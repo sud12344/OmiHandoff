@@ -1,0 +1,151 @@
+[
+ {
+  "cfg": "6803-08-08-08-NWO-FG",
+  "scale": "2:1",
+  "sheet_scale": [
+   2.0,
+   1.0
+  ],
+  "view_scales": {
+   "*Top": [
+    2.0,
+    1.0
+   ],
+   "*Right": [
+    2.0,
+    1.0
+   ],
+   "*Left": [
+    2.0,
+    1.0
+   ],
+   "hidden": [
+    2.0,
+    1.0
+   ]
+  },
+  "legs": [
+   "+X",
+   "+Y",
+   "-X"
+  ],
+  "dims": [
+   [
+    "leg +X (crossing to end)",
+    1.25
+   ],
+   [
+    "leg -X (crossing to end)",
+    1.25
+   ],
+   [
+    "leg +Y (crossing to end)",
+    1.45
+   ],
+   [
+    "hex across flats (Top view)",
+    0.88
+   ],
+   [
+    "hex across flats (Top view)",
+    0.75
+   ],
+   [
+    "bore at +X end (Right view)",
+    0.39
+   ],
+   [
+    "bore at -X end (Left view)",
+    0.39
+   ],
+   [
+    "bore at +Y end (Top view)",
+    0.39
+   ]
+  ],
+  "log": [
+   "title fields replaced: 1"
+  ],
+  "saved": [
+   true,
+   true
+  ],
+  "drawing_title": "6803-08-08-08-NWO-FG - Sheet1",
+  "part_title": "6803_MASTER"
+ },
+ {
+  "cfg": "2650-08-08-08-08-FG",
+  "scale": "3:2",
+  "sheet_scale": [
+   3.0,
+   2.0
+  ],
+  "view_scales": {
+   "*Top": [
+    3.0,
+    2.0
+   ],
+   "*Right": [
+    3.0,
+    2.0
+   ],
+   "*Left": [
+    3.0,
+    2.0
+   ],
+   "hidden": [
+    3.0,
+    2.0
+   ]
+  },
+  "legs": [
+   "+X",
+   "+Y",
+   "-X",
+   "-Y"
+  ],
+  "dims": [
+   [
+    "leg +X (crossing to end)",
+    1.25
+   ],
+   [
+    "leg -X (crossing to end)",
+    1.25
+   ],
+   [
+    "leg +Y (crossing to end)",
+    1.25
+   ],
+   [
+    "leg -Y (crossing to end)",
+    1.25
+   ],
+   [
+    "hex across flats (Top view)",
+    0.75
+   ],
+   [
+    "bore at +X end (Right view)",
+    0.39
+   ],
+   [
+    "bore at -X end (Left view)",
+    0.39
+   ],
+   [
+    "bore at +Y end (Top view)",
+    0.39
+   ]
+  ],
+  "log": [
+   "title fields replaced: 1"
+  ],
+  "saved": [
+   true,
+   true
+  ],
+  "drawing_title": "2650-08-08-08-08-FG - Sheet1",
+  "part_title": "2650_MASTER"
+ }
+]

@@ -1,0 +1,24 @@
+table,config,check,brennan,other,agree
+1704,1704-12-12-Tube,Air-Way s115 M3 vs Brennan L1 (both JIC tip -> leg-2 axis?),2.83,2.84,yes
+1704,1704-12-12-Tube,"Air-Way s115 M3 - O/2 (M3 to the head far edge, as drawn) vs Brennan L1",2.83,2.09,NO
+1704,1704-12-12-Tube,Air-Way s115 N4 vs Brennan L2 (JIC axis -> flange face),2.13,2.12,yes
+1704,1704-12-12-Tube,Air-Way s115 C vs Brennan A/F (end-piece hex),1.125,1.13,yes
+1704,1704-16-20-Tube,Air-Way s115 M3 vs Brennan L1 (both JIC tip -> leg-2 axis?),3.39,2.79,NO (-0.60)
+1704,1704-16-20-Tube,"Air-Way s115 M3 - O/2 (M3 to the head far edge, as drawn) vs Brennan L1",3.39,1.79,NO
+1704,1704-16-20-Tube,Air-Way s115 N4 vs Brennan L2 (JIC axis -> flange face),2.6,2.37,NO (-0.23)
+1704,1704-16-20-Tube,Air-Way s115 C vs Brennan A/F (end-piece hex),1.375,1.38,yes
+1704,1704-24-20-Tube,Air-Way s115 M3 vs Brennan L1 (both JIC tip -> leg-2 axis?),4.21,3.52,NO (-0.69)
+1704,1704-24-20-Tube,"Air-Way s115 M3 - O/2 (M3 to the head far edge, as drawn) vs Brennan L1",4.21,2.52,NO
+1704,1704-24-20-Tube,Air-Way s115 N4 vs Brennan L2 (JIC axis -> flange face),3.03,2.5,NO (-0.53)
+1704,1704-24-20-Tube,Air-Way s115 C vs Brennan A/F (end-piece hex),2.0,2.0,yes
+1704,1704-24-24-Tube,Air-Way s115 M3 vs Brennan L1 (both JIC tip -> leg-2 axis?),4.57,3.67,NO (-0.90)
+1704,1704-24-24-Tube,"Air-Way s115 M3 - O/2 (M3 to the head far edge, as drawn) vs Brennan L1",4.57,2.48,NO
+1704,1704-24-24-Tube,Air-Way s115 N4 vs Brennan L2 (JIC axis -> flange face),3.66,2.75,NO (-0.91)
+1704,1704-24-24-Tube,Air-Way s115 C vs Brennan A/F (end-piece hex),2.0,2.0,yes
+6701,6701-04-04,C2 nut hex vs swivel library SWIV_MEAS AF,0.563,0.5625,yes
+6701,6701-06-06,C2 nut hex vs swivel library SWIV_MEAS AF,0.688,0.6875,yes
+6701,6701-08-08,C2 nut hex vs swivel library SWIV_MEAS AF,0.875,0.875,yes
+6701,6701-12-12,C2 nut hex vs swivel library SWIV_MEAS AF,1.25,1.25,yes
+6701,6701-16-16,C2 nut hex vs swivel library SWIV_MEAS AF,1.5,1.5,yes
+6701,6701-20-20,C2 nut hex vs swivel library SWIV_MEAS AF,2.0,2.0,yes
+6701,6701-L-16-16,C2 nut hex vs swivel library SWIV_MEAS AF,1.5,1.5,yes

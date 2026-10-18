@@ -1,0 +1,1357 @@
+[
+ {
+  "sid": 9,
+  "code": "FF2403",
+  "name": "FF2403 Male Union",
+  "root": "2403",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff2403-male-union-series-9",
+  "sheet_count": 15,
+  "rows": 15,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "L6",
+   "S1",
+   "d1(1)",
+   "d1(2)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2403_p1.txt",
+   "FF2403_p2.txt"
+  ]
+ },
+ {
+  "sid": 10,
+  "code": "FF2404",
+  "name": "FF2404 Male Connector",
+  "root": "2404",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff2404-male-connector-series-10",
+  "sheet_count": 24,
+  "rows": 24,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "A NPTF",
+   "L",
+   "S1",
+   "d1",
+   "D2"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2404_p1.txt",
+   "FF2404_p2.txt"
+  ]
+ },
+ {
+  "sid": 11,
+  "code": "FF2407",
+  "name": "FF2407 Reducing Adapter",
+  "root": "2407",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff2407-reducing-adapter-series-11",
+  "sheet_count": 25,
+  "rows": 25,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2A",
+   "L36",
+   "d8",
+   "d1"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2407_p1.txt",
+   "FF2407_p2.txt"
+  ]
+ },
+ {
+  "sid": 12,
+  "code": "FF2408",
+  "name": "FF2408 Male Plug",
+  "root": "2408",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff2408-male-plug-series-12",
+  "sheet_count": 8,
+  "rows": 8,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "L24",
+   "S1",
+   "W/HOLE"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2408_p1.txt",
+   "FF2408_p2.txt"
+  ]
+ },
+ {
+  "sid": 20,
+  "code": "FF2500",
+  "name": "FF2500 90° Union Elbow",
+  "root": "2500",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff2500-90-union-elbow-series-20",
+  "sheet_count": 7,
+  "rows": 7,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "L7 (1)",
+   "L7 (2)",
+   "S2",
+   "d1(1)",
+   "d1(2)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2500_p1.txt",
+   "FF2500_p2.txt"
+  ]
+ },
+ {
+  "sid": 21,
+  "code": "FF2501",
+  "name": "FF2501 90° Male Elbow",
+  "root": "2501",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff2501-90-male-elbow-series-21",
+  "sheet_count": 18,
+  "rows": 18,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "A NPTF",
+   "L7",
+   "N",
+   "S2",
+   "d1",
+   "D2"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2501_p1.txt",
+   "FF2501_p2.txt"
+  ]
+ },
+ {
+  "sid": 28,
+  "code": "FF2503",
+  "name": "FF2503 45° Male Elbow",
+  "root": "2503",
+  "shape": "45°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/45/ff2503-45-male-elbow-series-28",
+  "sheet_count": 10,
+  "rows": 10,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "A NPTF",
+   "L12",
+   "N2",
+   "S2",
+   "d1",
+   "D2"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2503_p1.txt",
+   "FF2503_p2.txt"
+  ]
+ },
+ {
+  "sid": 32,
+  "code": "FF2603",
+  "name": "FF2603 Union Tee",
+  "root": "2603",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff2603-union-tee-series-32",
+  "sheet_count": 18,
+  "rows": 17,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "d(3) UN/UNF-2A",
+   "L7 (1)",
+   "L7 (2)",
+   "L7 (3)",
+   "S2",
+   "d1(1)",
+   "d1(2)",
+   "d1(3)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2603_p1.txt",
+   "FF2603_p2.txt"
+  ]
+ },
+ {
+  "sid": 39,
+  "code": "FF2650",
+  "name": "FF2650 Union Cross",
+  "root": "2650",
+  "shape": "Cross",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/cross/ff2650-union-cross-series-39",
+  "sheet_count": 3,
+  "rows": 3,
+  "columns": [
+   "Part #",
+   "d (1) UN/UNF-2A",
+   "d (2) UN/UNF-2A",
+   "d (3) UN/UNF-2A",
+   "d (4) UN/UNF-2A",
+   "L7 (1)",
+   "L7 (2)",
+   "L7 (3)",
+   "L7 (4)",
+   "S2",
+   "d1 (1)",
+   "d1 (2)",
+   "d1 (3)",
+   "d1 (4)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2650_p1.txt",
+   "FF2650_p2.txt"
+  ]
+ },
+ {
+  "sid": 13,
+  "code": "FF2700",
+  "name": "FF2700 Bulkhead Union",
+  "root": "2700",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff2700-bulkhead-union-series-13",
+  "sheet_count": 20,
+  "rows": 19,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "L15",
+   "i2",
+   "S4 (1)",
+   "S4 (2)",
+   "d1(1)",
+   "d1(2)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2700_p1.txt",
+   "FF2700_p2.txt"
+  ]
+ },
+ {
+  "sid": 23,
+  "code": "FF2701",
+  "name": "FF2701 90° Bulkhead Elbow",
+  "root": "2701",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff2701-90-bulkhead-elbow-series-23",
+  "sheet_count": 14,
+  "rows": 14,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "L16",
+   "L17",
+   "i2",
+   "i4",
+   "d17",
+   "S4",
+   "S2",
+   "d1(1)",
+   "d1(2)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2701_p1.txt",
+   "FF2701_p2.txt"
+  ]
+ },
+ {
+  "sid": 29,
+  "code": "FF2702",
+  "name": "FF2702 45° Bulkhead Elbow",
+  "root": "2702",
+  "shape": "45°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/45/ff2702-45-bulkhead-elbow-series-29",
+  "sheet_count": 13,
+  "rows": 13,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "L12",
+   "L18",
+   "i2",
+   "i4",
+   "d17",
+   "S4",
+   "S2",
+   "d1(1)",
+   "d1(2)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2702_p1.txt",
+   "FF2702_p2.txt"
+  ]
+ },
+ {
+  "sid": 33,
+  "code": "FF2703",
+  "name": "FF2703 Bulkhead Branch Tee",
+  "root": "2703",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff2703-bulkhead-branch-tee-series-33",
+  "sheet_count": 15,
+  "rows": 15,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "d(3) UN/UNF-2A",
+   "L16 (1)",
+   "L16 (2)",
+   "L7",
+   "i2",
+   "i4",
+   "d17",
+   "S4",
+   "S2",
+   "d1(1)",
+   "d1(2)",
+   "d1(3)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2703_p1.txt",
+   "FF2703_p2.txt"
+  ]
+ },
+ {
+  "sid": 34,
+  "code": "FF2704",
+  "name": "FF2704 Bulkhead Run Tee",
+  "root": "2704",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff2704-bulkhead-run-tee-series-34",
+  "sheet_count": 18,
+  "rows": 18,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "d(3) UN/UNF-2A",
+   "L16 (1)",
+   "L17",
+   "L16 (3)",
+   "i2",
+   "i4",
+   "S4",
+   "d17",
+   "S2",
+   "d1(1)",
+   "d1(2)",
+   "d1(3)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF2704_p1.txt",
+   "FF2704_p2.txt"
+  ]
+ },
+ {
+  "sid": 2,
+  "code": "FF304-C",
+  "name": "FF304-C Cap Nut",
+  "root": "304-C",
+  "shape": "Nut",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/nut/ff304-c-cap-nut-series-2",
+  "sheet_count": 8,
+  "rows": 8,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2B",
+   "L20",
+   "L38",
+   "S"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF304-C_p1.txt",
+   "FF304-C_p2.txt"
+  ]
+ },
+ {
+  "sid": 3,
+  "code": "FF306",
+  "name": "FF306 Bulkhead Lock Nut",
+  "root": "306",
+  "shape": "Nut",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/nut/ff306-bulkhead-lock-nut-series-3",
+  "sheet_count": 6,
+  "rows": 6,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2B",
+   "h2",
+   "S4"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF306_p1.txt",
+   "FF306_p2.txt"
+  ]
+ },
+ {
+  "sid": 4,
+  "code": "FF306-N",
+  "name": "FF306-N Adjustable Lock Nut",
+  "root": "306-N",
+  "shape": "Nut",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/nut/ff306-n-adjustable-lock-nut-series-4",
+  "sheet_count": 10,
+  "rows": 10,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d1 UN/UNF-2B",
+   "L2",
+   "S3"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF306-N_p1.txt",
+   "FF306-N_p2.txt"
+  ]
+ },
+ {
+  "sid": 494,
+  "code": "FF30760",
+  "name": "FF30760 Straight Thread Cross",
+  "root": "30760",
+  "shape": "Cross",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/cross/ff30760-straight-thread-cross-series-494",
+  "sheet_count": 4,
+  "rows": 4,
+  "columns": [
+   "Part #",
+   "d (1) UN/UNF-2A",
+   "d (2) UN/UNF-2A",
+   "d (3) UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L7 (1)",
+   "L7 (2)",
+   "L7 (3)",
+   "L10",
+   "S2",
+   "S3",
+   "d1 (1)",
+   "d1 (2)",
+   "d1 (3)",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF30760_p1.txt",
+   "FF30760_p2.txt"
+  ]
+ },
+ {
+  "sid": 483,
+  "code": "FF31371",
+  "name": "FF31371 ORFS Bulkhead to Stud End",
+  "root": "31371",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff31371-orfs-bulkhead-to-stud-end-series-483",
+  "sheet_count": 11,
+  "rows": 11,
+  "columns": [
+   "Part #",
+   "d (1) UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L20",
+   "i2",
+   "S4 (1)",
+   "S4 (2)",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF31371_p1.txt",
+   "FF31371_p2.txt"
+  ]
+ },
+ {
+  "sid": 492,
+  "code": "FF31617",
+  "name": "FF31617 Male to Female ORFS Adapter",
+  "root": "31617",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff31617-male-to-female-orfs-adapter-series-492",
+  "sheet_count": 4,
+  "rows": 4,
+  "columns": [
+   "Part #",
+   "OD",
+   "d (1) UN/UNF-2A",
+   "d (2) UN/UNF-2B",
+   "L19",
+   "S",
+   "d1"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF31617_p1.txt",
+   "FF31617_p2.txt"
+  ]
+ },
+ {
+  "sid": 493,
+  "code": "FF31626",
+  "name": "FF31626 ORFS to Straight Thread Branch Tee",
+  "root": "31626",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff31626-orfs-to-straight-thread-branch-tee-series-493",
+  "sheet_count": 2,
+  "rows": 2,
+  "columns": [
+   "Part #",
+   "d (1) UN/UNF-2A",
+   "n (1) UN/UNF-2B",
+   "n (2) UN/UNF-2A",
+   "L7",
+   "L6",
+   "L10",
+   "S3",
+   "S2",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF31626_p1.txt",
+   "FF31626_p2.txt"
+  ]
+ },
+ {
+  "sid": 498,
+  "code": "FF31639",
+  "name": "FF31639 Male ORFS / Female ORFS / Straight Thread",
+  "root": "31639",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff31639-male-orfs-female-orfs-straight-thread-series-498",
+  "sheet_count": 11,
+  "rows": 11,
+  "columns": [
+   "Part #",
+   "d (1) UN/UNF-2A",
+   "d (2) UN/UNF-2B",
+   "n UN/UNF-2B",
+   "L7",
+   "L47",
+   "L6",
+   "S",
+   "S1 HEX",
+   "S2",
+   "d1",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF31639_p1.txt",
+   "FF31639_p2.txt"
+  ]
+ },
+ {
+  "sid": 502,
+  "code": "FF31682",
+  "name": "FF31682 ORFS to Straight Thread",
+  "root": "31682",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff31682-orfs-to-straight-thread-series-502",
+  "sheet_count": 7,
+  "rows": 7,
+  "columns": [
+   "Part #",
+   "d (1) UN/UNF-2A",
+   "n (2) UN/UNF-2A",
+   "n (3) UN/UNF-2B",
+   "L6",
+   "L9",
+   "L10",
+   "L11",
+   "S2",
+   "S3",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF31682_p1.txt",
+   "FF31682_p2.txt"
+  ]
+ },
+ {
+  "sid": 5,
+  "code": "FF318",
+  "name": "FF318 Tube Nut",
+  "root": "318",
+  "shape": "Nut",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/nut/ff318-tube-nut-series-5",
+  "sheet_count": 9,
+  "rows": 9,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2B",
+   "h",
+   "S"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF318_p1.txt",
+   "FF318_p2.txt"
+  ]
+ },
+ {
+  "sid": 501,
+  "code": "FF31831",
+  "name": "FF31831 Female Straight Thread to Female ORFS Swivel to Male ORFS End",
+  "root": "31831",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff31831-female-straight-thread-to-female-orfs-swivel-to-male-orfs-end-series-501",
+  "sheet_count": 2,
+  "rows": 2,
+  "columns": [
+   "Part #",
+   "n (1) UN/UNF-2B",
+   "d (2) UN/UNF-2B",
+   "d (3) UN/UNF-2A",
+   "L6",
+   "L11",
+   "L47",
+   "S",
+   "S2",
+   "d1",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF31831_p1.txt",
+   "FF31831_p2.txt"
+  ]
+ },
+ {
+  "sid": 6,
+  "code": "FF319",
+  "name": "FF319 Tube Sleeve",
+  "root": "319",
+  "shape": "Sleeve",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/sleeve/ff319-tube-sleeve-series-6",
+  "sheet_count": 13,
+  "rows": 11,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "L",
+   "d8"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF319_p1.txt",
+   "FF319_p2.txt"
+  ]
+ },
+ {
+  "sid": 7,
+  "code": "FF320",
+  "name": "FF320 Tube Sleeve",
+  "root": "320",
+  "shape": "Sleeve",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/sleeve/ff320-tube-sleeve-series-7",
+  "sheet_count": 6,
+  "rows": 6,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "L36",
+   "d8"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF320_p1.txt",
+   "FF320_p2.txt"
+  ]
+ },
+ {
+  "sid": 8,
+  "code": "FF403",
+  "name": "FF403 Braze Tube Union",
+  "root": "403",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff403-braze-tube-union-series-8",
+  "sheet_count": 19,
+  "rows": 19,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "L26",
+   "L22",
+   "L23",
+   "S1",
+   "d1",
+   "d5"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF403_p1.txt",
+   "FF403_p2.txt"
+  ]
+ },
+ {
+  "sid": 14,
+  "code": "FF6400",
+  "name": "FF6400 Straight Thread Connector",
+  "root": "6400",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6400-straight-thread-connector-series-14",
+  "sheet_count": 41,
+  "rows": 40,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L8",
+   "L9",
+   "S5",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6400_p1.txt",
+   "FF6400_p2.txt"
+  ]
+ },
+ {
+  "sid": 15,
+  "code": "FF6400-L",
+  "name": "FF6400-L Straight Thread Connector Long",
+  "root": "6400-L",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6400-l-straight-thread-connector-long-series-15",
+  "sheet_count": 16,
+  "rows": 16,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L32",
+   "L31",
+   "S5",
+   "d1",
+   "d20",
+   "Style"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6400-L_p1.txt",
+   "FF6400-L_p2.txt"
+  ]
+ },
+ {
+  "sid": 16,
+  "code": "FF6402",
+  "name": "FF6402 Straight Thread / Female ORFS Swivel Adapter",
+  "root": "6402",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6402-straight-thread-female-orfs-swivel-adapter-series-16",
+  "sheet_count": 11,
+  "rows": 11,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "n UN/UNF-2A",
+   "d UN/UNF-2B",
+   "L34",
+   "L35",
+   "L37",
+   "S",
+   "S5",
+   "d20",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6402_p1.txt",
+   "FF6402_p2.txt"
+  ]
+ },
+ {
+  "sid": 24,
+  "code": "FF6500",
+  "name": "FF6500 90° ORFS Swivel Elbow",
+  "root": "6500",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff6500-90-orfs-swivel-elbow-series-24",
+  "sheet_count": 14,
+  "rows": 14,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2B",
+   "L7",
+   "L21",
+   "S",
+   "S2",
+   "d1",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6500_p1.txt",
+   "FF6500_p2.txt"
+  ]
+ },
+ {
+  "sid": 30,
+  "code": "FF6502",
+  "name": "FF6502 45° ORFS Swivel Elbow",
+  "root": "6502",
+  "shape": "45°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/45/ff6502-45-orfs-swivel-elbow-series-30",
+  "sheet_count": 8,
+  "rows": 8,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2B",
+   "L7",
+   "L52",
+   "S",
+   "S2",
+   "d1",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6502_p1.txt",
+   "FF6502_p2.txt"
+  ]
+ },
+ {
+  "sid": 17,
+  "code": "FF6504",
+  "name": "FF6504 Male ORFS / Female ORFS Swivel Union",
+  "root": "6504",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6504-male-orfs-female-orfs-swivel-union-series-17",
+  "sheet_count": 15,
+  "rows": 15,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2B",
+   "L44",
+   "S",
+   "S1",
+   "d1",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6504_p1.txt",
+   "FF6504_p2.txt"
+  ]
+ },
+ {
+  "sid": 485,
+  "code": "FF6505",
+  "name": "FF6505 Male Pipe / Female ORFS Swivel Connector",
+  "root": "6505",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6505-male-pipe-female-orfs-swivel-connector-series-485",
+  "sheet_count": 4,
+  "rows": 4,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "A NPTF",
+   "d UN/UNF-2B",
+   "L16",
+   "S",
+   "S1",
+   "D2",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6505_p1.txt",
+   "FF6505_p2.txt"
+  ]
+ },
+ {
+  "sid": 521,
+  "code": "FF6506",
+  "name": "FF6506 Female Pipe / Female ORFS Swivel Connector",
+  "root": "6506",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6506-female-pipe-female-orfs-swivel-connector-series-521",
+  "sheet_count": 2,
+  "rows": 2,
+  "columns": [
+   "Part #",
+   "A NPTF",
+   "B UN/UNF-2B",
+   "L17",
+   "S1",
+   "S",
+   "TAP DRILL",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6506_p1.txt",
+   "FF6506_p2.txt"
+  ]
+ },
+ {
+  "sid": 522,
+  "code": "FF6509",
+  "name": "FF6509 ORFS Swivel / Female Straight Thread Connector",
+  "root": "6509",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6509-orfs-swivel-female-straight-thread-connector-series-522",
+  "sheet_count": 5,
+  "rows": 5,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2N",
+   "B UN/UNF-2B",
+   "L38",
+   "S",
+   "S1",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6509_p1.txt",
+   "FF6509_p2.txt"
+  ]
+ },
+ {
+  "sid": 523,
+  "code": "FF6565",
+  "name": "FF6565 Male ORFS / Female Double Swivel Union",
+  "root": "6565",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff6565-male-orfs-female-double-swivel-union-series-523",
+  "sheet_count": 5,
+  "rows": 5,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2B",
+   "L45",
+   "S1",
+   "S(1)",
+   "S(2)",
+   "D19(1)",
+   "D19(2)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6565_p1.txt",
+   "FF6565_p2.txt"
+  ]
+ },
+ {
+  "sid": 35,
+  "code": "FF6600",
+  "name": "FF6600 ORFS Swivel Branch Tee",
+  "root": "6600",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff6600-orfs-swivel-branch-tee-series-35",
+  "sheet_count": 7,
+  "rows": 7,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "d(3) UN/UNF-2B",
+   "L7 (1)",
+   "L7 (2)",
+   "L21",
+   "S",
+   "S2",
+   "d1(1)",
+   "d1(2)",
+   "d19"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6600_p1.txt",
+   "FF6600_p2.txt"
+  ]
+ },
+ {
+  "sid": 36,
+  "code": "FF6602",
+  "name": "FF6602 ORFS Swivel Run Tee",
+  "root": "6602",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff6602-orfs-swivel-run-tee-series-36",
+  "sheet_count": 21,
+  "rows": 21,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2B",
+   "d(3) UN/UNF-2A",
+   "L7 (1)",
+   "L21",
+   "L7",
+   "S",
+   "S2",
+   "d1(1)",
+   "d19",
+   "d1(3)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6602_p1.txt",
+   "FF6602_p2.txt"
+  ]
+ },
+ {
+  "sid": 25,
+  "code": "FF6801",
+  "name": "FF6801 90° Straight Thread Elbow",
+  "root": "6801",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff6801-90-straight-thread-elbow-series-25",
+  "sheet_count": 36,
+  "rows": 36,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L7",
+   "L10",
+   "L11",
+   "S3",
+   "S2",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6801_p1.txt",
+   "FF6801_p2.txt"
+  ]
+ },
+ {
+  "sid": 26,
+  "code": "FF6801-L",
+  "name": "FF6801-L 90° Straight Thread Elbow Long",
+  "root": "6801-L",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff6801-l-90-straight-thread-elbow-long-series-26",
+  "sheet_count": 11,
+  "rows": 12,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L7",
+   "L50",
+   "L51",
+   "S3",
+   "S2",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6801-L_p1.txt",
+   "FF6801-L_p2.txt"
+  ]
+ },
+ {
+  "sid": 31,
+  "code": "FF6802",
+  "name": "FF6802 45° Straight Thread Elbow",
+  "root": "6802",
+  "shape": "45°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/45/ff6802-45-straight-thread-elbow-series-31",
+  "sheet_count": 23,
+  "rows": 23,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L12",
+   "L13",
+   "L14",
+   "S3",
+   "S2",
+   "d1",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6802_p1.txt",
+   "FF6802_p2.txt"
+  ]
+ },
+ {
+  "sid": 37,
+  "code": "FF6803",
+  "name": "FF6803 Straight Thread Branch Tee",
+  "root": "6803",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff6803-straight-thread-branch-tee-series-37",
+  "sheet_count": 20,
+  "rows": 20,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "d(2) UN/UNF-2A",
+   "n UN/UNF-2A",
+   "L7 (1)",
+   "L7 (2)",
+   "L10",
+   "L11",
+   "S3",
+   "S2",
+   "d1(1)",
+   "d1(2)",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6803_p1.txt",
+   "FF6803_p2.txt"
+  ]
+ },
+ {
+  "sid": 38,
+  "code": "FF6804",
+  "name": "FF6804 Straight Thread Run Tee",
+  "root": "6804",
+  "shape": "Tee",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/tee/ff6804-straight-thread-run-tee-series-38",
+  "sheet_count": 27,
+  "rows": 28,
+  "columns": [
+   "Part #",
+   "d(1) UN/UNF-2A",
+   "n UN/UNF-2A",
+   "d(3) UN/UNF-2A",
+   "L7 (1)",
+   "L10",
+   "L11",
+   "L7 (3)",
+   "S3",
+   "S2",
+   "d1(1)",
+   "d20",
+   "d1(3)"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6804_p1.txt",
+   "FF6804_p2.txt"
+  ]
+ },
+ {
+  "sid": 27,
+  "code": "FF6809",
+  "name": "FF6809 90° Straight Thread / Female ORFS Swivel Elbow",
+  "root": "6809",
+  "shape": "90°",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/90/ff6809-90-straight-thread-female-orfs-swivel-elbow-series-27",
+  "sheet_count": 6,
+  "rows": 6,
+  "columns": [
+   "Part #",
+   "d UN/UNF-2B",
+   "n UN/UNF-2A",
+   "L10",
+   "L11",
+   "L21",
+   "S",
+   "S2",
+   "S3",
+   "d19",
+   "d20"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF6809_p1.txt",
+   "FF6809_p2.txt"
+  ]
+ },
+ {
+  "sid": 18,
+  "code": "FF7403",
+  "name": "FF7403 Male ORFS Adapter / 37° Male JIC",
+  "root": "7403",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff7403-male-orfs-adapter-37-male-jic-series-18",
+  "sheet_count": 9,
+  "rows": 9,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2A",
+   "B UN/UNF-2A",
+   "L41",
+   "S1",
+   "d1",
+   "D"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF7403_p1.txt",
+   "FF7403_p2.txt"
+  ]
+ },
+ {
+  "sid": 19,
+  "code": "FF7504",
+  "name": "FF7504 37° Male JIC / Female ORFS Swivel Adapter",
+  "root": "7504",
+  "shape": "Straight",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/straight/ff7504-37-male-jic-female-orfs-swivel-adapter-series-19",
+  "sheet_count": 9,
+  "rows": 9,
+  "columns": [
+   "Part #",
+   "TUBE OD",
+   "d UN/UNF-2B",
+   "B UN/UNF-2A",
+   "L40",
+   "L38",
+   "L39",
+   "C2",
+   "S",
+   "d19",
+   "D2"
+  ],
+  "passes_identical": true,
+  "written": [
+   "FF7504_p1.txt",
+   "FF7504_p2.txt"
+  ]
+ },
+ {
+  "sid": 40,
+  "code": "AWs40",
+  "name": "O-Ring For SAE J1453/2/3 Face Seal Ends",
+  "root": "UNPARSED",
+  "shape": "Accessories",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/accessories/o-ring-for-sae-j1453-2-3-face-seal-ends-series-40",
+  "sheet_count": 23,
+  "rows": 23,
+  "columns": [
+   "Part #",
+   "Type",
+   "Tube Fitting Size",
+   "TUBE OD",
+   "I.D.",
+   "W",
+   "Temperature",
+   "Shore Hardness",
+   "Elongation",
+   "Tensile"
+  ],
+  "passes_identical": true,
+  "written": [
+   "AWs40_p1.txt",
+   "AWs40_p2.txt"
+  ]
+ },
+ {
+  "sid": 41,
+  "code": "AWs41",
+  "name": "ORFS Braze Rings",
+  "root": "UNPARSED",
+  "shape": "Accessories",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/accessories/orfs-braze-rings-series-41",
+  "sheet_count": 10,
+  "rows": 10,
+  "columns": [
+   "Part #",
+   "Tube O.D.",
+   "Type",
+   "Ring OD",
+   "Ring OD",
+   "Wire Dia.",
+   "Wire Dia.",
+   "Industry Specifications Reference",
+   "Silver",
+   "Copper",
+   "Zinc",
+   "Nickel",
+   "Total Other Elements",
+   "Solidus",
+   "Liquidus"
+  ],
+  "passes_identical": true,
+  "written": [
+   "AWs41_p1.txt",
+   "AWs41_p2.txt"
+  ]
+ },
+ {
+  "sid": 218,
+  "code": "AWs218",
+  "name": "O-Rings For SAE J-1926/2/3 Inch Stud Ends",
+  "root": "UNPARSED",
+  "shape": "Accessories",
+  "url": "https://parts.air-way.com/hydraulic-fittings/o-ring-face-seal-orfs-hydraulic-fittings/accessories/o-rings-for-sae-j-1926-2-3-inch-stud-ends-series-218",
+  "sheet_count": 33,
+  "rows": 33,
+  "columns": [
+   "Part #",
+   "Type",
+   "Tube Fitting Size",
+   "TUBE OD",
+   "I.D.",
+   "W",
+   "Temperature",
+   "Shore Hardness",
+   "Elongation",
+   "Tensile"
+  ],
+  "passes_identical": true,
+  "written": [
+   "AWs218_p1.txt",
+   "AWs218_p2.txt"
+  ]
+ }
+]

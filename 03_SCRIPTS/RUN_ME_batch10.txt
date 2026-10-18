@@ -1,0 +1,32 @@
+BATCH 10 - NPSM SWIVEL UNIONS AND CODE 61 FLANGE ADAPTERS, THREE NEW MASTERS (2026-09-24)
+=======================================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+Run these after batch 9 (they use the same new helpers: the zone hex cut and the port drawn inside the part).
+
+   1  Build_1404_MASTER.bas   Sub Build1404   male pipe x female NPSM swivel union     4 configs (swivel size -08)
+   2  Build_1405_MASTER.bas   Sub Build1405   female pipe x female NPSM swivel union   3 configs (swivel size -08)
+   3  Build_1700_MASTER.bas   Sub Build1700   male JIC x SAE code 61 flange adapter    5 configs (flange -08/-12/-24)
+                                                                                total   12 configs
+
+WHAT TO LOOK AT IN THE REPORTS
+  1404 / 1405: "DRIVE sketch fully defined", "HEXCUT / NUTCUT created in the right zone", "bore reaches the swivel
+               stem tip", "THD_EndB helix created / swept cut created" (straight 1/2-14 NPSM thread in the nut).
+  1700:        "HEXCUT created in the right zone" (the hex stops at the flange head), the O-ring groove is part of the
+               revolve, "Across flats / corners ... flange head dia" check.
+
+WHERE THE NUMBERS COME FROM (details: 00_DOCS\NPSM_swivel_and_code61_flange_measurements.md; pictures in 05_DIAGRAMS)
+  1404/1405  Nut and stem measured on the Brennan 1404-08-08 STEP. Placed to Air-Way as you decided: stem tip at
+             Air-Way L, nut face at Air-Way W (the nut ends up 0.05 further out than on Brennan's part - noted
+             on every row). Nut hex = Air-Way C(2) (1.00 = Brennan). Only the -08 swivel exists as a STEP.
+  1700       Flange head thickness and face O-ring groove measured on the Brennan 1700-08/-12/-24 STEPs. Head dia
+             = Air-Way O (Brennan agrees). Built to Air-Way as you decided: overall L28 and a hex of Air-Way C over
+             the whole body (Brennan has a round collar with two flats and a neck, and is 0.12-0.48 longer - noted
+             on the rows that have a Brennan STEP). Flange sizes -08/-12/-24 only.
+  All 12 rows are ASSUMED (one manufacturer for the swivel / flange details; SAE J518 not available).
+
+CHECKED BEFORE SENDING
+  Every DRIVE sketch solved as exactly defined (no missing, no redundant dims), clean closed outlines, revolved
+  volumes recomputed independently, 1404-08-08 and 1700-61-08-08 laid over Brennan's own cross-sections.
+  Batch 8/9 macros regenerate with the same geometry (comment/order-only differences) - no need to re-import them.

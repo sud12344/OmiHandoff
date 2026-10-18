@@ -1,0 +1,15 @@
+BATCH 11d - 6502 45 DEG FEMALE SWIVEL ELBOW (2026-09-24), from the Brennan STEPs you downloaded
+===============================================================================================
+   Build_6502_MASTER.bas   Sub Build6502   45 deg male JIC x female JIC swivel elbow   2 configs (6502-04-04-FG, 6502-08-08-FG)
+Run it after 6500 (it uses the same swivel end, and the 45 deg leg code of 2503/2702 - run 2503 first).
+
+WHY IT CAN BE BUILT NOW: I had refused 6502 because the rounded corner of the body reaches past the swivel's body face.
+Brennan's own 6502-08-08-FG does exactly that (corner radius 0.433, body face 0.395) - the extra corner stays inside
+the swivel neck, so it adds no material outside it. The macro now accepts that case and still refuses sizes where the
+corner would stick out beside the neck (6502-12-12-FG: needs its own Brennan STEP).
+MODEL vs BRENNAN 6502-08-08-FG: JIC hex arm 0.323 and JIC tip 0.98 identical; body hex 0.75, corner 0.433 identical;
+nut face 1.25 (Air-Way -FG M6) vs Brennan 1.28 (Air-Way's non-FG value) - built to Air-Way, noted on the row.
+WATCH IN THE REPORT: "LEG1/LEG2 sketch fully defined", "NUTHEX1 nut flats normal to Z", "PLN2 is normal to the angled
+leg", "leg 1 bore reaches the swivel seat", "leg 1 tip (exact) 1.2500", "leg 2 tip (exact) 0.9800", sweep 2/2.
+NOT YET: 1503 (45 deg NPSM swivel elbow) - the body now passes the same check, but its male pipe thread sits on the
+45 deg leg and the macro library has no tapered pipe thread for an angled leg yet (my work, next).

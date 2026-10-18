@@ -1,0 +1,61 @@
+BATCH 4 - TEN NEW MASTERS (2026-09-24)
+=====================================
+Same routine as before: SolidWorks open, no document open. In the VBA editor remove any old module of the
+same name, File > Import File > the .bas from 03_SCRIPTS, run the entry sub below. One at a time; close the
+part between runs. Each run writes 03_SCRIPTS\Build_<root>_report.txt and saves 11_MASTERS\<root>_MASTER.SLDPRT
+(threads suppressed, as usual). Tell me "check reports" when done - you can send them a few at a time.
+
+Suggested order (simplest first, so a problem in a shared helper shows up early):
+
+ STRAIGHTS (gen_straight2.py - same helpers as 5000/5404/5405/6401/6405/0403, all built clean)
+   1  Build_5406P_MASTER.bas  Sub Build5406P  male pipe plug (NPTF, solid hex head)             4 configs
+   2  Build_5406C_MASTER.bas  Sub Build5406C  female pipe cap (NPTF port, closed hex)           6 configs
+   3  Build_5406_MASTER.bas   Sub Build5406   pipe reducer bushing (male NPTF x female NPTF)   28 configs
+   4  Build_6408_MASTER.bas   Sub Build6408   ORB hex head plug (solid)                        11 configs
+   5  Build_2408_MASTER.bas   Sub Build2408   JIC male plug (solid + hollow variants)          15 configs
+   6  Build_0318_MASTER.bas   Sub Build0318   JIC tube nut (internal UNF thread)               12 configs
+
+ 90-DEG ELBOWS (gen_tee.py - 2500HX body: two hex arms + the 30-deg corner "puck", legs along +X and +Y)
+   7  Build_5504_MASTER.bas   Sub Build5504   female pipe elbow (NPTF-F x NPTF-F)               5 configs
+   8  Build_5500_MASTER.bas   Sub Build5500   male pipe elbow (NPTF-M x NPTF-M)               13 configs
+   9  Build_5502_MASTER.bas   Sub Build5502   street elbow (NPTF-M x NPTF-F)                  13 configs
+  10  Build_2501_MASTER.bas   Sub Build2501   male elbow (JIC x NPTF-M)                       29 configs
+                                                                                     total   136 configs
+
+NEW THINGS IN THESE MACROS (worth a look in the reports)
+  - Plugs / cap: one end is a plain flat hex face. The report checks the axis is CLOSED there.
+  - 2408: hollow (-H) and solid configs share one master; the hole is suppressed on the solid configs
+    through a $STATE column in the design table (blank hole cells on solid rows are intentional).
+  - 0318 nut: first internal straight thread (helical, no taper) - "THD_EndA helix created / swept cut
+    created" lines are the ones to watch.
+  - Elbows: new "PUCK sketch fully defined / PUCK revolve created" lines, then the usual one-body,
+    bores-open, extents and all-configuration sweep.
+
+WHERE THE NUMBERS COME FROM (every assumption is also in $PRP@AxialSource of each row)
+  2408  L3/hex Air-Way == MS51518D (VERIFIED). Brennan 2408-08 STEP: hex 0.283 long = L3 - JIC end, hole
+        0.391. Hole depth (JIC end length - 0.020) is measured on that one STEP only, so every hollow
+        config is marked ASSUMED; the solid configs stay VERIFIED.
+  6408  Air-Way + the table's own SAE J1926 plug-end columns. Hollow 6408s are NOT built (no source for
+        the hole depth); -14 and -32 are blocked (groove width unpublished).
+  0318  L1/hex/thread Air-Way; bore D1, internal shoulder I1 and thread length J1 from MS51531D (the 37-deg
+        nut standard). MS51531D L1 and hex agree with Air-Way on all 12 sizes. Brennan 0318-08 STEP
+        matches I1 (0.723) and D1 (0.568). Thread minor = ASME B1.1 basic minor.
+  5406  Air-Way; male end = the 5404 Brennan-measured end length (same rule as 5405); female port = MS51503
+        P1 rule. Air-Way gives no through-bore, so the tap drill is carried through (ASSUMPTION). The wall
+        between the female thread and the male thread root is checked per size: 5406-04-02 (0.022) and
+        5406-06-04 (0.024) are thin but positive - flagged in $COMMENT.
+  5406C / 5406P  Air-Way single source; P1 rule as above.
+  Elbows  hex A/F = max(Air-Way hex, JIC thread major) as on the tees. Female legs (5502, 5504): the hex
+        arm runs to the port face - ASSUMPTION (the Brennan 2502-06-04-FG STEP shows a round collar there;
+        its length is not published). 5502: the connecting drill is capped at the tap drill.
+        Some male pipe ends (-16/-20/-24) stand slightly proud of the hex flats, as on the Brennan 5600-16
+        STEP; the Z-extent check allows for it.
+
+NOT IN THIS BATCH (and why)
+  - 45-deg elbows 2503 / 5503 / 5505 (33 configs): the Brennan 2504-08-08-FG STEP shows the same body
+    (hex arms + 30-deg puck, hex shoulders 0.323 from the centre) but one leg must be modelled at 135 deg,
+    which needs new angled-plane helpers. Next job.
+  - 0319 sleeve: Air-Way gives only L and OD; the bore / head / cone need the AN819 standard (not
+    transcribed yet). The Brennan 0319-08 STEP covers -08 only.
+  - 3051 street elbow: only one leg length is published.
+  - Swivel, bulkhead, flange, hose and adjustable-ORB families: internal/nut geometry still open.

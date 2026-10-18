@@ -1,0 +1,92 @@
+genfeat_20261018 / straights - notes (2026-10-18)
+====================================================
+Base: tools/_out/puckfix_20261009/tools_new (copied whole to straights/tools). Changed: tools/generators/gen_straight2.py; new:
+tools/measure/nptfm40.py. checks / templates untouched. patch.diff = generators + measure + checks vs the base (LF line endings kept).
+No SolidWorks, no macro run, no website. Test tables: test/root (stage copy + test/cells_feature.csv via apply_brennan.py, 27 target rows
+set ASSUMED), test/root_T (+ TEST 5406-40-32), test/root_untouched (stage copy, regression only).
+
+1. WHAT THE FEATURE ADDS (gen_straight2.py)
+-------------------------------------------
+(1) 5404N OMi part-number form (user A4 "keep OMi's form"): SPEC 5404N gets dashre1 = -N-(\d+)X(len): 5404-N-04X2.500 -> both ends -04,
+    and the X length must equal L@DRIVE (else the row blocks). The Air-Way form "5404-N-4-4 X 2" (dashre2) is read first, unchanged.
+    + the held -06 round-bar fix of 2026-10-01 (tier1_20261001/work/5404N-06, QA #163) as documented: ROUND_STEP_MIN = 0.0025 for round
+    bars (hex bodies keep 0.005). -06 (C 0.69 vs crest cone 0.6819 at L2 -> step 0.0040) now builds with a ROUND-BAR STEP warning, a
+    row-only assumption in $PRP@AxialSource, and "NEEDS SOLIDWORKS CHECK" in $COMMENT. -12 (0.0005) / -16 (negative) still block.
+(2) -40 pipe end (2-1/2-8 NPTF), Brennan-measured (user 2026-10-02):
+    NPTF[40] = ('2-1/2', 8, D 2.875, E0 2.71954, E1 None, L1 None, L2 1.1374), ENDL[40] = 1.515, FPT[40] = tap drill 2.729 / P1 1.0443.
+    Only added when the dash is missing (no existing entry changes). Rows using a -40 pipe end get NPTF40_ASSUME in $PRP@AxialSource and
+    cannot stay VERIFIED. gen_tee reads G.NPTF / G.ENDL, so the same entries serve 2501-40-40-FG's NPT leg (same end, measured).
+(3) SPEC 6400 (user A6): male JIC (1st dash, End B) x male ORB (2nd dash, End A), ENDS FROM THE LIBRARIES (ORB: 6401/6405/6410 rows +
+    6408 -02/-14/-32 merges; JIC: MS33656J 2403 table). The review row's own ORB/JIC columns are cross-checked (difference > 0.0005 holds
+    the row) - all 6400 rows equal the libraries today; empty ORB_GRVW at -14/-32 = library 0.125 (A18). Hex over the body, bores D4 (ORB)
+    / D3 (JIC) stepped at the hex mid-plane (the hand-made table's rule). load_6400 folds DesignTable_6400L.xlsx in (L6 -> D1, C4 -> hex,
+    D2 -> ORB-side bore, D1 -> JIC-side bore, THDMAJ_B2/B1 -> ORB/JIC thread) with a LONG JIC END (end_JICLONG = end_JICBH: library chain,
+    thread zone extended) so the hex keeps the length of the 6400 row of the same dashes. The stale "BLOCKED - ORB groove width
+    unpublished" note of the -14/-32 rows is rewritten "RESOLVED 2026-10-18 (A18 ...) (was: ...)".
+(4) -02 female ORB port: ORBF_MEAS[2] = RF 0.18 / RC 0.1624 / P 0.468 / 12deg (Brennan 6410-04-02-O, tools/measure/ports.py), with a
+    row note (single STEP, port drill = the measured minor). -02 female JIC (0304-C-02, 0306-02): NOT done - no STEP with a female -02 JIC
+    on disk (BRENNAN_0304-C-02 / 0306-02 / any 2406-02-xx needed).
+
+2. ASSUMPTIONS ADDED (each written into $PRP@AxialSource of the rows it touches)
+--------------------------------------------------------------------------------
+A1 -40 male end: Brennan blank cone 2.7769 at the tip (5404-40-40 both ends, 5406-40-32, 2501-40-40-FG NPT leg: identical) ->
+   E0 = 2.7769 - 0.4589 P. Evidence: nptfm40.py on 22 Brennan male NPTF ends -04..-32 (measure_40/nptfm40_validate_raw.txt): the blank
+   sits k = 0.4585..0.4595 P above ASME E0 at all 8 library sizes, and the measured end length = ENDL exactly at every size. ASSUMED that
+   Brennan's blank rule holds at -40.
+A2 -40 thread length L2 = 16 (D - E0 - 0.8P) + 2P = 1.1374: the ASME identity "crest cone meets D at L5 = L2 - 2P", checked to 1e-4 on
+   all 9 library sizes (generator's own NPTF table); D 2.875 = the smaller Brennan collar (the library D at -16/-24/-32 = the smaller of
+   the Brennan collars). tpi 8 = Brennan TFA catalog callout "2-1/2-8". E1 / L1 unknown (None; no end module reads them).
+A3 -40 female port: Brennan 5000-40-40 has no separate tap drill - taper 2.7892 -> 2.729 over 1.0443, then the 2.729 bore through.
+   FPT[40] tap drill 2.729, P1 1.0443 (= thread depth; on the coupling the pockets meet anyway). Extractor validated on 5405-08-08
+   (0.718 to 0.90) and 5405-16-16 (to 1.14 = FPT[16] P1) - measure_40/fpt_port_validate.txt.
+A4 5404N -06 round-bar step 0.0040 (documented fix; see 1(1)).
+A5 6400 bore step at the hex mid-plane (hand-made table rule) - text in S6400_ASSUME.
+A6 6400-L long JIC end: hex length = the 6400 row of the same dashes; the JIC thread runs from the land to the relief; the library 60deg
+   ramp + relief are kept at the hex (Brennan 6400-L-08-08-O runs the thread cylinder straight into the hex face). Measured on ONE STEP:
+   Brennan 6400-L-08-08-O JIC end 1.880 / hex 0.382 / ORB 0.438 / overall 2.700 vs model 1.877 / 0.385 / 0.438 / 2.70
+   (measure_40/brennan_6400_outlines.txt). The 6 6400-L rows go VERIFIED -> ASSUMED.
+A7 -02 female ORB port geometry and port drill 0.270 from the Brennan 6410-04-02-O STEP only.
+Brennan cross-checks of the 6400 SPEC (own STEPs, measure_40/brennan_6400_outlines.txt): 6400-14-14-O overall 1.99, JIC end 0.890, ORB
+end 0.594, bore 0.719 = model; 6400-32-32-O overall 2.78, JIC end 1.333, ORB end 0.594, bore 1.781 (model 1.78).
+
+3. CHECKS (checks_out/, test/closedloop/, regen/cmp.txt)
+--------------------------------------------------------
+- vbacheck OK (7 macros), dofcheck_straight fully defined / 0 redundant (7), allcfg_check 0 outline problems: 5404N 22, 5000 22, 5404 31,
+  6400 62 (feature root) / 56 (untouched), 6410 32, 5406 30 (TEST).
+- OCP closed loop (scripts/closedloop.py -> test/closedloop/closedloop.txt): FAIL count 0. -40 male end on 5404-40-40 (crest at tip, L2,
+  relief, end 1.515, taper) + control 5404-08-08; 5404N OMi rows -04/-06/-08 (L, crest, L2, bar C, step); -02 port on 6410-04-02-O
+  (RF, RC, angle, minor, depth) + control 6410-04-04-O; 5000-40-40 pocket; ALL 62 6400 configurations: ORB thread / THDL / GD / GW
+  (plugs.orb_end), JIC chain TM / SL / CD / LL / TZ / RL / end (jicm.py), overall, hex, bores = review row = library; vs the hand-made
+  master table (50 common configurations): equal except the 8 A19 OMi cells the stage applied after that master was built (expected).
+- Regression (regen/cmp.txt): ALL straight + tee roots, base vs new tools on the untouched stage: every root IDENTICAL (SW2 cells + macro)
+  except the new root 6400 (56 configurations; base has no SPEC). gen_tee 1503 fails identically in both (pre-existing). On the feature root
+  (target cells applied) no other root changes either (checks_out/regress.txt) - incl. every ORB-end root: the 6410-04-02-O ORB cells
+  do not alter the ORB library (ORB[4] already set by an earlier row, same values).
+
+4. FOR THE USER / MAIN SESSION TO DECIDE
+-----------------------------------------
+D1 -40 pipe end: accept the derived E0 2.71954 / L2 1.1374 (Brennan blank + rule validated on 8 sizes + the ASME identity)? The alternative
+   remains the ASME B1.20.1 row for 2-1/2-8 (not in the project).
+D2 New data cells (own Brennan STEPs, proposed in test/cells_feature.csv, kind brennan-dim): 5000-40-40 TAPDRILL1/2 2.729; 5404-40-40
+   NPTFA/B_ENDL 1.515; 6410-04-02-O D3 0.270 (no OMi / Air-Way / catalog value). Plus end-library cells (THDMAJ / PIPEOD 2.875, thread
+   texts). 5404-40-40 NPTFA/B_E0 / E1 / L2 left empty (the generator does not read them).
+D3 5404N -06 (7 rows): built by the generator; SolidWorks must re-check the threads (QA #163 failure was the thread sweeps at -06, even with
+   -06 as the reference configuration). If they fail again, the next look is the thread end at the bar (Brennan has no 5404-N-06 file).
+D4 6400 rebuild: the generated master has 56 configurations on today's stage (+6 target rows = 62). The hand-made master's 8 DROP
+   configurations (6400-02-02-O, -05-08, -08-05, -14-12, -14-16, -20-12, -20-16, -20-20) are not generated (DROP rows are never built).
+   Dimension names change (generator names); 8 A19 cells take the OMi values. 6400-L rows (6) become configurations of the 6400 master.
+D5 5406-40-32 still waits on A9 (the -32 tap drill); with a TEST tap drill its -40 male end builds (test/gen_T).
+D6 2501-40-40-FG: the row has no data (tee / data work). When it gets data, gen_tee should append NPTF40_ASSUME (G.NPTF40_ASSUME) to its
+   $PRP@AxialSource - gen_tee is not changed here.
+D7 Stale wave-2 cell comments once this ships: 5000-40-40 / 5404-40-40 / 5406-40-32 ("-40 ... not in the end library") and 6410-04-02-O
+   ("no port drill D3 and no measured -02 port geometry yet").
+D8 0304-C-02 / 0306-02: need a Brennan STEP with a female -02 JIC (download).
+D9 Not applied (would change built $PRP@AxialSource): the 5404N SPEC text "step ... is the difference between C and the pipe OD" is
+   inexact (the step is between C and the crest cone at L2), as noted on 2026-10-01.
+
+5. MERGE NOTES
+--------------
+All edits are additive and keyed to their dash / SPEC: NPTF / ENDL / FPT entries only for dash 40 (guarded "if 40 not in ..."), ORBF_MEAS
+gets key 2, SPEC 5404N gets dashre1, SPEC 6400 + load_6400 / end_JICLONG / _libchk_6400 are new; build_rows changes: dashre1 parsing
+(xlen_), the round-bar branch (ROUND_STEP_MIN, model_extra), NPTF40_ASSUME / VERIFIED->ASSUMED for n40 ends. end_NPTFM / end_NPTFF
+return one extra key (n40); end_ORBF appends a note only for dash 2.

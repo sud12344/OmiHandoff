@@ -1,0 +1,3 @@
+6408 UPDATE (2026-09-24) - replaces the batch-4 Build_6408_MASTER.bas / DesignTable_6408_SW2.xlsx
+Now 12 configs (was 11): 6408-32-O-SOLID added. Its ORB groove width 0.125 was measured on your Brennan
+6400-32-32-O STEP (root dia 2.381 = ORD-5700, thread length 0.469 = the table). Run it exactly as in RUN_ME_batch4.

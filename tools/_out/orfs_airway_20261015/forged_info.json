@@ -1,0 +1,517 @@
+{
+ "note": "forged_info.py (2026-10-15): INFORMATION ONLY - how often Air-Way's NON-forged ORFS rows print the same leg lengths / hexes as\nBrennan's forged (-FG) rows of the same size. Nothing is built from this (user rule: no -FG part from non-forged Air-Way rows); it is\nthe evidence for the user if they want to revisit that rule for ORFS.\n\nColumn pairs by drawing meaning (Brennan letters vs Air-Way letters on the same view): leg lengths in side order, JJ FLATS = the\nforged body flats (Air-Way S2 / S3 = body hex), C HEX = swivel nut / locknut hex. Where the meaning is unclear the pair is not used.\npython -I forged_info.py  ->  ../forged_info.json + printed summary",
+ "series": {
+  "FS2500-FG": {
+   "airway": "FF2500",
+   "sizes_in_both": 7,
+   "rows_all_equal": 7,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7 (2)": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2501-FG": {
+   "airway": "FF2501",
+   "sizes_in_both": 18,
+   "rows_all_equal": 8,
+   "columns": {
+    "M LGTH ~ L7": {
+     "equal": 14,
+     "different": 4,
+     "not_compared": 0
+    },
+    "N LGTH ~ N": {
+     "equal": 13,
+     "different": 5,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 14,
+     "different": 4,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2503-FG": {
+   "airway": "FF2503",
+   "sizes_in_both": 8,
+   "rows_all_equal": 2,
+   "columns": {
+    "M LGTH ~ L12": {
+     "equal": 6,
+     "different": 2,
+     "not_compared": 0
+    },
+    "N LGTH ~ N2": {
+     "equal": 5,
+     "different": 3,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 4,
+     "different": 4,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2603-FG": {
+   "airway": "FF2603",
+   "sizes_in_both": 10,
+   "rows_all_equal": 6,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 9,
+     "different": 1,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7 (2)": {
+     "equal": 9,
+     "different": 1,
+     "not_compared": 0
+    },
+    "M3 LGTH ~ L7 (3)": {
+     "equal": 9,
+     "different": 1,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 7,
+     "different": 3,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2650-FG": {
+   "airway": "FF2650",
+   "sizes_in_both": 2,
+   "rows_all_equal": 1,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 2,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7 (2)": {
+     "equal": 2,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M3 LGTH ~ L7 (3)": {
+     "equal": 2,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M4 LGTH ~ L7 (4)": {
+     "equal": 2,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 1,
+     "different": 1,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2701-FG": {
+   "airway": "FF2701",
+   "sizes_in_both": 8,
+   "rows_all_equal": 6,
+   "columns": {
+    "R LGTH ~ L16": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "S LGTH ~ L17": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 6,
+     "different": 2,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2702-FG": {
+   "airway": "FF2702",
+   "sizes_in_both": 7,
+   "rows_all_equal": 5,
+   "columns": {
+    "P LGTH ~ L12": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "ZZ LGTH ~ L18": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 5,
+     "different": 2,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2703-FG": {
+   "airway": "FF2703",
+   "sizes_in_both": 7,
+   "rows_all_equal": 5,
+   "columns": {
+    "R1 LGTH ~ L16 (1)": {
+     "equal": 6,
+     "different": 1,
+     "not_compared": 0
+    },
+    "R2 LGTH ~ L16 (2)": {
+     "equal": 6,
+     "different": 1,
+     "not_compared": 0
+    },
+    "S LGTH ~ L7": {
+     "equal": 6,
+     "different": 1,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 6,
+     "different": 1,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS2704-FG": {
+   "airway": "FF2704",
+   "sizes_in_both": 6,
+   "rows_all_equal": 6,
+   "columns": {
+    "R1 LGTH ~ L16 (1)": {
+     "equal": 6,
+     "different": 0,
+     "not_compared": 0
+    },
+    "S LGTH ~ L17": {
+     "equal": 6,
+     "different": 0,
+     "not_compared": 0
+    },
+    "R2 LGTH ~ L16 (3)": {
+     "equal": 6,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 6,
+     "different": 0,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6500-FG": {
+   "airway": "FF6500",
+   "sizes_in_both": 8,
+   "rows_all_equal": 5,
+   "columns": {
+    "M LGTH ~ L7": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "AAA LGTH ~ L21": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "C HEX ~ S": {
+     "equal": 7,
+     "different": 1,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 5,
+     "different": 3,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6502-FG": {
+   "airway": "FF6502",
+   "sizes_in_both": 8,
+   "rows_all_equal": 0,
+   "columns": {
+    "L1 LGTH ~ L7": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "L2 LGTH ~ L52": {
+     "equal": 0,
+     "different": 8,
+     "not_compared": 0
+    },
+    "C HEX ~ S": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 5,
+     "different": 3,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6600-FG": {
+   "airway": "FF6600",
+   "sizes_in_both": 7,
+   "rows_all_equal": 6,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7 (2)": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "AAA LGTH ~ L21": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "C HEX ~ S": {
+     "equal": 7,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 6,
+     "different": 1,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6602-FG": {
+   "airway": "FF6602",
+   "sizes_in_both": 9,
+   "rows_all_equal": 7,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 9,
+     "different": 0,
+     "not_compared": 0
+    },
+    "AAA LGTH ~ L21": {
+     "equal": 9,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7": {
+     "equal": 9,
+     "different": 0,
+     "not_compared": 0
+    },
+    "C HEX ~ S": {
+     "equal": 8,
+     "different": 1,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 7,
+     "different": 2,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6801-NWO-FG": {
+   "airway": "FF6801",
+   "sizes_in_both": 29,
+   "rows_all_equal": 22,
+   "columns": {
+    "M LGTH ~ L7": {
+     "equal": 28,
+     "different": 1,
+     "not_compared": 0
+    },
+    "N LGTH ~ L10": {
+     "equal": 27,
+     "different": 2,
+     "not_compared": 0
+    },
+    "C HEX ~ S3": {
+     "equal": 29,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 23,
+     "different": 6,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6801-L-NWO-FG": {
+   "airway": "FF6801-L",
+   "sizes_in_both": 8,
+   "rows_all_equal": 5,
+   "columns": {
+    "M LGTH ~ L7": {
+     "equal": 7,
+     "different": 1,
+     "not_compared": 0
+    },
+    "N LGTH ~ L50": {
+     "equal": 5,
+     "different": 3,
+     "not_compared": 0
+    },
+    "C HEX ~ S3": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 8,
+     "different": 0,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6802-NWO-FG": {
+   "airway": "FF6802",
+   "sizes_in_both": 21,
+   "rows_all_equal": 9,
+   "columns": {
+    "M LGTH ~ L12": {
+     "equal": 18,
+     "different": 3,
+     "not_compared": 0
+    },
+    "N LGTH ~ L13": {
+     "equal": 20,
+     "different": 1,
+     "not_compared": 0
+    },
+    "C HEX ~ S3": {
+     "equal": 19,
+     "different": 2,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 11,
+     "different": 10,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6803-NWO-FG": {
+   "airway": "FF6803",
+   "sizes_in_both": 10,
+   "rows_all_equal": 4,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 10,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7 (2)": {
+     "equal": 10,
+     "different": 0,
+     "not_compared": 0
+    },
+    "N LGTH ~ L10": {
+     "equal": 10,
+     "different": 0,
+     "not_compared": 0
+    },
+    "C HEX ~ S3": {
+     "equal": 8,
+     "different": 2,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 5,
+     "different": 5,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6804-NWO-FG": {
+   "airway": "FF6804",
+   "sizes_in_both": 16,
+   "rows_all_equal": 11,
+   "columns": {
+    "M1 LGTH ~ L7 (1)": {
+     "equal": 15,
+     "different": 1,
+     "not_compared": 0
+    },
+    "N LGTH ~ L10": {
+     "equal": 16,
+     "different": 0,
+     "not_compared": 0
+    },
+    "M2 LGTH ~ L7 (3)": {
+     "equal": 15,
+     "different": 1,
+     "not_compared": 0
+    },
+    "C HEX ~ S3": {
+     "equal": 16,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 12,
+     "different": 4,
+     "not_compared": 0
+    }
+   }
+  },
+  "FS6809-NWO-FG": {
+   "airway": "FF6809",
+   "sizes_in_both": 6,
+   "rows_all_equal": 3,
+   "columns": {
+    "AAA LGTH ~ L21": {
+     "equal": 5,
+     "different": 1,
+     "not_compared": 0
+    },
+    "N LGTH ~ L10": {
+     "equal": 6,
+     "different": 0,
+     "not_compared": 0
+    },
+    "JJ FLATS ~ S2": {
+     "equal": 4,
+     "different": 2,
+     "not_compared": 0
+    }
+   }
+  }
+ },
+ "cells": {
+  "equal": 669,
+  "different": 101
+ }
+}

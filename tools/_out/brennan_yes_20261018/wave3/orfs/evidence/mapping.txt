@@ -1,0 +1,156 @@
+== FS0304-C: ORFS p19 FS0304-C "CAP ASSEMBLY INSERT" - NEW columns (table had none)
+   L@DRIVE <- "L" = nut length (open face -> closed end, drawing L); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   NUTHEX@HEX <- "HEX" = nut hex across flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   H@DRIVE <- "H O.D." = insert collar OD (drawing H); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   K@DRIVE <- "K LGTH" = insert length (drawing K, insert inner face -> outer face); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS0306: ORFS p20 FS0306 "BULKHEAD LOCK NUT"
+   H2@DRIVE <- "TT WIDTH" = nut thickness; same-table check: 6/6 rows with an Air-Way value agree to rounding
+   S4HEX@HEX <- "B HEX" = nut hex; same-table check: 6/6 rows with an Air-Way value agree to rounding
+== FS0319: ORFS p20 FS0319 "BRAZE SLEEVE"
+   L@DRIVE <- "F LGTH" = sleeve length; same-table check: 6/6 rows with an Air-Way value agree to rounding
+   D8@DRIVE <- "A O.D." = sleeve collar OD; same-table check: 6/6 rows with an Air-Way value agree to rounding
+== FS1700: Flange p4 FS1700 "MFS-FLANGE STRAIGHT - CODE 61" - NEW columns (table had none)
+   L28@DRIVE <- "L (in.)" = face-seal face -> flange face (overall); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   CHEX@HEX <- "A/F (in.)" = body wrench flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS1800: Flange p4 FS1800 "MFS-FLANGE STRT CODE 62" - NEW columns (table had none)
+   L28@DRIVE <- "L (in.)" = face-seal face -> flange face (overall); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   CHEX@HEX <- "A/F (in.)" = body wrench flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS1704: Flange p6 FS1704-FG "MFS-FLANGE 90 DEG CODE 61" - NEW columns (table had none)
+   M@DRIVE <- "L1 (in.)" = face-seal face -> crossing (FS leg); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   N2@DRIVE <- "L2 (in.)" = flange face -> crossing (flange leg); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   Y@HEX <- "A/F (in.)" = forged body across flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS1804: Flange p7 FS1804-FG "MFS-FLANGE 90 DEG CODE 62" - NEW columns (table had none)
+   M@DRIVE <- "L1 (in.)" = face-seal face -> crossing (FS leg); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   N2@DRIVE <- "L2 (in.)" = flange face -> crossing (flange leg); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   Y@HEX <- "A/F (in.)" = forged body across flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS2403: ORFS p3 FS2403 "MFS-MFS STRAIGHT"
+   L6@DRIVE <- "FF LGTH" = overall face -> face; same-table check: 15/15 rows with an Air-Way value agree to rounding
+   S1HEX@HEX <- "H HEX" = body hex; same-table check: 15/15 rows with an Air-Way value agree to rounding
+== FS2406: ORFS p4 FS2406 "FFS-MFS TUBE END REDUCER"
+   L36@DRIVE <- "L LGTH" = collar face -> male face; same-table check: 11/12 rows with an Air-Way value agree to rounding (1 differ, e.g. FS2406-20-16 1.34 vs 1.514)
+        differs: FS2406-20-16 1.34 vs 1.514
+   NUTHEX@HEX <- "C HEX" = nut hex (FS0318 nut of the first dash, Q-FS2406-NUT); same-table check: 12/12 rows with an Air-Way value agree to rounding
+== FS2500: ORFS p7 FS2500-FG "MFS-MFS 90 DEG ELBOW"
+   L7_1@DRIVE <- "M1 LGTH" = leg 1 (A1) face -> crossing; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   L7_2@DRIVE <- "M2 LGTH" = leg 2 (A2) face -> crossing; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 7/7 rows with an Air-Way value agree to rounding
+== FS2501: ORFS p7-8 FS2501-FG "MFS-MP 90 DEG ELBOW"
+   L7@DRIVE <- "M LGTH" = FS leg face -> crossing; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   N@DRIVE <- "N LGTH" = pipe leg tip -> crossing; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 7/7 rows with an Air-Way value agree to rounding
+== FS2503: ORFS p8 FS2503-FG "MFS-MP 45 DEG ELBOW"
+   L12@DRIVE <- "M LGTH" = FS leg face -> crossing; same-table check: 2/2 rows with an Air-Way value agree to rounding
+   N2@DRIVE <- "N LGTH" = pipe leg tip -> crossing; same-table check: 2/2 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 2/2 rows with an Air-Way value agree to rounding
+== FS2601: ORFS p14 FS2601-FG "MFS-MFS-MP TEE" - NEW columns (table had none)
+   L7_1@DRIVE <- "M1 LGTH" = run leg A1 face -> crossing; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   L7_2@DRIVE <- "M2 LGTH" = run leg A2 face -> crossing; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   N@DRIVE <- "N LGTH" = pipe branch tip -> crossing; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   S2HEX@HEX <- "JJ FLATS" = forged flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS2701: ORFS p8 FS2701-FG "MFS-MFS BULKHEAD 90 DEG ELBOW"
+   L16@DRIVE <- "R LGTH" = FS leg face -> crossing; same-table check: 6/6 rows with an Air-Way value agree to rounding
+   L17@DRIVE <- "S LGTH" = bulkhead leg tip -> crossing; same-table check: 6/6 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 6/6 rows with an Air-Way value agree to rounding
+== FS2701-LN: ORFS p8 FS2701-FG "MFS-MFS BULKHEAD 90 DEG ELBOW"
+   L16@DRIVE <- "R LGTH" = FS leg face -> crossing; same-table check: 6/6 rows with an Air-Way value agree to rounding
+   L17@DRIVE <- "S LGTH" = bulkhead leg tip -> crossing; same-table check: 6/6 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 6/6 rows with an Air-Way value agree to rounding
+== FS2702: ORFS p8 FS2702-FG "MFS-MFS BULKHEAD 45 DEG ELBOW"
+   L12@DRIVE <- "P LGTH" = FS leg face -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   L18@DRIVE <- "ZZ LGTH" = bulkhead leg tip -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 5/5 rows with an Air-Way value agree to rounding
+== FS2702-LN: ORFS p8 FS2702-FG "MFS-MFS BULKHEAD 45 DEG ELBOW"
+   L12@DRIVE <- "P LGTH" = FS leg face -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   L18@DRIVE <- "ZZ LGTH" = bulkhead leg tip -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 5/5 rows with an Air-Way value agree to rounding
+== FS2703: ORFS p16 FS2703-FG "MFS-MFS-MFS BULKHEAD TEE"
+   L16_1@DRIVE <- "R1 LGTH" = run leg A1 face -> crossing; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   L16_2@DRIVE <- "R2 LGTH" = run leg A2 face -> crossing; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   L7@DRIVE <- "S LGTH" = bulkhead branch tip -> crossing; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 4/4 rows with an Air-Way value agree to rounding
+== FS2703-LN: ORFS p16 FS2703-FG "MFS-MFS-MFS BULKHEAD TEE"
+   L16_1@DRIVE <- "R1 LGTH" = run leg A1 face -> crossing; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   L16_2@DRIVE <- "R2 LGTH" = run leg A2 face -> crossing; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   L7@DRIVE <- "S LGTH" = bulkhead branch tip -> crossing; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 4/4 rows with an Air-Way value agree to rounding
+== FS6400: ORFS p5 FS6400-O "MFS-MORB STRAIGHT"
+   L8@DRIVE <- "L LGTH" = FS face -> ORB tip (overall); same-table check: 25/29 rows with an Air-Way value agree to rounding (4 differ, e.g. FS6400-06-06-O 1.25 vs 1.260)
+        differs: FS6400-06-06-O 1.25 vs 1.260
+        differs: FS6400-16-16-O 1.99 vs 1.978
+        differs: FS6400-24-24-O 2.22 vs 2.128
+        differs: FS6400-32-32-O 2.32 vs 2.313
+   S5HEX@HEX <- "H HEX" = body hex; same-table check: 27/29 rows with an Air-Way value agree to rounding (2 differ, e.g. FS6400-04-06-O 0.69 vs 0.750)
+        differs: FS6400-04-06-O 0.69 vs 0.750
+        differs: FS6400-20-16-O 1.75 vs 1.875
+== FS6400-L: ORFS p5 FS6400-L-O "MFS-MORB STRAIGHT LONG"
+   L32@DRIVE <- "L LGTH" = FS face -> ORB tip (overall); same-table check: 3/3 rows with an Air-Way value agree to rounding
+   S5HEX@HEX <- "H HEX" = body hex; same-table check: 3/3 rows with an Air-Way value agree to rounding
+== FS6402: ORFS p5 FS6402 "MFS-FJS STRAIGHT" - NEW columns (table had none)
+   L@DRIVE <- "L LGTH" = FS face -> JIC swivel nut face (overall); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   S1HEX@HEX <- "H HEX" = body hex; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   SHEX@HEX <- "C HEX" = JIC swivel nut hex; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS6500: ORFS p9 FS6500-FG "MFS-FFSS 90 DEG ELBOW"
+   L7@DRIVE <- "M LGTH" = FS leg face -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   L21@DRIVE <- "AAA LGTH" = swivel leg crossing -> nut face; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   SHEX@HEX <- "C HEX" = swivel nut hex; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 5/5 rows with an Air-Way value agree to rounding
+== FS6502: ORFS p9 FS6502-FG "MFS-FFSS 45 DEG ELBOW"
+   L7@DRIVE <- "L1 LGTH" = FS leg face -> crossing; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   L2@DRIVE <- "L2 LGTH" = swivel leg crossing -> nut face along the 45 deg axis (NEW column: mapping to Air-Way L52 not confirmed); no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   SHEX@HEX <- "C HEX" = swivel nut hex; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   S2HEX@HEX <- "JJ FLATS" = forged flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+== FS6505: ORFS p6 FS6505 "MP-FFSS STRAIGHT"
+   L16@DRIVE <- "L LGTH" = pipe tip -> swivel nut face; same-table check: 0/3 rows with an Air-Way value agree to rounding (3 differ, e.g. FS6505-08-08 1.99 vs 2.150)
+        differs: FS6505-08-08 1.99 vs 2.150
+        differs: FS6505-12-12 2.5 vs 2.370
+        differs: FS6505-16-16 2.87 vs 2.880
+   SHEX@HEX <- "C HEX" = swivel nut hex; same-table check: 2/3 rows with an Air-Way value agree to rounding (1 differ, e.g. FS6505-16-16 1.61 vs 1.625)
+        differs: FS6505-16-16 1.61 vs 1.625
+   S1HEX@HEX <- "H HEX" = body hex; same-table check: 2/3 rows with an Air-Way value agree to rounding (1 differ, e.g. FS6505-12-12 1.13 vs 1.250)
+        differs: FS6505-12-12 1.13 vs 1.250
+   D2@BORE <- "A HOLE" = pipe-end bore; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   D19@BORE <- "B HOLE" = swivel-end bore; same-table check: 2/3 rows with an Air-Way value agree to rounding (1 differ, e.g. FS6505-16-16 0.79 vs 0.783)
+        differs: FS6505-16-16 0.79 vs 0.783
+== FS6565: ORFS p6-7 FS6565 "FFSS-FFSS STRAIGHT"
+   L45@DRIVE <- "L LGTH" = nut face -> nut face; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   S1HEX@HEX <- "H HEX" = body hex; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   S_1HEX@HEX <- "C HEX" = swivel nut 1 hex; same-table check: 4/4 rows with an Air-Way value agree to rounding
+   S_2HEX@HEX <- "C HEX" = swivel nut 2 hex (Brennan prints one C HEX for both nuts); same-table check: 4/4 rows with an Air-Way value agree to rounding
+== FS6602: ORFS p17 FS6602-FG "MFS-FFSS-MFS RUN TEE"
+   L7_1@DRIVE <- "M1 LGTH" = run leg A1 face -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   L21@DRIVE <- "AAA LGTH" = run swivel leg crossing -> nut face; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   L7@DRIVE <- "M2 LGTH" = branch A2 face -> crossing; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   SHEX@HEX <- "C HEX" = swivel nut hex; same-table check: 5/5 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 5/5 rows with an Air-Way value agree to rounding
+== FS6801: ORFS p10 FS6801-NWO-FG "MFS-MAORB 90 DEG ELBOW"
+   L7@DRIVE <- "M LGTH" = FS leg face -> crossing; same-table check: 20/20 rows with an Air-Way value agree to rounding
+   L10@DRIVE <- "N LGTH" = adjustable stud tip -> crossing; same-table check: 20/20 rows with an Air-Way value agree to rounding
+   S3HEX@HEX <- "C HEX" = lock nut hex; same-table check: 20/20 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 20/20 rows with an Air-Way value agree to rounding
+== FS6802: ORFS p10 FS6802-NWO-FG "MFS-MAORB 45 DEG ELBOW"
+   L12@DRIVE <- "M LGTH" = FS leg face -> crossing; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   L13@DRIVE <- "N LGTH" = adjustable stud tip -> crossing; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   S3HEX@HEX <- "C HEX" = lock nut hex; same-table check: 7/7 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 7/7 rows with an Air-Way value agree to rounding
+== FS6803: ORFS p17 FS6803-NWO-FG "MFS-MFS-MAORB TEE"
+   L7_1@DRIVE <- "M1 LGTH" = run leg A1 face -> crossing; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   L7_2@DRIVE <- "M2 LGTH" = run leg A2 face -> crossing; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   L10@DRIVE <- "N LGTH" = adjustable stud tip -> crossing; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   S3HEX@HEX <- "C HEX" = lock nut hex; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 3/3 rows with an Air-Way value agree to rounding
+== FS6809: ORFS p11 FS6809-NWO-FG "FFSS-MAORB 90 DEG ELBOW"
+   L21@DRIVE <- "AAA LGTH" = swivel leg crossing -> nut face; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   L10@DRIVE <- "N LGTH" = adjustable stud tip -> crossing; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   SHEX@HEX <- "C1 HEX" = swivel nut hex; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   S3HEX@HEX <- "C2 HEX" = lock nut hex; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   S2HEX@HEX <- "JJ FLATS" = forged flats; same-table check: 3/3 rows with an Air-Way value agree to rounding
+   D19@BORE <- "A HOLE" = swivel-end bore; same-table check: 2/3 rows with an Air-Way value agree to rounding (1 differ, e.g. FS6809-16-16-NWO-FG 0.79 vs 0.783)
+        differs: FS6809-16-16-NWO-FG 0.79 vs 0.783
+   D20@BORE <- "B HOLE" = stud-end bore; same-table check: 1/3 rows with an Air-Way value agree to rounding (2 differ, e.g. FS6809-16-16-NWO-FG 0.85 vs 0.811)
+        differs: FS6809-16-16-NWO-FG 0.85 vs 0.811
+        differs: FS6809-20-20-NWO-FG 1.08 vs 1.024
+== FS7202: ORFS p11 FS7202-NWO-FG "MFS-MBSPP 90 DEG ELBOW" (lengths and hexes printed in MILLIMETRES) - NEW columns (table had none)
+   L7@DRIVE <- "M LGTH" = FS leg face -> crossing; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   L10@DRIVE <- "N LGTH" = BSPP stud tip -> crossing; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   S3HEX@HEX <- "C4 HEX" = lock nut hex; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)
+   S2HEX@HEX <- "JJ HEX" = forged body across flats; no row of this table has both an Air-Way and a Brennan value (drawing mapping only; cross-check in evidence/crosscheck.txt)

@@ -1,0 +1,34 @@
+{
+ "A_1804": {
+  "built": 1041,
+  "unbuilt": {
+   "BRENNAN: possible only with Brennan data (catalog prints it)": 373,
+   "my work only (staged or to generate)": 55,
+   "needs your decisions (+ downloads)": 142,
+   "needs OMi (new scope: no Air-Way sizes)": 12,
+   "BRENNAN: possible only with Brennan data (Brennan 3D file only)": 53,
+   "data / my work only": 32,
+   "needs your STEP downloads (shape)": 75,
+   "data now (Air-Way O-rings, master staged)": 21
+  }
+ },
+ "B_77": {
+  "no source (OMi only)": 6,
+  "BRENNAN: catalog prints it": 34,
+  "data (staged, wrongly DROP)": 37
+ },
+ "C_ORFS": {
+  "BRENNAN: catalog prints it": 110,
+  "no source (OMi only)": 6,
+  "data (staged; needs the ORFS model type + STEPs)": 269
+ },
+ "D_compression": {
+  "no source (OMi only)": 230
+ },
+ "E_testgauge": {
+  "no source (OMi only)": 12
+ },
+ "F_kits": {
+  "out of scope (kits)": 30
+ }
+}

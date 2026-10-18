@@ -1,0 +1,132 @@
+== 1703-24-24-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_1703-24-24-FG.stp  sha256 53cd5f141d4abb21
+    leg flange dir -90 deg, Z=0 section (hex corners): tip a_max = 2.3800
+      axis-parallel r 0.6300 (dia 1.2600)  a -0.0000 .. 2.3800
+      axis-parallel r 0.9825 (dia 1.9650)  a 0.6800 .. 2.0650
+      axis-parallel r 1.0575 (dia 2.1150)  a 2.2700 .. 2.3800
+      axis-parallel r 1.0825 (dia 2.1650)  a -0.0000 .. 0.6411
+      axis-parallel r 1.1875 (dia 2.3750)  a 2.0650 .. 2.3800
+    leg flange, section normal to X (flats normal to Z at r = A/F/2): tip a_max = 2.3800
+      axis-parallel r 0.6300 (dia 1.2600)  a -0.0000 .. 2.3800
+      axis-parallel r 0.9355 (dia 1.8710)  a -0.2200 .. -0.0450
+      axis-parallel r 0.9355 (dia 1.8710)  a 0.0882 .. 0.1495
+      axis-parallel r 0.9355 (dia 1.8710)  a 0.1640 .. 0.2200
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.7655 .. -0.2200
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.0450 .. 0.0882
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.1495 .. 0.1640
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.2200 .. 0.6800
+      axis-parallel r 0.9825 (dia 1.9650)  a 0.6800 .. 2.0650
+      axis-parallel r 1.0575 (dia 2.1150)  a 2.2700 .. 2.3800
+      axis-parallel r 1.1875 (dia 2.3750)  a 2.0650 .. 2.3800
+    leg JIC dir 135 deg, Z=0 section (hex corners): tip a_max = 1.7800
+      axis-parallel r 0.6560 (dia 1.3120)  a 0.2350 .. 1.7800
+      axis-parallel r 0.8775 (dia 1.7550)  a 0.6970 .. 0.8220
+      axis-parallel r 0.8775 (dia 1.7550)  a 1.4020 .. 1.5318
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.8566 .. 1.3420
+      axis-parallel r 1.0825 (dia 2.1650)  a 0.4484 .. 0.6581
+== 1704-24-24-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_1704-24-24-FG.stp  sha256 21f8294334c31e87
+    leg JIC dir 180 deg, Z=0 section (hex corners): tip a_max = 2.3300
+      axis-parallel r 0.6560 (dia 1.3120)  a 0.6300 .. 2.3300
+      axis-parallel r 0.8775 (dia 1.7550)  a 1.2470 .. 1.3720
+      axis-parallel r 0.8775 (dia 1.7550)  a 1.9520 .. 2.0818
+      axis-parallel r 0.9375 (dia 1.8750)  a 1.4066 .. 1.8920
+      axis-parallel r 1.0825 (dia 2.1650)  a 1.0825 .. 1.2081
+      axis-parallel r 1.2210 (dia 2.4420)  a -0.9825 .. -0.9375
+      axis-parallel r 1.2210 (dia 2.4420)  a 0.9375 .. 0.9825
+      axis-parallel r 2.8350 (dia 5.6700)  a -1.1875 .. -0.9825
+      axis-parallel r 2.8350 (dia 5.6700)  a 0.9825 .. 1.1875
+      axis-parallel r 3.0400 (dia 6.0800)  a -1.0575 .. -0.9025
+      axis-parallel r 3.0400 (dia 6.0800)  a 0.9025 .. 1.0575
+      axis-parallel r 3.1500 (dia 6.3000)  a -1.1875 .. -1.0575
+      axis-parallel r 3.1500 (dia 6.3000)  a -0.8929 .. -0.6300
+      axis-parallel r 3.1500 (dia 6.3000)  a 0.6300 .. 0.8929
+      axis-parallel r 3.1500 (dia 6.3000)  a 1.0575 .. 1.1875
+    leg JIC, section normal to Y (flats normal to Z at r = A/F/2): tip a_max = 2.3300
+      axis-parallel r 0.6560 (dia 1.3120)  a 0.0260 .. 2.3300
+      axis-parallel r 0.8775 (dia 1.7550)  a 1.2470 .. 1.3720
+      axis-parallel r 0.8775 (dia 1.7550)  a 1.9520 .. 2.0818
+      axis-parallel r 0.9355 (dia 1.8710)  a -0.2200 .. -0.1783
+      axis-parallel r 0.9355 (dia 1.8710)  a -0.0762 .. -0.0549
+      axis-parallel r 0.9355 (dia 1.8710)  a 0.0540 .. 0.0753
+      axis-parallel r 0.9355 (dia 1.8710)  a 0.1775 .. 0.2200
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.5413 .. -0.2200
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.1783 .. -0.0762
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.0549 .. 0.0540
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.0753 .. 0.1775
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.2200 .. 1.2470
+      axis-parallel r 0.9375 (dia 1.8750)  a 1.4066 .. 1.8920
+    leg flange dir -90 deg, Z=0 section (hex corners): tip a_max = 3.1500
+      axis-parallel r 0.6300 (dia 1.2600)  a -0.0000 .. 3.1500
+      axis-parallel r 0.9825 (dia 1.9650)  a 1.2210 .. 2.8350
+      axis-parallel r 1.0575 (dia 2.1150)  a 3.0400 .. 3.1500
+      axis-parallel r 1.0825 (dia 2.1650)  a 0.0000 .. 1.1821
+      axis-parallel r 1.1875 (dia 2.3750)  a 2.8350 .. 3.1500
+    leg flange, section normal to X (flats normal to Z at r = A/F/2): tip a_max = 3.1500
+      axis-parallel r 0.6300 (dia 1.2600)  a 0.1810 .. 3.1500
+      axis-parallel r 0.9355 (dia 1.8710)  a -0.2200 .. -0.0450
+      axis-parallel r 0.9355 (dia 1.8710)  a 0.0882 .. 0.1495
+      axis-parallel r 0.9355 (dia 1.8710)  a 0.1640 .. 0.2200
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.5413 .. -0.2200
+      axis-parallel r 0.9375 (dia 1.8750)  a -0.0450 .. 0.0882
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.1495 .. 0.1640
+      axis-parallel r 0.9375 (dia 1.8750)  a 0.2200 .. 1.2210
+      axis-parallel r 0.9825 (dia 1.9650)  a 1.2210 .. 2.8350
+      axis-parallel r 1.0575 (dia 2.1150)  a 3.0400 .. 3.1500
+      axis-parallel r 1.1875 (dia 2.3750)  a 2.8350 .. 3.1500
+== 1804-08-08-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_1804-08-08-FG.stp  sha256 bc421d36a75f8217
+    leg JIC dir 180 deg, Z=0 section (hex corners): tip a_max = 1.5200
+      axis-parallel r 0.1955 (dia 0.3910)  a 0.1955 .. 1.5200
+      axis-parallel r 0.3295 (dia 0.6590)  a 0.8630 .. 0.9570
+      axis-parallel r 0.3295 (dia 0.6590)  a 1.2670 .. 1.3654
+      axis-parallel r 0.3750 (dia 0.7500)  a 0.9833 .. 1.2215
+      axis-parallel r 0.5052 (dia 1.0104)  a 0.5052 .. 0.8449
+      axis-parallel r 0.6130 (dia 1.2260)  a -0.4600 .. -0.4375
+      axis-parallel r 0.6130 (dia 1.2260)  a 0.4375 .. 0.4600
+      axis-parallel r 1.7450 (dia 3.4900)  a -0.6250 .. -0.4600
+      axis-parallel r 1.7450 (dia 3.4900)  a 0.4600 .. 0.6250
+      axis-parallel r 1.9400 (dia 3.8800)  a -0.5000 .. -0.3450
+      axis-parallel r 1.9400 (dia 3.8800)  a 0.3450 .. 0.5000
+      axis-parallel r 2.0500 (dia 4.1000)  a -0.6250 .. -0.5000
+      axis-parallel r 2.0500 (dia 4.1000)  a -0.3450 .. -0.1955
+      axis-parallel r 2.0500 (dia 4.1000)  a 0.1955 .. 0.3450
+      axis-parallel r 2.0500 (dia 4.1000)  a 0.5000 .. 0.6250
+    leg JIC, section normal to Y (flats normal to Z at r = A/F/2): tip a_max = 1.5200
+      axis-parallel r 0.1955 (dia 0.3910)  a -0.0000 .. 1.5200
+      axis-parallel r 0.3295 (dia 0.6590)  a 0.8630 .. 0.9570
+      axis-parallel r 0.3295 (dia 0.6590)  a 1.2670 .. 1.3654
+      axis-parallel r 0.3750 (dia 0.7500)  a 0.9833 .. 1.2215
+      axis-parallel r 0.4355 (dia 0.8710)  a -0.1200 .. -0.1016
+      axis-parallel r 0.4355 (dia 0.8710)  a -0.0432 .. -0.0309
+      axis-parallel r 0.4355 (dia 0.8710)  a 0.0308 .. 0.0432
+      axis-parallel r 0.4355 (dia 0.8710)  a 0.1015 .. 0.1200
+      axis-parallel r 0.4375 (dia 0.8750)  a -0.2526 .. -0.1200
+      axis-parallel r 0.4375 (dia 0.8750)  a -0.1016 .. -0.0432
+      axis-parallel r 0.4375 (dia 0.8750)  a -0.0309 .. 0.0308
+      axis-parallel r 0.4375 (dia 0.8750)  a 0.0432 .. 0.1015
+      axis-parallel r 0.4375 (dia 0.8750)  a 0.1200 .. 0.8630
+    leg flange dir -90 deg, Z=0 section (hex corners): tip a_max = 2.0500
+      axis-parallel r 0.1955 (dia 0.3910)  a 0.0000 .. 2.0500
+      axis-parallel r 0.3450 (dia 0.6900)  a 1.9400 .. 2.0500
+      axis-parallel r 0.4600 (dia 0.9200)  a 0.6130 .. 1.7450
+      axis-parallel r 0.5000 (dia 1.0000)  a 1.9400 .. 2.0500
+      axis-parallel r 0.5052 (dia 1.0104)  a 0.0000 .. 0.5949
+      axis-parallel r 0.6250 (dia 1.2500)  a 1.7450 .. 2.0500
+    leg flange, section normal to X (flats normal to Z at r = A/F/2): tip a_max = 2.0500
+      axis-parallel r 0.1955 (dia 0.3910)  a 0.0000 .. 2.0500
+      axis-parallel r 0.3450 (dia 0.6900)  a 1.9400 .. 2.0500
+      axis-parallel r 0.4355 (dia 0.8710)  a -0.1200 .. -0.0250
+      axis-parallel r 0.4355 (dia 0.8710)  a 0.0504 .. 0.0849
+      axis-parallel r 0.4355 (dia 0.8710)  a 0.0940 .. 0.1200
+      axis-parallel r 0.4375 (dia 0.8750)  a -0.2526 .. -0.1200
+      axis-parallel r 0.4375 (dia 0.8750)  a -0.0250 .. 0.0504
+      axis-parallel r 0.4375 (dia 0.8750)  a 0.1200 .. 0.6130
+      axis-parallel r 0.4600 (dia 0.9200)  a 0.6130 .. 1.7450
+      axis-parallel r 0.5000 (dia 1.0000)  a 1.9400 .. 2.0500
+      axis-parallel r 0.6250 (dia 1.2500)  a 1.7450 .. 2.0500
+== 4501-08-08-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_4501-08-08-FG.stp  sha256 3bc9ba6a8d593d6a
+   (shape-only sample: the catalog prints every body size of this family; HOSEB DESIGN s3 read it - not re-measured)
+== 4503-08-08-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_4503-08-08-FG.stp  sha256 c0fc1d95ee4c8ae7
+   (shape-only sample: the catalog prints every body size of this family; HOSEB DESIGN s3 read it - not re-measured)
+== 4601-08-06-NWO-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_4601-08-06-NWO-FG.stp  sha256 f08e5843c4367815
+   (shape-only sample: the catalog prints every body size of this family; HOSEB DESIGN s3 read it - not re-measured)
+== 4603-16-16-NWO-FG  C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\09_STEP_FILES\BRENNAN_4603-16-16-NWO-FG.stp  sha256 206a0b91249b6d9b
+   (shape-only sample: the catalog prints every body size of this family; HOSEB DESIGN s3 read it - not re-measured)

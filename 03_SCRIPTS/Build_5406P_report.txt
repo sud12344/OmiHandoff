@@ -1,0 +1,70 @@
+Build_5406P_MASTER  9/24/2026 5:50:16 PM
+OK    dim L2 = 1.2400 in (expect 1.2400)
+OK    dim BODYR = 0.7967 in (expect 0.7967)
+OK    dim NPTFA_MAJR = 0.6416 in (expect 0.6416)
+OK    dim NPTFA_THDL = 0.6828 in (expect 0.6828)
+      NPTFA_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFA_TAPER = 1.79 deg
+OK    dim NPTFA_RELL = 0.2572 in (expect 0.2572)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 1.8661 in^3 (expect 1.8661)
+OK    dim HEXB = 1.3800 in (expect 1.3800)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (5.5% of volume)
+OK    solid plug: End A face closed on the axis (x=0)
+OK    solid plug: End B face closed on the axis (x=1.2400)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 1.2832 in (expect 1.2832)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start = (0.0000, 0.0000, 0.6416)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.6416) axialIsX=True apex dir 1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.6416 (want 0.6416)
+OK    dim PROF_R = 0.6416 in (expect 0.6416)
+      APEXR: try 0 value 0.5720 (want 0.5720)
+OK    dim APEXR = 0.5720 in (expect 0.5720)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.09276 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 1.2849 (nominal 1.2400; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.2400
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 1.3890 / corners 1.5935 (expect 1.3800 / 1.5935)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5406P_SW2.xlsx
+OK    Configurations after table: 5 (expect 5)
+OK    5406-20P L2@DRIVE = 1.4700 (table 1.4700)
+OK    5406-20P BODYR@DRIVE = 1.0104 (table 1.0104)
+OK    5406-20P HEXB@HEX = 1.7500 (table 1.7500)
+OK    5406-20P NPTFA_MAJR@DRIVE = 0.8134 (table 0.8134)
+OK    5406-20P NPTFA_THDL@DRIVE = 0.7068 (table 0.7068)
+OK    5406-20P NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5406-20P NPTFA_RELL@DRIVE = 0.2632 (table 0.2632)
+OK    5406-20P PROF_R@THDPROF_A = 0.8134 (table 0.8134)
+OK    5406-20P one solid body (found 1)
+      5406-20P box x -0.055..1.470  y -0.875..0.875
+OK    5406-32P L2@DRIVE = 1.7500 (table 1.7500)
+OK    5406-32P BODYR@DRIVE = 1.4434 (table 1.4434)
+OK    5406-32P HEXB@HEX = 2.5000 (table 2.5000)
+OK    5406-32P NPTFA_MAJR@DRIVE = 1.1693 (table 1.1693)
+OK    5406-32P NPTFA_THDL@DRIVE = 0.7565 (table 0.7565)
+OK    5406-32P NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5406-32P NPTFA_RELL@DRIVE = 0.2735 (table 0.2735)
+OK    5406-32P PROF_R@THDPROF_A = 1.1693 (table 1.1693)
+OK    5406-32P one solid body (found 1)
+      5406-32P box x -0.081..1.750  y -1.261..1.250
+OK    All-config sweep: 4 configurations rebuilt, 0 feature/body failures
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\5406P_MASTER_175153.SLDPRT (first name was locked, error 0)

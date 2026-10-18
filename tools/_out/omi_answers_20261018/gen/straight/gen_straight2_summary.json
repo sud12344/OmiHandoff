@@ -1,0 +1,48 @@
+{
+ "6405": {
+  "configs": 40,
+  "ref": "6405-08-08-O",
+  "skipped": [
+   [
+    "6405-16-06-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6405-16-08-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6405-20-04-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6405-02-02-O",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6405-02-04-O",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6405-16-24-O",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6405-32-16-O",
+    "BUILD",
+    "MISSING"
+   ]
+  ],
+  "blocked": [
+   "6405-32-24-O: bore 2.38 > pocket 1.72"
+  ],
+  "verts": 8,
+  "cols": 32
+ }
+}

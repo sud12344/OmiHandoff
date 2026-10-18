@@ -1,0 +1,158 @@
+Build_5504_MASTER  9/24/2026 7:54:31 PM
+OK    dim M1 = 1.2300 in (expect 1.2300)
+OK    dim BODYR = 0.5300 in (expect 0.5300)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim M2 = 1.2300 in (expect 1.2300)
+OK    dim BODYR = 0.5300 in (expect 0.5300)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 1.0600 in (expect 1.0600)
+      HEX1: sgVERTICAL -> vertex |z| max 0.5300 (flats want 0.5300)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.485 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    dim HEXAF = 1.0600 in (expect 1.0600)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.5300 (flats want 0.5300)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.332 in on axis 1 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.5300 in (expect 0.5300)
+OK    dim PUCK_HT = 0.5300 in (expect 0.5300)
+OK    dim PUCK_R1B = 0.3060 in (expect 0.3060)
+OK    dim PUCK_R1T = 0.3060 in (expect 0.3060)
+OK    dim PUCK_XC = 0.6120 in (expect 0.6120)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    One solid body after legs+hex
+OK    select end face for POCKET1 at x=1.2300
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET1 sketch opened (active sketch exists)
+OK    POCKET1 circle created
+OK    dim TAPDRILL1 = 0.7000 in (expect 0.7000)
+OK    POCKET1 sketch closed and named (ProfileFeature)
+      POCKETCUT1 attempt 0: CreateDefinition returned Nothing
+      POCKETCUT1 attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT1 cut removes material (attempt 0)
+OK    POCKETCUT1 dims: DEPTH=1.2300 TAPDRILL1=0.7000 
+OK    select end face for POCKET2 at x=1.2300
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET2 sketch opened (active sketch exists)
+OK    POCKET2 circle created
+OK    dim TAPDRILL2 = 0.7000 in (expect 0.7000)
+OK    POCKET2 sketch closed and named (ProfileFeature)
+      POCKETCUT2 attempt 0: CreateDefinition returned Nothing
+      POCKETCUT2 attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT2 cut removes material (attempt 0)
+OK    POCKETCUT2 dims: DEPTH=1.2300 TAPDRILL2=0.7000 
+OK    leg 1 bore open on the axis at its face (X=+1.2300)
+OK    leg 2 bore open on the axis at its face (Y=+1.2300)
+OK    THD_End1: end face found at 1.2300
+OK    dim HELIXDIA = 0.7000 in (expect 0.7000)
+OK    THD_End1 helix sketch made (ProfileFeature)
+      THD_End1: InsertHelix ok
+OK    THD_End1 helix created
+OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End1: helix start = (1.2300, 0.0000, -0.3500)
+      THD_End1: profile on Top Plane
+      THD_End1: sketch start (1.2300,0.3500) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.2300 (want 1.2300)
+OK    dim PROF_AX = 1.2300 in (expect 1.2300)
+      PROF_R: try 0 value 0.3500 (want 0.3500)
+OK    dim PROF_R = 0.3500 in (expect 0.3500)
+      APEXR: try 0 value 0.4071 (want 0.4071)
+OK    dim APEXR = 0.4071 in (expect 0.4071)
+OK    THD_End1 60 deg tooth angle placed
+OK    THD_End1 profile sketch fully defined
+      THD_End1: sweep CreateFeature -> True
+OK    THD_End1 swept cut created
+OK    THD_End1 sweep removed material: 0.03205 in^3
+OK    THD_End1 suppressed
+OK    THD_End2: end face found at 1.2300
+OK    dim HELIXDIA = 0.7000 in (expect 0.7000)
+OK    THD_End2 helix sketch made (ProfileFeature)
+      THD_End2: InsertHelix ok
+OK    THD_End2 helix created
+OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End2: helix start = (0.3500, 1.2300, 0.0000)
+      THD_End2: profile on Front Plane
+      THD_End2: sketch start (0.3500,1.2300) axialIsX=False apex dir 1
+      PROF_AX: try 0 value 1.2300 (want 1.2300)
+OK    dim PROF_AX = 1.2300 in (expect 1.2300)
+      PROF_R: try 0 value 0.3500 (want 0.3500)
+OK    dim PROF_R = 0.3500 in (expect 0.3500)
+      APEXR: try 0 value 0.4071 (want 0.4071)
+OK    dim APEXR = 0.4071 in (expect 0.4071)
+OK    THD_End2 60 deg tooth angle placed
+OK    THD_End2 profile sketch fully defined
+      THD_End2: sweep CreateFeature -> True
+OK    THD_End2 swept cut created
+OK    THD_End2 sweep removed material: 0.03087 in^3
+OK    THD_End2 suppressed
+OK    X extent -0.612 .. 1.230 (expect -0.612 .. 1.230; threads may add a little)
+OK    Y extent -0.612 .. 1.230 (expect -0.612 .. 1.230)
+      Bounding box z -0.530 .. 0.530 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.5300 .. 0.5300 (expect -0.5300 .. 0.5300: hex flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5504_SW2.xlsx
+OK    Configurations after table: 6 (expect 6)
+      config check 1: 5504-02-02-FG
+OK    5504-02-02-FG M1@LEG1 = 0.6600 (table 0.6600)
+OK    5504-02-02-FG BODYR@LEG1 = 0.2800 (table 0.2800)
+OK    5504-02-02-FG M2@LEG2 = 0.6600 (table 0.6600)
+OK    5504-02-02-FG BODYR@LEG2 = 0.2800 (table 0.2800)
+OK    5504-02-02-FG DEPTH@POCKETCUT1 = 0.6600 (table 0.6600)
+OK    5504-02-02-FG DEPTH@POCKETCUT2 = 0.6600 (table 0.6600)
+OK    5504-02-02-FG PROF_R@THDPROF_1 = 0.1650 (table 0.1650)
+OK    5504-02-02-FG PROF_R@THDPROF_2 = 0.1650 (table 0.1650)
+OK    5504-02-02-FG HEXAF@HEX1 = 0.5600 (table 0.5600)
+OK    5504-02-02-FG HEXL@HEX1_BODY = 0.4000 (table 0.4000)
+OK    5504-02-02-FG HEXAF@HEX2 = 0.5600 (table 0.5600)
+OK    5504-02-02-FG HEXL@HEX2_BODY = 0.4000 (table 0.4000)
+OK    5504-02-02-FG PUCK_R1B@PUCK = 0.1617 (table 0.1617)
+OK    5504-02-02-FG PUCK_XC@PUCK = 0.3233 (table 0.3233)
+OK    5504-02-02-FG one solid body (found 1)
+      5504-02-02-FG box x -0.323..0.660  y -0.323..0.660
+      config check 2: 5504-16-16-FG
+OK    5504-16-16-FG M1@LEG1 = 1.6200 (table 1.6200)
+OK    5504-16-16-FG BODYR@LEG1 = 0.8150 (table 0.8150)
+OK    5504-16-16-FG M2@LEG2 = 1.6200 (table 1.6200)
+OK    5504-16-16-FG BODYR@LEG2 = 0.8150 (table 0.8150)
+OK    5504-16-16-FG DEPTH@POCKETCUT1 = 1.6200 (table 1.6200)
+OK    5504-16-16-FG DEPTH@POCKETCUT2 = 1.6200 (table 1.6200)
+OK    5504-16-16-FG PROF_R@THDPROF_1 = 0.5700 (table 0.5700)
+OK    5504-16-16-FG PROF_R@THDPROF_2 = 0.5700 (table 0.5700)
+OK    5504-16-16-FG HEXAF@HEX1 = 1.6300 (table 1.6300)
+OK    5504-16-16-FG HEXL@HEX1_BODY = 1.3600 (table 1.3600)
+OK    5504-16-16-FG HEXAF@HEX2 = 1.6300 (table 1.6300)
+OK    5504-16-16-FG HEXL@HEX2_BODY = 1.3600 (table 1.3600)
+OK    5504-16-16-FG PUCK_R1B@PUCK = 0.4705 (table 0.4705)
+OK    5504-16-16-FG PUCK_XC@PUCK = 0.9411 (table 0.9411)
+OK    5504-16-16-FG one solid body (found 1)
+      5504-16-16-FG box x -0.941..1.620  y -0.941..1.620
+      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/5  5504-02-02-FG  rebuilt in 1.4 s
+      sweep 2/5  5504-04-04-FG  rebuilt in 0.9 s
+      sweep 3/5  5504-08-08-FG  rebuilt in 0.9 s
+      sweep 4/5  5504-12-12-FG  rebuilt in 0.9 s
+      sweep 5/5  5504-16-16-FG  rebuilt in 0.8 s
+OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\5504_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\5504_MASTER.SLDPRT

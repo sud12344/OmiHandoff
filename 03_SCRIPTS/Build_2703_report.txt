@@ -1,0 +1,253 @@
+Build_2703_MASTER  10/2/2026 12:58:47 PM
+OK    dim M1 = 1.3600 in (expect 1.3600)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
+OK    dim JIC1_RELIEFL = 0.0940 in (expect 0.0940)
+OK    angle RELIEFANG1 = 60.00 deg
+OK    dim JIC1_THDZ = 0.2837 in (expect 0.2837)
+OK    dim JIC1_CONER = 0.3295 in (expect 0.3295)
+OK    dim JIC1_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JIC1_SEATL = 0.1546 in (expect 0.1546)
+      SEATB1: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB1 = 37.00 deg
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim M2 = 1.3600 in (expect 1.3600)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim THDMAJR_B2 = 0.3750 in (expect 0.3750)
+OK    dim JIC2_RELIEFL = 0.0940 in (expect 0.0940)
+OK    angle RELIEFANG2 = 60.00 deg
+OK    dim JIC2_THDZ = 0.2837 in (expect 0.2837)
+OK    dim JIC2_CONER = 0.3295 in (expect 0.3295)
+OK    dim JIC2_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JIC2_SEATL = 0.1546 in (expect 0.1546)
+      SEATB2: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB2 = 37.00 deg
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim M3 = 2.1100 in (expect 2.1100)
+OK    dim BODYR = 0.3550 in (expect 0.3550)
+OK    dim COLLARR3 = 0.4400 in (expect 0.4400)
+OK    dim COLLARL3 = 0.0900 in (expect 0.0900)
+OK    dim JIC3_RELIEFL = 0.0940 in (expect 0.0940)
+OK    angle RELIEFANG3 = 60.00 deg
+OK    dim THDMAJR_B3 = 0.3750 in (expect 0.3750)
+OK    dim JIC3_THDZ = 0.8767 in (expect 0.8767)
+OK    dim JIC3_CONER = 0.3295 in (expect 0.3295)
+OK    dim JIC3_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JIC3_SEATL = 0.1546 in (expect 0.1546)
+      SEATB3: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB3 = 36.99 deg
+OK    LEG3 sketch fully defined
+OK    LEG3 revolve created
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      RUN: sgVERTICAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    RUN hex flats normal to Z
+OK    RUN hex sketch fully defined
+      RUN: FeatureExtrusion3 two-direction (0.703 / 0.703) -> True
+      RUN: new faces centred at 0.000 in (want 0.000)
+OK    RUN extruded both ways
+OK    RUN dims named (HEXL1 HEXL2 HEXAF )
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX3: sgHORIZONTAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX3 hex flats normal to Z
+OK    HEX3 hex sketch fully defined
+      HEX3: FeatureExtrusion3 dir=0 -> True
+      HEX3: new faces centred at 0.277 in on axis 1 (want sign 1)
+OK    HEX3 extruded the right way
+OK    HEX3 dims named (HEXL HEXAF )
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=1.3600
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.3900 in (expect 0.3900)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=1.3600 D1=0.3900 
+OK    select end face for BORE2 at x=-1.3600
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 0.3900 in (expect 0.3900)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=1.3600 D2=0.3900 
+OK    select end face for BORE3 at x=2.1100
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE3 sketch opened (active sketch exists)
+OK    BORE3 circle created
+OK    dim D3 = 0.3900 in (expect 0.3900)
+OK    BORE3 sketch closed and named (ProfileFeature)
+      BORECUT3 attempt 0: CreateDefinition returned Nothing
+      BORECUT3 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT3 cut removes material (attempt 0)
+OK    BORECUT3 dims: DEPTH=2.1100 D3=0.3900 
+OK    leg 1 bore open on the axis at its face (X=+1.3600)
+OK    leg 2 bore open on the axis at its face (X=-1.3600)
+OK    leg 3 bore open on the axis at its face (Y=+2.1100)
+      THD_End1: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End1: anchor edge found at x=0.8233 r=0.3750
+      THD_End1: Edge ok
+      THD_End1: Type=Inch Die ok
+      THD_End1: Size=0.7500-16 ok
+      THD_End1: ThreadMethod=Cut ok
+      THD_End1: EndCondition=Blind ok
+      THD_End1: BlindDepth=0.2837 ok
+      THD_End1: DiameterOverride ok
+      THD_End1: Diameter ok
+      THD_End1: PitchOverride ok
+      THD_End1: Pitch ok
+      THD_End1: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_End1: CreateFeature -> True
+OK    THD_End1 thread feature created
+      THD_End1: thread centre x = 0.9749 in, anchor 0.8233, wanted +X
+OK    THD_End1 runs along the thread flat (away from the hex)
+OK    THD_End1 rebuilds without error (code 0)
+OK    THD_End1 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_End1: profile sketch renamed to THD_End1_PROF
+OK    THD_End1 profile dims reachable as Profile_Height@THD_End1_PROF
+OK    THD_End1 profile pitch reachable as THDPITCH@THD_End1_PROF
+      THD_End1: left live until the final suppress step
+      THD_End2: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End2: anchor edge found at x=-0.8233 r=0.3750
+      THD_End2: Edge ok
+      THD_End2: Type=Inch Die ok
+      THD_End2: Size=0.7500-16 ok
+      THD_End2: ThreadMethod=Cut ok
+      THD_End2: EndCondition=Blind ok
+      THD_End2: BlindDepth=0.2837 ok
+      THD_End2: DiameterOverride ok
+      THD_End2: Diameter ok
+      THD_End2: PitchOverride ok
+      THD_End2: Pitch ok
+      THD_End2: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_End2: CreateFeature -> True
+OK    THD_End2 thread feature created
+      THD_End2: thread centre x = -0.9749 in, anchor -0.8233, wanted -X
+OK    THD_End2 runs along the thread flat (away from the hex)
+OK    THD_End2 rebuilds without error (code 0)
+OK    THD_End2 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_End2: profile sketch renamed to THD_End2_PROF
+OK    THD_End2 profile dims reachable as Profile_Height@THD_End2_PROF
+OK    THD_End2 profile pitch reachable as THDPITCH@THD_End2_PROF
+      THD_End2: left live until the final suppress step
+      THD_End3: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End3: anchor edge found at x=0.9803 r=0.3750
+      THD_End3: Edge ok
+      THD_End3: Type=Inch Die ok
+      THD_End3: Size=0.7500-16 ok
+      THD_End3: ThreadMethod=Cut ok
+      THD_End3: EndCondition=Blind ok
+      THD_End3: BlindDepth=0.8767 ok
+      THD_End3: DiameterOverride ok
+      THD_End3: Diameter ok
+      THD_End3: PitchOverride ok
+      THD_End3: Pitch ok
+      THD_End3: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_End3: CreateFeature -> True
+OK    THD_End3 thread feature created
+      THD_End3: thread centre x = 1.4289 in, anchor 0.9803, wanted +X
+OK    THD_End3 runs along the thread flat (away from the hex)
+OK    THD_End3 rebuilds without error (code 0)
+OK    THD_End3 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.8767 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_End3: profile sketch renamed to THD_End3_PROF
+OK    THD_End3 profile dims reachable as Profile_Height@THD_End3_PROF
+OK    THD_End3 profile pitch reachable as THDPITCH@THD_End3_PROF
+      THD_End3: left live until the final suppress step
+OK    X extent -1.360 .. 1.360 (expect -1.360 .. 1.360; threads may add a little)
+OK    Y extent -0.433 .. 2.110 (expect -0.433 .. 2.110)
+      Bounding box z -0.440 .. 0.440 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: bulkhead collar)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2703_SW2.xlsx
+OK    Configurations after table: 13 (expect 13)
+      config check 1: 2703-04-04-04-FG
+OK    2703-04-04-04-FG M1@LEG1 = 0.9700 (table 0.9700)
+OK    2703-04-04-04-FG BODYR@LEG1 = 0.2200 (table 0.2200)
+OK    2703-04-04-04-FG THDMAJR_B1@LEG1 = 0.2188 (table 0.2188)
+OK    2703-04-04-04-FG JIC1_RELIEFL@LEG1 = 0.0750 (table 0.0750)
+OK    2703-04-04-04-FG JIC1_THDZ@LEG1 = 0.2608 (table 0.2608)
+OK    2703-04-04-04-FG JIC1_CONER@LEG1 = 0.1820 (table 0.1820)
+OK    2703-04-04-04-FG DEPTH@BORECUT1 = 0.9700 (table 0.9700)
+OK    2703-04-04-04-FG DEPTH@BORECUT2 = 0.9700 (table 0.9700)
+OK    2703-04-04-04-FG DEPTH@BORECUT3 = 1.5900 (table 1.5900)
+OK    2703-04-04-04-FG THDPITCH@THD_End1 = 0.0500 (table 0.0500)
+OK    2703-04-04-04-FG Profile_Height@THD_End1_PROF = 0.0271 (table 0.0271)
+OK    2703-04-04-04-FG THDPITCH@THD_End1_PROF = 0.0500 (table 0.0500)
+OK    2703-04-04-04-FG THDPITCH@THD_End2 = 0.0500 (table 0.0500)
+OK    2703-04-04-04-FG Profile_Height@THD_End2_PROF = 0.0271 (table 0.0271)
+OK    2703-04-04-04-FG THDPITCH@THD_End2_PROF = 0.0500 (table 0.0500)
+OK    2703-04-04-04-FG THDPITCH@THD_End3 = 0.0500 (table 0.0500)
+OK    2703-04-04-04-FG Profile_Height@THD_End3_PROF = 0.0271 (table 0.0271)
+OK    2703-04-04-04-FG THDPITCH@THD_End3_PROF = 0.0500 (table 0.0500)
+OK    2703-04-04-04-FG HEXAF@RUN = 0.4400 (table 0.4400)
+OK    2703-04-04-04-FG HEXL1@RUN_BODY = 0.4200 (table 0.4200)
+OK    2703-04-04-04-FG HEXL2@RUN_BODY = 0.4200 (table 0.4200)
+OK    2703-04-04-04-FG HEXAF@HEX3 = 0.4400 (table 0.4400)
+OK    2703-04-04-04-FG HEXL@HEX3_BODY = 0.4800 (table 0.4800)
+OK    2703-04-04-04-FG one solid body (found 1)
+      2703-04-04-04-FG box x -0.970..0.970  y -0.254..1.590
+      config check 2: 2703-16-16-16-FG-LN
+OK    2703-16-16-16-FG-LN M1@LEG1 = 1.9400 (table 1.9400)
+OK    2703-16-16-16-FG-LN BODYR@LEG1 = 0.6563 (table 0.6563)
+OK    2703-16-16-16-FG-LN THDMAJR_B1@LEG1 = 0.6563 (table 0.6563)
+OK    2703-16-16-16-FG-LN JIC1_RELIEFL@LEG1 = 0.1250 (table 0.1250)
+OK    2703-16-16-16-FG-LN JIC1_THDZ@LEG1 = 0.4365 (table 0.4365)
+OK    2703-16-16-16-FG-LN JIC1_CONER@LEG1 = 0.5965 (table 0.5965)
+OK    2703-16-16-16-FG-LN DEPTH@BORECUT1 = 1.9400 (table 1.9400)
+OK    2703-16-16-16-FG-LN DEPTH@BORECUT2 = 1.9400 (table 1.9400)
+OK    2703-16-16-16-FG-LN DEPTH@BORECUT3 = 2.8000 (table 2.8000)
+OK    2703-16-16-16-FG-LN THDPITCH@THD_End1 = 0.0833 (table 0.0833)
+OK    2703-16-16-16-FG-LN Profile_Height@THD_End1_PROF = 0.0451 (table 0.0451)
+OK    2703-16-16-16-FG-LN THDPITCH@THD_End1_PROF = 0.0833 (table 0.0833)
+OK    2703-16-16-16-FG-LN THDPITCH@THD_End2 = 0.0833 (table 0.0833)
+OK    2703-16-16-16-FG-LN Profile_Height@THD_End2_PROF = 0.0451 (table 0.0451)
+OK    2703-16-16-16-FG-LN THDPITCH@THD_End2_PROF = 0.0833 (table 0.0833)
+OK    2703-16-16-16-FG-LN THDPITCH@THD_End3 = 0.0833 (table 0.0833)
+OK    2703-16-16-16-FG-LN Profile_Height@THD_End3_PROF = 0.0451 (table 0.0451)
+OK    2703-16-16-16-FG-LN THDPITCH@THD_End3_PROF = 0.0833 (table 0.0833)
+OK    2703-16-16-16-FG-LN HEXAF@RUN = 1.3125 (table 1.3125)
+OK    2703-16-16-16-FG-LN HEXL1@RUN_BODY = 1.0290 (table 1.0290)
+OK    2703-16-16-16-FG-LN HEXL2@RUN_BODY = 1.0290 (table 1.0290)
+OK    2703-16-16-16-FG-LN HEXAF@HEX3 = 1.3125 (table 1.3125)
+OK    2703-16-16-16-FG-LN HEXL@HEX3_BODY = 1.1090 (table 1.1090)
+OK    2703-16-16-16-FG-LN one solid body (found 1)
+      2703-16-16-16-FG-LN box x -1.940..1.940  y -0.758..2.800
+      All-config sweep: rebuilding 12 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/12  2703-04-04-04-FG  rebuilt in 1.8 s
+      sweep 2/12  2703-04-04-04-FG-LN  rebuilt in 2.8 s
+      sweep 3/12  2703-06-06-06-FG  rebuilt in 4.5 s
+      sweep 4/12  2703-06-06-06-FG-LN  rebuilt in 3.0 s
+      sweep 5/12  2703-08-08-08-FG  rebuilt in 1.7 s
+      sweep 6/12  2703-08-08-08-FG-LN  rebuilt in 2.2 s
+      sweep 7/12  2703-10-10-10-FG  rebuilt in 3.9 s
+      sweep 8/12  2703-10-10-10-FG-LN  rebuilt in 2.1 s
+      sweep 9/12  2703-12-12-12-FG  rebuilt in 2.2 s
+      sweep 10/12  2703-12-12-12-FG-LN  rebuilt in 2.4 s
+      sweep 11/12  2703-16-16-16-FG  rebuilt in 2.5 s
+      sweep 12/12  2703-16-16-16-FG-LN  rebuilt in 1.4 s
+OK    All-config sweep: 12 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 2703-08-08-08-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+OK    Threads suppressed in all configurations before save (3 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2703_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2703_MASTER.SLDPRT

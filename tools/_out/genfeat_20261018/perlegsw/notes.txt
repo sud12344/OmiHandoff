@@ -1,0 +1,74 @@
+PERLEGSW (Q-NEW-PERLEGSW, approved 2026-10-08) - genfeat 2026-10-18 - notes
+==========================================================================================
+Base: tools/_out/puckfix_20261009/tools_new (batch-16) copied to perlegsw/tools. Ported from tools/_out/wave2_impl_20261009: its
+scripts/patch_perlegsw.py applied unchanged (the base differs from the 2026-10-09 base only by the puck fix: every anchor matched once).
+No SolidWorks, no macro run, no website. Nothing outside perlegsw/ was written.
+
+WHAT CHANGED (patch.diff)
+- generators/gen_tee.py
+  * the 2026-10-09 PERLEGSW patch: per-leg 5th tuple element (leg_end / legs4 / end_val, END-LIBRARY tokens '=6801', '=ORB:THDL',
+    '=ORB:GD', '=FPT:TD'), per-leg end-data gates, perleg checks (nut-cut slab clearance of every nut, NWO envelope overlap, arm ridge on
+    tees and NWO legs), per-leg $PRP@AxialSource wording, SPEC 6807.
+  * 2026-10-18: 1601 / 1602 / 1603 / 6606 moved from SPEC_WAITING into SPEC (their rows now have sizes: Brennan TFA catalog, user
+    2026-10-18 "Brennan = yes"; 1602-02/-04/-08/-16/-20-FG from OMi's 2026-10-18 drawings). ref rows: 6606-08-08-08-FG and
+    1603-06-06-06-FG (the old refs -06 / -08 have no data). 6603 / 6566 stay in SPEC_WAITING (no data-complete row).
+  * 2026-10-18, perleg roots only: (a) a row with an EMPTY body cell (leg length, bore, body hex, swivel nut-face / nose / nut-hex column)
+    is skipped "missing data" with the columns named (was a TypeError crash: 1603-08-08-08-FG); (b) nut face -> stem tip (NPSM) /
+    nut face -> nose tip (JIC swivel) of the row compared with the Brennan library value (NPSM_MEAS TIP_B / SWIV_MEAS NOSETIP_B), a
+    difference is a $COMMENT warning, the row is followed; (c) source-neutral wording of the shared MODEL texts that named Air-Way as the
+    row source (hex A/F, nut hex, nose tip, the 2026-09-24 "follow Air-Way W-L 0.33" sentence, the female NPTF tap-drill sentence).
+    Every non-perleg root is byte-identical (regen/cmp.txt).
+- measure/npsm.py: measure_npsm(..., oth=None, win=0.6) - optional: the other legs of a tee (section half away from them) and the axial
+  window of the nut corner reading (a body hex larger than the nut, OMi 1602-04-04-04-FG 0.75 vs nut 0.688). Defaults = old behaviour.
+- measure/perleg_model.py (new): OCP rebuild of a perleg tee in the macro's feature order (LEGi, RUN, HEX3, NUTCUTi, pockets / bores).
+- measure/perleg_closedloop.py (new): rebuild -> STEP -> per-leg extractors (npsm.py / swiv.py _measure_leg / nwo.py) + body-hex probe
+  + bores -> must return the row and the end-library values.
+
+RESULTS
+- Test copy (test/root = stage + wave2/tee_elbow cells of 1601/1602/1603/6606 via apply_brennan.py, target rows ASSUMED, 6807 row renamed):
+  1601 7/7 built, 1602 7/7, 1603 5/6 (1603-08-08-08-FG skipped: D1 / D2 empty), 6606 4/4, 6807 1 (test rename only). 0 blocked.
+- Static: vbacheck OK (51-52 procedures), dofcheck_tee every leg fully defined / 0 redundant, allcfg_check t 0 outline problems
+  (checks/). regress.py: not applicable (new roots, no previous SW2).
+- OCP closed loop (ocp/closed_loop.txt): 24 configurations, every one 1 solid, 0 of 1,307 checks off (tolerance 0.0015, hexes 0.002).
+  6807-06-06-NWO-FG volume 0.553624 = the 2026-10-09 OCP value 0.55362; NUTCUT1/2 0.02814 = the generator integral.
+- 1602 vs OMi's drawings (ocp/drawing_check_1602.txt): 70 of 70 printed values reproduced by the rebuilt model (port face, stem tips,
+  nut faces, body hex, both nut hexes, both bores on -02 / -04 / -08 / -16 / -20).
+- Unit cases (checks/unit_cases.txt): short branch leg blocks (nut-slab rule), oversized body hex blocks (arm-ridge rule), 1603-08 skipped;
+  TEST rows for the SPEC_WAITING roots 6603 (from 6602-06-06-06-FG) and 6566 (from 6500-06-06-FG) generate and pass vbacheck /
+  dofcheck_tee / outline checks (TEST INPUT ONLY - in memory, never in a table).
+- Regression (regen/cmp.txt): 75 roots identical (macro, SW2, summary, exit); new roots 1601 1602 1603 6606 6807; on the UNTOUCHED stage
+  only 1602 builds (its 5 OMi-drawing rows) - the Brennan cells are not in the stage yet, 6807's row has the space in its name.
+
+MODELLING ASSUMPTIONS ADDED (each goes into $PRP@AxialSource of the rows it touches)
+1. Tee forging = the 2603HX body (run hex bar continuous through the crossing + branch hex arm, flats normal to Z); every special leg = the
+   library end (SWIV_MEAS / NPSM_MEAS, Q-TRANSFER-ENDLIB yes 2026-10-08), its hex arm ending at the library body face. Source: shape of the
+   Brennan 6603-06-06-06-FG / 6606-06-06-06-FG / 1601-08-08-08-FG / 1603-08-08-08-FG STEPs (wave2_shapes_20261008/PERLEGSW/evidence/
+   step_survey.txt; shape only). Other sizes (1601-20, 6606-04/-08/-10/-16: rows.csv "GATE STEP partly") ASSUMED from those forgings.
+2. 1602: no Brennan 1602 STEP - the 1601 body with the library female NPTF leg (round collar 0.26, tap drill to the crossing, as 5605).
+   OMi's drawings confirm every printed dimension (point above); the collar / port details are not on the drawings.
+3. Leg order 1601 / 1602: the first dash = the pipe branch (Air-Way 1601-06-04-04 A = 3/8 NPTF; Brennan A1 = the NPTF branch).
+   1603: part-number side 1 = the branch (ASSUMPTION: Air-Way prints side 1 differently; the Brennan 1603 table gives A1's nut face as L).
+   Every -FG row has equal dashes, so no configuration depends on it.
+4. Where the row's nut face -> stem tip differs from the Brennan 1404 value the row is followed (1601 / 1602 / 1603 -06: 0.21 vs 0.22;
+   -12: 0.35 vs 0.33 - Brennan TFA catalog rows; said in $COMMENT per row).
+5. 6807 (unchanged from 2026-10-09): two adjustable ORB legs on one 6801-type elbow forging (no 6807 STEP seen), I3 = Air-Way 6801 ORB_I3,
+   thread length / undercut = ORB end library.
+6. A perleg row with an empty body cell is never filled - skipped (DataStatus gate).
+
+FOR THE USER / MAIN SESSION
+a. 6807-06-06 NWO-FG: the staged config / $PRP@PartNo is spelled with a space -> skipped "dash count". Staging edit needed: rename to
+   6807-06-06-NWO-FG (as in wave2_impl_20261009/CHANGES.csv). Its build was gated on the 6807 pilot STEP ("coming") or the user accepting
+   "body form assumed from 6801".
+b. 1603-08-08-08-FG: D1 / D2 printed as a range 0.44/0.46 (never averaged). A14 says measure the STEP (BRENNAN_1603-08-08-08-FG.stp is
+   present) - a data task, not done here; the row builds as soon as the two cells are filled.
+c. 1602-06 / -12-FG bores: Brennan drill 0.34 / 0.63 used as staged; the staging flagged that OMi's drawings print the stem bore 0.01-0.02
+   smaller than Brennan's drill on 7 of 7 sibling bores - the user's call (rows.csv conflicts).
+d. 1601-20-20-20-FG: male NPTF round end 0.0229 proud of the 1.625 flats (Brennan C1HEX). The generator accepts it by the 5600 precedent
+   (Brennan 5600-16-16-16-FG: 0.0012 proud) - warning only; -16: 0.0069, -12: flush by 0.0015.
+e. 1602 OMi-drawing rows are VERIFIED in the stage; the generator's existing NPSM rule writes them ASSUMED in the SW2 ("the NPSM swivel
+   nut/stem geometry is single-source"), as on 1501 / 1502.
+f. SolidWorks dry run still needed (main session): the NPSM nut helix on -X (1601 / 1602 / 1603 leg 2) is the one thread placement never
+   built yet; the triple-helix tees (1603, 6606) rebuild three helical threads per configuration in the sweep - one root per run_macro.
+g. Still no data: 6603 (2), 6566 (2), 6606-06 / -12-FG, 6807-04/-08-06/-08/-12-NWO-FG (MISSING; capability ready).
+h. Merge: gen_tee overlaps the other wave-2 features at the leg constructors / SPEC tail (ANGLED should use this 5th-tuple format);
+   npsm.py change is additive (keyword arguments with old defaults).

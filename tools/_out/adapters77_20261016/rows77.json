@@ -1,0 +1,2322 @@
+[
+ {
+  "sku": "0618-06",
+  "table": "DesignTable_0618.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": null,
+  "omi_row": 83,
+  "omi_values": {},
+  "proposal": "no Air-Way row and no Brennan catalog row; OMi gives no dimension"
+ },
+ {
+  "sku": "1504-08-08-FG",
+  "table": "DesignTable_1504.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p022-t01",
+  "omi_row": 184,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "1504-12-12-FG",
+  "table": "DesignTable_1504.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p022-t01",
+  "omi_row": 185,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "1504-16-16-FG",
+  "table": "DesignTable_1504.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p022-t01",
+  "omi_row": 186,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "2403-20-16",
+  "table": "DesignTable_2403.xlsx",
+  "row": "2403-20-16",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p005-t01",
+  "omi_row": 456,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "L1@DRIVE",
+    "value": 2.38,
+    "brennan_col": "L LGTH",
+    "brennan": "2.380",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.69,
+    "brennan_col": "C HEX",
+    "brennan": "1.688",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 1.08,
+    "brennan_col": "B1 DRILL",
+    "brennan": "1.078",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.84,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p005-t01: agrees on L1@DRIVE, HEXB@HEX, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "2404-14-12",
+  "table": "DesignTable_2404L.xlsx, DesignTable_2404LL.xlsx, DesignTable_2404_FINAL.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p006-t01",
+  "omi_row": 509,
+  "omi_values": {
+   "OverallLength": "2.09",
+   "HexFlat": "1.250",
+   "S1ID": "0.719",
+   "S2ID": "0.719"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives OverallLength 2.09, HexFlat 1.250, S1ID 0.719, S2ID 0.719"
+ },
+ {
+  "sku": "2404-16-08",
+  "table": "DesignTable_2404L.xlsx, DesignTable_2404LL.xlsx, DesignTable_2404_FINAL.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p006-t01",
+  "omi_row": 510,
+  "omi_values": {
+   "OverallLength": "2.11",
+   "HexFlat": "1.375",
+   "S1ID": "0.844",
+   "S2ID": "0.531"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives OverallLength 2.11, HexFlat 1.375, S1ID 0.844, S2ID 0.531"
+ },
+ {
+  "sku": "2406-20-12",
+  "table": "DesignTable_2406.xlsx",
+  "row": "2406-20-12",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p007-t03",
+  "omi_row": 615,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "L23@DRIVE",
+    "value": 2.02,
+    "brennan_col": "L0 LGTH",
+    "brennan": "2.000",
+    "result": "different"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 2,
+    "brennan_col": "C HEX",
+    "brennan": "2.000",
+    "result": "equal"
+   },
+   {
+    "col": "D3@BORE",
+    "value": 0.61,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.609",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p007-t03: agrees on HEXB@HEX, D3@BORE; DIFFERS on L23@DRIVE 2.02 vs Brennan L0 LGTH 2.000 (built to the dimension source, s6)"
+ },
+ {
+  "sku": "2406-20-16",
+  "table": "DesignTable_2406.xlsx",
+  "row": "2406-20-16",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p008-t01",
+  "omi_row": 616,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "L23@DRIVE",
+    "value": 2.01,
+    "brennan_col": "L0 LGTH",
+    "brennan": "2.000",
+    "result": "different"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 2,
+    "brennan_col": "C HEX",
+    "brennan": "2.000",
+    "result": "equal"
+   },
+   {
+    "col": "D3@BORE",
+    "value": 0.84,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p008-t01: agrees on HEXB@HEX, D3@BORE; DIFFERS on L23@DRIVE 2.01 vs Brennan L0 LGTH 2.000 (built to the dimension source, s6)"
+ },
+ {
+  "sku": "2501-06-04-FG",
+  "table": "DesignTable_2501.xlsx",
+  "row": "2501-06-04-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED-CORE",
+  "brennan": "TFA-p023-t01",
+  "omi_row": 670,
+  "omi_values": {
+   "M1": "1.06",
+   "L1": "1.09",
+   "HexFlat": "0.562",
+   "S1ID": "0.297",
+   "S2ID": "0.281"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M@DRIVE",
+    "value": 1.06,
+    "brennan_col": "M LGTH",
+    "brennan": "1.06",
+    "result": "equal"
+   },
+   {
+    "col": "N@DRIVE",
+    "value": 1.09,
+    "brennan_col": "L LGTH",
+    "brennan": "1.09",
+    "result": "equal"
+   },
+   {
+    "col": "Y@REF",
+    "value": 0.56,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.562",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.3,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@DRILL",
+    "value": 0.28,
+    "brennan_col": "A2 DRILL",
+    "brennan": "0.281",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p023-t01: agrees on M@DRIVE, N@DRIVE, Y@REF, D@BORE, D1@DRILL"
+ },
+ {
+  "sku": "2501-06-06-FG",
+  "table": "DesignTable_2501.xlsx",
+  "row": "2501-06-06-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED-CORE",
+  "brennan": "TFA-p023-t01",
+  "omi_row": 671,
+  "omi_values": {
+   "M1": "1.14",
+   "L1": "1.22",
+   "HexFlat": "0.750",
+   "S1ID": "0.297",
+   "S2ID": "0.406"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M@DRIVE",
+    "value": 1.14,
+    "brennan_col": "M LGTH",
+    "brennan": "1.140",
+    "result": "equal"
+   },
+   {
+    "col": "N@DRIVE",
+    "value": 1.22,
+    "brennan_col": "L LGTH",
+    "brennan": "1.220",
+    "result": "equal"
+   },
+   {
+    "col": "Y@REF",
+    "value": 0.75,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.750",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.3,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@DRILL",
+    "value": 0.41,
+    "brennan_col": "A2 DRILL",
+    "brennan": "0.406",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p023-t01: agrees on M@DRIVE, N@DRIVE, Y@REF, D@BORE, D1@DRILL"
+ },
+ {
+  "sku": "2502-04-04-FG",
+  "table": "DesignTable_2502.xlsx",
+  "row": "2502-04-04-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED",
+  "brennan": "TFA-p025-t02",
+  "omi_row": 731,
+  "omi_values": {
+   "M1": "1.220",
+   "L1": "0.880",
+   "HexFlat": "0.750",
+   "S1ID": "0.172"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M1@DRIVE",
+    "value": 1.22,
+    "brennan_col": "M LGTH",
+    "brennan": "1.22",
+    "result": "equal"
+   },
+   {
+    "col": "N1@DRIVE",
+    "value": 0.88,
+    "brennan_col": "L LGTH",
+    "brennan": "0.88",
+    "result": "equal"
+   },
+   {
+    "col": "Y1@DRIVE",
+    "value": 0.75,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.750",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.17,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p025-t02: agrees on M1@DRIVE, N1@DRIVE, Y1@DRIVE, D@BORE"
+ },
+ {
+  "sku": "2502-04-06-FG",
+  "table": "DesignTable_2502.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p025-t02",
+  "omi_row": 732,
+  "omi_values": {
+   "M1": "1.290",
+   "L1": "1.020",
+   "HexFlat": "0.875",
+   "S1ID": "0.172"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives M1 1.290, L1 1.020, HexFlat 0.875, S1ID 0.172"
+ },
+ {
+  "sku": "2502-05-04-FG",
+  "table": "DesignTable_2502.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p025-t02",
+  "omi_row": 733,
+  "omi_values": {
+   "M1": "1.220",
+   "L1": "0.880",
+   "HexFlat": "0.750",
+   "S1ID": "0.234"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives M1 1.220, L1 0.880, HexFlat 0.750, S1ID 0.234"
+ },
+ {
+  "sku": "2502-06-04-FG",
+  "table": "DesignTable_2502.xlsx",
+  "row": "2502-06-04-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED",
+  "brennan": "TFA-p025-t02",
+  "omi_row": 734,
+  "omi_values": {
+   "M1": "1.230",
+   "L1": "0.880",
+   "HexFlat": "0.750",
+   "S1ID": "0.297"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M1@DRIVE",
+    "value": 1.23,
+    "brennan_col": "M LGTH",
+    "brennan": "1.23",
+    "result": "equal"
+   },
+   {
+    "col": "N1@DRIVE",
+    "value": 0.88,
+    "brennan_col": "L LGTH",
+    "brennan": "0.88",
+    "result": "equal"
+   },
+   {
+    "col": "Y1@DRIVE",
+    "value": 0.75,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.750",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.3,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p025-t02: agrees on M1@DRIVE, N1@DRIVE, Y1@DRIVE, D@BORE"
+ },
+ {
+  "sku": "2504-16-16-FG",
+  "table": "DesignTable_2504.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p026-t02",
+  "omi_row": 787,
+  "omi_values": {
+   "M1": "1.470",
+   "M2": "1.470",
+   "HexFlat": "1.312",
+   "S1ID": "0.844",
+   "S2ID": "0.844"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives M1 1.470, M2 1.470, HexFlat 1.312, S1ID 0.844, S2ID 0.844"
+ },
+ {
+  "sku": "2505-04-04-FG",
+  "table": "DesignTable_2505.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p027-t01",
+  "omi_row": 789,
+  "omi_values": {
+   "M1": "0.870",
+   "M2": "0.620",
+   "HexFlat": "0.750",
+   "S1ID": "0.172"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives M1 0.870, M2 0.620, HexFlat 0.750, S1ID 0.172"
+ },
+ {
+  "sku": "2505-06-06-FG",
+  "table": "DesignTable_2505.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p027-t01",
+  "omi_row": 791,
+  "omi_values": {
+   "M1": "0.880",
+   "M2": "0.750",
+   "HexFlat": "0.875",
+   "S1ID": "0.297"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives M1 0.880, M2 0.750, HexFlat 0.875, S1ID 0.297"
+ },
+ {
+  "sku": "2613-04-04-04-FG",
+  "table": "DesignTable_2613.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p053-t02",
+  "omi_row": 898,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "2613-08-08-08-FG",
+  "table": "DesignTable_2613.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": null,
+  "omi_row": 900,
+  "omi_values": {},
+  "proposal": "no Air-Way row and no Brennan catalog row; OMi gives no dimension"
+ },
+ {
+  "sku": "2650-04-04-04-04-FG",
+  "table": "DesignTable_2650.xlsx",
+  "row": "2650-04-04-04-04-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p062-t02",
+  "omi_row": 905,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M1@DRIVE",
+    "value": 0.89,
+    "brennan_col": "M1 LGTH",
+    "brennan": "0.89",
+    "result": "equal"
+   },
+   {
+    "col": "M2@DRIVE",
+    "value": 0.89,
+    "brennan_col": "M2 LGTH",
+    "brennan": "0.89",
+    "result": "equal"
+   },
+   {
+    "col": "M3@DRIVE",
+    "value": 0.89,
+    "brennan_col": "M3 LGTH",
+    "brennan": "0.89",
+    "result": "equal"
+   },
+   {
+    "col": "M4@DRIVE",
+    "value": 0.89,
+    "brennan_col": "M4 LGTH",
+    "brennan": "0.89",
+    "result": "equal"
+   },
+   {
+    "col": "Y@HEX",
+    "value": 0.44,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.438",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.17,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.17,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE",
+    "value": 0.17,
+    "brennan_col": "B3 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D4@BORE",
+    "value": 0.17,
+    "brennan_col": "B4 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p062-t02: agrees on M1@DRIVE, M2@DRIVE, M3@DRIVE, M4@DRIVE, Y@HEX, D1@BORE, D2@BORE, D3@BORE, D4@BORE"
+ },
+ {
+  "sku": "2701-LN-02-02-FG",
+  "table": "DesignTable_2701.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": null,
+  "omi_row": 973,
+  "omi_values": {},
+  "proposal": "no Air-Way row and no Brennan catalog row; OMi gives no dimension"
+ },
+ {
+  "sku": "2701-LN-04-04-FG",
+  "table": "DesignTable_2701.xlsx",
+  "row": "2701-04-04-FG-LN",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": null,
+  "omi_row": 974,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [],
+  "brennan_cells": [],
+  "why": "no Brennan catalog row"
+ },
+ {
+  "sku": "2701-LN-05-05-FG",
+  "table": "DesignTable_2701.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": null,
+  "omi_row": 975,
+  "omi_values": {},
+  "proposal": "no Air-Way row and no Brennan catalog row; OMi gives no dimension"
+ },
+ {
+  "sku": "2705-06-04",
+  "table": "DesignTable_2705.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p008-t04",
+  "omi_row": 1045,
+  "omi_values": {
+   "OverallLength": "2.190",
+   "HexFlat": "0.875",
+   "S2ID": "0.172"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives OverallLength 2.190, HexFlat 0.875, S2ID 0.172"
+ },
+ {
+  "sku": "2705-06-06",
+  "table": "DesignTable_2705.xlsx",
+  "row": "2705-06-06",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p008-t04",
+  "omi_row": 1046,
+  "omi_values": {
+   "OverallLength": "2.220",
+   "HexFlat": "0.875",
+   "S2ID": "0.297"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "L24@DRIVE",
+    "table": 2.18,
+    "omi": "2.220",
+    "cell": "Items!L1046"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L24@DRIVE",
+    "value": 2.22,
+    "brennan_col": "L LGTH",
+    "brennan": "2.220",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.3,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): L24@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!L1046 = 2.220 (table had 2.18) | Brennan TFA TFA-p008-t04: agrees on L24@DRIVE, D@BORE"
+ },
+ {
+  "sku": "2705-06-08",
+  "table": "DesignTable_2705.xlsx",
+  "row": "2705-06-08",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p008-t04",
+  "omi_row": 1047,
+  "omi_values": {
+   "OverallLength": "2.390",
+   "HexFlat": "1.000",
+   "S2ID": "0.391"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "L24@DRIVE",
+    "table": 2.34,
+    "omi": "2.390",
+    "cell": "Items!L1047"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L24@DRIVE",
+    "value": 2.39,
+    "brennan_col": "L LGTH",
+    "brennan": "2.39",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.39,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.391",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): L24@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!L1047 = 2.390 (table had 2.34) | Brennan TFA TFA-p008-t04: agrees on L24@DRIVE, D@BORE"
+ },
+ {
+  "sku": "2705-08-08",
+  "table": "DesignTable_2705.xlsx",
+  "row": "2705-08-08",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p008-t04",
+  "omi_row": 1048,
+  "omi_values": {
+   "OverallLength": "2.610",
+   "HexFlat": "1.125",
+   "S2ID": "0.391"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "L24@DRIVE",
+    "table": 2.58,
+    "omi": "2.610",
+    "cell": "Items!L1048"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L24@DRIVE",
+    "value": 2.61,
+    "brennan_col": "L LGTH",
+    "brennan": "2.610",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.39,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.391",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): L24@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!L1048 = 2.610 (table had 2.58) | Brennan TFA TFA-p008-t04: agrees on L24@DRIVE, D@BORE"
+ },
+ {
+  "sku": "3474-08-08-NWO",
+  "table": "DesignTable_3474.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p009-t06",
+  "omi_row": 1107,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "3474-10-10-NWO",
+  "table": "DesignTable_3474.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p009-t06",
+  "omi_row": 1108,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "5404-N-06X5.500",
+  "table": "DesignTable_5404.xlsx, DesignTable_5404N.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p011-t05",
+  "omi_row": 1320,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "5406-08-04",
+  "table": "DesignTable_5406.xlsx",
+  "row": "5406-08-04",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p013-t01",
+  "omi_row": 1369,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "L2@DRIVE",
+    "value": 1.1,
+    "brennan_col": "L LGTH",
+    "brennan": "1.10",
+    "result": "equal"
+   },
+   {
+    "col": "C2HEX@HEX",
+    "value": 0.88,
+    "brennan_col": "C HEX",
+    "brennan": "0.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "TAPDRILL@BORE",
+    "value": 0.43,
+    "brennan_col": "A1 DRILL",
+    "brennan": "0.431",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p013-t01: agrees on L2@DRIVE, C2HEX@HEX, TAPDRILL@BORE"
+ },
+ {
+  "sku": "5406-08-06",
+  "table": "DesignTable_5406.xlsx",
+  "row": "5406-08-06",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p013-t01",
+  "omi_row": 1370,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "L2@DRIVE",
+    "value": 1.1,
+    "brennan_col": "L LGTH",
+    "brennan": "1.100",
+    "result": "equal"
+   },
+   {
+    "col": "C2HEX@HEX",
+    "value": 0.88,
+    "brennan_col": "C HEX",
+    "brennan": "0.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "TAPDRILL@BORE",
+    "value": 0.57,
+    "brennan_col": "A1 DRILL",
+    "brennan": "0.578",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p013-t01: agrees on L2@DRIVE, C2HEX@HEX, TAPDRILL@BORE"
+ },
+ {
+  "sku": "5406-P-08",
+  "table": "DesignTable_5406.xlsx, DesignTable_5406C.xlsx, DesignTable_5406P.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p067-t03",
+  "omi_row": 1419,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "5406-P-12",
+  "table": "DesignTable_5406.xlsx, DesignTable_5406C.xlsx, DesignTable_5406P.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p067-t03",
+  "omi_row": 1420,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "5502-12-12-FG",
+  "table": "DesignTable_5502.xlsx",
+  "row": "5502-12-12-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p031-t03",
+  "omi_row": 1475,
+  "omi_values": {
+   "M1": "1.590",
+   "L1": "1.360",
+   "HexFlat": "1.312",
+   "S1ID": "0.719"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "N@DRIVE",
+    "value": 1.59,
+    "brennan_col": "N LGTH",
+    "brennan": "1.590",
+    "result": "equal"
+   },
+   {
+    "col": "N1@DRIVE",
+    "value": 1.36,
+    "brennan_col": "N1 LGTH",
+    "brennan": "1.360",
+    "result": "equal"
+   },
+   {
+    "col": "W@REF",
+    "value": 1.31,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.312",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.72,
+    "brennan_col": "A1 DRILL",
+    "brennan": "0.719",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p031-t03: agrees on N@DRIVE, N1@DRIVE, W@REF, D@BORE"
+ },
+ {
+  "sku": "5502-16-12-FG",
+  "table": "DesignTable_5502.xlsx",
+  "row": "5502-16-12-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p031-t03",
+  "omi_row": 1477,
+  "omi_values": {
+   "M1": "1.970",
+   "L1": "1.360",
+   "HexFlat": "1.312",
+   "S1ID": "0.938"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "W@REF",
+    "table": 1.63,
+    "omi": "1.312",
+    "cell": "Items!R1477"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "N@DRIVE",
+    "value": 1.97,
+    "brennan_col": "N LGTH",
+    "brennan": "1.970",
+    "result": "equal"
+   },
+   {
+    "col": "N1@DRIVE",
+    "value": 1.39,
+    "brennan_col": "N1 LGTH",
+    "brennan": "1.360",
+    "result": "different"
+   },
+   {
+    "col": "W@REF",
+    "value": 1.312,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.312",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.94,
+    "brennan_col": "A1 DRILL",
+    "brennan": "0.938",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): W@REF: OMi WebsitePartsInfo2026.xlsx Items!R1477 = 1.312 (table had 1.63) | Brennan TFA TFA-p031-t03: agrees on N@DRIVE, W@REF, D@BORE; DIFFERS on N1@DRIVE 1.39 vs Brennan N1 LGTH 1.360 (built to the dimension source, s6)"
+ },
+ {
+  "sku": "5502-16-16-FG",
+  "table": "DesignTable_5502.xlsx",
+  "row": "5502-16-16-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p031-t03",
+  "omi_row": 1478,
+  "omi_values": {
+   "M1": "1.970",
+   "L1": "1.620",
+   "HexFlat": "1.625",
+   "S1ID": "0.938"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "N@DRIVE",
+    "value": 1.97,
+    "brennan_col": "N LGTH",
+    "brennan": "1.970",
+    "result": "equal"
+   },
+   {
+    "col": "N1@DRIVE",
+    "value": 1.62,
+    "brennan_col": "N1 LGTH",
+    "brennan": "1.620",
+    "result": "equal"
+   },
+   {
+    "col": "W@REF",
+    "value": 1.63,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.625",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.94,
+    "brennan_col": "A1 DRILL",
+    "brennan": "0.938",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p031-t03: agrees on N@DRIVE, N1@DRIVE, W@REF, D@BORE"
+ },
+ {
+  "sku": "5601-08-08-08-FG",
+  "table": "DesignTable_5601.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p055-t02",
+  "omi_row": 1543,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "5601-12-12-12-FG",
+  "table": "DesignTable_5601.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p055-t02",
+  "omi_row": 1544,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "5601-16-16-16-FG",
+  "table": "DesignTable_5601.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p055-t02",
+  "omi_row": 1545,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6316-08",
+  "table": "(no review table)",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p013-t04",
+  "omi_row": 1620,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6316-12",
+  "table": "(no review table)",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p013-t04",
+  "omi_row": 1621,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6316-16",
+  "table": "(no review table)",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p013-t04",
+  "omi_row": 1622,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6400-02-02-O",
+  "table": "DesignTable_6400.xlsx",
+  "row": "6400-02-02-O",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED",
+  "brennan": "TFA-p014-t02",
+  "omi_row": 1623,
+  "omi_values": {
+   "OverallLength": "1.06",
+   "HexFlat": "0.438",
+   "S1ID": "0.062",
+   "S2ID": "0.062"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "D1@DRIVE",
+    "value": 1.06,
+    "brennan_col": "L5 LGTH",
+    "brennan": "1.06",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 0.4375,
+    "brennan_col": "C4 HEX",
+    "brennan": "0.438",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE_B",
+    "value": 0.06,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.062",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D4@BORE_A",
+    "value": 0.06,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.062",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p014-t02: agrees on D1@DRIVE, HEXB@HEX, D3@BORE_B, D4@BORE_A"
+ },
+ {
+  "sku": "6400-20-12-O",
+  "table": "DesignTable_6400.xlsx",
+  "row": "6400-20-12-O",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p014-t03",
+  "omi_row": 1677,
+  "omi_values": {
+   "OverallLength": "2.30",
+   "HexFlat": "1.688",
+   "S1ID": "1.078",
+   "S2ID": "0.609"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "D1@DRIVE",
+    "value": 2.3,
+    "brennan_col": "L5 LGTH",
+    "brennan": "2.300",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.6875,
+    "brennan_col": "C4 HEX",
+    "brennan": "1.688",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE_B",
+    "value": 1.08,
+    "brennan_col": "B1 DRILL",
+    "brennan": "1.078",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D4@BORE_A",
+    "value": 0.61,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.609",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p014-t03: agrees on D1@DRIVE, HEXB@HEX, D3@BORE_B, D4@BORE_A"
+ },
+ {
+  "sku": "6400-20-16-O",
+  "table": "DesignTable_6400.xlsx",
+  "row": "6400-20-16-O",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p014-t03",
+  "omi_row": 1678,
+  "omi_values": {
+   "OverallLength": "2.33",
+   "HexFlat": "1.688",
+   "S1ID": "1.078",
+   "S2ID": "0.844"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "D1@DRIVE",
+    "value": 2.33,
+    "brennan_col": "L5 LGTH",
+    "brennan": "2.33",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.6875,
+    "brennan_col": "C4 HEX",
+    "brennan": "1.688",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE_B",
+    "value": 1.08,
+    "brennan_col": "B1 DRILL",
+    "brennan": "1.078",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D4@BORE_A",
+    "value": 0.84,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p014-t03: agrees on D1@DRIVE, HEXB@HEX, D3@BORE_B, D4@BORE_A"
+ },
+ {
+  "sku": "6400-20-20-O",
+  "table": "DesignTable_6400.xlsx",
+  "row": "6400-20-20-O",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED",
+  "brennan": "TFA-p014-t03",
+  "omi_row": 1679,
+  "omi_values": {
+   "OverallLength": "2.17",
+   "HexFlat": "1.875",
+   "S1ID": "1.078",
+   "S2ID": "1.078"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "D1@DRIVE",
+    "value": 2.17,
+    "brennan_col": "L5 LGTH",
+    "brennan": "2.17",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.875,
+    "brennan_col": "C4 HEX",
+    "brennan": "1.875",
+    "result": "equal"
+   },
+   {
+    "col": "D3@BORE_B",
+    "value": 1.08,
+    "brennan_col": "B1 DRILL",
+    "brennan": "1.078",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D4@BORE_A",
+    "value": 1.08,
+    "brennan_col": "B2 DRILL",
+    "brennan": "1.078",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p014-t03: agrees on D1@DRIVE, HEXB@HEX, D3@BORE_B, D4@BORE_A"
+ },
+ {
+  "sku": "6402-12-10-O",
+  "table": "DesignTable_6402.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p015-t02",
+  "omi_row": 1735,
+  "omi_values": {
+   "OverallLength": "1.920",
+   "L1": "1.420",
+   "HexFlat": "1.250",
+   "S1ID": "0.484",
+   "NutHex1": "1.000",
+   "S2ID": "0.484"
+  },
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi parts file gives OverallLength 1.920, L1 1.420, HexFlat 1.250, S1ID 0.484, NutHex1 1.000, S2ID 0.484"
+ },
+ {
+  "sku": "6405-16-06-O",
+  "table": "DesignTable_6405.xlsx",
+  "row": "6405-16-06-O",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p016-t01",
+  "omi_row": 1790,
+  "omi_values": {
+   "OverallLength": "1.130",
+   "HexFlat": "1.500",
+   "S1ID": "0.844"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "D3@BORE",
+    "table": 0.57,
+    "omi": "0.844",
+    "cell": "Items!S1790"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L31@DRIVE",
+    "value": 1,
+    "brennan_col": "L LGTH",
+    "brennan": "1.125",
+    "result": "rounding_only"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.5,
+    "brennan_col": "C4 HEX",
+    "brennan": "1.500",
+    "result": "equal"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): D3@BORE: OMi WebsitePartsInfo2026.xlsx Items!S1790 = 0.844 (table had 0.57) | Brennan TFA TFA-p016-t01: agrees on L31@DRIVE, HEXB@HEX"
+ },
+ {
+  "sku": "6405-16-08-O",
+  "table": "DesignTable_6405.xlsx",
+  "row": "6405-16-08-O",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p016-t01",
+  "omi_row": 1791,
+  "omi_values": {
+   "OverallLength": "1.720",
+   "HexFlat": "1.500",
+   "S1ID": "0.844"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "L31@DRIVE",
+    "table": 1.47,
+    "omi": "1.720",
+    "cell": "Items!L1791"
+   },
+   {
+    "col": "D3@BORE",
+    "table": 0.7,
+    "omi": "0.844",
+    "cell": "Items!S1791"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L31@DRIVE",
+    "value": 1.72,
+    "brennan_col": "L LGTH",
+    "brennan": "1.72",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.5,
+    "brennan_col": "C4 HEX",
+    "brennan": "1.500",
+    "result": "equal"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): L31@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!L1791 = 1.720 (table had 1.47); D3@BORE: OMi WebsitePartsInfo2026.xlsx Items!S1791 = 0.844 (table had 0.7) | Brennan TFA TFA-p016-t01: agrees on L31@DRIVE, HEXB@HEX"
+ },
+ {
+  "sku": "6410-06-08-O",
+  "table": "DesignTable_6410.xlsx",
+  "row": "6410-06-08-O",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p016-t03",
+  "omi_row": 1843,
+  "omi_values": {
+   "OverallLength": "1.450",
+   "HexFlat": "1.000",
+   "S1ID": "0.297"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "L33@DRIVE",
+    "table": 1.32,
+    "omi": "1.450",
+    "cell": "Items!L1843"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L33@DRIVE",
+    "value": 1.45,
+    "brennan_col": "L LGTH",
+    "brennan": "1.450",
+    "result": "equal"
+   },
+   {
+    "col": "C1HEX@HEX",
+    "value": 1,
+    "brennan_col": "C4 HEX",
+    "brennan": "1.000",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.3,
+    "brennan_col": "B DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): L33@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!L1843 = 1.450 (table had 1.32) | Brennan TFA TFA-p016-t03: agrees on L33@DRIVE, C1HEX@HEX, D@BORE"
+ },
+ {
+  "sku": "6410-08-04-O",
+  "table": "DesignTable_6410.xlsx",
+  "row": "6410-08-04-O",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p016-t03",
+  "omi_row": 1844,
+  "omi_values": {
+   "OverallLength": "1.100",
+   "HexFlat": "0.875",
+   "S1ID": "0.386"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "L33@DRIVE",
+    "table": 0.8,
+    "omi": "1.100",
+    "cell": "Items!L1844"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "L33@DRIVE",
+    "value": 1.1,
+    "brennan_col": "L LGTH",
+    "brennan": "1.100",
+    "result": "equal"
+   },
+   {
+    "col": "C1HEX@HEX",
+    "value": 0.88,
+    "brennan_col": "C4 HEX",
+    "brennan": "0.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.38,
+    "brennan_col": "B DRILL",
+    "brennan": "0.391",
+    "result": "different"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): L33@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!L1844 = 1.100 (table had 0.8) | Brennan TFA TFA-p016-t03: agrees on L33@DRIVE, C1HEX@HEX; DIFFERS on D@BORE 0.38 vs Brennan B DRILL 0.391 (built to the dimension source, s6)"
+ },
+ {
+  "sku": "6500-08-06-FG",
+  "table": "DesignTable_6500.xlsx",
+  "row": "6500-08-06-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p034-t01",
+  "omi_row": 1918,
+  "omi_values": {
+   "M1": "0.91",
+   "M2": "1.28",
+   "L1": "1.25",
+   "HexFlat": "0.750",
+   "S1ID": "0.391",
+   "NutHex1": "0.688",
+   "S2ID": "0.297"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG_M@DRIVE",
+    "value": 1.25,
+    "brennan_col": "M LGTH",
+    "brennan": "1.250",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 0.69,
+    "brennan_col": "C HEX",
+    "brennan": "0.688",
+    "result": "rounding_only"
+   },
+   {
+    "col": "Y@REF",
+    "value": 0.75,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.750",
+    "result": "equal"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.39,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.391",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.3,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p034-t01: agrees on LEG_M@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "6500-08-08-FG",
+  "table": "DesignTable_6500.xlsx",
+  "row": "6500-08-08-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED-LEGS",
+  "brennan": "TFA-p034-t01",
+  "omi_row": 1919,
+  "omi_values": {
+   "M1": "0.96",
+   "M2": "1.38",
+   "L1": "1.25",
+   "HexFlat": "0.750",
+   "S1ID": "0.391",
+   "NutHex1": "0.875",
+   "S2ID": "0.391"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG_M@DRIVE",
+    "value": 1.25,
+    "brennan_col": "M LGTH",
+    "brennan": "1.25",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 0.88,
+    "brennan_col": "C HEX",
+    "brennan": "0.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "Y@REF",
+    "value": 0.75,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.750",
+    "result": "equal"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.39,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.391",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.39,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.391",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p034-t01: agrees on LEG_M@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "6502-16-16-FG",
+  "table": "DesignTable_6502.xlsx",
+  "row": "6502-16-16-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p035-t02",
+  "omi_row": 1970,
+  "omi_values": {
+   "M1": "1.160",
+   "M2": "1.750",
+   "L1": "1.470",
+   "HexFlat": "1.312",
+   "S1ID": "0.844",
+   "NutHex1": "1.500",
+   "S2ID": "0.844"
+  },
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M2@DRIVE",
+    "value": 1.47,
+    "brennan_col": "M2 LGTH",
+    "brennan": "1.47",
+    "result": "equal"
+   },
+   {
+    "col": "M6@DRIVE",
+    "value": 1.75,
+    "brennan_col": "M6 LGTH",
+    "brennan": "1.75",
+    "result": "equal"
+   },
+   {
+    "col": "C3HEX@HEX",
+    "value": 1.5,
+    "brennan_col": "C HEX",
+    "brennan": "1.500",
+    "result": "equal"
+   },
+   {
+    "col": "Y@HEX",
+    "value": 1.31,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.312",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.84,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.84,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p035-t02: agrees on M2@DRIVE, M6@DRIVE, C3HEX@HEX, Y@HEX, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "6502-20-16-FG",
+  "table": "DesignTable_6502.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": null,
+  "omi_row": 1971,
+  "omi_values": {},
+  "proposal": "no Air-Way row and no Brennan catalog row; OMi gives no dimension"
+ },
+ {
+  "sku": "6505-24-24",
+  "table": "DesignTable_6505.xlsx",
+  "row": "6505-24-24",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p018-t01",
+  "omi_row": 2029,
+  "omi_values": {
+   "OverallLength": "3.00",
+   "L1": "2.27",
+   "HexFlat": "2.000",
+   "S1ID": "1.500",
+   "NutHex1": "2.250",
+   "S2ID": "1.312"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "CHEX@HEX",
+    "value": 2,
+    "brennan_col": "C HEX",
+    "brennan": "2.000",
+    "result": "equal"
+   },
+   {
+    "col": "C3HEX@HEX",
+    "value": 2.25,
+    "brennan_col": "C1 HEX",
+    "brennan": "2.250",
+    "result": "equal"
+   },
+   {
+    "col": "D@BORE",
+    "value": 1.31,
+    "brennan_col": "B DRILL",
+    "brennan": "1.312",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p018-t01: agrees on CHEX@HEX, C3HEX@HEX, D@BORE"
+ },
+ {
+  "sku": "6505-32-32",
+  "table": "DesignTable_6505.xlsx",
+  "row": "6505-32-32",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p018-t01",
+  "omi_row": 2030,
+  "omi_values": {
+   "OverallLength": "3.44",
+   "L1": "2.50",
+   "HexFlat": "2.625",
+   "S1ID": "1.938",
+   "NutHex1": "2.875",
+   "S2ID": "1.781"
+  },
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [
+   {
+    "col": "CHEX@HEX",
+    "table": 2.5,
+    "omi": "2.625",
+    "cell": "Items!R2030"
+   }
+  ],
+  "brennan_cells": [
+   {
+    "col": "CHEX@HEX",
+    "value": 2.625,
+    "brennan_col": "C HEX",
+    "brennan": "2.625",
+    "result": "equal"
+   },
+   {
+    "col": "C3HEX@HEX",
+    "value": 2.88,
+    "brennan_col": "C1 HEX",
+    "brennan": "2.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D@BORE",
+    "value": 1.78,
+    "brennan_col": "B DRILL",
+    "brennan": "1.781",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "OMi dims first (user 2026-09-25): CHEX@HEX: OMi WebsitePartsInfo2026.xlsx Items!R2030 = 2.625 (table had 2.5) | Brennan TFA TFA-p018-t01: agrees on CHEX@HEX, C3HEX@HEX, D@BORE"
+ },
+ {
+  "sku": "6602-32-32-32-FG",
+  "table": "DesignTable_6602.xlsx",
+  "row": "6602-32-32-32-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p057-t02",
+  "omi_row": 2093,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "M1@DRIVE",
+    "value": 3.06,
+    "brennan_col": "M LGTH",
+    "brennan": "3.060",
+    "result": "equal"
+   },
+   {
+    "col": "C3HEX@HEX",
+    "value": 2.88,
+    "brennan_col": "C HEX",
+    "brennan": "2.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "Y@HEX",
+    "value": 2.5,
+    "brennan_col": "Y HEX",
+    "brennan": "2.500",
+    "result": "equal"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 1.78,
+    "brennan_col": "A1 DRILL",
+    "brennan": "1.781",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 1.78,
+    "brennan_col": "A2 DRILL",
+    "brennan": "1.781",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE",
+    "value": 1.78,
+    "brennan_col": "A3 DRILL",
+    "brennan": "1.781",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p057-t02: agrees on M1@DRIVE, C3HEX@HEX, Y@HEX, D1@BORE, D2@BORE, D3@BORE"
+ },
+ {
+  "sku": "6801-16-10-NWO-FG",
+  "table": "DesignTable_6801.xlsx, DesignTable_6801L.xlsx, DesignTable_6801LL.xlsx, DesignTable_6801LLL.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p041-t01",
+  "omi_row": 2176,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6801-16-12-NWO-FG",
+  "table": "DesignTable_6801.xlsx",
+  "row": "6801-16-12-NWO-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED (hex/legs single-source for unequal-dash)",
+  "brennan": "TFA-p041-t01",
+  "omi_row": 2177,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED (hex/legs single-source for unequal-dash)",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG_ORB@DRIVE",
+    "value": 2.05,
+    "brennan_col": "M7 LGTH",
+    "brennan": "2.05",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.25,
+    "brennan_col": "C HEX",
+    "brennan": "1.250",
+    "result": "equal"
+   },
+   {
+    "col": "Y@REF",
+    "value": 1.31,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.312",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.84,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.61,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.609",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p041-t01: agrees on LEG_ORB@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "6801-16-14-NWO-FG",
+  "table": "DesignTable_6801.xlsx",
+  "row": "6801-16-14-NWO-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p041-t01",
+  "omi_row": 2178,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG_ORB@DRIVE",
+    "value": 2.05,
+    "brennan_col": "M7 LGTH",
+    "brennan": "2.050",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.38,
+    "brennan_col": "C HEX",
+    "brennan": "1.375",
+    "result": "rounding_only"
+   },
+   {
+    "col": "Y@REF",
+    "value": 1.31,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.312",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.84,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.72,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.719",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p041-t01: agrees on LEG_ORB@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "6801-16-16-NWO-FG",
+  "table": "DesignTable_6801.xlsx",
+  "row": "6801-16-16-NWO-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED (hex/legs single-source for unequal-dash)",
+  "brennan": "TFA-p041-t01",
+  "omi_row": 2179,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED (hex/legs single-source for unequal-dash)",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG_ORB@DRIVE",
+    "value": 2.05,
+    "brennan_col": "M7 LGTH",
+    "brennan": "2.05",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 1.5,
+    "brennan_col": "C HEX",
+    "brennan": "1.500",
+    "result": "equal"
+   },
+   {
+    "col": "Y@REF",
+    "value": 1.31,
+    "brennan_col": "Y FLATS",
+    "brennan": "1.312",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.84,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.84,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.844",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p041-t01: agrees on LEG_ORB@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE"
+ },
+ {
+  "sku": "6803-02-02-02-NWO-FG",
+  "table": "DesignTable_6803.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": null,
+  "omi_row": 2240,
+  "omi_values": {},
+  "proposal": "no Air-Way row and no Brennan catalog row; OMi gives no dimension"
+ },
+ {
+  "sku": "6803-04-04-04-NWO-FG",
+  "table": "DesignTable_6803.xlsx",
+  "row": "6803-04-04-04-NWO-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED",
+  "brennan": "TFA-p059-t02",
+  "omi_row": 2241,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG1@DRIVE",
+    "value": 0.89,
+    "brennan_col": "M1 LGTH",
+    "brennan": "0.89",
+    "result": "equal"
+   },
+   {
+    "col": "LEG2@DRIVE",
+    "value": 0.89,
+    "brennan_col": "M2 LGTH",
+    "brennan": "0.89",
+    "result": "equal"
+   },
+   {
+    "col": "LEG3@DRIVE",
+    "value": 1.03,
+    "brennan_col": "M7 LGTH",
+    "brennan": "1.03",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 0.56,
+    "brennan_col": "C HEX",
+    "brennan": "0.563",
+    "result": "rounding_only"
+   },
+   {
+    "col": "Y@REF",
+    "value": 0.44,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.438",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.17,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.17,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE",
+    "value": 0.17,
+    "brennan_col": "B3 DRILL",
+    "brennan": "0.172",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p059-t02: agrees on LEG1@DRIVE, LEG2@DRIVE, LEG3@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE, D3@BORE"
+ },
+ {
+  "sku": "6803-04-04-06-NWO-FG",
+  "table": "DesignTable_6803.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p059-t02",
+  "omi_row": 2242,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6803-06-06-06-NWO-FG",
+  "table": "DesignTable_6803.xlsx",
+  "row": "6803-06-06-06-NWO-FG",
+  "old_scope": "DROP",
+  "old_status": "VERIFIED",
+  "brennan": "TFA-p059-t02",
+  "omi_row": 2244,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "VERIFIED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "LEG1@DRIVE",
+    "value": 1.06,
+    "brennan_col": "M1 LGTH",
+    "brennan": "1.06",
+    "result": "equal"
+   },
+   {
+    "col": "LEG2@DRIVE",
+    "value": 1.06,
+    "brennan_col": "M2 LGTH",
+    "brennan": "1.06",
+    "result": "equal"
+   },
+   {
+    "col": "LEG3@DRIVE",
+    "value": 1.25,
+    "brennan_col": "M7 LGTH",
+    "brennan": "1.25",
+    "result": "equal"
+   },
+   {
+    "col": "HEXB@HEX",
+    "value": 0.69,
+    "brennan_col": "C HEX",
+    "brennan": "0.688",
+    "result": "rounding_only"
+   },
+   {
+    "col": "Y@REF",
+    "value": 0.56,
+    "brennan_col": "Y FLATS",
+    "brennan": "0.562",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.3,
+    "brennan_col": "B1 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D2@BORE",
+    "value": 0.3,
+    "brennan_col": "B2 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D3@BORE",
+    "value": 0.3,
+    "brennan_col": "B3 DRILL",
+    "brennan": "0.297",
+    "result": "rounding_only"
+   }
+  ],
+  "why": "Brennan TFA TFA-p059-t02: agrees on LEG1@DRIVE, LEG2@DRIVE, LEG3@DRIVE, HEXB@HEX, Y@REF, D1@BORE, D2@BORE, D3@BORE"
+ },
+ {
+  "sku": "6807-16-16-NWO-FG",
+  "table": "DesignTable_6807.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p044-t01",
+  "omi_row": 2303,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6807-20-20-NWO-FG",
+  "table": "DesignTable_6807.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p044-t01",
+  "omi_row": 2304,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6809-04-04-NWO-FG",
+  "table": "DesignTable_6809.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p044-t03",
+  "omi_row": 2314,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6809-06-06-NWO-FG",
+  "table": "DesignTable_6809.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p044-t03",
+  "omi_row": 2315,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6809-08-08-NWO-FG",
+  "table": "DesignTable_6809.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p044-t03",
+  "omi_row": 2316,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6901-08-06-NWO-FG",
+  "table": "DesignTable_6901.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p045-t03",
+  "omi_row": 2375,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6901-08-08-NWO-FG",
+  "table": "DesignTable_6901.xlsx",
+  "row": "6901-08-08 NWO-FG",
+  "old_scope": "DROP",
+  "old_status": "ASSUMED",
+  "brennan": "TFA-p045-t03",
+  "omi_row": 2376,
+  "omi_values": {},
+  "new_scope": "BUILD",
+  "new_status": "ASSUMED",
+  "omi_taken": [],
+  "brennan_cells": [
+   {
+    "col": "CHEX@HEX",
+    "value": 1,
+    "brennan_col": "C1 HEX",
+    "brennan": "1.000",
+    "result": "equal"
+   },
+   {
+    "col": "C4HEX@HEX",
+    "value": 0.88,
+    "brennan_col": "C HEX",
+    "brennan": "0.875",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D1@BORE",
+    "value": 0.39,
+    "brennan_col": "B DRILL",
+    "brennan": "0.391",
+    "result": "rounding_only"
+   },
+   {
+    "col": "D@BORE",
+    "value": 0.45,
+    "brennan_col": "A DRILL",
+    "brennan": "0.460",
+    "result": "different"
+   }
+  ],
+  "why": "Brennan TFA TFA-p045-t03: agrees on CHEX@HEX, C4HEX@HEX, D1@BORE; DIFFERS on D@BORE 0.45 vs Brennan A DRILL 0.460 (built to the dimension source, s6)"
+ },
+ {
+  "sku": "6901-08-12-NWO-FG",
+  "table": "DesignTable_6901.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p045-t03",
+  "omi_row": 2377,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ },
+ {
+  "sku": "6901-10-06-NWO-FG",
+  "table": "DesignTable_6901.xlsx",
+  "row": "",
+  "old_scope": "",
+  "old_status": "",
+  "brennan": "TFA-p045-t03",
+  "omi_row": 2378,
+  "omi_values": {},
+  "proposal": "no Air-Way row (Air-Way does not print this size); Brennan prints it (check only); OMi gives no dimension"
+ }
+]

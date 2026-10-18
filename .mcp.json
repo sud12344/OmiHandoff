@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "solidworks": {
+      "type": "stdio",
+      "command": "C:\\Users\\sudha\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "args": ["C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\sw_mcp\\server.py"]
+    }
+  }
+}

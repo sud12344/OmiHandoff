@@ -1,0 +1,66 @@
+table,config,result,reason
+1503,1503-02-02-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-04-04-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-06-06-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-08-06-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-08-08-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-12-08-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-12-12-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-12-16-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-16-12-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-16-16-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-20-16-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-20-20-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-24-24-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-32-32-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1503,1503-04-02-FG,built,TARGET (wave-2 data complete)
+1503,1503-04-06-FG,built,TARGET (wave-2 data complete)
+1503,1503-06-04-FG,built,TARGET (wave-2 data complete)
+1503,1503-06-08-FG,built,TARGET (wave-2 data complete)
+1503,1503-08-12-FG,built,TARGET (wave-2 data complete)
+1504,1504-04-04-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-1504; without the proposals: skipped (BUILD MISSING)
+1504,1504-06-06-FG,built,TARGET (wave-2 data complete)
+1504,1504-20-20-FG,built,stage row (ASSUMED/VERIFIED in the stage)
+1504,1504-24-24-FG,skipped,"DataStatus MISSING - wave-2: missing TAPDRILL@BORE (GATE Q-CONFLICT-TAPDRILL-24 (A9, open): -24 tap drill 1.72 vs 1.70 - left EMPTY)"
+1504,1504-32-32-FG,skipped,DataStatus MISSING - wave-2: missing every dimension column (HOLD needs STEP download: 09_STEP_FILES/BRENNAN_1504-32-32-FG.stp is not there (no Brennan; GATE Q-TRANSFER-NUTHEX (open))
+5501,5501-02-02-FG,built,TARGET (wave-2 data complete)
+5501,5501-04-04-FG,built,TARGET (wave-2 data complete)
+5501,5501-06-06-FG,built,TARGET (wave-2 data complete)
+5501,5501-08-08-FG,built,TARGET (wave-2 data complete)
+5501,5501-12-12-FG,built,TARGET (wave-2 data complete)
+5501,5501-16-16-FG,built,TARGET (wave-2 data complete)
+5501,5501-20-20-FG,built,TARGET (wave-2 data complete)
+5501,5501-24-24-FG,skipped,DataStatus MISSING
+5501,5501-32-32-FG,skipped,DataStatus MISSING
+5503,5503-02-02-FG,blocked,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-5503D; leg 1: port depth P1 0.46 >= leg length 0.47
+5503,5503-04-04-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-5503D/P-PORT; without the proposals: blocked (leg 1: port depth P1 0.67 >= leg length 0.62; leg 2: bore 1.19 >= tip dia 0.522)
+5503,5503-06-06-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-PORT; without the proposals: blocked (leg 1: port depth P1 0.68 >= leg length 0.72)
+5503,5503-08-08-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-5503D/P-PORT; without the proposals: blocked (leg 1: port depth P1 0.9 >= leg length 0.91; leg 2: bore 1.54 >= tip dia 0.816)
+5503,5503-12-12-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-5503D; without the proposals: blocked (leg 2: bore 1.64 >= tip dia 1.025)
+5503,5503-04-02-FG,skipped,DataStatus MISSING - wave-2: missing every dimension column (HOLD needs STEP download: 09_STEP_FILES/BRENNAN_5503-04-02-FG.stp is not there (no Brennan)
+5503,5503-06-04-FG,skipped,DataStatus MISSING - wave-2: missing every dimension column (HOLD needs STEP download: 09_STEP_FILES/BRENNAN_5503-06-04-FG.stp is not there (no Brennan)
+5503,5503-08-06-FG,skipped,DataStatus MISSING - wave-2: missing every dimension column (HOLD needs STEP download: 09_STEP_FILES/BRENNAN_5503-08-06-FG.stp is not there (no Brennan)
+5503,5503-12-08-FG,skipped,DataStatus MISSING - wave-2: missing every dimension column (HOLD needs STEP download: 09_STEP_FILES/BRENNAN_5503-12-08-FG.stp is not there (no Brennan)
+5503,5503-16-12-FG,skipped,DataStatus MISSING - wave-2: missing every dimension column (HOLD needs STEP download: 09_STEP_FILES/BRENNAN_5503-16-12-FG.stp is not there (no Brennan)
+5503,5503-16-16-FG,built,TARGET (wave-2 data complete); needs PROPOSAL P-PORT; without the proposals: blocked (leg 1: port depth P1 1.14 >= leg length 1.12)
+5503,5503-20-20-FG,built,TARGET (wave-2 data complete)
+5503,5503-24-24-FG,skipped,"DataStatus MISSING - wave-2: missing TAPDRILL@BORE (GATE Q-CONFLICT-TAPDRILL-24 (A9, open): -24 tap drill 1.72 vs 1.70 - left EMPTY)"
+5503,5503-32-32-FG,skipped,"DataStatus MISSING - wave-2: missing TAPDRILL@BORE (GATE Q-CONFLICT-TAPDRILL-32 (A9, open): -32 tap drill 2.19 vs 2.20 - left EMPTY)"
+5505,5505-04-04-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-PORT; without the proposals: blocked (leg 1: port depth P1 0.67 >= leg length 0.69; leg 2: port depth P1 0.67 >= leg length 0.69)
+5505,5505-02-02-FG,skipped,DataStatus MISSING
+5505,5505-06-06-FG,skipped,DataStatus MISSING
+5505,5505-08-08-FG,skipped,DataStatus MISSING
+5505,5505-12-12-FG,skipped,DataStatus MISSING
+5505,5505-16-16-FG,skipped,DataStatus MISSING
+5505,5505-20-20-FG,built,TARGET (wave-2 data complete)
+6810,6810-12-12-NWO-FG,skipped,DataStatus MISSING
+6902,6902-12-12-NWO-FG,built,stage row (ASSUMED/VERIFIED in the stage); needs PROPOSAL P-6902PN; without the proposals: skipped (dash count [12])
+6902,6902-04-04-NWO-FG,skipped,DataStatus MISSING
+6902,6902-06-04-NWO-FG,skipped,DataStatus MISSING
+6902,6902-06-06-NWO-FG,skipped,DataStatus MISSING
+6902,6902-08-06-NWO-FG,skipped,DataStatus MISSING
+6902,6902-08-08-NWO-FG,skipped,DataStatus MISSING
+6902,6902-10-08-NWO-FG,skipped,DataStatus MISSING
+6902,6902-10-12-NWO-FG,skipped,DataStatus MISSING
+6902,6902-16-16-NWO-FG,skipped,DataStatus MISSING
+6902,6902-24-24-NWO-FG,skipped,DataStatus MISSING - wave-2: missing N4@DRIVE ; M@DRIVE ; W2@HEX ; C1HEX@HEX (GATE STEP:6902-24-24-NWO-FG (shape / pilot file not in 09_STEP_FILES - needs STEP download)

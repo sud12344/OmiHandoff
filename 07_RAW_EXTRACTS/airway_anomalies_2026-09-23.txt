@@ -1,0 +1,48 @@
+1404|1404-16-20,1404-20-16|pass2 (reverse) swapped these two rows; resolved by targeted third fetch which matched pass1
+1501|1501-2-4-FG|A NPTF printed "1/8-24" on Air-Way (expected 1/8-27); copied as printed
+1501|1501-4-2-FG|D printed 0.23 (sibling non-FG row 0.13); copied as printed
+1502|1502-4-2|A NPTF printed "1/8-18" on Air-Way for a -4 end (expected 1/4-18); copied as printed
+1503|(table)|pass1 stated ROWS=36 but enumerated 35; pass2 35; json n=35 -> 35 accepted
+1504|1504-4-4-FG|A1 NPSM printed "1/4918" on Air-Way (garbled 1/4-18); copied as printed
+1703|(table)|single-row pass repeated identically; reverse pass trivially equal
+2605|(table)|pass1 stated ROWS=32 but enumerated 31; pass2 31; Series sheet n=30 -> 31 accepted (both passes agree)
+2605|2605-32-32-32-FG|B (3) printed "1 1/2-12" on Air-Way while B (1) is 2 1/2-12 for a -32 end; copied as printed, flag for review
+2650|2650-24-24-24-24|B threads printed "1 7/8-14" on Air-Way (UN/UNF -24 JIC is 1 7/8-12); copied as printed
+2701|2701-4-4-LN|O printed ".056" on Air-Way (sibling rows 0.56); copied as printed
+2701|(table)|pass1 stated ROWS=34, both passes enumerate 33; Series sheet n=34 -> 33 accepted
+2702|2702-12-12-FG-LN|O/Y/D(1)/D(2) printed 1.31/1.25/0.72/0.72 (siblings 1.19/1.06/0.61) — looks like a -16 row's values; copied as printed, flag for review
+2702|(table)|pass1 stated ROWS=32, pass2 29, both enumerate 29; Series n=28 -> 29 accepted
+2703|2703-8-8-8-FG-LN|B (3) printed "3/16-16" on Air-Way (siblings 3/4-16); copied as printed
+2703|(table)|pass1 stated ROWS=30, pass2 26; both enumerate 28; Series n=26 -> 28 accepted
+2704|(table)|no 2704-4-4-4-LN row on Air-Way (LN variant exists for every other size); as printed
+2706|2706-24-24-LN|A NPTF printed "1 1/2-11" on Air-Way (sibling 1 1/2-11 1/2); copied as printed
+4404|4404-20-24|AA printed 1.14 on Air-Way (all other -20 OD rows 1.36); copied as printed
+4404|(table)|pass1 stated ROWS=33, pass2 34; both enumerate 33
+4501|(table)|pass1 stated ROWS=33, pass2 35; both enumerate 33
+4503|4503-6-6-FG|D1 printed "030" on Air-Way (garbled 0.30); copied as printed
+4601|(table)|part numbers carry " NWO" suffix on Air-Way (e.g. "4601-8-8 NWO"); config names keep it verbatim; pass1 stated ROWS=43, both enumerate 42
+4603|(table)|" NWO" suffix in part numbers kept verbatim; 4603-6-4 NWO AA 0.38 (siblings 0.43) and 4603-16-8 NWO AA 1.00 (siblings 1.06) as printed
+4604|4604-20-14-0|part number printed with trailing "-0" (zero) instead of "-O" on Air-Way; kept verbatim, flag
+4604|(table)|"-O" suffix (O-ring) in part numbers kept verbatim; pass1 stated 38, pass2 39, both enumerate 38; row order on Air-Way starts with 5-6-O before 4-3-O
+5503|5503-2-2-FG,4-4-FG,8-8-FG,12-12-FG|D printed 0.83/1.19/1.54/1.64 on -FG rows (non-FG siblings 0.19/0.28/0.53/0.72) — implausible bore, copied as printed, flag for review
+5505|5505-24-24-FG|A(1) whitespace variant between passes ("1 1/2- 11 1/2" vs "1 1/2-11 1/2"); compared with whitespace stripped, pass1 form kept
+5604|5604-4-4-4-FG|A (2) printed "14-18" on Air-Way (garbled 1/4-18); copied as printed
+5605|5605-8-8-8-FG|A (1) printed "1/4-14" on Air-Way for a -8 end (expected 1/2-14); copied as printed
+6402|(table)|"-O" suffix kept verbatim; 6402-6-8-O TUBE OD 1/2, 6402-8-12-O TUBE OD 1 (do not match -6/-8 first end; copied as printed); 6402-24-20-O L26/L27 1.90/1.27 far below siblings (flag)
+6501|6501-24-24|B printed "1 7/8-14" on Air-Way (JIC -24 is 1 7/8-12); copied as printed
+6502|6502-24-24|B (1)/(2) printed "1 7/8-14" on Air-Way (FG sibling 1 7/8-12); copied as printed
+6504|6504-6-8|D (1)/D (2) printed ".030"/".039" on Air-Way (garbled 0.30/0.39); copied as printed
+6504|6504-24-24|D (1) printed 1.38 (D (2) 1.31); copied as printed
+6505|(table)|D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows
+6506|6506-12-12,12-14,12-16,16-16,20-20|L17 blank on Air-Way -> empty cell (MISSING for that dim)
+6565|6565-32-32|B (1)/(2) printed "2 1/2-2 1/2" (thread pitch missing; expected 2 1/2-12); copied as printed
+6600|6600-24-24-24-FG|D (3) printed ".31" on Air-Way (siblings 1.31); copied as printed
+6602|6602-16-10-6|B (1) printed "1 5/16-18" on Air-Way (expected 1 5/16-12); 6602-16-16-8 C3 0.88 (siblings 1.50); 6602-6-6-8-FG D(1) 0.32, 6602-8-8-6-FG D(1) 0.43; all copied as printed
+6901|(table)|pass2 stated ROWS=30, both enumerate 29; 6901-6-6 NWO-FG D1 0.29 (siblings 0.30) as printed
+6902|6902-6-4 NWO|C1 0.88 (sibling 6902-4-4 C1 0.69); as printed
+0304|(table)|Air-Way part numbers printed as 304-n; config names zero-padded to 0304-nn per project rule
+0318|(table)|Air-Way part numbers printed as 318-n; config names zero-padded to 0318-nn
+0319|(table)|Air-Way part numbers printed as 319-n; config names zero-padded to 0319-nn; sleeve has no thread column (X = sleeve OD as printed)
+0403|(table)|Air-Way part numbers carry " UNPL" / " PF UNPL" suffixes (unplated / PF variant) kept verbatim; config names 0403-...; L7 and D2 printed to 3 decimals as on page; pass2 stated ROWS=35, both enumerate 34
+0403|403-10-6 UNPL|C printed "0375" on Air-Way (garbled 0.75?); left empty, MISSING
+0306|(table)|Air-Way lists only the ORFS FF306 bulkhead locknut (s3) for this root; rows renamed 0306-n LN; OMi 0306-02..-32 (JIC bulkhead locknut) is NOT the same thread family -> those SKUs appear as MISSING rows

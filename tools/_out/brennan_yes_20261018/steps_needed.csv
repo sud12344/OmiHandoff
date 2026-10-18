@@ -1,0 +1,336 @@
+why,table,config,step
+Brennan-only row,0304,0304-C-02,0304-C-02
+Brennan-only row,0306,0306-02,0306-02
+shape,0319,0319-02,0319 (tube sleeve)
+shape,0319,0319-03,0319 (tube sleeve)
+shape,0319,0319-04,0319 (tube sleeve)
+shape,0319,0319-05,0319 (tube sleeve)
+shape,0319,0319-06,0319 (tube sleeve)
+shape,0319,0319-08,0319 (tube sleeve)
+shape,0319,0319-10,0319 (tube sleeve)
+shape,0319,0319-12,0319 (tube sleeve)
+shape,0319,0319-16,0319 (tube sleeve)
+shape,0319,0319-20,0319 (tube sleeve)
+shape,0319,0319-24,0319 (tube sleeve)
+shape,0319,0319-32,0319 (tube sleeve)
+Brennan-only row,1405,1405-04-06,1405-04-06
+Brennan-only row,1405,1405-08-12,1405-08-12
+Brennan-only row,1405,1405-20-24,1405-20-24
+shape,1504,1504-04-04-FG,1504-04-04-FG
+Brennan-only row,1504,1504-20-20-FG,1504-20-20-FG
+Brennan-only row,1504,1504-24-24-FG,1504-24-24-FG
+Brennan-only row,1504,1504-32-32-FG,1504-32-32-FG
+Brennan-only row,1601,1601-20-20-20-FG,1601-20-20-20-FG
+Brennan-only row,1602,1602-02-02-02-FG,1602-02-02-02-FG
+Brennan-only row,1602,1602-04-04-04-FG,1602-04-04-04-FG
+Brennan-only row,1602,1602-06-06-06-FG,1602-06-06-06-FG
+Brennan-only row,1602,1602-08-08-08-FG,1602-08-08-08-FG
+Brennan-only row,1602,1602-12-12-12-FG,1602-12-12-12-FG
+Brennan-only row,1602,1602-16-16-16-FG,1602-16-16-16-FG
+Brennan-only row,1602,1602-20-20-20-FG,1602-20-20-20-FG
+Brennan-only row,1703,1703-08-08-FG,1703-08-08-FG
+Brennan-only row,1703,1703-12-12-FG,1703-12-12-FG
+Brennan-only row,1703,1703-16-16-FG,1703-16-16-FG
+Brennan-only row,1703,1703-20-20-FG,1703-20-20-FG
+Brennan-only row,1703,1703-32-32-FG,1703-32-32-FG
+Brennan-only row,1704,1704-08-08-FG,1704-08-08-FG
+Brennan-only row,1704,1704-12-12-FG,1704-12-12-FG
+Brennan-only row,1704,1704-16-16-FG,1704-16-16-FG
+Brennan-only row,1704,1704-20-20-FG,1704-20-20-FG
+Brennan-only row,1704,1704-32-32-FG,1704-32-32-FG
+Brennan-only row,1724,1724-12,"(STEP, part not named)"
+Brennan-only row,1724,1724-16,"(STEP, part not named)"
+Brennan-only row,1724,1724-20,"(STEP, part not named)"
+Brennan-only row,1724,1724-24,"(STEP, part not named)"
+Brennan-only row,1724,1724-32,"(STEP, part not named)"
+Brennan-only row,1724,1724-40,"(STEP, part not named)"
+Brennan-only row,1800,1800-12-12,"(STEP, part not named)"
+Brennan-only row,1800,1800-12-16,"(STEP, part not named)"
+Brennan-only row,1800,1800-16-12,"(STEP, part not named)"
+Brennan-only row,1800,1800-16-16,"(STEP, part not named)"
+Brennan-only row,1800,1800-16-20,"(STEP, part not named)"
+Brennan-only row,1800,1800-16-24,"(STEP, part not named)"
+Brennan-only row,1800,1800-20-16,"(STEP, part not named)"
+Brennan-only row,1800,1800-20-20,"(STEP, part not named)"
+Brennan-only row,1800,1800-20-24,"(STEP, part not named)"
+Brennan-only row,1800,1800-24-20,"(STEP, part not named)"
+Brennan-only row,1800,1800-24-24,"(STEP, part not named)"
+Brennan-only row,1800,1800-32-32,"(STEP, part not named)"
+Brennan-only row,1803,1803-08-08-FG,1803-08-08-FG
+Brennan-only row,1803,1803-12-12-FG,1803-12-12-FG
+Brennan-only row,1803,1803-16-16-FG,1803-16-16-FG
+Brennan-only row,1803,1803-20-20-FG,1803-20-20-FG
+Brennan-only row,1803,1803-24-24-FG,1803-24-24-FG
+Brennan-only row,1803,1803-32-32-FG,1803-32-32-FG
+Brennan-only row,1804,1804-12-12-FG,1804-12-12-FG
+Brennan-only row,1804,1804-16-16-FG,1804-16-16-FG
+Brennan-only row,1804,1804-20-20-FG,1804-20-20-FG
+Brennan-only row,1804,1804-24-24-FG,1804-24-24-FG
+Brennan-only row,1804,1804-32-32-FG,1804-32-32-FG
+Brennan-only row,1824,1824-12,"(STEP, part not named)"
+Brennan-only row,1824,1824-16,"(STEP, part not named)"
+Brennan-only row,1824,1824-20,"(STEP, part not named)"
+Brennan-only row,1824,1824-24,"(STEP, part not named)"
+Brennan-only row,1824,1824-32,"(STEP, part not named)"
+Brennan-only row,2403,2403-06-02,2403-06-02
+Brennan-only row,2405,2405-10-06,2405-10-06
+Brennan-only row,2405,2405-14-12,2405-14-12
+Brennan-only row,2406,2406-06-12,2406-06-12
+Brennan-only row,2502,2502-20-16-FG,2502-20-16-FG
+Brennan-only row,2505,2505-12-12-FG,2505-12-12-FG
+Brennan-only row,2505,2505-16-16-FG,2505-16-16-FG
+Brennan-only row,2606,2606-04-04-04-FG,2606-04-04-04-FG
+Brennan-only row,2606,2606-06-06-06-FG,2606-06-06-06-FG
+Brennan-only row,2606,2606-12-12-12-FG,2606-12-12-12-FG
+Brennan-only row,2606,2606-16-16-16-FG,2606-16-16-16-FG
+Brennan-only row,2609,2609-08-08-08-FG,2609-08-08-08-FG
+Brennan-only row,2611,2611-08-08-08-FG,2611-08-08-08-FG
+Brennan-only row,2611,2611-12-12-12-FG,2611-12-12-12-FG
+Brennan-only row,2700,2700-04-02,2700-04-02
+Brennan-only row,2700,2700-08-06,2700-08-06
+Brennan-only row,2700,2700-10-08,2700-10-08
+Brennan-only row,2700,2700-12-10,2700-12-10
+Brennan-only row,2705,2705-04-02,2705-04-02
+shape,3051,3051-04-04,3051
+shape,3051,3051-06-06,3051
+shape,3051,3051-08-08,3051
+shape,3051,3051-12-12,3051
+Brennan-only row,4501,4501-06-04-FG,4501-06-04-FG
+Brennan-only row,4501,4501-06-06-FG,4501-06-06-FG
+Brennan-only row,4501,4501-08-06-FG,4501-08-06-FG
+Brennan-only row,4501,4501-08-12-FG,4501-08-12-FG
+Brennan-only row,4501,4501-10-08-FG,4501-10-08-FG
+Brennan-only row,4501,4501-12-08-FG,4501-12-08-FG
+Brennan-only row,4501,4501-12-12-FG,4501-12-12-FG
+Brennan-only row,4501,4501-16-12-FG,4501-16-12-FG
+Brennan-only row,4501,4501-16-16-FG,4501-16-16-FG
+Brennan-only row,4501,4501-20-20-FG,4501-20-20-FG
+Brennan-only row,4503,4503-04-04-FG,4503-04-04-FG
+Brennan-only row,4503,4503-12-12-FG,4503-12-12-FG
+Brennan-only row,4503,4503-16-12-FG,4503-16-12-FG
+Brennan-only row,4503,4503-16-16-FG,4503-16-16-FG
+Brennan-only row,4503,4503-20-20-FG,4503-20-20-FG
+Brennan-only row,4503,4503-24-24-FG,4503-24-24-FG
+Brennan-only row,4601,4601-04-04-NWO-FG,4601-04-04-NWO-FG
+Brennan-only row,4601,4601-12-10-NWO-FG,4601-12-10-NWO-FG
+Brennan-only row,4601,4601-16-16-NWO-FG,4601-16-16-NWO-FG
+Brennan-only row,4601,4601-16-20-NWO-FG,4601-16-20-NWO-FG
+Brennan-only row,4601,4601-20-16-NWO-FG,4601-20-16-NWO-FG
+Brennan-only row,4601,4601-20-20-NWO-FG,4601-20-20-NWO-FG
+Brennan-only row,4601,4601-24-20-NWO-FG,4601-24-20-NWO-FG
+Brennan-only row,4601,4601-24-24-NWO-FG,4601-24-24-NWO-FG
+Brennan-only row,5000,5000-06-02,5000-06-02
+Brennan-only row,5000,5000-16-08,5000-16-08
+Brennan-only row,5000,5000-24-20,5000-24-20
+Brennan-only row,5404,5404-L-04X2.000,5404-L-04X2.000
+Brennan-only row,5404,5404-L-04X3.000,5404-L-04X3.000
+Brennan-only row,5404,5404-L-04X4.000,5404-L-04X4.000
+Brennan-only row,5404,5404-R-04-04-047,5404-R-04-04-047
+shape,5405,5405-08-16,5405-08-16
+Brennan-only row,5405,5405-04-02,5405-04-02
+Brennan-only row,5405,5405-04-12,5405-04-12
+Brennan-only row,5405,5405-08-04,5405-08-04
+Brennan-only row,5405,5405-16-24,5405-16-24
+Brennan-only row,5405,5405-20-20,5405-20-20
+Brennan-only row,5405,5405-20-32,5405-20-32
+Brennan-only row,5405,5405-24-20,5405-24-20
+Brennan-only row,5406,5406-32-04,5406-32-04
+Brennan-only row,5406C,5406-C-20,5406-C-20
+Brennan-only row,5406C,5406-C-24,5406-C-24
+Brennan-only row,5406C,5406-C-32,5406-C-32
+Brennan-only row,5503,5503-04-02-FG,5503-04-02-FG
+Brennan-only row,5503,5503-06-04-FG,5503-06-04-FG
+Brennan-only row,5503,5503-08-06-FG,5503-08-06-FG
+Brennan-only row,5503,5503-12-08-FG,5503-12-08-FG
+Brennan-only row,5503,5503-16-12-FG,5503-16-12-FG
+Brennan-only row,5503,5503-20-20-FG,5503-20-20-FG
+Brennan-only row,5503,5503-24-24-FG,5503-24-24-FG
+Brennan-only row,5503,5503-32-32-FG,5503-32-32-FG
+Brennan-only row,5504,5504-06-04-FG,5504-06-04-FG
+Brennan-only row,5504,5504-06-06-FG,5504-06-06-FG
+Brennan-only row,5504,5504-08-06-FG,5504-08-06-FG
+Brennan-only row,5504,5504-20-20-FG,5504-20-20-FG
+Brennan-only row,5504,5504-24-24-FG,5504-24-24-FG
+shape,5504,5504-32-32-FG,5504-32-32-FG
+shape,5505,5505-02-02-FG,5505-02-02-FG
+shape,5505,5505-06-06-FG,5505-06-06-FG
+shape,5505,5505-12-12-FG,5505-12-12-FG
+shape,5505,5505-16-16-FG,5505-16-16-FG
+Brennan-only row,5505,5505-20-20-FG,5505-20-20-FG
+Brennan-only row,5601,5601-02-02-02-FG,"(STEP, part not named)"
+Brennan-only row,5601,5601-04-04-04-FG,"(STEP, part not named)"
+Brennan-only row,5601,5601-20-20-20-FG,"(STEP, part not named)"
+Brennan-only row,5601,5601-24-24-24-FG,"(STEP, part not named)"
+shape,5602,5602-02-02-02-FG,5602-02-02-02-FG
+shape,5602,5602-06-06-06-FG,5602-06-06-06-FG
+shape,5602,5602-12-12-12-FG,5602-12-12-12-FG
+shape,5602,5602-16-16-16-FG,5602-16-16-16-FG
+shape,5602,5602-20-20-20-FG,5602-20-20-20-FG
+shape,5602,5602-24-24-24-FG,5602-24-24-24-FG
+shape,5602,5602-32-32-32-FG,5602-32-32-32-FG
+Brennan-only row,5603,5603-02-02-02-FG,"(STEP, part not named)"
+Brennan-only row,5603,5603-04-04-04-FG,"(STEP, part not named)"
+Brennan-only row,5603,5603-06-06-06-FG,"(STEP, part not named)"
+Brennan-only row,5603,5603-12-12-12-FG,"(STEP, part not named)"
+Brennan-only row,5603,5603-16-16-16-FG,"(STEP, part not named)"
+Brennan-only row,5603,5603-20-20-20-FG,"(STEP, part not named)"
+Brennan-only row,5603,5603-24-24-24-FG,"(STEP, part not named)"
+shape,5604,5604-02-02-02-FG,5604-02-02-02-FG
+shape,5604,5604-12-12-12-FG,5604-12-12-12-FG
+shape,5604,5604-16-16-16-FG,5604-16-16-16-FG
+shape,5604,5604-20-20-20-FG,5604-20-20-20-FG
+Brennan-only row,5604,5604-32-32-32-FG,5604-32-32-32-FG
+shape,5605,5605-02-02-02-FG,5605-02-02-02-FG
+shape,5605,5605-12-12-12-FG,5605-12-12-12-FG
+shape,5605,5605-16-16-16-FG,5605-16-16-16-FG
+shape,5605,5605-20-20-20-FG,5605-20-20-20-FG
+shape,5605,5605-32-32-32-FG,5605-32-32-32-FG
+Brennan-only row,5652,5652-02-02-02-02-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-04-04-04-04-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-06-06-06-06-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-12-12-12-12-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-16-16-16-16-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-20-20-20-20-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-24-24-24-24-FG,"(STEP, part not named)"
+Brennan-only row,5652,5652-32-32-32-32-FG,"(STEP, part not named)"
+shape,6405,6405-32-24-O,6405-32-24-O (Air-Way D3 misprint)
+Brennan-only row,6405,6405-02-02-O,6405-02-02-O
+Brennan-only row,6405,6405-02-04-O,6405-02-04-O
+Brennan-only row,6408,6408-HHP-02-O,"(STEP, part not named)"
+Brennan-only row,6408,6408-HHP-03-O,"(STEP, part not named)"
+Brennan-only row,6408,6408-HHP-04-O,"(STEP, part not named)"
+Brennan-only row,6408,6408-HHP-06-O,"(STEP, part not named)"
+Brennan-only row,6408,6408-HHP-08-O,"(STEP, part not named)"
+Brennan-only row,6410,6410-32-20-O,6410-32-20-O
+Brennan-only row,6420,6420-12-12,6420-12-12
+Brennan-only row,6425,6425-08-08,6425-08-08
+Brennan-only row,6500,6500-04-02-FG,6500-04-02-FG
+shape,6500,6500-04-06-FG,6500-04-06-FG
+shape,6500,6500-12-08-FG,6500-12-08-FG
+shape,6500,6500-12-16-FG,6500-12-16-FG
+shape,6500,6500-16-12-FG,6500-16-12-FG
+Brennan-only row,6500,6500-20-16-FG,6500-20-16-FG
+Brennan-only row,6500,6500-24-20-FG,6500-24-20-FG
+Brennan-only row,6500,6500-32-24-FG,6500-32-24-FG
+shape,6501,6501-06-06-FG,6501-06-06-FG
+shape,6501,6501-12-12-FG,6501-12-12-FG
+Brennan-only row,6501,6501-16-12-FG,6501-16-12-FG
+Brennan-only row,6502,6502-04-02-FG,6502-04-02-FG
+Brennan-only row,6502,6502-06-04-FG,6502-06-04-FG
+Brennan-only row,6502,6502-12-10-FG,6502-12-10-FG
+shape,6503,6503-06-06-FG,6503-06-06-FG
+shape,6503,6503-16-16-FG,6503-16-16-FG
+shape,6505,6505-04-02,6505-04-02
+Brennan-only row,6566,6566-06-06-FG,6566-06-06-FG
+Brennan-only row,6566,6566-16-16-FG,6566-16-16-FG
+shape,6603,6603-16-16-16-FG,6603-16-16-16-FG
+Brennan-only row,6606,6606-04-04-04-FG,6606-04-04-04-FG
+Brennan-only row,6606,6606-08-08-08-FG,6606-08-08-08-FG
+Brennan-only row,6606,6606-10-10-10-FG,6606-10-10-10-FG
+shape,6606,6606-12-12-12-FG,6606-12-12-12-FG
+Brennan-only row,6606,6606-16-16-16-FG,6606-16-16-16-FG
+shape,6801,6801-08-04-NWO-FG,6801-08-04-NWO-FG
+shape,6801,6801-08-16-NWO-FG,6801-08-16-NWO-FG
+shape,6801,6801-12-20-NWO-FG,6801-12-20-NWO-FG
+shape,6801,6801-16-24-NWO-FG,6801-16-24-NWO-FG
+shape,6801,6801-24-16-NWO-FG,6801-24-16-NWO-FG
+shape,6801L,6801-L-04-04-NWO-FG,6801-L pilot (coming)
+shape,6801L,6801-L-06-06-NWO-FG,6801-L pilot (coming)
+shape,6801L,6801-L-08-08-NWO-FG,6801-L pilot (coming)
+shape,6801L,6801-L-12-12-NWO-FG,6801-L pilot (coming)
+shape,6801L,6801-L-16-16-NWO-FG,6801-L / -LL pilots (coming)
+shape,6801L,6801-L-16-16-NWO-FG,6801-L-16-16-NWO-FG
+shape,6801L,6801-L-20-20-NWO-FG,6801-L / -LL pilots (coming)
+shape,6801L,6801-L-20-20-NWO-FG,6801-L-20-20-NWO-FG
+shape,6801LL,6801-LL-04-04-NWO-FG,6801-LL pilot (coming)
+shape,6801LL,6801-LL-06-06-NWO-FG,6801-LL pilot (coming)
+shape,6801LL,6801-LL-08-08-NWO-FG,6801-LL pilot (coming)
+shape,6801LL,6801-LL-12-12-NWO-FG,6801-L / -LL pilots (coming)
+shape,6801LL,6801-LL-12-12-NWO-FG,6801-LL-12-12-NWO-FG
+shape,6801LL,6801-LL-16-16-NWO-FG,6801-L / -LL pilots (coming)
+shape,6801LL,6801-LL-16-16-NWO-FG,6801-LL-16-16-NWO-FG
+shape,6801LL,6801-LL-20-20-NWO-FG,6801-L / -LL pilots (coming)
+shape,6801LL,6801-LL-20-20-NWO-FG,6801-LL-20-20-NWO-FG
+Brennan-only row,6802,6802-04-02-NWO-FG,6802-04-02-NWO-FG
+shape,6802,6802-06-10-NWO-FG,6802-06-10-NWO-FG
+shape,6802,6802-08-12-NWO-FG,6802-08-12-NWO-FG
+shape,6803,6803-08-08-06-NWO-FG,6803-08-08-06-NWO-FG
+shape,6803,6803-08-08-10-NWO-FG,6803-08-08-10-NWO-FG
+shape,6803,6803-24-24-24-NWO-FG,6803-24-24-24-NWO-FG
+shape,6804,6804-24-24-24-NWO-FG,6804-24-24-24-NWO-FG
+shape,6805,6805-06-04-NWO-FG,6805 pilot (coming)
+shape,6805,6805-08-06-NWO-FG,6805 pilot (coming)
+shape,6805,6805-12-12-NWO-FG,6805 pilot (coming)
+shape,6805,6805-04-02-NWO-FG,6805-04-02-NWO-FG
+shape,6805,6805-04-04-NWO-FG,6805-04-04-NWO-FG
+shape,6805,6805-06-06-NWO-FG,6805-06-06-NWO-FG
+shape,6805,6805-08-08-NWO-FG,6805-08-08-NWO-FG
+shape,6805,6805-10-08-NWO-FG,6805-10-08-NWO-FG
+shape,6805,6805-12-08-NWO-FG,6805-12-08-NWO-FG
+shape,6805,6805-16-12-NWO-FG,6805-16-12-NWO-FG
+shape,6805,6805-16-16-NWO-FG,6805-16-16-NWO-FG
+shape,6805,6805-20-20-NWO-FG,6805-20-20-NWO-FG
+shape,6806,6806-04-04-NWO-FG,6806 pilot (coming)
+shape,6806,6806-06-04-NWO-FG,6806-06-04-NWO-FG
+shape,6806,6806-06-06-NWO-FG,6806-06-06-NWO-FG
+shape,6806,6806-08-06-NWO-FG,6806-08-06-NWO-FG
+shape,6806,6806-08-08-NWO-FG,6806-08-08-NWO-FG
+shape,6806,6806-10-08-NWO-FG,6806-10-08-NWO-FG
+Brennan-only row,6806,6806-12-08-NWO-FG,6806-12-08-NWO-FG
+shape,6806,6806-12-12-NWO-FG,6806-12-12-NWO-FG
+shape,6806,6806-16-16-NWO-FG,6806-16-16-NWO-FG
+shape,6806,6806-20-20-NWO-FG,6806-20-20-NWO-FG
+shape,6806,6806-24-24-NWO-FG,6806-24-24-NWO-FG
+shape,6807,6807-06-06 NWO-FG,6807 pilot (coming)
+shape,6807,6807-04-04-NWO-FG,6807-04-04-NWO-FG
+shape,6807,6807-08-06-NWO-FG,6807-08-06-NWO-FG
+shape,6807,6807-08-08-NWO-FG,6807-08-08-NWO-FG
+shape,6807,6807-12-12-NWO-FG,6807-12-12-NWO-FG
+shape,6809,6809-10-10-NWO-FG,6809-10-10-NWO-FG
+shape,6809,6809-12-12-NWO-FG,6809-12-12-NWO-FG
+shape,6809,6809-16-16-NWO-FG,6809-16-16-NWO-FG
+shape,6809,6809-20-20-NWO-FG,6809-20-20-NWO-FG
+shape,6810,6810-12-12-NWO-FG,6810-12-12-NWO-FG
+Brennan-only row,6815,6815-04-04-NWO-FG,6815-04-04-NWO-FG
+Brennan-only row,6815,6815-06-06-NWO-FG,6815-06-06-NWO-FG
+Brennan-only row,6815,6815-08-08-NWO-FG,6815-08-08-NWO-FG
+Brennan-only row,6815,6815-10-10-NWO-FG,6815-10-10-NWO-FG
+Brennan-only row,6815,6815-12-12-NWO-FG,6815-12-12-NWO-FG
+Brennan-only row,6815,6815-16-16-NWO-FG,6815-16-16-NWO-FG
+Brennan-only row,6832,6832-04-04-04-NWO-FG,6832-04-04-04-NWO-FG
+Brennan-only row,6832,6832-06-06-06-NWO-FG,6832-06-06-06-NWO-FG
+Brennan-only row,6832,6832-08-08-08-NWO-FG,6832-08-08-08-NWO-FG
+Brennan-only row,6832,6832-16-16-16-NWO-FG,6832-16-16-16-NWO-FG
+Brennan-only row,6835,6835-04-04-04-NWO-FG,6835-04-04-04-NWO-FG
+Brennan-only row,6835,6835-06-06-06-NWO-FG,6835-06-06-06-NWO-FG
+Brennan-only row,6835,6835-08-08-08-NWO-FG,6835-08-08-08-NWO-FG
+Brennan-only row,6835,6835-12-12-12-NWO-FG,6835-12-12-12-NWO-FG
+shape,6900,6900-08-08-O,6900-08-08-O
+Brennan-only row,6900,6900-32-32-O,6900-32-32-O
+shape,6901,6901-06-04 NWO-FG,6901 pilot (coming)
+shape,6901,6901-06-06 NWO-FG,6901 pilot (coming)
+shape,6901,6901-10-08 NWO-FG,6901 pilot (coming)
+shape,6901,6901-04-04-NWO-FG,6901-04-04-NWO-FG
+shape,6901,6901-04-06-NWO-FG,6901-04-06-NWO-FG
+shape,6901,6901-06-08-NWO-FG,6901-06-08-NWO-FG
+shape,6901,6901-10-12-NWO-FG,6901-10-12-NWO-FG
+shape,6901,6901-12-06-NWO-FG,6901-12-06-NWO-FG
+shape,6901,6901-12-08-NWO-FG,6901-12-08-NWO-FG
+shape,6901,6901-12-12-NWO-FG,6901-12-12-NWO-FG
+shape,6901,6901-12-16-NWO-FG,6901-12-16-NWO-FG
+shape,6901,6901-16-12-NWO-FG,6901-16-12-NWO-FG
+shape,6901,6901-16-16-NWO-FG,6901-16-16-NWO-FG
+shape,6901,6901-20-16-NWO-FG,6901-20-16-NWO-FG
+shape,6901,6901-20-20-NWO-FG,6901-20-20-NWO-FG
+shape,6901,6901-24-24-NWO-FG,6901-24-24-NWO-FG
+Brennan-only row,6901,6901-32-32-NWO-FG,6901-32-32-NWO-FG
+shape,6902,6902-12-12 NWO-FG,6902 pilot (coming)
+shape,6902,6902-04-04-NWO-FG,6902-04-04-NWO-FG
+shape,6902,6902-06-04-NWO-FG,6902-06-04-NWO-FG
+shape,6902,6902-06-06-NWO-FG,6902-06-06-NWO-FG
+shape,6902,6902-08-06-NWO-FG,6902-08-06-NWO-FG
+shape,6902,6902-08-08-NWO-FG,6902-08-08-NWO-FG
+shape,6902,6902-10-08-NWO-FG,6902-10-08-NWO-FG
+shape,6902,6902-10-12-NWO-FG,6902-10-12-NWO-FG
+shape,6902,6902-16-16-NWO-FG,6902-16-16-NWO-FG
+Brennan-only row,6902,6902-24-24-NWO-FG,6902-24-24-NWO-FG

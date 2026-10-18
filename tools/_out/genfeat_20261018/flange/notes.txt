@@ -1,0 +1,84 @@
+genfeat_20261018 / flange - notes (2026-10-18)
+==============================================
+Base: tools/_out/puckfix_20261009/tools_new (byte copy in flange/regen/tools_base). Feature copy: flange/tools. Nothing outside flange/ was written;
+no SolidWorks, no macro run, no website. Tables: test/root = stage copy + the flange cells (apply_brennan.py) + the 9 data-complete rows ASSUMED
+(test/root/ASSUMED_SET.csv, CHANGES.csv). test/root_held = the same + the held -FG rows ASSUMED only to read the generator's skip reasons (no cell filled).
+
+WHAT CHANGED
+------------
+gen_tee.py
+  - leg kinds FLG61 / FLG62 (leg_FLG): the end library head (G.end_FLG61 / G.end_FLG62) turned into leg coordinates on the axis-aligned leg 1;
+    leg core 0.02 inside the flats (JICBH convention); 10-point profile, 7 dims + face collinear (dofcheck: 20 unknowns, rank 20, 0 redundant).
+  - SPECs 1703 / 1704 (code 61) and 1803 / 1804 (code 62): flange leg 1 on +X, JIC leg 2 (+Y / 135 deg), dmap (1, 0); per-leg bores: flange leg
+    DFLG@BORE, JIC leg D@BORE; flg_o = O@DRIVE cross-checked against the end library.
+  - gates: flange size without end data -> skipped "no end data" (code 62: "needs code 62 head STEP"); empty leg / hex / bore cell -> skipped
+    "row without ..."; row O vs library > 0.0101 -> BLOCKED (conflict), <= 0.0101 -> rounding note; flange-leg checks (no hex arm, face land
+    inside the groove, wall under the flats, head tangent to core / hex corners, corner puck within 0.03 of the head back face -> BLOCKED; head
+    circle between hex flats and corners -> warning (2702 -16 situation); hex proud of the head -> warning); angled-leg guard (assert).
+  - DataStatus at most ASSUMED for a flange-leg row (TEST exempt); "hex A/F raised from Air-Way" reworded to the row's hex for these rows;
+    assume_reps: the shared elbow sentence names the row's own hex source (not Air-Way).
+  - emit: no thread on a flange leg; Z extent / Y (X) extent include the flange head; zlab 'flange head'.
+gen_straight2.py
+  - end_FLG61(..., neck=None) + flg_neck_end: the head on a round neck with the 30deg chamfer up to a round collar (unchanged output without neck).
+  - FLG62_MEAS / flg62_head / end_FLG62, flg_neck (ported from the unmerged wave-1 FLANGE62).
+  - SPEC option 'flats' (FLANGE62): round collar + two wrench flats cut (FlatsCut VBA helper, appended only to macros that use it).
+  - SPEC 1700RC (A16): the 1700 rows named without '-61-' (1700-20-16 / -24-20 / -32-24) with Brennan's round collar, two flats, 30deg
+    chamfer and neck - its own master, read from DesignTable_1700.xlsx; SPEC 1700 skips those rows ('other shape family').
+  - SPECs 1800 / 1824 (FLANGE62) and 1724 (FLANGE61-PLUG) merged; round-body flange-head box check, no-thread save check ({THDCHK}).
+checks/dofcheck_tee.py: Collinear of two vertical lines = same axial position (was: same radius only). Existing tee macros only have
+  horizontal collinears - dofcheck output identical on every base tee macro (regen/dofcheck_tee_cmp.txt).
+measure/flange62.py, flange62_model.py (ported from FLANGE62); flange62.py collar-face detection fixed for model JIC ends -12 and up
+  (re-validated: identical readings on the 9 Brennan 1700 STEPs + 1800-08-08, test/ocp/flange62_revalidation.txt).
+measure/flgleg.py (new, DESIGN 4.11): reads a forged elbow's flange leg (M, head, bore, outline behind the head in the flats / corners planes).
+
+MODELLING ASSUMPTIONS ADDED (each goes into $PRP@AxialSource of every row it touches)
+------------------------------------------------------------------------------------
+A1 Flange-leg head = the end library: code 61 thickness / groove = FLG61_MEAS (Brennan 1700 STEPs, flange.py); code 61 head OD by flange size =
+   FLG61_O {8: 1.19, 12: 1.50, 16: 1.75, 20: 2.00, 24: 2.38, 32: 2.81} = DesignTable_1700 column O (Air-Way s61) as built in the 1700 master
+   (Q-TRANSFER-ENDLIB 2026-10-08; checked against every 1700 row: -24 is printed 2.38 and 2.37 = 2.375 rounded, rounding only). Code 62 = FLG62_MEAS[8]
+   (Brennan 1800-08-08 / 1824-08 / 1804-08-08-FG, agree to 0.0002). Single manufacturer -> ASSUMED.
+A2 Forged hex arm from the crossing to the flange head back face; the Brennan round neck between hex arm and head is NOT modelled (Q-FLG61-NECK).
+   Shape evidence (not data): Brennan 1804-08-08-FG neck dia 0.920 (flgleg.py), 1703 / 1704-24-24-FG neck dia 1.965 (FLG61LEG DESIGN_REVIEW s5).
+A3 Flange-leg bore = the row DFLG (own STEP), JIC-leg bore = the row D; each from its face to the crossing.
+A4 Groove inner-wall draft (Brennan -24 elbows 5 deg), bore chamfer at the face, head edge chamfers, hex-end chamfers NOT modelled.
+A5 1700RC / 1800 body = the Brennan construction: round collar (COLLARD), two wrench flats (A/F = CHEX resp. WAF, normal to model Y) over the zone
+   FLATL / COLLARL from the collar face to the neck start, 30deg chamfer (FLG_NECK_CHAMANG; Brennan 1800-08-08 30.0; the 1700 own-STEP readings
+   fit it exactly: e.g. 1700-20-16 (1.75 - 1.484) / 2 / tan30 = 0.2304 = the measured chamfer), neck (NECKD) to the head; neck length = what L
+   leaves (reproduces the own-STEP neck lengths: 1700-20-16 1.049, 1800-08-08 1.156). On the 1700 rows the neck is below the flats, so the flats
+   run out in the chamfer exactly as on the Brennan 1700 STEPs (same solid). Bore: one through bore D (the smaller where the STEP is stepped).
+A6 1724 / 1824 plugs: solid, round shank / stub behind the flange head, no hex (A2 2026-10-18 "hexless ok" closes Q-SOP5), no thread, edge chamfers
+   NOT modelled (FLANGE61-PLUG / FLANGE62 texts unchanged).
+
+CHECKS AND EVIDENCE
+-------------------
+- vbacheck OK, dofcheck fully defined / 0 redundant, allcfg 0 outline problems: 1700, 1700RC, 1800, 1824, 1724, 1703, 1704, 1804 (test/checks.txt).
+- OCP closed loop: straights 72 / 72 values (test/ocp/closedloop_straight.txt), elbows 42 / 42 (test/ocp/closedloop_tee.txt); OCP volumes of
+  1800-08-08 / 1824-08 / 1724-08 = the wave-1 FLANGE62 / FLANGE61-PLUG evidence exactly (1.429393 / 0.54624 / 0.406062 in^3).
+- gate unit tests 23 / 23 (test/unit_gates.txt; construction fixtures in memory, never in a table).
+- regression (regen/cmp.txt): every gen_straight2 / gen_tee root regenerated with the base and the feature tools on the same untouched stage copy:
+  75 roots IDENTICAL (macro without the date line, SW2 cell by cell, summary, return code; 1503 fails in both, known). Changed only the new roots
+  1700RC / 1724 / 1800 / 1824 / 1703 / 1704 / 1803 / 1804 (base: no SPEC -> KeyError; feature: 0 configs on the stage, all rows MISSING there).
+  1700 identical incl. its summary. On test/root: 1700 base vs feature = 10 configs, 0 changed cells, macro identical (test/checks.txt).
+- merge note: the SPEC hunk of gen_tee inserts 4 entries before the closing brace of SPEC (other features may add SPECs there too); every other
+  hunk is additive and anchored on exact text. patch.diff applies with `patch -p1` from the repo root to a fresh copy of the base tools and
+  reproduces flange/tools byte for byte.
+
+DECISIONS FOR THE USER
+----------------------
+D1 (1700RC) A16 rows built as their OWN master 1700RC (Build_1700RC_MASTER.bas -> 11_MASTERS\1700RC_MASTER.SLDPRT, DesignTable_1700RC_SW2.xlsx):
+   a round collar + chamfer + neck is a different DRIVE sketch than the hex-to-head 1700 body, so one design table cannot carry both. The rows stay
+   in DesignTable_1700.xlsx. Alternative: remodel ALL 1700 rows as Brennan (needs collar / flats / neck for the 10 Air-Way rows - Brennan STEPs exist
+   for 1700-08/-12/-16/-20/-24/-32 only, and their L differ from Air-Way L28 by 0.09-0.70). Recommended: keep 1700RC.
+D2 Q-FLG61-NECK (now also code 62): with Brennan = yes, model the elbow neck as Brennan (hex arm end + neck dia from the own STEPs) or keep the hex
+   running to the head (as built now; the neck dia lies between the hex flats and corners = the 2702 -16 crossing risk in SolidWorks)? Recommended keep.
+D3 Q-FLG61-O24: -24 code 61 head OD 2.38 (built) vs 2.37 printed on 1700-61-20-24 - rounding only; recommended 2.38.
+D4 Q-FLG61-SHORT (only if SolidWorks fails): -32 rows (1703 / 1704-32-32-FG once their bores exist) will carry the crossing warning (catalog A/F 2.5:
+   head radius 1.405 between flats 1.25 and corners 1.443). Decide after the first SolidWorks dry run.
+D5 Code 62 heads -12 .. -32 (every 1803 / 1804 row except -08, every 1800 / 1824 row except -08): need a Brennan STEP with that code 62 head
+   (1824-xx plugs preferred) or Q-TRANSFER-FLG62-HEAD (catalog p.8 3300-62).
+D6 Stale review-table comments on the built rows (not generator text, not changed here): 1703 / 1704-24-24-FG "BUILD-NEAR ... NOT assumed", 1700
+   rows "BUILD-MISSING ... Air-Way has no row", 1800 / 1824 / 1724 / 1804 "MISSING: needs a dimensional source" - to be cleaned at ship time.
+D7 1700-20-16 A/F: catalog 1.625 vs its own STEP 1.646 (A13: catalog as printed) - built 1.625; the flats equal the JIC -20 thread major there.
+
+SOLIDWORKS (not run - license / other session): dry-run order for the main session = 1703, 1704, 1804 (flange leg union of the hex arm end face
+with the head back face: coplanar, head covers the hex corners on all three), then 1700RC / 1800 (FlatsCut), 1824 / 1724.

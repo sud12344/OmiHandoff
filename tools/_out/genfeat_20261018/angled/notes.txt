@@ -1,0 +1,71 @@
+ANGLED - generator feature 2026-10-18 (Q-NEW-ANGLEDHELIX / -ANGLEDFEMALE / -ANGLEDNUT, approved 2026-10-08)
+Base: tools/_out/puckfix_20261009/tools_new (copied to angled/tools; only gen_tee.py, checks/dofcheck_tee.py changed, measure/angled_model.py new).
+No SolidWorks, no website. Nothing written outside angled/.
+
+=== WHAT THE GENERATOR NOW DOES (gen_tee.py, all opt-in: no released root reaches any new path - regen proves it)
+- New SPECs 1504 5501 5503 5505 6810 6902; 1503 gains neck_turn.
+- Leg on the 135 deg axis may carry a HELIX thread: VBA HelixThreadV (helix sketch on the leg end face, helix flags / start angle tried until
+  the curve starts in the Front Plane on the end face, far end HEIGHT into the part at the radius the taper wants, right hand; 60 deg tooth on the
+  Front Plane with parallel / perpendicular relations to a construction axis line; swept cut left LIVE, suppressed by the final step).
+  SolidWorks' Thread feature is not used there (crash 2026-10-15). HelixUCheck re-reads the helix start in EVERY configuration.
+- Female NPTF port on the 135 deg leg (BoreCutV pocket / connecting bore, collar, open-axis checks).
+- Swivel on the 135 deg leg: Dim_pair dims in emit_leg_u, PLN2 on the nut face, NutHexCutV (3 orientation tries incl. a vertex on the Front
+  Plane, cut accepted only when centred on the nut), stem-tip / seat open checks, nut-slab check, port-vs-swivel-slot check.
+- N1: NECKTRIM / NECKFILL on a +X NPSM swivel (neck_turn). N2: slot test on what the corner really reaches (corner inside the stem by 0.02 from
+  the slot start on). 6502 unchanged (no neck_turn key). No neck turn on the 135 deg leg (not needed by any row; NeckRingU not written).
+- nwo '=6801' in positions 3 / 4: ORB thread length + groove dia from the Air-Way 6801 rows of the same ORB size (nwo_col_from), warned + in AxialSource.
+- p1 = PORTDEPTH@BORE on 1504 / 5503 / 5505 (the existing 2505 mechanism): a row's port depth where the library P1 does not fit.
+- New AxialSource texts (review B2): angled_texts (male end / female port / swivel on the 135 deg leg, HelixThreadV, per-leg port depth),
+  angled_nptff_text, ANGLED_NECK_ASSUME, 6801 transfer sentence.
+
+=== ASSUMPTIONS ADDED (each in $PRP@AxialSource of the rows it touches) + source
+A1 Helical thread on the 135 deg leg = the axis-leg HelixThread method about that axis (straights HelixThread; gen_bent HelixThreadY 2026-10-15).
+A2 Female port on the 135 deg leg = the 5504 / 1502 forged female leg turned: collar 0.26 at the flats dia, tap drill to the crossing ending flat
+   there - Brennan 1504-06-06-FG / 5503-16-16-FG / 5505-08-08-FG STEPs (OCP, scripts/port_depth_probe_out.txt). NOTE: the 2026-10-08 design said
+   Brennan's drill runs past the crossing on 1504 / 5505 and stops short on 5503 - OCP shows all three end flat AT the crossing.
+A3 5503 conn=None (tap drill carried to the crossing), NOT conn=D as designed: Brennan 5503-16-16-FG drill 1.156 from the port bottom to the
+   crossing (ocp/cmp_5503-16-16-FG.json). The male bore D runs from the male tip.
+A4 NPSM neck turn (N1/N2) as 6502: Brennan 1503-08-08-FG / 1503-12-08-FG / 1504-06-06-FG, tools/measure/neck45.py: body face 0.400 / 0.570 /
+   0.360 inside the corner radius 0.5052 / 0.6131 / 0.5052, excess 0.000 (scripts/neck45_1503_1504_out.txt). ASSUMED for every NPSM size.
+A5 Swivel nut on the 135 deg leg (6902) = the axis swivel end turned; COMPOSED shape (no 6902 STEP) - ASSUMPTION, said in the text.
+A6 6902 adjustable-ORB end cells from Air-Way 6801 -12: I3 1.14 (= Brennan), THDL 0.469 (Brennan 0.410, known -12 difference), groove 0.945.
+A7 Male NPTF end on the 135 deg leg: bore ends at the crossing; Brennan's slight drill overrun, its thread cone and bore-mouth countersink not modelled.
+
+=== A15 (user 2026-10-18 "look at Brennan parts ... save for later")
+Q-ANGLED-NECKNPSM: SETTLED by Brennan (A4). Implemented.
+Q-ANGLED-5503D:    SETTLED by the Brennan catalog TFA p.32 5503-FG A1 DRILL 0.188 / 0.281 / 0.531 / 0.719 (plain Air-Way twins agree 10/10).
+                   Applied ONLY in the test copy as PROPOSAL P-5503D (overwrites Air-Way's non-bore 0.83 / 1.19 / 1.54 / 1.64) - stage edit = main session.
+Q-ANGLED-P1:       SETTLED where Brennan has the size: the port depth Brennan draws is one value per size on every STEP
+                   (scripts/brennan_port_depths_out.txt): -04 0.560 (4 STEPs), -06 0.580 (3), -08 0.750 (12), -12 0.770 (2), -16 0.940 (3, incl. the
+                   part's own 5503-16-16-FG), -32 0.970 (1). Applied as PROPOSAL P-PORT cells PORTDEPTH@BORE (new column) only where MS51503 P1
+                   does not fit: 5503-04-04 0.56, 5503-06-06 0.58, 5503-08-08 0.75, 5503-16-16 0.94, 5505-04-04 0.56 (both legs).
+                   STILL OPEN: -02 (5503-02-02-FG blocked: P1 0.46 vs leg 0.47; no Brennan -02 female port STEP) and -20 / -24 (no row needs it).
+                   Same -16 value would also free 2505-16-16-FG (not this feature's root).
+
+=== PROPOSALS in test/root only (test/root/CHANGES_angled.csv) - the user / main session decides
+P-5503D (above), P-PORT (above), P-1504: 1504-04-04-FG THDMAJ_A1 0.54 (end library; Air-Way printed "1/4918") -> ASSUMED,
+P-6902PN: '6902-12-12 NWO-FG' -> '6902-12-12-NWO-FG' (= its OMiSKU; dashes() cannot parse the space).
+
+=== OPEN / FOR THE USER
+1. Apply the 4 proposals to the stage? (without them: 5503 1 config instead of 6, 5505 1 instead of 2, 1504 2 instead of 3, 6902 0 instead of 1)
+2. 6902-12-12-NWO-FG builds from a composed shape (design review B1): accept, or wait for BRENNAN_6902-08-08-NWO-FG (download list).
+3. 6810: no data-complete row (only Air-Way non-forged 6810-xx NWO) - SPEC in place, 0 configurations; JIC swivel on the 135 deg leg is
+   coded (same NutHexCutV / HelixThreadV path as 6902) but proven on no row.
+4. 5505-20-20-FG: wave-2 gate "pilot STEP 5505-20-20-FG not on disk" - built on the 5505-08-08-FG shape; confirm.
+5. 1504-06-06-FG D@BORE 0.320 is a Brennan drill flagged by wave 2 (OMi drawings print bores 0.01-0.02 below the Brennan drill) - unchanged.
+6. Collar cap (existing generator rule since 2026-09-24): the female collar is shortened to clear the corner by 0.03 (5503-16-16-FG: 0.152 instead
+   of 0.26). Brennan 5503-16-16-FG keeps the full 0.26 collar starting inside the corner radius (0.86 < 0.938): +0.166 in^3 of hex in the model.
+   Changing it touches every female-port elbow macro - not done here.
+7. 5501-24-24 / -32-32-FG: OMi Items has values (design 1.2) but they are not in the wave-2 cells -> MISSING, not staged.
+8. SolidWorks dry runs (main session, design s5 order 5501 -> 1503 -> 1504 -> 5503 -> 5505 -> 6902). New-in-SolidWorks risks: HelixThreadV start /
+   hand on the 135 deg face (up to 64 tries, each checked on the curve), NutHexCutV orientation (3 tries), profile dim placement; THD_End2 is
+   rebuilt LIVE in the all-config sweep (longer runs).
+
+=== EVIDENCE
+regen/cmp.txt: 75 base roots - 74 identical (macro, SW2, summary, exit code); 1503 changed (base exit 1 -> 14 configs on the untouched stage);
+  new roots 1504 / 5501 / 5503 / 5505 / 6810 / 6902. REGRESSION PASS.
+checks/final_{full,targets}_*.txt: vbacheck all OK; dofcheck_tee every LEG / NECKTRIM / NECKFILL fully defined, new THDPROF_2 (135 deg tooth)
+  model rank 20/20 with the same single redundancy (l2 = l3) as the proven HelixThread set; allcfg 0 problems.
+ocp/final_loop_<root>.txt: OCP closed loop (model -> forged.py / neck45.py / corner arcs -> generator values), 38 configurations, 0 problems.
+ocp/final_volumes_<root>.txt: expected volume per configuration (threads off). ocp/cmp_5501-08-08-FG.json, cmp_5503-16-16-FG.json: vs Brennan
+  (tips, hex faces, collar radius, A/F, port depth 0.94 equal; differences = Brennan thread cone / countersink / drill overrun, collar cap item 6).

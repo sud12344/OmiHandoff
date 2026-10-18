@@ -1,0 +1,25 @@
+THREAD-TOOTH FIX RE-RUN (2026-09-23, QA #124)
+=============================================
+Re-import and run these five (VBA editor: remove the old module, File > Import File, pick the
+.bas dated today, save, run). One at a time; close the part between runs; send me the reports.
+
+  03_SCRIPTS\Build_2403_MASTER.bas     Sub Build2403
+  03_SCRIPTS\Build_2405_MASTER.bas     Sub Build2405
+  03_SCRIPTS\Build_2500HX_MASTER.bas   Sub Build2500HX
+  03_SCRIPTS\Build_2502HX_MASTER.bas   Sub Build2502HX
+  03_SCRIPTS\Build_2603HX_MASTER.bas   Sub Build2603HX
+
+What changed in each: the Thread feature's "Thread ProfileN" sub-sketch is renamed THD_EndX_PROF
+and the SW2 table now drives Profile_Height / Profile_Land / THDPITCH @THD_EndX_PROF (tooth scaled
+with pitch) - same fix that cleared the -02..-06 rebuild errors on 6401/6405/0403. New step before
+the save: an ALL-configuration rebuild sweep (every config, every feature, one body) so the small
+sizes are actually checked this time. Expect it to take longer - 2405/2502HX have helix threads.
+Parts now save to 11_MASTERS\<root>_MASTER.SLDPRT.
+
+THREADS SUPPRESSED FOR SAVE (added 2026-09-23)
+Every build macro (all 11) now ends with "Suppress threads for save": THD_* suppressed in ALL
+configurations after the checks, then saved. The drawing macros (OMi_SeriesDrawings /
+OMi_BatchDrawings) already unsuppress THD_* for the views and re-suppress afterwards - no change.
+For the masters already sitting in 11_MASTERS, run 03_SCRIPTS\OMi_ThreadState.bas,
+Sub SuppressThreads_AllMasters (no documents open) - it opens each master, suppresses the threads
+in every configuration, saves, and writes ThreadState_report.txt. Takes a minute or two.

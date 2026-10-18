@@ -1,0 +1,90 @@
+def vba_swivel(g, S, rb, ov):
+    """SWSK: the straights' female JIC swivel end (nut + nose one solid) as a closed half-section about the vertical leg-2 axis.
+    W0 seat end on the axis, W1 seat end at the bore radius rb (the 37 deg seat cone ends at the through-bore, as on the 6565
+    double swivel - SEAT_TO_BORE_ASSUME: on the short bent-tube body the cone apex would fall behind the body face at -12 / -16),
+    W2 seat mouth ... W9 nut-face mouth ... W16 neck, W17 body face on the axis. Anchor: the axis line collinear with PATH's last
+    line, W17 at SWB_TUBEOVL (= ov) from the PATH end (the tube runs ov into the swivel body). 18 points, 36 unknowns:
+    collinear (2) + overlap (1) + 7 horizontal + 6 vertical + 20 dimensions."""
+    m = S['m']
+    F, u, n = g['F'], g['u'], g['n']
+    P = lambda a, r: (F[0] - a * u[0] + r * n[0], F[1] - a * u[1] + r * n[1])
+    seat_end = S['s_nt'] + (m['SEATR'] - rb) / gs.TAN37
+    Wl = [(seat_end, 0.0), (seat_end, rb), (S['s_nt'], m['SEATR']), (S['s_nt'], m['NOSER']), (m['FLOOR'], m['NOSER']),
+          (m['FLOOR'], m['RELR']), (S['scb0'], m['RELR']), (m['TE'], S['rmin']), (S['cs'], S['rmin']), (0.0, S['rcs']), (0.0, S['Rn']),
+          (m['HEXL'], S['Rn']), (m['HEXL'], m['SKF']), (m['SKS'], m['SKR']), (m['NUTL'], m['SKR']), (m['NUTL'], m['NECKR']),
+          (m['BODYS'], m['NECKR']), (m['BODYS'], 0.0)]
+    pts = [P(a, r) for a, r in Wl]
+    N = len(pts)
+    ax = N - 1
+    q = lambda v: f'{v * IN:.9f}'
+    L = ['    ' + "' ================= SWSK: female JIC swivel end (nut + nose, one solid) about the leg-2 axis =================",
+         '    stepName = "SWIVEL sketch"', '    swModel.ClearSelection2 True',
+         '    swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0',
+         '    swSkMgr.InsertSketch True', '    swSkMgr.AddToDB = True', f'    ReDim seg({N - 1})']
+    for i in range(N):
+        a_, b_ = pts[i], pts[(i + 1) % N]
+        L.append(f'    Set seg({i}) = swSkMgr.CreateLine({q(a_[0])}, {q(a_[1])}, 0, {q(b_[0])}, {q(b_[1])}, 0)')
+    L += [f'    Set axisCL = swSkMgr.CreateCenterLine({q(pts[N - 1][0])}, {q(pts[N - 1][1])}, 0, {q(pts[0][0])}, {q(pts[0][1])}, 0)',
+          '    swSkMgr.AddToDB = False',
+          f'    Check "SWSK: {N} lines and the leg-2 centre line created", (Not seg({N - 1}) Is Nothing) And (Not axisCL Is Nothing)',
+          '    Dim sl1 As SldWorks.SketchLine, sl2 As SldWorks.SketchLine, scl As SldWorks.SketchLine, spl As SldWorks.SketchLine',
+          '    Dim dsw As SldWorks.DisplayDimension',
+          f'    For i = 0 To {N - 1}',
+          f'        Set sl1 = seg(i): Set sl2 = seg((i + 1) Mod {N})',
+          '        swModel.ClearSelection2 True', '        sl1.GetEndPoint2.Select4 False, Nothing', '        sl2.GetStartPoint2.Select4 True, Nothing',
+          '        swModel.SketchAddConstraints "sgMERGEPOINTS"', '    Next i',
+          f'    Set scl = axisCL: Set sl1 = seg({ax})',
+          '    swModel.ClearSelection2 True', '    scl.GetStartPoint2.Select4 False, Nothing', '    sl1.GetStartPoint2.Select4 True, Nothing',
+          '    swModel.SketchAddConstraints "sgMERGEPOINTS"',
+          '    swModel.ClearSelection2 True', '    scl.GetEndPoint2.Select4 False, Nothing', '    sl1.GetEndPoint2.Select4 True, Nothing',
+          '    swModel.SketchAddConstraints "sgMERGEPOINTS"',
+          "    ' the swivel axis on the tube centre line (collinear with PATH's last line), the body face SWB_TUBEOVL past the tube end",
+          f'    swModel.ClearSelection2 True: seg({ax}).Select4 False, Nothing: p2.Select4 True, Nothing: swModel.SketchAddConstraints "sgCOLINEAR"',
+          f'    Set spl = p2: Set sl1 = seg({ax})',
+          '    swModel.ClearSelection2 True', '    sl1.GetStartPoint2.Select4 False, Nothing', '    spl.GetEndPoint2.Select4 True, Nothing',
+          f'    Set dsw = swModel.AddVerticalDimension2({q(pts[ax][0] - 0.35)}, {q(pts[ax][1] - ov / 2)}, 0)',
+          f'    NameDim dsw, "SWB_TUBEOVL", {q(ov)}']
+    for i in range(N - 1):                      # the axis line gets its direction from the collinear relation
+        a_, b_ = pts[i], pts[(i + 1) % N]
+        if abs(a_[1] - b_[1]) < 1e-9:
+            L.append(f'    swModel.ClearSelection2 True: seg({i}).Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL"')
+        elif abs(a_[0] - b_[0]) < 1e-9:
+            L.append(f'    swModel.ClearSelection2 True: seg({i}).Select4 False, Nothing: swModel.SketchAddConstraints "sgVERTICAL"')
+    mid = lambda k: ((pts[k][0] + pts[(k + 1) % N][0]) / 2, (pts[k][1] + pts[(k + 1) % N][1]) / 2)
+    side = S['Rn'] + 0.35
+
+    def at(k, dx=0.0, dy=0.0):
+        mx, my = mid(k)
+        return f'{q(mx + dx)}, {q(my + dy)}'
+    L += [f'    Call Dim_pair(2, 9, "SWB_NOSETIP", {q(S["s_nt"])}, {at(2, side, 0)})',
+          f'    Call Dim_ptline(1, False, {ax}, "SWB_SEATENDR", {q(rb)}, {at(0, 0.05, -0.08)})',
+          f'    Call Dim_ptline(1, True, {ax}, "SWB_SEATR", {q(m["SEATR"])}, {at(1, 0.1, 0.05)})',
+          f'    Call Dim_ang(1, {ax}, "SWB_SEATANG", {math.radians(37):.9f}, {at(1, 0.05, -0.1)})',
+          f'    Call Dim_rad(3, "SWB_NOSER", {q(m["NOSER"])}, {at(3, 0.1, 0)})',
+          f'    Call Dim_pair(4, 9, "SWB_FLOOR", {q(m["FLOOR"])}, {at(4, side + 0.2, 0)})',
+          f'    Call Dim_rad(5, "SWB_RELR", {q(m["RELR"])}, {at(5, 0.15, 0)})',
+          f'    Call Dim_ang(6, {ax}, "SWB_RELANG", {math.radians(45):.9f}, {at(6, 0.05, 0.05)})',
+          f'    Call Dim_rad(7, "SWB_MINR", {q(S["rmin"])}, {at(7, 0.2, 0)})',
+          f'    Call Dim_len(7, "SWB_THDL", {q(m["TE"] - S["cs"])}, {at(7, -0.15, 0)})',
+          f'    Call Dim_ang(8, {ax}, "SWB_CSANG", {math.radians(50):.9f}, {at(8, 0.05, 0.08)})',
+          f'    Call Dim_ptline(8, True, {ax}, "SWB_CSR", {q(S["rcs"])}, {at(8, 0, 0.25)})',
+          f'    Call Dim_rad(10, "SWB_NUTR", {q(S["Rn"])}, {at(10, 0.3, 0)})',
+          f'    Call Dim_len(10, "SWB_NUTHEXL", {q(m["HEXL"])}, {at(10, side, 0)})',
+          f'    Call Dim_ptline(11, True, {ax}, "SWB_SKIRTFR", {q(m["SKF"])}, {at(11, 0.2, -0.05)})',
+          f'    Call Dim_rad(13, "SWB_SKIRTR", {q(m["SKR"])}, {at(13, 0.3, 0)})',
+          f'    Call Dim_len(13, "SWB_SKIRTL", {q(m["NUTL"] - m["SKS"])}, {at(13, side, 0)})',
+          f'    Call Dim_pair(14, 9, "SWB_NUTL", {q(m["NUTL"])}, {at(14, side + 0.4, 0)})',
+          f'    Call Dim_rad(15, "SWB_NECKR", {q(m["NECKR"])}, {at(15, 0.35, 0)})',
+          f'    Call Dim_pair(16, 9, "SWB_BODYS", {q(m["BODYS"])}, {at(16, side + 0.6, 0)})']
+    L += ['    swModel.ClearSelection2 True', '    swSkMgr.InsertSketch True', '    Set swFeat = swModel.FeatureByPositionReverse(0)',
+          '    swFeat.Name = "SWSK"',
+          '    Check "SWSK sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)',
+          '    stepName = "SWIVEL revolve"', '    swModel.ClearSelection2 True',
+          '    swModel.Extension.SelectByID2 "SWSK", "SKETCH", 0, 0, 0, False, 0, Nothing, 0',
+          '    Set hsd = swSelMgr.CreateSelectData: hsd.Mark = 16', '    axisCL.Select4 True, hsd',
+          '    Set hrev = swFeatMgr.FeatureRevolve2(True, True, False, False, False, False, 0, 0, 6.28318530717959, 0, False, False, 0, 0, 0, 0, 0, True, True, True)',
+          '    Check "SWIVEL revolve created (female JIC swivel end about the leg-2 axis)", Not hrev Is Nothing',
+          '    If Not hrev Is Nothing Then hrev.Name = "SWIVEL"',
+          '    stepName = "Swivel nut hex"',
+          f'    Set hexcut = NutHexCutY({q(g["X0"])}, {q(F[1])}, {q(S["nut_af"])}, {q(m["HEXL"])})', '']
+    return '\n'.join(L), seat_end

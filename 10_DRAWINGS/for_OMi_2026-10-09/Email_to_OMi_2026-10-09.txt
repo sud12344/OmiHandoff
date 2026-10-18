@@ -1,0 +1,46 @@
+Subject: Fitting drawings for review + a few questions
+
+Hi [name],
+
+Attached are check drawings for the fittings we have modelled so far. There is one page per fitting family (62 families).
+Each page shows one typical size with its main measurements: lengths, hex sizes and hole sizes. The 3D models cover
+about 1,000 of your part numbers so far.
+
+Could you help with the questions below? Short answers are fine, and you can answer them in any order.
+
+ABOUT THE DRAWINGS
+1. Could someone who knows these parts look through the drawings and tell me if any number looks wrong? The part number
+   and the right value are enough.
+2. What would you like in the title box at the bottom right of each drawing? For example: your logo or company name,
+   material, plating or finish, tolerances, and who drew it. Right now it only says "Carbon Steel" and "OM Industrial".
+
+SIZES WE DON'T HAVE
+3. The first tab of the attached spreadsheet lists 226 part numbers we have no sizes for. It uses the same columns as
+   your website parts file. Could you fill in the yellow cells, in inches? Your supplier's drawings or catalog pages are
+   fine, and so is measuring a part from stock with calipers. Partial answers help. We will build the parts you send
+   first.
+
+QUICK QUESTIONS
+4. Small 6408 plugs (6408-02-O, 6408-03-O, 6408-05-O and 6408-04-O-SLD): your file lists a hole size for them. Are they
+   hollow, with a hole through them, or solid? 6408-04-O-SLD is called "Solid" but also lists a hole.
+5. The third tab lists 13 parts (mostly 6410 reducers) shown as exactly 1.000" long, and 6420-08-08 shown as 1.320",
+   the same as the line above it. Are those the real lengths? If not, what are the real ones?
+6. Bulkhead fittings sold with a locknut (part numbers with "-LN"): is it OK if the 3D model shows the fitting without
+   the locknut?
+7. For 6 parts we had no numbers from you, so we took the sizes from another manufacturer's (Brennan) 3D files. Is that
+   OK, or would you rather we wait for your numbers?
+8. Do you need 3D models of the rubber O-rings, the bent-tube elbows, and the flareless nut and sleeve? Or only the
+   steel fittings for now?
+
+FOR YOUR INFORMATION
+The second tab lists a few things in your website parts file that look like typos. Examples: thread sizes that don't
+match the part number, and "NPFT" written instead of "NPTF". Nothing to send back. This is only so the website can
+be corrected.
+
+Thanks for your help!
+
+[your name]
+
+Attachments:
+- OMi_dimension_check_drawings_2026-10-09.pdf
+- OMi_missing_sizes_and_typos_2026-10-09.xlsx

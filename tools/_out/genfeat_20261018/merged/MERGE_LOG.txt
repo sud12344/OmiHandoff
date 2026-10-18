@@ -1,0 +1,126 @@
+genfeat_20261018 - MERGE of the five generator features into ONE toolset (2026-10-18)
+==========================================================================================
+Base   : tools/_out/puckfix_20261009/tools_new (batch-16 toolchain), read-only.
+Theirs : genfeat_20261018/<f>/tools for f = straights, flange, hoseb, perlegsw, angled (each a full copy of the base + its feature).
+Result : genfeat_20261018/merged/tools (started as an unmodified base copy). patch_merged.diff = merged vs base (generators / checks / measure),
+         applies with `patch -p1` to a fresh base copy and reproduces merged/tools byte for byte (checked).
+No SolidWorks, no macro run, no website; nothing written outside genfeat_20261018/merged/ (the feature folders, base, stage were only read).
+
+1. WHAT TOUCHED WHAT (diff -r of every feature tools copy vs the base, not the patch.diff file lists)
+------------------------------------------------------------------------------------------------------
+  generators/gen_tee.py        flange, hoseb, perlegsw, angled  -> 3-way merge (below)
+  generators/gen_straight2.py  straights, flange                -> 3-way merge
+  checks/dofcheck_tee.py       flange, hoseb, angled            -> 3-way merge
+  checks/allcfg_check.py       hoseb only                       -> copied
+  measure/npsm.py              perlegsw only                    -> copied
+  new files (copied)           measure/nptfm40.py (straights); flange62.py, flange62_model.py, flgleg.py (flange); hoseb_model.py (hoseb);
+                               perleg_closedloop.py, perleg_model.py (perlegsw); angled_model.py (angled)
+  All files LF; outputs kept LF.
+
+2. METHOD
+---------
+git merge-file --diff3 (base = the base file), sequentially; every conflict block resolved by hand-chosen rule (merged/_work/resolve3.py,
+the exact rule per block is listed below); then a semantic review of every hunk of all four gen_tee diffs against each other (sections 4);
+semantic fixes applied by merged/_work/semfix.py (asserted exact replacements). Order: gen_tee = perlegsw (ours) + hoseb -> + flange -> + angled;
+gen_straight2 = straights (ours) + flange; dofcheck_tee = flange (ours) + hoseb (clean) -> + angled. Intermediates kept in merged/_work/.
+merged/_work/feature_lines_check.txt: every line a feature ADDED is verbatim in the merged file, except exactly the lines changed by the
+resolutions below (24 lines, all listed there).
+
+3. TEXTUAL CONFLICTS AND RESOLUTIONS
+------------------------------------
+gen_straight2.py (straights x flange) - 1 conflict
+ G1 build_rows, right after `if body < 0.05`: straights adds the 5404N part-number length check (xlen_ vs L@DRIVE); flange adds the
+    FLANGE61-PLUG clamping-shoulder check (flgplug). -> BOTH lines, straights first (disjoint roots: 5404N / 1724).
+    Every other hunk of the two features merged clean (straights: 5404N dashre1, ROUND_STEP_MIN, NPTF/FPT/ENDL[40], ORBF_MEAS[2], SPEC 6400 +
+    load_6400 + end_JICLONG; flange: end_FLG61 neck, FLG62_MEAS / flg62_head / end_FLG62, 'flats' option + FlatsCut, SPECs 1700RC / 1800 /
+    1824 / 1724, 1700 skip of the A16 rows).
+
+dofcheck_tee.py (flange x hoseb x angled) - flange + hoseb clean, + angled 2 conflicts
+ D1 new functions after the leg-rank function: hoseb hosefaces / jac_rank / check_hoseface vs angled thdprof_u / check_thdprof -> BOTH (hoseb first).
+ D2 end of the per-macro loop: hoseb HOSEFACE prints vs angled THDPROF prints -> BOTH (hoseb first). Flange's Collinear change merged clean.
+
+gen_tee.py - 12 conflicts
+ step 1: perlegsw (ours) + hoseb
+ C1 SPEC tail: perlegsw adds 6807 / 6606 / 1601 / 1602 / 1603, closes SPEC and opens SPEC_WAITING (6603 / 6566); hoseb adds 4601 / 4603 / 4501 /
+    4503 before SPEC's closing brace. -> hoseb's entries INSIDE SPEC (before the brace), SPEC_WAITING after it, unchanged.
+ C2 build_rows, row gates after the dash count: perlegsw's empty-cell gate (perleg roots) + its per-leg swd line (legs4) vs hoseb's hose-bore gate +
+    `r = hoseb_endlib(...)` + the old swd line. -> perlegsw gate, then the hoseb block, then perlegsw's swd (hoseb's copy of the old swd line
+    dropped: perlegsw's per-leg form gives the same skip text on a one-swivel root and the hose roots have no swivel).
+ C3 after `L['bore'] = ...`: perlegsw's td_lib flag vs hoseb's hose-leg bore source block (hose_bore / hose_dh / hbsrc). -> BOTH.
+ C4 geometry checks after the elbow arm-ridge check: perlegsw (nose / stem tip vs Brennan warning, tee ridge, nut-slab clearance, NWO body-face
+    step) vs hoseb (hose stub wall / step, FACE-OFF geometry). -> BOTH, perlegsw first (perlegsw blocks are perleg-only, so hoseb's
+    `if chk or ...: continue` sees nothing new on a hose root).
+ step 2: + flange
+ C5 SPEC tail: flange's 1703 / 1704 / 1803 / 1804 -> inside SPEC after the hoseb entries.
+ C6 leg constructor chain: hoseb `elif kind == 'HOSEB'` vs flange `elif kind in FLG_KINDS` -> BOTH branches.
+ C7 emit, thread loop: both features added the same `if t is None: continue` -> ONE line, comment names both (hose leg / flange leg: no thread).
+ C8 emit, zlab: hoseb extends the chained expression with 'hose bead'; flange adds a 'flange head' override line after it -> hoseb's chain +
+    flange's line.
+ step 3: + angled
+ C9 helper area before leg_NWO: hoseb's HOSEB block (constants, hoseb_endlib, leg_HOSEB, faceoff_geo ...) vs angled's nwo_col_from -> BOTH.
+ C10 NWO leg branch - REWRITTEN (merged/_work/blk_nwo.txt): perlegsw reads each leg's own end tuple (leg_end) through end_val (table column or
+    END-LIBRARY token); angled reads '=6801' in the thread-length / groove positions from the Air-Way 6801 rows (nwo_col_from) with its own
+    warnings and L['nwo_src'] (AxialSource text). Neither version alone serves all roots:
+      - perlegsw's end_val treats ANY '=<series>' token as the adjustable-ORB I3 (nwo_i3_from), so 6810 / 6902 ('=6801' in positions 3 / 4)
+        would get I3 = 1.14 as thread length and groove dia;
+      - angled's code sends every token starting with '=' to nwo_col_from, so 4601 / 4603 ('=ORB:THDL' / '=ORB:GD') would fail
+        (no DesignTable_ORB:THDL) and 6807 likewise.
+    Merged rule: I3 and nut hex through end_val (perlegsw, same value + text as before for '=6801'); thread length / groove dia: a token that
+    starts with '=' and is NOT an END-LIBRARY token (ENDLIB_TOKENS) = angled's nwo_col_from path with angled's warning texts, order and nwo_src;
+    anything else (column, '=ORB:THDL', '=ORB:GD') through end_val (perlegsw / hoseb).
+ C11 assume_text: flange's FLGLEG_ASSUME / FLGLEG_SHAPE lines vs angled's nwo_src text, ANGLED_NECK_ASSUME switch and angled_texts -> angled's lines,
+    then flange's (no root carries both; each root's text order equals its feature's).
+ C12 macro helper suffix: `{HOSEFACE_HELP if faceoff}` (hoseb) and `{angled_help(sp, legs)}` (angled) -> BOTH.
+
+4. SEMANTIC CONFLICTS (no textual conflict - found in the hunk-by-hunk review; fixed in merged/_work/semfix.py)
+---------------------------------------------------------------------------------------------------------------
+ S1 PERLEGSW x HOSEB: hoseb_endlib fills the ORB tokens into a COPY of the row and writes their source into the warnings first ($COMMENT order);
+    with perlegsw merged, end_val would read the same tokens again and append the same two warnings a second time at the leg (4601 / 4603
+    $COMMENT changed). hoseb's note "hoseb_endlib stays harmless" holds for the values, not for the text. Fix: end_val returns r[c] without a
+    warning when the row copy already carries the token (`if c in r: return r[c]`). 4601 / 4603 = hoseb's output exactly (proof 1).
+ S2 FLANGE x PERLEGSW: flange's row gate `if any(kind in FLG_KINDS for (kind, lc, bc, tc) in sp['legs'])` runs for EVERY root and unpacks 4-tuples:
+    ValueError on every perleg root (5-tuple legs: 6807, 6606, 1601, 1602, 1603) - the whole root would stop. Fix: legs4(sp) in the three
+    flange lines (gate, flg_o loop, miss_ list); identical result on 4-tuple SPECs.
+ S3 HOSEB x PERLEGSW: the same 4-tuple unpack in hoseb_endlib, the hose-bore gate (_hb) and the HOSEB AxialSource text (_hl). Only hose roots
+    reach them today; legs4(sp) keeps them safe if a hose root ever gets a 5th leg element. No output change.
+ S4 ANGLED x HOSEB: angled_texts / angled_help / helixu_check read L['thread']['type'] for every leg on the 135 deg axis; on 4603 / 4503 that leg
+    is the HOSE leg with thread None -> TypeError (both roots would stop). Fix: (L['thread'] or {}).get('type') == 'HELIX' (a leg without
+    a thread is not a helix leg). The emit thread loop already skips thread None before the angled branch (C7).
+ Checked, no conflict: gen_tee reads gen_straight2 (G.NPTF / ENDL / FPT / ORB / end_FLG61 / end_FLG62 / flg62_head / end_HOSEB / lib_gaps):
+    the straights additions (dash 40, ORBF_MEAS[2], 6400) and the flange additions change no tee root (proofs 1, 1b, 2); angled's MakeLegPlane
+    Mtip change, 135-deg NPTFF / swivel / helix emit branches and e45 checks never see a HOSEB or FLG leg as a helix / port / swivel; flange's
+    flange-leg `continue` in the geometry checks skips hoseb's arm-clearance tweak; DataStatus blocks (NPSM / HOSEB / FLG) are independent; the
+    perlegsw ENDLIB AxialSource sentence reads only 5th-element tuples (none on hoseb / angled SPECs).
+
+5. PROOFS (all in merged/verify/ and merged/regen/; scripts in merged/scripts/)
+------------------------------------------------------------------------------
+ P1  verify/<f>.txt (verify_features.py): on each feature's own test root(s) (copied), the feature's tools and the merged tools regenerate EVERY root;
+     every target root IDENTICAL (macro w/o line endings + date line, SW2 cell by cell, rc, summary json):
+       straights (test/root, test/root_T): 5404N 5000 5404 6400 6410 5406;  flange (test/root, test/root_held): 1700 1700RC 1724 1800 1824 1703 1704
+       1803 1804;  hoseb: 4501 4503 4601 4603;  perlegsw: 1601 1602 1603 6606 6807;  angled (test/root, test/root_targets): 1503 1504 5501 5503 5505
+       6810 6902. Every other shared root identical too, except 1503 on the non-angled roots (the ANGLED change: feature tools rc 1, merged 14 /
+       19 configurations). The feature's KEPT outputs = its fresh run (every kept macro + SW2). Merged: 99 roots, 0 failures on all 8 test roots.
+ P1b verify/combined.txt (combined_root.py): all five features' test tables overlaid on one pre-update stage copy (no table changed by two features):
+     every target root identical to its merged run on the feature's own root.
+ P2  regen/cmp.txt (regress_all.py): untouched stage (copied) - base 75 roots vs merged 99: 74 IDENTICAL, 1 changed = 1503 (angled, base rc 1
+     "angled leg must carry a Thread-feature (JIC) end" -> 14 configurations); 24 new roots, all rc 0 (4601 6, 4603 4, 1602 5, 6807 1, 1504 1,
+     6400 60, others 0 on the stage). Nothing else changes. 1503 is the only base failure (known).
+     P2b: each feature's own tools on the same copy, its new / changed roots = merged, all identical.
+     NOTE: the stage was updated at 15:51 (wave 3 adapters, pending OMi values, 6807 rename) AFTER the features' regressions - hence 6400 60 vs 56
+     and 6807 1 vs 0 against the features' own cmp.txt; P2b shows the merged tools equal the feature tools on the updated stage.
+ P3a verify/static_checks.txt (static_checks.py): merged checks on every new / changed macro: vbacheck all OK, dofcheck_straight / dofcheck_tee every
+     sketch fully defined, 0 redundant (angled THDPROF_2 with the accepted HelixThread rank), allcfg_check s|t 0 outline problems (incl. hose
+     face-offs). The feature's own checks print the SAME output on the same macros.
+ P3b verify/ocp_closedloop.txt (ocp_all.py; copies of the feature-folder scripts in merged/scripts/ocp/ with paths only changed):
+       hoseb 39 / 39 PASS; perlegsw 24 configurations, 0 of 1307 checks off; angled 38 configurations, 0 problems; flange 72 / 72 + 42 / 42;
+       straights FAIL count 0 - every one = the feature's count, and the per-configuration results / reports are identical to the feature's.
+
+6. HOUSEKEEPING / NOT DONE
+--------------------------
+ - Not re-run with the merged tools (not part of the requested proofs): flange scripts/unit_gates.py, perlegsw scripts/unit_cases.py and
+   drawing_check.py (they test in-memory fixtures of code that P1 shows is byte-identical in its outputs).
+ - Removed by me (my own scratch, no user data): merged/verify/hoseb from the first harness attempt that failed at start (only an empty _keys
+   folder), and an empty tools/_to_delete folder created a few seconds earlier by a mistyped relative mkdir. The temp copies under %TEMP%.
+ - merged/tools/__pycache__ came with the base copy (stale .pyc, ignored by python -B; harmless).
+ - Open user decisions are unchanged: see each feature's notes.txt (straights D1-D6, flange D1-D6, hoseb 1-5, perlegsw a-h, angled 1-8). The merge
+   adds none.

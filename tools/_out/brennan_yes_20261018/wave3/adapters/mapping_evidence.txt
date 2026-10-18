@@ -1,0 +1,136 @@
+===== 1504 (TFA p.22 "1504-FG FP-FPS 45 DEG ELBOW"; mapping = wave2 tee_elbow mapping_evidence.txt; OMi drawing row 1504-20-20-FG is the strongest pair)
+  N2@DRIVE         <- L LGTH     axis crossing to the female NPTF port face                   | stage rows printed by the catalog: 1/2 agree to rounding (differ: 1504-04-04-FG 0.91 vs 0.69)
+  M@DRIVE          <- M1 LGTH    axis crossing to the NPSM swivel stem tip (45 deg leg)       | stage rows printed by the catalog: 1/2 agree to rounding (differ: 1504-04-04-FG 0.72 vs 0.76)
+  W2@HEX           <- M LGTH     axis crossing to the swivel-nut face (45 deg leg)            | stage rows printed by the catalog: 1/2 agree to rounding (differ: 1504-04-04-FG 0.91 vs 0.95)
+  CHEX@HEX         <- C HEX      swivel nut hex                                               | stage rows printed by the catalog: 2/2 agree to rounding
+  C1HEX@HEX        <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 1/2 agree to rounding (differ: 1504-04-04-FG 0.69 vs 0.75)
+  D@BORE           <- A2 DRILL   NPSM swivel stem bore                                        | stage rows printed by the catalog: 1/2 agree to rounding (differ: 1504-20-20-FG 1.01 vs 1.02)
+===== 2404_FINAL (TFA p.6 "2404 MJ-MP STRAIGHT")
+  D1@DRIVE         <- L LGTH     overall                                                      | stage rows printed by the catalog: 54/54 agree to rounding
+  HEXB@HEX         <- C HEX      body hex                                                     | stage rows printed by the catalog: 53/54 agree to rounding (differ: 2404-20-12 1.69 vs 1.625)
+===== 2502 (TFA p.25 "2502-FG MJ-FP 90 DEG ELBOW")
+  M1@DRIVE         <- M LGTH     axis crossing to the JIC tip                                 | stage rows printed by the catalog: 10/10 agree to rounding
+  N1@DRIVE         <- L LGTH     axis crossing to the female NPTF port face                   | stage rows printed by the catalog: 10/10 agree to rounding
+  Y1@DRIVE         <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 10/10 agree to rounding
+  D@BORE           <- B1 DRILL   JIC end drill                                                | stage rows printed by the catalog: 10/10 agree to rounding
+===== 2504 (TFA p.26 "2504-FG MJ-MJ 45 DEG ELBOW")
+  M2_1@DRIVE       <- M1 LGTH    leg 1 JIC tip to the crossing                                | stage rows printed by the catalog: 4/4 agree to rounding
+  M2_2@DRIVE       <- M2 LGTH    leg 2 JIC tip to the crossing                                | stage rows printed by the catalog: 4/4 agree to rounding
+  Y@HEX            <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 4/4 agree to rounding
+  D1@BORE          <- B1 DRILL   leg 1 bore                                                   | stage rows printed by the catalog: 4/4 agree to rounding
+  D2@BORE          <- B2 DRILL   leg 2 bore                                                   | stage rows printed by the catalog: 4/4 agree to rounding
+===== 2505 (TFA p.27 "2505-FG MJ-FP 45 DEG ELBOW")
+  M2@DRIVE         <- M LGTH     JIC leg                                                      | stage rows printed by the catalog: 3/3 agree to rounding
+  N6@DRIVE         <- N LGTH     female pipe leg along the 45 deg axis                        | stage rows printed by the catalog: 3/3 agree to rounding
+  Y1@HEX           <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 3/3 agree to rounding
+  D@BORE           <- B1 DRILL   JIC end drill                                                | stage rows printed by the catalog: 3/3 agree to rounding
+===== 2613 (TFA p.53 "2613-FG MP-FP-MJ TEE")
+  N5@DRIVE         <- L LGTH     run axis to the A1 male NPTF tip                             | stage rows printed by the catalog: 0/0 agree to rounding
+  N1@DRIVE         <- L1 LGTH    run axis to the A2 female NPTF port face                     | stage rows printed by the catalog: 0/0 agree to rounding
+  M1@DRIVE         <- M LGTH     run axis to the B3 JIC tip                                   | stage rows printed by the catalog: 0/0 agree to rounding
+  Y1@HEX           <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 0/0 agree to rounding
+  D1@BORE          <- A1 DRILL   male NPTF drill                                              | stage rows printed by the catalog: 0/0 agree to rounding
+  D@BORE           <- B3 DRILL   JIC drill                                                    | stage rows printed by the catalog: 0/0 agree to rounding
+  -- Air-Way plain rows vs the Brennan -FG row of the same size (different parts; letter check only)
+  N5@DRIVE         <- L LGTH     4/4
+  N1@DRIVE         <- L1 LGTH    4/4
+  M1@DRIVE         <- M LGTH     1/4 (differ: 2613-04-04-04 1.01 vs 2613-04-04-04-FG 1.22; 2613-04-04-06 1.13 vs 2613-04-04-06-FG 1.23; 2613-08-08-10 1.55 vs 2613-08-08-10-FG 1.64)
+  Y1@HEX           <- Y FLATS    2/4 (differ: 2613-08-08-10 1.13 vs 2613-08-08-10-FG 1.062; 2613-12-12-12 1.38 vs 2613-12-12-12-FG 1.312)
+  D1@BORE          <- A1 DRILL   4/4
+  D@BORE           <- B3 DRILL   4/4
+===== 2705 (TFA p.8 "2705 FP-MJ BULKHEAD STRAIGHT")
+  L24@DRIVE        <- L LGTH     overall                                                      | stage rows printed by the catalog: 6/11 agree to rounding (differ: 2705-06-06 2.18 vs 2.22; 2705-06-08 2.34 vs 2.39; 2705-08-08 2.58 vs 2.61; 2705-20-20 3.22 vs 3.38 ...)
+  C5HEX@HEX        <- C1 HEX     body hex                                                     | stage rows printed by the catalog: 10/11 agree to rounding (differ: 2705-06-06 1.0 vs 0.875)
+  D@BORE           <- B2 DRILL   bore                                                         | stage rows printed by the catalog: 11/11 agree to rounding
+===== 5601 (TFA p.55 "5601-FG MP-MP-FP TEE")
+  N_1@DRIVE        <- N1 LGTH    A1 male run leg                                              | stage rows printed by the catalog: 3/3 agree to rounding
+  N2@DRIVE         <- N2 LGTH    A2 male run leg                                              | stage rows printed by the catalog: 3/3 agree to rounding
+  N1@DRIVE         <- N3 LGTH    A3 female branch port face                                   | stage rows printed by the catalog: 3/3 agree to rounding
+  W@HEX            <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 3/3 agree to rounding
+  D1@BORE          <- A1 DRILL   A1 drill                                                     | stage rows printed by the catalog: 3/3 agree to rounding
+  D2@BORE          <- A2 DRILL   A2 drill                                                     | stage rows printed by the catalog: 3/3 agree to rounding
+  -- Air-Way plain rows vs the Brennan -FG row of the same size (different parts; letter check only)
+  N_1@DRIVE        <- N1 LGTH    5/5
+  N2@DRIVE         <- N2 LGTH    5/5
+  N1@DRIVE         <- N3 LGTH    5/5
+  W@HEX            <- Y FLATS    3/5 (differ: 5601-08-08-08 1.13 vs 5601-08-08-08-FG 1.062; 5601-12-12-12 1.38 vs 5601-12-12-12-FG 1.312)
+  D1@BORE          <- A1 DRILL   5/5
+  D2@BORE          <- A2 DRILL   5/5
+===== 6402 (TFA p.15 "6402-O MORB-FJS STRAIGHT")
+  L26@DRIVE        <- L1 LGTH    ORB tip to the nut face (overall)                            | stage rows printed by the catalog: 15/17 agree to rounding (differ: 6402-16-12-O 2.19 vs 2.14; 6402-12-16-O 2.28 vs 2.26)
+  L27@DRIVE        <- L LGTH     ORB tip to the seat                                          | stage rows printed by the catalog: 13/17 agree to rounding (differ: 6402-04-04-O 0.97 vs 0.96; 6402-06-04-O 1.07 vs 1.06; 6402-16-12-O 1.63 vs 1.57; 6402-12-16-O 1.69 vs 1.67)
+  C4HEX@HEX        <- C HEX      body hex                                                     | stage rows printed by the catalog: 16/17 agree to rounding (differ: 6402-12-16-O 1.38 vs 1.5)
+  C3HEX@HEX        <- C1 HEX     swivel nut hex                                               | stage rows printed by the catalog: 17/17 agree to rounding
+  D1@BORE          <- B DRILL    ORB-end bore                                                 | stage rows printed by the catalog: 17/17 agree to rounding
+  D2@BORE          <- A DRILL    swivel-end bore                                              | stage rows printed by the catalog: 17/17 agree to rounding
+===== 6801 (TFA p.40 / p.41 "6801-NWO-FG MJ-MAORB 90 DEG ELBOW")
+  LEG_JIC@DRIVE    <- M LGTH     JIC tip to the ORB axis                                      | stage rows printed by the catalog: 41/41 agree to rounding
+  LEG_ORB@DRIVE    <- M7 LGTH    adjustable ORB tip to the JIC axis                           | stage rows printed by the catalog: 38/41 agree to rounding (differ: 6801-04-02-NWO-FG 1.03 vs 0.92; 6801-04-03-NWO-FG 0.92 vs 1.02; 6801-10-08-NWO-FG 1.6 vs 1.54)
+  HEXB@HEX         <- C HEX      locknut hex                                                  | stage rows printed by the catalog: 41/41 agree to rounding
+  D1@BORE          <- B1 DRILL   JIC-end bore                                                 | stage rows printed by the catalog: 40/41 agree to rounding (differ: 6801-32-24-NWO-FG 1.31 vs 1.781)
+  D2@BORE          <- B2 DRILL   ORB-end bore                                                 | stage rows printed by the catalog: 39/41 agree to rounding (differ: 6801-10-06-NWO-FG 0.29 vs 0.297; 6801-32-24-NWO-FG 1.78 vs 1.312)
+  Y@REF            <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 41/41 agree to rounding
+===== 6803 (TFA p.59 "6803-NWO-FG MJ-MJ-MAORB BRANCH TEE")
+  LEG1@DRIVE       <- M1 LGTH    B1 JIC leg                                                   | stage rows printed by the catalog: 8/9 agree to rounding (differ: 6803-12-12-12-NWO-FG 1.65 vs 1.66)
+  LEG2@DRIVE       <- M2 LGTH    B2 JIC leg                                                   | stage rows printed by the catalog: 8/9 agree to rounding (differ: 6803-12-12-12-NWO-FG 1.65 vs 1.66)
+  LEG3@DRIVE       <- M7 LGTH    B3 adjustable ORB leg                                        | stage rows printed by the catalog: 9/9 agree to rounding
+  HEXB@HEX         <- C HEX      locknut hex                                                  | stage rows printed by the catalog: 9/9 agree to rounding
+  Y@REF            <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 9/9 agree to rounding
+  D1@BORE          <- B1 DRILL   B1 bore                                                      | stage rows printed by the catalog: 9/9 agree to rounding
+  D2@BORE          <- B2 DRILL   B2 bore                                                      | stage rows printed by the catalog: 9/9 agree to rounding
+  D3@BORE          <- B3 DRILL   B3 bore                                                      | stage rows printed by the catalog: 9/9 agree to rounding
+  -- Air-Way plain rows vs the Brennan -FG row of the same size (different parts; letter check only)
+  LEG1@DRIVE       <- M1 LGTH    12/20 (differ: 6803-04-04-06-NWO 0.95 vs 6803-04-04-06-NWO-FG 1.05; 6803-06-06-04-NWO 1.08 vs 6803-06-06-04-NWO-FG 1.06; 6803-06-06-06-NWO 1.08 vs 6803-06-06-06-NWO-FG 1.06; 6803-06-06-08-NWO 1.15 vs 6803-06-06-08-NWO-FG 1.14)
+  LEG2@DRIVE       <- M2 LGTH    12/20 (differ: 6803-04-04-06-NWO 0.95 vs 6803-04-04-06-NWO-FG 1.05; 6803-06-06-04-NWO 1.08 vs 6803-06-06-04-NWO-FG 1.06; 6803-06-06-06-NWO 1.08 vs 6803-06-06-06-NWO-FG 1.06; 6803-06-06-08-NWO 1.15 vs 6803-06-06-08-NWO-FG 1.14)
+  LEG3@DRIVE       <- M7 LGTH    15/20 (differ: 6803-06-06-04-NWO 1.09 vs 6803-06-06-04-NWO-FG 1.19; 6803-08-08-06-NWO 1.34 vs 6803-08-08-06-NWO-FG 1.32; 6803-10-10-08-NWO 1.51 vs 6803-10-10-08-NWO-FG 1.54; 6803-12-12-10-NWO 1.8 vs 6803-12-12-10-NWO-FG 1.78)
+  HEXB@HEX         <- C HEX      19/20 (differ: 6803-08-08-12-NWO 0.88 vs 6803-08-08-12-NWO-FG 1.25)
+  Y@REF            <- Y FLATS    1/20 (differ: 6803-04-04-04-NWO 0.5 vs 6803-04-04-04-NWO-FG 0.438; 6803-04-04-06-NWO 0.63 vs 6803-04-04-06-NWO-FG 0.562; 6803-06-06-04-NWO 0.63 vs 6803-06-06-04-NWO-FG 0.562; 6803-06-06-06-NWO 0.63 vs 6803-06-06-06-NWO-FG 0.562)
+  D1@BORE          <- B1 DRILL   20/20
+  D2@BORE          <- B2 DRILL   20/20
+  D3@BORE          <- B3 DRILL   20/20
+===== 6807 (TFA p.44 "6807-NWO-FG MAORB-MAORB 90 DEG ELBOW")
+  M7_1@DRIVE       <- M1 LGTH    B1 adjustable ORB leg                                        | stage rows printed by the catalog: 0/0 agree to rounding
+  M7_2@DRIVE       <- M2 LGTH    B2 adjustable ORB leg                                        | stage rows printed by the catalog: 0/0 agree to rounding
+  C4_1HEX@HEX      <- C HEX      B1 locknut hex                                               | stage rows printed by the catalog: 0/0 agree to rounding
+  C4_2HEX@HEX      <- C2 HEX     B2 locknut hex                                               | stage rows printed by the catalog: 0/0 agree to rounding
+  Y@HEX            <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 0/0 agree to rounding
+  D1@BORE          <- B1 DRILL   B1 bore                                                      | stage rows printed by the catalog: 0/0 agree to rounding
+  D2@BORE          <- B2 DRILL   B2 bore                                                      | stage rows printed by the catalog: 0/0 agree to rounding
+  -- Air-Way plain rows vs the Brennan -FG row of the same size (different parts; letter check only)
+  M7_1@DRIVE       <- M1 LGTH    3/3
+  M7_2@DRIVE       <- M2 LGTH    3/3
+  C4_1HEX@HEX      <- C HEX      3/3
+  C4_2HEX@HEX      <- C2 HEX     3/3
+  Y@HEX            <- Y FLATS    0/3 (differ: 6807-16-16 NWO 1.38 vs 6807-16-16-NWO-FG 1.312; 6807-20-20 NWO 1.75 vs 6807-20-20-NWO-FG 1.625; 6807-24-24 NWO 2.0 vs 6807-24-24-NWO-FG 1.875)
+  D1@BORE          <- B1 DRILL   3/3
+  D2@BORE          <- B2 DRILL   3/3
+===== 6809 (TFA p.44 "6809-NWO-FG MAORB-FJS 90 DEG ELBOW")
+  M7@DRIVE         <- M7 LGTH    adjustable ORB tip to the swivel axis                        | stage rows printed by the catalog: 0/0 agree to rounding
+  M5@DRIVE         <- M6 LGTH    ORB axis to the swivel-nut face                              | stage rows printed by the catalog: 0/0 agree to rounding
+  M10@DRIVE        <- M LGTH     ORB axis to the swivel nose / seat                           | stage rows printed by the catalog: 0/0 agree to rounding
+  C3HEX@HEX        <- C2 HEX     swivel nut hex (end B2)                                      | stage rows printed by the catalog: 0/0 agree to rounding
+  C4HEX@HEX        <- C1 HEX     locknut hex (end B1)                                         | stage rows printed by the catalog: 0/0 agree to rounding
+  Y@HEX            <- Y FLATS    forged body flats                                            | stage rows printed by the catalog: 0/0 agree to rounding
+  D1@BORE          <- B1 DRILL   ORB-end bore                                                 | stage rows printed by the catalog: 0/0 agree to rounding
+  D2@BORE          <- B2 DRILL   swivel-end bore                                              | stage rows printed by the catalog: 0/0 agree to rounding
+  -- Air-Way plain rows vs the Brennan -FG row of the same size (different parts; letter check only)
+  M7@DRIVE         <- M7 LGTH    11/11
+  M5@DRIVE         <- M6 LGTH    7/11 (differ: 6809-06-04 NWO 1.06 vs 6809-06-04-NWO-FG 1.09; 6809-08-06 NWO 1.34 vs 6809-08-06-NWO-FG 1.28; 6809-10-08 NWO 1.44 vs 6809-10-08-NWO-FG 1.51; 6809-12-10 NWO 1.71 vs 6809-12-10-NWO-FG 1.65)
+  M10@DRIVE        <- M LGTH     3/11 (differ: 6809-04-04 NWO 0.66 vs 6809-04-04-NWO-FG 0.68; 6809-06-04 NWO 0.72 vs 6809-06-04-NWO-FG 0.75; 6809-06-06 NWO 0.88 vs 6809-06-06-NWO-FG 0.87; 6809-08-06 NWO 0.97 vs 6809-08-06-NWO-FG 0.91)
+  C3HEX@HEX        <- C2 HEX     11/11
+  C4HEX@HEX        <- C1 HEX     11/11
+  Y@HEX            <- Y FLATS    0/11 (differ: 6809-04-04 NWO 0.5 vs 6809-04-04-NWO-FG 0.438; 6809-06-04 NWO 0.63 vs 6809-06-04-NWO-FG 0.562; 6809-06-06 NWO 0.63 vs 6809-06-06-NWO-FG 0.562; 6809-08-06 NWO 0.81 vs 6809-08-06-NWO-FG 0.75)
+  D1@BORE          <- B1 DRILL   11/11
+  D2@BORE          <- B2 DRILL   11/11
+===== 6901 (TFA p.45 / p.46 "6901-NWO-FG MAORB-FPS 90 DEG ELBOW"; the stage -FG rows are Air-Way s142 rows, so this IS a same-part pairing)
+  CHEX@HEX         <- C1 HEX     NPSM swivel nut hex                                          | stage rows printed by the catalog: 4/4 agree to rounding
+  C4HEX@HEX        <- C HEX      ORB locknut hex                                              | stage rows printed by the catalog: 4/4 agree to rounding
+  D1@BORE          <- B DRILL    ORB end drill                                                | stage rows printed by the catalog: 3/4 agree to rounding (differ: 6901-06-06 NWO-FG 0.29 vs 0.297)
+  D@BORE           <- A DRILL    NPSM end drill                                               | stage rows printed by the catalog: 1/4 agree to rounding (differ: 6901-06-06 NWO-FG 0.33 vs 0.34; 6901-08-08 NWO-FG 0.45 vs 0.46; 6901-10-08 NWO-FG 0.45 vs 0.46)
+  N5@DRIVE         <- M7 LGTH    candidate: ORB tip to the swivel axis                        | stage rows printed by the catalog: 2/4 agree to rounding (differ: 6901-06-06 NWO-FG 1.5 vs 1.25; 6901-08-08 NWO-FG 1.5 vs 1.45)
+  M1@DRIVE         <- M LGTH     candidate: ORB axis to the stem tip                          | stage rows printed by the catalog: 0/4 agree to rounding (differ: 6901-06-04 NWO-FG 0.94 vs 0.88; 6901-06-06 NWO-FG 1.12 vs 0.9; 6901-08-08 NWO-FG 1.0 vs 1.11; 6901-10-08 NWO-FG 0.98 vs 1.11)
+  W3@HEX           <- M6 LGTH    candidate: ORB axis to the nut face                          | stage rows printed by the catalog: 0/4 agree to rounding (differ: 6901-06-04 NWO-FG 1.18 vs 1.07; 6901-06-06 NWO-FG 1.37 vs 1.11; 6901-08-08 NWO-FG 1.33 vs 1.39; 6901-10-08 NWO-FG 1.31 vs 1.39)
+  C1HEX@HEX        <- Y FLATS    candidate: forged body flats                                 | stage rows printed by the catalog: 0/4 agree to rounding (differ: 6901-06-04 NWO-FG 0.75 vs 0.562; 6901-06-06 NWO-FG 0.75 vs 0.562; 6901-08-08 NWO-FG 0.88 vs 0.75; 6901-10-08 NWO-FG 1.11 vs 0.875)
+===== 5406P (TFA p.67 "5406-P EXTERNAL HEX PIPE PLUG"; the alias rows 5406-16P ... -32P are BUILD with OMiSKU 5406-P-16 ...)
+  L2@DRIVE         <- L LGTH     plug length                                                  | stage rows printed by the catalog: 3/3 agree to rounding
+  C2HEX@HEX        <- C HEX      hex                                                          | stage rows printed by the catalog: 3/3 agree to rounding

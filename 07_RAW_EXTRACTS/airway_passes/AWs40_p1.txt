@@ -1,0 +1,24 @@
+Part #|Type|Tube Fitting Size|TUBE OD|I.D.|W|Temperature|Shore Hardness|Elongation|Tensile
+FF4000-4|CH (Buna-N)|-4|1/4|0.301  ± 0.005|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-6|CH (Buna-N)|-6|3/8|0.364  ± 0.005|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-8|CH (Buna-N)|-8|1/2|0.489  ± 0.005|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-10|CH (Buna-N)|-10|5/8|0.614  ± 0.005|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-12|CH (Buna-N)|-12|3/4|0.739  ± 0.005|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-16|CH (Buna-N)|-16|1|0.926  ± 0.005|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-20|CH (Buna-N)|-20|1 1/4|1.176  ± 0.006|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-24|CH (Buna-N)|-24|1 1/2|1.489  ± 0.010|0.070  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4000-32|CH (Buna-N)|-32|2|1.925  ± 0.017|0.103  ± 0.003|-35°C to 125°C (-30°F to 250°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4001-4|HK (Viton)|-4|1/4|0.301  ± 0.005|0.070  ± 0.003|-15°C to 275°C (5°F to 525°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4001-6|HK (Viton)|-6|3/8|0.364  ± 0.005|0.070  ± 0.003|-15°C to 275°C (5°F to 525°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4001-10|HK (Viton)|-10|5/8|0.614  ± 0.005|0.070  ± 0.003|-15°C to 275°C (5°F to 525°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4001-12|HK (Viton)|-12|3/4|0.739  ± 0.005|0.070  ± 0.003|-15°C to 275°C (5°F to 525°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4001-16|HK (Viton)|-16|1|0.926  ± 0.005|0.070  ± 0.003|-15°C to 275°C (5°F to 525°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4001-24|HK (Viton)|-24|1 1/2|1.489  ± 0.010|0.070  ± 0.003|-15°C to 275°C (5°F to 525°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-4|CH (Hi-Temp)|-4|1/4|0.301  ± 0.005|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-6|CH (Hi-Temp)|-6|3/8|0.364  ± 0.005|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-8|CH (Hi-Temp)|-8|1/2|0.489  ± 0.005|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-10|CH (Hi-Temp)|-10|5/8|0.614  ± 0.005|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-12|CH (Hi-Temp)|-12|3/4|0.739  ± 0.005|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-16|CH (Hi-Temp)|-16|1|0.926  ± 0.005|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-20|CH (Hi-Temp)|-20|1 1/4|1.176  ± 0.006|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min
+FF4002-24|CH (Hi-Temp)|-24|1 1/2|1.489  ± 0.010|0.070  ± 0.003|-32°C to 135°C (-25°F to 275°F)|90 pts  ± 5 pts|100% min|10 MPa min

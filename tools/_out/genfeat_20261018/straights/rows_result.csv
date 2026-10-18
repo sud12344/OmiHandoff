@@ -1,0 +1,109 @@
+table,config,result,reason
+5000,5000-40-40,built,"built (ASSUMED): Hexagon Pipe Coupling, 2 1/2-8 NPTF (female) x 2 1/2-8 NPTF (female)"
+5404,5404-40-40,built,"built (ASSUMED): Hexagon Pipe Nipple, 2 1/2-8 NPTF x 2 1/2-8 NPTF"
+5404N,5404-N-04X2.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-04X3.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-04X4.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-04X4.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-04X5.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-04X5.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-04X6.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/4-18 NPTF x 1/4-18 NPTF"
+5404N,5404-N-06X2.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-06X2.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-06X3.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-06X3.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-06X4.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-06X5.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-06X6.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 3/8-18 NPTF x 3/8-18 NPTF | NEEDS SOLIDWORKS CHECK: round-bar step 0.0040 < 0.005; the 2026-10-01 dry run (QA #163) built the -06 bodies but THD_EndA/B failed to rebuild"
+5404N,5404-N-08X3.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/2-14 NPTF x 1/2-14 NPTF"
+5404N,5404-N-08X4.500,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/2-14 NPTF x 1/2-14 NPTF"
+5404N,5404-N-08X5.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/2-14 NPTF x 1/2-14 NPTF"
+5404N,5404-N-08X6.000,built,"built (ASSUMED): Straight Pipe Nipple (round, NPTF x NPTF), 1/2-14 NPTF x 1/2-14 NPTF"
+6400,6400-12-14-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12"
+6400,6400-14-14-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 3/16-12 x 1 3/16-12"
+6400,6400-16-14-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12"
+6400,6400-20-32-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/8-12 x 1 5/8-12"
+6400,6400-24-32-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 7/8-12 x 1 7/8-12"
+6400,6400-32-32-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 2 1/2-12 x 2 1/2-12"
+6410,6410-04-02-O,built,"built (ASSUMED): ORB Reducer/Expander (male ORB x female ORB port), 7/16-20 (male ORB) x 5/16-24 (female ORB port)"
+5404N,5404-N-06X4.500,skipped,BUILD | MISSING (no Air-Way transfer / Brennan catalog row prepared in wave 2 - stays MISSING)
+5404N,5404-N-08X2.500,skipped,BUILD | MISSING (no Air-Way transfer / Brennan catalog row prepared in wave 2 - stays MISSING)
+5404N,5404-N-08X5.500,skipped,BUILD | MISSING (no Air-Way transfer / Brennan catalog row prepared in wave 2 - stays MISSING)
+6400,6400-03-03-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/8-24 x 3/8-24 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-02-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-03-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-04-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-05-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-06-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-08-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-10-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-04-12-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 x 7/16-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-05-04-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1/2-20 x 1/2-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-05-05-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1/2-20 x 1/2-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-05-06-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1/2-20 x 1/2-20 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-04-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-05-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-06-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-08-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-10-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-12-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-06-16-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 x 9/16-18 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-04-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-06-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-08-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-10-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-12-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-16-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-08-20-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 x 3/4-16 [SPEC 6400 rebuild, user A6]"
+6400,6400-10-06-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/8-14 x 7/8-14 [SPEC 6400 rebuild, user A6]"
+6400,6400-10-08-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/8-14 x 7/8-14 [SPEC 6400 rebuild, user A6]"
+6400,6400-10-10-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/8-14 x 7/8-14 [SPEC 6400 rebuild, user A6]"
+6400,6400-10-12-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/8-14 x 7/8-14 [SPEC 6400 rebuild, user A6]"
+6400,6400-10-16-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 7/8-14 x 7/8-14 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-06-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-08-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-10-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-12-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-16-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-20-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-12-24-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 x 1 1/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-16-08-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-16-10-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-16-12-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-16-16-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-16-20-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-16-24-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 x 1 5/16-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-20-24-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/8-12 x 1 5/8-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-24-16-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 7/8-12 x 1 7/8-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-24-20-O,built,"built (ASSUMED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 7/8-12 x 1 7/8-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-24-24-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 1 7/8-12 x 1 7/8-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-32-20-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 2 1/2-12 x 2 1/2-12 [SPEC 6400 rebuild, user A6]"
+6400,6400-32-24-O,built,"built (VERIFIED): Straight Thread Connector, Male 37 deg Flare (JIC) x Male SAE ORB, 2 1/2-12 x 2 1/2-12 [SPEC 6400 rebuild, user A6]"
+6400L,6400-L-04-04-O,built,"built (ASSUMED): Straight Thread Connector Long, Male 37 deg Flare (JIC) x Male SAE ORB, 7/16-20 (long thread) x 7/16-20 [6400-L folded in, user A6]"
+6400L,6400-L-06-06-O,built,"built (ASSUMED): Straight Thread Connector Long, Male 37 deg Flare (JIC) x Male SAE ORB, 9/16-18 (long thread) x 9/16-18 [6400-L folded in, user A6]"
+6400L,6400-L-08-08-O,built,"built (ASSUMED): Straight Thread Connector Long, Male 37 deg Flare (JIC) x Male SAE ORB, 3/4-16 (long thread) x 3/4-16 [6400-L folded in, user A6]"
+6400L,6400-L-10-10-O,built,"built (ASSUMED): Straight Thread Connector Long, Male 37 deg Flare (JIC) x Male SAE ORB, 7/8-14 (long thread) x 7/8-14 [6400-L folded in, user A6]"
+6400L,6400-L-12-12-O,built,"built (ASSUMED): Straight Thread Connector Long, Male 37 deg Flare (JIC) x Male SAE ORB, 1 1/16-12 (long thread) x 1 1/16-12 [6400-L folded in, user A6]"
+6400L,6400-L-16-16-O,built,"built (ASSUMED): Straight Thread Connector Long, Male 37 deg Flare (JIC) x Male SAE ORB, 1 5/16-12 (long thread) x 1 5/16-12 [6400-L folded in, user A6]"
+6400,6400-02-02-O,skipped,DROP | VERIFIED
+6400,6400-05-08-O,skipped,DROP | ASSUMED
+6400,6400-08-05-O,skipped,DROP | ASSUMED
+6400,6400-08-14-O,skipped,DROP | MISSING
+6400,6400-14-12-O,skipped,DROP | ASSUMED
+6400,6400-14-16-O,skipped,DROP | ASSUMED
+6400,6400-20-12-O,skipped,DROP | ASSUMED
+6400,6400-20-16-O,skipped,DROP | ASSUMED
+6400,6400-20-20-O,skipped,DROP | VERIFIED
+6400L,6400-L-04-06-O,skipped,DROP | ASSUMED
+6400L,6400-L-04-08-O,skipped,DROP | ASSUMED
+6400L,6400-L-06-08-O,skipped,DROP | ASSUMED
+6400L,6400-L-08-10-O,skipped,DROP | ASSUMED
+6400L,6400-L-10-08-O,skipped,DROP | ASSUMED
+6400L,6400-L-10-12-O,skipped,DROP | ASSUMED
+6400L,6400-L-12-10-O,skipped,DROP | ASSUMED
+6400L,6400-L-20-20-O,skipped,DROP | ASSUMED
+6400L,6400-L-24-24-O,skipped,DROP | ASSUMED
+5406,5406-40-32,blocked,"data: A9 / Q-CONFLICT-TAPDRILL-32 (the -32 female tap drill waits for BRENNAN_5405-32-32); the -40 male end itself works: TEST scenario (Air-Way -32 tap drill 2.20 marked TEST) builds it - built, 0 geometry checks failed"
+2501,2501-40-40-FG,skipped,"gen_tee root, row MISSING (no cell at all; tee / data work). Its NPT leg is the SAME -40 end (Brennan 2501-40-40-FG leg (1,+1): cone 2.7769 at the tip, end 1.515 = 5404-40-40) -> gen_straight2 NPTF[40] / ENDL[40] are now visible to gen_tee (G.NPTF / G.ENDL); gen_tee does not yet append NPTF40_ASSUME to $PRP@AxialSource"
+0304,0304-C-02,skipped,no female -02 JIC geometry: no Brennan STEP with a female -02 JIC thread + seat on disk (BRENNAN_0304-C-02 / 0306-02 / any 2406-02-xx) - needs a download
+0306,0306-02,skipped,no female -02 JIC geometry: no Brennan STEP with a female -02 JIC thread on disk (BRENNAN_0306-02 / 0304-C-02 / any 2406-02-xx) - needs a download

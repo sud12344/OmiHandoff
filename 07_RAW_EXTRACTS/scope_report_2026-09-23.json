@@ -1,0 +1,586 @@
+{
+ "tables": {
+  "0304": {
+   "airway_rows": 9,
+   "build": 0,
+   "drop": 9,
+   "omi_only": 13,
+   "near": 0,
+   "omi_total": 13
+  },
+  "0306": {
+   "airway_rows": 6,
+   "build": 0,
+   "drop": 6,
+   "omi_only": 12,
+   "near": 0,
+   "omi_total": 12
+  },
+  "0318": {
+   "airway_rows": 13,
+   "build": 12,
+   "drop": 1,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 12
+  },
+  "0319": {
+   "airway_rows": 13,
+   "build": 12,
+   "drop": 1,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 12
+  },
+  "0403": {
+   "airway_rows": 34,
+   "build": 0,
+   "drop": 34,
+   "omi_only": 7,
+   "near": 7,
+   "omi_total": 7
+  },
+  "1404": {
+   "airway_rows": 27,
+   "build": 24,
+   "drop": 3,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 24
+  },
+  "1405": {
+   "airway_rows": 17,
+   "build": 15,
+   "drop": 2,
+   "omi_only": 3,
+   "near": 0,
+   "omi_total": 18
+  },
+  "1501": {
+   "airway_rows": 48,
+   "build": 19,
+   "drop": 29,
+   "omi_only": 2,
+   "near": 2,
+   "omi_total": 21
+  },
+  "1502": {
+   "airway_rows": 16,
+   "build": 2,
+   "drop": 14,
+   "omi_only": 8,
+   "near": 7,
+   "omi_total": 10
+  },
+  "1503": {
+   "airway_rows": 35,
+   "build": 14,
+   "drop": 21,
+   "omi_only": 5,
+   "near": 5,
+   "omi_total": 19
+  },
+  "1504": {
+   "airway_rows": 11,
+   "build": 1,
+   "drop": 10,
+   "omi_only": 4,
+   "near": 2,
+   "omi_total": 5
+  },
+  "1601": {
+   "airway_rows": 9,
+   "build": 0,
+   "drop": 9,
+   "omi_only": 7,
+   "near": 6,
+   "omi_total": 7
+  },
+  "1602": {
+   "airway_rows": 4,
+   "build": 0,
+   "drop": 4,
+   "omi_only": 7,
+   "near": 3,
+   "omi_total": 7
+  },
+  "1603": {
+   "airway_rows": 7,
+   "build": 0,
+   "drop": 7,
+   "omi_only": 6,
+   "near": 6,
+   "omi_total": 6
+  },
+  "1700": {
+   "airway_rows": 13,
+   "build": 10,
+   "drop": 3,
+   "omi_only": 3,
+   "near": 0,
+   "omi_total": 13
+  },
+  "1703": {
+   "airway_rows": 1,
+   "build": 0,
+   "drop": 1,
+   "omi_only": 19,
+   "near": 1,
+   "omi_total": 19
+  },
+  "1704": {
+   "airway_rows": 2,
+   "build": 0,
+   "drop": 2,
+   "omi_only": 25,
+   "near": 2,
+   "omi_total": 25
+  },
+  "2504": {
+   "airway_rows": 7,
+   "build": 0,
+   "drop": 7,
+   "omi_only": 4,
+   "near": 4,
+   "omi_total": 4
+  },
+  "2505": {
+   "airway_rows": 6,
+   "build": 0,
+   "drop": 6,
+   "omi_only": 3,
+   "near": 3,
+   "omi_total": 3
+  },
+  "2605": {
+   "airway_rows": 31,
+   "build": 7,
+   "drop": 24,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 7
+  },
+  "2606": {
+   "airway_rows": 7,
+   "build": 0,
+   "drop": 7,
+   "omi_only": 5,
+   "near": 4,
+   "omi_total": 5
+  },
+  "2609": {
+   "airway_rows": 1,
+   "build": 0,
+   "drop": 1,
+   "omi_only": 1,
+   "near": 0,
+   "omi_total": 1
+  },
+  "2611": {
+   "airway_rows": 5,
+   "build": 0,
+   "drop": 5,
+   "omi_only": 3,
+   "near": 2,
+   "omi_total": 3
+  },
+  "2613": {
+   "airway_rows": 4,
+   "build": 0,
+   "drop": 4,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 0
+  },
+  "2650": {
+   "airway_rows": 13,
+   "build": 4,
+   "drop": 9,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 4
+  },
+  "2701": {
+   "airway_rows": 33,
+   "build": 13,
+   "drop": 20,
+   "omi_only": 2,
+   "near": 0,
+   "omi_total": 15
+  },
+  "2702": {
+   "airway_rows": 29,
+   "build": 11,
+   "drop": 18,
+   "omi_only": 1,
+   "near": 1,
+   "omi_total": 12
+  },
+  "2703": {
+   "airway_rows": 28,
+   "build": 12,
+   "drop": 16,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 12
+  },
+  "2704": {
+   "airway_rows": 25,
+   "build": 12,
+   "drop": 13,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 12
+  },
+  "2705": {
+   "airway_rows": 21,
+   "build": 14,
+   "drop": 7,
+   "omi_only": 3,
+   "near": 0,
+   "omi_total": 17
+  },
+  "2706": {
+   "airway_rows": 25,
+   "build": 23,
+   "drop": 2,
+   "omi_only": 6,
+   "near": 0,
+   "omi_total": 29
+  },
+  "4404": {
+   "airway_rows": 33,
+   "build": 13,
+   "drop": 20,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 13
+  },
+  "4501": {
+   "airway_rows": 33,
+   "build": 1,
+   "drop": 32,
+   "omi_only": 11,
+   "near": 11,
+   "omi_total": 12
+  },
+  "4503": {
+   "airway_rows": 25,
+   "build": 0,
+   "drop": 25,
+   "omi_only": 7,
+   "near": 7,
+   "omi_total": 7
+  },
+  "4601": {
+   "airway_rows": 42,
+   "build": 6,
+   "drop": 36,
+   "omi_only": 9,
+   "near": 9,
+   "omi_total": 15
+  },
+  "4603": {
+   "airway_rows": 33,
+   "build": 4,
+   "drop": 29,
+   "omi_only": 1,
+   "near": 1,
+   "omi_total": 5
+  },
+  "4604": {
+   "airway_rows": 38,
+   "build": 14,
+   "drop": 24,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 14
+  },
+  "5501": {
+   "airway_rows": 7,
+   "build": 0,
+   "drop": 7,
+   "omi_only": 9,
+   "near": 7,
+   "omi_total": 9
+  },
+  "5503": {
+   "airway_rows": 15,
+   "build": 5,
+   "drop": 10,
+   "omi_only": 9,
+   "near": 4,
+   "omi_total": 14
+  },
+  "5505": {
+   "airway_rows": 9,
+   "build": 1,
+   "drop": 8,
+   "omi_only": 6,
+   "near": 5,
+   "omi_total": 7
+  },
+  "5600": {
+   "airway_rows": 12,
+   "build": 6,
+   "drop": 6,
+   "omi_only": 2,
+   "near": 0,
+   "omi_total": 8
+  },
+  "5601": {
+   "airway_rows": 5,
+   "build": 0,
+   "drop": 5,
+   "omi_only": 5,
+   "near": 2,
+   "omi_total": 5
+  },
+  "5604": {
+   "airway_rows": 12,
+   "build": 4,
+   "drop": 8,
+   "omi_only": 5,
+   "near": 4,
+   "omi_total": 9
+  },
+  "5605": {
+   "airway_rows": 14,
+   "build": 4,
+   "drop": 10,
+   "omi_only": 5,
+   "near": 5,
+   "omi_total": 9
+  },
+  "5652": {
+   "airway_rows": 8,
+   "build": 0,
+   "drop": 8,
+   "omi_only": 9,
+   "near": 8,
+   "omi_total": 9
+  },
+  "6402": {
+   "airway_rows": 22,
+   "build": 15,
+   "drop": 7,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 15
+  },
+  "6501": {
+   "airway_rows": 16,
+   "build": 1,
+   "drop": 15,
+   "omi_only": 14,
+   "near": 10,
+   "omi_total": 15
+  },
+  "6502": {
+   "airway_rows": 22,
+   "build": 10,
+   "drop": 12,
+   "omi_only": 5,
+   "near": 0,
+   "omi_total": 15
+  },
+  "6503": {
+   "airway_rows": 11,
+   "build": 1,
+   "drop": 10,
+   "omi_only": 4,
+   "near": 4,
+   "omi_total": 5
+  },
+  "6504": {
+   "airway_rows": 14,
+   "build": 10,
+   "drop": 4,
+   "omi_only": 10,
+   "near": 0,
+   "omi_total": 20
+  },
+  "6505": {
+   "airway_rows": 20,
+   "build": 16,
+   "drop": 4,
+   "omi_only": 4,
+   "near": 0,
+   "omi_total": 20
+  },
+  "6506": {
+   "airway_rows": 18,
+   "build": 15,
+   "drop": 3,
+   "omi_only": 4,
+   "near": 0,
+   "omi_total": 19
+  },
+  "6565": {
+   "airway_rows": 9,
+   "build": 9,
+   "drop": 0,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 9
+  },
+  "6600": {
+   "airway_rows": 20,
+   "build": 10,
+   "drop": 10,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 10
+  },
+  "6602": {
+   "airway_rows": 39,
+   "build": 9,
+   "drop": 30,
+   "omi_only": 0,
+   "near": 0,
+   "omi_total": 9
+  },
+  "6603": {
+   "airway_rows": 5,
+   "build": 0,
+   "drop": 5,
+   "omi_only": 2,
+   "near": 2,
+   "omi_total": 2
+  },
+  "6606": {
+   "airway_rows": 2,
+   "build": 0,
+   "drop": 2,
+   "omi_only": 6,
+   "near": 2,
+   "omi_total": 6
+  },
+  "6807": {
+   "airway_rows": 12,
+   "build": 1,
+   "drop": 11,
+   "omi_only": 4,
+   "near": 4,
+   "omi_total": 5
+  },
+  "6809": {
+   "airway_rows": 12,
+   "build": 0,
+   "drop": 12,
+   "omi_only": 4,
+   "near": 4,
+   "omi_total": 4
+  },
+  "6810": {
+   "airway_rows": 4,
+   "build": 0,
+   "drop": 4,
+   "omi_only": 1,
+   "near": 1,
+   "omi_total": 1
+  },
+  "6901": {
+   "airway_rows": 29,
+   "build": 3,
+   "drop": 26,
+   "omi_only": 14,
+   "near": 13,
+   "omi_total": 17
+  },
+  "6902": {
+   "airway_rows": 18,
+   "build": 1,
+   "drop": 17,
+   "omi_only": 9,
+   "near": 8,
+   "omi_total": 10
+  }
+ },
+ "skeletons": {
+  "0618": {
+   "n": 1,
+   "action": "SKELETON MISSING"
+  },
+  "0619": {
+   "n": 2,
+   "action": "SKELETON MISSING"
+  },
+  "1724": {
+   "n": 7,
+   "action": "SKELETON MISSING"
+  },
+  "1800": {
+   "n": 13,
+   "action": "SKELETON MISSING"
+  },
+  "1803": {
+   "n": 19,
+   "action": "SKELETON MISSING"
+  },
+  "1804": {
+   "n": 22,
+   "action": "SKELETON MISSING"
+  },
+  "1824": {
+   "n": 6,
+   "action": "SKELETON MISSING"
+  },
+  "1901": {
+   "n": 10,
+   "action": "OUT OF SCOPE (kits)"
+  },
+  "1902": {
+   "n": 8,
+   "action": "OUT OF SCOPE (kits)"
+  },
+  "1927": {
+   "n": 12,
+   "action": "OUT OF SCOPE (kits)"
+  },
+  "3474": {
+   "n": 7,
+   "action": "SKELETON MISSING"
+  },
+  "4000": {
+   "n": 11,
+   "action": "SKELETON MISSING"
+  },
+  "4001": {
+   "n": 10,
+   "action": "SKELETON MISSING"
+  },
+  "4005": {
+   "n": 9,
+   "action": "SKELETON MISSING"
+  },
+  "6420": {
+   "n": 2,
+   "action": "SKELETON MISSING"
+  },
+  "6425": {
+   "n": 6,
+   "action": "SKELETON MISSING"
+  },
+  "6566": {
+   "n": 2,
+   "action": "SKELETON MISSING"
+  },
+  "6701": {
+   "n": 7,
+   "action": "SKELETON MISSING"
+  },
+  "6815": {
+   "n": 6,
+   "action": "SKELETON MISSING"
+  },
+  "6832": {
+   "n": 4,
+   "action": "SKELETON MISSING"
+  },
+  "6835": {
+   "n": 4,
+   "action": "SKELETON MISSING"
+  }
+ }
+}

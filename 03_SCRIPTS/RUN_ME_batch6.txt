@@ -1,0 +1,22 @@
+BATCH 6 - BULKHEAD ELBOWS AND TEES (2026-09-24, from your new Brennan STEPs)
+============================================================================
+Same routine: SolidWorks open, no document, re-import each .bas, run the entry sub, one at a time, close the part
+between runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Run these after batches 4 and 5 (2702 uses the new
+45-deg code from 2503, so run 2503 first and send me its report if it fails).
+
+   1  Build_2703_MASTER.bas   Sub Build2703   bulkhead branch tee                 11 configs
+   2  Build_2704_MASTER.bas   Sub Build2704   bulkhead run tee                    12 configs
+   3  Build_2701_MASTER.bas   Sub Build2701   90 deg bulkhead elbow                7 configs
+   4  Build_2702_MASTER.bas   Sub Build2702   45 deg bulkhead elbow               10 configs
+                                                                         total   40 configs
+
+HOW THE BULKHEAD LEG IS BUILT (Brennan 2701-08-08-FG STEP, measured)
+  hex arm -> round collar, dia = Air-Way O (STEP 0.875 vs O 0.88) -> JIC bulkhead end whose relief-to-tip length is
+  Air-Way i2 (STEP 2.11 - 0.86 = 1.25 = i2), with the JIC thread run from the relief to the land (as on 2700/2705).
+  ASSUMPTION: Air-Way K1 is read as the collar thickness (the STEP collar is 0.125 thick and is followed by a 0.125
+  round shank at the thread diameter, which is not modelled). -LN configs ship with a locknut (not modelled).
+
+BLOCKED (reported in the build output, not in the tables)
+  2701 -06, -10, -12 (6 configs): Air-Way collar dia O equals the hex flats exactly, so the collar step has zero
+  height - needs a decision (collar flush with the hex, i.e. no collar) before it can be modelled.
+  2702-12-12-FG-LN: Air-Way row values are the anomaly already flagged in the review table (bore 0.72 > tip).

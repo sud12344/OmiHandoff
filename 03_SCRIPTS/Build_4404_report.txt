@@ -1,0 +1,129 @@
+Build_4404_MASTER  9/25/2026 3:11:59 AM
+OK    dim L1 = 2.3500 in (expect 2.3500)
+OK    dim BODYR = 0.4330 in (expect 0.4330)
+OK    dim HOSEA_STUBR = 0.2500 in (expect 0.2500)
+OK    dim HOSEA_BEADPOS = 0.1991 in (expect 0.1991)
+OK    dim HOSEA_BEADR = 0.2800 in (expect 0.2800)
+OK    dim HOSEA_BEADW = 0.1039 in (expect 0.1039)
+OK    dim HOSEA_TAILL = 1.1970 in (expect 1.1970)
+OK    dim NPTFB_MAJR = 0.3282 in (expect 0.3282)
+OK    dim NPTFB_THDL = 0.4078 in (expect 0.4078)
+      NPTFB_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFB_TAPER = 1.79 deg
+OK    dim NPTFB_RELL = 0.1522 in (expect 0.1522)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.6696 in^3 (expect 0.6696)
+OK    dim HEXB = 0.7500 in (expect 0.7500)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (4.4% of volume)
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.4100 in (expect 0.4100)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=1.6450 DA=0.4100 
+OK    select end face for BORE_B at x=2.3500
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.4100 in (expect 0.4100)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 0)
+OK    BORECUT_B dims: DEPTH=0.7050 DB=0.4100 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=2.3500)
+OK    THD_EndB: end face found at 2.3500
+OK    dim HELIXDIA = 0.6565 in (expect 0.6565)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndB: helix start = (2.3500, 0.0000, -0.3282)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (2.3500,0.3282) axialIsX=True apex dir -1
+      PROF_AX: try 0 value 2.3500 (want 2.3500)
+OK    dim PROF_AX = 2.3500 in (expect 2.3500)
+      PROF_R: try 0 value 0.3282 (want 0.3282)
+OK    dim PROF_R = 0.3282 in (expect 0.3282)
+      APEXR: try 0 value 0.2838 (want 0.2838)
+OK    dim APEXR = 0.2838 in (expect 0.2838)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.01814 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 2.3798 (nominal 2.3500; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=2.3500
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 0.7500 / corners 0.8660 (expect 0.7500 / 0.8660)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_4404_SW2.xlsx
+OK    Configurations after table: 14 (expect 14)
+      config check 1: 4404-04-04
+OK    4404-04-04 L1@DRIVE = 2.3500 (table 2.3500)
+OK    4404-04-04 BODYR@DRIVE = 0.3233 (table 0.3233)
+OK    4404-04-04 HEXB@HEX = 0.5600 (table 0.5600)
+OK    4404-04-04 HOSEA_STUBR@DRIVE = 0.1250 (table 0.1250)
+OK    4404-04-04 HOSEA_BEADPOS@DRIVE = 0.2063 (table 0.2063)
+OK    4404-04-04 HOSEA_BEADR@DRIVE = 0.1450 (table 0.1450)
+OK    4404-04-04 HOSEA_BEADW@DRIVE = 0.0894 (table 0.0894)
+OK    4404-04-04 HOSEA_TAILL@DRIVE = 1.2043 (table 1.2043)
+OK    4404-04-04 PROF_R@THDPROF_B = 0.2609 (table 0.2609)
+OK    4404-04-04 DEPTH@BORECUT_A = 1.6450 (table 1.6450)
+OK    4404-04-04 DEPTH@BORECUT_B = 0.7050 (table 0.7050)
+OK    4404-04-04 one solid body (found 1)
+      4404-04-04 box x 0.000..2.380  y -0.283..0.284
+      config check 2: 4404-24-24
+OK    4404-24-24 L1@DRIVE = 3.0700 (table 3.0700)
+OK    4404-24-24 BODYR@DRIVE = 1.1547 (table 1.1547)
+OK    4404-24-24 HEXB@HEX = 2.0000 (table 2.0000)
+OK    4404-24-24 HOSEA_STUBR@DRIVE = 0.7500 (table 0.7500)
+OK    4404-24-24 HOSEA_BEADPOS@DRIVE = 0.1910 (table 0.1910)
+OK    4404-24-24 HOSEA_BEADR@DRIVE = 0.8100 (table 0.8100)
+OK    4404-24-24 HOSEA_BEADW@DRIVE = 0.1200 (table 0.1200)
+OK    4404-24-24 HOSEA_TAILL@DRIVE = 1.1890 (table 1.1890)
+OK    4404-24-24 PROF_R@THDPROF_B = 0.9328 (table 0.9328)
+OK    4404-24-24 DEPTH@BORECUT_A = 1.7850 (table 1.7850)
+OK    4404-24-24 DEPTH@BORECUT_B = 1.2850 (table 1.2850)
+OK    4404-24-24 one solid body (found 1)
+      4404-24-24 box x 0.000..3.134  y -1.000..1.000
+      All-config sweep: rebuilding 13 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/13  4404-04-04  rebuilt in 1.0 s
+      sweep 2/13  4404-06-04  rebuilt in 1.4 s
+      sweep 3/13  4404-06-06  rebuilt in 1.6 s
+      sweep 4/13  4404-08-06  rebuilt in 1.1 s
+      sweep 5/13  4404-08-08  rebuilt in 5.5 s
+      sweep 6/13  4404-10-08  rebuilt in 5.5 s
+      sweep 7/13  4404-12-08  rebuilt in 5.5 s
+      sweep 8/13  4404-12-12  rebuilt in 9.5 s
+      sweep 9/13  4404-12-16  rebuilt in 10.5 s
+      sweep 10/13  4404-16-12  rebuilt in 9.5 s
+      sweep 11/13  4404-16-16  rebuilt in 10.5 s
+      sweep 12/13  4404-20-20  rebuilt in 7.6 s
+      sweep 13/13  4404-24-24  rebuilt in 5.3 s
+OK    All-config sweep: 13 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 4404-08-06 for the save (it opens in this size)
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 14 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\4404\4404_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 9/25/2026 3:13:50 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\4404\4404_MASTER.SLDPRT

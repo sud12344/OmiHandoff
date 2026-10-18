@@ -1,0 +1,409 @@
+diff -ruN '--exclude=__pycache__' puckfix_20261009/tools_new/generators/gen_straight2.py genfeat_20261018/straights/tools/generators/gen_straight2.py
+--- puckfix_20261009/tools_new/generators/gen_straight2.py	2026-10-09 10:01:55.668483300 -0500
++++ genfeat_20261018/straights/tools/generators/gen_straight2.py	2026-10-18 15:35:52.872827200 -0500
+@@ -78,6 +78,36 @@
+     dd = [int(x) for x in re.findall(r'-(\d\d)', r['$PRP@PartNo'])[:2]]
+     if len(dd) == 2 and r.get('NPTFA_ENDL@DRIVE'):
+         ENDL.setdefault(dd[0], r['NPTFA_ENDL@DRIVE']); ENDL.setdefault(dd[1], r['NPTFB_ENDL@DRIVE'])
++# 2026-10-18 (genfeat straights, -40 PIPE END): the 2-1/2 NPTF (-40) male and female pipe ends, BRENNAN-MEASURED (user 2026-10-02: "Brennan-
++# measured threads accepted" for the -40 sizes instead of the ASME B1.20.1 row, which is not transcribed in the project; threads only need to
++# show on drawings). Extractors: tools/measure/nptfm40.py (male end) and tools/measure/fgelbow.py --port (female port); evidence in
++# tools/_out/genfeat_20261018/straights/measure_40/.
++#  MALE (Brennan 5404-40-40 both ends, 5406-40-32, and the NPT leg of 2501-40-40-FG): 45deg tip chamfer 0.1042, blank cone 1.788deg of dia
++#  2.7769 extrapolated to the tip face, end length 1.515 to the hex face (all four ends), collar 2.875 (5406-40-32) / 2.880 (5404-40-40).
++#  VALIDATION of the extractor on 22 male NPTF ends of 22 Brennan STEPs (-04 .. -32, 1404 / 2404-L / 2706 / 4404 / 5404 / 5406 / 6404) and the
++#  -08 leg of 2501-LL-08-08-FG: end length = ENDL (5404 table) exactly at every size, and the Brennan blank cone at the tip face = ASME E0 + k P
++#  with k = 0.4585 .. 0.4595 at all 8 library sizes (3 pitches; mean 0.4589). Hence, at -40:
++#    threads per inch 8 = the Brennan TFA catalog callout "2-1/2-8" (5000 / 5404 / 5406 tables, PIPE_THD_NAME);
++#    pipe OD D 2.875 = the smaller Brennan collar (the library D at -16 / -24 / -32 equals the smaller of the Brennan collars too);
++#    pitch dia at the small end E0 = 2.7769 - 0.4589 / 8 = 2.71954 (ASSUMPTION: Brennan's blank rule of the 8 smaller sizes holds at -40);
++#    thread length L2 from the ASME relation D = E0 + 0.8P + (L2 - 2P) / 16 (crest cone meets D at L5 = L2 - 2P; holds to 1e-4 on all 9
++#    library sizes) -> L2 = 1.1374;  end length ENDL 1.515 (measured);  E1 / L1 (hand-tight plane) are read by no end module -> None.
++#  FEMALE (Brennan 5000-40-40, both ports identical): 45deg mouth chamfer 0.0799, tapered minor 2.7892 -> 2.729 over 1.0443 from the face,
++#  then a plain 2.729 bore through between the two ports - NO separate tap drill (as 5406-40-32's -32 port, A9 README). FPT[40]: tap drill
++#  2.729, P1 = the taper (thread) depth 1.0443. Validation: the same extractor returns the recorded 5405-08-08 port (drill 0.718 to 0.90 =
++#  FPT[8] P1) and the 5405-16-16 port (drill to 1.14 = FPT[16] P1).
++NPTF40_MEAS = dict(nps='2-1/2', tpi=8, D=2.875, cone_tip=2.7769, k=0.4589, ENDL=1.515, FPT_P1=1.0443, FPT_TD=2.729)
++if 40 not in NPTF:
++    _m40 = NPTF40_MEAS; _E0_40 = round(_m40['cone_tip'] - _m40['k'] / _m40['tpi'], 5); _P40 = 1 / _m40['tpi']
++    NPTF[40] = (_m40['nps'], _m40['tpi'], _m40['D'], _E0_40, None, None, round(16 * (_m40['D'] - _E0_40 - 0.8 * _P40) + 2 * _P40, 4))
++if 40 not in ENDL: ENDL[40] = NPTF40_MEAS['ENDL']
++if 40 not in FPT: FPT[40] = dict(P1=NPTF40_MEAS['FPT_P1'], TD=NPTF40_MEAS['FPT_TD'], thr='2 1/2-8 NPTF (female)', src40=True)
++NPTF40_ASSUME = ('-40 PIPE END (2-1/2-8 NPTF) IS BRENNAN-MEASURED, NOT ASME B1.20.1 (user 2026-10-02: Brennan-measured threads accepted for -40): '
++                 'male end - pitch dia at the tip E0 2.71954 = the Brennan blank cone 2.7769 (5404-40-40 / 5406-40-32 / 2501-40-40-FG STEPs) - 0.4589 P '
++                 '(the Brennan blank sits 0.4585-0.4595 P above ASME E0 at all 8 library sizes -04..-32, ASSUMED to hold at -40), crest E0 + 0.8P, '
++                 'taper 1.7899deg, thread length L2 1.1374 from D = E0 + 0.8P + (L2 - 2P)/16 with pipe OD D 2.875 (Brennan collar), end length 1.515 '
++                 '(measured on all four Brennan -40 male ends); female port - tap drill 2.729 and thread depth 1.0443 = the Brennan 5000-40-40 tapered '
++                 'port (no separate drill: the 2.729 bore runs through); 8 threads per inch = Brennan TFA catalog callout 2-1/2-8; single manufacturer, ASSUMED')
+ ORB = {}   # dash -> dict(TM, THDL, GD, GW)  from 6401 + 6405 + 6410 review tables (ORD-5700 / measured)
+ for root in ('6401', '6405', '6410'):
+     for r in load_review(root)[1]:
+@@ -186,7 +216,7 @@
+     if 'rel' in seg: cols[f'NPTF{sfx}_RELL@DRIVE'] = round(endl - L2, 4)
+     cols.update({f'HELIXDIA@HELIXSK_{sfx}': round(2 * rS, 5), f'HEIGHT@HELIX_{sfx}': L2, f'PITCH@HELIX_{sfx}': round(P, 5),
+                  f'PROF_R@THDPROF_{sfx}': round(rS, 5), f'APEXR@THDPROF_{sfx}': round(rS - 0.8 * P, 5)})
+-    return dict(kind='NPTFM', V=V, endlen=x, seg=seg, cols=cols, thr=npt_thr(dash) + ' NPTF', faceR=rS * 0.5, rS=rS, rL=rL,
++    return dict(kind='NPTFM', V=V, endlen=x, seg=seg, cols=cols, thr=npt_thr(dash) + ' NPTF', faceR=rS * 0.5, rS=rS, rL=rL, n40=(dash == 40),
+                 thread=dict(type='HELIX', r=rS, height=L2, pitch=P, thdh=0.8 * P, taper=TAPER, taperOut=True, apexOut=False))
+ 
+ 
+@@ -196,7 +226,7 @@
+     cols = {f'TAPDRILL{sfx}@POCKET_{sfx}': td, f'DEPTH@POCKETCUT_{sfx}': f['P1'],
+             f'HELIXDIA@HELIXSK_{sfx}': td, f'HEIGHT@HELIX_{sfx}': f['P1'], f'PITCH@HELIX_{sfx}': round(P, 4),
+             f'PROF_R@THDPROF_{sfx}': round(td / 2, 4), f'APEXR@THDPROF_{sfx}': round(td / 2 + 0.8 * P, 4)}
+-    return dict(kind='NPTFF', V=[], endlen=0.0, seg=dict(face=0), cols=cols, thr=f['thr'], faceR=None, td=td, P1=f['P1'],
++    return dict(kind='NPTFF', V=[], endlen=0.0, seg=dict(face=0), cols=cols, thr=f['thr'], faceR=None, td=td, P1=f['P1'], n40=bool(f.get('src40')),
+                 thread=dict(type='HELIX', r=td / 2, height=f['P1'], pitch=P, thdh=0.8 * P, taper=TAPER, taperOut=False, apexOut=True))
+ 
+ 
+@@ -321,7 +351,11 @@
+              4: dict(RF=0.245, RC=0.2233, P=0.547, CHANG=12.0), 6: dict(RF=0.309, RC=0.2865, P=0.609, CHANG=12.0),
+              10: dict(RF=0.4725, RC=0.4441, P=0.781, CHANG=15.0), 12: dict(RF=0.575, RC=0.538, P=0.906, CHANG=15.0),
+              16: dict(RF=0.70, RC=0.663, P=0.906, CHANG=15.0), 20: dict(RF=0.8575, RC=0.8205, P=0.906, CHANG=15.0),
+-             24: dict(RF=0.983, RC=0.946, P=0.906, CHANG=15.0)}
++             24: dict(RF=0.983, RC=0.946, P=0.906, CHANG=15.0),
++             # 2026-10-18 (genfeat straights): -02 (5/16-24) female ORB port measured on the Brennan 6410-04-02-O STEP with tools/measure/ports.py
++             # (same run reproduces the -04 / -08 entries on 6404-04-04 / 6404-08-08 / 6410-12-08-O): O-ring chamfer 12deg from dia 0.360 to 0.3248,
++             # minor bore dia 0.270 to 0.468 from the face - single STEP (ASSUMED); no -02 port drill published (OMi / Air-Way / catalog)
++             2: dict(RF=0.18, RC=0.1624, P=0.468, CHANG=12.0)}
+ # Female 37deg JIC port, measured on Brennan 2406-08-08: face -> 45deg countersink from dia 0.755 -> minor bore to 0.375 from
+ # the face -> 37deg internal seat straight from the minor down to the bore (no flat).
+ JICF_MEAS = {8: dict(RCS=0.3775, P=0.375),
+@@ -369,6 +403,12 @@
+               f'thread length unchanged (= the measured port depth) (ASSUMPTION - the nine Brennan STEPs with a female ORB port, 6404-04/-06/-08/-10/-12/-16/-24 '
+               f'and 6410-12-08-O / -24-20-O, all have a through-bore SMALLER than the port minor, joined by the 120deg drill point; the Brennan TFA catalog '
+               f'p16 (6410-O, B DRILL) gives the through drill = the port minor on the short reducers, i.e. drilled through; no Brennan STEP of such a part yet)') if deep else None
++    if dash == 2:
++        # 2026-10-18 (genfeat straights): the -02 port is measured on one Brennan STEP and has no published port drill - logged on every row using it
++        n02_ = ('female -02 ORB port (5/16-24): O-ring chamfer 12deg from dia 0.360 to 0.3248 and minor-bore depth 0.468 measured on the Brennan '
++                '6410-04-02-O STEP only (tools/measure/ports.py; ASSUMED, single STEP); port drill D3 = the minor bore measured there (0.270) - no '
++                'OMi / Air-Way / catalog value for the -02 port drill')
++        axnote = (axnote + '; ' + n02_) if axnote else n02_
+     return dict(kind='ORBF', V=[], VG=VG, cav=True, endlen=0.0, seg=dict(face=0), cols=cols, thr=thr + ' (female ORB port)', faceR=None,
+                 td=minor, P1=apex, m=m, c1=c1, c2=c2, rmin=rmin, deep=deep, drill=drill, apex60=apex60, axnote=axnote,
+                 thread=dict(type='HELIX', r=rmin, height=m['P'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
+@@ -773,6 +813,9 @@
+               bore=('mid', 'D@BORE', 'D@BORE'), ref='4604-08-08-O', thrchk=(('B', 'THDMAJ_B@DRIVE'),),
+               assume='beaded hose stub: tube OD = Air-Way TUBE OD (hose size), bead dia = Air-Way AA, through bore D; stub length 1.500 from the hex face, bead centre 0.251 from the stub tip and bead chord width from the bead section radius 0.060 - all three measured on the Brennan 4404-08-06 STEP and ASSUMED for the other sizes (with them, Air-Way L gives hex lengths that grow smoothly with the hex, e.g. 0.29 on 4404-08-06 = Brennan); the round bead section is modelled as a flat-topped ring of the same chord width; hex end chamfers NOT modelled' + '; male ORB end: thread length + groove from the 6401/6405/6410 review tables (ORD-5700 groove, measured thread length; no tip chamfer modelled)'),
+  '5404N': dict(name='Straight Pipe Nipple (round, NPTF x NPTF)', L='L@DRIVE', hex='COD@REF', round=True, dashre2=r'-N-(\d+)-(\d+)',
++              # 2026-10-18 (user A4 "keep OMi's form"): OMi part numbers 5404-N-04X2.500 = one pipe dash (both ends) + the cut length after X;
++              # read when the Air-Way form "5404-N-4-4 X 2" (dashre2) does not match; the X length must equal L@DRIVE
++              dashre1=r'-N-(\d+)X(\d+(?:\.\d+)?)$',
+               A=lambda r, a, b: end_NPTFM(a, 'A', NPTF[a][6]), B=lambda r, a, b: end_NPTFM(b, 'B', NPTF[b][6]),
+               bore=('mid', 'D1@BORE', 'D2@BORE'), ref='5404-N-8-8 X 3', thrchk=(('A', 'THDMAJ_A1@DRIVE'), ('B', 'THDMAJ_A2@DRIVE')),
+               assume='round bar of Air-Way diameter C (no hex); male NPTF ends per ASME B1.20.3, threaded over L2 only (vanish threads NOT modelled - ASSUMPTION), the small step from the thread to the bar diameter is the difference between C and the pipe OD as printed; bore step at mid-length (ASSUMPTION)'),
+@@ -1033,6 +1076,105 @@
+                     desc=lambda r, tA, tB: f"JIC Bulkhead Locknut, {tB.split(' (')[0]}, thread through, 45 deg countersink both faces", assume=NUT_ASSUME)
+ 
+ 
++# ---- 2026-10-18 (genfeat straights, user A6 "rebuild 6400 with the generator, fold 6400-L in"): SPEC 6400 = male 37deg JIC x male SAE ORB
++# straight thread connector, until now the hand-made master (DesignTable_6400_SW2.xlsx; the master file is not in the repo). Built from the
++# existing END LIBRARIES only: End A = the male ORB end of the SECOND part-number dash (ORB library: 6401 / 6405 / 6410 rows + the 6408 -02 /
++# -14 / -32 merges, groove width 0.125 at -14 / -32 measured on the Brennan 6400-14-14-O / -32-32-O STEPs = A18), End B = the male JIC end of
++# the FIRST dash (MS33656J chain, 2403 table). The review table's own ORB / JIC columns are not read for geometry; they are cross-checked
++# against the libraries (equal on every 6400 row today, the empty -14 / -32 groove width excepted) and a difference blocks the row.
++# Body: hex over the whole length between the two ends, bores D4 (ORB side, End A) / D3 (JIC side, End B) stepped at the hex mid-plane - the
++# hand-made table's own rule (its DEPTH@BORECUT_A = ORB end + half the hex at every row).
++# 6400-L (DesignTable_6400L.xlsx, Air-Way s90) folds in as rows: the Brennan 6400-L-08-08-O STEP (tools/measure, section through the axis) has the
++# 6400 ORB end (0.438), a hex 0.382 long (6400-08-08-O: 0.385) and a LONG JIC end: seat 0.1546 / land 0.0984 = MS33656J -08, then the 3/4-16
++# thread cylinder straight to the hex face at 1.880 from the tip (no relief), overall 2.700 = Air-Way L6. Modelled as the library JIC end with
++# its thread zone extended (end_JICBH, as the bulkhead unions 2700 / 2705 / 2706) so that the JIC end is L6 - ORB end - the hex length of the
++# 6400 row of the same dashes long (6400-L-08-08-O: 2.70 - 1.48 + 0.657 = 1.877 vs Brennan 1.880).
++L6400_ASSUME = ('6400-L = the LONG straight thread connector (OMi "Straight Thread Connector Long", Air-Way s90, review table DesignTable_6400L.xlsx), '
++                'folded into the 6400 master (user A6 2026-10-18): overall = Air-Way L6, hex = C4, bores D2 (ORB side) / D1 (JIC side) stepped at the hex '
++                'mid-plane, same ORB end per dash; the extra length is a LONG JIC THREAD: the library JIC end with its thread zone extended (bulkhead '
++                'construction of 2700 / 2705 / 2706) so that the hex keeps the length of the 6400 row of the same dashes (ASSUMPTION - measured on the '
++                'Brennan 6400-L-08-08-O STEP only: JIC end 1.880 from the tip to the hex face, hex 0.382 (6400-08-08-O model 0.385), ORB end 0.438, overall '
++                '2.700; Brennan runs the thread cylinder straight into the hex face, the model keeps the library 60deg ramp + relief there)')
++S6400_ASSUME = ('End A male SAE ORB end of the second dash and End B male 37deg JIC end of the first dash from the END LIBRARIES (ORB: thread major / length, '
++                'groove dia / width of the 6401 / 6405 / 6410 review rows + the 6408 -02 / -14 / -32 rows, groove width 0.125 at -14 / -32 measured on the '
++                'Brennan 6400-14-14-O / 6400-32-32-O STEPs (A18 2026-10-18); JIC: MS33656J chain per dash, 2403 table, VERIFIED vs Brennan; no tip chamfers) - '
++                'equal to the ORB / JIC columns of the 6400 review table (cross-checked per row); D1 overall / hex / bores D4 (ORB side) and D3 (JIC side): '
++                'review table (Air-Way; OMi = Air-Way on the A23 rows); hex over the whole length between the two ends; bore step D4 / D3 at the hex mid-plane '
++                '(ASSUMPTION - the rule of the hand-made 6400 table, as 2403); hex end chamfers NOT modelled; rebuilt by the generator 2026-10-18 (user A6), '
++                'replaces the hand-made 6400 master')
++ROW6400_LIBCHK = (('THDMAJ_A@DRIVE', 'ORB', 'TM'), ('ORB_THDL@DRIVE', 'ORB', 'THDL'), ('ORB_GRVDIA@DRIVE', 'ORB', 'GD'), ('ORB_GRVW@DRIVE', 'ORB', 'GW'),
++                  ('THDMAJ_B@DRIVE', 'JIC', 'TM'), ('JIC_RELIEFL@DRIVE', 'JIC', 'RL'), ('JIC_THDZ@DRIVE', 'JIC', 'TZ'), ('JIC_CONEDIA@DRIVE', 'JIC', 'CD'),
++                  ('JIC_LANDL@DRIVE', 'JIC', 'LL'), ('JIC_SEATL@DRIVE', 'JIC', 'SL'))
++BRENNAN_6400L = {'6400-L-08-08-O': 'Brennan 6400-L-08-08-O STEP: overall 2.700, JIC end 1.880 (thread cylinder 0.750 to the hex face, no relief), hex 0.382 '
++                                   '(A/F 0.875), ORB end 0.438, bore 0.391 through'}
++
++
++def _libchk_6400(n, a, b):
++    """the 6400 review row's own ORB / JIC columns against the end libraries the SPEC builds from: a difference > 0.0005 holds the row"""
++    bad = []
++    for col, lib, k in ROW6400_LIBCHK:
++        v = n.get(col)
++        if v is None: continue                       # empty column: the library value is used (ORB_GRVW at -14 / -32 = A18)
++        src = (ORB.get(b) if lib == 'ORB' else JIC.get(a)) or {}
++        if k in src and abs(v - src[k]) > 5e-4: bad.append(f'{col} {v} vs the {lib} library {src[k]}')
++    if bad: n['_HOLD'] = ('HELD: the 6400 row\'s own end columns differ from the end library the generator builds from (' + '; '.join(bad) +
++                          ') - settle which is right before building')
++
++
++def end_JICLONG(dash, sfx, I1):
++    """6400-L long JIC end: the library JIC end with its thread zone extended to the end length I1 (end_JICBH construction), labelled long"""
++    E = end_JICBH(dash, sfx, I1)
++    E['thr'] = E['e']['thr'] + ' (long thread)'; E['long'] = True
++    return E
++
++
++def load_6400():
++    """6400 review rows + the 6400-L rows (DesignTable_6400L.xlsx) mapped onto the 6400 columns; the long JIC end length _I1 per 6400-L row"""
++    h, rows = load_review('6400')
++    out, std = [], {}
++    for r in rows:
++        n = dict(r); dd = [int(x) for x in re.findall(r'-(\d\d)', str(r['$PRP@PartNo']))[:2]]
++        if len(dd) == 2:
++            std.setdefault(tuple(dd), r)
++            if dd[1] in ORB and dd[0] in JIC: _libchk_6400(n, dd[0], dd[1])
++        c_ = str(n.get('$COMMENT') or '')
++        if len(dd) == 2 and dd[1] in ORB_GW_MEASURED and c_.startswith('BLOCKED - ORB groove width unpublished'):
++            # the -14 / -32 rows' hand-made-table note: settled by A18 (2026-10-18) - the ORB library carries the measured groove width
++            n['$COMMENT'] = (f'RESOLVED 2026-10-18 (A18: ORB -{dd[1]:02d} groove width {ORB[dd[1]]["GW"]} measured on the {ORB_GW_SRC[dd[1]]}, ORB library) (was: '
++                             + c_[len('BLOCKED - '):] + ')')
++        out.append(n)
++    for r in _load_table('DesignTable_6400L.xlsx')[1]:
++        pn = str(r['$PRP@PartNo']); dd = [int(x) for x in re.findall(r'-(\d\d)', pn)[:2]]
++        n = {'$PRP@PartNo': pn, 'D1@DRIVE': r.get('L6@DRIVE'), 'HEXB@HEX': r.get('C4HEX@HEX'), 'D4@BORE_A': r.get('D2@BORE'), 'D3@BORE_B': r.get('D1@BORE'),
++             'THDMAJ_A@DRIVE': r.get('THDMAJ_B2@DRIVE'), 'THDMAJ_B@DRIVE': r.get('THDMAJ_B1@DRIVE'), 'ORB_GRVDIA@DRIVE': r.get('ORB_GRVDIA@DRIVE'),
++             'ORB_GRVW@DRIVE': r.get('ORB_GRVW@DRIVE'), '$PRP@DataStatus': r.get('$PRP@DataStatus'), '$PRP@AxialSource': r.get('$PRP@AxialSource'),
++             '$COMMENT': r.get('$COMMENT'), '$PRP@ScopeAction': r.get('$PRP@ScopeAction'), '$PRP@OMiSKU': r.get('$PRP@OMiSKU'),
++             '_DESCNAME': 'Straight Thread Connector Long', '_ASSUME': L6400_ASSUME, '_LONG': True}
++        if len(dd) == 2 and dd[1] in ORB and dd[0] in JIC:
++            _libchk_6400(n, dd[0], dd[1])
++            s_ = std.get(tuple(dd))
++            if s_ is None or s_.get('D1@DRIVE') is None or n['D1@DRIVE'] is None:
++                n.setdefault('_HOLD', f'HELD: no 6400-{dd[0]:02d}-{dd[1]:02d}-O row with an overall length - the hex length of the long variant is taken from it')
++            else:
++                jl_ = end_JICM(dd[0], 'B')['endlen']; ol_ = end_ORBM(dd[1], 'A')['endlen']
++                hexl_ = s_['D1@DRIVE'] - ol_ - jl_
++                n['_I1'] = round(n['D1@DRIVE'] - ol_ - hexl_, 4)
++                _note(n, f"6400-L: JIC end {n['_I1']} long = L6 {n['D1@DRIVE']} - ORB end {ol_:.4f} - the hex length {hexl_:.4f} of {s_['$PRP@PartNo']} (D1 {s_['D1@DRIVE']})")
++                if pn in BRENNAN_6400L: _note(n, BRENNAN_6400L[pn] + f" - model: JIC end {n['_I1']}, hex {hexl_:.4f}, ORB end {ol_:.4f}, overall {n['D1@DRIVE']}")
++                _assumed(n, 'the long JIC end length rests on the hex-length rule measured on one Brennan STEP (6400-L-08-08-O)')
++        out.append(n)
++    return h, out
++
++
++SPEC['6400'] = dict(name='Straight Thread Connector (male JIC x male ORB)', L='D1@DRIVE', hex='HEXB@HEX', load=load_6400,
++                    A=lambda r, a, b: end_ORBM(b, 'A'),
++                    B=lambda r, a, b: end_JICLONG(a, 'B', r['_I1']) if r.get('_LONG') else end_JICM(a, 'B'),
++                    bore=('mid', 'D4@BORE_A', 'D3@BORE_B'), ref='6400-08-08-O', thrchk=(('A', 'THDMAJ_A@DRIVE', 'b'), ('B', 'THDMAJ_B@DRIVE', 'a')),
++                    carry=('$PRP@Material', '$PRP@Finish', '$PRP@PressureRating'),
++                    desc=lambda r, tA, tB: f"{r.get('_DESCNAME') or 'Straight Thread Connector'}, Male 37 deg Flare (JIC) x Male SAE ORB, {tB} x {tA.replace(' (male ORB)', '')}",
++                    assume=S6400_ASSUME)
++
++
+ # ---- 2026-10-02 (work group PLUGS): three new plug masters - socket-head ORB plug 6408HHP, hollow-hex pipe plug 5406HHP, square-head
+ # pipe plug 5406SHP. One master per shape: their rows stay in the 6408 / 5406 review tables (OMi part numbers 6408-HHP-nn-O, 5406-HHP-nn,
+ # 5406-SHP-nn; Brennan numbers 6408-Hnn-O, 5406-HP-nn, 5406-SHP-nn), the loaders below pick them out, and SPECs 6408 / 5406 skip them
+@@ -1207,6 +1349,20 @@
+     return [int(x) for x in re.findall(r'-(\d\d)', pn)[:2]]
+ 
+ 
++# 2026-10-01 (work group 5404N-06, deployed 2026-10-18 by genfeat straights): smallest radial step allowed between an end's outermost radius
++# and a ROUND bar body. A hex body keeps the 0.005 margin below its corner radius (the hex cut must not leave a sliver at the end step). A round
++# bar has no hex cut: its body radius is the real outer surface, so the step only has to be real. 0.0025 = half the 0.01 print step of Air-Way's
++# bar diameter C (C 0.69 means 0.685..0.695): with at least this step the bar stays above the end's crest cone even if the true C is 0.005
++# smaller. 5404N -06: ASME B1.20.3 3/8 NPTF crest cone at L2 = E0 + 0.8P + L2/16 = 0.6819 dia vs C 0.69 -> step 0.0040 (built, with a
++# warning); -12: 1.0589 vs 1.06 -> 0.0005 and -16: 1.3259 vs 1.31 -> negative stay BLOCKED. Rows with a step >= 0.005 (every built 5404N
++# configuration) are untouched. (tools/_out/tier1_20261001/work/5404N-06/NOTES.md; QA #163: the SolidWorks dry run of 2026-10-01 built the
++# -06 bodies but THD_EndA / THD_EndB failed to rebuild in the -06 configurations - the -06 rows carry NEEDS SOLIDWORKS CHECK in $COMMENT.)
++ROUND_STEP_MIN = 0.0025
++ROUND_STEP_SWCHECK = ('NEEDS SOLIDWORKS CHECK: on 2026-10-01 (QA #163) the thread features THD_EndA / THD_EndB failed to rebuild in every '
++                      'configuration with a round-bar step below 0.005 (5404N -06 TEST rows; bodies built) - dry-run and sweep the threads live '
++                      'before shipping')
++
++
+ def build_rows(root):
+     sp = SPEC[root]; h, rows = sp['load']() if sp.get('load') else load_review(root)     # 2026-10-01: 'load' = a root with folded tables (2403 + 2403-LH, 2404 + 2404-L)
+     out = []; skipped = []
+@@ -1225,10 +1381,15 @@
+         if sp.get('solid_only') and r.get('HOLE@BORE') is not None:
+             skipped.append((pn, 'hollow variant', 'hole depth unpublished - not built')); continue
+         try:
++            xlen_ = None
+             if sp.get('dashre2'):
+                 m = re.search(sp['dashre2'], pn)
+-                if not m: raise KeyError('part number has no dash pair')
+-                a, b = int(m.group(1)), int(m.group(2))
++                m1_ = re.search(sp['dashre1'], pn) if (not m and sp.get('dashre1')) else None
++                if m1_:
++                    # 2026-10-18 (5404N, user A4): OMi form 5404-N-04X2.500 - one dash for both ends, the cut length after X
++                    a = b = int(m1_.group(1)); xlen_ = float(m1_.group(2))
++                elif not m: raise KeyError('part number has no dash pair')
++                else: a, b = int(m.group(1)), int(m.group(2))
+             elif sp.get('dashre'):
+                 m = re.search(sp['dashre'], pn)
+                 if not m: raise KeyError('part number has no dash')
+@@ -1259,6 +1420,7 @@
+         rB = hexb / 2 if sp.get('round') else hexb / math.cos(math.radians(30)) / 2
+         chk = list(chk0); warn = []
+         if body < 0.05: chk.append(f'hex length {body:.3f}')
++        if xlen_ is not None and (L is None or abs(xlen_ - L) > 1e-6): chk.append(f'length {xlen_:g} in the part number differs from {sp["L"].split("@")[0]} {L}')
+         if r.get('_NOTE'): warn.append(r['_NOTE'])
+         if r.get('_T20') is not None:
+             # 2026-10-01 (2404-L rows): the hex length follows from L20 and the two ends; Air-Way T20 (= hex length) is the cross-check
+@@ -1269,6 +1431,7 @@
+             if E['kind'] == 'FLG61': continue          # flange head: its own zone, not hex-cut
+             for (x, rr) in E['V']:
+                 if not sp.get('round') and rr > hexb / 2 - 0.002 and rr < rB - 0.005: warn.append(f'{E["kind"]} radius {rr:.4f} is above the hex flats {hexb/2:.4f} - the hex cut will flat it'); break
++        model_extra = []    # 2026-10-01 (5404N-06): modelling assumptions that apply to this row only (appended to its $PRP@AxialSource)
+         for E in (EA, EB):
+             if E['kind'] == 'FLG61':
+                 if abs(E['rO'] - rB) < 0.003: chk.append(f'flange head radius {E["rO"]:.4f} equals the hex corner radius {rB:.4f} (zero-height step)')
+@@ -1279,7 +1442,22 @@
+                     # 2026-10-02 (PLUGS): square head corners below the round D collar - its own zone cut, so only a real step is needed (no hex-cut margin)
+                     if rr >= rB - 0.001: chk.append(f'square head corner radius {rr:.4f} not below the body radius {rB:.4f} (step < 0.001)')
+                     continue
+-                if rr >= rB - 0.005: chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
++                if rr >= rB - 0.005:
++                    if sp.get('round') and rB - rr >= ROUND_STEP_MIN - 1e-9:
++                        # round bar (5404N): a small real step from the end of the thread cone to the bar (see ROUND_STEP_MIN)
++                        sfx_ = 'A' if E is EA else 'B'
++                        msg_ = (f'ROUND-BAR STEP End {sfx_}: bar dia {2 * rB:.4f} (Air-Way C) is only {rB - rr:.4f} (radius) above the '
++                                f'{E["kind"]} end at {x:.4f} from its tip (dia {2 * rr:.4f}' + (' = ASME B1.20.3 crest cone E0 + 0.8P + L2/16' if E['kind'] == 'NPTFM' else '') +
++                                f') - built with that step (round bar: allowed down to {ROUND_STEP_MIN}, half the 0.01 print step of C; a hex body needs 0.005)')
++                        if msg_ not in warn: warn.append(msg_)
++                        if ROUND_STEP_SWCHECK not in warn: warn.append(ROUND_STEP_SWCHECK)
++                        if not model_extra:
++                            model_extra.append(f'round bar only {rB - rr:.4f} (radius) above the {E["kind"]} crest cone at the end of the thread: modelled as that small '
++                                               f'step, as at every 5404N size - the vanish threads of the real part (crest cone running on into the bar) are NOT '
++                                               f'modelled (ASSUMPTION); allowed because the step is at least {ROUND_STEP_MIN} = half the 0.01 print step of Air-Way C, '
++                                               f'so the bar stays above the crest cone even if the true C is 0.005 smaller')
++                    else:
++                        chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
+         cols = dict(); cols[sp['L'].split('@')[0] + '@DRIVE'] = L; cols['BODYR@DRIVE'] = round(rB, 5)
+         if not sp.get('round'): cols['HEXB@HEX'] = hexb
+         cols.update(EA['cols']); cols.update(EB['cols'])
+@@ -1534,15 +1712,19 @@
+         if st_ == 'VERIFIED' and any((E_.get('e') or {}).get('src40') for E_ in (EA, EB)):
+             # review fix F2 (2026-10-01, SIZE-40): the -40 JIC end is measured on ONE Brennan STEP (JIC40_ASSUME says ASSUMED) - the row cannot stay VERIFIED
+             st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the -40 JIC end (JIC_MEAS_40) is measured on one Brennan STEP - single manufacturer')
++        if st_ == 'VERIFIED' and any(E_.get('n40') for E_ in (EA, EB)):
++            # 2026-10-18: the -40 pipe end is Brennan-measured (one manufacturer) - the row cannot stay VERIFIED
++            st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the -40 pipe end is measured on Brennan STEPs - single manufacturer')
+         cols['$PRP@DataStatus'] = 'BLOCKED' if chk else st_
+         asm_ = sp['assume'](r) if callable(sp['assume']) else sp['assume']     # review fix F2: SPEC 2404 words its source clause per row
+-        cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + asm_
++        cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + asm_ + ''.join('; ' + m_ for m_ in model_extra)
+         # 2026-10-01 (ORB-02): an ORB end merged from another series' row carries its own source note (empty for every older ORB size)
+         cols['$PRP@AxialSource'] += ''.join('; ' + E_['o']['note'] for E_ in (EA, EB) if E_.get('kind') == 'ORBM' and E_.get('o', {}).get('note'))
+         for E_ in (EA, EB):
+             if E_.get('axnote'): cols['$PRP@AxialSource'] += '; ' + E_['axnote']     # per-row modelling assumption (2026-10-01: deep-bore ORB port)
+         if r.get('_ASSUME'): cols['$PRP@AxialSource'] += '; ' + r['_ASSUME']     # 2026-10-01: assumptions that touch only some rows (folded 2403-LH / 2404-L rows, 2404 counterbores)
+         if any((E_.get('e') or {}).get('src40') for E_ in (EA, EB)): cols['$PRP@AxialSource'] += '; ' + JIC40_ASSUME   # SIZE-40
++        if any(E_.get('n40') for E_ in (EA, EB)): cols['$PRP@AxialSource'] += '; ' + NPTF40_ASSUME   # 2026-10-18: -40 pipe end (Brennan-measured)
+         if pn in BRENNAN_1700:
+             bl_, bf_ = BRENNAN_1700[pn]
+             warn.append(f'Brennan {pn.replace("-61", "")} STEP: overall {bl_:.3f} (Air-Way L28 {L}), round collar dia O with wrench flats {bf_:.3f} (Air-Way hex C {hexb}) - built to Air-Way (user decision 2026-09-24)')
+diff -ruN '--exclude=__pycache__' puckfix_20261009/tools_new/measure/nptfm40.py genfeat_20261018/straights/tools/measure/nptfm40.py
+--- puckfix_20261009/tools_new/measure/nptfm40.py	1969-12-31 18:00:00.000000000 -0600
++++ genfeat_20261018/straights/tools/measure/nptfm40.py	2026-10-18 15:35:52.874334300 -0500
+@@ -0,0 +1,105 @@
++"""nptfm40.py (2026-10-18, genfeat straights) - the male NPTF end of a Brennan straight STEP, read at BOTH ends, and its relation to the
++project's end library (gen_straight2 NPTF = ASME B1.20.3 / B1.20.1 basic dimensions, ENDL = the Brennan-measured end length of the 5404 table).
++
++    python tools/measure/nptfm40.py <step> [<step> ...]          one JSON line per male NPTF end found
++    python tools/measure/nptfm40.py --validate <step> [...]      + the comparison with NPTF / ENDL for the dashes the library carries
++    python tools/measure/nptfm40.py --leg AXIS,SIGN <step> [...]  the male NPTF end of one elbow leg (forged elbows, e.g. 2501-40-40-FG)
++
++Method: plugs.py (validated on the PLUGS pilots and on 5406-08-04 = ENDL[8]): plane section through the X axis; at each end the 45deg tip
++chamfer, the 1.788deg blank cone (Brennan models the male thread as a plain cone, no helix), its extrapolation to the tip face, the collar
++after it and the end length to the first face that steps out past the collar (hex face). The end's dash is identified from the collar
++(= the pipe OD D of the dash, within 0.01) when the library carries it.
++Brennan cone vs ASME: k = (cone dia at the tip face - E0) * tpi - the cone sits k pitches above the ASME pitch diameter at the small end.
++"""
++import os as _os, sys as _sys
++_HERE = _os.path.dirname(_os.path.abspath(__file__)); _TOOLS = _os.path.dirname(_HERE)
++for _p in (_os.path.join(_TOOLS, 'generators'), _TOOLS, _HERE):
++    if _p not in _sys.path: _sys.path.insert(0, _p)
++import sys, json, math
++import plugs
++from plugs import axial, upper, ang, frame
++from ms51500 import NPTF
++
++
++def ends(p):
++    """the two end planes of the axial section (x min / x max) as (tip, sgn)"""
++    ax, tip, head, sgn = frame(p)
++    return [(tip, sgn), (head, -sgn)]
++
++
++def male_end(p, tip, sgn):
++    S = upper(axial(p, 0.0, tip, sgn))
++    ln = [s for s in S if s[4] == 'L']
++    tipch = [s for s in ln if s[0] < 1e-4 and 30 < ang(s) < 60 and s[3] > s[1]]
++    if not tipch: return None
++    a0 = tipch[0][2]
++    cone = [s for s in ln if 1.0 < ang(s) < 3.0 and abs(s[0] - a0) < 1e-4 and s[3] > s[1]]
++    if not cone: return None
++    cone = cone[0]
++    t = math.tan(math.radians(ang(cone)))
++    r_tip = cone[1] - cone[0] * t
++    collar = [s for s in ln if abs(s[1] - s[3]) < 1e-6 and abs(s[0] - cone[2]) < 2e-3 and s[1] > cone[3] - 1e-6]
++    c_end = collar[0][2] if collar else cone[2]
++    c_r = collar[0][1] if collar else None
++    face = [s for s in ln if abs(s[0] - s[2]) < 1e-6 and abs(s[0] - c_end) < 1e-3 and max(s[1], s[3]) > (c_r or cone[3]) + 0.01]
++    return dict(chamfer_len=round(a0, 4), chamfer_r_tip=round(tipch[0][1], 4), cone_angle=round(ang(cone), 3), cone_tip_dia=round(2 * r_tip, 4),
++                cone_end=round(cone[2], 4), cone_end_dia=round(2 * cone[3], 4), collar_dia=round(2 * c_r, 4) if c_r else None,
++                end_length=round(c_end, 4) if face else None, bore_open_at_tip=None)
++
++
++def leg_male_end(p, axis, sign, pn=2):
++    """the male NPTF end of an ELBOW leg (2501-40-40-FG): prof.leg_edges along the leg axis, re-expressed as distance from the leg tip"""
++    from prof import leg_edges
++    E = [(k, P) for k, P in leg_edges(p, axis, sign, pn) if k == 'L']
++    tipa = max(max(q[0] for q in P) for k, P in E)
++    S = []
++    for k, P in E:
++        (a1, r1), (a2, r2) = (tipa - P[0][0], P[0][1]), (tipa - P[-1][0], P[-1][1])
++        if a1 > a2: a1, r1, a2, r2 = a2, r2, a1, r1
++        if min(r1, r2) > -1e-6: S.append((a1, r1, a2, r2, 'L'))
++    S.sort(key=lambda s: (s[0], s[2]))
++    global axial
++    keep = axial
++    try:
++        axial = lambda *_a, **_k: S          # male_end() reads the section through axial(); feed it the leg section
++        return male_end(p, 0.0, 1)
++    finally:
++        axial = keep
++
++
++def dash_of(m):
++    if not m.get('collar_dia'): return None
++    best = min(NPTF, key=lambda d: abs(NPTF[d][2] - m['collar_dia']))
++    return best if abs(NPTF[best][2] - m['collar_dia']) < 0.011 else None
++
++
++def run(p, validate=False):
++    out = []
++    import gen_straight2 as G       # ENDL (5404 review table) - only for --validate
++    for tip, sgn in ends(p):
++        m = male_end(p, tip, sgn)
++        if not m: continue
++        m = dict(step=_os.path.basename(p), end_x=round(tip, 4), **m)
++        d = dash_of(m); m['dash'] = d
++        if validate and d:
++            nps, tpi, D, E0, E1, L1, L2 = NPTF[d]
++            m['lib'] = dict(D=D, E0=E0, crest_tip=round(E0 + 0.8 / tpi, 4), L2=L2, ENDL=G.ENDL.get(d), tpi=tpi)
++            m['k_cone_minus_E0_pitches'] = round((m['cone_tip_dia'] - E0) * tpi, 4)
++            m['d_endl'] = None if m['end_length'] is None or G.ENDL.get(d) is None else round(m['end_length'] - G.ENDL[d], 4)
++            m['cone_end_minus_L2'] = round(m['cone_end'] - L2, 4)
++        out.append(m)
++    return out
++
++
++if __name__ == '__main__':
++    a = sys.argv[1:]; v = False
++    if a and a[0] == '--leg':
++        ax_, sg_ = (int(x) for x in a[1].split(','))
++        for p in a[2:]: print(json.dumps(dict(step=_os.path.basename(p), leg=(ax_, sg_), **(leg_male_end(p, ax_, sg_) or {}))))
++        sys.exit(0)
++    if a and a[0] == '--validate': v = True; a = a[1:]
++    for p in a:
++        try:
++            for m in run(p, v): print(json.dumps(m))
++        except Exception as ex:
++            print(json.dumps(dict(step=_os.path.basename(p), error=f'{type(ex).__name__} {ex}')))

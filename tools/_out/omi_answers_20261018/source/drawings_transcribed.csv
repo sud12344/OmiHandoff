@@ -1,0 +1,93 @@
+part_number,feature,value,printed,meaning,pdf
+1405-04-06,overall,1.48,1.48,port face to swivel-nut face (overall),zip_a/1405-04-06.pdf
+1405-04-06,face_to_stemtip,1.27,1.27,port face to stem tip (seat),zip_a/1405-04-06.pdf
+1405-04-06,hex,0.687,0.687 HEX FLAT,body hex across flats,zip_a/1405-04-06.pdf
+1405-04-06,nut,0.875,0.875 NUT HEX,swivel nut hex across flats,zip_a/1405-04-06.pdf
+1405-04-06,bore,0.32,dia 0.320,swivel stem bore,zip_a/1405-04-06.pdf
+1405-08-12,overall,1.97,1.97,port face to swivel-nut face (overall),zip_a/1405-08-12.pdf
+1405-08-12,face_to_stemtip,1.62,1.62,port face to stem tip (seat),zip_a/1405-08-12.pdf
+1405-08-12,hex,1.25,1.250 HEX FLAT,body hex across flats,zip_a/1405-08-12.pdf
+1405-08-12,nut,1.25,1.250 NUT HEX,swivel nut hex across flats,zip_a/1405-08-12.pdf
+1405-08-12,bore,0.61,dia 0.610,swivel stem bore,zip_a/1405-08-12.pdf
+1502-06-06-FG,leg_port,1.02,1.020,axis crossing to female NPTF port face,zip_a/1502-06-06-FG.pdf
+1502-06-06-FG,leg_stemtip,1.06,1.060,axis crossing to swivel stem tip (seat),zip_a/1502-06-06-FG.pdf
+1502-06-06-FG,leg_nutface,1.27,1.270,axis crossing to swivel-nut face,zip_a/1502-06-06-FG.pdf
+1502-06-06-FG,hex,0.875,0.875 HEX FLAT,body hex across flats,zip_a/1502-06-06-FG.pdf
+1502-06-06-FG,nut,0.875,0.875 NUT HEX,swivel nut hex across flats,zip_a/1502-06-06-FG.pdf
+1502-06-06-FG,bore,0.32,dia 0.320,swivel stem bore,zip_a/1502-06-06-FG.pdf
+1502-12-08-FG,leg_port,1.36,1.360,axis crossing to female NPTF port face,zip_a/1502-12-08-FG.pdf
+1502-12-08-FG,leg_stemtip,1.47,1.470,axis crossing to swivel stem tip (seat),zip_a/1502-12-08-FG.pdf
+1502-12-08-FG,leg_nutface,1.75,1.750,axis crossing to swivel-nut face,zip_a/1502-12-08-FG.pdf
+1502-12-08-FG,hex,1.312,1.312 HEX FLAT,body hex across flats,zip_a/1502-12-08-FG.pdf
+1502-12-08-FG,nut,1.0,1.000 NUT HEX,swivel nut hex across flats,zip_a/1502-12-08-FG.pdf
+1502-12-08-FG,bore,0.44,dia 0.440,swivel stem bore,zip_a/1502-12-08-FG.pdf
+1502-12-12-FG,leg_port,1.36,1.360,axis crossing to female NPTF port face,zip_a/1502-12-12-FG.pdf
+1502-12-12-FG,leg_stemtip,1.47,1.470,axis crossing to swivel stem tip (seat),zip_a/1502-12-12-FG.pdf
+1502-12-12-FG,leg_nutface,1.82,1.820,axis crossing to swivel-nut face,zip_a/1502-12-12-FG.pdf
+1502-12-12-FG,hex,1.312,1.312 HEX FLAT,body hex across flats,zip_a/1502-12-12-FG.pdf
+1502-12-12-FG,nut,1.25,1.250 NUT HEX,swivel nut hex across flats,zip_a/1502-12-12-FG.pdf
+1502-12-12-FG,bore,0.61,dia 0.610,swivel stem bore,zip_a/1502-12-12-FG.pdf
+1502-20-20-FG,leg_port,1.7,1.700,axis crossing to female NPTF port face,zip_a/1502-20-20-FG.pdf
+1502-20-20-FG,leg_stemtip,1.83,1.830,axis crossing to swivel stem tip (seat),zip_a/1502-20-20-FG.pdf
+1502-20-20-FG,leg_nutface,2.25,2.250,axis crossing to swivel-nut face,zip_a/1502-20-20-FG.pdf
+1502-20-20-FG,hex,1.875,1.875 HEX FLAT,body hex across flats,zip_a/1502-20-20-FG.pdf
+1502-20-20-FG,nut,1.875,1.875 NUT HEX,swivel nut hex across flats,zip_a/1502-20-20-FG.pdf
+1502-20-20-FG,bore,1.01,dia 1.010,swivel stem bore,zip_a/1502-20-20-FG.pdf
+1502-24-24-FG,leg_port,2.08,2.080,axis crossing to female NPTF port face,zip_a/1502-24-24-FG.pdf
+1502-24-24-FG,leg_stemtip,2.41,2.410,axis crossing to swivel stem tip (seat),zip_a/1502-24-24-FG.pdf
+1502-24-24-FG,leg_nutface,2.83,2.830,axis crossing to swivel-nut face,zip_a/1502-24-24-FG.pdf
+1502-24-24-FG,hex,2.559,2.559 HEX FLAT,body hex across flats,zip_a/1502-24-24-FG.pdf
+1502-24-24-FG,nut,2.125,2.125 NUT HEX,swivel nut hex across flats,zip_a/1502-24-24-FG.pdf
+1502-24-24-FG,bore,1.25,dia 1.250,swivel stem bore,zip_a/1502-24-24-FG.pdf
+1502-32-32-FG,leg_port,2.39,2.390,axis crossing to female NPTF port face,zip_a/1502-32-32-FG.pdf
+1502-32-32-FG,leg_stemtip,2.57,2.570,axis crossing to swivel stem tip (seat),zip_a/1502-32-32-FG.pdf
+1502-32-32-FG,leg_nutface,2.99,2.990,axis crossing to swivel-nut face,zip_a/1502-32-32-FG.pdf
+1502-32-32-FG,hex,2.811,2.811 HEX FLAT,body hex across flats,zip_a/1502-32-32-FG.pdf
+1502-32-32-FG,nut,2.625,2.625 NUT HEX,swivel nut hex across flats,zip_a/1502-32-32-FG.pdf
+1502-32-32-FG,bore,1.72,dia 1.720,swivel stem bore,zip_a/1502-32-32-FG.pdf
+1504-20-20-FG,leg_port,1.44,1.440,axis crossing to female NPTF port face,zip_b/1504-20-20-FG.pdf
+1504-20-20-FG,leg_stemtip,1.35,1.350,axis crossing to swivel stem tip (seat) along the 45 deg leg,zip_b/1504-20-20-FG.pdf
+1504-20-20-FG,leg_nutface,1.77,1.770,axis crossing to swivel-nut face along the 45 deg leg,zip_b/1504-20-20-FG.pdf
+1504-20-20-FG,hex,1.875,1.875 HEX FLAT,body hex across flats,zip_b/1504-20-20-FG.pdf
+1504-20-20-FG,nut,1.875,1.875 NUT HEX,swivel nut hex across flats,zip_b/1504-20-20-FG.pdf
+1504-20-20-FG,bore,1.01,dia 1.010,swivel stem bore,zip_b/1504-20-20-FG.pdf
+1602-02-02-02-FG,leg_port,0.66,0.660,axis crossing to branch female NPTF port face,zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,leg_stemtip,0.8,0.800 (both run legs),axis crossing to swivel stem tip (seat),zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,leg_nutface,0.94,0.940 (both run legs),axis crossing to swivel-nut face,zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,hex,0.562,0.562 HEX FLAT,body hex across flats,zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,nut,0.562,0.562 NUT HEX 1,swivel nut 1 hex across flats,zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,nut2,0.562,0.562 NUT HEX 2,swivel nut 2 hex across flats,zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,bore,0.11,dia 0.110 (side 1),swivel stem bore side 1,zip_b/1602-02-02-02-FG.pdf
+1602-02-02-02-FG,bore2,0.11,dia 0.110 (side 2),swivel stem bore side 2,zip_b/1602-02-02-02-FG.pdf
+1602-04-04-04-FG,leg_port,0.88,0.880,axis crossing to branch female NPTF port face,zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,leg_stemtip,0.99,0.990 (both run legs),axis crossing to swivel stem tip (seat),zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,leg_nutface,1.18,1.180 (both run legs),axis crossing to swivel-nut face,zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,hex,0.75,0.750 HEX FLAT,body hex across flats,zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,nut,0.688,0.688 NUT HEX 1,swivel nut 1 hex across flats,zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,nut2,0.688,0.688 NUT HEX 2,swivel nut 2 hex across flats,zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,bore,0.21,dia 0.210 (side 1),swivel stem bore side 1,zip_b/1602-04-04-04-FG.pdf
+1602-04-04-04-FG,bore2,0.21,dia 0.210 (side 2),swivel stem bore side 2,zip_b/1602-04-04-04-FG.pdf
+1602-08-08-08-FG,leg_port,1.23,1.230,axis crossing to branch female NPTF port face,zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,leg_stemtip,1.24,1.240 (both run legs),axis crossing to swivel stem tip (seat),zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,leg_nutface,1.52,1.520 (both run legs),axis crossing to swivel-nut face,zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,hex,1.062,1.062 HEX FLAT,body hex across flats,zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,nut,1.0,1.000 NUT HEX 1,swivel nut 1 hex across flats,zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,nut2,1.0,1.000 NUT HEX 2,swivel nut 2 hex across flats,zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,bore,0.44,dia 0.440 (side 1),swivel stem bore side 1,zip_b/1602-08-08-08-FG.pdf
+1602-08-08-08-FG,bore2,0.44,dia 0.440 (side 2),swivel stem bore side 2,zip_b/1602-08-08-08-FG.pdf
+1602-16-16-16-FG,leg_port,1.62,1.620,axis crossing to branch female NPTF port face,zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,leg_stemtip,1.73,1.730 (both run legs),axis crossing to swivel stem tip (seat),zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,leg_nutface,2.08,2.080 (both run legs),axis crossing to swivel-nut face,zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,hex,1.625,1.625 HEX FLAT,body hex across flats,zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,nut,1.5,1.500 NUT HEX 1,swivel nut 1 hex across flats,zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,nut2,1.5,1.500 NUT HEX 2,swivel nut 2 hex across flats,zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,bore,0.78,dia 0.780 (side 1),swivel stem bore side 1,zip_b/1602-16-16-16-FG.pdf
+1602-16-16-16-FG,bore2,0.78,dia 0.780 (side 2),swivel stem bore side 2,zip_b/1602-16-16-16-FG.pdf
+1602-20-20-20-FG,leg_port,1.7,1.700,axis crossing to branch female NPTF port face,zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,leg_stemtip,1.83,1.830 (both run legs),axis crossing to swivel stem tip (seat),zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,leg_nutface,2.25,2.250 (both run legs),axis crossing to swivel-nut face,zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,hex,1.875,1.875 HEX FLAT,body hex across flats,zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,nut,1.875,1.875 NUT HEX 1,swivel nut 1 hex across flats,zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,nut2,1.875,1.875 NUT HEX 2,swivel nut 2 hex across flats,zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,bore,1.01,dia 1.010 (side 1),swivel stem bore side 1,zip_b/1602-20-20-20-FG.pdf
+1602-20-20-20-FG,bore2,1.01,dia 1.010 (side 2),swivel stem bore side 2,zip_b/1602-20-20-20-FG.pdf

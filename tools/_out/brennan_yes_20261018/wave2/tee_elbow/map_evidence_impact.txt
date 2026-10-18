@@ -1,0 +1,212 @@
+1501 N1@DRIVE <- L LGTH | drawing p20: L = A1 (male NPTF) tip to the A2 swivel axis; gen_tee SPEC 1501: N1@DRIVE = NPTFM leg, axis crossing to the pipe tip; review rows of the same -FG part number holding a value (Air-Way): 16/22 agree (equal 16, rounding 0); differ: 1501-02-04-FG cat 
+1501 M1@DRIVE <- M LGTH | gen_tee SPEC 1501: M1@DRIVE = axis crossing to the NPSM stem tip; catalog M is the shorter swivel-leg column: the two swivel-leg columns differ by the nut-face-to-stem-tip offset TIP_B measured on the in-repo Brennan 1404 STEPs (gen_straight2 NPSM_MEAS: -02 0.
+1501 W3@HEX <- M1 LGTH | drawing p20: M1 = A1 axis to the swivel nut face; gen_tee npsm W3@HEX = axis to the nut face; see M1@DRIVE; review rows of the same -FG part number holding a value (Air-Way): 3/22 agree (equal 3, rounding 0); differ: 1501-02-02-FG cat 0.840 vs 0.85; 1501-02-04
+1501 CHEX@HEX <- C HEX | drawing: C HEX points at the swivel nut; gen_tee npsm CHEX@HEX = nut hex (must equal NPSM_MEAS AF of the Brennan 1404 STEPs); review rows of the same -FG part number holding a value (Air-Way): 21/22 agree (equal 9, rounding 12); differ: 1501-24-24-FG cat 2.125
+1501 C1HEX@HEX <- Y FLATS | Y FLATS = forged body flats (drawing; = OMi Hex Flat on every elbow series with OMi data); gen_tee hex = C1HEX@HEX; review rows of the same -FG part number holding a value (Air-Way): 18/22 agree (equal 4, rounding 14); differ: 1501-02-04-FG cat 0.562 vs 0.5; 1
+1501 D2@BORE <- A1 DRILL | A1 = the male NPTF end; gen_tee D2@BORE = NPTFM leg bore; review rows of the same -FG part number holding a value (Air-Way): 22/22 agree (equal 2, rounding 20)
+1501 D@BORE <- A2 DRILL | A2 = the NPSM swivel end; gen_tee D@BORE = NPSMSW leg bore; review rows of the same -FG part number holding a value (Air-Way): 15/22 agree (equal 5, rounding 10); differ: 1501-04-02-FG cat 0.13 vs 0.23; 1501-06-08-FG cat 0.46/0.48 vs 0.45; 1501-08-12-FG cat 0.
+1501 THDMAJ_A@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1501 THDMAJ_A1@DRIVE <- A2 NPSM | catalog A2 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1503 N@DRIVE <- L LGTH | in-repo Brennan 1503-08-08-FG / 1503-12-08-FG STEPs: male pipe leg 1.170 / 1.200 = catalog L; gen_tee SPEC 1503 N@DRIVE = NPTFM leg; review rows of the same -FG part number holding a value (Air-Way): 2/14 agree (equal 0, rounding 2); differ: 1503-02-02-FG cat 
+1503 M@DRIVE <- M1 LGTH | in-repo STEPs: stem tip 0.880 / 1.050 = catalog M1; gen_tee SPEC 1503 M@DRIVE = NPSMSW stem tip; review rows of the same -FG part number holding a value (Air-Way): 2/14 agree (equal 0, rounding 2); differ: 1503-04-04-FG cat 0.73 vs 0.72; 1503-06-06-FG cat 0.81
+1503 W2@HEX <- M LGTH | in-repo STEPs: nut face 1.160 / 1.330 = catalog M; gen_tee npsm W2@HEX = nut face; review rows of the same -FG part number holding a value (Air-Way): 1/14 agree (equal 0, rounding 1); differ: 1503-02-02-FG cat 0.760 vs 0.75; 1503-04-04-FG cat 0.92 vs 0.91; 150
+1503 CHEX@HEX <- C HEX | drawing: C HEX on the swivel nut; review rows of the same -FG part number holding a value (Air-Way): 14/14 agree (equal 7, rounding 7)
+1503 C1HEX@HEX <- Y FLATS | Y FLATS = forged body flats; gen_tee hex = C1HEX@HEX; review rows of the same -FG part number holding a value (Air-Way): 14/14 agree (equal 2, rounding 12)
+1503 D2@BORE <- A1 DRILL | A1 = male NPTF end; review rows of the same -FG part number holding a value (Air-Way): 14/14 agree (equal 3, rounding 11)
+1503 D@BORE <- A2 DRILL | A2 = NPSM end; review rows of the same -FG part number holding a value (Air-Way): 1/14 agree (equal 1, rounding 0); differ: 1503-02-02-FG cat 0.150 vs 0.13; 1503-06-06-FG cat 0.340 vs 0.33; 1503-08-06-FG cat 0.340 vs 0.33 ... (Air-Way differs by 0.01-0.02 - an
+1503 THDMAJ_A@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1503 THDMAJ_A1@DRIVE <- A2 NPSM | catalog A2 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1504 N2@DRIVE <- L LGTH | drawing p22: L = A1 female NPTF port face to the 45 deg axis crossing; N2 is the only pipe-leg column; Air-Way's 1504 legs are much longer (another maker): review rows of the same -FG part number holding a value (Air-Way): 0/1 agree (equal 0, rounding 0); diff
+1504 M@DRIVE <- M1 LGTH | same Air-Way letters as the 1503 SPEC (M = stem tip, W2 = nut face); catalog M1 = stem tip (drawing p22, as 1503): the two swivel-leg columns differ by the nut-face-to-stem-tip offset TIP_B measured on the in-repo Brennan 1404 STEPs (gen_straight2 NPSM_MEAS: -
+1504 W2@HEX <- M LGTH | catalog M = axis crossing to the nut face (drawing p22, as 1503); 1503 analogue W2 = nut face
+1504 CHEX@HEX <- C HEX | drawing: C HEX on the swivel nut; review rows of the same -FG part number holding a value (Air-Way): 1/1 agree (equal 0, rounding 1)
+1504 C1HEX@HEX <- Y FLATS | Y FLATS = forged body flats; review rows of the same -FG part number holding a value (Air-Way): 0/1 agree (equal 0, rounding 0); differ: 1504-04-04-FG cat 0.750 vs 0.69
+1504 D@BORE <- A2 DRILL | A2 = NPSM end, the only drill printed; review rows of the same -FG part number holding a value (Air-Way): 1/1 agree (equal 1, rounding 0)
+1504 THDMAJ_A@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1504 THDMAJ_A1@DRIVE <- A2 NPSM | catalog A2 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1601 N1@DRIVE <- L LGTH | drawing p47: L = A1 male NPTF branch tip to the run axis; the 1601 L values equal the 1501-FG L values size for size and Air-Way 1601 N1 equals Air-Way plain 1501 N1 (same leg in both families); plain Air-Way twins vs the catalog -FG row (different parts - col
+1601 W3_2@HEX <- M LGTH | drawing p47: M = A2 swivel nut face to the branch axis; values = 1501 M1 (nut face) size for size; M - M1 = TIP_B
+1601 W3_3@HEX <- M LGTH | symmetry: A2 = A3 on every catalog row of this table and the catalog prints one value per feature (nut face printed on the A2 side only)
+1601 M1_3@DRIVE <- M1 LGTH | drawing p47: M1 = branch axis to the A3 stem tip (inside the nut); values = 1501 M (stem tip) size for size; the two swivel-leg columns differ by the nut-face-to-stem-tip offset TIP_B measured on the in-repo Brennan 1404 STEPs (gen_straight2 NPSM_MEAS: -02 0.1
+1601 M1_2@DRIVE <- M1 LGTH | symmetry: A2 = A3 on every catalog row of this table and the catalog prints one value per feature (stem tip printed on the A3 side only)
+1601 C3HEX@HEX <- C HEX | drawing p47: C HEX labels the A3 swivel nut; = NPSM_MEAS AF at the same size on every F1a row
+1601 C2HEX@HEX <- C HEX | symmetry: A2 = A3 on every catalog row of this table and the catalog prints one value per feature
+1601 C1HEX@HEX <- Y FLATS | Y FLATS = forged body flats; Air-Way C1HEX = body hex (plain 1601-06-04-04: C1HEX 0.88, nut hexes 0.69)
+1601 D2@BORE <- A1 DRILL | A1 = male NPTF end; Air-Way D2 = the pipe bore (plain rows 0.19/0.28/0.41/0.53 vs A1 DRILL 0.188/0.281/0.406/0.531)
+1601 D_2@BORE <- A2 DRILL | A2 = NPSM end; Air-Way D_2 = NPSM bore
+1601 D3@BORE <- A3 DRILL | A3 = NPSM end; Air-Way D3 = NPSM bore
+1601 THDMAJ_A@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1601 THDMAJ_A1_2@DRIVE <- A2 NPSM | catalog A2 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1601 THDMAJ_A1_3@DRIVE <- A3 NPSM | catalog A3 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1602 N3@DRIVE <- L LGTH | drawing p48: L = A1 female NPTF port face to the run axis; L values equal the 1502-FG L values size for size; N3 = the only pipe-leg column (as 1502)
+1602 W3_2@HEX <- M LGTH | drawing p48: M = A2 nut face to the branch axis; values = 1502 M1 (nut face) size for size; M - M1 = TIP_B
+1602 W3_3@HEX <- M LGTH | symmetry: A2 = A3 on every catalog row of this table and the catalog prints one value per feature (nut face printed on the A2 side only)
+1602 M1_3@DRIVE <- M1 LGTH | drawing p48: M1 = branch axis to the A3 stem tip; values = 1502 M (stem tip) size for size; the two swivel-leg columns differ by the nut-face-to-stem-tip offset TIP_B measured on the in-repo Brennan 1404 STEPs (gen_straight2 NPSM_MEAS: -02 0.14, -04 0.19, -06 
+1602 M1_2@DRIVE <- M1 LGTH | symmetry: A2 = A3 on every catalog row of this table and the catalog prints one value per feature (stem tip printed on the A3 side only)
+1602 C3HEX@HEX <- C HEX | drawing p48: C HEX labels the A3 swivel nut; = NPSM_MEAS AF at the same size
+1602 C2HEX@HEX <- C HEX | symmetry: A2 = A3 on every catalog row of this table and the catalog prints one value per feature
+1602 C1HEX@HEX <- Y FLATS | Y FLATS = forged body flats (Air-Way C1HEX = body hex, as 1601)
+1602 D2@BORE <- A2 DRILL | A2 = NPSM end; Air-Way D2 = swivel bore (plain 1602-06-06-06: D2 0.33, tap drill 0.57)
+1602 D3@BORE <- A3 DRILL | A3 = NPSM end; Air-Way D3 = swivel bore
+1602 THDMAJ_A@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1602 THDMAJ_A1_2@DRIVE <- A2 NPSM | catalog A2 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1602 THDMAJ_A1_3@DRIVE <- A3 NPSM | catalog A3 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1603 W3@HEX <- L LGTH | drawing p48: L = A1 (branch) nut face to the run axis (1603-08-06-06: L 1.39 = the -08 nut face of 1501-08-08-FG); every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading
+1603 M1@DRIVE <- M2 LGTH | leg-1 stem tip is not printed; taken from the A3 stem tip M2 by symmetry: every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading of Air-Way's leg numbers (un-suffixed = 
+1603 M2_2@DRIVE <- M1 LGTH | drawing p48: M1 = run axis to the A2 stem tip (inner dimension); every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading of Air-Way's leg numbers (un-suffixed = leg 1, _2
+1603 W5_2@HEX <- M LGTH | leg-2 nut face is not printed; taken from the A3 nut face M by symmetry: every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading of Air-Way's leg numbers (un-suffixed = l
+1603 M2_3@DRIVE <- M2 LGTH | drawing p48: M2 = run axis to the A3 stem tip (inside M); M - M2 = TIP_B (1603-06-06-08: 1.39 - 1.11 = 0.28 = -08)
+1603 W5_3@HEX <- M LGTH | drawing p48: M = run axis to the A3 nut face
+1603 C_1HEX@HEX <- C HEX | drawing p48: C HEX labels the A1 (branch) nut; 1603-06-06-08 / -08-06-06 rows: C HEX = the A1 NPSM nut size
+1603 C3HEX@HEX <- C1 HEX | drawing p48: C 1HEX labels the A3 nut (1603-06-06-08: C1 HEX 1.000 = the -08 A3 nut; but 1603-16-12-16 prints the -12 nut) - same value on the F1a rows
+1603 C2HEX@HEX <- C1 HEX | every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading of Air-Way's leg numbers (un-suffixed = leg 1, _2 / _3 = legs 2 / 3) changes no value
+1603 C1HEX@HEX <- Y Flats | Y Flats = forged body flats (Air-Way C1HEX = body hex, as 1601)
+1603 D1@BORE <- A1 DRILL | Air-Way 1603 has two bore columns (D1, D2) for three ends; every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading of Air-Way's leg numbers (un-suffixed = leg 1, _2 / _3 
+1603 D2@BORE <- A2 DRILL | every same-dash 1603 catalog row prints L = M, M1 = M2, C HEX = C1 HEX and three equal drills, so all three swivel legs are alike and the reading of Air-Way's leg numbers (un-suffixed = leg 1, _2 / _3 = legs 2 / 3) changes no value
+1603 THDMAJ_A1_1@DRIVE <- A1 NPSM | catalog A1 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1603 THDMAJ_A1_2@DRIVE <- A2 NPSM | catalog A2 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+1603 THDMAJ_A1_3@DRIVE <- A3 NPSM | catalog A3 NPSM = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2500 M1@DRIVE <- M1 LGTH | drawing p22: M1 = B1 tip to the B2 axis; in-repo Brennan 2500-06-06-FG STEP 1.06; review rows of the same -FG part number holding a value (Air-Way): 11/11 agree (equal 11, rounding 0) (incl. the unequal 2500-10-08-FG / -16-12-FG)
+2500 M2@DRIVE <- M2 LGTH | drawing p22: M2 = B2 tip to the B1 axis; STEP 1.06; review rows of the same -FG part number holding a value (Air-Way): 11/11 agree (equal 11, rounding 0)
+2500 Y@REF <- Y FLATS | body flats; STEP flats 0.5626 = 0.562; review rows of the same -FG part number holding a value (Air-Way): 11/11 agree (equal 2, rounding 9)
+2500 D1@BORE <- B1 DRILL | B1 end drill; review rows of the same -FG part number holding a value (Air-Way): 11/11 agree (equal 0, rounding 11)
+2500 D2@BORE <- B2 DRILL | B2 end drill; review rows of the same -FG part number holding a value (Air-Way): 11/11 agree (equal 0, rounding 11)
+2500 THDMAJ_B1@DRIVE <- B1 SAE 37Deg | catalog B1 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2500 THDMAJ_B2@DRIVE <- B2 SAE 37Deg | catalog B2 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2501 THDMAJ_A@DRIVE <- B1 SAE 37Deg | B1 = JIC thread
+2501 PIPEOD@DRIVE <- A2 NPTF | A2 = male NPTF
+2501 Y@REF <- Y FLATS | Y FLATS = forged body flats; = OMi Hex Flat 44/44; M073; Air-Way 34/38
+2501 D@BORE <- B1 DRILL | B1 DRILL = OMi Side 1 ID 44/44; M074; Air-Way 38/38
+2501 D1@DRILL <- A2 DRILL | A2 DRILL = OMi Side 2 ID 43/44; M075; Air-Way 38/38
+2501 M@DRIVE <- M LGTH | drawing TFA p23: M = male JIC (B1) tip to the A2-leg axis; catalog M = OMi 'M 1 Size' on 44/44 (TFA_elbows.json certain); gen_tee 2501 JICM leg = M@DRIVE; Air-Way equal on 35/38
+2501 N@DRIVE <- L LGTH | drawing p23: L = male pipe (A2) tip to the B1-leg axis; catalog L = OMi 'L 1 Size' 44/44; gen_tee 2501 NPTFM leg = N@DRIVE; Air-Way 35/38
+2501LL M@DRIVE <- M LGTH | drawing p24: same letters as 2501 / 2501-L (M = JIC leg); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 11/14 agree (equal 11, rounding 0); differ: 2501-LL-04-04 cat 1.050 vs 0.95; 2501-LL-06-06 cat 1.14 vs 1.16; 
+2501LL N4@DRIVE <- L LGTH | drawing p24: L = extra-long pipe leg; Air-Way N4 = the 2501-LL long leg (2501L analogue N3 = L, STEP-proven); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 9/14 agree (equal 9, rounding 0); differ: 2501-LL-05-02 c
+2501LL Y@REF <- Y FLATS | body flats; plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 1/14 agree (equal 0, rounding 1); differ: 2501-LL-04-02 cat 0.438 vs 0.5; 2501-LL-04-04 cat 0.562 vs 0.63; 2501-LL-06-04 cat 0.562 vs 0.63 ...
+2501LL D@BORE <- B1 DRILL | JIC end drill; plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 14/14 agree (equal 0, rounding 14)
+2501LL D1@BORE <- A2 DRILL | pipe end drill; plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 14/14 agree (equal 1, rounding 13)
+2501LL THDMAJ_B@DRIVE <- B1 SAE 37Deg | catalog B1 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2501LL THDMAJ_A@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2502 M1@DRIVE <- M LGTH | drawing p25: M = male JIC tip to the A2 axis; in-repo Brennan 2502-06-04-FG STEP 1.23; = OMi M 1 certain 20/20 (M1) (M081); review rows of the same -FG part number holding a value (Air-Way): 10/10 agree (equal 10, rounding 0)
+2502 N1@DRIVE <- L LGTH | drawing p25: L = female pipe port face to the B1 axis; STEP 0.88; = OMi L 1 certain 20/20 (L1) (M082); review rows of the same -FG part number holding a value (Air-Way): 10/10 agree (equal 10, rounding 0)
+2502 Y1@DRIVE <- Y FLATS | body flats; STEP flats 0.750; = OMi Hex Flat certain 20/20 (HexFlat) (M083); review rows of the same -FG part number holding a value (Air-Way): 10/10 agree (equal 2, rounding 8)
+2502 D@BORE <- B1 DRILL | JIC end drill; = OMi Side 1 ID certain 20/20 (S1ID) (M084); review rows of the same -FG part number holding a value (Air-Way): 10/10 agree (equal 0, rounding 10)
+2502 THDMAJ_B@DRIVE <- B1 SAE 37Deg | catalog B1 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2502 THDMAJ_A@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2505 M2@DRIVE <- M LGTH | drawing p27: M = B1 (male JIC) leg; = OMi M 1 certain 8/8 (M1); OMi M1 -> M2@DRIVE (M095); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 0/5 agree (equal 0, rounding 0); differ: 2505-04-04 cat 0.870 vs 0.88; 2505-
+2505 N6@DRIVE <- N LGTH | drawing p27: N = A2 female pipe port face along the 45 deg axis; = OMi M 2 certain 8/8 (M2); OMi M2 -> N6@DRIVE (M096); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 1/5 agree (equal 0, rounding 1); differ: 2505-0
+2505 Y1@HEX <- Y FLATS | body flats (only hex); = OMi Hex Flat certain 8/8 (HexFlat) (M097); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 3/5 agree (equal 1, rounding 2); differ: 2505-08-08 cat 1.062 vs 1.13; 2505-12-12 cat 1.312 vs 1.38
+2505 D@BORE <- B1 DRILL | JIC end drill; = OMi Side 1 ID certain 8/8 (S1ID) (M098); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 5/5 agree (equal 0, rounding 5)
+2505 THDMAJ_B@DRIVE <- B1 SAE 37Deg | catalog B1 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2505 THDMAJ_A@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2602 M1_1@DRIVE <- M1 LGTH | drawing p49: M1 = B1 run leg; = OMi M 1 likely 10/10 (M1) (M173); review rows of the same -FG part number holding a value (Air-Way): 8/8 agree (equal 8, rounding 0)
+2602 M1_2@DRIVE <- M2 LGTH | drawing p49: M2 = B2 run leg; = OMi M 2 likely 10/10 (M2) (M174); review rows of the same -FG part number holding a value (Air-Way): 8/8 agree (equal 8, rounding 0)
+2602 N1@DRIVE <- N LGTH | drawing p49: N = A3 female branch port face to the run axis; = OMi L 1 certain 10/10 (L1) (M175); review rows of the same -FG part number holding a value (Air-Way): 8/8 agree (equal 8, rounding 0)
+2602 Y1@DRIVE <- Y FLATS | drawing p49: Y FLATS labels the forged body; = OMi Hex Flat certain 10/10 (HexFlat) (M176); review rows of the same -FG part number holding a value (Air-Way): 7/8 agree (equal 2, rounding 5); differ: 2602-24-24-24-FG cat 2.562 vs 2.57
+2602 D1@BORE <- B1 DRILL | = OMi Side 1 ID likely 10/10 (S1ID) (M177); review rows of the same -FG part number holding a value (Air-Way): 8/8 agree (equal 0, rounding 8)
+2602 D2@BORE <- B2 DRILL | = OMi Side 2 ID likely 10/10 (S2ID) (M178); review rows of the same -FG part number holding a value (Air-Way): 8/8 agree (equal 0, rounding 8)
+2602 THDMAJ_B1@DRIVE <- B1 SAE 37Deg | catalog B1 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2602 THDMAJ_B2@DRIVE <- B2 SAE 37Deg | catalog B2 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2602 THDMAJ_A@DRIVE <- A3 NPTF | catalog A3 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2606 M1_1@DRIVE <- M LGTH | drawing p51: M = B1 (side-1 JIC run) tip to the branch axis; = OMi M 1 likely 10/10 (M1) (M193); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 5/7 agree (equal 4, rounding 1); differ: 2606-04-04-04 cat 1.22 vs 1.0
+2606 N1@DRIVE <- L LGTH | drawing p51: L = A2 (side-2 female pipe run) port face to the branch axis; = OMi M 2 certain 10/10 (M2) (M194, discriminating rows); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 7/7 agree (equal 7, rounding 0)
+2606 M1_3@DRIVE <- N LGTH | drawing p51: N = B3 (side-3 JIC branch) tip to the run axis; = OMi L 1 likely 10/10 (L1) (M195); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 5/7 agree (equal 4, rounding 1); differ: 2606-04-04-04 cat 1.22 vs 1.0
+2606 Y1@HEX <- Y FLATS | body flats; = OMi Hex Flat certain 10/10 (HexFlat) (M196); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 6/7 agree (equal 2, rounding 4); differ: 2606-08-08-08 cat 1.062 vs 1.13
+2606 D1@BORE <- B1 DRILL | = OMi Side 1 ID likely 10/10 (S1ID) (M197); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 7/7 agree (equal 0, rounding 7)
+2606 D3@BORE <- B3 DRILL | = OMi Side 3 ID likely 10/10 (S3ID) (M198); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 7/7 agree (equal 0, rounding 7)
+2606 THDMAJ_B1@DRIVE <- B1 SAE 37Deg | catalog B1 SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2606 THDMAJ_A@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2606 THDMAJ_B3@DRIVE <- BE SAE 37Deg | catalog BE SAE 37Deg = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+2609 M1@DRIVE <- M LGTH | side-1 JIC leg; catalog M = OMi 'M 1 Size' 4/4 on discriminating rows (certain); M199 - confirmed
+2609 N1_2@DRIVE <- L1 LGTH | side-2 female pipe leg; = OMi 'M 2 Size' (tie with L on symmetric parts - numerically irrelevant: both 1.230 here); M200
+2609 N1_3@DRIVE <- L LGTH | side-3 female pipe leg; = OMi 'L 1 Size' (tie); M201
+2609 Y1@HEX <- Y FLATS | = OMi Hex Flat (certain); M202
+2609 D@BORE <- B1 DRILL | = OMi Side 1 ID (certain); M203
+2609 THDMAJ_B@DRIVE <- B1 SAE 37Deg | B1 thread
+2609 THDMAJ_A2@DRIVE <- A2 NPTF | A2 = female NPTF
+2609 THDMAJ_A3@DRIVE <- A3 NPTF | A3 = female NPTF
+2611 M1@DRIVE <- M LGTH | side-1 JIC leg; = OMi 'M 1 Size' 5/5 discriminating (certain); M204 - confirmed
+2611 N5@DRIVE <- L LGTH | side-2 male pipe leg; = OMi 'M 2 Size' 5/5 (certain); M205 - confirmed
+2611 N1@DRIVE <- L1 LGTH | side-3 female pipe leg; = OMi 'L 1 Size' 5/5 (certain); M206 - confirmed
+2611 Y1@HEX <- Y FLATS | = OMi Hex Flat 5/5 (certain); M207
+2611 D@BORE <- B1 DRILL | = OMi Side 1 ID 5/5 (certain); M208
+2611 D1@BORE <- A2 DRILL | = OMi Side 2 ID 5/5 (certain); M209
+2611 THDMAJ_B@DRIVE <- B1 SAE 37Deg | B1 thread
+2611 THDMAJ_A2@DRIVE <- A2 NPTF | A2 = male NPTF
+2611 THDMAJ_A3@DRIVE <- A3 NPTF | A3 = female NPTF
+5501 N4@DRIVE <- N LGTH | drawing p31: N = A1 (side-1) leg (letters the other way round from 5500); = OMi M 1 likely 8/8 (M1) (M104); same-dash rows only; plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 6/7 agree (equal 6, rounding 0); diffe
+5501 N6@DRIVE <- N1 LGTH | drawing p31: N1 = A2 (side-2) leg; = OMi L 1 likely 8/8 (L1) (M105); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 3/7 agree (equal 1, rounding 2); differ: 5501-02-02 cat 0.64 vs 0.66; 5501-04-04 cat 0.86 vs 0.91;
+5501 Y@HEX <- Y FLATS | body flats; = OMi Hex Flat certain 8/8 (HexFlat) (M106); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 0/7 agree (equal 0, rounding 0); differ: 5501-02-02 cat 0.438 vs 0.5; 5501-04-04 cat 0.562 vs 0.63; 5501-06-06
+5501 D1@BORE <- A1 DRILL | = OMi Side 1 ID likely 8/8 (S1ID) (M107); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 7/7 agree (equal 1, rounding 6)
+5501 D2@BORE <- A2 DRILL | = OMi Side 2 ID likely 8/8 (S2ID) (M108); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 7/7 agree (equal 1, rounding 6)
+5501 THDMAJ_A1@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5501 THDMAJ_A2@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5502 N@DRIVE <- N LGTH | drawing p31: N = A1 male pipe leg; in-repo Brennan 5502-04/-08/-16 STEPs 1.09/1.47/1.97 = N; = OMi M 1 certain 25/25 (M1) (M109); review rows of the same -FG part number holding a value (Air-Way, some cells Task-A OMi values): 14/17 agree (equal 14, rounding 0
+5502 N1@DRIVE <- N1 LGTH | drawing p31: N1 = A2 female port face to the A1 axis; STEPs 0.88/1.23/1.62 = N1; = OMi L 1 certain 24/25 (L1) (M110); review rows of the same -FG part number holding a value (Air-Way, some cells Task-A OMi values): 14/17 agree (equal 13, rounding 1); differ: 5
+5502 W@REF <- Y FLATS | body flats; STEP flats 0.750/1.062/1.625; = OMi Hex Flat certain 25/25 (HexFlat) (M111); review rows of the same -FG part number holding a value (Air-Way, some cells Task-A OMi values): 16/17 agree (equal 4, rounding 12); differ: 5502-16-12-FG cat 1.312 vs 1.6
+5502 D@BORE <- A1 DRILL | male end drill; = OMi Side 1 ID certain 25/25 (S1ID) (M112); review rows of the same -FG part number holding a value (Air-Way, some cells Task-A OMi values): 17/17 agree (equal 3, rounding 14)
+5502 THDMAJ_A1@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5502 THDMAJ_A2@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5503 N4@DRIVE <- N LGTH | drawing p32: N = A1 male pipe tip to the 45 deg crossing; review rows of the same -FG part number holding a value (Air-Way): 5/5 agree (equal 5, rounding 0); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 10/10 agr
+5503 N3@DRIVE <- N1 LGTH | drawing p32: N1 = A2 female port face along the 45 deg axis; review rows of the same -FG part number holding a value (Air-Way): 5/5 agree (equal 5, rounding 0); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 10/10 
+5503 W@HEX <- Y FLATS | body hex (the drawing labels it "C HEX", the table column is Y FLATS); review rows of the same -FG part number holding a value (Air-Way): 5/5 agree (equal 1, rounding 4); plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence onl
+5503 D@BORE <- A1 DRILL | A1 = the male end; Air-Way plain rows D = A1 DRILL (plain Air-Way twins vs the catalog -FG row (different parts - column-meaning evidence only): 10/10 agree (equal 2, rounding 8)) but Air-Way's -FG rows print 0.83/1.19/1.54/1.64 (not a drill): review rows of t
+5503 THDMAJ_A1@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5503 THDMAJ_A2@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5504 N1_1@DRIVE <- N LGTH | drawing p32: N = A1 port face to the A2 axis; gen_tee SPEC 5504 leg 1 = first dash; in-repo Brennan 5504-08-08-FG STEP 1.23; review rows of the same -FG part number holding a value (Air-Way): 6/6 agree (equal 6, rounding 0)
+5504 N1_2@DRIVE <- N1 LGTH | drawing p32: N1 = A2 port face to the A1 axis; STEP 1.23; review rows of the same -FG part number holding a value (Air-Way): 5/6 agree (equal 5, rounding 0); differ: 5504-04-02-FG cat 0.88 vs 0.72
+5504 W@REF <- Y FLATS | body flats; STEP flats 1.062; review rows of the same -FG part number holding a value (Air-Way): 6/6 agree (equal 2, rounding 4)
+5504 THDMAJ_A1@DRIVE <- A1 NPTF | catalog A1 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5504 THDMAJ_A2@DRIVE <- A2 NPTF | catalog A2 NPTF = the thread of that end (column letter); the major diameter stays with the thread standard / end library
+5505 N2_1@DRIVE <- N LGTH | 
+5505 N2_2@DRIVE <- N1 LGTH | 
+5505 W@HEX <- Y FLATS | 
+5604 N1_1@DRIVE <- N1 LGTH | 
+5604 N1_2@DRIVE <- N2 LGTH | 
+5604 N@DRIVE <- N LGTH | 
+5604 W@HEX <- Y FLATS | 
+5604 D@BORE <- A3 DRILL | 
+6606 M5_1@DRIVE <- M6 LGTH | 
+6606 M10_1@DRIVE <- M LGTH | 
+6606 C3_1HEX@HEX <- C HEX | 
+6606 M5_2@DRIVE <- M6 LGTH | 
+6606 M10_2@DRIVE <- M LGTH | 
+6606 C3_2HEX@HEX <- C HEX | 
+6606 M5_3@DRIVE <- M6 LGTH | 
+6606 M10_3@DRIVE <- M LGTH | 
+6606 C3_3HEX@HEX <- C HEX | 
+6606 Y@HEX <- Y FLATS | 
+6606 D1@BORE <- A1 DRILL | 
+6815 LEG_ORB: MAORB tip to FORB axis (6801 analog LEG_ORB@DRIVE) (no column yet - review table is a 7-column skeleton) <- M8 LGTH | 
+6815 LEG_FORB: MAORB axis to FORB port face (no column yet - review table is a 7-column skeleton) <- M6 LGTH | 
+6815 lock-nut hex (6801 analog HEXB@HEX) (no column yet - review table is a 7-column skeleton) <- C HEX | 
+6815 forged body flats (6801 analog Y@REF) (no column yet - review table is a 7-column skeleton) <- Y FLATS | 
+6815 bore, MAORB end (6801 analog D2@BORE) (no column yet - review table is a 7-column skeleton) <- B1 DRILL | 
+6832 LEG1: B1 FORB port face to branch axis (6803 analog LEG1@DRIVE) (no column yet - review table is a 7-column skeleton) <- M1 LGTH | 
+6832 LEG2: B2 FORB port face to branch axis (6803 analog LEG2@DRIVE) (no column yet - review table is a 7-column skeleton) <- N2 LGTH | 
+6832 LEG3: run axis to MAORB tip, branch (6803 analog LEG3@DRIVE) (no column yet - review table is a 7-column skeleton) <- M7 LGTH | 
+6832 lock-nut hex (6803 analog HEXB@HEX) (no column yet - review table is a 7-column skeleton) <- C HEX | 
+6832 forged body flats (6803 analog Y@REF) (no column yet - review table is a 7-column skeleton) <- Y FLATS | 
+6832 bore, MAORB end (6803 analog D3@BORE) (no column yet - review table is a 7-column skeleton) <- B3 DRILL | 
+6835 LEG1: B1 MAORB tip to branch axis (run) (no column yet - review table is a 7-column skeleton) <- M7 LGTH | 
+6835 LEG2: branch axis to B2 FORB port face (run) (no column yet - review table is a 7-column skeleton) <- M1 LGTH | 
+6835 LEG3: run axis to B3 FORB port face (branch) (no column yet - review table is a 7-column skeleton) <- M2 LGTH | 
+6835 lock-nut hex (6804 analog HEXB@HEX) (no column yet - review table is a 7-column skeleton) <- C HEX | 
+6835 forged body flats (6804 analog Y@REF) (no column yet - review table is a 7-column skeleton) <- Y FLATS | 
+6835 bore, MAORB end (D1@BORE) (no column yet - review table is a 7-column skeleton) <- B1 DRILL | 
+6901 N5@DRIVE <- M7 LGTH | 
+6901 M1@DRIVE <- M LGTH | 
+6901 W3@HEX <- M6 LGTH | 
+6901 CHEX@HEX <- C1 HEX | 
+6901 C4HEX@HEX <- C HEX | 
+6901 C1HEX@HEX <- Y FLATS | 
+6901 D1@BORE <- B DRILL | 
+6901 D@BORE <- A DRILL | 
+6902 N4@DRIVE <- M8 LGTH | 
+6902 M@DRIVE <- M LGTH | 
+6902 W2@HEX <- M6 LGTH | 
+6902 CHEX@HEX <- C1 HEX | 
+6902 C4HEX@HEX <- C HEX | 
+6902 C1HEX@HEX <- Y FLATS | 
+6902 D1@BORE <- B DRILL | 
+6902 D@BORE <- A DRILL | 

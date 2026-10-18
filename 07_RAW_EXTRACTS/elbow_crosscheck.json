@@ -1,0 +1,43 @@
+{
+ "date": "2026-09-04",
+ "method": "Air-Way 2-pass enumerated extraction (sets identical both passes) vs MS drawing transcription",
+ "series": {
+  "2501": {
+   "aw_rows": 78,
+   "ms_rows_covered": 24,
+   "fg_agree": 21,
+   "fg_conflict": [
+    "2501-4-2-FG N",
+    "2501-14-12-FG M",
+    "2501-32-32-FG D1"
+   ],
+   "leg_map": "MS M<->AW M, MS N<->AW N (32-0 vote)",
+   "note": "FG (forged) rows match MS51504; non-FG rows are a distinct leg pattern (longer legs) - carry legs per-part in design table"
+  },
+  "6801": {
+   "aw_rows": 92,
+   "matched_dash_covered": 21,
+   "agree": 19,
+   "conflict": [
+    "6801-5-5 boss leg: AW 1.13 vs MS 1.090 (MS single-pass, re-verify)"
+   ],
+   "leg_map": "MS M3<->AW M (JIC leg), MS M4<->AW M7 (boss leg) (19-0 vote)"
+  },
+  "6802": {
+   "aw_rows": 56,
+   "matched_dash_covered": 20,
+   "agree": 19,
+   "conflict": [
+    "6802-14-14 legs: AW 1.45/1.86 vs MS 1.39/1.80 (+0.06 both)"
+   ],
+   "leg_map": "MS M2<->AW M2 (JIC leg), MS M3<->AW M8 (boss leg) (19-0 vote)"
+  }
+ },
+ "as_printed_anomalies": [
+  "2501-24-24 B=1 7/8-14 (probable typo for -12)",
+  "6801-10-6-FG D2=0.29",
+  "6801-32-24-FG D1/D2 appear swapped",
+  "6801-16-24 M/M7 appear swapped",
+  "6802-16-24 D2=0.84 (should be ~1.31)"
+ ]
+}

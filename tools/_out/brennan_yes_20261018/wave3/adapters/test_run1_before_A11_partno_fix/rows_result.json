@@ -1,0 +1,282 @@
+{
+ "2403-20-16": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:2403)"
+ },
+ "2406-20-12": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:2406)"
+ },
+ "2406-20-16": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:2406)"
+ },
+ "2501-06-04-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:2501)"
+ },
+ "2501-06-06-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:2501)"
+ },
+ "2502-04-04-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2502-06-04-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2650-04-04-04-04-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:2650)"
+ },
+ "2701-04-04-FG-LN": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:2701)"
+ },
+ "2705-06-06": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:2705)"
+ },
+ "2705-06-08": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:2705)"
+ },
+ "2705-08-08": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:2705)"
+ },
+ "5406-08-04": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:5406)"
+ },
+ "5406-08-06": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:5406)"
+ },
+ "5502-12-12-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:5502)"
+ },
+ "5502-16-12-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:5502)"
+ },
+ "5502-16-16-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:5502)"
+ },
+ "6400-02-02-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6400-20-12-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6400-20-16-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6400-20-20-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6405-16-06-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6405-16-08-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6410-06-08-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:6410)"
+ },
+ "6410-08-04-O": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:6410)"
+ },
+ "6500-08-06-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6500)"
+ },
+ "6500-08-08-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6500)"
+ },
+ "6502-16-16-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6502)"
+ },
+ "6505-24-24": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:6505)"
+ },
+ "6505-32-32": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (straight:6505)"
+ },
+ "6602-32-32-32-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6602)"
+ },
+ "6801-16-12-NWO-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6801)"
+ },
+ "6801-16-14-NWO-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6801)"
+ },
+ "6801-16-16-NWO-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6801)"
+ },
+ "6803-04-04-04-NWO-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6803)"
+ },
+ "6803-06-06-06-NWO-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "CONFIG (tee:6803)"
+ },
+ "6901-08-08 NWO-FG": {
+  "kind": "a: DROP->BUILD (edits_77)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "5406-08P": {
+  "kind": "b: alias row DROP->BUILD",
+  "result": "not built: no generator / no summary entry"
+ },
+ "5406-12P": {
+  "kind": "b: alias row DROP->BUILD",
+  "result": "CONFIG (straight:5406P)"
+ },
+ "1504-08-08-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "1504-12-12-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "1504-16-16-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2404-14-12": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (straight:2404)"
+ },
+ "2404-16-08": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (straight:2404)"
+ },
+ "2502-04-06-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2502-05-04-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2504-16-16-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:2504)"
+ },
+ "2505-04-04-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2505-06-06-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:2505)"
+ },
+ "2613-04-04-04-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2705-06-04": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (straight:2705)"
+ },
+ "3474-08-08-NWO": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "3474-10-10-NWO": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "5404-N-06X5.500": {
+  "kind": "b: new row (ready=yes)",
+  "result": "not built: straight:5404N: no end data | KeyError('part number has no dash pair')"
+ },
+ "5601-08-08-08-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:5601)"
+ },
+ "5601-12-12-12-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:5601)"
+ },
+ "5601-16-16-16-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:5601)"
+ },
+ "6402-12-10-O": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (straight:6402)"
+ },
+ "6801-16-10-NWO-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:6801)"
+ },
+ "6803-04-04-06-NWO-FG": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:6803)"
+ },
+ "6807-16-16-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6807-20-20-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6809-04-04-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6809-06-06-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6809-08-08-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6901-08-06-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6901-08-12-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "6901-10-06-NWO-FG": {
+  "kind": "b: new row (ready=no)",
+  "result": "not built: no generator / no summary entry"
+ },
+ "2701-02-02-FG-LN": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:2701)"
+ },
+ "2701-05-05-FG-LN": {
+  "kind": "b: new row (ready=yes)",
+  "result": "CONFIG (tee:2701)"
+ }
+}

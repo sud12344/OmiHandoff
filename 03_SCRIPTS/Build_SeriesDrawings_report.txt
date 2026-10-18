@@ -1,0 +1,123 @@
+OMi_SeriesDrawings  9/18/2026 4:09:40 PM
+
+output folder: C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\
+drawing template: C:\ProgramData\SolidWorks\SOLIDWORKS 2026\templates\Drawing.drwdot
+base drawing: C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\02_TEMPLATES\OMi_SheetFormat_B_6600.SLDDRW
+OK    a default drawing template is configured
+
+===== 2403 =====
+OK    2403: master part found (C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\2403_MASTER_macro.SLDPRT)
+OK    2403: part opened (err 0)
+  2403-08-08 not found, using the active configuration 2403-08-08
+  74 model dimension(s) marked for drawing
+  2 thread feature(s) unsuppressed for the views
+OK    2403: base drawing opened (err 0)
+OK    2403: saved as C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2403_SERIES.SLDDRW
+  3 view(s) removed from the base sheet
+  sheet 432 x 279 mm
+  part 1.62 x 0.81 in, view scale 1.000
+OK    2403: front view
+  views: front True, right True, iso True
+  enum check: source=0 types=32768
+  InsertModelAnnotations3 (early bound, all views) -> Object()
+  annotations returned: 37
+  dimensions kept 2, pruned 0
+OK    2403: envelope dimensions on the sheet
+  adding notes
+  saving
+OK    2403: SLDDRW written
+OK    2403: PDF written C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2403_SERIES.PDF
+
+===== 2405 =====
+OK    2405: master part found (C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\2405_MASTER_macro.SLDPRT)
+OK    2405: part opened (err 0)
+  2405-08-08 not found, using the active configuration 2405-08-08
+  56 model dimension(s) marked for drawing
+  2 thread feature(s) unsuppressed for the views
+OK    2405: base drawing opened (err 0)
+OK    2405: saved as C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2405_SERIES.SLDDRW
+  3 view(s) removed from the base sheet
+  sheet 432 x 279 mm
+  part 1.83 x 1.14 in, view scale 1.000
+OK    2405: front view
+  views: front True, right True, iso True
+  enum check: source=0 types=32768
+  InsertModelAnnotations3 (early bound, all views) -> Object()
+  annotations returned: 25
+  dimensions kept 2, pruned 0
+OK    2405: envelope dimensions on the sheet
+  adding notes
+  saving
+OK    2405: SLDDRW written
+OK    2405: PDF written C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2405_SERIES.PDF
+
+===== 2500 =====
+OK    2500: master part found (C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\2500HX_MASTER_macro.SLDPRT)
+OK    2500: part opened (err 0)
+  2500-08-08 not found, using the active configuration 2500-08-08
+  95 model dimension(s) marked for drawing
+  2 thread feature(s) unsuppressed for the views
+OK    2500: base drawing opened (err 0)
+OK    2500: saved as C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2500_SERIES.SLDDRW
+  3 view(s) removed from the base sheet
+  sheet 432 x 279 mm
+  part 1.72 x 1.72 in, view scale 1.000
+OK    2500: front view
+  views: front True, right True, iso True
+  enum check: source=0 types=32768
+  InsertModelAnnotations3 (early bound, all views) -> Object()
+  annotations returned: 51
+  dimensions kept 1, pruned 1
+OK    2500: envelope dimensions on the sheet
+  adding notes
+  saving
+OK    2500: SLDDRW written
+OK    2500: PDF written C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2500_SERIES.PDF
+
+===== 2502 =====
+OK    2502: master part found (C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\2502HX_MASTER_macro_155227.SLDPRT)
+OK    2502: part opened (err 0)
+  2502-08-08 not found, using the active configuration 2502-08-08
+  88 model dimension(s) marked for drawing
+  2 thread feature(s) unsuppressed for the views
+OK    2502: base drawing opened (err 0)
+OK    2502: saved as C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2502_SERIES.SLDDRW
+  3 view(s) removed from the base sheet
+  sheet 432 x 279 mm
+  part 1.92 x 2.20 in, view scale 1.000
+OK    2502: front view
+  views: front True, right True, iso True
+  enum check: source=0 types=32768
+  InsertModelAnnotations3 (early bound, all views) -> Object()
+  annotations returned: 40
+  dimensions kept 1, pruned 1
+OK    2502: envelope dimensions on the sheet
+  adding notes
+  saving
+OK    2502: SLDDRW written
+OK    2502: PDF written C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2502_SERIES.PDF
+
+===== 2603 =====
+OK    2603: master part found (C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\2603HX_MASTER_macro.SLDPRT)
+OK    2603: part opened (err 0)
+  2603-08-08-08 not found, using the active configuration 2603-08-08-08
+  124 model dimension(s) marked for drawing
+  3 thread feature(s) unsuppressed for the views
+OK    2603: base drawing opened (err 0)
+OK    2603: saved as C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2603_SERIES.SLDDRW
+  3 view(s) removed from the base sheet
+  sheet 432 x 279 mm
+  part 2.50 x 1.72 in, view scale 1.000
+OK    2603: front view
+  views: front True, right True, iso True
+  enum check: source=0 types=32768
+  InsertModelAnnotations3 (early bound, all views) -> Object()
+  annotations returned: 64
+  dimensions kept 1, pruned 1
+OK    2603: envelope dimensions on the sheet
+  adding notes
+  saving
+OK    2603: SLDDRW written
+OK    2603: PDF written C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\10_DRAWINGS\2603_SERIES.PDF
+
+done in 44.8s   sheets ok = 5   problems = 0

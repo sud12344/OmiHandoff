@@ -1,0 +1,61 @@
+BATCH 13a - THE BRENNAN STEP DOWNLOAD, PART 1: SWIVELS, FEMALE PORTS, NPSM, ORB -14, FLANGES (2026-09-25)
+========================================================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+Every master opens in its reference size.
+
+18 MACROS, +172 CONFIGURATIONS. All but 6405 replace macros that were already waiting - just run them when you get to them.
+
+                                                         configurations
+  JIC swivel sizes (-05 -06 -10 -20 -24 -32 added)
+     Build_6500_MASTER.bas   Sub Build6500   90 elbow            7 -> 14
+     Build_6502_MASTER.bas   Sub Build6502   45 elbow            2 ->  8
+     Build_6600_MASTER.bas   Sub Build6600   run tee             4 ->  9
+     Build_6602_MASTER.bas   Sub Build6602   run tee             4 ->  9
+     Build_6402_MASTER.bas   Sub Build6402   ORB x swivel        7 -> 15
+     Build_6504_MASTER.bas   Sub Build6504   JIC x swivel        4 ->  8
+     Build_6505_MASTER.bas   Sub Build6505   swivel x pipe       8 -> 16
+     Build_6506_MASTER.bas   Sub Build6506   swivel x pipe       4 -> 10
+     Build_6565_MASTER.bas   Sub Build6565   swivel x swivel     4 ->  5
+  Female ORB port sizes (-04 -06 -10 -12 -16 -20 -24 added)
+     Build_6404_MASTER.bas   Sub Build6404   ORB port x pipe     2 -> 14
+     Build_6410_MASTER.bas   Sub Build6410   ORB x ORB port      4 -> 27
+  Female JIC port sizes (-04 -05 -06 -10 -12 -14 -16 -20 -24 -32 added)
+     Build_2406_MASTER.bas   Sub Build2406   JIC port x JIC      5 -> 40
+  NPSM swivel sizes (-02 -04 -06 -12 -16 -20 -24 -32 added)
+     Build_1404_MASTER.bas   Sub Build1404   pipe x NPSM swivel  4 -> 24
+     Build_1405_MASTER.bas   Sub Build1405   NPSM swivel         3 -> 15
+     Build_1501_MASTER.bas   Sub Build1501   90 elbow            3 -> 16
+  Code 61 flanges (-16 -20 -32 added)
+     Build_1700_MASTER.bas   Sub Build1700   flange x JIC        5 -> 10
+  ORB -14 groove (measured on 6400-14-14-O)
+     Build_6408_MASTER.bas   Sub Build6408   ORB plug (hollow)  13 -> 14   (replaces the batch 11e macro - run this one instead)
+     Build_6405_MASTER.bas   Sub Build6405   ORB x female pipe  38 -> 39   RE-RUN (6405 is built) - close the old 6405 first;
+                                                                            copy of the old master in _to_delete\superseded_20260925\pre_b13
+  The big ones (2406: 40, 6410: 27, 1404: 24) take a while in the sweep - progress lines keep coming, that is normal.
+
+WHERE THE NUMBERS COME FROM
+  Every new size is measured on the Brennan STEP you downloaded (09_STEP_FILES\BRENNAN_*.stp). Each measuring script
+  (03_SCRIPTS\measure) was first run on the STEPs we already had and gives exactly the values used before, then on the
+  new ones. Air-Way still sets the lengths, hexes and bores; Brennan sets the swivel nut / port / flange-head shapes.
+  Single manufacturer for those shapes -> the rows stay ASSUMED.
+  Two small changes you may notice: the ORB port O-ring chamfer is 12 deg at -04/-06 (15 deg from -08 up, as Brennan);
+  on the NPSM swivels the skirt front is drawn at the hex flats where Brennan's is 0.001 above Air-Way's rounded hex.
+
+STILL OUT (and why)
+  6502-05-05-FG, 6502-12-12-FG  the 45 deg corner would stick out beside the swivel neck. Your 6502-12-12-FG STEP shows
+                                Brennan stops the corner at the swivel body face - I need to add that trim to the macro.
+  6565-20-20, 6565-24-24        the two swivel seats come too close for the way the cavity is drawn (my fix, later).
+  6504-24-24                    Air-Way bore 1.38 vs the -24 JIC tip 1.381 - no wall left (Air-Way value to confirm).
+  1501-04-02-FG                 Air-Way bore 0.23 vs the -02 swivel stem tip 0.234.
+  1501-24-24-FG                 Air-Way nut hex 1.88 vs Brennan's -24 NPSM nut 2.125 - which is right?
+  6410-20-12-O, -20-16-O, -24-16-O   the port drill point reaches the male end with Air-Way's length.
+  2406-16-04                    the -16 port would cut into the -04 male end with Air-Way's length.
+  1503-xx                       needs the pipe thread on the 45 deg leg (my work).
+
+CHECKED BEFORE SENDING
+  Every sketch solved as exactly defined, clean outline for EVERY configuration (not just the reference one),
+  revolved volume recomputed, static VBA check. Every configuration that existed before has identical values.
+
+STILL TO COME (batch 13b): the long parts (2404-L / 6400-L / 2501-L) and the new adjustable ORB module (6801 family).

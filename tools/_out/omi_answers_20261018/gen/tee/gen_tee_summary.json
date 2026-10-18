@@ -1,0 +1,93 @@
+{
+ "1502": {
+  "configs": 7,
+  "ref": "1502-02-02-FG",
+  "skipped": [
+   [
+    "1502-02-02",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-04-02",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "1502-04-04",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-04-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-06-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-06-08",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-08-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-08-08",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-08-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-12-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-16-16",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-20-20",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-24-24",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-32-32",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1502-08-08-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "1502-16-16-FG",
+    "BUILD",
+    "MISSING"
+   ]
+  ],
+  "blocked": [
+   "1502-04-04-FG: leg 2: the other leg's hex arm corner (hex corner radius 0.3984) stands 0.0084 beyond the swivel body face (0.3900) OUTSIDE the neck (radius 0.1825), from the neck out to the arm end 0.680 along the other leg (ridge 0.0290 wide) - Brennan faces it off at the body face (6500-05-05-FG STEP: body face 0.314 inside the corner radius 0.3245, nothing outside the neck beyond it); the 90 deg elbow has no facing cut"
+  ],
+  "warnings": [],
+  "cols": 57
+ }
+}

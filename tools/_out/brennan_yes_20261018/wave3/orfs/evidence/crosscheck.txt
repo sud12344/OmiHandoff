@@ -1,0 +1,56 @@
+FS0304-C "L" (nut length) vs Air-Way FF318 h (tube nut, same dash): 5/8 agree to rounding
+      differs: -16 1.090 vs 1.10
+      differs: -20 1.090 vs 1.10
+      differs: -24 1.090 vs 1.10
+FS0304-C "HEX" vs Air-Way FF318 S (tube nut hex): 8/8 agree to rounding
+FS0304-C "HEX" vs Air-Way FF304-C S (cap nut hex): 8/8 agree to rounding
+FS0304-C "H O.D." (insert collar) vs Brennan FS0319 "A O.D." (braze sleeve collar, same dash): 8/8 agree to rounding
+FS0304-C "L" vs Brennan FS0318 "Q WIDTH" (nut length): 2/8 agree to rounding
+      differs: -08 0.830 vs 0.827
+      differs: -10 0.930 vs 0.925
+      differs: -12 1.020 vs 1.024
+      differs: -16 1.090 vs 1.095
+      differs: -20 1.090 vs 1.095
+      differs: -24 1.090 vs 1.095
+FS2601 "M1 / M2" (run legs) vs Air-Way L7 of the same FS dash on FS2500 / FS2603 / FS2650 rows: 16/16 agree to rounding
+FS2601 "N" (pipe branch) vs Air-Way FS2501 N of the same (FS, pipe) dash pair: 4/4 agree to rounding
+FS2601 "N" vs Brennan FS2501-FG "N LGTH" of the same (FS, pipe) pair: 7/8 agree to rounding
+      differs: FS2601-10-10-08-FG 1.59 vs 1.470
+FS6402 "C HEX" vs the JIC swivel nut hex C3HEX of the same JIC dash in the 6402 master table: 7/7 agree to rounding
+FS6402 "H HEX" vs Brennan FS6403 "H HEX" of the same pair (body hex of the MFS x MJ straight): 7/7 agree to rounding
+FS6502-FG "L1 LGTH" vs Air-Way FF6502 L7 (plain): 8/8 agree to rounding
+FS6502-FG "L2 LGTH" vs Air-Way FF6502 L52 (plain): 0/8 agree to rounding
+      differs: FS6502-04-04-FG 0.94 vs 0.99
+      differs: FS6502-06-06-FG 1.06 vs 1.12
+      differs: FS6502-08-08-FG 1.32 vs 1.49
+      differs: FS6502-10-10-FG 1.44 vs 1.53
+      differs: FS6502-12-12-FG 1.48 vs 1.73
+      differs: FS6502-16-16-FG 1.520 vs 1.87
+      differs: FS6502-20-20-FG 1.72 vs 1.98
+      differs: FS6502-24-24-FG 2.060 vs 2.41
+FS6502-FG "C HEX" vs Air-Way FF6502 S (swivel nut): 8/8 agree to rounding
+FS6502-FG "JJ FLATS" vs Air-Way FF6502 S2: 5/8 agree to rounding
+      differs: FS6502-04-04-FG 0.562 vs 0.55
+      differs: FS6502-16-16-FG 1.438 vs 1.42
+      differs: FS6502-20-20-FG 1.625 vs 1.61
+FS6502-FG "L2 LGTH" vs Brennan FS6500-FG "AAA LGTH" (90 deg swivel leg, same size) - information only: 0/8 agree to rounding
+      differs: FS6502-04-04-FG 0.94 vs 1.04
+      differs: FS6502-06-06-FG 1.06 vs 1.15
+      differs: FS6502-08-08-FG 1.32 vs 1.49
+      differs: FS6502-10-10-FG 1.44 vs 1.62
+      differs: FS6502-12-12-FG 1.48 vs 1.82
+      differs: FS6502-16-16-FG 1.520 vs 2.10
+      differs: FS6502-20-20-FG 1.72 vs 2.29
+      differs: FS6502-24-24-FG 2.060 vs 2.410
+FS7202 "M LGTH" mm/25.4 vs Brennan FS6801-NWO-FG "M LGTH" of the same FS dash (inches, 0.01): 12/22 agree to rounding
+      differs: FS7202-04-04-NWO-FG 0.93 vs 0.85
+      differs: FS7202-04-06-NWO-FG 0.97 vs 0.85
+      differs: FS7202-06-06-NWO-FG 1.04 vs 0.980
+      differs: FS7202-08-08-NWO-FG 1.21 vs 1.10
+      differs: FS7202-08-12-NWO-FG 1.32 vs 1.10
+      differs: FS7202-10-12-NWO-FG 1.41 vs 1.31
+      differs: FS7202-12-12-NWO-FG 1.48 vs 1.47
+      differs: FS7202-12-16-NWO-FG 1.62 vs 1.47
+      differs: FS7202-16-20-NWO-FG 1.75 vs 1.64
+      differs: FS7202-20-24-NWO-FG 1.92 vs 1.760
+FS1700 / FS1800 / FS1704 / FS1804: no Air-Way ORFS flange series; the letters follow the Flange catalog drawings (p4 / p6 / p7: L = face-seal face -> flange face, L1 = FS leg to the crossing, L2 = flange face to the crossing, A/F = flats), the drawing convention wave 2 checked on the JIC 1700 / 1703 / 1704 / 1804 rows against their own Brennan STEPs (catalog L 9/9; L1 / L2 / A/F reproduced). No FS flange STEP is on disk.

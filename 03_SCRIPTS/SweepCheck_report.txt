@@ -1,0 +1,13 @@
+OMi_SweepCheck  9/24/2026 10:20:50 AM
+OK    0403_MASTER.SLDPRT: 33 configurations swept with 1 thread feature(s) live, 0 failing
+OK    2403_MASTER.SLDPRT: 49 configurations swept with 2 thread feature(s) live, 0 failing
+OK    2405_MASTER.SLDPRT: 32 configurations swept with 2 thread feature(s) live, 0 failing
+OK    2500HX_MASTER.SLDPRT: 27 configurations swept with 2 thread feature(s) live, 0 failing
+OK    2502HX_MASTER.SLDPRT: 29 configurations swept with 2 thread feature(s) live, 0 failing
+OK    2603HX_MASTER.SLDPRT: 41 configurations swept with 3 thread feature(s) live, 0 failing
+OK    5000_MASTER.SLDPRT: 19 configurations swept with 2 thread feature(s) live, 0 failing
+OK    5404_MASTER.SLDPRT: 25 configurations swept with 2 thread feature(s) live, 0 failing
+OK    5405_MASTER.SLDPRT: 23 configurations swept with 2 thread feature(s) live, 0 failing
+OK    6401_MASTER.SLDPRT: 20 configurations swept with 2 thread feature(s) live, 0 failing
+OK    6405_MASTER.SLDPRT: 36 configurations swept with 2 thread feature(s) live, 0 failing
+SUMMARY: 11 master(s) swept, 0 with failures

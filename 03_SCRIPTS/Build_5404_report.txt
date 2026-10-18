@@ -1,0 +1,126 @@
+Build_5404_MASTER  9/23/2026 3:54:24 AM
+OK    dim L = 1.8900 in (expect 1.8900)
+OK    dim BODYR = 0.5081 in (expect 0.5081)
+OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
+OK    dim NPTFA_THDL = 0.5337 in (expect 0.5337)
+      NPTFA_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFA_TAPER = 1.79 deg
+OK    dim NPTFA_RELL = 0.2163 in (expect 0.2163)
+OK    dim NPTFB_MAJR = 0.4078 in (expect 0.4078)
+OK    dim NPTFB_THDL = 0.5337 in (expect 0.5337)
+      NPTFB_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFB_TAPER = 1.79 deg
+OK    dim NPTFB_RELL = 0.2163 in (expect 0.2163)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 1.1419 in^3 (expect 1.1419)
+OK    dim HEXB = 0.8800 in (expect 0.8800)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (4.8% of volume)
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.5300 in (expect 0.5300)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.9450 DA=0.5300 
+OK    select end face for BORE_B at x=1.8900
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.5300 in (expect 0.5300)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 0)
+OK    BORECUT_B dims: DEPTH=0.9450 DB=0.5300 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=1.8900)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start = (0.0000, 0.0000, 0.4078)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.4078) axialIsX=True apex dir 1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.4078 (want 0.4078)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+      APEXR: try 0 value 0.3506 (want 0.3506)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.03723 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+OK    THD_EndB: end face found at 1.8900
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndB: helix start = (1.8900, 0.0000, -0.4078)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (1.8900,0.4078) axialIsX=True apex dir -1
+      PROF_AX: try 0 value 1.8900 (want 1.8900)
+OK    dim PROF_AX = 1.8900 in (expect 1.8900)
+      PROF_R: try 0 value 0.4078 (want 0.4078)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+      APEXR: try 0 value 0.3506 (want 0.3506)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.03725 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+FAIL  Overall length 1.9632 (expect 1.8900)
+OK    Hex across flats 0.8800 / corners 1.0161 (expect 0.8800 / 1.0161)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5404_SW2.xlsx
+OK    Configurations after table: 26 (expect 26)
+OK    5404-02-02 L@DRIVE = 1.0600 (table 1.0600)
+OK    5404-02-02 BODYR@DRIVE = 0.2540 (table 0.2540)
+OK    5404-02-02 HEXB@HEX = 0.4400 (table 0.4400)
+OK    5404-02-02 NPTFA_MAJR@DRIVE = 0.1966 (table 0.1966)
+OK    5404-02-02 NPTFA_THDL@DRIVE = 0.2639 (table 0.2639)
+OK    5404-02-02 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5404-02-02 NPTFA_RELL@DRIVE = 0.1161 (table 0.1161)
+OK    5404-02-02 NPTFB_MAJR@DRIVE = 0.1966 (table 0.1966)
+OK    5404-02-02 PROF_R@THDPROF_A = 0.1966 (table 0.1966)
+OK    5404-02-02 PROF_R@THDPROF_B = 0.1966 (table 0.1966)
+OK    5404-02-02 DEPTH@BORECUT_A = 0.5300 (table 0.5300)
+OK    5404-02-02 DEPTH@BORECUT_B = 0.5300 (table 0.5300)
+OK    5404-02-02 one solid body (found 1)
+      5404-02-02 box x -0.020..1.080  y -0.220..0.220
+OK    5404-32-32 L@DRIVE = 2.8200 (table 2.8200)
+OK    5404-32-32 BODYR@DRIVE = 1.4434 (table 1.4434)
+OK    5404-32-32 HEXB@HEX = 2.5000 (table 2.5000)
+OK    5404-32-32 NPTFA_MAJR@DRIVE = 1.1693 (table 1.1693)
+OK    5404-32-32 NPTFA_THDL@DRIVE = 0.7565 (table 0.7565)
+OK    5404-32-32 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5404-32-32 NPTFA_RELL@DRIVE = 0.2735 (table 0.2735)
+OK    5404-32-32 NPTFB_MAJR@DRIVE = 1.1693 (table 1.1693)
+OK    5404-32-32 PROF_R@THDPROF_A = 1.1693 (table 1.1693)
+OK    5404-32-32 PROF_R@THDPROF_B = 1.1693 (table 1.1693)
+OK    5404-32-32 DEPTH@BORECUT_A = 1.4100 (table 1.4100)
+OK    5404-32-32 DEPTH@BORECUT_B = 1.4100 (table 1.4100)
+OK    5404-32-32 one solid body (found 1)
+      5404-32-32 box x -0.081..2.901  y -1.261..1.250
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\5404_MASTER_macro_035534.SLDPRT (first name was locked, error 0)

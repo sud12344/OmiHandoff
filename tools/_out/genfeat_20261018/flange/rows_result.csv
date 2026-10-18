@@ -1,0 +1,131 @@
+table,config,result,reason
+1700,1700-61-08-08,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-12-12,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-12-16,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-12-20,skipped,ScopeAction DROP (not an OMi part)
+1700,1700-61-16-12,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-16-16,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-16-20,skipped,ScopeAction DROP (not an OMi part)
+1700,1700-61-16-24,skipped,ScopeAction DROP (not an OMi part)
+1700,1700-61-20-20,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-20-24,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-24-24,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-24-32,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-61-32-32,built,unchanged Air-Way hex-body row (master 1700; macro + SW2 identical to the base tools in the regression)
+1700,1700-20-16,built,master 1700RC: Brennan round collar + two wrench flats + 30deg chamfer + neck (A16); closed loop OK
+1700,1700-24-20,built,master 1700RC: Brennan round collar + two wrench flats + 30deg chamfer + neck (A16); closed loop OK
+1700,1700-32-24,built,master 1700RC: Brennan round collar + two wrench flats + 30deg chamfer + neck (A16); closed loop OK
+1703,1703-61-24-24,skipped,ScopeAction DROP (not an OMi part)
+1703,1703-08-08-FG,skipped,"DataStatus MISSING: missing M2@DRIVE ; N3@DRIVE ; CHEX@HEX ; D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without N3@DRIVE / DFLG@BORE / M2@DRIVE / D@BORE / CHEX@HEX - needs the cell(s) before the row can build"
+1703,1703-08-08-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-12-12-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1703,1703-12-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-12-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-16-16-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1703,1703-16-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-16-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-16-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-20-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-20-20-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1703,1703-20-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-20-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-24-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-24-24-FG,built,"master 1703: forged 45 deg elbow, code 61 -24 flange leg (FLG61) + JIC -24 leg; closed loop OK"
+1703,1703-24-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-24-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1703,1703-32-32-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1703,1703-32-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-61-24-24,skipped,ScopeAction DROP (not an OMi part)
+1704,1704-61-32-32,skipped,ScopeAction DROP (not an OMi part)
+1704,1704-08-08-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1704,1704-08-08-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-08-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-12-12-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1704,1704-12-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-12-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-16-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-16-16-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1704,1704-16-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-16-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-16-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-20-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-20-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-20-20-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1704,1704-20-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-20-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-20-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-24-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-24-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-24-24-FG,built,"master 1704: forged 90 deg elbow, code 61 -24 flange leg (FLG61) + JIC -24 leg; closed loop OK"
+1704,1704-24-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-24-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-32-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1704,1704-32-32-FG,skipped,"DataStatus MISSING: missing D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without DFLG@BORE / D@BORE - needs the cell(s) before the row can build"
+1704,1704-32-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-08-08-FG,skipped,"DataStatus MISSING: missing M2@DRIVE ; N3@DRIVE ; CHEX@HEX ; D@BORE ; DFLG@BORE | generator (held-row test, test/root_held): row without N3@DRIVE / DFLG@BORE / M2@DRIVE / D@BORE / CHEX@HEX - needs the cell(s) before the row can build"
+1803,1803-12-12-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -12: needs code 62 head STEP - a Brennan STEP with a -12 code 62 head (1824-12 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1803,1803-12-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-12-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-12-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-16-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-16-16-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -16: needs code 62 head STEP - a Brennan STEP with a -16 code 62 head (1824-16 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1803,1803-16-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-16-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-20-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-20-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-20-20-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -20: needs code 62 head STEP - a Brennan STEP with a -20 code 62 head (1824-20 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1803,1803-20-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-20-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-24-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-24-24-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -24: needs code 62 head STEP - a Brennan STEP with a -24 code 62 head (1824-24 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1803,1803-24-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1803,1803-32-32-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -32: needs code 62 head STEP - a Brennan STEP with a -32 code 62 head (1824-32 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing M2@DRIVE ; N3@DRIVE ; CHEX@HEX ; D@BORE ; DFLG@BORE ; O@DRIVE"
+1803,1803-32-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-08-08-FG,built,"master 1804: forged 90 deg elbow, code 62 -08 flange leg (FLG62) + JIC -08 leg; closed loop OK"
+1804,1804-08-08-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-12-12-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -12: needs code 62 head STEP - a Brennan STEP with a -12 code 62 head (1824-12 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1804,1804-12-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-12-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-12-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-16-12-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-16-16-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -16: needs code 62 head STEP - a Brennan STEP with a -16 code 62 head (1824-16 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1804,1804-16-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-16-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-16-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-20-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-20-20-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -20: needs code 62 head STEP - a Brennan STEP with a -20 code 62 head (1824-20 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1804,1804-20-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-20-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-24-16-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-24-20-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-24-24-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -24: needs code 62 head STEP - a Brennan STEP with a -24 code 62 head (1824-24 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1804,1804-24-24-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-24-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1804,1804-32-32-FG,blocked,"generator (held-row test, test/root_held): no end data - code 62 flange head not measured for -32: needs code 62 head STEP - a Brennan STEP with a -32 code 62 head (1824-32 plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange catalog p.8 3300-62) | data: also missing D@BORE ; DFLG@BORE ; O@DRIVE"
+1804,1804-32-32-Tube,skipped,"bent-tube row: later wave (gen_bent.py), not touched"
+1724,1724-08,built,"master 1724 (wave-1 FLANGE61-PLUG merged): code 61 -08 head on a round shank, solid; closed loop OK"
+1724,1724-12,skipped,DataStatus MISSING: missing L@DRIVE ; SHANKD@REF ; O@DRIVE | needs its own Brennan STEP
+1724,1724-16,skipped,DataStatus MISSING: missing L@DRIVE ; SHANKD@REF ; O@DRIVE | needs its own Brennan STEP
+1724,1724-20,skipped,DataStatus MISSING: missing L@DRIVE ; SHANKD@REF ; O@DRIVE | needs its own Brennan STEP
+1724,1724-24,skipped,DataStatus MISSING: missing L@DRIVE ; SHANKD@REF ; O@DRIVE | needs its own Brennan STEP
+1724,1724-32,skipped,DataStatus MISSING: missing L@DRIVE ; SHANKD@REF ; O@DRIVE | needs its own Brennan STEP
+1724,1724-40,skipped,DataStatus MISSING: missing L@DRIVE ; SHANKD@REF ; O@DRIVE | needs its own Brennan STEP (-40: also FLG61_MEAS[40])
+1800,1800-08-08,built,master 1800 (wave-1 FLANGE62 merged): round collar + flats + code 62 -08 head; closed loop OK
+1800,1800-12-12,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-12-16,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-16-12,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-16-16,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-16-20,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-16-24,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-20-16,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-20-20,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-20-24,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-24-20,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-24-24,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1800,1800-32-32,skipped,DataStatus MISSING: missing COLLARD@DRIVE ; COLLARL@DRIVE ; NECKD@DRIVE ; D@BORE | needs its own Brennan STEP and a code 62 head STEP of that size
+1824,1824-08,built,"master 1824 (wave-1 FLANGE62 merged): code 62 -08 head on a round stub, solid; closed loop OK"
+1824,1824-12,skipped,DataStatus MISSING: missing L@DRIVE ; STUBD@DRIVE | needs its own Brennan STEP and a code 62 head STEP of that size
+1824,1824-16,skipped,DataStatus MISSING: missing L@DRIVE ; STUBD@DRIVE | needs its own Brennan STEP and a code 62 head STEP of that size
+1824,1824-20,skipped,DataStatus MISSING: missing L@DRIVE ; STUBD@DRIVE | needs its own Brennan STEP and a code 62 head STEP of that size
+1824,1824-24,skipped,DataStatus MISSING: missing L@DRIVE ; STUBD@DRIVE | needs its own Brennan STEP and a code 62 head STEP of that size
+1824,1824-32,skipped,DataStatus MISSING: missing L@DRIVE ; STUBD@DRIVE | needs its own Brennan STEP and a code 62 head STEP of that size

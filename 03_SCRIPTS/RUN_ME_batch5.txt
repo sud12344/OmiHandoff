@@ -1,0 +1,57 @@
+BATCH 5 - SEVEN NEW MASTERS (2026-09-24)
+========================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+Batch 4 (RUN_ME_batch4.txt) can be run before or after this one - they do not depend on each other.
+
+Suggested order:
+
+ STRAIGHTS (gen_straight2.py - the same helpers as the six straights you already built clean)
+   1  Build_2706_MASTER.bas   Sub Build2706   male pipe x JIC bulkhead connector               22 configs
+   2  Build_2705_MASTER.bas   Sub Build2705   female pipe x JIC bulkhead connector             14 configs
+   3  Build_2700_MASTER.bas   Sub Build2700   bulkhead union (JIC x JIC bulkhead)              24 configs
+   4  Build_4404_MASTER.bas   Sub Build4404   male pipe x beaded hose connector                13 configs
+   5  Build_4604_MASTER.bas   Sub Build4604   male ORB x beaded hose connector                 14 configs
+   6  Build_5404N_MASTER.bas  Sub Build5404N  straight pipe nipple (round bar, no hex)          4 configs
+
+ 45-DEG ELBOW (gen_tee.py - NEW angled-leg code, run it last)
+   7  Build_2503_MASTER.bas   Sub Build2503   45 deg male elbow (JIC x male NPTF)              27 configs
+                                                                                     total   118 configs
+
+WHAT IS NEW, AND WHAT TO LOOK AT IN THE REPORTS
+  - Bulkhead ends (2700/2705/2706): the JIC end with its thread run the full bulkhead length. Same code path as
+    the JIC ends you have already built, just a longer thread. -LN configs are the same fitting sold with a
+    locknut; the locknut is a separate part (0306) and is not modelled.
+  - Beaded hose (4404/4604): new stub + bead end. Look for "HOSEA_... = ..." dimension lines and a clean sweep.
+  - 5404N: first straight without a hex - the macro skips the hex cut; the report has a "Body diameter" check
+    instead of the hex check.
+  - 2503 is the first part with a leg that is NOT on the X or Y axis (the JIC leg sits at 135 deg). New report lines:
+       LEGANG2 = 135.00 deg, "LEG2 sketch fully defined", "PLN2 reference plane created", "PLN2 is normal to the
+       angled leg", HEX2 extruded the right way, BORE2 / THD_End2 on the angled leg, "leg 2 tip (exact)".
+    If anything in 2503 fails, send me the report - it only affects this one macro.
+
+WHERE THE NUMBERS COME FROM (every assumption is also in $PRP@AxialSource of each row)
+  Bulkheads  Brennan 2705-08-08 STEP: the bulkhead thread IS the 3/4-16 JIC thread, running from the relief to
+             the land; its length from the relief to the tip (1.44) = Air-Way I1. So: MS33656J nose (VERIFIED) +
+             thread over Air-Way I1 per part. This closes the "bulkhead thread open" item on 2700.
+             2700: the bulkhead is the SECOND dash (2700-06-04 I1 1.20 = the -04 bulkhead length).
+             Not modelled: Brennan's 0.04 collar at the hex face and its slightly larger relief.
+  4404/4604  Tube OD = Air-Way TUBE OD column, bead dia = Air-Way AA, bore = Air-Way D (Brennan 4404-08-06: 0.500 /
+             0.560 / 0.406 - all three match). Stub length 1.500, bead position 0.251 from the tip and bead width
+             come from that one Brennan STEP (ASSUMED for the other sizes); with them Air-Way's overall length gives
+             a 0.29 hex on 4404-08-06 = Brennan exactly. The round bead section is drawn as a flat-topped ring.
+  5404N      Air-Way bar diameter C and length; NPTF threads over L2 only (vanish not modelled).
+  2503       Brennan 2504-08-08-FG STEP (45-deg JIC elbow): same forged body as the 90-deg elbows - one hex arm per
+             leg with its shoulder at M - end length (0.323 on the STEP = 0.98 - 0.657) and the same 30-deg corner
+             puck. Checked for every row that the puck never covers the inner thread edge (tightest 2503-06-08-FG,
+             0.006 clear - flagged in its $COMMENT).
+
+TOPOLOGY NOTE (same as 5406-C/-P in batch 4): 5404-N is grouped under topology 5404 in the master data, but a
+round nipple has no hex, so it got its own master. Tell me if you would rather fold it in differently.
+
+STILL NOT BUILDABLE WITHOUT MORE DATA (details in my message)
+  swivel families (6500..6506, 6565, 6600, 6602, 6402, 2406, unions 1404/1405/1501-1503), bulkhead elbows/tees
+  2701-2704, adjustable-ORB elbows/tees (6801-6807, 4601, 4603), code 61 flange 1700, sleeve 0319,
+  45-deg street/female elbows 5503 (Air-Way D column looks shifted - values like 0.83 on a 1/8 elbow)
+  and 5505 (its only row: the 1/4 port drill depth 0.67 nearly equals the 0.69 leg, the two ports run into each other).

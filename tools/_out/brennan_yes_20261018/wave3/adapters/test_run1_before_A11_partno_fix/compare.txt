@@ -1,0 +1,192 @@
+===== applied vs base (stage)
+straight:0304          rc 0->0 | configs 12->12 new 0 old-changed 0 | macro identical
+straight:0306          rc 0->0 | configs 11->11 new 0 old-changed 0 | macro identical
+straight:0318          rc 0->0 | configs 12->12 new 0 old-changed 0 | macro identical
+straight:0403          rc 0->0 | configs 7->7 new 0 old-changed 0 | macro identical
+straight:1404          rc 0->0 | configs 24->24 new 0 old-changed 0 | macro identical
+straight:1405          rc 0->0 | configs 17->17 new 0 old-changed 0 | macro identical
+straight:1700          rc 0->0 | configs 10->10 new 0 old-changed 0 | macro identical
+straight:2403          rc 0->0 | configs 39->40 new 1 old-changed 0 | macro differs (1 lines)
+      NEW 2403-20-16  [a: DROP->BUILD (edits_77)]
+straight:2404          rc 0->0 | configs 57->59 new 2 old-changed 0 | macro differs (1 lines)
+      NEW 2404-14-12  [b: new row (ready=yes)]
+      NEW 2404-16-08  [b: new row (ready=yes)]
+straight:2405          rc 0->0 | configs 30->30 new 0 old-changed 0 | macro identical
+straight:2406          rc 0->0 | configs 49->51 new 2 old-changed 0 | macro differs (1 lines)
+      NEW 2406-20-12  [a: DROP->BUILD (edits_77)]
+      NEW 2406-20-16  [a: DROP->BUILD (edits_77)]
+straight:2408          rc 0->0 | configs 15->15 new 0 old-changed 0 | macro identical
+straight:2700          rc 0->0 | configs 26->26 new 0 old-changed 0 | macro identical
+straight:2705          rc 0->0 | configs 14->18 new 4 old-changed 0 | macro differs (1 lines)
+      NEW 2705-06-04  [b: new row (ready=yes)]
+      NEW 2705-06-06  [a: DROP->BUILD (edits_77)]
+      NEW 2705-06-08  [a: DROP->BUILD (edits_77)]
+      NEW 2705-08-08  [a: DROP->BUILD (edits_77)]
+straight:2706          rc 0->0 | configs 25->25 new 0 old-changed 0 | macro identical
+straight:4404          rc 0->0 | configs 13->13 new 0 old-changed 0 | macro identical
+straight:4604          rc 0->0 | configs 14->14 new 0 old-changed 0 | macro identical
+straight:5000          rc 0->0 | configs 21->21 new 0 old-changed 0 | macro identical
+straight:5404          rc 0->0 | configs 30->30 new 0 old-changed 0 | macro identical
+straight:5404N         rc 0->0 | configs 4->4 new 0 old-changed 0 | macro identical
+straight:5405          rc 0->0 | configs 31->31 new 0 old-changed 0 | macro identical
+straight:5406          rc 0->0 | configs 29->31 new 2 old-changed 0 | macro differs (1 lines)
+      NEW 5406-08-04  [a: DROP->BUILD (edits_77)]
+      NEW 5406-08-06  [a: DROP->BUILD (edits_77)]
+straight:5406C         rc 0->0 | configs 7->7 new 0 old-changed 0 | macro identical
+straight:5406HHP       rc 0->0 | configs 1->1 new 0 old-changed 0 | macro identical
+straight:5406P         rc 0->0 | configs 7->8 new 1 old-changed 0 | macro differs (3 lines)
+      NEW 5406-12P  [b: alias row DROP->BUILD]
+straight:5406SHP       rc 0->0 | configs 1->1 new 0 old-changed 0 | macro identical
+straight:6401          rc 0->0 | configs 24->24 new 0 old-changed 0 | macro identical
+straight:6402          rc 0->0 | configs 15->16 new 1 old-changed 0 | macro differs (1 lines)
+      NEW 6402-12-10-O  [b: new row (ready=yes)]
+straight:6404          rc 0->0 | configs 14->14 new 0 old-changed 0 | macro identical
+straight:6405          rc 0->0 | configs 42->42 new 0 old-changed 0 | macro identical
+straight:6408          rc 0->0 | configs 14->14 new 0 old-changed 0 | macro identical
+straight:6408HHP       rc 0->0 | configs 1->1 new 0 old-changed 0 | macro identical
+straight:6410          rc 0->0 | configs 31->33 new 2 old-changed 0 | macro differs (1043 lines)
+      NEW 6410-06-08-O  [a: DROP->BUILD (edits_77)]
+      NEW 6410-08-04-O  [a: DROP->BUILD (edits_77)]
+straight:6504          rc 0->0 | configs 14->14 new 0 old-changed 0 | macro identical
+straight:6505          rc 0->0 | configs 19->21 new 2 old-changed 0 | macro differs (3 lines)
+      NEW 6505-24-24  [a: DROP->BUILD (edits_77)]
+      NEW 6505-32-32  [a: DROP->BUILD (edits_77)]
+straight:6506          rc 0->0 | configs 14->14 new 0 old-changed 0 | macro identical
+straight:6565          rc 0->0 | configs 8->8 new 0 old-changed 0 | macro identical
+tee:1501               rc 0->0 | configs 19->19 new 0 old-changed 0 | macro identical
+tee:1502               rc 0->0 | configs 8->8 new 0 old-changed 0 | macro identical
+tee:1503               rc 1->1 | configs 6->6 new 0 old-changed 0 | macro n/a
+tee:2501               rc 0->0 | configs 54->56 new 2 old-changed 0 | macro differs (1 lines)
+      NEW 2501-06-04-FG  [a: DROP->BUILD (edits_77)]
+      NEW 2501-06-06-FG  [a: DROP->BUILD (edits_77)]
+tee:2503               rc 0->0 | configs 29->29 new 0 old-changed 0 | macro identical
+tee:2504               rc 0->0 | configs 4->5 new 1 old-changed 0 | macro differs (3 lines)
+      NEW 2504-16-16-FG  [b: new row (ready=yes)]
+tee:2505               rc 0->0 | configs 1->2 new 1 old-changed 0 | macro differs (3 lines)
+      NEW 2505-06-06-FG  [b: new row (ready=yes)]
+tee:2601               rc 0->0 | configs 10->10 new 0 old-changed 0 | macro identical
+tee:2602               rc 0->0 | configs 6->6 new 0 old-changed 0 | macro identical
+tee:2605               rc 0->0 | configs 7->7 new 0 old-changed 0 | macro identical
+tee:2606               rc 0->0 | configs 5->5 new 0 old-changed 0 | macro identical
+tee:2609               rc 0->0 | configs 1->1 new 0 old-changed 0 | macro identical
+tee:2611               rc 0->0 | configs 3->3 new 0 old-changed 0 | macro identical
+tee:2650               rc 0->0 | configs 4->5 new 1 old-changed 0 | macro differs (3 lines)
+      NEW 2650-04-04-04-04-FG  [a: DROP->BUILD (edits_77)]
+tee:2701               rc 0->0 | configs 15->18 new 3 old-changed 0 | macro differs (1 lines)
+      NEW 2701-02-02-FG-LN  [b: new row (ready=yes)]
+      NEW 2701-04-04-FG-LN  [a: DROP->BUILD (edits_77)]
+      NEW 2701-05-05-FG-LN  [b: new row (ready=yes)]
+tee:2702               rc 0->0 | configs 11->11 new 0 old-changed 0 | macro identical
+tee:2703               rc 0->0 | configs 12->12 new 0 old-changed 0 | macro identical
+tee:2704               rc 0->0 | configs 12->12 new 0 old-changed 0 | macro identical
+tee:5500               rc 0->0 | configs 16->16 new 0 old-changed 0 | macro identical
+tee:5502               rc 0->0 | configs 17->20 new 3 old-changed 0 | macro differs (1 lines)
+      NEW 5502-12-12-FG  [a: DROP->BUILD (edits_77)]
+      NEW 5502-16-12-FG  [a: DROP->BUILD (edits_77)]
+      NEW 5502-16-16-FG  [a: DROP->BUILD (edits_77)]
+tee:5504               rc 0->0 | configs 9->9 new 0 old-changed 0 | macro identical
+tee:5600               rc 0->0 | configs 8->8 new 0 old-changed 0 | macro identical
+tee:5601               rc 0->0 | configs 3->6 new 3 old-changed 0 | macro differs (1 lines)
+      NEW 5601-08-08-08-FG  [b: new row (ready=yes)]
+      NEW 5601-12-12-12-FG  [b: new row (ready=yes)]
+      NEW 5601-16-16-16-FG  [b: new row (ready=yes)]
+tee:5602               rc 0->0 | configs 2->2 new 0 old-changed 0 | macro identical
+tee:5603               rc 0->0 | configs 6->6 new 0 old-changed 0 | macro identical
+tee:5604               rc 0->0 | configs 4->4 new 0 old-changed 0 | macro identical
+tee:5605               rc 0->0 | configs 4->4 new 0 old-changed 0 | macro identical
+tee:5652               rc 0->0 | configs 6->6 new 0 old-changed 0 | macro identical
+tee:6500               rc 0->0 | configs 24->26 new 2 old-changed 0 | macro differs (1 lines)
+      NEW 6500-08-06-FG  [a: DROP->BUILD (edits_77)]
+      NEW 6500-08-08-FG  [a: DROP->BUILD (edits_77)]
+tee:6501               rc 0->0 | configs 14->14 new 0 old-changed 0 | macro identical
+tee:6502               rc 0->0 | configs 11->12 new 1 old-changed 0 | macro differs (1 lines)
+      NEW 6502-16-16-FG  [a: DROP->BUILD (edits_77)]
+tee:6503               rc 0->0 | configs 1->1 new 0 old-changed 0 | macro identical
+tee:6600               rc 0->0 | configs 10->10 new 0 old-changed 0 | macro identical
+tee:6602               rc 0->0 | configs 9->10 new 1 old-changed 0 | macro differs (3 lines)
+      NEW 6602-32-32-32-FG  [a: DROP->BUILD (edits_77)]
+tee:6801               rc 0->0 | configs 35->39 new 4 old-changed 0 | macro differs (1 lines)
+      NEW 6801-16-10-NWO-FG  [b: new row (ready=yes)]
+      NEW 6801-16-12-NWO-FG  [a: DROP->BUILD (edits_77)]
+      NEW 6801-16-14-NWO-FG  [a: DROP->BUILD (edits_77)]
+      NEW 6801-16-16-NWO-FG  [a: DROP->BUILD (edits_77)]
+tee:6802               rc 0->0 | configs 20->20 new 0 old-changed 0 | macro identical
+tee:6803               rc 0->0 | configs 5->8 new 3 old-changed 0 | macro differs (3 lines)
+      NEW 6803-04-04-04-NWO-FG  [a: DROP->BUILD (edits_77)]
+      NEW 6803-04-04-06-NWO-FG  [b: new row (ready=yes)]
+      NEW 6803-06-06-06-NWO-FG  [a: DROP->BUILD (edits_77)]
+tee:6804               rc 0->0 | configs 8->8 new 0 old-changed 0 | macro identical
+
+===== target rows
+2403-20-16               a: DROP->BUILD (edits_77)          CONFIG (straight:2403)
+2406-20-12               a: DROP->BUILD (edits_77)          CONFIG (straight:2406)
+2406-20-16               a: DROP->BUILD (edits_77)          CONFIG (straight:2406)
+2501-06-04-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:2501)
+2501-06-06-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:2501)
+2502-04-04-FG            a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+2502-06-04-FG            a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+2650-04-04-04-04-FG      a: DROP->BUILD (edits_77)          CONFIG (tee:2650)
+2701-04-04-FG-LN         a: DROP->BUILD (edits_77)          CONFIG (tee:2701)
+2705-06-06               a: DROP->BUILD (edits_77)          CONFIG (straight:2705)
+2705-06-08               a: DROP->BUILD (edits_77)          CONFIG (straight:2705)
+2705-08-08               a: DROP->BUILD (edits_77)          CONFIG (straight:2705)
+5406-08-04               a: DROP->BUILD (edits_77)          CONFIG (straight:5406)
+5406-08-06               a: DROP->BUILD (edits_77)          CONFIG (straight:5406)
+5502-12-12-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:5502)
+5502-16-12-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:5502)
+5502-16-16-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:5502)
+6400-02-02-O             a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+6400-20-12-O             a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+6400-20-16-O             a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+6400-20-20-O             a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+6405-16-06-O             a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+6405-16-08-O             a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+6410-06-08-O             a: DROP->BUILD (edits_77)          CONFIG (straight:6410)
+6410-08-04-O             a: DROP->BUILD (edits_77)          CONFIG (straight:6410)
+6500-08-06-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:6500)
+6500-08-08-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:6500)
+6502-16-16-FG            a: DROP->BUILD (edits_77)          CONFIG (tee:6502)
+6505-24-24               a: DROP->BUILD (edits_77)          CONFIG (straight:6505)
+6505-32-32               a: DROP->BUILD (edits_77)          CONFIG (straight:6505)
+6602-32-32-32-FG         a: DROP->BUILD (edits_77)          CONFIG (tee:6602)
+6801-16-12-NWO-FG        a: DROP->BUILD (edits_77)          CONFIG (tee:6801)
+6801-16-14-NWO-FG        a: DROP->BUILD (edits_77)          CONFIG (tee:6801)
+6801-16-16-NWO-FG        a: DROP->BUILD (edits_77)          CONFIG (tee:6801)
+6803-04-04-04-NWO-FG     a: DROP->BUILD (edits_77)          CONFIG (tee:6803)
+6803-06-06-06-NWO-FG     a: DROP->BUILD (edits_77)          CONFIG (tee:6803)
+6901-08-08 NWO-FG        a: DROP->BUILD (edits_77)          not built: no generator / no summary entry
+5406-08P                 b: alias row DROP->BUILD           not built: no generator / no summary entry
+5406-12P                 b: alias row DROP->BUILD           CONFIG (straight:5406P)
+1504-08-08-FG            b: new row (ready=no)              not built: no generator / no summary entry
+1504-12-12-FG            b: new row (ready=no)              not built: no generator / no summary entry
+1504-16-16-FG            b: new row (ready=no)              not built: no generator / no summary entry
+2404-14-12               b: new row (ready=yes)             CONFIG (straight:2404)
+2404-16-08               b: new row (ready=yes)             CONFIG (straight:2404)
+2502-04-06-FG            b: new row (ready=no)              not built: no generator / no summary entry
+2502-05-04-FG            b: new row (ready=no)              not built: no generator / no summary entry
+2504-16-16-FG            b: new row (ready=yes)             CONFIG (tee:2504)
+2505-04-04-FG            b: new row (ready=yes)             not built: no generator / no summary entry
+2505-06-06-FG            b: new row (ready=yes)             CONFIG (tee:2505)
+2613-04-04-04-FG         b: new row (ready=no)              not built: no generator / no summary entry
+2705-06-04               b: new row (ready=yes)             CONFIG (straight:2705)
+3474-08-08-NWO           b: new row (ready=no)              not built: no generator / no summary entry
+3474-10-10-NWO           b: new row (ready=no)              not built: no generator / no summary entry
+5404-N-06X5.500          b: new row (ready=yes)             not built: straight:5404N: no end data | KeyError('part number has no dash pair')
+5601-08-08-08-FG         b: new row (ready=yes)             CONFIG (tee:5601)
+5601-12-12-12-FG         b: new row (ready=yes)             CONFIG (tee:5601)
+5601-16-16-16-FG         b: new row (ready=yes)             CONFIG (tee:5601)
+6402-12-10-O             b: new row (ready=yes)             CONFIG (straight:6402)
+6801-16-10-NWO-FG        b: new row (ready=yes)             CONFIG (tee:6801)
+6803-04-04-06-NWO-FG     b: new row (ready=yes)             CONFIG (tee:6803)
+6807-16-16-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6807-20-20-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6809-04-04-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6809-06-06-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6809-08-08-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6901-08-06-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6901-08-12-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+6901-10-06-NWO-FG        b: new row (ready=no)              not built: no generator / no summary entry
+2701-02-02-FG-LN         b: new row (ready=yes)             CONFIG (tee:2701)
+2701-05-05-FG-LN         b: new row (ready=yes)             CONFIG (tee:2701)
+
+pre-existing configurations changed: 0

@@ -1,0 +1,98 @@
+# OMi fitting library - git repo for Claude Code cloud sessions (2026-10-18).
+# Goal: everything the Python side needs (tools, review tables, docs, Brennan STEPs, catalog parse, current staging), under ~100 MB.
+# NOT included: SolidWorks parts (the cloud cannot run SolidWorks), old staging copies, _to_delete, _archive.
+
+# --- SolidWorks files and lock files
+*.SLDPRT
+*.SLDDRW
+*.SLDASM
+*.sldprt
+*.slddrw
+~$*
+11_MASTERS/
+11_MASTERS_NEW/
+
+# --- history / scratch
+_to_delete/
+_archive/
+Claude outputs/
+__pycache__/
+*.pyc
+.claude/settings.local.json
+
+# --- drawings: keep the OMi correspondence, drop the big PDFs
+10_DRAWINGS/**/*.pdf
+10_DRAWINGS/**/*.png
+
+# --- tools/_out: ignore all, then re-include the current work
+tools/_out/*
+!tools/_out/brennan_yes_20261018/
+!tools/_out/genfeat_20261018/
+!tools/_out/puckfix_20261009/
+!tools/_out/omi_answers_20261018/
+!tools/_out/a19_omi_diffs_20261018/
+!tools/_out/orfs_airway_20261015/
+!tools/_out/orfs_modeltype_20261016/
+!tools/_out/newtypes_20261014/
+!tools/_out/unblock_20261008/
+!tools/_out/adapters77_20261016/
+!tools/_out/airway_20261014/
+!tools/_out/brennan_catalog_20261001/
+
+# brennan_yes: keep stage, stage_orfs, scripts, wave reports / cell lists; drop test copies and regenerations
+tools/_out/brennan_yes_20261018/base_root/
+tools/_out/brennan_yes_20261018/stage_gen/
+tools/_out/brennan_yes_20261018/base_gen/
+tools/_out/brennan_yes_20261018/regen_*/
+tools/_out/brennan_yes_20261018/*_trial/
+tools/_out/brennan_yes_20261018/*_trial_gen/
+tools/_out/brennan_yes_20261018/marker_test/
+tools/_out/brennan_yes_20261018/**/test/
+tools/_out/brennan_yes_20261018/**/b15held_test/
+tools/_out/brennan_yes_20261018/**/w1brennan_test/
+tools/_out/brennan_yes_20261018/**/work/
+# genfeat: keep the merged toolset + each feature's patch / notes / rows; drop the per-feature tool copies and test runs
+tools/_out/genfeat_20261018/*/tools/
+!tools/_out/genfeat_20261018/merged/tools/
+tools/_out/genfeat_20261018/**/test/
+tools/_out/genfeat_20261018/**/regen/
+tools/_out/genfeat_20261018/**/verify/
+tools/_out/genfeat_20261018/**/ocp/
+tools/_out/genfeat_20261018/**/_work/
+tools/_out/genfeat_20261018/**/_v1_*/
+tools/_out/genfeat_20261018/**/checks_out/
+tools/_out/genfeat_20261018/**/measure_40/
+# puckfix: only the batch-16 base tools
+tools/_out/puckfix_20261009/*
+!tools/_out/puckfix_20261009/tools_new/
+# brennan catalog: only the parse
+tools/_out/brennan_catalog_20261001/*
+!tools/_out/brennan_catalog_20261001/catalog_verified.json
+!tools/_out/brennan_catalog_20261001/catalog_verified.xlsx
+!tools/_out/brennan_catalog_20261001/catalog_index.json
+!tools/_out/brennan_catalog_20261001/impact/
+# size trims (2026-10-18): intermediates already folded into the stage / merged tools
+tools/_out/brennan_catalog_20261001/impact/*
+!tools/_out/brennan_catalog_20261001/impact/*.md
+tools/_out/brennan_yes_20261018/wave3/*/tables/
+tools/_out/brennan_yes_20261018/wave3/**/root*/
+tools/_out/brennan_yes_20261018/wave3/**/gen*/
+tools/_out/brennan_yes_20261018/wave3/**/scratch*/
+tools/_out/genfeat_20261018/*/*
+!tools/_out/genfeat_20261018/*/patch.diff
+!tools/_out/genfeat_20261018/*/notes.txt
+!tools/_out/genfeat_20261018/*/rows_result.csv
+!tools/_out/genfeat_20261018/*/cells_extra.csv
+!tools/_out/genfeat_20261018/merged/tools/
+!tools/_out/genfeat_20261018/merged/MERGE_LOG.txt
+!tools/_out/genfeat_20261018/merged/patch_merged.diff
+tools/_out/orfs_airway_20261015/raw/
+tools/_out/omi_answers_20261018/scratch_root/
+03_SCRIPTS/_legacy/
+07_RAW_EXTRACTS/brennan_catalogs/Clamps Catalog.pdf
+07_RAW_EXTRACTS/brennan_catalogs/Instrumentation Catalog.pdf
+07_RAW_EXTRACTS/brennan_catalogs/DIN Catalog.pdf
+# newtypes: no SolidWorks test outputs
+tools/_out/newtypes_20261014/swtest/
+tools/_out/newtypes_20261014/out/
+tools/_out/newtypes_20261014/history/

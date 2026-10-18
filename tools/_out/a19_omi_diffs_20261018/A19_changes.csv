@@ -1,0 +1,9 @@
+table,config,column,current_value,current_source,omi_value,omi_cell,delta,mapping_id,table_cell,omi_header,data_status,note
+6400,6400-06-08-O,D4@BORE_A,0.3,Air-Way,0.391,Items!X1639,0.091,M158,R20,Side 2 ID,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-06-16-O,D1@DRIVE,1.68,Air-Way,1.69,Items!L1642,0.01,M155,B23,Overall Length,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-08-04-O,HEXB@HEX,0.8125,Air-Way,0.875,Items!R1643,0.0625,M156,P24,Hex Flat,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-10-06-O,HEXB@HEX,0.9375,Air-Way,1.000,Items!R1651,0.0625,M156,P33,Hex Flat,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-10-08-O,HEXB@HEX,0.9375,Air-Way,1.000,Items!R1652,0.0625,M156,P34,Hex Flat,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-10-12-O,D4@BORE_A,0.48,Air-Way,0.609,Items!X1654,0.129,M158,R36,Side 2 ID,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-24-16-O,HEXB@HEX,2,Air-Way,2.125,Items!R1682,0.125,M156,P61,Hex Flat,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)
+6400,6400-24-20-O,HEXB@HEX,2,Air-Way,2.125,Items!R1683,0.125,M156,P62,Hex Flat,ASSUMED,6400 is the hand-made master; A6 = rebuild 6400 with the generator (fold 6400-L in)

@@ -1,0 +1,241 @@
+===== 1501  (TFA-p020-t01, TFA p.20 "1501-FG MP-FPS 90 DEG ELBOW")
+  N1@DRIVE         <- L LGTH    axis crossing to the male NPTF tip                                     | same -FG pn in table: 16/22 (differ: 1501-02-04-FG 1.06 vs 0.9; 1501-04-06-FG 1.09 vs 1.22; 1501-06-08-FG 1.22 vs 1.28 ...) | plain twins: 0/26 (differ: 1501-02-02 0.94 vs 0.72; 1501-02-04 1.06 vs 0.9; 1501-04-02 1.19 vs 1.09 ...) | OMi same part: -
+  M1@DRIVE         <- M LGTH    axis crossing to the NPSM swivel stem tip                              | same -FG pn in table: 2/22 (differ: 1501-02-04-FG 0.79 vs 0.88; 1501-04-04-FG 0.79 vs 0.88; 1501-04-06-FG 0.95 vs 0.99 ...) | plain twins: 2/26 (differ: 1501-02-04 0.79 vs 0.88; 1501-04-04 0.79 vs 0.88; 1501-04-06 0.95 vs 0.99 ...) | OMi same part: -
+  W3@HEX           <- M1 LGTH   axis crossing to the swivel-nut face                                   | same -FG pn in table: 5/22 (differ: 1501-02-04-FG 0.98 vs 1.07; 1501-04-04-FG 0.98 vs 1.07; 1501-06-04-FG 1.07 vs 1.18 ...) | plain twins: 5/26 (differ: 1501-02-04 0.98 vs 1.07; 1501-04-04 0.98 vs 1.07; 1501-04-08 1.33 vs 1.39 ...) | OMi same part: -
+  CHEX@HEX         <- C HEX     swivel nut hex                                                         | same -FG pn in table: 21/22 (differ: 1501-24-24-FG 1.88 vs 2.125) | plain twins: 26/26 | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   forged body flats                                                      | same -FG pn in table: 18/22 (differ: 1501-02-04-FG 0.5 vs 0.562; 1501-04-02-FG 0.5 vs 0.562; 1501-04-04-FG 0.5 vs 0.562 ...) | plain twins: 0/26 (differ: 1501-02-02 0.56 vs 0.438; 1501-02-04 0.69 vs 0.562; 1501-04-02 0.69 vs 0.562 ...) | OMi same part: -
+  D2@BORE          <- A1 DRILL  male NPTF end drill                                                    | same -FG pn in table: 22/22 | plain twins: 26/26 | OMi same part: -
+  D@BORE           <- A2 DRILL  NPSM swivel stem bore                                                  | same -FG pn in table: 6/10 (differ: 1501-04-02-FG 0.23 vs 0.13; 1501-08-12-FG 0.63 vs 0.61; 1501-12-08-FG 0.42 vs 0.46 ...) | plain twins: 11/13 (differ: 1501-08-12 0.63 vs 0.61; 1501-20-20 1.01 vs 1.09) | OMi same part: -
+===== 1503  (TFA-p021-t02, TFA p.21 "1503-FG MP-FPS 45 DEG ELBOW")
+  N@DRIVE          <- L LGTH    axis crossing to the male NPTF tip                                     | same -FG pn in table: 0/14 (differ: 1503-02-02-FG 0.63 vs 0.52; 1503-04-04-FG 0.91 vs 0.86; 1503-06-06-FG 1.12 vs 0.95 ...) | plain twins: 0/21 (differ: 1503-02-02 0.63 vs 0.52; 1503-02-04 0.56 vs 0.67; 1503-04-02 0.94 vs 0.86 ...) | OMi same part: -
+  M@DRIVE          <- M1 LGTH   axis crossing to the NPSM swivel stem tip (45 deg leg)                 | same -FG pn in table: 1/14 (differ: 1503-02-02-FG 0.6 vs 0.62; 1503-06-06-FG 0.95 vs 0.81; 1503-08-06-FG 0.88 vs 0.81 ...) | plain twins: 3/21 (differ: 1503-02-02 0.6 vs 0.62; 1503-02-04 0.65 vs 0.73; 1503-04-04 0.69 vs 0.73 ...) | OMi same part: -
+  W2@HEX           <- M LGTH    axis crossing to the swivel-nut face (45 deg leg)                      | same -FG pn in table: 4/14 (differ: 1503-06-06-FG 1.2 vs 1.02; 1503-08-06-FG 1.13 vs 1.02; 1503-08-08-FG 1.27 vs 1.16 ...) | plain twins: 5/21 (differ: 1503-02-04 0.84 vs 0.92; 1503-04-02 0.79 vs 0.77; 1503-04-04 0.88 vs 0.92 ...) | OMi same part: -
+  CHEX@HEX         <- C HEX     swivel nut hex                                                         | same -FG pn in table: 14/14 | plain twins: 20/21 (differ: 1503-04-02 0.69 vs 0.562) | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   forged body flats                                                      | same -FG pn in table: 14/14 | plain twins: 0/21 (differ: 1503-02-02 0.56 vs 0.438; 1503-02-04 0.69 vs 0.562; 1503-04-02 0.69 vs 0.562 ...) | OMi same part: -
+  D2@BORE          <- A1 DRILL  male NPTF end drill                                                    | same -FG pn in table: 14/14 | plain twins: 21/21 | OMi same part: -
+  D@BORE           <- A2 DRILL  NPSM swivel stem bore                                                  | same -FG pn in table: 8/14 (differ: 1503-02-02-FG 0.13 vs 0.15; 1503-12-16-FG 0.84 vs 0.8; 1503-16-16-FG 0.84 vs 0.8 ...) | plain twins: 15/21 (differ: 1503-02-02 0.13 vs 0.15; 1503-12-16 0.84 vs 0.8; 1503-16-16 0.84 vs 0.8 ...) | OMi same part: -
+===== 1504  (TFA-p022-t01, TFA p.22 "1504-FG FP-FPS 45 DEG ELBOW")
+  N2@DRIVE         <- L LGTH    axis crossing to the female NPTF port face                             | same -FG pn in table: 1/2 (differ: 1504-04-04-FG 0.91 vs 0.69) | plain twins: 0/10 (differ: 1504-02-02 0.67 vs 0.47; 1504-04-04 0.91 vs 0.69; 1504-06-04 1.06 vs 0.75 ...) | OMi same part: -
+  M@DRIVE          <- M1 LGTH   axis crossing to the NPSM swivel stem tip (45 deg leg)                 | same -FG pn in table: 1/2 (differ: 1504-04-04-FG 0.72 vs 0.76) | plain twins: 2/10 (differ: 1504-02-02 0.65 vs 0.55; 1504-04-04 0.66 vs 0.76; 1504-06-04 0.74 vs 0.77 ...) | OMi same part: -
+  W2@HEX           <- M LGTH    axis crossing to the swivel-nut face (45 deg leg)                      | same -FG pn in table: 1/2 (differ: 1504-04-04-FG 0.91 vs 0.95) | plain twins: 0/10 (differ: 1504-02-02 0.79 vs 0.7; 1504-04-04 0.85 vs 0.95; 1504-06-04 0.93 vs 0.96 ...) | OMi same part: -
+  CHEX@HEX         <- C HEX     swivel nut hex                                                         | same -FG pn in table: 2/2 | plain twins: 10/10 | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   forged body flats                                                      | same -FG pn in table: 1/2 (differ: 1504-04-04-FG 0.69 vs 0.75) | plain twins: 3/10 (differ: 1504-04-04 0.69 vs 0.75; 1504-08-08 1.0 vs 1.062; 1504-08-06 1.0 vs 1.062 ...) | OMi same part: -
+  D@BORE           <- A2 DRILL  NPSM swivel stem bore                                                  | same -FG pn in table: 2/2 | plain twins: 9/10 (differ: 1504-16-16 0.84 vs 0.8) | OMi same part: -
+===== 1601  (TFA-p047-t02, TFA p.47 "1601-FG MP-FPS-FPS TEE")
+  N1@DRIVE         <- L LGTH    run axis to the male NPTF (A1) branch tip                              | same -FG pn in table: 0/0 | plain twins: 0/9 (differ: 1601-02-02-02 0.94 vs 0.72; 1601-04-04-04 1.19 vs 1.09; 1601-06-04-04 1.5 vs 1.22 ...) | OMi same part: -
+  M1_2@DRIVE       <- M1 LGTH   branch axis to the A2 swivel stem tip (printed once, A2 = A3)          | same -FG pn in table: 0/0 | plain twins: 1/9 (differ: 1601-04-04-04 0.79 vs 0.88; 1601-06-04-04 0.88 vs 0.97; 1601-06-06-06 0.95 vs 0.99 ...) | OMi same part: -
+  M1_3@DRIVE       <- M1 LGTH   branch axis to the A3 swivel stem tip                                  | same -FG pn in table: 0/0 | plain twins: 1/9 (differ: 1601-04-04-04 0.79 vs 0.88; 1601-06-04-04 0.88 vs 0.97; 1601-06-06-06 0.95 vs 0.99 ...) | OMi same part: -
+  W3_2@HEX         <- M LGTH    branch axis to the A2 swivel-nut face                                  | same -FG pn in table: 0/0 | plain twins: 3/9 (differ: 1601-04-04-04 0.98 vs 1.07; 1601-06-04-04 1.07 vs 1.16; 1601-08-08-08 1.33 vs 1.39 ...) | OMi same part: -
+  W3_3@HEX         <- M LGTH    branch axis to the A3 swivel-nut face (printed once, A2 = A3)          | same -FG pn in table: 0/0 | plain twins: 3/9 (differ: 1601-04-04-04 0.98 vs 1.07; 1601-06-04-04 1.07 vs 1.16; 1601-08-08-08 1.33 vs 1.39 ...) | OMi same part: -
+  C2HEX@HEX        <- C HEX     A2 swivel nut hex (printed once, A2 = A3)                              | same -FG pn in table: 0/0 | plain twins: 6/9 (differ: 1601-06-04-04 0.69 vs 0.875; 1601-08-06-06 0.88 vs 1.0; 1601-12-08-08 1.0 vs 1.25) | OMi same part: -
+  C3HEX@HEX        <- C HEX     A3 swivel nut hex                                                      | same -FG pn in table: 0/0 | plain twins: 6/9 (differ: 1601-06-04-04 0.69 vs 0.875; 1601-08-06-06 0.88 vs 1.0; 1601-12-08-08 1.0 vs 1.25) | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 0/9 (differ: 1601-02-02-02 0.56 vs 0.438; 1601-04-04-04 0.69 vs 0.562; 1601-06-04-04 0.88 vs 0.75 ...) | OMi same part: -
+  D2@BORE          <- A1 DRILL  male NPTF end drill                                                    | same -FG pn in table: 0/0 | plain twins: 9/9 | OMi same part: -
+  D_2@BORE         <- A2 DRILL  A2 NPSM stem bore                                                      | same -FG pn in table: 0/0 | plain twins: 8/9 (differ: 1601-16-16-16 0.84 vs 0.8) | OMi same part: -
+  D3@BORE          <- A3 DRILL  A3 NPSM stem bore                                                      | same -FG pn in table: 0/0 | plain twins: 8/9 (differ: 1601-16-16-16 0.84 vs 0.8) | OMi same part: -
+===== 1602  (TFA-p048-t01, TFA p.48 "1602-FG FP-FPS-FPS TEE")
+  N3@DRIVE         <- L LGTH    run axis to the female NPTF (A1) branch port face                      | same -FG pn in table: 4/4 | plain twins: 0/3 (differ: 1602-06-06-06 1.06 vs 0.94; 1602-12-08-08 1.44 vs 1.36; 1602-12-12-12 1.44 vs 1.36) | OMi same part: -
+  M1_2@DRIVE       <- M1 LGTH   branch axis to the A2 swivel stem tip (printed once, A2 = A3)          | same -FG pn in table: 4/4 | plain twins: 0/3 (differ: 1602-06-06-06 0.94 vs 0.99; 1602-12-08-08 1.13 vs 1.47; 1602-12-12-12 1.26 vs 1.47) | OMi same part: -
+  M1_3@DRIVE       <- M1 LGTH   branch axis to the A3 swivel stem tip                                  | same -FG pn in table: 4/4 | plain twins: 0/3 (differ: 1602-06-06-06 0.94 vs 0.99; 1602-12-08-08 1.13 vs 1.47; 1602-12-12-12 1.26 vs 1.47) | OMi same part: -
+  W3_2@HEX         <- M LGTH    branch axis to the A2 swivel-nut face                                  | same -FG pn in table: 4/4 | plain twins: 1/3 (differ: 1602-12-08-08 1.45 vs 1.75; 1602-12-12-12 1.6 vs 1.82) | OMi same part: -
+  W3_3@HEX         <- M LGTH    branch axis to the A3 swivel-nut face (printed once, A2 = A3)          | same -FG pn in table: 4/4 | plain twins: 1/3 (differ: 1602-12-08-08 1.45 vs 1.75; 1602-12-12-12 1.6 vs 1.82) | OMi same part: -
+  C2HEX@HEX        <- C HEX     A2 swivel nut hex (printed once, A2 = A3)                              | same -FG pn in table: 4/4 | plain twins: 2/3 (differ: 1602-12-08-08 1.0 vs 1.25) | OMi same part: -
+  C3HEX@HEX        <- C HEX     A3 swivel nut hex                                                      | same -FG pn in table: 4/4 | plain twins: 2/3 (differ: 1602-12-08-08 1.0 vs 1.25) | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   forged body flats                                                      | same -FG pn in table: 4/4 | plain twins: 1/3 (differ: 1602-12-08-08 1.25 vs 1.312; 1602-12-12-12 1.25 vs 1.312) | OMi same part: -
+  D2@BORE          <- A2 DRILL  A2 NPSM stem bore                                                      | same -FG pn in table: 3/4 (differ: 1602-16-16-16-FG 0.78 vs 0.8) | plain twins: 3/3 | OMi same part: -
+  D3@BORE          <- A3 DRILL  A3 NPSM stem bore                                                      | same -FG pn in table: 3/4 (differ: 1602-16-16-16-FG 0.78 vs 0.8) | plain twins: 3/3 | OMi same part: -
+===== 1603  (TFA-p048-t02, TFA p.48 "1603-FG FP-FPS-FPS TEE")
+  M1@DRIVE         <- M2 LGTH   run/branch axis to the A1 stem tip - not printed for A1; A1 = A2 = A3  | same -FG pn in table: 0/0 | plain twins: 1/7 (differ: 1603-04-04-04 0.79 vs 0.88; 1603-06-06-06 0.95 vs 0.99; 1603-08-08-08 1.0 vs 1.11 ...) | OMi same part: -
+  M2_2@DRIVE       <- M1 LGTH   run axis to the A2 swivel stem tip                                     | same -FG pn in table: 0/0 | plain twins: 3/7 (differ: 1603-04-04-04 0.86 vs 0.88; 1603-06-06-06 0.86 vs 0.99; 1603-12-12-12 1.39 vs 1.3 ...) | OMi same part: -
+  M2_3@DRIVE       <- M2 LGTH   run axis to the A3 swivel stem tip                                     | same -FG pn in table: 0/0 | plain twins: 3/7 (differ: 1603-04-04-04 0.86 vs 0.88; 1603-06-06-06 0.86 vs 0.99; 1603-12-12-12 1.39 vs 1.3 ...) | OMi same part: -
+  W3@HEX           <- L LGTH    axis to the A1 (branch) swivel-nut face                                | same -FG pn in table: 0/0 | plain twins: 2/7 (differ: 1603-04-04-04 0.98 vs 1.07; 1603-08-08-08 1.33 vs 1.39; 1603-12-12-12 1.6 vs 1.65 ...) | OMi same part: -
+  W5_2@HEX         <- M LGTH    axis to the A2 swivel-nut face - printed for A3 only; A2 = A3 (symmetr | same -FG pn in table: 0/0 | plain twins: 2/7 (differ: 1603-04-04-04 1.05 vs 1.07; 1603-06-06-06 1.11 vs 1.2; 1603-08-08-08 1.44 vs 1.39 ...) | OMi same part: -
+  W5_3@HEX         <- M LGTH    axis to the A3 swivel-nut face                                         | same -FG pn in table: 0/0 | plain twins: 2/7 (differ: 1603-04-04-04 1.05 vs 1.07; 1603-06-06-06 1.11 vs 1.2; 1603-08-08-08 1.44 vs 1.39 ...) | OMi same part: -
+  C_1HEX@HEX       <- C HEX     A1 swivel nut hex                                                      | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: -
+  C2HEX@HEX        <- C1 HEX    A2 swivel nut hex (C1 HEX printed for A3; A2 = A3)                     | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: -
+  C3HEX@HEX        <- C1 HEX    A3 swivel nut hex                                                      | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: -
+  C1HEX@HEX        <- Y Flats   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 0/7 (differ: 1603-02-02-02 0.56 vs 0.438; 1603-04-04-04 0.69 vs 0.562; 1603-06-06-06 0.88 vs 0.75 ...) | OMi same part: -
+  D1@BORE          <- A1 DRILL  NPSM stem bore (A1)                                                    | same -FG pn in table: 0/0 | plain twins: 4/6 (differ: 1603-02-02-02 0.13 vs 0.11; 1603-16-16-16 0.84 vs 0.78) | OMi same part: -
+  D2@BORE          <- A2 DRILL  NPSM stem bore (A2 / A3)                                               | same -FG pn in table: 0/0 | plain twins: 4/6 (differ: 1603-02-02-02 0.13 vs 0.11; 1603-16-16-16 0.84 vs 0.78) | OMi same part: -
+===== 2500  (TFA-p022-t02, TFA p.22 "2500-FG MJ-MJ 90 DEG ELBOW")
+  M1@DRIVE         <- M1 LGTH   B1 JIC tip to the B2 axis                                              | same -FG pn in table: 11/11 | plain twins: 13/15 (differ: 2500-06-04 1.08 vs 1.06; 2500-06-06 1.08 vs 1.06) | OMi same part: -
+  M2@DRIVE         <- M2 LGTH   B2 JIC tip to the B1 axis                                              | same -FG pn in table: 11/11 | plain twins: 11/15 (differ: 2500-06-04 0.95 vs 1.05; 2500-10-08 1.31 vs 1.33; 2500-12-08 1.4 vs 1.42 ...) | OMi same part: -
+  Y@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 11/11 | plain twins: 1/15 (differ: 2500-04-04 0.5 vs 0.438; 2500-06-04 0.63 vs 0.562; 2500-06-06 0.63 vs 0.562 ...) | OMi same part: -
+  D1@BORE          <- B1 DRILL  B1 JIC end drill                                                       | same -FG pn in table: 11/11 | plain twins: 15/15 | OMi same part: -
+  D2@BORE          <- B2 DRILL  B2 JIC end drill                                                       | same -FG pn in table: 11/11 | plain twins: 15/15 | OMi same part: -
+===== 2501  (TFA-p023-t01, TFA p.23 "2501-FG MJ-MP 90 DEG ELBOW")
+  M@DRIVE          <- M LGTH    axis crossing to the JIC tip                                           | same -FG pn in table: 43/44 (differ: 2501-20-24-FG 2.3 vs 2.2) | plain twins: 29/44 (differ: 2501-02-02 0.81 vs 0.77; 2501-02-04 0.87 vs 0.93; 2501-03-02 0.86 vs 0.83 ...) | OMi same part: 1/1
+  N@DRIVE          <- L LGTH    axis crossing to the male NPTF tip                                     | same -FG pn in table: 44/44 | plain twins: 29/44 (differ: 2501-02-02 0.78 vs 0.72; 2501-03-02 0.78 vs 0.72; 2501-05-02 0.81 vs 0.78 ...) | OMi same part: 1/1
+  Y@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 44/44 | plain twins: 1/44 (differ: 2501-02-02 0.5 vs 0.438; 2501-02-04 0.63 vs 0.562; 2501-03-02 0.5 vs 0.438 ...) | OMi same part: 1/1
+  D@BORE           <- B1 DRILL  JIC end drill                                                          | same -FG pn in table: 44/44 | plain twins: 44/44 | OMi same part: 1/1
+  D1@DRILL         <- A2 DRILL  male NPTF end drill                                                    | same -FG pn in table: 44/44 | plain twins: 44/44 | OMi same part: 1/1
+===== 2501LL  (TFA-p024-t02, TFA p.24 "2501-LL-FG MJ-MP 90 DEG ELBOW X-LONG")
+  M@DRIVE          <- M LGTH    JIC leg: crossing to the JIC tip                                       | same -FG pn in table: 0/0 | plain twins: 11/14 (differ: 2501-LL-04-04 0.95 vs 1.05; 2501-LL-06-06 1.16 vs 1.14; 2501-LL-08-08 1.31 vs 1.33) | OMi same part: -
+  N4@DRIVE         <- L LGTH    pipe leg: crossing to the male NPTF tip                                | same -FG pn in table: 0/0 | plain twins: 11/14 (differ: 2501-LL-05-02 1.59 vs 1.56; 2501-LL-12-08 2.98 vs 3.28; 2501-LL-16-12 3.41 vs 3.86) | OMi same part: -
+  Y@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 1/14 (differ: 2501-LL-04-02 0.5 vs 0.438; 2501-LL-04-04 0.63 vs 0.562; 2501-LL-06-04 0.63 vs 0.562 ...) | OMi same part: -
+  D@BORE           <- B1 DRILL  JIC-leg bore                                                           | same -FG pn in table: 0/0 | plain twins: 14/14 | OMi same part: -
+  D1@BORE          <- A2 DRILL  pipe drill                                                             | same -FG pn in table: 0/0 | plain twins: 14/14 | OMi same part: -
+===== 2502  (TFA-p025-t02, TFA p.25 "2502-FG MJ-FP 90 DEG ELBOW")
+  M1@DRIVE         <- M LGTH    axis crossing to the JIC tip                                           | same -FG pn in table: 10/10 | plain twins: 10/19 (differ: 2502-04-04 1.14 vs 1.22; 2502-04-08 1.33 vs 1.4; 2502-06-02 1.08 vs 1.23 ...) | OMi same part: 4/4
+  N1@DRIVE         <- L LGTH    axis crossing to the female NPTF port face                             | same -FG pn in table: 10/10 | plain twins: 17/19 (differ: 2502-08-04 0.91 vs 1.01; 2502-12-08 1.23 vs 1.35) | OMi same part: 4/4
+  Y1@DRIVE         <- Y FLATS   forged body flats                                                      | same -FG pn in table: 10/10 | plain twins: 6/19 (differ: 2502-04-02 0.63 vs 0.562; 2502-04-08 1.13 vs 1.062; 2502-06-02 0.63 vs 0.562 ...) | OMi same part: 6/6
+  D@BORE           <- B1 DRILL  JIC end drill                                                          | same -FG pn in table: 10/10 | plain twins: 19/19 | OMi same part: 6/6
+===== 2505  (TFA-p027-t01, TFA p.27 "2505-FG MJ-FP 45 DEG ELBOW")
+  M2@DRIVE         <- M LGTH    JIC leg                                                                | same -FG pn in table: 3/3 | plain twins: 1/5 (differ: 2505-06-06 1.06 vs 0.88; 2505-08-08 1.28 vs 1.04; 2505-12-12 1.54 vs 1.42 ...) | OMi same part: -
+  N6@DRIVE         <- N LGTH    female pipe leg along the 45 deg axis                                  | same -FG pn in table: 3/3 | plain twins: 2/5 (differ: 2505-06-06 0.72 vs 0.75; 2505-08-08 0.91 vs 0.94; 2505-12-12 0.97 vs 1.0) | OMi same part: -
+  Y1@HEX           <- Y FLATS   forged body flats                                                      | same -FG pn in table: 3/3 | plain twins: 3/5 (differ: 2505-08-08 1.13 vs 1.062; 2505-12-12 1.38 vs 1.312) | OMi same part: -
+  D@BORE           <- B1 DRILL  JIC end drill                                                          | same -FG pn in table: 3/3 | plain twins: 5/5 | OMi same part: -
+===== 2602  (TFA-p049-t02, TFA p.49 "2602-FG MJ-MJ-FP TEE")
+  M1_1@DRIVE       <- M1 LGTH   B1 JIC run leg                                                         | same -FG pn in table: 8/8 | plain twins: 7/11 (differ: 2602-04-04-04 1.14 vs 1.22; 2602-08-08-04 1.36 vs 1.42; 2602-08-08-08 1.55 vs 1.52 ...) | OMi same part: 1/1
+  M1_2@DRIVE       <- M2 LGTH   B2 JIC run leg                                                         | same -FG pn in table: 8/8 | plain twins: 7/11 (differ: 2602-04-04-04 1.14 vs 1.22; 2602-08-08-04 1.36 vs 1.42; 2602-08-08-08 1.55 vs 1.52 ...) | OMi same part: 1/1
+  N1@DRIVE         <- N LGTH    run axis to the female NPTF branch port face                           | same -FG pn in table: 8/8 | plain twins: 9/11 (differ: 2602-08-08-04 0.91 vs 1.02; 2602-12-12-08 1.23 vs 1.35) | OMi same part: 1/1
+  Y1@DRIVE         <- Y FLATS   forged body flats                                                      | same -FG pn in table: 8/8 | plain twins: 4/11 (differ: 2602-05-05-02 0.63 vs 0.562; 2602-08-08-04 0.81 vs 0.875; 2602-08-08-08 1.13 vs 1.062 ...) | OMi same part: 1/1
+  D1@BORE          <- B1 DRILL  B1 JIC drill                                                           | same -FG pn in table: 8/8 | plain twins: 11/11 | OMi same part: 1/1
+  D2@BORE          <- B2 DRILL  B2 JIC drill                                                           | same -FG pn in table: 8/8 | plain twins: 11/11 | OMi same part: 1/1
+===== 2606  (TFA-p051-t01, TFA p.51 "2606-FG MJ-FP-MJ TEE")
+  M1_1@DRIVE       <- M LGTH    B1 JIC run leg                                                         | same -FG pn in table: 5/5 | plain twins: 5/7 (differ: 2606-04-04-04 1.02 vs 1.22; 2606-08-08-08 1.55 vs 1.52) | OMi same part: -
+  N1@DRIVE         <- L LGTH    female NPTF branch                                                     | same -FG pn in table: 5/5 | plain twins: 7/7 | OMi same part: -
+  M1_3@DRIVE       <- N LGTH    B3 JIC run leg                                                         | same -FG pn in table: 5/5 | plain twins: 5/7 (differ: 2606-04-04-04 1.02 vs 1.22; 2606-08-08-08 1.55 vs 1.52) | OMi same part: -
+  Y1@HEX           <- Y FLATS   forged body flats                                                      | same -FG pn in table: 5/5 | plain twins: 5/7 (differ: 2606-08-08-08 1.13 vs 1.062; 2606-20-20-20 2.0 vs 1.875) | OMi same part: -
+  D1@BORE          <- B1 DRILL  B1 drill                                                               | same -FG pn in table: 5/5 | plain twins: 7/7 | OMi same part: -
+  D3@BORE          <- B3 DRILL  B3 drill                                                               | same -FG pn in table: 5/5 | plain twins: 7/7 | OMi same part: -
+===== 2609  (TFA-p052-t01, TFA p.52 "2609-FG MJ-FP-FP TEE")
+  M1@DRIVE         <- M LGTH    JIC leg                                                                | same -FG pn in table: 1/1 | plain twins: 1/1 | OMi same part: -
+  N1_2@DRIVE       <- L1 LGTH   A2 female port                                                         | same -FG pn in table: 1/1 | plain twins: 1/1 | OMi same part: -
+  N1_3@DRIVE       <- L LGTH    A3 female port                                                         | same -FG pn in table: 1/1 | plain twins: 1/1 | OMi same part: -
+  Y1@HEX           <- Y FLATS   forged body flats                                                      | same -FG pn in table: 1/1 | plain twins: 0/1 (differ: 2609-12-12-12 1.38 vs 1.312) | OMi same part: -
+  D@BORE           <- B1 DRILL  JIC drill                                                              | same -FG pn in table: 1/1 | plain twins: 1/1 | OMi same part: -
+===== 2611  (TFA-p052-t03, TFA p.52 "2611-FG MJ-MP-FP TEE")
+  M1@DRIVE         <- M LGTH    axis to the B1 JIC tip                                                 | same -FG pn in table: 2/2 | plain twins: 1/5 (differ: 2611-04-04-04 1.01 vs 1.22; 2611-06-06-06 1.19 vs 1.31; 2611-08-06-06 1.28 vs 1.42 ...) | OMi same part: -
+  N5@DRIVE         <- L LGTH    axis to the A2 male NPTF tip                                           | same -FG pn in table: 2/2 | plain twins: 3/5 (differ: 2611-06-06-06 1.25 vs 1.22; 2611-08-06-06 1.25 vs 1.22) | OMi same part: -
+  N1@DRIVE         <- L1 LGTH   axis to the A3 female NPTF port face                                   | same -FG pn in table: 2/2 | plain twins: 5/5 | OMi same part: -
+  Y1@HEX           <- Y FLATS   forged body flats                                                      | same -FG pn in table: 2/2 | plain twins: 4/5 (differ: 2611-12-12-12 1.38 vs 1.312) | OMi same part: -
+  D@BORE           <- B1 DRILL  JIC drill                                                              | same -FG pn in table: 2/2 | plain twins: 5/5 | OMi same part: -
+  D1@BORE          <- A2 DRILL  male NPTF drill                                                        | same -FG pn in table: 2/2 | plain twins: 5/5 | OMi same part: -
+===== 5501  (TFA-p031-t02, TFA p.31 "5501-FG MP-MP 45 DEG ELBOW")
+  N4@DRIVE         <- N LGTH    A1 male NPTF leg (crossing to tip)                                     | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: 7/7
+  N6@DRIVE         <- N1 LGTH   A2 male NPTF leg (crossing to tip, 45 deg)                             | same -FG pn in table: 0/0 | plain twins: 1/7 (differ: 5501-02-02 0.66 vs 0.64; 5501-04-04 0.91 vs 0.86; 5501-06-06 1.0 vs 0.95 ...) | OMi same part: 7/7
+  Y@HEX            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 0/7 (differ: 5501-02-02 0.5 vs 0.438; 5501-04-04 0.63 vs 0.562; 5501-06-06 0.81 vs 0.75 ...) | OMi same part: 7/7
+  D1@BORE          <- A1 DRILL  A1 drill                                                               | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: 7/7
+  D2@BORE          <- A2 DRILL  A2 drill                                                               | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: 7/7
+===== 5502  (TFA-p031-t03, TFA p.31 "5502-FG MP-FP 90 DEG ELBOW STREET ELBOW")
+  N@DRIVE          <- N LGTH    axis crossing to the male NPTF tip                                     | same -FG pn in table: 14/17 (differ: 5502-02-02-FG 0.89 vs 0.78; 5502-20-20-FG 2.75 vs 2.38; 5502-24-24-FG 3.05 vs 2.64) | plain twins: 16/23 (differ: 5502-02-02 0.84 vs 0.78; 5502-04-06 1.16 vs 1.22; 5502-06-08 1.38 vs 1.28 ...) | OMi same part: 4/4
+  N1@DRIVE         <- N1 LGTH   axis crossing to the female NPTF port face                             | same -FG pn in table: 16/17 (differ: 5502-16-12-FG 1.39 vs 1.36) | plain twins: 18/23 (differ: 5502-06-04 0.91 vs 1.01; 5502-08-04 0.97 vs 1.01; 5502-08-06 1.05 vs 1.02 ...) | OMi same part: 4/4
+  W@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 16/17 (differ: 5502-16-12-FG 1.63 vs 1.312) | plain twins: 6/23 (differ: 5502-02-02 0.63 vs 0.562; 5502-04-02 0.63 vs 0.562; 5502-06-04 0.81 vs 0.875 ...) | OMi same part: 4/4
+  D@BORE           <- A1 DRILL  male end drill                                                         | same -FG pn in table: 17/17 | plain twins: 23/23 | OMi same part: 4/4
+===== 5503  (TFA-p032-t01, TFA p.32 "5503-FG MP-FP 45 DEG ELBOW STREET ELBOW")
+  N4@DRIVE         <- N LGTH    A1 male pipe tip to the 45 deg crossing                                | same -FG pn in table: 5/5 | plain twins: 9/10 (differ: 5503-06-06 1.1 vs 1.06) | OMi same part: -
+  N3@DRIVE         <- N1 LGTH   A2 female port face along the 45 deg axis                              | same -FG pn in table: 5/5 | plain twins: 10/10 | OMi same part: -
+  W@HEX            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 5/5 | plain twins: 4/10 (differ: 5503-02-02 0.63 vs 0.562; 5503-08-08 1.13 vs 1.062; 5503-12-12 1.38 vs 1.312 ...) | OMi same part: -
+  D@BORE           <- A1 DRILL  male end drill                                                         | same -FG pn in table: 1/5 (differ: 5503-02-02-FG 0.83 vs 0.188; 5503-04-04-FG 1.19 vs 0.281; 5503-08-08-FG 1.54 vs 0.531 ...) | plain twins: 10/10 | OMi same part: -
+===== 5504  (TFA-p032-t02, TFA p.32 "5504-FG FP-FP 90 DEG ELBOW")
+  N1_1@DRIVE       <- N LGTH    A1 female port face                                                    | same -FG pn in table: 6/6 | plain twins: 16/16 | OMi same part: -
+  N1_2@DRIVE       <- N1 LGTH   A2 female port face                                                    | same -FG pn in table: 5/6 (differ: 5504-04-02-FG 0.72 vs 0.88) | plain twins: 9/16 (differ: 5504-04-02 0.72 vs 0.88; 5504-06-04 0.94 vs 1.01; 5504-08-04 1.06 vs 1.1 ...) | OMi same part: -
+  W@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 6/6 | plain twins: 6/16 (differ: 5504-02-02 0.63 vs 0.562; 5504-08-04 1.13 vs 1.062; 5504-08-06 1.13 vs 1.062 ...) | OMi same part: -
+===== 5505  (TFA-p033-t01, TFA p.33 "5505-FG FP-FP 45 DEG ELBOW")
+  N2_1@DRIVE       <- N LGTH    A1 female port face                                                    | same -FG pn in table: 1/1 | plain twins: 2/2 | OMi same part: -
+  N2_2@DRIVE       <- N1 LGTH   A2 female port face (45 deg)                                           | same -FG pn in table: 1/1 | plain twins: 2/2 | OMi same part: -
+  W@HEX            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 1/1 | plain twins: 1/2 (differ: 5505-12-12 1.38 vs 1.312) | OMi same part: -
+===== 5604  (TFA-p056-t02, TFA p.56 "5604-FG FP-FP-MP BRANCH TEE")
+  N1_1@DRIVE       <- N1 LGTH   A1 female run port face                                                | same -FG pn in table: 4/4 | plain twins: 8/8 | OMi same part: -
+  N1_2@DRIVE       <- N2 LGTH   A2 female run port face                                                | same -FG pn in table: 4/4 | plain twins: 8/8 | OMi same part: -
+  N@DRIVE          <- N LGTH    A3 male branch tip                                                     | same -FG pn in table: 4/4 | plain twins: 7/8 (differ: 5604-02-02-02 0.84 vs 0.78) | OMi same part: -
+  W@HEX            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 3/4 (differ: 5604-06-06-06-FG 0.81 vs 0.875) | plain twins: 3/8 (differ: 5604-02-02-02 0.63 vs 0.562; 5604-08-08-08 1.13 vs 1.062; 5604-12-12-08 1.38 vs 1.312 ...) | OMi same part: -
+  D@BORE           <- A3 DRILL  male branch drill                                                      | same -FG pn in table: 3/4 (differ: 5604-24-24-24-FG 1.68 vs 1.5) | plain twins: 8/8 | OMi same part: -
+===== 6606  (TFA-p058-t04, TFA p.58 "6606-FG FJS-FJS-FJS TEE")
+  M5_1@DRIVE       <- M6 LGTH   leg 1: axis to the swivel-nut face (printed once; all legs alike)      | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  M5_2@DRIVE       <- M6 LGTH   leg 2: axis to the swivel-nut face (printed once; all legs alike)      | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  M5_3@DRIVE       <- M6 LGTH   leg 3: axis to the swivel-nut face (printed once; all legs alike)      | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  M10_1@DRIVE      <- M LGTH    leg 1: axis to the swivel nose (printed once; all legs alike)          | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  M10_2@DRIVE      <- M LGTH    leg 2: axis to the swivel nose (printed once; all legs alike)          | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  M10_3@DRIVE      <- M LGTH    leg 3: axis to the swivel nose (printed once; all legs alike)          | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  C3_1HEX@HEX      <- C HEX     leg 1 swivel nut hex                                                   | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  C3_2HEX@HEX      <- C HEX     leg 2 swivel nut hex                                                   | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  C3_3HEX@HEX      <- C HEX     leg 3 swivel nut hex                                                   | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+  Y@HEX            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 0/2 (differ: 6606-06-06-06 0.63 vs 0.562; 6606-12-12-12 1.13 vs 1.062) | OMi same part: -
+  D1@BORE          <- A1 DRILL  bore (A1 = A2 = A3 on every row)                                       | same -FG pn in table: 0/0 | plain twins: 2/2 | OMi same part: -
+===== 6815  (TFA-p045-t01, TFA p.45 "6815-NWO-FG MAORB-FORB 90 DEG ELBOW")
+  LEG_ORB@DRIVE    <- M8 LGTH   B1 adjustable male ORB tip to the B2 axis (6801 analog LEG_ORB@DRIVE = | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  LEG_FORB@DRIVE   <- M6 LGTH   B1 axis to the B2 female ORB port face                                 | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  HEXB@HEX         <- C HEX     lock-nut hex (6801 analog HEXB@HEX)                                    | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  Y@REF            <- Y FLATS   forged body flats (6801 analog Y@REF)                                  | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  D2@BORE          <- B1 DRILL  bore of the adjustable male ORB end (6801 analog D2@BORE)              | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+===== 6832  (TFA-p061-t01, TFA p.61 "6832-NWO-FG FORB-FORB-MAORB TEE")
+  LEG1@DRIVE       <- M1 LGTH   B1 female ORB port face to the branch axis (6803 analog LEG1@DRIVE)    | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  LEG2@DRIVE       <- N2 LGTH   B2 female ORB port face to the branch axis (6803 analog LEG2@DRIVE)    | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  LEG3@DRIVE       <- M7 LGTH   run axis to the B3 adjustable male ORB tip (6803 analog LEG3@DRIVE)    | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  HEXB@HEX         <- C HEX     lock-nut hex                                                           | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  Y@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  D3@BORE          <- B3 DRILL  bore of the B3 male ORB end                                            | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+===== 6835  (TFA-p061-t02, TFA p.61 "6835-NWO-FG MAORB-FORB-FORB TEE")
+  LEG1@DRIVE       <- M7 LGTH   B1 adjustable male ORB tip to the branch axis (6804 analog LEG2@DRIVE  | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  LEG2@DRIVE       <- M2 LGTH   branch axis to the B2 female ORB port face                             | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  LEG3@DRIVE       <- M1 LGH    run axis to the B3 female ORB port face                                | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  HEXB@HEX         <- C HEX     lock-nut hex                                                           | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  Y@REF            <- Y FLATS   forged body flats                                                      | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+  D1@BORE          <- B1 DRILL  bore of the B1 male ORB end                                            | same -FG pn in table: 0/0 | plain twins: 0/0 | OMi same part: -
+===== 6901  (TFA-p046-t01, TFA p.46 "6901-NWO-FG MAORB-FPS 90 DEG ELBOW")
+  N5@DRIVE         <- M7 LGTH   adjustable ORB leg: crossing to the ORB tip                            | same -FG pn in table: 0/0 | plain twins: 0/7 (differ: 6901-16-12 NWO 2.09 vs 2.05; 6901-16-16 NWO 2.09 vs 2.05; 6901-16-20 NWO 2.47 vs 2.25 ...) | OMi same part: -
+  CHEX@HEX         <- C1 HEX    NPSM swivel nut hex                                                    | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: -
+  C4HEX@HEX        <- C HEX     ORB lock-nut hex                                                       | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: -
+  D1@BORE          <- B DRILL   ORB end drill                                                          | same -FG pn in table: 0/0 | plain twins: 7/7 | OMi same part: -
+  D@BORE           <- A DRILL   NPSM end drill                                                         | same -FG pn in table: 0/0 | plain twins: 2/4 (differ: 6901-20-20 NWO 1.01 vs 1.087; 6901-24-24 NWO 1.26 vs 1.317) | OMi same part: -
+  M1@DRIVE         <- M LGTH    NOT PROPOSED (unconfirmed)                                             | same -FG pn in table: 0/0 | plain twins: 1/7 (differ: 6901-16-16 NWO 1.4 vs 1.54; 6901-16-20 NWO 1.67 vs 1.78; 6901-20-12 NWO 1.58 vs 1.61 ...) | OMi same part: -
+  W3@HEX           <- M6 LGTH   NOT PROPOSED (unconfirmed)                                             | same -FG pn in table: 0/0 | plain twins: 0/7 (differ: 6901-16-12 NWO 1.72 vs 1.75; 6901-16-16 NWO 1.77 vs 1.89; 6901-16-20 NWO 2.09 vs 2.2 ...) | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   NOT PROPOSED (unconfirmed)                                             | same -FG pn in table: 0/0 | plain twins: 0/7 (differ: 6901-16-12 NWO 1.5 vs 1.312; 6901-16-16 NWO 1.5 vs 1.312; 6901-16-20 NWO 1.88 vs 1.625 ...) | OMi same part: -
+===== 6902  (TFA-p046-t02, TFA p.46 "6902-NWO-FG MAORB-FPS 45 DEG ELBOW")
+  N4@DRIVE         <- M8 LGTH   adjustable ORB leg: crossing to the ORB tip                            | same -FG pn in table: 1/1 | plain twins: 1/17 (differ: 6902-04-06 NWO 1.06 vs 1.08; 6902-06-04 NWO 1.06 vs 1.14; 6902-06-06 NWO 1.06 vs 1.14 ...) | OMi same part: -
+  CHEX@HEX         <- C1 HEX    NPSM swivel nut hex                                                    | same -FG pn in table: 1/1 | plain twins: 17/17 | OMi same part: -
+  C4HEX@HEX        <- C HEX     ORB lock-nut hex                                                       | same -FG pn in table: 1/1 | plain twins: 16/17 (differ: 6902-04-06 NWO 0.69 vs 0.563) | OMi same part: -
+  D1@BORE          <- B DRILL   ORB end drill                                                          | same -FG pn in table: 1/1 | plain twins: 17/17 | OMi same part: -
+  D@BORE           <- A DRILL   NPSM end drill                                                         | same -FG pn in table: 0/0 | plain twins: 12/14 (differ: 6902-12-16 NWO 0.84 vs 0.78; 6902-16-16 NWO 0.84 vs 0.78) | OMi same part: -
+  M@DRIVE          <- M LGTH    NOT PROPOSED (unconfirmed)                                             | same -FG pn in table: 0/1 (differ: 6902-12-12 NWO-FG 1.06 vs 1.02) | plain twins: 3/17 (differ: 6902-04-04 NWO 0.66 vs 0.61; 6902-04-06 NWO 0.71 vs 0.83; 6902-06-04 NWO 0.66 vs 0.81 ...) | OMi same part: -
+  W2@HEX           <- M6 LGTH   NOT PROPOSED (unconfirmed)                                             | same -FG pn in table: 0/1 (differ: 6902-12-12 NWO-FG 1.39 vs 1.37) | plain twins: 1/17 (differ: 6902-04-04 NWO 0.85 vs 0.8; 6902-04-06 NWO 0.96 vs 1.04; 6902-06-04 NWO 0.85 vs 1.0 ...) | OMi same part: -
+  C1HEX@HEX        <- Y FLATS   NOT PROPOSED (unconfirmed)                                             | same -FG pn in table: 1/1 | plain twins: 0/17 (differ: 6902-04-04 NWO 0.69 vs 0.438; 6902-04-06 NWO 0.88 vs 0.562; 6902-06-04 NWO 0.88 vs 0.562 ...) | OMi same part: -
+===== OMi drawings 2026-10-18 (tools/_out/omi_answers_20261018/source/drawings_transcribed.csv) vs Brennan TFA p.22 (1504) / p.48 (1602)
+  1504-20-20-FG     leg_port     (axis crossing to female NPTF port face                 ) OMi 1.44   | Brennan L LGTH   1.440  EQUAL
+  1504-20-20-FG     leg_stemtip  (axis crossing to swivel stem tip (seat) along the 45 de) OMi 1.35   | Brennan M1 LGTH  1.350  EQUAL
+  1504-20-20-FG     leg_nutface  (axis crossing to swivel-nut face along the 45 deg leg  ) OMi 1.77   | Brennan M LGTH   1.770  EQUAL
+  1504-20-20-FG     hex          (body hex across flats                                  ) OMi 1.875  | Brennan Y FLATS  1.875  EQUAL
+  1504-20-20-FG     nut          (swivel nut hex across flats                            ) OMi 1.875  | Brennan C HEX    1.875  EQUAL
+  1504-20-20-FG     bore         (swivel stem bore                                       ) OMi 1.01   | Brennan A2 DRILL 1.020  DIFFERS
+  1602-02-02-02-FG  leg_port     (axis crossing to branch female NPTF port face          ) OMi 0.66   | Brennan L LGTH   0.660  EQUAL
+  1602-02-02-02-FG  leg_stemtip  (axis crossing to swivel stem tip (seat)                ) OMi 0.8    | Brennan M1 LGTH  0.800  EQUAL
+  1602-02-02-02-FG  leg_nutface  (axis crossing to swivel-nut face                       ) OMi 0.94   | Brennan M LGTH   0.940  EQUAL
+  1602-02-02-02-FG  hex          (body hex across flats                                  ) OMi 0.562  | Brennan Y FLATS  0.562  EQUAL
+  1602-02-02-02-FG  nut          (swivel nut 1 hex across flats                          ) OMi 0.562  | Brennan C HEX    0.562  EQUAL
+  1602-02-02-02-FG  nut2         (swivel nut 2 hex across flats                          ) OMi 0.562  | Brennan C HEX    0.562  EQUAL
+  1602-02-02-02-FG  bore         (swivel stem bore side 1                                ) OMi 0.11   | Brennan A2 DRILL 0.120  DIFFERS
+  1602-02-02-02-FG  bore2        (swivel stem bore side 2                                ) OMi 0.11   | Brennan A3 DRILL 0.120  DIFFERS
+  1602-04-04-04-FG  leg_port     (axis crossing to branch female NPTF port face          ) OMi 0.88   | Brennan L LGTH   0.880  EQUAL
+  1602-04-04-04-FG  leg_stemtip  (axis crossing to swivel stem tip (seat)                ) OMi 0.99   | Brennan M1 LGTH  0.990  EQUAL
+  1602-04-04-04-FG  leg_nutface  (axis crossing to swivel-nut face                       ) OMi 1.18   | Brennan M LGTH   1.180  EQUAL
+  1602-04-04-04-FG  hex          (body hex across flats                                  ) OMi 0.75   | Brennan Y FLATS  0.750  EQUAL
+  1602-04-04-04-FG  nut          (swivel nut 1 hex across flats                          ) OMi 0.688  | Brennan C HEX    0.688  EQUAL
+  1602-04-04-04-FG  nut2         (swivel nut 2 hex across flats                          ) OMi 0.688  | Brennan C HEX    0.688  EQUAL
+  1602-04-04-04-FG  bore         (swivel stem bore side 1                                ) OMi 0.21   | Brennan A2 DRILL 0.220  DIFFERS
+  1602-04-04-04-FG  bore2        (swivel stem bore side 2                                ) OMi 0.21   | Brennan A3 DRILL 0.220  DIFFERS
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-08-08-08-FG not in catalog
+  1602-16-16-16-FG  leg_port     (axis crossing to branch female NPTF port face          ) OMi 1.62   | Brennan L LGTH   1.62   EQUAL
+  1602-16-16-16-FG  leg_stemtip  (axis crossing to swivel stem tip (seat)                ) OMi 1.73   | Brennan M1 LGTH  1.73   EQUAL
+  1602-16-16-16-FG  leg_nutface  (axis crossing to swivel-nut face                       ) OMi 2.08   | Brennan M LGTH   2.08   EQUAL
+  1602-16-16-16-FG  hex          (body hex across flats                                  ) OMi 1.625  | Brennan Y FLATS  1.625  EQUAL
+  1602-16-16-16-FG  nut          (swivel nut 1 hex across flats                          ) OMi 1.5    | Brennan C HEX    1.500  EQUAL
+  1602-16-16-16-FG  nut2         (swivel nut 2 hex across flats                          ) OMi 1.5    | Brennan C HEX    1.500  EQUAL
+  1602-16-16-16-FG  bore         (swivel stem bore side 1                                ) OMi 0.78   | Brennan A2 DRILL 0.800  DIFFERS
+  1602-16-16-16-FG  bore2        (swivel stem bore side 2                                ) OMi 0.78   | Brennan A3 DRILL 0.800  DIFFERS
+  1602-20-20-20-FG  leg_port     (axis crossing to branch female NPTF port face          ) OMi 1.7    | Brennan L LGTH   1.700  EQUAL
+  1602-20-20-20-FG  leg_stemtip  (axis crossing to swivel stem tip (seat)                ) OMi 1.83   | Brennan M1 LGTH  1.830  EQUAL
+  1602-20-20-20-FG  leg_nutface  (axis crossing to swivel-nut face                       ) OMi 2.25   | Brennan M LGTH   2.250  EQUAL
+  1602-20-20-20-FG  hex          (body hex across flats                                  ) OMi 1.875  | Brennan Y FLATS  1.875  EQUAL
+  1602-20-20-20-FG  nut          (swivel nut 1 hex across flats                          ) OMi 1.875  | Brennan C HEX    1.875  EQUAL
+  1602-20-20-20-FG  nut2         (swivel nut 2 hex across flats                          ) OMi 1.875  | Brennan C HEX    1.875  EQUAL
+  1602-20-20-20-FG  bore         (swivel stem bore side 1                                ) OMi 1.01   | Brennan A2 DRILL 1.020  DIFFERS
+  1602-20-20-20-FG  bore2        (swivel stem bore side 2                                ) OMi 1.01   | Brennan A3 DRILL 1.020  DIFFERS

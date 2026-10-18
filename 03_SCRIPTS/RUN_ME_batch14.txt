@@ -1,0 +1,163 @@
+BATCH 14 - OMi DIMENSIONS (TASK A, 18 ROOTS) + TIER-1 GENERATOR FIXES + 2403 / 2405 FROM THE GENERATOR (2026-10-02)
+=================================================================================================================
+NOTHING TO RUN. Batch 14 is ALREADY BUILT: Claude built it on 2026-10-02 through the SolidWorks MCP (SolidWorks 2026 SP4)
+with your approval ("yes to all", 2026-10-02). Every part below is in 11_MASTERS, its macro in 03_SCRIPTS and its SW2
+table in 04_DESIGN_TABLES, so 03_SCRIPTS rebuilds exactly the part that is in 11_MASTERS. You do not need to re-run it.
+  - 7 parts were built for real today by their new macros (no overrides): 6502 6802 6565 6404 6410 2403 2405.
+  - 15 parts are the Task A builds of 2026-09-25 night that waited in 11_MASTERS_NEW; they moved to 11_MASTERS today
+    byte for byte: 0403 1404 2705 2706 6401 6402 6405 6408 6504 6505 2501 2503 5500 5502 6500. Their reports (now in
+    03_SCRIPTS) say "Saved to ...\11_MASTERS_NEW\..." - that is where the dry run saved them. The shipped macros are the
+    ones that built them (regenerated today: identical apart from the date line).
+
+If you ever re-run one: SolidWorks open, no document open (close <root>_MASTER first - a locked file makes the macro save
+<root>_MASTER_hhnnss.SLDPRT instead), remove any old module of the same name in the VBA editor first (File > Remove),
+File > Import File > the .bas from 03_SCRIPTS, run the entry sub, close the part between runs.
+Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed, saved in the
+reference size). A good run ends with "finished with 0 problem(s)", "Configurations after table: N+1 (expect N+1)",
+"Master left in its reference configuration ..." (missing = an old module ran) and "Saved to ...\11_MASTERS\...".
+
+22 MACROS + 22 SW2 TABLES, 429 -> 425 CONFIGURATIONS (+15 new, -19 DROP)       configurations (old master -> new)
+  Tier-1 generator fixes - built for real 2026-10-02
+     Build_6502_MASTER.bas   Sub Build6502   45 elbow JIC x swivel        8 -> 10   +6502-05-05-FG, -12-12-FG: the swivel neck
+                                                                                    is turned clear of the forged corner
+     Build_6802_MASTER.bas   Sub Build6802   45 elbow JIC x adj. ORB     16 -> 19   +6802-20-16, -20-20, -24-24-NWO-FG: the
+                                                                                    locknut-reach check was too strict at 45 deg
+     Build_6565_MASTER.bas   Sub Build6565   swivel x swivel              5 ->  8   +6565-20-20, -24-24: each seat cone now ends
+                                                                                    at the bore; +6565-10-10 (Task A: OMi nut hex)
+     Build_6410_MASTER.bas   Sub Build6410   ORB x ORB port              27 -> 30   +6410-20-12-O, -20-16-O, -24-16-O: port
+                                                                                    drilled through (no drill point) when the bore
+                                                                                    >= the port minor; 17 changed by Task A
+     Build_6404_MASTER.bas   Sub Build6404   ORB port x male pipe        14 -> 14   13 changed by Task A (OMi length / hex);
+                                                                                    6404-06-08 port drilled through
+  2403 / 2405 now come from the generator (were your legacy-builder masters, last saved 2026-09-24) - built for real 2026-10-02
+     Build_2403_MASTER.bas   Sub Build2403   union JIC x JIC (+2403-LH)  49 -> 34   15 DROP configurations left (below)
+     Build_2405_MASTER.bas   Sub Build2405   female pipe x JIC           32 -> 28    4 DROP configurations left (below)
+  Task A - OMi dimensions (OMi file first, Air-Way fills the rest) - built 2026-09-25 night, moved in unchanged
+     Build_0403_MASTER.bas   Sub Build0403   braze tube union             7 ->  7    2 changed (socket dia)
+     Build_1404_MASTER.bas   Sub Build1404   male pipe x NPSM swivel     24 -> 24   17 changed (stem-side bore; Q-31 open, below)
+     Build_2705_MASTER.bas   Sub Build2705   female pipe x JIC bulkhead  14 -> 14   12 changed (length, 1 hex)
+     Build_2706_MASTER.bas   Sub Build2706   male pipe x JIC bulkhead    22 -> 22   20 changed (length, bores)
+     Build_6401_MASTER.bas   Sub Build6401   ORB x male pipe             20 -> 21   15 changed (length, hex); +6401-32-32-O (in
+                                                                                    the table since batch 11, first built here)
+     Build_6402_MASTER.bas   Sub Build6402   ORB x swivel                15 -> 15    2 changed
+     Build_6405_MASTER.bas   Sub Build6405   ORB x female pipe           39 -> 40   28 changed (length, bore, hex);
+                                                                                    +6405-24-16-O (unblocked by OMi length 1.750)
+     Build_6408_MASTER.bas   Sub Build6408   ORB plug                    14 -> 14    1 changed (hole)
+     Build_6504_MASTER.bas   Sub Build6504   JIC x swivel                 8 ->  9   +6504-24-24 (unblocked by OMi bore 1.312)
+     Build_6505_MASTER.bas   Sub Build6505   male pipe x swivel          16 -> 16    5 changed (hex, bore)
+     Build_2501_MASTER.bas   Sub Build2501   90 elbow JIC x male pipe    32 -> 33   +2501-32-32-FG (was MISSING: OMi settles
+                                                                                    the Air-Way vs MS51504 drill conflict)
+     Build_2503_MASTER.bas   Sub Build2503   45 elbow JIC x male pipe    27 -> 27    1 changed (bore)
+     Build_5500_MASTER.bas   Sub Build5500   90 elbow male pipe          13 -> 13    1 changed (-32 hex 2.58 -> 2.500)
+     Build_5502_MASTER.bas   Sub Build5502   90 street elbow             13 -> 13    3 changed (hex 0.75 -> 0.562, 1.06 -> 0.875)
+     Build_6500_MASTER.bas   Sub Build6500   90 elbow JIC x swivel       14 -> 14    1 changed (hex 1.13 -> 1.062)
+  "changed" = a dimension changed on purpose (Task A: 138 configurations in all, every one checked against the table;
+  tools\_out\omi_apply_20260925\TaskA_result.md). Every other old configuration has the volume and size it had before
+  (2403 / 2405: same volume, bounding box within 0.00033 in - see DROPPED below).
+  Also changed on purpose: 6410-12-08-O length Air-Way 1.09 -> OMi 1.480 (= Brennan 1.4802) - this replaces your earlier
+  "keep Air-Way 1.09" (it came with Task A).
+  Design tables: all 22 DesignTable_<root>_SW2.xlsx replaced. New columns: ORBFB_DRILLANG@DRIVE (6404, 6410: 60 = drill
+  point, 90 = drilled through), SWA_SEATENDR / SWB_SEATENDR@DRIVE (6565), TRIM_*@NECKTRIM1 / FILL_*@NECKFILL1 (6502);
+  2403 / 2405 renamed columns (2403: D1@BORE_A / D2@BORE_B -> DA@BORE_A / DB@BORE_B, START@BORECUT_B gone; 2405:
+  JIC_*@DRIVE -> JICB_*@DRIVE, TAPDRILL@BORE_A -> TAPDRILLA@POCKET_A, DEPTH@BORECUT_A -> DEPTH@POCKETCUT_A, D3@BORE_B ->
+  DB@BORE_B) and a new $PRP@OMiSKU.
+  The review tables DesignTable_<root>.xlsx were not touched by this batch (Task A's OMi values were written into 18 of
+  them on 2026-09-25; the originals: tools\_out\omi_apply_20260925\originals_before_apply\).
+  Old files (macros, reports, SW2 tables, masters, the 3 superseded staged builds 6404 / 6410 / 6565):
+  _to_delete\superseded_20261002\batch14_replaced\ and a second copy in tools\_out\ship_20261002\old_files\
+  (MANIFEST.txt with sha256 in both).
+  The toolchain in tools\ now carries the tier-1 fixes (deployed 2026-10-02, all but 5404N-06; undo: tools\_out\
+  ship_20261002\deploy.diff or tools_before\; record: tools\_out\ship_20261002\PREP.md, 00_DOCS\Tier1_Fixes_2026-10-01.md).
+
+CHECKED BEFORE SHIPPING
+  Static, on all 22 macros with the deployed checks (tools\_out\ship_20261002\checks\): every sketch exactly defined
+  (dofcheck), clean outline for EVERY configuration (allcfg, 425), VBA check incl. the 24-continuation limit (vbacheck),
+  0 changed cells against the set that was dry-run (regress); against the old shipped tables only the intended changes.
+  SolidWorks dry runs: tier 1 on 2026-10-02 (tools\_out\tier1_20261001\integrated\sw_tests\out\ and \dryrun\), Task A on
+  2026-09-25 (tools\_out\omi_apply_20260925\dryrun\compare_all.txt). Plan and the expected volume / size of every
+  configuration: tools\_out\ship_20261002\BUILD_PLAN.md.
+  Real builds 2026-10-02 (tools\_out\ship_20261002\build_out\<root>.txt and ship_log.txt): all 7 PASS - "finished with
+  0 problem(s)", report 0 FAIL lines, "Configurations after table: N+1 (expect N+1)", master left in its reference
+  configuration, saved to 11_MASTERS (no _hhnnss copy); then sweep_configs of the saved part: every configuration rebuilt
+  with 1 solid body and IDENTICAL (volume + size, tolerance 1e-5) to its dry run - 6502 10, 6802 19, 6565 8, 6404 14,
+  6410 30, 2403 34, 2405 28. Macro times 60-252 s.
+  Task A moves: part and report keep the sha256 they had in 11_MASTERS_NEW (ship_log.txt); their reports have 0 FAIL lines.
+
+NEW ASSUMPTIONS - written into $PRP@AxialSource of the rows (00_DOCS\Tier1_Fixes_2026-10-01.md section 4a, items 1-5)
+  1. 6565, every row (8):
+     "both swivel seats: the 37deg seat cone ends at the through-bore (D1 at End A, D2 at End B) with no flat, as measured
+     on the Brennan 6500-04..-32-FG swivel legs (all 10 sizes, 2026-10-01) and as drawn in the Brennan TFA catalog p.18 for
+     6565 (no Brennan 6565 STEP - ASSUMED for the double swivel); the DRIVE sketch draws each seat cone down to the bore
+     radius (SWA_SEATENDR / SWB_SEATENDR = D1/2 / D2/2) and closes it radially to the axis; the bore cuts remove the core
+     between the two seats"
+  2. 6502, every row (10):
+     "swivel neck turned clear of the forged corner (Brennan 6502-12-12-FG STEP, tools/measure/neck45.py, 2026-10-01: body
+     face 0.412, neck 0.417, nothing outside the neck from the body face to the nut rear face 0.453, where an untrimmed
+     corner would stand 0.038 out; Brennan 1503-08-08-FG consistent): from the swivel body face to the swivel nut rear face
+     the 30deg corner puck and the start corner of the angled hex arm are cut down to the neck radius (NECKTRIM1 revolve cut
+     + NECKFILL1 ring back to the neck, in every configuration; no change where the corner stays inside the neck) - measured
+     on ONE size whose corner stands out of the neck (-12), ASSUMED for the other sizes (-05)"
+  3. The 12 deep-bore rows: 6410-10-04-O, -10-06-O, -12-04-O, -12-06-O, -16-06-O, -16-08-O, -16-10-O, -20-12-O, -20-16-O,
+     -24-12-O, -24-16-O and 6404-06-08 ({D}, {D3}, {P} = the row's values):
+     "female ORB port DEEP BORE (2026-10-01): through-bore {D} >= port minor {D3} -> port drilled through, NO 120deg drill
+     point (ORBFB_DRILLANG 90): the minor bore ends flat at the measured port depth {P} and the through-bore carries on at
+     the same diameter; thread length unchanged (= the measured port depth) (ASSUMPTION - the nine Brennan STEPs with a
+     female ORB port, 6404-04/-06/-08/-10/-12/-16/-24 and 6410-12-08-O / -24-20-O, all have a through-bore SMALLER than the
+     port minor, joined by the 120deg drill point; the Brennan TFA catalog p16 (6410-O, B DRILL) gives the through drill =
+     the port minor on the short reducers, i.e. drilled through; no Brennan STEP of such a part yet)"
+  4. 2403, every row (34) - the bore step at the hex mid-plane is an unsourced rule, as in the legacy builder:
+     "MODEL: JIC ends A and B: MS33656J chain per dash (2403 table, VERIFIED vs Brennan); L1 / hex / bores D1, D2: review
+     table (Air-Way; matched-dash rows == MS51501D); hex over the whole length between the two JIC ends (legacy 2403
+     builder); bore step D1/D2 at the hex mid-plane (ASSUMPTION - unsourced, same rule as the legacy 2403 builder and 6400;
+     no effect where D1 = D2); hex end chamfers NOT modelled"
+     The 7 2403-LH rows (-04-04 -06-06 -08-08 -10-10 -12-12 -16-16 -20-20) also get:
+     "2403-LH = the LARGE-HEX union (OMi "Straight-Large Hex", Air-Way s63, review table DesignTable_2403LH.xlsx), folded
+     into the 2403 master as rows of the same shape: same JIC ends per dash, L1 and bores D1 / D2 from the 2403-LH table,
+     hex = its C2 (as the legacy 2403 builder already did, 2026-09-06)"
+  5. 2405, every row (28):
+     "MODEL: female NPTF port (End A): Air-Way tap drill to MS51503 P1 max per pipe dash (2405 table; Brennan 5405 STEPs
+     confirm P1 = the port drill depth), tapered helical thread over P1; JIC end (End B): MS33656J chain per dash (2403
+     table, VERIFIED vs Brennan); L2 / hex: review table (Air-Way; matched rows == MS51503D); hex from the port face to the
+     JIC end (legacy 2405 builder); through bore D3 (Air-Way) from the JIC tip to the port bottom; hex end chamfers and the
+     port countersink NOT modelled"
+  (The 2404 text, item 6, is NOT shipped - 2404 is held, below.)
+
+DROPPED FROM 2403 / 2405 (Q-SPECS-1: your yes) - configurations of the old masters whose review-table rows are DROP
+(OMi does not sell them); the generator builds BUILD rows only:
+  2403 (15): 2403-04-03, -12-04, -14-12, -14-14, -20-16, -24-12, 2403-LH-02-02, -03-03, -05-05, -08-04, -08-06, -10-04,
+             -10-08, -12-08, -12-10
+  2405 (4):  2405-03-04, -05-02, -06-02, -32-24
+  Every remaining configuration has the old part's volume (2403: 14 exact, 20 differ in bounding box by <= 0.00004 in;
+  2405: 3 exact, 25 by <= 0.00033 in = rounding of the hex body radius). Only the thread-feature depth changed, on every
+  configuration (threads are suppressed in the saved part, so no material change). The old masters are in the two
+  old-file folders above.
+
+OPEN QUESTIONS THIS BATCH CARRIES
+  Q-31  1404 bores: shipped with OMi's 17 bore cells as staged. OMi is 0.01-0.05 below Brennan on all 8 sizes with a STEP;
+        Air-Way equals Brennan on 3 and is closer on 7. If you answer "Air-Way", the 17 cells go back to the originals and
+        1404 is rebuilt.
+  Q-32  6404-10-08 length: OMi 1.750 as staged (Brennan 1.740, Air-Way 1.81).
+  Q-2   The 10 OMi bores wider than the female port (6405 / 6410 reducers) and 6405-20-16-O (OMi length 1.000 =
+        placeholder) kept their old values, reason in $COMMENT.
+
+STILL OUT (and why)
+  2404, 2404-L                 held until OMi clarifies the bores (your decision 2026-10-02): the hand-built 2404 master and
+                               every 2404 table stay exactly as they are (2404-40-32 still VERIFIED there). The 2404 SPEC
+                               is in the generator but not shipped (Q-SPECS-2 pipe end, Q-2404-BORE).
+  5404N-06 (8 rows)            the tier-1 round-bar fix builds bodies, but THD_EndA / THD_EndB fail at -06 in SolidWorks -
+                               held out of the toolchain; Brennan has no file for 5404-N-06X2.000. 5404N is unchanged.
+  2702, 2703                   bulkhead hex arm 0.001 in short of the collar at -16 (your OK, 2026-10-02) - comes as
+                               batch 14b after its SolidWorks dry runs (tools\_out\fix2702_20261002).
+  5405-12-08, -16-08, -16-12   in the 5405 macro and table since batch 11, not in the built 5405 - re-run Build_5405.
+  6565-32-32                   thread 2 1/2-12? (Q-THREAD: Brennan p.18 and OMi agree, Air-Way prints no pitch) - code ready.
+  6410-32-24-O                 bore: Air-Way D3 1.78 or Brennan port minor 1.794 (Q-BOREWIDE) - code ready.
+  6802-32-32-NWO-FG            the Brennan 6802-32-32 STEP (received 2026-10-02) must be measured first - code ready.
+  6502-16-12-FG                Brennan legs M2 / M / M6 = OMi P / N / O? (Q-B-SWELB) - code ready.
+  6405-02-02-O, -02-04-O       the male -02 ORB end is ready; the body values exist only at Brennan (Q-BRENNAN-ONLY).
+  2403-04-02, -10-04, -16-10, -24-16, 2403-LH-24-24, 2405-10-06, -14-12   values only in the Brennan catalog
+                               (Q-SPECS-5 / Q-BRENNAN-ONLY); 2403-06-02 has no source at all.
+  2501-40-40-FG, 5000-40-40, 5404-40-40, 5406-40-32   -40: Brennan-measured threads accepted (your answer 2026-10-02),
+                               STEPs received - to be measured, a later batch.
+  Still out from earlier batches: 6802-04-06-NWO-FG (Air-Way nut hex 0.56 for a -06 ORB), 6801-05-05 (MISSING, your
+  decision), 1501-04-02-FG (bore vs the -02 stem tip), 1501-24-24-FG (Air-Way nut 1.88 vs Brennan 2.125), 2406-16-04 (port
+  wall), 6405-32-24-O (Air-Way bore 2.38 misprint), 1503 (pipe thread on the 45 deg leg).

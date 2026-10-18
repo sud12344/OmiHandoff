@@ -1,0 +1,377 @@
+{
+ "straight:5000": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5000-40-40', 'BUILD', 'MISSING')"
+ },
+ "straight:5404": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5404-R-04-04-047', 'BUILD', 'MISSING')"
+ },
+ "straight:5405": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5405-20-32', 'BUILD', 'MISSING')"
+ },
+ "straight:6401": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6401-24-16-O', 'DROP', 'ASSUMED')"
+ },
+ "straight:6405": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6405-32-16-O', 'BUILD', 'MISSING')"
+ },
+ "straight:2408": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2408-14-SOLID', 'BUILD', 'MISSING')"
+ },
+ "straight:6408": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6408-16-O-SOLID', 'DROP', 'ASSUMED')"
+ },
+ "straight:0318": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('0318-14', 'DROP', 'ASSUMED')"
+ },
+ "straight:5406": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5406-HHP-02', 'BUILD', 'MISSING')"
+ },
+ "straight:5406C": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5406-C-32', 'BUILD', 'MISSING')"
+ },
+ "straight:5406P": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5406-12P', 'DROP', 'ASSUMED')"
+ },
+ "straight:2700": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2700-10-08', 'BUILD', 'MISSING')"
+ },
+ "straight:2705": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2705-20-20', 'DROP', 'ASSUMED')"
+ },
+ "straight:2706": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2706-LN-08-06', 'BUILD', 'MISSING')"
+ },
+ "straight:4404": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('4404-08-04', 'DROP', 'ASSUMED')"
+ },
+ "straight:4604": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('4604-08-04-O', 'DROP', 'ASSUMED')"
+ },
+ "straight:5404N": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5404-N-8-8 X 2 1/2', 'DROP', 'ASSUMED')"
+ },
+ "straight:6404": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6404-08-24', 'DROP', 'ASSUMED')"
+ },
+ "straight:6410": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6410-06-08-O', 'DROP', 'ASSUMED')"
+ },
+ "straight:2406": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2406-20-16', 'DROP', 'ASSUMED')"
+ },
+ "straight:6504": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6504-10-08', 'BUILD', 'MISSING')"
+ },
+ "straight:6505": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6505-04-02', 'BUILD', 'MISSING')"
+ },
+ "straight:6506": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6506-06-10', 'BUILD', 'MISSING')"
+ },
+ "straight:6402": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6402-16-20-O', 'DROP', 'ASSUMED')"
+ },
+ "straight:6565": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6565-32-32', 'BUILD', 'MISSING')"
+ },
+ "straight:1404": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('1404-24-32', 'DROP', 'ASSUMED')"
+ },
+ "straight:1405": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('1405-20-24', 'BUILD', 'MISSING')"
+ },
+ "straight:1700": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('1700-32-24', 'BUILD', 'MISSING')"
+ },
+ "straight:0403": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('0403-10-06 UNPL', 'DROP', 'MISSING')"
+ },
+ "straight:2403": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2403-24-12', 'DROP', 'ASSUMED')"
+ },
+ "straight:2405": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2405-32-24', 'DROP', 'VERIFIED')"
+ },
+ "straight:2404": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('2404-L-32-32', 'BUILD', 'MISSING')"
+ },
+ "straight:0304": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('0304-12', 'DROP', 'ASSUMED')"
+ },
+ "straight:0306": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('0306-24 LN', 'DROP', 'ASSUMED')"
+ },
+ "straight:6408HHP": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('6408-HHP-10-O', 'BUILD', 'MISSING')"
+ },
+ "straight:5406HHP": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5406-HHP-16', 'BUILD', 'MISSING')"
+ },
+ "straight:5406SHP": {
+  "rc": 0,
+  "err": "",
+  "out": "   skipped ('5406-SHP-16', 'BUILD', 'MISSING')"
+ },
+ "tee:2650": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2650-16-16-16-16-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)"
+ },
+ "tee:2601": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2601-24-24-24-FG: leg 3: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats by 0.0179; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+ },
+ "tee:2602": {
+  "rc": 0,
+  "err": "",
+  "out": "2602: 6 configs (ref 2602-06-06-06-FG), 15 skipped, 0 blocked, 63 cols"
+ },
+ "tee:2605": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2605-20-20-20-FG: leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+ },
+ "tee:2606": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2606-16-16-16-FG: leg 2: female port thread length = MS51503 P1 1.14 (library) - the row has no measured PORTDEPTH@BORE"
+ },
+ "tee:2609": {
+  "rc": 0,
+  "err": "",
+  "out": "2609: 1 configs (ref 2609-08-08-08-FG), 1 skipped, 0 blocked, 53 cols"
+ },
+ "tee:2611": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2611-12-12-12-FG: leg 3: female port thread length = MS51503 P1 0.91 (library) - the row has no measured PORTDEPTH@BORE"
+ },
+ "tee:5600": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 5600-24-24-24-FG: leg 1: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats by 0.0179; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats b"
+ },
+ "tee:5602": {
+  "rc": 0,
+  "err": "",
+  "out": "5602: 2 configs (ref 5602-08-08-08-FG), 19 skipped, 0 blocked, 53 cols"
+ },
+ "tee:5604": {
+  "rc": 0,
+  "err": "",
+  "out": "5604: 4 configs (ref 5604-08-08-08-FG), 13 skipped, 0 blocked, 53 cols"
+ },
+ "tee:5605": {
+  "rc": 0,
+  "err": "",
+  "out": "5605: 4 configs (ref 5605-06-06-06-FG), 15 skipped, 0 blocked, 45 cols"
+ },
+ "tee:5652": {
+  "rc": 0,
+  "err": "",
+  "out": "5652: 6 configs (ref 5652-02-02-02-02-FG), 11 skipped, 0 blocked, 57 cols"
+ },
+ "tee:5603": {
+  "rc": 0,
+  "err": "",
+  "out": "5603: 6 configs (ref 5603-02-02-02-FG), 8 skipped, 0 blocked, 53 cols"
+ },
+ "tee:5601": {
+  "rc": 0,
+  "err": "",
+  "out": "5601: 3 configs (ref 5601-02-02-02-FG), 7 skipped, 0 blocked, 53 cols"
+ },
+ "tee:2501": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2501-LL-16-16-FG: hex A/F raised from the row's hex Y 1.312 to 1.3125 (JIC thread major; 2603HX rule); leg 2: male NPTF thread dia at L2 1.3259 vs hex flats 1.3125 (round end proud of the flats by 0.0067; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+ },
+ "tee:5500": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 5500-24-24-FG: leg 1: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats by 0.0179; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats by 0"
+ },
+ "tee:5502": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 5502-20-16-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+ },
+ "tee:5504": {
+  "rc": 0,
+  "err": "",
+  "out": "5504: 9 configs (ref 5504-08-08-FG), 19 skipped, 0 blocked, 38 cols"
+ },
+ "tee:2503": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2503-24-24-FG: leg 1: male NPTF thread dia at L2 1.9109 vs hex flats 1.8800 (round end proud of the flats by 0.0154; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+ },
+ "tee:2504": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2504-12-12-FG: hex A/F raised from OMi Hex Flat 1.062 to 1.0625 (JIC thread major; 2603HX rule)"
+ },
+ "tee:2505": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2505-12-12-FG: leg 1: female port thread length = MS51503 P1 0.91 (library) - the row has no measured PORTDEPTH@BORE"
+ },
+ "tee:2701": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2701-16-16-FG-LN: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)"
+ },
+ "tee:2702": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2702-16-16-FG-LN: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 2: BULKHEAD HEX ARM ENDED 0.001 SHORT of the collar face (HEX2_BODY 0.870 -> 0.869): ending on the collar face, HEX2_BODY did not rebuild in SolidWorks at this size (2026-09-25); the collar radi"
+ },
+ "tee:2703": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2703-16-16-16-FG-LN: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 3: BULKHEAD HEX ARM ENDED 0.001 SHORT of the collar face (HEX3_BODY 1.110 -> 1.109): ending on the collar face, HEX3_BODY did not rebuild in SolidWorks at this size (2026-09-25); the collar r"
+ },
+ "tee:2704": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 2704-16-16-16-FG-LN: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)"
+ },
+ "tee:6500": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6500-L-16-16-FG: hex A/F raised from OMi Hex Flat 1.312 to 1.3125 (JIC thread major; 2603HX rule)"
+ },
+ "tee:6501": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6501-24-24-FG: leg 1: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats by 0.0179; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+ },
+ "tee:6503": {
+  "rc": 0,
+  "err": "",
+  "out": "6503: 1 configs (ref 6503-08-08-FG), 14 skipped, 0 blocked, 58 cols"
+ },
+ "tee:6502": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6502-32-32-FG: leg 1: the corner puck (radius 1.443) reaches 0.203 past the swivel body face (1.240) but stays inside the neck (max 0.739 off the axis vs neck radius 1.079) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings"
+ },
+ "tee:6600": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6600-20-20-20-FG: leg 3: Air-Way nut-face-to-seat 0.620 vs Brennan 0.640"
+ },
+ "tee:1501": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 1501-32-32-FG: leg 2 hex arm 1.465 barely clears the corner puck (radius 1.443)"
+ },
+ "tee:1503": {
+  "rc": 1,
+  "err": "AssertionError: angled leg must carry a Thread-feature (JIC) end",
+  "out": ""
+ },
+ "tee:1502": {
+  "rc": 0,
+  "err": "",
+  "out": "   BLOCKED 1502-04-04-FG: leg 2: the other leg's hex arm corner (hex corner radius 0.3984) stands 0.0084 beyond the swivel body face (0.3900) OUTSIDE the neck (radius 0.1825), from the neck out to the arm end 0.680 along the other leg (ridge 0.0290 wide) - Brennan faces it off at the body face (6500"
+ },
+ "tee:6602": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6602-24-24-24-FG: hex A/F raised from Air-Way 1.85 to 1.8750 (JIC thread major; 2603HX rule)"
+ },
+ "tee:6802": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6802-32-32-NWO-FG: leg 1: CORNER NECK TRIM (ORBTRIM1): beyond the body face (0.720) the corner stands outside the ORB neck / locknut inner chamfer - angled hex arm by 0.219 (x=0.723, r 1.319), corner puck by 0.151 (x=0.720, r 1.251) - cut back to the ORB profile up to the full nut corner (0."
+ },
+ "tee:6803": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6803-20-20-20-NWO-FG: leg 3: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -20 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)"
+ },
+ "tee:6804": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6804-20-20-20-NWO-FG: leg 2: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -20 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)"
+ },
+ "tee:6801": {
+  "rc": 0,
+  "err": "",
+  "out": "   warn 6801-16-08-NWO-FG: hex A/F raised from Air-Way 1.312 to 1.3125 (JIC thread major; 2603HX rule)"
+ }
+}

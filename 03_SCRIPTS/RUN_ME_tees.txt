@@ -1,0 +1,45 @@
+TEES & CROSSES BATCH - 2026-09-24 (gen_tee.py)
+===============================================
+Same routine as the straights: SolidWorks open, no document; in the VBA editor remove any old
+module of the same name, File > Import File > the .bas from 03_SCRIPTS, run the entry sub below.
+One at a time; close the part between runs. Reports land in 03_SCRIPTS\Build_<root>_report.txt
+and the part in 11_MASTERS\<root>_MASTER.SLDPRT. Tell me "check reports" when done.
+
+STEP 0 (once, first):  OMi_SweepCheck.bas  ->  Sub SweepAllMasters
+   Re-checks the 11 masters already in 11_MASTERS with their threads LIVE in every configuration
+   (see "why" below). Nothing is saved - it only writes 03_SCRIPTS\SweepCheck_report.txt.
+   Takes several minutes (helical threads rebuild slowly).
+
+THE NEW MASTERS (39 configurations):
+   Build_2650_MASTER.bas   Sub Build2650   union cross, 4 x JIC                         4 configs
+   Build_2601_MASTER.bas   Sub Build2601   male branch tee, JIC run x male NPTF branch  9 configs
+   Build_2602_MASTER.bas   Sub Build2602   female branch tee, JIC run x female NPTF     5 configs
+   Build_2605_MASTER.bas   Sub Build2605   male run tee, JIC / male NPTF run, JIC branch 7 configs
+   Build_5600_MASTER.bas   Sub Build5600   male pipe tee, 3 x male NPTF                 6 configs
+   Build_5602_MASTER.bas   Sub Build5602   male run pipe tee (1 male, 2 female NPTF)    2 configs
+   Build_5604_MASTER.bas   Sub Build5604   male branch pipe tee (2 female, 1 male)      3 configs
+   Build_5605_MASTER.bas   Sub Build5605   female pipe tee, 3 x female NPTF             3 configs
+
+HOW THEY ARE BUILT (same pattern as the 2603HX tee, which is built and clean):
+   legs revolved from the axis crossing to each face (legs 1/2 = +X/-X, leg 3 = +Y, leg 4 = -Y);
+   forged body = hex bars with flats normal to Z (run bar through the crossing + branch arm; the
+   cross has two continuous bars). Checked against the Brennan 2650-08-08-08-08-FG STEP:
+   hex A/F 0.750, hex shoulders at 0.593, bore 0.392 - the macro reproduces all three.
+   Brennan 5600-16-16-16-FG STEP (your upload): hex A/F 1.3125, hex stops 1.03 from the centre
+   (= 1.97 - 0.94, the same male-pipe end length as the 5404 nipple), round end 1.315 dia sitting
+   0.001 proud of the flats, bore 0.938. That unblocked the 2601/2605/5600 -12/-16/-20 sizes.
+   Each macro checks: every sketch fully defined, one solid body, every bore open, extents, the
+   table values landing in two configs, then EVERY configuration rebuilt with threads live,
+   then threads suppressed in all configurations and the part saved.
+
+NOT IN THESE TABLES (still listed in the review tables):
+   - MISSING rows (OMi sells it, Air-Way has no dimensions) and DROP rows (Air-Way only)
+   - 2606, 2609, 2611, 2613, 5601, 5603, 5652: no buildable rows at all (OMi sells only -FG sizes
+     that Air-Way does not list) - same -FG decision as QA #120.
+
+WHY STEP 0: while writing this batch I found that the five older macros (2403, 2405, 2500HX,
+2502HX, 2603HX) suppressed each thread the moment it was created, so yesterday's all-config
+sweep rebuilt those parts WITHOUT their threads - the thread-tooth fix was never exercised on
+their small sizes. The six straights had no all-config sweep at all (two configs only).
+All 11 macros are fixed (threads stay live until the final step; every macro now sweeps), and
+OMi_SweepCheck verifies the parts you already have without rebuilding them.

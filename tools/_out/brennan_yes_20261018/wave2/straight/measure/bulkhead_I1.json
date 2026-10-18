@@ -1,0 +1,104 @@
+{
+ "2705-08-08": {
+  "step": "09_STEP_FILES/BRENNAN_2705-08-08.stp",
+  "sha256": "a3ee90a6bc018e307e10128a53cafe2d58771e9e1cb0de14aaaebacfcf53723d",
+  "bbox": [
+   -1.1301,
+   -0.6496,
+   -0.6496,
+   1.4801,
+   0.6496,
+   0.6496
+  ],
+  "overall": 2.6102,
+  "corner_dia": 1.2992,
+  "hex_af_from_corners": 1.1251,
+  "tip": 1.48,
+  "SL": 0.1546,
+  "CD": 0.659,
+  "LL": 0.0984,
+  "TM": 0.75,
+  "thread_from": 0.1545,
+  "thread_to": 1.1815,
+  "ramp": 0.0205,
+  "relief_dia": 0.679,
+  "RL": 0.094,
+  "relief_start": 0.04,
+  "collar": [
+   {
+    "a1": -0.0,
+    "a2": 0.04,
+    "dia": 0.744
+   }
+  ],
+  "I1": 1.44
+ },
+ "2700-02-02": {
+  "step": "09_STEP_FILES/BRENNAN_2700-02-02.stp",
+  "sha256": "8510b8b0f1b648e7b9368c95c1df70a60dffb4cad665d2998413d5cf88ccc976",
+  "bbox": [
+   -0.448,
+   -0.3245,
+   -0.3245,
+   1.422,
+   0.3245,
+   0.3245
+  ],
+  "overall": 1.87,
+  "corner_dia": 0.649,
+  "hex_af_from_corners": 0.5621,
+  "tip": 1.422,
+  "SL": 0.1108,
+  "CD": 0.25,
+  "LL": 0.0662,
+  "TM": 0.3125,
+  "thread_from": 0.433,
+  "thread_to": 1.2202,
+  "ramp": 0.018,
+  "relief_dia": 0.25,
+  "RL": 0.063,
+  "relief_start": 0.352,
+  "collar": [
+   {
+    "a1": 0.312,
+    "a2": 0.352,
+    "dia": 0.311
+   }
+  ],
+  "I1": 1.07
+ },
+ "2706-04-02": {
+  "step": "09_STEP_FILES/BRENNAN_2706-04-02.stp",
+  "sha256": "d4ff2da4fb37563bb06fbbf4898afd36acf99b4f7e736d47165686918c452a10",
+  "bbox": [
+   -0.56,
+   -0.3609,
+   -0.3609,
+   1.42,
+   0.3609,
+   0.3609
+  ],
+  "overall": 1.98,
+  "corner_dia": 0.7218,
+  "hex_af_from_corners": 0.6251,
+  "tip": 1.42,
+  "SL": 0.1108,
+  "CD": 0.25,
+  "LL": 0.0662,
+  "TM": 0.3125,
+  "thread_from": 0.391,
+  "thread_to": 1.2182,
+  "ramp": 0.018,
+  "relief_dia": 0.25,
+  "RL": 0.063,
+  "relief_start": 0.31,
+  "collar": [
+   {
+    "a1": 0.27,
+    "a2": 0.31,
+    "dia": 0.311
+   }
+  ],
+  "I1": 1.11
+ }
+}

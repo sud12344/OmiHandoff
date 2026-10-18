@@ -1,0 +1,26 @@
+table,config,ready,missing_columns,conflicts,notes
+2406,2406-04-02,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-04-04,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-04-08,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-06-10,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-08-08,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-10-16,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-12-04,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+2406,2406-12-12,yes,,,Brennan TFA p7 TFA-p007-t03; JIC ends from the end library
+5404,5404-16-04,yes,,,Brennan TFA p11 TFA-p011-t04; NPTF ends from the end library
+5404,5404-20-12,yes,,,Brennan TFA p11 TFA-p011-t04; NPTF ends from the end library
+5404,5404-24-12,yes,,,Brennan TFA p11 TFA-p011-t04; NPTF ends from the end library
+5404,5404-32-12,yes,,,Brennan TFA p11 TFA-p011-t04; NPTF ends from the end library
+5404,5404-32-16,yes,,,Brennan TFA p11 TFA-p011-t04; NPTF ends from the end library
+5406P,5406-P-02,yes,,,Brennan TFA p67 TFA-p067-t03; Air-Way alias row 5406-02P agrees to rounding (VERIFIED candidate if the user confirms the alias)
+5406P,5406-P-04,yes,,,Brennan TFA p67 TFA-p067-t03; Air-Way alias row 5406-04P agrees to rounding (VERIFIED candidate if the user confirms the alias)
+5406P,5406-P-06,yes,,,Brennan TFA p67 TFA-p067-t03; Air-Way alias row 5406-06P agrees to rounding (VERIFIED candidate if the user confirms the alias)
+5600,5600-20-20-20-FG,yes,,,Brennan TFA p55 TFA-p055-t01; no Air-Way / OMi dimension to compare
+5600,5600-24-24-24-FG,yes,,,Brennan TFA p55 TFA-p055-t01; no Air-Way / OMi dimension to compare
+6504,6504-04-06,yes,,,OMi gives L13 / hexes / bores (= Brennan p17 to rounding); L14 from Brennan p17 alone; nut face to nose L13 - L14 = 0.380 vs Brennan-measured swivel -06 NOSETIP_B 0.38 (gen_straight2 SWIV_MEAS); nut hex OMi 0.688 vs SWIV_MEAS AF 0.6875
+6504,6504-06-04,yes,,,OMi gives L13 / hexes / bores (= Brennan p17 to rounding); L14 from Brennan p17 alone; nut face to nose L13 - L14 = 0.340 vs Brennan-measured swivel -04 NOSETIP_B 0.35 (gen_straight2 SWIV_MEAS); nut hex OMi 0.562 vs SWIV_MEAS AF 0.5625
+6504,6504-08-10,yes,,,OMi gives L13 / hexes / bores (= Brennan p17 to rounding); L14 from Brennan p17 alone; nut face to nose L13 - L14 = 0.500 vs Brennan-measured swivel -10 NOSETIP_B 0.5 (gen_straight2 SWIV_MEAS); nut hex OMi 1.0 vs SWIV_MEAS AF 1.0
+6504,6504-12-16,yes,,,OMi gives L13 / hexes / bores (= Brennan p17 to rounding); L14 from Brennan p17 alone; nut face to nose L13 - L14 = 0.590 vs Brennan-measured swivel -16 NOSETIP_B 0.6 (gen_straight2 SWIV_MEAS); nut hex OMi 1.5 vs SWIV_MEAS AF 1.5
+6600,6600-24-24-24-FG,yes,,M10@DRIVE Air-Way 1.86 vs Brennan M4 LGTH 1.870,"only D3 was empty; conflicts are in non-empty Air-Way cells (not proposed, kept per the standing rule OMi / Air-Way ahead of Brennan) - listed for the user"
+2408,2408-14-SOLID,no,,HEXB@HEX Air-Way 1.125 vs Brennan TFA p66 TFA-p066-t05 C HEX 1.250 (= MS51518D 1 1/4); Air-Way 1.125 is below the 1.1875 thread major,"HELD: the base cell holds Air-Way 1.125, so Brennan may not replace it (Q-CONFLICT-2408-14-SOLID / Q-NEW-CATRANK - user). Also THDMAJ_B@DRIVE = 1.25 is a column-shift error (the voted hex; JIC -14 major = 1.1875) and $PRP@AxialSource = ""VERIFIED"" is shifted text - fix with the answer. L3 1.31 = Brennan L 1.310. HOLE@BORE empty is normal for a SOLID row."
+6801,6801-05-05-NWO-FG,no,,LEG_ORB 1.13 (Air-Way = Brennan TFA p40 M7 1.13 = Brennan STEP) vs MS51527G / 29D / 30D 1.090 (question 25 of 2026-09-26),"HELD: no empty cell - every value is in the base table (Air-Way, = Brennan catalog / STEP to rounding, FG-STEP measure_6801.txt). The row waits on question 25 (conflict with the MS standard), which Q-BRENNAN-ONLY = yes does not answer; picking 1.13 because two sources agree would be a majority vote. Its $PRP@AxialSource ""VERIFIED"" is shifted text (clean-up with the answer)."

@@ -1,0 +1,142 @@
+table,config,column,current_value,current_source,omi_value,omi_cell,delta,mapping_id,table_cell,omi_header,reading_status,note
+0318,0318-02,L1@DRIVE,0.54,Air-Way,0.55,Items!L30,0.01,M013,B3,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-03,L1@DRIVE,0.6,Air-Way,0.61,Items!L31,0.01,M013,B4,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-04,L1@DRIVE,0.61,Air-Way,0.62,Items!L32,0.01,M013,B5,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-05,L1@DRIVE,0.67,Air-Way,0.68,Items!L33,0.01,M013,B6,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-06,L1@DRIVE,0.72,Air-Way,0.73,Items!L34,0.01,M013,B7,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-08,L1@DRIVE,0.84,Air-Way,0.85,Items!L35,0.01,M013,B8,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-10,L1@DRIVE,0.97,Air-Way,0.98,Items!L36,0.01,M013,B9,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-12,L1@DRIVE,1.02,Air-Way,1.03,Items!L37,0.01,M013,B10,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-16,L1@DRIVE,1.12,Air-Way,1.13,Items!L38,0.01,M013,B12,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-20,L1@DRIVE,1.22,Air-Way,1.23,Items!L39,0.01,M013,B13,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0318,0318-32,L1@DRIVE,1.74,Air-Way,1.75,Items!L41,0.01,M013,B15,Overall Length,open: Q36-14,OMi = MS51531D nominal; Air-Way prints 0.01 shorter on every 0318 row (audit 3.6)
+0403,0403-16-16 UNPL,L3@DRIVE,1.33,Air-Way,1.320,Items!L59,-0.01,M016,B23,Overall Length,open: Q36-14,
+1404,1404-02-02,C1HEX@HEX,0.5,Air-Way,0.562,Items!R88,0.062,M051,D3,Hex Flat,open: Q36-13,
+1404,1404-02-04,C1HEX@HEX,0.63,Air-Way,0.688,Items!R89,0.058,M051,D4,Hex Flat,open: Q36-13,
+1404,1404-04-02,C1HEX@HEX,0.63,Air-Way,0.688,Items!R90,0.058,M051,D6,Hex Flat,open: Q36-13,
+1404,1404-04-04,C1HEX@HEX,0.63,Air-Way,0.688,Items!R91,0.058,M051,D7,Hex Flat,open: Q36-13,
+1404,1404-04-08,C1HEX@HEX,0.94,Air-Way,1.000,Items!R93,0.06,M051,D9,Hex Flat,open: Q36-13,
+1404,1404-06-06,C1HEX@HEX,0.81,Air-Way,0.875,Items!R95,0.065,M051,D11,Hex Flat,open: Q36-13,
+1404,1404-06-08,C1HEX@HEX,0.94,Air-Way,1,Items!R96,0.06,M051,D12,Hex Flat,open: Q36-13,OMi writes the integer text '1' (read as 1.000)
+1404,1404-08-08,C1HEX@HEX,0.94,Air-Way,1,Items!R98,0.06,M051,D15,Hex Flat,open: Q36-13,OMi writes the integer text '1' (read as 1.000)
+1404,1404-08-12,C1HEX@HEX,1.13,Air-Way,1.250,Items!R99,0.12,M051,D16,Hex Flat,open: Q36-13,
+1404,1404-12-12,C1HEX@HEX,1.13,Air-Way,1.250,Items!R101,0.12,M051,D18,Hex Flat,open: Q36-13,
+1404,1404-16-12,C1HEX@HEX,1.38,Air-Way,1.500,Items!R103,0.12,M051,D20,Hex Flat,open: Q36-13,
+1404,1404-16-20,C1HEX@HEX,1.75,Air-Way,1.875,Items!R105,0.125,M051,D22,Hex Flat,open: Q36-13,
+1404,1404-20-16,C1HEX@HEX,1.75,Air-Way,1.875,Items!R106,0.125,M051,D23,Hex Flat,open: Q36-13,
+1404,1404-20-20,C1HEX@HEX,1.75,Air-Way,1.875,Items!R107,0.125,M051,D24,Hex Flat,open: Q36-13,
+1404,1404-24-20,C1HEX@HEX,2,Air-Way,2.125,Items!R109,0.125,M051,D26,Hex Flat,open: Q36-13,
+2501,2501-20-24-FG,M@DRIVE,2.3,Air-Way,2.20,Items!N695,-0.1,M071,B72,M 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",
+2501L,2501-L-04-02-FG,N3@DRIVE,1.19,Air-Way,1.170,Items!P703,-0.02,M077,C3,L 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",
+2503,2503-04-08-FG,M2@DRIVE,1.17,Air-Way,0.870,Items!N755,-0.3,M085,B13,M 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",possible leg swap: OMi M 1 Size 0.870 ~ table N2@DRIVE 0.89 - check before applying; audit 3.5: OMi M 1 / L 1 look swapped against Air-Way M2 / N2 on this row
+2503,2503-04-08-FG,N2@DRIVE,0.89,Air-Way,1.170,Items!P755,0.28,M086,C13,L 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",possible leg swap: OMi L 1 Size 1.170 ~ table M2@DRIVE 1.17 - check before applying; audit 3.5: OMi M 1 / L 1 look swapped against Air-Way M2 / N2 on this row
+2503,2503-05-04-FG,N2@DRIVE,0.88,Air-Way,0.860,Items!P757,-0.02,M086,C16,L 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",
+2503,2503-06-06-FG,M2@DRIVE,0.91,Air-Way,0.870,Items!N759,-0.04,M085,B23,M 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",
+2503,2503-08-08-FG,M2@DRIVE,1.11,Air-Way,0.990,Items!N763,-0.12,M085,B32,M 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",
+2503,2503-10-12-FG,M2@DRIVE,1.08,Air-Way,1.160,Items!N767,0.08,M085,B40,M 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",possible leg swap: OMi M 1 Size 1.160 ~ table N2@DRIVE 1.16 - check before applying; audit 3.5: OMi M 1 / L 1 look swapped against Air-Way M2 / N2 on this row
+2503,2503-10-12-FG,N2@DRIVE,1.16,Air-Way,1.200,Items!P767,0.04,M086,C40,L 1 Size,"Q36-5 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-ELBOW, TEE-2501 / TEE-OTHER NOTES)",audit 3.5: OMi M 1 / L 1 look swapped against Air-Way M2 / N2 on this row
+2605,2605-06-06-06-FG,M1@DRIVE,1.06,Air-Way,1.140,Items!N837,0.08,M186,B10,M 1 Size,open: Q36-7,
+2605,2605-06-06-06-FG,M3@DRIVE,1.06,Air-Way,1.140,Items!P837,0.08,M188,D10,L 1 Size,open: Q36-7,
+5500,5500-02-02-FG,N1@DRIVE,0.72,Air-Way,0.780,Items!N1432,0.06,M099,B3,M 1 Size,"Q36-6 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-5500, TEE-OTHER NOTES)",
+5500,5500-02-02-FG,N2@DRIVE,0.72,Air-Way,0.780,Items!P1432,0.06,M100,C3,L 1 Size,"Q36-6 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-5500, TEE-OTHER NOTES)",
+5500,5500-16-12-FG,N1@DRIVE,1.78,Air-Way,1.970,Items!N1443,0.19,M099,B23,M 1 Size,"Q36-6 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-5500, TEE-OTHER NOTES)",possible leg swap: OMi M 1 Size 1.970 ~ table N2@DRIVE 1.97 - check before applying
+5500,5500-16-12-FG,N2@DRIVE,1.97,Air-Way,1.780,Items!P1443,-0.19,M100,C23,L 1 Size,"Q36-6 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-5500, TEE-OTHER NOTES)",possible leg swap: OMi L 1 Size 1.780 ~ table N1@DRIVE 1.78 - check before applying
+5502,5502-02-02-FG,N@DRIVE,0.89,Air-Way,0.780,Items!N1458,-0.11,M109,B3,M 1 Size,open: Q36-5,
+5502,5502-08-04-FG,N1@DRIVE,1,Air-Way,1.010,Items!P1469,0.01,M110,C21,L 1 Size,open: Q36-5,
+5502,5502-08-06-FG,N1@DRIVE,1.01,Air-Way,1.020,Items!P1470,0.01,M110,C23,L 1 Size,open: Q36-5,
+5502,5502-20-20-FG,N@DRIVE,2.75,Air-Way,2.380,Items!N1481,-0.37,M109,B41,M 1 Size,open: Q36-5,
+5502,5502-24-24-FG,N@DRIVE,3.05,Air-Way,2.640,Items!N1484,-0.41,M109,B44,M 1 Size,open: Q36-5,
+6402,6402-04-04-O,L26@DRIVE,1.29,Air-Way,1.310,Items!L1724,0.02,M020,B3,Overall Length,open: Q36-10,
+6402,6402-04-04-O,L27@DRIVE,0.95,Air-Way,0.970,Items!P1724,0.02,M021,C3,L 1 Size,open: Q36-10,
+6402,6402-04-06-O,L26@DRIVE,1.43,Air-Way,1.410,Items!L1725,-0.02,M020,B4,Overall Length,open: Q36-10,
+6402,6402-04-06-O,L27@DRIVE,1.06,Air-Way,1.040,Items!P1725,-0.02,M021,C4,L 1 Size,open: Q36-10,
+6402,6402-06-04-O,L26@DRIVE,1.34,Air-Way,1.410,Items!L1726,0.07,M020,B5,Overall Length,open: Q36-10,
+6402,6402-06-04-O,L27@DRIVE,1,Air-Way,1.070,Items!P1726,0.07,M021,C5,L 1 Size,open: Q36-10,
+6402,6402-06-06-O,L26@DRIVE,1.48,Air-Way,1.430,Items!L1727,-0.05,M020,B6,Overall Length,open: Q36-10,
+6402,6402-06-06-O,L27@DRIVE,1.11,Air-Way,1.050,Items!P1727,-0.06,M021,C6,L 1 Size,open: Q36-10,
+6402,6402-06-08-O,L26@DRIVE,1.48,Air-Way,1.620,Items!L1728,0.14,M020,B7,Overall Length,open: Q36-10,
+6402,6402-06-08-O,L27@DRIVE,1.06,Air-Way,1.200,Items!P1728,0.14,M021,C7,L 1 Size,open: Q36-10,
+6402,6402-08-06-O,L26@DRIVE,1.55,Air-Way,1.580,Items!L1729,0.03,M020,B9,Overall Length,open: Q36-10,
+6402,6402-08-06-O,L27@DRIVE,1.18,Air-Way,1.210,Items!P1729,0.03,M021,C9,L 1 Size,open: Q36-10,
+6402,6402-08-08-O,L26@DRIVE,1.59,Air-Way,1.650,Items!L1730,0.06,M020,B10,Overall Length,open: Q36-10,
+6402,6402-08-08-O,L27@DRIVE,1.17,Air-Way,1.230,Items!P1730,0.06,M021,C10,L 1 Size,open: Q36-10,
+6402,6402-08-10-O,L26@DRIVE,1.81,Air-Way,1.800,Items!L1731,-0.01,M020,B11,Overall Length,open: Q36-10,
+6402,6402-08-10-O,L27@DRIVE,1.31,Air-Way,1.300,Items!P1731,-0.01,M021,C11,L 1 Size,open: Q36-10,
+6402,6402-10-08-O,L26@DRIVE,1.72,Air-Way,1.790,Items!L1732,0.07,M020,B13,Overall Length,open: Q36-10,
+6402,6402-10-08-O,L27@DRIVE,1.3,Air-Way,1.370,Items!P1732,0.07,M021,C13,L 1 Size,open: Q36-10,
+6402,6402-10-10-O,L26@DRIVE,1.95,Air-Way,1.890,Items!L1733,-0.06,M020,B14,Overall Length,open: Q36-10,
+6402,6402-10-10-O,L27@DRIVE,1.45,Air-Way,1.390,Items!P1733,-0.06,M021,C14,L 1 Size,open: Q36-10,
+6402,6402-12-12-O,L26@DRIVE,2.17,Air-Way,2.140,Items!L1736,-0.03,M020,B16,Overall Length,open: Q36-10,
+6402,6402-12-12-O,L27@DRIVE,1.61,Air-Way,1.580,Items!P1736,-0.03,M021,C16,L 1 Size,open: Q36-10,
+6402,6402-16-16-O,L26@DRIVE,2.28,Air-Way,2.260,Items!L1738,-0.02,M020,B19,Overall Length,open: Q36-10,
+6402,6402-16-16-O,L27@DRIVE,1.69,Air-Way,1.670,Items!P1738,-0.02,M021,C19,L 1 Size,open: Q36-10,
+6402,6402-20-20-O,L26@DRIVE,2.45,Air-Way,2.420,Items!L1739,-0.03,M020,B21,Overall Length,open: Q36-10,
+6402,6402-20-20-O,L27@DRIVE,1.83,Air-Way,1.800,Items!P1739,-0.03,M021,C21,L 1 Size,open: Q36-10,
+6402,6402-24-24-O,L26@DRIVE,2.72,Air-Way,2.610,Items!L1740,-0.11,M020,B23,Overall Length,open: Q36-10,
+6402,6402-24-24-O,L27@DRIVE,1.99,Air-Way,1.870,Items!P1740,-0.12,M021,C23,L 1 Size,open: Q36-10,
+6402,6402-32-32-O,L26@DRIVE,2.93,Air-Way,2.950,Items!L1741,0.02,M020,B24,Overall Length,open: Q36-10,
+6402,6402-32-32-O,L27@DRIVE,1.99,Air-Way,2.010,Items!P1741,0.02,M021,C24,L 1 Size,open: Q36-10,
+6404,6404-06-08,D1@BORE,0.5,Air-Way,0.531,Items!S1747,0.031,M069,E11,Side 1 ID,open: Q36-14,
+6500,6500-05-05-FG,LEG_M10@DRIVE,0.69,Air-Way,0.68,Items!N1914,-0.01,M113,D8,M 1 Size,"Q36-8 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWELB, SWIVEL-ELBOWS NOTES)",
+6500,6500-10-12-FG,LEG_M10@DRIVE,1.19,Air-Way,1.18,Items!N1924,-0.01,M113,D28,M 1 Size,"Q36-8 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWELB, SWIVEL-ELBOWS NOTES)",
+6500,6500-12-12-FG,LEG_M10@DRIVE,1.19,Air-Way,1.18,Items!N1926,-0.01,M113,D33,M 1 Size,"Q36-8 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWELB, SWIVEL-ELBOWS NOTES)",
+6501,6501-04-04-FG,M10@DRIVE,0.77,Air-Way,0.800,Items!N1941,0.03,M127,D6,M 1 Size,"Q36-9 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-6501, SWIVEL-ELBOWS NOTES)",
+6501,6501-04-04-FG,M5@DRIVE,1.11,Air-Way,1.140,Items!O1941,0.03,M128,C6,M 2 Size,"Q36-9 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-6501, SWIVEL-ELBOWS NOTES)",
+6502,6502-08-08-FG,M6@DRIVE,1.25,Air-Way,1.280,Items!O1963,0.03,M135,C10,M 2 Size,"Q36-8 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWELB, SWIVEL-ELBOWS NOTES)",
+6502,6502-12-12-FG,M14@DRIVE,0.94,Air-Way,0.930,Items!N1967,-0.01,M134,D14,M 1 Size,"Q36-8 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWELB, SWIVEL-ELBOWS NOTES)",
+6502,6502-20-20-FG,M14@DRIVE,1.4,Air-Way,1.410,Items!N1972,0.01,M134,D19,M 1 Size,"Q36-8 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWELB, SWIVEL-ELBOWS NOTES)",
+6503,6503-08-08-FG,M10@DRIVE,1.1,Air-Way,1.128,Items!N1978,0.028,M141,D9,M 1 Size,open: Q36-9,
+6503,6503-08-08-FG,M5@DRIVE,1.52,Air-Way,1.550,Items!O1978,0.03,M142,C9,M 2 Size,open: Q36-9,
+6504,6504-04-04,L13@DRIVE,1.42,Air-Way,1.510,Items!L1985,0.09,M026,B3,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-06-06,L13@DRIVE,1.6,Air-Way,1.640,Items!L1988,0.04,M026,B4,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-06-08,L13@DRIVE,1.65,Air-Way,1.730,Items!L1989,0.08,M026,B5,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-08-06,L13@DRIVE,1.72,Air-Way,1.740,Items!L1990,0.02,M026,B6,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-08-08,L13@DRIVE,1.73,Air-Way,1.830,Items!L1991,0.1,M026,B7,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-10-10,L13@DRIVE,2.16,Air-Way,2.170,Items!L1995,0.01,M026,B8,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-16-16,L13@DRIVE,2.48,Air-Way,2.500,Items!L2002,0.02,M026,B12,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-20-20,L13@DRIVE,2.69,Air-Way,2.700,Items!L2005,0.01,M026,B14,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6504,6504-24-24,L13@DRIVE,3.09,Air-Way,3.100,Items!L2006,0.01,M026,B16,Overall Length,"Q36-14 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-OTHER-6504, SWIVEL-STRAIGHTS NOTES)","OMi gives no L14: moving L13 alone moves the swivel nose against the nut face (batch 15 kept 6504-06-08 at Air-Way for this reason, SWIVEL-STRAIGHTS NOTES 'Deliberately not changed')"
+6505,6505-02-04,L15@DRIVE,1.34,Air-Way,1.36,Items!L2009,0.02,M031,B3,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-02-04,L16@DRIVE,1,Air-Way,1.01,Items!P2009,0.01,M032,C3,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-04-04,L15@DRIVE,1.53,Air-Way,1.56,Items!L2011,0.03,M031,B4,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-04-04,L16@DRIVE,1.19,Air-Way,1.21,Items!P2011,0.02,M032,C4,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-04-05,L15@DRIVE,1.63,Air-Way,1.64,Items!L2012,0.01,M031,B5,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-04-06,L15@DRIVE,1.72,Air-Way,1.68,Items!L2013,-0.04,M031,B6,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-04-06,L16@DRIVE,1.34,Air-Way,1.30,Items!P2013,-0.04,M032,C6,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-06-06,L15@DRIVE,1.72,Air-Way,1.64,Items!L2015,-0.08,M031,B7,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-06-06,L16@DRIVE,1.34,Air-Way,1.26,Items!P2015,-0.08,M032,C7,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-06,L15@DRIVE,1.86,Air-Way,1.88,Items!L2017,0.02,M031,B10,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-06,L16@DRIVE,1.48,Air-Way,1.51,Items!P2017,0.03,M032,C10,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-08,L15@DRIVE,1.9,Air-Way,1.98,Items!L2018,0.08,M031,B11,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-08,L16@DRIVE,1.48,Air-Way,1.56,Items!P2018,0.08,M032,C11,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-10,L15@DRIVE,2.28,Air-Way,2.10,Items!L2019,-0.18,M031,B12,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-10,L16@DRIVE,1.78,Air-Way,1.60,Items!P2019,-0.18,M032,C12,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-12,L15@DRIVE,2.26,Air-Way,2.14,Items!L2020,-0.12,M031,B13,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-08-12,L16@DRIVE,1.7,Air-Way,1.58,Items!P2020,-0.12,M032,C13,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-12-10,L15@DRIVE,2.22,Air-Way,2.21,Items!L2022,-0.01,M031,B14,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-12-10,L16@DRIVE,1.72,Air-Way,1.70,Items!P2022,-0.02,M032,C14,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-12-12,L15@DRIVE,2.26,Air-Way,2.28,Items!L2023,0.02,M031,B15,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-12-12,L16@DRIVE,1.7,Air-Way,1.72,Items!P2023,0.02,M032,C15,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-12-16,L15@DRIVE,2.36,Air-Way,2.38,Items!L2024,0.02,M031,B16,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-12-16,L16@DRIVE,1.77,Air-Way,1.79,Items!P2024,0.02,M032,C16,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-20-20,L15@DRIVE,2.66,Air-Way,2.84,Items!L2028,0.18,M031,B19,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6505,6505-20-20,L16@DRIVE,2.03,Air-Way,2.21,Items!P2028,0.18,M032,C19,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-02-04,L17@DRIVE,1.19,Air-Way,1.260,Items!L2032,0.07,M038,B3,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-02-04,L18@DRIVE,0.85,Air-Way,0.920,Items!P2032,0.07,M039,C3,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-04-04,L17@DRIVE,1.44,Air-Way,1.520,Items!L2033,0.08,M038,B5,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-04-04,L18@DRIVE,1.09,Air-Way,1.170,Items!P2033,0.08,M039,C5,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-04-06,L17@DRIVE,1.5,Air-Way,1.630,Items!L2034,0.13,M038,B6,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-04-06,L18@DRIVE,1.13,Air-Way,1.260,Items!P2034,0.13,M039,C6,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-06-06,L17@DRIVE,1.63,Air-Way,1.690,Items!L2036,0.06,M038,B8,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-06-06,L18@DRIVE,1.25,Air-Way,1.310,Items!P2036,0.06,M039,C8,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-06-08,L17@DRIVE,1.61,Air-Way,1.780,Items!L2037,0.17,M038,B9,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-06-08,L18@DRIVE,1.19,Air-Way,1.360,Items!P2037,0.17,M039,C9,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-08-06,L17@DRIVE,1.87,Air-Way,1.920,Items!L2039,0.05,M038,B10,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-08-06,L18@DRIVE,1.49,Air-Way,1.540,Items!P2039,0.05,M039,C10,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-08-08,L18@DRIVE,1.49,Air-Way,1.480,Items!P2040,-0.01,M039,C11,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-08-10,L17@DRIVE,2.08,Air-Way,2.120,Items!L2041,0.04,M038,B12,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-08-10,L18@DRIVE,1.58,Air-Way,1.620,Items!P2041,0.04,M039,C12,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-12-10,L17@DRIVE,2.11,Air-Way,2.180,Items!L2043,0.07,M038,B14,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-12-10,L18@DRIVE,1.62,Air-Way,1.680,Items!P2043,0.06,M039,C14,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-24-24,L17@DRIVE,2.98,Air-Way,3.000,Items!L2049,0.02,M038,B20,Overall Length,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",
+6506,6506-24-24,L18@DRIVE,2.25,Air-Way,2.270,Items!P2049,0.02,M039,C20,L 1 Size,"Q36-10 reading; settled by Brennan TFA catalog letters in batch 15 (Q-B-SWSTR, SWIVEL-STRAIGHTS NOTES)",

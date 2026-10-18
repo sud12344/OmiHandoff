@@ -1,0 +1,39 @@
+BATCH 8 - THREE NEW MASTERS FROM THE BRENNAN STEP BUNDLE (2026-09-24)
+=====================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+Independent of batches 4-7 - run them in any order.
+
+   1  Build_6404_MASTER.bas   Sub Build6404   female ORB port x male NPTF adapter                2 configs
+   2  Build_6410_MASTER.bas   Sub Build6410   ORB reducer (male ORB x female -08 ORB port)       4 configs
+   3  Build_2406_MASTER.bas   Sub Build2406   JIC reducer (male JIC x female -08 JIC port)       5 configs
+                                                                                     total    11 configs
+
+WHAT IS NEW
+  First female ports drawn INSIDE the DRIVE revolve (the port is a cavity in the profile, not a separate cut):
+    6404/6410  female SAE ORB port: 15 deg O-ring chamfer, 45 deg lead-in, minor bore, 120 deg drill point
+    2406       female 37 deg JIC port: 45 deg countersink, minor bore, 37 deg internal seat
+  Report lines to look at:
+    - "DRIVE sketch fully defined" and "Revolved volume ... (expect ...)"   <- the cavity profile
+    - "dim L32/L33/L23 = ..."  the overall length is now dimensioned between the two end faces
+    - "dim ORBFB_... / JICFB_... = ..."  the port dimensions
+    - "bore open on the axis at End B"   <- the through bore breaks into the port
+    - "THD_EndB helix created / swept cut created"  <- straight internal thread (same code as the 0318 nut)
+  If DRIVE is not fully defined or the volume check fails, send me the report - that is the new part.
+
+WHERE THE NUMBERS COME FROM (also in $PRP@AxialSource of every row)
+  Female ORB -08 port   measured on TWO Brennan STEPs (6404-08-08 and 6410-12-08-O) - they agree: face dia 0.813,
+                        chamfer to 0.756, minor bore to 0.688 from the face, 120 deg drill point. Port minor = Air-Way D3.
+  Female JIC -08 port   measured on the Brennan 2406-08-08 STEP: countersink from 0.755, minor (ASME B1.1 basic minor)
+                        to 0.375 from the face, 37 deg seat straight down to the bore. The round collar Brennan has at
+                        the female end is NOT modelled (hex runs the full length).
+  Everything else       Air-Way (lengths, hex, bores) + the male ends already verified on earlier series.
+  Only -08 FEMALE ports are built: each other port size needs its own STEP. All 11 rows are ASSUMED.
+
+FLAGGED FOR YOU (in each row's $COMMENT)
+  6410-12-08-O  Brennan's part is 1.48 long, Air-Way says 1.09. Built to Air-Way (project rule). With 1.09 the -08
+                port sits inside the male -12 ORB end - the wall between them is 0.099 at its thinnest (fine), but it
+                is a different design from Brennan's. Please confirm the length with OMi.
+  6410-16-08-O  same idea, port inside the male -16 end, wall 0.224.
+  6404-08-08    Brennan 1.65 vs Air-Way 1.69 - normal difference between manufacturers.

@@ -1,0 +1,21 @@
+Checks of the staged tables (2026-10-18). Tools: tools/_out/puckfix_20261009/tools_new (= batch-16 staged tools + puck fix),
+OMI_ROOT = tools/_out/omi_answers_20261018/scratch_root, output gen/straight, gen/tee.
+
+Generators
+  gen_straight2 1405: 17 configs (ref 1405-08-08), 3 skipped (1405-04-02 DROP, 1405-08-04 DROP, 1405-20-24 MISSING), 0 geometry-blocked
+  gen_straight2 6410: 31 configs; gen_straight2 6405: 40 configs, blocked 6405-32-24-O (bore 2.38 > pocket 1.72; old, unrelated)
+  gen_tee 1502: 7 configs (ref 1502-02-02-FG), 16 skipped, 1 blocked: 1502-04-04-FG (old Air-Way row, hex-arm corner vs swivel body face; unrelated)
+
+SW2 vs current (scripts/cmp_sw2.py)
+  1405: live 15 -> 17, added 1405-04-06, 1405-08-12; old configurations unchanged
+  6405: live 40 -> 40; only the $COMMENT of 6405-20-16-O changed (note appended)
+  6410: live 30 -> 31, added 6410-16-04-O; old configurations: only $COMMENT notes appended (12-04, 16-06, 16-08, 20-12, 24-12, 24-16)
+  1502: batch-16 staged (puckfix regen/new) 1 -> 7, added 1502-06-06-FG -12-08-FG -12-12-FG -20-20-FG -24-24-FG -32-32-FG; 1502-02-02-FG unchanged
+
+Static checks
+  vbacheck: Build_1405 33 procedures OK, Build_6410 33 OK, Build_6405 33 OK, Build_1502 51 OK
+  dofcheck_straight: 1405 fully defined (40/40, redundant 0), 6410 fully defined (24/24, redundant 0)
+  dofcheck_tee 1502: leg 1 8/8, leg 2 40/40, fully defined, redundant 0
+  allcfg_check: 1405 17 configs 0 outline problems; 6410 31 configs 0; 1502 7 configs 0
+
+NOT done: SolidWorks dry runs (SolidWorks was not running). Do them before anything ships (CLAUDE.md verify loop).

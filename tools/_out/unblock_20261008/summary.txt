@@ -1,0 +1,83 @@
+unbuilt BUILD rows: 763  by status {'MISSING': 672, 'DATA': 91}
+by source {'IMPACT-WORK': 267, 'WAVE1-READY': 48, 'DATA-NO-MASTER': 90, 'IMPACT-DECIDE': 87, 'IMPACT-STEP': 62, 'IMPACT-NOW': 2, 'WAVE1-BRENNAN-ONLY': 84, 'IMPACT-SCOPE': 98, 'B15-HELD': 25}
+
+NO user action needed (only my work): 51  {'WAVE1-READY': 48, 'IMPACT-WORK': 3}
+Q-BRENNAN-ONLY = yes ALONE makes 76 more rows buildable (with my work): {'IMPACT-NOW': 2, 'WAVE1-BRENNAN-ONLY': 37, 'IMPACT-WORK': 12, 'B15-HELD': 23, 'IMPACT-STEP': 2}
+  by table: {'5406': 15, '2406': 9, '1502': 7, '3474': 7, '2501LL': 6, '5404': 6, '2403': 4, '6504': 4, '5406P': 3, '1501': 2, '5600': 2, '1724': 1, '1800': 1, '1804': 1, '1824': 1, '2403LH': 1, '2501': 1, '2700': 1, '2706': 1, '5000': 1, '6410': 1, '6600': 1}
+  Q-BRENNAN-ONLY is one of the gates (or an alternative) of 435 rows
+
+rows touched per user action (a row can need several):
+   435  Q-BRENNAN-ONLY                              alone frees 76
+   426  STEP download                               alone frees 28
+   147  Q-TRANSFER-ENDLIB                           alone frees 0
+    77  Q-TRANSFER-TAPDRILL                         alone frees 6
+    68  Q-SCOPE-TUBE                                alone frees 32
+    64  capability Q-NEW-ANGLEDHELIX                alone frees 21
+    50  Q-SOP5                                      alone frees 0
+    39  capability Q-NEW-HOSEB                      alone frees 11
+    35  capability Q-NEW-PERLEGSW                   alone frees 0
+    30  Q-NEW-ORINGSRC                              alone frees 0
+    30  Q-SCOPE-ORING                               alone frees 0
+    21  Q-NEW-6900-LEN                              alone frees 19
+    20  Q-NEW-5404N-NAME                            alone frees 0
+    20  Q-TRANSFER-5404N                            alone frees 0
+    19  Q-CAT-5404N-BORE                            alone frees 0
+    18  Q-NEW-F2A-NOTINCAT                          alone frees 0
+    17  Q-NEW-F1B-TAPDRILL-SCOPE                    alone frees 17
+    13  Q-HANDMADE                                  alone frees 6
+    12  capability Q-NEW-ANGLEDFEMALE               alone frees 0
+    12  capability Q-NEW-FLG61LEG                   alone frees 0
+    12  Q-HX                                        alone frees 1
+    11  OMi answer                                  alone frees 11
+    11  Q-TRANSFER-I1                               alone frees 3
+    11  Q-NEW-F1B-ORBEND                            alone frees 11
+    11  capability Q-NEW-ANGLEDNUT                  alone frees 0
+     9  Q-TRANSFER-FLG61-O                          alone frees 0
+     9  Q-NEW-4005CODE                              alone frees 0
+     8  Q-NEW-F3-CODE62LEN                          alone frees 0
+     7  Q-TRANSFER-LN                               alone frees 0
+     7  Q-TRANSFER-D3                               alone frees 0
+     7  Q-BOREWIDE                                  alone frees 0
+     7  Q-NEW-F1B-CATDIFF                           alone frees 0
+     7  Q-NEW-F1B-RANGE                             alone frees 0
+     6  Q-NEW-CATRANK                               alone frees 6
+     6  Q-CONFLICT-TAPDRILL-32                      alone frees 0
+     6  Q-TRANSFER-SWOFFSET                         alone frees 1
+     5  Q-CONFLICT-TAPDRILL-24                      alone frees 0
+     5  Q-NEW-F1A-5504TAP                           alone frees 0
+     5  Q-B-OTHER-6420                              alone frees 0
+     5  Q-B-OTHER                                   alone frees 0
+     4  BLOCKED                                     alone frees 4
+     4  Q-NEW-AWALIAS                               alone frees 3
+     4  Q-TRANSFER-ORBGW                            alone frees 0
+     4  Q-CONFLICT-SWOFFSET                         alone frees 0
+     3  Q-NEW-FLARELESS-N3                          alone frees 0
+
+greedy order (each step = the action that frees the most rows given the earlier ones; all STEP downloads pooled):
+  start: 51 rows need no user action
+  + Q-BRENNAN-ONLY                             frees   76  (cumulative 127)
+  + STEP download                              frees   89  (cumulative 216)
+  + Q-TRANSFER-ENDLIB                          frees   54  (cumulative 270)
+  + capability Q-NEW-HOSEB                     frees   39  (cumulative 309)
+  + capability Q-NEW-ANGLEDHELIX               frees   37  (cumulative 346)
+  + Q-SCOPE-TUBE                               frees   32  (cumulative 378)
+  + Q-SOP5                                     frees   48  (cumulative 426)
+  + Q-TRANSFER-TAPDRILL                        frees   31  (cumulative 457)
+  + capability Q-NEW-PERLEGSW                  frees   32  (cumulative 489)
+  + Q-NEW-6900-LEN                             frees   20  (cumulative 509)
+  + Q-NEW-F1B-TAPDRILL-SCOPE                   frees   17  (cumulative 526)
+  + capability Q-NEW-ANGLEDFEMALE              frees   11  (cumulative 537)
+  + OMi answer                                 frees   11  (cumulative 548)
+  + Q-NEW-F1B-ORBEND                           frees   11  (cumulative 559)
+  + Q-HANDMADE                                 frees    9  (cumulative 568)
+  + capability Q-NEW-ANGLEDNUT                 frees    9  (cumulative 577)
+  + Q-NEW-F3-CODE62LEN                         frees    8  (cumulative 585)
+  + Q-HX                                       frees    7  (cumulative 592)
+  + Q-NEW-F1B-CATDIFF                          frees    7  (cumulative 599)
+  + Q-NEW-F1B-RANGE                            frees    7  (cumulative 606)
+  + Q-NEW-F2A-NOTINCAT                         frees    6  (cumulative 612)
+  + Q-TRANSFER-I1                              frees    7  (cumulative 619)
+  + Q-TRANSFER-LN                              frees    7  (cumulative 626)
+  + Q-CONFLICT-TAPDRILL-24                     frees    5  (cumulative 631)
+  + Q-CONFLICT-TAPDRILL-32                     frees    5  (cumulative 636)
+  still blocked after those: 127; their gates: [('Q-BRENNAN-ONLY', 112), ('STEP download', 61), ('Q-NEW-ORINGSRC', 30), ('Q-SCOPE-ORING', 30), ('Q-NEW-5404N-NAME', 20), ('Q-TRANSFER-5404N', 20), ('Q-CAT-5404N-BORE', 19), ('capability Q-NEW-FLG61LEG', 12), ('Q-TRANSFER-FLG61-O', 9), ('Q-NEW-4005CODE', 9), ('Q-BOREWIDE', 7), ('Q-TRANSFER-D3', 7), ('Q-TRANSFER-TAPDRILL', 6), ('Q-TRANSFER-ENDLIB', 6), ('Q-TRANSFER-SWOFFSET', 6), ('Q-NEW-F1A-5504TAP', 5), ('BLOCKED', 4), ('Q-NEW-F2A-NOTINCAT', 4), ('Q-HANDMADE', 4), ('Q-TRANSFER-ORBGW', 4), ('Q-CONFLICT-SWOFFSET', 4), ('Q-NEW-F3-FLARELESS-ALIAS', 3), ('Q-NEW-FLARELESS-N3', 3), ('capability Q-NEW-PERLEGSW', 3), ('Q-NEW-1700BODY', 3)]

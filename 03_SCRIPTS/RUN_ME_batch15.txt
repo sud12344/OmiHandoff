@@ -1,0 +1,72 @@
+BATCH 15 - 52 NEW CONFIGURATIONS IN 18 EXISTING MASTERS (OMi VALUES + 5 FORGED ROWS FROM THEIR OWN BRENNAN STEPS) (2026-10-08)
+==================================================================================================================================
+NOTHING TO RUN. Batch 15 is ALREADY BUILT: Claude built all 18 masters through the SolidWorks MCP on 2026-10-02 (dry runs into
+staging, SolidWorks 2026 SP4) and moved them into 11_MASTERS on 2026-10-08 after your "ship batch". Their macros are in 03_SCRIPTS
+and their SW2 tables in 04_DESIGN_TABLES. You do not need to re-run them.
+
+If you ever re-run one: same as RUN_ME_batch14.txt (close <root>_MASTER, remove any old module of the same name in the VBA editor
+first, import the .bas from 03_SCRIPTS, run the entry sub). A good run ends with "finished with 0 problem(s)", "Configurations
+after table: N+1 (expect N+1)", "Master left in its reference configuration ..." and "Saved to ...\11_MASTERS\...". The reports
+of this batch still say "Saved to ...\11_MASTERS_NEW\..." (the staging build); the parts were moved unchanged (same sha256).
+
+18 MACROS + 18 SW2 TABLES                                  configurations  new
+   Build_1501_MASTER.bas   Sub Build1501                  16 -> 17        1501-02-04-FG
+   Build_2501_MASTER.bas   Sub Build2501                  33 -> 48        2501-04-02 / -04-12 / -05-06 / -06-12 / -08-16 / -12-06 /
+                                                                          -12-20 / -16-08 / -16-24 / -24-16 / -24-32-FG,
+                                                                          2501-L-04-04 / -08-08 / -12-12 / -16-16-FG (2501-L folded)
+   Build_2503_MASTER.bas   Sub Build2503                  27 -> 29        2503-20-24-FG, 2503-24-20-FG
+   Build_2601_MASTER.bas   Sub Build2601                   9 -> 10        2601-24-24-24-FG
+   Build_2701_MASTER.bas   Sub Build2701                  13 -> 15        2701-02-02-FG, 2701-05-05-FG (own Brennan STEPs)
+   Build_5500_MASTER.bas   Sub Build5500                  13 -> 16        5500-08-04-FG, 5500-16-08-FG, 5500-24-24-FG
+   Build_5604_MASTER.bas   Sub Build5604                   3 -> 4         5604-04-04-04-FG   (+ the QA #144 round collar, below)
+   Build_5605_MASTER.bas   Sub Build5605                   3 -> 4         5605-08-08-08-FG   (+ the QA #144 round collar, below)
+   Build_6500_MASTER.bas   Sub Build6500                  14 -> 15        6500-06-04-FG
+   Build_6501_MASTER.bas   Sub Build6501                   1 -> 11        6501-04-06 / -06-04 / -06-08 / -08-06 / -08-08 / -08-10 /
+                                                                          -16-16 / -20-20 / -24-24 / -32-32-FG
+   Build_6502_MASTER.bas   Sub Build6502                  10 -> 11        6502-10-08-FG
+   Build_6801_MASTER.bas   Sub Build6801                  33 -> 35        6801-16-08-NWO-FG, 6801-24-32-NWO-FG (own Brennan STEPs)
+   Build_6802_MASTER.bas   Sub Build6802                  19 -> 20        6802-32-32-NWO-FG (own Brennan STEP; the corner neck trim
+                                                                          ORBTRIM1 is live only in this configuration)
+   Build_2706_MASTER.bas   Sub Build2706                  22 -> 23        2706-24-24-LN
+   Build_6401_MASTER.bas   Sub Build6401                  21 -> 24        6401-16-20-O, 6401-20-16-O, 6401-24-20-O
+   Build_6504_MASTER.bas   Sub Build6504                   9 -> 10        6504-06-08
+   Build_6505_MASTER.bas   Sub Build6505                  16 -> 18        6505-06-04, 6505-16-12
+   Build_6506_MASTER.bas   Sub Build6506                  10 -> 14        6506-12-12, 6506-12-16, 6506-16-16, 6506-20-20
+                                                         ----------
+                                                          272 -> 324      52 new
+
+WHERE THE VALUES COME FROM (all 52 rows ASSUMED - one source)
+  - 47 rows: the OMi dimension file (07_RAW_EXTRACTS/omi_dimensions/WebsitePartsInfo2026.xlsx, sheet Items), each cell read by
+    address. The Brennan TFA catalog was used only to settle which OMi column is which leg (OMi "M 1" / "M 2" / "L 1"); OMi and the
+    catalog are the same source (Brennan data), so the rows are ASSUMED. Thread majors from the part-number dashes.
+  - 5 forged rows from their own Brennan STEPs (standing -FG decision): 2701-02-02-FG, 2701-05-05-FG, 6801-16-08-NWO-FG,
+    6801-24-32-NWO-FG, 6802-32-32-NWO-FG.
+  - Every changed cell, with its source: tools\_out\batch15_20261002\work\<group>\CHANGES.csv (groups FG-STEP, STRAIGHTS,
+    SWIVEL-ELBOWS, SWIVEL-STRAIGHTS, TEE-2501, TEE-OTHER) and $PRP@AxialSource of each row.
+
+5604 / 5605: THE ROUND-COLLAR RE-RUN (QA #144) IS DONE WITH THIS BATCH
+  Your 5604 / 5605 masters were built on 2026-09-24 before the round collar on the female pipe ends (QA #144 asked for a re-run).
+  The batch-15 builds come from the current generator, so their old configurations now carry the collar: volume -1.8 % to -5.8 %,
+  bounding sizes unchanged (tools\_out\ship_20261008\checks\old_configs_vs_accepted_5604_5605.txt). 2602 / 5602 still have their
+  2026-09-24 builds.
+
+CHECKED BEFORE SHIPPING (tools\_out\ship_20261008\checks)
+  - The 18 roots regenerated on 2026-10-08 from the staged review tables with the live tools give exactly the macros and SW2
+    tables that built the staged parts (only the "generated <date>" line differs) - verify_b15.txt.
+  - regress: 0 changed cells in any old configuration; 52 new configurations, none lost - regress_live_vs_staged.txt.
+  - SolidWorks dry runs 2026-10-02: 0 FAIL lines, every configuration rebuilt with 1 body (batch15_20261002\dryrun_log.txt).
+  - Old configurations vs the accepted masters: 266 of 266 identical (257 against the sweeps recorded when those masters were built,
+    9 of 2601 against a read-only sweep on 2026-10-08) - old_configs_vs_accepted*.txt. 5604 / 5605: the collar change above.
+  - Screenshots 2026-10-08: 5604-08-08-08-FG (collars), 6802-32-32-NWO-FG (section).
+  - Static checks of the staged macros: sketches fully defined, every configuration's outline clean, VBA check OK
+    (batch15_20261002\checks).
+  - Old files: _to_delete\superseded_20261008\batch15_replaced\ and tools\_out\ship_20261008\old_files\ (MANIFEST*.txt).
+
+STILL OUT (25 rows held MISSING, values prepared but not applied - QA #169)
+  - Values only at Brennan (Q-BRENNAN-ONLY "later"): 2406 x8, 5404 x5, 5600-20-20-20-FG / -24-24-24-FG, 6504 x4, 5406-P x3
+    (or Q-NEW-AWALIAS), 6600-24-24-24-FG (or Q-GARBLE). A "yes" builds 24 of the 25.
+  - Conflicts: 2408-14-SOLID (Q-NEW-CATRANK), 6801-05-05-NWO-FG (question 25).
+  - Prepared values: tools\_out\batch15_20261002\work\STRAIGHTS\PROPOSALS.csv, SWIVEL-STRAIGHTS\NOTES.md,
+    TEE-OTHER\proposal_held_NOT_STAGED\, FG-STEP\NOTES.md.
+
+QA_Log #167-#169 (01_MASTER_DATA). Configurations in a master after batch 15: 1,044 of 1,804.

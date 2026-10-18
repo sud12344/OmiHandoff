@@ -1,0 +1,272 @@
+Build_6565_MASTER  10/2/2026 7:17:03 AM
+OK    dim L31 = 1.9200 in (expect 1.9200)
+OK    dim BODYR = 0.4677 in (expect 0.4677)
+OK    dim SWA_SEATENDR = 0.1950 in (expect 0.1950)
+      SWA_SEATANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SWA_SEATANG = 37.00 deg
+OK    dim SWA_SEATR = 0.2825 in (expect 0.2825)
+OK    dim SWA_NOSETIP = 0.4200 in (expect 0.4200)
+OK    dim SWA_NOSER = 0.3400 in (expect 0.3400)
+OK    dim SWA_FLOOR = 0.6723 in (expect 0.6723)
+OK    dim SWA_RELR = 0.3925 in (expect 0.3925)
+      SWA_RELANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SWA_RELANG = 45.00 deg
+OK    dim SWA_MINR = 0.3412 in (expect 0.3412)
+OK    dim SWA_THDL = 0.3283 in (expect 0.3283)
+      SWA_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      SWA_CSANG angle try 0 at (0.172, 0.067): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 1 at (0.457, -0.067): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 2 at (0.029, 0.133): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 3 at (0.600, -0.133): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 4 at (0.014, 0.455): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 5 at (0.014, -0.455): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 6 at (-0.014, 0.455): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 7 at (-0.014, -0.455): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 8 at (0.132, 0.079): 130.0 deg (want 50.0)
+      SWA_CSANG angle try 9 at (-0.104, 0.079): 130.0 deg (want 50.0)
+OK    angle SWA_CSANG held by its supplement SWA_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
+OK    dim SWA_CSR = 0.3750 in (expect 0.3750)
+OK    dim SWA_NUTR = 0.5081 in (expect 0.5081)
+OK    dim SWA_NUTHEXL = 0.4499 in (expect 0.4499)
+OK    dim SWA_SKIRTFR = 0.4361 in (expect 0.4361)
+OK    dim SWA_SKIRTR = 0.4108 in (expect 0.4108)
+OK    dim SWA_SKIRTL = 0.1800 in (expect 0.1800)
+OK    dim SWA_NUTL = 0.8270 in (expect 0.8270)
+OK    dim SWA_NECKR = 0.2920 in (expect 0.2920)
+OK    dim SWA_BODYS = 0.8850 in (expect 0.8850)
+OK    dim SWB_BODYS = 0.8850 in (expect 0.8850)
+OK    dim SWB_NECKR = 0.2920 in (expect 0.2920)
+OK    dim SWB_NUTL = 0.8270 in (expect 0.8270)
+OK    dim SWB_SKIRTR = 0.4108 in (expect 0.4108)
+OK    dim SWB_SKIRTL = 0.1800 in (expect 0.1800)
+OK    dim SWB_SKIRTFR = 0.4361 in (expect 0.4361)
+OK    dim SWB_NUTHEXL = 0.4499 in (expect 0.4499)
+OK    dim SWB_NUTR = 0.5081 in (expect 0.5081)
+OK    dim SWB_CSR = 0.3750 in (expect 0.3750)
+      SWB_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      SWB_CSANG angle try 0 at (1.463, -0.067): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 1 at (1.748, 0.067): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 2 at (1.320, -0.133): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 3 at (1.891, 0.133): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 4 at (1.906, 0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 5 at (1.906, -0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 6 at (-1.906, 0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 7 at (-1.906, -0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 8 at (2.024, 0.079): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 9 at (1.788, 0.079): 130.0 deg (want 50.0)
+OK    angle SWB_CSANG held by its supplement SWB_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
+OK    dim SWB_MINR = 0.3412 in (expect 0.3412)
+OK    dim SWB_THDL = 0.3283 in (expect 0.3283)
+      SWB_RELANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SWB_RELANG = 45.00 deg
+OK    dim SWB_RELR = 0.3925 in (expect 0.3925)
+OK    dim SWB_FLOOR = 0.6723 in (expect 0.6723)
+OK    dim SWB_NOSER = 0.3400 in (expect 0.3400)
+OK    dim SWB_NOSETIP = 0.4200 in (expect 0.4200)
+OK    dim SWB_SEATR = 0.2825 in (expect 0.2825)
+      SWB_SEATANG: the two lines share no endpoint - vertex candidates unavailable
+      SWB_SEATANG angle try 0 at (0.976, -0.050): 143.0 deg (want 37.0)
+OK    angle SWB_SEATANG = 37.00 deg
+OK    dim SWB_SEATENDR = 0.1950 in (expect 0.1950)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.8557 in^3 (expect 0.8557)
+OK    HEX: sketch plane selected (Right Plane)
+OK    dim HEXB = 0.8100 in (expect 0.8100)
+OK    HEX sketch fully defined
+      HEXCUT attempt 0: CreateDefinition returned Nothing
+      HEXCUT attempt 0: FeatureCut4 scope off -> True
+      HEXCUT attempt 0: removed 0.00029 in^3, new faces span x=0.7350..0.8270 (zone 0.8850..1.0350)
+      HEXCUT attempt 1: CreateDefinition returned Nothing
+      HEXCUT attempt 1: FeatureCut4 scope off -> True
+      HEXCUT attempt 1: removed 0.01783 in^3, new faces span x=0.8850..1.0350 (zone 0.8850..1.0350)
+OK    HEXCUT created in the right zone and removed material (attempt 1)
+OK    HEXCUT removed only the corners (2.1% of volume)
+OK    HEXCUT dims: DEPTH=0.1500 START=0.8850 HEXB=0.8100 
+OK    NUTHEX: sketch plane selected (End B face)
+OK    dim NUTHEX = 0.8800 in (expect 0.8800)
+OK    NUTHEX sketch fully defined
+      NUTCUT attempt 0: CreateDefinition returned Nothing
+      NUTCUT attempt 0: FeatureCut4 scope off -> True
+      NUTCUT attempt 0: removed 0.06312 in^3, new faces span x=1.4701..1.9200 (zone 1.4701..1.9200)
+OK    NUTCUT created in the right zone and removed material (attempt 0)
+OK    NUTCUT removed only the corners (7.5% of volume)
+OK    NUTCUT dims: DEPTH=0.4499 NUTHEX=0.8800 
+OK    NUTHEX@NUTHEX reachable
+OK    DEPTH@NUTCUT reachable
+OK    NUTHEXA: sketch plane selected (Right Plane)
+OK    dim NUTHEXA = 0.8800 in (expect 0.8800)
+OK    NUTHEXA sketch fully defined
+      NUTCUTA attempt 0: CreateDefinition returned Nothing
+      NUTCUTA attempt 0: FeatureCut4 scope off -> False
+      NUTCUTA attempt 0: FeatureCut4 scope on -> False
+      NUTCUTA attempt 1: CreateDefinition returned Nothing
+      NUTCUTA attempt 1: FeatureCut4 scope off -> True
+      NUTCUTA attempt 1: removed 0.06312 in^3, new faces span x=0.0000..0.4499 (zone 0.0000..0.4499)
+OK    NUTCUTA created in the right zone and removed material (attempt 1)
+OK    NUTCUTA removed only the corners (8.1% of volume)
+OK    NUTCUTA dims: DEPTH=0.4499 NUTHEXA=0.8800 
+OK    NUTHEXA@NUTHEXA reachable
+OK    DEPTH@NUTCUTA reachable
+OK    START@HEXCUT reachable
+OK    HEXB@HEX reachable
+OK    DEPTH@HEXCUT reachable
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.3900 in (expect 0.3900)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.9600 DA=0.3900 
+OK    select end face for BORE_B at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.3900 in (expect 0.3900)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> False
+      BORECUT_B attempt 0: FeatureCut4 scope on -> False
+      BORECUT_B attempt 1: CreateDefinition returned Nothing
+      BORECUT_B attempt 1: FeatureCut4 scope off -> False
+      BORECUT_B attempt 1: FeatureCut4 scope on -> False
+      BORECUT_B attempt 2: CreateDefinition returned Nothing
+      BORECUT_B attempt 2: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 2)
+OK    BORECUT_B dims: DEPTH=0.5400 START=0.9600 DB=0.3900 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=1.9200)
+OK    bore reaches the End A swivel seat (no bore bottom at the nose-tip plane x=0.4200)
+OK    bore reaches the swivel seat (no bore bottom at the nose-tip plane x=1.5000)
+OK    bore step open (no face across the axis at x=0.9600)
+OK    bore open through the End A seat end (no face across the axis at x=0.5361)
+OK    bore open through the End B seat end (no face across the axis at x=1.3839)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.3412)
+      THD_EndA: helix start = (0.0000, 0.0000, 0.3412)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.3412) axialIsX=True apex dir -1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.3412 (want 0.3412)
+OK    dim PROF_R = 0.3412 in (expect 0.3412)
+      APEXR: try 0 value 0.3750 (want 0.3750)
+OK    dim APEXR = 0.3750 in (expect 0.3750)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.00818 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+OK    THD_EndB: end face found at 1.9200
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (1.9200, 0.0000, -0.3412)
+      THD_EndB: helix start = (1.9200, 0.0000, -0.3412)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (1.9200,0.3412) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.9200 (want 1.9200)
+OK    dim PROF_AX = 1.9200 in (expect 1.9200)
+      PROF_R: try 0 value 0.3412 (want 0.3412)
+OK    dim PROF_R = 0.3412 in (expect 0.3412)
+      APEXR: try 0 value 0.3750 (want 0.3750)
+OK    dim APEXR = 0.3750 in (expect 0.3750)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.00818 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 1.9591 (nominal 1.9200; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.9200
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Across flats / corners 0.8800 / 1.0161 (body hex 0.8100, nut hex 0.8800/0.8800: expect between 0.8800 and 1.0161)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_6565_SW2.xlsx
+OK    Configurations after table: 9 (expect 9)
+      config check 1: 6565-04-04
+OK    6565-04-04 L31@DRIVE = 1.5100 (table 1.5100)
+OK    6565-04-04 BODYR@DRIVE = 0.2483 (table 0.2483)
+OK    6565-04-04 HEXB@HEX = 0.4300 (table 0.4300)
+OK    6565-04-04 SWA_BODYS@DRIVE = 0.6850 (table 0.6850)
+OK    6565-04-04 SWA_NECKR@DRIVE = 0.1465 (table 0.1465)
+OK    6565-04-04 SWA_NUTL@DRIVE = 0.6490 (table 0.6490)
+OK    6565-04-04 SWA_SKIRTR@DRIVE = 0.2574 (table 0.2574)
+OK    6565-04-04 SWA_SKIRTL@DRIVE = 0.1400 (table 0.1400)
+OK    6565-04-04 PROF_R@THDPROF_A = 0.1917 (table 0.1917)
+OK    6565-04-04 PROF_R@THDPROF_B = 0.1917 (table 0.1917)
+OK    6565-04-04 DEPTH@BORECUT_A = 0.7550 (table 0.7550)
+OK    6565-04-04 DEPTH@BORECUT_B = 0.4150 (table 0.4150)
+OK    6565-04-04 SWA_SEATENDR@DRIVE = 0.0850 (table 0.0850)
+OK    6565-04-04 SWB_SEATENDR@DRIVE = 0.0850 (table 0.0850)
+OK    6565-04-04 one solid body (found 1)
+      6565-04-04 box x -0.016..1.526  y -0.280..0.280
+      config check 2: 6565-24-24
+OK    6565-24-24 L31@DRIVE = 3.4600 (table 3.4600)
+OK    6565-24-24 BODYR@DRIVE = 1.1547 (table 1.1547)
+OK    6565-24-24 HEXB@HEX = 2.0000 (table 2.0000)
+OK    6565-24-24 SWA_BODYS@DRIVE = 1.4100 (table 1.4100)
+OK    6565-24-24 SWA_NECKR@DRIVE = 0.7760 (table 0.7760)
+OK    6565-24-24 SWA_NUTL@DRIVE = 1.3200 (table 1.3200)
+OK    6565-24-24 SWA_SKIRTR@DRIVE = 1.0504 (table 1.0504)
+OK    6565-24-24 SWA_SKIRTL@DRIVE = 0.2300 (table 0.2300)
+OK    6565-24-24 PROF_R@THDPROF_A = 0.8924 (table 0.8924)
+OK    6565-24-24 PROF_R@THDPROF_B = 0.8924 (table 0.8924)
+OK    6565-24-24 DEPTH@BORECUT_A = 1.7300 (table 1.7300)
+OK    6565-24-24 DEPTH@BORECUT_B = 0.9950 (table 0.9950)
+OK    6565-24-24 SWA_SEATENDR@DRIVE = 0.6550 (table 0.6550)
+OK    6565-24-24 SWB_SEATENDR@DRIVE = 0.6550 (table 0.6550)
+OK    6565-24-24 one solid body (found 1)
+      6565-24-24 box x -0.052..3.486  y -1.125..1.125
+OK    6565-08-08: bore open through the End A seat end (x=0.5361, seat cone ends at r=0.1950)
+OK    6565-08-08: bore open through the End B seat end (x=1.3839, seat cone ends at r=0.1950)
+OK    6565-04-04: bore open through the End A seat end (x=0.4196, seat cone ends at r=0.0850)
+OK    6565-04-04: bore open through the End B seat end (x=1.0904, seat cone ends at r=0.0850)
+OK    6565-06-06: bore open through the End A seat end (x=0.4679, seat cone ends at r=0.1450)
+OK    6565-06-06: bore open through the End B seat end (x=1.3121, seat cone ends at r=0.1450)
+OK    6565-10-10: bore open through the End A seat end (x=0.6294, seat cone ends at r=0.2400)
+OK    6565-10-10: bore open through the End B seat end (x=1.7706, seat cone ends at r=0.2400)
+OK    6565-12-12: bore open through the End A seat end (x=0.7226, seat cone ends at r=0.3000)
+OK    6565-12-12: bore open through the End B seat end (x=1.8174, seat cone ends at r=0.3000)
+OK    6565-16-16: bore open through the End A seat end (x=0.7592, seat cone ends at r=0.4200)
+OK    6565-16-16: bore open through the End B seat end (x=1.9608, seat cone ends at r=0.4200)
+OK    6565-20-20: bore open through the End A seat end (x=0.8473, seat cone ends at r=0.5350)
+OK    6565-20-20: bore open through the End B seat end (x=2.0427, seat cone ends at r=0.5350)
+OK    6565-24-24: bore open through the End A seat end (x=0.9407, seat cone ends at r=0.6550)
+OK    6565-24-24: bore open through the End B seat end (x=2.5193, seat cone ends at r=0.6550)
+      All-config sweep: rebuilding 8 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/8  6565-04-04  rebuilt in 1.4 s
+      sweep 2/8  6565-06-06  rebuilt in 1.1 s
+      sweep 3/8  6565-08-08  rebuilt in 1.0 s
+      sweep 4/8  6565-10-10  rebuilt in 1.0 s
+      sweep 5/8  6565-12-12  rebuilt in 0.9 s
+      sweep 6/8  6565-16-16  rebuilt in 1.5 s
+      sweep 7/8  6565-20-20  rebuilt in 1.6 s
+      sweep 8/8  6565-24-24  rebuilt in 1.1 s
+OK    All-config sweep: 8 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 6565-08-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\6565_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/2/2026 7:18:20 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\6565_MASTER.SLDPRT

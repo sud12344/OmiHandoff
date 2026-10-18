@@ -1,0 +1,132 @@
+ORFS model type - Brennan STEP files needed (2026-10-16)
+========================================================
+SHAPE ONLY (user 2026-10-08: "Brennan 3D files for SHAPE only"): no dimension is taken from these files.
+- You download them. Brennan's part numbers are the OMi FS part numbers.
+- Save each one as 09_STEP_FILES/BRENNAN_<part number>.stp, e.g. 09_STEP_FILES/BRENNAN_FS2403-08-08.stp.
+- Every part number below is printed in Brennan's ORFS catalog (07_RAW_EXTRACTS/brennan_catalogs/ORFS Catalog.pdf; page given), so
+  Brennan sells it.
+- None is in 09_STEP_FILES yet: on 2026-10-16 no FS file was among the 153 files there.
+- Why each is needed: PLAN.md in this folder (end entries FSM / FSSW / FSBH, questions Q-FS-*).
+
+QUESTIONS FOR YOU (first)
+  S1. Download part 1 (9 pilots) now, and parts 2 and 3 only after the pilots are measured and their extractors pass? Recommended. The
+      earlier STEP lists worked the same way: pilots first, the rest after the pilot passes.
+  S2. Also download the Air-Way 3D models of part 5?
+      - Air-Way is the dimension source, and a second manufacturer next to Brennan.
+      - With them the new ORFS end shapes can be VERIFIED instead of single-source ASSUMED (PLAN Q-FS-2NDSHAPE).
+      - The 3DContentCentral sign-in is yours to do.
+  S3. Get BRENNAN_FS2408-08 (part 4) only if the FS2408 plug is to be built with Air-Way's hole (PLAN Q-FS2408-HOLE).
+
+TOTAL for all 288 parts with dimensions: 9 pilots + 8 per-dash files + 15 family pilots = 32 files. Parts 4 and 5 are optional.
+
+
+1. PILOTS - DOWNLOAD FIRST (9 files, one per new end type; each validates its new extractor before the rest is downloaded)
+   Every pilot is a row with dimensions of its own master, so it also serves that master's closed loop.
+
+  P1  FS2403-08-08           p3   MALE FACE-SEAL END (FSM) -08, two copies on one straight union.
+                                  - new tools/measure/fsm.py must read both ends the same.
+                                  - measures: face, O-ring groove (must fit the Air-Way FS4000-08 O-ring: I.D. 0.489, W 0.070),
+                                    thread length, relief, end length.
+                                  - pilot of FS2403.
+  P2  FS6500-08-08-FG        p9   FEMALE FACE-SEAL SWIVEL (FSSW) -08.
+                                  - new fssw.py: nut hex length, nut rear face, thread minor + length, the seal face inside the nut,
+                                    neck, body face.
+                                  - 3rd copy of the FSM -08 (must equal P1).
+                                  - 90 deg forged swivel elbow body (wave-1 fgelbow.py / elbow90.py).
+                                  - settles the swivel reference: crossing -> nut face = Air-Way L21 1.49 = Brennan AAA 1.49?
+                                  - pilot of FS6500.
+  P3  FS2701-08-08-FG        p8   MALE BULKHEAD END (FSBH) -08: face-seal nose, thread run over Air-Way i2 1.44, collar d17 1.00 x
+                                  i4 0.06; 90 deg forged bulkhead body. Pilot of FS2701 / FS2701-LN.
+  P4  FS6400-08-08-O         p5   STRAIGHT-THREAD STUD on an FS part (PLAN Q-FS-ORBSTUD).
+                                  - Air-Way L8 - L9 = 0.55 tip -> hex, our ORB end 0.438.
+                                  - what fills the extra length: thread length, undercut, plain shank?
+                                  - pilot of FS6400 / FS6400-L.
+  P5  FS6801-08-08-NWO-FG    p10  ADJUSTABLE STUD on an FS part (PLAN Q-FS-ORBSTUD).
+                                  - washer face 0.54 from the tip (Air-Way L10 - L11), our NWO -08 0.490.
+                                  - nut, washer, undercut (nwo.py, validated).
+                                  - 4th copy of the FSM -08; 90 deg forged body.
+                                  - pilot of FS6801 / FS6801-L.
+  P6  FS0318-08              p20  FS NUT: thread length, inner lip and its bore (fsnut.py on wave-1 nutprof.py).
+                                  - hex 0.94 / length 0.83 must match Air-Way FF318-8.
+                                  - compared with the nut of P2: if equal, no other nut STEP is needed.
+                                  - pilot of FS0318.
+  P7  FS0319-08              p20  FS BRAZE SLEEVE: collar length, spigot, bore (length 0.37 / OD 0.75 come from Air-Way). Pilot of FS0319.
+  P8  FS0306-08              p20  FS BULKHEAD LOCK NUT: face chamfers / countersinks (wave-1 locknut.py); thickness 0.35 / hex 1.13
+                                  come from Air-Way. Pilot of FS0306.
+  P9  FS2406-08-06           p4   TUBE-END REDUCER: collar (Air-Way d8 0.75) and seal face, neck, whether the nut is part of it
+                                  (PLAN Q-FS2406-NUT); FSM -06 (cross-check of E2). Pilot of FS2406.
+
+
+2. END LIBRARY PER DASH (8 files, after P1 and P2 have passed)
+   Gives the male face-seal end at every dash with dimensions (-04 ... -32) and the swivel at -04 ... -20. FS6500 carries both ends, so
+   one file per dash does both. A row needs every dash it has (e.g. FS2403-08-06 needs P1 and E2). Rows with dimensions that carry a
+   face-seal end (FSM / FSBH / FSSW) of that dash:
+
+  E1  FS6500-04-04-FG        p9   FSM -04 + FSSW -04                                    39 rows
+  E2  FS6500-06-06-FG        p9   FSM -06 + FSSW -06                                    50 rows
+      (-08 comes from P1 / P2)                                                          51 rows
+  E3  FS6500-10-10-FG        p9   FSM -10 + FSSW -10                                    30 rows
+  E4  FS6500-12-12-FG        p9   FSM -12 + FSSW -12                                    41 rows
+  E5  FS6500-16-16-FG        p9   FSM -16 + FSSW -16 (row itself MISSING; shape only)    27 rows
+  E6  FS6500-20-20-FG        p9   FSM -20 + FSSW -20 (row itself MISSING; shape only)    17 rows
+  E7  FS2403-24-24           p3   FSM -24, two copies (no -24 swivel row has dimensions)  9 rows
+  E8  FS6400-32-32-O         p5   FSM -32 + the -32 stud: the only -32 face-seal row with dimensions is this part   1 row
+  The 32 nut / lock-nut / sleeve / O-ring rows need no face-seal end.
+
+
+3. FAMILY PILOTS (15 files: one per remaining master with a body shape of its own)
+   Forged bodies are checked with the wave-1 extractors (forged.py / fgelbow.py / elbow90.py, closed loop with tee_model.py). Fetch them
+   family by family, largest first; each master is generated after its pilot. FS6500, FS2701 and FS6801 are covered by P2 / P3 / P5.
+
+  F1  FS2704-08-08-08-FG      p16  bulkhead run tee                  FS2704 + FS2704-LN, 12 rows
+  F2  FS2702-08-08-FG         p8   45 deg bulkhead elbow             FS2702 + FS2702-LN, 10 rows
+  F3  FS2703-08-08-08-FG      p16  bulkhead branch tee               FS2703 + FS2703-LN,  8 rows
+  F4  FS2500-08-08-FG         p7   90 deg MFS x MFS elbow            7 rows
+  F5  FS2501-08-06-FG         p8   90 deg MFS x male pipe elbow      7 rows (FS2501-08-08-FG has no dimensions)
+  F6  FS6802-08-08-NWO-FG     p10  45 deg MFS x adjustable stud      7 rows
+  F7  FS6804-08-08-08-NWO-FG  p18  run tee with adjustable stud      7 rows
+  F8  FS2603-08-08-08-FG      p15  MFS tee                           6 rows
+  F9  FS6600-08-08-08-FG      p16  branch tee with swivel            6 rows
+  F10 FS6602-08-08-08-FG      p17  run tee with swivel               5 rows
+  F11 FS6803-08-08-08-NWO-FG  p17  branch tee with adjustable stud   3 rows
+  F12 FS6809-06-06-NWO-FG     p11  90 deg swivel x adjustable stud (new combination); 3 rows. -06 because FS6809-08-08 has no dimensions.
+  F13 FS2503-08-06-FG         p8   45 deg MFS x male pipe elbow      2 rows
+  F14 FS2650-10-10-10-10-FG   p19  cross                             1 row (the only cross with dimensions)
+  F15 FS2700-08-08            p4   straight bulkhead union           FS2700 + FS2700-LN, 16 rows: confirms the thread run from the hex
+                                   face; Air-Way's drawing shows no collar on the straight.
+
+
+4. CONDITIONAL / OPTIONAL (not needed for the 288 rows unless noted)
+  - FS6565-08-08 (p7): two swivels on a straight body. Recommended cross-check for fssw.py: the same -08 swivel as P2, read twice more.
+  - FS2408-08 (p21): only if Q-FS2408-HOLE = "with hole" and the Air-Way model A10 is not used (hole depth).
+  - FS0319-04 / -06 / -10 / -16 / -20 / -24 (p20): sleeve collar length / spigot per size, only if you do not accept a per-size rule
+    from P7. FS0319-32 has no Brennan part (it would need the rule); FS0319-12 has no row with dimensions.
+  - FS2404-08-08 (p3), FS6403-08-08 (p5), FS6504-08-08 (p6), FS6505-08-08 (p6), FS6540-08-08-O (p6): straight masters with a plain hex
+    body between library ends. Only if you want one pilot per master, as wave 1 had; the model needs nothing from them.
+  - FS6801-L-08-08-NWO-FG (p9): check of the long variant folded into FS6801.
+  DO NOT use a 45 deg part (FS6502-..-FG, FS2702, FS6802) for a swivel or end measurement: swiv.py cannot section a 45 deg leg
+  (MEASURED-ENDS note, 2026-10-01).
+
+
+5. OPTIONAL SECOND SOURCE - Air-Way's own 3D models (only if S2 = yes)
+   Air-Way item numbers ("Has3DModel" on parts.air-way.com; download from 3DContentCentral, catalogId 11912). Save them as
+   09_STEP_FILES/AIRWAY_<item>.stp, a new prefix, so they never mix with the BRENNAN_ files. Each one is measured with the same
+   extractor as its Brennan pilot; where both agree, that end entry is VERIFIED.
+
+  A1  FF2403-8-8-O                  for P1 (male face-seal end)
+  A2  FF6500-8-8-O                  for P2 (swivel)
+  A3  FF2701-8-8-O                  for P3 (bulkhead end)
+  A4  FF6400-8-8-O                  for P4 (fixed stud)
+  A5  FF6801-8-8 NWO                for P5 (adjustable stud)
+  A6  FF318-8                       for P6 (nut)
+  A7  FF319-8 UNPL                  for P7 (sleeve)
+  A8  FF306-8 LN                    for P8 (lock nut)
+  A9  FF2407-8-6-O W/FF CRIMP NUT   for P9: the reducer body only; this Air-Way kit has a crimp nut, not the FF318 nut
+  A10 FF2408-8-O-W/HOLE             plug hole depth, if Q-FS2408-HOLE = "with hole"
+
+
+WHAT IS NOT IN THIS LIST
+  - Compression (C...) and test-gauge parts: no dimension source (Air-Way has no series).
+  - The 12 FS series with no dimensions (FS0304-C, FS1700, FS1704, FS1800, FS1804, FS2405, FS2502, FS2601, FS6402, FS6502, FS6503,
+    FS7202): their pilots wait until OMi or Air-Way data exist.
+  - Code 61 / 62 flange heads (for FS1700 / FS1800 later): see tools/_out/newtypes_20261014/README.md.

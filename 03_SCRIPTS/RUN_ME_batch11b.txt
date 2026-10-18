@@ -1,0 +1,31 @@
+BATCH 11b/11c - ROUND COLLARS ON THE FEMALE PIPE ENDS OF THE FORGED ELBOWS AND TEES (2026-09-24)
+==============================================================================================
+11c UPDATE: the six Brennan STEPs you downloaded (5502-04-04/-08-08/-16-16, 5504-08-08, 5605-08-08-08) all show the SAME collar,
+0.260 long at every size and on every female leg (not 30% of the leg) - the macros now use 0.26. The 5504/5502/2602/5602/5604/5605/6503
+macros below are the 11c versions.
+
+Why: 5504 did not look like the OMi/Brennan part. On Brennan's forged elbows the hex stops short of a female pipe
+port and the last part of the leg is ROUND - a collar the size of the hex flats (Brennan 2502-06-04-FG STEP: hex to
+0.62 from the centre, round collar 0.62 -> 0.88). The 2502HX master already had this collar; the newer elbow/tee
+macros ran the hex all the way to the port face. They now stop the hex 0.26 short of each female port face and the
+last 0.26 is the round collar (dia = hex flats) - measured on Brennan at -04, -08 and -16 (single manufacturer, ASSUMED).
+Nothing else changed: same legs, ports, threads, bores and checks - only the hex arm lengths on female legs.
+
+Same routine: remove the old module, import the .bas, run, close the part before the next one.
+
+ RE-RUN NOW (you built both with the old hex-to-the-face macro)
+   1  Build_5504_MASTER.bas   Sub Build5504   90 deg female pipe elbow         5 configs
+   2  Build_5502_MASTER.bas   Sub Build5502   street elbow (one female leg)   13 configs
+
+ UPDATED MACRO STILL WAITING - run it in its normal place in the list
+      Build_6503_MASTER.bas   Sub Build6503   female pipe x swivel elbow        1 config
+
+ ALREADY BUILT WITH HEX ENDS - re-run when convenient (old masters copied to _to_delete\superseded_20260924\pre_collar)
+      Build_2602_MASTER.bas   Sub Build2602   female branch tee                 5 configs
+      Build_5602_MASTER.bas   Sub Build5602   male run pipe tee (female legs)   2 configs
+      Build_5604_MASTER.bas   Sub Build5604   male branch pipe tee              3 configs
+      Build_5605_MASTER.bas   Sub Build5605   female pipe tee                   3 configs
+
+WHAT TO LOOK AT: "HEX1/HEX2 ... extruded the right way", "POCKETn cut removes material", "Z extent ... hex flats"
+(the collar is exactly the width of the flats), "All-config sweep ... 0 feature/body failures".
+NOT MODELLED (as before): hex-end chamfers, the chamfer at the port mouth.

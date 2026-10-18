@@ -1,0 +1,41 @@
+BATCH 12 - 0403 MAPPED TO THE OMi PARTS + 2701 FLUSH-COLLAR SIZES (2026-09-25)
+==============================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+Every master now opens in its reference size (batch 11e).
+
+RUN
+  1  Build_0403_MASTER.bas   Sub Build0403   braze tube union        33 -> 7 configurations   (RE-RUN - close the old 0403 first)
+     Your decision: OMi's plated 0403 parts are built from the Air-Way UNPL (unplated) rows of the same size.
+     The master now holds exactly the 7 OMi parts: 0403-04-04, -06-06, -08-08, -10-10, -12-12, -16-16, -20-20.
+     The configurations keep the Air-Way names ("0403-08-08 UNPL"); the OMi part number is in the OMiSKU property.
+     The 26 Air-Way-only UNPL sizes have no OMi part number and are no longer built.
+     A copy of the old master is in _to_delete\superseded_20260925\pre_b12.
+
+  2  Build_2701_MASTER.bas   Sub Build2701   90 deg bulkhead elbow    7 -> 13 configurations  (first run - replaces the waiting macro)
+     -06, -10 and -12 (and their -LN versions) were blocked: Air-Way prints the bulkhead collar the same size as the
+     hex flats. They are now built with the collar flush with the flats.
+
+  3  Build_2702 / 2703 / 2704 (first runs - replace the waiting macros): same configurations as before. The circle
+     drawn under the hex arm of each bulkhead leg is now 0.02 inside the hex. The hex covers it, so the part does not
+     change; that is what lets 2701 have a collar the same size as the flats. 2702-12-12-FG-LN stays out (its Air-Way
+     row looks like a -16 row - flagged for OMi).
+
+WHAT TO LOOK AT IN THE REPORTS
+  0403: "Configurations after table: 8 (expect 8)", sweep 7 configurations, 0 failures.
+  2701: "LEG2 sketch fully defined", "Configurations after table: 14 (expect 14)", sweep 13 configurations, 0 failures.
+  2702-2704: as before; "BODYR" now reads 0.02 less than the hex flats radius on the bulkhead leg.
+  All: "Master left in its reference configuration ...".
+
+NOT IN THIS BATCH, AND WHY
+  2404-L / 6400-L / 2501-L (your yes to folding them into the base masters): Air-Way gives only the overall length,
+  not where the extra length goes. One Brennan STEP each settles it: 2404-L-08-08, 6400-L-08-08-O, 2501-L-06-04-FG.
+  Forged (-FG) parts that Air-Way only lists as non-forged (260): waiting for Brennan -FG STEPs (the forged hex is usually
+  one size smaller than the non-forged one, so the non-forged numbers would give the wrong shape).
+  OMi 0304-C-xx is a JIC CAP nut (OMi: "04 JIC Cap Nut"), not the Air-Way 0304 standard nut - needs its own source.
+
+CHECKED BEFORE SENDING
+  Every sketch solved as exactly defined (0403: 22 of 22; bulkhead legs 26 of 26), clean outline, static VBA check.
+  0403: the 7 configurations have the same values as in the old master. 2702-2704 differ from the waiting macros only
+  in the hidden core circle; 2701 also in the configuration count.

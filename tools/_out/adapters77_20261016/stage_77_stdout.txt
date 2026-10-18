@@ -1,0 +1,40 @@
+37: Counter({'VERIFIED': 21, 'ASSUMED': 14, 'ASSUMED (hex/legs single-source for unequal-dash)': 2}) | took OMi values: 9 | Brennan differs on some cell: 5
+40: Counter({'no OMi values + Brennan': 25, 'OMi values + Brennan': 9, 'no OMi values': 6})
+136 change lines -> C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\adapters77_20261016\CHANGES.csv
+  2403-20-16             ASSUMED        -> VERIFIED  OMi 0  BR L1@DRIVE=e HEXB@HEX=r D1@BORE=r D2@BORE=r
+  2406-20-12             ASSUMED        -> ASSUMED   OMi 0  BR L23@DRIVE=d HEXB@HEX=e D3@BORE=r
+  2406-20-16             ASSUMED        -> ASSUMED   OMi 0  BR L23@DRIVE=d HEXB@HEX=e D3@BORE=r
+  2501-06-04-FG          VERIFIED-CORE  -> VERIFIED  OMi 0  BR M@DRIVE=e N@DRIVE=e Y@REF=r D@BORE=r D1@DRILL=r
+  2501-06-06-FG          VERIFIED-CORE  -> VERIFIED  OMi 0  BR M@DRIVE=e N@DRIVE=e Y@REF=e D@BORE=r D1@DRILL=r
+  2502-04-04-FG          VERIFIED       -> VERIFIED  OMi 0  BR M1@DRIVE=e N1@DRIVE=e Y1@DRIVE=e D@BORE=r
+  2502-06-04-FG          VERIFIED       -> VERIFIED  OMi 0  BR M1@DRIVE=e N1@DRIVE=e Y1@DRIVE=e D@BORE=r
+  2650-04-04-04-04-FG    ASSUMED        -> VERIFIED  OMi 0  BR M1@DRIVE=e M2@DRIVE=e M3@DRIVE=e M4@DRIVE=e Y@HEX=r D1@BORE=r D2@BORE=r D3@BORE=r D4@BORE=r
+  2701-LN-04-04-FG       ASSUMED        -> ASSUMED   OMi 0  BR 
+  2705-06-06             ASSUMED        -> ASSUMED   OMi 1  BR L24@DRIVE=e D@BORE=r
+  2705-06-08             ASSUMED        -> ASSUMED   OMi 1  BR L24@DRIVE=e D@BORE=r
+  2705-08-08             ASSUMED        -> ASSUMED   OMi 1  BR L24@DRIVE=e D@BORE=r
+  5406-08-04             ASSUMED        -> VERIFIED  OMi 0  BR L2@DRIVE=e C2HEX@HEX=r TAPDRILL@BORE=r
+  5406-08-06             ASSUMED        -> VERIFIED  OMi 0  BR L2@DRIVE=e C2HEX@HEX=r TAPDRILL@BORE=r
+  5502-12-12-FG          ASSUMED        -> VERIFIED  OMi 0  BR N@DRIVE=e N1@DRIVE=e W@REF=r D@BORE=r
+  5502-16-12-FG          ASSUMED        -> ASSUMED   OMi 1  BR N@DRIVE=e N1@DRIVE=d W@REF=e D@BORE=r
+  5502-16-16-FG          ASSUMED        -> VERIFIED  OMi 0  BR N@DRIVE=e N1@DRIVE=e W@REF=r D@BORE=r
+  6400-02-02-O           VERIFIED       -> VERIFIED  OMi 0  BR D1@DRIVE=e HEXB@HEX=r D3@BORE_B=r D4@BORE_A=r
+  6400-20-12-O           ASSUMED        -> VERIFIED  OMi 0  BR D1@DRIVE=e HEXB@HEX=r D3@BORE_B=r D4@BORE_A=r
+  6400-20-16-O           ASSUMED        -> VERIFIED  OMi 0  BR D1@DRIVE=e HEXB@HEX=r D3@BORE_B=r D4@BORE_A=r
+  6400-20-20-O           VERIFIED       -> VERIFIED  OMi 0  BR D1@DRIVE=e HEXB@HEX=e D3@BORE_B=r D4@BORE_A=r
+  6405-16-06-O           ASSUMED        -> ASSUMED   OMi 1  BR L31@DRIVE=r HEXB@HEX=e
+  6405-16-08-O           ASSUMED        -> ASSUMED   OMi 2  BR L31@DRIVE=e HEXB@HEX=e
+  6410-06-08-O           ASSUMED        -> ASSUMED   OMi 1  BR L33@DRIVE=e C1HEX@HEX=e D@BORE=r
+  6410-08-04-O           ASSUMED        -> ASSUMED   OMi 1  BR L33@DRIVE=e C1HEX@HEX=r D@BORE=d
+  6500-08-06-FG          ASSUMED        -> VERIFIED  OMi 0  BR LEG_M@DRIVE=e HEXB@HEX=r Y@REF=e D1@BORE=r D2@BORE=r
+  6500-08-08-FG          VERIFIED-LEGS  -> VERIFIED  OMi 0  BR LEG_M@DRIVE=e HEXB@HEX=r Y@REF=e D1@BORE=r D2@BORE=r
+  6502-16-16-FG          ASSUMED        -> VERIFIED  OMi 0  BR M2@DRIVE=e M6@DRIVE=e C3HEX@HEX=e Y@HEX=r D1@BORE=r D2@BORE=r
+  6505-24-24             ASSUMED        -> ASSUMED   OMi 0  BR CHEX@HEX=e C3HEX@HEX=e D@BORE=r
+  6505-32-32             ASSUMED        -> ASSUMED   OMi 1  BR CHEX@HEX=e C3HEX@HEX=r D@BORE=r
+  6602-32-32-32-FG       ASSUMED        -> VERIFIED  OMi 0  BR M1@DRIVE=e C3HEX@HEX=r Y@HEX=e D1@BORE=r D2@BORE=r D3@BORE=r
+  6801-16-12-NWO-FG      ASSUMED (hex/legs single-source for unequal-dash) -> ASSUMED (hex/legs single-source for unequal-dash) OMi 0  BR LEG_ORB@DRIVE=e HEXB@HEX=e Y@REF=r D1@BORE=r D2@BORE=r
+  6801-16-14-NWO-FG      ASSUMED        -> VERIFIED  OMi 0  BR LEG_ORB@DRIVE=e HEXB@HEX=r Y@REF=r D1@BORE=r D2@BORE=r
+  6801-16-16-NWO-FG      ASSUMED (hex/legs single-source for unequal-dash) -> ASSUMED (hex/legs single-source for unequal-dash) OMi 0  BR LEG_ORB@DRIVE=e HEXB@HEX=e Y@REF=r D1@BORE=r D2@BORE=r
+  6803-04-04-04-NWO-FG   VERIFIED       -> VERIFIED  OMi 0  BR LEG1@DRIVE=e LEG2@DRIVE=e LEG3@DRIVE=e HEXB@HEX=r Y@REF=r D1@BORE=r D2@BORE=r D3@BORE=r
+  6803-06-06-06-NWO-FG   VERIFIED       -> VERIFIED  OMi 0  BR LEG1@DRIVE=e LEG2@DRIVE=e LEG3@DRIVE=e HEXB@HEX=r Y@REF=r D1@BORE=r D2@BORE=r D3@BORE=r
+  6901-08-08-NWO-FG      ASSUMED        -> ASSUMED   OMi 0  BR CHEX@HEX=e C4HEX@HEX=r D1@BORE=r D@BORE=d

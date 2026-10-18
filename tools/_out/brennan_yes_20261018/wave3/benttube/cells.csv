@@ -1,0 +1,339 @@
+table,config,column,value,source,kind
+1703,1703-08-08-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-08-08-Tube,M1@DRIVE,1.81,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 2.72 - L2 0.91 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-08-08-Tube,L1@DRIVE,1.2869,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 0.91 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-08-08-Tube,CHEX@HEX,0.875,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 7/8 = male JIC end-piece hex,brennan-dim
+1703,1703-08-08-Tube,O@DRIVE,1.19,end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -08 = Air-Way s61 O via DesignTable_1700 (1700-61-08-08); Brennan 3300-61 A agrees,endlib
+1703,1703-12-12-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-12-12-Tube,M1@DRIVE,2.13,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 3.15 - L2 1.02 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-12-12-Tube,L1@DRIVE,1.4425,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.02 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-12-12-Tube,CHEX@HEX,1.125,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1703,1703-12-12-Tube,O@DRIVE,1.5,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -12 = Air-Way s61 O via DesignTable_1700 (1700-61-12-12, 1700-61-16-12); Brennan 3300-61 A agrees",endlib
+1703,1703-12-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-12-16-Tube,M1@DRIVE,2.13,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 3.15 - L2 1.02 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-12-16-Tube,L1@DRIVE,1.4425,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.02 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-12-16-Tube,CHEX@HEX,1.125,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1703,1703-12-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1703,1703-16-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-16-16-Tube,M1@DRIVE,2.48,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 3.66 - L2 1.18 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-16-16-Tube,L1@DRIVE,1.6688,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.18 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-16-16-Tube,CHEX@HEX,1.375,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1703,1703-16-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1703,1703-16-20-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-16-20-Tube,M1@DRIVE,2.48,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 3.66 - L2 1.18 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-16-20-Tube,L1@DRIVE,1.6688,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.18 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-16-20-Tube,CHEX@HEX,1.375,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1703,1703-16-20-Tube,O@DRIVE,2,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -20 = Air-Way s61 O via DesignTable_1700 (1700-61-12-20, 1700-61-16-20, 1700-61-20-20); Brennan 3300-61 A agrees",endlib
+1703,1703-16-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-16-24-Tube,M1@DRIVE,2.48,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 3.74 - L2 1.26 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-16-24-Tube,L1@DRIVE,1.7819,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.26 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-16-24-Tube,CHEX@HEX,1.375,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1703,1703-16-24-Tube,O@DRIVE,2.38,"end library: code 61 head O.D. flange -24: Air-Way s61 via DesignTable_1700 [('1700-61-16-24', 2.38), ('1700-61-20-24', 2.37), ('1700-61-24-24', 2.38)] (rounding-only difference); Brennan 3300-61 A 2.38",endlib
+1703,1703-20-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-20-16-Tube,M1@DRIVE,2.64,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 3.86 - L2 1.22 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-20-16-Tube,L1@DRIVE,1.7253,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.22 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-20-16-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1703,1703-20-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1703,1703-20-20-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-20-20-Tube,M1@DRIVE,2.83,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 4.21 - L2 1.38 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-20-20-Tube,L1@DRIVE,1.9516,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.38 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-20-20-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1703,1703-20-20-Tube,O@DRIVE,2,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -20 = Air-Way s61 O via DesignTable_1700 (1700-61-12-20, 1700-61-16-20, 1700-61-20-20); Brennan 3300-61 A agrees",endlib
+1703,1703-20-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-20-24-Tube,M1@DRIVE,2.83,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 4.25 - L2 1.42 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-20-24-Tube,L1@DRIVE,2.0082,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.42 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-20-24-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1703,1703-20-24-Tube,O@DRIVE,2.38,"end library: code 61 head O.D. flange -24: Air-Way s61 via DesignTable_1700 [('1700-61-16-24', 2.38), ('1700-61-20-24', 2.37), ('1700-61-24-24', 2.38)] (rounding-only difference); Brennan 3300-61 A 2.38",endlib
+1703,1703-24-20-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-24-20-Tube,M1@DRIVE,3.24,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 4.70 - L2 1.46 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-24-20-Tube,L1@DRIVE,2.0648,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.46 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-24-20-Tube,CHEX@HEX,2.0,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 2 = male JIC end-piece hex,brennan-dim
+1703,1703-24-20-Tube,O@DRIVE,2,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -20 = Air-Way s61 O via DesignTable_1700 (1700-61-12-20, 1700-61-16-20, 1700-61-20-20); Brennan 3300-61 A agrees",endlib
+1703,1703-24-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-24-24-Tube,M1@DRIVE,3.27,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 4.96 - L2 1.69 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-24-24-Tube,L1@DRIVE,2.39,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.69 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-24-24-Tube,CHEX@HEX,2.0,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 2 = male JIC end-piece hex,brennan-dim
+1703,1703-24-24-Tube,O@DRIVE,2.38,"end library: code 61 head O.D. flange -24: Air-Way s61 via DesignTable_1700 [('1700-61-16-24', 2.38), ('1700-61-20-24', 2.37), ('1700-61-24-24', 2.38)] (rounding-only difference); Brennan 3300-61 A 2.38",endlib
+1703,1703-24-32-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-24-32-Tube,M1@DRIVE,3.31,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 5.12 - L2 1.81 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-24-32-Tube,L1@DRIVE,2.5597,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 1.81 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-24-32-Tube,CHEX@HEX,2.0,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 2 = male JIC end-piece hex,brennan-dim
+1703,1703-24-32-Tube,O@DRIVE,2.81,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -32 = Air-Way s61 O via DesignTable_1700 (1700-61-24-32, 1700-61-32-32); Brennan 3300-61 A agrees",endlib
+1703,1703-32-32-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p4 table 1703 title",other
+1703,1703-32-32-Tube,M1@DRIVE,4.05,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L1 6.22 - L2 2.17 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1703,1703-32-32-Tube,L1@DRIVE,3.0688,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): L2 2.17 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1703,1703-32-32-Tube,CHEX@HEX,2.75,Brennan Flange catalog p4 table 1703 (MJ-FLANGE 45 DEG ELBOW CODE 61): A/F 2 3/4 = male JIC end-piece hex,brennan-dim
+1703,1703-32-32-Tube,O@DRIVE,2.81,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -32 = Air-Way s61 O via DesignTable_1700 (1700-61-24-32, 1700-61-32-32); Brennan 3300-61 A agrees",endlib
+1704,1704-08-08-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-08-08-Tube,M1@DRIVE,2.32,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 2.32 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-08-08-Tube,L1@DRIVE,1.81,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 1.81 = JIC axis -> flange face,brennan-dim
+1704,1704-08-08-Tube,CHEX@HEX,0.875,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 7/8 = male JIC end-piece hex,brennan-dim
+1704,1704-08-08-Tube,O@DRIVE,1.19,end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -08 = Air-Way s61 O via DesignTable_1700 (1700-61-08-08); Brennan 3300-61 A agrees,endlib
+1704,1704-08-12-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-08-12-Tube,M1@DRIVE,2.32,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 2.32 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-08-12-Tube,L1@DRIVE,1.85,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 1.85 = JIC axis -> flange face,brennan-dim
+1704,1704-08-12-Tube,CHEX@HEX,0.875,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 7/8 = male JIC end-piece hex,brennan-dim
+1704,1704-08-12-Tube,O@DRIVE,1.5,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -12 = Air-Way s61 O via DesignTable_1700 (1700-61-12-12, 1700-61-16-12); Brennan 3300-61 A agrees",endlib
+1704,1704-12-12-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-12-12-Tube,CHEX@HEX,1.13,Air-Way s115 1701-61-12-12 C 1.13 (Brennan A/F 1 1/8 agrees),other
+1704,1704-12-12-Tube,D@BORE,0.61,Air-Way s115 1701-61-12-12 D 0.61 (bore; Brennan prints none),other
+1704,1704-12-12-Tube,O@DRIVE,1.5,Air-Way s115 1701-61-12-12 O 1.5 (head O.D.; = Air-Way s61 / Brennan 3300-61 A for flange -12),other
+1704,1704-12-12-Tube,M1@DRIVE,2.84,"Air-Way s115 1701-61-12-12 M3 2.84 read as JIC tip -> leg-2 axis (= Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 2.83 = JIC tip -> leg-2 axis; the Air-Way drawing puts M3 at the head far edge - schematic, the numbers agree with Brennan)",other
+1704,1704-12-12-Tube,L1@DRIVE,2.12,Air-Way s115 1701-61-12-12 N4 2.12 = flange face -> JIC axis (= Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.13 = JIC axis -> flange face),other
+1704,1704-12-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-12-16-Tube,M1@DRIVE,2.83,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 2.83 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-12-16-Tube,L1@DRIVE,2.13,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.13 = JIC axis -> flange face,brennan-dim
+1704,1704-12-16-Tube,CHEX@HEX,1.125,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1704,1704-12-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1704,1704-16-12-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-16-12-Tube,M1@DRIVE,2.95,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 2.95 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-16-12-Tube,L1@DRIVE,2.13,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.13 = JIC axis -> flange face,brennan-dim
+1704,1704-16-12-Tube,CHEX@HEX,1.375,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1704,1704-16-12-Tube,O@DRIVE,1.5,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -12 = Air-Way s61 O via DesignTable_1700 (1700-61-12-12, 1700-61-16-12); Brennan 3300-61 A agrees",endlib
+1704,1704-16-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-16-16-Tube,M1@DRIVE,3.39,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.39 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-16-16-Tube,L1@DRIVE,2.6,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.60 = JIC axis -> flange face,brennan-dim
+1704,1704-16-16-Tube,CHEX@HEX,1.375,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1704,1704-16-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1704,1704-16-20-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-16-20-Tube,CHEX@HEX,1.38,Air-Way s115 1701-61-16-20 C 1.38 (Brennan A/F 1 3/8 agrees),other
+1704,1704-16-20-Tube,D@BORE,0.84,Air-Way s115 1701-61-16-20 D 0.84 (bore; Brennan prints none),other
+1704,1704-16-20-Tube,O@DRIVE,2.0,Air-Way s115 1701-61-16-20 O 2.0 (head O.D.; = Air-Way s61 / Brennan 3300-61 A for flange -20),other
+1704,1704-16-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-16-24-Tube,M1@DRIVE,3.39,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.39 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-16-24-Tube,L1@DRIVE,2.66,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.66 = JIC axis -> flange face,brennan-dim
+1704,1704-16-24-Tube,CHEX@HEX,1.375,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1704,1704-16-24-Tube,O@DRIVE,2.38,"end library: code 61 head O.D. flange -24: Air-Way s61 via DesignTable_1700 [('1700-61-16-24', 2.38), ('1700-61-20-24', 2.37), ('1700-61-24-24', 2.38)] (rounding-only difference); Brennan 3300-61 A 2.38",endlib
+1704,1704-20-12-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-20-12-Tube,M1@DRIVE,3.052,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.052 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-20-12-Tube,L1@DRIVE,2.26,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.26 = JIC axis -> flange face,brennan-dim
+1704,1704-20-12-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1.6875 = male JIC end-piece hex,brennan-dim
+1704,1704-20-12-Tube,O@DRIVE,1.5,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -12 = Air-Way s61 O via DesignTable_1700 (1700-61-12-12, 1700-61-16-12); Brennan 3300-61 A agrees",endlib
+1704,1704-20-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-20-16-Tube,M1@DRIVE,3.54,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.54 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-20-16-Tube,L1@DRIVE,2.6,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.60 = JIC axis -> flange face,brennan-dim
+1704,1704-20-16-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1704,1704-20-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1704,1704-20-20-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-20-20-Tube,M1@DRIVE,3.98,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.98 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-20-20-Tube,L1@DRIVE,3.03,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 3.03 = JIC axis -> flange face,brennan-dim
+1704,1704-20-20-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1704,1704-20-20-Tube,O@DRIVE,2,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -20 = Air-Way s61 O via DesignTable_1700 (1700-61-12-20, 1700-61-16-20, 1700-61-20-20); Brennan 3300-61 A agrees",endlib
+1704,1704-20-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-20-24-Tube,M1@DRIVE,3.98,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.98 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-20-24-Tube,L1@DRIVE,3.11,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 3.11 = JIC axis -> flange face,brennan-dim
+1704,1704-20-24-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1704,1704-20-24-Tube,O@DRIVE,2.38,"end library: code 61 head O.D. flange -24: Air-Way s61 via DesignTable_1700 [('1700-61-16-24', 2.38), ('1700-61-20-24', 2.37), ('1700-61-24-24', 2.38)] (rounding-only difference); Brennan 3300-61 A 2.38",endlib
+1704,1704-20-32-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-20-32-Tube,M1@DRIVE,3.976,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 3.976 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-20-32-Tube,L1@DRIVE,3.504,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 3.504 = JIC axis -> flange face,brennan-dim
+1704,1704-20-32-Tube,CHEX@HEX,1.688,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 1.688 = male JIC end-piece hex,brennan-dim
+1704,1704-20-32-Tube,O@DRIVE,2.81,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -32 = Air-Way s61 O via DesignTable_1700 (1700-61-24-32, 1700-61-32-32); Brennan 3300-61 A agrees",endlib
+1704,1704-24-16-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-24-16-Tube,M1@DRIVE,4.039,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 4.039 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-24-16-Tube,L1@DRIVE,2.849,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 2.849 = JIC axis -> flange face,brennan-dim
+1704,1704-24-16-Tube,CHEX@HEX,2.0,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 2.000 = male JIC end-piece hex,brennan-dim
+1704,1704-24-16-Tube,O@DRIVE,1.75,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -16 = Air-Way s61 O via DesignTable_1700 (1700-61-12-16, 1700-61-16-16); Brennan 3300-61 A agrees",endlib
+1704,1704-24-20-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-24-20-Tube,CHEX@HEX,2.0,Air-Way s115 1701-61-24-20 C 2.0 (Brennan A/F 2 agrees),other
+1704,1704-24-20-Tube,D@BORE,1.08,Air-Way s115 1701-61-24-20 D 1.08 (bore; Brennan prints none),other
+1704,1704-24-20-Tube,O@DRIVE,2.0,Air-Way s115 1701-61-24-20 O 2.0 (head O.D.; = Air-Way s61 / Brennan 3300-61 A for flange -20),other
+1704,1704-24-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-24-24-Tube,CHEX@HEX,2.0,Air-Way s115 1701-61-24-24 C 2.0 (Brennan A/F 2 agrees),other
+1704,1704-24-24-Tube,D@BORE,1.31,Air-Way s115 1701-61-24-24 D 1.31 (bore; Brennan prints none),other
+1704,1704-24-24-Tube,O@DRIVE,2.38,Air-Way s115 1701-61-24-24 O 2.38 (head O.D.; = Air-Way s61 / Brennan 3300-61 A for flange -24),other
+1704,1704-24-32-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-24-32-Tube,M1@DRIVE,4.57,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 4.57 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-24-32-Tube,L1@DRIVE,3.86,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 3.86 = JIC axis -> flange face,brennan-dim
+1704,1704-24-32-Tube,CHEX@HEX,2.0,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 2 = male JIC end-piece hex,brennan-dim
+1704,1704-24-32-Tube,O@DRIVE,2.81,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -32 = Air-Way s61 O via DesignTable_1700 (1700-61-24-32, 1700-61-32-32); Brennan 3300-61 A agrees",endlib
+1704,1704-32-24-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-32-24-Tube,M1@DRIVE,5.04,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 5.04 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-32-24-Tube,L1@DRIVE,3.66,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 3.66 = JIC axis -> flange face,brennan-dim
+1704,1704-32-24-Tube,CHEX@HEX,2.75,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 2 3/4 = male JIC end-piece hex,brennan-dim
+1704,1704-32-24-Tube,O@DRIVE,2.38,"end library: code 61 head O.D. flange -24: Air-Way s61 via DesignTable_1700 [('1700-61-16-24', 2.38), ('1700-61-20-24', 2.37), ('1700-61-24-24', 2.38)] (rounding-only difference); Brennan 3300-61 A 2.38",endlib
+1704,1704-32-32-Tube,$PRP@FlangeCode,61,"OMi part description ""Code 61 Flange"" + Brennan Flange catalog p5 table 1704 title",other
+1704,1704-32-32-Tube,M1@DRIVE,5.79,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L1 5.79 = JIC tip -> leg-2 axis,brennan-dim
+1704,1704-32-32-Tube,L1@DRIVE,4.84,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): L2 4.84 = JIC axis -> flange face,brennan-dim
+1704,1704-32-32-Tube,CHEX@HEX,2.75,Brennan Flange catalog p5 table 1704 (MJ-FLANGE 90 DEG CODE 61): A/F 2 3/4 = male JIC end-piece hex,brennan-dim
+1704,1704-32-32-Tube,O@DRIVE,2.81,"end library (Q-TRANSFER-ENDLIB): code 61 head O.D. flange -32 = Air-Way s61 O via DesignTable_1700 (1700-61-24-32, 1700-61-32-32); Brennan 3300-61 A agrees",endlib
+1803,1803-12-12-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-12-12-Tube,M1@DRIVE,2.17,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 3.31 - L2 1.14 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-12-12-Tube,L1@DRIVE,1.6122,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.14 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-12-12-Tube,CHEX@HEX,1.125,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1803,1803-12-12-Tube,O@DRIVE,1.625,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.625 = head O.D. flange -12 (3300-62-12-12, 3300-62-16-12)",brennan-dim
+1803,1803-12-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-12-16-Tube,M1@DRIVE,2.13,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 3.35 - L2 1.22 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-12-16-Tube,L1@DRIVE,1.7253,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.22 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-12-16-Tube,CHEX@HEX,1.125,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1803,1803-12-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1803,1803-12-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-12-20-Tube,M1@DRIVE,2.13,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 3.75 - L2 1.62 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-12-20-Tube,L1@DRIVE,2.291,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.62 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-12-20-Tube,CHEX@HEX,1.125,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1.125 = male JIC end-piece hex,brennan-dim
+1803,1803-12-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1803,1803-16-12-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-16-12-Tube,M1@DRIVE,2.28,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 3.46 - L2 1.18 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-16-12-Tube,L1@DRIVE,1.6688,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.18 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-16-12-Tube,CHEX@HEX,1.375,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1803,1803-16-12-Tube,O@DRIVE,1.625,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.625 = head O.D. flange -12 (3300-62-12-12, 3300-62-16-12)",brennan-dim
+1803,1803-16-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-16-16-Tube,M1@DRIVE,2.48,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 3.86 - L2 1.38 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-16-16-Tube,L1@DRIVE,1.9516,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.38 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-16-16-Tube,CHEX@HEX,1.375,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1803,1803-16-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1803,1803-16-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-16-20-Tube,M1@DRIVE,2.48,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 3.98 - L2 1.50 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-16-20-Tube,L1@DRIVE,2.1213,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.50 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-16-20-Tube,CHEX@HEX,1.375,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1803,1803-16-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1803,1803-20-12-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-20-12-Tube,M1@DRIVE,2.71,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 4.13 - L2 1.42 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-20-12-Tube,L1@DRIVE,2.0082,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.42 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-20-12-Tube,CHEX@HEX,1.5,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 1/2 = male JIC end-piece hex,brennan-dim
+1803,1803-20-12-Tube,O@DRIVE,1.625,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.625 = head O.D. flange -12 (3300-62-12-12, 3300-62-16-12)",brennan-dim
+1803,1803-20-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-20-16-Tube,M1@DRIVE,2.71,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 4.13 - L2 1.42 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-20-16-Tube,L1@DRIVE,2.0082,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.42 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-20-16-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1803,1803-20-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1803,1803-20-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-20-20-Tube,M1@DRIVE,2.88,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 4.53 - L2 1.65 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-20-20-Tube,L1@DRIVE,2.3335,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.65 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-20-20-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1803,1803-20-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1803,1803-20-24-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-20-24-Tube,M1@DRIVE,2.84,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 4.65 - L2 1.81 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-20-24-Tube,L1@DRIVE,2.5597,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.81 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-20-24-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1803,1803-20-24-Tube,O@DRIVE,2.5,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.5 = head O.D. flange -24 (3300-62-24-24, 3300-62-28-24)",brennan-dim
+1803,1803-24-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-24-20-Tube,M1@DRIVE,3.475,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 4.875 - L2 1.400 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-24-20-Tube,L1@DRIVE,1.9799,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.400 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-24-20-Tube,CHEX@HEX,2.0,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 2.000 = male JIC end-piece hex,brennan-dim
+1803,1803-24-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1803,1803-24-24-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-24-24-Tube,M1@DRIVE,3.23,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 5.16 - L2 1.93 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-24-24-Tube,L1@DRIVE,2.7294,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 1.93 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-24-24-Tube,CHEX@HEX,2.0,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 2 = male JIC end-piece hex,brennan-dim
+1803,1803-24-24-Tube,O@DRIVE,2.5,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.5 = head O.D. flange -24 (3300-62-24-24, 3300-62-28-24)",brennan-dim
+1803,1803-32-32-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p5 table 1803 title",other
+1803,1803-32-32-Tube,M1@DRIVE,4.06,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L1 6.54 - L2 2.48 (L1 / L2 = horizontal / vertical to the leg-2 axis at the flange face; crossing of the leg axes = L1 - L2 at 45 deg),brennan-dim
+1803,1803-32-32-Tube,L1@DRIVE,3.5072,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): L2 2.48 x sqrt(2) (crossing -> flange face along leg 2 at 45 deg),brennan-dim
+1803,1803-32-32-Tube,CHEX@HEX,2.75,Brennan Flange catalog p5 table 1803 (MJ-FLANGE 45 DEG CODE 62): A/F 2 3/4 = male JIC end-piece hex,brennan-dim
+1803,1803-32-32-Tube,O@DRIVE,3.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 3.125 = head O.D. flange -32 (3300-62-32-32, 3300-62-36-32)",brennan-dim
+1804,1804-08-08-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-08-08-Tube,M1@DRIVE,2.32,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 2.32 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-08-08-Tube,L1@DRIVE,1.85,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 1.85 = JIC axis -> flange face,brennan-dim
+1804,1804-08-08-Tube,CHEX@HEX,0.875,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 7/8 = male JIC end-piece hex,brennan-dim
+1804,1804-08-08-Tube,O@DRIVE,1.25,end library: gen_bent FLG62_MEAS[8] O 1.250 (code 62 -08 head measured on the Brennan 1800-08-08 / 1824-08 / 1804-08-08-FG STEPs),endlib
+1804,1804-12-12-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-12-12-Tube,M1@DRIVE,2.83,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 2.83 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-12-12-Tube,L1@DRIVE,2.28,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.28 = JIC axis -> flange face,brennan-dim
+1804,1804-12-12-Tube,CHEX@HEX,1.125,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1804,1804-12-12-Tube,O@DRIVE,1.625,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.625 = head O.D. flange -12 (3300-62-12-12, 3300-62-16-12)",brennan-dim
+1804,1804-12-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-12-16-Tube,M1@DRIVE,2.83,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 2.83 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-12-16-Tube,L1@DRIVE,2.4,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.40 = JIC axis -> flange face,brennan-dim
+1804,1804-12-16-Tube,CHEX@HEX,1.125,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1804,1804-12-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1804,1804-12-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-12-20-Tube,M1@DRIVE,2.83,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 2.83 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-12-20-Tube,L1@DRIVE,2.76,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.76 = JIC axis -> flange face,brennan-dim
+1804,1804-12-20-Tube,CHEX@HEX,1.125,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 1/8 = male JIC end-piece hex,brennan-dim
+1804,1804-12-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1804,1804-16-12-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-16-12-Tube,M1@DRIVE,2.93,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 2.93 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-16-12-Tube,L1@DRIVE,2.28,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.28 = JIC axis -> flange face,brennan-dim
+1804,1804-16-12-Tube,CHEX@HEX,1.375,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1804,1804-16-12-Tube,O@DRIVE,1.625,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.625 = head O.D. flange -12 (3300-62-12-12, 3300-62-16-12)",brennan-dim
+1804,1804-16-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-16-16-Tube,M1@DRIVE,3.39,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.39 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-16-16-Tube,L1@DRIVE,2.87,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.87 = JIC axis -> flange face,brennan-dim
+1804,1804-16-16-Tube,CHEX@HEX,1.375,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1804,1804-16-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1804,1804-16-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-16-20-Tube,M1@DRIVE,3.39,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.39 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-16-20-Tube,L1@DRIVE,3.03,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 3.03 = JIC axis -> flange face,brennan-dim
+1804,1804-16-20-Tube,CHEX@HEX,1.375,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1804,1804-16-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1804,1804-16-24-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-16-24-Tube,M1@DRIVE,3.39,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.39 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-16-24-Tube,L1@DRIVE,3.23,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 3.23 = JIC axis -> flange face,brennan-dim
+1804,1804-16-24-Tube,CHEX@HEX,1.375,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 3/8 = male JIC end-piece hex,brennan-dim
+1804,1804-16-24-Tube,O@DRIVE,2.5,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.5 = head O.D. flange -24 (3300-62-24-24, 3300-62-28-24)",brennan-dim
+1804,1804-20-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-20-16-Tube,M1@DRIVE,3.54,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.54 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-20-16-Tube,L1@DRIVE,2.87,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.87 = JIC axis -> flange face,brennan-dim
+1804,1804-20-16-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1804,1804-20-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1804,1804-20-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-20-20-Tube,M1@DRIVE,3.98,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.98 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-20-20-Tube,L1@DRIVE,3.46,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 3.46 = JIC axis -> flange face,brennan-dim
+1804,1804-20-20-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1804,1804-20-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1804,1804-20-24-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-20-24-Tube,M1@DRIVE,3.98,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.98 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-20-24-Tube,L1@DRIVE,3.66,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 3.66 = JIC axis -> flange face,brennan-dim
+1804,1804-20-24-Tube,CHEX@HEX,1.6875,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 1 11/16 = male JIC end-piece hex,brennan-dim
+1804,1804-20-24-Tube,O@DRIVE,2.5,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.5 = head O.D. flange -24 (3300-62-24-24, 3300-62-28-24)",brennan-dim
+1804,1804-24-16-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-24-16-Tube,M1@DRIVE,3.94,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 3.94 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-24-16-Tube,L1@DRIVE,2.87,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 2.87 = JIC axis -> flange face,brennan-dim
+1804,1804-24-16-Tube,CHEX@HEX,2.0,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 2 = male JIC end-piece hex,brennan-dim
+1804,1804-24-16-Tube,O@DRIVE,1.875,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 1.875 = head O.D. flange -16 (3300-62-16-16, 3300-62-20-16)",brennan-dim
+1804,1804-24-20-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-24-20-Tube,M1@DRIVE,4.33,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 4.33 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-24-20-Tube,L1@DRIVE,3.46,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 3.46 = JIC axis -> flange face,brennan-dim
+1804,1804-24-20-Tube,CHEX@HEX,2.0,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 2 = male JIC end-piece hex,brennan-dim
+1804,1804-24-20-Tube,O@DRIVE,2.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.125 = head O.D. flange -20 (3300-62-20-20, 3300-62-24-20)",brennan-dim
+1804,1804-24-24-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-24-24-Tube,M1@DRIVE,4.57,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 4.57 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-24-24-Tube,L1@DRIVE,4.02,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 4.02 = JIC axis -> flange face,brennan-dim
+1804,1804-24-24-Tube,CHEX@HEX,2.0,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 2 = male JIC end-piece hex,brennan-dim
+1804,1804-24-24-Tube,O@DRIVE,2.5,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 2.5 = head O.D. flange -24 (3300-62-24-24, 3300-62-28-24)",brennan-dim
+1804,1804-24-32-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-24-32-Tube,M1@DRIVE,4.833,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 4.833 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-24-32-Tube,L1@DRIVE,4.303,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 4.303 = JIC axis -> flange face,brennan-dim
+1804,1804-24-32-Tube,CHEX@HEX,2.0,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 2.000 = male JIC end-piece hex,brennan-dim
+1804,1804-24-32-Tube,O@DRIVE,3.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 3.125 = head O.D. flange -32 (3300-62-32-32, 3300-62-36-32)",brennan-dim
+1804,1804-32-32-Tube,$PRP@FlangeCode,62,"OMi part description ""Code 62 Flange"" + Brennan Flange catalog p6 table 1804 title",other
+1804,1804-32-32-Tube,M1@DRIVE,5.79,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L1 5.79 = JIC tip -> leg-2 axis,brennan-dim
+1804,1804-32-32-Tube,L1@DRIVE,5.31,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): L2 5.31 = JIC axis -> flange face,brennan-dim
+1804,1804-32-32-Tube,CHEX@HEX,2.75,Brennan Flange catalog p6 table 1804 (MJ-FLANGE 90 DEG CODE 62): A/F 2 3/4 = male JIC end-piece hex,brennan-dim
+1804,1804-32-32-Tube,O@DRIVE,3.125,"Brennan Flange catalog p8 3300-62 (braze flange head, code 62) A 3.125 = head O.D. flange -32 (3300-62-32-32, 3300-62-36-32)",brennan-dim
+6701,6701-04-04,M1@DRIVE,1.25,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): M 1.25 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-04-04,L1@DRIVE,1.09,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): L 1.09 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-04-04,CHEX@HEX,0.5,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C1 HEX 0.500 = male JIC end-piece hex,brennan-dim
+6701,6701-04-04,NUTHEX@NUTHEXSK,0.563,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C2 HEX 0.563 = swivel nut hex (= swivel library SWIV_MEAS AF 0.5625),brennan-dim
+6701,6701-04-04,NOSETIP@SWSK,0.35,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[4] NOSETIP_B (female JIC swivel -04, Brennan 6500 STEP)",endlib
+6701,6701-06-06,M1@DRIVE,1.35,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): M 1.35 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-06-06,L1@DRIVE,1.22,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): L 1.22 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-06-06,CHEX@HEX,0.625,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C1 HEX 0.625 = male JIC end-piece hex,brennan-dim
+6701,6701-06-06,NUTHEX@NUTHEXSK,0.688,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C2 HEX 0.688 = swivel nut hex (= swivel library SWIV_MEAS AF 0.6875),brennan-dim
+6701,6701-06-06,NOSETIP@SWSK,0.38,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[6] NOSETIP_B (female JIC swivel -06, Brennan 6500 STEP)",endlib
+6701,6701-08-08,M1@DRIVE,1.77,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): M 1.77 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-08-08,L1@DRIVE,1.52,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): L 1.52 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-08-08,CHEX@HEX,0.812,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C1 HEX 0.812 = male JIC end-piece hex,brennan-dim
+6701,6701-08-08,NUTHEX@NUTHEXSK,0.875,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C2 HEX 0.875 = swivel nut hex (= swivel library SWIV_MEAS AF 0.875),brennan-dim
+6701,6701-08-08,NOSETIP@SWSK,0.43,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[8] NOSETIP_B (female JIC swivel -08, Brennan 6500 STEP)",endlib
+6701,6701-12-12,M1@DRIVE,2.5,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): M 2.50 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-12-12,L1@DRIVE,2.4,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): L 2.40 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-12-12,CHEX@HEX,1.125,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C1 HEX 1.125 = male JIC end-piece hex,brennan-dim
+6701,6701-12-12,NUTHEX@NUTHEXSK,1.25,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C2 HEX 1.250 = swivel nut hex (= swivel library SWIV_MEAS AF 1.25),brennan-dim
+6701,6701-12-12,NOSETIP@SWSK,0.57,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[12] NOSETIP_B (female JIC swivel -12, Brennan 6500 STEP)",endlib
+6701,6701-16-16,M1@DRIVE,3.1,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): M 3.10 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-16-16,L1@DRIVE,3.15,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): L 3.15 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-16-16,CHEX@HEX,1.375,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C1 HEX 1.375 = male JIC end-piece hex,brennan-dim
+6701,6701-16-16,NUTHEX@NUTHEXSK,1.5,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C2 HEX 1.500 = swivel nut hex (= swivel library SWIV_MEAS AF 1.5),brennan-dim
+6701,6701-16-16,NOSETIP@SWSK,0.6,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[16] NOSETIP_B (female JIC swivel -16, Brennan 6500 STEP)",endlib
+6701,6701-20-20,M1@DRIVE,2.75,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): M 2.750 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-20-20,L1@DRIVE,3.75,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): L 3.750 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-20-20,CHEX@HEX,1.693,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C1 HEX 1.693 = male JIC end-piece hex,brennan-dim
+6701,6701-20-20,NUTHEX@NUTHEXSK,2.0,Brennan TFA catalog p38 table 6701 (MJ-FJS SWEPT 90 DEG ELBOW): C2 HEX 2.000 = swivel nut hex (= swivel library SWIV_MEAS AF 2.0),brennan-dim
+6701,6701-20-20,NOSETIP@SWSK,0.64,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[20] NOSETIP_B (female JIC swivel -20, Brennan 6500 STEP)",endlib
+6701,6701-L-16-16,M1@DRIVE,3.125,Brennan TFA catalog p38 table 6701-L (MJ-FJS SWEPT 90 LONG): M 3.125 = JIC tip -> swivel-leg axis (drawing),brennan-dim
+6701,6701-L-16-16,L1@DRIVE,4.87,Brennan TFA catalog p38 table 6701-L (MJ-FJS SWEPT 90 LONG): L 4.870 = JIC axis -> swivel nut face (drawing),brennan-dim
+6701,6701-L-16-16,CHEX@HEX,1.375,Brennan TFA catalog p38 table 6701-L (MJ-FJS SWEPT 90 LONG): C1 HEX 1.375 = male JIC end-piece hex,brennan-dim
+6701,6701-L-16-16,NUTHEX@NUTHEXSK,1.5,Brennan TFA catalog p38 table 6701-L (MJ-FJS SWEPT 90 LONG): C2 HEX 1.500 = swivel nut hex (= swivel library SWIV_MEAS AF 1.5),brennan-dim
+6701,6701-L-16-16,NOSETIP@SWSK,0.6,"end library (Q-TRANSFER-ENDLIB): gen_straight2 SWIV_MEAS[16] NOSETIP_B (female JIC swivel -16, Brennan 6500 STEP)",endlib

@@ -1,0 +1,37 @@
+Subject: Sizes for the O-rings, bent-tube elbows and flareless nut / sleeve
+
+Hi [name],
+
+Thanks for letting us know that you need the O-rings, the bent-tube elbows and the flareless nut and sleeve too. Your parts
+file lists these parts but has no sizes for them, so we can't model or draw them yet. The attached spreadsheet has one tab
+per group, with yellow cells for what we need. All sizes are in inches.
+
+The quickest way is usually your supplier's drawings: one drawing per series with a size table is plenty. If you send
+drawings, you don't need to fill in the cells.
+
+1. O-RINGS (4000 Buna, 4001 Viton, 4005 flange)
+   - 4000 and 4001: we found their sizes in a supplier catalog that uses the same part numbers (the standard O-rings for
+     SAE straight-thread ports, 90 durometer). Nothing to send, unless yours are different.
+   - 4005: are they for code 61 or code 62 flanges? And which standard O-ring size (AS568 number) is each one, or its
+     inside diameter and cross-section? Plus material and hardness.
+
+2. BENT-TUBE ELBOWS (1703 / 1704 / 1803 / 1804 "-Tube", and 6701)
+   - Tube outside diameter and wall thickness, bend radius, the two leg lengths and the hex sizes. The last tab of the
+     spreadsheet explains each length. For four 1704 sizes a supplier catalog already gives the hex, the flange face height
+     and the flange head size (filled in) - only the tube, the bend and the head thickness are missing there.
+
+3. FLARELESS NUT 0618 AND SLEEVE 0619
+   - Length, hex size, inside and outside diameters, plus the shape of the inside of the nut and of the front edge of the
+     sleeve. A drawing, or a photo with the sizes written on it, is best.
+
+4. 13 of these part numbers are in your parts file but not on your website (orange in the spreadsheet), for example
+   4000-05, 6701-10-10 and 0618-06. Do you sell them? If not, we will leave them out.
+
+5. Is one drawing per series enough (like the ones we sent before), or do you need a drawing for every part number?
+
+Thanks for your help!
+
+[your name]
+
+Attachment:
+- OMi_sizes_Orings_BentTube_Flareless_2026-10-14.xlsx

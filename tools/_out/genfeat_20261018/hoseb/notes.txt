@@ -1,0 +1,93 @@
+HOSEB (Q-NEW-HOSEB) - genfeat 2026-10-18 - notes
+=====================================================
+UPDATE (main session 2026-10-18, on A15 "look at Brennan"): (1) DH@BORE is now a permanent PER-ROW fallback for 4601 / 4603 (SPEC
+hose_dh='DH@BORE': a row that carries DH@BORE takes it for the hose leg, every other row stays on Q-HOSEB-BORE (a)); (2) cells_extra.csv
+adds DH@BORE 0.844 for 4601-16-20-NWO-FG (TFA p.29 B1, line_y 646.0) and 1.843 for 4501-32-32-FG (TFA p.28 B1, line_y 628.0). Both rows now
+build. The pre-update outputs are kept in _v1_before_dhfallback/ (test, regen, ocp, checks_out, rows_result.csv, notes_v1.txt) and the
+pre-update patch script in scripts/patch_hoseb_v1_before_dhfallback.py.txt. Sections below are updated to the final state.
+
+What was done
+-------------
+- tools/ = copy of tools/_out/puckfix_20261009/tools_new (batch-16 base), edited only here. patch.diff = this copy vs the base
+  (generators / checks / measure). S4: patch.diff applied to a fresh base copy reproduces tools/ (checks_out/S4_patch_apply.txt).
+- gen_tee.py: scripts/patch_hoseb.py (asserted anchors) = the wave2_impl_20261009 HOSEB patch (leg_HOSEB, faceoff_geo, face-off
+  HOSEFACEi / STUBFILLi VBA, emit changes) ported onto the batch-16 base WITHOUT PERLEGSW:
+    * SPEC 4601 / 4603 / 4501 / 4503 added after 6801 (no SPEC_WAITING; 4501 / 4503 have rows now).
+    * the 4601 / 4603 adjustable-ORB end reads the SPEC-wide nwo tuple ('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'); the two ORB tokens are
+      filled per row by the new hoseb_endlib() (virtual keys on a copy of the row; G.ORB values, same texts as PERLEGSW's end_val). The NWO
+      branch of build_rows is untouched, so PERLEGSW can merge on top (its end_val then reads the same tokens; hoseb_endlib stays harmless).
+    * NEW hose-bore option hose_bore='col' (the HOSEB leg's bore column is the part's own hose drill): 4501 / 4503 hose leg = DH@BORE
+      (Brennan TFA B1 DRILL; user 2026-10-18 A15 "look at Brennan"); the NPTF leg keeps D1@BORE (Brennan A2 DRILL). A row whose DH@BORE is
+      empty is SKIPPED ("hose bore: the row has no hose drill DH@BORE"). 4601 / 4603 keep hose_bore='own' = Q-HOSEB-BORE (a) (A15) with the
+      per-row fallback hose_dh='DH@BORE' (the leg records its source in L['hbsrc']; the $COMMENT and AxialSource texts follow the row). Rows
+      without DH@BORE produce exactly the same macro / SW2 as before the fallback (regen/cmp.txt, last block).
+    * PUCK_XC anchor follows the batch-16 puck inset (AC - PUCK_INSET).
+    * BRENNAN_NOTES for the 10 Air-Way-sized 4601 / 4603 rows reworded ("cross-check"; the "not a source" wording predates Brennan = yes).
+    * $PRP@AxialSource MODEL texts made source-neutral (the row's TubeOD / AA / L4|L5, "sources: the row's own AxialSource"), because the
+      4501 / 4503 / most 4601 rows are now Brennan-sized, not Air-Way.
+- checks/allcfg_check.py, checks/dofcheck_tee.py: the wave2_impl face-off checks (scripts/checks_from_wave2.diff, applied unchanged).
+- measure/hoseb_model.py (new, from wave2_impl): OCP closed loop; body() now builds the corner puck from the TABLE values (PUCK_XC / R1B / HB,
+  i.e. with the batch-16 inset) instead of nwo_model.body's puck at AC.
+- The port reproduces the wave2_impl output exactly: on the same test tables every geometry cell of all 37 configurations is equal; only
+  PUCK_R1B / R1T / XC (batch-16 inset), $PRP@AxialSource and $COMMENT (texts) differ.
+
+Test data (test/, never staged)
+-------------------------------
+- test/root/04_DESIGN_TABLES = stage copy + wave2/flange_hose/cells.csv rows of 4501 / 4503 / 4601 / 4603 (test/cells_hoseb.csv, 280 cells)
+  applied with apply_brennan.py (test/apply_stdout.txt, test/root/CHANGES.csv); then scripts/set_assumed.py set 28 rows ASSUMED
+  (27 DATA COMPLETE + 4601-16-20-NWO-FG; test/set_assumed_log.txt). cells_extra.csv (2 cells, kind brennan-dim) is applied in the same
+  apply_brennan.py call (test/apply_stdout.txt, test/root/CHANGES.csv).
+- (scripts/dh_route_4601.py = the earlier in-memory test of the DH route; superseded by the fallback, its output is in _v1_before_dhfallback.)
+
+Results
+-------
+- rows_result.csv: every BUILD row builds. 4501 12 / 12 (11 Brennan + 4501-32-32-FG Air-Way row with the Brennan DH), 4503 7 / 7,
+  4601 15 (9 Brennan incl. 4601-16-20-NWO-FG on DH 0.844 + 6 Air-Way on (a)), 4603 5 (1 Brennan + 4 Air-Way). 0 blocked, 0 skipped.
+- Static checks (checks_out/): vbacheck OK on the 4 macros; dofcheck_tee: 20 sketches (legs, face-off, refill) rank = unknowns, 0 redundant;
+  allcfg_check t: 0 leg outline problems, every face-off region holds all sampled forged-corner points past the hose hex face (12 / 7 / 15 / 5
+  face-offs). 4501-32-32-FG has corner past the face (Air-Way legs) - face-off takes it; 4601-16-20 clears (net 0).
+- OCP closed loop (ocp/, measure/hoseb_model.py): 39 / 39 configurations PASS - 1 solid each, refill = stub ring (1e-4), net < 0 exactly where
+  the corner stood past the face, 0 volume past the hose hex face outside the stub, hose cylinders / planes from the STEP = the generator, no
+  face-off face left, adjustable-ORB legs re-measured with the nwo.py extractor = the generator. 4501-32-32-FG 11.148 in^3, 4601-16-20 5.181.
+- Hose stub walls of the two new rows: 4501-32-32-FG (2.000 - 1.843) / 2 = 0.0785; 4601-16-20-NWO-FG (1.000 - 0.844) / 2 = 0.078.
+- regress.py: not applicable (no old configuration of these four roots exists).
+- S4: patch.diff applied to a fresh base copy reproduces tools/ (checks_out/S4_patch_apply.txt).
+
+Assumptions added / carried (each goes into $PRP@AxialSource or $COMMENT of the rows it touches)
+-------------------------------------------------------------------------------------------------
+1. Hose end = the hose end library of the built 4404 / 4604 masters (gen_straight2 end_HOSEB): stub 1.500, bead centre 0.251, bead section
+   0.060 as a flat-topped ring - Brennan 4404-08-06 STEP, same on 4404-16-16 / 4501-08-08-FG / 4503-08-08-FG / 4603-16-16-NWO-FG
+   (4601-08-06-NWO-FG: 1.530). Q-TRANSFER-ENDLIB (user 2026-10-08).
+2. Hose leg length L4 / L5 = axis crossing to the hose tip: Brennan TFA p28-p30 drawings; 4501-08-08-FG STEP 0.555 + 1.500 = catalog 2.055.
+3. Hose-leg bore: 4501 / 4503 = own DH@BORE (Brennan B1 DRILL, A15); 4601 / 4603 = DH@BORE where the row has it (4601-16-20-NWO-FG), else
+   the single bore D through both legs (Q-HOSEB-BORE (a), A15).
+4. Face-off of the forged corner at the hose hex face (Brennan 4503-08-08-FG / 4603-16-16-NWO-FG / 6500-05-05-FG, shape only); 0.05 overrun and
+   region bounds are construction margins.
+5. Adjustable-ORB thread length / undercut = ORB end library ('=ORB:THDL' / '=ORB:GD'), I3 = Air-Way 6801 ORB_I3 ('=6801') - unchanged rules.
+6. Bead dia AA of the Brennan-filled rows = the built 4404 / 4604 rows of the same hose size (already in the cells, cited in each row's
+   AxialSource).
+
+For the user / main session
+---------------------------
+1. Done per the main session: DH@BORE per-row fallback for 4601 / 4603 and the two cells (cells_extra.csv). To ship, cells_extra.csv must be
+   applied with the other Brennan cells (apply_brennan.py adds the DH@BORE column to 4601 and fills 4501's).
+2. apply_brennan.py marks 4501-32-32-FG "$PRP@DimSource BRENNAN" and prefixes "[BRENNAN-ONLY 2026-10-18]" to its AxialSource although only its
+   DH@BORE is Brennan (every other cell is Air-Way) - the marker over-states it for that mixed row; the main session may want a per-cell note.
+3. Carried from DESIGN 5.3: 4601-16-12-NWO-FG Air-Way -FG row (L4 1.90 / Y 1.06) vs Brennan (2.358 / 1.312) and Air-Way's own non-forged row
+   (2.06 / 1.13) - possible Air-Way misprint, built to Air-Way.
+4. 4601 and 4603 masters mix Air-Way-sized rows (6 / 4) and Brennan-sized rows (9 / 1); 4501 has one Air-Way-sized row (-32-32); Brennan's legs are longer on most shared sizes.
+5. Table text, not generator: 4601-20-16-NWO-FG (and other Brennan-filled rows) keep the old $COMMENT "BUILD-NEAR ... confirm with OMi/Brennan
+   before modelling" next to the new Brennan note - clean at ship time.
+6. NOT RUN IN SOLIDWORKS (unavailable). The face-off (HOSEFACE / STUBFILL: offset plane, ModelToSketchTransform rectangle, blind-cut direction
+   test, refill volume check) is new VBA that has never been dry-run. Before shipping: DESIGN section 7 D1-D5 (run_macro dry runs of 4501 /
+   4503 / 4601 / 4603 into a scratch folder, sweep_configs, geometry, screenshots). Fallback if it does not build: block the rows whose corner
+   stands past the hose hex face (4503 7 of 7, 4601 9 of 15, 4603 5 of 5, 4501 1 of 12 = -32-32).
+7. Merge with PERLEGSW: both insert SPEC entries after 6801 and a line after "L['bore'] = r[bc] ..." in build_rows (adjacent, trivial).
+   PERLEGSW's legs4()/end_val() changes do not touch the HOSEB lines; hoseb_endlib can be dropped once end_val is in.
+
+Regression (regen/cmp.txt)
+--------------------------
+(Re-run after the fallback update.) All gen_straight2 + gen_tee roots regenerated with base and new tools on the same untouched stage copy (regen/root): 75 roots identical
+(rc, macro without the date line, SW2 cells, summary); 0 non-target changes. New only: tee 4601 (6 Air-Way configs) and 4603 (4), 4501 / 4503
+"0 configs - nothing to build" (no data-complete row in the untouched stage; 4501-32-32-FG skipped there: the untouched stage has no DH@BORE; with cells_extra.csv it builds). 1503 rc 1 in both (known
+angled-helix limit). Static checks on the stage-untouched 4601 / 4603 macros also pass (checks_out/stage_untouched_checks.txt).

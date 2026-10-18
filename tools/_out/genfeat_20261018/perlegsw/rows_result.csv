@@ -1,0 +1,36 @@
+table,config,result,reason
+1601,1601-02-02-02-FG,built,"OCP closed loop 50 checks, 0 off"
+1601,1601-04-04-04-FG,built,"OCP closed loop 50 checks, 0 off"
+1601,1601-06-06-06-FG,built,"OCP closed loop 50 checks, 0 off; warn: leg 1: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed"
+1601,1601-08-08-08-FG,built,"OCP closed loop 50 checks, 0 off"
+1601,1601-12-12-12-FG,built,"OCP closed loop 50 checks, 0 off; warn: leg 3: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 1: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed"
+1601,1601-16-16-16-FG,built,"OCP closed loop 50 checks, 0 off; warn: leg 3: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+1601,1601-20-20-20-FG,built,"OCP closed loop 50 checks, 0 off; warn: leg 3: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+1602,1602-02-02-02-FG,built,"OCP closed loop 50 checks, 0 off; OMi drawing values reproduced (ocp/drawing_check_1602.txt)"
+1602,1602-04-04-04-FG,built,"OCP closed loop 50 checks, 0 off; OMi drawing values reproduced (ocp/drawing_check_1602.txt)"
+1602,1602-06-06-06-FG,built,"OCP closed loop 50 checks, 0 off; warn: leg 1: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed"
+1602,1602-08-08-08-FG,built,"OCP closed loop 50 checks, 0 off; OMi drawing values reproduced (ocp/drawing_check_1602.txt)"
+1602,1602-12-12-12-FG,built,"OCP closed loop 50 checks, 0 off; warn: leg 1: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed"
+1602,1602-16-16-16-FG,built,"OCP closed loop 50 checks, 0 off; OMi drawing values reproduced (ocp/drawing_check_1602.txt)"
+1602,1602-20-20-20-FG,built,"OCP closed loop 50 checks, 0 off; OMi drawing values reproduced (ocp/drawing_check_1602.txt)"
+1603,1603-02-02-02-FG,built,"OCP closed loop 70 checks, 0 off"
+1603,1603-04-04-04-FG,built,"OCP closed loop 70 checks, 0 off"
+1603,1603-06-06-06-FG,built,"OCP closed loop 70 checks, 0 off; warn: leg 1: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 3: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed"
+1603,1603-08-08-08-FG,skipped,"missing data: empty cell(s) D2@BORE, D1@BORE - no value from any allowed source (DataStatus gate)"
+1603,1603-12-12-12-FG,built,"OCP closed loop 70 checks, 0 off; warn: leg 1: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 3: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed"
+1603,1603-16-16-16-FG,built,"OCP closed loop 70 checks, 0 off"
+6606,6606-04-04-04-FG,built,"OCP closed loop 58 checks, 0 off"
+6606,6606-06-06-06-FG,skipped,BUILD: DataStatus MISSING (no size source for this row)
+6606,6606-08-08-08-FG,built,"OCP closed loop 58 checks, 0 off"
+6606,6606-10-10-10-FG,built,"OCP closed loop 58 checks, 0 off"
+6606,6606-12-12-12-FG,skipped,BUILD: DataStatus MISSING (no size source for this row)
+6606,6606-16-16-16-FG,built,"OCP closed loop 58 checks, 0 off"
+6807,6807-06-06-NWO-FG,built,"OCP closed loop 25 checks, 0 off; warn: leg 1: adjustable ORB tip-to-body-face 0.75 = Air-Way 6801 ORB_I3 for -06 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION); leg 1: adjustable ORB thread length 0.312 = the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_THDL at every dash -02..-32) for -06 (end library, Q-TRANSFER-ENDLIB 2026-10-08); leg 1: adjustable ORB undercut dia 0.481 = the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_GRVDIA at every dash -02..-32) for -06 (end library, Q-TRANSFER-ENDLIB 2026-10-08); leg 2: adjustable ORB tip-to-body-face 0.75 = Air-Way 6801 ORB_I3 for -06 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION); leg 2: adjustable ORB thread length 0.312 = the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_THDL at every dash -02..-32) for -06 (end library, Q-TRANSFER-ENDLIB 2026-10-08); leg 2: adjustable ORB undercut dia 0.481 = the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_GRVDIA at every dash -02..-32) for -06 (end library, Q-TRANSFER-ENDLIB 2026-10-08); leg 1: the adjustable ORB body face is a 0.0048 step (hex flats radius 0.2800 vs neck radius 0.2752); leg 2: the adjustable ORB body face is a 0.0048 step (hex flats radius 0.2800 vs neck radius 0.2752); TEST COPY ONLY: the staged config is named ""6807-06-06 NWO-FG"" (space) and is skipped ""dash count"" in the stage - rename to the OMi part number at staging (notes.txt)"
+6807,6807-04-04-NWO-FG,skipped,BUILD: DataStatus MISSING (no size source for this row)
+6807,6807-08-06-NWO-FG,skipped,BUILD: DataStatus MISSING (no size source for this row)
+6807,6807-08-08-NWO-FG,skipped,BUILD: DataStatus MISSING (no size source for this row)
+6807,6807-12-12-NWO-FG,skipped,BUILD: DataStatus MISSING (no size source for this row)
+6603,6603-06-06-06-FG,skipped,"no data-complete row (DataStatus MISSING: no Brennan catalog / OMi / Air-Way -FG size); the capability is in SPEC_WAITING (TEST row generated and checked, checks/unit_cases.txt)"
+6603,6603-16-16-16-FG,skipped,"no data-complete row (DataStatus MISSING: no Brennan catalog / OMi / Air-Way -FG size); the capability is in SPEC_WAITING (TEST row generated and checked, checks/unit_cases.txt)"
+6566,6566-06-06-FG,skipped,"no data-complete row (DataStatus MISSING: no Brennan catalog / OMi / Air-Way -FG size); the capability is in SPEC_WAITING (TEST row generated and checked, checks/unit_cases.txt)"
+6566,6566-16-16-FG,skipped,"no data-complete row (DataStatus MISSING: no Brennan catalog / OMi / Air-Way -FG size); the capability is in SPEC_WAITING (TEST row generated and checked, checks/unit_cases.txt)"

@@ -1,0 +1,6 @@
+table,config,column,current_value,current_source,omi_value,omi_cell,delta,mapping_id,table_cell,built
+1404,1404-02-02,W@HEX,1.15,Air-Way,1.08,Items!L88,-0.07,M049,C3,built
+1404,1404-04-04,W@HEX,1.44,Air-Way,1.42,Items!L91,-0.02,M049,C7,built
+1404,1404-16-12,W@HEX,2.31,Air-Way,2.29,Items!L103,-0.02,M049,C20,built
+1404,1404-20-24,W@HEX,2.51,Air-Way,2.47,Items!L108,-0.04,M049,C25,built
+1404,1404-24-20,W@HEX,2.61,Air-Way,2.54,Items!L109,-0.07,M049,C26,built

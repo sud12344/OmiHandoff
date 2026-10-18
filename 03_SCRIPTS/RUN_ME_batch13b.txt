@@ -1,0 +1,50 @@
+BATCH 13b - ADJUSTABLE ORB (6801 FAMILY) + 2501 WITH 2501-L, AND THE RE-SHIPPED 6404 / 6504 / 6565 (2026-09-25)
+==========================================================================================================
+NOTHING TO RUN. Every part below is already in 11_MASTERS: Claude built them overnight (2026-09-25) through the
+SolidWorks MCP and you accepted them the same evening. This batch only puts the matching macros and design tables in
+place, so that 03_SCRIPTS rebuilds exactly the part that is in 11_MASTERS.
+
+If you ever re-run one: SolidWorks open, no document open, remove any old module of the same name in the VBA editor
+first (File > Remove), File > Import File > the .bas from 03_SCRIPTS, run the entry sub, close the part between runs.
+Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed, saved in the
+reference size).
+
+8 MACROS                                                       configurations
+  New adjustable-ORB module ("NWO": neck, locknut with 15 deg chamfers, backup washer, O-ring undercut, ORB thread)
+     Build_6801_MASTER.bas   Sub Build6801   90 elbow JIC x adj. ORB           33   (new)
+     Build_6802_MASTER.bas   Sub Build6802   45 elbow JIC x adj. ORB           16   (new)
+     Build_6803_MASTER.bas   Sub Build6803   branch tee, ORB branch             5   (new)
+     Build_6804_MASTER.bas   Sub Build6804   run tee, ORB on the run            8   (new)
+  Long variant folded in (your yes, 2026-09-25)
+     Build_2501_MASTER.bas   Sub Build2501   90 elbow JIC x male pipe      29 -> 32  (+2501-L-04-02 / -06-04 / -06-06-FG;
+                                                                                   replaces the old batch-11 macro)
+  Re-shipped (the 03_SCRIPTS versions did not compile - 6504, 6565 - or built 6404 -04/-06 with a 15 deg chamfer)
+     Build_6404_MASTER.bas   Sub Build6404   ORB port x male pipe              14
+     Build_6504_MASTER.bas   Sub Build6504   JIC x JIC swivel                   8
+     Build_6565_MASTER.bas   Sub Build6565   swivel x swivel                    5
+  Design tables: DesignTable_2501_SW2.xlsx replaced (29 -> 32 rows); DesignTable_6801/6802/6803/6804_SW2.xlsx new.
+  6404 / 6504 / 6565 tables unchanged (identical cell by cell).
+  Old files: _to_delete\superseded_20260925\reshipped_regen_20260925\ (MANIFEST.txt with sha256).
+
+CHECKED BEFORE SHIPPING (2026-09-25)
+  Static: every sketch exactly defined (dofcheck), clean outline for EVERY configuration (allcfg), VBA check (also the
+  24-continuation limit), every configuration that existed before has identical values (regress).
+  SolidWorks: dry runs into tools\_out\ship_20260925_dryrun of 6504 6565 2501 6801 6802 6803 6804 - 0 FAIL lines, every
+  configuration rebuilt, and volume + size of EVERY configuration identical to the accepted part in 11_MASTERS
+  (tools\_out\ship_20260925_dryrun\<root>\cmp_out.txt). The 6404 macro is the one that built the accepted 6404 (identical
+  apart from line endings). Check outputs: tools\_out\ship_20260925_checks\ (121 configurations, all clean).
+  The macros carry the overnight generator fixes: rejected angle tries are really deleted, a supplement angle is kept as
+  <name>_SUPPL, the helix start is read from the curve, the problem count only counts real FAIL lines.
+
+SOURCES / ASSUMPTIONS
+  6801: Air-Way legs, hexes, bores; the NWO end measured on the Brennan 6801 STEPs (9 sizes, closed loop).
+  6803 / 6804: Air-Way prints no I3 -> the 6801 ORB_I3 of the same ORB size is used (ASSUMPTION, logged in the rows).
+  2501-L: the Brennan 2501-L-06-04-FG STEP shows the forged NPTF hex arm simply runs to N3.
+
+STILL OUT (and why)
+  6802-04-06-NWO-FG               Air-Way nut hex 0.56 for a -06 ORB, which needs 0.6875 (Air-Way data).
+  6802-20-16 / -20-20 / -24-24    a check that is too strict for 45 deg elbows (it counts the angled JIC leg's thread
+                                  radius) - fix the check, not the geometry.
+  6801-05-05-NWO-FG               MISSING "CONFLICT vs MS51527" - Brennan matches Air-Way; your decision.
+  Findings for OMi: 6801-04-02 Air-Way leg 1.03 vs Brennan 0.92; 6801-12-12 Air-Way ORB thread length 0.469 vs 0.410
+  (built to Air-Way, noted in $COMMENT).

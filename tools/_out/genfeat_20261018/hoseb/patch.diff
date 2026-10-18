@@ -1,0 +1,1075 @@
+diff -ruN -x __pycache__ -x _out -x '*.pyc' puckfix_20261009/tools_new/generators/gen_tee.py genfeat_20261018/hoseb/tools/generators/gen_tee.py
+--- puckfix_20261009/tools_new/generators/gen_tee.py	2026-10-09 10:02:06.280833800 -0500
++++ genfeat_20261018/hoseb/tools/generators/gen_tee.py	2026-10-18 15:14:15.789426000 -0500
+@@ -279,6 +279,32 @@
+     '6801': dict(name='90 deg Male JIC x Adjustable Male ORB Elbow', hex='Y@REF', elbow=True, ref='6801-08-08-NWO-FG',
+                  nwo=('ORB_I3@DRIVE', 'HEXB@HEX', 'ORB_THDL@DRIVE', 'ORB_GRVDIA@DRIVE'),
+                  legs=[('JICM', 'LEG_JIC@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('NWO', 'LEG_ORB@DRIVE', 'D2@BORE', 'THDMAJ_B@DRIVE')]),
++    # ---- 2026-10-18 genfeat HOSEB (Q-NEW-HOSEB, user 2026-10-08 "yes go ahead"; port of wave2_impl_20261009): beaded hose-barb leg on forged
++    #      elbows = the straight 4404 / 4604 end (gen_straight2.end_HOSEB) ported to a leg (leg_HOSEB). hoseb = (stub OD column, bead dia column);
++    #      hose_bore = where the hose-leg bore comes from (Q-HOSEB-BORE, user 2026-10-18 A15):
++    #        'own'   the HOSEB leg's bore column is the part's single bore, carried through both legs (option (a): 4601 / 4603);
++    #        'col'   the HOSEB leg's bore column is the part's own hose drill (DH@BORE = Brennan TFA B1 DRILL, "look at Brennan": 4501 / 4503);
++    #                a row with that cell empty is skipped;
++    #        '=4404' the Air-Way 4404 equal-size through bore (option (b), not chosen); None = no source (rows skipped).
++    #      hose_dh = per-row fallback of an 'own' root: where the row has this hose-drill column filled (DH@BORE, Brennan B1 DRILL, A15 "look at
++    #                Brennan"), the hose leg takes it; rows without it stay on 'own' (4601-16-20-NWO-FG: bore 1.078 > the 1.000 stub under (a)).
++    #      pn = the column that names the configuration (OMi SKU form: the Air-Way review rows spell '4601-06-06 NWO-FG', which dashes() cannot
++    #      parse). nwo: '=ORB:THDL' / '=ORB:GD' = the ORB end library (hoseb_endlib; Q-TRANSFER-ENDLIB). The threaded leg stays axis-aligned
++    #      (+X / +Y): on the 45 deg elbows the 135 deg leg is the hose leg (no thread -> no angled helix). The forged corner past the hose hex
++    #      face is faced off (HOSEFACEi / STUBFILLi) in every configuration.
++    '4601': dict(name='90 deg Adjustable Male ORB x Beaded Hose Elbow', hex='Y@HEX', elbow=True, ref='4601-08-08-NWO-FG', hoseb=('$PRP@TubeOD', 'AA@DRIVE'),
++                 hose_bore='own', hose_dh='DH@BORE', pn='$PRP@OMiSKU', nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'),
++                 legs=[('HOSEB', 'L4@DRIVE', 'D@BORE', None), ('NWO', 'M7@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
++    '4603': dict(name='45 deg Adjustable Male ORB x Beaded Hose Elbow', hex='CHEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='4603-08-08-NWO-FG',
++                 hoseb=('$PRP@TubeOD', 'AA@DRIVE'), hose_bore='own', hose_dh='DH@BORE', pn='$PRP@OMiSKU', nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'),
++                 legs=[('NWO', 'M8@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('HOSEB', 'L5@DRIVE', 'D@BORE', None)]),
++    # 4501 / 4503: the single bore D1 is the PIPE-end drill (Brennan A2 DRILL; 0.030 wall through the 2.000 stub on 4501-32-32-FG) - the hose
++    # leg reads its own drill DH (Brennan B1 DRILL). 4501-32-32-FG (Air-Way row) has no DH cell: skipped until it gets one.
++    '4501': dict(name='90 deg Male Pipe x Beaded Hose Elbow', hex='Y@HEX', elbow=True, ref='4501-08-08-FG', hoseb=('$PRP@TubeOD', 'AA@DRIVE'), hose_bore='col',
++                 legs=[('HOSEB', 'L4@DRIVE', 'DH@BORE', None), ('NPTFM', 'N@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE')]),
++    '4503': dict(name='45 deg Male Pipe x Beaded Hose Elbow', hex='CHEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='4503-08-08-FG',
++                 hoseb=('$PRP@TubeOD', 'AA@DRIVE'), hose_bore='col',
++                 legs=[('NPTFM', 'N2@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('HOSEB', 'L5@DRIVE', 'DH@BORE', None)]),
+ }
+ # leg placement: (axis 0=X 1=Y, sign)
+ PLACE = {1: (0, +1), 2: (0, -1), 3: (1, +1), 4: (1, -1)}
+@@ -360,6 +386,21 @@
+                      'the NPSM swivel end equals NPSM_MEAS[8] (Brennan 1404-08-08) on every value; Brennan TFA catalog p21 prints the same L/M/M1/C/Y/A2 DRILL. '
+                      'NOT modelled: the thread-zone minor cone and the port-mouth 45deg chamfer, the ball end of the tap drill past the crossing, the nut 30deg '
+                      'face chamfer and 45deg rear hex chamfer, the nut rear undercut and the nut/body joint, 0.01 fillets, the 0.002 deep marking on the hex flats',
++    # 2026-10-18 (genfeat HOSEB): Brennan TFA catalog p29 / p30 vs the Air-Way-sized 4601 / 4603 rows (they keep their Air-Way values; Brennan
++    # fills only empty cells, 2026-10-18); the other cells (M, C HEX, B2 DRILL) agree within 0.011 (HOSEB DESIGN 2.5)
++    '4601-06-06-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L, M, C HEX and B2 DRILL agree with Air-Way within 0.011 (L4 1.81 = Brennan L within 0.002)',
++    '4601-08-08-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 1.980 / Y 0.750 vs Air-Way L4 1.91 / Y 0.81 (built to Air-Way); the rest agrees within 0.011',
++    '4601-10-10-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 2.055 / Y 0.875 vs Air-Way L4 1.97 / Y 0.94 (built to Air-Way); the rest agrees within 0.011',
++    '4601-12-12-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 2.197 vs Air-Way L4 2.06 (built to Air-Way); the rest agrees within 0.011',
++    '4601-16-12-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 2.358 / Y 1.312 vs Air-Way -FG L4 1.90 / Y 1.06 - LARGE DIFFERENCE; Air-Way\'s own '
++                         'non-forged 4601-16-12 NWO row prints L4 2.06 / Y 1.13: possible Air-Way misprint - built to the -FG row per the rules, FLAG FOR THE USER / OMi; '
++                         'the hose-leg bore 0.61 (Air-Way D) leaves a 0.195 wall in the -16 stub, Brennan\'s hose drill is 0.844 (Q-HOSEB-BORE)',
++    '4601-32-32-NWO-FG': 'Brennan TFA catalog p30 (cross-check): Y 2.625 vs Air-Way 2.50 (built to Air-Way); hose drill 1.843 vs the Air-Way bore 1.78 '
++                         'carried through the hose leg (Q-HOSEB-BORE (a)); L4 2.81 = Brennan L within 0.002',
++    '4603-04-04-NWO-FG': 'Brennan TFA catalog p30 (cross-check): L 1.681 vs Air-Way L5 1.70 (built to Air-Way); the rest agrees within 0.011',
++    '4603-06-06-NWO-FG': 'Brennan TFA catalog p30 (cross-check): Y 0.562 vs Air-Way CHEX 0.63 (built to Air-Way); the rest agrees within 0.011',
++    '4603-08-08-NWO-FG': 'Brennan TFA catalog p30 (cross-check): L 1.625 / Y 0.812 vs Air-Way L5 1.69 / CHEX 0.75 (built to Air-Way); the rest agrees within 0.011',
++    '4603-12-12-NWO-FG': 'Brennan TFA catalog p30 (cross-check): L 1.894 vs Air-Way L5 1.75 (built to Air-Way); the rest agrees within 0.011',
+     # 2026-10-01 (NECK-6502): tools/measure/neck45.py (body face, neck, what stands outside the neck) + prof45.py (JIC leg)
+     '6502-12-12-FG': 'Brennan 6502-12-12-FG STEP (2026-10-01, tools/measure/neck45.py + prof45.py): JIC tip 1.280 = model (Air-Way M2); JIC hex arm to 0.416 = model; '
+                      'JIC bore 0.609 (Air-Way D1 0.61); body hex corner radius 0.6131 (A/F 1.062; model 1.0625 = the JIC thread major, 2603HX rule); swivel nut face '
+@@ -516,6 +557,132 @@
+     return i3
+ 
+ 
++# ---------------------------------------------------------------- 2026-10-09 wave 2, HOSEB: beaded hose-barb leg + face-off of the forged corner
++HOSE_WALL_MIN = 0.015     # hose stub wall (stub OD - bore) / 2 below this -> BLOCKED; 0.015 .. 0.03 -> warning (the built 4404-04-04 master has 0.020)
++FACEOFF_DELTA = 0.05      # the face-off runs this far past the forged corner radius (the stub ring it takes is put back); also its region margin
++FACEOFF_GAP = 0.02        # clearances of the face-off: cut end vs bead start, region bounds vs the corner material / the other leg's end
++FACEOFF_ROUT_K = 1.5      # 45 deg elbow: outer radius of the face-off ring = this x the hex corner radius (as NECKTRIM, TRIM_ROUT_K)
++HOSEB_ASSUME = ('beaded hose-barb leg (Q-NEW-HOSEB, port of the straight 4404 / 4604 end): stub OD = the row\'s TubeOD (hose size), bead dia = the row\'s AA '
++                '(sources: the row\'s own AxialSource); stub 1.500 from the hose-leg hex face to the tip, bead centre 0.251 from the tip and bead chord width from the bead section radius '
++                '0.060 - the hose end library (Brennan 4404-08-06 STEP; Q-TRANSFER-ENDLIB), the same on the Brennan 4404-16-16, 4501-08-08-FG, 4503-08-08-FG and '
++                '4603-16-16-NWO-FG STEPs (4601-08-06-NWO-FG: stub 1.530) - shape only; the forged hex arm of the hose leg = the row\'s hose leg length minus the stub; the round '
++                'bead section is modelled as a flat-topped ring of the same chord width; plain hose tip, no thread on the hose leg; bores flat to the crossing '
++                '(Brennan: ball-ended drills)')
++FACEOFF_ASSUME = ('FORGED CORNER FACED OFF AT THE HOSE HEX FACE (Q-NEW-HOSEB, features HOSEFACE / STUBFILL): nothing of the forged corner (30deg puck, the other '
++                  "leg's hex arm) stands past the hose-leg hex face outside the hose stub - as on the Brennan 4503-08-08-FG and 4603-16-16-NWO-FG forgings (hose "
++                  'hex face a complete hexagon inside the corner radius, nothing beyond it) and the Brennan 6500-05-05-FG elbow (corner faced off at the body '
++                  'face), shape only; modelled as a cut of the region past the hose hex face (90 deg: a rectangle along the other leg up to its hex arm end; '
++                  '45 deg: a ring to 1.5 x the hex corner radius) to 0.05 beyond the corner radius, then the stub ring put back (STUBFILL) - in every '
++                  'configuration, no change where the corner clears the face; the 0.05 overrun and the region bounds are construction margins, not part '
++                  'dimensions (ASSUMPTION for these forgings: no 90 deg hose elbow whose hose hex arm ends inside the corner radius has been seen)')
++
++
++# END-LIBRARY tokens of the adjustable-ORB end of a HOSEB root (Q-TRANSFER-ENDLIB = yes, user 2026-10-08 "reuse end details - yes"); the same values
++# and texts as the PERLEGSW end_val (wave2_impl_20261009), so a later merge of PERLEGSW reads the same SPEC tuple unchanged
++HOSEB_ENDLIB = {
++    '=ORB:THDL': ('THDL', 'adjustable ORB thread length', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_THDL at every dash -02..-32)'),
++    '=ORB:GD': ('GD', 'adjustable ORB undercut dia', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_GRVDIA at every dash -02..-32)'),
++}
++
++
++def hoseb_endlib(sp, r, dd, warn, chk):
++    """a HOSEB root's row with the end-library tokens of its SPEC nwo tuple filled in as virtual keys of a COPY of the row (the leg modules read
++    r[sp['nwo'][k]]); a dash missing from the library is a check failure; the source of every value goes into the warnings ($COMMENT)"""
++    r = dict(r)
++    for i, ((kind, lc, bc, tc), d) in enumerate(zip(sp['legs'], dd), 1):
++        if kind != 'NWO': continue
++        for c in sp['nwo']:
++            if c not in HOSEB_ENDLIB: continue
++            key, what, src = HOSEB_ENDLIB[c]
++            if d not in G.ORB or G.ORB[d].get(key) is None: chk.append(f'leg {i}: no -{d:02d} entry in the ORB end library for {what}'); continue
++            r[c] = G.ORB[d][key]
++            warn.append(f'leg {i}: {what} {r[c]} = {src} for -{d:02d} (end library, Q-TRANSFER-ENDLIB 2026-10-08)')
++    return r
++
++
++def hose_bore_lib(dash):
++    """'=4404' (Q-HOSEB-BORE option b, ONLY after the user picks it): the Air-Way 4404 through bore D3 of the equal-size row 4404-dd-dd"""
++    ws = openpyxl.load_workbook(f'{REV}/DesignTable_4404.xlsx', read_only=True).active
++    rows = list(ws.iter_rows(values_only=True)); h = rows[1]
++    for r in rows[2:]:
++        if not r[0]: continue
++        d = dict(zip(h, r)); dd = dashes(str(d['$PRP@PartNo']))
++        if dd == [dash, dash] and d.get('D3@BORE') is not None: return d['D3@BORE']
++    raise KeyError(f'no Air-Way 4404-{dash:02d}-{dash:02d} through bore')
++
++
++def leg_HOSEB(i, dash, L, BR, stubOD, bead):
++    """beaded hose leg from the crossing: hex core to the hose hex face, stub (tail), bead (flat-topped ring), stub nose, plain tip face"""
++    E = G.end_HOSEB(str(i), stubOD, bead)
++    rS, rA, p1, p2, w = E['rS'], E['rA'], E['p1'], E['p2'], E['w']
++    sh = round(L - E['endlen'], 4); b0 = round(L - p2, 4); b1 = round(L - p1, 4)
++    V = [(0, 0), (0, BR), (sh, BR), (sh, rS), (b0, rS), (b0, rA), (b1, rA), (b1, rS), (L, rS), (L, 0)]
++    cols = {f'M{i}@LEG{i}': L, f'BODYR@LEG{i}': round(BR, 5), f'HOSE{i}_TAILL@LEG{i}': round(b0 - sh, 4), f'HOSE{i}_BEADR@LEG{i}': round(rA, 5),
++            f'HOSE{i}_BEADW@LEG{i}': w, f'HOSE{i}_STUBR@LEG{i}': round(rS, 5), f'HOSE{i}_BEADPOS@LEG{i}': p1}
++    top = max(BR, rA)
++    dims = [('len', -1, f'M{i}', L, L / 2, top + 0.6), ('rad', 1, 'BODYR', BR, sh / 2, -0.4),
++            ('len', 3, f'HOSE{i}_TAILL', round(b0 - sh, 4), (sh + b0) / 2, top + 0.15), ('rad', 5, f'HOSE{i}_BEADR', rA, (b0 + b1) / 2, -0.35),
++            ('len', 5, f'HOSE{i}_BEADW', w, (b0 + b1) / 2, top + 0.35), ('rad', 7, f'HOSE{i}_STUBR', rS, (b1 + L) / 2, -0.25),
++            ('len', 7, f'HOSE{i}_BEADPOS', p1, (b1 + L) / 2, top + 0.25), ('col', 3, 7)]
++    return dict(kind='HOSEB', dash=dash, V=V, endlen=E['endlen'], cols=cols, tcols={}, dims=dims, rmax=max(rA, rS), rS=rS, rA=rA,
++                bead=(b0, b1), thr=E['thr'], thread=None, tipR=rS)
++
++
++def leg_axes(sp, n):
++    """unit vector (XY plane) of every leg axis, in leg order"""
++    out = []
++    for i in range(1, n + 1):
++        ax, sg = place(sp)[i]
++        out.append((UXV, UYV) if ax == 'U' else (float(sg), 0.0) if ax == 0 else (0.0, float(sg)))
++    return out
++
++
++def faceoff_geo(sp, legs, ih, BR, AC, N=60):
++    """the forged corner past the hose hex face of leg ih (0-based), sampled exactly as the design check (HOSEB/scripts/faceoff_geo.py):
++    the 30deg corner puck (cone surface + interior), the other leg's hex arm outline from the crossing to its hexl, and the other leg's END
++    (its revolved profile beyond its hex arm, plus the adjustable-ORB locknut envelope) inside the slab [hexl, max(AC, hexl) + DELTA]. Points
++    past the hex face (along the hose axis) and outside the stub radius are the material the face-off must take."""
++    U = leg_axes(sp, len(legs)); H = legs[ih]; u = U[ih]; n = (-u[1], u[0]); s = H['hexl']; rS = H['rS']
++    io = 1 - ih; O = legs[io]; uo = U[io]; no = (-uo[1], uo[0]); pts = []; T30_ = math.tan(math.radians(30))
++    def keep(x, y, z, tag):
++        a = x * u[0] + y * u[1]
++        if a <= s + 1e-9: return
++        t_ = x * n[0] + y * n[1]; r = math.hypot(t_, z)
++        if r <= rS + 1e-9: return
++        pts.append((tag, a, r, x * uo[0] + y * uo[1]))
++    for k in range(N + 1):
++        z = -BR + 2 * BR * k / N; R = AC - abs(z) * T30_
++        for j in range(360):
++            th = 2 * math.pi * j / 360; c_, s_ = math.cos(th), math.sin(th)
++            for f_ in (1.0, 0.8, 0.6): keep(f_ * R * c_, f_ * R * s_, z, 'puck')
++    hexv = [(AC, 0.0), (AC / 2, BR), (-AC / 2, BR), (-AC, 0.0), (-AC / 2, -BR), (AC / 2, -BR)]
++    for k in range(N + 1):
++        ao = O['hexl'] * k / N
++        for j in range(6):
++            (p1, z1), (p2, z2) = hexv[j], hexv[(j + 1) % 6]
++            for q in range(25):
++                p_ = p1 + (p2 - p1) * q / 24; z = z1 + (z2 - z1) * q / 24
++                keep(ao * uo[0] + p_ * no[0], ao * uo[1] + p_ * no[1], z, 'other hex arm')
++    endpts = []; amax = max(AC, s) + FACEOFF_DELTA
++    def endpt(ao, ro, ph):
++        p_ = ro * math.cos(ph); z = ro * math.sin(ph); x = ao * uo[0] + p_ * no[0]; y = ao * uo[1] + p_ * no[1]; a = x * u[0] + y * u[1]
++        if s - 1e-9 <= a <= amax: endpts.append((math.hypot(x * n[0] + y * n[1], z), ao))
++    for (a1, r1), (a2, r2) in zip(O['V'], O['V'][1:]):
++        for k in range(41):
++            ao = a1 + (a2 - a1) * k / 40; ro = r1 + (r2 - r1) * k / 40
++            if ao <= O['hexl'] + 1e-9: continue
++            for j in range(72): endpt(ao, ro, 2 * math.pi * j / 72)
++    if O['kind'] == 'NWO':
++        for ao in (O['nut']['n0'], O['nut']['w0']):
++            for j in range(72): endpt(ao, O['nut']['Rn'], 2 * math.pi * j / 72)
++    r = dict(past=bool(pts))
++    if pts:
++        r.update(past_max_r=max(p_[2] for p_ in pts), past_max_a=max(p_[1] for p_ in pts), past_max_along_other=max(p_[3] for p_ in pts),
++                 past_by=sorted({p_[0] for p_ in pts}))
++    if endpts: r.update(end_min_r=min(e[0] for e in endpts), end_min_along_other=min(e[1] for e in endpts))
++    return r
++
++
+ def leg_NWO(i, dash, LEG, BR, I3, nutAF, THDL, GRVD):
+     """adjustable ORB leg (a from the crossing): body hex arm to the body face, neck, locknut envelope with its two 15deg chamfer
+     cones (cut to the hexagon later: NUTCUTi), washer, O-ring undercut, male ORB thread to the tip"""
+@@ -924,13 +1091,23 @@
+     out, skipped = [], []
+     nleg = len(sp['legs'])
+     for r in rows:
+-        pn = r['$PRP@PartNo']
++        pn = r[sp.get('pn', '$PRP@PartNo')] or r['$PRP@PartNo']       # 2026-10-18 (HOSEB): SPEC pn = the column that names the configuration
+         if r.get('$PRP@ScopeAction') != 'BUILD' or r['$PRP@DataStatus'] == 'MISSING':
+             skipped.append((pn, r.get('$PRP@ScopeAction'), r['$PRP@DataStatus'])); continue
+         dd = dashes(pn)
+         if sp.get('dmap') and len(dd) == len(sp['dmap']): dd = [dd[k] for k in sp['dmap']]
+         chk, warn = [], []
+         if len(dd) != nleg: skipped.append((pn, 'dash count', dd)); continue
++        if sp.get('hoseb'):
++            # 2026-10-18 (HOSEB): the hose-leg bore source (SPEC hose_bore, Q-HOSEB-BORE) must exist; the adjustable-ORB end-library tokens of the
++            # SPEC nwo tuple are filled into a copy of the row (hoseb_endlib)
++            _hb = [bc_ for kind_, lc_, bc_, tc_ in sp['legs'] if kind_ == 'HOSEB'][0]
++            if sp.get('hose_bore', 'own') is None:
++                skipped.append((pn, 'no end data', 'hose bore: no source (Q-HOSEB-BORE)')); continue
++            if sp['hose_bore'] == 'col' and r.get(_hb) is None:
++                skipped.append((pn, 'no end data', f'hose bore: the row has no hose drill {_hb} (Q-HOSEB-BORE: the 4501 / 4503 hose leg = the part\'s own '
++                                                   'hose drill, Brennan B1 DRILL, user 2026-10-18 A15)')); continue
++            r = hoseb_endlib(sp, r, dd, warn, chk)
+         swd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'JICSW']
+         # 2026-10-01: the measured sizes are read from the tables (the fixed texts "-04/-08/-12/-16 only" / "-08 only" were stale since batch 13)
+         _have = lambda tab: '/'.join(f'-{k:02d}' for k in sorted(tab))
+@@ -992,6 +1169,9 @@
+                     if i3c.startswith('='): warn.append(f'leg {i}: adjustable ORB tip-to-body-face {I3} = Air-Way {i3c[1:]} ORB_I3 for -{d:02d} (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)')
+                     L = leg_NWO(i, d, M, BR, I3, r[sp['nwo'][1]], r[sp['nwo'][2]], r[sp['nwo'][3]])
+                 except (AssertionError, KeyError, TypeError) as ex: chk.append(f'leg {i} adjustable ORB: {ex}'); L = leg_JICM(i, d, M, BR)
++            elif kind == 'HOSEB':
++                try: L = leg_HOSEB(i, d, M, BR, G.frac(r[sp['hoseb'][0]]), r[sp['hoseb'][1]])
++                except (AssertionError, KeyError, TypeError, ValueError) as ex: chk.append(f'leg {i} hose barb: {ex}'); L = leg_JICM(i, d, M, BR)
+             elif sp.get('p1'):
+                 # 2026-10-02: the row's own measured port thread length where it has one, else the MS51503 P1 library value (said in $COMMENT)
+                 p1_ = r.get(sp['p1'])
+@@ -999,6 +1179,21 @@
+                 L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')), p1=p1_)
+             else: L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')))
+             L['bore'] = r[bc] if kind != 'NPTFF' else None
++            if kind == 'HOSEB' and L['kind'] == 'HOSEB':
++                # 2026-10-18 (HOSEB): the hose-leg bore (Q-HOSEB-BORE, user 2026-10-18 A15); hose_dh = per-row fallback of an 'own' root
++                hb_, bcn_ = sp.get('hose_bore', 'own'), bc
++                if hb_ == 'own' and sp.get('hose_dh') and r.get(sp['hose_dh']) is not None:
++                    hb_, bcn_ = 'col', sp['hose_dh']; L['bore'] = r[bcn_]
++                L['hbsrc'] = (hb_, bcn_)
++                if hb_ == 'own':
++                    warn.append(f"leg {i}: hose-leg bore {L['bore']} = the row's single bore {bc.split('@')[0]} (the adjustable-ORB end drill) carried through "
++                                'the hose leg (Q-HOSEB-BORE option (a), user 2026-10-18 A15)')
++                elif hb_ == 'col':
++                    warn.append(f"leg {i}: hose-leg bore {L['bore']} = the row's own hose drill {bcn_.split('@')[0]} (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 "
++                                "A15 'look at Brennan')" + (f"; the adjustable-ORB leg keeps the row's {bc.split('@')[0]} {r[bc]}" if bcn_ != bc else ''))
++                else:
++                    try: L['bore'] = hose_bore_lib(d); warn.append(f'leg {i}: hose-leg bore {L["bore"]} = Air-Way 4404-{d:02d}-{d:02d} through bore (hose end library, Q-HOSEB-BORE option (b))')
++                    except KeyError as ex: chk.append(f'leg {i} hose bore: {ex}')
+             legs.append(L)
+         AC = BR / COS30
+         # geometry checks
+@@ -1071,7 +1266,7 @@
+             elif sp.get('elbow'):
+                 if sp.get('arm_ridge_check') and L['hexl'] < AC:        # 2026-10-02 (1502): an arm ending inside the corner radius does not clear it
+                     warn.append(f'leg {i} hex arm {L["hexl"]:.3f} ends {AC - L["hexl"]:.3f} INSIDE the hex corner radius ({AC:.3f})')
+-                elif L['hexl'] < AC + 0.03:
++                elif L['hexl'] < AC + 0.03 and L['kind'] != 'HOSEB':       # (HOSEB: the face-off below says what happens at the hose hex face)
+                     warn.append(f'leg {i} hex arm {L["hexl"]:.3f} barely clears the corner puck (radius {AC:.3f})')
+             elif i >= 3 and L['hexl'] < AC + 0.03 and not sp.get('cross'):
+                 warn.append(f'leg {i} hex arm {L["hexl"]:.3f} barely clears the run bar corner ({AC:.3f})')
+@@ -1093,6 +1288,40 @@
+                                f'({L["hexl"]:.4f}) OUTSIDE the neck (radius {nr_:.4f}), from the neck out to the arm end {oth_["hexl"]:.3f} along the other '
+                                f'leg (ridge {2 * h_ / TAN30:.4f} wide) - Brennan faces it off at the body face (6500-05-05-FG STEP: body face 0.314 inside '
+                                f'the corner radius 0.3245, nothing outside the neck beyond it); the 90 deg elbow has no facing cut')
++        # 2026-10-09 (wave 2, HOSEB, DESIGN 4.5 / 4.6): the hose stub (wall, hex-face step, bead clear of the face-off) and the FACE-OFF of the forged
++        # corner at the hose hex face - in EVERY configuration (HOSEFACEi cut + STUBFILLi refill; net 0 where the corner clears the face)
++        for i, L in enumerate(legs, 1):
++            if L['kind'] != 'HOSEB': continue
++            assert sp.get('elbow') and (place(sp)[i] == ('U', 1) if sp.get('e45') else place(sp)[i] == (0, 1)), 'hose leg: +X on a 90 deg elbow, 135 deg on a 45 deg elbow'
++            b0_ = L['bead'][0]; sh_ = L['hexl']; rS_ = L['rS']; e45_ = bool(sp.get('e45'))
++            if L['bore'] is not None:
++                wl_ = rS_ - L['bore'] / 2
++                if wl_ < HOSE_WALL_MIN - 1e-9: chk.append(f'leg {i}: hose stub wall {wl_:.4f} (stub OD {2 * rS_:.3f}, bore {L["bore"]}) < {HOSE_WALL_MIN}')
++                elif wl_ < 0.03: warn.append(f'leg {i}: thin hose stub wall {wl_:.4f} (stub OD {2 * rS_:.3f}, bore {L["bore"]}; the 4404-04-04 master has 0.020)')
++            if rS_ > BR - 0.01: chk.append(f'leg {i}: hose stub radius {rS_:.4f} not below the hex flats radius {BR:.4f} - 0.01 (no hex face step)')
++            if chk or L['bore'] is None: continue
++            fo_ = faceoff_geo(sp, legs, i - 1, BR, AC); O_ = legs[2 - i]
++            fo_.update(rect=not e45_, sh=sh_, depth=round(max(AC - sh_, 0.0) + FACEOFF_DELTA, 4), rin=round((L['bore'] / 2 + rS_) / 2, 5), rS=rS_)
++            cend_ = round(sh_ + fo_['depth'], 4)
++            if b0_ < cend_ + FACEOFF_GAP: chk.append(f'leg {i}: hose bead starts {b0_:.4f} from the crossing, within {FACEOFF_GAP} of the face-off end {cend_:.4f}')
++            if not (L['bore'] / 2 + 0.005 <= fo_['rin'] <= rS_ - 0.005): chk.append(f'leg {i}: face-off inner radius {fo_["rin"]} not between the bore and the stub radius')
++            if e45_:
++                fo_['rout'] = round(FACEOFF_ROUT_K * AC, 4)
++                if fo_['past'] and fo_['past_max_r'] > fo_['rout'] - FACEOFF_GAP:
++                    chk.append(f'leg {i}: the forged corner past the hose hex face reaches {fo_["past_max_r"]:.4f} off the hose axis, beyond the face-off ring {fo_["rout"]}')
++                if fo_.get('end_min_r', 1e9) < fo_['rout'] + FACEOFF_GAP:
++                    chk.append(f'leg {i}: the other leg\'s end lies {fo_["end_min_r"]:.4f} off the hose axis inside the face-off slab - the ring {fo_["rout"]} would cut it')
++            else:
++                fo_['ylo'] = round(AC + FACEOFF_DELTA, 4); fo_['zh'] = round(BR + FACEOFF_DELTA, 5)
++                fo_['ytop'] = round(min(O_['hexl'], fo_.get('end_min_along_other', 1e9)), 4)
++                if fo_['ytop'] < rS_ + 0.01: chk.append(f'leg {i}: face-off rectangle ends {fo_["ytop"]:.4f} along the other leg, inside the stub radius {rS_:.4f} + 0.01')
++                if fo_['past'] and fo_['past_max_along_other'] > fo_['ytop'] + 1e-6:
++                    chk.append(f'leg {i}: the forged corner past the hose hex face reaches {fo_["past_max_along_other"]:.4f} along the other leg, beyond the face-off rectangle ({fo_["ytop"]:.4f})')
++            L['faceoff'] = fo_
++            if fo_['past']:
++                warn.append(f'leg {i}: hose hex arm {sh_:.3f} ends {AC - sh_:.3f} inside the forged corner radius ({AC:.3f}): the corner past the hose hex face '
++                            f'({", ".join(fo_["past_by"])}, up to {fo_["past_max_r"]:.3f} off the hose axis, {fo_["past_max_a"] - sh_:.3f} deep) is faced off to the '
++                            f'stub (HOSEFACE{i} / STUBFILL{i}, depth {fo_["depth"]:.4f}' + (', as the Brennan 4503-08-08-FG / 4603-16-16-NWO-FG forgings show)' if e45_ else ')'))
+         # 2026-10-01 (NECK-6502): the neck turn of a swivel leg on a 45 deg elbow - in EVERY configuration of the root (the master carries
+         # the two features in all of them), whether or not the corner reaches out of the neck in this one
+         for i, L in enumerate(legs, 1):
+@@ -1178,6 +1407,18 @@
+             cols['PUCK_HB@PUCK'] = round(BR, 5); cols['PUCK_HT@PUCK'] = round(BR, 5)
+             cols['PUCK_R1B@PUCK'] = round(R1, 5); cols['PUCK_R1T@PUCK'] = round(R1, 5); cols['PUCK_XC@PUCK'] = round(AC - PUCK_INSET, 5)
+             for i, L in enumerate(legs, 1):
++                fo_ = L.get('faceoff')
++                if not fo_: continue
++                # 2026-10-09 (HOSEB): the face-off columns (plane offset, cut region, depth, refill ring) - diameters, as BoreCut dimensions its circles
++                cols[f'D1@HFPLN{i}'] = fo_['sh']; cols[f'HF{i}_DIN@HOSEFACE{i}_SK'] = round(2 * fo_['rin'], 5)
++                if fo_['rect']:
++                    cols[f'HF{i}_ZH@HOSEFACE{i}_SK'] = fo_['zh']; cols[f'HF{i}_YTOP@HOSEFACE{i}_SK'] = fo_['ytop']
++                    cols[f'HF{i}_ZH2@HOSEFACE{i}_SK'] = fo_['zh']; cols[f'HF{i}_YLO@HOSEFACE{i}_SK'] = fo_['ylo']
++                else: cols[f'HF{i}_DOUT@HOSEFACE{i}_SK'] = round(2 * fo_['rout'], 5)
++                cols[f'DEPTH@HOSEFACE{i}'] = fo_['depth']
++                cols[f'SF{i}_DIN@STUBFILL{i}_SK'] = round(2 * fo_['rin'], 5); cols[f'SF{i}_DOUT@STUBFILL{i}_SK'] = round(2 * fo_['rS'], 5)
++                cols[f'DEPTH@STUBFILL{i}'] = fo_['depth']
++            for i, L in enumerate(legs, 1):
+                 if L.get('trim'):
+                     t_ = L['trim']
+                     cols[f'TRIM_A0@NECKTRIM{i}'] = t_['a0']; cols[f'TRIM_LEN@NECKTRIM{i}'] = t_['len']
+@@ -1199,6 +1440,9 @@
+         if any(L['kind'] == 'NPSMSW' for L in legs) and ds_ not in ('ASSUMED', 'MISSING'):
+             c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the NPSM swivel nut/stem geometry is single-source (Brennan 1404-08-08 STEP)'
+             ds_ = 'ASSUMED'
++        if any(L['kind'] == 'HOSEB' for L in legs) and ds_ not in ('ASSUMED', 'MISSING', 'TEST'):
++            c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the hose-barb stub / bead geometry is single-source (Brennan 4404-08-06 STEP)'
++            ds_ = 'ASSUMED'
+         if any(L['kind'] == 'NWO' for L in legs) and ds_ not in ('ASSUMED', 'MISSING'):
+             c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the adjustable ORB nut/washer/neck geometry is single-source (Brennan 6801-XX-XX-NWO-FG STEPs)'
+             ds_ = 'ASSUMED'
+@@ -1278,6 +1522,20 @@
+     if 'NPSMSW' in k: t.append(G.NPSM_ASSUME.replace('NUT FACE AT AIR-WAY W AND STEM TIP AT AIR-WAY L', 'NUT FACE AT AIR-WAY ' + sp['npsm'][0].split('@')[0] + ' AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)')
+                                 .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs) + ')'))
+     if 'NWO' in k: t.append(NWO_ASSUME)
++    if 'HOSEB' in k:
++        _hl = [(lc, bc) for kd, lc, bc, tc in sp['legs'] if kd == 'HOSEB'][0]
++        _hs = [L.get('hbsrc') for L in legs if L['kind'] == 'HOSEB' and L.get('hbsrc')]      # per-row bore source (hose_dh fallback)
++        t.append(HOSEB_ASSUME + f'; hose leg length = the row\'s {_hl[0].split("@")[0]} read as the axis crossing to the hose tip (ASSUMPTION, mapping: Brennan '
++                 'TFA p28-p30 drawings L = hose leg, Brennan 4501-08-08-FG STEP hose hex arm 0.555 + stub 1.500 = catalog L 2.055; Air-Way L4 / L5 = Brennan '
++                 'L within 0.002 on 4601-06-06 / 4601-32-32)')
++        hb_ = _hs[0][0] if _hs else sp.get('hose_bore', 'own')
++        if _hs: _hl = (_hl[0], _hs[0][1])
++        t.append('hose leg bore = ' + (f"the part's single bore column {_hl[1].split('@')[0]} carried through both legs (ASSUMPTION: the table prints one "
++                                       'bore, the adjustable-ORB end drill; Q-HOSEB-BORE option (a), user 2026-10-18 A15)' if hb_ == 'own' else
++                                       f"the part's own hose drill column {_hl[1].split('@')[0]} (Brennan TFA B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at "
++                                       "Brennan'); the threaded leg keeps its own drill" if hb_ == 'col' else
++                                       'the Air-Way 4404 equal-size through bore D3 (hose end library, Q-HOSEB-BORE option (b))'))
++    if any(L.get('faceoff') for L in legs): t.append(FACEOFF_ASSUME)
+     if any(L.get('nwo_trim') for L in legs): t.append(NWO_TRIM_ASSUME)
+     if any(L.get('trim') for L in legs): t.append(NECK_ASSUME)
+     if 'NPTFM' in k: t.append('male NPTF legs: ASME B1.20.3 cone + relief to the Brennan-measured 5404 end length; confirmed on a forged tee by Brennan 5600-16-16-16-FG STEP (hex stops at N - 0.94, relief dia 1.315 = pipe OD, 0.001 proud of the 1.3125 flats)')
+@@ -1758,6 +2016,300 @@
+ """
+ 
+ 
++def hoseface_vba(i, lg, e45):
++    """2026-10-09 (wave 2, HOSEB, DESIGN 4.6 / 4.7): the face-off of the forged corner at the hose hex face of leg i, in the reference configuration"""
++    fo = lg['faceoff']; f = lambda v: f'{v * IN:.9f}'
++    ux, uy = (UXV, UYV) if e45 else (1.0, 0.0)
++    ring = math.pi * (fo['rS'] ** 2 - fo['rin'] ** 2) * fo['depth']
++    reg = (f"ring {fo['rin']:.4f} .. {fo['rout']:.4f} about the hose axis" if e45 else
++           f"rectangle y {-fo['ylo']:.4f} .. {fo['ytop']:.4f} (along the other leg, to its hex arm end) x z +-{fo['zh']:.4f} minus the circle {fo['rin']:.4f}")
++    what = (f"the corner ({', '.join(fo['past_by'])}) stands up to {fo['past_max_r']:.4f} off the hose axis past the face: net change < 0" if fo['past'] else
++            'the corner clears the face here: net change 0')
++    return f"""    ' ================= HOSEFACE{i} / STUBFILL{i}: forged corner faced off at the hose hex face (wave 2, HOSEB, 2026-10-09) =================
++    '  Plane HFPLN{i} at the hose hex face ({fo['sh']:.4f} along the hose leg); cut {reg} over {fo['depth']:.4f}
++    '  away from the crossing (to 0.05 past the corner radius), then the stub ring {fo['rin']:.4f} .. {fo['rS']:.4f} ({ring:.6f} in^3) put back. {what}.
++    stepName = "HOSEFACE{i}"
++    Call HoseFace({i}, {not e45}, "{'PLN2' if e45 else 'Right Plane'}", {ux:.15f}, {uy:.15f}, {f(fo['sh'])}, {f(fo['depth'])}, {f(fo['rin'])}, {f(fo['rS'])}, {f(fo.get('ylo', 0.0))}, {f(fo.get('ytop', 0.0))}, {f(fo.get('zh', 0.0))}, {f(fo.get('rout', 0.0))}, {fo['past']})
++    Check "D1@HFPLN{i} reachable", Not swModel.Parameter("D1@HFPLN{i}") Is Nothing
++    Check "DEPTH@HOSEFACE{i} reachable", Not swModel.Parameter("DEPTH@HOSEFACE{i}") Is Nothing
++    Check "DEPTH@STUBFILL{i} reachable", Not swModel.Parameter("DEPTH@STUBFILL{i}") Is Nothing
++"""
++
++
++HOSEFACE_HELP = """
++' ---------------------------------------------------------------- hose-leg face-off helpers (wave 2, HOSEB, 2026-10-09)
++Function FeatCentreU(f As SldWorks.Feature, ux As Double, uy As Double) As Double
++    ' centre of the feature's faces (union of their boxes) projected on the leg direction (ux, uy, 0)
++    On Error Resume Next
++    Dim faces As Variant, i As Long, bx As Variant, k As Long, lo(2) As Double, hi(2) As Double, n As Long
++    faces = f.GetFaces
++    For k = 0 To 2: lo(k) = 1E+30: hi(k) = -1E+30: Next k
++    If Not IsEmpty(faces) Then
++        For i = LBound(faces) To UBound(faces)
++            bx = faces(i).GetBox
++            For k = 0 To 2
++                If bx(k) < lo(k) Then lo(k) = bx(k)
++                If bx(3 + k) > hi(k) Then hi(k) = bx(3 + k)
++            Next k
++            n = n + 1
++        Next i
++    End If
++    If n = 0 Then FeatCentreU = 0 Else FeatCentreU = ((lo(0) + hi(0)) / 2) * ux + ((lo(1) + hi(1)) / 2) * uy
++End Function
++
++Function HoseFacePlane(nm As String, basePl As String, distM As Double, ux As Double, uy As Double) As Boolean
++    ' the hose hex face plane: reference plane parallel to basePl (Right Plane / PLN2: through the origin, normal to the hose leg) at distM along
++    ' the leg direction (ux, uy, 0) - not the face itself (it splits differently per configuration). Its side is checked on the plane's own
++    ' origin; if SolidWorks put it on the other side it is deleted and made again with the flip option (256). Offset = D1@<nm> (design table).
++    On Error Resume Next
++    Dim att As Long, f As SldWorks.Feature, rp As Object, ad As Variant, pos As Double, ok As Boolean
++    For att = 0 To 1
++        swModel.ClearSelection2 True
++        ok = swModel.Extension.SelectByID2(basePl, "PLANE", 0, 0, 0, False, 0, Nothing, 0)
++        Check nm & ": base plane " & basePl & " selected", ok
++        If ok = False Then Exit Function
++        swFeatMgr.InsertRefPlane swRefPlaneReferenceConstraints_e.swRefPlaneReferenceConstraint_Distance + IIf(att = 1, 256, 0), distM, 0, 0, 0, 0
++        Trace nm & ": InsertRefPlane distance " & Format(distM / IN_, "0.0000") & IIf(att = 1, " (flipped)", "") & " " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
++        Set f = swModel.FeatureByPositionReverse(0)
++        If f Is Nothing Then Exit For
++        If f.GetTypeName2 <> "RefPlane" Then Set f = Nothing: Exit For
++        Set rp = f.GetSpecificFeature2
++        ad = rp.Transform.ArrayData
++        pos = ad(9) * ux + ad(10) * uy
++        Trace nm & ": plane origin (" & Format(ad(9) / IN_, "0.0000") & ", " & Format(ad(10) / IN_, "0.0000") & ", " & Format(ad(11) / IN_, "0.0000") & ") = " & Format(pos / IN_, "0.0000") & " along the hose leg (want " & Format(distM / IN_, "0.0000") & ")"
++        If Abs(pos - distM) < 0.000002 Then Exit For
++        swModel.ClearSelection2 True
++        f.Select2 False, 0
++        swModel.Extension.DeleteSelection2 0
++        Set f = Nothing
++    Next att
++    Check nm & " reference plane at the hose hex face (" & Format(distM / IN_, "0.0000") & " along the hose leg)", Not f Is Nothing
++    If f Is Nothing Then Exit Function
++    f.Name = nm
++    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
++    Set d = f.GetFirstDisplayDimension
++    Do While Not d Is Nothing
++        Set dm = d.GetDimension2(0)
++        If Abs(dm.SystemValue - distM) < 0.000001 Then dm.Name = "D1"
++        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
++        Set d = f.GetNextDisplayDimension(d)
++    Loop
++    Check nm & " offset reachable as D1@" & nm & " (" & names & ")", Not swModel.Parameter("D1@" & nm) Is Nothing
++    swModel.ClearSelection2 True
++    HoseFacePlane = True
++End Function
++
++Sub HoseFaceCentre(c As SldWorks.SketchSegment)
++    ' circle centre on the projected origin = the hose axis on this plane (as BoreCut does on a face)
++    On Error Resume Next
++    Dim ca As SldWorks.SketchArc
++    Set ca = c
++    swModel.ClearSelection2 True
++    ca.GetCenterPoint2.Select4 False, Nothing
++    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
++    swModel.SketchAddConstraints "sgCOINCIDENT"
++    swModel.ClearSelection2 True
++End Sub
++
++Sub HoseFaceDia(c As SldWorks.SketchSegment, nm As String, diaM As Double, tx As Double, ty As Double)
++    ' diameter dimension of a circle (as BoreCut); a radius handed back is switched to the diameter display
++    On Error Resume Next
++    Dim dd As SldWorks.DisplayDimension, v As Double
++    swModel.ClearSelection2 True
++    c.Select4 False, Nothing
++    Set dd = swModel.AddDimension2(tx, ty, 0)
++    If Not dd Is Nothing Then
++        v = dd.GetDimension2(0).SystemValue
++        If Abs(v - diaM / 2) < 0.000005 Then dd.Diametric = True: Trace nm & ": radius dim switched to diameter -> " & Format(dd.GetDimension2(0).SystemValue / IN_, "0.0000")
++    End If
++    NameDim dd, nm, diaM
++End Sub
++
++Function HoseFaceRing(skName As String, pl As String, nmIn As String, nmOut As String, r0 As Double, r1 As Double, sh As Double, ux As Double, uy As Double) As SldWorks.Feature
++    ' two circles r0 < r1 about the hose axis on the plane pl (a ring), centres on the projected origin, diameters dimensioned
++    On Error Resume Next
++    Dim mu As SldWorks.MathUtility, skO As SldWorks.Sketch, xf As SldWorks.MathTransform, mp As SldWorks.MathPoint, arr(2) As Double, pc As Variant
++    Dim c0 As SldWorks.SketchSegment, c1 As SldWorks.SketchSegment, skF As SldWorks.Feature
++    swModel.ClearSelection2 True
++    swModel.Extension.SelectByID2 pl, "PLANE", 0, 0, 0, False, 0, Nothing, 0
++    swSkMgr.InsertSketch True
++    Set mu = swApp.GetMathUtility: Set skO = swSkMgr.ActiveSketch
++    Set xf = skO.ModelToSketchTransform
++    arr(0) = sh * ux: arr(1) = sh * uy: arr(2) = 0
++    Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pc = mp.ArrayData
++    Trace skName & ": hose axis at sketch (" & Format(pc(0) / IN_, "0.0000") & ", " & Format(pc(1) / IN_, "0.0000") & ", " & Format(pc(2) / IN_, "0.0000") & ")"
++    swSkMgr.AddToDB = True
++    Set c0 = swSkMgr.CreateCircleByRadius(pc(0), pc(1), 0, r0)
++    Set c1 = swSkMgr.CreateCircleByRadius(pc(0), pc(1), 0, r1)
++    swSkMgr.AddToDB = False
++    Check skName & " circles created", (Not c0 Is Nothing) And (Not c1 Is Nothing)
++    If c0 Is Nothing Or c1 Is Nothing Then swSkMgr.InsertSketch True: Exit Function
++    HoseFaceCentre c0
++    HoseFaceCentre c1
++    HoseFaceDia c0, nmIn, 2 * r0, pc(0) + 0.7 * r0, pc(1) + 0.7 * r0
++    HoseFaceDia c1, nmOut, 2 * r1, pc(0) + 0.7 * r1, pc(1) - 0.7 * r1
++    swModel.ClearSelection2 True
++    swSkMgr.InsertSketch True
++    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
++    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
++    Set HoseFaceRing = skF
++End Function
++
++Function HoseFaceRect(skName As String, pl As String, pfx As String, sh As Double, ylo As Double, ytop As Double, zh As Double, rin As Double) As SldWorks.Feature
++    ' 90 deg elbow, hose leg on +X: on the hose hex face plane pl (parallel to the Right Plane) the rectangle y = -ylo .. ytop (model Y, along the
++    ' other leg up to its hex arm end), z = -zh .. zh, minus the circle rin about the hose axis. Corners placed through the sketch's
++    ' ModelToSketchTransform, sides horizontal / vertical as drawn, each side dimensioned to the projected origin (DimSegOrigin): pfx_ZH (z = -zh),
++    ' pfx_YTOP, pfx_ZH2 (z = +zh), pfx_YLO; the region is verified in model space afterwards (as NutHexCutAx verifies the hex flats).
++    On Error Resume Next
++    Dim mu As SldWorks.MathUtility, skO As SldWorks.Sketch, xf As SldWorks.MathTransform, xi As SldWorks.MathTransform, mp As SldWorks.MathPoint
++    Dim arr(2) As Double, pd As Variant, pu(3) As Double, pv(3) As Double, k As Long, ya As Variant, za As Variant, cu As Double, cv As Double, ok As Boolean
++    Dim s(3) As SldWorks.SketchSegment, c As SldWorks.SketchSegment, q1 As SldWorks.SketchLine, q2 As SldWorks.SketchLine, skF As SldWorks.Feature
++    swModel.ClearSelection2 True
++    swModel.Extension.SelectByID2 pl, "PLANE", 0, 0, 0, False, 0, Nothing, 0
++    swSkMgr.InsertSketch True
++    Set mu = swApp.GetMathUtility: Set skO = swSkMgr.ActiveSketch
++    Set xf = skO.ModelToSketchTransform: Set xi = xf.Inverse
++    ya = Array(-ylo, ytop, ytop, -ylo): za = Array(-zh, -zh, zh, zh)
++    For k = 0 To 3
++        arr(0) = sh: arr(1) = ya(k): arr(2) = za(k)
++        Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pd = mp.ArrayData
++        pu(k) = pd(0): pv(k) = pd(1)
++    Next k
++    arr(0) = sh: arr(1) = 0: arr(2) = 0
++    Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pd = mp.ArrayData
++    cu = pd(0): cv = pd(1)
++    swSkMgr.AddToDB = True
++    For k = 0 To 3
++        Set s(k) = swSkMgr.CreateLine(pu(k), pv(k), 0, pu((k + 1) Mod 4), pv((k + 1) Mod 4), 0)
++    Next k
++    Set c = swSkMgr.CreateCircleByRadius(cu, cv, 0, rin)
++    swSkMgr.AddToDB = False
++    For k = 0 To 3
++        Set q1 = s(k): Set q2 = s((k + 1) Mod 4)
++        swModel.ClearSelection2 True: q1.GetEndPoint2.Select4 False, Nothing: q2.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
++    Next k
++    ok = True
++    For k = 0 To 3
++        swModel.ClearSelection2 True
++        s(k).Select4 False, Nothing
++        If Abs(pv(k) - pv((k + 1) Mod 4)) < 0.000000001 Then
++            swModel.SketchAddConstraints "sgHORIZONTAL"
++        ElseIf Abs(pu(k) - pu((k + 1) Mod 4)) < 0.000000001 Then
++            swModel.SketchAddConstraints "sgVERTICAL"
++        Else
++            ok = False
++        End If
++    Next k
++    Check skName & ": rectangle sides along the sketch axes (plane parallel to the Right Plane)", ok
++    HoseFaceCentre c
++    Call DimSegOrigin(s(0), pfx & "_ZH", zh, 1.2 * (pu(0) + pu(1)) / 2, 1.2 * (pv(0) + pv(1)) / 2)
++    Call DimSegOrigin(s(1), pfx & "_YTOP", ytop, 1.2 * (pu(1) + pu(2)) / 2, 1.2 * (pv(1) + pv(2)) / 2)
++    Call DimSegOrigin(s(2), pfx & "_ZH2", zh, 1.2 * (pu(2) + pu(3)) / 2, 1.2 * (pv(2) + pv(3)) / 2)
++    Call DimSegOrigin(s(3), pfx & "_YLO", ylo, 1.2 * (pu(3) + pu(0)) / 2, 1.2 * (pv(3) + pv(0)) / 2)
++    HoseFaceDia c, pfx & "_DIN", 2 * rin, cu + 0.7 * rin, cv + 0.7 * rin
++    swModel.ClearSelection2 True
++    Dim ymn As Double, ymx As Double, zmx As Double, xbad As Double, ln As SldWorks.SketchLine
++    ymn = 1E+30: ymx = -1E+30: zmx = 0: xbad = 0
++    For k = 0 To 3
++        Set ln = s(k)
++        arr(0) = ln.GetStartPoint2.X: arr(1) = ln.GetStartPoint2.Y: arr(2) = 0
++        Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xi): pd = mp.ArrayData
++        If pd(1) < ymn Then ymn = pd(1)
++        If pd(1) > ymx Then ymx = pd(1)
++        If Abs(pd(2)) > zmx Then zmx = Abs(pd(2))
++        If Abs(pd(0) - sh) > xbad Then xbad = Abs(pd(0) - sh)
++    Next k
++    Check skName & ": region in model space y " & Format(ymn / IN_, "0.0000") & " .. " & Format(ymx / IN_, "0.0000") & ", |z| " & Format(zmx / IN_, "0.0000") & " on x " & Format(sh / IN_, "0.0000") & " (want " & Format(-ylo / IN_, "0.0000") & " .. " & Format(ytop / IN_, "0.0000") & ", " & Format(zh / IN_, "0.0000") & ")", Abs(ymn + ylo) < 0.000002 And Abs(ymx - ytop) < 0.000002 And Abs(zmx - zh) < 0.000002 And xbad < 0.000002
++    swSkMgr.InsertSketch True
++    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
++    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
++    Set HoseFaceRect = skF
++End Function
++
++Sub HoseFaceDepth(f As SldWorks.Feature, depthM As Double)
++    ' name the feature's depth dimension DEPTH (identified by value)
++    On Error Resume Next
++    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
++    Set d = f.GetFirstDisplayDimension
++    Do While Not d Is Nothing
++        Set dm = d.GetDimension2(0)
++        If Abs(dm.SystemValue - depthM) < 0.000001 Then dm.Name = "DEPTH"
++        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
++        Set d = f.GetNextDisplayDimension(d)
++    Loop
++    Check f.Name & " dims: " & names, InStr(names, "DEPTH=") > 0
++End Sub
++
++Sub HoseFace(i As Long, rect As Boolean, basePl As String, ux As Double, uy As Double, sh As Double, depthM As Double, rin As Double, rS As Double, ylo As Double, ytop As Double, zh As Double, rout As Double, past As Boolean)
++    ' FACE-OFF of the forged corner at the hose hex face (wave 2, HOSEB, DESIGN 4.6): nothing of the corner stands past the hose hex face outside
++    ' the stub (Brennan 4503-08-08-FG / 4603-16-16-NWO-FG). HOSEFACEi = blind cut over depthM from the plane HFPLNi away from the crossing of the
++    ' region (90 deg: rectangle minus the circle rin; 45 deg: ring rin .. rout); it always takes the stub ring rin .. rS (never a cut that removes
++    ' nothing). STUBFILLi = boss of the ring rin .. rS over the same depth puts the stub back. Both act in every configuration.
++    On Error Resume Next
++    Dim pl As String, sk As SldWorks.Feature, sk2 As SldWorks.Feature, v0 As Double, v1 As Double, v2 As Double, ring As Double
++    Dim cut As SldWorks.Feature, fil As SldWorks.Feature, att As Long, cxF As Double, cxW As Double
++    pl = "HFPLN" & i
++    ring = 3.14159265358979 * (rS * rS - rin * rin) * depthM
++    cxW = sh + depthM / 2
++    If HoseFacePlane(pl, basePl, sh, ux, uy) = False Then Exit Sub
++    If rect Then
++        Set sk = HoseFaceRect("HOSEFACE" & i & "_SK", pl, "HF" & i, sh, ylo, ytop, zh, rin)
++    Else
++        Set sk = HoseFaceRing("HOSEFACE" & i & "_SK", pl, "HF" & i & "_DIN", "HF" & i & "_DOUT", rin, rout, sh, ux, uy)
++    End If
++    Check "HOSEFACE" & i & "_SK sketch made", Not sk Is Nothing
++    If sk Is Nothing Then Exit Sub
++    v0 = Volume()
++    For att = 0 To 1
++        Set cut = MakeCut(sk, swEndConditions_e.swEndCondBlind, depthM, False, (att = 1), 0#, False, "HOSEFACE" & i & " attempt " & att)
++        If Not cut Is Nothing Then
++            v1 = Volume(): cxF = FeatCentreU(cut, ux, uy)
++            Trace "HOSEFACE" & i & " attempt " & att & ": removed " & Format((v0 - v1) / (IN_ ^ 3), "0.000000") & " in^3, cut faces centred at " & Format(cxF / IN_, "0.0000") & " along the hose leg (want " & Format(cxW / IN_, "0.0000") & ")"
++            If v1 < v0 - 1E-12 And Abs(cxF - cxW) < 0.25 * depthM Then Exit For
++            swModel.ClearSelection2 True
++            cut.Select2 False, 0
++            swModel.Extension.DeleteSelection2 0
++            Set cut = Nothing
++        End If
++    Next att
++    Check "HOSEFACE" & i & " cut made on the tip side of the hose hex face (attempt " & att & ")", Not cut Is Nothing
++    If cut Is Nothing Then Exit Sub
++    cut.Name = "HOSEFACE" & i
++    HoseFaceDepth cut, depthM
++    Check "HOSEFACE" & i & " took " & Format((v0 - v1) / (IN_ ^ 3), "0.000000") & " in^3 (at least the stub ring " & Format(ring / (IN_ ^ 3), "0.000000") & ")", v0 - v1 > 0.98 * ring
++    Set sk2 = HoseFaceRing("STUBFILL" & i & "_SK", pl, "SF" & i & "_DIN", "SF" & i & "_DOUT", rin, rS, sh, ux, uy)
++    Check "STUBFILL" & i & "_SK sketch made", Not sk2 Is Nothing
++    If sk2 Is Nothing Then Exit Sub
++    ' the boss direction is told by the volume: toward the tip it adds exactly the stub ring, toward the crossing (inside the hex arm) ~nothing
++    For att = 0 To 1
++        swModel.ClearSelection2 True
++        swModel.Extension.SelectByID2 "STUBFILL" & i & "_SK", "SKETCH", 0, 0, 0, False, 0, Nothing, 0
++        Set fil = swFeatMgr.FeatureExtrusion3(True, False, (att = 1), swEndConditions_e.swEndCondBlind, 0, depthM, 0, False, False, False, False, 0, 0, False, False, False, False, True, False, False, 0, 0, False)
++        Trace "STUBFILL" & i & ": FeatureExtrusion3 dir=" & att & " -> " & (Not fil Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
++        If Not fil Is Nothing Then
++            v2 = Volume(): cxF = FeatCentreU(fil, ux, uy)
++            Trace "STUBFILL" & i & " dir " & att & ": added " & Format((v2 - v1) / (IN_ ^ 3), "0.000000") & " in^3 (ring " & Format(ring / (IN_ ^ 3), "0.000000") & "), faces centred at " & Format(cxF / IN_, "0.0000") & " along the hose leg"
++            If Abs((v2 - v1) - ring) < 0.02 * ring Then Exit For
++            swModel.ClearSelection2 True
++            fil.Select2 False, 0
++            swModel.Extension.DeleteSelection2 0
++            Set fil = Nothing
++        End If
++    Next att
++    Check "STUBFILL" & i & " boss made on the tip side (attempt " & att & ")", Not fil Is Nothing
++    If fil Is Nothing Then Exit Sub
++    fil.Name = "STUBFILL" & i
++    HoseFaceDepth fil, depthM
++    Check "STUBFILL" & i & " put back " & Format((v2 - v1) / (IN_ ^ 3), "0.000000") & " in^3 = the stub ring (expect " & Format(ring / (IN_ ^ 3), "0.000000") & ")", Abs((v2 - v1) - ring) < 0.001 * ring
++    If past Then
++        Check "HOSEFACE" & i & " + STUBFILL" & i & " removed the forged corner past the hose hex face: net " & Format((v2 - v0) / (IN_ ^ 3), "0.000000") & " in^3 (< 0)", v2 < v0 - 0.001 * ring
++    Else
++        Check "HOSEFACE" & i & " + STUBFILL" & i & " leave the reference configuration unchanged (the corner clears the face): net " & Format((v2 - v0) / (IN_ ^ 3), "0.000000") & " in^3", Abs(v2 - v0) < 0.001 * ring
++    End If
++End Sub
++"""
++
++
+ def emit_leg_u(i, lg):
+     # leg along (UXV, UYV) sketched on the Front Plane with parallel/perpendicular relations to its own axis line
+     M = lg.get('Mtip', lg['V'][-1][0]); out = []
+@@ -1898,6 +2450,7 @@
+         body.append(puck_vba(BR, AC))
+         for i, lg in enumerate(legs, 1):
+             if lg.get('trim'): body.append(neck_vba(i, lg))       # 2026-10-01 (NECK-6502)
++            if lg.get('faceoff'): body.append(hoseface_vba(i, lg, e45))      # 2026-10-09 (HOSEB): face-off at the hose hex face
+     else:
+         body.append('    stepName = "RUN"')
+         body.append(f'    Call HexRun("Right Plane", 0#, {legs[0]["hexl"]*IN:.9f}, {legs[1]["hexl"]*IN:.9f}, {BR*IN:.9f}, "RUN", 0)')
+@@ -2000,6 +2553,7 @@
+     body.append('    stepName = "Threads"')
+     for i, lg in enumerate(legs, 1):
+         ax, sg = place(sp)[i]; M = lg.get('Mtip', lg['V'][-1][0]); t = lg['thread']
++        if t is None: continue          # 2026-10-09 (HOSEB): the hose leg carries no thread
+         if ax == 'U':
+             assert t['type'] == 'CUT', 'angled leg must carry a Thread-feature (JIC) end'
+             body.append(f'    tipPos = {M*IN:.9f}')
+@@ -2018,7 +2572,9 @@
+         xmax = Mt(legs[0]); xmin = -AC; ymax = Mt(legs[1]); ymin = -AC
+         # a male NPTF end may stand proud of the flats (Brennan 5600-16 STEP) - then it sets the Z extent
+         # (2026-09-25: + JICBH - the bulkhead collar stands proud of the hex flats, 2701/2702/2704 Z extent 0.44 vs 0.375)
+-        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('NPTFM', 'JICSW', 'NPSMSW', 'NWO', 'JICBH')])
++        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('NPTFM', 'JICSW', 'NPSMSW', 'NWO', 'JICBH', 'HOSEB')])
++        if legs[0]['kind'] == 'HOSEB': ymin = -max(AC, legs[0]['rA'])            # 2026-10-09 (HOSEB): the bead around the +X hose leg
++        if legs[1]['kind'] == 'HOSEB' and not e45: xmin = -max(AC, legs[1]['rA'])
+         # an adjustable ORB leg's washer / locknut corners reach past the corner puck across the other axis
+         if legs[1]['kind'] == 'NWO' and not e45: xmin = -max(AC, nwo_radial(legs[1]))
+         if legs[0]['kind'] == 'NWO': ymin = -max(AC, nwo_radial(legs[0]))
+@@ -2036,7 +2592,8 @@
+         if len(legs) > 2 and legs[2]['kind'] == 'NWO': xmin = min(xmin, -nwo_radial(legs[2])); xmax = max(xmax, nwo_radial(legs[2]))
+     zlab = 'hex flats' if zexp == BR else 'swivel nut flats' if any(lg['kind'] in ('JICSW', 'NPSMSW') and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
+         'adjustable ORB washer' if any(lg['kind'] == 'NWO' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
+-        'bulkhead collar' if any(lg['kind'] == 'JICBH' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else 'male pipe end proud of the flats'
++        'bulkhead collar' if any(lg['kind'] == 'JICBH' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
++        'hose bead' if any(lg['kind'] == 'HOSEB' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else 'male pipe end proud of the flats'
+     if e45:
+         m1 = legs[0].get('Mtip', legs[0]['V'][-1][0]); m2 = legs[1].get('Mtip', legs[1]['V'][-1][0])
+         body += ['    stepName = "Self-checks"', '    Dim bb As Variant, ex1 As Double, ex2 As Double',
+@@ -2058,7 +2615,8 @@
+              '    If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)', '']
+     # design table + config check
+     params = [c for c in hdr if '@' in c and not c.startswith('$') and c.split('@')[1].startswith(('LEG',))][:6] + \
+-             [c for c in hdr if c.startswith(('HEXAF@', 'HEXL', 'PUCK_XC@', 'PUCK_R1B@', 'THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'TRIM_', 'FILL_'))]
++             [c for c in hdr if c.startswith(('HEXAF@', 'HEXL', 'PUCK_XC@', 'PUCK_R1B@', 'THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'TRIM_', 'FILL_'))
++              or c.split('@')[-1].startswith(('HFPLN', 'HOSEFACE', 'STUBFILL'))]      # 2026-10-09 (HOSEB): the face-off values land per configuration
+     cfgs = [(ok[1]['pn'], [ok[1]['cols'][p] for p in params]), (ok[-1]['pn'], [ok[-1]['cols'][p] for p in params])] if len(ok) > 2 else [(ok[-1]['pn'], [ok[-1]['cols'][p] for p in params])]
+     # 2026-10-01 (NECK-6502): also spot-check the configuration where the neck turn takes the most of the corner (if it is not already listed)
+     cut_ = [(max(L['trim']['reach'] - L['trim']['r'] for L in b['legs'] if L.get('trim')), b) for b in ok if any(L.get('trim') for L in b['legs'])]
+@@ -2159,7 +2717,7 @@
+ End Sub
+ 
+ ' ---------------------------------------------------------------- helpers (2603HX library + straights HelixThread)
+-{HELP}{NWO_HELP if any(lg['kind'] == 'NWO' for lg in legs) else ''}{ORBTRIM_HELP if orbtrims else ''}{NECK_HELP if any(lg.get('trim') for lg in legs) else ''}'''
++{HELP}{NWO_HELP if any(lg['kind'] == 'NWO' for lg in legs) else ''}{ORBTRIM_HELP if orbtrims else ''}{NECK_HELP if any(lg.get('trim') for lg in legs) else ''}{HOSEFACE_HELP if any(lg.get('faceoff') for lg in legs) else ''}'''
+     vba = ref_config_at_save(add_progress(vba))      # 2026-09-24: one report/status-bar line per configuration in the sweep; 2026-09-25: saved in the reference configuration (progress_patch.py)
+     p = f'{OUT}/Build_{root}_MASTER.bas'; open(p, 'w').write(vba)
+     return p
+diff -ruN -x __pycache__ -x _out -x '*.pyc' puckfix_20261009/tools_new/checks/allcfg_check.py genfeat_20261018/hoseb/tools/checks/allcfg_check.py
+--- puckfix_20261009/tools_new/checks/allcfg_check.py	2026-10-09 10:01:55.730762900 -0500
++++ genfeat_20261018/hoseb/tools/checks/allcfg_check.py	2026-10-18 15:02:15.491246700 -0500
+@@ -52,12 +52,69 @@
+             if iss: probs.append((cols['$PRP@PartNo'], iss[:3]))
+         print(f'{r:6} {len(ok):3} configs  outline problems: {len(probs)}', probs[:4])
+ 
++def faceoff_issues(T, sp, b, i, Lg):
++    """2026-10-09 (wave 2, HOSEB, DESIGN 4.11): the face-off of hose leg i in THIS configuration, from its SW2 values - an independent, denser
++    numpy sampling (not the generator's faceoff_geo): depth > 0; the cut ends 0.02 before the bead; bore/2 + 0.005 <= rin <= rS - 0.005; cut and
++    refill share plane / rin / depth; the stub ring rin..rS lies inside the cut region; every forged-corner point (30deg puck and the other leg's
++    hex arm, surface AND interior) past the hose hex face and outside the stub lies inside the cut region; no point of the other leg beyond its
++    hex arm (its revolved profile incl. the locknut envelope, surface and interior) lies strictly inside the cut region.
++    Returns (problems, number of corner points past the face)."""
++    import numpy as np
++    c = b['cols']; BR, AC = b['BR'], b['AC']; e45 = bool(sp.get('e45')); bad = []
++    sh = c[f'D1@HFPLN{i}']; dep = c[f'DEPTH@HOSEFACE{i}']; rin = c[f'HF{i}_DIN@HOSEFACE{i}_SK'] / 2; rS = c[f'SF{i}_DOUT@STUBFILL{i}_SK'] / 2
++    if abs(c[f'SF{i}_DIN@STUBFILL{i}_SK'] / 2 - rin) > 1e-9 or abs(c[f'DEPTH@STUBFILL{i}'] - dep) > 1e-9: bad.append('refill ring / depth differ from the cut')
++    if abs(rS - Lg['rS']) > 1e-9 or abs(sh - Lg['hexl']) > 1e-9: bad.append('plane offset / stub radius differ from the hose leg')
++    if not dep > 0: bad.append(f'depth {dep}')
++    if not sh + dep <= Lg['bead'][0] - 0.02 + 1e-9: bad.append(f'cut end {sh + dep:.4f} vs bead start {Lg["bead"][0]:.4f}')
++    if not (Lg['bore'] / 2 + 0.005 <= rin + 1e-9 and rin <= rS - 0.005 + 1e-9): bad.append(f'rin {rin} vs bore radius {Lg["bore"] / 2} / stub radius {rS}')
++    ax = []
++    for k in (1, 2):
++        a_, s_ = T.place(sp)[k]; ax.append(np.array((T.UXV, T.UYV) if a_ == 'U' else (float(s_), 0.0) if a_ == 0 else (0.0, float(s_))))
++    u = ax[i - 1]; n = np.array((-u[1], u[0])); uo = ax[2 - i]; no = np.array((-uo[1], uo[0])); O = b['legs'][2 - i]
++    if e45:
++        rout = c[f'HF{i}_DOUT@HOSEFACE{i}_SK'] / 2
++        if not rS < rout: bad.append('stub ring outside the cut ring')
++        def inreg(a, t, z, e):
++            r = np.hypot(t, z); return (a >= sh + e) & (a <= sh + dep - e) & (r >= rin + e) & (r <= rout - e)
++    else:
++        ylo, ytop, zh, zh2 = (c[f'HF{i}_{k}@HOSEFACE{i}_SK'] for k in ('YLO', 'YTOP', 'ZH', 'ZH2'))
++        if abs(zh - zh2) > 1e-9 or not rS < min(ylo, ytop, zh): bad.append('stub ring not inside the cut rectangle')
++        def inreg(a, t, z, e):
++            return (a >= sh + e) & (a <= sh + dep - e) & (t >= -ylo + e) & (t <= ytop - e) & (np.abs(z) <= zh - e) & (np.hypot(t, z) >= rin + e)
++    T30 = math.tan(math.radians(30)); P = []
++    zz = np.linspace(-BR, BR, 81); th = np.linspace(0, 2 * math.pi, 720, endpoint=False)
++    for f in (1.0, 0.9, 0.75, 0.5, 0.25):                    # the puck: double cone about Z, surface + interior
++        R = (AC - np.abs(zz) * T30)[:, None] * f
++        P.append(np.stack([(R * np.cos(th)).ravel(), (R * np.sin(th)).ravel(), np.repeat(zz, th.size)], 1))
++    pp, qz = np.meshgrid(np.linspace(-AC, AC, 61), np.linspace(-BR, BR, 41)); pp, qz = pp.ravel(), qz.ravel()
++    hx = (np.abs(qz) <= BR + 1e-12) & (np.abs(pp) * math.sqrt(3) / 2 + np.abs(qz) / 2 <= BR + 1e-12); pp, qz = pp[hx], qz[hx]
++    for ao in np.linspace(0, O['hexl'], 81):                   # the other leg's hex arm, flats normal to Z, crossing .. its hexl
++        P.append(np.stack([ao * uo[0] + pp * no[0], ao * uo[1] + pp * no[1], qz], 1))
++    P = np.concatenate(P); a = P[:, 0] * u[0] + P[:, 1] * u[1]; t = P[:, 0] * n[0] + P[:, 1] * n[1]
++    past = (a > sh + 1e-6) & (np.hypot(t, P[:, 2]) > rS + 1e-6)
++    out_ = past & ~inreg(a, t, P[:, 2], -1e-6)
++    if out_.any():
++        k = np.argmax(np.hypot(t, P[:, 2]) * out_); bad.append(f'{int(out_.sum())} corner points past the hose hex face outside the cut region (e.g. a {a[k]:.4f}, t {t[k]:.4f}, z {P[k, 2]:.4f})')
++    E = []; ph = np.linspace(0, 2 * math.pi, 144, endpoint=False)
++    for (a1, r1), (a2, r2) in zip(O['V'], O['V'][1:]):       # the other leg beyond its hex arm: revolved profile, surface + interior
++        for s_ in np.linspace(0, 1, 41):
++            ao = a1 + (a2 - a1) * s_; ro = r1 + (r2 - r1) * s_
++            if ao <= O['hexl'] + 1e-9: continue
++            for f in (1.0, 0.75, 0.5, 0.25):
++                E.append(np.stack([ao * uo[0] + f * ro * np.cos(ph) * no[0], ao * uo[1] + f * ro * np.cos(ph) * no[1], f * ro * np.sin(ph)], 1))
++    if E:
++        E = np.concatenate(E); a = E[:, 0] * u[0] + E[:, 1] * u[1]; t = E[:, 0] * n[0] + E[:, 1] * n[1]
++        hit = inreg(a, t, E[:, 2], 1e-6)
++        if hit.any(): bad.append(f'{int(hit.sum())} points of the other leg\'s end inside the cut region')
++    return bad, int(past.sum())
++
++
+ def check_tees(roots):
+     import gen_tee as T
+     for r in roots:
+         built, skipped = T.build_rows(r)
+         ok = [b for b in built if not b['chk']]
+-        probs = []; nturn = 0
++        probs = []; nturn = 0; nface = 0; npast_ = 0
+         for b in ok:
+             for i, Lg in enumerate(b['legs'], 1):
+                 iss = poly_issues(Lg['V'])
+@@ -75,6 +132,9 @@
+                     if not (t['rin'] > t['cav'] + 0.005 and t['rin'] > Lg['bore'] / 2 + 0.005): bad.append(f'rin {t["rin"]} vs slab cavity {t["cav"]} / bore radius {Lg["bore"] / 2}')
+                     if not (t['rout'] > t['reach'] + 0.02): bad.append(f'rout {t["rout"]} vs corner reach {t["reach"]}')
+                     if bad: probs.append((b['pn'], i, bad))
++                if Lg.get('faceoff'):       # 2026-10-09 (wave 2, HOSEB): the face-off region of this configuration
++                    bad, npast = faceoff_issues(T, T.SPEC[r], b, i, Lg); nface += 1; npast_ += npast
++                    if bad: probs.append((b['pn'], f'HOSEFACE{i}', bad))
+         # 2026-10-01 (6802-E45): the corner neck trim loop (ORBTRIMi_SK) of every configuration whose table carries it - the design table
+         # drives this closed loop in every configuration (live or suppressed): no zero segment, no self-intersection, off the axis
+         tl = [(b['pn'], i, Lg) for b in ok for i, Lg in enumerate(b['legs'], 1) if f'$STATE@ORBTRIM{i}' in b['cols']]
+@@ -83,7 +143,9 @@
+             if iss: probs.append((pn, f'ORBTRIM{i}', iss[:3]))
+         # integration 2026-10-01: one summary line carrying both counters (corner neck trim loops of 6802-E45, neck turns of NECK-6502)
+         print(f'{r:6} {len(ok):3} configs  leg outline problems: {len(probs)}', probs[:4], *([f'(corner neck trim loops checked: {len(tl)})'] if tl else []),
+-              *([f'(neck turns checked: {nturn})'] if nturn else []))
++              *([f'(neck turns checked: {nturn})'] if nturn else []),
++              *([f'(hose face-offs checked: {nface}, forged-corner sample points past the hose hex face: {npast_}, all inside the cut region)'] if nface and not
++                [p_ for p_ in probs if str(p_[1]).startswith('HOSEFACE')] else [f'(hose face-offs checked: {nface})'] if nface else []))
+ 
+ if __name__ == '__main__':
+     kind = sys.argv[1]
+diff -ruN -x __pycache__ -x _out -x '*.pyc' puckfix_20261009/tools_new/checks/dofcheck_tee.py genfeat_20261018/hoseb/tools/checks/dofcheck_tee.py
+--- puckfix_20261009/tools_new/checks/dofcheck_tee.py	2026-10-09 10:01:55.732862700 -0500
++++ genfeat_20261018/hoseb/tools/checks/dofcheck_tee.py	2026-10-18 15:02:15.496244800 -0500
+@@ -126,6 +126,50 @@
+             qp = q0.copy(); qm = q0.copy(); qp[k] += h; qm[k] -= h; J[c, k] = (f(qp) - f(qm)) / (2 * h)
+     r = np.linalg.matrix_rank(J, tol=1e-6)
+     return dict(unknowns=len(q0), cons=len(cons), rank=int(r), fully=bool(r == len(q0)), redundant=len(cons) - int(r))
++def hosefaces(path):
++    """2026-10-09 (wave 2, HOSEB): the face-off calls Call HoseFace(i, rect, basePl, ux, uy, sh, depth, rin, rS, ylo, ytop, zh, rout, past)"""
++    t = open(path).read(); out = []
++    for m in re.finditer(r'Call HoseFace\((\d+), (True|False), "([^"]+)", ([^)]*)\)', t):
++        v = [x.strip() for x in m.group(4).split(',')]
++        out.append(dict(i=int(m.group(1)), rect=m.group(2) == 'True', base=m.group(3), ux=float(v[0]), uy=float(v[1]), sh=float(v[2]), depth=float(v[3]),
++                        rin=float(v[4]), rS=float(v[5]), ylo=float(v[6]), ytop=float(v[7]), zh=float(v[8]), rout=float(v[9]), past=v[10] == 'True'))
++    return out
++def jac_rank(cons, q0):
++    J = np.zeros((len(cons), len(q0))); h = 1e-7
++    for c, f in enumerate(cons):
++        for k in range(len(q0)):
++            qp = q0.copy(); qm = q0.copy(); qp[k] += h; qm[k] -= h; J[c, k] = (f(qp) - f(qm)) / (2 * h)
++    r = int(np.linalg.matrix_rank(J, tol=1e-6))
++    return dict(unknowns=len(q0), cons=len(cons), rank=r, fully=bool(r == len(q0)), redundant=len(cons) - r)
++def check_hoseface(h):
++    """mirror of the VBA HoseFaceRect / HoseFaceRing sketches (in plane coordinates: (y, z) on the Right-Plane-parallel plane, any orthonormal
++    pair on PLN2-parallel; the sketch axes are a signed permutation of them, so the rank is the same):
++    rect: corners P0..P3 = (-ylo,-zh) (ytop,-zh) (ytop,zh) (-ylo,zh) joined by merged sides; sides s0 / s2 along y, s1 / s3 along z (H / V);
++          DimSegOrigin on each side (|z| = zh, |y| = ytop, |z| = zh, |y| = ylo); circle rin: centre coincident with the projected origin, diameter.
++    ring: two circles, each centre coincident with the projected origin, each diameter dimensioned (cut ring rin..rout, fill ring rin..rS).
++    Also: the values carried by the drawn sketch, and that the stub ring (rin..rS) lies inside the cut region (the refill only puts back what the cut took)."""
++    res = {}
++    if h['rect']:
++        q0 = np.array([-h['ylo'], -h['zh'], h['ytop'], -h['zh'], h['ytop'], h['zh'], -h['ylo'], h['zh'], 0.0, 0.0, h['rin']])
++        Y = lambda q, k: q[2 * k]; Z = lambda q, k: q[2 * k + 1]
++        cons = [lambda q: Z(q, 0) - Z(q, 1), lambda q: Y(q, 1) - Y(q, 2), lambda q: Z(q, 2) - Z(q, 3), lambda q: Y(q, 3) - Y(q, 0),
++                lambda q: abs(Z(q, 0)), lambda q: abs(Y(q, 1)), lambda q: abs(Z(q, 2)), lambda q: abs(Y(q, 3)),
++                lambda q: q[8], lambda q: q[9], lambda q: 2 * q[10]]
++        res['HOSEFACE_SK'] = jac_rank(cons, q0)
++        want = [0, 0, 0, 0, h['zh'], h['ytop'], h['zh'], h['ylo'], 0, 0, 2 * h['rin']]
++        res['HOSEFACE_SK']['value_mismatch'] = [k for k, (f, w) in enumerate(zip(cons, want)) if abs(f(q0) - w) > 1e-12]
++        inside = h['rS'] < min(h['ylo'], h['ytop'], h['zh']) - 1e-9
++    else:
++        q0 = np.array([0.0, 0.0, h['rin'], 0.0, 0.0, h['rout']])
++        cons = [lambda q: q[0], lambda q: q[1], lambda q: 2 * q[2], lambda q: q[3], lambda q: q[4], lambda q: 2 * q[5]]
++        res['HOSEFACE_SK'] = jac_rank(cons, q0)
++        inside = h['rS'] < h['rout'] - 1e-9
++    q0 = np.array([0.0, 0.0, h['rin'], 0.0, 0.0, h['rS']])
++    res['STUBFILL_SK'] = jac_rank([lambda q: q[0], lambda q: q[1], lambda q: 2 * q[2], lambda q: q[3], lambda q: q[4], lambda q: 2 * q[5]], q0)
++    res['plane'] = dict(base=h['base'], offset_in=round(h['sh'] / IN_, 4), dims=1, fully=True)
++    res['geometry'] = dict(rin_lt_rS=bool(h['rin'] < h['rS'] - 1e-9), fill_ring_inside_cut_region=bool(inside), depth_pos=bool(h['depth'] > 0),
++                           unit_axis=bool(abs(math.hypot(h['ux'], h['uy']) - 1) < 1e-9))
++    return res
+ IN_ = 0.0254
+ for p in sys.argv[1:]:
+     L, D = legs(p)
+@@ -142,3 +186,5 @@
+         geo = geo and all(abs(r0 - q[4]) < 1e-8 for q in rings)          # TRIM and FILL share the inner radius
+         res['on_neck_line'] = bool(geo)
+         print(p.split('/')[-1], nm, f'(a0 {a0 / IN_:.4f}, len {ln / IN_:.4f}, r {r0 / IN_:.4f}..{r1 / IN_:.4f}, neck {neck / IN_:.4f})', res)
++    for h in hosefaces(p):        # 2026-10-09 (wave 2, HOSEB): face-off plane + sketches
++        for nm, res in check_hoseface(h).items(): print(p.split('/')[-1], f'HOSEFACE{h["i"]} {nm}', res)
+diff -ruN -x __pycache__ -x _out -x '*.pyc' puckfix_20261009/tools_new/measure/hoseb_model.py genfeat_20261018/hoseb/tools/measure/hoseb_model.py
+--- puckfix_20261009/tools_new/measure/hoseb_model.py	1969-12-31 18:00:00.000000000 -0600
++++ genfeat_20261018/hoseb/tools/measure/hoseb_model.py	2026-10-18 15:07:03.673510600 -0500
+@@ -0,0 +1,211 @@
++# 2026-10-09 (wave 2, HOSEB + PERLEGSW; 2026-10-18 genfeat HOSEB: the table's corner puck, see body()): OCP closed loop of the new elbow configurations (4601 / 4603 hose elbows with the face-off, 6807
++# double adjustable-ORB elbow). Rebuilds a configuration from the generator's own build_rows() data IN THE MACRO'S FEATURE ORDER (leg revolves,
++# hex arms, corner puck - nwo_model.body; then the face-off HOSEFACEi cut + STUBFILLi refill from the SW2 face-off values; the locknut hex cuts;
++# the bores; threads not modelled), writes a STEP, reads it back and measures it:
++#   * one solid; locknut cut volume = nwo_nut_removed() (the macro's NutHexCutNWO expectation); face-off cut >= the stub ring, refill = the stub
++#     ring exactly, net change (< 0 where the corner stood past the hose hex face, 0 where it clears);
++#   * nothing of the forged corner past the hose hex face outside the stub (90 deg: up to the other leg's hex arm end; 45 deg: any direction),
++#     up to the bead: volume of the solid in that region = 0;
++#   * hose leg from the STEP faces: coaxial cylinders stub rS / bead rA / bore, planes normal to the hose axis at the hex face, the bead edges
++#     and the tip; NO face left by the face-off (no cylinder at rin, no plane at the face-off end);
++#   * every adjustable-ORB leg from the STEP with the SAME extractor used on the Brennan 6801 STEPs (nwo.measure_nwo / parse, per leg): tip,
++#     I3, thread length, undercut, washer, nut, neck = the generator's values.
++# usage: hoseb_model.py <root> [<pn> ...]   (env as gen_tee: OMI_ROOT, GT_OUT; HB_OUT = folder for the STEPs and results.json)
++import os as _os, sys as _sys
++_HERE = _os.path.dirname(_os.path.abspath(__file__)); _TOOLS = _os.path.dirname(_HERE)
++for _p in (_os.path.join(_TOOLS, 'generators'), _TOOLS, _HERE):
++    if _p not in _sys.path: _sys.path.insert(0, _p)
++import omi_paths as OP
++import sys, os, math, json
++os.environ.setdefault('GT_OUT', OP.SCRATCH)
++from OCP.gp import gp_Pnt, gp_Dir, gp_Ax2
++from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox, BRepPrimAPI_MakeCylinder, BRepPrimAPI_MakeRevol
++from OCP.gp import gp_Ax1
++from OCP.BRepAlgoAPI import BRepAlgoAPI_Common
++from OCP.TopExp import TopExp_Explorer
++from OCP.TopAbs import TopAbs_FACE, TopAbs_SOLID
++from OCP.TopoDS import TopoDS
++from OCP.BRepAdaptor import BRepAdaptor_Surface
++from OCP.GeomAbs import GeomAbs_Cylinder, GeomAbs_Plane
++import nwo_model as NM
++from nwo_model import MM, vol, fuse, cut, hex_prism, write
++from nwo import measure_nwo, parse, walk, key as nkey
++from prof import leg_edges
++from swiv import seg_list
++from prof import shape
++
++
++def cyl(u, a0, a1, r):
++    """solid cylinder of radius r about the leg axis u (through the origin) from a0 to a1"""
++    return BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt(a0 * u[0] * MM, a0 * u[1] * MM, 0), gp_Dir(u[0], u[1], 0)), r * MM, (a1 - a0) * MM).Shape()
++
++
++def ring(u, a0, a1, r0, r1): return cut(cyl(u, a0, a1, r1), cyl(u, a0, a1, r0))
++
++
++def box(x0, y0, z0, x1, y1, z1): return BRepPrimAPI_MakeBox(gp_Pnt(x0 * MM, y0 * MM, z0 * MM), gp_Pnt(x1 * MM, y1 * MM, z1 * MM)).Shape()
++
++
++def nsolids(S):
++    e = TopExp_Explorer(S, TopAbs_SOLID); n = 0
++    while e.More(): n += 1; e.Next()
++    return n
++
++
++def axes(e45): return [(1.0, 0.0), NM.U135 if e45 else (0.0, 1.0)]
++
++
++def body(b, e45):
++    """2026-10-18 (genfeat HOSEB, batch-16 base): nwo_model.body with the corner puck of the TABLE (PUCK_XC / PUCK_R1B / PUCK_HB of the SW2 row:
++    equator AC - PUCK_INSET since the 2026-10-09 puck fix) instead of nwo_model's puck at AC - the macro's puck, so the rebuild is the macro's"""
++    legs = b['legs']; BR = b['BR']; c = b['cols']; S = None
++    for i, lg in enumerate(legs):
++        s = NM.revolve_leg_u(lg['V'], NM.U135) if (e45 and i == 1) else NM.revolve_leg(lg['V'], i); S = s if S is None else fuse(S, s)
++    for i, lg in enumerate(legs):
++        S = fuse(S, NM.hex_prism_u(NM.U135, 2 * BR, 0.0, lg['hexl']) if (e45 and i == 1) else hex_prism(i, 2 * BR, 0.0, lg['hexl']))
++    h = c['PUCK_HB@PUCK']; r1 = c['PUCK_R1B@PUCK']; xc = c['PUCK_XC@PUCK']
++    assert abs(c['PUCK_HT@PUCK'] - h) < 1e-12 and abs(c['PUCK_R1T@PUCK'] - r1) < 1e-12
++    pk = BRepPrimAPI_MakeRevol(NM.face([(0, 0, -h), (r1, 0, -h), (xc, 0, 0), (r1, 0, h), (0, 0, h)]), gp_Ax1(gp_Pnt(0, 0, 0), gp_Dir(0, 0, 1)), 2 * math.pi).Shape()
++    return fuse(S, pk)
++
++
++def build(b, e45):
++    """the macro's order: legs + hex arms + puck -> face-off cut + refill -> locknut cuts -> bores"""
++    legs = b['legs']; c = b['cols']; U = axes(e45); info = {}
++    S = body(b, e45)
++    for i, lg in enumerate(legs, 1):
++        fo = lg.get('faceoff')
++        if not fo: continue
++        u = U[i - 1]; sh = c[f'D1@HFPLN{i}']; dep = c[f'DEPTH@HOSEFACE{i}']; rin = c[f'HF{i}_DIN@HOSEFACE{i}_SK'] / 2; rS = c[f'SF{i}_DOUT@STUBFILL{i}_SK'] / 2
++        if e45: tool = ring(u, sh, sh + dep, rin, c[f'HF{i}_DOUT@HOSEFACE{i}_SK'] / 2)
++        else:
++            assert u == (1.0, 0.0)
++            zh = c[f'HF{i}_ZH@HOSEFACE{i}_SK']
++            tool = cut(box(sh, -c[f'HF{i}_YLO@HOSEFACE{i}_SK'], -zh, sh + dep, c[f'HF{i}_YTOP@HOSEFACE{i}_SK'], zh), cyl(u, sh, sh + dep, rin))
++        v0 = vol(S); S = cut(S, tool); v1 = vol(S); S = fuse(S, ring(u, sh, sh + dep, rin, rS)); v2 = vol(S)
++        info[f'HOSEFACE{i}'] = dict(cut=v0 - v1, fill=v2 - v1, ring=math.pi * (rS ** 2 - rin ** 2) * dep, net=v2 - v0, past=fo['past'])
++    for i, lg in enumerate(legs):
++        if lg['kind'] != 'NWO': continue
++        assert not (e45 and i == 1)
++        n = lg['nut']; BIG = 20.0
++        slab = box(-BIG, n['n0'], -BIG, BIG, n['w0'], BIG) if i == 1 else box(n['n0'], -BIG, -BIG, n['w0'], BIG, BIG)
++        v0 = vol(S); S = cut(S, cut(slab, hex_prism(i, n['af'], n['n0'], n['w0']))); info[f'NUTCUT{i + 1}'] = dict(removed=v0 - vol(S), expect=NM_T.nwo_nut_removed(n))
++    for i, lg in enumerate(legs):
++        S = cut(S, cyl(U[i], 0.0, lg.get('Mtip', lg['V'][-1][0]), lg['bore'] / 2))
++    return S, info
++
++
++def residual(S, b, e45):
++    """volume of the finished solid past each hose hex face, outside the stub, before the bead (must be 0)"""
++    out = {}
++    for i, lg in enumerate(b['legs'], 1):
++        if lg['kind'] != 'HOSEB': continue
++        u = axes(e45)[i - 1]; sh = lg['hexl']; b0 = lg['bead'][0]; rS = lg['rS']
++        if e45: R = cut(cyl(u, sh + 1e-4, b0 - 1e-4, 10.0), cyl(u, sh, b0, rS + 1e-5))
++        else: R = cut(box(sh + 1e-4, -10, -10, b0 - 1e-4, b['cols'][f'HF{i}_YTOP@HOSEFACE{i}_SK'] - 1e-4, 10), cyl(u, sh, b0, rS + 1e-5))
++        out[f'leg{i}'] = vol(BRepAlgoAPI_Common(S, R).Shape())
++    return out
++
++
++def faces(p, u):
++    """cylinders coaxial with the leg axis u (radius, axial span) and planes normal to it (position) of a STEP"""
++    S = shape(p); e = TopExp_Explorer(S, TopAbs_FACE); cy, pl = set(), set()
++    while e.More():
++        f = TopoDS.Face(e.Current()) if hasattr(TopoDS, "Face") else TopoDS.Face_s(e.Current()); s = BRepAdaptor_Surface(f); e.Next()
++        if s.GetType() == GeomAbs_Cylinder:
++            c = s.Cylinder(); d = c.Axis().Direction(); L = c.Location()
++            if abs(abs(d.X() * u[0] + d.Y() * u[1]) - 1) > 1e-6: continue
++            lx, ly, lz = L.X() / MM, L.Y() / MM, L.Z() / MM; t = lx * u[0] + ly * u[1]
++            if math.hypot(lx - t * u[0], ly - t * u[1], lz) > 1e-5: continue
++            cy.add(round(c.Radius() / MM, 5))
++        elif s.GetType() == GeomAbs_Plane:
++            q = s.Plane(); d = q.Axis().Direction(); L = q.Location()
++            if abs(abs(d.X() * u[0] + d.Y() * u[1]) - 1) > 1e-6: continue
++            pl.add(round((L.X() * u[0] + L.Y() * u[1]) / MM, 5))
++    return cy, pl
++
++
++def measure_legs(p, legs):
++    """nwo.measure_nwo on GIVEN legs [(axis, sign)] (its own legs_of() takes the two largest box extents - on a 45 deg hose elbow those can
++    both belong to the angled hose leg); same section walk and parse"""
++    res = []
++    for axis, sign in legs:
++        for pn in [k for k in (0, 1, 2) if k != axis]:
++            S = [s for s in seg_list(leg_edges(p, axis, sign, pn, a0=0.05)) if min(s['r1'], s['r2']) > -1e-6]
++            at = max(max(s['a1'], s['a2']) for s in S)
++            face = [s for s in S if abs(s['a1'] - at) < 1e-3 and abs(s['a2'] - at) < 1e-3]
++            if not face: continue
++            rstart = max(max(s['r1'], s['r2']) for s in face)
++            res.append(((axis, sign, pn), at, walk(S, nkey((at, rstart)), 0.06)))
++    return res
++
++
++def nwo_legs(p, legs=None):
++    """the adjustable ORB legs of a STEP, per leg (axis, sign), with nwo.py's own pattern (the Brennan 6801 extractor)"""
++    best = {}
++    for leg, at, pts in (measure_legs(p, legs) if legs else measure_nwo(p)):
++        M = parse(at, pts)
++        if len(M) < 6: continue
++        t, u_, w, n, k, b = M[:6]
++        if not (u_[2] < t[2] and w[2] > u_[2] and n[2] < w[2] + 0.2 and k[2] < n[2] and b[2] > k[2] - 0.05): continue
++        c = dict(tip=round(at, 4), TM=round(2 * t[2], 4), UR=round(u_[2], 4), THDL=round(at - u_[0], 4), WR=round(w[2], 4), WT=round(w[0] - w[1], 4),
++                 NUTR=round(n[2], 4), NUTT=round(n[0] - n[1], 4), NECKR=round(k[2], 4), NECKL=round(k[0] - k[1], 4), I3=round(at - k[1], 4))
++        key = leg[:2]
++        if key not in best or c['NUTR'] < best[key]['NUTR']: best[key] = c
++    return best
++
++
++def run(T, root, pns=(), outd=None, verbose=True):
++    """closed loop of every buildable configuration of a gen_tee root (or the listed ones); T = the imported gen_tee (SPEC may carry injected
++    TEST roots). Returns (results, problems)."""
++    global NM_T
++    NM_T = T; e45 = bool(T.SPEC[root].get('e45')); outd = outd or os.environ.get('HB_OUT', OP.SCRATCH); os.makedirs(outd, exist_ok=True)
++    built, _ = T.build_rows(root); res = {}; bad = []
++    for b in built:
++        if b['chk'] or (pns and b['pn'] not in pns): continue
++        S, info = build(b, e45); path = os.path.join(outd, f'MODEL_{b["pn"]}.stp'); write(S, path)
++        r = dict(volume=vol(S), solids=nsolids(S), info=info, residual=residual(S, b, e45)); errs = []
++        if r['solids'] != 1: errs.append(f'{r["solids"]} solids')
++        for k, v in info.items():
++            if k.startswith('NUTCUT') and abs(v['removed'] - v['expect']) > 0.005 * v['expect']: errs.append(f'{k} removed {v["removed"]:.6f} vs {v["expect"]:.6f}')
++            if k.startswith('HOSEFACE'):
++                if v['cut'] < 0.98 * v['ring']: errs.append(f'{k} cut {v["cut"]:.6f} < ring')
++                if abs(v['fill'] - v['ring']) > 1e-4 * v['ring']: errs.append(f'{k} refill {v["fill"]:.7f} vs ring {v["ring"]:.7f}')
++                if (v['net'] < -1e-3 * v['ring']) != v['past']: errs.append(f'{k} net {v["net"]:.6f} vs past {v["past"]}')
++        for k, v in r['residual'].items():
++            if v > 1e-7: errs.append(f'{k}: {v:.7f} in^3 of the solid past the hose hex face outside the stub')
++        # hose leg faces from the STEP
++        for i, lg in enumerate(b['legs'], 1):
++            if lg['kind'] != 'HOSEB': continue
++            u = axes(e45)[i - 1]; cy, pl = faces(path, u); fo = lg['faceoff']; L_ = lg['V'][-1][0]; b0, b1 = lg['bead']
++            want_c = {round(lg['rS'], 5), round(lg['rA'], 5), round(lg['bore'] / 2, 5)}; want_p = {round(x, 5) for x in (lg['hexl'], b0, b1, L_)}
++            r[f'hose{i}'] = dict(cylinders=sorted(cy), planes=sorted(pl))
++            if not want_c <= cy: errs.append(f'hose leg {i}: cylinders {sorted(cy)} miss {sorted(want_c - cy)}')
++            if not want_p <= pl: errs.append(f'hose leg {i}: planes {sorted(pl)} miss {sorted(want_p - pl)}')
++            if round(fo['rin'], 5) in cy: errs.append(f'hose leg {i}: a face-off cylinder (rin {fo["rin"]}) is left')
++            if round(lg['hexl'] + fo['depth'], 5) in pl: errs.append(f'hose leg {i}: a face-off end plane ({lg["hexl"] + fo["depth"]:.4f}) is left')
++        # adjustable ORB legs from the STEP (nwo.py extractor) vs the generator's leg values
++        got = nwo_legs(path, [(0, 1)] + ([] if e45 else [(1, 1)])); r['nwo'] = {str(k): v for k, v in got.items()}
++        for i, lg in enumerate(b['legs']):
++            if lg['kind'] != 'NWO': continue
++            key = (0, 1) if i == 0 else ((1, 1) if not e45 else None)
++            m = got.get(key)
++            want = dict(tip=lg['V'][-1][0], I3=lg['endlen'], THDL=round(lg['V'][-1][0] - lg['te'], 4), UR=lg['UR'], WR=lg['m']['WR'], WT=lg['m']['WT'],
++                        NUTR=lg['nut']['af'] / 2, NUTT=lg['m']['NUTT'], NECKR=lg['m']['NECKR'], NECKL=lg['m']['NECKL'], TM=2 * lg['rM'])
++            if not m: errs.append(f'leg {i + 1}: the nwo.py extractor found no adjustable ORB leg on {key}'); continue
++            dif = {k: (m[k], round(v, 4)) for k, v in want.items() if abs(m[k] - v) > 0.0015}
++            r[f'nwo_leg{i + 1}'] = dict(measured=m, want={k: round(v, 4) for k, v in want.items()}, diff=dif)
++            if dif: errs.append(f'leg {i + 1} NWO measured != generator: {dif}')
++        r['errors'] = errs; res[b['pn']] = r; bad += [f'{b["pn"]}: {x}' for x in errs]
++        if verbose: print(b['pn'], 'volume %.5f in^3, %d solid(s)' % (r['volume'], r['solids']),
++              {k: {kk: round(vv, 6) if isinstance(vv, float) else vv for kk, vv in v.items()} for k, v in info.items()},
++              'residual', {k: round(v, 8) for k, v in r['residual'].items()}, 'OK' if not errs else errs)
++    json.dump(res, open(os.path.join(outd, f'results_{root}.json'), 'w'), indent=1, default=str)
++    return res, bad
++
++
++if __name__ == '__main__':
++    import gen_tee
++    root = sys.argv[1]
++    res, bad = run(gen_tee, root, sys.argv[2:])
++    print(root, 'closed loop', 'PASS' if not bad else f'FAIL ({len(bad)})')

@@ -1,0 +1,53 @@
+BATCH 9 - THE FEMALE JIC SWIVEL FAMILY, TEN NEW MASTERS (2026-09-24)
+=====================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+Independent of batches 4-8.
+
+Suggested order (run #1 first - if it has a problem, everything after it will have the same one):
+
+ STRAIGHTS (gen_straight2.py)
+   1  Build_6505_MASTER.bas   Sub Build6505   male pipe x female JIC swivel connector              8 configs
+   2  Build_6504_MASTER.bas   Sub Build6504   male JIC x female JIC swivel union                   4 configs
+   3  Build_6402_MASTER.bas   Sub Build6402   male ORB x female JIC swivel adapter                 7 configs
+   4  Build_6506_MASTER.bas   Sub Build6506   female pipe x female JIC swivel connector            4 configs
+   5  Build_6565_MASTER.bas   Sub Build6565   double female JIC swivel union (swivel both ends)    4 configs
+
+ ELBOWS / TEES (gen_tee.py)
+   6  Build_6500_MASTER.bas   Sub Build6500   90 deg female swivel elbow (male JIC x swivel)       7 configs
+   7  Build_6501_MASTER.bas   Sub Build6501   90 deg male pipe x swivel elbow                      1 config
+   8  Build_6503_MASTER.bas   Sub Build6503   90 deg female pipe x swivel elbow                    1 config
+   9  Build_6600_MASTER.bas   Sub Build6600   swivel branch tee (swivel on the branch)             4 configs
+  10  Build_6602_MASTER.bas   Sub Build6602   swivel run tee (swivel on the run)                   4 configs
+                                                                                     total    44 configs
+
+WHAT IS NEW
+  The swivel end = a nut (its own hex) sitting over a nose with the 37 deg seat, drawn inside the leg revolve like
+  the batch 8 ports: nut face -> countersink -> nut thread (helical, straight) -> relief -> slot around the nose ->
+  nose tip -> 37 deg seat -> bore. The nut and the body are ONE solid, as in Brennan's own STEP files.
+  Two new operations, and the report lines to watch:
+    - Straights: the body hex is no longer cut through the whole part - "HEXCUT created in the right zone"
+      (it stops at the body face behind the nut) and "NUTCUT created in the right zone" (the nut hex, cut from
+      the nut face). 6565 has three zone cuts (body + both nuts) and "START=" in the HEXCUT dims.
+    - Elbows / tees: "NUTHEXn nut flats normal to Z" and "NUTCUTn created and removed material".
+    - All: "... sketch fully defined", "Revolved volume ... (expect ...)", "bore reaches the swivel seat",
+      "THD_End... helix created / swept cut created".
+  6565 is the first part whose End A is not a tip on the axis: the macro puts the origin on the End A nut face
+  instead. If its DRIVE sketch is not fully defined, send me that report first.
+
+WHERE THE NUMBERS COME FROM (details: 00_DOCS\Swivel_end_Brennan6500_measurements.md, pictures in 05_DIAGRAMS)
+  Swivel end   measured on the FOUR Brennan 6500-04/-08/-12/-16-FG STEPs (cut through the axis, exact edges):
+               nut length/hex length/skirt, nut thread length and minor (= ASME B1.1 basic minor), relief, slot
+               floor, nose OD, seat mouth. Nut hex = Air-Way C3 (matches Brennan at all 4 sizes); nose tip =
+               Air-Way M10 / "L to seat" (Brennan within 0.01). Built for swivel sizes -04/-08/-12/-16 only.
+  Straights    the body hex stops where Brennan's forged arm stops behind the nut (ASSUMED for a straight body).
+  Everything else as before (MS33656J JIC ends, NPTF, ORB, Air-Way lengths/hexes/bores).
+  All 44 configs are ASSUMED (the swivel geometry is one manufacturer). 6500 rows that were "VERIFIED-LEGS"
+  are now ASSUMED for that reason (noted in $COMMENT).
+
+CHECKED BEFORE SENDING
+  Every sketch (straight DRIVE and every tee leg) solved as exactly defined (no missing, no redundant dims),
+  every profile is a clean closed outline, revolved volumes recomputed independently, and the 6500-12-12
+  model laid over Brennan's own cross-section (05_DIAGRAMS). Released series regenerate unchanged (helpers
+  added only).

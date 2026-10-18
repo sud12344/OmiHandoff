@@ -1,0 +1,48 @@
+STRAIGHTS BATCH - ROUND 2 (2026-09-23, after the first six reports)
+====================================================================
+Run all six again, same way as before (SolidWorks open, no document; Tools > Macro > Run;
+one at a time; close the part between runs), then send me the six Build_<root>_report.txt:
+
+  03_SCRIPTS\Build_5000_MASTER.bas   Sub Build5000   NPTF female x NPTF female      19 configs (pipe coupling)
+  03_SCRIPTS\Build_5404_MASTER.bas   Sub Build5404   NPTF male x NPTF male          25 configs
+  03_SCRIPTS\Build_5405_MASTER.bas   Sub Build5405   NPTF male x NPTF female        23 configs
+  03_SCRIPTS\Build_6401_MASTER.bas   Sub Build6401   ORB male x NPTF male           20 configs
+  03_SCRIPTS\Build_6405_MASTER.bas   Sub Build6405   ORB male x NPTF female         36 configs (6405-24-16-O blocked, see below)
+  03_SCRIPTS\Build_0403_MASTER.bas   Sub Build0403   braze socket x JIC male        33 configs
+
+Correction to the first note: 5000 is the NPTF female x female pipe coupling and 0403 is
+braze socket x JIC MALE - the round-1 note had those two labels wrong. Geometry was right.
+
+WHAT ROUND 1 FOUND AND WHAT CHANGED
+ 1. "APEXR / PROF_AX / PROF_R @THDPROF_B do not drive" dialog on every helix at End B
+    -> the thread-profile dimensions at End B were never created (dimension type was left to
+       SolidWorks' text-position guess; it only worked at End A). Now placed as explicit
+       horizontal/vertical dimensions. Also the cause of "Overall length" FAIL and the
+       THD_EndB rebuild errors in the config check.
+ 2. 0403 bore did not reach End B -> bore is now sketched on the End B face and cut back to the
+    socket bottom (no start offset). New checks: "bore open on the axis at End A / End B /
+    pocket bottom" in every macro.
+ 3. THD_EndA rebuild error on the small configs only (6401-04-02, 6405-03-04, 0403-04-04)
+    -> the Thread feature uses the SolidWorks "Inch Die 0.7500-16" profile; on 20/24 tpi
+       configs the pitch is overridden but the tooth stays the 16-tpi size, so adjacent turns
+       overlap and the sweep fails. The tables now also drive Profile_Height / Profile_Land
+       (scaled with pitch: 0.5413P and 0.25P, the ratios of the SW 16-tpi profile). The
+       macro reports whether SolidWorks accepts those names ("profile dims reachable"); if it
+       does not, the report will say so and I will re-address them.
+       NOTE: this same defect exists in the already-built 2403/2405/2500/2502/2603 masters on
+       their -02..-06 configs (they were only spot-checked on -10 and -20). Fix follows once
+       confirmed here.
+ 4. "NPTFA_TAPER = 1.2299 (table 1.7899)" FAIL -> false alarm, the check divided an angle by
+    inches. Angles now reported in degrees.
+ 5. 6405 "DEPTH@BORECUT_A does not drive" -> 6405-24-16-O had a NEGATIVE bore depth: the
+    female-port depth P1 (1.14) is deeper than Air-Way's overall length (1.00). That row is
+    now blocked. Your Brennan 5405-08-08 STEP settled what P1 is: the tap-drill depth
+    (0.900 measured = MS51503 P1 max -> VERIFIED for the 1/2 port; thread depth in the STEP
+    is 0.750). So P1 stays. Rows where the drill depth runs into the other end's thread
+    region are built AS PRINTED with an "AS-PRINTED WARNING" in $COMMENT (12 rows of 6405,
+    Air-Way L31 suspect). On 5000 the two drill holes meet (through coupling) and each
+    helical thread is cut to min(P1, L/2) so the two threads cannot cross.
+
+Config spot-check now also verifies THDPITCH, Profile_Height, PROF_R, pocket and bore depths.
+Threads still unsuppressed (SUPPRESS_THREADS = False). Every modelling assumption is in
+$PRP@AxialSource of the SW2 table. Blocked/skipped list: 03_SCRIPTS\gen_straight2_summary.json

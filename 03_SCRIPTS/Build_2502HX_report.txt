@@ -1,0 +1,183 @@
+Build_2502HX_MASTER  9/23/2026 4:26:31 AM
+      profile axis start pinned to origin (2 selected)
+OK    dim N1 = 1.2300 in (expect 1.2300)
+OK    dim COLLARR = 0.5650 in (expect 0.5650)
+OK    COLLAR sketch fully defined
+OK    COLLAR revolve created
+      profile axis start pinned to previous leg axis point (2 selected)
+OK    dim M1 = 1.5500 in (expect 1.5500)
+OK    dim BODYR = 0.4050 in (expect 0.4050)
+OK    dim THDMAJR_B = 0.3750 in (expect 0.3750)
+OK    dim JIC_RELIEFL = 0.0940 in (expect 0.0940)
+      RELIEFANG angle try 0 at (1.735, 0.887): 120.0 deg (want 60.0)
+      RELIEFANG angle try 1 at (1.735, -0.887): 120.0 deg (want 60.0)
+      RELIEFANG angle try 2 at (-1.735, 0.887): 120.0 deg (want 60.0)
+      RELIEFANG angle try 3 at (-1.735, -0.887): 120.0 deg (want 60.0)
+      RELIEFANG angle try 4 at (1.853, 0.079): 120.0 deg (want 60.0)
+      RELIEFANG angle try 5 at (1.617, 0.079): 120.0 deg (want 60.0)
+OK    angle RELIEFANG = 60.00 deg
+OK    dim JIC_THDZ = 0.2837 in (expect 0.2837)
+OK    dim JIC_CONER = 0.3295 in (expect 0.3295)
+OK    dim JIC_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JIC_SEATL = 0.1546 in (expect 0.1546)
+      SEATB: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB = 37.00 deg
+OK    LEGJ sketch fully defined
+OK    LEGJ revolve created
+OK    dim HEXAF = 1.1300 in (expect 1.1300)
+OK    HEXP hex sketch fully defined
+      HEXP: FeatureExtrusion3 flip=0 -> True
+      HEXP: box x 0.000..1.635  y -0.565..1.550  z -0.652..0.652
+OK    HEXP extruded the right way
+      HEXP: z extent 0.6524 (flats want 0.5650)
+      HEXP: flats not normal to Z with sgHORIZONTAL - rebuilding with the other relation
+OK    dim HEXAF = 1.1300 in (expect 1.1300)
+OK    HEXP hex sketch fully defined
+      HEXP: FeatureExtrusion3 flip=0 -> True
+      HEXP: box x 0.000..1.635  y -0.652..1.550  z -0.565..0.565
+OK    HEXP extruded the right way
+      HEXP: z extent 0.5650 (flats want 0.5650)
+OK    HEXP dims named (HEXL COLLARL HEXAF )
+OK    dim HEXAF = 1.1300 in (expect 1.1300)
+OK    HEXJ hex sketch fully defined
+      HEXJ: FeatureExtrusion3 flip=0 -> True
+      HEXJ: box x 0.000..1.882  y -0.652..1.550  z -0.565..0.565
+OK    HEXJ extruded the right way
+      HEXJ: z extent 0.5650 (flats want 0.5650)
+OK    HEXJ dims named (HEXL HEXAF )
+OK    dim PUCK_X = 1.2300 in (expect 1.2300)
+OK    dim PUCK_HB = 0.5650 in (expect 0.5650)
+OK    dim PUCK_HT = 0.5650 in (expect 0.5650)
+OK    dim PUCK_R1B = 0.3262 in (expect 0.3262)
+OK    dim PUCK_R1T = 0.3262 in (expect 0.3262)
+OK    dim PUCK_XC = 1.8824 in (expect 1.8824)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    One solid body after collar+hex+puck
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+      BORE_A centre pinned to origin (2 selected before constraint)
+OK    dim TAPDRILL = 0.7000 in (expect 0.7000)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.9000 TAPDRILL=0.7000 
+OK    select end face for BORE_P at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_P sketch opened (active sketch exists)
+OK    BORE_P circle created
+      BORE_P centre pinned to origin (2 selected before constraint)
+OK    dim D = 0.3900 in (expect 0.3900)
+OK    BORE_P sketch closed and named (ProfileFeature)
+      BORECUT_P attempt 0: CreateDefinition returned Nothing
+      BORECUT_P attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_P cut removes material (attempt 0)
+OK    BORECUT_P dims: DEPTH=1.2300 D=0.3900 
+OK    select end face for BORE_J at x=1.5500
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_J sketch opened (active sketch exists)
+OK    BORE_J circle created
+      BORE_J centre pinned to leg axis point (2 selected before constraint)
+OK    dim D = 0.3900 in (expect 0.3900)
+OK    BORE_J sketch closed and named (ProfileFeature)
+      BORECUT_J attempt 0: CreateDefinition returned Nothing
+      BORECUT_J attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_J cut removes material (attempt 0)
+OK    BORECUT_J dims: DEPTH=1.5500 D=0.3900 
+      THD_EndB: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndB: anchor edge found at x=1.0133 r=0.3750
+      THD_EndB: Edge ok
+      THD_EndB: Type=Inch Die ok
+      THD_EndB: Size=0.7500-16 ok
+      THD_EndB: ThreadMethod=Cut ok
+      THD_EndB: EndCondition=Blind ok
+      THD_EndB: BlindDepth=0.2837 ok
+      THD_EndB: DiameterOverride ok
+      THD_EndB: Diameter ok
+      THD_EndB: PitchOverride ok
+      THD_EndB: Pitch ok
+      THD_EndB: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_EndB: CreateFeature -> True
+OK    THD_EndB thread feature created
+      THD_EndB: thread centre x = 1.1656 in, anchor 1.0133, wanted +X
+OK    THD_EndB runs along the thread flat (away from the hex)
+OK    THD_EndB rebuilds without error (code 0)
+OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_EndB: profile sketch renamed to THD_EndB_PROF
+OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
+OK    THD_EndB suppressed
+      THD_EndA: End A face selected -> True
+OK    dim HELIXDIA = 0.7000 in (expect 0.7000)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix called ok
+      THD_EndA: last feature = Helix/Spiral1 (Helix)
+OK    THD_EndA helix created
+OK    THD_EndA helix dims: D7=0.00000 D6=0.03124 D5=12.60504 PITCH=0.00181 HEIGHT=0.02286 
+      THD_EndA: ReferenceCurve.GetCurve -> False [err Object doesn't support this property or method]
+      THD_EndA: start from sketch transform
+      THD_EndA: helix start = (0.0000, 0.0000, 0.3500) in
+OK    THD_EndA helix starts on the End A face at the pocket radius
+      THD_EndA: profile centre in sketch coords = (0.0000, -0.3500)
+      THD_EndA: P on Right Plane ok
+      THD_EndA: profile relations ok
+OK    dim PROF_R = 0.3500 in (expect 0.3500)
+      THD_EndA: 60 deg dim 60.0
+OK    dim APEXR = 0.4071 in (expect 0.4071)
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: CreateDefinition(swFmSweepCut) -> True
+      THD_EndA: swd.Profile ok
+      THD_EndA: swd.Path ok
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.03227 in^3
+OK    THD_EndA suppressed
+OK    X extent 0.000 .. 1.882 (expect 0.000 .. 1.882)
+OK    Y extent -0.652 .. 1.550 (expect -0.652 .. 1.550)
+OK    Z extent -0.565 .. 0.565 (expect -0.565 .. 0.565)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2502HX_SW2.xlsx
+OK    Configurations after table: 30
+OK    2502-20-20-FG N1@COLLAR = 1.7000 (table 1.7000)
+OK    2502-20-20-FG HEXAF@HEXP = 1.8800 (table 1.8800)
+OK    2502-20-20-FG COLLARL@HEXP_BODY = 0.5100 (table 0.5100)
+OK    2502-20-20-FG HEXL@HEXP_BODY = 1.1900 (table 1.1900)
+OK    2502-20-20-FG HEXAF@HEXJ = 1.8800 (table 1.8800)
+OK    2502-20-20-FG HEXL@HEXJ_BODY = 1.3720 (table 1.3720)
+OK    2502-20-20-FG PUCK_XC@PUCK = 2.7854 (table 2.7854)
+OK    2502-20-20-FG M1@LEGJ = 2.3300 (table 2.3300)
+OK    2502-20-20-FG BODYR@LEGJ = 0.8750 (table 0.8750)
+OK    2502-20-20-FG TAPDRILL@BORE_A = 1.4800 (table 1.4800)
+OK    2502-20-20-FG DEPTH@BORECUT_A = 1.1400 (table 1.1400)
+OK    2502-20-20-FG one solid body (found 1)
+      2502-20-20-FG box x 0.000..2.785  y -1.085..2.330
+OK    2502-24-24 N1@COLLAR = 2.0800 (table 2.0800)
+OK    2502-24-24 HEXAF@HEXP = 2.5000 (table 2.5000)
+OK    2502-24-24 COLLARL@HEXP_BODY = 0.6100 (table 0.6100)
+OK    2502-24-24 HEXL@HEXP_BODY = 1.4700 (table 1.4700)
+OK    2502-24-24 HEXAF@HEXJ = 2.5000 (table 2.5000)
+OK    2502-24-24 HEXL@HEXJ_BODY = 1.8070 (table 1.8070)
+OK    2502-24-24 PUCK_XC@PUCK = 3.5234 (table 3.5234)
+OK    2502-24-24 M1@LEGJ = 2.8900 (table 2.8900)
+OK    2502-24-24 BODYR@LEGJ = 1.0000 (table 1.0000)
+OK    2502-24-24 TAPDRILL@BORE_A = 1.7200 (table 1.7200)
+OK    2502-24-24 DEPTH@BORECUT_A = 1.1600 (table 1.1600)
+OK    2502-24-24 one solid body (found 1)
+      2502-24-24 box x 0.000..3.523  y -1.443..2.890
+OK    All-config sweep: 29 configurations rebuilt, 0 feature/body failures
+FAIL  Threads suppressed in all configurations before save (2 THD_ features)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2502HX_MASTER_042719.SLDPRT (first name was locked, error 0)

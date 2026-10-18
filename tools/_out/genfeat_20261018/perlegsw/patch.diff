@@ -1,0 +1,712 @@
+diff -ruN -x __pycache__ -x _out -x '*.orig' puckfix_20261009/tools_new/generators/gen_tee.py genfeat_20261018/perlegsw/tools/generators/gen_tee.py
+--- puckfix_20261009/tools_new/generators/gen_tee.py	2026-10-09 10:02:06.280833800 -0500
++++ genfeat_20261018/perlegsw/tools/generators/gen_tee.py	2026-10-18 15:01:58.356998300 -0500
+@@ -279,6 +279,72 @@
+     '6801': dict(name='90 deg Male JIC x Adjustable Male ORB Elbow', hex='Y@REF', elbow=True, ref='6801-08-08-NWO-FG',
+                  nwo=('ORB_I3@DRIVE', 'HEXB@HEX', 'ORB_THDL@DRIVE', 'ORB_GRVDIA@DRIVE'),
+                  legs=[('JICM', 'LEG_JIC@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('NWO', 'LEG_ORB@DRIVE', 'D2@BORE', 'THDMAJ_B@DRIVE')]),
++    # ---- 2026-10-09 wave 2, PERLEGSW (Q-NEW-PERLEGSW, user 2026-10-08 "yes go ahead"): several swivel / NPSM swivel / adjustable-ORB legs on
++    #      one forged body. A leg tuple may carry a 5th element = the column tuple of ITS end (layout of the SPEC-wide sw / npsm / nwo); a
++    #      4-tuple leg reads the SPEC-wide tuple, so every older root is unchanged. A value is a table column or an END-LIBRARY token (end_val;
++    #      Q-TRANSFER-ENDLIB = yes, user 2026-10-08): '=6801' (adjustable-ORB I3 = Air-Way 6801 ORB_I3), '=ORB:THDL' / '=ORB:GD' (ORB end
++    #      library thread length / undercut dia), '=FPT:TD' (female pipe tap drill, only where the row's cell is empty). perleg=True switches on
++    #      the per-leg checks and wording (nut-cut slabs of every nut, envelope overlap, arm ridge on tees, NWO legs in the ridge checks).
++    # 6807: only 6807-06-06-NWO-FG has an allowed size source - its own Air-Way -FG row (s140 "6807-6-6 NWO-FG"); OMi Items row 2299 lists the
++    # part with no dimension. Body form ASSUMED from the 6801 forging until a 6807 STEP is seen (DESIGN_REVIEW P6: dry run now, ship gated).
++    '6807': dict(name='90 deg Adjustable Male ORB x Adjustable Male ORB Elbow', hex='Y@HEX', elbow=True, perleg=True, arm_ridge_check=True,
++                 ref='6807-06-06-NWO-FG',
++                 assume_extra=['two adjustable ORB legs on one 90 deg elbow forging (OMi "MAORB - MAORB 90 deg Elbow Forged"; no Brennan 6807 STEP seen: '
++                               'the body form - 2500HX hex arms + 30deg corner puck, each ORB leg = the ORB leg of the accepted 6801 forging - is ASSUMED '
++                               'from the Brennan 6801-XX-XX-NWO-FG STEPs, shape only)'],
++                 legs=[('NWO', 'M7_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('=6801', 'C4_1HEX@HEX', '=ORB:THDL', '=ORB:GD')),
++                       ('NWO', 'M7_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('=6801', 'C4_2HEX@HEX', '=ORB:THDL', '=ORB:GD'))]),
++    # ---- 2026-10-18 (genfeat PERLEGSW, Q-NEW-PERLEGSW approved 2026-10-08): the tees with several female swivel / NPSM swivel legs, out of
++    #      SPEC_WAITING now that rows have sizes: the Brennan TFA catalog (user 2026-10-18 "Brennan = yes"; tables 1601 / 1602 / 1603 / 6606,
++    #      cells tools/_out/brennan_yes_20261018/wave2/tee_elbow/cells.csv) and, for 1602-02/-04/-08/-16/-20-FG, OMi's own 2026-10-18 drawings.
++    #      Body = the 2603HX tee (run hex bar continuous through the crossing + branch hex arm, flats normal to Z), every special leg = the
++    #      library end (SWIV_MEAS / NPSM_MEAS, Q-TRANSFER-ENDLIB), its hex arm ending at the library body face - the shape seen on the Brennan
++    #      6603-06-06-06-FG / 6606-06-06-06-FG / 1601-08-08-08-FG / 1603-08-08-08-FG tee forgings (shape only, PERLEGSW DESIGN section 3).
++    #      Column meanings: JIC swivel legs: leg col = crossing to the nut face (Brennan M6 / Air-Way M5), extra = (crossing to the nose tip
++    #      M10, nut hex C3); NPSM legs: leg col = crossing to the stem tip (Brennan M1 / M2), extra = (crossing to the nut face W3 / W5 =
++    #      Brennan M / L, nut hex).
++    '6606': dict(name='Female Swivel Tee (three swivels)', hex='Y@HEX', perleg=True, arm_ridge_check=True, ref='6606-08-08-08-FG',
++                 legs=[('JICSW', f'M5_{k}@DRIVE', 'D1@BORE', f'THDMAJ_B{k}@DRIVE', (f'M10_{k}@DRIVE', f'C3_{k}HEX@HEX')) for k in (1, 2, 3)]),
++    # 1601 / 1602: the first dash is the pipe branch (Air-Way 1601-06-04-04: A = 3/8 NPTF; Brennan A1 = the NPTF branch) -> dmap; every -FG
++    # BUILD row has equal dashes today
++    '1601': dict(name='Female NPSM Swivel Run x Male Pipe Branch Tee', hex='C1HEX@HEX', perleg=True, arm_ridge_check=True, dmap=(1, 2, 0),
++                 ref='1601-08-08-08-FG',
++                 legs=[('NPSMSW', 'M1_2@DRIVE', 'D_2@BORE', 'THDMAJ_A1_2@DRIVE', ('W3_2@HEX', 'C2HEX@HEX')),
++                       ('NPSMSW', 'M1_3@DRIVE', 'D3@BORE', 'THDMAJ_A1_3@DRIVE', ('W3_3@HEX', 'C3HEX@HEX')),
++                       ('NPTFM', 'N1@DRIVE', 'D2@BORE', 'THDMAJ_A@DRIVE')]),
++    '1602': dict(name='Female NPSM Swivel Run x Female Pipe Branch Tee', hex='C1HEX@HEX', perleg=True, arm_ridge_check=True, dmap=(1, 2, 0),
++                 conn=None, ref='1602-08-08-08-FG',
++                 legs=[('NPSMSW', 'M1_2@DRIVE', 'D2@BORE', 'THDMAJ_A1_2@DRIVE', ('W3_2@HEX', 'C2HEX@HEX')),
++                       ('NPSMSW', 'M1_3@DRIVE', 'D3@BORE', 'THDMAJ_A1_3@DRIVE', ('W3_3@HEX', 'C3HEX@HEX')),
++                       ('NPTFF', 'N3@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE')]),          # an empty TAPDRILL takes '=FPT:TD' (end library)
++    # 1603: side 1 = the branch: the leg Air-Way prints differently (W3 / M1 vs W5 / M2 at -04); the Brennan TFA 1603 table labels A1's nut face
++    # L (axis to the A1 branch nut face) and A2 / A3 the run (M, M1 / M2) - still logged as an ASSUMPTION (every -FG row has equal dashes)
++    '1603': dict(name='Female NPSM Swivel Tee (three swivels)', hex='C1HEX@HEX', perleg=True, arm_ridge_check=True, dmap=(1, 2, 0),
++                 ref='1603-06-06-06-FG',
++                 assume_extra=['1603 side order: part-number side 1 (W3 / M1) = the branch leg, sides 2 / 3 (W5 / M2) = the run (ASSUMPTION: Air-Way prints '
++                               'side 1 differently, the Brennan TFA 1603 table labels A1 as the branch; every -FG row has equal dashes)'],
++                 legs=[('NPSMSW', 'M2_2@DRIVE', 'D2@BORE', 'THDMAJ_A1_2@DRIVE', ('W5_2@HEX', 'C2HEX@HEX')),
++                       ('NPSMSW', 'M2_3@DRIVE', 'D2@BORE', 'THDMAJ_A1_3@DRIVE', ('W5_3@HEX', 'C3HEX@HEX')),
++                       ('NPSMSW', 'M1@DRIVE', 'D1@BORE', 'THDMAJ_A1_1@DRIVE', ('W3@HEX', 'C_1HEX@HEX'))]),
++}
++# 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
++# no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
++# the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
++# 2026-10-18 (genfeat PERLEGSW): 1601 / 1602 / 1603 / 6606 moved into SPEC (rows from the Brennan TFA catalog, user 2026-10-18 "Brennan =
++# yes", and the 1602-FG rows from OMi's 2026-10-18 drawings); 6603 / 6566 still have no data-complete row.
++SPEC_WAITING = {
++    # PERLEGSW. Column meanings (Air-Way headers): JIC swivel legs: leg col = crossing to the nut face (M5), extra = (crossing to the nose tip
++    # M10, nut hex C3); NPSM legs: leg col = crossing to the stem tip, extra = (crossing to the nut face, nut hex).
++    '6603': dict(name='Female Swivel Run x Male JIC Branch Tee', hex='Y@HEX', perleg=True, arm_ridge_check=True, ref='6603-06-06-06-FG',
++                 legs=[('JICSW', 'M5_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('M10_1@DRIVE', 'C3_1HEX@HEX')),
++                       ('JICSW', 'M5_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('M10_2@DRIVE', 'C3_2HEX@HEX')),
++                       ('JICM', 'M@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')]),
++    # 6566: the review table is a skeleton (no Air-Way series). These column names are a PLACEHOLDER for the TEST harness only - not staged in
++    # any table (DESIGN_REVIEW P10). Open: OMi gives one M 1 / M 2 pair for two swivel legs (6500-L fold: M 2 = crossing to the nut face,
++    # M 1 = crossing to the nose tip) - the leg mapping is a question for when data arrives.
++    '6566': dict(name='90 deg Female Swivel x Female Swivel Elbow', hex='Y@HEX', elbow=True, perleg=True, arm_ridge_check=True, ref='6566-06-06-FG',
++                 legs=[('JICSW', 'M5_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('M10_1@DRIVE', 'C3_1HEX@HEX')),
++                       ('JICSW', 'M5_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('M10_2@DRIVE', 'C3_2HEX@HEX'))]),
+ }
+ # leg placement: (axis 0=X 1=Y, sign)
+ PLACE = {1: (0, +1), 2: (0, -1), 3: (1, +1), 4: (1, -1)}
+@@ -856,6 +922,83 @@
+     return [int(x) for x in re.findall(r'-(\d\d)(?=-|$)', pn)]
+ 
+ 
++# ---------------------------------------------------------------- 2026-10-09 wave 2, PERLEGSW: per-leg end columns and end-library tokens
++def legs4(sp):
++    """the (kind, leg col, bore col, thread col) part of every SPEC leg (a leg may carry a 5th element: its own end columns)"""
++    return [l[:4] for l in sp['legs']]
++
++
++def leg_end(sp, k):
++    """the end-column tuple of leg k (0-based): the leg's own 5th element, else the SPEC-wide sw / npsm / nwo tuple (every older root)"""
++    l = sp['legs'][k]
++    return l[4] if len(l) > 4 else sp[{'JICSW': 'sw', 'NPSMSW': 'npsm', 'NWO': 'nwo'}[l[0]]]
++
++
++# END-LIBRARY tokens (Q-TRANSFER-ENDLIB = yes, user 2026-10-08 "reuse end details - yes"): token -> (library, key, what, source text)
++ENDLIB_TOKENS = {
++    '=ORB:THDL': ('ORB', 'THDL', 'adjustable ORB thread length', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_THDL at every dash -02..-32)'),
++    '=ORB:GD': ('ORB', 'GD', 'adjustable ORB undercut dia', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_GRVDIA at every dash -02..-32)'),
++    '=FPT:TD': ('FPT', 'TD', 'female NPTF tap drill', 'the female pipe port end library (per-size tap drill of the 2405 table, carried by every built female pipe port)'),
++}
++ENDLIB_TEXT = {
++    '=6801': 'adjustable ORB tip-to-body-face = Air-Way 6801 ORB_I3 of the same ORB size (= the Brennan 6801 STEPs)',
++    '=ORB:THDL': 'adjustable ORB thread length = the ORB end library (6401 / 6405 / 6410 tables, = Air-Way 6801 at every dash)',
++    '=ORB:GD': 'adjustable ORB O-ring undercut dia = the ORB end library (6401 / 6405 / 6410 tables, = Air-Way 6801 at every dash)',
++    '=FPT:TD': 'female NPTF tap drill = the female pipe port end library (2405 table tap drill), only where the row has none',
++}
++
++
++def end_val(r, c, d, i, warn):
++    """an end value of leg i (dash d): the row's column c, or an END-LIBRARY token (ENDLIB_TOKENS / '=<root>' = the adjustable-ORB I3 of that
++    Air-Way series); the source of every token value goes into the row's warnings ($COMMENT). A missing library entry raises KeyError."""
++    if not (isinstance(c, str) and c.startswith('=')): return r[c]
++    if c in ENDLIB_TOKENS:
++        lib, key, what, src = ENDLIB_TOKENS[c]
++        lv = getattr(G, lib)
++        if d not in lv: raise KeyError(f'no -{d:02d} entry in the {lib} end library for {what}')
++        v = lv[d][key]
++        warn.append(f'leg {i}: {what} {v} = {src} for -{d:02d} (end library, Q-TRANSFER-ENDLIB 2026-10-08)')
++        return v
++    v = nwo_i3_from(c[1:], d)
++    warn.append(f'leg {i}: adjustable ORB tip-to-body-face {v} = Air-Way {c[1:]} ORB_I3 for -{d:02d} (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)')
++    return v
++
++
++def nptff_td(r, bc, d, i, sp, warn):
++    """female NPTF tap drill of a leg: the row's column; on a perleg root an EMPTY cell takes the end-library tap drill ('=FPT:TD')"""
++    return end_val(r, '=FPT:TD', d, i, warn) if r[bc] is None and sp.get('perleg') else r[bc]
++
++
++ARM_RIDGE_EPS = 1e-4      # a hex corner standing more than this past a special leg's body face is a ridge (wave-1 1502 value, named once)
++NUTSLAB_MIN = 0.003       # a nut cut's slab must start this far beyond every perpendicular leg's final reach and the body hex corner
++
++
++def nut_slab(L):
++    """(start, end) along its own axis of the slab a leg's nut hex cut clears to the hexagon (None for legs without a nut cut)"""
++    if L['kind'] in ('JICSW', 'NPSMSW'): return (round(L['Mtip'] - L['m']['HEXL'], 4), L['Mtip'])
++    if L['kind'] == 'NWO': return (L['nut']['n0'], L['nut']['w0'])
++    return None
++
++
++def final_reach(o):
++    """largest distance from its own axis of a leg in the FINISHED part: swivel nut corners / skirt, adjustable-ORB washer / nut corners, else rmax"""
++    if o['kind'] in ('JICSW', 'NPSMSW'): return max(o['nut_af'] / math.sqrt(3), o['m']['SKR'])
++    if o['kind'] == 'NWO': return nwo_radial(o)
++    return o['rmax']
++
++
++def nwo_overlap(L, O, n=2000):
++    """volume (in^3) of the perpendicular adjustable-ORB leg O's revolved locknut ENVELOPE lying beyond L's locknut slab start n0 (along L's
++    axis): NUTCUTi of L (built first) removes it, so L's cut removes that much more and O's that much less than nwo_nut_removed(). The slab
++    rule keeps O's final hex corners and L's below the other slab, so only the envelope margin can reach (circular segments, integrated)."""
++    a0 = L['nut']['n0']; nu = O['nut']; k = 1 / math.tan(math.radians(NWO_CHANG)); h = (nu['w0'] - nu['n0']) / n; tot = 0.0
++    for j in range(n):
++        a = nu['n0'] + (j + 0.5) * h
++        r = min(nu['Rn'], nu['rc'] + (a - nu['n0']) * k, nu['rc'] + (nu['w0'] - a) * k)
++        if r > a0: tot += r * r * math.acos(a0 / r) - a0 * math.sqrt(r * r - a0 * a0)
++    return tot * h
++
++
+ def pilot_text(root, legs, pn):
+     """2026-10-02 (new masters wave 1, PIPE-TEES): the $PRP@AxialSource MODEL text of a row of a root whose shape is measured on its own
+     Brennan pilot STEP (SPEC 'pilot'). = assume_text() with its shared body / collar / port / male sentences reworded for these roots - every
+@@ -931,35 +1074,48 @@
+         if sp.get('dmap') and len(dd) == len(sp['dmap']): dd = [dd[k] for k in sp['dmap']]
+         chk, warn = [], []
+         if len(dd) != nleg: skipped.append((pn, 'dash count', dd)); continue
+-        swd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'JICSW']
++        # 2026-10-18 (genfeat PERLEGSW): a perleg row with an EMPTY body cell (leg length, bore, body hex, a swivel's nut-face / nose / nut hex
++        # column) is skipped with the columns named - never filled here (an empty female NPTF tap drill takes the end library, nptff_td)
++        if sp.get('perleg'):
++            _need = [sp['hex']] + [c_ for k_, (kind, lc, bc, tc) in enumerate(legs4(sp)) for c_ in
++                                   ([lc] + ([bc] if kind != 'NPTFF' else []) + [x_ for x_ in (leg_end(sp, k_) if kind in ('JICSW', 'NPSMSW', 'NWO') else ())
++                                                                               if not str(x_).startswith('=')])]
++            _miss = [c_ for c_ in dict.fromkeys(_need) if r.get(c_) is None]
++            if _miss: skipped.append((pn, 'missing data', 'empty cell(s) ' + ', '.join(_miss) + ' - no value from any allowed source (DataStatus gate)')); continue
++        # 2026-10-09 (wave 2, PERLEGSW): the end-data gates check EVERY swivel leg and name the first missing dash (the same text as before
++        # for a root with one swivel; a perleg root also names the leg)
++        swd = [(k_, d) for k_, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1) if kind == 'JICSW' and d not in G.SWIV_MEAS]
+         # 2026-10-01: the measured sizes are read from the tables (the fixed texts "-04/-08/-12/-16 only" / "-08 only" were stale since batch 13)
+         _have = lambda tab: '/'.join(f'-{k:02d}' for k in sorted(tab))
+-        if swd and swd[0] not in G.SWIV_MEAS:
+-            skipped.append((pn, 'no end data', f'female JIC swivel end not measured for -{swd[0]:02d} (SWIV_MEAS has {_have(G.SWIV_MEAS)}; needs a Brennan STEP carrying a -{swd[0]:02d} JIC swivel)')); continue
+-        npd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'NPSMSW']
+-        if npd and npd[0] not in G.NPSM_MEAS:
+-            skipped.append((pn, 'no end data', f'female NPSM swivel end not measured for -{npd[0]:02d} (NPSM_MEAS has {_have(G.NPSM_MEAS)})')); continue
+-        nwd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'NWO' and d not in NWO_MEAS]
++        _onleg = lambda k_: f' on leg {k_}' if sp.get('perleg') else ''
++        if swd:
++            skipped.append((pn, 'no end data', f'female JIC swivel end not measured for -{swd[0][1]:02d}{_onleg(swd[0][0])} (SWIV_MEAS has {_have(G.SWIV_MEAS)}; needs a Brennan STEP carrying a -{swd[0][1]:02d} JIC swivel)')); continue
++        npd = [(k_, d) for k_, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1) if kind == 'NPSMSW' and d not in G.NPSM_MEAS]
++        if npd:
++            skipped.append((pn, 'no end data', f'female NPSM swivel end not measured for -{npd[0][1]:02d}{_onleg(npd[0][0])} (NPSM_MEAS has {_have(G.NPSM_MEAS)})')); continue
++        nwd = [d for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'NWO' and d not in NWO_MEAS]
+         if nwd:
+             skipped.append((pn, 'no end data', f'adjustable ORB end not measured for -{nwd[0]:02d}')); continue
+         # SIZE-40 (2026-10-01): a leg dash missing from an end library (e.g. -40 NPTF) -> skip the row with the source that would fill it
+         # (until now an uncaught KeyError here stopped the whole root)
+-        gaps = G.lib_gaps([(kind, d) for (kind, lc, bc, tc), d in zip(sp['legs'], dd)])
++        gaps = G.lib_gaps([(kind, d) for (kind, lc, bc, tc), d in zip(legs4(sp), dd)])
+         if gaps:
+             skipped.append((pn, 'no end data', '; '.join(gaps))); continue
+         # the leg threads must be the ones the part number says
+-        for (kind, lc, bc, tc), d in zip(sp['legs'], dd):
++        for (kind, lc, bc, tc), d in zip(legs4(sp), dd):
+             if tc is None: continue
+             tm = r[tc]
+             want = G.JIC[d]['TM'] if kind in ('JICM', 'JICBH', 'JICSW', 'NWO') else G.NPTF[d][2]
++            if tm is None and sp.get('perleg'):      # 2026-10-09 (PERLEGSW): an empty cell takes the library major (a filled one must match)
++                warn.append(f'{tc} empty: thread major {want} = the -{d:02d} end library (Q-TRANSFER-ENDLIB)'); continue
+             if tm is None or abs(tm - want) > 1e-3: chk.append(f'{tc} {tm} does not match the -{d:02d} end ({want})')
+         Y = r[sp['hex']]
+         # 2603HX rule: A/F = max(Air-Way hex, JIC thread majors) - the JIC nipple keeps its relief below the flats
+-        maxes = [G.JIC[d]['TM'] for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind in ('JICM', 'JICBH')]
++        maxes = [G.JIC[d]['TM'] for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind in ('JICM', 'JICBH')]
+         AF = max([Y] + maxes); BR = AF / 2
+         if AF > Y + 1e-9: warn.append(f'hex A/F raised from Air-Way {Y} to {AF:.4f} (JIC thread major; 2603HX rule)')
+         # male NPTF: the thread cylinder at its vanish point (radius rL) must sit inside the hex flats with a real shoulder
+-        for i, ((kind, lc, bc, tc), d) in enumerate(zip(sp['legs'], dd), 1):
++        for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
+             if kind == 'NPTFM':
+                 nps, tpi, D, E0, E1, L1, L2 = G.NPTF[d]; P = 1 / tpi
+                 rL = (E0 + 0.8 * P) / 2 + L2 * math.tan(TAPER)
+@@ -972,7 +1128,7 @@
+                     warn.append(f'leg {i}: male NPTF thread dia at L2 {2*rL:.4f} vs hex flats {2*BR:.4f} (round end {"proud of" if rL > BR else "flush with"} the flats by {abs(rL-BR):.4f}; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)')
+         conn = r[sp['conn']] if sp.get('conn') else None
+         legs = []
+-        for i, ((kind, lc, bc, tc), d) in enumerate(zip(sp['legs'], dd), 1):
++        for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
+             M = r[lc]
+             if kind == 'JICM': L = leg_JICM(i, d, M, BR)
+             elif kind == 'JICBH':
+@@ -980,25 +1136,27 @@
+                 except AssertionError as ex: chk.append(f'leg {i} bulkhead: {ex}'); L = leg_JICM(i, d, M, BR)
+             elif kind == 'NPTFM': L = leg_NPTFM(i, d, M, BR)
+             elif kind == 'JICSW':
+-                try: L = leg_JICSW(i, d, M, BR, r[sp['sw'][0]], r[sp['sw'][1]])
++                # 2026-10-09 (PERLEGSW): each swivel leg reads its own end columns (leg_end) - table columns or end-library tokens (end_val)
++                try: e_ = leg_end(sp, i - 1); L = leg_JICSW(i, d, M, BR, end_val(r, e_[0], d, i, warn), end_val(r, e_[1], d, i, warn))
+                 except AssertionError as ex: chk.append(f'leg {i} swivel: {ex}'); L = leg_JICM(i, d, M, BR)
+             elif kind == 'NPSMSW':
+-                try: L = leg_NPSMSW(i, d, M, BR, r[sp['npsm'][0]], r[sp['npsm'][1]])
++                try: e_ = leg_end(sp, i - 1); L = leg_NPSMSW(i, d, M, BR, end_val(r, e_[0], d, i, warn), end_val(r, e_[1], d, i, warn))
+                 except (AssertionError, KeyError) as ex: chk.append(f'leg {i} NPSM swivel: {ex}'); L = leg_NPTFM(i, d, M, BR)
+             elif kind == 'NWO':
+                 try:
+-                    i3c = sp['nwo'][0]
+-                    I3 = nwo_i3_from(i3c[1:], d) if i3c.startswith('=') else r[i3c]
+-                    if i3c.startswith('='): warn.append(f'leg {i}: adjustable ORB tip-to-body-face {I3} = Air-Way {i3c[1:]} ORB_I3 for -{d:02d} (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)')
+-                    L = leg_NWO(i, d, M, BR, I3, r[sp['nwo'][1]], r[sp['nwo'][2]], r[sp['nwo'][3]])
++                    # I3 '=6801' (end_val: same value and warning text as before), nut hex, thread length, undercut dia - per leg
++                    e_ = leg_end(sp, i - 1)
++                    I3 = end_val(r, e_[0], d, i, warn)
++                    L = leg_NWO(i, d, M, BR, I3, end_val(r, e_[1], d, i, warn), end_val(r, e_[2], d, i, warn), end_val(r, e_[3], d, i, warn))
+                 except (AssertionError, KeyError, TypeError) as ex: chk.append(f'leg {i} adjustable ORB: {ex}'); L = leg_JICM(i, d, M, BR)
+             elif sp.get('p1'):
+                 # 2026-10-02: the row's own measured port thread length where it has one, else the MS51503 P1 library value (said in $COMMENT)
+                 p1_ = r.get(sp['p1'])
+                 if p1_ is None: warn.append(f'leg {i}: female port thread length = MS51503 P1 {G.FPT[d]["P1"]} (library) - the row has no measured {sp["p1"]}')
+-                L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')), p1=p1_)
+-            else: L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')))
++                L = leg_NPTFF(i, d, M, BR, nptff_td(r, bc, d, i, sp, warn), conn, split=bool(sp.get('elbow')), p1=p1_)
++            else: L = leg_NPTFF(i, d, M, BR, nptff_td(r, bc, d, i, sp, warn), conn, split=bool(sp.get('elbow')))
+             L['bore'] = r[bc] if kind != 'NPTFF' else None
++            if kind == 'NPTFF' and sp.get('perleg') and r[bc] is None: L['td_lib'] = True      # 2026-10-09 (PERLEGSW): tap drill from the end library
+             legs.append(L)
+         AC = BR / COS30
+         # geometry checks
+@@ -1086,13 +1244,66 @@
+         # switched on there (it would block a shipped configuration); left to the main session.
+         if sp.get('arm_ridge_check') and sp.get('elbow') and not sp.get('e45'):
+             for i, L in enumerate(legs, 1):
+-                if L['kind'] not in ('JICSW', 'NPSMSW'): continue
++                # 2026-10-09 (PERLEGSW, DESIGN_REVIEW P4): a perleg root checks its adjustable ORB legs too (neck = NWO_MEAS NECKR)
++                if L['kind'] not in (('JICSW', 'NPSMSW', 'NWO') if sp.get('perleg') else ('JICSW', 'NPSMSW')): continue
+                 oth_ = [o for o in legs if o is not L][0]; nr_ = L['m']['NECKR']; h_ = AC - L['hexl']
+-                if h_ > 1e-4 and oth_['hexl'] > nr_:
+-                    chk.append(f'leg {i}: the other leg\'s hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the swivel body face '
++                if h_ > ARM_RIDGE_EPS and oth_['hexl'] > nr_:
++                    chk.append(f'leg {i}: the other leg\'s hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the {"adjustable ORB" if L["kind"] == "NWO" else "swivel"} body face '
+                                f'({L["hexl"]:.4f}) OUTSIDE the neck (radius {nr_:.4f}), from the neck out to the arm end {oth_["hexl"]:.3f} along the other '
+                                f'leg (ridge {2 * h_ / TAN30:.4f} wide) - Brennan faces it off at the body face (6500-05-05-FG STEP: body face 0.314 inside '
+                                f'the corner radius 0.3245, nothing outside the neck beyond it); the 90 deg elbow has no facing cut')
++        # 2026-10-18 (genfeat PERLEGSW): the row's nut face -> stem tip (NPSM) / nut face -> nose tip (JIC swivel) is followed; on a perleg
++        # root it is compared with the Brennan value of the library end (NPSM_MEAS TIP_B, SWIV_MEAS NOSETIP_B) and a difference is said
++        if sp.get('perleg'):
++            for i, L in enumerate(legs, 1):
++                if L['kind'] not in ('JICSW', 'NPSMSW'): continue
++                k_, w_ = ('TIP_B', 'stem tip') if L['kind'] == 'NPSMSW' else ('NOSETIP_B', 'nose tip')
++                if abs(L['s_nt'] - L['m'][k_]) > 0.005:
++                    warn.append(f'leg {i}: nut face to {w_} {L["s_nt"]:.3f} (row) vs {L["m"][k_]:.3f} on the Brennan -{L["dash"]:02d} swivel ({k_}) - the row is followed')
++        # 2026-10-09 (wave 2, PERLEGSW, DESIGN 4.4 c): the same ridge on a TEE. A run special leg (+/-X) whose body face lies inside the hex
++        # corner radius sees the branch hex arm HEX3 (corners at x = +/-AC) stand AC - hexl beyond it, outside the neck wherever the arm runs
++        # farther from the run axis than the neck (hexl3 > NECKR). A branch special leg (+Y) sees the run bar's corners (y = +/-AC) the same
++        # way. The run-side rule follows the Brennan 6500-05-05-FG evidence (90 deg elbow); the BRANCH-side rule is CONSERVATIVE, UNCONFIRMED
++        # (no tee -05 forging seen; DESIGN_REVIEW P3). Opt-in: perleg roots only (the shipped 6602-05 / 6600-05 carry such a ridge - main session).
++        if sp.get('perleg') and sp.get('arm_ridge_check') and not sp.get('elbow') and not sp.get('cross'):
++            for i, L in enumerate(legs, 1):
++                if L['kind'] not in ('JICSW', 'NPSMSW', 'NWO'): continue
++                nr_ = L['m']['NECKR']; h_ = AC - L['hexl']
++                if h_ <= ARM_RIDGE_EPS: continue
++                if i <= 2 and legs[2]['hexl'] > nr_:
++                    chk.append(f'leg {i}: the branch hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the run body face ({L["hexl"]:.4f}) '
++                               f'OUTSIDE the neck (radius {nr_:.4f}), from the neck out to the branch arm end {legs[2]["hexl"]:.3f} (ridge {2 * h_ / TAN30:.4f} wide) '
++                               '- Brennan faces such a corner off at the body face (6500-05-05-FG STEP); the tee has no facing cut')
++                elif i == 3 and max(legs[0]['hexl'], legs[1]['hexl']) > nr_:
++                    chk.append(f'leg {i}: the run bar corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the branch body face ({L["hexl"]:.4f}) '
++                               f'OUTSIDE the neck (radius {nr_:.4f}), along the run bar to {max(legs[0]["hexl"], legs[1]["hexl"]):.3f} (ridge {2 * h_ / TAN30:.4f} wide) '
++                               '- CONSERVATIVE rule, unconfirmed (no tee -05 forging seen); the tee has no facing cut')
++        # 2026-10-09 (wave 2, PERLEGSW, DESIGN 4.4 a / b): every nut cut removes everything outside its hexagon over its slab, so every
++        # perpendicular leg's FINAL reach (swivel nut corners / skirt, adjustable-ORB washer / nut corners, else rmax) and the body hex corner
++        # must stay NUTSLAB_MIN short of the slab start (a same-axis opposite leg cannot reach it). Two adjustable ORB legs: the revolved locknut
++        # ENVELOPE (NWO_RN_MARGIN beyond the final corners) of the later leg may reach into the earlier leg's slab - the final solid is the same,
++        # but the earlier NUTCUT removes that sliver (nwo_overlap) and the later one that much less: warned here, bounded in emit().
++        if sp.get('perleg'):
++            for i, L in enumerate(legs, 1):
++                sl_ = nut_slab(L)
++                if not sl_: continue
++                ax_ = place(sp)[i][0]
++                for j, o in enumerate(legs, 1):
++                    if o is L or place(sp)[j][0] == ax_: continue
++                    rch_ = max(final_reach(o), AC)
++                    if sl_[0] < rch_ + NUTSLAB_MIN:
++                        chk.append(f'leg {i}: nut cut slab starts {sl_[0]:.4f} from the crossing, inside the final reach {rch_:.4f} of leg {j} / the body hex corner '
++                                   f'(+{NUTSLAB_MIN} needed): the nut cut would shave that leg')
++                    elif L['kind'] == 'NWO' and o['kind'] == 'NWO' and j > i:
++                        ov_ = nwo_overlap(L, o)
++                        if ov_ > 0:
++                            L.setdefault('nut_overlap', {})[j] = ov_
++                            warn.append(f'leg {j}: its revolved locknut envelope (radius {o["nut"]["Rn"]:.4f}, {NWO_RN_MARGIN} beyond the nut corners) reaches past '
++                                        f'leg {i}\'s locknut slab start {sl_[0]:.4f}: NUTCUT{i} removes {ov_:.6f} in^3 of it ({100 * ov_ / nwo_nut_removed(o["nut"]):.2f} % '
++                                        f'of NUTCUT{j}); the finished solid is unchanged')
++            for i, L in enumerate(legs, 1):
++                if L['kind'] == 'NWO' and BR - L['m']['NECKR'] < 0.01:
++                    warn.append(f'leg {i}: the adjustable ORB body face is a {BR - L["m"]["NECKR"]:.4f} step (hex flats radius {BR:.4f} vs neck radius {L["m"]["NECKR"]:.4f})')
+         # 2026-10-01 (NECK-6502): the neck turn of a swivel leg on a 45 deg elbow - in EVERY configuration of the root (the master carries
+         # the two features in all of them), whether or not the corner reaches out of the neck in this one
+         for i, L in enumerate(legs, 1):
+@@ -1163,7 +1374,7 @@
+                     else:
+                         oth = max([0.0] + [nwo_radial(o) if o['kind'] == 'NWO' else o['rmax'] for o in legs if o is not L])
+                         oth = max(oth, AC)
+-                        if n0_ < oth + 0.003: chk.append(f'leg {i}: locknut starts {n0_:.3f} from the crossing, inside the reach of the other legs / corner ({oth:.3f})')
++                        if n0_ < oth + 0.003 and not sp.get('perleg'): chk.append(f'leg {i}: locknut starts {n0_:.3f} from the crossing, inside the reach of the other legs / corner ({oth:.3f})')
+                 if L['kind'] == 'JICSW':
+                     m_ = L['m']
+                     if m_['NECKR'] - L['bore'] / 2 < 0.03: chk.append(f'leg {i}: neck wall {m_["NECKR"] - L["bore"] / 2:.3f} (neck dia {2*m_["NECKR"]:.3f}, bore {L["bore"]})')
+@@ -1273,10 +1484,26 @@
+         assert len(j_) == 1 and t[j_[0]].count(' and is hidden by the hex)') == 1, j_
+         t[j_[0]] = t[j_[0]].replace(' and is hidden by the hex)', f' and shows over the {BH_ARM_SHORT} band where the hex arm ends short of the '
+                                     f'collar on this row - see the bulkhead hex arm note)')
+-    if 'JICSW' in k: t.append(G.SWIV_ASSUME.replace('the body hex stops at the measured body-face position of the 6500 forged arm (ASSUMED for a straight body)',
+-                                     'the forged hex arm stops at the measured body-face position (= the 6500 forged-arm end on all 4 STEPs' + ('' if sp.get('elbow') else '; ASSUMED for a tee') + ')') + '; swivel leg length = Air-Way M5 (crossing to the nut face), nose tip at Air-Way M10')
+-    if 'NPSMSW' in k: t.append(G.NPSM_ASSUME.replace('NUT FACE AT AIR-WAY W AND STEM TIP AT AIR-WAY L', 'NUT FACE AT AIR-WAY ' + sp['npsm'][0].split('@')[0] + ' AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)')
+-                                .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs) + ')'))
++    # 2026-10-09 (PERLEGSW): a perleg root names each leg's own columns and, on a tee, the Brennan tee forgings the body face was seen on (shape)
++    _pl = [(kd, lc, leg_end(sp, j)) for j, (kd, lc, bc, tc) in enumerate(legs4(sp)) if kd in ('JICSW', 'NPSMSW')] if sp.get('perleg') else []
++    _cn = lambda kd, f: ' / '.join(dict.fromkeys(f(lc, e) .split('@')[0] for k_, lc, e in _pl if k_ == kd))
++    if 'JICSW' in k:
++        _s = G.SWIV_ASSUME.replace('the body hex stops at the measured body-face position of the 6500 forged arm (ASSUMED for a straight body)',
++                                   'the forged hex arm stops at the measured body-face position (= the 6500 forged-arm end on all 4 STEPs' + ('' if sp.get('elbow') else '; ASSUMED for a tee') + ')')
++        if not sp.get('perleg'): t.append(_s + '; swivel leg length = Air-Way M5 (crossing to the nut face), nose tip at Air-Way M10')
++        else:
++            if not sp.get('elbow'): _s = _s.replace('; ASSUMED for a tee)', '; on a tee: the library body-face position SWIV_MEAS BODYS, seen on the Brennan 6603-06-06-06-FG / '
++                                                    '6606-06-06-06-FG tee forgings - shape only, user decision 2026-10-08 - every swivel there = SWIV_MEAS[6])')
++            t.append(_s + '; every swivel leg: leg length = the row ' + _cn('JICSW', lambda lc, e: lc) + ' (crossing to the nut face), nose tip at the row '
++                     + _cn('JICSW', lambda lc, e: e[0]) + ', nut hex = the row ' + _cn('JICSW', lambda lc, e: e[1]))
++    if 'NPSMSW' in k:
++        _w = ('THE ROW ' + _cn('NPSMSW', lambda lc, e: e[0]) + ' AND STEM TIP AT THE ROW ' + _cn('NPSMSW', lambda lc, e: lc) + ' (crossing to the nut face / to the stem tip, per leg)') \
++            if sp.get('perleg') else 'AIR-WAY ' + sp['npsm'][0].split('@')[0] + ' AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)'
++        _b = ('1404 straight body face BODY_TO_TIP; on a tee seen on the Brennan 1601-08-08-08-FG / 1603-08-08-08-FG tee forgings - shape only, every NPSM swivel there = '
++              'NPSM_MEAS[8]' if not sp.get('elbow') else 'Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs)) if sp.get('perleg') else \
++            'Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs)
++        t.append(G.NPSM_ASSUME.replace('NUT FACE AT AIR-WAY W AND STEM TIP AT AIR-WAY L', 'NUT FACE AT ' + _w)
++                 .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (' + _b + ')'))
+     if 'NWO' in k: t.append(NWO_ASSUME)
+     if any(L.get('nwo_trim') for L in legs): t.append(NWO_TRIM_ASSUME)
+     if any(L.get('trim') for L in legs): t.append(NECK_ASSUME)
+@@ -1296,6 +1523,28 @@
+         else: t.append('female NPTF legs: Air-Way tap drill to MS51503 P1 max (' + BR5405 + '), tapered helix over P1; connecting drill to the axis crossing = '
+                  + (f"the part's own {sp['conn'].split('@')[0]} column (ASSUMPTION{'; capped at the tap drill where larger' if sp.get('elbow') else ''})" if sp.get('conn') else 'the tap drill carried to the crossing (ASSUMPTION: Air-Way publishes no bore for this part)'))
+     t.append('each leg bore runs from its face to the axis crossing')
++    # 2026-10-09 (wave 2): every END-LIBRARY token of a leg's own end tuple (5th element), with its source (Q-TRANSFER-ENDLIB = yes, user 2026-10-08)
++    _tok = [c_ for l_ in sp['legs'] if len(l_) > 4 for c_ in l_[4] if isinstance(c_, str) and c_.startswith('=')]
++    if any(L.get('td_lib') for L in legs): _tok.append('=FPT:TD')
++    if _tok: t.append("end-library values (Q-TRANSFER-ENDLIB, user 2026-10-08 'reuse end details - yes'): "
++                      + '; '.join(ENDLIB_TEXT.get(c_, f'{c_}: end library') for c_ in dict.fromkeys(_tok)))
++    # 2026-10-18 (genfeat PERLEGSW): a perleg root's rows come from several sources (Brennan TFA catalog, OMi drawings, Air-Way - each row
++    # names its own in the first part of $PRP@AxialSource): the shared texts that name Air-Way as the row source are worded source-neutrally
++    if sp.get('perleg'):
++        _jic = any(kd in ('JICM', 'JICBH') for kd, lc, bc, tc in legs4(sp)); _hx = sp['hex'].split('@')[0]
++        for a_, b_ in (('hex bars A/F = max(Air-Way hex, male thread majors)', 'hex bars A/F = ' + ('max(the row body hex ' + _hx + ', JIC thread majors)' if _jic else
++                                                                                                    'the row body hex ' + _hx + ' (no male JIC leg, so no 2603HX raise)')),
++                       ('A/F = max(Air-Way hex, JIC thread majors)', 'A/F = ' + ('max(the row body hex ' + _hx + ', JIC thread majors)' if _jic else
++                                                                                 'the row body hex ' + _hx + ' (no male JIC leg, so no 2603HX raise)')),
++                       ('nut hex = Air-Way C(2) (must equal the Brennan nut, checked per row)', 'nut hex = the row nut hex (must equal the Brennan nut, checked per row)'),
++                       ('swivel nut hex = Air-Way C3', 'swivel nut hex = the row nut hex (must equal the Brennan nut, checked per row)'),
++                       ('nose tip at Air-Way L minus the to-seat length (Brennan within 0.01)', 'nose tip at the row nose-tip length (nut face to nose tip compared '
++                        'with the Brennan swivel NOSETIP_B per row, a difference is said in $COMMENT)'),
++                       (' (user decision 2026-09-24: follow Air-Way - at -08 Air-Way W-L 0.33 vs Brennan 0.28, so the nut sits 0.05 further out than on the Brennan part)',
++                        ' (the row is followed; its nut face to stem tip is compared with the Brennan 1404 value TIP_B per row, a difference is said in $COMMENT)'),
++                       ('female NPTF legs: Air-Way tap drill to MS51503 P1 max', "female NPTF legs: the row's TAPDRILL (the end-library per-size tap drill) to MS51503 P1 max"),
++                       ('(ASSUMPTION: Air-Way publishes no bore for this part)', '(ASSUMPTION: no source prints a connecting bore for this part)')):
++            t = [x_.replace(a_, b_) for x_ in t]
+     t += sp.get('assume_extra', [])          # 2026-10-02: per-root notes (pilot STEP comparison) - only the new roots carry them
+     s_ = '; '.join(t)
+     for a_, b_ in sp.get('assume_reps', ()):        # 2026-10-02 (1502): per-root wording of the shared texts (every pair must apply)
+@@ -1922,6 +2171,8 @@
+         if lg['kind'] != 'NWO': continue
+         ax, sg = place(sp)[i]; assert ax != 'U', 'angled adjustable ORB legs not supported yet'
+         nut = lg['nut']
++        for j_, ov_ in lg.get('nut_overlap', {}).items():      # 2026-10-09 (PERLEGSW, DESIGN_REVIEW P11): the sliver both NUTCUT volume checks see
++            assert ov_ < 0.005 * min(nwo_nut_removed(nut), nwo_nut_removed(legs[j_ - 1]['nut'])), (root, PN, f'NUTCUT{i} / NUTCUT{j_} envelope overlap {ov_:.6f} in^3 >= 0.5 %')
+         body.append(f"    ' ================= adjustable ORB locknut on leg {i}: hexagon on the nut's inner face, flats normal to Z, cut outside over the nut thickness =================")
+         body.append(f'    stepName = "NUTHEX{i}"')
+         body.append(f'    curAxis = {ax}: tipPos = {sg*lg["V"][-1][0]*IN:.9f}')
+diff -ruN -x __pycache__ -x _out -x '*.orig' puckfix_20261009/tools_new/measure/npsm.py genfeat_20261018/perlegsw/tools/measure/npsm.py
+--- puckfix_20261009/tools_new/measure/npsm.py	2026-10-09 10:01:55.720911300 -0500
++++ genfeat_20261018/perlegsw/tools/measure/npsm.py	2026-10-18 15:08:40.072245800 -0500
+@@ -8,22 +8,30 @@
+ from swiv import seg_list, near, legs_of
+ from ports import ends_of, ang
+ 
+-def measure_npsm(p, ends=None, model=False):
++def measure_npsm(p, ends=None, model=False, oth=None, win=0.6):
+     # 2026-10-02 (new master 1502): ends = [(axis, sign)] of the swivel leg on an ELBOW (the default ends_of() assumes a straight);
+     # model=True: the STEP is OUR model (OCP rebuild / SolidWorks export) for the closed loop - our nut has no 45deg rear hex chamfer
+     # and no nut/body collar, so the hex foot is the vertical step from the nut corner radius to the skirt front and the nut rear
+     # face runs down to the neck (never use it on a Brennan STEP)
++    # 2026-10-18 (genfeat PERLEGSW): oth = [(axis, sign)] of the OTHER legs (a tee with several swivels): in each section plane the half away
++    # from them is read, and a plane with other legs on both sides of the leg axis is not used (None: the elbow / straight rule below);
++    # win = the axial window behind the nut face in which the nut corner radius is read (a body hex larger than the nut, e.g. OMi 1602-04-04-04-FG
++    # hex 0.75 / nut 0.688, must stay outside it: the closed loop passes the library nut length + 0.02)
+     cands = []
+     for axis, sign in (ends or ends_of(p)):
+         # elbow (ends given): the other leg = the other of the two largest extents; in the plane that contains it, read the side away from it
+-        oth_ = [l for l, _ in legs_of(p) if l[0] != axis] if ends else []
++        oth_ = [l for l, _ in legs_of(p) if l[0] != axis] if ends and oth is None else []
+         for pn in [k for k in (0, 1, 2) if k != axis]:
+             o_ = [k for k in (0, 1, 2) if k not in (axis, pn)][0]
+-            rs_ = -oth_[0][1] if oth_ and oth_[0][0] == o_ else 1
++            if oth is not None:
++                s_o = {sg_ for a_, sg_ in oth if a_ == o_}
++                if len(s_o) > 1: continue
++                rs_ = -s_o.pop() if s_o else 1
++            else: rs_ = -oth_[0][1] if oth_ and oth_[0][0] == o_ else 1
+             S = [s for s in seg_list(leg_edges(p, axis, sign, pn, a0=-99, rside=rs_)) if min(s['r1'], s['r2']) > -1e-6]
+             af = max(max(s['a1'], s['a2']) for s in S)
+             cs = [s for s in S if near(s['a2'], af) and s['a1'] < af - 1e-3 and s['r2'] > s['r1'] and 40 < ang(s) < 50]
+-            if cs: cands.append((max(max(s['r1'], s['r2']) for s in S if s['a1'] > af - 0.6), axis, sign, pn, af, S, cs[0]))
++            if cs: cands.append((max(max(s['r1'], s['r2']) for s in S if s['a1'] > af - win), axis, sign, pn, af, S, cs[0]))
+     rmax, axis, sign, pn, af, S, cs = max(cands, key=lambda c: c[0])
+     rflat = min(c[0] for c in cands if (c[1], c[2]) == (axis, sign))
+     s_ = lambda a: round(af - a, 4)
+diff -ruN -x __pycache__ -x _out -x '*.orig' puckfix_20261009/tools_new/measure/perleg_closedloop.py genfeat_20261018/perlegsw/tools/measure/perleg_closedloop.py
+--- puckfix_20261009/tools_new/measure/perleg_closedloop.py	1969-12-31 18:00:00.000000000 -0600
++++ genfeat_20261018/perlegsw/tools/measure/perleg_closedloop.py	2026-10-18 15:10:32.506108000 -0500
+@@ -0,0 +1,191 @@
++# 2026-10-18 (genfeat PERLEGSW): closed loop for the roots with several swivel / adjustable-ORB legs. Every configuration is rebuilt in OCP
++# from the generator's own data (perleg_model.build for tees, nwo_model.build for 90 deg elbows with adjustable ORB legs), written as a STEP,
++# read back and measured with the extractors used on the Brennan STEPs, leg by leg:
++#   female NPSM swivel: npsm.measure_npsm(..., ends=[leg], model=True, oth=<other legs>)   (section half away from the other legs)
++#   female JIC swivel : swiv._measure_leg on the section of that leg (half away from the other legs)
++#   adjustable ORB    : nwo.measure_nwo / nwo.parse per leg (flats-plane reading)
++# plus the body hex (thin probe across the run bar / branch arm: |z| extent = flats), each leg's bore (smallest horizontal radius of its
++# section) and the leg extents. The readings must return the ROW values (leg lengths, nut face / stem tip / nose tip, nut hex, body hex,
++# bores) and the END-LIBRARY values (NPSM_MEAS / SWIV_MEAS / NWO_MEAS), within TOL. Threads are not modelled (suppressed in saved masters).
++#   python tools/measure/perleg_closedloop.py <root> [<root> ...] [--out <dir>]     (OMI_ROOT / GT_OUT as for gen_tee)
++import os as _os, sys as _sys
++_HERE = _os.path.dirname(_os.path.abspath(__file__)); _TOOLS = _os.path.dirname(_HERE)
++for _p in (_os.path.join(_TOOLS, 'generators'), _TOOLS, _HERE):
++    if _p not in _sys.path: _sys.path.insert(0, _p)
++import omi_paths as OP
++import sys, os, json, math
++os.environ.setdefault('GT_OUT', OP.SCRATCH)
++from OCP.gp import gp_Pnt
++from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox
++from OCP.BRepAlgoAPI import BRepAlgoAPI_Common
++from OCP.Bnd import Bnd_Box
++from OCP.BRepBndLib import BRepBndLib
++import gen_tee as T
++import gen_straight2 as G
++from pipetee_model import vol, nsolids, write, MM, PLACE
++import perleg_model as PM
++import nwo_model as NM
++from prof import leg_edges, bbox, shape
++from swiv import seg_list, near, _measure_leg
++from npsm import measure_npsm
++from nwo import measure_nwo, parse
++
++TOL = 0.0015          # as the other closed loops (swiv.py / npsm.py model mode)
++NPSM_KEYS = ('HEXL', 'SKF', 'SKS', 'SKR', 'NUTL', 'CSR', 'MINR', 'TE', 'RELR', 'RB0', 'CBR', 'CBEND', 'NECKR', 'BODY_TO_TIP', 'CONEL', 'STEMR', 'TIPR')
++SWIV_KEYS = ('HEXL', 'SKF', 'SKS', 'SKR', 'NUTL', 'NECKR', 'BODYS', 'MINR', 'TE', 'RELR', 'FLOOR', 'NOSER', 'SEATR')
++
++
++def half_side(ax, pn, oth):
++    """rside of the section plane normal to pn for a leg on axis ax: the half away from the other legs; None = other legs on both halves"""
++    o_ = [k for k in (0, 1, 2) if k not in (ax, pn)][0]
++    s_o = {sg for a_, sg in oth if a_ == o_}
++    return None if len(s_o) > 1 else (-s_o.pop() if s_o else 1)
++
++
++def measure_swivel_leg(p, ax, sg, oth):
++    cands = []
++    for pn in [k for k in (0, 1, 2) if k != ax]:
++        rs = half_side(ax, pn, oth)
++        if rs is None: continue
++        S = [s for s in seg_list(leg_edges(p, ax, sg, pn, a0=0.0, rside=rs)) if min(s['r1'], s['r2']) > -1e-6]
++        if not S: continue
++        af = max(max(s['a1'], s['a2']) for s in S)
++        cs = [s for s in S if near(s['a2'], af) and s['a1'] < af - 1e-3 and s['r2'] > s['r1'] and 40 < math.degrees(math.atan2(s['r2'] - s['r1'], s['a2'] - s['a1'])) < 60]
++        if cs: cands.append((max(max(s['r1'], s['r2']) for s in S if s['a1'] > af - 0.5), ax, sg, pn, af, S))
++    c = max(cands, key=lambda c: c[0]); rflat = min(c_[0] for c_ in cands)
++    m = _measure_leg(*c, rflat, model=True)
++    m['AF'] = m['AF_if_corners'] if c[3] == 2 else m['AF_flats_plane']     # plane z = 0 holds the nut corners (flats normal to Z)
++    return m, c[5]
++
++
++def leg_bore(p, ax, sg, oth, amax):
++    """bore radius of a leg: the smallest-radius horizontal edge of its section (half away from the other legs) inside the leg"""
++    for pn in [k for k in (0, 1, 2) if k != ax]:
++        rs = half_side(ax, pn, oth)
++        if rs is None: continue
++        S = seg_list(leg_edges(p, ax, sg, pn, a0=0.0, rside=rs))
++        h = [s for s in S if near(s['r1'], s['r2'], 1e-4) and s['r1'] > 0.01 and s['a2'] - s['a1'] > 0.05 and s['a2'] <= amax + 1e-6 and s['a2'] > 0.3 * amax]
++        if h: return round(2 * min(s['r1'] for s in h), 4)
++    return None
++
++
++def probe_flats(S, ax, at):
++    """|z| half-extent of the solid in a thin probe across axis ax at coordinate `at` (the other in-plane coordinate |u| <= 0.0005)"""
++    d = 0.0005; lo = [-d, -d, -5.0]; hi = [d, d, 5.0]; lo[ax] = at - d; hi[ax] = at + d
++    C = BRepAlgoAPI_Common(S, BRepPrimAPI_MakeBox(gp_Pnt(*[v * MM for v in lo]), gp_Pnt(*[v * MM for v in hi])).Shape()).Shape()
++    b = Bnd_Box(); BRepBndLib.Add_s(C, b)
++    return round(max(-b.CornerMin().Z(), b.CornerMax().Z()) / MM, 4)
++
++
++def clip_leg(S, ax, sg, a_clip, R):
++    """the part of the solid beyond a_clip along the signed leg axis and within R of it (the other legs and the run bar / branch arm corners
++    cut away), so the section extractors see one leg only, in both section planes (on a tee the corner plane of the branch also holds both
++    run legs; a perpendicular swivel nut can reach past this leg's body face, far out along its own axis - hence the radial limit R)"""
++    BIG = 20.0; lo = [-R] * 3; hi = [R] * 3; lo[ax] = -BIG; hi[ax] = BIG
++    if sg > 0: lo[ax] = a_clip
++    else: hi[ax] = -a_clip
++    return BRepAlgoAPI_Common(S, BRepPrimAPI_MakeBox(gp_Pnt(*[v * MM for v in lo]), gp_Pnt(*[v * MM for v in hi])).Shape()).Shape()
++
++
++def cmp(out, tag, got, want, tol=TOL):
++    ok = got is not None and want is not None and abs(got - want) <= tol
++    out.append((tag, got, round(want, 4) if want is not None else None, ok))
++
++
++def rowdict(root):
++    h, rows = T.load_review(root)
++    return {r['$PRP@PartNo']: r for r in rows}
++
++
++def check_tee(root, b, row, outd):
++    sp = T.SPEC[root]; c = b['cols']; res = []
++    S, st = PM.build(b, sp); p = os.path.join(outd, f'MODEL_{b["pn"]}.stp'); write(S, p)
++    info = dict(solids=nsolids(S), volume=round(vol(S), 6), nutcut={k: round(v, 6) for k, v in st.items() if k.startswith('NUTCUT')})
++    res.append(('one solid', info['solids'], 1, info['solids'] == 1))
++    bb = bbox(p)
++    legs4 = T.legs4(sp)
++    for i, (L, (kind, lc, bc, tc)) in enumerate(zip(b['legs'], legs4), 1):
++        ax, sg = T.PLACE[i]; oth = [T.PLACE[j] for j in range(1, len(b['legs']) + 1) if j != i]
++        ext = bb[3] if (ax, sg) == (0, 1) else -bb[0] if (ax, sg) == (0, -1) else bb[4]
++        # clip beyond the final reach of the perpendicular legs and the body hex corner (the nut-slab rule keeps it below this leg's nut),
++        # and before this leg's body face where possible
++        perp = [o for j, o in enumerate(b['legs'], 1) if T.PLACE[j][0] != ax]
++        a_clip = max([T.final_reach(o) for o in perp] + [b['AC']]) + 0.003
++        if kind in ('NPSMSW', 'JICSW', 'NPTFM'): a_clip = min(a_clip, L['hexl'] - 0.01)
++        pl = os.path.join(outd, f'MODEL_{b["pn"]}_leg{i}.stp'); write(clip_leg(S, ax, sg, a_clip, max(T.final_reach(L), b['AC']) + 0.01), pl); oth = []
++        if kind in ('NPSMSW', 'JICSW'):
++            e_ = T.leg_end(sp, i - 1); W = row[e_[0]] if kind == 'NPSMSW' else row[lc]       # nut face
++            cmp(res, f'leg {i} extent = nut face', ext, W)
++            if kind == 'NPSMSW':
++                lib = G.NPSM_MEAS[L['dash']]; m = measure_npsm(pl, ends=[(ax, sg)], model=True, oth=oth, win=lib['NUTL'] + 0.02)
++                cmp(res, f'leg {i} NPSM nut face ({e_[0].split("@")[0]})', m['face'], W)
++                cmp(res, f'leg {i} NPSM stem tip ({lc.split("@")[0]})', round(m['face'] - m['TIP_B'], 4), row[lc])
++                af = m['AF'] if m['end'][2] == 2 else m['AF_flats_plane']
++                cmp(res, f'leg {i} nut hex ({e_[1].split("@")[0]})', af, row[e_[1]], 0.002)
++                for k in NPSM_KEYS: cmp(res, f'leg {i} NPSM {k} (NPSM_MEAS[{L["dash"]}])', m[k], lib[k])
++            else:
++                m, _ = measure_swivel_leg(pl, ax, sg, oth); lib = G.SWIV_MEAS[L['dash']]
++                cmp(res, f'leg {i} JIC swivel nut face ({lc.split("@")[0]})', round(m['face'], 4), W)
++                cmp(res, f'leg {i} JIC swivel nose tip ({e_[0].split("@")[0]})', round(m['face'] - m['NOSETIP_B'], 4), row[e_[0]])
++                cmp(res, f'leg {i} nut hex ({e_[1].split("@")[0]})', m['AF'], row[e_[1]], 0.002)
++                for k in SWIV_KEYS: cmp(res, f'leg {i} JIC swivel {k} (SWIV_MEAS[{L["dash"]}])', m[k], lib[k])
++            cmp(res, f'leg {i} bore ({bc.split("@")[0]})', leg_bore(pl, ax, sg, oth, L['Mtip']), row[bc])
++        else:
++            cmp(res, f'leg {i} extent ({lc.split("@")[0]})', ext, row[lc])
++            if kind != 'NPTFF': cmp(res, f'leg {i} bore ({bc.split("@")[0]})', leg_bore(pl, ax, sg, oth, row[lc]), row[bc])
++            else: cmp(res, f'leg {i} tap drill ({bc.split("@")[0]})', leg_bore(pl, ax, sg, oth, row[lc]), row[bc] if row[bc] is not None else G.FPT[L['dash']]['TD'])
++    # body hex: the run bar outside the branch arm (|x| between the hex corner and the body face), the branch arm above the run bar corners
++    AC = b['AC']; hx = sp['hex']
++    for nm, ax, a0, a1 in (('run bar +X', 0, AC, c['HEXL1@RUN_BODY']), ('run bar -X', 0, -c['HEXL2@RUN_BODY'], -AC), ('branch arm', 1, AC, c['HEXL@HEX3_BODY'])):
++        if abs(a1 - a0) > 0.03: cmp(res, f'body hex {nm} ({hx.split("@")[0]})', round(2 * probe_flats(S, ax, (a0 + a1) / 2), 4), row[hx], 0.002)
++    return res, info
++
++
++def check_nwo_elbow(root, b, row, outd):
++    sp = T.SPEC[root]; res = []
++    S, removed = NM.build(b); p = os.path.join(outd, f'MODEL_{b["pn"]}.stp'); write(S, p)
++    info = dict(solids=nsolids(S), volume=round(vol(S), 6), nutcut={k: round(v, 6) for k, v in removed.items()},
++                nutcut_expect={i + 1: round(T.nwo_nut_removed(L['nut']), 6) for i, L in enumerate(b['legs'])})
++    res.append(('one solid', info['solids'], 1, info['solids'] == 1))
++    for i in info['nutcut']: cmp(res, f'NUTCUT{i} removed (generator integral)', info['nutcut'][i], info['nutcut_expect'][i], 0.005 * info['nutcut_expect'][i])
++    rd = {}
++    for leg, at, pts in measure_nwo(p):
++        M = parse(at, pts)
++        if len(M) < 6: continue
++        t, u, w, n, k, bo = M[:6]
++        if not (u[2] < t[2] and w[2] > u[2] and k[2] < n[2]): continue
++        cand = dict(tip=round(at, 4), TM=round(2 * t[2], 4), UR=round(u[2], 4), THDL=round(at - u[0], 4), WR=round(w[2], 4), WT=round(w[0] - w[1], 4),
++                    NUTR=round(n[2], 4), NUTT=round(n[0] - n[1], 4), NECKR=round(k[2], 4), I3=round(at - k[1], 4), BODYR=round(bo[2], 4))
++        key = (leg[0], leg[1])
++        if key not in rd or cand['NUTR'] < rd[key]['NUTR']: rd[key] = cand
++    for i, (L, (kind, lc, bc, tc)) in enumerate(zip(b['legs'], T.legs4(sp)), 1):
++        ax, sg = T.place(sp)[i]; m = rd.get((ax, sg)); e_ = T.leg_end(sp, i - 1); lib = T.NWO_MEAS[L['dash']]
++        if m is None: res.append((f'leg {i} adjustable ORB reading', None, None, False)); continue
++        cmp(res, f'leg {i} tip ({lc.split("@")[0]})', m['tip'], row[lc])
++        cmp(res, f'leg {i} tip to body face (I3 {e_[0]})', m['I3'], L['endlen'])
++        cmp(res, f'leg {i} locknut hex ({e_[1].split("@")[0]})', round(2 * m['NUTR'], 4), row[e_[1]], 0.002)
++        cmp(res, f'leg {i} thread major ({tc.split("@")[0]})', m['TM'], row[tc])
++        cmp(res, f'leg {i} ORB thread length ({e_[2]})', m['THDL'], L['cols'][f'NW{i}_THDL@LEG{i}'])
++        cmp(res, f'leg {i} undercut dia ({e_[3]})', round(2 * m['UR'], 4), round(2 * L['UR'], 4))
++        for k in ('NECKR', 'NUTT', 'WR', 'WT'): cmp(res, f'leg {i} {k} (NWO_MEAS[{L["dash"]}])', m[k], lib[k])
++        cmp(res, f'leg {i} body flats ({sp["hex"].split("@")[0]})', round(2 * m['BODYR'], 4), row[sp['hex']], 0.002)
++    return res, info
++
++
++if __name__ == '__main__':
++    args = sys.argv[1:]; out = OP.SCRATCH
++    if '--out' in args: k = args.index('--out'); out = args[k + 1]; del args[k:k + 2]
++    allbad = 0
++    for root in args:
++        sp = T.SPEC[root]; built, _ = T.build_rows(root); rows = rowdict(root); outd = os.path.join(out, root); os.makedirs(outd, exist_ok=True)
++        recs = []
++        for b in built:
++            if b['chk']: continue
++            res, info = (check_nwo_elbow if sp.get('elbow') else check_tee)(root, b, rows[b['pn']], outd)
++            bad = [r for r in res if not r[3]]; allbad += len(bad)
++            print(f'{b["pn"]}: {len(res)} checks, {len(bad)} off; solids {info["solids"]}, volume {info["volume"]} in^3, nut cuts {info["nutcut"]}'
++                  + (f' (expect {info["nutcut_expect"]})' if 'nutcut_expect' in info else ''), flush=True)
++            for r in bad: print('    OFF', r)
++            recs.append(dict(pn=b['pn'], info=info, checks=[list(r) for r in res]))
++        json.dump(recs, open(os.path.join(out, f'results_{root}.json'), 'w'), indent=1, default=str)
++    print('PERLEGSW closed loop', 'PASS' if not allbad else f'FAIL ({allbad} checks off)')
+diff -ruN -x __pycache__ -x _out -x '*.orig' puckfix_20261009/tools_new/measure/perleg_model.py genfeat_20261018/perlegsw/tools/measure/perleg_model.py
+--- puckfix_20261009/tools_new/measure/perleg_model.py	1969-12-31 18:00:00.000000000 -0600
++++ genfeat_20261018/perlegsw/tools/measure/perleg_model.py	2026-10-18 15:04:20.577919400 -0500
+@@ -0,0 +1,62 @@
++# 2026-10-18 (genfeat PERLEGSW, Q-NEW-PERLEGSW): OCP rebuild of a gen_tee TEE with several swivel legs (female JIC swivel / female NPSM
++# swivel on +X, -X and / or +Y, plus male / female pipe or male JIC legs) from the configuration's SW2 values and leg profiles (build_rows),
++# in the macro's feature order: LEGi revolves (each leg profile V about its signed axis, the swivel cavity included), the RUN hex bar along X
++# (-HEXL2 .. +HEXL1) and the HEX3 branch arm along +Y (0 .. HEXL3), flats normal to Z; then every swivel nut hex cut in leg order
++# (NutHexCutAx: everything outside the nut hexagon over DEPTH@NUTCUTi from the nut face inward), then the pockets / bores (BoreCut: from the leg
++# face inward; POCKETi = tap drill over DEPTH@POCKETCUTi, BOREi = Di over DEPTH@BORECUTi). Threads are not modelled (the saved masters carry
++# every THD_ feature suppressed). 90 deg elbows with adjustable ORB legs (6807): nwo_model.build. Written as a STEP and measured with the
++# Brennan extractors in perleg_closedloop.py.
++#   python tools/measure/perleg_model.py <root> [<pn> ...] [--out <dir>]      (OMI_ROOT / GT_OUT as for gen_tee)
++import os as _os, sys as _sys
++_HERE = _os.path.dirname(_os.path.abspath(__file__)); _TOOLS = _os.path.dirname(_HERE)
++for _p in (_os.path.join(_TOOLS, 'generators'), _TOOLS, _HERE):
++    if _p not in _sys.path: _sys.path.insert(0, _p)
++import omi_paths as OP
++import sys, os
++os.environ.setdefault('GT_OUT', OP.SCRATCH)
++from OCP.gp import gp_Pnt
++from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox
++from pipetee_model import PLACE, revolve_leg, hex_prism, drill, fuse, cut, vol, nsolids, write, MM
++
++
++def nut_cut_tool(ax, sg, af, a0, a1):
++    """the NutHexCutAx tool of a leg on signed axis (ax, sg): the slab a0 .. a1 along the leg (leg coordinates) minus the nut hexagon prism"""
++    BIG = 20.0; lo = [-BIG * MM] * 3; hi = [BIG * MM] * 3
++    x0, x1 = sorted((sg * a0, sg * a1)); lo[ax] = x0 * MM; hi[ax] = x1 * MM
++    return cut(BRepPrimAPI_MakeBox(gp_Pnt(*lo), gp_Pnt(*hi)).Shape(), hex_prism(ax, af, x0, x1))
++
++
++def build(b, sp):
++    assert not sp.get('elbow') and not sp.get('cross'), 'tees only (90 deg elbows with adjustable ORB legs: nwo_model.build)'
++    c = b['cols']; legs = b['legs']; steps = {}
++    S = None
++    for i, lg in enumerate(legs, 1):                                           # LEG1..3
++        ax, sg = PLACE[i]; s = revolve_leg(lg['V'], ax, sg); S = s if S is None else fuse(S, s)
++    S = fuse(S, hex_prism(0, c['HEXAF@RUN'], -c['HEXL2@RUN_BODY'], c['HEXL1@RUN_BODY']))      # RUN
++    S = fuse(S, hex_prism(1, c['HEXAF@HEX3'], 0.0, c['HEXL@HEX3_BODY']))                      # HEX3
++    steps['body'] = vol(S)
++    for i, lg in enumerate(legs, 1):                                           # NUTHEXi / NUTCUTi
++        if lg['kind'] not in ('JICSW', 'NPSMSW'): continue
++        ax, sg = PLACE[i]; a1 = c[f'M{i}@LEG{i}']; a0 = a1 - c[f'DEPTH@NUTCUT{i}']
++        v0 = vol(S); S = cut(S, nut_cut_tool(ax, sg, c[f'NUTHEX{i}@NUTHEX{i}'], a0, a1)); steps[f'NUTCUT{i}'] = v0 - vol(S)
++    steps['solids_after_hex'] = nsolids(S)
++    for i, lg in enumerate(legs, 1):                                           # pockets / bores
++        ax, sg = PLACE[i]; M = lg.get('Mtip', lg['V'][-1][0])
++        if lg['kind'] == 'NPTFF':
++            S = cut(S, drill(ax, sg, M, c[f'TAPDRILL{i}@POCKET{i}'], c[f'DEPTH@POCKETCUT{i}']))
++            if f'D{i}@BORE{i}' in c: S = cut(S, drill(ax, sg, M, c[f'D{i}@BORE{i}'], c[f'DEPTH@BORECUT{i}']))
++        else:
++            S = cut(S, drill(ax, sg, M, c[f'D{i}@BORE{i}'], c[f'DEPTH@BORECUT{i}']))
++    return S, steps
++
++
++if __name__ == '__main__':
++    import gen_tee as T
++    args = sys.argv[1:]; out = OP.SCRATCH
++    if '--out' in args: k = args.index('--out'); out = args[k + 1]; del args[k:k + 2]
++    root, pns = args[0], args[1:]
++    sp = T.SPEC[root]; built, _ = T.build_rows(root); os.makedirs(out, exist_ok=True)
++    for b in built:
++        if b['chk'] or (pns and b['pn'] not in pns): continue
++        S, st = build(b, sp); path = os.path.join(out, f'MODEL_{b["pn"]}.stp'); write(S, path)
++        print(b['pn'], 'solids', nsolids(S), 'volume', round(vol(S), 5), {k: round(v, 6) for k, v in st.items()}, '->', path)

@@ -1,0 +1,53 @@
+BATCH 11e - 6408 PLUG WITH ITS HOLE + EVERY MASTER NOW SAVED IN ITS REFERENCE SIZE (2026-09-25)
+=====================================================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+
+RUN
+  1  Build_6408_MASTER.bas   Sub Build6408   ORB hex head plug   12 -> 13 configurations
+     Close the old 6408 master first (a copy is kept in _to_delete\superseded_20260925\pre_6408h).
+     The plain OMi plugs 6408-xx-O are now built HOLLOW - drilled from the thread end, like the Brennan
+     6408-08-O and 6408-20-O STEPs you downloaded:
+        hollow  -04 -06 -08 -10 -12 -16 -20 -24 -32   (hole = the Air-Way HOLE column, 0.20 ... 1.81)
+        solid   -02 -03 -05 (Air-Way lists only a solid plug at these sizes) and 6408-04-O-SLD
+     -14 stays out (ORB -14 groove width still unmeasured - one Brennan 6400-14-14-O STEP fixes it).
+     The master opens in 6408-08-O-H.
+
+WHAT TO LOOK AT IN THE 6408 REPORT
+  "hole open on the axis at the ORB tip (x=0)", "hole bottom present at x=0.4580", "plug head closed on the axis",
+  "6408-32-O-H: hole open ... / hole bottom at x=0.6540", "6408-02-O-SOLID: solid plug - ORB tip closed",
+  "All-config sweep: 13 configurations rebuilt, 0 feature/body failures",
+  "Master left in its reference configuration 6408-08-O-H".
+
+WHERE THE 6408 NUMBERS COME FROM
+  L, hex, ORB end: Air-Way / SAE J1926 as before - the Brennan -08 and -20 STEPs agree exactly (L 0.800 / 1.200,
+  hex 0.875 / 1.875, same thread length and groove).
+  Hole diameter: Air-Way HOLE column (Brennan 0.422 at -08, 1.093 at -20 - same).
+  Hole depth: Air-Way does not publish it. Brennan: full diameter to 0.020 past the hex face at -08 and 0.040 at -20,
+  then a 120 deg drill point. Other sizes are interpolated by dash size (ASSUMPTION, logged per row). The drill point
+  is not modelled (flat bottom, as on 2408). With the point, every size would keep 0.23-0.28 in of solid head,
+  in line with Brennan's 0.22 (-08) and 0.25 (-20).
+  Which OMi SKU is which: OMi sells 6408-04-O and 6408-04-O-SLD ("External Hex Plug Solid"), and Brennan's 6408-08-O /
+  6408-20-O are hollow - so the plain SKUs are the hollow plugs. The Air-Way SOLID rows at -06...-32 have no OMi SKU
+  and are marked DROP in DesignTable_6408.xlsx (switching one back is a one-cell change).
+
+EVERY MACRO: THE MASTER IS NOW SAVED IN ITS REFERENCE SIZE
+  SolidWorks opens a part in the configuration that was active when it was saved. Until now the macros left the
+  master in the first name of the configuration list - the smallest size (5504 opened as 5504-02-02-FG, where the
+  0.26 collar takes up most of the short leg; 6408 opened as the solid -02 plug). Every macro in 03_SCRIPTS now
+  switches back to the reference size (the -08 one checked against Brennan) before the save. Geometry and checks
+  are untouched; the old copies are in _to_delete\superseded_20260925\pre_refcfg.
+  Masters you already built: no re-run needed. To make one open in the -08 size: double-click that configuration
+  in the ConfigurationManager and save.
+
+5406C / 5406P
+  These two macros still had the old save step, so each run also wrote a second, time-stamped copy
+  (5406C_MASTER_174645.SLDPRT, 5406P_MASTER_175153.SLDPRT). The copies are moved to
+  _to_delete\superseded_20260924\duplicate_saves and the two macros now have the same save fix as the rest.
+  The masters you built are fine - no re-run needed.
+
+CHECKED BEFORE SENDING
+  6408: DRIVE sketch exactly defined (16 of 16), clean outline, revolved volume recomputed, static VBA check; the new
+  macro differs from the old one only in the hole, its checks, the configuration list and the reference size.
+  All 28 other straight roots and 24 elbow/tee roots regenerate identical apart from the reference-size lines.

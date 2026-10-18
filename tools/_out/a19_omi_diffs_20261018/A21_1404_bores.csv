@@ -1,0 +1,19 @@
+table,config,column,current_value,current_source,airway_value,omi_cell,delta,mapping_id,table_cell,airway_printed_check,built
+1404,1404-02-02,D@BORE,0.11,"OMi (Task A, batch 14)",0.13,Items!X88,0.02,M055,G3,0.13 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-02-04,D@BORE,0.21,"OMi (Task A, batch 14)",0.19,Items!X89,-0.02,M055,G4,0.19 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-04-04,D@BORE,0.21,"OMi (Task A, batch 14)",0.22,Items!X91,0.01,M055,G7,0.22 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-04-08,D@BORE,0.44,"OMi (Task A, batch 14)",0.28,Items!X93,-0.16,M055,G9,0.28 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-06-04,D@BORE,0.21,"OMi (Task A, batch 14)",0.22,Items!X94,0.01,M055,G10,0.22 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-06-06,D@BORE,0.32,"OMi (Task A, batch 14)",0.33,Items!X95,0.01,M055,G11,0.33 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-06-08,D@BORE,0.44,"OMi (Task A, batch 14)",0.41,Items!X96,-0.03,M055,G12,0.41 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-08-06,D@BORE,0.32,"OMi (Task A, batch 14)",0.33,Items!X97,0.01,M055,G14,0.33 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-08-08,D@BORE,0.44,"OMi (Task A, batch 14)",0.45,Items!X98,0.01,M055,G15,0.45 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-08-12,D@BORE,0.61,"OMi (Task A, batch 14)",0.53,Items!X99,-0.08,M055,G16,0.53 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-12-08,D@BORE,0.44,"OMi (Task A, batch 14)",0.45,Items!X100,0.01,M055,G17,0.45 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-12-12,D@BORE,0.61,"OMi (Task A, batch 14)",0.63,Items!X101,0.02,M055,G18,0.63 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-12-12,D2@BORE,0.61,"OMi (Task A, batch 14)",0.72,Items!S101,0.11,M054,F18,0.72 (07_RAW_EXTRACTS\1404.csv col 8 (D2)),built
+1404,1404-12-16,D@BORE,0.78,"OMi (Task A, batch 14)",0.72,Items!X102,-0.06,M055,G19,0.72 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-16-12,D@BORE,0.61,"OMi (Task A, batch 14)",0.63,Items!X103,0.02,M055,G20,0.63 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-16-16,D@BORE,0.78,"OMi (Task A, batch 14)",0.84,Items!X104,0.06,M055,G21,0.84 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-20-16,D@BORE,0.78,"OMi (Task A, batch 14)",0.84,Items!X106,0.06,M055,G23,0.84 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built
+1404,1404-24-24,D@BORE,1.25,"OMi (Task A, batch 14)",1.26,Items!X110,0.01,M055,G27,1.26 (07_RAW_EXTRACTS\1404.csv col 9 (D)),built

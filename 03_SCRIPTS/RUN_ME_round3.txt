@@ -1,0 +1,15 @@
+ROUND 3 (2026-09-23) - only the three macros with a Thread feature changed
+===========================================================================
+  03_SCRIPTS\Build_6401_MASTER.bas   Sub Build6401
+  03_SCRIPTS\Build_6405_MASTER.bas   Sub Build6405
+  03_SCRIPTS\Build_0403_MASTER.bas   Sub Build0403
+5000 / 5404 / 5405 round-2 reports are clean (the only FAIL was my bounding-box length check,
+which is loose around thread faces - replaced by an end-face check). No need to re-run those.
+
+Round 2 dialog "Profile_Height / Profile_Land @THD_EndX do not drive": the thread feature keeps
+its tooth profile in a sub-sketch SolidWorks names "Thread Profile1", so the columns did not
+resolve. The macro now renames that sketch to THD_EndX_PROF and the tables drive
+Profile_Height / Profile_Land / THDPITCH @THD_EndX_PROF (tooth scaled with pitch). The
+report line "profile sketch renamed to ..." and "profile dims reachable" tell us if it took,
+and the config check reads Profile_Height@THD_EndX_PROF per config. That should clear the
+THD_EndA / THD_EndB rebuild errors on the -02..-06 configs.

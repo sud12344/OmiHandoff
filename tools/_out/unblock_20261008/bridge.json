@@ -1,0 +1,50 @@
+{
+ "built": 1044,
+ "planned": 1804,
+ "steps": [
+  {
+   "step": "Paused new masters, no decision needed",
+   "freed": 48
+  },
+  {
+   "step": "OK to use Brennan data on its own?",
+   "freed": 76
+  },
+  {
+   "step": "Download ~80 Brennan 3D files",
+   "freed": 89
+  },
+  {
+   "step": "Reuse already-measured end details?",
+   "freed": 54
+  },
+  {
+   "step": "Approve 6 new shapes for the drawing program",
+   "freed": 125
+  },
+  {
+   "step": "Scope: bent-tube elbows and O-rings",
+   "freed": 62
+  },
+  {
+   "step": "Parts with no wrench hex from Brennan files?",
+   "freed": 48
+  },
+  {
+   "step": "Use Air-Way's tap-drill sizes?",
+   "freed": 37
+  },
+  {
+   "step": "Answers from OMi",
+   "freed": 11
+  },
+  {
+   "step": "About 40 smaller data questions",
+   "freed": 204
+  },
+  {
+   "step": "Blocked by geometry or a part-specific conflict",
+   "freed": 6
+  }
+ ]
+}

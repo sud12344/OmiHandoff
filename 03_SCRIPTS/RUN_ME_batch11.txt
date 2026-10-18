@@ -1,0 +1,52 @@
+BATCH 11 - ONE NEW MASTER + THREE BUILT MASTERS WITH EXTRA SIZES (2026-09-24)
+=============================================================================
+Same routine as always: SolidWorks open, no document open, remove any old module of the same name in the VBA
+editor, File > Import File > the .bas from 03_SCRIPTS, run the entry sub, one at a time, close the part between
+runs. Reports: 03_SCRIPTS\Build_<root>_report.txt. Parts: 11_MASTERS\<root>_MASTER.SLDPRT (threads suppressed).
+
+NEW - PROGRESS LINES (every macro waiting in 03_SCRIPTS - the 34 from batches 4-10 and the 4 below)
+  The all-config sweep now writes one line per configuration, e.g.
+      sweep 7/26  5405-12-08  rebuilt in 14.2 s
+  straight into the report (open 03_SCRIPTS\Build_<root>_report.txt in Notepad and reopen it to see it grow) and
+  into the SolidWorks status bar. SolidWorks still looks busy while a configuration rebuilds - that is normal;
+  as long as new lines keep appearing it is working. Do not click in SolidWorks while a macro runs.
+  The 34 macros already waiting in 03_SCRIPTS were given the same lines in place (geometry untouched; the old
+  copies are in _to_delete\superseded_20260924\pre_progress). Re-import them before running, as usual.
+
+ NEW MASTER
+   1  Build_1501_MASTER.bas   Sub Build1501   90 deg male pipe x female NPSM swivel elbow      3 configs
+                                              (1501-06-08-FG, 1501-08-08-FG, 1501-12-08-FG - swivel -08, the one measured size)
+
+ EXTRA SIZES FOR MASTERS YOU ALREADY BUILT (optional - re-run when convenient; the macro overwrites the master)
+   Close the old master first. A copy of each old master is kept in _to_delete\superseded_20260924\pre_b11.
+   2  Build_5405_MASTER.bas   Sub Build5405   pipe adapter                 23 -> 26 configs (+5405-12-08, -16-08, -16-12)
+   3  Build_6401_MASTER.bas   Sub Build6401   ORB x male pipe              20 -> 21 configs (+6401-32-32-O)
+   4  Build_6405_MASTER.bas   Sub Build6405   ORB x female pipe            36 -> 38 configs (+6405-32-20-O, -32-32-O)
+      These three now also run the all-config sweep (5405: about 8-10 minutes, like 5406).
+
+WHAT TO LOOK AT IN THE REPORTS
+  1501: "LEG2 sketch fully defined", "NUTHEX2 nut flats normal to Z", "NUTCUT2 created and removed material",
+        "leg 2 bore runs through the NPSM stem tip", "THD_End1 / THD_End2 helix created / swept cut created",
+        "Z extent ... swivel nut flats", "All-config sweep: 3 configurations rebuilt, 0 feature/body failures".
+  5405/6401/6405: same checks as before + the sweep lines; every existing configuration has identical values.
+
+WHERE THE NUMBERS COME FROM
+  1501   Air-Way s113 (N1 pipe leg, M1 = crossing to the stem tip, W3 = crossing to the nut face, C = nut hex,
+         C1 = body hex, bores). Swivel end = the Brennan 1404-08-08 measurements used for 1404/1405 (nut at Air-Way W,
+         your decision). ASSUMPTION: the forged hex arm stops at the body face 0.48 behind the stem tip, as on the
+         straight 1404. All 3 rows ASSUMED.
+  5405   The three reducers whose Air-Way bore is wider than the port tap drill (0.72/0.94 vs 0.70/0.91): the bore
+         now stops at the port bottom, leaving a small internal step (0.010 / 0.120 / 0.015). ASSUMPTION, noted per row.
+  6401/6405  ORB -32 end: thread 2 1/2-12, length 0.469, groove root 2.381 (ORD-5700, as the 6408 -32 plug) and
+         groove width 0.125 measured on the Brennan 6400-32-32-O STEP.
+
+NOT BUILT, AND WHY (the full list is 00_DOCS\OMi_Coverage_2026-09-24.xlsx)
+  1503 (45 deg NPSM swivel elbow) and 6502 (45 deg JIC swivel elbow): on a 45 deg forging the swivel sits so close
+  to the crossing that the corner of the body would run into the swivel neck. Brennan's 45 deg body shape is needed:
+  one STEP each (1503-08-08-FG, 6502-08-08-FG).
+  6405-32-24-O: Air-Way prints the bore as 2.38 - larger than the whole ORB end - misprint, left out.
+
+CHECKED BEFORE SENDING
+  Every sketch solved as exactly defined (1501 swivel leg: 40 of 40), clean outlines, revolved volumes recomputed,
+  static VBA check of every macro (no undeclared variables, no duplicate procedures). 5405/6401/6405: every existing
+  configuration has identical values; batch 8/9/10 macros regenerate with the same geometry.
