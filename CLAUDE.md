@@ -8,6 +8,9 @@ spec-sheet work).
 
 **Current state, open work, user decisions: `00_DOCS/PROJECT_STATUS.md` - read it before starting
 anything, update it when a batch ships or the user decides something.**
+**2026-10-18 (night): the folder is a git repo (branch main, `.gitignore` keeps it ~70 MB: no SolidWorks parts, old staging copies,
+_to_delete, _archive) for Claude Code cloud sessions - see `CLOUD_SETUP.md` (the cloud runs the Python side only, never SolidWorks).
+Commit new staging work you want in the cloud.**
 **2026-10-18 (later): OMi answered the 2026-10-09 request - staged in `tools/_out/omi_answers_20261018/` (README.md; do not
 overwrite): 15 rows MISSING -> ASSUMED from OMi's drawings / real lengths, not shipped; open: VERIFIED or ASSUMED, and whether
 Brennan's catalog may now be used (PROJECT_STATUS s5).**
