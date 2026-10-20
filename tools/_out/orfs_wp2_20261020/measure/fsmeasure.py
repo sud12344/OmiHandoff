@@ -122,8 +122,14 @@ def face_corner(S):
     """the end face x bore corner: the bore = the smallest-radius horizontal reaching the far end; the face = the vertical at the
     largest a that starts at the bore radius"""
     hz = [s for s in S if s['k'] == 'L' and abs(s['r1'] - s['r2']) < TOL and s['a2'] - s['a1'] > 0.05]
-    rb = min(min(s['r1'], s['r2']) for s in hz)
-    vs = [s for s in S if s['k'] == 'L' and abs(s['a1'] - s['a2']) < TOL and abs(min(s['r1'], s['r2']) - rb) < TOL]
+    # the bore of THIS end: among the smallest-radius horizontals, the one reaching furthest out (a part with a bore step has two bores;
+    # 2026-10-20: the smallest bore overall can belong to the other end)
+    rlow = min(min(s['r1'], s['r2']) for s in hz)
+    cand = [s for s in hz if min(s['r1'], s['r2']) < rlow + 0.15]
+    amax = max(s['a2'] for s in cand)
+    bs = min((s for s in cand if s['a2'] > amax - TOL), key=lambda s: min(s['r1'], s['r2']))     # (the groove walls also reach the face)
+    rb = min(bs['r1'], bs['r2'])
+    vs = [s for s in S if s['k'] == 'L' and abs(s['a1'] - s['a2']) < TOL and abs(min(s['r1'], s['r2']) - rb) < TOL and abs(s['a1'] - bs['a2']) < TOL]
     af = max(s['a1'] for s in vs)
     return af, rb
 
@@ -248,8 +254,9 @@ def measure_fssw(p, axis, sign, others=(), pn=2):
 
 
 # ------------------------------------------------------------------------------------------------------------------------- studs
-def measure_stud(p, axis, sign, others=(), pn=2):
-    """straight-thread (SAE J1926) stud on an FS part: fixed (ends at the hex face) or adjustable (washer, lock nut). From the tip."""
+def measure_stud(p, axis, sign, others=(), pn=2, model=False):
+    """straight-thread (SAE J1926) stud on an FS part: fixed (ends at the hex face) or adjustable (washer, lock nut). From the tip.
+    model=True (closed loop on OUR rebuild): the library ORB end has no tip chamfer and a radial step instead of the 60deg flank."""
     S = half(p, axis, sign, pn, others)
     at, rb = face_corner(S)
     s_ = lambda a: R4(at - a)
@@ -257,9 +264,13 @@ def measure_stud(p, axis, sign, others=(), pn=2):
     E, rings = simplify(E)
     o = dict(BORER=R4(rb), tip_a=R4(at)); i = 0
     assert V(E[i]); i += 1
-    e = E[i]; assert e['k'] == 'L' and 30 < A(e) < 60; o['TIPCH'] = s_(e['q'][0]); o['TIPCH_ANG'] = A(e); i += 1
+    e = E[i]
+    if model and H(e): o['TIPCH'] = 0.0; o['TIPCH_ANG'] = None
+    else:
+        assert e['k'] == 'L' and 30 < A(e) < 60; o['TIPCH'] = s_(e['q'][0]); o['TIPCH_ANG'] = A(e); i += 1
     e = E[i]; assert H(e); o['RMAJ'] = R4(e['p'][1]); o['THD_END'] = s_(e['q'][0]); i += 1
-    e = E[i]; assert e['k'] == 'L' and 50 < A(e) < 70 and e['q'][1] < e['p'][1]; o['FLANK_ANG'] = A(e); i += 1
+    e = E[i]
+    assert e['k'] == 'L' and ((50 < A(e) < 70) or (model and V(e))) and e['q'][1] < e['p'][1]; o['FLANK_ANG'] = A(e); i += 1
     fl_end = s_(E[i - 1]['q'][0])
     e = E[i]; assert H(e); o['UCR'] = R4(e['p'][1]); i += 1
     # the shoulder (hex face of a fixed stud, washer face of an adjustable one) = the next radial face; where the O-ring sits in the

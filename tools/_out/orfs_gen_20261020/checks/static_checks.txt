@@ -1,0 +1,6 @@
+tools/_out/orfs_gen_20261020/out/Build_FS2403_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6400_MASTER.bas 33 procedures OK
+Build_FS2403_MASTER.bas {'points': 22, 'unknowns': 44, 'constraints': 44, 'rank': 44, 'dims': 24, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6400_MASTER.bas {'points': 17, 'unknowns': 34, 'constraints': 34, 'rank': 34, 'dims': 17, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+FS2403   1 configs  outline problems: 0 []
+FS6400   4 configs  outline problems: 0 []
