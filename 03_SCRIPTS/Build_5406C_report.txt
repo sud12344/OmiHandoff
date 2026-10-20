@@ -1,4 +1,4 @@
-Build_5406C_MASTER  9/24/2026 5:46:22 PM
+Build_5406C_MASTER  10/19/2026 11:07:02 PM
 OK    dim L = 1.2300 in (expect 1.2300)
 OK    dim BODYR = 0.6524 in (expect 0.6524)
 OK    DRIVE sketch fully defined
@@ -32,6 +32,7 @@ OK    THD_EndA helix sketch made (ProfileFeature)
       THD_EndA: InsertHelix ok
 OK    THD_EndA helix created
 OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.3500)
       THD_EndA: helix start = (0.0000, 0.0000, 0.3500)
       THD_EndA: profile on Top Plane
       THD_EndA: sketch start (0.0000,-0.3500) axialIsX=True apex dir -1
@@ -52,8 +53,9 @@ OK    End B face present at x=1.2300
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 1.1300 / corners 1.3048 (expect 1.1300 / 1.3048)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5406C_SW2.xlsx
-OK    Configurations after table: 7 (expect 7)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_5406C_SW2.xlsx
+OK    Configurations after table: 8 (expect 8)
+      config check 1: 5406-C-12
 OK    5406-C-12 L@DRIVE = 1.4400 (table 1.4400)
 OK    5406-C-12 BODYR@DRIVE = 0.7217 (table 0.7217)
 OK    5406-C-12 HEXB@HEX = 1.2500 (table 1.2500)
@@ -61,6 +63,7 @@ OK    5406-C-12 DEPTH@POCKETCUT_A = 0.9100 (table 0.9100)
 OK    5406-C-12 PROF_R@THDPROF_A = 0.4550 (table 0.4550)
 OK    5406-C-12 one solid body (found 1)
       5406-C-12 box x -0.039..1.440  y -0.625..0.625
+      config check 2: 5406-C-6
 OK    5406-C-6 L@DRIVE = 0.9700 (table 0.9700)
 OK    5406-C-6 BODYR@DRIVE = 0.5081 (table 0.5081)
 OK    5406-C-6 HEXB@HEX = 0.8800 (table 0.8800)
@@ -68,7 +71,18 @@ OK    5406-C-6 DEPTH@POCKETCUT_A = 0.6800 (table 0.6800)
 OK    5406-C-6 PROF_R@THDPROF_A = 0.2850 (table 0.2850)
 OK    5406-C-6 one solid body (found 1)
       5406-C-6 box x -0.030..0.970  y -0.440..0.440
-OK    All-config sweep: 6 configurations rebuilt, 0 feature/body failures
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      All-config sweep: rebuilding 7 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/7  5406-C-12  rebuilt in 1.3 s
+      sweep 2/7  5406-C-16  rebuilt in 2.0 s
+      sweep 3/7  5406-C-2  rebuilt in 1.8 s
+      sweep 4/7  5406-C-20  rebuilt in 2.5 s
+      sweep 5/7  5406-C-4  rebuilt in 1.8 s
+      sweep 6/7  5406-C-6  rebuilt in 1.3 s
+      sweep 7/7  5406-C-8  rebuilt in 1.2 s
+OK    All-config sweep: 7 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 5406-C-8 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
 OK    Threads suppressed in all configurations before save (1 THD_ features)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\5406C_MASTER_174645.SLDPRT (first name was locked, error 0)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5406C\5406C_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 11:07:39 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5406C\5406C_MASTER.SLDPRT

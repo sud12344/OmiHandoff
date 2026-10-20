@@ -1,4 +1,4 @@
-Build_2505_MASTER  10/9/2026 10:12:46 AM
+Build_2505_MASTER  10/20/2026 12:17:44 AM
 OK    dim M1 = 1.0000 in (expect 1.0000)
 OK    dim BODYR = 0.6560 in (expect 0.6560)
 OK    LEG1 sketch fully defined
@@ -127,35 +127,36 @@ OK    leg 1 tip (exact) 1.0000 along +X (expect 1.0000)
 OK    leg 2 tip (exact) 1.4200 along the 135-deg leg (expect 1.4200)
 OK    Z extent (exact) -0.6560 .. 0.6560 (expect -0.6560 .. 0.6560: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_2505_SW2.xlsx
-OK    Configurations after table: 2 (expect 2)
-      config check 1: 2505-12-12-FG
-OK    2505-12-12-FG M1@LEG1 = 1.0000 (table 1.0000)
-OK    2505-12-12-FG BODYR@LEG1 = 0.6560 (table 0.6560)
-OK    2505-12-12-FG M2@LEG2 = 1.4200 (table 1.4200)
-OK    2505-12-12-FG BODYR@LEG2 = 0.6560 (table 0.6560)
-OK    2505-12-12-FG THDMAJR_B2@LEG2 = 0.5313 (table 0.5313)
-OK    2505-12-12-FG JIC2_RELIEFL@LEG2 = 0.1250 (table 0.1250)
-OK    2505-12-12-FG DEPTH@POCKETCUT1 = 1.0000 (table 1.0000)
-OK    2505-12-12-FG DEPTH@BORECUT2 = 1.4200 (table 1.4200)
-OK    2505-12-12-FG PROF_R@THDPROF_1 = 0.4550 (table 0.4550)
-OK    2505-12-12-FG THDPITCH@THD_End2 = 0.0833 (table 0.0833)
-OK    2505-12-12-FG Profile_Height@THD_End2_PROF = 0.0451 (table 0.0451)
-OK    2505-12-12-FG THDPITCH@THD_End2_PROF = 0.0833 (table 0.0833)
-OK    2505-12-12-FG HEXAF@HEX1 = 1.3120 (table 1.3120)
-OK    2505-12-12-FG HEXL@HEX1_BODY = 0.7870 (table 0.7870)
-OK    2505-12-12-FG HEXAF@HEX2 = 1.3120 (table 1.3120)
-OK    2505-12-12-FG HEXL@HEX2_BODY = 0.5560 (table 0.5560)
-OK    2505-12-12-FG PUCK_R1B@PUCK = 0.3782 (table 0.3782)
-OK    2505-12-12-FG PUCK_XC@PUCK = 0.7570 (table 0.7570)
-OK    2505-12-12-FG one solid body (found 1)
-      2505-12-12-FG box x -1.239..1.000  y -0.757..1.239
-      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/1  2505-12-12-FG  rebuilt in 0.4 s
-OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_2505_SW2.xlsx
+OK    Configurations after table: 3 (expect 3)
+      config check 1: 2505-06-06-FG
+OK    2505-06-06-FG M1@LEG1 = 0.7500 (table 0.7500)
+OK    2505-06-06-FG BODYR@LEG1 = 0.4375 (table 0.4375)
+OK    2505-06-06-FG M2@LEG2 = 0.8800 (table 0.8800)
+OK    2505-06-06-FG BODYR@LEG2 = 0.4375 (table 0.4375)
+OK    2505-06-06-FG THDMAJR_B2@LEG2 = 0.2813 (table 0.2813)
+OK    2505-06-06-FG JIC2_RELIEFL@LEG2 = 0.0830 (table 0.0830)
+OK    2505-06-06-FG DEPTH@POCKETCUT1 = 0.7500 (table 0.7500)
+OK    2505-06-06-FG DEPTH@BORECUT2 = 0.8800 (table 0.8800)
+OK    2505-06-06-FG PROF_R@THDPROF_1 = 0.2850 (table 0.2850)
+OK    2505-06-06-FG THDPITCH@THD_End2 = 0.0556 (table 0.0556)
+OK    2505-06-06-FG Profile_Height@THD_End2_PROF = 0.0301 (table 0.0301)
+OK    2505-06-06-FG THDPITCH@THD_End2_PROF = 0.0556 (table 0.0556)
+OK    2505-06-06-FG HEXAF@HEX1 = 0.8750 (table 0.8750)
+OK    2505-06-06-FG HEXL@HEX1_BODY = 0.5350 (table 0.5350)
+OK    2505-06-06-FG HEXAF@HEX2 = 0.8750 (table 0.8750)
+OK    2505-06-06-FG HEXL@HEX2_BODY = 0.3240 (table 0.3240)
+OK    2505-06-06-FG PUCK_R1B@PUCK = 0.2521 (table 0.2521)
+OK    2505-06-06-FG PUCK_XC@PUCK = 0.5047 (table 0.5047)
+OK    2505-06-06-FG one solid body (found 1)
+      2505-06-06-FG box x -0.735..0.750  y -0.505..0.735
+      All-config sweep: rebuilding 2 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/2  2505-06-06-FG  rebuilt in 1.1 s
+      sweep 2/2  2505-12-12-FG  rebuilt in 0.8 s
+OK    All-config sweep: 2 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2505-12-12-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\2505\2505_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\2505\2505_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2505\2505_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2505\2505_MASTER.SLDPRT

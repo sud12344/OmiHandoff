@@ -1,0 +1,74 @@
+Build_5406SHP_MASTER  10/19/2026 11:11:05 PM
+OK    dim L2 = 1.0200 in (expect 1.0200)
+OK    dim BODYR = 0.4200 in (expect 0.4200)
+OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
+      NPTFA_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFA_TAPER = 1.79 deg
+OK    dim SQB_HEADR = 0.3981 in (expect 0.3981)
+OK    dim SQB_HEADL = 0.4400 in (expect 0.4400)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.5343 in^3 (expect 0.5343)
+OK    SQUARE: sketch plane selected (End B face)
+OK    dim SQAF = 0.5630 in (expect 0.5630)
+OK    SQUARE sketch fully defined
+      SQCUT attempt 0: CreateDefinition returned Nothing
+      SQCUT attempt 0: FeatureCut4 scope off -> True
+      SQCUT attempt 0: removed 0.07962 in^3, new faces span x=0.5800..1.0200 (zone 0.5800..1.0200)
+OK    SQCUT created in the right zone and removed material (attempt 0)
+OK    SQCUT removed only the corners (14.9% of volume)
+OK    SQCUT dims: DEPTH=0.4400 SQAF=0.5630 
+OK    SQAF@SQUARE reachable
+OK    DEPTH@SQCUT reachable
+OK    solid plug: End A face closed on the axis (x=0)
+OK    solid plug: End B face closed on the axis (x=1.0200)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.4078)
+      THD_EndA: helix start = (0.0000, 0.0000, 0.4078)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.4078) axialIsX=True apex dir 1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.4078 (want 0.4078)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+      APEXR: try 0 value 0.3506 (want 0.3506)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.03408 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 1.0564 (nominal 1.0200; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.0200
+OK    Body within nominal length +0.15 (threads loosen the box)
+FAIL  Body diameter 0.8526 / 0.8502 (expect 0.8400)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_5406SHP_SW2.xlsx
+OK    Configurations after table: 2 (expect 2)
+      config check 1: 5406-SHP-08
+OK    5406-SHP-08 L2@DRIVE = 1.0200 (table 1.0200)
+OK    5406-SHP-08 BODYR@DRIVE = 0.4200 (table 0.4200)
+OK    5406-SHP-08 NPTFA_MAJR@DRIVE = 0.4078 (table 0.4078)
+OK    5406-SHP-08 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5406-SHP-08 SQB_HEADR@DRIVE = 0.3981 (table 0.3981)
+OK    5406-SHP-08 SQB_HEADL@DRIVE = 0.4400 (table 0.4400)
+OK    5406-SHP-08 PROF_R@THDPROF_A = 0.4078 (table 0.4078)
+OK    5406-SHP-08 SQAF@SQUARE = 0.5630 (table 0.5630)
+OK    5406-SHP-08 DEPTH@SQCUT = 0.4400 (table 0.4400)
+OK    5406-SHP-08 one solid body (found 1)
+      5406-SHP-08 box x -0.036..1.020  y -0.427..0.426
+      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/1  5406-SHP-08  rebuilt in 1.7 s
+OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 5406-SHP-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5406SHP\5406SHP_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 11:11:31 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5406SHP\5406SHP_MASTER.SLDPRT

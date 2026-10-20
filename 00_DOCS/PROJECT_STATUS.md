@@ -1,4 +1,4 @@
-# OMi fitting library: project status and open work (2026-10-19: batch 16 shipped - wave 1, leftovers, JIC tees, 2404, 5405, corner-puck fix; before: batch 15 2026-10-08)
+# OMi fitting library: project status and open work (2026-10-20: batch 17 shipped - the 2026-10-18 stage + 5 generator features; before: batch 16 2026-10-19)
 
 This is the handover state from the Cowork sessions (2026-09-04 to 2026-09-25), updated after Claude's overnight
 SolidWorks build of 2026-09-25 (details: `00_DOCS/OVERNIGHT_BUILD_2026-09-25.md`) and after batch 14 (2026-10-02,
@@ -6,6 +6,30 @@ SolidWorks build of 2026-09-25 (details: `00_DOCS/OVERNIGHT_BUILD_2026-09-25.md`
 the detail behind it. Keep it current: update it whenever a batch ships or a decision is made.
 
 ## 1. Where things stand
+
+**2026-10-20: BATCH 17 SHIPPED (`03_SCRIPTS\RUN_ME_batch17.txt`, QA #173-#175; user: "can you ship batch 17?").** Evidence and scripts:
+`tools\_out\batch17_20261019\` (RESUME.md = the run log, checks\, scripts\ship_b17.py, old_files\ + MANIFEST*.txt; second copy
+`_to_delete\superseded_20261019b\batch17_replaced\`).
+- **Content:** the 2026-10-18 stage (`brennan_yes_20261018\stage`: OMi answers, Brennan rows waves 1-3 marked `$PRP@DimSource` BRENNAN,
+  A19-A23, the 37 wrongly-DROP adapters + wave-3 adapter rows - adapters77 went in HERE, `apply_77.py` was never run) + the five merged
+  generator features (hose barb, flange legs, 45 deg angled legs, per-leg swivels, straights incl. 6400 generated per A6).
+- **Rebased on live first:** stage review tables = live tables after batch 16 + logged batch-17 edits, 0 stale cells (`checks\cmp3_full.txt`);
+  regenerated from live (control = live tools + live tables reproduces batch 16).
+- **Generator fix (QA #174):** the angled macros did not compile (Atan2V got Variant elements ByRef) -> `ByVal`; changes exactly that line in
+  the 6 angled macros. Live `tools\` = `batch17_20261019\tools_b17` (gen_tee.py, gen_straight2.py, allcfg_check.py, dofcheck_tee.py, npsm.py
+  changed; 8 measure scripts added). Undo = `old_files\tools\`.
+- **74 masters -> `11_MASTERS`** (24 new, 50 replaced) = the SolidWorks dry-run parts (sha256 `checks\shipped_files_sha256.txt`), 74 macros
+  (LF) + reports -> `03_SCRIPTS`, 74 SW2 + 88 review tables -> `04_DESIGN_TABLES`. Dry runs: 0 FAIL (5406HHP / SHP: 1 accepted extent-check
+  FAIL), 1 body each; old configurations identical to read-only sweeps of the replaced masters, or changed with their own table cells (92:
+  A19 / A20 / A21 / A23). Post-ship: live tools + tables regenerate the shipped files (`checks\verify_b17.txt`, 0 BAD).
+- **Held (QA #175):** 4503 / 4603 (hose face-off on the hose leg), 1703-24-24-FG (HEX2 direction), 1700RC / 1800 (FLATS sketch
+  under-defined), 5404N (-06 threads again, QA #163; old master stays). Rows stay in the tables; generator work needed.
+- **Shipped with an open user call in AxialSource:** 6902-12-12-NWO-FG composed shape, 5505-20-20-FG on the -08 shape.
+- **Now: 1,354 of 1,874 BUILD rows in a master** (1,103 of 1,804 before), 95 masters in `11_MASTERS`, 440 MISSING, 336 VERIFIED, 79 with
+  data and no master configuration (`batch17_20261019\paperwork\count_now.txt`). Coverage refreshed: A1 1,300 OMi part numbers.
+- SolidWorks incidents during the dry runs (no effect on the shipped files): it closed at 21:28 (my VBA bisect loading ~40 test modules)
+  and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
+  insert - those dry runs were discarded and re-run after closing it.
 
 **2026-10-19: BATCH 16 SHIPPED (`03_SCRIPTS\RUN_ME_batch16.txt`, QA #170-#172; user: "Yes, ship batch 16 as planned.").** Plan +
 evidence: `tools\_out\ship_20261019\` (SHIP_PLAN.md, checks\, scripts\ship_b16.py, old_files\ + MANIFEST*.txt; second copy

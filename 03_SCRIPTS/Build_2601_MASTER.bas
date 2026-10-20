@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2601_MASTER"
 ' ============================================================================
-'  Build_2601_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_tee.py
+'  Build_2601_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
 '  Male Branch Tee (tee), forged hex body (2603HX pattern).  Reference config 2601-08-08-08-FG: JICM -08, JICM -08, NPTFM -08
 '  Entry: Sub Build2601.  Legs 1/2 along +X/-X, leg 3 along +Y.
 '  Builds from DesignTable_2601_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the

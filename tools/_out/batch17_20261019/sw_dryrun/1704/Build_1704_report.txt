@@ -1,0 +1,136 @@
+Build_1704_MASTER  10/19/2026 9:41:14 PM
+OK    dim M1 = 3.1500 in (expect 3.1500)
+OK    dim BODYR = 0.9175 in (expect 0.9175)
+OK    dim FLG1_HEADR = 1.1900 in (expect 1.1900)
+OK    dim FLG1_HEADT = 0.3150 in (expect 0.3150)
+OK    dim FLG1_GRVOR = 1.0575 in (expect 1.0575)
+OK    dim FLG1_GRVIR = 0.9025 in (expect 0.9025)
+OK    dim FLG1_GRVD = 0.1100 in (expect 0.1100)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim M2 = 2.3300 in (expect 2.3300)
+OK    dim BODYR = 0.9375 in (expect 0.9375)
+OK    dim THDMAJR_B2 = 0.9375 in (expect 0.9375)
+OK    dim JIC2_RELIEFL = 0.1250 in (expect 0.1250)
+OK    angle RELIEFANG2 = 60.00 deg
+OK    dim JIC2_THDZ = 0.5454 in (expect 0.5454)
+OK    dim JIC2_CONER = 0.8775 in (expect 0.8775)
+OK    dim JIC2_LANDL = 0.1298 in (expect 0.1298)
+OK    dim JIC2_SEATL = 0.2482 in (expect 0.2482)
+      SEATB2: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB2 = 37.00 deg
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 1.8750 in (expect 1.8750)
+      HEX1: sgVERTICAL -> vertex |z| max 0.9375 (flats want 0.9375)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 1.418 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    dim HEXAF = 1.8750 in (expect 1.8750)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.9375 (flats want 0.9375)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.354 in on axis 1 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.9375 in (expect 0.9375)
+OK    dim PUCK_HT = 0.9375 in (expect 0.9375)
+OK    dim PUCK_R1B = 0.5408 in (expect 0.5408)
+OK    dim PUCK_R1T = 0.5408 in (expect 0.5408)
+OK    dim PUCK_XC = 1.0820 in (expect 1.0820)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=3.1500
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 1.2600 in (expect 1.2600)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=3.1500 D1=1.2600 
+OK    select end face for BORE2 at x=2.3300
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 1.3120 in (expect 1.3120)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=2.3300 D2=1.3120 
+OK    leg 1 bore open on the axis at its face (X=+3.1500)
+OK    leg 2 bore open on the axis at its face (Y=+2.3300)
+      THD_End2: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End2: anchor edge found at x=1.4066 r=0.9375
+      THD_End2: Edge ok
+      THD_End2: Type=Inch Die ok
+      THD_End2: Size=1.8750-12 ok
+      THD_End2: ThreadMethod=Cut ok
+      THD_End2: EndCondition=Blind ok
+      THD_End2: BlindDepth=0.5454 ok
+      THD_End2: DiameterOverride ok
+      THD_End2: Diameter ok
+      THD_End2: PitchOverride ok
+      THD_End2: Pitch ok
+      THD_End2: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=1.8750-12 Dia=1.8750 Pitch=0.0833
+      THD_End2: CreateFeature -> True
+OK    THD_End2 thread feature created
+      THD_End2: thread centre x = 1.6821 in, anchor 1.4066, wanted +X
+OK    THD_End2 runs along the thread flat (away from the hex)
+OK    THD_End2 rebuilds without error (code 0)
+OK    THD_End2 dims: D8=0.0000 THDPITCH=0.0833 THDDIA=1.8750 DEPTH=0.5454 D1=0.0000 Pitch=0.0125 Profile_Land=0.0031 Profile_Angle=41.2283 Profile_Height=0.0068 
+      THD_End2: profile sketch renamed to THD_End2_PROF
+OK    THD_End2 profile dims reachable as Profile_Height@THD_End2_PROF
+      THD_End2: profile pitch dimension renamed Pitch -> THDPITCH
+OK    THD_End2 profile pitch reachable as THDPITCH@THD_End2_PROF
+      THD_End2: left live until the final suppress step
+OK    X extent -1.083 .. 3.150 (expect -1.083 .. 3.150; threads may add a little)
+OK    Y extent -1.190 .. 2.330 (expect -1.190 .. 2.330)
+      Bounding box z -1.190 .. 1.190 (approximate - loose around thread faces)
+OK    Z extent (exact) -1.1900 .. 1.1900 (expect -1.1900 .. 1.1900: flange head)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17\tee\DesignTable_1704_SW2.xlsx
+OK    Configurations after table: 2 (expect 2)
+      config check 1: 1704-24-24-FG
+OK    1704-24-24-FG M1@LEG1 = 3.1500 (table 3.1500)
+OK    1704-24-24-FG BODYR@LEG1 = 0.9175 (table 0.9175)
+OK    1704-24-24-FG FLG1_GRVIR@LEG1 = 0.9025 (table 0.9025)
+OK    1704-24-24-FG FLG1_GRVD@LEG1 = 0.1100 (table 0.1100)
+OK    1704-24-24-FG FLG1_GRVOR@LEG1 = 1.0575 (table 1.0575)
+OK    1704-24-24-FG FLG1_HEADR@LEG1 = 1.1900 (table 1.1900)
+OK    1704-24-24-FG DEPTH@BORECUT1 = 3.1500 (table 3.1500)
+OK    1704-24-24-FG DEPTH@BORECUT2 = 2.3300 (table 2.3300)
+OK    1704-24-24-FG THDPITCH@THD_End2 = 0.0833 (table 0.0833)
+OK    1704-24-24-FG Profile_Height@THD_End2_PROF = 0.0451 (table 0.0451)
+OK    1704-24-24-FG THDPITCH@THD_End2_PROF = 0.0833 (table 0.0833)
+OK    1704-24-24-FG HEXAF@HEX1 = 1.8750 (table 1.8750)
+OK    1704-24-24-FG HEXL@HEX1_BODY = 2.8350 (table 2.8350)
+OK    1704-24-24-FG HEXAF@HEX2 = 1.8750 (table 1.8750)
+OK    1704-24-24-FG HEXL@HEX2_BODY = 1.2470 (table 1.2470)
+OK    1704-24-24-FG PUCK_R1B@PUCK = 0.5408 (table 0.5408)
+OK    1704-24-24-FG PUCK_XC@PUCK = 1.0820 (table 1.0820)
+OK    1704-24-24-FG one solid body (found 1)
+      1704-24-24-FG box x -1.083..3.150  y -1.190..2.330
+      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/1  1704-24-24-FG  rebuilt in 0.4 s
+OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 1704-24-24-FG for the save (it opens in this size)
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1704\1704_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1704\1704_MASTER.SLDPRT

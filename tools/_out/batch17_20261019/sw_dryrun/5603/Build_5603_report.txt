@@ -1,0 +1,213 @@
+Build_5603_MASTER  10/20/2026 12:31:15 AM
+OK    dim M1 = 0.7800 in (expect 0.7800)
+OK    dim BODYR = 0.2810 in (expect 0.2810)
+OK    dim NPTF1_MAJR = 0.1966 in (expect 0.1966)
+OK    dim NPTF1_THDL = 0.2639 in (expect 0.2639)
+      NPTF1_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTF1_TAPER = 1.79 deg
+OK    dim NPTF1_RELL = 0.1161 in (expect 0.1161)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim M2 = 0.6600 in (expect 0.6600)
+OK    dim BODYR = 0.2810 in (expect 0.2810)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim M3 = 0.7800 in (expect 0.7800)
+OK    dim BODYR = 0.2810 in (expect 0.2810)
+OK    dim NPTF3_MAJR = 0.1966 in (expect 0.1966)
+OK    dim NPTF3_THDL = 0.2639 in (expect 0.2639)
+      NPTF3_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTF3_TAPER = 1.79 deg
+OK    dim NPTF3_RELL = 0.1161 in (expect 0.1161)
+OK    LEG3 sketch fully defined
+OK    LEG3 revolve created
+OK    dim HEXAF = 0.5620 in (expect 0.5620)
+      RUN: sgVERTICAL -> vertex |z| max 0.2810 (flats want 0.2810)
+OK    RUN hex flats normal to Z
+OK    RUN hex sketch fully defined
+      RUN: FeatureExtrusion3 two-direction (0.400 / 0.400) -> True
+      RUN: new faces centred at 0.000 in (want 0.000)
+OK    RUN extruded both ways
+OK    RUN dims named (HEXL1 HEXL2 HEXAF )
+OK    dim HEXAF = 0.5620 in (expect 0.5620)
+      HEX3: sgHORIZONTAL -> vertex |z| max 0.2810 (flats want 0.2810)
+OK    HEX3 hex flats normal to Z
+OK    HEX3 hex sketch fully defined
+      HEX3: FeatureExtrusion3 dir=0 -> True
+      HEX3: new faces centred at 0.119 in on axis 1 (want sign 1)
+OK    HEX3 extruded the right way
+OK    HEX3 dims named (HEXL HEXAF )
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=0.7800
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.1880 in (expect 0.1880)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=0.7800 D1=0.1880 
+OK    select end face for POCKET2 at x=-0.6600
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET2 sketch opened (active sketch exists)
+OK    POCKET2 circle created
+OK    dim TAPDRILL2 = 0.3300 in (expect 0.3300)
+OK    POCKET2 sketch closed and named (ProfileFeature)
+      POCKETCUT2 attempt 0: CreateDefinition returned Nothing
+      POCKETCUT2 attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT2 cut removes material (attempt 0)
+OK    POCKETCUT2 dims: DEPTH=0.6600 TAPDRILL2=0.3300 
+OK    select end face for BORE3 at x=0.7800
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE3 sketch opened (active sketch exists)
+OK    BORE3 circle created
+OK    dim D3 = 0.1880 in (expect 0.1880)
+OK    BORE3 sketch closed and named (ProfileFeature)
+      BORECUT3 attempt 0: CreateDefinition returned Nothing
+      BORECUT3 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT3 cut removes material (attempt 0)
+OK    BORECUT3 dims: DEPTH=0.7800 D3=0.1880 
+OK    leg 1 bore open on the axis at its face (X=+0.7800)
+OK    leg 2 bore open on the axis at its face (X=-0.6600)
+OK    leg 3 bore open on the axis at its face (Y=+0.7800)
+OK    THD_End1: end face found at 0.7800
+OK    dim HELIXDIA = 0.3931 in (expect 0.3931)
+OK    THD_End1 helix sketch made (ProfileFeature)
+      THD_End1: InsertHelix ok
+OK    THD_End1 helix created
+OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (0.7800, 0.0000, -0.1966)
+      THD_End1: helix start = (0.7800, 0.0000, -0.1966)
+      THD_End1: profile on Top Plane
+      THD_End1: sketch start (0.7800,0.1966) axialIsX=True apex dir -1
+      PROF_AX: try 0 value 0.7800 (want 0.7800)
+OK    dim PROF_AX = 0.7800 in (expect 0.7800)
+      PROF_R: try 0 value 0.1966 (want 0.1966)
+OK    dim PROF_R = 0.1966 in (expect 0.1966)
+      APEXR: try 0 value 0.1669 (want 0.1669)
+OK    dim APEXR = 0.1669 in (expect 0.1669)
+OK    THD_End1 60 deg tooth angle placed
+OK    THD_End1 profile sketch fully defined
+      THD_End1: sweep CreateFeature -> True
+OK    THD_End1 swept cut created
+OK    THD_End1 sweep removed material: 0.00481 in^3
+OK    THD_End1 suppressed
+OK    THD_End2: end face found at -0.6600
+OK    dim HELIXDIA = 0.3300 in (expect 0.3300)
+OK    THD_End2 helix sketch made (ProfileFeature)
+      THD_End2: InsertHelix ok
+OK    THD_End2 helix created
+OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End2: helix start from the curve (-0.6600, 0.0000, 0.1650)
+      THD_End2: helix start = (-0.6600, 0.0000, 0.1650)
+      THD_End2: profile on Top Plane
+      THD_End2: sketch start (-0.6600,-0.1650) axialIsX=True apex dir -1
+      PROF_AX: try 0 value 0.6600 (want 0.6600)
+OK    dim PROF_AX = 0.6600 in (expect 0.6600)
+      PROF_R: try 0 value 0.1650 (want 0.1650)
+OK    dim PROF_R = 0.1650 in (expect 0.1650)
+      APEXR: try 0 value 0.1946 (want 0.1946)
+OK    dim APEXR = 0.1946 in (expect 0.1946)
+OK    THD_End2 60 deg tooth angle placed
+OK    THD_End2 profile sketch fully defined
+      THD_End2: sweep CreateFeature -> True
+OK    THD_End2 swept cut created
+OK    THD_End2 sweep removed material: 0.00405 in^3
+OK    THD_End2 suppressed
+OK    THD_End3: end face found at 0.7800
+OK    dim HELIXDIA = 0.3931 in (expect 0.3931)
+OK    THD_End3 helix sketch made (ProfileFeature)
+      THD_End3: InsertHelix ok
+OK    THD_End3 helix created
+OK    THD_End3 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End3: helix start from the curve (0.0000, 0.7800, 0.1966)
+      THD_End3: helix start = (0.0000, 0.7800, 0.1966)
+      THD_End3: profile on Right Plane
+      THD_End3: sketch start (-0.1966,0.7800) axialIsX=False apex dir 1
+      PROF_AX: try 0 value 0.7800 (want 0.7800)
+OK    dim PROF_AX = 0.7800 in (expect 0.7800)
+      PROF_R: try 0 value 0.1966 (want 0.1966)
+OK    dim PROF_R = 0.1966 in (expect 0.1966)
+      APEXR: try 0 value 0.1669 (want 0.1669)
+OK    dim APEXR = 0.1669 in (expect 0.1669)
+OK    THD_End3 60 deg tooth angle placed
+OK    THD_End3 profile sketch fully defined
+      THD_End3: sweep CreateFeature -> True
+OK    THD_End3 swept cut created
+OK    THD_End3 sweep removed material: 0.00482 in^3
+OK    THD_End3 suppressed
+OK    X extent -0.660 .. 0.780 (expect -0.660 .. 0.780; threads may add a little)
+OK    Y extent -0.324 .. 0.780 (expect -0.324 .. 0.780)
+      Bounding box z -0.281 .. 0.281 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.2810 .. 0.2810 (expect -0.2810 .. 0.2810: hex flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_5603_SW2.xlsx
+OK    Configurations after table: 7 (expect 7)
+      config check 1: 5603-04-04-04-FG
+OK    5603-04-04-04-FG M1@LEG1 = 1.0900 (table 1.0900)
+OK    5603-04-04-04-FG BODYR@LEG1 = 0.3750 (table 0.3750)
+OK    5603-04-04-04-FG NPTF1_MAJR@LEG1 = 0.2609 (table 0.2609)
+OK    5603-04-04-04-FG NPTF1_THDL@LEG1 = 0.4018 (table 0.4018)
+OK    5603-04-04-04-FG NPTF1_TAPER@LEG1 = 1.7899 (table 1.7899)
+OK    5603-04-04-04-FG NPTF1_RELL@LEG1 = 0.1582 (table 0.1582)
+OK    5603-04-04-04-FG DEPTH@BORECUT1 = 1.0900 (table 1.0900)
+OK    5603-04-04-04-FG DEPTH@POCKETCUT2 = 0.8800 (table 0.8800)
+OK    5603-04-04-04-FG DEPTH@BORECUT3 = 1.0900 (table 1.0900)
+OK    5603-04-04-04-FG PROF_R@THDPROF_1 = 0.2609 (table 0.2609)
+OK    5603-04-04-04-FG PROF_R@THDPROF_2 = 0.2150 (table 0.2150)
+OK    5603-04-04-04-FG PROF_R@THDPROF_3 = 0.2609 (table 0.2609)
+OK    5603-04-04-04-FG HEXAF@RUN = 0.7500 (table 0.7500)
+OK    5603-04-04-04-FG HEXL1@RUN_BODY = 0.5300 (table 0.5300)
+OK    5603-04-04-04-FG HEXL2@RUN_BODY = 0.6200 (table 0.6200)
+OK    5603-04-04-04-FG HEXAF@HEX3 = 0.7500 (table 0.7500)
+OK    5603-04-04-04-FG HEXL@HEX3_BODY = 0.5300 (table 0.5300)
+OK    5603-04-04-04-FG one solid body (found 1)
+      5603-04-04-04-FG box x -0.880..1.090  y -0.433..1.090
+      config check 2: 5603-20-20-20-FG
+OK    5603-20-20-20-FG M1@LEG1 = 2.3800 (table 2.3800)
+OK    5603-20-20-20-FG BODYR@LEG1 = 0.9375 (table 0.9375)
+OK    5603-20-20-20-FG NPTF1_MAJR@LEG1 = 0.8134 (table 0.8134)
+OK    5603-20-20-20-FG NPTF1_THDL@LEG1 = 0.7068 (table 0.7068)
+OK    5603-20-20-20-FG NPTF1_TAPER@LEG1 = 1.7899 (table 1.7899)
+OK    5603-20-20-20-FG NPTF1_RELL@LEG1 = 0.2632 (table 0.2632)
+OK    5603-20-20-20-FG DEPTH@BORECUT1 = 2.3800 (table 2.3800)
+OK    5603-20-20-20-FG DEPTH@POCKETCUT2 = 1.7000 (table 1.7000)
+OK    5603-20-20-20-FG DEPTH@BORECUT3 = 2.3800 (table 2.3800)
+OK    5603-20-20-20-FG PROF_R@THDPROF_1 = 0.8134 (table 0.8134)
+OK    5603-20-20-20-FG PROF_R@THDPROF_2 = 0.7400 (table 0.7400)
+OK    5603-20-20-20-FG PROF_R@THDPROF_3 = 0.8134 (table 0.8134)
+OK    5603-20-20-20-FG HEXAF@RUN = 1.8750 (table 1.8750)
+OK    5603-20-20-20-FG HEXL1@RUN_BODY = 1.4100 (table 1.4100)
+OK    5603-20-20-20-FG HEXL2@RUN_BODY = 1.4400 (table 1.4400)
+OK    5603-20-20-20-FG HEXAF@HEX3 = 1.8750 (table 1.8750)
+OK    5603-20-20-20-FG HEXL@HEX3_BODY = 1.4100 (table 1.4100)
+OK    5603-20-20-20-FG one solid body (found 1)
+      5603-20-20-20-FG box x -1.700..2.380  y -1.083..2.380
+      All-config sweep: rebuilding 6 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/6  5603-02-02-02-FG  rebuilt in 0.2 s
+      sweep 2/6  5603-04-04-04-FG  rebuilt in 0.9 s
+      sweep 3/6  5603-06-06-06-FG  rebuilt in 0.6 s
+      sweep 4/6  5603-12-12-12-FG  rebuilt in 0.7 s
+      sweep 5/6  5603-16-16-16-FG  rebuilt in 0.8 s
+      sweep 6/6  5603-20-20-20-FG  rebuilt in 0.9 s
+OK    All-config sweep: 6 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 5603-02-02-02-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+OK    Threads suppressed in all configurations before save (3 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5603\5603_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5603\5603_MASTER.SLDPRT

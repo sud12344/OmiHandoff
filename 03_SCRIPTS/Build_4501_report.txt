@@ -1,0 +1,215 @@
+Build_4501_MASTER  10/19/2026 8:52:26 PM
+OK    dim M1 = 2.0550 in (expect 2.0550)
+OK    dim BODYR = 0.4375 in (expect 0.4375)
+OK    dim HOSE1_TAILL = 1.1970 in (expect 1.1970)
+OK    dim HOSE1_BEADR = 0.2800 in (expect 0.2800)
+OK    dim HOSE1_BEADW = 0.1039 in (expect 0.1039)
+OK    dim HOSE1_STUBR = 0.2500 in (expect 0.2500)
+OK    dim HOSE1_BEADPOS = 0.1991 in (expect 0.1991)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim M2 = 1.4700 in (expect 1.4700)
+OK    dim BODYR = 0.4375 in (expect 0.4375)
+OK    dim NPTF2_MAJR = 0.4078 in (expect 0.4078)
+OK    dim NPTF2_THDL = 0.5337 in (expect 0.5337)
+      NPTF2_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTF2_TAPER = 1.79 deg
+OK    dim NPTF2_RELL = 0.2163 in (expect 0.2163)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 0.8750 in (expect 0.8750)
+      HEX1: sgVERTICAL -> vertex |z| max 0.4375 (flats want 0.4375)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.278 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    dim HEXAF = 0.8750 in (expect 0.8750)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.4375 (flats want 0.4375)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.234 in on axis 1 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.4375 in (expect 0.4375)
+OK    dim PUCK_HT = 0.4375 in (expect 0.4375)
+OK    dim PUCK_R1B = 0.2521 in (expect 0.2521)
+OK    dim PUCK_R1T = 0.2521 in (expect 0.2521)
+OK    dim PUCK_XC = 0.5047 in (expect 0.5047)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    HFPLN1: base plane Right Plane selected
+      HFPLN1: InsertRefPlane distance 0.5550 ok
+      HFPLN1: plane origin (0.5550, 0.0000, 0.0000) = 0.5550 along the hose leg (want 0.5550)
+OK    HFPLN1 reference plane at the hose hex face (0.5550 along the hose leg)
+OK    HFPLN1 offset reachable as D1@HFPLN1 (D1=0.5550 )
+OK    HOSEFACE1_SK: rectangle sides along the sketch axes (plane parallel to the Right Plane)
+OK    dim HF1_ZH = 0.4875 in (expect 0.4875)
+OK    dim HF1_YTOP = 0.7200 in (expect 0.7200)
+OK    dim HF1_ZH2 = 0.4875 in (expect 0.4875)
+OK    dim HF1_YLO = 0.5552 in (expect 0.5552)
+OK    dim HF1_DIN = 0.4530 in (expect 0.4530)
+OK    HOSEFACE1_SK: region in model space y -0.5552 .. 0.7200, |z| 0.4875 on x 0.5550 (want -0.5552 .. 0.7200, 0.4875)
+OK    HOSEFACE1_SK sketch fully defined
+OK    HOSEFACE1_SK sketch made
+      HOSEFACE1 attempt 0: CreateDefinition returned Nothing
+      HOSEFACE1 attempt 0: FeatureCut4 scope off -> True
+      HOSEFACE1 attempt 0: removed 0.025094 in^3, cut faces centred at 0.5300 along the hose leg (want 0.5800)
+      HOSEFACE1 attempt 1: CreateDefinition returned Nothing
+      HOSEFACE1 attempt 1: FeatureCut4 scope off -> True
+      HOSEFACE1 attempt 1: removed 0.001759 in^3, cut faces centred at 0.5800 along the hose leg (want 0.5800)
+OK    HOSEFACE1 cut made on the tip side of the hose hex face (attempt 1)
+OK    HOSEFACE1 dims: D1=0.5550 DEPTH=0.0500 HF1_ZH=0.4875 HF1_YTOP=0.7200 HF1_ZH2=0.4875 HF1_YLO=0.5552 HF1_DIN=0.4530 
+OK    HOSEFACE1 took 0.001759 in^3 (at least the stub ring 0.001759)
+      STUBFILL1_SK: hose axis at sketch (0.0000, 0.0000, 0.0000)
+OK    STUBFILL1_SK circles created
+OK    dim SF1_DIN = 0.4530 in (expect 0.4530)
+OK    dim SF1_DOUT = 0.5000 in (expect 0.5000)
+OK    STUBFILL1_SK sketch fully defined
+OK    STUBFILL1_SK sketch made
+      STUBFILL1: FeatureExtrusion3 dir=0 -> True
+      STUBFILL1 dir 0: added 0.001759 in^3 (ring 0.001759), faces centred at 1.1535 along the hose leg
+OK    STUBFILL1 boss made on the tip side (attempt 0)
+OK    STUBFILL1 dims: D1=0.5550 DEPTH=0.0500 SF1_DIN=0.4530 SF1_DOUT=0.5000 
+OK    STUBFILL1 put back 0.001759 in^3 = the stub ring (expect 0.001759)
+OK    HOSEFACE1 + STUBFILL1 leave the reference configuration unchanged (the corner clears the face): net 0.000000 in^3
+OK    D1@HFPLN1 reachable
+OK    DEPTH@HOSEFACE1 reachable
+OK    DEPTH@STUBFILL1 reachable
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=2.0550
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.4060 in (expect 0.4060)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=2.0550 D1=0.4060 
+OK    select end face for BORE2 at x=1.4700
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 0.5310 in (expect 0.5310)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=1.4700 D2=0.5310 
+OK    leg 1 bore open on the axis at its face (X=+2.0550)
+OK    leg 2 bore open on the axis at its face (Y=+1.4700)
+OK    THD_End2: end face found at 1.4700
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_End2 helix sketch made (ProfileFeature)
+      THD_End2: InsertHelix ok
+OK    THD_End2 helix created
+OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End2: helix start from the curve (0.0000, 1.4700, 0.4078)
+      THD_End2: helix start = (0.0000, 1.4700, 0.4078)
+      THD_End2: profile on Right Plane
+      THD_End2: sketch start (-0.4078,1.4700) axialIsX=False apex dir 1
+      PROF_AX: try 0 value 1.4700 (want 1.4700)
+OK    dim PROF_AX = 1.4700 in (expect 1.4700)
+      PROF_R: try 0 value 0.4078 (want 0.4078)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+      APEXR: try 0 value 0.3506 (want 0.3506)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_End2 60 deg tooth angle placed
+OK    THD_End2 profile sketch fully defined
+      THD_End2: sweep CreateFeature -> True
+OK    THD_End2 swept cut created
+OK    THD_End2 sweep removed material: 0.03723 in^3
+OK    THD_End2 suppressed
+OK    X extent -0.505 .. 2.055 (expect -0.505 .. 2.055; threads may add a little)
+OK    Y extent -0.505 .. 1.470 (expect -0.505 .. 1.470)
+      Bounding box z -0.438 .. 0.438 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.4375 .. 0.4375 (expect -0.4375 .. 0.4375: hex flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17\tee\DesignTable_4501_SW2.xlsx
+OK    Configurations after table: 13 (expect 13)
+      config check 1: 4501-06-04-FG
+OK    4501-06-04-FG M1@LEG1 = 1.8700 (table 1.8700)
+OK    4501-06-04-FG BODYR@LEG1 = 0.2810 (table 0.2810)
+OK    4501-06-04-FG HOSE1_TAILL@LEG1 = 1.1985 (table 1.1985)
+OK    4501-06-04-FG HOSE1_BEADR@LEG1 = 0.2150 (table 0.2150)
+OK    4501-06-04-FG HOSE1_BEADW@LEG1 = 0.1009 (table 0.1009)
+OK    4501-06-04-FG HOSE1_STUBR@LEG1 = 0.1875 (table 0.1875)
+OK    4501-06-04-FG DEPTH@BORECUT1 = 1.8700 (table 1.8700)
+OK    4501-06-04-FG DEPTH@BORECUT2 = 1.0900 (table 1.0900)
+OK    4501-06-04-FG PROF_R@THDPROF_2 = 0.2609 (table 0.2609)
+OK    4501-06-04-FG HEXAF@HEX1 = 0.5620 (table 0.5620)
+OK    4501-06-04-FG HEXL@HEX1_BODY = 0.3700 (table 0.3700)
+OK    4501-06-04-FG HEXAF@HEX2 = 0.5620 (table 0.5620)
+OK    4501-06-04-FG HEXL@HEX2_BODY = 0.5300 (table 0.5300)
+OK    4501-06-04-FG PUCK_R1B@PUCK = 0.1617 (table 0.1617)
+OK    4501-06-04-FG PUCK_XC@PUCK = 0.3240 (table 0.3240)
+OK    4501-06-04-FG D1@HFPLN1 = 0.3700 (table 0.3700)
+OK    4501-06-04-FG HF1_DIN@HOSEFACE1_SK = 0.3360 (table 0.3360)
+OK    4501-06-04-FG HF1_ZH@HOSEFACE1_SK = 0.3310 (table 0.3310)
+OK    4501-06-04-FG HF1_YTOP@HOSEFACE1_SK = 0.5300 (table 0.5300)
+OK    4501-06-04-FG HF1_ZH2@HOSEFACE1_SK = 0.3310 (table 0.3310)
+OK    4501-06-04-FG HF1_YLO@HOSEFACE1_SK = 0.3745 (table 0.3745)
+OK    4501-06-04-FG DEPTH@HOSEFACE1 = 0.0500 (table 0.0500)
+OK    4501-06-04-FG SF1_DIN@STUBFILL1_SK = 0.3360 (table 0.3360)
+OK    4501-06-04-FG SF1_DOUT@STUBFILL1_SK = 0.3750 (table 0.3750)
+OK    4501-06-04-FG DEPTH@STUBFILL1 = 0.0500 (table 0.0500)
+OK    4501-06-04-FG one solid body (found 1)
+      4501-06-04-FG box x -0.324..1.870  y -0.324..1.090
+      config check 2: 4501-32-32-FG
+OK    4501-32-32-FG M1@LEG1 = 2.8100 (table 2.8100)
+OK    4501-32-32-FG BODYR@LEG1 = 1.2500 (table 1.2500)
+OK    4501-32-32-FG HOSE1_TAILL@LEG1 = 1.1890 (table 1.1890)
+OK    4501-32-32-FG HOSE1_BEADR@LEG1 = 1.0750 (table 1.0750)
+OK    4501-32-32-FG HOSE1_BEADW@LEG1 = 0.1200 (table 0.1200)
+OK    4501-32-32-FG HOSE1_STUBR@LEG1 = 1.0000 (table 1.0000)
+OK    4501-32-32-FG DEPTH@BORECUT1 = 2.8100 (table 2.8100)
+OK    4501-32-32-FG DEPTH@BORECUT2 = 3.0000 (table 3.0000)
+OK    4501-32-32-FG PROF_R@THDPROF_2 = 1.1693 (table 1.1693)
+OK    4501-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
+OK    4501-32-32-FG HEXL@HEX1_BODY = 1.3100 (table 1.3100)
+OK    4501-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
+OK    4501-32-32-FG HEXL@HEX2_BODY = 1.9700 (table 1.9700)
+OK    4501-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    4501-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
+OK    4501-32-32-FG D1@HFPLN1 = 1.3100 (table 1.3100)
+OK    4501-32-32-FG HF1_DIN@HOSEFACE1_SK = 1.9215 (table 1.9215)
+OK    4501-32-32-FG HF1_ZH@HOSEFACE1_SK = 1.3000 (table 1.3000)
+OK    4501-32-32-FG HF1_YTOP@HOSEFACE1_SK = 1.9700 (table 1.9700)
+OK    4501-32-32-FG HF1_ZH2@HOSEFACE1_SK = 1.3000 (table 1.3000)
+OK    4501-32-32-FG HF1_YLO@HOSEFACE1_SK = 1.4934 (table 1.4934)
+OK    4501-32-32-FG DEPTH@HOSEFACE1 = 0.1834 (table 0.1834)
+OK    4501-32-32-FG SF1_DIN@STUBFILL1_SK = 1.9215 (table 1.9215)
+OK    4501-32-32-FG SF1_DOUT@STUBFILL1_SK = 2.0000 (table 2.0000)
+OK    4501-32-32-FG DEPTH@STUBFILL1 = 0.1834 (table 0.1834)
+OK    4501-32-32-FG one solid body (found 1)
+      4501-32-32-FG box x -1.443..2.810  y -1.443..3.000
+      All-config sweep: rebuilding 12 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/12  4501-06-04-FG  rebuilt in 0.6 s
+      sweep 2/12  4501-06-06-FG  rebuilt in 0.6 s
+      sweep 3/12  4501-08-06-FG  rebuilt in 0.9 s
+      sweep 4/12  4501-08-08-FG  rebuilt in 0.6 s
+      sweep 5/12  4501-08-12-FG  rebuilt in 0.5 s
+      sweep 6/12  4501-10-08-FG  rebuilt in 0.7 s
+      sweep 7/12  4501-12-08-FG  rebuilt in 1.1 s
+      sweep 8/12  4501-12-12-FG  rebuilt in 0.7 s
+      sweep 9/12  4501-16-12-FG  rebuilt in 0.7 s
+      sweep 10/12  4501-16-16-FG  rebuilt in 0.8 s
+      sweep 11/12  4501-20-20-FG  rebuilt in 0.8 s
+      sweep 12/12  4501-32-32-FG  rebuilt in 0.6 s
+OK    All-config sweep: 12 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 4501-08-08-FG for the save (it opens in this size)
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\4501\4501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\4501\4501_MASTER.SLDPRT

@@ -1,11 +1,8 @@
-Build_2602_MASTER  9/24/2026 6:16:26 PM
+Build_2602_MASTER  10/20/2026 12:19:49 AM
 OK    dim M1 = 1.3100 in (expect 1.3100)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B1 = 0.2813 in (expect 0.2813)
 OK    dim JIC1_RELIEFL = 0.0830 in (expect 0.0830)
-      RELIEFANG1 angle try 0 at (0.777, 0.540): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 1 at (0.777, -0.540): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 2 at (-0.777, 0.540): 120.0 deg (want 60.0)
 OK    angle RELIEFANG1 = 60.00 deg
 OK    dim JIC1_THDZ = 0.2515 in (expect 0.2515)
 OK    dim JIC1_CONER = 0.2405 in (expect 0.2405)
@@ -19,9 +16,6 @@ OK    dim M2 = 1.3100 in (expect 1.3100)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B2 = 0.2813 in (expect 0.2813)
 OK    dim JIC2_RELIEFL = 0.0830 in (expect 0.0830)
-      RELIEFANG2 angle try 0 at (-0.777, 0.540): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 1 at (-0.777, -0.540): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 2 at (0.777, 0.540): 120.0 deg (want 60.0)
 OK    angle RELIEFANG2 = 60.00 deg
 OK    dim JIC2_THDZ = 0.2515 in (expect 0.2515)
 OK    dim JIC2_CONER = 0.2405 in (expect 0.2405)
@@ -166,9 +160,10 @@ OK    THD_End3 helix sketch made (ProfileFeature)
       THD_End3: InsertHelix ok
 OK    THD_End3 helix created
 OK    THD_End3 helix dims named (D7 D6 D5 PITCH HEIGHT )
-      THD_End3: helix start = (0.2850, 1.0200, 0.0000)
-      THD_End3: profile on Front Plane
-      THD_End3: sketch start (0.2850,1.0200) axialIsX=False apex dir 1
+      THD_End3: helix start from the curve (0.0000, 1.0200, 0.2850)
+      THD_End3: helix start = (0.0000, 1.0200, 0.2850)
+      THD_End3: profile on Right Plane
+      THD_End3: sketch start (-0.2850,1.0200) axialIsX=False apex dir -1
       PROF_AX: try 0 value 1.0200 (want 1.0200)
 OK    dim PROF_AX = 1.0200 in (expect 1.0200)
       PROF_R: try 0 value 0.2850 (want 0.2850)
@@ -179,15 +174,15 @@ OK    THD_End3 60 deg tooth angle placed
 OK    THD_End3 profile sketch fully defined
       THD_End3: sweep CreateFeature -> True
 OK    THD_End3 swept cut created
-OK    THD_End3 sweep removed material: 0.01495 in^3
+OK    THD_End3 sweep removed material: 0.01569 in^3
 OK    THD_End3 suppressed
 OK    X extent -1.310 .. 1.310 (expect -1.310 .. 1.310; threads may add a little)
 OK    Y extent -0.508 .. 1.020 (expect -0.508 .. 1.020)
       Bounding box z -0.442 .. 0.442 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2602_SW2.xlsx
-OK    Configurations after table: 6 (expect 6)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_2602_SW2.xlsx
+OK    Configurations after table: 7 (expect 7)
       config check 1: 2602-04-04-04-FG
 OK    2602-04-04-04-FG M1@LEG1 = 1.2200 (table 1.2200)
 OK    2602-04-04-04-FG BODYR@LEG1 = 0.3750 (table 0.3750)
@@ -238,16 +233,18 @@ OK    2602-16-16-16-FG HEXAF@HEX3 = 1.6300 (table 1.6300)
 OK    2602-16-16-16-FG HEXL@HEX3_BODY = 1.3600 (table 1.3600)
 OK    2602-16-16-16-FG one solid body (found 1)
       2602-16-16-16-FG box x -2.170..2.170  y -0.941..1.620
-      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/5  2602-04-04-04-FG  rebuilt in 1.2 s
-      sweep 2/5  2602-06-06-04-FG  rebuilt in 1.8 s
-      sweep 3/5  2602-06-06-06-FG  rebuilt in 1.3 s
-      sweep 4/5  2602-12-12-12-FG  rebuilt in 1.9 s
-      sweep 5/5  2602-16-16-16-FG  rebuilt in 1.3 s
-OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
-      THD_End3: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      All-config sweep: rebuilding 6 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/6  2602-04-04-04-FG  rebuilt in 1.0 s
+      sweep 2/6  2602-06-06-04-FG  rebuilt in 1.5 s
+      sweep 3/6  2602-06-06-06-FG  rebuilt in 1.0 s
+      sweep 4/6  2602-08-08-08-FG  rebuilt in 1.6 s
+      sweep 5/6  2602-12-12-12-FG  rebuilt in 1.4 s
+      sweep 6/6  2602-16-16-16-FG  rebuilt in 1.2 s
+OK    All-config sweep: 6 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 2602-06-06-06-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2602_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2602_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2602\2602_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2602\2602_MASTER.SLDPRT

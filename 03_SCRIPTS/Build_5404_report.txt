@@ -1,4 +1,4 @@
-Build_5404_MASTER  9/23/2026 3:54:24 AM
+Build_5404_MASTER  10/19/2026 10:36:23 PM
 OK    dim L = 1.8900 in (expect 1.8900)
 OK    dim BODYR = 0.5081 in (expect 0.5081)
 OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
@@ -55,6 +55,7 @@ OK    THD_EndA helix sketch made (ProfileFeature)
       THD_EndA: InsertHelix ok
 OK    THD_EndA helix created
 OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.4078)
       THD_EndA: helix start = (0.0000, 0.0000, 0.4078)
       THD_EndA: profile on Top Plane
       THD_EndA: sketch start (0.0000,-0.4078) axialIsX=True apex dir 1
@@ -75,6 +76,7 @@ OK    THD_EndB helix sketch made (ProfileFeature)
       THD_EndB: InsertHelix ok
 OK    THD_EndB helix created
 OK    THD_EndB helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (1.8900, 0.0000, -0.4078)
       THD_EndB: helix start = (1.8900, 0.0000, -0.4078)
       THD_EndB: profile on Top Plane
       THD_EndB: sketch start (1.8900,0.4078) axialIsX=True apex dir -1
@@ -90,11 +92,15 @@ OK    THD_EndB profile sketch fully defined
 OK    THD_EndB swept cut created
 OK    THD_EndB sweep removed material: 0.03725 in^3
       THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
-FAIL  Overall length 1.9632 (expect 1.8900)
+      Bounding box length 1.9632 (nominal 1.8900; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.8900
+OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 0.8800 / corners 1.0161 (expect 0.8800 / 1.0161)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5404_SW2.xlsx
-OK    Configurations after table: 26 (expect 26)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_5404_SW2.xlsx
+OK    Configurations after table: 32 (expect 32)
+      config check 1: 5404-02-02
 OK    5404-02-02 L@DRIVE = 1.0600 (table 1.0600)
 OK    5404-02-02 BODYR@DRIVE = 0.2540 (table 0.2540)
 OK    5404-02-02 HEXB@HEX = 0.4400 (table 0.4400)
@@ -109,18 +115,58 @@ OK    5404-02-02 DEPTH@BORECUT_A = 0.5300 (table 0.5300)
 OK    5404-02-02 DEPTH@BORECUT_B = 0.5300 (table 0.5300)
 OK    5404-02-02 one solid body (found 1)
       5404-02-02 box x -0.020..1.080  y -0.220..0.220
-OK    5404-32-32 L@DRIVE = 2.8200 (table 2.8200)
-OK    5404-32-32 BODYR@DRIVE = 1.4434 (table 1.4434)
-OK    5404-32-32 HEXB@HEX = 2.5000 (table 2.5000)
-OK    5404-32-32 NPTFA_MAJR@DRIVE = 1.1693 (table 1.1693)
-OK    5404-32-32 NPTFA_THDL@DRIVE = 0.7565 (table 0.7565)
-OK    5404-32-32 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
-OK    5404-32-32 NPTFA_RELL@DRIVE = 0.2735 (table 0.2735)
-OK    5404-32-32 NPTFB_MAJR@DRIVE = 1.1693 (table 1.1693)
-OK    5404-32-32 PROF_R@THDPROF_A = 1.1693 (table 1.1693)
-OK    5404-32-32 PROF_R@THDPROF_B = 1.1693 (table 1.1693)
-OK    5404-32-32 DEPTH@BORECUT_A = 1.4100 (table 1.4100)
-OK    5404-32-32 DEPTH@BORECUT_B = 1.4100 (table 1.4100)
-OK    5404-32-32 one solid body (found 1)
-      5404-32-32 box x -0.081..2.901  y -1.261..1.250
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\5404_MASTER_macro_035534.SLDPRT (first name was locked, error 0)
+      config check 2: 5404-40-40
+OK    5404-40-40 L@DRIVE = 3.9500 (table 3.9500)
+OK    5404-40-40 BODYR@DRIVE = 1.7321 (table 1.7321)
+OK    5404-40-40 HEXB@HEX = 3.0000 (table 3.0000)
+OK    5404-40-40 NPTFA_MAJR@DRIVE = 1.4098 (table 1.4098)
+OK    5404-40-40 NPTFA_THDL@DRIVE = 1.1374 (table 1.1374)
+OK    5404-40-40 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5404-40-40 NPTFA_RELL@DRIVE = 0.3776 (table 0.3776)
+OK    5404-40-40 NPTFB_MAJR@DRIVE = 1.4098 (table 1.4098)
+OK    5404-40-40 PROF_R@THDPROF_A = 1.4098 (table 1.4098)
+OK    5404-40-40 PROF_R@THDPROF_B = 1.4098 (table 1.4098)
+OK    5404-40-40 DEPTH@BORECUT_A = 1.9750 (table 1.9750)
+OK    5404-40-40 DEPTH@BORECUT_B = 1.9750 (table 1.9750)
+OK    5404-40-40 one solid body (found 1)
+      5404-40-40 box x -0.081..4.031  y -1.521..1.521
+      All-config sweep: rebuilding 31 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/31  5404-02-02  rebuilt in 5.9 s
+      sweep 2/31  5404-04-02  rebuilt in 7.8 s
+      sweep 3/31  5404-04-04  rebuilt in 5.5 s
+      sweep 4/31  5404-06-02  rebuilt in 8.1 s
+      sweep 5/31  5404-06-04  rebuilt in 5.4 s
+      sweep 6/31  5404-06-06  rebuilt in 5.1 s
+      sweep 7/31  5404-08-04  rebuilt in 10.1 s
+      sweep 8/31  5404-08-06  rebuilt in 10.3 s
+      sweep 9/31  5404-08-08  rebuilt in 8.5 s
+      sweep 10/31  5404-12-04  rebuilt in 16.3 s
+      sweep 11/31  5404-12-06  rebuilt in 16.3 s
+      sweep 12/31  5404-12-08  rebuilt in 21.9 s
+      sweep 13/31  5404-12-12  rebuilt in 27.2 s
+      sweep 14/31  5404-16-04  rebuilt in 18.3 s
+      sweep 15/31  5404-16-06  rebuilt in 18.5 s
+      sweep 16/31  5404-16-08  rebuilt in 23.1 s
+      sweep 17/31  5404-16-12  rebuilt in 28.3 s
+      sweep 18/31  5404-16-16  rebuilt in 30.6 s
+      sweep 19/31  5404-20-12  rebuilt in 23.6 s
+      sweep 20/31  5404-20-16  rebuilt in 25.0 s
+      sweep 21/31  5404-20-20  rebuilt in 20.8 s
+      sweep 22/31  5404-24-12  rebuilt in 27.1 s
+      sweep 23/31  5404-24-16  rebuilt in 28.0 s
+      sweep 24/31  5404-24-20  rebuilt in 23.0 s
+      sweep 25/31  5404-24-24  rebuilt in 26.3 s
+      sweep 26/31  5404-32-12  rebuilt in 26.4 s
+      sweep 27/31  5404-32-16  rebuilt in 27.9 s
+      sweep 28/31  5404-32-20  rebuilt in 23.3 s
+      sweep 29/31  5404-32-24  rebuilt in 27.0 s
+      sweep 30/31  5404-32-32  rebuilt in 27.1 s
+      sweep 31/31  5404-40-40  rebuilt in 11.8 s
+OK    All-config sweep: 31 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 5404-08-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 32 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 32 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5404\5404_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 10:47:54 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5404\5404_MASTER.SLDPRT

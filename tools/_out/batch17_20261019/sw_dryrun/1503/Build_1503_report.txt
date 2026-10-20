@@ -1,0 +1,331 @@
+Build_1503_MASTER  10/19/2026 9:50:51 PM
+OK    dim M1 = 1.2700 in (expect 1.2700)
+OK    dim BODYR = 0.4400 in (expect 0.4400)
+OK    dim NP1_BODYS = 0.8100 in (expect 0.8100)
+OK    dim NP1_NECKR = 0.3040 in (expect 0.3040)
+OK    dim NP1_NUTL = 0.7200 in (expect 0.7200)
+OK    dim NP1_LIPR = 0.4550 in (expect 0.4550)
+OK    dim NP1_LIPL = 0.1400 in (expect 0.1400)
+OK    dim NP1_SKIRTFR = 0.5000 in (expect 0.5000)
+OK    dim NP1_NUTHEXL = 0.4000 in (expect 0.4000)
+OK    dim NP1_NUTR = 0.5774 in (expect 0.5774)
+OK    dim NP1_CSR = 0.4115 in (expect 0.4115)
+      NP1_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      NP1_CSANG angle try 0 at (0.713, -0.060): 135.0 deg (want 45.0)
+OK    angle NP1_CSANG = 45.00 deg
+OK    dim NP1_MINR = 0.3795 in (expect 0.3795)
+OK    dim NP1_THDL = 0.3560 in (expect 0.3560)
+      NP1_RELANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NP1_RELANG = 45.00 deg
+OK    dim NP1_RELR = 0.4115 in (expect 0.4115)
+OK    dim NP1_CBR = 0.4425 in (expect 0.4425)
+OK    dim NP1_CBEND = 0.5950 in (expect 0.5950)
+OK    dim NP1_STEMR = 0.3700 in (expect 0.3700)
+      NP1_CONEANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NP1_CONEANG = 29.99 deg
+OK    dim NP1_TIPR = 0.2810 in (expect 0.2810)
+OK    dim NP1_STEMTIP = 0.3300 in (expect 0.3300)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim HZREF = 0.5000 in (expect 0.5000)
+OK    angle LEGANG2 = 135.00 deg
+OK    dim M2 = 1.4400 in (expect 1.4400)
+OK    dim BODYR = 0.4400 in (expect 0.4400)
+OK    dim NPTF2_MAJR = 0.4078 in (expect 0.4078)
+OK    dim NPTF2_THDL = 0.5337 in (expect 0.5337)
+      NPTF2_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTF2_TAPER = 1.79 deg
+OK    dim NPTF2_RELL = 0.2163 in (expect 0.2163)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 0.8800 in (expect 0.8800)
+      HEX1: sgVERTICAL -> vertex |z| max 0.4400 (flats want 0.4400)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.230 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    PLN2: leg tip face found 1.4400 along the leg
+      PLN2: InsertRefPlane ok
+OK    PLN2 reference plane created (RefPlane)
+      PLN2: plane z axis (-0.707, 0.707, 0.000), leg axis (-0.707, 0.707)
+OK    PLN2 is normal to the angled leg
+OK    dim HEXAF = 0.8800 in (expect 0.8800)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.4400 (flats want 0.4400)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.309 in on axis 0 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.4400 in (expect 0.4400)
+OK    dim PUCK_HT = 0.4400 in (expect 0.4400)
+OK    dim PUCK_R1B = 0.2535 in (expect 0.2535)
+OK    dim PUCK_R1T = 0.2535 in (expect 0.2535)
+OK    dim PUCK_XC = 0.5076 in (expect 0.5076)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    dim TRIM_A0 = 0.4600 in (expect 0.4600)
+OK    dim TRIM_LEN = 0.0900 in (expect 0.0900)
+OK    dim TRIM_RIN = 0.2645 in (expect 0.2645)
+OK    dim TRIM_ROUT = 0.7621 in (expect 0.7621)
+OK    NECKTRIM1 sketch fully defined
+      NECKTRIM1: FeatureRevolve2 (cut = True, feature scope auto) -> True
+OK    NECKTRIM1 revolve cut took 0.006349 in^3 (at least the neck ring 0.006349)
+OK    dim FILL_A0 = 0.4600 in (expect 0.4600)
+OK    dim FILL_LEN = 0.0900 in (expect 0.0900)
+OK    dim FILL_RIN = 0.2645 in (expect 0.2645)
+OK    dim FILL_ROUT = 0.3040 in (expect 0.3040)
+OK    NECKFILL1 sketch fully defined
+      NECKFILL1: FeatureRevolve2 (cut = False, feature scope auto) -> True
+OK    NECKFILL1 revolve created (neck ring back)
+OK    NECKTRIM1 + NECKFILL1 leave the reference configuration unchanged: net 0.000000 in^3 (the corner stays inside the neck here: 0.2157 off the axis vs neck radius 0.3040)
+OK    NUTHEX1: nut face found at 1.2700 on axis 0
+OK    dim NUTHEX1 = 1.0000 in (expect 1.0000)
+      NUTHEX1: sgHORIZONTAL -> vertex |z| max 0.5774 (flats want 0.5000)
+      NUTHEX1: sketch removed, retrying with the other relation
+OK    NUTHEX1: nut face found at 1.2700 on axis 0
+OK    dim NUTHEX1 = 1.0000 in (expect 1.0000)
+      NUTHEX1: sgVERTICAL -> vertex |z| max 0.5000 (flats want 0.5000)
+OK    NUTHEX1 nut flats normal to Z
+OK    NUTHEX1 sketch fully defined
+      NUTCUT1 attempt 0: CreateDefinition returned Nothing
+      NUTCUT1 attempt 0: FeatureCut4 scope off -> True
+OK    NUTCUT1 created and removed material (attempt 0)
+OK    NUTCUT1 removed only the nut corners (4.4% of volume)
+OK    NUTCUT1 dims: DEPTH=0.4000 NUTHEX1=1.0000 
+OK    NUTHEX1@NUTHEX1 reachable
+OK    DEPTH@NUTCUT1 reachable
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=1.2700
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.4500 in (expect 0.4500)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=1.2700 D1=0.4500 
+OK    select end face for BORE2 at x=1.4400
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 0.5300 in (expect 0.5300)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=1.4400 D2=0.5300 
+OK    leg 1 bore open on the axis at its face (X=+1.2700)
+OK    leg 1 bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane X=+0.9400)
+OK    leg 2 bore open on the axis at its face (1.4400 along the 135-deg leg)
+OK    THD_End1: end face found at 1.2700
+OK    dim HELIXDIA = 0.7590 in (expect 0.7590)
+OK    THD_End1 helix sketch made (ProfileFeature)
+      THD_End1: InsertHelix ok
+OK    THD_End1 helix created
+OK    THD_End1 helix dims named (D7 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (1.2700, 0.0000, -0.3795)
+      THD_End1: helix start = (1.2700, 0.0000, -0.3795)
+      THD_End1: profile on Top Plane
+      THD_End1: sketch start (1.2700,0.3795) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.2700 (want 1.2700)
+OK    dim PROF_AX = 1.2700 in (expect 1.2700)
+      PROF_R: try 0 value 0.3795 (want 0.3795)
+OK    dim PROF_R = 0.3795 in (expect 0.3795)
+      APEXR: try 0 value 0.4366 (want 0.4366)
+OK    dim APEXR = 0.4366 in (expect 0.4366)
+OK    THD_End1 60 deg tooth angle placed
+OK    THD_End1 profile sketch fully defined
+      THD_End1: sweep CreateFeature -> True
+OK    THD_End1 swept cut created
+OK    THD_End1 sweep removed material: 0.02577 in^3
+OK    THD_End1 suppressed
+OK    THD_End2: end face found 1.4400 along the 135-deg leg
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_End2 helix sketch made (ProfileFeature)
+OK    THD_End2 helix sketch fully defined
+      THD_End2: helix try 0 (reversed True, clockwise True, taper out True, start 270.0 deg): face end 1.4400 along, z -0.4078, r 0.4078; far end 0.9063, r 0.4245 (want 0.4245); right hand
+      THD_End2: helix try 1 (reversed True, clockwise True, taper out True, start 90.0 deg): face end 1.4400 along, z 0.4078, r 0.4078; far end 0.9063, r 0.4245 (want 0.4245); right hand
+      THD_End2: helix try 2 (reversed True, clockwise True, taper out True, start 45.0 deg): face end 1.4400 along, z 0.2883, r 0.4078; far end 0.9063, r 0.4245 (want 0.4245); right hand
+      THD_End2: helix try 3 (reversed True, clockwise True, taper out True, start 225.0 deg): face end 1.4400 along, z -0.2883, r 0.4078; far end 0.9063, r 0.4245 (want 0.4245); right hand
+      THD_End2: helix try 4 (reversed True, clockwise True, taper out True, start 0.0 deg): face end 1.4400 along, z 0.0000, r 0.4078; far end 0.9063, r 0.4245 (want 0.4245); right hand
+OK    THD_End2: helix into the part, right hand, starting in the Front Plane on the end face 1.4400 (radius 0.4078)
+OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End2: profile at a 1.4400, q 0.4078, apex 0.3506
+OK    dim PHZL = 0.5000 in (expect 0.5000)
+OK    dim PAXL = 0.2500 in (expect 0.2500)
+OK    dim PPZL = 0.2500 in (expect 0.2500)
+OK    angle PANG = 135.00 deg
+OK    dim PROF_AX = 1.4400 in (expect 1.4400)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_End2 60 deg tooth angle placed
+OK    THD_End2 profile sketch fully defined
+      THD_End2: sweep CreateFeature -> True
+OK    THD_End2 swept cut created
+OK    THD_End2 sweep removed material: 0.03726 in^3
+OK    THD_End2: one solid body after the thread
+      THD_End2: left live until the final suppress step
+OK    leg 1 tip (exact) 1.2700 along +X (expect 1.2700)
+OK    leg 2 tip (exact) 1.4400 along the 135-deg leg (expect 1.4400)
+OK    Z extent (exact) -0.5000 .. 0.5000 (expect -0.5000 .. 0.5000: swivel nut flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_1503_SW2.xlsx
+OK    Configurations after table: 20 (expect 20)
+      config check 1: 1503-02-02-FG
+OK    1503-02-02-FG M1@LEG1 = 0.7500 (table 0.7500)
+OK    1503-02-02-FG BODYR@LEG1 = 0.2200 (table 0.2200)
+OK    1503-02-02-FG NP1_BODYS@LEG1 = 0.4300 (table 0.4300)
+OK    1503-02-02-FG NP1_NECKR@LEG1 = 0.1290 (table 0.1290)
+OK    1503-02-02-FG NP1_NUTL@LEG1 = 0.3800 (table 0.3800)
+OK    1503-02-02-FG NP1_LIPR@LEG1 = 0.2496 (table 0.2496)
+OK    1503-02-02-FG DEPTH@BORECUT1 = 0.7500 (table 0.7500)
+OK    1503-02-02-FG DEPTH@BORECUT2 = 0.6300 (table 0.6300)
+OK    1503-02-02-FG PROF_R@THDPROF_1 = 0.1820 (table 0.1820)
+OK    1503-02-02-FG PROF_R@THDPROF_2 = 0.1966 (table 0.1966)
+OK    1503-02-02-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
+OK    1503-02-02-FG HEXL@HEX1_BODY = 0.3200 (table 0.3200)
+OK    1503-02-02-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
+OK    1503-02-02-FG HEXL@HEX2_BODY = 0.2500 (table 0.2500)
+OK    1503-02-02-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    1503-02-02-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
+OK    1503-02-02-FG TRIM_A0@NECKTRIM1 = 0.3200 (table 0.3200)
+OK    1503-02-02-FG TRIM_LEN@NECKTRIM1 = 0.0500 (table 0.0500)
+OK    1503-02-02-FG TRIM_RIN@NECKTRIM1 = 0.0970 (table 0.0970)
+OK    1503-02-02-FG TRIM_ROUT@NECKTRIM1 = 0.3811 (table 0.3811)
+OK    1503-02-02-FG FILL_A0@NECKFILL1 = 0.3200 (table 0.3200)
+OK    1503-02-02-FG FILL_LEN@NECKFILL1 = 0.0500 (table 0.0500)
+OK    1503-02-02-FG FILL_RIN@NECKFILL1 = 0.0970 (table 0.0970)
+OK    1503-02-02-FG FILL_ROUT@NECKFILL1 = 0.1290 (table 0.1290)
+OK    1503-02-02-FG one solid body (found 1)
+      1503-02-02-FG box x -0.597..0.750  y -0.323..0.598
+      config check 2: 1503-12-08-FG
+OK    1503-12-08-FG M1@LEG1 = 1.2100 (table 1.2100)
+OK    1503-12-08-FG BODYR@LEG1 = 0.5300 (table 0.5300)
+OK    1503-12-08-FG NP1_BODYS@LEG1 = 0.8100 (table 0.8100)
+OK    1503-12-08-FG NP1_NECKR@LEG1 = 0.3040 (table 0.3040)
+OK    1503-12-08-FG NP1_NUTL@LEG1 = 0.7200 (table 0.7200)
+OK    1503-12-08-FG NP1_LIPR@LEG1 = 0.4550 (table 0.4550)
+OK    1503-12-08-FG DEPTH@BORECUT1 = 1.2100 (table 1.2100)
+OK    1503-12-08-FG DEPTH@BORECUT2 = 1.5000 (table 1.5000)
+OK    1503-12-08-FG PROF_R@THDPROF_1 = 0.3795 (table 0.3795)
+OK    1503-12-08-FG PROF_R@THDPROF_2 = 0.5124 (table 0.5124)
+OK    1503-12-08-FG HEXAF@HEX1 = 1.0600 (table 1.0600)
+OK    1503-12-08-FG HEXL@HEX1_BODY = 0.4000 (table 0.4000)
+OK    1503-12-08-FG HEXAF@HEX2 = 1.0600 (table 1.0600)
+OK    1503-12-08-FG HEXL@HEX2_BODY = 0.7500 (table 0.7500)
+OK    1503-12-08-FG PUCK_R1B@PUCK = 0.3055 (table 0.3055)
+OK    1503-12-08-FG PUCK_XC@PUCK = 0.6115 (table 0.6115)
+OK    1503-12-08-FG TRIM_A0@NECKTRIM1 = 0.4000 (table 0.4000)
+OK    1503-12-08-FG TRIM_LEN@NECKTRIM1 = 0.0900 (table 0.0900)
+OK    1503-12-08-FG TRIM_RIN@NECKTRIM1 = 0.2645 (table 0.2645)
+OK    1503-12-08-FG TRIM_ROUT@NECKTRIM1 = 0.9180 (table 0.9180)
+OK    1503-12-08-FG FILL_A0@NECKFILL1 = 0.4000 (table 0.4000)
+OK    1503-12-08-FG FILL_LEN@NECKFILL1 = 0.0900 (table 0.0900)
+OK    1503-12-08-FG FILL_RIN@NECKFILL1 = 0.2645 (table 0.2645)
+OK    1503-12-08-FG FILL_ROUT@NECKFILL1 = 0.3040 (table 0.3040)
+OK    1503-12-08-FG one solid body (found 1)
+      1503-12-08-FG box x -1.447..1.210  y -0.612..1.453
+      config check 3: 1503-32-32-FG
+OK    1503-32-32-FG M1@LEG1 = 1.9700 (table 1.9700)
+OK    1503-32-32-FG BODYR@LEG1 = 1.2500 (table 1.2500)
+OK    1503-32-32-FG NP1_BODYS@LEG1 = 1.1650 (table 1.1650)
+OK    1503-32-32-FG NP1_NECKR@LEG1 = 1.0215 (table 1.0215)
+OK    1503-32-32-FG NP1_NUTL@LEG1 = 1.1250 (table 1.1250)
+OK    1503-32-32-FG NP1_LIPR@LEG1 = 1.2766 (table 1.2766)
+OK    1503-32-32-FG DEPTH@BORECUT1 = 1.9700 (table 1.9700)
+OK    1503-32-32-FG DEPTH@BORECUT2 = 2.0000 (table 2.0000)
+OK    1503-32-32-FG PROF_R@THDPROF_1 = 1.1340 (table 1.1340)
+OK    1503-32-32-FG PROF_R@THDPROF_2 = 1.1693 (table 1.1693)
+OK    1503-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
+OK    1503-32-32-FG HEXL@HEX1_BODY = 0.8050 (table 0.8050)
+OK    1503-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
+OK    1503-32-32-FG HEXL@HEX2_BODY = 0.9700 (table 0.9700)
+OK    1503-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    1503-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
+OK    1503-32-32-FG TRIM_A0@NECKTRIM1 = 0.8050 (table 0.8050)
+OK    1503-32-32-FG TRIM_LEN@NECKTRIM1 = 0.0400 (table 0.0400)
+OK    1503-32-32-FG TRIM_RIN@NECKTRIM1 = 0.9408 (table 0.9408)
+OK    1503-32-32-FG TRIM_ROUT@NECKTRIM1 = 2.1651 (table 2.1651)
+OK    1503-32-32-FG FILL_A0@NECKFILL1 = 0.8050 (table 0.8050)
+OK    1503-32-32-FG FILL_LEN@NECKFILL1 = 0.0400 (table 0.0400)
+OK    1503-32-32-FG FILL_RIN@NECKFILL1 = 0.9408 (table 0.9408)
+OK    1503-32-32-FG FILL_ROUT@NECKFILL1 = 1.0215 (table 1.0215)
+OK    1503-32-32-FG one solid body (found 1)
+      1503-32-32-FG box x -2.288..1.970  y -1.518..2.302
+OK    1503-08-08-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-08-08-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.4400 along the leg, table 1.4400; r 0.4078, table 0.4078)
+OK    1503-02-02-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-02-02-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.6300 along the leg, table 0.6300; r 0.1966, table 0.1966)
+OK    1503-04-02-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-04-02-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.8600 along the leg, table 0.8600; r 0.2609, table 0.2609)
+OK    1503-04-04-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-04-04-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.9100 along the leg, table 0.9100; r 0.2609, table 0.2609)
+OK    1503-04-06-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-04-06-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.9500 along the leg, table 0.9500; r 0.2609, table 0.2609)
+OK    1503-06-04-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-06-04-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.9500 along the leg, table 0.9500; r 0.3282, table 0.3282)
+OK    1503-06-06-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-06-06-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.1200 along the leg, table 1.1200; r 0.3282, table 0.3282)
+OK    1503-06-08-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-06-08-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.9800 along the leg, table 0.9800; r 0.3282, table 0.3282)
+OK    1503-08-06-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-08-06-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.3100 along the leg, table 1.3100; r 0.4078, table 0.4078)
+OK    1503-08-12-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-08-12-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.2000 along the leg, table 1.2000; r 0.4078, table 0.4078)
+OK    1503-12-08-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-12-08-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.5000 along the leg, table 1.5000; r 0.5124, table 0.5124)
+OK    1503-12-12-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-12-12-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.5000 along the leg, table 1.5000; r 0.5124, table 0.5124)
+OK    1503-12-16-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-12-16-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.3100 along the leg, table 1.3100; r 0.5124, table 0.5124)
+OK    1503-16-12-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-16-12-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.5000 along the leg, table 1.5000; r 0.6416, table 0.6416)
+OK    1503-16-16-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-16-16-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.4400 along the leg, table 1.4400; r 0.6416, table 0.6416)
+OK    1503-20-16-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-20-16-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.8000 along the leg, table 1.8000; r 0.8134, table 0.8134)
+OK    1503-20-20-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-20-20-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.8000 along the leg, table 1.8000; r 0.8134, table 0.8134)
+OK    1503-24-24-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-24-24-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.9400 along the leg, table 1.9400; r 0.9328, table 0.9328)
+OK    1503-32-32-FG: THD_End2 live and rebuilt (error code 0)
+OK    1503-32-32-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 2.0000 along the leg, table 2.0000; r 1.1693, table 1.1693)
+      All-config sweep: rebuilding 19 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/19  1503-02-02-FG  rebuilt in 2.4 s
+      sweep 2/19  1503-04-02-FG  rebuilt in 1.6 s
+      sweep 3/19  1503-04-04-FG  rebuilt in 1.3 s
+      sweep 4/19  1503-04-06-FG  rebuilt in 1.5 s
+      sweep 5/19  1503-06-04-FG  rebuilt in 1.2 s
+      sweep 6/19  1503-06-06-FG  rebuilt in 1.5 s
+      sweep 7/19  1503-06-08-FG  rebuilt in 1.2 s
+      sweep 8/19  1503-08-06-FG  rebuilt in 3.3 s
+      sweep 9/19  1503-08-08-FG  rebuilt in 4.1 s
+      sweep 10/19  1503-08-12-FG  rebuilt in 3.8 s
+      sweep 11/19  1503-12-08-FG  rebuilt in 6.0 s
+      sweep 12/19  1503-12-12-FG  rebuilt in 6.1 s
+      sweep 13/19  1503-12-16-FG  rebuilt in 6.3 s
+      sweep 14/19  1503-16-12-FG  rebuilt in 7.2 s
+      sweep 15/19  1503-16-16-FG  rebuilt in 8.1 s
+      sweep 16/19  1503-20-16-FG  rebuilt in 5.1 s
+      sweep 17/19  1503-20-20-FG  rebuilt in 5.0 s
+      sweep 18/19  1503-24-24-FG  rebuilt in 6.5 s
+      sweep 19/19  1503-32-32-FG  rebuilt in 6.7 s
+OK    All-config sweep: 19 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 1503-08-08-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 20 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 20 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1503\1503_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1503\1503_MASTER.SLDPRT

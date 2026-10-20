@@ -1,0 +1,80 @@
+0318   configs 12 -> 12  new cols []  lost cols []  changed cells in old configs: 23 [('0318-08', 'L1@DRIVE', 0.84, 0.85), ('0318-08', 'DEPTH@BORECUT_B', 0.117, 0.127), ('0318-02', 'L1@DRIVE', 0.54, 0.55), ('0318-02', 'DEPTH@BORECUT_B', 0.08, 0.09)]
+0403   configs 7 -> 7  new cols []  lost cols []  changed cells in old configs: 6 [('0403-08-08 UNPL', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('0403-04-04 UNPL', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('0403-06-06 UNPL', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('0403-10-10 UNPL', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+1404   configs 24 -> 24  new cols []  lost cols []  changed cells in old configs: 120 [('1404-08-08', 'W@DRIVE', 1.94, 1.89), ('1404-08-08', 'BODYR@DRIVE', 0.54271, 0.57735), ('1404-08-08', 'HEXB@HEX', 0.94, 1), ('1404-08-08', 'NPB_BODYS@DRIVE', 0.81, 0.76)]
+1405   configs 15 -> 17  new cols []  lost cols []  changed cells in old configs: 0 []
+1700RC missing False True
+1724 missing False True
+1800 missing False True
+1824 missing False True
+2403   configs 34 -> 40  new cols []  lost cols []  changed cells in old configs: 0 []
+2404   configs 57 -> 59  new cols []  lost cols []  changed cells in old configs: 0 []
+2405   configs 28 -> 30  new cols []  lost cols []  changed cells in old configs: 0 []
+2406   configs 40 -> 51  new cols []  lost cols []  changed cells in old configs: 0 []
+2700   configs 24 -> 26  new cols []  lost cols []  changed cells in old configs: 0 []
+2705   configs 14 -> 18  new cols []  lost cols []  changed cells in old configs: 2 [('2705-02-04', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2705-02-04-LN', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+2706   configs 23 -> 25  new cols []  lost cols []  changed cells in old configs: 2 [('2706-12-12', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2706-12-12-LN', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+5000   configs 19 -> 22  new cols []  lost cols []  changed cells in old configs: 0 []
+5404N  configs 4 -> 22  new cols []  lost cols []  changed cells in old configs: 0 []
+5404   configs 25 -> 31  new cols []  lost cols []  changed cells in old configs: 0 []
+5405   configs 26 -> 31  new cols []  lost cols []  changed cells in old configs: 0 []
+5406C  configs 6 -> 7  new cols []  lost cols []  changed cells in old configs: 0 []
+5406HHP missing False True
+5406P  configs 4 -> 9  new cols []  lost cols []  changed cells in old configs: 0 []
+5406SHP missing False True
+5406   configs 28 -> 31  new cols []  lost cols []  changed cells in old configs: 0 []
+6400 missing False True
+6401   configs 24 -> 24  new cols []  lost cols []  changed cells in old configs: 5 [('6401-08-08-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6401-08-06-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6401-10-12-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6401-12-08-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+6402   configs 15 -> 16  new cols []  lost cols []  changed cells in old configs: 92 [('6402-08-08-O', 'L26@DRIVE', 1.59, 1.65), ('6402-08-08-O', 'PROF_AX@THDPROF_B', 1.59, 1.65), ('6402-08-08-O', 'DEPTH@BORECUT_A', 0.5715, 0.6015), ('6402-08-08-O', 'DEPTH@BORECUT_B', 0.5985, 0.6285)]
+6404   configs 14 -> 14  new cols []  lost cols []  changed cells in old configs: 1 [('6404-08-06', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+6405   configs 40 -> 44  new cols []  lost cols []  changed cells in old configs: 6 [('6405-06-08-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6405-10-04-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6405-10-08-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6405-12-12-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+6408HHP missing False True
+6408   configs 14 -> 14  new cols []  lost cols []  changed cells in old configs: 4 [('6408-02-O-SOLID', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6408-03-O-SOLID', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6408-04-O-SOLID', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6408-05-O-SOLID', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+6410   configs 30 -> 34  new cols []  lost cols []  changed cells in old configs: 6 [('6410-08-06-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6410-08-12-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6410-10-06-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('6410-12-04-O', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+6504   configs 10 -> 14  new cols []  lost cols []  changed cells in old configs: 1 [('6504-12-12', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+6505   configs 19 -> 21  new cols []  lost cols []  changed cells in old configs: 83 [('6505-08-08', 'L15@DRIVE', 1.9, 1.98), ('6505-08-08', 'PROF_AX@THDPROF_B', 1.9, 1.98), ('6505-08-08', 'DEPTH@BORECUT_A', 0.8825, 0.9225), ('6505-08-08', 'DEPTH@BORECUT_B', 0.5975, 0.6375)]
+6506   configs 14 -> 14  new cols []  lost cols []  changed cells in old configs: 39 [('6506-08-08', 'SWB_NOSETIP@DRIVE', 0.42, 0.43), ('6506-08-08', 'DEPTH@BORECUT_A', 1.49, 1.48), ('6506-02-04', 'L17@DRIVE', 1.19, 1.26), ('6506-02-04', 'PROF_AX@THDPROF_B', 1.19, 1.26)]
+1501   configs 17 -> 19  new cols []  lost cols []  changed cells in old configs: 0 []
+1502   configs 1 -> 8  new cols []  lost cols []  changed cells in old configs: 0 []
+1503   configs 6 -> 19  new cols ['TRIM_A0@NECKTRIM1', 'TRIM_LEN@NECKTRIM1', 'TRIM_RIN@NECKTRIM1', 'TRIM_ROUT@NECKTRIM1', 'FILL_A0@NECKFILL1', 'FILL_LEN@NECKFILL1', 'FILL_RIN@NECKFILL1', 'FILL_ROUT@NECKFILL1']  lost cols []  changed cells in old configs: 0 []
+1504 missing False True
+1601 missing False True
+1602 missing False True
+1603 missing False True
+1703 missing False True
+1704 missing False True
+1804 missing False True
+2501   configs 48 -> 56  new cols []  lost cols []  changed cells in old configs: 8 [('2501-20-24-FG', 'M1@LEG1', 2.3, 2.2), ('2501-20-24-FG', 'DEPTH@BORECUT1', 2.3, 2.2), ('2501-20-24-FG', 'HEXL@HEX1_BODY', 1.342, 1.242), ('2501-L-04-02-FG', 'M2@LEG2', 1.19, 1.17)]
+2503   configs 29 -> 29  new cols []  lost cols []  changed cells in old configs: 15 [('2503-02-02-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2503-03-02-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2503-05-04-FG', 'M1@LEG1', 0.88, 0.86), ('2503-05-04-FG', 'DEPTH@BORECUT1', 0.88, 0.86)]
+2504   configs 4 -> 5  new cols []  lost cols []  changed cells in old configs: 0 []
+2505   configs 1 -> 2  new cols []  lost cols []  changed cells in old configs: 0 []
+2601   configs 10 -> 10  new cols []  lost cols []  changed cells in old configs: 9 [('2601-08-08-08-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2601-04-04-02-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2601-04-04-04-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2601-06-06-04-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED')]
+2602   configs 5 -> 6  new cols []  lost cols []  changed cells in old configs: 0 []
+2605   configs 7 -> 7  new cols []  lost cols []  changed cells in old configs: 12 [('2605-08-08-08-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2605-04-04-04-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2605-06-04-06-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('2605-06-06-06-FG', 'M1@LEG1', 1.06, 1.14)]
+2611   configs 2 -> 3  new cols []  lost cols []  changed cells in old configs: 0 []
+2650   configs 4 -> 5  new cols []  lost cols []  changed cells in old configs: 0 []
+2701   configs 15 -> 18  new cols []  lost cols []  changed cells in old configs: 0 []
+4501 missing False True
+4503 missing False True
+4601 missing False True
+4603 missing False True
+5500   configs 16 -> 16  new cols []  lost cols []  changed cells in old configs: 18 [('5500-08-08-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('5500-02-02-FG', 'M1@LEG1', 0.72, 0.78), ('5500-02-02-FG', 'M2@LEG2', 0.72, 0.78), ('5500-02-02-FG', 'DEPTH@BORECUT1', 0.72, 0.78)]
+5501 missing False True
+5502   configs 13 -> 20  new cols []  lost cols []  changed cells in old configs: 27 [('5502-08-08-FG', '$PRP@DataStatus', 'ASSUMED', 'VERIFIED'), ('5502-02-02-FG', 'M1@LEG1', 0.89, 0.78), ('5502-02-02-FG', 'DEPTH@BORECUT1', 0.89, 0.78), ('5502-02-02-FG', 'PROF_AX@THDPROF_1', 0.89, 0.78)]
+5503 missing False True
+5504   configs 5 -> 9  new cols []  lost cols []  changed cells in old configs: 0 []
+5505 missing False True
+5600   configs 6 -> 8  new cols []  lost cols []  changed cells in old configs: 0 []
+5601 missing False True
+5603 missing False True
+5652 missing False True
+6500   configs 24 -> 26  new cols []  lost cols []  changed cells in old configs: 3 [('6500-12-12-FG', 'SW2_NOSETIP@LEG2', 0.56, 0.57), ('6500-05-05-FG', 'SW2_NOSETIP@LEG2', 0.37, 0.38), ('6500-10-12-FG', 'SW2_NOSETIP@LEG2', 0.56, 0.57)]
+6501   configs 14 -> 14  new cols []  lost cols []  changed cells in old configs: 4 [('6501-04-04-FG', 'M2@LEG2', 1.11, 1.14), ('6501-04-04-FG', 'DEPTH@BORECUT2', 1.11, 1.14), ('6501-04-04-FG', 'PROF_AX@THDPROF_2', 1.11, 1.14), ('6501-04-04-FG', 'HEXL@HEX2_BODY', 0.425, 0.455)]
+6502   configs 11 -> 12  new cols []  lost cols []  changed cells in old configs: 9 [('6502-08-08-FG', 'M1@LEG1', 1.25, 1.28), ('6502-08-08-FG', 'SW1_NOSETIP@LEG1', 0.39, 0.42), ('6502-08-08-FG', 'DEPTH@BORECUT1', 1.25, 1.28), ('6502-08-08-FG', 'PROF_AX@THDPROF_1', 1.25, 1.28)]
+6503   configs 1 -> 1  new cols []  lost cols []  changed cells in old configs: 5 [('6503-08-08-FG', 'M2@LEG2', 1.52, 1.55), ('6503-08-08-FG', 'SW2_NOSETIP@LEG2', 0.42, 0.422), ('6503-08-08-FG', 'DEPTH@BORECUT2', 1.52, 1.55), ('6503-08-08-FG', 'PROF_AX@THDPROF_2', 1.52, 1.55)]
+6600   configs 9 -> 10  new cols []  lost cols []  changed cells in old configs: 0 []
+6602   configs 9 -> 10  new cols []  lost cols []  changed cells in old configs: 0 []
+6606 missing False True
+6801   configs 35 -> 39  new cols []  lost cols []  changed cells in old configs: 0 []
+6803   configs 5 -> 8  new cols []  lost cols []  changed cells in old configs: 0 []
+6807 missing False True
+6902 missing False True

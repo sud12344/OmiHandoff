@@ -1,0 +1,223 @@
+Build_4603_MASTER  10/19/2026 9:24:38 PM
+OK    dim M1 = 1.3000 in (expect 1.3000)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim NW1_BODYL = 0.4400 in (expect 0.4400)
+OK    dim NW1_NECKR = 0.3500 in (expect 0.3500)
+OK    dim NW1_NECKL = 0.0190 in (expect 0.0190)
+OK    dim NW1_CHR = 0.4450 in (expect 0.4450)
+OK    angle NW1_CHANG1 = 75.00 deg
+OK    dim NW1_NUTR = 0.5181 in (expect 0.5181)
+OK    angle NW1_CHANG2 = 75.00 deg
+OK    dim NW1_NUTT = 0.3100 in (expect 0.3100)
+OK    dim NW1_CHR2 = 0.4450 in (expect 0.4450)
+OK    dim NW1_WASHR = 0.5050 in (expect 0.5050)
+OK    dim NW1_WASHT = 0.0410 in (expect 0.0410)
+OK    dim NW1_UCR = 0.3300 in (expect 0.3300)
+OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
+OK    dim NW1_THDL = 0.3440 in (expect 0.3440)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim HZREF = 0.5000 in (expect 0.5000)
+OK    angle LEGANG2 = 135.00 deg
+OK    dim M2 = 1.6900 in (expect 1.6900)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim HOSE2_TAILL = 1.1970 in (expect 1.1970)
+OK    dim HOSE2_BEADR = 0.2800 in (expect 0.2800)
+OK    dim HOSE2_BEADW = 0.1039 in (expect 0.1039)
+OK    dim HOSE2_STUBR = 0.2500 in (expect 0.2500)
+OK    dim HOSE2_BEADPOS = 0.1991 in (expect 0.1991)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX1: sgVERTICAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.220 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    PLN2: leg tip face found 1.6900 along the leg
+      PLN2: InsertRefPlane ok
+OK    PLN2 reference plane created (RefPlane)
+      PLN2: plane z axis (-0.707, 0.707, 0.000), leg axis (-0.707, 0.707)
+OK    PLN2 is normal to the angled leg
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.048 in on axis 0 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.3750 in (expect 0.3750)
+OK    dim PUCK_HT = 0.3750 in (expect 0.3750)
+OK    dim PUCK_R1B = 0.2160 in (expect 0.2160)
+OK    dim PUCK_R1T = 0.2160 in (expect 0.2160)
+OK    dim PUCK_XC = 0.4325 in (expect 0.4325)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    HFPLN2: base plane PLN2 selected
+      HFPLN2: InsertRefPlane distance 0.1900 ok
+      HFPLN2: plane origin (-0.1344, 0.1344, 0.0000) = 0.1900 along the hose leg (want 0.1900)
+OK    HFPLN2 reference plane at the hose hex face (0.1900 along the hose leg)
+OK    HFPLN2 offset reachable as D1@HFPLN2 (D1=0.1900 )
+      HOSEFACE2_SK: hose axis at sketch (0.0000, 0.0000, 0.0000)
+OK    HOSEFACE2_SK circles created
+OK    dim HF2_DIN = 0.4450 in (expect 0.4450)
+OK    dim HF2_DOUT = 1.2990 in (expect 1.2990)
+OK    HOSEFACE2_SK sketch fully defined
+OK    HOSEFACE2_SK sketch made
+      HOSEFACE2 attempt 0: CreateDefinition returned Nothing
+      HOSEFACE2 attempt 0: FeatureCut4 scope off -> True
+      HOSEFACE2 attempt 0: removed 0.118781 in^3, cut faces centred at -0.0004 along the hose leg (want 0.3365)
+      HOSEFACE2 attempt 1: CreateDefinition returned Nothing
+      HOSEFACE2 attempt 1: FeatureCut4 scope off -> True
+      HOSEFACE2 attempt 1: removed 0.022865 in^3, cut faces centred at 0.2450 along the hose leg (want 0.3365)
+FAIL  HOSEFACE2 cut made on the tip side of the hose hex face (attempt 2)
+OK    D1@HFPLN2 reachable
+FAIL  DEPTH@HOSEFACE2 reachable
+FAIL  DEPTH@STUBFILL2 reachable
+OK    NUTHEX1: locknut inner face found at 0.4590 on axis 0
+OK    dim NUTHEX1 = 0.8800 in (expect 0.8800)
+      NUTHEX1: sgHORIZONTAL -> vertex |z| max 0.5081 (flats want 0.4400)
+      NUTHEX1: sketch removed, retrying with the other relation
+OK    NUTHEX1: locknut inner face found at 0.4590 on axis 0
+OK    dim NUTHEX1 = 0.8800 in (expect 0.8800)
+      NUTHEX1: sgVERTICAL -> vertex |z| max 0.4400 (flats want 0.4400)
+OK    NUTHEX1 nut flats normal to Z
+OK    NUTHEX1 sketch fully defined
+      NUTCUT1 attempt 0: CreateDefinition returned Nothing
+      NUTCUT1 attempt 0: FeatureCut4 scope off -> True
+      NUTCUT1 attempt 0: removed 0.04959 in^3 (expect 0.04959), cut faces centred at 0.6140 on axis 0 (want 0.6140)
+OK    NUTCUT1 created and removed material (attempt 0)
+OK    NUTCUT1 removed only the nut corners (4.4% of volume)
+OK    NUTCUT1 removed 0.04959 in^3 = the chamfered nut envelope outside the hexagon (expect 0.04959)
+OK    NUTCUT1 dims: DEPTH=0.3100 NUTHEX1=0.8800 
+OK    NUTHEX1@NUTHEX1 reachable
+OK    DEPTH@NUTCUT1 reachable
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=1.3000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.3900 in (expect 0.3900)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=1.3000 D1=0.3900 
+OK    select end face for BORE2 at x=1.6900
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 0.3900 in (expect 0.3900)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=1.6900 D2=0.3900 
+OK    leg 1 bore open on the axis at its face (X=+1.3000)
+OK    leg 2 bore open on the axis at its face (1.6900 along the 135-deg leg)
+      THD_End1: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End1: anchor edge found at x=0.9560 r=0.3750
+      THD_End1: Edge ok
+      THD_End1: Type=Inch Die ok
+      THD_End1: Size=0.7500-16 ok
+      THD_End1: ThreadMethod=Cut ok
+      THD_End1: EndCondition=Blind ok
+      THD_End1: BlindDepth=0.3440 ok
+      THD_End1: DiameterOverride ok
+      THD_End1: Diameter ok
+      THD_End1: PitchOverride ok
+      THD_End1: Pitch ok
+      THD_End1: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_End1: CreateFeature -> True
+OK    THD_End1 thread feature created
+      THD_End1: thread centre x = 1.1378 in, anchor 0.9560, wanted +X
+OK    THD_End1 runs along the thread flat (away from the hex)
+OK    THD_End1 rebuilds without error (code 0)
+OK    THD_End1 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.3440 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_End1: profile sketch renamed to THD_End1_PROF
+OK    THD_End1 profile dims reachable as Profile_Height@THD_End1_PROF
+OK    THD_End1 profile pitch reachable as THDPITCH@THD_End1_PROF
+      THD_End1: left live until the final suppress step
+OK    leg 1 tip (exact) 1.3000 along +X (expect 1.3000)
+OK    leg 2 tip (exact) 1.6900 along the 135-deg leg (expect 1.6900)
+OK    Z extent (exact) -0.5050 .. 0.5050 (expect -0.5050 .. 0.5050: adjustable ORB washer)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17\tee\DesignTable_4603_SW2.xlsx
+OK    Configurations after table: 6 (expect 6)
+      config check 1: 4603-04-04-NWO-FG
+OK    4603-04-04-NWO-FG M1@LEG1 = 1.0500 (table 1.0500)
+OK    4603-04-04-NWO-FG BODYR@LEG1 = 0.2200 (table 0.2200)
+OK    4603-04-04-NWO-FG NW1_BODYL@LEG1 = 0.3200 (table 0.3200)
+OK    4603-04-04-NWO-FG NW1_NECKR@LEG1 = 0.2252 (table 0.2252)
+OK    4603-04-04-NWO-FG NW1_NECKL@LEG1 = 0.0290 (table 0.0290)
+OK    4603-04-04-NWO-FG NW1_CHR@LEG1 = 0.2850 (table 0.2850)
+OK    4603-04-04-NWO-FG DEPTH@BORECUT1 = 1.0500 (table 1.0500)
+OK    4603-04-04-NWO-FG DEPTH@BORECUT2 = 1.7000 (table 1.7000)
+OK    4603-04-04-NWO-FG THDPITCH@THD_End1 = 0.0500 (table 0.0500)
+OK    4603-04-04-NWO-FG Profile_Height@THD_End1_PROF = 0.0271 (table 0.0271)
+OK    4603-04-04-NWO-FG THDPITCH@THD_End1_PROF = 0.0500 (table 0.0500)
+OK    4603-04-04-NWO-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
+OK    4603-04-04-NWO-FG HEXL@HEX1_BODY = 0.3200 (table 0.3200)
+OK    4603-04-04-NWO-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
+OK    4603-04-04-NWO-FG HEXL@HEX2_BODY = 0.2000 (table 0.2000)
+OK    4603-04-04-NWO-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    4603-04-04-NWO-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
+OK    4603-04-04-NWO-FG D1@HFPLN2 = 0.2000 (table 0.2000)
+OK    4603-04-04-NWO-FG HF2_DIN@HOSEFACE2_SK = 0.2100 (table 0.2100)
+OK    4603-04-04-NWO-FG HF2_DOUT@HOSEFACE2_SK = 0.7622 (table 0.7622)
+FAIL  4603-04-04-NWO-FG DEPTH@HOSEFACE2 readable
+FAIL  4603-04-04-NWO-FG SF2_DIN@STUBFILL2_SK readable
+FAIL  4603-04-04-NWO-FG SF2_DOUT@STUBFILL2_SK readable
+FAIL  4603-04-04-NWO-FG DEPTH@STUBFILL2 readable
+OK    4603-04-04-NWO-FG one solid body (found 1)
+      4603-04-04-NWO-FG box x -1.290..1.066  y -0.325..1.290
+      config check 2: 4603-16-16-NWO-FG
+OK    4603-16-16-NWO-FG M1@LEG1 = 1.8500 (table 1.8500)
+OK    4603-16-16-NWO-FG BODYR@LEG1 = 0.6560 (table 0.6560)
+OK    4603-16-16-NWO-FG NW1_BODYL@LEG1 = 0.7100 (table 0.7100)
+OK    4603-16-16-NWO-FG NW1_NECKR@LEG1 = 0.6000 (table 0.6000)
+OK    4603-16-16-NWO-FG NW1_NECKL@LEG1 = 0.0270 (table 0.0270)
+OK    4603-16-16-NWO-FG NW1_CHR@LEG1 = 0.7550 (table 0.7550)
+OK    4603-16-16-NWO-FG DEPTH@BORECUT1 = 1.8500 (table 1.8500)
+OK    4603-16-16-NWO-FG DEPTH@BORECUT2 = 1.9600 (table 1.9600)
+OK    4603-16-16-NWO-FG THDPITCH@THD_End1 = 0.0833 (table 0.0833)
+OK    4603-16-16-NWO-FG Profile_Height@THD_End1_PROF = 0.0451 (table 0.0451)
+OK    4603-16-16-NWO-FG THDPITCH@THD_End1_PROF = 0.0833 (table 0.0833)
+OK    4603-16-16-NWO-FG HEXAF@HEX1 = 1.3120 (table 1.3120)
+OK    4603-16-16-NWO-FG HEXL@HEX1_BODY = 0.7100 (table 0.7100)
+OK    4603-16-16-NWO-FG HEXAF@HEX2 = 1.3120 (table 1.3120)
+OK    4603-16-16-NWO-FG HEXL@HEX2_BODY = 0.4600 (table 0.4600)
+OK    4603-16-16-NWO-FG PUCK_R1B@PUCK = 0.3782 (table 0.3782)
+OK    4603-16-16-NWO-FG PUCK_XC@PUCK = 0.7570 (table 0.7570)
+OK    4603-16-16-NWO-FG D1@HFPLN2 = 0.4600 (table 0.4600)
+OK    4603-16-16-NWO-FG HF2_DIN@HOSEFACE2_SK = 0.9220 (table 0.9220)
+OK    4603-16-16-NWO-FG HF2_DOUT@HOSEFACE2_SK = 2.2724 (table 2.2724)
+FAIL  4603-16-16-NWO-FG DEPTH@HOSEFACE2 readable
+FAIL  4603-16-16-NWO-FG SF2_DIN@STUBFILL2_SK readable
+FAIL  4603-16-16-NWO-FG SF2_DOUT@STUBFILL2_SK readable
+FAIL  4603-16-16-NWO-FG DEPTH@STUBFILL2 readable
+OK    4603-16-16-NWO-FG one solid body (found 1)
+      4603-16-16-NWO-FG box x -1.739..1.876  y -0.866..1.739
+      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/5  4603-04-04-NWO-FG  rebuilt in 2.6 s
+      sweep 2/5  4603-06-06-NWO-FG  rebuilt in 2.8 s
+      sweep 3/5  4603-08-08-NWO-FG  rebuilt in 2.9 s
+      sweep 4/5  4603-12-12-NWO-FG  rebuilt in 3.3 s
+      sweep 5/5  4603-16-16-NWO-FG  rebuilt in 3.1 s
+OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 4603-08-08-NWO-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\4603\4603_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\4603\4603_MASTER.SLDPRT

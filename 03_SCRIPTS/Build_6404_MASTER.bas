@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6404_MASTER"
 ' ============================================================================
-'  Build_6404_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_straight2.py
+'  Build_6404_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
 '  Female ORB Port x Male NPTF Adapter - master from reference configuration 6404-08-08 (DesignTable_6404_SW2.xlsx row 2)
 '  Ends: A = NPTFM  B = ORBF.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6404.  Report: 03_SCRIPTS\Build_6404_report.txt

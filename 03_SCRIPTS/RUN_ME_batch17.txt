@@ -1,0 +1,137 @@
+BATCH 17 - THE 2026-10-18 STAGE (OMi ANSWERS, BRENNAN ROWS, A19-A23, THE 37 WRONGLY-DROPPED ADAPTERS) + FIVE NEW GENERATOR FEATURES (2026-10-20)
+=====================================================================================================================================
+NOTHING TO RUN. Batch 17 is ALREADY BUILT: Claude built all 74 masters through the SolidWorks MCP (SolidWorks 2026 SP4) as dry runs into
+tools\_out\batch17_20261019\sw_dryrun\ on 2026-10-19/20 and copied them into 11_MASTERS after your "can you ship batch 17?". Their
+macros are in 03_SCRIPTS, their SW2 tables in 04_DESIGN_TABLES. The reports in 03_SCRIPTS still say "Saved to ...\sw_dryrun\..." (the
+staging builds); the parts were copied unchanged (same sha256: tools\_out\batch17_20261019\checks\shipped_files_sha256.txt).
+
+If you ever re-run one: close <root>_MASTER, remove any old module of the same name in the VBA editor first, import the .bas
+from 03_SCRIPTS, run the entry sub (Sub Build<root>). A good run ends with "finished with 0 problem(s)", "All-config sweep: N
+configurations rebuilt, 0 feature/body failures", "Master left in its reference configuration ..." and "Saved to
+...\11_MASTERS\...". (5406HHP / 5406SHP say "1 problem(s)": the body-diameter self-check reads SolidWorks' loose part box around the
+live thread - the exact size is the table's 0.84; QA #173.)
+
+74 MASTERS                                          configurations
+ NEW MASTERS (24)
+   Build_1503_MASTER.bas            19 configurations
+   Build_1504_MASTER.bas             3 configurations
+   Build_1601_MASTER.bas             7 configurations
+   Build_1602_MASTER.bas             7 configurations
+   Build_1603_MASTER.bas             5 configurations
+   Build_1704_MASTER.bas             1 configurations
+   Build_1724_MASTER.bas             1 configurations
+   Build_1804_MASTER.bas             1 configurations
+   Build_1824_MASTER.bas             1 configurations
+   Build_4501_MASTER.bas            12 configurations
+   Build_4601_MASTER.bas            15 configurations
+   Build_5406HHP_MASTER.bas          1 configurations
+   Build_5406SHP_MASTER.bas          1 configurations
+   Build_5501_MASTER.bas             7 configurations
+   Build_5503_MASTER.bas             6 configurations
+   Build_5505_MASTER.bas             2 configurations
+   Build_5601_MASTER.bas             6 configurations
+   Build_5603_MASTER.bas             6 configurations
+   Build_5652_MASTER.bas             6 configurations
+   Build_6400_MASTER.bas            66 configurations
+   Build_6408HHP_MASTER.bas          1 configurations
+   Build_6606_MASTER.bas             4 configurations
+   Build_6807_MASTER.bas             1 configurations
+   Build_6902_MASTER.bas             1 configurations
+ REPLACED MASTERS (50)            before -> after   new   old changed with their table cells
+   Build_0318_MASTER.bas            12 ->   12           11
+   Build_0403_MASTER.bas             7 ->    7           1
+   Build_1404_MASTER.bas            24 ->   24           22
+   Build_1405_MASTER.bas            15 ->   17      +2   
+   Build_1501_MASTER.bas            17 ->   19      +2   
+   Build_1502_MASTER.bas             1 ->    8      +7   
+   Build_2403_MASTER.bas            34 ->   40      +6   
+   Build_2404_MASTER.bas            57 ->   59      +2   
+   Build_2405_MASTER.bas            28 ->   30      +2   
+   Build_2406_MASTER.bas            40 ->   51     +11   
+   Build_2501_MASTER.bas            48 ->   56      +8   2
+   Build_2503_MASTER.bas            29 ->   29           3
+   Build_2504_MASTER.bas             4 ->    5      +1   
+   Build_2505_MASTER.bas             1 ->    2      +1   
+   Build_2601_MASTER.bas            10 ->   10           
+   Build_2602_MASTER.bas             5 ->    6      +1   
+   Build_2605_MASTER.bas             7 ->    7           1
+   Build_2611_MASTER.bas             2 ->    3      +1   
+   Build_2650_MASTER.bas             4 ->    5      +1   
+   Build_2700_MASTER.bas            24 ->   26      +2   
+   Build_2701_MASTER.bas            15 ->   18      +3   
+   Build_2705_MASTER.bas            14 ->   18      +4   
+   Build_2706_MASTER.bas            23 ->   25      +2   
+   Build_5000_MASTER.bas            19 ->   22      +3   
+   Build_5404_MASTER.bas            25 ->   31      +6   
+   Build_5405_MASTER.bas            26 ->   31      +5   
+   Build_5406_MASTER.bas            28 ->   31      +3   
+   Build_5406C_MASTER.bas            6 ->    7      +1   
+   Build_5406P_MASTER.bas            4 ->    9      +5   
+   Build_5500_MASTER.bas            16 ->   16           1
+   Build_5502_MASTER.bas            13 ->   20      +7   5
+   Build_5504_MASTER.bas             5 ->    9      +4   
+   Build_5600_MASTER.bas             6 ->    8      +2   
+   Build_6401_MASTER.bas            24 ->   24           
+   Build_6402_MASTER.bas            15 ->   16      +1   15
+   Build_6404_MASTER.bas            14 ->   14           
+   Build_6405_MASTER.bas            40 ->   44      +4   
+   Build_6408_MASTER.bas            14 ->   14           
+   Build_6410_MASTER.bas            30 ->   34      +4   
+   Build_6500_MASTER.bas            24 ->   26      +2   3
+   Build_6501_MASTER.bas            14 ->   14           1
+   Build_6502_MASTER.bas            11 ->   12      +1   3
+   Build_6503_MASTER.bas             1 ->    1           1
+   Build_6504_MASTER.bas            10 ->   14      +4   
+   Build_6505_MASTER.bas            19 ->   21      +2   13
+   Build_6506_MASTER.bas            14 ->   14           10
+   Build_6600_MASTER.bas             9 ->   10      +1   
+   Build_6602_MASTER.bas             9 ->   10      +1   
+   Build_6801_MASTER.bas            35 ->   39      +4   
+   Build_6803_MASTER.bas             5 ->    8      +3   
+                                                  ----------
+   Configurations in a master: 1,103 -> 1,354 (BUILD rows 1,804 -> 1,874: the 37 adapters + new wave-3 / Brennan rows).
+   95 masters in 11_MASTERS (was 71). BUILD rows MISSING 619 -> 440, VERIFIED 169 -> 336.
+   "old changed" = old configurations whose dimensions changed on purpose with their table cells (92): the OMi values you approved
+   (A19 groups 1-3, 134 cells), the 1404 nut faces / bores (A20 / A21), 6402 / 6505 / 6506 / 0318 OMi lengths. Every other old
+   configuration is identical (volume + size) to a read-only sweep of the master it replaces.
+
+WHAT IS NEW IN THE MODELS (the five generator features, merged 2026-10-18 in tools\_out\genfeat_20261018, now in tools\)
+  - Hose barb ends with the forged-corner face-off (4501, 4601).
+  - Flange legs code 61 / 62 (1704, 1804, 1724, 1824).
+  - 45 deg elbows with the thread / port / swivel on the 135 deg leg (1503, 1504, 5501, 5503, 5505, 6902): helical thread swept along
+    the leg (HelixThreadV), not SolidWorks' Thread feature (that crashed SolidWorks off-axis on 2026-10-15).
+  - A swivel per leg (1601, 1602, 1603, 6606, 6807).
+  - Straights: 6400 generated (A6: it replaces the hand-built master, 6400-L folded in; the hand-built one's 8 DROP configurations are not
+    generated), -40 pipe end, -02 female ORB port, 5404N OMi names (5404N itself held, below).
+  - Generator fix found by the dry runs (QA #174): the angled macros did not compile (Atan2V got Variant elements ByRef) - now ByVal.
+
+WHERE THE VALUES COME FROM
+  - Brennan rows (your "yes use brennan but still differentiate"): $PRP@DimSource = BRENNAN and AxialSource starts with
+    [BRENNAN-ONLY 2026-10-18]; DataStatus ASSUMED. Undo: tools\_out\brennan_yes_20261018\scripts\revert_brennan.py, then regenerate.
+  - OMi answers of 2026-10-18 (14 drawings + real lengths): DimSource OMI-DRAWING / OMI, VERIFIED (A23).
+  - The 37 wrongly-DROP adapters: BUILD again, Brennan-checked (VERIFIED where Air-Way = Brennan on every compared cell).
+  - Every cell and its source: tools\_out\brennan_yes_20261018\stage\CHANGES.csv and each row's $PRP@AxialSource.
+
+STILL YOUR CALL (shipped with the assumption written into the part's AxialSource; say the word and they come out)
+  - 6902-12-12-NWO-FG: composed shape (no Brennan 6902 STEP yet; BRENNAN_6902-08-08-NWO-FG is on the download list).
+  - 5505-20-20-FG: built on the 5505-08-08-FG shape (no 5505-20-20-FG STEP).
+
+CHECKED BEFORE SHIPPING (tools\_out\batch17_20261019\, RESUME.md)
+  - The stage was compared cell by cell with the live tables after batch 16: 0 stale cells (checks\cmp3_full.txt).
+  - Every root regenerated: live tools on live tables reproduce what batch 16 shipped; the batch-17 tools on the stage change 80 roots
+    (checks\detail_cmp.txt); every changed old configuration sits on a row with a logged edit.
+  - Static checks clean (checks\allcfg.txt, dofcheck_*.txt, vbacheck.txt, regress.txt).
+  - SolidWorks dry runs of all 80 (checks\verdict.txt): 74 pass - 0 FAIL lines, 1 body per configuration, old configurations as above.
+  - After shipping: the LIVE tools + LIVE tables regenerate exactly the shipped macros + SW2 (checks\verify_b17.txt, 0 BAD).
+  - Old files: _to_delete\superseded_20261019b\batch17_replaced\ and tools\_out\batch17_20261019\old_files\ (MANIFEST*.txt).
+
+HELD BACK (QA #175; rows stay in their review tables, nothing in 11_MASTERS changes for them)
+  - 4503 (7) / 4603 (5): the hose face-off on the hose leg cuts on the wrong side in SolidWorks.
+  - 1703-24-24-FG: the leg-2 hex arm extrudes the wrong way.
+  - 1700RC (1700-20-16 / -24-20 / -32-24) and 1800-08-08: the flats sketch is not fully defined in SolidWorks.
+  - 5404N: the -06 thread sweeps fail again (QA #163); its 4-configuration master stays, the 18 OMi-name rows wait.
+  Each needs generator work - a follow-up session.
+
+NOT CHANGED: the stale "BUILD-NEAR / MISSING" $COMMENT texts on rows that are now built were not re-worded (comment text only).
+
+QA_Log #173-#175 (01_MASTER_DATA). Coverage refreshed (00_DOCS\OMi_Coverage_2026-09-24.xlsx): A1 1,300 OMi part numbers built.

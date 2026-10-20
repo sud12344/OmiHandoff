@@ -8,22 +8,30 @@ from prof import leg_edges, bbox
 from swiv import seg_list, near, legs_of
 from ports import ends_of, ang
 
-def measure_npsm(p, ends=None, model=False):
+def measure_npsm(p, ends=None, model=False, oth=None, win=0.6):
     # 2026-10-02 (new master 1502): ends = [(axis, sign)] of the swivel leg on an ELBOW (the default ends_of() assumes a straight);
     # model=True: the STEP is OUR model (OCP rebuild / SolidWorks export) for the closed loop - our nut has no 45deg rear hex chamfer
     # and no nut/body collar, so the hex foot is the vertical step from the nut corner radius to the skirt front and the nut rear
     # face runs down to the neck (never use it on a Brennan STEP)
+    # 2026-10-18 (genfeat PERLEGSW): oth = [(axis, sign)] of the OTHER legs (a tee with several swivels): in each section plane the half away
+    # from them is read, and a plane with other legs on both sides of the leg axis is not used (None: the elbow / straight rule below);
+    # win = the axial window behind the nut face in which the nut corner radius is read (a body hex larger than the nut, e.g. OMi 1602-04-04-04-FG
+    # hex 0.75 / nut 0.688, must stay outside it: the closed loop passes the library nut length + 0.02)
     cands = []
     for axis, sign in (ends or ends_of(p)):
         # elbow (ends given): the other leg = the other of the two largest extents; in the plane that contains it, read the side away from it
-        oth_ = [l for l, _ in legs_of(p) if l[0] != axis] if ends else []
+        oth_ = [l for l, _ in legs_of(p) if l[0] != axis] if ends and oth is None else []
         for pn in [k for k in (0, 1, 2) if k != axis]:
             o_ = [k for k in (0, 1, 2) if k not in (axis, pn)][0]
-            rs_ = -oth_[0][1] if oth_ and oth_[0][0] == o_ else 1
+            if oth is not None:
+                s_o = {sg_ for a_, sg_ in oth if a_ == o_}
+                if len(s_o) > 1: continue
+                rs_ = -s_o.pop() if s_o else 1
+            else: rs_ = -oth_[0][1] if oth_ and oth_[0][0] == o_ else 1
             S = [s for s in seg_list(leg_edges(p, axis, sign, pn, a0=-99, rside=rs_)) if min(s['r1'], s['r2']) > -1e-6]
             af = max(max(s['a1'], s['a2']) for s in S)
             cs = [s for s in S if near(s['a2'], af) and s['a1'] < af - 1e-3 and s['r2'] > s['r1'] and 40 < ang(s) < 50]
-            if cs: cands.append((max(max(s['r1'], s['r2']) for s in S if s['a1'] > af - 0.6), axis, sign, pn, af, S, cs[0]))
+            if cs: cands.append((max(max(s['r1'], s['r2']) for s in S if s['a1'] > af - win), axis, sign, pn, af, S, cs[0]))
     rmax, axis, sign, pn, af, S, cs = max(cands, key=lambda c: c[0])
     rflat = min(c[0] for c in cands if (c[1], c[2]) == (axis, sign))
     s_ = lambda a: round(af - a, 4)

@@ -1,0 +1,174 @@
+0318     PASS  configs 12  live compared True  
+      0318-02: dV +0.000999 in^3 (+2.517 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-03: dV +0.001220 in^3 (+2.299 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-04: dV +0.001990 in^3 (+2.019 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-05: dV +0.002344 in^3 (+1.804 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-06: dV +0.002610 in^3 (+1.635 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-08: dV +0.004172 in^3 (+1.549 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-10: dV +0.004856 in^3 (+1.300 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-12: dV +0.008095 in^3 (+1.239 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-16: dV +0.010206 in^3 (+1.125 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-20: dV +0.020454 in^3 (+0.995 %), dSize 0.01000 - CHANGED (table cells changed)
+      0318-32: dV +0.035053 in^3 (+0.729 %), dSize 0.01000 - CHANGED (table cells changed)
+0403     PASS  configs 7  live compared True  
+      0403-16-16 UNPL: dV -0.010951 in^3 (-1.125 %), dSize 0.01000 - CHANGED (table cells changed)
+1404     PASS  configs 24  live compared True  
+      1404-02-02: dV +0.017692 in^3 (+10.432 %), dSize 0.00231 - CHANGED (table cells changed)
+      1404-02-04: dV +0.023104 in^3 (+8.838 %), dSize 0.01000 - CHANGED (table cells changed)
+      1404-04-02: dV +0.023583 in^3 (+8.951 %), dSize 0.06697 - CHANGED (table cells changed)
+      1404-04-04: dV +0.018037 in^3 (+5.736 %), dSize 0.00000 - CHANGED (table cells changed)
+      1404-04-06: dV +0.003189 in^3 (+0.635 %), dSize 0.04000 - CHANGED (table cells changed)
+      1404-04-08: dV +0.105913 in^3 (+16.005 %), dSize 0.05000 - CHANGED (table cells changed)
+      1404-06-04: dV -0.001381 in^3 (-0.342 %), dSize 0.01000 - CHANGED (table cells changed)
+      1404-06-06: dV +0.032478 in^3 (+6.347 %), dSize 0.04000 - CHANGED (table cells changed)
+      1404-06-08: dV +0.058712 in^3 (+8.626 %), dSize 0.05000 - CHANGED (table cells changed)
+      1404-08-06: dV +0.000075 in^3 (+0.011 %), dSize 0.04000 - CHANGED (table cells changed)
+      1404-08-08: dV +0.040610 in^3 (+5.166 %), dSize 0.05000 - CHANGED (table cells changed)
+      1404-08-12: dV +0.176317 in^3 (+15.156 %), dSize 0.03000 - CHANGED (table cells changed)
+      1404-12-08: dV -0.001923 in^3 (-0.196 %), dSize 0.02000 - CHANGED (table cells changed)
+      1404-12-12: dV -0.007447 in^3 (-0.563 %), dSize 0.04000 - CHANGED (table cells changed)
+      1404-12-16: dV +0.062870 in^3 (+3.314 %), dSize 0.02000 - CHANGED (table cells changed)
+      1404-16-12: dV +0.162075 in^3 (+9.191 %), dSize 0.13857 - CHANGED (table cells changed)
+      1404-16-16: dV -0.056150 in^3 (-2.670 %), dSize 0.03000 - CHANGED (table cells changed)
+      1404-16-20: dV +0.181081 in^3 (+5.925 %), dSize 0.01000 - CHANGED (table cells changed)
+      1404-20-16: dV +0.106274 in^3 (+4.193 %), dSize 0.14434 - CHANGED (table cells changed)
+      1404-20-20: dV +0.174371 in^3 (+5.589 %), dSize 0.03000 - CHANGED (table cells changed)
+      1404-24-20: dV +0.254530 in^3 (+6.784 %), dSize 0.14434 - CHANGED (table cells changed)
+      1404-24-24: dV -0.071518 in^3 (-1.821 %), dSize 0.14000 - CHANGED (table cells changed)
+1405     PASS  configs 17  live compared True  
+1501     PASS  configs 19  live compared True  
+1502     PASS  configs 8  live compared True  
+1503     PASS  configs 19  live compared False  
+1504     PASS  configs 3  live compared False  
+1601     PASS  configs 7  live compared False  
+1602     PASS  configs 7  live compared False  
+1603     PASS  configs 5  live compared False  
+1700RC   CHECK  configs 3  live compared False  1 FAIL line(s): FLATS sketch fully defined
+1703     CHECK  configs 1  live compared False  2 FAIL line(s): HEX2 extruded the right way | 1703-24-24-FG HEXL@HEX2_BODY readable
+1704     PASS  configs 1  live compared False  
+1724     PASS  configs 1  live compared False  
+1800     CHECK  configs 1  live compared False  1 FAIL line(s): FLATS sketch fully defined
+1804     PASS  configs 1  live compared False  
+1824     PASS  configs 1  live compared False  
+2403     PASS  configs 40  live compared True  
+2404     PASS  configs 59  live compared True  
+2405     PASS  configs 30  live compared True  
+2406     PASS  configs 51  live compared True  
+2501     PASS  configs 56  live compared True  
+      2501-20-24-FG: dV -0.214474 in^3 (-3.082 %), dSize 0.10000 - CHANGED (table cells changed)
+      2501-L-04-02-FG: dV -0.002786 in^3 (-1.114 %), dSize 0.02000 - CHANGED (table cells changed)
+2503     PASS  configs 29  live compared True  
+      2503-05-04-FG: dV -0.004200 in^3 (-1.464 %), dSize 0.02000 - CHANGED (table cells changed)
+      2503-06-06-FG: dV -0.016533 in^3 (-3.410 %), dSize 0.02829 - CHANGED (table cells changed)
+      2503-08-08-FG: dV -0.065995 in^3 (-7.791 %), dSize 0.08485 - CHANGED (table cells changed)
+2504     PASS  configs 5  live compared True  
+2505     PASS  configs 2  live compared True  
+2601     PASS  configs 10  live compared True  
+2602     PASS  configs 6  live compared True  
+2605     PASS  configs 7  live compared True  
+      2605-06-06-06-FG: dV +0.066636 in^3 (+8.618 %), dSize 0.08000 - CHANGED (table cells changed)
+2611     PASS  configs 3  live compared True  
+2650     PASS  configs 5  live compared True  
+2700     PASS  configs 26  live compared True  
+2701     PASS  configs 18  live compared True  
+2705     PASS  configs 18  live compared True  
+2706     PASS  configs 25  live compared True  
+4501     PASS  configs 12  live compared False  
+4503     CHECK  configs 7  live compared False  12 FAIL line(s): HOSEFACE2 cut made on the tip side of the hose hex face (attempt 2) | DEPTH@HOSEFACE2 reachable | DEPTH@STUBFILL2 reachable | dim D2 = 0.4530 in (expect 0.4060)
+4601     PASS  configs 15  live compared False  
+4603     CHECK  configs 5  live compared False  11 FAIL line(s): HOSEFACE2 cut made on the tip side of the hose hex face (attempt 2) | DEPTH@HOSEFACE2 reachable | DEPTH@STUBFILL2 reachable | 4603-04-04-NWO-FG DEPTH@HOSEFACE2 readable
+5000     PASS  configs 22  live compared True  
+5404     PASS  configs 31  live compared True  
+5404N    CHECK  configs 22  live compared True  16 FAIL line(s): Body diameter 0.8861 / 0.8931 (expect 0.8800) | 5404-N-06X2.000 feature THD_EndA rebuilds (error code 1) | 5404-N-06X2.000 feature THD_EndB rebuilds (error code 1) | 5404-N-06X2.500 feature THD_EndA rebuilds (error code 1)
+5405     PASS  configs 31  live compared True  
+5406     PASS  configs 31  live compared True  
+5406C    PASS  configs 7  live compared True  
+5406HHP  PASS  configs 1  live compared False  
+      ACCEPTED: Body diameter 0.8526 / 0.8502 (expect 0.8400) - GetPartBox is loose around the live helical thread (length box 0.6464 vs 0.61 too); exact sweep size 0.61 x 0.84 x 0.84 = table
+5406P    PASS  configs 9  live compared True  
+5406SHP  PASS  configs 1  live compared False  
+      ACCEPTED: Body diameter 0.8526 / 0.8502 (expect 0.8400) - GetPartBox is loose around the live helical thread; exact sweep size 1.02 x 0.84 x 0.84 = table
+5500     PASS  configs 16  live compared True  
+      5500-02-02-FG: dV +0.016717 in^3 (+9.945 %), dSize 0.06000 - CHANGED (table cells changed)
+5501     PASS  configs 7  live compared False  
+5502     PASS  configs 20  live compared True  
+      5502-02-02-FG: dV -0.026755 in^3 (-9.443 %), dSize 0.11000 - CHANGED (table cells changed)
+      5502-08-04-FG: dV +0.005179 in^3 (+0.490 %), dSize 0.01000 - CHANGED (table cells changed)
+      5502-08-06-FG: dV +0.004424 in^3 (+0.456 %), dSize 0.01000 - CHANGED (table cells changed)
+      5502-20-20-FG: dV -0.678468 in^3 (-10.153 %), dSize 0.37000 - CHANGED (table cells changed)
+      5502-24-24-FG: dV -1.602459 in^3 (-9.848 %), dSize 0.41000 - CHANGED (table cells changed)
+5503     PASS  configs 6  live compared False  
+5504     PASS  configs 9  live compared True  
+5505     PASS  configs 2  live compared False  
+5600     PASS  configs 8  live compared True  
+5601     PASS  configs 6  live compared False  
+5603     PASS  configs 6  live compared False  
+5652     PASS  configs 6  live compared False  
+6400     PASS  configs 66  live compared False  
+6401     PASS  configs 24  live compared True  
+6402     PASS  configs 16  live compared True  
+      6402-04-04-O: dV +0.004977 in^3 (+2.435 %), dSize 0.02000 - CHANGED (table cells changed)
+      6402-04-06-O: dV -0.004498 in^3 (-1.687 %), dSize 0.02000 - CHANGED (table cells changed)
+      6402-06-04-O: dV +0.027254 in^3 (+9.624 %), dSize 0.07000 - CHANGED (table cells changed)
+      6402-06-06-O: dV -0.018275 in^3 (-5.618 %), dSize 0.05000 - CHANGED (table cells changed)
+      6402-06-08-O: dV +0.054890 in^3 (+13.238 %), dSize 0.14000 - CHANGED (table cells changed)
+      6402-08-06-O: dV +0.017267 in^3 (+3.611 %), dSize 0.03000 - CHANGED (table cells changed)
+      6402-08-08-O: dV +0.033072 in^3 (+6.007 %), dSize 0.06000 - CHANGED (table cells changed)
+      6402-08-10-O: dV -0.005433 in^3 (-0.731 %), dSize 0.01000 - CHANGED (table cells changed)
+      6402-10-08-O: dV +0.050108 in^3 (+7.078 %), dSize 0.07000 - CHANGED (table cells changed)
+      6402-10-10-O: dV -0.041105 in^3 (-4.583 %), dSize 0.06000 - CHANGED (table cells changed)
+      6402-12-12-O: dV -0.031827 in^3 (-2.092 %), dSize 0.03000 - CHANGED (table cells changed)
+      6402-16-16-O: dV -0.027887 in^3 (-1.305 %), dSize 0.02000 - CHANGED (table cells changed)
+      6402-20-20-O: dV -0.064344 in^3 (-1.753 %), dSize 0.03000 - CHANGED (table cells changed)
+      6402-24-24-O: dV -0.295260 in^3 (-5.920 %), dSize 0.11000 - CHANGED (table cells changed)
+      6402-32-32-O: dV +0.081218 in^3 (+0.992 %), dSize 0.02000 - CHANGED (table cells changed)
+6404     PASS  configs 14  live compared True  
+6405     PASS  configs 44  live compared True  
+6408     PASS  configs 14  live compared True  
+6408HHP  PASS  configs 1  live compared False  
+6410     PASS  configs 34  live compared True  
+6500     PASS  configs 26  live compared True  
+      6500-05-05-FG: dV -0.001077 in^3 (-0.303 %), dSize 0.00000 - CHANGED (table cells changed)
+      6500-10-12-FG: dV -0.004346 in^3 (-0.221 %), dSize 0.00000 - CHANGED (table cells changed)
+      6500-12-12-FG: dV -0.004346 in^3 (-0.212 %), dSize 0.00000 - CHANGED (table cells changed)
+6501     PASS  configs 14  live compared True  
+      6501-04-04-FG: dV +0.007467 in^3 (+1.855 %), dSize 0.03000 - CHANGED (table cells changed)
+6502     PASS  configs 12  live compared True  
+      6502-08-08-FG: dV +0.003719 in^3 (+0.537 %), dSize 0.03000 - CHANGED (table cells changed)
+      6502-12-12-FG: dV -0.004346 in^3 (-0.264 %), dSize 0.00000 - CHANGED (table cells changed)
+      6502-20-20-FG: dV +0.009272 in^3 (+0.201 %), dSize 0.00000 - CHANGED (table cells changed)
+6503     PASS  configs 1  live compared True  
+      6503-08-08-FG: dV +0.025121 in^3 (+1.609 %), dSize 0.03000 - CHANGED (table cells changed)
+6504     PASS  configs 14  live compared True  
+6505     PASS  configs 21  live compared True  
+      6505-02-04: dV +0.003034 in^3 (+1.581 %), dSize 0.02000 - CHANGED (table cells changed)
+      6505-04-04: dV +0.006624 in^3 (+2.332 %), dSize 0.03000 - CHANGED (table cells changed)
+      6505-04-05: dV +0.001223 in^3 (+0.394 %), dSize 0.01000 - CHANGED (table cells changed)
+      6505-04-06: dV -0.008218 in^3 (-2.515 %), dSize 0.04000 - CHANGED (table cells changed)
+      6505-06-06: dV -0.033316 in^3 (-7.051 %), dSize 0.08000 - CHANGED (table cells changed)
+      6505-08-06: dV +0.011694 in^3 (+2.034 %), dSize 0.02000 - CHANGED (table cells changed)
+      6505-08-08: dV +0.044095 in^3 (+5.952 %), dSize 0.08000 - CHANGED (table cells changed)
+      6505-08-10: dV -0.123313 in^3 (-11.946 %), dSize 0.18000 - CHANGED (table cells changed)
+      6505-08-12: dV -0.073151 in^3 (-6.207 %), dSize 0.12000 - CHANGED (table cells changed)
+      6505-12-10: dV -0.011185 in^3 (-1.003 %), dSize 0.01000 - CHANGED (table cells changed)
+      6505-12-12: dV +0.016272 in^3 (+1.128 %), dSize 0.02000 - CHANGED (table cells changed)
+      6505-12-16: dV +0.024853 in^3 (+1.297 %), dSize 0.02000 - CHANGED (table cells changed)
+      6505-20-20: dV +0.280326 in^3 (+7.788 %), dSize 0.18000 - CHANGED (table cells changed)
+6506     PASS  configs 14  live compared True  
+      6506-02-04: dV +0.017422 in^3 (+8.921 %), dSize 0.07000 - CHANGED (table cells changed)
+      6506-04-04: dV +0.037155 in^3 (+10.145 %), dSize 0.08000 - CHANGED (table cells changed)
+      6506-04-06: dV +0.054139 in^3 (+13.337 %), dSize 0.13000 - CHANGED (table cells changed)
+      6506-06-06: dV +0.035998 in^3 (+6.686 %), dSize 0.06000 - CHANGED (table cells changed)
+      6506-06-08: dV +0.093702 in^3 (+16.187 %), dSize 0.17000 - CHANGED (table cells changed)
+      6506-08-06: dV +0.051757 in^3 (+5.190 %), dSize 0.05000 - CHANGED (table cells changed)
+      6506-08-08: dV -0.002437 in^3 (-0.233 %), dSize 0.00000 - CHANGED (table cells changed)
+      6506-08-10: dV +0.036995 in^3 (+3.055 %), dSize 0.04000 - CHANGED (table cells changed)
+      6506-12-10: dV +0.099714 in^3 (+6.195 %), dSize 0.07000 - CHANGED (table cells changed)
+      6506-24-24: dV +0.071153 in^3 (+1.047 %), dSize 0.02000 - CHANGED (table cells changed)
+6600     PASS  configs 10  live compared True  
+6602     PASS  configs 10  live compared True  
+6606     PASS  configs 4  live compared False  
+6801     PASS  configs 39  live compared True  
+6803     PASS  configs 8  live compared True  
+6807     PASS  configs 1  live compared False  
+6902     PASS  configs 1  live compared False  

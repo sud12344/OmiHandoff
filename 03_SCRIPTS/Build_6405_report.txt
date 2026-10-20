@@ -1,4 +1,4 @@
-Build_6405_MASTER  9/25/2026 11:01:33 PM
+Build_6405_MASTER  10/19/2026 11:40:17 PM
 OK    dim L31 = 1.4700 in (expect 1.4700)
 OK    dim BODYR = 0.6524 in (expect 0.6524)
 OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
@@ -62,15 +62,15 @@ OK    THD_EndA thread feature created
       THD_EndA: thread centre x = 0.1622 in, anchor 0.3440, wanted -X
 OK    THD_EndA runs along the thread flat (away from the hex)
 OK    THD_EndA rebuilds without error (code 0)
-      THD_EndA: dim full name D8@THD_EndA@Part16.Part
-      THD_EndA: dim full name THDPITCH@THD_EndA@Part16.Part
-      THD_EndA: dim full name THDDIA@THD_EndA@Part16.Part
-      THD_EndA: dim full name DEPTH@THD_EndA@Part16.Part
-      THD_EndA: dim full name D1@THD_EndA@Part16.Part
-      THD_EndA: dim full name THDPITCH@Thread Profile1@Part16.Part
-      THD_EndA: dim full name Profile_Land@Thread Profile1@Part16.Part
-      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part16.Part
-      THD_EndA: dim full name Profile_Height@Thread Profile1@Part16.Part
+      THD_EndA: dim full name D8@THD_EndA@Part14.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part14.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part14.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part14.Part
+      THD_EndA: dim full name D1@THD_EndA@Part14.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part14.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part14.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part14.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part14.Part
 OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.3440 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndA: profile sketch renamed to THD_EndA_PROF
 OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
@@ -104,24 +104,24 @@ OK    End B face present at x=1.4700
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 1.1300 / corners 1.3048 (expect 1.1300 / 1.3048)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\omi_apply_20260925\after\straight\DesignTable_6405_SW2.xlsx
-OK    Configurations after table: 41 (expect 41)
-      config check 1: 6405-03-04-O
-OK    6405-03-04-O L31@DRIVE = 1.1000 (table 1.1000)
-OK    6405-03-04-O BODYR@DRIVE = 0.4330 (table 0.4330)
-OK    6405-03-04-O HEXB@HEX = 0.7500 (table 0.7500)
-OK    6405-03-04-O THDMAJR_A@DRIVE = 0.1875 (table 0.1875)
-OK    6405-03-04-O ORBA_THDL@DRIVE = 0.2340 (table 0.2340)
-OK    6405-03-04-O ORBA_GRVR@DRIVE = 0.1560 (table 0.1560)
-OK    6405-03-04-O ORBA_GRVW@DRIVE = 0.0630 (table 0.0630)
-OK    6405-03-04-O THDPITCH@THD_EndA = 0.0417 (table 0.0417)
-OK    6405-03-04-O Profile_Height@THD_EndA_PROF = 0.0226 (table 0.0226)
-OK    6405-03-04-O THDPITCH@THD_EndA_PROF = 0.0417 (table 0.0417)
-OK    6405-03-04-O DEPTH@POCKETCUT_B = 0.6700 (table 0.6700)
-OK    6405-03-04-O PROF_R@THDPROF_B = 0.2150 (table 0.2150)
-OK    6405-03-04-O DEPTH@BORECUT_A = 0.4300 (table 0.4300)
-OK    6405-03-04-O one solid body (found 1)
-      6405-03-04-O box x -0.014..1.130  y -0.375..0.375
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_6405_SW2.xlsx
+OK    Configurations after table: 45 (expect 45)
+      config check 1: 6405-02-02-O
+OK    6405-02-02-O L31@DRIVE = 0.9500 (table 0.9500)
+OK    6405-02-02-O BODYR@DRIVE = 0.3245 (table 0.3245)
+OK    6405-02-02-O HEXB@HEX = 0.5620 (table 0.5620)
+OK    6405-02-02-O THDMAJR_A@DRIVE = 0.1563 (table 0.1563)
+OK    6405-02-02-O ORBA_THDL@DRIVE = 0.2340 (table 0.2340)
+OK    6405-02-02-O ORBA_GRVR@DRIVE = 0.1250 (table 0.1250)
+OK    6405-02-02-O ORBA_GRVW@DRIVE = 0.0630 (table 0.0630)
+OK    6405-02-02-O THDPITCH@THD_EndA = 0.0417 (table 0.0417)
+OK    6405-02-02-O Profile_Height@THD_EndA_PROF = 0.0226 (table 0.0226)
+OK    6405-02-02-O THDPITCH@THD_EndA_PROF = 0.0417 (table 0.0417)
+OK    6405-02-02-O DEPTH@POCKETCUT_B = 0.4600 (table 0.4600)
+OK    6405-02-02-O PROF_R@THDPROF_B = 0.1650 (table 0.1650)
+OK    6405-02-02-O DEPTH@BORECUT_A = 0.4900 (table 0.4900)
+OK    6405-02-02-O one solid body (found 1)
+      6405-02-02-O box x -0.014..0.970  y -0.281..0.281
       config check 2: 6405-32-32-O
 OK    6405-32-32-O L31@DRIVE = 2.2400 (table 2.2400)
 OK    6405-32-32-O BODYR@DRIVE = 1.6628 (table 1.6628)
@@ -138,52 +138,56 @@ OK    6405-32-32-O PROF_R@THDPROF_B = 1.0950 (table 1.0950)
 OK    6405-32-32-O DEPTH@BORECUT_A = 1.0600 (table 1.0600)
 OK    6405-32-32-O one solid body (found 1)
       6405-32-32-O box x -0.026..2.302  y -1.440..1.440
-      All-config sweep: rebuilding 40 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/40  6405-03-04-O  rebuilt in 1.1 s
-      sweep 2/40  6405-04-02-O  rebuilt in 1.8 s
-      sweep 3/40  6405-04-04-O  rebuilt in 1.8 s
-      sweep 4/40  6405-04-06-O  rebuilt in 1.9 s
-      sweep 5/40  6405-05-02-O  rebuilt in 1.8 s
-      sweep 6/40  6405-05-04-O  rebuilt in 1.9 s
-      sweep 7/40  6405-06-02-O  rebuilt in 1.9 s
-      sweep 8/40  6405-06-04-O  rebuilt in 1.8 s
-      sweep 9/40  6405-06-06-O  rebuilt in 1.8 s
-      sweep 10/40  6405-06-08-O  rebuilt in 1.9 s
-      sweep 11/40  6405-08-02-O  rebuilt in 1.9 s
-      sweep 12/40  6405-08-04-O  rebuilt in 1.8 s
-      sweep 13/40  6405-08-06-O  rebuilt in 1.9 s
-      sweep 14/40  6405-08-08-O  rebuilt in 1.2 s
-      sweep 15/40  6405-08-12-O  rebuilt in 1.8 s
-      sweep 16/40  6405-10-04-O  rebuilt in 1.9 s
-      sweep 17/40  6405-10-06-O  rebuilt in 1.8 s
-      sweep 18/40  6405-10-08-O  rebuilt in 2.0 s
-      sweep 19/40  6405-10-12-O  rebuilt in 2.2 s
-      sweep 20/40  6405-12-04-O  rebuilt in 1.9 s
-      sweep 21/40  6405-12-06-O  rebuilt in 2.2 s
-      sweep 22/40  6405-12-08-O  rebuilt in 2.3 s
-      sweep 23/40  6405-12-12-O  rebuilt in 2.2 s
-      sweep 24/40  6405-12-16-O  rebuilt in 2.5 s
-      sweep 25/40  6405-14-12-O  rebuilt in 2.1 s
-      sweep 26/40  6405-16-04-O  rebuilt in 2.0 s
-      sweep 27/40  6405-16-12-O  rebuilt in 2.2 s
-      sweep 28/40  6405-16-16-O  rebuilt in 2.2 s
-      sweep 29/40  6405-16-20-O  rebuilt in 2.5 s
-      sweep 30/40  6405-20-08-O  rebuilt in 2.2 s
-      sweep 31/40  6405-20-12-O  rebuilt in 2.3 s
-      sweep 32/40  6405-20-16-O  rebuilt in 2.6 s
-      sweep 33/40  6405-20-20-O  rebuilt in 2.6 s
-      sweep 34/40  6405-20-24-O  rebuilt in 2.8 s
-      sweep 35/40  6405-24-12-O  rebuilt in 2.2 s
-      sweep 36/40  6405-24-16-O  rebuilt in 2.4 s
-      sweep 37/40  6405-24-20-O  rebuilt in 2.6 s
-      sweep 38/40  6405-24-24-O  rebuilt in 3.0 s
-      sweep 39/40  6405-32-20-O  rebuilt in 2.6 s
-      sweep 40/40  6405-32-32-O  rebuilt in 1.9 s
-OK    All-config sweep: 40 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 44 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/44  6405-02-02-O  rebuilt in 1.5 s
+      sweep 2/44  6405-02-04-O  rebuilt in 2.4 s
+      sweep 3/44  6405-03-04-O  rebuilt in 2.3 s
+      sweep 4/44  6405-04-02-O  rebuilt in 2.3 s
+      sweep 5/44  6405-04-04-O  rebuilt in 2.2 s
+      sweep 6/44  6405-04-06-O  rebuilt in 2.1 s
+      sweep 7/44  6405-05-02-O  rebuilt in 2.0 s
+      sweep 8/44  6405-05-04-O  rebuilt in 2.2 s
+      sweep 9/44  6405-06-02-O  rebuilt in 2.2 s
+      sweep 10/44  6405-06-04-O  rebuilt in 2.1 s
+      sweep 11/44  6405-06-06-O  rebuilt in 2.0 s
+      sweep 12/44  6405-06-08-O  rebuilt in 2.1 s
+      sweep 13/44  6405-08-02-O  rebuilt in 2.0 s
+      sweep 14/44  6405-08-04-O  rebuilt in 2.1 s
+      sweep 15/44  6405-08-06-O  rebuilt in 2.0 s
+      sweep 16/44  6405-08-08-O  rebuilt in 1.4 s
+      sweep 17/44  6405-08-12-O  rebuilt in 2.3 s
+      sweep 18/44  6405-10-04-O  rebuilt in 2.0 s
+      sweep 19/44  6405-10-06-O  rebuilt in 2.3 s
+      sweep 20/44  6405-10-08-O  rebuilt in 2.7 s
+      sweep 21/44  6405-10-12-O  rebuilt in 2.8 s
+      sweep 22/44  6405-12-04-O  rebuilt in 2.3 s
+      sweep 23/44  6405-12-06-O  rebuilt in 2.2 s
+      sweep 24/44  6405-12-08-O  rebuilt in 2.1 s
+      sweep 25/44  6405-12-12-O  rebuilt in 2.5 s
+      sweep 26/44  6405-12-16-O  rebuilt in 2.4 s
+      sweep 27/44  6405-14-12-O  rebuilt in 2.7 s
+      sweep 28/44  6405-16-04-O  rebuilt in 2.2 s
+      sweep 29/44  6405-16-06-O  rebuilt in 2.4 s
+      sweep 30/44  6405-16-08-O  rebuilt in 2.4 s
+      sweep 31/44  6405-16-12-O  rebuilt in 2.6 s
+      sweep 32/44  6405-16-16-O  rebuilt in 2.6 s
+      sweep 33/44  6405-16-20-O  rebuilt in 3.0 s
+      sweep 34/44  6405-20-08-O  rebuilt in 2.3 s
+      sweep 35/44  6405-20-12-O  rebuilt in 2.4 s
+      sweep 36/44  6405-20-16-O  rebuilt in 2.7 s
+      sweep 37/44  6405-20-20-O  rebuilt in 2.8 s
+      sweep 38/44  6405-20-24-O  rebuilt in 3.0 s
+      sweep 39/44  6405-24-12-O  rebuilt in 2.4 s
+      sweep 40/44  6405-24-16-O  rebuilt in 2.5 s
+      sweep 41/44  6405-24-20-O  rebuilt in 2.6 s
+      sweep 42/44  6405-24-24-O  rebuilt in 3.1 s
+      sweep 43/44  6405-32-20-O  rebuilt in 2.6 s
+      sweep 44/44  6405-32-32-O  rebuilt in 1.9 s
+OK    All-config sweep: 44 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6405-08-08-O for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 41 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 41 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 45 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 45 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6405_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 9/25/2026 11:03:29 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6405_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6405\6405_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 11:42:44 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6405\6405_MASTER.SLDPRT

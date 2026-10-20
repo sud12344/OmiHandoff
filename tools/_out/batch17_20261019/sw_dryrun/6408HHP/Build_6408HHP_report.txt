@@ -1,0 +1,90 @@
+Build_6408HHP_MASTER  10/19/2026 11:45:35 PM
+OK    dim L = 0.5800 in (expect 0.5800)
+OK    dim BODYR = 0.4375 in (expect 0.4375)
+OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
+OK    dim ORBA_THDL = 0.3440 in (expect 0.3440)
+OK    dim ORBA_GRVR = 0.3300 in (expect 0.3300)
+OK    dim ORBA_GRVW = 0.0940 in (expect 0.0940)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.2695 in^3 (expect 0.2695)
+OK    SOCKET: head face selected at x=0.5800
+OK    dim SOCKAF = 0.3130 in (expect 0.3130)
+OK    SOCKET sketch fully defined
+      SOCKETCUT attempt 0: CreateDefinition returned Nothing
+      SOCKETCUT attempt 0: FeatureCut4 scope off -> True
+      SOCKETCUT attempt 0: removed 0.01595 in^3 (hex prism 0.01595), new faces span x=0.3920..0.5800
+OK    SOCKETCUT created in the head and removed material (attempt 0)
+OK    SOCKETCUT removed the hex prism volume (0.01595 vs 0.01595 in^3)
+OK    SOCKETCUT dims: DEPTH=0.1880 SOCKAF=0.3130 
+OK    SOCKAF@SOCKET reachable
+OK    DEPTH@SOCKETCUT reachable
+OK    socket plug: End A (thread tip) closed on the axis (x=0)
+OK    socket open on the axis at the head face (x=0.5800)
+OK    socket bottom present at x=0.3920
+      THD_EndA: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndA: anchor edge found at x=0.3440 r=0.3750
+      THD_EndA: Edge ok
+      THD_EndA: Type=Inch Die ok
+      THD_EndA: Size=0.7500-16 ok
+      THD_EndA: ThreadMethod=Cut ok
+      THD_EndA: EndCondition=Blind ok
+      THD_EndA: BlindDepth=0.3440 ok
+      THD_EndA: DiameterOverride ok
+      THD_EndA: Diameter ok
+      THD_EndA: PitchOverride ok
+      THD_EndA: Pitch ok
+      THD_EndA: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_EndA: CreateFeature -> True
+OK    THD_EndA thread feature created
+      THD_EndA: thread centre x = 0.1622 in, anchor 0.3440, wanted -X
+OK    THD_EndA runs along the thread flat (away from the hex)
+OK    THD_EndA rebuilds without error (code 0)
+      THD_EndA: dim full name D8@THD_EndA@Part16.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part16.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part16.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part16.Part
+      THD_EndA: dim full name D1@THD_EndA@Part16.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part16.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part16.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part16.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part16.Part
+OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.3440 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_EndA: profile sketch renamed to THD_EndA_PROF
+OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
+OK    THD_EndA profile pitch reachable as THDPITCH@THD_EndA_PROF
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 0.5997 (nominal 0.5800; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=0.5800
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Body diameter 0.8750 / 0.8750 (expect 0.8750)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_6408HHP_SW2.xlsx
+OK    Configurations after table: 2 (expect 2)
+      config check 1: 6408-HHP-08-O
+OK    6408-HHP-08-O L@DRIVE = 0.5800 (table 0.5800)
+OK    6408-HHP-08-O BODYR@DRIVE = 0.4375 (table 0.4375)
+OK    6408-HHP-08-O THDMAJR_A@DRIVE = 0.3750 (table 0.3750)
+OK    6408-HHP-08-O ORBA_THDL@DRIVE = 0.3440 (table 0.3440)
+OK    6408-HHP-08-O ORBA_GRVR@DRIVE = 0.3300 (table 0.3300)
+OK    6408-HHP-08-O ORBA_GRVW@DRIVE = 0.0940 (table 0.0940)
+OK    6408-HHP-08-O THDPITCH@THD_EndA = 0.0625 (table 0.0625)
+OK    6408-HHP-08-O Profile_Height@THD_EndA_PROF = 0.0338 (table 0.0338)
+OK    6408-HHP-08-O THDPITCH@THD_EndA_PROF = 0.0625 (table 0.0625)
+OK    6408-HHP-08-O SOCKAF@SOCKET = 0.3130 (table 0.3130)
+OK    6408-HHP-08-O DEPTH@SOCKETCUT = 0.1880 (table 0.1880)
+OK    6408-HHP-08-O one solid body (found 1)
+      6408-HHP-08-O box x -0.020..0.580  y -0.438..0.438
+OK    6408-HHP-08-O: socket open on the axis at the head face (x=0.5800)
+OK    6408-HHP-08-O: socket bottom at x=0.3920 (depth 0.188, A/F 0.313)
+OK    6408-HHP-08-O: End A tip closed on the axis (x=0)
+      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/1  6408-HHP-08-O  rebuilt in 0.4 s
+OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 6408-HHP-08-O for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6408HHP\6408HHP_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 11:45:53 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6408HHP\6408HHP_MASTER.SLDPRT

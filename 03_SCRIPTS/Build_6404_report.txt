@@ -1,4 +1,4 @@
-Build_6404_MASTER  10/2/2026 7:18:46 AM
+Build_6404_MASTER  10/19/2026 11:36:01 PM
 OK    dim L32 = 1.6500 in (expect 1.6500)
 OK    dim BODYR = 0.6137 in (expect 0.6137)
 OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
@@ -99,7 +99,7 @@ OK    End B face present at x=1.6500
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 1.0630 / corners 1.2274 (expect 1.0630 / 1.2274)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_6404_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_6404_SW2.xlsx
 OK    Configurations after table: 15 (expect 15)
       config check 1: 6404-04-02
 OK    6404-04-02 L32@DRIVE = 1.0600 (table 1.0600)
@@ -159,24 +159,24 @@ OK    6404-24-24: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
 OK    6404-24-24: bore meets the port - no face across the axis at the minor-bore bottom x=1.3240
       All-config sweep: rebuilding 14 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
       sweep 1/14  6404-04-02  rebuilt in 2.7 s
-      sweep 2/14  6404-04-04  rebuilt in 1.9 s
-      sweep 3/14  6404-06-04  rebuilt in 2.1 s
-      sweep 4/14  6404-06-06  rebuilt in 1.6 s
-      sweep 5/14  6404-06-08  rebuilt in 3.8 s
-      sweep 6/14  6404-08-06  rebuilt in 1.4 s
-      sweep 7/14  6404-08-08  rebuilt in 3.9 s
-      sweep 8/14  6404-10-08  rebuilt in 4.2 s
-      sweep 9/14  6404-10-12  rebuilt in 7.0 s
-      sweep 10/14  6404-12-08  rebuilt in 3.8 s
-      sweep 11/14  6404-12-12  rebuilt in 6.2 s
-      sweep 12/14  6404-16-12  rebuilt in 6.6 s
-      sweep 13/14  6404-16-16  rebuilt in 8.3 s
-      sweep 14/14  6404-24-24  rebuilt in 8.4 s
+      sweep 2/14  6404-04-04  rebuilt in 2.1 s
+      sweep 3/14  6404-06-04  rebuilt in 2.0 s
+      sweep 4/14  6404-06-06  rebuilt in 1.8 s
+      sweep 5/14  6404-06-08  rebuilt in 4.8 s
+      sweep 6/14  6404-08-06  rebuilt in 1.6 s
+      sweep 7/14  6404-08-08  rebuilt in 4.3 s
+      sweep 8/14  6404-10-08  rebuilt in 4.1 s
+      sweep 9/14  6404-10-12  rebuilt in 6.7 s
+      sweep 10/14  6404-12-08  rebuilt in 4.2 s
+      sweep 11/14  6404-12-12  rebuilt in 6.1 s
+      sweep 12/14  6404-16-12  rebuilt in 6.1 s
+      sweep 13/14  6404-16-16  rebuilt in 6.8 s
+      sweep 14/14  6404-24-24  rebuilt in 6.1 s
 OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6404-08-08 for the save (it opens in this size)
       THD_EndA: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
       THD_EndB: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\6404_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/2/2026 7:22:57 AM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\6404_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6404\6404_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 11:39:39 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6404\6404_MASTER.SLDPRT

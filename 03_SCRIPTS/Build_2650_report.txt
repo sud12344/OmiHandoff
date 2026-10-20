@@ -1,11 +1,8 @@
-Build_2650_MASTER  9/24/2026 11:41:52 AM
+Build_2650_MASTER  10/20/2026 12:22:54 AM
 OK    dim M1 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
 OK    dim JIC1_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG1 angle try 0 at (0.627, 0.475): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 1 at (0.627, -0.475): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 2 at (-0.627, 0.475): 120.0 deg (want 60.0)
 OK    angle RELIEFANG1 = 60.00 deg
 OK    dim JIC1_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC1_CONER = 0.3295 in (expect 0.3295)
@@ -19,9 +16,6 @@ OK    dim M2 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B2 = 0.3750 in (expect 0.3750)
 OK    dim JIC2_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG2 angle try 0 at (-0.627, 0.475): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 1 at (-0.627, -0.475): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 2 at (0.627, 0.475): 120.0 deg (want 60.0)
 OK    angle RELIEFANG2 = 60.00 deg
 OK    dim JIC2_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC2_CONER = 0.3295 in (expect 0.3295)
@@ -35,9 +29,6 @@ OK    dim M3 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B3 = 0.3750 in (expect 0.3750)
 OK    dim JIC3_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG3 angle try 0 at (0.475, 0.627): 120.0 deg (want 60.0)
-      RELIEFANG3 angle try 1 at (0.475, -0.627): 120.0 deg (want 60.0)
-      RELIEFANG3 angle try 2 at (-0.475, 0.627): 120.0 deg (want 60.0)
 OK    angle RELIEFANG3 = 60.00 deg
 OK    dim JIC3_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC3_CONER = 0.3295 in (expect 0.3295)
@@ -51,9 +42,6 @@ OK    dim M4 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B4 = 0.3750 in (expect 0.3750)
 OK    dim JIC4_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG4 angle try 0 at (0.475, -0.627): 120.0 deg (want 60.0)
-      RELIEFANG4 angle try 1 at (0.475, 0.627): 120.0 deg (want 60.0)
-      RELIEFANG4 angle try 2 at (-0.475, -0.627): 120.0 deg (want 60.0)
 OK    angle RELIEFANG4 = 60.00 deg
 OK    dim JIC4_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC4_CONER = 0.3295 in (expect 0.3295)
@@ -161,6 +149,7 @@ OK    THD_End1 rebuilds without error (code 0)
 OK    THD_End1 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_End1: profile sketch renamed to THD_End1_PROF
 OK    THD_End1 profile dims reachable as Profile_Height@THD_End1_PROF
+OK    THD_End1 profile pitch reachable as THDPITCH@THD_End1_PROF
       THD_End1: left live until the final suppress step
       THD_End2: CreateDefinition(swFmSweepThread) -> True
 OK    THD_End2: anchor edge found at x=-0.7133 r=0.3750
@@ -183,6 +172,7 @@ OK    THD_End2 rebuilds without error (code 0)
 OK    THD_End2 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_End2: profile sketch renamed to THD_End2_PROF
 OK    THD_End2 profile dims reachable as Profile_Height@THD_End2_PROF
+OK    THD_End2 profile pitch reachable as THDPITCH@THD_End2_PROF
       THD_End2: left live until the final suppress step
       THD_End3: CreateDefinition(swFmSweepThread) -> True
 OK    THD_End3: anchor edge found at x=0.7133 r=0.3750
@@ -205,6 +195,7 @@ OK    THD_End3 rebuilds without error (code 0)
 OK    THD_End3 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_End3: profile sketch renamed to THD_End3_PROF
 OK    THD_End3 profile dims reachable as Profile_Height@THD_End3_PROF
+OK    THD_End3 profile pitch reachable as THDPITCH@THD_End3_PROF
       THD_End3: left live until the final suppress step
       THD_End4: CreateDefinition(swFmSweepThread) -> True
 OK    THD_End4: anchor edge found at x=-0.7133 r=0.3750
@@ -227,43 +218,47 @@ OK    THD_End4 rebuilds without error (code 0)
 OK    THD_End4 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_End4: profile sketch renamed to THD_End4_PROF
 OK    THD_End4 profile dims reachable as Profile_Height@THD_End4_PROF
+OK    THD_End4 profile pitch reachable as THDPITCH@THD_End4_PROF
       THD_End4: left live until the final suppress step
 OK    X extent -1.250 .. 1.250 (expect -1.250 .. 1.250; threads may add a little)
 OK    Y extent -1.250 .. 1.250 (expect -1.250 .. 1.250)
-FAIL  Z extent -0.388 .. 0.392 (expect -0.375 .. 0.375: hex flats)
+      Bounding box z -0.388 .. 0.392 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.3750 .. 0.3750 (expect -0.3750 .. 0.3750: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2650_SW2.xlsx
-OK    Configurations after table: 5 (expect 5)
-OK    2650-06-06-06-06-FG M1@LEG1 = 1.0600 (table 1.0600)
-OK    2650-06-06-06-06-FG BODYR@LEG1 = 0.2813 (table 0.2813)
-OK    2650-06-06-06-06-FG THDMAJR_B1@LEG1 = 0.2813 (table 0.2813)
-OK    2650-06-06-06-06-FG JIC1_RELIEFL@LEG1 = 0.0830 (table 0.0830)
-OK    2650-06-06-06-06-FG JIC1_THDZ@LEG1 = 0.2515 (table 0.2515)
-OK    2650-06-06-06-06-FG JIC1_CONER@LEG1 = 0.2405 (table 0.2405)
-OK    2650-06-06-06-06-FG DEPTH@BORECUT1 = 1.0600 (table 1.0600)
-OK    2650-06-06-06-06-FG DEPTH@BORECUT2 = 1.0600 (table 1.0600)
-OK    2650-06-06-06-06-FG DEPTH@BORECUT3 = 1.0600 (table 1.0600)
-OK    2650-06-06-06-06-FG DEPTH@BORECUT4 = 1.0600 (table 1.0600)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End1 = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG Profile_Height@THD_End1_PROF = 0.0301 (table 0.0301)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End1_PROF = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End2 = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG Profile_Height@THD_End2_PROF = 0.0301 (table 0.0301)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End2_PROF = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End3 = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG Profile_Height@THD_End3_PROF = 0.0301 (table 0.0301)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End3_PROF = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End4 = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG Profile_Height@THD_End4_PROF = 0.0301 (table 0.0301)
-OK    2650-06-06-06-06-FG THDPITCH@THD_End4_PROF = 0.0556 (table 0.0556)
-OK    2650-06-06-06-06-FG HEXAF@RUN = 0.5625 (table 0.5625)
-OK    2650-06-06-06-06-FG HEXL1@RUN_BODY = 0.5040 (table 0.5040)
-OK    2650-06-06-06-06-FG HEXL2@RUN_BODY = 0.5040 (table 0.5040)
-OK    2650-06-06-06-06-FG HEXAF@RUN2 = 0.5625 (table 0.5625)
-OK    2650-06-06-06-06-FG HEXL1@RUN2_BODY = 0.5040 (table 0.5040)
-OK    2650-06-06-06-06-FG HEXL2@RUN2_BODY = 0.5040 (table 0.5040)
-OK    2650-06-06-06-06-FG one solid body (found 1)
-      2650-06-06-06-06-FG box x -1.060..1.060  y -1.060..1.060
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_2650_SW2.xlsx
+OK    Configurations after table: 6 (expect 6)
+      config check 1: 2650-04-04-04-04-FG
+OK    2650-04-04-04-04-FG M1@LEG1 = 0.8900 (table 0.8900)
+OK    2650-04-04-04-04-FG BODYR@LEG1 = 0.2200 (table 0.2200)
+OK    2650-04-04-04-04-FG THDMAJR_B1@LEG1 = 0.2188 (table 0.2188)
+OK    2650-04-04-04-04-FG JIC1_RELIEFL@LEG1 = 0.0750 (table 0.0750)
+OK    2650-04-04-04-04-FG JIC1_THDZ@LEG1 = 0.2608 (table 0.2608)
+OK    2650-04-04-04-04-FG JIC1_CONER@LEG1 = 0.1820 (table 0.1820)
+OK    2650-04-04-04-04-FG DEPTH@BORECUT1 = 0.8900 (table 0.8900)
+OK    2650-04-04-04-04-FG DEPTH@BORECUT2 = 0.8900 (table 0.8900)
+OK    2650-04-04-04-04-FG DEPTH@BORECUT3 = 0.8900 (table 0.8900)
+OK    2650-04-04-04-04-FG DEPTH@BORECUT4 = 0.8900 (table 0.8900)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End1 = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG Profile_Height@THD_End1_PROF = 0.0271 (table 0.0271)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End1_PROF = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End2 = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG Profile_Height@THD_End2_PROF = 0.0271 (table 0.0271)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End2_PROF = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End3 = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG Profile_Height@THD_End3_PROF = 0.0271 (table 0.0271)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End3_PROF = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End4 = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG Profile_Height@THD_End4_PROF = 0.0271 (table 0.0271)
+OK    2650-04-04-04-04-FG THDPITCH@THD_End4_PROF = 0.0500 (table 0.0500)
+OK    2650-04-04-04-04-FG HEXAF@RUN = 0.4400 (table 0.4400)
+OK    2650-04-04-04-04-FG HEXL1@RUN_BODY = 0.3400 (table 0.3400)
+OK    2650-04-04-04-04-FG HEXL2@RUN_BODY = 0.3400 (table 0.3400)
+OK    2650-04-04-04-04-FG HEXAF@RUN2 = 0.4400 (table 0.4400)
+OK    2650-04-04-04-04-FG HEXL1@RUN2_BODY = 0.3400 (table 0.3400)
+OK    2650-04-04-04-04-FG HEXL2@RUN2_BODY = 0.3400 (table 0.3400)
+OK    2650-04-04-04-04-FG one solid body (found 1)
+      2650-04-04-04-04-FG box x -0.890..0.890  y -0.890..0.890
+      config check 2: 2650-16-16-16-16-FG
 OK    2650-16-16-16-16-FG M1@LEG1 = 1.8100 (table 1.8100)
 OK    2650-16-16-16-16-FG BODYR@LEG1 = 0.6563 (table 0.6563)
 OK    2650-16-16-16-16-FG THDMAJR_B1@LEG1 = 0.6563 (table 0.6563)
@@ -294,10 +289,18 @@ OK    2650-16-16-16-16-FG HEXL1@RUN2_BODY = 0.8990 (table 0.8990)
 OK    2650-16-16-16-16-FG HEXL2@RUN2_BODY = 0.8990 (table 0.8990)
 OK    2650-16-16-16-16-FG one solid body (found 1)
       2650-16-16-16-16-FG box x -1.810..1.810  y -1.810..1.810
-OK    All-config sweep: 4 configurations rebuilt, 0 feature/body failures
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
-      THD_End3: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
-      THD_End4: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/5  2650-04-04-04-04-FG  rebuilt in 1.4 s
+      sweep 2/5  2650-06-06-06-06-FG  rebuilt in 2.2 s
+      sweep 3/5  2650-08-08-08-08-FG  rebuilt in 1.4 s
+      sweep 4/5  2650-12-12-12-12-FG  rebuilt in 2.0 s
+      sweep 5/5  2650-16-16-16-16-FG  rebuilt in 1.5 s
+OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 2650-08-08-08-08-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_End4: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
 OK    Threads suppressed in all configurations before save (4 THD_ features)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2650_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2650\2650_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2650\2650_MASTER.SLDPRT

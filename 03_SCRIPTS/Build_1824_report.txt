@@ -1,0 +1,39 @@
+Build_1824_MASTER  10/19/2026 9:42:45 PM
+OK    dim L = 0.6200 in (expect 0.6200)
+OK    dim BODYR = 0.4685 in (expect 0.4685)
+OK    dim FLGA_HEADR = 0.6250 in (expect 0.6250)
+OK    dim FLGA_HEADT = 0.3050 in (expect 0.3050)
+OK    dim FLGA_GRVIR = 0.3450 in (expect 0.3450)
+OK    dim FLGA_GRVD = 0.1100 in (expect 0.1100)
+OK    dim FLGA_GRVOR = 0.5000 in (expect 0.5000)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.5462 in^3 (expect 0.5462)
+OK    solid plug: End A face closed on the axis (x=0)
+OK    solid plug: End B face closed on the axis (x=0.6200)
+      Bounding box length 0.6200 (nominal 0.6200; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=0.6200
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Outer diameter 1.2500 / 1.2500 (expect the flange head 1.2500; round body 0.9370)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17\straight\DesignTable_1824_SW2.xlsx
+OK    Configurations after table: 2 (expect 2)
+      config check 1: 1824-08
+OK    1824-08 L@DRIVE = 0.6200 (table 0.6200)
+OK    1824-08 BODYR@DRIVE = 0.4685 (table 0.4685)
+OK    1824-08 FLGA_GRVIR@DRIVE = 0.3450 (table 0.3450)
+OK    1824-08 FLGA_GRVD@DRIVE = 0.1100 (table 0.1100)
+OK    1824-08 FLGA_GRVOR@DRIVE = 0.5000 (table 0.5000)
+OK    1824-08 FLGA_HEADR@DRIVE = 0.6250 (table 0.6250)
+OK    1824-08 FLGA_HEADT@DRIVE = 0.3050 (table 0.3050)
+OK    1824-08 one solid body (found 1)
+      1824-08 box x 0.000..0.620  y -0.625..0.625
+      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/1  1824-08  rebuilt in 0.1 s
+OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 1824-08 for the save (it opens in this size)
+OK    No threaded end: no THD_ feature to suppress before save (0 found)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1824\1824_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 9:42:55 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1824\1824_MASTER.SLDPRT

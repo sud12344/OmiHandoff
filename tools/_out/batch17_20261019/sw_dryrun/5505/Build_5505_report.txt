@@ -1,0 +1,155 @@
+Build_5505_MASTER  10/19/2026 10:01:04 PM
+OK    dim M1 = 1.4400 in (expect 1.4400)
+OK    dim BODYR = 0.9375 in (expect 0.9375)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim HZREF = 0.5000 in (expect 0.5000)
+OK    angle LEGANG2 = 135.00 deg
+OK    dim M2 = 1.4400 in (expect 1.4400)
+OK    dim BODYR = 0.9375 in (expect 0.9375)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 1.8750 in (expect 1.8750)
+      HEX1: sgVERTICAL -> vertex |z| max 0.9375 (flats want 0.9375)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.590 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    PLN2: leg tip face found 1.4400 along the leg
+      PLN2: InsertRefPlane ok
+OK    PLN2 reference plane created (RefPlane)
+      PLN2: plane z axis (-0.707, 0.707, 0.000), leg axis (-0.707, 0.707)
+OK    PLN2 is normal to the angled leg
+OK    dim HEXAF = 1.8750 in (expect 1.8750)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.9375 (flats want 0.9375)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.443 in on axis 0 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.9375 in (expect 0.9375)
+OK    dim PUCK_HT = 0.9375 in (expect 0.9375)
+OK    dim PUCK_R1B = 0.5408 in (expect 0.5408)
+OK    dim PUCK_R1T = 0.5408 in (expect 0.5408)
+OK    dim PUCK_XC = 1.0820 in (expect 1.0820)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    One solid body after legs+hex
+OK    select end face for POCKET1 at x=1.4400
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET1 sketch opened (active sketch exists)
+OK    POCKET1 circle created
+OK    dim TAPDRILL1 = 1.4800 in (expect 1.4800)
+OK    POCKET1 sketch closed and named (ProfileFeature)
+      POCKETCUT1 attempt 0: CreateDefinition returned Nothing
+      POCKETCUT1 attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT1 cut removes material (attempt 0)
+OK    POCKETCUT1 dims: DEPTH=1.4400 TAPDRILL1=1.4800 
+OK    select end face for POCKET2 at x=1.4400
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET2 sketch opened (active sketch exists)
+OK    POCKET2 circle created
+OK    dim TAPDRILL2 = 1.4800 in (expect 1.4800)
+OK    POCKET2 sketch closed and named (ProfileFeature)
+      POCKETCUT2 attempt 0: CreateDefinition returned Nothing
+      POCKETCUT2 attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT2 cut removes material (attempt 0)
+OK    POCKETCUT2 dims: DEPTH=1.4400 TAPDRILL2=1.4800 
+OK    leg 1 bore open on the axis at its face (X=+1.4400)
+OK    leg 2 bore open on the axis at its face (1.4400 along the 135-deg leg)
+OK    THD_End1: end face found at 1.4400
+OK    dim HELIXDIA = 1.4800 in (expect 1.4800)
+OK    THD_End1 helix sketch made (ProfileFeature)
+      THD_End1: InsertHelix ok
+OK    THD_End1 helix created
+OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (1.4400, 0.0000, -0.7400)
+      THD_End1: helix start = (1.4400, 0.0000, -0.7400)
+      THD_End1: profile on Top Plane
+      THD_End1: sketch start (1.4400,0.7400) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.4400 (want 1.4400)
+OK    dim PROF_AX = 1.4400 in (expect 1.4400)
+      PROF_R: try 0 value 0.7400 (want 0.7400)
+OK    dim PROF_R = 0.7400 in (expect 0.7400)
+      APEXR: try 0 value 0.8096 (want 0.8096)
+OK    dim APEXR = 0.8096 in (expect 0.8096)
+OK    THD_End1 60 deg tooth angle placed
+OK    THD_End1 profile sketch fully defined
+      THD_End1: sweep CreateFeature -> True
+OK    THD_End1 swept cut created
+OK    THD_End1 sweep removed material: 0.10112 in^3
+OK    THD_End1 suppressed
+OK    THD_End2: end face found 1.4400 along the 135-deg leg
+OK    dim HELIXDIA = 1.4800 in (expect 1.4800)
+OK    THD_End2 helix sketch made (ProfileFeature)
+OK    THD_End2 helix sketch fully defined
+      THD_End2: helix try 0 (reversed True, clockwise True, taper out False, start 270.0 deg): face end 1.4400 along, z -0.7400, r 0.7400; far end 0.2800, r 0.7038 (want 0.7038); right hand
+      THD_End2: helix try 1 (reversed True, clockwise True, taper out False, start 90.0 deg): face end 1.4400 along, z 0.7400, r 0.7400; far end 0.2800, r 0.7038 (want 0.7038); right hand
+      THD_End2: helix try 2 (reversed True, clockwise True, taper out False, start 45.0 deg): face end 1.4400 along, z 0.5233, r 0.7400; far end 0.2800, r 0.7038 (want 0.7038); right hand
+      THD_End2: helix try 3 (reversed True, clockwise True, taper out False, start 225.0 deg): face end 1.4400 along, z -0.5233, r 0.7400; far end 0.2800, r 0.7038 (want 0.7038); right hand
+      THD_End2: helix try 4 (reversed True, clockwise True, taper out False, start 0.0 deg): face end 1.4400 along, z 0.0000, r 0.7400; far end 0.2800, r 0.7038 (want 0.7038); right hand
+OK    THD_End2: helix into the part, right hand, starting in the Front Plane on the end face 1.4400 (radius 0.7400)
+OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End2: profile at a 1.4400, q 0.7400, apex 0.8096
+OK    dim PHZL = 0.5000 in (expect 0.5000)
+OK    dim PAXL = 0.2500 in (expect 0.2500)
+OK    dim PPZL = 0.2500 in (expect 0.2500)
+OK    angle PANG = 135.00 deg
+OK    dim PROF_AX = 1.4400 in (expect 1.4400)
+OK    dim PROF_R = 0.7400 in (expect 0.7400)
+OK    dim APEXR = 0.8096 in (expect 0.8096)
+OK    THD_End2 60 deg tooth angle placed
+OK    THD_End2 profile sketch fully defined
+      THD_End2: sweep CreateFeature -> True
+OK    THD_End2 swept cut created
+OK    THD_End2 sweep removed material: 0.10113 in^3
+OK    THD_End2: one solid body after the thread
+      THD_End2: left live until the final suppress step
+OK    leg 1 tip (exact) 1.4400 along +X (expect 1.4400)
+OK    leg 2 tip (exact) 1.4400 along the 135-deg leg (expect 1.4400)
+OK    Z extent (exact) -0.9375 .. 0.9375 (expect -0.9375 .. 0.9375: hex flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_5505_SW2.xlsx
+OK    Configurations after table: 3 (expect 3)
+      config check 1: 5505-04-04-FG
+OK    5505-04-04-FG M1@LEG1 = 0.6900 (table 0.6900)
+OK    5505-04-04-FG BODYR@LEG1 = 0.3750 (table 0.3750)
+OK    5505-04-04-FG M2@LEG2 = 0.6900 (table 0.6900)
+OK    5505-04-04-FG BODYR@LEG2 = 0.3750 (table 0.3750)
+OK    5505-04-04-FG DEPTH@POCKETCUT1 = 0.6900 (table 0.6900)
+OK    5505-04-04-FG DEPTH@POCKETCUT2 = 0.6900 (table 0.6900)
+OK    5505-04-04-FG PROF_R@THDPROF_1 = 0.2150 (table 0.2150)
+OK    5505-04-04-FG PROF_R@THDPROF_2 = 0.2150 (table 0.2150)
+OK    5505-04-04-FG HEXAF@HEX1 = 0.7500 (table 0.7500)
+OK    5505-04-04-FG HEXL@HEX1_BODY = 0.4630 (table 0.4630)
+OK    5505-04-04-FG HEXAF@HEX2 = 0.7500 (table 0.7500)
+OK    5505-04-04-FG HEXL@HEX2_BODY = 0.4630 (table 0.4630)
+OK    5505-04-04-FG PUCK_R1B@PUCK = 0.2160 (table 0.2160)
+OK    5505-04-04-FG PUCK_XC@PUCK = 0.4325 (table 0.4325)
+OK    5505-04-04-FG one solid body (found 1)
+      5505-04-04-FG box x -0.753..0.690  y -0.433..0.753
+OK    5505-20-20-FG: THD_End2 live and rebuilt (error code 0)
+OK    5505-20-20-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.4400 along the leg, table 1.4400; r 0.7400, table 0.7400)
+OK    5505-04-04-FG: THD_End2 live and rebuilt (error code 0)
+OK    5505-04-04-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.6900 along the leg, table 0.6900; r 0.2150, table 0.2150)
+      All-config sweep: rebuilding 2 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/2  5505-04-04-FG  rebuilt in 0.7 s
+      sweep 2/2  5505-20-20-FG  rebuilt in 1.5 s
+OK    All-config sweep: 2 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 5505-20-20-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5505\5505_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5505\5505_MASTER.SLDPRT

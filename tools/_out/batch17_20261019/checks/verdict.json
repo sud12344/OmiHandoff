@@ -1,0 +1,414 @@
+{
+ "0318": {
+  "issues": [],
+  "n": 12,
+  "live": true
+ },
+ "0403": {
+  "issues": [],
+  "n": 7,
+  "live": true
+ },
+ "1404": {
+  "issues": [],
+  "n": 24,
+  "live": true
+ },
+ "1405": {
+  "issues": [],
+  "n": 17,
+  "live": true
+ },
+ "1501": {
+  "issues": [],
+  "n": 19,
+  "live": true
+ },
+ "1502": {
+  "issues": [],
+  "n": 8,
+  "live": true
+ },
+ "1503": {
+  "issues": [],
+  "n": 19,
+  "live": false
+ },
+ "1504": {
+  "issues": [],
+  "n": 3,
+  "live": false
+ },
+ "1601": {
+  "issues": [],
+  "n": 7,
+  "live": false
+ },
+ "1602": {
+  "issues": [],
+  "n": 7,
+  "live": false
+ },
+ "1603": {
+  "issues": [],
+  "n": 5,
+  "live": false
+ },
+ "1700RC": {
+  "issues": [
+   "1 FAIL line(s): FLATS sketch fully defined"
+  ],
+  "n": 3,
+  "live": false
+ },
+ "1703": {
+  "issues": [
+   "2 FAIL line(s): HEX2 extruded the right way | 1703-24-24-FG HEXL@HEX2_BODY readable"
+  ],
+  "n": 1,
+  "live": false
+ },
+ "1704": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "1724": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "1800": {
+  "issues": [
+   "1 FAIL line(s): FLATS sketch fully defined"
+  ],
+  "n": 1,
+  "live": false
+ },
+ "1804": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "1824": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "2403": {
+  "issues": [],
+  "n": 40,
+  "live": true
+ },
+ "2404": {
+  "issues": [],
+  "n": 59,
+  "live": true
+ },
+ "2405": {
+  "issues": [],
+  "n": 30,
+  "live": true
+ },
+ "2406": {
+  "issues": [],
+  "n": 51,
+  "live": true
+ },
+ "2501": {
+  "issues": [],
+  "n": 56,
+  "live": true
+ },
+ "2503": {
+  "issues": [],
+  "n": 29,
+  "live": true
+ },
+ "2504": {
+  "issues": [],
+  "n": 5,
+  "live": true
+ },
+ "2505": {
+  "issues": [],
+  "n": 2,
+  "live": true
+ },
+ "2601": {
+  "issues": [],
+  "n": 10,
+  "live": true
+ },
+ "2602": {
+  "issues": [],
+  "n": 6,
+  "live": true
+ },
+ "2605": {
+  "issues": [],
+  "n": 7,
+  "live": true
+ },
+ "2611": {
+  "issues": [],
+  "n": 3,
+  "live": true
+ },
+ "2650": {
+  "issues": [],
+  "n": 5,
+  "live": true
+ },
+ "2700": {
+  "issues": [],
+  "n": 26,
+  "live": true
+ },
+ "2701": {
+  "issues": [],
+  "n": 18,
+  "live": true
+ },
+ "2705": {
+  "issues": [],
+  "n": 18,
+  "live": true
+ },
+ "2706": {
+  "issues": [],
+  "n": 25,
+  "live": true
+ },
+ "4501": {
+  "issues": [],
+  "n": 12,
+  "live": false
+ },
+ "4503": {
+  "issues": [
+   "12 FAIL line(s): HOSEFACE2 cut made on the tip side of the hose hex face (attempt 2) | DEPTH@HOSEFACE2 reachable | DEPTH@STUBFILL2 reachable | dim D2 = 0.4530 in (expect 0.4060)"
+  ],
+  "n": 7,
+  "live": false
+ },
+ "4601": {
+  "issues": [],
+  "n": 15,
+  "live": false
+ },
+ "4603": {
+  "issues": [
+   "11 FAIL line(s): HOSEFACE2 cut made on the tip side of the hose hex face (attempt 2) | DEPTH@HOSEFACE2 reachable | DEPTH@STUBFILL2 reachable | 4603-04-04-NWO-FG DEPTH@HOSEFACE2 readable"
+  ],
+  "n": 5,
+  "live": false
+ },
+ "5000": {
+  "issues": [],
+  "n": 22,
+  "live": true
+ },
+ "5404": {
+  "issues": [],
+  "n": 31,
+  "live": true
+ },
+ "5404N": {
+  "issues": [
+   "16 FAIL line(s): Body diameter 0.8861 / 0.8931 (expect 0.8800) | 5404-N-06X2.000 feature THD_EndA rebuilds (error code 1) | 5404-N-06X2.000 feature THD_EndB rebuilds (error code 1) | 5404-N-06X2.500 feature THD_EndA rebuilds (error code 1)"
+  ],
+  "n": 22,
+  "live": true
+ },
+ "5405": {
+  "issues": [],
+  "n": 31,
+  "live": true
+ },
+ "5406": {
+  "issues": [],
+  "n": 31,
+  "live": true
+ },
+ "5406C": {
+  "issues": [],
+  "n": 7,
+  "live": true
+ },
+ "5406HHP": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "5406P": {
+  "issues": [],
+  "n": 9,
+  "live": true
+ },
+ "5406SHP": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "5500": {
+  "issues": [],
+  "n": 16,
+  "live": true
+ },
+ "5501": {
+  "issues": [],
+  "n": 7,
+  "live": false
+ },
+ "5502": {
+  "issues": [],
+  "n": 20,
+  "live": true
+ },
+ "5503": {
+  "issues": [],
+  "n": 6,
+  "live": false
+ },
+ "5504": {
+  "issues": [],
+  "n": 9,
+  "live": true
+ },
+ "5505": {
+  "issues": [],
+  "n": 2,
+  "live": false
+ },
+ "5600": {
+  "issues": [],
+  "n": 8,
+  "live": true
+ },
+ "5601": {
+  "issues": [],
+  "n": 6,
+  "live": false
+ },
+ "5603": {
+  "issues": [],
+  "n": 6,
+  "live": false
+ },
+ "5652": {
+  "issues": [],
+  "n": 6,
+  "live": false
+ },
+ "6400": {
+  "issues": [],
+  "n": 66,
+  "live": false
+ },
+ "6401": {
+  "issues": [],
+  "n": 24,
+  "live": true
+ },
+ "6402": {
+  "issues": [],
+  "n": 16,
+  "live": true
+ },
+ "6404": {
+  "issues": [],
+  "n": 14,
+  "live": true
+ },
+ "6405": {
+  "issues": [],
+  "n": 44,
+  "live": true
+ },
+ "6408": {
+  "issues": [],
+  "n": 14,
+  "live": true
+ },
+ "6408HHP": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "6410": {
+  "issues": [],
+  "n": 34,
+  "live": true
+ },
+ "6500": {
+  "issues": [],
+  "n": 26,
+  "live": true
+ },
+ "6501": {
+  "issues": [],
+  "n": 14,
+  "live": true
+ },
+ "6502": {
+  "issues": [],
+  "n": 12,
+  "live": true
+ },
+ "6503": {
+  "issues": [],
+  "n": 1,
+  "live": true
+ },
+ "6504": {
+  "issues": [],
+  "n": 14,
+  "live": true
+ },
+ "6505": {
+  "issues": [],
+  "n": 21,
+  "live": true
+ },
+ "6506": {
+  "issues": [],
+  "n": 14,
+  "live": true
+ },
+ "6600": {
+  "issues": [],
+  "n": 10,
+  "live": true
+ },
+ "6602": {
+  "issues": [],
+  "n": 10,
+  "live": true
+ },
+ "6606": {
+  "issues": [],
+  "n": 4,
+  "live": false
+ },
+ "6801": {
+  "issues": [],
+  "n": 39,
+  "live": true
+ },
+ "6803": {
+  "issues": [],
+  "n": 8,
+  "live": true
+ },
+ "6807": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ },
+ "6902": {
+  "issues": [],
+  "n": 1,
+  "live": false
+ }
+}

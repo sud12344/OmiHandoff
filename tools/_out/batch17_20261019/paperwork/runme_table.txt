@@ -1,0 +1,77 @@
+ NEW MASTERS (24)
+   Build_1503_MASTER.bas            19 configurations
+   Build_1504_MASTER.bas             3 configurations
+   Build_1601_MASTER.bas             7 configurations
+   Build_1602_MASTER.bas             7 configurations
+   Build_1603_MASTER.bas             5 configurations
+   Build_1704_MASTER.bas             1 configurations
+   Build_1724_MASTER.bas             1 configurations
+   Build_1804_MASTER.bas             1 configurations
+   Build_1824_MASTER.bas             1 configurations
+   Build_4501_MASTER.bas            12 configurations
+   Build_4601_MASTER.bas            15 configurations
+   Build_5406HHP_MASTER.bas          1 configurations
+   Build_5406SHP_MASTER.bas          1 configurations
+   Build_5501_MASTER.bas             7 configurations
+   Build_5503_MASTER.bas             6 configurations
+   Build_5505_MASTER.bas             2 configurations
+   Build_5601_MASTER.bas             6 configurations
+   Build_5603_MASTER.bas             6 configurations
+   Build_5652_MASTER.bas             6 configurations
+   Build_6400_MASTER.bas            66 configurations
+   Build_6408HHP_MASTER.bas          1 configurations
+   Build_6606_MASTER.bas             4 configurations
+   Build_6807_MASTER.bas             1 configurations
+   Build_6902_MASTER.bas             1 configurations
+ REPLACED MASTERS (50)            before -> after   new   old changed with their table cells
+   Build_0318_MASTER.bas            12 ->   12           11
+   Build_0403_MASTER.bas             7 ->    7           1
+   Build_1404_MASTER.bas            24 ->   24           22
+   Build_1405_MASTER.bas            15 ->   17      +2   
+   Build_1501_MASTER.bas            17 ->   19      +2   
+   Build_1502_MASTER.bas             1 ->    8      +7   
+   Build_2403_MASTER.bas            34 ->   40      +6   
+   Build_2404_MASTER.bas            57 ->   59      +2   
+   Build_2405_MASTER.bas            28 ->   30      +2   
+   Build_2406_MASTER.bas            40 ->   51     +11   
+   Build_2501_MASTER.bas            48 ->   56      +8   2
+   Build_2503_MASTER.bas            29 ->   29           3
+   Build_2504_MASTER.bas             4 ->    5      +1   
+   Build_2505_MASTER.bas             1 ->    2      +1   
+   Build_2601_MASTER.bas            10 ->   10           
+   Build_2602_MASTER.bas             5 ->    6      +1   
+   Build_2605_MASTER.bas             7 ->    7           1
+   Build_2611_MASTER.bas             2 ->    3      +1   
+   Build_2650_MASTER.bas             4 ->    5      +1   
+   Build_2700_MASTER.bas            24 ->   26      +2   
+   Build_2701_MASTER.bas            15 ->   18      +3   
+   Build_2705_MASTER.bas            14 ->   18      +4   
+   Build_2706_MASTER.bas            23 ->   25      +2   
+   Build_5000_MASTER.bas            19 ->   22      +3   
+   Build_5404_MASTER.bas            25 ->   31      +6   
+   Build_5405_MASTER.bas            26 ->   31      +5   
+   Build_5406_MASTER.bas            28 ->   31      +3   
+   Build_5406C_MASTER.bas            6 ->    7      +1   
+   Build_5406P_MASTER.bas            4 ->    9      +5   
+   Build_5500_MASTER.bas            16 ->   16           1
+   Build_5502_MASTER.bas            13 ->   20      +7   5
+   Build_5504_MASTER.bas             5 ->    9      +4   
+   Build_5600_MASTER.bas             6 ->    8      +2   
+   Build_6401_MASTER.bas            24 ->   24           
+   Build_6402_MASTER.bas            15 ->   16      +1   15
+   Build_6404_MASTER.bas            14 ->   14           
+   Build_6405_MASTER.bas            40 ->   44      +4   
+   Build_6408_MASTER.bas            14 ->   14           
+   Build_6410_MASTER.bas            30 ->   34      +4   
+   Build_6500_MASTER.bas            24 ->   26      +2   3
+   Build_6501_MASTER.bas            14 ->   14           1
+   Build_6502_MASTER.bas            11 ->   12      +1   3
+   Build_6503_MASTER.bas             1 ->    1           1
+   Build_6504_MASTER.bas            10 ->   14      +4   
+   Build_6505_MASTER.bas            19 ->   21      +2   13
+   Build_6506_MASTER.bas            14 ->   14           10
+   Build_6600_MASTER.bas             9 ->   10      +1   
+   Build_6602_MASTER.bas             9 ->   10      +1   
+   Build_6801_MASTER.bas            35 ->   39      +4   
+   Build_6803_MASTER.bas             5 ->    8      +3   
+configurations in new masters + new rows in replaced masters (6400 aside): 299

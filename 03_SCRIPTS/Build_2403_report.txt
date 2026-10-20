@@ -1,4 +1,4 @@
-Build_2403_MASTER  10/2/2026 7:27:17 AM
+Build_2403_MASTER  10/19/2026 10:10:50 PM
 OK    dim L1 = 1.6200 in (expect 1.6200)
 OK    dim BODYR = 0.4677 in (expect 0.4677)
 OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
@@ -75,15 +75,15 @@ OK    THD_EndA thread feature created
       THD_EndA: thread centre x = 0.3842 in, anchor 0.5367, wanted -X
 OK    THD_EndA runs along the thread flat (away from the hex)
 OK    THD_EndA rebuilds without error (code 0)
-      THD_EndA: dim full name D8@THD_EndA@Part34.Part
-      THD_EndA: dim full name THDPITCH@THD_EndA@Part34.Part
-      THD_EndA: dim full name THDDIA@THD_EndA@Part34.Part
-      THD_EndA: dim full name DEPTH@THD_EndA@Part34.Part
-      THD_EndA: dim full name D1@THD_EndA@Part34.Part
-      THD_EndA: dim full name THDPITCH@Thread Profile1@Part34.Part
-      THD_EndA: dim full name Profile_Land@Thread Profile1@Part34.Part
-      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part34.Part
-      THD_EndA: dim full name Profile_Height@Thread Profile1@Part34.Part
+      THD_EndA: dim full name D8@THD_EndA@Part25.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part25.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part25.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part25.Part
+      THD_EndA: dim full name D1@THD_EndA@Part25.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part25.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part25.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part25.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part25.Part
 OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndA: profile sketch renamed to THD_EndA_PROF
 OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
@@ -107,15 +107,15 @@ OK    THD_EndB thread feature created
       THD_EndB: thread centre x = 1.2358 in, anchor 1.0833, wanted +X
 OK    THD_EndB runs along the thread flat (away from the hex)
 OK    THD_EndB rebuilds without error (code 0)
-      THD_EndB: dim full name D8@THD_EndB@Part34.Part
-      THD_EndB: dim full name THDPITCH@THD_EndB@Part34.Part
-      THD_EndB: dim full name THDDIA@THD_EndB@Part34.Part
-      THD_EndB: dim full name DEPTH@THD_EndB@Part34.Part
-      THD_EndB: dim full name D1@THD_EndB@Part34.Part
-      THD_EndB: dim full name THDPITCH@Thread Profile2@Part34.Part
-      THD_EndB: dim full name Profile_Land@Thread Profile2@Part34.Part
-      THD_EndB: dim full name Profile_Angle@Thread Profile2@Part34.Part
-      THD_EndB: dim full name Profile_Height@Thread Profile2@Part34.Part
+      THD_EndB: dim full name D8@THD_EndB@Part25.Part
+      THD_EndB: dim full name THDPITCH@THD_EndB@Part25.Part
+      THD_EndB: dim full name THDDIA@THD_EndB@Part25.Part
+      THD_EndB: dim full name DEPTH@THD_EndB@Part25.Part
+      THD_EndB: dim full name D1@THD_EndB@Part25.Part
+      THD_EndB: dim full name THDPITCH@Thread Profile2@Part25.Part
+      THD_EndB: dim full name Profile_Land@Thread Profile2@Part25.Part
+      THD_EndB: dim full name Profile_Angle@Thread Profile2@Part25.Part
+      THD_EndB: dim full name Profile_Height@Thread Profile2@Part25.Part
 OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndB: profile sketch renamed to THD_EndB_PROF
 OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
@@ -127,8 +127,8 @@ OK    End B face present at x=1.6200
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 0.8100 / corners 0.9353 (expect 0.8100 / 0.9353)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2403_SW2.xlsx
-OK    Configurations after table: 35 (expect 35)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_2403_SW2.xlsx
+OK    Configurations after table: 41 (expect 41)
       config check 1: 2403-02-02
 OK    2403-02-02 L1@DRIVE = 1.1700 (table 1.1700)
 OK    2403-02-02 BODYR@DRIVE = 0.2540 (table 0.2540)
@@ -148,65 +148,71 @@ OK    2403-02-02 DEPTH@BORECUT_A = 0.5850 (table 0.5850)
 OK    2403-02-02 DEPTH@BORECUT_B = 0.5850 (table 0.5850)
 OK    2403-02-02 one solid body (found 1)
       2403-02-02 box x 0.000..1.170  y -0.220..0.220
-      config check 2: 2403-LH-20-20
-OK    2403-LH-20-20 L1@DRIVE = 2.4300 (table 2.4300)
-OK    2403-LH-20-20 BODYR@DRIVE = 1.0854 (table 1.0854)
-OK    2403-LH-20-20 HEXB@HEX = 1.8800 (table 1.8800)
-OK    2403-LH-20-20 THDMAJR_A@DRIVE = 0.8125 (table 0.8125)
-OK    2403-LH-20-20 JICA_RELIEFL@DRIVE = 0.1250 (table 0.1250)
-OK    2403-LH-20-20 JICA_THDZ@DRIVE = 0.4316 (table 0.4316)
-OK    2403-LH-20-20 JICA_CONER@DRIVE = 0.7530 (table 0.7530)
-OK    2403-LH-20-20 JICA_LANDL@DRIVE = 0.1288 (table 0.1288)
-OK    2403-LH-20-20 THDPITCH@THD_EndA = 0.0833 (table 0.0833)
-OK    2403-LH-20-20 Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
-OK    2403-LH-20-20 THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
-OK    2403-LH-20-20 THDPITCH@THD_EndB = 0.0833 (table 0.0833)
-OK    2403-LH-20-20 Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
-OK    2403-LH-20-20 THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
-OK    2403-LH-20-20 DEPTH@BORECUT_A = 1.2150 (table 1.2150)
-OK    2403-LH-20-20 DEPTH@BORECUT_B = 1.2150 (table 1.2150)
-OK    2403-LH-20-20 one solid body (found 1)
-      2403-LH-20-20 box x 0.000..2.430  y -0.940..0.940
-      All-config sweep: rebuilding 34 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/34  2403-02-02  rebuilt in 1.2 s
-      sweep 2/34  2403-03-03  rebuilt in 1.9 s
-      sweep 3/34  2403-04-04  rebuilt in 1.7 s
-      sweep 4/34  2403-05-04  rebuilt in 2.6 s
-      sweep 5/34  2403-05-05  rebuilt in 1.6 s
-      sweep 6/34  2403-06-04  rebuilt in 1.7 s
-      sweep 7/34  2403-06-05  rebuilt in 1.6 s
-      sweep 8/34  2403-06-06  rebuilt in 2.0 s
-      sweep 9/34  2403-08-04  rebuilt in 1.8 s
-      sweep 10/34  2403-08-06  rebuilt in 2.0 s
-      sweep 11/34  2403-08-08  rebuilt in 1.5 s
-      sweep 12/34  2403-10-06  rebuilt in 2.8 s
-      sweep 13/34  2403-10-08  rebuilt in 2.5 s
-      sweep 14/34  2403-10-10  rebuilt in 2.0 s
-      sweep 15/34  2403-12-06  rebuilt in 2.1 s
-      sweep 16/34  2403-12-08  rebuilt in 1.8 s
-      sweep 17/34  2403-12-10  rebuilt in 1.7 s
-      sweep 18/34  2403-12-12  rebuilt in 1.6 s
-      sweep 19/34  2403-16-08  rebuilt in 1.7 s
-      sweep 20/34  2403-16-12  rebuilt in 1.5 s
-      sweep 21/34  2403-16-16  rebuilt in 1.6 s
-      sweep 22/34  2403-20-12  rebuilt in 1.7 s
-      sweep 23/34  2403-20-20  rebuilt in 1.9 s
-      sweep 24/34  2403-24-20  rebuilt in 2.2 s
-      sweep 25/34  2403-24-24  rebuilt in 2.7 s
-      sweep 26/34  2403-32-24  rebuilt in 3.2 s
-      sweep 27/34  2403-32-32  rebuilt in 3.5 s
-      sweep 28/34  2403-LH-04-04  rebuilt in 2.1 s
-      sweep 29/34  2403-LH-06-06  rebuilt in 2.2 s
-      sweep 30/34  2403-LH-08-08  rebuilt in 2.4 s
-      sweep 31/34  2403-LH-10-10  rebuilt in 1.7 s
-      sweep 32/34  2403-LH-12-12  rebuilt in 2.2 s
-      sweep 33/34  2403-LH-16-16  rebuilt in 2.2 s
-      sweep 34/34  2403-LH-20-20  rebuilt in 1.6 s
-OK    All-config sweep: 34 configurations rebuilt, 0 feature/body failures
+      config check 2: 2403-LH-24-24
+OK    2403-LH-24-24 L1@DRIVE = 2.7500 (table 2.7500)
+OK    2403-LH-24-24 BODYR@DRIVE = 1.2269 (table 1.2269)
+OK    2403-LH-24-24 HEXB@HEX = 2.1250 (table 2.1250)
+OK    2403-LH-24-24 THDMAJR_A@DRIVE = 0.9375 (table 0.9375)
+OK    2403-LH-24-24 JICA_RELIEFL@DRIVE = 0.1250 (table 0.1250)
+OK    2403-LH-24-24 JICA_THDZ@DRIVE = 0.5454 (table 0.5454)
+OK    2403-LH-24-24 JICA_CONER@DRIVE = 0.8775 (table 0.8775)
+OK    2403-LH-24-24 JICA_LANDL@DRIVE = 0.1298 (table 0.1298)
+OK    2403-LH-24-24 THDPITCH@THD_EndA = 0.0833 (table 0.0833)
+OK    2403-LH-24-24 Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
+OK    2403-LH-24-24 THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
+OK    2403-LH-24-24 THDPITCH@THD_EndB = 0.0833 (table 0.0833)
+OK    2403-LH-24-24 Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
+OK    2403-LH-24-24 THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
+OK    2403-LH-24-24 DEPTH@BORECUT_A = 1.3750 (table 1.3750)
+OK    2403-LH-24-24 DEPTH@BORECUT_B = 1.3750 (table 1.3750)
+OK    2403-LH-24-24 one solid body (found 1)
+      2403-LH-24-24 box x 0.000..2.750  y -1.063..1.063
+      All-config sweep: rebuilding 40 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/40  2403-02-02  rebuilt in 0.9 s
+      sweep 2/40  2403-03-03  rebuilt in 1.3 s
+      sweep 3/40  2403-04-02  rebuilt in 1.5 s
+      sweep 4/40  2403-04-04  rebuilt in 1.5 s
+      sweep 5/40  2403-05-04  rebuilt in 1.4 s
+      sweep 6/40  2403-05-05  rebuilt in 1.4 s
+      sweep 7/40  2403-06-04  rebuilt in 1.3 s
+      sweep 8/40  2403-06-05  rebuilt in 1.4 s
+      sweep 9/40  2403-06-06  rebuilt in 1.5 s
+      sweep 10/40  2403-08-04  rebuilt in 1.4 s
+      sweep 11/40  2403-08-06  rebuilt in 1.9 s
+      sweep 12/40  2403-08-08  rebuilt in 1.2 s
+      sweep 13/40  2403-10-04  rebuilt in 1.2 s
+      sweep 14/40  2403-10-06  rebuilt in 1.4 s
+      sweep 15/40  2403-10-08  rebuilt in 1.5 s
+      sweep 16/40  2403-10-10  rebuilt in 1.3 s
+      sweep 17/40  2403-12-06  rebuilt in 1.4 s
+      sweep 18/40  2403-12-08  rebuilt in 1.4 s
+      sweep 19/40  2403-12-10  rebuilt in 1.2 s
+      sweep 20/40  2403-12-12  rebuilt in 1.3 s
+      sweep 21/40  2403-16-08  rebuilt in 1.4 s
+      sweep 22/40  2403-16-10  rebuilt in 1.4 s
+      sweep 23/40  2403-16-12  rebuilt in 1.3 s
+      sweep 24/40  2403-16-16  rebuilt in 1.6 s
+      sweep 25/40  2403-20-12  rebuilt in 1.5 s
+      sweep 26/40  2403-20-16  rebuilt in 1.6 s
+      sweep 27/40  2403-20-20  rebuilt in 1.8 s
+      sweep 28/40  2403-24-16  rebuilt in 1.7 s
+      sweep 29/40  2403-24-20  rebuilt in 1.8 s
+      sweep 30/40  2403-24-24  rebuilt in 1.9 s
+      sweep 31/40  2403-32-24  rebuilt in 2.2 s
+      sweep 32/40  2403-32-32  rebuilt in 2.6 s
+      sweep 33/40  2403-LH-04-04  rebuilt in 1.4 s
+      sweep 34/40  2403-LH-06-06  rebuilt in 1.7 s
+      sweep 35/40  2403-LH-08-08  rebuilt in 2.7 s
+      sweep 36/40  2403-LH-10-10  rebuilt in 2.1 s
+      sweep 37/40  2403-LH-12-12  rebuilt in 1.7 s
+      sweep 38/40  2403-LH-16-16  rebuilt in 2.2 s
+      sweep 39/40  2403-LH-20-20  rebuilt in 2.4 s
+      sweep 40/40  2403-LH-24-24  rebuilt in 1.8 s
+OK    All-config sweep: 40 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2403-08-08 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 35 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 35 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 41 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 41 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2403_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/2/2026 7:29:18 AM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2403_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2403\2403_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 10:12:29 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2403\2403_MASTER.SLDPRT

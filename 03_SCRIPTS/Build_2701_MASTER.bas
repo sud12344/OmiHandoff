@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2701_MASTER"
 ' ============================================================================
-'  Build_2701_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_tee.py
+'  Build_2701_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
 '  90 deg Bulkhead Elbow (elbow), forged hex body (2500HX pattern).  Reference config 2701-08-08-FG: JICM -08, JICBH -08
 '  Entry: Sub Build2701.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_2701_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -249,7 +249,7 @@ Sub Build2701()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 16)", (UBound(cfgs) + 1) = 16
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 19)", (UBound(cfgs) + 1) = 19
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

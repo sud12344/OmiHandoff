@@ -51,7 +51,11 @@ def check(P, dims):
         elif name == 'Dim_ang':
             i, j = int(a[0]), int(a[1]); cons.append((a[2], lambda q, i=i, j=j: math.sin(segang(q, i) - (segang(q, j) if j != n - 1 else 0.0))))
         elif name == 'Collinear':
-            i, j = int(a[0]), int(a[1]); cons.append(('col', lambda q, i=i, j=j: Y(q, segs[i][0]) - Y(q, segs[j][0])))
+            i, j = int(a[0]), int(a[1])
+            if abs(P[segs[i][0]][1] - P[segs[i][1]][1]) < 1e-9:      # horizontal lines -> same radius (every JIC cone collinear)
+                cons.append(('col', lambda q, i=i, j=j: Y(q, segs[i][0]) - Y(q, segs[j][0])))
+            else:                                                    # 2026-10-18 (flange leg face ring / face disc): vertical lines -> same axial position
+                cons.append(('col', lambda q, i=i, j=j: X(q, segs[i][0]) - X(q, segs[j][0])))
     q0 = P.flatten().astype(float); J = np.zeros((len(cons), len(q0))); h = 1e-7
     for c, (nm, f) in enumerate(cons):
         for k in range(len(q0)):
@@ -126,6 +130,89 @@ def check_ring(a0, ln, r0, r1):
             qp = q0.copy(); qm = q0.copy(); qp[k] += h; qm[k] -= h; J[c, k] = (f(qp) - f(qm)) / (2 * h)
     r = np.linalg.matrix_rank(J, tol=1e-6)
     return dict(unknowns=len(q0), cons=len(cons), rank=int(r), fully=bool(r == len(q0)), redundant=len(cons) - int(r))
+def hosefaces(path):
+    """2026-10-09 (wave 2, HOSEB): the face-off calls Call HoseFace(i, rect, basePl, ux, uy, sh, depth, rin, rS, ylo, ytop, zh, rout, past)"""
+    t = open(path).read(); out = []
+    for m in re.finditer(r'Call HoseFace\((\d+), (True|False), "([^"]+)", ([^)]*)\)', t):
+        v = [x.strip() for x in m.group(4).split(',')]
+        out.append(dict(i=int(m.group(1)), rect=m.group(2) == 'True', base=m.group(3), ux=float(v[0]), uy=float(v[1]), sh=float(v[2]), depth=float(v[3]),
+                        rin=float(v[4]), rS=float(v[5]), ylo=float(v[6]), ytop=float(v[7]), zh=float(v[8]), rout=float(v[9]), past=v[10] == 'True'))
+    return out
+def jac_rank(cons, q0):
+    J = np.zeros((len(cons), len(q0))); h = 1e-7
+    for c, f in enumerate(cons):
+        for k in range(len(q0)):
+            qp = q0.copy(); qm = q0.copy(); qp[k] += h; qm[k] -= h; J[c, k] = (f(qp) - f(qm)) / (2 * h)
+    r = int(np.linalg.matrix_rank(J, tol=1e-6))
+    return dict(unknowns=len(q0), cons=len(cons), rank=r, fully=bool(r == len(q0)), redundant=len(cons) - r)
+def check_hoseface(h):
+    """mirror of the VBA HoseFaceRect / HoseFaceRing sketches (in plane coordinates: (y, z) on the Right-Plane-parallel plane, any orthonormal
+    pair on PLN2-parallel; the sketch axes are a signed permutation of them, so the rank is the same):
+    rect: corners P0..P3 = (-ylo,-zh) (ytop,-zh) (ytop,zh) (-ylo,zh) joined by merged sides; sides s0 / s2 along y, s1 / s3 along z (H / V);
+          DimSegOrigin on each side (|z| = zh, |y| = ytop, |z| = zh, |y| = ylo); circle rin: centre coincident with the projected origin, diameter.
+    ring: two circles, each centre coincident with the projected origin, each diameter dimensioned (cut ring rin..rout, fill ring rin..rS).
+    Also: the values carried by the drawn sketch, and that the stub ring (rin..rS) lies inside the cut region (the refill only puts back what the cut took)."""
+    res = {}
+    if h['rect']:
+        q0 = np.array([-h['ylo'], -h['zh'], h['ytop'], -h['zh'], h['ytop'], h['zh'], -h['ylo'], h['zh'], 0.0, 0.0, h['rin']])
+        Y = lambda q, k: q[2 * k]; Z = lambda q, k: q[2 * k + 1]
+        cons = [lambda q: Z(q, 0) - Z(q, 1), lambda q: Y(q, 1) - Y(q, 2), lambda q: Z(q, 2) - Z(q, 3), lambda q: Y(q, 3) - Y(q, 0),
+                lambda q: abs(Z(q, 0)), lambda q: abs(Y(q, 1)), lambda q: abs(Z(q, 2)), lambda q: abs(Y(q, 3)),
+                lambda q: q[8], lambda q: q[9], lambda q: 2 * q[10]]
+        res['HOSEFACE_SK'] = jac_rank(cons, q0)
+        want = [0, 0, 0, 0, h['zh'], h['ytop'], h['zh'], h['ylo'], 0, 0, 2 * h['rin']]
+        res['HOSEFACE_SK']['value_mismatch'] = [k for k, (f, w) in enumerate(zip(cons, want)) if abs(f(q0) - w) > 1e-12]
+        inside = h['rS'] < min(h['ylo'], h['ytop'], h['zh']) - 1e-9
+    else:
+        q0 = np.array([0.0, 0.0, h['rin'], 0.0, 0.0, h['rout']])
+        cons = [lambda q: q[0], lambda q: q[1], lambda q: 2 * q[2], lambda q: q[3], lambda q: q[4], lambda q: 2 * q[5]]
+        res['HOSEFACE_SK'] = jac_rank(cons, q0)
+        inside = h['rS'] < h['rout'] - 1e-9
+    q0 = np.array([0.0, 0.0, h['rin'], 0.0, 0.0, h['rS']])
+    res['STUBFILL_SK'] = jac_rank([lambda q: q[0], lambda q: q[1], lambda q: 2 * q[2], lambda q: q[3], lambda q: q[4], lambda q: 2 * q[5]], q0)
+    res['plane'] = dict(base=h['base'], offset_in=round(h['sh'] / IN_, 4), dims=1, fully=True)
+    res['geometry'] = dict(rin_lt_rS=bool(h['rin'] < h['rS'] - 1e-9), fill_ring_inside_cut_region=bool(inside), depth_pos=bool(h['depth'] > 0),
+                           unit_axis=bool(abs(math.hypot(h['ux'], h['uy']) - 1) < 1e-9))
+    return res
+def thdprof_u(path):
+    """2026-10-18 (ANGLED): the tooth sketches THDPROF_<i> that HelixThreadV draws on the Front Plane for a thread on the 135 deg leg:
+    Call HelixThreadV(tipD, r, height, pitch, thdh, taper, taperOut, apexOut, "i", "THD_Endi") in the build body"""
+    t = open(path).read()
+    if 'Sub HelixThreadV(' not in t: return []
+    return [(m.group(9), float(m.group(1)), float(m.group(2)), float(m.group(5)), m.group(8) == 'True') for m in
+            re.finditer(r'Call HelixThreadV\((-?[\d.]+), (-?[\d.]+), (-?[\d.]+), (-?[\d.]+), (-?[\d.]+), (-?[\d.]+), (True|False), (True|False), "(\d+)"', t)]
+def check_thdprof(tip, r, thdh, apexOut, angled=True):
+    """mirror of the VBA tooth sketch (angled = HelixThreadV, else the axis-leg HelixThread set): construction lines HZ / AX / PZ from the origin
+    (HZ horizontal, PZ perpendicular to AX, three fixed lengths, AX at 135 deg to HZ); tooth P0 - P - P2 - A merged, l1 / l1b parallel to AX
+    (axis legs: horizontal), lc perpendicular (vertical), l1 = l1b, l2 = l3; PROF_AX = P to PZ, PROF_R = P to AX, APEXR = A to AX, 60 deg"""
+    ux, uy = (math.cos(math.radians(135)), math.sin(math.radians(135))) if angled else (1.0, 0.0)
+    q0 = r; ap = r + (thdh if apexOut else -thdh); half = thdh * math.tan(math.radians(30))
+    pt = lambda a, q: (a * ux - q * uy, a * uy + q * ux)
+    pts = [(0, 0), (0.0127 * 1.0, 0), (0, 0), pt(0.00635, 0), (0, 0), pt(0, 0.00635), pt(tip - half, q0), pt(tip, q0), pt(tip + half, q0), pt(tip, ap)]
+    q0v = np.array([c for p_ in pts for c in p_], float)
+    X = lambda q, k: q[2 * k]; Y = lambda q, k: q[2 * k + 1]
+    def ang(q, a, b): return math.atan2(Y(q, b) - Y(q, a), X(q, b) - X(q, a))
+    def cross(q, a, b, c, d):   # sin of the angle between lines a-b and c-d
+        return math.sin(ang(q, a, b) - ang(q, c, d))
+    def dot(q, a, b, c, d): return math.cos(ang(q, a, b) - ang(q, c, d))
+    def dist(q, p, a, b):
+        dx, dy = X(q, b) - X(q, a), Y(q, b) - Y(q, a); L_ = math.hypot(dx, dy)
+        return abs((X(q, p) - X(q, a)) * dy - (Y(q, p) - Y(q, a)) * dx) / L_
+    L = lambda q, a, b: math.hypot(X(q, b) - X(q, a), Y(q, b) - Y(q, a))
+    HZ0, HZ1, AX0, AX1, PZ0, PZ1, P0, P, P2, A = range(10)
+    cons = [lambda q: X(q, HZ0), lambda q: Y(q, HZ0), lambda q: X(q, AX0), lambda q: Y(q, AX0), lambda q: X(q, PZ0), lambda q: Y(q, PZ0),
+            lambda q: Y(q, HZ1) - Y(q, HZ0), lambda q: dot(q, PZ0, PZ1, AX0, AX1), lambda q: L(q, HZ0, HZ1), lambda q: L(q, AX0, AX1), lambda q: L(q, PZ0, PZ1),
+            lambda q: ang(q, AX0, AX1) - ang(q, HZ0, HZ1),
+            lambda q: cross(q, P0, P, AX0, AX1), lambda q: cross(q, P, P2, AX0, AX1), lambda q: dot(q, P, A, AX0, AX1),
+            lambda q: L(q, P0, P) - L(q, P, P2), lambda q: L(q, P2, A) - L(q, A, P0),
+            lambda q: dist(q, P, PZ0, PZ1), lambda q: dist(q, P, AX0, AX1), lambda q: dist(q, A, AX0, AX1),
+            lambda q: math.sin(ang(q, P2, A) - ang(q, A, P0))]
+    J = np.zeros((len(cons), len(q0v))); h = 1e-7
+    for c, f in enumerate(cons):
+        for k in range(len(q0v)):
+            qp = q0v.copy(); qm = q0v.copy(); qp[k] += h; qm[k] -= h; J[c, k] = (f(qp) - f(qm)) / (2 * h)
+    rk = int(np.linalg.matrix_rank(J, tol=1e-6))
+    return dict(unknowns=len(q0v), cons=len(cons), rank=rk, fully=bool(rk == len(q0v)), redundant=len(cons) - rk)
 IN_ = 0.0254
 for p in sys.argv[1:]:
     L, D = legs(p)
@@ -142,3 +229,11 @@ for p in sys.argv[1:]:
         geo = geo and all(abs(r0 - q[4]) < 1e-8 for q in rings)          # TRIM and FILL share the inner radius
         res['on_neck_line'] = bool(geo)
         print(p.split('/')[-1], nm, f'(a0 {a0 / IN_:.4f}, len {ln / IN_:.4f}, r {r0 / IN_:.4f}..{r1 / IN_:.4f}, neck {neck / IN_:.4f})', res)
+    for h in hosefaces(p):        # 2026-10-09 (wave 2, HOSEB): face-off plane + sketches
+        for nm, res in check_hoseface(h).items(): print(p.split('/')[-1], f'HOSEFACE{h["i"]} {nm}', res)
+    for sfx, tip, r, thdh, apo in thdprof_u(p):
+        # 2026-10-18 (ANGLED): the 135 deg tooth sketch must have the rank of the proven axis-leg HelixThread set (the same one redundant relation,
+        # l2 = l3, which SolidWorks accepts as fully defined on every built helix thread)
+        ra = check_thdprof(tip, r, thdh, apo, True); rx = check_thdprof(tip, r, thdh, apo, False)
+        ra['same_as_HelixThread'] = (ra['fully'], ra['redundant']) == (rx['fully'], rx['redundant'])
+        print(p.split('/')[-1], f'THDPROF_{sfx} (135-deg leg, tip {tip / IN_:.4f}, r {r / IN_:.4f})', ra)

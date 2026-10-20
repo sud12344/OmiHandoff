@@ -222,8 +222,41 @@ SPEC = {
     # ---- female NPSM (pipe) SWIVEL elbows (Brennan 1404-08-08 STEP: nut + stem, one solid; swivel size -08 only)
     '1501': dict(name='90 deg Male Pipe x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, ref='1501-08-08-FG', npsm=('W3@HEX', 'CHEX@HEX'),
                  legs=[('NPTFM', 'N1@DRIVE', 'D2@BORE', 'THDMAJ_A@DRIVE'), ('NPSMSW', 'M1@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE')]),
+    # 2026-10-18 (ANGLED, genfeat): 1503 gains the angled helix (male pipe end on the 135 deg leg) and the NPSM neck turn (neck_turn, N1 / N2:
+    # the 6502 NECKTRIM / NECKFILL on the +X NPSM swivel + the slot test on what the corner really reaches - Q-ANGLED-NECKNPSM settled from the
+    # Brennan 1503-08-08-FG / 1503-12-08-FG / 1504-06-06-FG STEPs, ANGLED_NECK_ASSUME)
     '1503': dict(name='45 deg Male Pipe x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='1503-08-08-FG', npsm=('W2@HEX', 'CHEX@HEX'),
+                 neck_turn=True,
                  legs=[('NPSMSW', 'M@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N@DRIVE', 'D2@BORE', 'THDMAJ_A@DRIVE')]),
+    # ---- 2026-10-18 (ANGLED, genfeat; capabilities Q-NEW-ANGLEDHELIX / -ANGLEDFEMALE / -ANGLEDNUT approved 2026-10-08, design
+    #      tools/_out/wave2_shapes_20261008/ANGLED/DESIGN.md): 45 deg elbows whose 135 deg leg carries a helical thread (male / female NPTF, swivel-nut
+    #      thread: HelixThreadV), a female pipe port (BoreCutV pocket + collar) or a swivel nut (NutHexCutV). The adjustable ORB leg and an NPSM swivel
+    #      that needs the neck turn stay on +X (their locknut cut / ORBTRIM / NeckRing are +X-only and proven there).
+    #      p1 = 'PORTDEPTH@BORE': a row's own Brennan port depth where the MS51503 P1 library value does not fit the short 45 deg leg (Q-ANGLED-P1,
+    #      settled from the Brennan STEPs 2026-10-18 - the per-size port depth Brennan draws, ANGLED_P1_NOTE); the library value everywhere else.
+    '1504': dict(name='45 deg Female Pipe x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='1504-06-06-FG',
+                 conn=None, npsm=('W2@HEX', 'CHEX@HEX'), neck_turn=True, p1='PORTDEPTH@BORE',
+                 nptff_text='ANGLED_NPTFF',
+                 legs=[('NPSMSW', 'M@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFF', 'N2@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE')]),
+    '5501': dict(name='45 deg Male Pipe Elbow', hex='Y@HEX', elbow=True, e45=True, ref='5501-08-08-FG',
+                 legs=[('NPTFM', 'N4@DRIVE', 'D1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N6@DRIVE', 'D2@BORE', 'THDMAJ_A2@DRIVE')]),
+    # 5503: the female port's tap drill runs from the port face to the axis crossing and ends flat there (conn=None) - Brennan 5503-16-16-FG STEP
+    # (OCP, angled/ocp/cmp_5503-16-16-FG.json: drill 1.156 from the port bottom 0.94 deep to the crossing); the male bore D runs from the male tip
+    '5503': dict(name='45 deg Street Pipe Elbow', hex='W@HEX', elbow=True, e45=True, dmap=(1, 0), ref='5503-16-16-FG', conn=None, p1='PORTDEPTH@BORE',
+                 nptff_text='ANGLED_NPTFF',
+                 legs=[('NPTFF', 'N3@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A2@DRIVE'), ('NPTFM', 'N4@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE')]),
+    '5505': dict(name='45 deg Female Pipe Elbow', hex='W@HEX', elbow=True, e45=True, ref='5505-20-20-FG', conn=None, p1='PORTDEPTH@BORE',
+                 nptff_text='ANGLED_NPTFF',
+                 legs=[('NPTFF', 'N2_1@DRIVE', 'TAPDRILL1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFF', 'N2_2@DRIVE', 'TAPDRILL2@BORE', 'THDMAJ_A2@DRIVE')]),
+    # adjustable ORB leg on +X (first dash), swivel on the 135 deg leg; the adjustable-ORB end cells Air-Way does not print for 6810 / 6902 come
+    # from the Air-Way 6801 rows of the same ORB size ('=6801' in nwo positions 1, 3, 4: I3 checked = Brennan 6801, as 6803 / 6804; thread length
+    # and groove dia, Q-TRANSFER-ENDLIB = yes 2026-10-08). No neck turn on the 135 deg leg (NeckRing is +X-only; the 6902 corner stays inside the neck).
+    '6810': dict(name='45 deg Adjustable Male ORB x Female JIC Swivel Elbow', hex='Y@HEX', elbow=True, e45=True, ref='6810-12-12-NWO-FG',
+                 sw=('M20@DRIVE', 'C3HEX@HEX'), nwo=('=6801', 'C4HEX@HEX', '=6801', '=6801'),
+                 legs=[('NWO', 'M8@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICSW', 'M19@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE')]),
+    '6902': dict(name='45 deg Adjustable Male ORB x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, e45=True, ref='6902-12-12-NWO-FG',
+                 npsm=('W2@HEX', 'CHEX@HEX'), nwo=('=6801', 'C4HEX@HEX', '=6801', '=6801'),
+                 legs=[('NWO', 'N4@DRIVE', 'D1@BORE', 'THDMAJ_B@DRIVE'), ('NPSMSW', 'M@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE')]),
     # 2026-10-02 (new master 1502; user 2026-10-02 "yes, go ahead": new masters from the pilot STEPs): 90 deg female pipe x female NPSM swivel
     # FORGED elbow. Pilot Brennan 1502-08-08-FG STEP, measured with tools/measure/fgelbow.py + npsm.py --leg 1,1 (validated first on 2500-06-06-FG,
     # 5504-08-08-FG, 5502-04/-08/-16-FG, 2502-06-04-FG, 5405-08-08 and the 9 1404 STEPs): the 2500HX elbow body (hex arms, flats normal to Z,
@@ -279,6 +312,117 @@ SPEC = {
     '6801': dict(name='90 deg Male JIC x Adjustable Male ORB Elbow', hex='Y@REF', elbow=True, ref='6801-08-08-NWO-FG',
                  nwo=('ORB_I3@DRIVE', 'HEXB@HEX', 'ORB_THDL@DRIVE', 'ORB_GRVDIA@DRIVE'),
                  legs=[('JICM', 'LEG_JIC@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('NWO', 'LEG_ORB@DRIVE', 'D2@BORE', 'THDMAJ_B@DRIVE')]),
+    # ---- 2026-10-09 wave 2, PERLEGSW (Q-NEW-PERLEGSW, user 2026-10-08 "yes go ahead"): several swivel / NPSM swivel / adjustable-ORB legs on
+    #      one forged body. A leg tuple may carry a 5th element = the column tuple of ITS end (layout of the SPEC-wide sw / npsm / nwo); a
+    #      4-tuple leg reads the SPEC-wide tuple, so every older root is unchanged. A value is a table column or an END-LIBRARY token (end_val;
+    #      Q-TRANSFER-ENDLIB = yes, user 2026-10-08): '=6801' (adjustable-ORB I3 = Air-Way 6801 ORB_I3), '=ORB:THDL' / '=ORB:GD' (ORB end
+    #      library thread length / undercut dia), '=FPT:TD' (female pipe tap drill, only where the row's cell is empty). perleg=True switches on
+    #      the per-leg checks and wording (nut-cut slabs of every nut, envelope overlap, arm ridge on tees, NWO legs in the ridge checks).
+    # 6807: only 6807-06-06-NWO-FG has an allowed size source - its own Air-Way -FG row (s140 "6807-6-6 NWO-FG"); OMi Items row 2299 lists the
+    # part with no dimension. Body form ASSUMED from the 6801 forging until a 6807 STEP is seen (DESIGN_REVIEW P6: dry run now, ship gated).
+    '6807': dict(name='90 deg Adjustable Male ORB x Adjustable Male ORB Elbow', hex='Y@HEX', elbow=True, perleg=True, arm_ridge_check=True,
+                 ref='6807-06-06-NWO-FG',
+                 assume_extra=['two adjustable ORB legs on one 90 deg elbow forging (OMi "MAORB - MAORB 90 deg Elbow Forged"; no Brennan 6807 STEP seen: '
+                               'the body form - 2500HX hex arms + 30deg corner puck, each ORB leg = the ORB leg of the accepted 6801 forging - is ASSUMED '
+                               'from the Brennan 6801-XX-XX-NWO-FG STEPs, shape only)'],
+                 legs=[('NWO', 'M7_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('=6801', 'C4_1HEX@HEX', '=ORB:THDL', '=ORB:GD')),
+                       ('NWO', 'M7_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('=6801', 'C4_2HEX@HEX', '=ORB:THDL', '=ORB:GD'))]),
+    # ---- 2026-10-18 (genfeat PERLEGSW, Q-NEW-PERLEGSW approved 2026-10-08): the tees with several female swivel / NPSM swivel legs, out of
+    #      SPEC_WAITING now that rows have sizes: the Brennan TFA catalog (user 2026-10-18 "Brennan = yes"; tables 1601 / 1602 / 1603 / 6606,
+    #      cells tools/_out/brennan_yes_20261018/wave2/tee_elbow/cells.csv) and, for 1602-02/-04/-08/-16/-20-FG, OMi's own 2026-10-18 drawings.
+    #      Body = the 2603HX tee (run hex bar continuous through the crossing + branch hex arm, flats normal to Z), every special leg = the
+    #      library end (SWIV_MEAS / NPSM_MEAS, Q-TRANSFER-ENDLIB), its hex arm ending at the library body face - the shape seen on the Brennan
+    #      6603-06-06-06-FG / 6606-06-06-06-FG / 1601-08-08-08-FG / 1603-08-08-08-FG tee forgings (shape only, PERLEGSW DESIGN section 3).
+    #      Column meanings: JIC swivel legs: leg col = crossing to the nut face (Brennan M6 / Air-Way M5), extra = (crossing to the nose tip
+    #      M10, nut hex C3); NPSM legs: leg col = crossing to the stem tip (Brennan M1 / M2), extra = (crossing to the nut face W3 / W5 =
+    #      Brennan M / L, nut hex).
+    '6606': dict(name='Female Swivel Tee (three swivels)', hex='Y@HEX', perleg=True, arm_ridge_check=True, ref='6606-08-08-08-FG',
+                 legs=[('JICSW', f'M5_{k}@DRIVE', 'D1@BORE', f'THDMAJ_B{k}@DRIVE', (f'M10_{k}@DRIVE', f'C3_{k}HEX@HEX')) for k in (1, 2, 3)]),
+    # 1601 / 1602: the first dash is the pipe branch (Air-Way 1601-06-04-04: A = 3/8 NPTF; Brennan A1 = the NPTF branch) -> dmap; every -FG
+    # BUILD row has equal dashes today
+    '1601': dict(name='Female NPSM Swivel Run x Male Pipe Branch Tee', hex='C1HEX@HEX', perleg=True, arm_ridge_check=True, dmap=(1, 2, 0),
+                 ref='1601-08-08-08-FG',
+                 legs=[('NPSMSW', 'M1_2@DRIVE', 'D_2@BORE', 'THDMAJ_A1_2@DRIVE', ('W3_2@HEX', 'C2HEX@HEX')),
+                       ('NPSMSW', 'M1_3@DRIVE', 'D3@BORE', 'THDMAJ_A1_3@DRIVE', ('W3_3@HEX', 'C3HEX@HEX')),
+                       ('NPTFM', 'N1@DRIVE', 'D2@BORE', 'THDMAJ_A@DRIVE')]),
+    '1602': dict(name='Female NPSM Swivel Run x Female Pipe Branch Tee', hex='C1HEX@HEX', perleg=True, arm_ridge_check=True, dmap=(1, 2, 0),
+                 conn=None, ref='1602-08-08-08-FG',
+                 legs=[('NPSMSW', 'M1_2@DRIVE', 'D2@BORE', 'THDMAJ_A1_2@DRIVE', ('W3_2@HEX', 'C2HEX@HEX')),
+                       ('NPSMSW', 'M1_3@DRIVE', 'D3@BORE', 'THDMAJ_A1_3@DRIVE', ('W3_3@HEX', 'C3HEX@HEX')),
+                       ('NPTFF', 'N3@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE')]),          # an empty TAPDRILL takes '=FPT:TD' (end library)
+    # 1603: side 1 = the branch: the leg Air-Way prints differently (W3 / M1 vs W5 / M2 at -04); the Brennan TFA 1603 table labels A1's nut face
+    # L (axis to the A1 branch nut face) and A2 / A3 the run (M, M1 / M2) - still logged as an ASSUMPTION (every -FG row has equal dashes)
+    '1603': dict(name='Female NPSM Swivel Tee (three swivels)', hex='C1HEX@HEX', perleg=True, arm_ridge_check=True, dmap=(1, 2, 0),
+                 ref='1603-06-06-06-FG',
+                 assume_extra=['1603 side order: part-number side 1 (W3 / M1) = the branch leg, sides 2 / 3 (W5 / M2) = the run (ASSUMPTION: Air-Way prints '
+                               'side 1 differently, the Brennan TFA 1603 table labels A1 as the branch; every -FG row has equal dashes)'],
+                 legs=[('NPSMSW', 'M2_2@DRIVE', 'D2@BORE', 'THDMAJ_A1_2@DRIVE', ('W5_2@HEX', 'C2HEX@HEX')),
+                       ('NPSMSW', 'M2_3@DRIVE', 'D2@BORE', 'THDMAJ_A1_3@DRIVE', ('W5_3@HEX', 'C3HEX@HEX')),
+                       ('NPSMSW', 'M1@DRIVE', 'D1@BORE', 'THDMAJ_A1_1@DRIVE', ('W3@HEX', 'C_1HEX@HEX'))]),
+    # ---- 2026-10-18 genfeat HOSEB (Q-NEW-HOSEB, user 2026-10-08 "yes go ahead"; port of wave2_impl_20261009): beaded hose-barb leg on forged
+    #      elbows = the straight 4404 / 4604 end (gen_straight2.end_HOSEB) ported to a leg (leg_HOSEB). hoseb = (stub OD column, bead dia column);
+    #      hose_bore = where the hose-leg bore comes from (Q-HOSEB-BORE, user 2026-10-18 A15):
+    #        'own'   the HOSEB leg's bore column is the part's single bore, carried through both legs (option (a): 4601 / 4603);
+    #        'col'   the HOSEB leg's bore column is the part's own hose drill (DH@BORE = Brennan TFA B1 DRILL, "look at Brennan": 4501 / 4503);
+    #                a row with that cell empty is skipped;
+    #        '=4404' the Air-Way 4404 equal-size through bore (option (b), not chosen); None = no source (rows skipped).
+    #      hose_dh = per-row fallback of an 'own' root: where the row has this hose-drill column filled (DH@BORE, Brennan B1 DRILL, A15 "look at
+    #                Brennan"), the hose leg takes it; rows without it stay on 'own' (4601-16-20-NWO-FG: bore 1.078 > the 1.000 stub under (a)).
+    #      pn = the column that names the configuration (OMi SKU form: the Air-Way review rows spell '4601-06-06 NWO-FG', which dashes() cannot
+    #      parse). nwo: '=ORB:THDL' / '=ORB:GD' = the ORB end library (hoseb_endlib; Q-TRANSFER-ENDLIB). The threaded leg stays axis-aligned
+    #      (+X / +Y): on the 45 deg elbows the 135 deg leg is the hose leg (no thread -> no angled helix). The forged corner past the hose hex
+    #      face is faced off (HOSEFACEi / STUBFILLi) in every configuration.
+    '4601': dict(name='90 deg Adjustable Male ORB x Beaded Hose Elbow', hex='Y@HEX', elbow=True, ref='4601-08-08-NWO-FG', hoseb=('$PRP@TubeOD', 'AA@DRIVE'),
+                 hose_bore='own', hose_dh='DH@BORE', pn='$PRP@OMiSKU', nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'),
+                 legs=[('HOSEB', 'L4@DRIVE', 'D@BORE', None), ('NWO', 'M7@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
+    '4603': dict(name='45 deg Adjustable Male ORB x Beaded Hose Elbow', hex='CHEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='4603-08-08-NWO-FG',
+                 hoseb=('$PRP@TubeOD', 'AA@DRIVE'), hose_bore='own', hose_dh='DH@BORE', pn='$PRP@OMiSKU', nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'),
+                 legs=[('NWO', 'M8@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('HOSEB', 'L5@DRIVE', 'D@BORE', None)]),
+    # 4501 / 4503: the single bore D1 is the PIPE-end drill (Brennan A2 DRILL; 0.030 wall through the 2.000 stub on 4501-32-32-FG) - the hose
+    # leg reads its own drill DH (Brennan B1 DRILL). 4501-32-32-FG (Air-Way row) has no DH cell: skipped until it gets one.
+    '4501': dict(name='90 deg Male Pipe x Beaded Hose Elbow', hex='Y@HEX', elbow=True, ref='4501-08-08-FG', hoseb=('$PRP@TubeOD', 'AA@DRIVE'), hose_bore='col',
+                 legs=[('HOSEB', 'L4@DRIVE', 'DH@BORE', None), ('NPTFM', 'N@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE')]),
+    '4503': dict(name='45 deg Male Pipe x Beaded Hose Elbow', hex='CHEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='4503-08-08-FG',
+                 hoseb=('$PRP@TubeOD', 'AA@DRIVE'), hose_bore='col',
+                 legs=[('NPTFM', 'N2@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('HOSEB', 'L5@DRIVE', 'DH@BORE', None)]),
+    # ---- 2026-10-18 (genfeat flange): SAE code 61 / code 62 FLANGE LEG on the forged elbows (Q-NEW-FLG61LEG approved 2026-10-08; Q-NEW-FLG62LEG
+    #      user 2026-10-18 A17). Design tools/_out/wave2_shapes_20261008/FLG61LEG/DESIGN.md: the flange is leg 1 on +X (axis-aligned, unthreaded),
+    #      the JIC leg 2 (+Y on 90 deg, the 135 deg axis on 45 deg); PN = <root>-JIC-FLANGE, so dmap swaps them (as 2503 / 2505 / 6802). Brennan
+    #      1703-24-24-FG / 1704-24-24-FG / 1804-08-08-FG STEPs: the 2500HX / 2504 forged body with the 1700 (code 61) / 1800 (code 62) head on the
+    #      flange leg. Per-leg bores: the flange leg reads DFLG@BORE, the JIC leg D@BORE (own STEPs: 1.260 / 1.312 at -24). flg_o = the row's head
+    #      OD column, cross-checked against the end library (FLG_O). assume_reps: the rows are not Air-Way rows - the shared elbow sentence names
+    #      the row's own hex source instead.
+    '1703': dict(name='45 deg Male JIC x SAE Code 61 Flange Elbow (forged)', hex='CHEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='1703-24-24-FG', flg_o='O@DRIVE',
+                 assume_reps=(('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),),
+                 legs=[('FLG61', 'N3@DRIVE', 'DFLG@BORE', None), ('JICM', 'M2@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
+    '1704': dict(name='90 deg Male JIC x SAE Code 61 Flange Elbow (forged)', hex='Y@HEX', elbow=True, dmap=(1, 0), ref='1704-24-24-FG', flg_o='O@DRIVE',
+                 assume_reps=(('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),),
+                 legs=[('FLG61', 'N2@DRIVE', 'DFLG@BORE', None), ('JICM', 'M@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
+    '1803': dict(name='45 deg Male JIC x SAE Code 62 Flange Elbow (forged)', hex='CHEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='1803-08-08-FG', flg_o='O@DRIVE',
+                 assume_reps=(('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),),
+                 legs=[('FLG62', 'N3@DRIVE', 'DFLG@BORE', None), ('JICM', 'M2@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
+    '1804': dict(name='90 deg Male JIC x SAE Code 62 Flange Elbow (forged)', hex='Y@HEX', elbow=True, dmap=(1, 0), ref='1804-08-08-FG', flg_o='O@DRIVE',
+                 assume_reps=(('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),),
+                 legs=[('FLG62', 'N2@DRIVE', 'DFLG@BORE', None), ('JICM', 'M@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
+}
+# 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
+# no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
+# the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
+# 2026-10-18 (genfeat PERLEGSW): 1601 / 1602 / 1603 / 6606 moved into SPEC (rows from the Brennan TFA catalog, user 2026-10-18 "Brennan =
+# yes", and the 1602-FG rows from OMi's 2026-10-18 drawings); 6603 / 6566 still have no data-complete row.
+SPEC_WAITING = {
+    # PERLEGSW. Column meanings (Air-Way headers): JIC swivel legs: leg col = crossing to the nut face (M5), extra = (crossing to the nose tip
+    # M10, nut hex C3); NPSM legs: leg col = crossing to the stem tip, extra = (crossing to the nut face, nut hex).
+    '6603': dict(name='Female Swivel Run x Male JIC Branch Tee', hex='Y@HEX', perleg=True, arm_ridge_check=True, ref='6603-06-06-06-FG',
+                 legs=[('JICSW', 'M5_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('M10_1@DRIVE', 'C3_1HEX@HEX')),
+                       ('JICSW', 'M5_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('M10_2@DRIVE', 'C3_2HEX@HEX')),
+                       ('JICM', 'M@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')]),
+    # 6566: the review table is a skeleton (no Air-Way series). These column names are a PLACEHOLDER for the TEST harness only - not staged in
+    # any table (DESIGN_REVIEW P10). Open: OMi gives one M 1 / M 2 pair for two swivel legs (6500-L fold: M 2 = crossing to the nut face,
+    # M 1 = crossing to the nose tip) - the leg mapping is a question for when data arrives.
+    '6566': dict(name='90 deg Female Swivel x Female Swivel Elbow', hex='Y@HEX', elbow=True, perleg=True, arm_ridge_check=True, ref='6566-06-06-FG',
+                 legs=[('JICSW', 'M5_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('M10_1@DRIVE', 'C3_1HEX@HEX')),
+                       ('JICSW', 'M5_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('M10_2@DRIVE', 'C3_2HEX@HEX'))]),
 }
 # leg placement: (axis 0=X 1=Y, sign)
 PLACE = {1: (0, +1), 2: (0, -1), 3: (1, +1), 4: (1, -1)}
@@ -360,6 +504,21 @@ BRENNAN_NOTES = {   # per-part comparisons with a Brennan STEP of the same part 
                      'the NPSM swivel end equals NPSM_MEAS[8] (Brennan 1404-08-08) on every value; Brennan TFA catalog p21 prints the same L/M/M1/C/Y/A2 DRILL. '
                      'NOT modelled: the thread-zone minor cone and the port-mouth 45deg chamfer, the ball end of the tap drill past the crossing, the nut 30deg '
                      'face chamfer and 45deg rear hex chamfer, the nut rear undercut and the nut/body joint, 0.01 fillets, the 0.002 deep marking on the hex flats',
+    # 2026-10-18 (genfeat HOSEB): Brennan TFA catalog p29 / p30 vs the Air-Way-sized 4601 / 4603 rows (they keep their Air-Way values; Brennan
+    # fills only empty cells, 2026-10-18); the other cells (M, C HEX, B2 DRILL) agree within 0.011 (HOSEB DESIGN 2.5)
+    '4601-06-06-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L, M, C HEX and B2 DRILL agree with Air-Way within 0.011 (L4 1.81 = Brennan L within 0.002)',
+    '4601-08-08-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 1.980 / Y 0.750 vs Air-Way L4 1.91 / Y 0.81 (built to Air-Way); the rest agrees within 0.011',
+    '4601-10-10-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 2.055 / Y 0.875 vs Air-Way L4 1.97 / Y 0.94 (built to Air-Way); the rest agrees within 0.011',
+    '4601-12-12-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 2.197 vs Air-Way L4 2.06 (built to Air-Way); the rest agrees within 0.011',
+    '4601-16-12-NWO-FG': 'Brennan TFA catalog p29 (cross-check): L 2.358 / Y 1.312 vs Air-Way -FG L4 1.90 / Y 1.06 - LARGE DIFFERENCE; Air-Way\'s own '
+                         'non-forged 4601-16-12 NWO row prints L4 2.06 / Y 1.13: possible Air-Way misprint - built to the -FG row per the rules, FLAG FOR THE USER / OMi; '
+                         'the hose-leg bore 0.61 (Air-Way D) leaves a 0.195 wall in the -16 stub, Brennan\'s hose drill is 0.844 (Q-HOSEB-BORE)',
+    '4601-32-32-NWO-FG': 'Brennan TFA catalog p30 (cross-check): Y 2.625 vs Air-Way 2.50 (built to Air-Way); hose drill 1.843 vs the Air-Way bore 1.78 '
+                         'carried through the hose leg (Q-HOSEB-BORE (a)); L4 2.81 = Brennan L within 0.002',
+    '4603-04-04-NWO-FG': 'Brennan TFA catalog p30 (cross-check): L 1.681 vs Air-Way L5 1.70 (built to Air-Way); the rest agrees within 0.011',
+    '4603-06-06-NWO-FG': 'Brennan TFA catalog p30 (cross-check): Y 0.562 vs Air-Way CHEX 0.63 (built to Air-Way); the rest agrees within 0.011',
+    '4603-08-08-NWO-FG': 'Brennan TFA catalog p30 (cross-check): L 1.625 / Y 0.812 vs Air-Way L5 1.69 / CHEX 0.75 (built to Air-Way); the rest agrees within 0.011',
+    '4603-12-12-NWO-FG': 'Brennan TFA catalog p30 (cross-check): L 1.894 vs Air-Way L5 1.75 (built to Air-Way); the rest agrees within 0.011',
     # 2026-10-01 (NECK-6502): tools/measure/neck45.py (body face, neck, what stands outside the neck) + prof45.py (JIC leg)
     '6502-12-12-FG': 'Brennan 6502-12-12-FG STEP (2026-10-01, tools/measure/neck45.py + prof45.py): JIC tip 1.280 = model (Air-Way M2); JIC hex arm to 0.416 = model; '
                      'JIC bore 0.609 (Air-Way D1 0.61); body hex corner radius 0.6131 (A/F 1.062; model 1.0625 = the JIC thread major, 2603HX rule); swivel nut face '
@@ -456,6 +615,79 @@ def leg_JICBH(i, dash, M, BR, i2, K1, O):
                 tipR=rT)
 
 
+# 2026-10-18 (genfeat flange, Q-NEW-FLG61LEG / Q-NEW-FLG62LEG): FLANGE LEG of a forged elbow. The head is the end library's: code 61 =
+# gen_straight2 end_FLG61 / FLG61_MEAS (Brennan 1700 STEPs, the accepted 1700 master), code 62 = end_FLG62 / FLG62_MEAS (Brennan 1800-08-08 /
+# 1824-08 / 1804-08-08-FG STEPs). Head OD by flange size (FLG61_O): the code 61 head OD as built in the 1700 master (DesignTable_1700 column O,
+# Air-Way s61; one value per flange size - -24 is printed 2.38 on 1700-61-24-24 and 2.37 on 1700-61-20-24, both 2.375 rounded: 2.38, rounding-
+# only, Q-FLG61-O24; the Brennan 1700 STEPs read 1.188 / 1.5 / 1.75 / 2.0 / 2.375 / 2.812); code 62: FLG62_MEAS O. The forged hex arm runs from
+# the crossing to the head back face (as the 1700 decision 2026-09-24); the Brennan round neck between hex arm and head is NOT modelled (Q-FLG61-NECK).
+FLG_KINDS = ('FLG61', 'FLG62')
+FLG61_O = {8: 1.19, 12: 1.50, 16: 1.75, 20: 2.00, 24: 2.38, 32: 2.81}
+FLG_O_ROUND = 0.0101        # |row O - library| up to two 2-decimal roundings of the same value (2.375 -> 2.37 / 2.38) = rounding, noted; above: conflict
+FLGLEG_ASSUME = {
+    'FLG61': ('code 61 flange leg (Q-NEW-FLG61LEG, user 2026-10-08): the SAE code 61 head of the 1700 end library on the axis-aligned leg 1 - head '
+              'thickness and face O-ring groove by flange size = FLG61_MEAS (Brennan 1700-08/-12/-16/-20/-24/-32 STEPs, tools/measure/flange.py), head '
+              'OD by flange size = the 1700 master value (FLG61_O: DesignTable_1700 column O, Air-Way s61; -24 = 2.38, the 2.375 printed 2.37 / 2.38 - '
+              'rounding only; Brennan 1700 STEPs agree; Q-TRANSFER-ENDLIB 2026-10-08); the Brennan 1703-24-24-FG / 1704-24-24-FG STEPs carry the same '
+              '-24 head'),
+    'FLG62': ('code 62 flange leg (Q-NEW-FLG62LEG, user 2026-10-18 A17): the SAE code 62 head of the 1800 end library on the axis-aligned leg 1 - head '
+              'OD, thickness and face O-ring groove = FLG62_MEAS (Brennan 1800-08-08 / 1824-08 / 1804-08-08-FG STEPs, tools/measure/flange62.py, agree to '
+              '0.0002); measured for flange size -08 only (another size needs a code 62 head STEP)')}
+FLGLEG_SHAPE = ('forged hex arm from the crossing to the head back face (as the 1700 decision 2026-09-24): the Brennan elbow STEPs instead end the hex '
+                'arm near the crossing and carry a round neck (between the hex flats and corners) up to the head - NOT modelled (Q-FLG61-NECK); the '
+                'groove inner-wall draft, the bore chamfer at the face, head edge chamfers and the hex-end chamfers NOT modelled; the flange-leg bore '
+                'is the row DFLG (own STEP), the JIC-leg bore the row D; single manufacturer (Brennan) head geometry -> ASSUMED at most')
+
+
+def flg_o(kind, dash):
+    # head OD of a flange leg from the end library (KeyError names what is missing)
+    if kind == 'FLG62': return G.flg62_head(dash)['O']
+    if dash not in G.FLG61_MEAS or dash not in FLG61_O:
+        raise KeyError(f'code 61 flange head not measured for -{dash:02d}: needs a FLG61_MEAS[{dash}] entry (head thickness, face groove) measured with '
+                       f'tools/measure/flange.py on a Brennan STEP with a -{dash:02d} code 61 head, and its head OD (FLG61_O)')
+    return FLG61_O[dash]
+
+
+def leg_FLG(i, kind, dash, M, BR, O):
+    """flange leg i (from the crossing): leg core 0.02 inside the hex flats (the JICBH convention: hidden in the hex prism, and the core-to-head
+    step never has zero height) to the head back face sh = M - TH, the head (radius O/2) to the face at M, the face O-ring groove, the inner face
+    disc down to the axis. = the end module's own profile (G.end_FLG61 / G.end_FLG62, face coordinates) turned into leg coordinates."""
+    E = G.end_FLG61(dash, str(i), O) if kind == 'FLG61' else G.end_FLG62(dash, str(i))
+    m = E['m']; TH, GI, GO, GD = m['TH'], m['GI'], m['GO'], m['GD']; rO = E['rO']
+    BRc = round(BR - 0.02, 5)
+    VH = [(M - x, r) for (x, r) in reversed(E['V'])]             # head back (sh, rO) -> face ring -> groove -> inner face disc (M, GI)
+    sh = VH[0][0]                                                 # = M - TH, exactly the head back face of the profile (not rounded)
+    V = [(0, 0), (0, BRc), (sh, BRc)] + VH + [(M, 0)]
+    assert len(V) == 10 and abs(VH[0][1] - rO) < 1e-12 and abs(sh - (M - TH)) < 1e-12, V
+    cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': BRc}
+    for k_, v_ in E['cols'].items(): cols[k_.replace('@DRIVE', f'@LEG{i}')] = v_
+    top = max(BR, rO)
+    dims = [('len', -1, f'M{i}', M, M / 2, top + 0.6), ('rad', 1, 'BODYR', BRc, sh / 2, -0.4),
+            ('rad', 3, f'FLG{i}_HEADR', rO, (sh + M) / 2, -0.35), ('len', 3, f'FLG{i}_HEADT', TH, (sh + M) / 2, top + 0.3),
+            ('rad', 5, f'FLG{i}_GRVOR', GO, M - GD / 2, -0.25), ('rad', 7, f'FLG{i}_GRVIR', GI, M - GD / 2, -0.15),
+            ('len', 7, f'FLG{i}_GRVD', GD, M - GD / 2, top + 0.45), ('col', 4, 8)]
+    return dict(kind=kind, dash=dash, V=V, endlen=TH, cols=cols, tcols={}, dims=dims, rmax=rO, thr=E['thr'], thread=None, tipR=GI, m=m, rO=rO, BRc=BRc)
+
+
+def flg_leg_checks(i, L, BR, AC):
+    """2026-10-18: geometry gates of a flange leg (DESIGN 4.5 + review fixes 2 / 4): (checks, warnings)"""
+    c, w = [], []; sh = L['hexl']; rO = L['rO']; GI = L['m']['GI']; b = L['bore']
+    if sh < 0.03: c.append(f'leg {i}: flange leg {L["V"][-1][0]} leaves no hex arm ({sh:.3f}) behind the head (thickness {L["endlen"]})')
+    if b is None: c.append(f'leg {i}: no bore')
+    else:
+        if GI - b / 2 < 0.03: c.append(f'leg {i}: bore {b} leaves {GI - b / 2:.3f} (< 0.03) face land inside the flange O-ring groove (groove inner dia {2 * GI:.3f})')
+        if BR - b / 2 < 0.03: c.append(f'leg {i}: bore {b} leaves < 0.03 wall under the hex flats ({2 * BR:.4f})')
+    if abs(rO - L['BRc']) < 0.003: c.append(f'leg {i}: flange head radius {rO:.4f} equals the leg core radius {L["BRc"]:.4f} (zero-height head back face)')
+    if abs(rO - AC) < 0.003: c.append(f'leg {i}: flange head radius {rO:.4f} equals the hex corner radius {AC:.4f} (tangent head / hex outline)')
+    if AC + 0.03 > sh: c.append(f'leg {i}: the corner puck (radius {AC:.3f}) reaches within 0.03 of the flange head back face ({sh:.3f})')
+    if BR + 1e-9 < rO < AC - 1e-9:
+        w.append(f'leg {i}: hex arm ends on the flange head back face with the head circle (radius {rO:.4f}) between the hex flats {BR:.4f} and corners '
+                 f'{AC:.4f} - the 2702 -16 situation (crossing outlines on a coplanar union; builds at 2702 -10 / -12, 2703 -12, 2704 -10 / -12 / -16); '
+                 f'SolidWorks decides (Q-FLG61-SHORT)')
+    elif rO <= BR: w.append(f'leg {i}: the hex arm stands proud of the flange head (head radius {rO:.4f} <= hex flats {BR:.4f})')
+    return c, w
+
+
 # 2026-09-25 (batch 13b): ADJUSTABLE ORB stud end ("NWO": nut, washer, O-ring), measured with tools/measure/nwo.py on the Brennan
 # 6801-XX-XX-NWO-FG STEPs (one per ORB size, user download 2026-09-25; -14 from the earlier bundle). From the body face outward: neck
 # (radius NECKR, length NECKL), locknut (hex, thickness NUTT), backup washer (radius WR, thickness WT), O-ring undercut, ORB thread.
@@ -514,6 +746,149 @@ def nwo_i3_from(src, dash):
     i3 = v.pop(); _I3_CACHE[src][dash] = {i3}
     if abs(i3 - NWO_MEAS[dash]['I3_B']) > 0.006: raise KeyError(f'Air-Way {src} ORB_I3 {i3} for -{dash:02d} differs from the Brennan 6801 STEP {NWO_MEAS[dash]["I3_B"]}')
     return i3
+
+
+# ---------------------------------------------------------------- 2026-10-09 wave 2, HOSEB: beaded hose-barb leg + face-off of the forged corner
+HOSE_WALL_MIN = 0.015     # hose stub wall (stub OD - bore) / 2 below this -> BLOCKED; 0.015 .. 0.03 -> warning (the built 4404-04-04 master has 0.020)
+FACEOFF_DELTA = 0.05      # the face-off runs this far past the forged corner radius (the stub ring it takes is put back); also its region margin
+FACEOFF_GAP = 0.02        # clearances of the face-off: cut end vs bead start, region bounds vs the corner material / the other leg's end
+FACEOFF_ROUT_K = 1.5      # 45 deg elbow: outer radius of the face-off ring = this x the hex corner radius (as NECKTRIM, TRIM_ROUT_K)
+HOSEB_ASSUME = ('beaded hose-barb leg (Q-NEW-HOSEB, port of the straight 4404 / 4604 end): stub OD = the row\'s TubeOD (hose size), bead dia = the row\'s AA '
+                '(sources: the row\'s own AxialSource); stub 1.500 from the hose-leg hex face to the tip, bead centre 0.251 from the tip and bead chord width from the bead section radius '
+                '0.060 - the hose end library (Brennan 4404-08-06 STEP; Q-TRANSFER-ENDLIB), the same on the Brennan 4404-16-16, 4501-08-08-FG, 4503-08-08-FG and '
+                '4603-16-16-NWO-FG STEPs (4601-08-06-NWO-FG: stub 1.530) - shape only; the forged hex arm of the hose leg = the row\'s hose leg length minus the stub; the round '
+                'bead section is modelled as a flat-topped ring of the same chord width; plain hose tip, no thread on the hose leg; bores flat to the crossing '
+                '(Brennan: ball-ended drills)')
+FACEOFF_ASSUME = ('FORGED CORNER FACED OFF AT THE HOSE HEX FACE (Q-NEW-HOSEB, features HOSEFACE / STUBFILL): nothing of the forged corner (30deg puck, the other '
+                  "leg's hex arm) stands past the hose-leg hex face outside the hose stub - as on the Brennan 4503-08-08-FG and 4603-16-16-NWO-FG forgings (hose "
+                  'hex face a complete hexagon inside the corner radius, nothing beyond it) and the Brennan 6500-05-05-FG elbow (corner faced off at the body '
+                  'face), shape only; modelled as a cut of the region past the hose hex face (90 deg: a rectangle along the other leg up to its hex arm end; '
+                  '45 deg: a ring to 1.5 x the hex corner radius) to 0.05 beyond the corner radius, then the stub ring put back (STUBFILL) - in every '
+                  'configuration, no change where the corner clears the face; the 0.05 overrun and the region bounds are construction margins, not part '
+                  'dimensions (ASSUMPTION for these forgings: no 90 deg hose elbow whose hose hex arm ends inside the corner radius has been seen)')
+
+
+# END-LIBRARY tokens of the adjustable-ORB end of a HOSEB root (Q-TRANSFER-ENDLIB = yes, user 2026-10-08 "reuse end details - yes"); the same values
+# and texts as the PERLEGSW end_val (wave2_impl_20261009), so a later merge of PERLEGSW reads the same SPEC tuple unchanged
+HOSEB_ENDLIB = {
+    '=ORB:THDL': ('THDL', 'adjustable ORB thread length', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_THDL at every dash -02..-32)'),
+    '=ORB:GD': ('GD', 'adjustable ORB undercut dia', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_GRVDIA at every dash -02..-32)'),
+}
+
+
+def hoseb_endlib(sp, r, dd, warn, chk):
+    """a HOSEB root's row with the end-library tokens of its SPEC nwo tuple filled in as virtual keys of a COPY of the row (the leg modules read
+    r[sp['nwo'][k]]); a dash missing from the library is a check failure; the source of every value goes into the warnings ($COMMENT)"""
+    r = dict(r)
+    for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
+        if kind != 'NWO': continue
+        for c in sp['nwo']:
+            if c not in HOSEB_ENDLIB: continue
+            key, what, src = HOSEB_ENDLIB[c]
+            if d not in G.ORB or G.ORB[d].get(key) is None: chk.append(f'leg {i}: no -{d:02d} entry in the ORB end library for {what}'); continue
+            r[c] = G.ORB[d][key]
+            warn.append(f'leg {i}: {what} {r[c]} = {src} for -{d:02d} (end library, Q-TRANSFER-ENDLIB 2026-10-08)')
+    return r
+
+
+def hose_bore_lib(dash):
+    """'=4404' (Q-HOSEB-BORE option b, ONLY after the user picks it): the Air-Way 4404 through bore D3 of the equal-size row 4404-dd-dd"""
+    ws = openpyxl.load_workbook(f'{REV}/DesignTable_4404.xlsx', read_only=True).active
+    rows = list(ws.iter_rows(values_only=True)); h = rows[1]
+    for r in rows[2:]:
+        if not r[0]: continue
+        d = dict(zip(h, r)); dd = dashes(str(d['$PRP@PartNo']))
+        if dd == [dash, dash] and d.get('D3@BORE') is not None: return d['D3@BORE']
+    raise KeyError(f'no Air-Way 4404-{dash:02d}-{dash:02d} through bore')
+
+
+def leg_HOSEB(i, dash, L, BR, stubOD, bead):
+    """beaded hose leg from the crossing: hex core to the hose hex face, stub (tail), bead (flat-topped ring), stub nose, plain tip face"""
+    E = G.end_HOSEB(str(i), stubOD, bead)
+    rS, rA, p1, p2, w = E['rS'], E['rA'], E['p1'], E['p2'], E['w']
+    sh = round(L - E['endlen'], 4); b0 = round(L - p2, 4); b1 = round(L - p1, 4)
+    V = [(0, 0), (0, BR), (sh, BR), (sh, rS), (b0, rS), (b0, rA), (b1, rA), (b1, rS), (L, rS), (L, 0)]
+    cols = {f'M{i}@LEG{i}': L, f'BODYR@LEG{i}': round(BR, 5), f'HOSE{i}_TAILL@LEG{i}': round(b0 - sh, 4), f'HOSE{i}_BEADR@LEG{i}': round(rA, 5),
+            f'HOSE{i}_BEADW@LEG{i}': w, f'HOSE{i}_STUBR@LEG{i}': round(rS, 5), f'HOSE{i}_BEADPOS@LEG{i}': p1}
+    top = max(BR, rA)
+    dims = [('len', -1, f'M{i}', L, L / 2, top + 0.6), ('rad', 1, 'BODYR', BR, sh / 2, -0.4),
+            ('len', 3, f'HOSE{i}_TAILL', round(b0 - sh, 4), (sh + b0) / 2, top + 0.15), ('rad', 5, f'HOSE{i}_BEADR', rA, (b0 + b1) / 2, -0.35),
+            ('len', 5, f'HOSE{i}_BEADW', w, (b0 + b1) / 2, top + 0.35), ('rad', 7, f'HOSE{i}_STUBR', rS, (b1 + L) / 2, -0.25),
+            ('len', 7, f'HOSE{i}_BEADPOS', p1, (b1 + L) / 2, top + 0.25), ('col', 3, 7)]
+    return dict(kind='HOSEB', dash=dash, V=V, endlen=E['endlen'], cols=cols, tcols={}, dims=dims, rmax=max(rA, rS), rS=rS, rA=rA,
+                bead=(b0, b1), thr=E['thr'], thread=None, tipR=rS)
+
+
+def leg_axes(sp, n):
+    """unit vector (XY plane) of every leg axis, in leg order"""
+    out = []
+    for i in range(1, n + 1):
+        ax, sg = place(sp)[i]
+        out.append((UXV, UYV) if ax == 'U' else (float(sg), 0.0) if ax == 0 else (0.0, float(sg)))
+    return out
+
+
+def faceoff_geo(sp, legs, ih, BR, AC, N=60):
+    """the forged corner past the hose hex face of leg ih (0-based), sampled exactly as the design check (HOSEB/scripts/faceoff_geo.py):
+    the 30deg corner puck (cone surface + interior), the other leg's hex arm outline from the crossing to its hexl, and the other leg's END
+    (its revolved profile beyond its hex arm, plus the adjustable-ORB locknut envelope) inside the slab [hexl, max(AC, hexl) + DELTA]. Points
+    past the hex face (along the hose axis) and outside the stub radius are the material the face-off must take."""
+    U = leg_axes(sp, len(legs)); H = legs[ih]; u = U[ih]; n = (-u[1], u[0]); s = H['hexl']; rS = H['rS']
+    io = 1 - ih; O = legs[io]; uo = U[io]; no = (-uo[1], uo[0]); pts = []; T30_ = math.tan(math.radians(30))
+    def keep(x, y, z, tag):
+        a = x * u[0] + y * u[1]
+        if a <= s + 1e-9: return
+        t_ = x * n[0] + y * n[1]; r = math.hypot(t_, z)
+        if r <= rS + 1e-9: return
+        pts.append((tag, a, r, x * uo[0] + y * uo[1]))
+    for k in range(N + 1):
+        z = -BR + 2 * BR * k / N; R = AC - abs(z) * T30_
+        for j in range(360):
+            th = 2 * math.pi * j / 360; c_, s_ = math.cos(th), math.sin(th)
+            for f_ in (1.0, 0.8, 0.6): keep(f_ * R * c_, f_ * R * s_, z, 'puck')
+    hexv = [(AC, 0.0), (AC / 2, BR), (-AC / 2, BR), (-AC, 0.0), (-AC / 2, -BR), (AC / 2, -BR)]
+    for k in range(N + 1):
+        ao = O['hexl'] * k / N
+        for j in range(6):
+            (p1, z1), (p2, z2) = hexv[j], hexv[(j + 1) % 6]
+            for q in range(25):
+                p_ = p1 + (p2 - p1) * q / 24; z = z1 + (z2 - z1) * q / 24
+                keep(ao * uo[0] + p_ * no[0], ao * uo[1] + p_ * no[1], z, 'other hex arm')
+    endpts = []; amax = max(AC, s) + FACEOFF_DELTA
+    def endpt(ao, ro, ph):
+        p_ = ro * math.cos(ph); z = ro * math.sin(ph); x = ao * uo[0] + p_ * no[0]; y = ao * uo[1] + p_ * no[1]; a = x * u[0] + y * u[1]
+        if s - 1e-9 <= a <= amax: endpts.append((math.hypot(x * n[0] + y * n[1], z), ao))
+    for (a1, r1), (a2, r2) in zip(O['V'], O['V'][1:]):
+        for k in range(41):
+            ao = a1 + (a2 - a1) * k / 40; ro = r1 + (r2 - r1) * k / 40
+            if ao <= O['hexl'] + 1e-9: continue
+            for j in range(72): endpt(ao, ro, 2 * math.pi * j / 72)
+    if O['kind'] == 'NWO':
+        for ao in (O['nut']['n0'], O['nut']['w0']):
+            for j in range(72): endpt(ao, O['nut']['Rn'], 2 * math.pi * j / 72)
+    r = dict(past=bool(pts))
+    if pts:
+        r.update(past_max_r=max(p_[2] for p_ in pts), past_max_a=max(p_[1] for p_ in pts), past_max_along_other=max(p_[3] for p_ in pts),
+                 past_by=sorted({p_[0] for p_ in pts}))
+    if endpts: r.update(end_min_r=min(e[0] for e in endpts), end_min_along_other=min(e[1] for e in endpts))
+    return r
+
+
+_NWOCOL_CACHE = {}
+def nwo_col_from(src, col, dash):
+    """2026-10-18 (ANGLED): an adjustable-ORB end cell (thread length / groove dia) from another Air-Way series of the same maker (6801), as
+    nwo_i3_from: every row of that table with this ORB size must print one single value (all Air-Way rows; OMi scope does not matter)"""
+    if (src, col) not in _NWOCOL_CACHE:
+        ws = openpyxl.load_workbook(f'{REV}/DesignTable_{src}.xlsx', read_only=True).active
+        rows = list(ws.iter_rows(values_only=True)); h = rows[1]; m = {}
+        for r in rows[2:]:
+            if not r[0]: continue
+            d = dict(zip(h, r)); dd = dashes(d['$PRP@PartNo'])
+            if len(dd) == 2 and d.get(col) is not None: m.setdefault(dd[1], set()).add(d[col])
+        _NWOCOL_CACHE[(src, col)] = m
+    v = _NWOCOL_CACHE[(src, col)].get(dash)
+    if not v or len(v) != 1: raise KeyError(f'no single Air-Way {src} {col} for -{dash:02d}: {v}')
+    return next(iter(v))
 
 
 def leg_NWO(i, dash, LEG, BR, I3, nutAF, THDL, GRVD):
@@ -821,9 +1196,102 @@ NECK_ASSUME = ('swivel neck turned clear of the forged corner (Brennan 6502-12-1
                'ASSUMED for the other sizes (-05)')
 
 
+# 2026-10-18 (ANGLED, N1 / N2 - Q-ANGLED-NECKNPSM settled from Brennan, user A15 2026-10-18 "look at Brennan parts"): tools/measure/neck45.py on the
+# Brennan 45 deg NPSM swivel forgings (tools/_out/genfeat_20261018/angled/scripts/neck45_1503_1504_out.txt): the body face lies inside the hex corner
+# radius and NOTHING stands outside the neck between the body face and the nut rear face - the corner is turned down to the neck, as on 6502.
+ANGLED_NECK_ASSUME = ('NPSM swivel neck turned clear of the forged corner as on 6502 (NECKTRIM1 revolve cut + NECKFILL1 ring back to the neck, in every '
+                      'configuration; no change where the corner stays inside the neck): Brennan 1503-08-08-FG / 1503-12-08-FG / 1504-06-06-FG STEPs '
+                      '(tools/measure/neck45.py 2026-10-18): body face 0.400 / 0.570 / 0.360 inside the hex corner radius 0.5052 / 0.6131 / 0.5052, '
+                      'neck 0.304 / 0.304 / 0.2465, nothing outside the neck from the body face to the nut rear face (excess 0.000) - ASSUMED for every '
+                      'NPSM size (Q-ANGLED-NECKNPSM, settled from the Brennan STEPs 2026-10-18); past the swivel slot start the corner must lie inside the '
+                      'stem by 0.02 (slot test on what the corner reaches, N2)')
+# Q-ANGLED-P1 (settled from Brennan 2026-10-18): the female NPTF port depth Brennan draws (face to the bottom of the 1.79deg tapered port, 45deg mouth
+# included), tools/_out/genfeat_20261018/angled/scripts/brennan_port_depths_out.txt - the same value on every Brennan STEP of a size. Used ONLY through a
+# row's PORTDEPTH cell (SPEC p1) where the MS51503 P1 library value does not fit the short 45 deg leg; text only here.
+ANGLED_P1_NOTE = {4: '0.560 (Brennan 2502-06-04-FG, 5405-04-04, 5406-08-04, 5502-04-04-FG STEPs)',
+                  6: '0.580 (Brennan 1504-06-06-FG, 2611-06-06-06-FG, 5601-06-06-06-FG STEPs)',
+                  8: '0.750 (Brennan 1502 / 2505 / 2606 / 5502 / 5504 / 5505 / 5603 / 5605 / 5652 -08 STEPs and 5 more)',
+                  12: '0.770 (Brennan 5405-12-12, 6506-12-14 STEPs)',
+                  16: '0.940 (Brennan 5405-16-16, 5502-16-16-FG, 5503-16-16-FG STEPs)',
+                  32: '0.970 (Brennan 5406-40-32 STEP)'}
+
+
+def angled_nptff_text(sp):
+    """2026-10-18 (ANGLED): the female-port sentence of 1504 / 5503 / 5505 (tap drill, port depth, connecting drill - sources named)"""
+    cn = (f"the part's own {sp['conn'].split('@')[0]} column (the male bore; capped at the tap drill where larger)" if sp.get('conn')
+          else 'the tap drill carried to the crossing (Brennan 1504-06-06-FG / 5503-16-16-FG / 5505-08-08-FG STEPs, OCP 2026-10-18: the drill runs '
+               'from the bottom of the tapered port to the axis crossing and ends flat there; the other leg bore opens into it)')
+    return ("female NPTF legs: tap drill = the row's TAPDRILL (end library: the per-size tap drill every built female pipe port carries, Q-TRANSFER-ENDLIB "
+            "= yes 2026-10-08), tapered helix over MS51503 P1 max (" + BR5405 + ") - where that does not fit the short 45 deg leg (P1 >= leg - 0.05) over "
+            "the row's " + sp['p1'].split('@')[0] + " = the port depth Brennan draws for that size (Q-ANGLED-P1, settled from the Brennan STEPs 2026-10-18; "
+            "said per leg below); connecting drill to the axis crossing = " + cn + '; the 1.79deg port cone and the 45deg mouth chamfer are NOT modelled')
+
+
+def angled_texts(sp, legs):
+    """2026-10-18 (ANGLED, design review B2): the $PRP@AxialSource sentences of the three capabilities - only for a leg on the 135 deg axis that
+    carries a helical thread, a female port or a swivel nut (no released root has one, so no released text changes)"""
+    if not sp.get('e45'): return []
+    t = []; P_ = place(sp)
+    U = [L for i, L in enumerate(legs, 1) if P_[i][0] == 'U' and (L['thread'] or {}).get('type') == 'HELIX']
+    if not U: return t
+    L = U[0]; k = L['kind']
+    if k == 'NPTFM':
+        t.append('male NPTF end on the 45 deg leg (Q-NEW-ANGLEDHELIX): the library male end of the axis legs (ASME B1.20.3 cone + relief to the 5404 end '
+                 'length) turned to the 135 deg axis; its bore ends at the axis crossing as on every built root (Brennan 5501-08-08-FG / 5503-16-16-FG '
+                 'STEPs, OCP 2026-10-18: the male drill runs on a little past the crossing, and Brennan draws its own simplified thread cone and a bore-mouth '
+                 'countersink - NOT modelled)')
+    elif k == 'NPTFF':
+        t.append('female NPTF port on the 45 deg leg (Q-NEW-ANGLEDFEMALE): the 5504 / 1502 forged female leg turned to the 135 deg axis - hex arm to 0.26 '
+                 'short of the port face, round collar of dia = the hex flats, tap drill from the port face (pocket), tapered helical thread over the port '
+                 'depth (Brennan 1504-06-06-FG / 5505-08-08-FG / 5503-16-16-FG STEPs: collar 0.26 at the flats dia on the 45 deg leg, the same end as on '
+                 'the axis legs)')
+    else:
+        t.append('swivel on the 45 deg leg (Q-NEW-ANGLEDNUT): the swivel end of the axis legs (same end library) turned to the 135 deg axis, its forged '
+                 'hex arm ending at the body face; the nut hex is cut on the nut face (NutHexCutV: hexagon with flats normal to Z, outside cut over the '
+                 'nut hex length, accepted only when the cut is centred on the nut). Composed shape: no Brennan STEP of this series measured (pilot '
+                 'STEP on the download list) - ASSUMPTION')
+    t.append('helical thread on the 45 deg leg (HelixThreadV, 2026-10-18): helix on the leg end face (circle centred on the leg axis), started in the '
+             'Front Plane, right hand, into the part, tapered as on the axis legs; 60deg tooth profile on the Front Plane with its sides parallel / '
+             'normal to the leg axis, swept along the helix - the thread of the axis legs (HelixThread) about the 135 deg axis; SolidWorks\' Thread '
+             'feature is not used there (an off-axis Thread feature crashed SolidWorks 2026-10-15); drawing-only thread, suppressed in the saved model and STEP')
+    for i, Lf in enumerate(legs, 1):
+        if Lf['kind'] == 'NPTFF' and abs(Lf['P1'] - G.FPT[Lf['dash']]['P1']) > 1e-9:
+            t.append(f'leg {i} port depth {Lf["P1"]:.3f} = the row {sp["p1"].split("@")[0]} instead of MS51503 P1 {G.FPT[Lf["dash"]]["P1"]} (which does not fit '
+                     f'the {Lf["V"][-1][0]:.2f} leg): the port depth Brennan draws for -{Lf["dash"]:02d}: {ANGLED_P1_NOTE.get(Lf["dash"], "no Brennan STEP of this size")}')
+    return t
+
+
 def neck_trim_leg(sp, i, L):
-    """legs that carry the NECKTRIM / NECKFILL turn: a female JIC swivel on the +X leg of a 45 deg elbow (6502)"""
+    """legs that carry the NECKTRIM / NECKFILL turn: a female JIC swivel on the +X leg of a 45 deg elbow (6502); 2026-10-18 (ANGLED, N1):
+    with SPEC neck_turn also a female NPSM swivel on the +X leg (1503 / 1504)"""
+    if sp.get('neck_turn'):
+        return bool(sp.get('e45')) and L['kind'] in ('JICSW', 'NPSMSW') and place(sp)[i] == (0, +1)
     return bool(sp.get('e45')) and L['kind'] == 'JICSW' and place(sp)[i] == (0, +1)
+
+
+def inner_env(V, a, rlim):
+    """2026-10-18 (ANGLED, N2): radius of a swivel leg's solid core at axial a beyond the slot start - the NPSM stem (or the JIC nose) as the
+    inner profile V[9:] draws it: the largest radius of the segments spanning a that lie at or below rlim (stem / nose radius); 0 past its tip"""
+    best = 0.0
+    for (pa, pr), (qa, qr) in zip(V[9:-1], V[10:]):
+        if max(pr, qr) > rlim + 1e-9: continue
+        lo, hi = min(pa, qa), max(pa, qa)
+        if a < lo - 1e-9 or a > hi + 1e-9: continue
+        best = max(best, max(pr, qr) if abs(qa - pa) < 1e-12 else pr + (qr - pr) * (a - pa) / (qa - pa))
+    return best
+
+
+def slot_reach_check(L, AC, BR, hexl2, slot_a, n=60):
+    """2026-10-18 (ANGLED, N2): the slot test on what the forged corner really reaches - from the swivel slot start to the corner's end (AC)
+    every corner point must lie inside the stem / nose (solid there) by 0.02: returns (worst margin, a, reach, core radius)"""
+    rlim = L['m']['STEMR'] if L['kind'] == 'NPSMSW' else L['m']['NOSER']
+    worst = None
+    if AC <= slot_a: return None
+    for k in range(n + 1):
+        a = slot_a + (AC - slot_a) * k / n
+        rc = corner_reach(a, AC, BR, hexl2); core = inner_env(L['V'], a, rlim); mg = core - rc
+        if worst is None or mg < worst[0]: worst = (mg, a, rc, core)
+    return worst
 
 
 def corner_reach(a0, AC, BR, hexl2):
@@ -854,6 +1322,84 @@ def slab_cavity(V, a0, a1):
 
 def dashes(pn):
     return [int(x) for x in re.findall(r'-(\d\d)(?=-|$)', pn)]
+
+
+# ---------------------------------------------------------------- 2026-10-09 wave 2, PERLEGSW: per-leg end columns and end-library tokens
+def legs4(sp):
+    """the (kind, leg col, bore col, thread col) part of every SPEC leg (a leg may carry a 5th element: its own end columns)"""
+    return [l[:4] for l in sp['legs']]
+
+
+def leg_end(sp, k):
+    """the end-column tuple of leg k (0-based): the leg's own 5th element, else the SPEC-wide sw / npsm / nwo tuple (every older root)"""
+    l = sp['legs'][k]
+    return l[4] if len(l) > 4 else sp[{'JICSW': 'sw', 'NPSMSW': 'npsm', 'NWO': 'nwo'}[l[0]]]
+
+
+# END-LIBRARY tokens (Q-TRANSFER-ENDLIB = yes, user 2026-10-08 "reuse end details - yes"): token -> (library, key, what, source text)
+ENDLIB_TOKENS = {
+    '=ORB:THDL': ('ORB', 'THDL', 'adjustable ORB thread length', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_THDL at every dash -02..-32)'),
+    '=ORB:GD': ('ORB', 'GD', 'adjustable ORB undercut dia', 'the ORB end library (6401 / 6405 / 6410 tables; = Air-Way 6801 ORB_GRVDIA at every dash -02..-32)'),
+    '=FPT:TD': ('FPT', 'TD', 'female NPTF tap drill', 'the female pipe port end library (per-size tap drill of the 2405 table, carried by every built female pipe port)'),
+}
+ENDLIB_TEXT = {
+    '=6801': 'adjustable ORB tip-to-body-face = Air-Way 6801 ORB_I3 of the same ORB size (= the Brennan 6801 STEPs)',
+    '=ORB:THDL': 'adjustable ORB thread length = the ORB end library (6401 / 6405 / 6410 tables, = Air-Way 6801 at every dash)',
+    '=ORB:GD': 'adjustable ORB O-ring undercut dia = the ORB end library (6401 / 6405 / 6410 tables, = Air-Way 6801 at every dash)',
+    '=FPT:TD': 'female NPTF tap drill = the female pipe port end library (2405 table tap drill), only where the row has none',
+}
+
+
+def end_val(r, c, d, i, warn):
+    """an end value of leg i (dash d): the row's column c, or an END-LIBRARY token (ENDLIB_TOKENS / '=<root>' = the adjustable-ORB I3 of that
+    Air-Way series); the source of every token value goes into the row's warnings ($COMMENT). A missing library entry raises KeyError."""
+    if not (isinstance(c, str) and c.startswith('=')): return r[c]
+    if c in r: return r[c]       # merge 2026-10-18: a HOSEB row copy carries the token values already (hoseb_endlib said their source)
+    if c in ENDLIB_TOKENS:
+        lib, key, what, src = ENDLIB_TOKENS[c]
+        lv = getattr(G, lib)
+        if d not in lv: raise KeyError(f'no -{d:02d} entry in the {lib} end library for {what}')
+        v = lv[d][key]
+        warn.append(f'leg {i}: {what} {v} = {src} for -{d:02d} (end library, Q-TRANSFER-ENDLIB 2026-10-08)')
+        return v
+    v = nwo_i3_from(c[1:], d)
+    warn.append(f'leg {i}: adjustable ORB tip-to-body-face {v} = Air-Way {c[1:]} ORB_I3 for -{d:02d} (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)')
+    return v
+
+
+def nptff_td(r, bc, d, i, sp, warn):
+    """female NPTF tap drill of a leg: the row's column; on a perleg root an EMPTY cell takes the end-library tap drill ('=FPT:TD')"""
+    return end_val(r, '=FPT:TD', d, i, warn) if r[bc] is None and sp.get('perleg') else r[bc]
+
+
+ARM_RIDGE_EPS = 1e-4      # a hex corner standing more than this past a special leg's body face is a ridge (wave-1 1502 value, named once)
+NUTSLAB_MIN = 0.003       # a nut cut's slab must start this far beyond every perpendicular leg's final reach and the body hex corner
+
+
+def nut_slab(L):
+    """(start, end) along its own axis of the slab a leg's nut hex cut clears to the hexagon (None for legs without a nut cut)"""
+    if L['kind'] in ('JICSW', 'NPSMSW'): return (round(L['Mtip'] - L['m']['HEXL'], 4), L['Mtip'])
+    if L['kind'] == 'NWO': return (L['nut']['n0'], L['nut']['w0'])
+    return None
+
+
+def final_reach(o):
+    """largest distance from its own axis of a leg in the FINISHED part: swivel nut corners / skirt, adjustable-ORB washer / nut corners, else rmax"""
+    if o['kind'] in ('JICSW', 'NPSMSW'): return max(o['nut_af'] / math.sqrt(3), o['m']['SKR'])
+    if o['kind'] == 'NWO': return nwo_radial(o)
+    return o['rmax']
+
+
+def nwo_overlap(L, O, n=2000):
+    """volume (in^3) of the perpendicular adjustable-ORB leg O's revolved locknut ENVELOPE lying beyond L's locknut slab start n0 (along L's
+    axis): NUTCUTi of L (built first) removes it, so L's cut removes that much more and O's that much less than nwo_nut_removed(). The slab
+    rule keeps O's final hex corners and L's below the other slab, so only the envelope margin can reach (circular segments, integrated)."""
+    a0 = L['nut']['n0']; nu = O['nut']; k = 1 / math.tan(math.radians(NWO_CHANG)); h = (nu['w0'] - nu['n0']) / n; tot = 0.0
+    for j in range(n):
+        a = nu['n0'] + (j + 0.5) * h
+        r = min(nu['Rn'], nu['rc'] + (a - nu['n0']) * k, nu['rc'] + (nu['w0'] - a) * k)
+        if r > a0: tot += r * r * math.acos(a0 / r) - a0 * math.sqrt(r * r - a0 * a0)
+    return tot * h
 
 
 def pilot_text(root, legs, pn):
@@ -924,42 +1470,75 @@ def build_rows(root):
     out, skipped = [], []
     nleg = len(sp['legs'])
     for r in rows:
-        pn = r['$PRP@PartNo']
+        pn = r[sp.get('pn', '$PRP@PartNo')] or r['$PRP@PartNo']       # 2026-10-18 (HOSEB): SPEC pn = the column that names the configuration
         if r.get('$PRP@ScopeAction') != 'BUILD' or r['$PRP@DataStatus'] == 'MISSING':
             skipped.append((pn, r.get('$PRP@ScopeAction'), r['$PRP@DataStatus'])); continue
         dd = dashes(pn)
         if sp.get('dmap') and len(dd) == len(sp['dmap']): dd = [dd[k] for k in sp['dmap']]
         chk, warn = [], []
         if len(dd) != nleg: skipped.append((pn, 'dash count', dd)); continue
-        swd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'JICSW']
+        # 2026-10-18 (genfeat PERLEGSW): a perleg row with an EMPTY body cell (leg length, bore, body hex, a swivel's nut-face / nose / nut hex
+        # column) is skipped with the columns named - never filled here (an empty female NPTF tap drill takes the end library, nptff_td)
+        if sp.get('perleg'):
+            _need = [sp['hex']] + [c_ for k_, (kind, lc, bc, tc) in enumerate(legs4(sp)) for c_ in
+                                   ([lc] + ([bc] if kind != 'NPTFF' else []) + [x_ for x_ in (leg_end(sp, k_) if kind in ('JICSW', 'NPSMSW', 'NWO') else ())
+                                                                               if not str(x_).startswith('=')])]
+            _miss = [c_ for c_ in dict.fromkeys(_need) if r.get(c_) is None]
+            if _miss: skipped.append((pn, 'missing data', 'empty cell(s) ' + ', '.join(_miss) + ' - no value from any allowed source (DataStatus gate)')); continue
+        if sp.get('hoseb'):
+            # 2026-10-18 (HOSEB): the hose-leg bore source (SPEC hose_bore, Q-HOSEB-BORE) must exist; the adjustable-ORB end-library tokens of the
+            # SPEC nwo tuple are filled into a copy of the row (hoseb_endlib)
+            _hb = [bc_ for kind_, lc_, bc_, tc_ in legs4(sp) if kind_ == 'HOSEB'][0]
+            if sp.get('hose_bore', 'own') is None:
+                skipped.append((pn, 'no end data', 'hose bore: no source (Q-HOSEB-BORE)')); continue
+            if sp['hose_bore'] == 'col' and r.get(_hb) is None:
+                skipped.append((pn, 'no end data', f'hose bore: the row has no hose drill {_hb} (Q-HOSEB-BORE: the 4501 / 4503 hose leg = the part\'s own '
+                                                   'hose drill, Brennan B1 DRILL, user 2026-10-18 A15)')); continue
+            r = hoseb_endlib(sp, r, dd, warn, chk)
+        # 2026-10-09 (wave 2, PERLEGSW): the end-data gates check EVERY swivel leg and name the first missing dash (the same text as before
+        # for a root with one swivel; a perleg root also names the leg)
+        swd = [(k_, d) for k_, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1) if kind == 'JICSW' and d not in G.SWIV_MEAS]
         # 2026-10-01: the measured sizes are read from the tables (the fixed texts "-04/-08/-12/-16 only" / "-08 only" were stale since batch 13)
         _have = lambda tab: '/'.join(f'-{k:02d}' for k in sorted(tab))
-        if swd and swd[0] not in G.SWIV_MEAS:
-            skipped.append((pn, 'no end data', f'female JIC swivel end not measured for -{swd[0]:02d} (SWIV_MEAS has {_have(G.SWIV_MEAS)}; needs a Brennan STEP carrying a -{swd[0]:02d} JIC swivel)')); continue
-        npd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'NPSMSW']
-        if npd and npd[0] not in G.NPSM_MEAS:
-            skipped.append((pn, 'no end data', f'female NPSM swivel end not measured for -{npd[0]:02d} (NPSM_MEAS has {_have(G.NPSM_MEAS)})')); continue
-        nwd = [d for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind == 'NWO' and d not in NWO_MEAS]
+        _onleg = lambda k_: f' on leg {k_}' if sp.get('perleg') else ''
+        if swd:
+            skipped.append((pn, 'no end data', f'female JIC swivel end not measured for -{swd[0][1]:02d}{_onleg(swd[0][0])} (SWIV_MEAS has {_have(G.SWIV_MEAS)}; needs a Brennan STEP carrying a -{swd[0][1]:02d} JIC swivel)')); continue
+        npd = [(k_, d) for k_, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1) if kind == 'NPSMSW' and d not in G.NPSM_MEAS]
+        if npd:
+            skipped.append((pn, 'no end data', f'female NPSM swivel end not measured for -{npd[0][1]:02d}{_onleg(npd[0][0])} (NPSM_MEAS has {_have(G.NPSM_MEAS)})')); continue
+        nwd = [d for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'NWO' and d not in NWO_MEAS]
         if nwd:
             skipped.append((pn, 'no end data', f'adjustable ORB end not measured for -{nwd[0]:02d}')); continue
         # SIZE-40 (2026-10-01): a leg dash missing from an end library (e.g. -40 NPTF) -> skip the row with the source that would fill it
         # (until now an uncaught KeyError here stopped the whole root)
-        gaps = G.lib_gaps([(kind, d) for (kind, lc, bc, tc), d in zip(sp['legs'], dd)])
+        gaps = G.lib_gaps([(kind, d) for (kind, lc, bc, tc), d in zip(legs4(sp), dd)])
         if gaps:
             skipped.append((pn, 'no end data', '; '.join(gaps))); continue
+        if any(kind in FLG_KINDS for (kind, lc, bc, tc) in legs4(sp)):
+            # 2026-10-18 (flange leg): a flange size without end data, or a row with an empty leg / hex / bore cell -> skipped with the reason
+            try:
+                for (kind, lc, bc, tc), d in zip(legs4(sp), dd):
+                    if kind in FLG_KINDS: flg_o(kind, d)
+            except KeyError as ex:
+                skipped.append((pn, 'no end data', str(ex).strip('"\''))); continue
+            miss_ = [c_ for (kind, lc, bc, tc) in legs4(sp) for c_ in (lc, bc, tc) if c_ and r.get(c_) is None] + ([sp['hex']] if r.get(sp['hex']) is None else [])
+            if miss_:
+                skipped.append((pn, 'row without ' + ' / '.join(miss_), 'needs the cell(s) before the row can build')); continue
         # the leg threads must be the ones the part number says
-        for (kind, lc, bc, tc), d in zip(sp['legs'], dd):
+        for (kind, lc, bc, tc), d in zip(legs4(sp), dd):
             if tc is None: continue
             tm = r[tc]
             want = G.JIC[d]['TM'] if kind in ('JICM', 'JICBH', 'JICSW', 'NWO') else G.NPTF[d][2]
+            if tm is None and sp.get('perleg'):      # 2026-10-09 (PERLEGSW): an empty cell takes the library major (a filled one must match)
+                warn.append(f'{tc} empty: thread major {want} = the -{d:02d} end library (Q-TRANSFER-ENDLIB)'); continue
             if tm is None or abs(tm - want) > 1e-3: chk.append(f'{tc} {tm} does not match the -{d:02d} end ({want})')
         Y = r[sp['hex']]
         # 2603HX rule: A/F = max(Air-Way hex, JIC thread majors) - the JIC nipple keeps its relief below the flats
-        maxes = [G.JIC[d]['TM'] for (kind, lc, bc, tc), d in zip(sp['legs'], dd) if kind in ('JICM', 'JICBH')]
+        maxes = [G.JIC[d]['TM'] for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind in ('JICM', 'JICBH')]
         AF = max([Y] + maxes); BR = AF / 2
         if AF > Y + 1e-9: warn.append(f'hex A/F raised from Air-Way {Y} to {AF:.4f} (JIC thread major; 2603HX rule)')
         # male NPTF: the thread cylinder at its vanish point (radius rL) must sit inside the hex flats with a real shoulder
-        for i, ((kind, lc, bc, tc), d) in enumerate(zip(sp['legs'], dd), 1):
+        for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
             if kind == 'NPTFM':
                 nps, tpi, D, E0, E1, L1, L2 = G.NPTF[d]; P = 1 / tpi
                 rL = (E0 + 0.8 * P) / 2 + L2 * math.tan(TAPER)
@@ -972,7 +1551,7 @@ def build_rows(root):
                     warn.append(f'leg {i}: male NPTF thread dia at L2 {2*rL:.4f} vs hex flats {2*BR:.4f} (round end {"proud of" if rL > BR else "flush with"} the flats by {abs(rL-BR):.4f}; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)')
         conn = r[sp['conn']] if sp.get('conn') else None
         legs = []
-        for i, ((kind, lc, bc, tc), d) in enumerate(zip(sp['legs'], dd), 1):
+        for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
             M = r[lc]
             if kind == 'JICM': L = leg_JICM(i, d, M, BR)
             elif kind == 'JICBH':
@@ -980,25 +1559,72 @@ def build_rows(root):
                 except AssertionError as ex: chk.append(f'leg {i} bulkhead: {ex}'); L = leg_JICM(i, d, M, BR)
             elif kind == 'NPTFM': L = leg_NPTFM(i, d, M, BR)
             elif kind == 'JICSW':
-                try: L = leg_JICSW(i, d, M, BR, r[sp['sw'][0]], r[sp['sw'][1]])
+                # 2026-10-09 (PERLEGSW): each swivel leg reads its own end columns (leg_end) - table columns or end-library tokens (end_val)
+                try: e_ = leg_end(sp, i - 1); L = leg_JICSW(i, d, M, BR, end_val(r, e_[0], d, i, warn), end_val(r, e_[1], d, i, warn))
                 except AssertionError as ex: chk.append(f'leg {i} swivel: {ex}'); L = leg_JICM(i, d, M, BR)
             elif kind == 'NPSMSW':
-                try: L = leg_NPSMSW(i, d, M, BR, r[sp['npsm'][0]], r[sp['npsm'][1]])
+                try: e_ = leg_end(sp, i - 1); L = leg_NPSMSW(i, d, M, BR, end_val(r, e_[0], d, i, warn), end_val(r, e_[1], d, i, warn))
                 except (AssertionError, KeyError) as ex: chk.append(f'leg {i} NPSM swivel: {ex}'); L = leg_NPTFM(i, d, M, BR)
             elif kind == 'NWO':
                 try:
-                    i3c = sp['nwo'][0]
-                    I3 = nwo_i3_from(i3c[1:], d) if i3c.startswith('=') else r[i3c]
-                    if i3c.startswith('='): warn.append(f'leg {i}: adjustable ORB tip-to-body-face {I3} = Air-Way {i3c[1:]} ORB_I3 for -{d:02d} (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)')
-                    L = leg_NWO(i, d, M, BR, I3, r[sp['nwo'][1]], r[sp['nwo'][2]], r[sp['nwo'][3]])
+                    # merge 2026-10-18: PERLEGSW per-leg end tuple (leg_end / end_val: I3 '=6801' same value and warning text as before, nut hex,
+                    # thread length, undercut dia - table columns or end-library tokens) + ANGLED (6810 / 6902): a thread length / groove dia token
+                    # '=<series>' (not an end-library token) = the Air-Way rows of the same ORB size in that series (nwo_col_from)
+                    e_ = leg_end(sp, i - 1)
+                    I3 = end_val(r, e_[0], d, i, warn)
+                    nut_ = end_val(r, e_[1], d, i, warn)
+                    i3c, thc_, gvc_ = e_[0], e_[2], e_[3]
+                    _ser = lambda c_: isinstance(c_, str) and c_.startswith('=') and c_ not in ENDLIB_TOKENS
+                    if _ser(thc_) or _ser(gvc_):
+                        # 2026-10-18 (ANGLED, 6810 / 6902): thread length / groove dia not printed for this series -> the Air-Way rows of the same
+                        # ORB size in the source series (Q-TRANSFER-ENDLIB = yes 2026-10-08); I3 keeps its Brennan check above
+                        THDL_ = nwo_col_from(thc_[1:], 'ORB_THDL@DRIVE', d) if _ser(thc_) else end_val(r, thc_, d, i, warn)
+                        GRVD_ = nwo_col_from(gvc_[1:], 'ORB_GRVDIA@DRIVE', d) if _ser(gvc_) else end_val(r, gvc_, d, i, warn)
+                        if _ser(thc_):
+                            warn.append(f'leg {i}: adjustable ORB thread length {THDL_} = Air-Way {thc_[1:]} ORB_THDL for -{d:02d} (not printed for this series; '
+                                        f'Q-TRANSFER-ENDLIB 2026-10-08)' + (f' - Brennan 6801 STEP {NWO_MEAS[d]["THDL_B"]}' if abs(THDL_ - NWO_MEAS[d]['THDL_B']) > 0.006 else ''))
+                        if _ser(gvc_):
+                            warn.append(f'leg {i}: adjustable ORB groove dia {GRVD_} = Air-Way {gvc_[1:]} ORB_GRVDIA for -{d:02d} (not printed for this series; Q-TRANSFER-ENDLIB 2026-10-08)')
+                        L = leg_NWO(i, d, M, BR, I3, nut_, THDL_, GRVD_)
+                        L['nwo_src'] = (i3c, thc_ if _ser(thc_) else '', gvc_ if _ser(gvc_) else '', I3, THDL_, GRVD_)
+                    else:
+                        L = leg_NWO(i, d, M, BR, I3, nut_, end_val(r, thc_, d, i, warn), end_val(r, gvc_, d, i, warn))
                 except (AssertionError, KeyError, TypeError) as ex: chk.append(f'leg {i} adjustable ORB: {ex}'); L = leg_JICM(i, d, M, BR)
+            elif kind == 'HOSEB':
+                try: L = leg_HOSEB(i, d, M, BR, G.frac(r[sp['hoseb'][0]]), r[sp['hoseb'][1]])
+                except (AssertionError, KeyError, TypeError, ValueError) as ex: chk.append(f'leg {i} hose barb: {ex}'); L = leg_JICM(i, d, M, BR)
+            elif kind in FLG_KINDS:
+                # 2026-10-18 (flange leg): only on an axis-aligned leg (the flange dims / vertical collinear are not drawn through DimLenU / DimRadU)
+                assert place(sp)[i][0] != 'U', f'{root}: flange leg {i} on the angled axis is not supported'
+                O_ = flg_o(kind, d)
+                try: L = leg_FLG(i, kind, d, M, BR, O_)
+                except AssertionError as ex: chk.append(f'leg {i} flange: {ex}'); L = leg_JICM(i, d, M, BR)
+                ro_ = r.get(sp['flg_o']) if sp.get('flg_o') else None
+                if ro_ is not None and abs(ro_ - O_) > FLG_O_ROUND: chk.append(f'leg {i}: row head OD {sp["flg_o"].split("@")[0]} {ro_} differs from the end library {O_} - conflict, ask the user')
+                elif ro_ is not None and abs(ro_ - O_) > 1e-9: warn.append(f'leg {i}: row head OD {ro_} vs end library {O_} - rounding only (built at {O_})')
             elif sp.get('p1'):
                 # 2026-10-02: the row's own measured port thread length where it has one, else the MS51503 P1 library value (said in $COMMENT)
                 p1_ = r.get(sp['p1'])
                 if p1_ is None: warn.append(f'leg {i}: female port thread length = MS51503 P1 {G.FPT[d]["P1"]} (library) - the row has no measured {sp["p1"]}')
-                L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')), p1=p1_)
-            else: L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')))
+                L = leg_NPTFF(i, d, M, BR, nptff_td(r, bc, d, i, sp, warn), conn, split=bool(sp.get('elbow')), p1=p1_)
+            else: L = leg_NPTFF(i, d, M, BR, nptff_td(r, bc, d, i, sp, warn), conn, split=bool(sp.get('elbow')))
             L['bore'] = r[bc] if kind != 'NPTFF' else None
+            if kind == 'NPTFF' and sp.get('perleg') and r[bc] is None: L['td_lib'] = True      # 2026-10-09 (PERLEGSW): tap drill from the end library
+            if kind == 'HOSEB' and L['kind'] == 'HOSEB':
+                # 2026-10-18 (HOSEB): the hose-leg bore (Q-HOSEB-BORE, user 2026-10-18 A15); hose_dh = per-row fallback of an 'own' root
+                hb_, bcn_ = sp.get('hose_bore', 'own'), bc
+                if hb_ == 'own' and sp.get('hose_dh') and r.get(sp['hose_dh']) is not None:
+                    hb_, bcn_ = 'col', sp['hose_dh']; L['bore'] = r[bcn_]
+                L['hbsrc'] = (hb_, bcn_)
+                if hb_ == 'own':
+                    warn.append(f"leg {i}: hose-leg bore {L['bore']} = the row's single bore {bc.split('@')[0]} (the adjustable-ORB end drill) carried through "
+                                'the hose leg (Q-HOSEB-BORE option (a), user 2026-10-18 A15)')
+                elif hb_ == 'col':
+                    warn.append(f"leg {i}: hose-leg bore {L['bore']} = the row's own hose drill {bcn_.split('@')[0]} (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 "
+                                "A15 'look at Brennan')" + (f"; the adjustable-ORB leg keeps the row's {bc.split('@')[0]} {r[bc]}" if bcn_ != bc else ''))
+                else:
+                    try: L['bore'] = hose_bore_lib(d); warn.append(f'leg {i}: hose-leg bore {L["bore"]} = Air-Way 4404-{d:02d}-{d:02d} through bore (hose end library, Q-HOSEB-BORE option (b))')
+                    except KeyError as ex: chk.append(f'leg {i} hose bore: {ex}')
             legs.append(L)
         AC = BR / COS30
         # geometry checks
@@ -1019,6 +1645,8 @@ def build_rows(root):
                 # (all 3 legs): the same 0.26 at -04, -08 and -16 (NOT proportional to the leg); kept clear of the corner puck by 0.03
                 Mf = L['V'][2][0]; CL = round(min(COLLAR_L, Mf - AC - 0.03), 3)
                 L['collar'] = CL; L['hexl'] = round(Mf - CL, 4)
+            if L['kind'] in FLG_KINDS:
+                c_, w_ = flg_leg_checks(i, L, BR, AC); chk += c_; warn += w_; continue       # 2026-10-18: the flange leg's own gates and wording
             if L['kind'] != 'NPTFF':
                 if L['hexl'] < 0.03: chk.append(f'leg {i}: end length {L["endlen"]:.3f} leaves no hex ({L["hexl"]:.3f})')
                 if L['bore'] is None: chk.append(f'leg {i}: no bore')
@@ -1042,7 +1670,19 @@ def build_rows(root):
                     hexl2_ = round(oth_['V'][2][0], 4); a_nr_ = round(L['V'][4][0], 4)
                     reach_ = corner_reach(L['hexl'], AC, BR, hexl2_); reach_n_ = corner_reach(a_nr_, AC, BR, hexl2_)
                     arm_ = SQ2 / 2 * AC > L['hexl']
-                    if AC > slot_a - 0.02:
+                    # 2026-10-18 (ANGLED, N2; SPEC neck_turn only): the puck reaches the slot start on its axis only (point (AC, 0, 0)); what
+                    # matters is how far off the axis the corner stands from the slot start on - inside the stem / nose it is hidden in solid
+                    sr_ = slot_reach_check(L, AC, BR, hexl2_, slot_a) if sp.get('neck_turn') else None
+                    if sp.get('neck_turn') and sr_ is not None and sr_[0] < 0.02:
+                        chk.append(f'leg {i}: past the swivel slot start ({slot_a:.3f}) the corner stands {sr_[2]:.4f} off the axis at {sr_[1]:.4f}, '
+                                   f'outside the {"stem" if L["kind"] == "NPSMSW" else "nose"} ({sr_[3]:.4f}) - margin {sr_[0]:.4f} < 0.02')
+                    elif sp.get('neck_turn') and sr_ is not None:
+                        warn.append(f'leg {i}: the corner (radius {AC:.3f}) reaches past the swivel slot start ({slot_a:.3f}) but stays inside the '
+                                    f'{"stem" if L["kind"] == "NPSMSW" else "nose"} there (worst margin {sr_[0]:.4f} at {sr_[1]:.4f}: corner {sr_[2]:.4f} off the '
+                                    f'axis vs {sr_[3]:.4f}) - hidden in solid (slot test N2, 2026-10-18)')
+                    if sp.get('neck_turn') and sr_ is not None and sr_[0] < 0.02:
+                        pass
+                    elif AC > slot_a - 0.02 and not sp.get('neck_turn'):
                         chk.append(f'leg {i}: the corner puck (radius {AC:.3f}) reaches into the swivel slot (starts {slot_a:.3f})')
                     elif reach_n_ > m_['SKR'] - 0.02:
                         chk.append(f'leg {i}: past the swivel nut rear face ({a_nr_:.3f}) the corner stands {reach_n_:.3f} off the axis, not inside the nut (skirt radius {m_["SKR"]:.3f})')
@@ -1071,7 +1711,7 @@ def build_rows(root):
             elif sp.get('elbow'):
                 if sp.get('arm_ridge_check') and L['hexl'] < AC:        # 2026-10-02 (1502): an arm ending inside the corner radius does not clear it
                     warn.append(f'leg {i} hex arm {L["hexl"]:.3f} ends {AC - L["hexl"]:.3f} INSIDE the hex corner radius ({AC:.3f})')
-                elif L['hexl'] < AC + 0.03:
+                elif L['hexl'] < AC + 0.03 and L['kind'] != 'HOSEB':       # (HOSEB: the face-off below says what happens at the hose hex face)
                     warn.append(f'leg {i} hex arm {L["hexl"]:.3f} barely clears the corner puck (radius {AC:.3f})')
             elif i >= 3 and L['hexl'] < AC + 0.03 and not sp.get('cross'):
                 warn.append(f'leg {i} hex arm {L["hexl"]:.3f} barely clears the run bar corner ({AC:.3f})')
@@ -1086,13 +1726,100 @@ def build_rows(root):
         # switched on there (it would block a shipped configuration); left to the main session.
         if sp.get('arm_ridge_check') and sp.get('elbow') and not sp.get('e45'):
             for i, L in enumerate(legs, 1):
-                if L['kind'] not in ('JICSW', 'NPSMSW'): continue
+                # 2026-10-09 (PERLEGSW, DESIGN_REVIEW P4): a perleg root checks its adjustable ORB legs too (neck = NWO_MEAS NECKR)
+                if L['kind'] not in (('JICSW', 'NPSMSW', 'NWO') if sp.get('perleg') else ('JICSW', 'NPSMSW')): continue
                 oth_ = [o for o in legs if o is not L][0]; nr_ = L['m']['NECKR']; h_ = AC - L['hexl']
-                if h_ > 1e-4 and oth_['hexl'] > nr_:
-                    chk.append(f'leg {i}: the other leg\'s hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the swivel body face '
+                if h_ > ARM_RIDGE_EPS and oth_['hexl'] > nr_:
+                    chk.append(f'leg {i}: the other leg\'s hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the {"adjustable ORB" if L["kind"] == "NWO" else "swivel"} body face '
                                f'({L["hexl"]:.4f}) OUTSIDE the neck (radius {nr_:.4f}), from the neck out to the arm end {oth_["hexl"]:.3f} along the other '
                                f'leg (ridge {2 * h_ / TAN30:.4f} wide) - Brennan faces it off at the body face (6500-05-05-FG STEP: body face 0.314 inside '
                                f'the corner radius 0.3245, nothing outside the neck beyond it); the 90 deg elbow has no facing cut')
+        # 2026-10-18 (genfeat PERLEGSW): the row's nut face -> stem tip (NPSM) / nut face -> nose tip (JIC swivel) is followed; on a perleg
+        # root it is compared with the Brennan value of the library end (NPSM_MEAS TIP_B, SWIV_MEAS NOSETIP_B) and a difference is said
+        if sp.get('perleg'):
+            for i, L in enumerate(legs, 1):
+                if L['kind'] not in ('JICSW', 'NPSMSW'): continue
+                k_, w_ = ('TIP_B', 'stem tip') if L['kind'] == 'NPSMSW' else ('NOSETIP_B', 'nose tip')
+                if abs(L['s_nt'] - L['m'][k_]) > 0.005:
+                    warn.append(f'leg {i}: nut face to {w_} {L["s_nt"]:.3f} (row) vs {L["m"][k_]:.3f} on the Brennan -{L["dash"]:02d} swivel ({k_}) - the row is followed')
+        # 2026-10-09 (wave 2, PERLEGSW, DESIGN 4.4 c): the same ridge on a TEE. A run special leg (+/-X) whose body face lies inside the hex
+        # corner radius sees the branch hex arm HEX3 (corners at x = +/-AC) stand AC - hexl beyond it, outside the neck wherever the arm runs
+        # farther from the run axis than the neck (hexl3 > NECKR). A branch special leg (+Y) sees the run bar's corners (y = +/-AC) the same
+        # way. The run-side rule follows the Brennan 6500-05-05-FG evidence (90 deg elbow); the BRANCH-side rule is CONSERVATIVE, UNCONFIRMED
+        # (no tee -05 forging seen; DESIGN_REVIEW P3). Opt-in: perleg roots only (the shipped 6602-05 / 6600-05 carry such a ridge - main session).
+        if sp.get('perleg') and sp.get('arm_ridge_check') and not sp.get('elbow') and not sp.get('cross'):
+            for i, L in enumerate(legs, 1):
+                if L['kind'] not in ('JICSW', 'NPSMSW', 'NWO'): continue
+                nr_ = L['m']['NECKR']; h_ = AC - L['hexl']
+                if h_ <= ARM_RIDGE_EPS: continue
+                if i <= 2 and legs[2]['hexl'] > nr_:
+                    chk.append(f'leg {i}: the branch hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the run body face ({L["hexl"]:.4f}) '
+                               f'OUTSIDE the neck (radius {nr_:.4f}), from the neck out to the branch arm end {legs[2]["hexl"]:.3f} (ridge {2 * h_ / TAN30:.4f} wide) '
+                               '- Brennan faces such a corner off at the body face (6500-05-05-FG STEP); the tee has no facing cut')
+                elif i == 3 and max(legs[0]['hexl'], legs[1]['hexl']) > nr_:
+                    chk.append(f'leg {i}: the run bar corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the branch body face ({L["hexl"]:.4f}) '
+                               f'OUTSIDE the neck (radius {nr_:.4f}), along the run bar to {max(legs[0]["hexl"], legs[1]["hexl"]):.3f} (ridge {2 * h_ / TAN30:.4f} wide) '
+                               '- CONSERVATIVE rule, unconfirmed (no tee -05 forging seen); the tee has no facing cut')
+        # 2026-10-09 (wave 2, PERLEGSW, DESIGN 4.4 a / b): every nut cut removes everything outside its hexagon over its slab, so every
+        # perpendicular leg's FINAL reach (swivel nut corners / skirt, adjustable-ORB washer / nut corners, else rmax) and the body hex corner
+        # must stay NUTSLAB_MIN short of the slab start (a same-axis opposite leg cannot reach it). Two adjustable ORB legs: the revolved locknut
+        # ENVELOPE (NWO_RN_MARGIN beyond the final corners) of the later leg may reach into the earlier leg's slab - the final solid is the same,
+        # but the earlier NUTCUT removes that sliver (nwo_overlap) and the later one that much less: warned here, bounded in emit().
+        if sp.get('perleg'):
+            for i, L in enumerate(legs, 1):
+                sl_ = nut_slab(L)
+                if not sl_: continue
+                ax_ = place(sp)[i][0]
+                for j, o in enumerate(legs, 1):
+                    if o is L or place(sp)[j][0] == ax_: continue
+                    rch_ = max(final_reach(o), AC)
+                    if sl_[0] < rch_ + NUTSLAB_MIN:
+                        chk.append(f'leg {i}: nut cut slab starts {sl_[0]:.4f} from the crossing, inside the final reach {rch_:.4f} of leg {j} / the body hex corner '
+                                   f'(+{NUTSLAB_MIN} needed): the nut cut would shave that leg')
+                    elif L['kind'] == 'NWO' and o['kind'] == 'NWO' and j > i:
+                        ov_ = nwo_overlap(L, o)
+                        if ov_ > 0:
+                            L.setdefault('nut_overlap', {})[j] = ov_
+                            warn.append(f'leg {j}: its revolved locknut envelope (radius {o["nut"]["Rn"]:.4f}, {NWO_RN_MARGIN} beyond the nut corners) reaches past '
+                                        f'leg {i}\'s locknut slab start {sl_[0]:.4f}: NUTCUT{i} removes {ov_:.6f} in^3 of it ({100 * ov_ / nwo_nut_removed(o["nut"]):.2f} % '
+                                        f'of NUTCUT{j}); the finished solid is unchanged')
+            for i, L in enumerate(legs, 1):
+                if L['kind'] == 'NWO' and BR - L['m']['NECKR'] < 0.01:
+                    warn.append(f'leg {i}: the adjustable ORB body face is a {BR - L["m"]["NECKR"]:.4f} step (hex flats radius {BR:.4f} vs neck radius {L["m"]["NECKR"]:.4f})')
+        # 2026-10-09 (wave 2, HOSEB, DESIGN 4.5 / 4.6): the hose stub (wall, hex-face step, bead clear of the face-off) and the FACE-OFF of the forged
+        # corner at the hose hex face - in EVERY configuration (HOSEFACEi cut + STUBFILLi refill; net 0 where the corner clears the face)
+        for i, L in enumerate(legs, 1):
+            if L['kind'] != 'HOSEB': continue
+            assert sp.get('elbow') and (place(sp)[i] == ('U', 1) if sp.get('e45') else place(sp)[i] == (0, 1)), 'hose leg: +X on a 90 deg elbow, 135 deg on a 45 deg elbow'
+            b0_ = L['bead'][0]; sh_ = L['hexl']; rS_ = L['rS']; e45_ = bool(sp.get('e45'))
+            if L['bore'] is not None:
+                wl_ = rS_ - L['bore'] / 2
+                if wl_ < HOSE_WALL_MIN - 1e-9: chk.append(f'leg {i}: hose stub wall {wl_:.4f} (stub OD {2 * rS_:.3f}, bore {L["bore"]}) < {HOSE_WALL_MIN}')
+                elif wl_ < 0.03: warn.append(f'leg {i}: thin hose stub wall {wl_:.4f} (stub OD {2 * rS_:.3f}, bore {L["bore"]}; the 4404-04-04 master has 0.020)')
+            if rS_ > BR - 0.01: chk.append(f'leg {i}: hose stub radius {rS_:.4f} not below the hex flats radius {BR:.4f} - 0.01 (no hex face step)')
+            if chk or L['bore'] is None: continue
+            fo_ = faceoff_geo(sp, legs, i - 1, BR, AC); O_ = legs[2 - i]
+            fo_.update(rect=not e45_, sh=sh_, depth=round(max(AC - sh_, 0.0) + FACEOFF_DELTA, 4), rin=round((L['bore'] / 2 + rS_) / 2, 5), rS=rS_)
+            cend_ = round(sh_ + fo_['depth'], 4)
+            if b0_ < cend_ + FACEOFF_GAP: chk.append(f'leg {i}: hose bead starts {b0_:.4f} from the crossing, within {FACEOFF_GAP} of the face-off end {cend_:.4f}')
+            if not (L['bore'] / 2 + 0.005 <= fo_['rin'] <= rS_ - 0.005): chk.append(f'leg {i}: face-off inner radius {fo_["rin"]} not between the bore and the stub radius')
+            if e45_:
+                fo_['rout'] = round(FACEOFF_ROUT_K * AC, 4)
+                if fo_['past'] and fo_['past_max_r'] > fo_['rout'] - FACEOFF_GAP:
+                    chk.append(f'leg {i}: the forged corner past the hose hex face reaches {fo_["past_max_r"]:.4f} off the hose axis, beyond the face-off ring {fo_["rout"]}')
+                if fo_.get('end_min_r', 1e9) < fo_['rout'] + FACEOFF_GAP:
+                    chk.append(f'leg {i}: the other leg\'s end lies {fo_["end_min_r"]:.4f} off the hose axis inside the face-off slab - the ring {fo_["rout"]} would cut it')
+            else:
+                fo_['ylo'] = round(AC + FACEOFF_DELTA, 4); fo_['zh'] = round(BR + FACEOFF_DELTA, 5)
+                fo_['ytop'] = round(min(O_['hexl'], fo_.get('end_min_along_other', 1e9)), 4)
+                if fo_['ytop'] < rS_ + 0.01: chk.append(f'leg {i}: face-off rectangle ends {fo_["ytop"]:.4f} along the other leg, inside the stub radius {rS_:.4f} + 0.01')
+                if fo_['past'] and fo_['past_max_along_other'] > fo_['ytop'] + 1e-6:
+                    chk.append(f'leg {i}: the forged corner past the hose hex face reaches {fo_["past_max_along_other"]:.4f} along the other leg, beyond the face-off rectangle ({fo_["ytop"]:.4f})')
+            L['faceoff'] = fo_
+            if fo_['past']:
+                warn.append(f'leg {i}: hose hex arm {sh_:.3f} ends {AC - sh_:.3f} inside the forged corner radius ({AC:.3f}): the corner past the hose hex face '
+                            f'({", ".join(fo_["past_by"])}, up to {fo_["past_max_r"]:.3f} off the hose axis, {fo_["past_max_a"] - sh_:.3f} deep) is faced off to the '
+                            f'stub (HOSEFACE{i} / STUBFILL{i}, depth {fo_["depth"]:.4f}' + (', as the Brennan 4503-08-08-FG / 4603-16-16-NWO-FG forgings show)' if e45_ else ')'))
         # 2026-10-01 (NECK-6502): the neck turn of a swivel leg on a 45 deg elbow - in EVERY configuration of the root (the master carries
         # the two features in all of them), whether or not the corner reaches out of the neck in this one
         for i, L in enumerate(legs, 1):
@@ -1108,6 +1835,23 @@ def build_rows(root):
             # the turn may only take forged-corner material: the other leg beyond its hex arm (radius <= rmax) must stay short of the body face
             if SQ2 / 2 * (oth_['rmax'] - oth_['V'][2][0]) > a0_ - 0.01:
                 chk.append(f'leg {i}: the other leg\'s end reaches {SQ2 / 2 * (oth_["rmax"] - oth_["V"][2][0]):.3f} along this leg, into the neck turn (body face {a0_:.3f})')
+        # 2026-10-18 (ANGLED): checks that only a leg on the 135 deg axis with a swivel or a female port reaches (no released root has one)
+        if sp.get('e45'):
+            for i, L in enumerate(legs, 1):
+                if place(sp)[i][0] != 'U': continue
+                oth_ = [o for o in legs if o is not L][0]
+                if L['kind'] in ('JICSW', 'NPSMSW'):
+                    # the nut hex is an OUTSIDE cut over [Mtip - HEXL, Mtip] along this leg: nothing else may stand in that slab (the +X leg's farthest
+                    # reach along the 135 deg axis = e45_reach by the mirror symmetry of the 45 deg elbow about its bisector)
+                    s0_ = L['Mtip'] - L['m']['HEXL']; rch_ = e45_reach(oth_, AC)
+                    if rch_ >= s0_ - 0.01: chk.append(f'leg {i}: the other leg / corner reaches {rch_:.3f} along the 135-deg leg, into the swivel nut hex slab (from {s0_:.3f})')
+                if L['kind'] == 'NPTFF' and oth_['kind'] in ('JICSW', 'NPSMSW'):
+                    # the female port on the 135 deg leg (its tap drill to the crossing, its thread over P1 from the face) must stay short of the +X swivel
+                    # slot / nut cavity: a point at a along this leg, radius q reaches (q - a) / sqrt2 along +X
+                    fp_ = L['thread']; a_in_ = L['V'][-1][0] - L['P1']; q_t_ = L['td'] / 2 + fp_['thdh']
+                    reach_x_ = SQ2 / 2 * max(L['td'] / 2 - (0.0 if L['to_centre'] else L['V'][-1][0] - L['pocket']), q_t_ - a_in_)
+                    m_o = oth_['m']; slot_o = oth_['Mtip'] - (m_o['FLOOR'] if oth_['kind'] == 'JICSW' else m_o['CBEND'])
+                    if reach_x_ > slot_o - 0.02: chk.append(f'leg {i}: the female port reaches {reach_x_:.3f} along the swivel leg, into its slot (starts {slot_o:.3f})')
         cols = {}
         for L in legs: cols.update(L['cols'])
         # bores / pockets
@@ -1163,7 +1907,7 @@ def build_rows(root):
                     else:
                         oth = max([0.0] + [nwo_radial(o) if o['kind'] == 'NWO' else o['rmax'] for o in legs if o is not L])
                         oth = max(oth, AC)
-                        if n0_ < oth + 0.003: chk.append(f'leg {i}: locknut starts {n0_:.3f} from the crossing, inside the reach of the other legs / corner ({oth:.3f})')
+                        if n0_ < oth + 0.003 and not sp.get('perleg'): chk.append(f'leg {i}: locknut starts {n0_:.3f} from the crossing, inside the reach of the other legs / corner ({oth:.3f})')
                 if L['kind'] == 'JICSW':
                     m_ = L['m']
                     if m_['NECKR'] - L['bore'] / 2 < 0.03: chk.append(f'leg {i}: neck wall {m_["NECKR"] - L["bore"] / 2:.3f} (neck dia {2*m_["NECKR"]:.3f}, bore {L["bore"]})')
@@ -1177,6 +1921,18 @@ def build_rows(root):
             cols['HEXAF@HEX2'] = round(AF, 5); cols['HEXL@HEX2_BODY'] = legs[1]['hexl']
             cols['PUCK_HB@PUCK'] = round(BR, 5); cols['PUCK_HT@PUCK'] = round(BR, 5)
             cols['PUCK_R1B@PUCK'] = round(R1, 5); cols['PUCK_R1T@PUCK'] = round(R1, 5); cols['PUCK_XC@PUCK'] = round(AC - PUCK_INSET, 5)
+            for i, L in enumerate(legs, 1):
+                fo_ = L.get('faceoff')
+                if not fo_: continue
+                # 2026-10-09 (HOSEB): the face-off columns (plane offset, cut region, depth, refill ring) - diameters, as BoreCut dimensions its circles
+                cols[f'D1@HFPLN{i}'] = fo_['sh']; cols[f'HF{i}_DIN@HOSEFACE{i}_SK'] = round(2 * fo_['rin'], 5)
+                if fo_['rect']:
+                    cols[f'HF{i}_ZH@HOSEFACE{i}_SK'] = fo_['zh']; cols[f'HF{i}_YTOP@HOSEFACE{i}_SK'] = fo_['ytop']
+                    cols[f'HF{i}_ZH2@HOSEFACE{i}_SK'] = fo_['zh']; cols[f'HF{i}_YLO@HOSEFACE{i}_SK'] = fo_['ylo']
+                else: cols[f'HF{i}_DOUT@HOSEFACE{i}_SK'] = round(2 * fo_['rout'], 5)
+                cols[f'DEPTH@HOSEFACE{i}'] = fo_['depth']
+                cols[f'SF{i}_DIN@STUBFILL{i}_SK'] = round(2 * fo_['rin'], 5); cols[f'SF{i}_DOUT@STUBFILL{i}_SK'] = round(2 * fo_['rS'], 5)
+                cols[f'DEPTH@STUBFILL{i}'] = fo_['depth']
             for i, L in enumerate(legs, 1):
                 if L.get('trim'):
                     t_ = L['trim']
@@ -1199,6 +1955,9 @@ def build_rows(root):
         if any(L['kind'] == 'NPSMSW' for L in legs) and ds_ not in ('ASSUMED', 'MISSING'):
             c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the NPSM swivel nut/stem geometry is single-source (Brennan 1404-08-08 STEP)'
             ds_ = 'ASSUMED'
+        if any(L['kind'] == 'HOSEB' for L in legs) and ds_ not in ('ASSUMED', 'MISSING', 'TEST'):
+            c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the hose-barb stub / bead geometry is single-source (Brennan 4404-08-06 STEP)'
+            ds_ = 'ASSUMED'
         if any(L['kind'] == 'NWO' for L in legs) and ds_ not in ('ASSUMED', 'MISSING'):
             c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the adjustable ORB nut/washer/neck geometry is single-source (Brennan 6801-XX-XX-NWO-FG STEPs)'
             ds_ = 'ASSUMED'
@@ -1210,6 +1969,11 @@ def build_rows(root):
             if ds_ not in ('ASSUMED', 'MISSING'):
                 c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the swivel nut/nose geometry is single-source (Brennan STEPs)'
                 ds_ = 'ASSUMED'
+        if any(L['kind'] in FLG_KINDS for L in legs):
+            if ds_ not in ('ASSUMED', 'MISSING', 'TEST'):
+                c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the flange head geometry is single-source (Brennan STEPs)'
+                ds_ = 'ASSUMED'
+            warn[:] = [w_.replace('hex A/F raised from Air-Way ', "hex A/F raised from the row's hex ") for w_ in warn]
         model_ = assume_text(root, legs)
         src_ = r.get('_FOLD_SRC') or SPEC[root].get('src')
         if src_:
@@ -1273,19 +2037,61 @@ def assume_text(root, legs):
         assert len(j_) == 1 and t[j_[0]].count(' and is hidden by the hex)') == 1, j_
         t[j_[0]] = t[j_[0]].replace(' and is hidden by the hex)', f' and shows over the {BH_ARM_SHORT} band where the hex arm ends short of the '
                                     f'collar on this row - see the bulkhead hex arm note)')
-    if 'JICSW' in k: t.append(G.SWIV_ASSUME.replace('the body hex stops at the measured body-face position of the 6500 forged arm (ASSUMED for a straight body)',
-                                     'the forged hex arm stops at the measured body-face position (= the 6500 forged-arm end on all 4 STEPs' + ('' if sp.get('elbow') else '; ASSUMED for a tee') + ')') + '; swivel leg length = Air-Way M5 (crossing to the nut face), nose tip at Air-Way M10')
-    if 'NPSMSW' in k: t.append(G.NPSM_ASSUME.replace('NUT FACE AT AIR-WAY W AND STEM TIP AT AIR-WAY L', 'NUT FACE AT AIR-WAY ' + sp['npsm'][0].split('@')[0] + ' AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)')
-                                .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs) + ')'))
+    # 2026-10-09 (PERLEGSW): a perleg root names each leg's own columns and, on a tee, the Brennan tee forgings the body face was seen on (shape)
+    _pl = [(kd, lc, leg_end(sp, j)) for j, (kd, lc, bc, tc) in enumerate(legs4(sp)) if kd in ('JICSW', 'NPSMSW')] if sp.get('perleg') else []
+    _cn = lambda kd, f: ' / '.join(dict.fromkeys(f(lc, e) .split('@')[0] for k_, lc, e in _pl if k_ == kd))
+    if 'JICSW' in k:
+        _s = G.SWIV_ASSUME.replace('the body hex stops at the measured body-face position of the 6500 forged arm (ASSUMED for a straight body)',
+                                   'the forged hex arm stops at the measured body-face position (= the 6500 forged-arm end on all 4 STEPs' + ('' if sp.get('elbow') else '; ASSUMED for a tee') + ')')
+        if not sp.get('perleg'): t.append(_s + '; swivel leg length = Air-Way M5 (crossing to the nut face), nose tip at Air-Way M10')
+        else:
+            if not sp.get('elbow'): _s = _s.replace('; ASSUMED for a tee)', '; on a tee: the library body-face position SWIV_MEAS BODYS, seen on the Brennan 6603-06-06-06-FG / '
+                                                    '6606-06-06-06-FG tee forgings - shape only, user decision 2026-10-08 - every swivel there = SWIV_MEAS[6])')
+            t.append(_s + '; every swivel leg: leg length = the row ' + _cn('JICSW', lambda lc, e: lc) + ' (crossing to the nut face), nose tip at the row '
+                     + _cn('JICSW', lambda lc, e: e[0]) + ', nut hex = the row ' + _cn('JICSW', lambda lc, e: e[1]))
+    if 'NPSMSW' in k:
+        _w = ('THE ROW ' + _cn('NPSMSW', lambda lc, e: e[0]) + ' AND STEM TIP AT THE ROW ' + _cn('NPSMSW', lambda lc, e: lc) + ' (crossing to the nut face / to the stem tip, per leg)') \
+            if sp.get('perleg') else 'AIR-WAY ' + sp['npsm'][0].split('@')[0] + ' AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)'
+        _b = ('1404 straight body face BODY_TO_TIP; on a tee seen on the Brennan 1601-08-08-08-FG / 1603-08-08-08-FG tee forgings - shape only, every NPSM swivel there = '
+              'NPSM_MEAS[8]' if not sp.get('elbow') else 'Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs)) if sp.get('perleg') else \
+            'Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs)
+        t.append(G.NPSM_ASSUME.replace('NUT FACE AT AIR-WAY W AND STEM TIP AT AIR-WAY L', 'NUT FACE AT ' + _w)
+                 .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (' + _b + ')'))
     if 'NWO' in k: t.append(NWO_ASSUME)
+    if 'HOSEB' in k:
+        _hl = [(lc, bc) for kd, lc, bc, tc in legs4(sp) if kd == 'HOSEB'][0]
+        _hs = [L.get('hbsrc') for L in legs if L['kind'] == 'HOSEB' and L.get('hbsrc')]      # per-row bore source (hose_dh fallback)
+        t.append(HOSEB_ASSUME + f'; hose leg length = the row\'s {_hl[0].split("@")[0]} read as the axis crossing to the hose tip (ASSUMPTION, mapping: Brennan '
+                 'TFA p28-p30 drawings L = hose leg, Brennan 4501-08-08-FG STEP hose hex arm 0.555 + stub 1.500 = catalog L 2.055; Air-Way L4 / L5 = Brennan '
+                 'L within 0.002 on 4601-06-06 / 4601-32-32)')
+        hb_ = _hs[0][0] if _hs else sp.get('hose_bore', 'own')
+        if _hs: _hl = (_hl[0], _hs[0][1])
+        t.append('hose leg bore = ' + (f"the part's single bore column {_hl[1].split('@')[0]} carried through both legs (ASSUMPTION: the table prints one "
+                                       'bore, the adjustable-ORB end drill; Q-HOSEB-BORE option (a), user 2026-10-18 A15)' if hb_ == 'own' else
+                                       f"the part's own hose drill column {_hl[1].split('@')[0]} (Brennan TFA B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at "
+                                       "Brennan'); the threaded leg keeps its own drill" if hb_ == 'col' else
+                                       'the Air-Way 4404 equal-size through bore D3 (hose end library, Q-HOSEB-BORE option (b))'))
+    if any(L.get('faceoff') for L in legs): t.append(FACEOFF_ASSUME)
     if any(L.get('nwo_trim') for L in legs): t.append(NWO_TRIM_ASSUME)
-    if any(L.get('trim') for L in legs): t.append(NECK_ASSUME)
+    if any(L.get('nwo_src') for L in legs):      # 2026-10-18 (ANGLED): adjustable-ORB end cells transferred from another series
+        for L in legs:
+            if not L.get('nwo_src'): continue
+            i3c, thc, gvc, I3, THDL, GRVD = L['nwo_src']
+            t.append(f'adjustable ORB end cells not printed for this series, taken from the Air-Way {i3c[1:]} rows of the same ORB size -{L["dash"]:02d} '
+                     f'(Q-TRANSFER-ENDLIB = yes, user 2026-10-08): tip-to-body-face ORB_I3 {I3} (checked = Brennan 6801 STEP)'
+                     + (f', thread length ORB_THDL {THDL}' if thc.startswith('=') else '') + (f', O-ring groove dia ORB_GRVDIA {GRVD}' if gvc.startswith('=') else ''))
+    if any(L.get('trim') for L in legs): t.append(ANGLED_NECK_ASSUME if sp.get('neck_turn') else NECK_ASSUME)
+    t += angled_texts(sp, legs)                 # 2026-10-18 (ANGLED): only a 135 deg leg with a helix / female port / swivel adds text
+    for kf_ in FLG_KINDS:
+        if kf_ in k: t.append(FLGLEG_ASSUME[kf_])
+    if k & set(FLG_KINDS): t.append(FLGLEG_SHAPE)
     if 'NPTFM' in k: t.append('male NPTF legs: ASME B1.20.3 cone + relief to the Brennan-measured 5404 end length; confirmed on a forged tee by Brennan 5600-16-16-16-FG STEP (hex stops at N - 0.94, relief dia 1.315 = pipe OD, 0.001 proud of the 1.3125 flats)')
     if 'NPTFF' in k:
         t.append('female legs: the forged hex arm stops 0.26 short of the port face and the end is a ROUND COLLAR of dia = the hex flats - MEASURED on the '
                  'Brennan 2502-06-04-FG, 5502-04-04/-08-08/-16-16-FG, 5504-08-08-FG and 5605-08-08-08-FG STEPs (collar 0.260 at every size and leg; '
                  'single manufacturer); port-mouth 45deg chamfer and hex chamfers not modelled')
-        if sp.get('nptff_text'): t.append(sp['nptff_text'])        # 2026-10-02 (1502): the root words its own port sentence (source per row)
+        if sp.get('nptff_text') == 'ANGLED_NPTFF': t.append(angled_nptff_text(sp))     # 2026-10-18 (ANGLED): 1504 / 5503 / 5505
+        elif sp.get('nptff_text'): t.append(sp['nptff_text'])        # 2026-10-02 (1502): the root words its own port sentence (source per row)
         elif sp.get('p1'):
             # 2026-10-02 (new masters 2505 / 2606 / 2611): tap drill and port thread length per row, sources named
             # 2026-10-09 (Q-TRANSFER-ENDLIB = yes, user 2026-10-08): the rows take the end-library port values, not their own Brennan file
@@ -1296,6 +2102,28 @@ def assume_text(root, legs):
         else: t.append('female NPTF legs: Air-Way tap drill to MS51503 P1 max (' + BR5405 + '), tapered helix over P1; connecting drill to the axis crossing = '
                  + (f"the part's own {sp['conn'].split('@')[0]} column (ASSUMPTION{'; capped at the tap drill where larger' if sp.get('elbow') else ''})" if sp.get('conn') else 'the tap drill carried to the crossing (ASSUMPTION: Air-Way publishes no bore for this part)'))
     t.append('each leg bore runs from its face to the axis crossing')
+    # 2026-10-09 (wave 2): every END-LIBRARY token of a leg's own end tuple (5th element), with its source (Q-TRANSFER-ENDLIB = yes, user 2026-10-08)
+    _tok = [c_ for l_ in sp['legs'] if len(l_) > 4 for c_ in l_[4] if isinstance(c_, str) and c_.startswith('=')]
+    if any(L.get('td_lib') for L in legs): _tok.append('=FPT:TD')
+    if _tok: t.append("end-library values (Q-TRANSFER-ENDLIB, user 2026-10-08 'reuse end details - yes'): "
+                      + '; '.join(ENDLIB_TEXT.get(c_, f'{c_}: end library') for c_ in dict.fromkeys(_tok)))
+    # 2026-10-18 (genfeat PERLEGSW): a perleg root's rows come from several sources (Brennan TFA catalog, OMi drawings, Air-Way - each row
+    # names its own in the first part of $PRP@AxialSource): the shared texts that name Air-Way as the row source are worded source-neutrally
+    if sp.get('perleg'):
+        _jic = any(kd in ('JICM', 'JICBH') for kd, lc, bc, tc in legs4(sp)); _hx = sp['hex'].split('@')[0]
+        for a_, b_ in (('hex bars A/F = max(Air-Way hex, male thread majors)', 'hex bars A/F = ' + ('max(the row body hex ' + _hx + ', JIC thread majors)' if _jic else
+                                                                                                    'the row body hex ' + _hx + ' (no male JIC leg, so no 2603HX raise)')),
+                       ('A/F = max(Air-Way hex, JIC thread majors)', 'A/F = ' + ('max(the row body hex ' + _hx + ', JIC thread majors)' if _jic else
+                                                                                 'the row body hex ' + _hx + ' (no male JIC leg, so no 2603HX raise)')),
+                       ('nut hex = Air-Way C(2) (must equal the Brennan nut, checked per row)', 'nut hex = the row nut hex (must equal the Brennan nut, checked per row)'),
+                       ('swivel nut hex = Air-Way C3', 'swivel nut hex = the row nut hex (must equal the Brennan nut, checked per row)'),
+                       ('nose tip at Air-Way L minus the to-seat length (Brennan within 0.01)', 'nose tip at the row nose-tip length (nut face to nose tip compared '
+                        'with the Brennan swivel NOSETIP_B per row, a difference is said in $COMMENT)'),
+                       (' (user decision 2026-09-24: follow Air-Way - at -08 Air-Way W-L 0.33 vs Brennan 0.28, so the nut sits 0.05 further out than on the Brennan part)',
+                        ' (the row is followed; its nut face to stem tip is compared with the Brennan 1404 value TIP_B per row, a difference is said in $COMMENT)'),
+                       ('female NPTF legs: Air-Way tap drill to MS51503 P1 max', "female NPTF legs: the row's TAPDRILL (the end-library per-size tap drill) to MS51503 P1 max"),
+                       ('(ASSUMPTION: Air-Way publishes no bore for this part)', '(ASSUMPTION: no source prints a connecting bore for this part)')):
+            t = [x_.replace(a_, b_) for x_ in t]
     t += sp.get('assume_extra', [])          # 2026-10-02: per-root notes (pilot STEP comparison) - only the new roots carry them
     s_ = '; '.join(t)
     for a_, b_ in sp.get('assume_reps', ()):        # 2026-10-02 (1502): per-root wording of the shared texts (every pair must apply)
@@ -1758,6 +2586,300 @@ def neck_vba(i, lg):
 """
 
 
+def hoseface_vba(i, lg, e45):
+    """2026-10-09 (wave 2, HOSEB, DESIGN 4.6 / 4.7): the face-off of the forged corner at the hose hex face of leg i, in the reference configuration"""
+    fo = lg['faceoff']; f = lambda v: f'{v * IN:.9f}'
+    ux, uy = (UXV, UYV) if e45 else (1.0, 0.0)
+    ring = math.pi * (fo['rS'] ** 2 - fo['rin'] ** 2) * fo['depth']
+    reg = (f"ring {fo['rin']:.4f} .. {fo['rout']:.4f} about the hose axis" if e45 else
+           f"rectangle y {-fo['ylo']:.4f} .. {fo['ytop']:.4f} (along the other leg, to its hex arm end) x z +-{fo['zh']:.4f} minus the circle {fo['rin']:.4f}")
+    what = (f"the corner ({', '.join(fo['past_by'])}) stands up to {fo['past_max_r']:.4f} off the hose axis past the face: net change < 0" if fo['past'] else
+            'the corner clears the face here: net change 0')
+    return f"""    ' ================= HOSEFACE{i} / STUBFILL{i}: forged corner faced off at the hose hex face (wave 2, HOSEB, 2026-10-09) =================
+    '  Plane HFPLN{i} at the hose hex face ({fo['sh']:.4f} along the hose leg); cut {reg} over {fo['depth']:.4f}
+    '  away from the crossing (to 0.05 past the corner radius), then the stub ring {fo['rin']:.4f} .. {fo['rS']:.4f} ({ring:.6f} in^3) put back. {what}.
+    stepName = "HOSEFACE{i}"
+    Call HoseFace({i}, {not e45}, "{'PLN2' if e45 else 'Right Plane'}", {ux:.15f}, {uy:.15f}, {f(fo['sh'])}, {f(fo['depth'])}, {f(fo['rin'])}, {f(fo['rS'])}, {f(fo.get('ylo', 0.0))}, {f(fo.get('ytop', 0.0))}, {f(fo.get('zh', 0.0))}, {f(fo.get('rout', 0.0))}, {fo['past']})
+    Check "D1@HFPLN{i} reachable", Not swModel.Parameter("D1@HFPLN{i}") Is Nothing
+    Check "DEPTH@HOSEFACE{i} reachable", Not swModel.Parameter("DEPTH@HOSEFACE{i}") Is Nothing
+    Check "DEPTH@STUBFILL{i} reachable", Not swModel.Parameter("DEPTH@STUBFILL{i}") Is Nothing
+"""
+
+
+HOSEFACE_HELP = """
+' ---------------------------------------------------------------- hose-leg face-off helpers (wave 2, HOSEB, 2026-10-09)
+Function FeatCentreU(f As SldWorks.Feature, ux As Double, uy As Double) As Double
+    ' centre of the feature's faces (union of their boxes) projected on the leg direction (ux, uy, 0)
+    On Error Resume Next
+    Dim faces As Variant, i As Long, bx As Variant, k As Long, lo(2) As Double, hi(2) As Double, n As Long
+    faces = f.GetFaces
+    For k = 0 To 2: lo(k) = 1E+30: hi(k) = -1E+30: Next k
+    If Not IsEmpty(faces) Then
+        For i = LBound(faces) To UBound(faces)
+            bx = faces(i).GetBox
+            For k = 0 To 2
+                If bx(k) < lo(k) Then lo(k) = bx(k)
+                If bx(3 + k) > hi(k) Then hi(k) = bx(3 + k)
+            Next k
+            n = n + 1
+        Next i
+    End If
+    If n = 0 Then FeatCentreU = 0 Else FeatCentreU = ((lo(0) + hi(0)) / 2) * ux + ((lo(1) + hi(1)) / 2) * uy
+End Function
+
+Function HoseFacePlane(nm As String, basePl As String, distM As Double, ux As Double, uy As Double) As Boolean
+    ' the hose hex face plane: reference plane parallel to basePl (Right Plane / PLN2: through the origin, normal to the hose leg) at distM along
+    ' the leg direction (ux, uy, 0) - not the face itself (it splits differently per configuration). Its side is checked on the plane's own
+    ' origin; if SolidWorks put it on the other side it is deleted and made again with the flip option (256). Offset = D1@<nm> (design table).
+    On Error Resume Next
+    Dim att As Long, f As SldWorks.Feature, rp As Object, ad As Variant, pos As Double, ok As Boolean
+    For att = 0 To 1
+        swModel.ClearSelection2 True
+        ok = swModel.Extension.SelectByID2(basePl, "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+        Check nm & ": base plane " & basePl & " selected", ok
+        If ok = False Then Exit Function
+        swFeatMgr.InsertRefPlane swRefPlaneReferenceConstraints_e.swRefPlaneReferenceConstraint_Distance + IIf(att = 1, 256, 0), distM, 0, 0, 0, 0
+        Trace nm & ": InsertRefPlane distance " & Format(distM / IN_, "0.0000") & IIf(att = 1, " (flipped)", "") & " " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+        Set f = swModel.FeatureByPositionReverse(0)
+        If f Is Nothing Then Exit For
+        If f.GetTypeName2 <> "RefPlane" Then Set f = Nothing: Exit For
+        Set rp = f.GetSpecificFeature2
+        ad = rp.Transform.ArrayData
+        pos = ad(9) * ux + ad(10) * uy
+        Trace nm & ": plane origin (" & Format(ad(9) / IN_, "0.0000") & ", " & Format(ad(10) / IN_, "0.0000") & ", " & Format(ad(11) / IN_, "0.0000") & ") = " & Format(pos / IN_, "0.0000") & " along the hose leg (want " & Format(distM / IN_, "0.0000") & ")"
+        If Abs(pos - distM) < 0.000002 Then Exit For
+        swModel.ClearSelection2 True
+        f.Select2 False, 0
+        swModel.Extension.DeleteSelection2 0
+        Set f = Nothing
+    Next att
+    Check nm & " reference plane at the hose hex face (" & Format(distM / IN_, "0.0000") & " along the hose leg)", Not f Is Nothing
+    If f Is Nothing Then Exit Function
+    f.Name = nm
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = f.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - distM) < 0.000001 Then dm.Name = "D1"
+        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
+        Set d = f.GetNextDisplayDimension(d)
+    Loop
+    Check nm & " offset reachable as D1@" & nm & " (" & names & ")", Not swModel.Parameter("D1@" & nm) Is Nothing
+    swModel.ClearSelection2 True
+    HoseFacePlane = True
+End Function
+
+Sub HoseFaceCentre(c As SldWorks.SketchSegment)
+    ' circle centre on the projected origin = the hose axis on this plane (as BoreCut does on a face)
+    On Error Resume Next
+    Dim ca As SldWorks.SketchArc
+    Set ca = c
+    swModel.ClearSelection2 True
+    ca.GetCenterPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+End Sub
+
+Sub HoseFaceDia(c As SldWorks.SketchSegment, nm As String, diaM As Double, tx As Double, ty As Double)
+    ' diameter dimension of a circle (as BoreCut); a radius handed back is switched to the diameter display
+    On Error Resume Next
+    Dim dd As SldWorks.DisplayDimension, v As Double
+    swModel.ClearSelection2 True
+    c.Select4 False, Nothing
+    Set dd = swModel.AddDimension2(tx, ty, 0)
+    If Not dd Is Nothing Then
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - diaM / 2) < 0.000005 Then dd.Diametric = True: Trace nm & ": radius dim switched to diameter -> " & Format(dd.GetDimension2(0).SystemValue / IN_, "0.0000")
+    End If
+    NameDim dd, nm, diaM
+End Sub
+
+Function HoseFaceRing(skName As String, pl As String, nmIn As String, nmOut As String, r0 As Double, r1 As Double, sh As Double, ux As Double, uy As Double) As SldWorks.Feature
+    ' two circles r0 < r1 about the hose axis on the plane pl (a ring), centres on the projected origin, diameters dimensioned
+    On Error Resume Next
+    Dim mu As SldWorks.MathUtility, skO As SldWorks.Sketch, xf As SldWorks.MathTransform, mp As SldWorks.MathPoint, arr(2) As Double, pc As Variant
+    Dim c0 As SldWorks.SketchSegment, c1 As SldWorks.SketchSegment, skF As SldWorks.Feature
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 pl, "PLANE", 0, 0, 0, False, 0, Nothing, 0
+    swSkMgr.InsertSketch True
+    Set mu = swApp.GetMathUtility: Set skO = swSkMgr.ActiveSketch
+    Set xf = skO.ModelToSketchTransform
+    arr(0) = sh * ux: arr(1) = sh * uy: arr(2) = 0
+    Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pc = mp.ArrayData
+    Trace skName & ": hose axis at sketch (" & Format(pc(0) / IN_, "0.0000") & ", " & Format(pc(1) / IN_, "0.0000") & ", " & Format(pc(2) / IN_, "0.0000") & ")"
+    swSkMgr.AddToDB = True
+    Set c0 = swSkMgr.CreateCircleByRadius(pc(0), pc(1), 0, r0)
+    Set c1 = swSkMgr.CreateCircleByRadius(pc(0), pc(1), 0, r1)
+    swSkMgr.AddToDB = False
+    Check skName & " circles created", (Not c0 Is Nothing) And (Not c1 Is Nothing)
+    If c0 Is Nothing Or c1 Is Nothing Then swSkMgr.InsertSketch True: Exit Function
+    HoseFaceCentre c0
+    HoseFaceCentre c1
+    HoseFaceDia c0, nmIn, 2 * r0, pc(0) + 0.7 * r0, pc(1) + 0.7 * r0
+    HoseFaceDia c1, nmOut, 2 * r1, pc(0) + 0.7 * r1, pc(1) - 0.7 * r1
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    Set HoseFaceRing = skF
+End Function
+
+Function HoseFaceRect(skName As String, pl As String, pfx As String, sh As Double, ylo As Double, ytop As Double, zh As Double, rin As Double) As SldWorks.Feature
+    ' 90 deg elbow, hose leg on +X: on the hose hex face plane pl (parallel to the Right Plane) the rectangle y = -ylo .. ytop (model Y, along the
+    ' other leg up to its hex arm end), z = -zh .. zh, minus the circle rin about the hose axis. Corners placed through the sketch's
+    ' ModelToSketchTransform, sides horizontal / vertical as drawn, each side dimensioned to the projected origin (DimSegOrigin): pfx_ZH (z = -zh),
+    ' pfx_YTOP, pfx_ZH2 (z = +zh), pfx_YLO; the region is verified in model space afterwards (as NutHexCutAx verifies the hex flats).
+    On Error Resume Next
+    Dim mu As SldWorks.MathUtility, skO As SldWorks.Sketch, xf As SldWorks.MathTransform, xi As SldWorks.MathTransform, mp As SldWorks.MathPoint
+    Dim arr(2) As Double, pd As Variant, pu(3) As Double, pv(3) As Double, k As Long, ya As Variant, za As Variant, cu As Double, cv As Double, ok As Boolean
+    Dim s(3) As SldWorks.SketchSegment, c As SldWorks.SketchSegment, q1 As SldWorks.SketchLine, q2 As SldWorks.SketchLine, skF As SldWorks.Feature
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 pl, "PLANE", 0, 0, 0, False, 0, Nothing, 0
+    swSkMgr.InsertSketch True
+    Set mu = swApp.GetMathUtility: Set skO = swSkMgr.ActiveSketch
+    Set xf = skO.ModelToSketchTransform: Set xi = xf.Inverse
+    ya = Array(-ylo, ytop, ytop, -ylo): za = Array(-zh, -zh, zh, zh)
+    For k = 0 To 3
+        arr(0) = sh: arr(1) = ya(k): arr(2) = za(k)
+        Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pd = mp.ArrayData
+        pu(k) = pd(0): pv(k) = pd(1)
+    Next k
+    arr(0) = sh: arr(1) = 0: arr(2) = 0
+    Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pd = mp.ArrayData
+    cu = pd(0): cv = pd(1)
+    swSkMgr.AddToDB = True
+    For k = 0 To 3
+        Set s(k) = swSkMgr.CreateLine(pu(k), pv(k), 0, pu((k + 1) Mod 4), pv((k + 1) Mod 4), 0)
+    Next k
+    Set c = swSkMgr.CreateCircleByRadius(cu, cv, 0, rin)
+    swSkMgr.AddToDB = False
+    For k = 0 To 3
+        Set q1 = s(k): Set q2 = s((k + 1) Mod 4)
+        swModel.ClearSelection2 True: q1.GetEndPoint2.Select4 False, Nothing: q2.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    Next k
+    ok = True
+    For k = 0 To 3
+        swModel.ClearSelection2 True
+        s(k).Select4 False, Nothing
+        If Abs(pv(k) - pv((k + 1) Mod 4)) < 0.000000001 Then
+            swModel.SketchAddConstraints "sgHORIZONTAL"
+        ElseIf Abs(pu(k) - pu((k + 1) Mod 4)) < 0.000000001 Then
+            swModel.SketchAddConstraints "sgVERTICAL"
+        Else
+            ok = False
+        End If
+    Next k
+    Check skName & ": rectangle sides along the sketch axes (plane parallel to the Right Plane)", ok
+    HoseFaceCentre c
+    Call DimSegOrigin(s(0), pfx & "_ZH", zh, 1.2 * (pu(0) + pu(1)) / 2, 1.2 * (pv(0) + pv(1)) / 2)
+    Call DimSegOrigin(s(1), pfx & "_YTOP", ytop, 1.2 * (pu(1) + pu(2)) / 2, 1.2 * (pv(1) + pv(2)) / 2)
+    Call DimSegOrigin(s(2), pfx & "_ZH2", zh, 1.2 * (pu(2) + pu(3)) / 2, 1.2 * (pv(2) + pv(3)) / 2)
+    Call DimSegOrigin(s(3), pfx & "_YLO", ylo, 1.2 * (pu(3) + pu(0)) / 2, 1.2 * (pv(3) + pv(0)) / 2)
+    HoseFaceDia c, pfx & "_DIN", 2 * rin, cu + 0.7 * rin, cv + 0.7 * rin
+    swModel.ClearSelection2 True
+    Dim ymn As Double, ymx As Double, zmx As Double, xbad As Double, ln As SldWorks.SketchLine
+    ymn = 1E+30: ymx = -1E+30: zmx = 0: xbad = 0
+    For k = 0 To 3
+        Set ln = s(k)
+        arr(0) = ln.GetStartPoint2.X: arr(1) = ln.GetStartPoint2.Y: arr(2) = 0
+        Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xi): pd = mp.ArrayData
+        If pd(1) < ymn Then ymn = pd(1)
+        If pd(1) > ymx Then ymx = pd(1)
+        If Abs(pd(2)) > zmx Then zmx = Abs(pd(2))
+        If Abs(pd(0) - sh) > xbad Then xbad = Abs(pd(0) - sh)
+    Next k
+    Check skName & ": region in model space y " & Format(ymn / IN_, "0.0000") & " .. " & Format(ymx / IN_, "0.0000") & ", |z| " & Format(zmx / IN_, "0.0000") & " on x " & Format(sh / IN_, "0.0000") & " (want " & Format(-ylo / IN_, "0.0000") & " .. " & Format(ytop / IN_, "0.0000") & ", " & Format(zh / IN_, "0.0000") & ")", Abs(ymn + ylo) < 0.000002 And Abs(ymx - ytop) < 0.000002 And Abs(zmx - zh) < 0.000002 And xbad < 0.000002
+    swSkMgr.InsertSketch True
+    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    Set HoseFaceRect = skF
+End Function
+
+Sub HoseFaceDepth(f As SldWorks.Feature, depthM As Double)
+    ' name the feature's depth dimension DEPTH (identified by value)
+    On Error Resume Next
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = f.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - depthM) < 0.000001 Then dm.Name = "DEPTH"
+        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
+        Set d = f.GetNextDisplayDimension(d)
+    Loop
+    Check f.Name & " dims: " & names, InStr(names, "DEPTH=") > 0
+End Sub
+
+Sub HoseFace(i As Long, rect As Boolean, basePl As String, ux As Double, uy As Double, sh As Double, depthM As Double, rin As Double, rS As Double, ylo As Double, ytop As Double, zh As Double, rout As Double, past As Boolean)
+    ' FACE-OFF of the forged corner at the hose hex face (wave 2, HOSEB, DESIGN 4.6): nothing of the corner stands past the hose hex face outside
+    ' the stub (Brennan 4503-08-08-FG / 4603-16-16-NWO-FG). HOSEFACEi = blind cut over depthM from the plane HFPLNi away from the crossing of the
+    ' region (90 deg: rectangle minus the circle rin; 45 deg: ring rin .. rout); it always takes the stub ring rin .. rS (never a cut that removes
+    ' nothing). STUBFILLi = boss of the ring rin .. rS over the same depth puts the stub back. Both act in every configuration.
+    On Error Resume Next
+    Dim pl As String, sk As SldWorks.Feature, sk2 As SldWorks.Feature, v0 As Double, v1 As Double, v2 As Double, ring As Double
+    Dim cut As SldWorks.Feature, fil As SldWorks.Feature, att As Long, cxF As Double, cxW As Double
+    pl = "HFPLN" & i
+    ring = 3.14159265358979 * (rS * rS - rin * rin) * depthM
+    cxW = sh + depthM / 2
+    If HoseFacePlane(pl, basePl, sh, ux, uy) = False Then Exit Sub
+    If rect Then
+        Set sk = HoseFaceRect("HOSEFACE" & i & "_SK", pl, "HF" & i, sh, ylo, ytop, zh, rin)
+    Else
+        Set sk = HoseFaceRing("HOSEFACE" & i & "_SK", pl, "HF" & i & "_DIN", "HF" & i & "_DOUT", rin, rout, sh, ux, uy)
+    End If
+    Check "HOSEFACE" & i & "_SK sketch made", Not sk Is Nothing
+    If sk Is Nothing Then Exit Sub
+    v0 = Volume()
+    For att = 0 To 1
+        Set cut = MakeCut(sk, swEndConditions_e.swEndCondBlind, depthM, False, (att = 1), 0#, False, "HOSEFACE" & i & " attempt " & att)
+        If Not cut Is Nothing Then
+            v1 = Volume(): cxF = FeatCentreU(cut, ux, uy)
+            Trace "HOSEFACE" & i & " attempt " & att & ": removed " & Format((v0 - v1) / (IN_ ^ 3), "0.000000") & " in^3, cut faces centred at " & Format(cxF / IN_, "0.0000") & " along the hose leg (want " & Format(cxW / IN_, "0.0000") & ")"
+            If v1 < v0 - 1E-12 And Abs(cxF - cxW) < 0.25 * depthM Then Exit For
+            swModel.ClearSelection2 True
+            cut.Select2 False, 0
+            swModel.Extension.DeleteSelection2 0
+            Set cut = Nothing
+        End If
+    Next att
+    Check "HOSEFACE" & i & " cut made on the tip side of the hose hex face (attempt " & att & ")", Not cut Is Nothing
+    If cut Is Nothing Then Exit Sub
+    cut.Name = "HOSEFACE" & i
+    HoseFaceDepth cut, depthM
+    Check "HOSEFACE" & i & " took " & Format((v0 - v1) / (IN_ ^ 3), "0.000000") & " in^3 (at least the stub ring " & Format(ring / (IN_ ^ 3), "0.000000") & ")", v0 - v1 > 0.98 * ring
+    Set sk2 = HoseFaceRing("STUBFILL" & i & "_SK", pl, "SF" & i & "_DIN", "SF" & i & "_DOUT", rin, rS, sh, ux, uy)
+    Check "STUBFILL" & i & "_SK sketch made", Not sk2 Is Nothing
+    If sk2 Is Nothing Then Exit Sub
+    ' the boss direction is told by the volume: toward the tip it adds exactly the stub ring, toward the crossing (inside the hex arm) ~nothing
+    For att = 0 To 1
+        swModel.ClearSelection2 True
+        swModel.Extension.SelectByID2 "STUBFILL" & i & "_SK", "SKETCH", 0, 0, 0, False, 0, Nothing, 0
+        Set fil = swFeatMgr.FeatureExtrusion3(True, False, (att = 1), swEndConditions_e.swEndCondBlind, 0, depthM, 0, False, False, False, False, 0, 0, False, False, False, False, True, False, False, 0, 0, False)
+        Trace "STUBFILL" & i & ": FeatureExtrusion3 dir=" & att & " -> " & (Not fil Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+        If Not fil Is Nothing Then
+            v2 = Volume(): cxF = FeatCentreU(fil, ux, uy)
+            Trace "STUBFILL" & i & " dir " & att & ": added " & Format((v2 - v1) / (IN_ ^ 3), "0.000000") & " in^3 (ring " & Format(ring / (IN_ ^ 3), "0.000000") & "), faces centred at " & Format(cxF / IN_, "0.0000") & " along the hose leg"
+            If Abs((v2 - v1) - ring) < 0.02 * ring Then Exit For
+            swModel.ClearSelection2 True
+            fil.Select2 False, 0
+            swModel.Extension.DeleteSelection2 0
+            Set fil = Nothing
+        End If
+    Next att
+    Check "STUBFILL" & i & " boss made on the tip side (attempt " & att & ")", Not fil Is Nothing
+    If fil Is Nothing Then Exit Sub
+    fil.Name = "STUBFILL" & i
+    HoseFaceDepth fil, depthM
+    Check "STUBFILL" & i & " put back " & Format((v2 - v1) / (IN_ ^ 3), "0.000000") & " in^3 = the stub ring (expect " & Format(ring / (IN_ ^ 3), "0.000000") & ")", Abs((v2 - v1) - ring) < 0.001 * ring
+    If past Then
+        Check "HOSEFACE" & i & " + STUBFILL" & i & " removed the forged corner past the hose hex face: net " & Format((v2 - v0) / (IN_ ^ 3), "0.000000") & " in^3 (< 0)", v2 < v0 - 0.001 * ring
+    Else
+        Check "HOSEFACE" & i & " + STUBFILL" & i & " leave the reference configuration unchanged (the corner clears the face): net " & Format((v2 - v0) / (IN_ ^ 3), "0.000000") & " in^3", Abs(v2 - v0) < 0.001 * ring
+    End If
+End Sub
+"""
+
+
 def emit_leg_u(i, lg):
     # leg along (UXV, UYV) sketched on the Front Plane with parallel/perpendicular relations to its own axis line
     M = lg.get('Mtip', lg['V'][-1][0]); out = []
@@ -1788,6 +2910,9 @@ def emit_leg_u(i, lg):
             out.append(f'    Call Dim_ptline({s_}, {ue}, {s2}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
         elif t == 'col':
             out.append(f'    Call Collinear({d[1]}, {d[2]})')
+        elif t == 'pair':           # 2026-10-18 (ANGLED): swivel profiles on the 135 deg leg (positions from the nut face)
+            _, s_, s2, nm, val, a, q = d; tx, ty = posU(a, q)
+            out.append(f'    Call Dim_pair({s_}, {s2}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
     out += ['    swModel.ClearSelection2 True', '    swSkMgr.InsertSketch True', '    Set swFeat = swModel.FeatureByPositionReverse(0)',
             f'    swFeat.Name = "LEG{i}"',
             f'    Check "LEG{i} sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)',
@@ -1825,6 +2950,344 @@ def orbtrim_check(trims, ok):
                     nm = f'OT{i}_{k}@ORBTRIM{i}_SK'
                     out += [f'    Set ot_p = swModel.Parameter("{nm}")',
                             f'    If ot_p Is Nothing Then Check "{pn} {nm} readable", False Else Check "{pn} {nm} = " & Format(ot_p.SystemValue / IN_, "0.0000") & " (table {v:.4f})", Abs(ot_p.SystemValue / IN_ - {v:.5f}) < 0.0005']
+    return out + ['']
+
+
+# ---------------------------------------------------------------- 2026-10-18 (ANGLED, genfeat): helpers for the 135 deg leg
+# Appended to a macro ONLY when its 135 deg leg carries a helical thread (HelixThreadV, HelixUCheck + their dimension helpers) or a swivel nut
+# (NutHexCutV) - every released macro stays byte-identical. Design: tools/_out/wave2_shapes_20261008/ANGLED/DESIGN.md 3.4 (+ review fixes 3-5).
+ANGLED_HELIX_HELP = '''
+' ---------------------------------------------------------------- 135-deg leg thread helpers (ANGLED, 2026-10-18)
+Function DimPtLnV(pt As SldWorks.SketchPoint, ln As SldWorks.SketchSegment, nm As String, valM As Double, tx As Double, ty As Double, dx As Double, dy As Double) As Boolean
+    ' point-to-line distance (the line may be a construction line), value checked; text tried at (tx, ty), then stepped by (dx, dy) both ways
+    Dim dd As SldWorks.DisplayDimension, k As Long, v As Double, f As Double
+    Dim fs As Variant: fs = Array(0#, 1#, -1#, 2#, -2#, 3#)
+    For k = 0 To 5
+        f = fs(k)
+        swModel.ClearSelection2 True
+        pt.Select4 False, Nothing
+        ln.Select4 True, Nothing
+        Set dd = swModel.AddDimension2(tx + f * dx, ty + f * dy, 0)
+        If Not dd Is Nothing Then
+            v = dd.GetDimension2(0).SystemValue
+            If Abs(v - valM) < 0.000005 Then Exit For
+            Trace nm & " try " & k & ": " & Format(v / IN_, "0.0000") & " (want " & Format(valM / IN_, "0.0000") & ")"
+            DeleteDisp dd: Set dd = Nothing
+        End If
+    Next k
+    NameDim dd, nm, valM
+    DimPtLnV = Not dd Is Nothing
+End Function
+
+Function DimSegLenV(ln As SldWorks.SketchSegment, nm As String, valM As Double, tx As Double, ty As Double, dx As Double, dy As Double) As Boolean
+    ' aligned length of one (construction) line, value checked (a horizontal / vertical projection is rejected by value and deleted)
+    Dim dd As SldWorks.DisplayDimension, k As Long, v As Double, f As Double
+    Dim fs As Variant: fs = Array(0#, 1#, -1#, 2#, -2#, 3#)
+    For k = 0 To 5
+        f = fs(k)
+        swModel.ClearSelection2 True
+        ln.Select4 False, Nothing
+        Set dd = swModel.AddDimension2(tx + f * dx, ty + f * dy, 0)
+        If Not dd Is Nothing Then
+            v = dd.GetDimension2(0).SystemValue
+            If Abs(v - valM) < 0.000005 Then Exit For
+            Trace nm & " try " & k & ": " & Format(v / IN_, "0.0000") & " (want " & Format(valM / IN_, "0.0000") & ")"
+            DeleteDisp dd: Set dd = Nothing
+        End If
+    Next k
+    NameDim dd, nm, valM
+    DimSegLenV = Not dd Is Nothing
+End Function
+
+Sub HelixThreadV(tipD As Double, rM As Double, heightM As Double, pitchM As Double, thdhM As Double, taperRad As Double, taperOut As Boolean, apexOut As Boolean, sfx As String, nm As String)
+    ' Helical thread on the 45-deg elbow's 135-deg leg (axis (UX, UY, 0) through the origin; Q-NEW-ANGLEDHELIX, 2026-10-18) = HelixThread of
+    ' the axis legs (helix on the end face + 60 deg tooth swept along it) with every axis-specific step in leg coordinates:
+    '  - helix sketch HELIXSK_<sfx> on the leg end face at tipD (tip / port face / nut face), circle HELIXDIA centred on the projected origin;
+    '  - helix HELIX_<sfx> (HEIGHT / PITCH, taper per end kind): flags and start angle tried until the curve starts IN THE FRONT PLANE (z = 0)
+    '    at the end face on the circle, its far end lies HEIGHT into the part with the radius the taper wants, right hand (read from the curve);
+    '  - tooth THDPROF_<sfx> on the Front Plane: base l1 + l1b parallel to a construction axis line (origin, 135 deg to a horizontal reference
+    '    line), PROF_AX = distance from a construction line through the origin normal to the axis, PROF_R / APEXR = distances from the axis
+    '    line, 60 deg between the sloped sides (the HelixThread relation set with horizontal / vertical replaced by parallel / perpendicular);
+    '  - swept cut <nm>, LEFT LIVE: the all-configuration sweep rebuilds it, HelixUCheck reads it per configuration, the final step suppresses it.
+    ' SolidWorks' Thread feature is not used here: on an off-axis female edge it crashed SolidWorks 2026 SP4 (2026-10-15, gen_bent HelixThreadY).
+    On Error Resume Next
+    Dim ok As Boolean, sk As SldWorks.Feature, hx As SldWorks.Feature, pf As SldWorks.Feature, f As SldWorks.Feature, dd As SldWorks.DisplayDimension
+    ok = SelectEndFaceV(tipD)
+    Check nm & ": end face found " & Format(tipD / IN_, "0.0000") & " along the 135-deg leg", ok
+    If ok = False Then Exit Sub
+    swSkMgr.InsertSketch True
+    Dim c As SldWorks.SketchSegment, ca As SldWorks.SketchArc
+    swSkMgr.AddToDB = True
+    Set c = swSkMgr.CreateCircleByRadius(0, 0, 0, rM)
+    swSkMgr.AddToDB = False
+    Set ca = c
+    swModel.ClearSelection2 True
+    ca.GetCenterPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    c.Select4 False, Nothing
+    Set dd = swModel.AddDimension2(rM * 2, rM * 2, 0)
+    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = 2 * rM
+    NameDim dd, "HELIXDIA", 2 * rM
+    ' start-angle candidates: the angles at which the sketch's X / Y axes (model coords; matrix rows or columns) give a start with z = 0
+    Dim xf As SldWorks.MathTransform, ad As Variant, th(7) As Double, k As Long
+    Set xf = swSkMgr.ActiveSketch.ModelToSketchTransform: Set xf = xf.Inverse
+    ad = xf.ArrayData
+    th(0) = Atan2V(-ad(2), ad(5)): th(1) = th(0) + 3.14159265358979
+    th(2) = Atan2V(-ad(6), ad(7)): th(3) = th(2) + 3.14159265358979
+    For k = 4 To 7: th(k) = (k - 4) * 1.5707963267949: Next k
+    For k = 0 To 3
+        Do While th(k) < 0: th(k) = th(k) + 6.28318530717959: Loop
+        Do While th(k) >= 6.28318530717959: th(k) = th(k) - 6.28318530717959: Loop
+    Next k
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Set sk = swModel.FeatureByPositionReverse(0): sk.Name = "HELIXSK_" & sfx
+    Check nm & " helix sketch made (" & sk.GetTypeName2 & ")", sk.GetTypeName2 = "ProfileFeature"
+    Check nm & " helix sketch fully defined", (sk.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    ' --- helix: the axis legs' flags first (reversed, clockwise, taperOut as given), then the alternatives; every try checked on the curve
+    Dim mdLate As Object: Set mdLate = swModel
+    Dim t As Long, rv As Boolean, cw As Boolean, tOut As Boolean, egv As Object, cv As Object, cpd As Object, e0 As Variant, e1 As Variant
+    Dim fp(2) As Double, fd(2) As Double, fq(2) As Double, afp As Double, afar As Double, rfp As Double, rfar As Double, rWant As Double
+    Dim rx As Double, ry As Double, hand As Double, good As Boolean
+    good = False
+    For t = 0 To 63
+        rv = ((t \\ 8) Mod 2 = 0): cw = ((t \\ 16) Mod 2 = 0): tOut = taperOut
+        If (t \\ 32) = 1 Then tOut = Not taperOut
+        If taperRad <= 0 And (t \\ 32) = 1 Then Exit For
+        rWant = rM + IIf(taperOut, 1#, -1#) * heightM * Tan(taperRad)      ' the radius the end kind wants HEIGHT into the part (male grows, female shrinks)
+        swModel.ClearSelection2 True
+        sk.Select2 False, 0
+        Err.Clear
+        mdLate.InsertHelix rv, cw, (taperRad > 0), tOut, swHelixDefinedBy_e.swHelixDefinedByHeightAndPitch, heightM, pitchM, 0#, taperRad, th(t Mod 8)
+        Set hx = swModel.FeatureByPositionReverse(0)
+        If Not hx Is Nothing Then
+            If hx.GetTypeName2 <> "Helix" Then Set hx = Nothing
+        End If
+        Set egv = Nothing
+        If Not hx Is Nothing Then Set egv = hx.GetSpecificFeature2.GetFirstSegment
+        If Not egv Is Nothing Then
+            Set cv = egv.GetCurve
+            Set cpd = egv.GetCurveParams3
+            e0 = cv.Evaluate2(cpd.UMinValue, 1): e1 = cv.Evaluate2(cpd.UMaxValue, 1)
+            If Abs(e0(0) * UX + e0(1) * UY - tipD) < Abs(e1(0) * UX + e1(1) * UY - tipD) Then
+                fp(0) = e0(0): fp(1) = e0(1): fp(2) = e0(2): fd(0) = e0(3): fd(1) = e0(4): fd(2) = e0(5): fq(0) = e1(0): fq(1) = e1(1): fq(2) = e1(2)
+            Else
+                fp(0) = e1(0): fp(1) = e1(1): fp(2) = e1(2): fd(0) = -e1(3): fd(1) = -e1(4): fd(2) = -e1(5): fq(0) = e0(0): fq(1) = e0(1): fq(2) = e0(2)
+            End If
+            afp = fp(0) * UX + fp(1) * UY: afar = fq(0) * UX + fq(1) * UY
+            rfp = Sqr(Abs(fp(0) ^ 2 + fp(1) ^ 2 + fp(2) ^ 2 - afp ^ 2)): rfar = Sqr(Abs(fq(0) ^ 2 + fq(1) ^ 2 + fq(2) ^ 2 - afar ^ 2))
+            rx = fp(0) - afp * UX: ry = fp(1) - afp * UY
+            ' right hand about the direction of advance w = -U (into the part): (r x t) . w > 0
+            hand = -(UX * (ry * fd(2) - fp(2) * fd(1)) + UY * (fp(2) * fd(0) - rx * fd(2)))
+            good = Abs(afp - tipD) < 0.00001 And Abs(fp(2)) < 0.00001 And Abs(rfp - rM) < 0.00001 And Abs(afar - (tipD - heightM)) < 0.00001 And Abs(rfar - rWant) < 0.00002 And hand > 0
+            Trace nm & ": helix try " & t & " (reversed " & rv & ", clockwise " & cw & ", taper out " & tOut & ", start " & Format(th(t Mod 8) * 57.2957795130823, "0.0") & " deg): face end " & Format(afp / IN_, "0.0000") & " along, z " & Format(fp(2) / IN_, "0.0000") & ", r " & Format(rfp / IN_, "0.0000") & "; far end " & Format(afar / IN_, "0.0000") & ", r " & Format(rfar / IN_, "0.0000") & " (want " & Format(rWant / IN_, "0.0000") & "); " & IIf(hand > 0, "right", "left") & " hand"
+        Else
+            Trace nm & ": helix try " & t & " made no helix curve" & IIf(Err.Number <> 0, " [err " & Err.Description & "]", "")
+        End If
+        Err.Clear
+        If good Then Exit For
+        If Not hx Is Nothing Then
+            swModel.ClearSelection2 True: hx.Select2 False, 0: swModel.Extension.DeleteSelection2 0
+        End If
+        Set hx = Nothing
+    Next t
+    Check nm & ": helix into the part, right hand, starting in the Front Plane on the end face " & Format(tipD / IN_, "0.0000") & " (radius " & Format(rM / IN_, "0.0000") & ")", good
+    If good = False Then Exit Sub
+    hx.Name = "HELIX_" & sfx
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = hx.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - heightM) < 0.000001 Then dm.Name = "HEIGHT"
+        If Abs(dm.SystemValue - pitchM) < 0.000001 Then dm.Name = "PITCH"
+        names = names & dm.Name & " "
+        Set d = hx.GetNextDisplayDimension(d)
+    Loop
+    Check nm & " helix dims named (" & names & ")", InStr(names, "HEIGHT") > 0 And InStr(names, "PITCH") > 0
+    ' --- tooth profile on the Front Plane (sketch coords = model X / Y) at the helix start: leg coords (a, q) -> (a*UX - q*UY, a*UY + q*UX)
+    Dim a0 As Double, q0 As Double, sRad As Double, sApex As Double, half As Double, ap As Double
+    a0 = afp: q0 = -fp(0) * UY + fp(1) * UX
+    sRad = IIf(q0 >= 0, 1#, -1#): sApex = IIf(apexOut, sRad, -sRad): half = thdhM * Tan(3.14159265358979 / 6): ap = q0 + sApex * thdhM
+    Trace nm & ": profile at a " & Format(a0 / IN_, "0.0000") & ", q " & Format(q0 / IN_, "0.0000") & ", apex " & Format(ap / IN_, "0.0000")
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
+    swSkMgr.InsertSketch True
+    Dim hz As SldWorks.SketchSegment, ax As SldWorks.SketchSegment, pz As SldWorks.SketchSegment
+    Dim l1 As SldWorks.SketchSegment, l1b As SldWorks.SketchSegment, l2 As SldWorks.SketchSegment, l3 As SldWorks.SketchSegment, lc As SldWorks.SketchSegment
+    Dim LH As Double, LA As Double, LP As Double: LH = 0.5 * IN_: LA = 0.25 * IN_: LP = 0.25 * IN_
+    swSkMgr.AddToDB = True
+    Set hz = swSkMgr.CreateCenterLine(0, 0, 0, LH, 0, 0)
+    Set ax = swSkMgr.CreateCenterLine(0, 0, 0, LA * UX, LA * UY, 0)
+    Set pz = swSkMgr.CreateCenterLine(0, 0, 0, -LP * UY, LP * UX, 0)
+    Set l1 = swSkMgr.CreateLine((a0 - half) * UX - q0 * UY, (a0 - half) * UY + q0 * UX, 0, a0 * UX - q0 * UY, a0 * UY + q0 * UX, 0)
+    Set l1b = swSkMgr.CreateLine(a0 * UX - q0 * UY, a0 * UY + q0 * UX, 0, (a0 + half) * UX - q0 * UY, (a0 + half) * UY + q0 * UX, 0)
+    Set l2 = swSkMgr.CreateLine((a0 + half) * UX - q0 * UY, (a0 + half) * UY + q0 * UX, 0, a0 * UX - ap * UY, a0 * UY + ap * UX, 0)
+    Set l3 = swSkMgr.CreateLine(a0 * UX - ap * UY, a0 * UY + ap * UX, 0, (a0 - half) * UX - q0 * UY, (a0 - half) * UY + q0 * UX, 0)
+    Set lc = swSkMgr.CreateLine(a0 * UX - q0 * UY, a0 * UY + q0 * UX, 0, a0 * UX - ap * UY, a0 * UY + ap * UX, 0)
+    swSkMgr.AddToDB = False
+    lc.ConstructionGeometry = True
+    Dim n1 As SldWorks.SketchLine, n1b As SldWorks.SketchLine, n2 As SldWorks.SketchLine, n3 As SldWorks.SketchLine, nc As SldWorks.SketchLine
+    Dim nh As SldWorks.SketchLine, na As SldWorks.SketchLine, np As SldWorks.SketchLine
+    Set n1 = l1: Set n1b = l1b: Set n2 = l2: Set n3 = l3: Set nc = lc: Set nh = hz: Set na = ax: Set np = pz
+    swModel.ClearSelection2 True: n1.GetEndPoint2.Select4 False, Nothing: n1b.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: n1b.GetEndPoint2.Select4 False, Nothing: n2.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: n2.GetEndPoint2.Select4 False, Nothing: n3.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: n3.GetEndPoint2.Select4 False, Nothing: n1.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: nc.GetStartPoint2.Select4 False, Nothing: n1.GetEndPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: nc.GetEndPoint2.Select4 False, Nothing: n2.GetEndPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    ' construction frame: the three lines start on the origin; the reference line is horizontal; the axis line is held by its angle to it
+    Dim cl3 As Variant, kq As Long: cl3 = Array(nh, na, np)
+    For kq = 0 To 2
+        swModel.ClearSelection2 True
+        cl3(kq).GetStartPoint2.Select4 False, Nothing
+        swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+        swModel.SketchAddConstraints "sgCOINCIDENT"
+    Next kq
+    swModel.ClearSelection2 True: hz.Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL"
+    swModel.ClearSelection2 True: pz.Select4 False, Nothing: ax.Select4 True, Nothing: swModel.SketchAddConstraints "sgPERPENDICULAR"
+    ' tooth: the HelixThread relation set, horizontal -> parallel to the axis line, vertical -> perpendicular to it
+    swModel.ClearSelection2 True: l1.Select4 False, Nothing: ax.Select4 True, Nothing: swModel.SketchAddConstraints "sgPARALLEL"
+    swModel.ClearSelection2 True: l1b.Select4 False, Nothing: ax.Select4 True, Nothing: swModel.SketchAddConstraints "sgPARALLEL"
+    swModel.ClearSelection2 True: lc.Select4 False, Nothing: ax.Select4 True, Nothing: swModel.SketchAddConstraints "sgPERPENDICULAR"
+    swModel.ClearSelection2 True: l1.Select4 False, Nothing: l1b.Select4 True, Nothing: swModel.SketchAddConstraints "sgSAMELENGTH"
+    swModel.ClearSelection2 True: l2.Select4 False, Nothing: l3.Select4 True, Nothing: swModel.SketchAddConstraints "sgSAMELENGTH"
+    ' constant frame dims (not table columns), then the table-driven PROF_AX / PROF_R / APEXR and the 60 deg tooth angle
+    Call DimSegLenV(hz, "PHZL", LH, LH / 2, -0.1 * IN_, 0, -0.05 * IN_)
+    Call DimSegLenV(ax, "PAXL", LA, LA / 2 * UX - 0.1 * IN_ * UY, LA / 2 * UY + 0.1 * IN_ * UX, -0.05 * IN_ * UY, 0.05 * IN_ * UX)
+    Call DimSegLenV(pz, "PPZL", LP, -LP / 2 * UY + 0.1 * IN_ * UX, LP / 2 * UX + 0.1 * IN_ * UY, 0.05 * IN_ * UX, 0.05 * IN_ * UY)
+    Set axisCL = ax: Set hzCL = hz
+    Call DimAngLeg("PANG", 2.35619449019234, 0.16 * IN_ * Cos(1.17809724509617), 0.16 * IN_ * Sin(1.17809724509617))
+    Dim tA As Double, tQ As Double
+    tA = a0 - 0.5 * (a0 - 0): tQ = q0 + sRad * 0.15 * IN_
+    Call DimPtLnV(n1.GetEndPoint2, pz, "PROF_AX", Abs(a0), tA * UX - tQ * UY, tA * UY + tQ * UX, 0.05 * IN_ * UX, 0.05 * IN_ * UY)
+    tA = a0 + 0.12 * IN_: tQ = q0 / 2
+    Call DimPtLnV(n1.GetEndPoint2, ax, "PROF_R", Abs(q0), tA * UX - tQ * UY, tA * UY + tQ * UX, 0.05 * IN_ * UX, 0.05 * IN_ * UY)
+    tA = a0 - 0.12 * IN_: tQ = ap / 2
+    Call DimPtLnV(n2.GetEndPoint2, ax, "APEXR", Abs(ap), tA * UX - tQ * UY, tA * UY + tQ * UX, -0.05 * IN_ * UX, -0.05 * IN_ * UY)
+    Dim kk As Long, v As Double, qq As Double, aa As Double
+    For kk = 0 To 5
+        swModel.ClearSelection2 True
+        l2.Select4 False, Nothing: l3.Select4 True, Nothing
+        aa = a0 + IIf(kk >= 4, 0.003 * (kk - 4.5), 0): qq = q0 + sApex * thdhM * (1.6 - (kk Mod 2) * 2.4)
+        Set dd = swModel.AddDimension2(aa * UX - qq * UY, aa * UY + qq * UX, 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - 3.14159265358979 / 3) < 0.001 Then Exit For
+        DeleteDisp dd: Set dd = Nothing
+    Next kk
+    Check nm & " 60 deg tooth angle placed", (Not dd Is Nothing) And Abs(v - 3.14159265358979 / 3) < 0.001
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Set pf = swModel.FeatureByPositionReverse(0): pf.Name = "THDPROF_" & sfx
+    Check nm & " profile sketch fully defined", (pf.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    ' --- swept cut (left live)
+    Dim vol0 As Double: vol0 = Volume()
+    Dim swd As Object
+    Set swd = swFeatMgr.CreateDefinition(swFeatureNameID_e.swFmSweepCut)
+    If Not swd Is Nothing Then
+        Set swd.Profile = pf: Set swd.Path = hx
+        swModel.ClearSelection2 True
+        pf.Select2 False, 1: hx.Select2 True, 4
+        Set f = swFeatMgr.CreateFeature(swd)
+        Trace nm & ": sweep CreateFeature -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+    End If
+    Check nm & " swept cut created", Not f Is Nothing
+    If f Is Nothing Then Exit Sub
+    f.Name = nm
+    Dim vol1 As Double: vol1 = Volume()
+    Check nm & " sweep removed material: " & Format((vol0 - vol1) / IN_ ^ 3, "0.00000") & " in^3", vol1 < vol0
+    Dim bq As Variant
+    bq = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
+    If IsEmpty(bq) Then Check nm & ": one solid body after the thread", False Else Check nm & ": one solid body after the thread", (UBound(bq) = 0)
+    Trace nm & ": left live until the final suppress step"
+End Sub
+
+Function Atan2V(ByVal y As Double, ByVal x As Double) As Double
+    If Abs(x) < 1E-12 And Abs(y) < 1E-12 Then Atan2V = 0: Exit Function
+    If Abs(x) < 1E-12 Then Atan2V = IIf(y > 0, 1.5707963267949, -1.5707963267949): Exit Function
+    Atan2V = Atn(y / x)
+    If x < 0 Then Atan2V = Atan2V + IIf(y >= 0, 3.14159265358979, -3.14159265358979)
+End Function
+
+Sub HelixUCheck(cfg As String, sfx As String, tipIn As Double, rIn As Double)
+    ' per configuration: the thread on the 135-deg leg rebuilt live and its helix still starts in the Front Plane on the leg end face (table
+    ' PROF_AX) on the thread radius (table HELIXDIA / 2) - a start that drifts out of the Front Plane would leave the tooth beside the helix
+    On Error Resume Next
+    Dim f As SldWorks.Feature, hx As SldWorks.Feature, egv As Object, cv As Object, cpd As Object, e0 As Variant, e1 As Variant, w As Boolean
+    Dim a0 As Double, a1 As Double, fz As Double, af As Double, rf As Double, ec As Long
+    swModel.ShowConfiguration2 cfg
+    swModel.ForceRebuild3 False
+    Set f = swModel.FeatureByName("THD_End" & sfx)
+    Set hx = swModel.FeatureByName("HELIX_" & sfx)
+    If f Is Nothing Or hx Is Nothing Then Check cfg & ": THD_End" & sfx & " and HELIX_" & sfx & " found", False: Exit Sub
+    ec = f.GetErrorCode2(w)
+    Check cfg & ": THD_End" & sfx & " live and rebuilt (error code " & ec & ")", (f.IsSuppressed = False) And (ec = 0)
+    Set egv = hx.GetSpecificFeature2.GetFirstSegment
+    If egv Is Nothing Then Check cfg & ": HELIX_" & sfx & " curve readable", False: Exit Sub
+    Set cv = egv.GetCurve: Set cpd = egv.GetCurveParams3
+    e0 = cv.Evaluate2(cpd.UMinValue, 0): e1 = cv.Evaluate2(cpd.UMaxValue, 0)
+    a0 = e0(0) * UX + e0(1) * UY: a1 = e1(0) * UX + e1(1) * UY
+    If Abs(a0 - tipIn * IN_) < Abs(a1 - tipIn * IN_) Then
+        af = a0: fz = e0(2): rf = Sqr(Abs(e0(0) ^ 2 + e0(1) ^ 2 + e0(2) ^ 2 - a0 ^ 2))
+    Else
+        af = a1: fz = e1(2): rf = Sqr(Abs(e1(0) ^ 2 + e1(1) ^ 2 + e1(2) ^ 2 - a1 ^ 2))
+    End If
+    Check cfg & ": HELIX_" & sfx & " starts in the Front Plane on the end face (z " & Format(fz / IN_, "0.00000") & "; " & Format(af / IN_, "0.0000") & " along the leg, table " & Format(tipIn, "0.0000") & "; r " & Format(rf / IN_, "0.0000") & ", table " & Format(rIn, "0.0000") & ")", Abs(fz) < 0.00001 And Abs(af / IN_ - tipIn) < 0.0005 And Abs(rf / IN_ - rIn) < 0.0005
+End Sub
+'''
+assert '\\\\' not in ANGLED_HELIX_HELP
+NUTV_HELP = derive(HELP, 'NutHexCutAx', 'NutHexCutV', [
+    ("    ' swivel nut hex: hexagon (across flats afM) sketched on the leg's nut face (normal to the current leg axis at tp), flats\n    ' normal to Z (vertex check in model coordinates, both sketch relations tried), OUTSIDE cut blind over depthM into the part",
+     "    ' 2026-10-18 (ANGLED, Q-NEW-ANGLEDNUT): swivel nut hex on the 135-deg leg - hexagon (across flats afM) sketched on the nut face (normal to\n"
+     "    ' the leg axis at tp along it), flats normal to Z (vertex check in model coordinates; horizontal, vertical, then a vertex on the Front\n"
+     "    ' Plane), OUTSIDE cut blind over depthM into the part, accepted only when the cut's faces are centred on the nut (tp - depthM / 2)"),
+    ('Dim tryRel As Long, relName As String, ok As Boolean, k As Long, zmax As Double', 'Dim tryRel As Long, relName As String, ok As Boolean, k As Long, zmax As Double, lnv As SldWorks.SketchLine'),
+    ('    For tryRel = 0 To 1\n        If tryRel = 0 Then relName = "sgHORIZONTAL" Else relName = "sgVERTICAL"',
+     '    For tryRel = 0 To 2\n        If tryRel = 0 Then relName = "sgHORIZONTAL" Else relName = "sgVERTICAL"\n        If tryRel = 2 Then relName = "vertex on the Front Plane"'),
+    ('        ok = SelectEndFace(tp)', '        ok = SelectEndFaceV(tp)'),
+    ('" on axis " & curAxis, ok', '" along the 135-deg leg", ok'),
+    ('        For k = LBound(poly) To UBound(poly)\n            If poly(k).GetType = swSketchSegments_e.swSketchLINE Then poly(k).Select4 False, Nothing: swModel.SketchAddConstraints relName: Exit For\n        Next k',
+     '        If tryRel < 2 Then\n'
+     '            For k = LBound(poly) To UBound(poly)\n                If poly(k).GetType = swSketchSegments_e.swSketchLINE Then poly(k).Select4 False, Nothing: swModel.SketchAddConstraints relName: Exit For\n            Next k\n'
+     '        Else\n'
+     '            For k = LBound(poly) To UBound(poly)\n                If poly(k).GetType = swSketchSegments_e.swSketchLINE Then\n'
+     '                    Set lnv = poly(k)\n                    lnv.GetStartPoint2.Select4 False, Nothing\n'
+     '                    swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, True, 0, Nothing, 0\n'
+     '                    swModel.SketchAddConstraints "sgCOINCIDENT"\n                    Exit For\n                End If\n            Next k\n'
+     '        End If'),
+    ('Dim v0 As Double, v1 As Double, cut As SldWorks.Feature, attempt As Long', 'Dim v0 As Double, v1 As Double, cut As SldWorks.Feature, attempt As Long, cxF As Double'),
+    ('            If v1 < v0 - 1E-12 Then Exit For',
+     '            cxF = FeatCentreV(cut)\n'
+     '            Trace featName & " attempt " & attempt & ": removed " & Format((v0 - v1) / (IN_ ^ 3), "0.00000") & " in^3, cut faces centred " & Format(cxF / IN_, "0.0000") & " along the 135-deg leg (want " & Format((tp - depthM / 2) / IN_, "0.0000") & ")"\n'
+     '            If v1 < v0 - 1E-12 And Abs(cxF - (tp - depthM / 2)) < 0.25 * depthM Then Exit For'),
+])
+assert 'Sub NutHexCutV(' in NUTV_HELP and 'SelectEndFace(' not in NUTV_HELP.replace('SelectEndFaceV(', '')
+
+
+def angled_help(sp, legs):
+    """the 135 deg leg helpers a macro needs (none for every released root)"""
+    if not sp.get('e45'): return ''
+    U = [L for i, L in enumerate(legs, 1) if place(sp)[i][0] == 'U']
+    out = ''
+    if any((L['thread'] or {}).get('type') == 'HELIX' for L in U): out += ANGLED_HELIX_HELP
+    if any(L['kind'] in ('JICSW', 'NPSMSW') for L in U): out += NUTV_HELP
+    return out
+
+
+def helixu_check(sp, legs, ok):
+    """2026-10-18 (ANGLED, review fix 4): per configuration (every table row; never SolidWorks' Default) - the 135 deg leg's helical thread is live
+    and rebuilt, and its helix starts in the Front Plane on the end face at the table's PROF_AX on the table's thread radius"""
+    if not sp.get('e45'): return []
+    us = [i for i, L in enumerate(legs, 1) if place(sp)[i][0] == 'U' and (L['thread'] or {}).get('type') == 'HELIX']
+    if not us: return []
+    out = ["    ' ---- 135-deg leg thread per configuration: live, rebuilt, helix start in the Front Plane at the table values (ANGLED 2026-10-18)",
+           '    stepName = "135-deg thread check"']
+    for i in us:
+        for b in ok:
+            c = b['cols']
+            out.append(f'    Call HelixUCheck("{b["pn"]}", "{i}", {c[f"PROF_AX@THDPROF_{i}"]:.5f}, {c[f"HELIXDIA@HELIXSK_{i}"] / 2:.6f})')
     return out + ['']
 
 
@@ -1889,7 +3352,7 @@ def emit(root, hdr, ok, refrow):
         body.append(f'    Call HexArm("Right Plane", 0#, 0#, {legs[0]["hexl"]*IN:.9f}, {BR*IN:.9f}, "HEX1", 0, 1#)')
         if e45:
             body.append('    stepName = "PLN2"')
-            body.append(f'    MakeLegPlane "PLN2", {legs[1]["V"][-1][0]*IN:.9f}')
+            body.append(f'    MakeLegPlane "PLN2", {legs[1].get("Mtip", legs[1]["V"][-1][0])*IN:.9f}')     # 2026-10-18: a swivel's planar end is its nut face
             body.append('    stepName = "HEX2"')
             body.append(f'    Call HexArmV("PLN2", 0#, 0#, {legs[1]["hexl"]*IN:.9f}, {BR*IN:.9f}, "HEX2", 0, 1#)')
         else:
@@ -1898,6 +3361,7 @@ def emit(root, hdr, ok, refrow):
         body.append(puck_vba(BR, AC))
         for i, lg in enumerate(legs, 1):
             if lg.get('trim'): body.append(neck_vba(i, lg))       # 2026-10-01 (NECK-6502)
+            if lg.get('faceoff'): body.append(hoseface_vba(i, lg, e45))      # 2026-10-09 (HOSEB): face-off at the hose hex face
     else:
         body.append('    stepName = "RUN"')
         body.append(f'    Call HexRun("Right Plane", 0#, {legs[0]["hexl"]*IN:.9f}, {legs[1]["hexl"]*IN:.9f}, {BR*IN:.9f}, "RUN", 0)')
@@ -1911,7 +3375,16 @@ def emit(root, hdr, ok, refrow):
         body.append(f'    Call HexArm("Top Plane", 0#, 0#, {legs[2]["hexl"]*IN:.9f}, {BR*IN:.9f}, "HEX3", 1, 1#)')
     for i, lg in enumerate(legs, 1):
         if lg['kind'] not in ('JICSW', 'NPSMSW'): continue
-        ax, sg = place(sp)[i]; assert ax != 'U', 'angled swivel legs not supported'
+        ax, sg = place(sp)[i]
+        if ax == 'U':
+            # 2026-10-18 (ANGLED, Q-NEW-ANGLEDNUT): the swivel nut on the 135 deg leg
+            body.append(f"    ' ================= swivel nut hex on leg {i} (135-deg leg): sketched on the nut face, flats normal to Z, cut over the nut hex length =================")
+            body.append(f'    stepName = "NUTHEX{i}"')
+            body.append(f'    tipPos = {lg["Mtip"]*IN:.9f}')
+            body.append(f'    Call NutHexCutV(tipPos, {lg["nut_af"]*IN:.9f}, {lg["m"]["HEXL"]*IN:.9f}, "NUTHEX{i}", "NUTHEX{i}", "NUTCUT{i}")')
+            body.append(f'    Check "NUTHEX{i}@NUTHEX{i} reachable", Not swModel.Parameter("NUTHEX{i}@NUTHEX{i}") Is Nothing')
+            body.append(f'    Check "DEPTH@NUTCUT{i} reachable", Not swModel.Parameter("DEPTH@NUTCUT{i}") Is Nothing')
+            continue
         body.append(f"    ' ================= swivel nut hex on leg {i}: sketched on the nut face, flats normal to Z, cut over the nut hex length =================")
         body.append(f'    stepName = "NUTHEX{i}"')
         body.append(f'    curAxis = {ax}: tipPos = {sg*lg["Mtip"]*IN:.9f}')
@@ -1922,6 +3395,8 @@ def emit(root, hdr, ok, refrow):
         if lg['kind'] != 'NWO': continue
         ax, sg = place(sp)[i]; assert ax != 'U', 'angled adjustable ORB legs not supported yet'
         nut = lg['nut']
+        for j_, ov_ in lg.get('nut_overlap', {}).items():      # 2026-10-09 (PERLEGSW, DESIGN_REVIEW P11): the sliver both NUTCUT volume checks see
+            assert ov_ < 0.005 * min(nwo_nut_removed(nut), nwo_nut_removed(legs[j_ - 1]['nut'])), (root, PN, f'NUTCUT{i} / NUTCUT{j_} envelope overlap {ov_:.6f} in^3 >= 0.5 %')
         body.append(f"    ' ================= adjustable ORB locknut on leg {i}: hexagon on the nut's inner face, flats normal to Z, cut outside over the nut thickness =================")
         body.append(f'    stepName = "NUTHEX{i}"')
         body.append(f'    curAxis = {ax}: tipPos = {sg*lg["V"][-1][0]*IN:.9f}')
@@ -1968,8 +3443,13 @@ def emit(root, hdr, ok, refrow):
     for i, lg in enumerate(legs, 1):
         ax, sg = place(sp)[i]; M = lg.get('Mtip', lg['V'][-1][0])
         if ax == 'U':
-            assert lg['kind'] != 'NPTFF', 'angled female legs not supported yet'
             body.append(f'    tipPos = {M*IN:.9f}')
+            if lg['kind'] == 'NPTFF':
+                # 2026-10-18 (ANGLED, Q-NEW-ANGLEDFEMALE): female port on the 135 deg leg = the axis-leg pocket / connecting bore, cut from the port face
+                body.append(f'    Call BoreCutV("POCKET{i}", "TAPDRILL{i}", {lg["td"]*IN:.9f}, {cols[f"DEPTH@POCKETCUT{i}"]*IN:.9f}, 0#, "POCKETCUT{i}", True, {BR*0.9*IN:.9f})')
+                if not lg['to_centre']:
+                    body.append(f'    Call BoreCutV("BORE{i}", "D{i}", {lg["conn"]*IN:.9f}, {M*IN:.9f}, 0#, "BORECUT{i}", True, {BR*0.9*IN:.9f})')
+                continue
             body.append(f'    Call BoreCutV("BORE{i}", "D{i}", {lg["bore"]*IN:.9f}, {M*IN:.9f}, 0#, "BORECUT{i}", True, {lg["tipR"]*0.9*IN:.9f})')
             continue
         body.append(f'    curAxis = {ax}: tipPos = {sg*M*IN:.9f}')
@@ -1983,6 +3463,13 @@ def emit(root, hdr, ok, refrow):
         ax, sg = place(sp)[i]; M = lg.get('Mtip', lg['V'][-1][0])
         if ax == 'U':
             body.append(f'    Check "leg {i} bore open on the axis at its face ({M:.4f} along the 135-deg leg)", Not AxisCoveredV({M*IN:.9f})')
+            # 2026-10-18 (ANGLED): the same open-axis checks as on the axis legs, along the 135 deg leg
+            if lg['kind'] == 'NPSMSW':
+                body.append(f'    Check "leg {i} bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane {M - lg["s_tip"]:.4f} along the 135-deg leg)", Not AxisCoveredV({(M - lg["s_tip"])*IN:.9f})')
+            if lg['kind'] == 'JICSW':
+                body.append(f'    Check "leg {i} bore reaches the swivel seat (no face across the axis at the nose-tip plane {M - lg["s_nt"]:.4f} along the 135-deg leg)", Not AxisCoveredV({(M - lg["s_nt"])*IN:.9f})')
+            if lg['kind'] == 'NPTFF' and not lg['to_centre']:
+                body.append(f'    Check "leg {i} bore open through the pocket bottom ({M - lg["pocket"]:.4f} along the 135-deg leg)", Not AxisCoveredV({(M - lg["pocket"])*IN:.9f})')
             continue
         body.append(f'    curAxis = {ax}: Check "leg {i} bore open on the axis at its face ({"XY"[ax]}={sg*M:+.4f})", Not AxisCoveredAx({sg*M*IN:.9f})')
         if lg['kind'] == 'NPSMSW':
@@ -2000,9 +3487,13 @@ def emit(root, hdr, ok, refrow):
     body.append('    stepName = "Threads"')
     for i, lg in enumerate(legs, 1):
         ax, sg = place(sp)[i]; M = lg.get('Mtip', lg['V'][-1][0]); t = lg['thread']
+        if t is None: continue          # 2026-10-09 (HOSEB): the hose leg carries no thread; 2026-10-18 (flange): flange leg - no thread
         if ax == 'U':
-            assert t['type'] == 'CUT', 'angled leg must carry a Thread-feature (JIC) end'
             body.append(f'    tipPos = {M*IN:.9f}')
+            if t['type'] == 'HELIX':
+                # 2026-10-18 (ANGLED, Q-NEW-ANGLEDHELIX): helical thread about the 135 deg axis (male / female NPTF, swivel-nut thread)
+                body.append(f'    Call HelixThreadV({M*IN:.9f}, {t["r"]*IN:.9f}, {t["height"]*IN:.9f}, {t["pitch"]*IN:.9f}, {t["thdh"]*IN:.9f}, {t.get("taper", TAPER):.9f}, {t["taperOut"]}, {t["apexOut"]}, "{i}", "THD_End{i}")')
+                continue
             body.append(f'    Call ThreadCutV({t["ex"]*IN:.9f}, {t["er"]*IN:.9f}, {t["depth"]*IN:.9f}, "{t["size"]}", "THD_End{i}", 1#, {t["pitch"]*IN:.9f})')
             continue
         body.append(f'    curAxis = {ax}: tipPos = {sg*M*IN:.9f}')
@@ -2018,13 +3509,19 @@ def emit(root, hdr, ok, refrow):
         xmax = Mt(legs[0]); xmin = -AC; ymax = Mt(legs[1]); ymin = -AC
         # a male NPTF end may stand proud of the flats (Brennan 5600-16 STEP) - then it sets the Z extent
         # (2026-09-25: + JICBH - the bulkhead collar stands proud of the hex flats, 2701/2702/2704 Z extent 0.44 vs 0.375)
-        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('NPTFM', 'JICSW', 'NPSMSW', 'NWO', 'JICBH')])
+        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('NPTFM', 'JICSW', 'NPSMSW', 'NWO', 'JICBH', 'HOSEB')])
+        if legs[0]['kind'] == 'HOSEB': ymin = -max(AC, legs[0]['rA'])            # 2026-10-09 (HOSEB): the bead around the +X hose leg
+        if legs[1]['kind'] == 'HOSEB' and not e45: xmin = -max(AC, legs[1]['rA'])
         # an adjustable ORB leg's washer / locknut corners reach past the corner puck across the other axis
         if legs[1]['kind'] == 'NWO' and not e45: xmin = -max(AC, nwo_radial(legs[1]))
         if legs[0]['kind'] == 'NWO': ymin = -max(AC, nwo_radial(legs[0]))
         # a swivel nut's hex corners (flats normal to Z) lie on the other in-plane axis (2026-09-25: 6500 X -0.722 vs -0.613)
         if legs[1]['kind'] in ('JICSW', 'NPSMSW') and not e45: xmin = min(xmin, -legs[1]['nut_af'] / math.sqrt(3))
         if legs[0]['kind'] in ('JICSW', 'NPSMSW'): ymin = min(ymin, -legs[0]['nut_af'] / math.sqrt(3))
+        # 2026-10-18: a flange head stands past the corner puck across the other in-plane axis, and may stand past the hex flats in Z
+        zexp = max([zexp] + [lg['rmax'] for lg in legs if lg['kind'] in FLG_KINDS])
+        if legs[0]['kind'] in FLG_KINDS: ymin = min(ymin, -legs[0]['rmax'])
+        if legs[1]['kind'] in FLG_KINDS and not e45: xmin = min(xmin, -legs[1]['rmax'])
     else:
         Mt = lambda lg: lg.get('Mtip', lg['V'][-1][0])
         xmax = Mt(legs[0]); xmin = -Mt(legs[1]); ymax = Mt(legs[2]); ymin = -Mt(legs[3]) if cross else -AC
@@ -2036,7 +3533,9 @@ def emit(root, hdr, ok, refrow):
         if len(legs) > 2 and legs[2]['kind'] == 'NWO': xmin = min(xmin, -nwo_radial(legs[2])); xmax = max(xmax, nwo_radial(legs[2]))
     zlab = 'hex flats' if zexp == BR else 'swivel nut flats' if any(lg['kind'] in ('JICSW', 'NPSMSW') and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
         'adjustable ORB washer' if any(lg['kind'] == 'NWO' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
-        'bulkhead collar' if any(lg['kind'] == 'JICBH' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else 'male pipe end proud of the flats'
+        'bulkhead collar' if any(lg['kind'] == 'JICBH' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
+        'hose bead' if any(lg['kind'] == 'HOSEB' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else 'male pipe end proud of the flats'
+    if zexp != BR and any(lg['kind'] in FLG_KINDS and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs): zlab = 'flange head'     # 2026-10-18
     if e45:
         m1 = legs[0].get('Mtip', legs[0]['V'][-1][0]); m2 = legs[1].get('Mtip', legs[1]['V'][-1][0])
         body += ['    stepName = "Self-checks"', '    Dim bb As Variant, ex1 As Double, ex2 As Double',
@@ -2058,7 +3557,8 @@ def emit(root, hdr, ok, refrow):
              '    If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)', '']
     # design table + config check
     params = [c for c in hdr if '@' in c and not c.startswith('$') and c.split('@')[1].startswith(('LEG',))][:6] + \
-             [c for c in hdr if c.startswith(('HEXAF@', 'HEXL', 'PUCK_XC@', 'PUCK_R1B@', 'THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'TRIM_', 'FILL_'))]
+             [c for c in hdr if c.startswith(('HEXAF@', 'HEXL', 'PUCK_XC@', 'PUCK_R1B@', 'THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'TRIM_', 'FILL_'))
+              or c.split('@')[-1].startswith(('HFPLN', 'HOSEFACE', 'STUBFILL'))]      # 2026-10-09 (HOSEB): the face-off values land per configuration
     cfgs = [(ok[1]['pn'], [ok[1]['cols'][p] for p in params]), (ok[-1]['pn'], [ok[-1]['cols'][p] for p in params])] if len(ok) > 2 else [(ok[-1]['pn'], [ok[-1]['cols'][p] for p in params])]
     # 2026-10-01 (NECK-6502): also spot-check the configuration where the neck turn takes the most of the corner (if it is not already listed)
     cut_ = [(max(L['trim']['reach'] - L['trim']['r'] for L in b['legs'] if L.get('trim')), b) for b in ok if any(L.get('trim') for L in b['legs'])]
@@ -2076,7 +3576,7 @@ def emit(root, hdr, ok, refrow):
              '    ok = swModel.InsertFamilyTableOpen(TABLE_PATH)', '    Check "Design table inserted from " & TABLE_PATH, ok', '    swModel.CloseFamilyTable',
              '    swModel.ForceRebuild3 False', '    Dim cfgs As Variant', '    cfgs = swModel.GetConfigurationNames',
              f'    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect {len(ok) + 1})", (UBound(cfgs) + 1) = {len(ok) + 1}',
-             blk] + orbtrim_check(orbtrims, ok) + [f'    swModel.ShowConfiguration2 "{PN}"', '    swModel.ForceRebuild3 False', '']
+             blk] + orbtrim_check(orbtrims, ok) + helixu_check(sp, legs, ok) + [f'    swModel.ShowConfiguration2 "{PN}"', '    swModel.ForceRebuild3 False', '']
     body.append(SWEEP)
     entry = f'Build{root}'
     ranks = ', '.join(f'{lg["kind"]} -{lg["dash"]:02d}' for lg in legs)
@@ -2159,7 +3659,7 @@ Trap:
 End Sub
 
 ' ---------------------------------------------------------------- helpers (2603HX library + straights HelixThread)
-{HELP}{NWO_HELP if any(lg['kind'] == 'NWO' for lg in legs) else ''}{ORBTRIM_HELP if orbtrims else ''}{NECK_HELP if any(lg.get('trim') for lg in legs) else ''}'''
+{HELP}{NWO_HELP if any(lg['kind'] == 'NWO' for lg in legs) else ''}{ORBTRIM_HELP if orbtrims else ''}{NECK_HELP if any(lg.get('trim') for lg in legs) else ''}{HOSEFACE_HELP if any(lg.get('faceoff') for lg in legs) else ''}{angled_help(sp, legs)}'''
     vba = ref_config_at_save(add_progress(vba))      # 2026-09-24: one report/status-bar line per configuration in the sweep; 2026-09-25: saved in the reference configuration (progress_patch.py)
     p = f'{OUT}/Build_{root}_MASTER.bas'; open(p, 'w').write(vba)
     return p

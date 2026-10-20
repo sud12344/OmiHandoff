@@ -1,11 +1,8 @@
-Build_2605_MASTER  9/24/2026 6:17:44 PM
+Build_2605_MASTER  10/20/2026 12:20:54 AM
 OK    dim M1 = 1.3300 in (expect 1.3300)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
 OK    dim JIC1_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG1 angle try 0 at (0.707, 0.540): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 1 at (0.707, -0.540): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 2 at (-0.707, 0.540): 120.0 deg (want 60.0)
 OK    angle RELIEFANG1 = 60.00 deg
 OK    dim JIC1_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC1_CONER = 0.3295 in (expect 0.3295)
@@ -28,9 +25,6 @@ OK    dim M3 = 1.3300 in (expect 1.3300)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B3 = 0.3750 in (expect 0.3750)
 OK    dim JIC3_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG3 angle try 0 at (0.540, 0.707): 120.0 deg (want 60.0)
-      RELIEFANG3 angle try 1 at (0.540, -0.707): 120.0 deg (want 60.0)
-      RELIEFANG3 angle try 2 at (-0.540, 0.707): 120.0 deg (want 60.0)
 OK    angle RELIEFANG3 = 60.00 deg
 OK    dim JIC3_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC3_CONER = 0.3295 in (expect 0.3295)
@@ -131,6 +125,7 @@ OK    THD_End2 helix sketch made (ProfileFeature)
       THD_End2: InsertHelix ok
 OK    THD_End2 helix created
 OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End2: helix start from the curve (-1.4700, 0.0000, 0.4078)
       THD_End2: helix start = (-1.4700, 0.0000, 0.4078)
       THD_End2: profile on Top Plane
       THD_End2: sketch start (-1.4700,-0.4078) axialIsX=True apex dir 1
@@ -174,8 +169,9 @@ OK    Y extent -0.508 .. 1.330 (expect -0.508 .. 1.330)
       Bounding box z -0.442 .. 0.442 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2605_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_2605_SW2.xlsx
 OK    Configurations after table: 8 (expect 8)
+      config check 1: 2605-04-04-04-FG
 OK    2605-04-04-04-FG M1@LEG1 = 1.0500 (table 1.0500)
 OK    2605-04-04-04-FG BODYR@LEG1 = 0.2800 (table 0.2800)
 OK    2605-04-04-04-FG THDMAJR_B1@LEG1 = 0.2188 (table 0.2188)
@@ -199,6 +195,7 @@ OK    2605-04-04-04-FG HEXAF@HEX3 = 0.5600 (table 0.5600)
 OK    2605-04-04-04-FG HEXL@HEX3_BODY = 0.5000 (table 0.5000)
 OK    2605-04-04-04-FG one solid body (found 1)
       2605-04-04-04-FG box x -1.090..1.050  y -0.323..1.050
+      config check 2: 2605-20-20-20-FG
 OK    2605-20-20-20-FG M1@LEG1 = 2.0600 (table 2.0600)
 OK    2605-20-20-20-FG BODYR@LEG1 = 0.8150 (table 0.8150)
 OK    2605-20-20-20-FG THDMAJR_B1@LEG1 = 0.8125 (table 0.8125)
@@ -222,10 +219,19 @@ OK    2605-20-20-20-FG HEXAF@HEX3 = 1.6300 (table 1.6300)
 OK    2605-20-20-20-FG HEXL@HEX3_BODY = 1.1020 (table 1.1020)
 OK    2605-20-20-20-FG one solid body (found 1)
       2605-20-20-20-FG box x -2.380..2.060  y -0.941..2.060
+      All-config sweep: rebuilding 7 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/7  2605-04-04-04-FG  rebuilt in 1.0 s
+      sweep 2/7  2605-06-04-06-FG  rebuilt in 1.6 s
+      sweep 3/7  2605-06-06-06-FG  rebuilt in 1.5 s
+      sweep 4/7  2605-08-08-08-FG  rebuilt in 1.1 s
+      sweep 5/7  2605-12-12-12-FG  rebuilt in 1.3 s
+      sweep 6/7  2605-16-16-16-FG  rebuilt in 1.6 s
+      sweep 7/7  2605-20-20-20-FG  rebuilt in 1.0 s
 OK    All-config sweep: 7 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 2605-08-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
       THD_End3: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2605_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2605_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2605\2605_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2605\2605_MASTER.SLDPRT

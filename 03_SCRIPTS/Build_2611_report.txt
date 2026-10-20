@@ -1,4 +1,4 @@
-Build_2611_MASTER  10/9/2026 9:50:36 AM
+Build_2611_MASTER  10/20/2026 12:22:08 AM
 OK    dim M1 = 1.3100 in (expect 1.3100)
 OK    dim BODYR = 0.4375 in (expect 0.4375)
 OK    dim THDMAJR_B1 = 0.2813 in (expect 0.2813)
@@ -160,8 +160,8 @@ OK    Y extent -0.505 .. 1.020 (expect -0.505 .. 1.020)
       Bounding box z -0.440 .. 0.440 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4375 .. 0.4375 (expect -0.4375 .. 0.4375: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\regen\jictees\DesignTable_2611_SW2.xlsx
-OK    Configurations after table: 3 (expect 3)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_2611_SW2.xlsx
+OK    Configurations after table: 4 (expect 4)
       config check 1: 2611-08-08-08-FG
 OK    2611-08-08-08-FG M1@LEG1 = 1.5200 (table 1.5200)
 OK    2611-08-08-08-FG BODYR@LEG1 = 0.5310 (table 0.5310)
@@ -184,14 +184,37 @@ OK    2611-08-08-08-FG HEXAF@HEX3 = 1.0620 (table 1.0620)
 OK    2611-08-08-08-FG HEXL@HEX3_BODY = 0.9700 (table 0.9700)
 OK    2611-08-08-08-FG one solid body (found 1)
       2611-08-08-08-FG box x -1.470..1.520  y -0.613..1.230
-      All-config sweep: rebuilding 2 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/2  2611-06-06-06-FG  rebuilt in 0.4 s
-      sweep 2/2  2611-08-08-08-FG  rebuilt in 0.7 s
-OK    All-config sweep: 2 configurations rebuilt, 0 feature/body failures
+      config check 2: 2611-12-12-12-FG
+OK    2611-12-12-12-FG M1@LEG1 = 1.8900 (table 1.8900)
+OK    2611-12-12-12-FG BODYR@LEG1 = 0.6560 (table 0.6560)
+OK    2611-12-12-12-FG THDMAJR_B1@LEG1 = 0.5313 (table 0.5313)
+OK    2611-12-12-12-FG JIC1_RELIEFL@LEG1 = 0.1250 (table 0.1250)
+OK    2611-12-12-12-FG JIC1_THDZ@LEG1 = 0.3895 (table 0.3895)
+OK    2611-12-12-12-FG JIC1_CONER@LEG1 = 0.4715 (table 0.4715)
+OK    2611-12-12-12-FG DEPTH@BORECUT1 = 1.8900 (table 1.8900)
+OK    2611-12-12-12-FG DEPTH@BORECUT2 = 1.5900 (table 1.5900)
+OK    2611-12-12-12-FG DEPTH@POCKETCUT3 = 1.3600 (table 1.3600)
+OK    2611-12-12-12-FG THDPITCH@THD_End1 = 0.0833 (table 0.0833)
+OK    2611-12-12-12-FG Profile_Height@THD_End1_PROF = 0.0451 (table 0.0451)
+OK    2611-12-12-12-FG THDPITCH@THD_End1_PROF = 0.0833 (table 0.0833)
+OK    2611-12-12-12-FG PROF_R@THDPROF_2 = 0.5124 (table 0.5124)
+OK    2611-12-12-12-FG PROF_R@THDPROF_3 = 0.4550 (table 0.4550)
+OK    2611-12-12-12-FG HEXAF@RUN = 1.3120 (table 1.3120)
+OK    2611-12-12-12-FG HEXL1@RUN_BODY = 1.0260 (table 1.0260)
+OK    2611-12-12-12-FG HEXL2@RUN_BODY = 0.8400 (table 0.8400)
+OK    2611-12-12-12-FG HEXAF@HEX3 = 1.3120 (table 1.3120)
+OK    2611-12-12-12-FG HEXL@HEX3_BODY = 1.1000 (table 1.1000)
+OK    2611-12-12-12-FG one solid body (found 1)
+      2611-12-12-12-FG box x -1.590..1.890  y -0.757..1.360
+      All-config sweep: rebuilding 3 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/3  2611-06-06-06-FG  rebuilt in 0.4 s
+      sweep 2/3  2611-08-08-08-FG  rebuilt in 0.8 s
+      sweep 3/3  2611-12-12-12-FG  rebuilt in 0.7 s
+OK    All-config sweep: 3 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2611-06-06-06-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
-      THD_End3: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\2611\2611_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\2611\2611_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2611\2611_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2611\2611_MASTER.SLDPRT

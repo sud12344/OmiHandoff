@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2404_MASTER"
 ' ============================================================================
-'  Build_2404_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_straight2.py
+'  Build_2404_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
 '  Male Connector - master from reference configuration 2404-08-08 (DesignTable_2404_SW2.xlsx row 2)
 '  Ends: A = NPTFM  B = JICM.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build2404.  Report: 03_SCRIPTS\Build_2404_report.txt
@@ -237,7 +237,7 @@ Sub Build2404()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 58)", (UBound(cfgs) + 1) >= 57
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 60)", (UBound(cfgs) + 1) >= 59
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

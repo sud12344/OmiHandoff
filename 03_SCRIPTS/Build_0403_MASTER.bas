@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_0403_MASTER"
 ' ============================================================================
-'  Build_0403_MASTER.bas  -  OMi fitting library, generated 2026-09-25 by gen_straight2.py
+'  Build_0403_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
 '  Braze Tube Union (braze socket x male JIC) - master from reference configuration 0403-08-08 UNPL (DesignTable_0403_SW2.xlsx row 2)
 '  Ends: A = BRAZE  B = JICM.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build0403.  Report: 03_SCRIPTS\Build_0403_report.txt

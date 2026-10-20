@@ -111,3 +111,15 @@ tools/_out/ship_20261019/paperwork/*.xlsx
 !tools/_out/puckfix_20261009/cmp_dryrun_resume_out.txt
 !tools/_out/puckfix_20261009/sliver_scaling.py
 !tools/_out/puckfix_20261009/sliver_scaling_out.txt
+# --- batch 17 ship (2026-10-20): run log, checks, scripts, paperwork scripts, dry-run logs + reports; not the regenerated macros,
+#     the stage root copy, old files, the tools copy (= live tools/), bisect modules, failed runs or workbook copies
+!tools/_out/batch17_20261019/
+tools/_out/batch17_20261019/*
+!tools/_out/batch17_20261019/RESUME.md
+!tools/_out/batch17_20261019/checks/
+!tools/_out/batch17_20261019/scripts/
+!tools/_out/batch17_20261019/paperwork/
+tools/_out/batch17_20261019/paperwork/*.xlsx
+!tools/_out/batch17_20261019/out_*.txt
+!tools/_out/batch17_20261019/run_groups_log*.txt
+!tools/_out/batch17_20261019/sw_dryrun/

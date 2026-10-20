@@ -1,0 +1,5 @@
+22:57 before g5: SLDWORKS 2.3 GB, free virtual 19.9 GB
+23:16 g5 done
+23:16 before g6: SLDWORKS 0.1 GB, free virtual 23.7 GB
+23:16 g6 done
+23:16 before g7: SLDWORKS 0.2 GB, free virtual 23.7 GB

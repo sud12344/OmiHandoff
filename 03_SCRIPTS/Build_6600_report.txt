@@ -1,11 +1,8 @@
-Build_6600_MASTER  9/25/2026 3:27:47 AM
+Build_6600_MASTER  10/20/2026 12:38:25 AM
 OK    dim M1 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
 OK    dim JIC1_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG1 angle try 0 at (0.627, 0.475): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 1 at (0.627, -0.475): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 2 at (-0.627, 0.475): 120.0 deg (want 60.0)
 OK    angle RELIEFANG1 = 60.00 deg
 OK    dim JIC1_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC1_CONER = 0.3295 in (expect 0.3295)
@@ -19,9 +16,6 @@ OK    dim M2 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B2 = 0.3750 in (expect 0.3750)
 OK    dim JIC2_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG2 angle try 0 at (-0.627, 0.475): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 1 at (-0.627, -0.475): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 2 at (0.627, 0.475): 120.0 deg (want 60.0)
 OK    angle RELIEFANG2 = 60.00 deg
 OK    dim JIC2_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC2_CONER = 0.3295 in (expect 0.3295)
@@ -43,13 +37,17 @@ OK    dim SW3_NUTHEXL = 0.4499 in (expect 0.4499)
 OK    dim SW3_NUTR = 0.5081 in (expect 0.5081)
 OK    dim SW3_CSR = 0.3750 in (expect 0.3750)
       SW3_CSANG: the two lines share no endpoint - vertex candidates unavailable
-      SW3_CSANG angle try 0 at (0.455, 1.366): 130.0 deg (want 50.0)
-      SW3_CSANG angle try 1 at (0.455, -1.366): 130.0 deg (want 50.0)
-      SW3_CSANG angle try 2 at (-0.455, 1.366): 130.0 deg (want 50.0)
-      SW3_CSANG angle try 3 at (-0.455, -1.366): 130.0 deg (want 50.0)
-      SW3_CSANG angle try 4 at (0.573, 0.079): 130.0 deg (want 50.0)
-      SW3_CSANG angle try 5 at (0.337, 0.079): 130.0 deg (want 50.0)
-FAIL  angle SW3_CSANG was not created
+      SW3_CSANG angle try 0 at (-0.067, 0.923): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 1 at (0.067, 1.208): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 2 at (-0.133, 0.780): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 3 at (0.133, 1.351): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 4 at (0.455, 1.366): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 5 at (0.455, -1.366): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 6 at (-0.455, 1.366): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 7 at (-0.455, -1.366): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 8 at (0.573, 0.079): 130.0 deg (want 50.0)
+      SW3_CSANG angle try 9 at (0.337, 0.079): 130.0 deg (want 50.0)
+OK    angle SW3_CSANG held by its supplement SW3_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
 OK    dim SW3_MINR = 0.3412 in (expect 0.3412)
 OK    dim SW3_THDL = 0.3283 in (expect 0.3283)
       SW3_RELANG: the two lines share no endpoint - vertex candidates unavailable
@@ -184,14 +182,15 @@ OK    THD_End2 profile dims reachable as Profile_Height@THD_End2_PROF
 OK    THD_End2 profile pitch reachable as THDPITCH@THD_End2_PROF
       THD_End2: left live until the final suppress step
 OK    THD_End3: end face found at 1.3800
-FAIL  dim HELIXDIA = 0.6800 in (expect 0.6823)
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
 OK    THD_End3 helix sketch made (ProfileFeature)
       THD_End3: InsertHelix ok
 OK    THD_End3 helix created
 OK    THD_End3 helix dims named (D7 D5 PITCH HEIGHT )
-      THD_End3: helix start = (0.3412, 1.3800, 0.0000)
-      THD_End3: profile on Front Plane
-      THD_End3: sketch start (0.3412,1.3800) axialIsX=False apex dir 1
+      THD_End3: helix start from the curve (0.0000, 1.3800, 0.3412)
+      THD_End3: helix start = (0.0000, 1.3800, 0.3412)
+      THD_End3: profile on Right Plane
+      THD_End3: sketch start (-0.3412,1.3800) axialIsX=False apex dir -1
       PROF_AX: try 0 value 1.3800 (want 1.3800)
 OK    dim PROF_AX = 1.3800 in (expect 1.3800)
       PROF_R: try 0 value 0.3412 (want 0.3412)
@@ -202,15 +201,15 @@ OK    THD_End3 60 deg tooth angle placed
 OK    THD_End3 profile sketch fully defined
       THD_End3: sweep CreateFeature -> True
 OK    THD_End3 swept cut created
-OK    THD_End3 sweep removed material: 0.00682 in^3
+OK    THD_End3 sweep removed material: 0.00818 in^3
 OK    THD_End3 suppressed
 OK    X extent -1.250 .. 1.250 (expect -1.250 .. 1.250; threads may add a little)
 OK    Y extent -0.433 .. 1.380 (expect -0.433 .. 1.380)
       Bounding box z -0.440 .. 0.440 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: swivel nut flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_6600_SW2.xlsx
-OK    Configurations after table: 10 (expect 10)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_6600_SW2.xlsx
+OK    Configurations after table: 11 (expect 11)
       config check 1: 6600-04-04-04-FG
 OK    6600-04-04-04-FG M1@LEG1 = 0.8900 (table 0.8900)
 OK    6600-04-04-04-FG BODYR@LEG1 = 0.2200 (table 0.2200)
@@ -259,21 +258,22 @@ OK    6600-32-32-32-FG HEXAF@HEX3 = 2.5000 (table 2.5000)
 OK    6600-32-32-32-FG HEXL@HEX3_BODY = 1.7100 (table 1.7100)
 OK    6600-32-32-32-FG one solid body (found 1)
       6600-32-32-32-FG box x -3.060..3.060  y -1.443..3.380
-      All-config sweep: rebuilding 9 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/9  6600-04-04-04-FG  rebuilt in 0.8 s
-      sweep 2/9  6600-05-05-05-FG  rebuilt in 1.3 s
-      sweep 3/9  6600-06-06-06-FG  rebuilt in 1.2 s
-      sweep 4/9  6600-08-08-08-FG  rebuilt in 1.0 s
-      sweep 5/9  6600-10-10-10-FG  rebuilt in 1.0 s
-      sweep 6/9  6600-12-12-12-FG  rebuilt in 1.2 s
-      sweep 7/9  6600-16-16-16-FG  rebuilt in 1.2 s
-      sweep 8/9  6600-20-20-20-FG  rebuilt in 1.3 s
-      sweep 9/9  6600-32-32-32-FG  rebuilt in 1.0 s
-OK    All-config sweep: 9 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 10 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/10  6600-04-04-04-FG  rebuilt in 1.1 s
+      sweep 2/10  6600-05-05-05-FG  rebuilt in 1.4 s
+      sweep 3/10  6600-06-06-06-FG  rebuilt in 1.6 s
+      sweep 4/10  6600-08-08-08-FG  rebuilt in 1.0 s
+      sweep 5/10  6600-10-10-10-FG  rebuilt in 1.3 s
+      sweep 6/10  6600-12-12-12-FG  rebuilt in 1.6 s
+      sweep 7/10  6600-16-16-16-FG  rebuilt in 1.5 s
+      sweep 8/10  6600-20-20-20-FG  rebuilt in 1.6 s
+      sweep 9/10  6600-24-24-24-FG  rebuilt in 1.7 s
+      sweep 10/10  6600-32-32-32-FG  rebuilt in 1.1 s
+OK    All-config sweep: 10 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6600-08-08-08-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 10 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 10 configs, 0 still live
-      THD_End3: SetSuppression2(all configs) -> True; per-config check: 10 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 11 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 11 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 11 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\6600\6600_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\6600\6600_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6600\6600_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6600\6600_MASTER.SLDPRT

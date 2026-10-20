@@ -1,11 +1,8 @@
-Build_6803_MASTER  9/25/2026 3:34:29 AM
+Build_6803_MASTER  10/20/2026 12:44:42 AM
 OK    dim M1 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
 OK    dim JIC1_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG1 angle try 0 at (0.627, 0.475): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 1 at (0.627, -0.475): 120.0 deg (want 60.0)
-      RELIEFANG1 angle try 2 at (-0.627, 0.475): 120.0 deg (want 60.0)
 OK    angle RELIEFANG1 = 60.00 deg
 OK    dim JIC1_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC1_CONER = 0.3295 in (expect 0.3295)
@@ -19,9 +16,6 @@ OK    dim M2 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B2 = 0.3750 in (expect 0.3750)
 OK    dim JIC2_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG2 angle try 0 at (-0.627, 0.475): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 1 at (-0.627, -0.475): 120.0 deg (want 60.0)
-      RELIEFANG2 angle try 2 at (0.627, 0.475): 120.0 deg (want 60.0)
 OK    angle RELIEFANG2 = 60.00 deg
 OK    dim JIC2_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JIC2_CONER = 0.3295 in (expect 0.3295)
@@ -199,34 +193,34 @@ OK    Y extent -0.433 .. 1.470 (expect -0.433 .. 1.450)
       Bounding box z -0.505 .. 0.505 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.5050 .. 0.5050 (expect -0.5050 .. 0.5050: adjustable ORB washer)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\tee\DesignTable_6803_SW2.xlsx
-OK    Configurations after table: 6 (expect 6)
-      config check 1: 6803-10-10-10-NWO-FG
-OK    6803-10-10-10-NWO-FG M1@LEG1 = 1.4500 (table 1.4500)
-OK    6803-10-10-10-NWO-FG BODYR@LEG1 = 0.4400 (table 0.4400)
-OK    6803-10-10-10-NWO-FG THDMAJR_B1@LEG1 = 0.4375 (table 0.4375)
-OK    6803-10-10-10-NWO-FG JIC1_RELIEFL@LEG1 = 0.1070 (table 0.1070)
-OK    6803-10-10-10-NWO-FG JIC1_THDZ@LEG1 = 0.3553 (table 0.3553)
-OK    6803-10-10-10-NWO-FG JIC1_CONER@LEG1 = 0.3860 (table 0.3860)
-OK    6803-10-10-10-NWO-FG DEPTH@BORECUT1 = 1.4500 (table 1.4500)
-OK    6803-10-10-10-NWO-FG DEPTH@BORECUT2 = 1.4500 (table 1.4500)
-OK    6803-10-10-10-NWO-FG DEPTH@BORECUT3 = 1.7000 (table 1.7000)
-OK    6803-10-10-10-NWO-FG THDPITCH@THD_End1 = 0.0714 (table 0.0714)
-OK    6803-10-10-10-NWO-FG Profile_Height@THD_End1_PROF = 0.0387 (table 0.0387)
-OK    6803-10-10-10-NWO-FG THDPITCH@THD_End1_PROF = 0.0714 (table 0.0714)
-OK    6803-10-10-10-NWO-FG THDPITCH@THD_End2 = 0.0714 (table 0.0714)
-OK    6803-10-10-10-NWO-FG Profile_Height@THD_End2_PROF = 0.0387 (table 0.0387)
-OK    6803-10-10-10-NWO-FG THDPITCH@THD_End2_PROF = 0.0714 (table 0.0714)
-OK    6803-10-10-10-NWO-FG THDPITCH@THD_End3 = 0.0714 (table 0.0714)
-OK    6803-10-10-10-NWO-FG Profile_Height@THD_End3_PROF = 0.0387 (table 0.0387)
-OK    6803-10-10-10-NWO-FG THDPITCH@THD_End3_PROF = 0.0714 (table 0.0714)
-OK    6803-10-10-10-NWO-FG HEXAF@RUN = 0.8800 (table 0.8800)
-OK    6803-10-10-10-NWO-FG HEXL1@RUN_BODY = 0.6920 (table 0.6920)
-OK    6803-10-10-10-NWO-FG HEXL2@RUN_BODY = 0.6920 (table 0.6920)
-OK    6803-10-10-10-NWO-FG HEXAF@HEX3 = 0.8800 (table 0.8800)
-OK    6803-10-10-10-NWO-FG HEXL@HEX3_BODY = 0.7000 (table 0.7000)
-OK    6803-10-10-10-NWO-FG one solid body (found 1)
-      6803-10-10-10-NWO-FG box x -1.450..1.450  y -0.508..1.725
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_6803_SW2.xlsx
+OK    Configurations after table: 9 (expect 9)
+      config check 1: 6803-04-04-04-NWO-FG
+OK    6803-04-04-04-NWO-FG M1@LEG1 = 0.8900 (table 0.8900)
+OK    6803-04-04-04-NWO-FG BODYR@LEG1 = 0.2200 (table 0.2200)
+OK    6803-04-04-04-NWO-FG THDMAJR_B1@LEG1 = 0.2188 (table 0.2188)
+OK    6803-04-04-04-NWO-FG JIC1_RELIEFL@LEG1 = 0.0750 (table 0.0750)
+OK    6803-04-04-04-NWO-FG JIC1_THDZ@LEG1 = 0.2608 (table 0.2608)
+OK    6803-04-04-04-NWO-FG JIC1_CONER@LEG1 = 0.1820 (table 0.1820)
+OK    6803-04-04-04-NWO-FG DEPTH@BORECUT1 = 0.8900 (table 0.8900)
+OK    6803-04-04-04-NWO-FG DEPTH@BORECUT2 = 0.8900 (table 0.8900)
+OK    6803-04-04-04-NWO-FG DEPTH@BORECUT3 = 1.0300 (table 1.0300)
+OK    6803-04-04-04-NWO-FG THDPITCH@THD_End1 = 0.0500 (table 0.0500)
+OK    6803-04-04-04-NWO-FG Profile_Height@THD_End1_PROF = 0.0271 (table 0.0271)
+OK    6803-04-04-04-NWO-FG THDPITCH@THD_End1_PROF = 0.0500 (table 0.0500)
+OK    6803-04-04-04-NWO-FG THDPITCH@THD_End2 = 0.0500 (table 0.0500)
+OK    6803-04-04-04-NWO-FG Profile_Height@THD_End2_PROF = 0.0271 (table 0.0271)
+OK    6803-04-04-04-NWO-FG THDPITCH@THD_End2_PROF = 0.0500 (table 0.0500)
+OK    6803-04-04-04-NWO-FG THDPITCH@THD_End3 = 0.0500 (table 0.0500)
+OK    6803-04-04-04-NWO-FG Profile_Height@THD_End3_PROF = 0.0271 (table 0.0271)
+OK    6803-04-04-04-NWO-FG THDPITCH@THD_End3_PROF = 0.0500 (table 0.0500)
+OK    6803-04-04-04-NWO-FG HEXAF@RUN = 0.4400 (table 0.4400)
+OK    6803-04-04-04-NWO-FG HEXL1@RUN_BODY = 0.3400 (table 0.3400)
+OK    6803-04-04-04-NWO-FG HEXL2@RUN_BODY = 0.3400 (table 0.3400)
+OK    6803-04-04-04-NWO-FG HEXAF@HEX3 = 0.4400 (table 0.4400)
+OK    6803-04-04-04-NWO-FG HEXL@HEX3_BODY = 0.3000 (table 0.3000)
+OK    6803-04-04-04-NWO-FG one solid body (found 1)
+      6803-04-04-04-NWO-FG box x -0.890..0.890  y -0.254..1.047
       config check 2: 6803-20-20-20-NWO-FG
 OK    6803-20-20-20-NWO-FG M1@LEG1 = 2.0600 (table 2.0600)
 OK    6803-20-20-20-NWO-FG BODYR@LEG1 = 0.8150 (table 0.8150)
@@ -253,17 +247,20 @@ OK    6803-20-20-20-NWO-FG HEXAF@HEX3 = 1.6300 (table 1.6300)
 OK    6803-20-20-20-NWO-FG HEXL@HEX3_BODY = 1.1100 (table 1.1100)
 OK    6803-20-20-20-NWO-FG one solid body (found 1)
       6803-20-20-20-NWO-FG box x -2.060..2.060  y -0.941..2.276
-      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/5  6803-08-08-08-NWO-FG  rebuilt in 0.5 s
-      sweep 2/5  6803-10-10-10-NWO-FG  rebuilt in 1.0 s
-      sweep 3/5  6803-12-12-12-NWO-FG  rebuilt in 1.2 s
-      sweep 4/5  6803-16-16-16-NWO-FG  rebuilt in 1.4 s
-      sweep 5/5  6803-20-20-20-NWO-FG  rebuilt in 1.0 s
-OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 8 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/8  6803-04-04-04-NWO-FG  rebuilt in 1.4 s
+      sweep 2/8  6803-04-04-06-NWO-FG  rebuilt in 1.7 s
+      sweep 3/8  6803-06-06-06-NWO-FG  rebuilt in 1.8 s
+      sweep 4/8  6803-08-08-08-NWO-FG  rebuilt in 1.2 s
+      sweep 5/8  6803-10-10-10-NWO-FG  rebuilt in 1.6 s
+      sweep 6/8  6803-12-12-12-NWO-FG  rebuilt in 1.9 s
+      sweep 7/8  6803-16-16-16-NWO-FG  rebuilt in 1.7 s
+      sweep 8/8  6803-20-20-20-NWO-FG  rebuilt in 1.4 s
+OK    All-config sweep: 8 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6803-08-08-08-NWO-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
-      THD_End3: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\6803\6803_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\6803\6803_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6803\6803_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6803\6803_MASTER.SLDPRT

@@ -1,4 +1,4 @@
-Build_1405_MASTER  9/25/2026 2:53:43 AM
+Build_1405_MASTER  10/19/2026 10:08:56 PM
 OK    dim W1 = 1.8300 in (expect 1.8300)
 OK    dim BODYR = 0.5774 in (expect 0.5774)
 OK    dim NPB_BODYS = 0.8100 in (expect 0.8100)
@@ -11,7 +11,7 @@ OK    dim NPB_NUTHEXL = 0.4000 in (expect 0.4000)
 OK    dim NPB_NUTR = 0.5774 in (expect 0.5774)
 OK    dim NPB_CSR = 0.4115 in (expect 0.4115)
       NPB_CSANG: the two lines share no endpoint - vertex candidates unavailable
-      NPB_CSANG angle try 0 at (1.814, 0.491): 135.0 deg (want 45.0)
+      NPB_CSANG angle try 0 at (1.273, -0.060): 135.0 deg (want 45.0)
 OK    angle NPB_CSANG = 45.00 deg
 OK    dim NPB_MINR = 0.3795 in (expect 0.3795)
 OK    dim NPB_THDL = 0.3560 in (expect 0.3560)
@@ -91,6 +91,7 @@ OK    THD_EndA helix sketch made (ProfileFeature)
       THD_EndA: InsertHelix ok
 OK    THD_EndA helix created
 OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.3500)
       THD_EndA: helix start = (0.0000, 0.0000, 0.3500)
       THD_EndA: profile on Top Plane
       THD_EndA: sketch start (0.0000,-0.3500) axialIsX=True apex dir -1
@@ -111,6 +112,7 @@ OK    THD_EndB helix sketch made (ProfileFeature)
       THD_EndB: InsertHelix ok
 OK    THD_EndB helix created
 OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (1.8300, 0.0000, -0.3795)
       THD_EndB: helix start = (1.8300, 0.0000, -0.3795)
       THD_EndB: profile on Top Plane
       THD_EndB: sketch start (1.8300,0.3795) axialIsX=True apex dir 1
@@ -132,8 +134,8 @@ OK    End B face present at x=1.8300
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Across flats / corners 1.0000 / 1.1547 (body hex 1.0000, nut hex 1.0000: expect between 1.0000 and 1.1547)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_1405_SW2.xlsx
-OK    Configurations after table: 16 (expect 16)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_1405_SW2.xlsx
+OK    Configurations after table: 18 (expect 18)
       config check 1: 1405-02-02
 OK    1405-02-02 W1@DRIVE = 1.0300 (table 1.0300)
 OK    1405-02-02 BODYR@DRIVE = 0.3233 (table 0.3233)
@@ -164,27 +166,29 @@ OK    1405-32-32 PROF_R@THDPROF_B = 1.1340 (table 1.1340)
 OK    1405-32-32 DEPTH@BORECUT_A = 2.1500 (table 2.1500)
 OK    1405-32-32 one solid body (found 1)
       1405-32-32 box x -0.062..2.580  y -1.315..1.315
-      All-config sweep: rebuilding 15 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/15  1405-02-02  rebuilt in 0.9 s
-      sweep 2/15  1405-04-04  rebuilt in 0.9 s
-      sweep 3/15  1405-06-04  rebuilt in 1.3 s
-      sweep 4/15  1405-06-06  rebuilt in 1.0 s
-      sweep 5/15  1405-06-08  rebuilt in 1.3 s
-      sweep 6/15  1405-08-06  rebuilt in 1.1 s
-      sweep 7/15  1405-08-08  rebuilt in 1.0 s
-      sweep 8/15  1405-12-08  rebuilt in 1.1 s
-      sweep 9/15  1405-12-12  rebuilt in 1.2 s
-      sweep 10/15  1405-12-16  rebuilt in 1.1 s
-      sweep 11/15  1405-16-12  rebuilt in 1.3 s
-      sweep 12/15  1405-16-16  rebuilt in 1.0 s
-      sweep 13/15  1405-20-20  rebuilt in 1.3 s
-      sweep 14/15  1405-24-24  rebuilt in 1.6 s
-      sweep 15/15  1405-32-32  rebuilt in 0.9 s
-OK    All-config sweep: 15 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 17 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/17  1405-02-02  rebuilt in 1.2 s
+      sweep 2/17  1405-04-04  rebuilt in 2.0 s
+      sweep 3/17  1405-04-06  rebuilt in 2.0 s
+      sweep 4/17  1405-06-04  rebuilt in 1.8 s
+      sweep 5/17  1405-06-06  rebuilt in 2.3 s
+      sweep 6/17  1405-06-08  rebuilt in 2.2 s
+      sweep 7/17  1405-08-06  rebuilt in 2.4 s
+      sweep 8/17  1405-08-08  rebuilt in 1.3 s
+      sweep 9/17  1405-08-12  rebuilt in 2.1 s
+      sweep 10/17  1405-12-08  rebuilt in 2.2 s
+      sweep 11/17  1405-12-12  rebuilt in 2.0 s
+      sweep 12/17  1405-12-16  rebuilt in 2.2 s
+      sweep 13/17  1405-16-12  rebuilt in 2.2 s
+      sweep 14/17  1405-16-16  rebuilt in 2.2 s
+      sweep 15/17  1405-20-20  rebuilt in 2.2 s
+      sweep 16/17  1405-24-24  rebuilt in 2.9 s
+      sweep 17/17  1405-32-32  rebuilt in 1.9 s
+OK    All-config sweep: 17 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 1405-08-08 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 16 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 16 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\1405\1405_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 9/25/2026 2:54:35 AM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\1405\1405_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1405\1405_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 10:10:03 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1405\1405_MASTER.SLDPRT

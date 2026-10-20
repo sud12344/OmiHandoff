@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2605_MASTER"
 ' ============================================================================
-'  Build_2605_MASTER.bas  -  OMi fitting library, generated 2026-09-24 by gen_tee.py
+'  Build_2605_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
 '  Male Run Tee (tee), forged hex body (2603HX pattern).  Reference config 2605-08-08-08-FG: JICM -08, NPTFM -08, JICM -08
 '  Entry: Sub Build2605.  Legs 1/2 along +X/-X, leg 3 along +Y.
 '  Builds from DesignTable_2605_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -28,6 +28,8 @@ Dim stepName As String
 Dim curAxis As Long          ' 0 = leg along X, 1 = leg along Y
 Dim tipPos As Double         ' signed position of the current leg's tip face on its axis (m)
 Dim hexAnchor As SldWorks.SketchPoint
+Dim UX As Double, UY As Double   ' direction of an angled leg (45-deg elbows)
+Dim hzCL As SldWorks.SketchSegment
 Dim NPTS As Long
 Dim PX() As Double, PR() As Double
 
@@ -242,6 +244,7 @@ Sub Build2605()
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "THDMAJR_B1@LEG1", "JIC1_RELIEFL@LEG1", "JIC1_THDZ@LEG1", "JIC1_CONER@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "DEPTH@BORECUT3", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "PROF_R@THDPROF_2", "THDPITCH@THD_End3", "Profile_Height@THD_End3_PROF", "THDPITCH@THD_End3_PROF", "HEXAF@RUN", "HEXL1@RUN_BODY", "HEXL2@RUN_BODY", "HEXAF@HEX3", "HEXL@HEX3_BODY")
     cx_w = Array(Array(1.05000, 0.28000, 0.21875, 0.07500, 0.26080, 0.18200, 1.05000, 1.09000, 1.05000, 0.05000, 0.02706, 0.05000, 0.26092, 0.05000, 0.02706, 0.05000, 0.56000, 0.50000, 0.53000, 0.56000, 0.50000), Array(2.06000, 0.81500, 0.81250, 0.12500, 0.43160, 0.75300, 2.06000, 2.38000, 2.06000, 0.08333, 0.04511, 0.08333, 0.81335, 0.08333, 0.04511, 0.08333, 1.63000, 1.10200, 1.41000, 1.63000, 1.10200))
     For cx_q = 0 To 1
+        Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
         swModel.ForceRebuild3 False
         For cx_k = 0 To 20
@@ -273,11 +276,19 @@ Sub Build2605()
     Dim sw_names As Variant, sw_i As Long, sw_f As SldWorks.Feature, sw_bad As Long, sw_n As Long, sw_b As Variant, sw_nb As Long
     sw_names = swModel.GetConfigurationNames
     sw_bad = 0: sw_n = 0
+    Dim sw_t0 As Single, sw_tot As Long
+    sw_tot = 0
+    For sw_i = LBound(sw_names) To UBound(sw_names)
+        If sw_names(sw_i) <> "Default" Then sw_tot = sw_tot + 1
+    Next sw_i
+    Progress "All-config sweep: rebuilding " & sw_tot & " configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows."
     For sw_i = LBound(sw_names) To UBound(sw_names)
         If sw_names(sw_i) <> "Default" Then
+            sw_t0 = Timer
             swModel.ShowConfiguration2 sw_names(sw_i)
             swModel.ForceRebuild3 False
             sw_n = sw_n + 1
+            Progress "sweep " & sw_n & "/" & sw_tot & "  " & sw_names(sw_i) & "  rebuilt in " & Format(Timer - sw_t0, "0.0") & " s"
             Set sw_f = swModel.FirstFeature
             Do While Not sw_f Is Nothing
                 If sw_f.GetErrorCode2(True) <> 0 And Not sw_f.IsSuppressed Then
@@ -398,11 +409,23 @@ Sub Trace(what As String)
     On Error Resume Next
     Print #fnRep, "      " & what
 End Sub
+Sub Progress(what As String)
+    ' progress line: written to the report at once (close + reopen - VBA otherwise writes the file in 512-byte blocks),
+    ' shown in the SolidWorks status bar, and Windows gets a chance to repaint (do not click in SolidWorks meanwhile)
+    Trace what
+    On Error Resume Next
+    Close #fnRep
+    Open REPORT_PATH For Append As #fnRep
+    Dim fr As Object
+    Set fr = swApp.Frame
+    fr.SetStatusBarText "OMi build: " & what
+    DoEvents
+End Sub
 Sub Check(what As String, passed As Boolean)
     Dim line As String
     line = IIf(passed, "OK    ", "FAIL  ") & what
     report = report & line & vbCrLf
-    If Not passed Then nErr = nErr + 1
+    If passed = False Then nErr = nErr + 1      ' not 'If Not passed': SolidWorks returns True as 1 and Not 1 = -2 (2026-09-25)
     Debug.Print line
     On Error Resume Next
     Print #fnRep, line
@@ -468,8 +491,8 @@ Sub Dim_rad(i As Long, nm As String, valM As Double, tx As Double, ty As Double)
 End Sub
 Sub DeleteDisp(dd As SldWorks.DisplayDimension)
     swModel.ClearSelection2 True
-    If dd.GetAnnotation.Select3(False, Nothing) Then
-        If swSelMgr.GetSelectedObjectCount2(-1) = 1 Then swModel.Extension.DeleteSelection2 0
+    If dd.GetAnnotation.Select2(False, 0) Then     ' Select3(False, Nothing) selects nothing in an open sketch (2026-09-25)
+        If swSelMgr.GetSelectedObjectCount2(-1) = 1 Then swModel.EditDelete
     End If
     swModel.ClearSelection2 True
 End Sub
@@ -656,29 +679,41 @@ Sub ThreadCut(ex As Double, er As Double, depthM As Double, sizeStr As String, n
     Trace nm & ": left live until the final suppress step"
 End Sub
 Sub Dim_ang(i As Long, j As Long, nm As String, valRad As Double, tx As Double, ty As Double)
-    ' Placement candidates: the caller's point first (unchanged behaviour), then the four quadrants
-    ' around the vertex the two lines share.  Mirroring through the ORIGIN only works when the leg
-    ' axis passes through it (2403/2500/2603); on 2502 the JIC leg axis is at x = N1, so the
-    ' vertex-relative candidates are what find the 60 deg side.
-    Dim dd As SldWorks.DisplayDimension, v As Double, k As Long, nC As Long
-    Dim cand(11) As Double, candy(11) As Double
-    cand(0) = tx: candy(0) = ty
-    cand(1) = tx: candy(1) = -ty
-    cand(2) = -tx: candy(2) = ty
-    cand(3) = -tx: candy(3) = -ty
-    cand(4) = tx + 0.003: candy(4) = 0.002
-    cand(5) = tx - 0.003: candy(5) = 0.002
-    nC = 5
+    ' Placement candidates (2026-09-25): first on the bisector of the sector that has the wanted angle, around the two
+    ' lines' intersection (the older candidates never found 50 deg for the swivel countersink); then the caller's point
+    ' first (the old behaviour), then the four quadrants around the vertex the two lines share.  Mirroring through the
+    ' ORIGIN only works when the leg axis passes through it (2403/2500/2603); on 2502 the JIC leg axis is at x = N1, so
+    ' the vertex-relative candidates are what find the 60 deg side.  A rejected try is deleted (DeleteDisp works since
+    ' 2026-09-25); if no try gives the wanted angle, the first placement is re-created and kept UNNAMED: its
+    ' supplementary angle fixes the same line, and a named supplement would be driven the wrong way by the table.
+    Dim dd As SldWorks.DisplayDimension, v As Double, k As Long, nC As Long, nI As Long
+    Dim cand(15) As Double, candy(15) As Double
+    Dim ix As Double, iy As Double, wx As Double, wy As Double
+    nI = 0
+    If AngleBisector(i, j, valRad, ix, iy, wx, wy) Then
+        cand(0) = ix + 0.004 * wx: candy(0) = iy + 0.004 * wy
+        cand(1) = ix - 0.004 * wx: candy(1) = iy - 0.004 * wy
+        cand(2) = ix + 0.008 * wx: candy(2) = iy + 0.008 * wy
+        cand(3) = ix - 0.008 * wx: candy(3) = iy - 0.008 * wy
+        nI = 4
+    End If
+    cand(nI) = tx: candy(nI) = ty
+    cand(nI + 1) = tx: candy(nI + 1) = -ty
+    cand(nI + 2) = -tx: candy(nI + 2) = ty
+    cand(nI + 3) = -tx: candy(nI + 3) = -ty
+    cand(nI + 4) = tx + 0.003: candy(nI + 4) = 0.002
+    cand(nI + 5) = tx - 0.003: candy(nI + 5) = 0.002
+    nC = nI + 5
     Dim px As Double, py As Double, dq As Double
     If SegVertex(i, j, px, py) Then
         dq = 0.0025
-        cand(6) = px + dq: candy(6) = py + dq
-        cand(7) = px + dq: candy(7) = py - dq
-        cand(8) = px - dq: candy(8) = py + dq
-        cand(9) = px - dq: candy(9) = py - dq
-        cand(10) = px + 3 * dq: candy(10) = py
-        cand(11) = px - 3 * dq: candy(11) = py
-        nC = 11
+        cand(nC + 1) = px + dq: candy(nC + 1) = py + dq
+        cand(nC + 2) = px + dq: candy(nC + 2) = py - dq
+        cand(nC + 3) = px - dq: candy(nC + 3) = py + dq
+        cand(nC + 4) = px - dq: candy(nC + 4) = py - dq
+        cand(nC + 5) = px + 3 * dq: candy(nC + 5) = py
+        cand(nC + 6) = px - 3 * dq: candy(nC + 6) = py
+        nC = nC + 6
     Else
         Trace nm & ": the two lines share no endpoint - vertex candidates unavailable"
     End If
@@ -694,6 +729,24 @@ Sub Dim_ang(i As Long, j As Long, nm As String, valRad As Double, tx As Double, 
             DeleteDisp dd: Set dd = Nothing
         End If
     Next k
+    If dd Is Nothing Then
+        ' When the two segments do not meet (swivel countersink vs the axis centreline) SolidWorks dimensions the
+        ' directed angle between them whatever the text position (probed 2026-09-25: 24 positions, all 130 deg).
+        ' Keep that supplement: it fixes the same line.  It is named <nm>_SUPPL so a table column <nm> can never
+        ' drive it the wrong way.
+        swModel.ClearSelection2 True
+        seg(i).Select4 False, Nothing
+        If j = NPTS - 1 Then axisCL.Select4 True, Nothing Else seg(j).Select4 True, Nothing
+        Set dd = swModel.AddDimension2(cand(0), candy(0), 0)
+        If Not dd Is Nothing Then v = dd.GetDimension2(0).SystemValue
+        If Not dd Is Nothing And Abs(v - (3.14159265358979 - valRad)) < 0.0005 Then
+            dd.GetDimension2(0).Name = nm & "_SUPPL"
+            Check "angle " & nm & " held by its supplement " & nm & "_SUPPL = " & Format(v * 180 / 3.14159265358979, "0.00") & " deg (same line; the segments do not meet)", True
+        Else
+            Check nm & ": no placement gave " & Format(valRad * 180 / 3.14159265358979, "0.0") & " deg - kept an unnamed " & Format(v * 180 / 3.14159265358979, "0.0") & " deg", False
+        End If
+        Exit Sub
+    End If
     If Right(nm, 6) = "_plain" Then
         Check "plain angle " & Left(nm, Len(nm) - 6) & " placed = " & Format(v * 180 / 3.14159265358979, "0.0") & " deg", (Not dd Is Nothing) And Abs(v - valRad) < 0.0005
     Else
@@ -721,6 +774,41 @@ Function SegVertex(i As Long, j As Long, ByRef px As Double, ByRef py As Double)
             End If
         Next n
     Next m
+End Function
+
+Function AngleBisector(i As Long, j As Long, valRad As Double, ByRef ix As Double, ByRef iy As Double, ByRef wx As Double, ByRef wy As Double) As Boolean
+    ' intersection of the two (extended) lines seg(i), seg(j)/centreline and the unit bisector of the sector whose
+    ' angle is valRad, in sketch coordinates (2026-09-25)
+    On Error Resume Next
+    Dim a As SldWorks.SketchLine, b As SldWorks.SketchLine
+    Set a = seg(i)
+    If j = NPTS - 1 Then Set b = axisCL Else Set b = seg(j)
+    If a Is Nothing Or b Is Nothing Then Exit Function
+    Dim ax0 As Double, ay0 As Double, ax1 As Double, ay1 As Double, bx0 As Double, by0 As Double, bx1 As Double, by1 As Double
+    ax0 = a.GetStartPoint2.X: ay0 = a.GetStartPoint2.Y: ax1 = a.GetEndPoint2.X: ay1 = a.GetEndPoint2.Y
+    bx0 = b.GetStartPoint2.X: by0 = b.GetStartPoint2.Y: bx1 = b.GetEndPoint2.X: by1 = b.GetEndPoint2.Y
+    If Err.Number <> 0 Then Err.Clear: Exit Function
+    Dim ux As Double, uy As Double, vx As Double, vy As Double, la As Double, lb As Double, den As Double, t As Double, c As Double, lw As Double
+    ux = ax1 - ax0: uy = ay1 - ay0: la = Sqr(ux * ux + uy * uy)
+    vx = bx1 - bx0: vy = by1 - by0: lb = Sqr(vx * vx + vy * vy)
+    If la < 0.0000001 Or lb < 0.0000001 Then Exit Function
+    ux = ux / la: uy = uy / la: vx = vx / lb: vy = vy / lb
+    den = ux * vy - uy * vx
+    If Abs(den) < 0.000001 Then Exit Function
+    t = ((bx0 - ax0) * vy - (by0 - ay0) * vx) / den
+    ix = ax0 + t * ux: iy = ay0 + t * uy
+    c = ux * vx + uy * vy
+    If Abs(ACosSafe(-c) - valRad) < Abs(ACosSafe(c) - valRad) Then vx = -vx: vy = -vy
+    wx = ux + vx: wy = uy + vy: lw = Sqr(wx * wx + wy * wy)
+    If lw < 0.000001 Then Exit Function
+    wx = wx / lw: wy = wy / lw
+    AngleBisector = True
+End Function
+
+Function ACosSafe(x As Double) As Double
+    If x >= 1 Then ACosSafe = 0: Exit Function
+    If x <= -1 Then ACosSafe = 3.14159265358979: Exit Function
+    ACosSafe = Atn(-x / Sqr(1 - x * x)) + 2 * Atn(1)
 End Function
 
 Function MakeCut(skF As SldWorks.Feature, endType As Long, depthM As Double, flipSide As Boolean, rev As Boolean, startOff As Double, flipOff As Boolean, tag As String) As SldWorks.Feature
@@ -1020,6 +1108,43 @@ Sub HexRun(pl As String, cx As Double, dep1 As Double, dep2 As Double, hIn As Do
     Loop
     Check nm & " dims named (" & names & ")", InStr(names, "HEXL1") > 0 And InStr(names, "HEXL2") > 0
 End Sub
+Sub DimSeg1(s1 As SldWorks.SketchSegment, nm As String, valM As Double, tx As Double, ty As Double)
+    ' one entity: a line's length, or an arc's radius (SP3 hands back a diameter for some arcs - flip it)
+    Dim dd As SldWorks.DisplayDimension, k As Long, v As Double
+    For k = 0 To 3
+        swModel.ClearSelection2 True
+        s1.Select4 False, Nothing
+        Set dd = swModel.AddDimension2(tx * IIf(k >= 2, -1#, 1#), ty * IIf(k Mod 2 = 1, -1#, 1#), 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - 2 * valM) < 0.000005 Then
+            Err.Clear
+            dd.Diametric = False
+            v = dd.GetDimension2(0).SystemValue
+            Trace nm & ": diameter dim flipped to radius -> " & Format(v / IN_, "0.0000")
+        End If
+        If Abs(v - valM) < 0.000005 Then Exit For
+        Trace nm & " try " & k & ": " & Format(v / IN_, "0.0000") & " (want " & Format(valM / IN_, "0.0000") & ")"
+        DeleteDisp dd: Set dd = Nothing
+    Next k
+    NameDim dd, nm, valM
+End Sub
+Sub DimSegOrigin(s1 As SldWorks.SketchSegment, nm As String, valM As Double, tx As Double, ty As Double)
+    ' perpendicular distance from a line to the sketch origin
+    Dim dd As SldWorks.DisplayDimension, k As Long, v As Double
+    For k = 0 To 3
+        swModel.ClearSelection2 True
+        s1.Select4 False, Nothing
+        swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+        Set dd = swModel.AddDimension2(tx * IIf(k >= 2, -1#, 1#), ty * IIf(k Mod 2 = 1, -1#, 1#), 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - valM) < 0.000005 Then Exit For
+        Trace nm & " try " & k & ": " & Format(v / IN_, "0.0000") & " (want " & Format(valM / IN_, "0.0000") & ")"
+        DeleteDisp dd: Set dd = Nothing
+    Next k
+    NameDim dd, nm, valM
+End Sub
 Sub HelixThread(tipAx As Double, rM As Double, heightM As Double, pitchM As Double, thdhM As Double, taperRad As Double, taperOut As Boolean, apexOut As Boolean, sfx As String, nm As String)
     On Error Resume Next
     Dim ok As Boolean, f As SldWorks.Feature, sk As SldWorks.Feature, hx As SldWorks.Feature, dd As SldWorks.DisplayDimension
@@ -1029,7 +1154,9 @@ Sub HelixThread(tipAx As Double, rM As Double, heightM As Double, pitchM As Doub
     If Not ok Then Exit Sub
     swSkMgr.InsertSketch True
     Dim c As SldWorks.SketchSegment, ca As SldWorks.SketchArc
+    swSkMgr.AddToDB = True           ' no inference: the circle must not snap to a nearby edge (nose OD, 2026-09-25)
     Set c = swSkMgr.CreateCircleByRadius(0, 0, 0, rM)
+    swSkMgr.AddToDB = False
     Set ca = c
     swModel.ClearSelection2 True
     ca.GetCenterPoint2.Select4 False, Nothing
@@ -1038,6 +1165,7 @@ Sub HelixThread(tipAx As Double, rM As Double, heightM As Double, pitchM As Doub
     swModel.ClearSelection2 True
     c.Select4 False, Nothing
     Set dd = swModel.AddDimension2(rM * 2, rM * 2, 0)
+    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = 2 * rM
     NameDim dd, "HELIXDIA", 2 * rM
     ' sketch X axis of this face sketch, in model coords (= helix start direction, start angle 0)
     Dim skc As SldWorks.Sketch, xf As SldWorks.MathTransform, ad As Variant, xd(2) As Double, au(2) As Double
@@ -1074,6 +1202,26 @@ Sub HelixThread(tipAx As Double, rM As Double, heightM As Double, pitchM As Doub
     au(0) = 0: au(1) = 0: au(2) = 0: au(curAxis) = 1
     Dim sp(2) As Double, k As Long
     For k = 0 To 2: sp(k) = au(k) * tipAx + xd(k) * rM: Next k
+    ' the helix start is READ from the helix curve: the face sketch's X axis does not always give it (2026-09-25:
+    ' 6565 had it 90 deg off - the thread profile then sat beside the helix and the swept cut failed)
+    Dim rcv As Object, egv As Object, vxa As Object, vxb As Object, pa As Variant, pb As Variant
+    Set rcv = hx.GetSpecificFeature2
+    If Not rcv Is Nothing Then Set egv = rcv.GetFirstSegment
+    If Not egv Is Nothing Then
+        Set vxa = egv.GetStartVertex: Set vxb = egv.GetEndVertex
+        If Not vxa Is Nothing Then
+            pa = vxa.GetPoint
+            If Not vxb Is Nothing Then
+                pb = vxb.GetPoint
+                If Abs(pb(curAxis) - tipAx) < Abs(pa(curAxis) - tipAx) Then pa = pb
+            End If
+            If Abs(pa(curAxis) - tipAx) < 0.00001 Then
+                Trace nm & ": helix start from the curve (" & Format(pa(0) / IN_, "0.0000") & ", " & Format(pa(1) / IN_, "0.0000") & ", " & Format(pa(2) / IN_, "0.0000") & ")"
+                For k = 0 To 2: sp(k) = pa(k): xd(k) = (pa(k) - au(k) * tipAx) / rM: Next k
+            End If
+        End If
+    End If
+    Err.Clear
     Trace nm & ": helix start = (" & Format(sp(0) / IN_, "0.0000") & ", " & Format(sp(1) / IN_, "0.0000") & ", " & Format(sp(2) / IN_, "0.0000") & ")"
     ' --- profile plane = principal plane containing the axis and the start point
     Dim nrm(2) As Double, plane As String, pinPlane As String
@@ -1258,3 +1406,548 @@ Function AxisCoveredAx(pos As Double) As Boolean
         End If
     Next i
 End Function
+
+' ---------------------------------------------------------------- angled-leg helpers (45-deg elbows, 2026-09-24)
+' The angled leg runs along the unit vector (UX, UY, 0) in the Front Plane. Local leg coordinates (a along the axis from
+' the crossing, q radial) map to model (a*UX - q*UY, a*UY + q*UX). Sketch coordinates on the Front Plane = model X/Y.
+Sub DrawProfileU(hzLen As Double)
+    Dim i As Long
+    ReDim seg(NPTS - 1)
+    swSkMgr.AddToDB = True
+    For i = 0 To NPTS - 2
+        Set seg(i) = swSkMgr.CreateLine(PX(i) * UX - PR(i) * UY, PX(i) * UY + PR(i) * UX, 0, PX(i + 1) * UX - PR(i + 1) * UY, PX(i + 1) * UY + PR(i + 1) * UX, 0)
+    Next i
+    Set seg(NPTS - 1) = swSkMgr.CreateLine(PX(NPTS - 1) * UX, PX(NPTS - 1) * UY, 0, PX(0) * UX, PX(0) * UY, 0)
+    Set axisCL = swSkMgr.CreateCenterLine(0, 0, 0, PX(NPTS - 1) * UX, PX(NPTS - 1) * UY, 0)
+    Set hzCL = swSkMgr.CreateCenterLine(0, 0, 0, hzLen, 0, 0)
+    swSkMgr.AddToDB = False
+    Dim ln1 As SldWorks.SketchLine, ln2 As SldWorks.SketchLine, cl As SldWorks.SketchLine, hz As SldWorks.SketchLine
+    For i = 0 To NPTS - 1
+        Set ln1 = seg(i): Set ln2 = seg((i + 1) Mod NPTS)
+        swModel.ClearSelection2 True
+        ln1.GetEndPoint2.Select4 False, Nothing
+        ln2.GetStartPoint2.Select4 True, Nothing
+        swModel.SketchAddConstraints "sgMERGEPOINTS"
+    Next i
+    ' axial lines parallel to the leg axis, radial lines perpendicular to it (the closing line lies on the axis itself)
+    For i = 0 To NPTS - 2
+        swModel.ClearSelection2 True
+        If Abs(PR(i) - PR(i + 1)) < 0.000000001 Then
+            seg(i).Select4 False, Nothing: axisCL.Select4 True, Nothing: swModel.SketchAddConstraints "sgPARALLEL"
+        ElseIf Abs(PX(i) - PX(i + 1)) < 0.000000001 Then
+            seg(i).Select4 False, Nothing: axisCL.Select4 True, Nothing: swModel.SketchAddConstraints "sgPERPENDICULAR"
+        End If
+    Next i
+    Set cl = axisCL: Set ln1 = seg(0): Set ln2 = seg(NPTS - 2): Set hz = hzCL
+    swModel.ClearSelection2 True
+    cl.GetStartPoint2.Select4 False, Nothing: ln1.GetStartPoint2.Select4 True, Nothing
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    cl.GetEndPoint2.Select4 False, Nothing: ln2.GetEndPoint2.Select4 True, Nothing
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    ln1.GetStartPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    ' horizontal reference line from the origin - the leg direction is fixed by ONE angle dimension to it (LEGANGn)
+    swModel.ClearSelection2 True
+    hzCL.Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL"
+    swModel.ClearSelection2 True
+    hz.GetStartPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    hzCL.Select4 False, Nothing
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2(hzLen / 2, -0.004, 0)
+    NameDim dd, "HZREF", hzLen
+    swModel.ClearSelection2 True
+End Sub
+
+Sub DimAngLeg(nm As String, valRad As Double, tx As Double, ty As Double)
+    ' angle between the leg axis and the horizontal reference line; the text is tried inside the wanted sector first
+    Dim dd As SldWorks.DisplayDimension, v As Double, k As Long, c As Double, s As Double, px As Double, py As Double, f As Double
+    Dim rots As Variant: rots = Array(0#, -0.35, 0.35)
+    For k = 0 To 8
+        f = 1# + 0.5 * (k \ 3)
+        c = Cos(rots(k Mod 3)): s = Sin(rots(k Mod 3))
+        px = f * (tx * c - ty * s): py = f * (tx * s + ty * c)
+        swModel.ClearSelection2 True
+        axisCL.Select4 False, Nothing
+        hzCL.Select4 True, Nothing
+        Set dd = swModel.AddDimension2(px, py, 0)
+        If Not dd Is Nothing Then
+            v = dd.GetDimension2(0).SystemValue
+            If Abs(v - valRad) < 0.0005 Then Exit For
+            Trace nm & " angle try " & k & ": " & Format(v * 180 / 3.14159265358979, "0.0") & " deg (want " & Format(valRad * 180 / 3.14159265358979, "0.0") & ")"
+            DeleteDisp dd: Set dd = Nothing
+        End If
+    Next k
+    NameAng dd, nm, valRad
+End Sub
+
+Sub DimLenU(i As Long, nm As String, valM As Double, a As Double, q As Double)
+    ' aligned length of a line along the angled leg (or, i = -1, the distance between the two end lines):
+    ' text candidates on the perpendicular through (a, q); a horizontal/vertical projection is rejected by value
+    Dim dd As SldWorks.DisplayDimension, v As Double, k As Long, f As Double
+    Dim fs As Variant: fs = Array(1#, 1.6, 0.6, -1#, 2.4, -1.6)
+    For k = 0 To 5
+        swModel.ClearSelection2 True
+        If i = -1 Then
+            seg(0).Select4 False, Nothing
+            seg(NPTS - 2).Select4 True, Nothing
+        Else
+            seg(i).Select4 False, Nothing
+        End If
+        f = fs(k)
+        Set dd = swModel.AddDimension2(a * UX - f * q * UY, a * UY + f * q * UX, 0)
+        If Not dd Is Nothing Then
+            v = dd.GetDimension2(0).SystemValue
+            If Abs(v - valM) < 0.000005 Then Exit For
+            Trace nm & " try " & k & ": " & Format(v / IN_, "0.0000") & " (want " & Format(valM / IN_, "0.0000") & ")"
+            DeleteDisp dd: Set dd = Nothing
+        End If
+    Next k
+    NameDim dd, nm, valM
+End Sub
+
+Sub DimRadU(i As Long, nm As String, valM As Double, a As Double, q As Double)
+    ' line-to-centreline distance (the radius, SP3 behaviour) for a line along the angled leg
+    Dim dd As SldWorks.DisplayDimension, v As Double, k As Long, f As Double
+    Dim fs As Variant: fs = Array(1#, 2#, 3#, -1#)
+    For k = 0 To 3
+        swModel.ClearSelection2 True
+        seg(i).Select4 False, Nothing
+        axisCL.Select4 True, Nothing
+        f = fs(k)
+        Set dd = swModel.AddDimension2(a * UX - f * q * UY, a * UY + f * q * UX, 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - valM) < 0.000005 Then Exit For
+        Trace nm & " try " & k & ": value " & Format(v / IN_, "0.0000") & " (want radius " & Format(valM / IN_, "0.0000") & ")"
+        DeleteDisp dd: Set dd = Nothing
+    Next k
+    NameDim dd, nm, valM
+End Sub
+
+Function SelectEndFaceV(fx As Double) As Boolean
+    ' planar face normal to the angled leg axis at signed distance fx along it
+    On Error Resume Next
+    Dim bods As Variant, bd As SldWorks.Body2, faces As Variant, i As Long, fc As SldWorks.Face2, sf As SldWorks.Surface, pp As Variant
+    bods = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
+    If IsEmpty(bods) Then Exit Function
+    Set bd = bods(0)
+    faces = bd.GetFaces
+    For i = LBound(faces) To UBound(faces)
+        Set fc = faces(i)
+        Set sf = fc.GetSurface
+        If sf.IsPlane Then
+            pp = sf.PlaneParams       ' nx,ny,nz, rx,ry,rz
+            If Abs(Abs(pp(0) * UX + pp(1) * UY) - 1) < 0.0001 And Abs(pp(3) * UX + pp(4) * UY - fx) < 0.00002 Then
+                swModel.ClearSelection2 True
+                SelectEndFaceV = fc.Select4(False, Nothing)
+                Exit Function
+            End If
+        End If
+    Next i
+End Function
+
+Function SelectCircEdgeV(ex As Double, er As Double, mark As Long) As Boolean
+    ' circular edge centred on the angled leg axis at distance ex along it, radius er
+    On Error Resume Next
+    Dim bods As Variant, bd As SldWorks.Body2, edges As Variant, i As Long, e As SldWorks.Edge, cv As SldWorks.Curve, cp As Variant
+    bods = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
+    If IsEmpty(bods) Then Exit Function
+    Set bd = bods(0)
+    edges = bd.GetEdges
+    For i = LBound(edges) To UBound(edges)
+        Set e = edges(i)
+        Set cv = e.GetCurve
+        If cv.IsCircle Then
+            cp = cv.CircleParams      ' cx,cy,cz, ax,ay,az, radius
+            If Abs(cp(0) - ex * UX) < 0.00002 And Abs(cp(1) - ex * UY) < 0.00002 And Abs(cp(2)) < 0.00002 And Abs(cp(6) - er) < 0.00002 Then
+                Dim sd As SldWorks.SelectData
+                Set sd = swSelMgr.CreateSelectData: sd.Mark = mark
+                swModel.ClearSelection2 True
+                SelectCircEdgeV = e.Select4(False, sd)
+                Exit Function
+            End If
+        End If
+    Next i
+End Function
+
+Function FeatCentreV(f As SldWorks.Feature) As Double
+    ' centre of the feature's faces (union of their boxes) projected on the angled leg axis
+    On Error Resume Next
+    Dim faces As Variant, i As Long, bx As Variant, k As Long, lo(2) As Double, hi(2) As Double, n As Long
+    faces = f.GetFaces
+    For k = 0 To 2: lo(k) = 1E+30: hi(k) = -1E+30: Next k
+    If Not IsEmpty(faces) Then
+        For i = LBound(faces) To UBound(faces)
+            bx = faces(i).GetBox
+            For k = 0 To 2
+                If bx(k) < lo(k) Then lo(k) = bx(k)
+                If bx(3 + k) > hi(k) Then hi(k) = bx(3 + k)
+            Next k
+            n = n + 1
+        Next i
+    End If
+    If n = 0 Then FeatCentreV = 0 Else FeatCentreV = ((lo(0) + hi(0)) / 2) * UX + ((lo(1) + hi(1)) / 2) * UY
+End Function
+
+Function AxisCoveredV(pos As Double) As Boolean
+    ' True when a planar face normal to the angled leg axis at 'pos' contains the axis point (the bore is NOT open there)
+    On Error Resume Next
+    Dim bods As Variant, bd As SldWorks.Body2, faces As Variant, i As Long, fc As SldWorks.Face2, sf As SldWorks.Surface, pp As Variant, cp As Variant, q(2) As Double
+    bods = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
+    If IsEmpty(bods) Then Exit Function
+    Set bd = bods(0)
+    faces = bd.GetFaces
+    q(0) = pos * UX: q(1) = pos * UY: q(2) = 0
+    For i = LBound(faces) To UBound(faces)
+        Set fc = faces(i)
+        Set sf = fc.GetSurface
+        If sf.IsPlane Then
+            pp = sf.PlaneParams
+            If Abs(Abs(pp(0) * UX + pp(1) * UY) - 1) < 0.0001 And Abs(pp(3) * UX + pp(4) * UY - pos) < 0.00002 Then
+                cp = fc.GetClosestPointOn(q(0), q(1), q(2))
+                If Abs(cp(0) - q(0)) < 0.000002 And Abs(cp(1) - q(1)) < 0.000002 And Abs(cp(2) - q(2)) < 0.000002 Then AxisCoveredV = True: Exit Function
+            End If
+        End If
+    Next i
+End Function
+
+Function MakeLegPlane(nm As String, tipDist As Double) As Boolean
+    ' reference plane through the origin, parallel to the angled leg's tip face (= normal to the leg axis)
+    On Error Resume Next
+    Dim ok As Boolean, f As SldWorks.Feature, rp As Object, tf As Object, ad As Variant, dr As Double, dc As Double
+    ok = SelectEndFaceV(tipDist)
+    Check nm & ": leg tip face found " & Format(tipDist / IN_, "0.0000") & " along the leg", ok
+    If Not ok Then Exit Function
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 1, Nothing, 0
+    swFeatMgr.InsertRefPlane swRefPlaneReferenceConstraints_e.swRefPlaneReferenceConstraint_Parallel, 0, swRefPlaneReferenceConstraints_e.swRefPlaneReferenceConstraint_Coincident, 0, 0, 0
+    Trace nm & ": InsertRefPlane " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    Set f = swModel.FeatureByPositionReverse(0)
+    If f Is Nothing Then Check nm & " reference plane created", False: Exit Function
+    Check nm & " reference plane created (" & f.GetTypeName2 & ")", f.GetTypeName2 = "RefPlane"
+    If f.GetTypeName2 <> "RefPlane" Then Exit Function
+    f.Name = nm
+    Set rp = f.GetSpecificFeature2
+    Set tf = rp.Transform
+    ad = tf.ArrayData
+    dr = ad(6) * UX + ad(7) * UY      ' plane z axis as a matrix row
+    dc = ad(2) * UX + ad(5) * UY      ' ... or as a column
+    Trace nm & ": plane z axis (" & Format(ad(6), "0.000") & ", " & Format(ad(7), "0.000") & ", " & Format(ad(8), "0.000") & "), leg axis (" & Format(UX, "0.000") & ", " & Format(UY, "0.000") & ")"
+    Check nm & " is normal to the angled leg", Abs(Abs(dr) - 1) < 0.001 Or Abs(Abs(dc) - 1) < 0.001
+    swModel.ClearSelection2 True
+    MakeLegPlane = True
+End Function
+Sub Dim_pair(i As Long, j As Long, nm As String, valM As Double, tx As Double, ty As Double)
+    ' distance between two parallel sketch lines seg(i) and seg(j) (leg length to a swivel nut face, positions from the nut face)
+    swModel.ClearSelection2 True
+    seg(i).Select4 False, Nothing
+    seg(j).Select4 True, Nothing
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2(tx, ty, 0)
+    NameDim dd, nm, valM
+End Sub
+
+Sub NutHexCutAx(tp As Double, afM As Double, depthM As Double, skName As String, dimName As String, featName As String)
+    ' swivel nut hex: hexagon (across flats afM) sketched on the leg's nut face (normal to the current leg axis at tp), flats
+    ' normal to Z (vertex check in model coordinates, both sketch relations tried), OUTSIDE cut blind over depthM into the part
+    On Error Resume Next
+    Dim tryRel As Long, relName As String, ok As Boolean, k As Long, zmax As Double
+    Dim mu As SldWorks.MathUtility: Set mu = swApp.GetMathUtility
+    Dim skF As SldWorks.Feature
+    For tryRel = 0 To 1
+        If tryRel = 0 Then relName = "sgHORIZONTAL" Else relName = "sgVERTICAL"
+        ok = SelectEndFace(tp)
+        Check skName & ": nut face found at " & Format(tp / IN_, "0.0000") & " on axis " & curAxis, ok
+        If Not ok Then Exit Sub
+        swSkMgr.InsertSketch True
+        Dim poly As Variant, circ As SldWorks.SketchSegment
+        poly = swSkMgr.CreatePolygon(0, 0, 0, afM / 2, 0, 0, 6, True)
+        For k = LBound(poly) To UBound(poly)
+            If poly(k).GetType = swSketchSegments_e.swSketchARC Then Set circ = poly(k)
+        Next k
+        swModel.ClearSelection2 True
+        circ.Select4 False, Nothing
+        Dim dd As SldWorks.DisplayDimension
+        Set dd = swModel.AddDimension2(afM * 0.7, afM * 0.7, 0)
+        If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = afM
+        NameDim dd, dimName, afM
+        swModel.ClearSelection2 True
+        For k = LBound(poly) To UBound(poly)
+            If poly(k).GetType = swSketchSegments_e.swSketchLINE Then poly(k).Select4 False, Nothing: swModel.SketchAddConstraints relName: Exit For
+        Next k
+        Dim arc As SldWorks.SketchArc: Set arc = circ
+        swModel.ClearSelection2 True
+        arc.GetCenterPoint2.Select4 False, Nothing
+        swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+        swModel.SketchAddConstraints "sgCOINCIDENT"
+        swModel.ClearSelection2 True
+        Dim skO As SldWorks.Sketch, xf As SldWorks.MathTransform, mp As SldWorks.MathPoint, arr(2) As Double, pd As Variant, lnq As SldWorks.SketchLine
+        Set skO = swSkMgr.ActiveSketch
+        Set xf = skO.ModelToSketchTransform: Set xf = xf.Inverse
+        zmax = 0
+        For k = LBound(poly) To UBound(poly)
+            If poly(k).GetType = swSketchSegments_e.swSketchLINE Then
+                Set lnq = poly(k)
+                arr(0) = lnq.GetStartPoint2.X: arr(1) = lnq.GetStartPoint2.Y: arr(2) = 0
+                Set mp = mu.CreatePoint(arr): Set mp = mp.MultiplyTransform(xf): pd = mp.ArrayData
+                If Abs(pd(2)) > zmax Then zmax = Abs(pd(2))
+            End If
+        Next k
+        ok = (Abs(zmax - afM / 2) < 0.0003)
+        Trace skName & ": " & relName & " -> vertex |z| max " & Format(zmax / IN_, "0.0000") & " (flats want " & Format(afM / 2 / IN_, "0.0000") & ")"
+        swSkMgr.InsertSketch True
+        Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+        If ok Then Exit For
+        swModel.ClearSelection2 True
+        skF.Select2 False, 0
+        swModel.Extension.DeleteSelection2 0
+        Trace skName & ": sketch removed, retrying with the other relation"
+    Next tryRel
+    Check skName & " nut flats normal to Z", ok
+    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    Dim v0 As Double, v1 As Double, cut As SldWorks.Feature, attempt As Long
+    v0 = Volume()
+    For attempt = 0 To 1
+        Set cut = MakeCut(skF, swEndConditions_e.swEndCondBlind, depthM, True, (attempt = 1), 0#, False, featName & " attempt " & attempt)
+        If Not cut Is Nothing Then
+            v1 = Volume()
+            If v1 < v0 - 1E-12 Then Exit For
+            swModel.ClearSelection2 True
+            cut.Select2 False, 0
+            swModel.Extension.DeleteSelection2 0
+            Set cut = Nothing
+        End If
+    Next attempt
+    Check featName & " created and removed material (attempt " & attempt & ")", Not cut Is Nothing
+    If cut Is Nothing Then Exit Sub
+    cut.Name = featName
+    Check featName & " removed only the nut corners (" & Format(100 * (v0 - v1) / v0, "0.0") & "% of volume)", (v1 < v0) And (v1 > 0.8 * v0)
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = cut.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - depthM) < 0.000001 Then dm.Name = "DEPTH"
+        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
+        Set d = cut.GetNextDisplayDimension(d)
+    Loop
+    Check featName & " dims: " & names, InStr(names, "DEPTH=") > 0
+End Sub
+Sub ThreadCutV(ex As Double, er As Double, depthM As Double, sizeStr As String, nm As String, wantDir As Double, pitchM As Double)
+    On Error Resume Next
+    Dim td As Object, f As SldWorks.Feature, ok As Boolean, edg As Object
+    Set td = swFeatMgr.CreateDefinition(swFeatureNameID_e.swFmSweepThread)
+    Trace nm & ": CreateDefinition(swFmSweepThread) -> " & (Not td Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+    If td Is Nothing Then Check nm & " thread definition not available", False: Exit Sub
+    ok = SelectCircEdgeV(ex, er, 0)
+    Check nm & ": anchor edge found at x=" & Format(ex / IN_, "0.0000") & " r=" & Format(er / IN_, "0.0000"), ok
+    If Not ok Then Exit Sub
+    Set edg = swSelMgr.GetSelectedObject6(1, -1)
+    Set td.Edge = edg: Trace nm & ": Edge " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.Type = "Inch Die": Trace nm & ": Type=Inch Die " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.Size = sizeStr: Trace nm & ": Size=" & sizeStr & " " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.ThreadMethod = swThreadMethod_e.swThreadMethod_Cut: Trace nm & ": ThreadMethod=Cut " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.EndCondition = swThreadEndCondition_e.swThreadEndCondition_Blind: Trace nm & ": EndCondition=Blind " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.BlindDepth = depthM: Trace nm & ": BlindDepth=" & Format(depthM / IN_, "0.0000") & " " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.RightHanded = True: Err.Clear
+    td.DiameterOverride = True: Trace nm & ": DiameterOverride " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.Diameter = 2 * er: Trace nm & ": Diameter " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.PitchOverride = True: Trace nm & ": PitchOverride " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    td.Pitch = pitchM: Trace nm & ": Pitch " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    Trace nm & ": readback Type=" & td.Type & " Size=" & td.Size & " Dia=" & Format(td.Diameter / IN_, "0.0000") & " Pitch=" & Format(td.Pitch / IN_, "0.0000"): Err.Clear
+    SelectCircEdgeV ex, er, 0
+    Set f = swFeatMgr.CreateFeature(td)
+    Trace nm & ": CreateFeature -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+    If f Is Nothing Then
+        ' retry with the thread running the other way along the edge
+        td.ReverseDirection = True: Err.Clear
+        SelectCircEdgeV ex, er, 0
+        Set f = swFeatMgr.CreateFeature(td)
+        Trace nm & ": CreateFeature (reversed) -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+    End If
+    Check nm & " thread feature created", Not f Is Nothing
+    If f Is Nothing Then Exit Sub
+    f.Name = nm
+    ' which way did it run? centre of the thread faces relative to the anchor edge
+    Dim cx As Double: cx = FeatCentreV(f)
+    Trace nm & ": thread centre x = " & Format(cx / IN_, "0.0000") & " in, anchor " & Format(ex / IN_, "0.0000") & ", wanted " & IIf(wantDir > 0, "+X", "-X")
+    If (cx - ex) * wantDir < 0 Then
+        Dim tdf As Object
+        Set tdf = f.GetDefinition
+        tdf.AccessSelections swModel, Nothing
+        tdf.ReverseDirection = Not tdf.ReverseDirection
+        ok = f.ModifyDefinition(tdf, swModel, Nothing)
+        Trace nm & ": direction flipped -> " & ok & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+        cx = FeatCentreV(f)
+        Trace nm & ": thread centre x now " & Format(cx / IN_, "0.0000") & " in"
+    End If
+    Check nm & " runs along the thread flat (away from the hex)", (cx - ex) * wantDir > 0
+    Check nm & " rebuilds without error (code " & f.GetErrorCode2(True) & ")", f.GetErrorCode2(True) = 0
+    ' name the thread dims by value: depth -> DEPTH, diameter -> THDDIA, pitch -> THDPITCH
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = f.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - depthM) < 0.000001 Then dm.Name = "DEPTH"
+        If Abs(dm.SystemValue - 2 * er) < 0.000001 Then dm.Name = "THDDIA"
+        If Abs(dm.SystemValue - pitchM) < 0.000001 Then dm.Name = "THDPITCH"
+        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
+        Set d = f.GetNextDisplayDimension(d)
+    Loop
+    Check nm & " dims: " & names, InStr(names, "DEPTH=") > 0 And InStr(names, "THDDIA=") > 0 And InStr(names, "THDPITCH=") > 0
+    ' 2026-09-23 fix (QA #124): the Thread feature keeps its tooth in a sub-sketch "Thread ProfileN" whose dims stay at the
+    ' 16-tpi size when the pitch is overridden -> overlapping turns on 20/24-tpi configs. Rename it so the table can drive them.
+    Dim sf As SldWorks.Feature: Set sf = f.GetFirstSubFeature
+    Do While Not sf Is Nothing
+        If Left(sf.Name, 14) = "Thread Profile" Then sf.Name = nm & "_PROF": Trace nm & ": profile sketch " & IIf(Err.Number <> 0, "rename FAILED " & Err.Description, "renamed to " & sf.Name): Err.Clear
+        Set sf = sf.GetNextSubFeature
+    Loop
+    Check nm & " profile dims reachable as Profile_Height@" & nm & "_PROF", Not swModel.Parameter("Profile_Height@" & nm & "_PROF") Is Nothing
+    Dim pfq As SldWorks.Feature, pdq As SldWorks.DisplayDimension, pmq As SldWorks.Dimension
+    Set pfq = swModel.FeatureByName(nm & "_PROF")
+    If Not pfq Is Nothing Then
+        Set pdq = pfq.GetFirstDisplayDimension
+        Do While Not pdq Is Nothing
+            Set pmq = pdq.GetDimension2(0)
+            If LCase(pmq.Name) = "pitch" Then pmq.Name = "THDPITCH": Trace nm & ": profile pitch dimension renamed Pitch -> THDPITCH"
+            Set pdq = pfq.GetNextDisplayDimension(pdq)
+        Loop
+    End If
+    Check nm & " profile pitch reachable as THDPITCH@" & nm & "_PROF", Not swModel.Parameter("THDPITCH@" & nm & "_PROF") Is Nothing
+    Err.Clear
+    Dim sup As Boolean
+    Trace nm & ": left live until the final suppress step"
+End Sub
+Sub BoreCutV(skName As String, dimName As String, diaM As Double, depthM As Double, startOff As Double, featName As String, fromEndB As Boolean, faceR As Double)
+    On Error GoTo BErr
+1000 Dim faceX As Double
+1010 faceX = IIf(fromEndB, tipPos, 0#)
+1020 swModel.ClearSelection2 True
+    ' pick the end face by a point on it, near its outer rim (so it still hits after an earlier bore)
+1030 Dim ok As Boolean
+1040 ok = SelectEndFaceV(faceX)
+1050 Check "select end face for " & skName & " at x=" & Format(faceX / IN_, "0.0000"), ok
+1060 Trace "selected object type = " & swSelMgr.GetSelectedObjectType3(1, -1) & " (2 = face), count = " & swSelMgr.GetSelectedObjectCount2(-1)
+1070 Trace "ok = " & ok
+1080 Trace "about to InsertSketch on the face"
+1090 swSkMgr.InsertSketch True
+1100 Trace "returned from InsertSketch"
+1110 Dim ask As SldWorks.Sketch
+1120 Set ask = swSkMgr.ActiveSketch
+1130 Trace "ActiveSketch fetched"
+1140 If ask Is Nothing Then
+1150 Trace "no active sketch - trying ModelDoc2.InsertSketch2"
+1160 SelectEndFaceV faceX
+1170 swModel.InsertSketch2 True
+1180 Set ask = swSkMgr.ActiveSketch
+1190 End If
+1200 Check skName & " sketch opened (active sketch exists)", Not ask Is Nothing
+1210 Dim c As SldWorks.SketchSegment
+1220 Set c = swSkMgr.CreateCircleByRadius(0, 0, 0, diaM / 2)
+1230 Check skName & " circle created", Not c Is Nothing
+1240 If c Is Nothing Then swSkMgr.InsertSketch True: Exit Sub
+1250 swModel.ClearSelection2 True
+1260 Dim ca As SldWorks.SketchArc
+1270 Set ca = c
+1280 ca.GetCenterPoint2.Select4 False, Nothing
+1290 swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+1300 swModel.SketchAddConstraints "sgCOINCIDENT"
+1310 swModel.ClearSelection2 True
+1320 c.Select4 False, Nothing
+1330 Dim dd As SldWorks.DisplayDimension
+1340 Set dd = swModel.AddDimension2(diaM, diaM, 0)
+1350 NameDim dd, dimName, diaM
+1360 swModel.ClearSelection2 True
+1370 swSkMgr.InsertSketch True
+1380 Dim skF As SldWorks.Feature
+1390 Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+1400 Check skName & " sketch closed and named (" & skF.GetTypeName2 & ")", skF.GetTypeName2 = "ProfileFeature"
+
+1410 Dim vol0 As Double, vol1 As Double
+1420 vol0 = Volume()
+1430 Dim cut As SldWorks.Feature
+1440 Dim flipDir As Boolean, flipOff As Boolean, attempt As Long
+1450 For attempt = 0 To 3
+1460 flipDir = (attempt Mod 2 = 1): flipOff = (attempt >= 2)
+1470 Set cut = MakeCut(skF, swEndConditions_e.swEndCondBlind, depthM, False, flipDir, startOff, flipOff, featName & " attempt " & attempt)
+1480 If Not cut Is Nothing Then
+1490 vol1 = Volume()
+1500 If vol1 < vol0 - 1E-12 Then Exit For
+            ' wrong direction: remove and retry
+1510 swModel.ClearSelection2 True
+1520 cut.Select2 False, 0
+1530 swModel.Extension.DeleteSelection2 0      ' keep the sketch
+1540 Set cut = Nothing
+1550 End If
+1560 If startOff = 0 And attempt = 1 Then Exit For
+1570 Next attempt
+1580 Check featName & " cut removes material (attempt " & attempt & ")", Not cut Is Nothing
+1590 If cut Is Nothing Then Exit Sub
+1600 cut.Name = featName
+    ' name the feature dimensions: depth -> DEPTH, start offset -> START (identified by value)
+1610 Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension
+1620 Set d = cut.GetFirstDisplayDimension
+1630 Do While Not d Is Nothing
+1640 Set dm = d.GetDimension2(0)
+1650 If Abs(dm.SystemValue - depthM) < 0.000001 And dm.Name <> "DEPTH" And (startOff = 0 Or Abs(depthM - startOff) > 0.000001 Or dm.Name = "D1") Then
+1660 dm.Name = "DEPTH"
+1670 ElseIf startOff > 0 And Abs(dm.SystemValue - startOff) < 0.000001 Then
+1680 dm.Name = "START"
+1690 End If
+1700 Set d = cut.GetNextDisplayDimension(d)
+1710 Loop
+1720 Dim names As String: names = ""
+1730 Set d = cut.GetFirstDisplayDimension
+1740 Do While Not d Is Nothing
+1750 names = names & d.GetDimension2(0).Name & "=" & Format(d.GetDimension2(0).SystemValue / IN_, "0.0000") & " "
+1760 Set d = cut.GetNextDisplayDimension(d)
+1770 Loop
+1780 Check featName & " dims: " & names, InStr(names, "DEPTH=") > 0 And (startOff = 0 Or InStr(names, "START=") > 0)
+1790 Exit Sub
+BErr:
+1800 Check "RUNTIME ERROR in BoreCut(" & skName & ") at line " & Erl & ": " & Err.Number & " - " & Err.Description, False
+1810 Resume Next
+End Sub
+Sub HexArmV(pl As String, cx As Double, off0 As Double, dep As Double, hIn As Double, nm As String, ax As Long, sg As Double)
+    If Not HexSketch(pl, cx, hIn, nm) Then Exit Sub
+    ' ---- extrude; Dir (3rd argument) reverses the direction.  Verified from the feature's own faces.
+    Dim ext As SldWorks.Feature, flp As Long, cxF As Double, grew As Boolean
+    For flp = 0 To 1
+        swModel.ClearSelection2 True
+        swModel.Extension.SelectByID2 nm, "SKETCH", 0, 0, 0, False, 0, Nothing, 0
+        On Error Resume Next
+        Set ext = swFeatMgr.FeatureExtrusion3(True, False, (flp = 1), swEndConditions_e.swEndCondBlind, 0, dep, 0, False, False, False, False, 0, 0, False, False, False, False, True, False, False, IIf(off0 > 0, 3, 0), off0, False)
+        Trace nm & ": FeatureExtrusion3 dir=" & flp & " -> " & (Not ext Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+        On Error GoTo 0
+        If ext Is Nothing Then Exit For
+        curAxis = ax
+        cxF = FeatCentreV(ext)
+        grew = (cxF * sg > 0.0002)
+        Trace nm & ": new faces centred at " & Format(cxF / IN_, "0.000") & " in on axis " & ax & " (want sign " & sg & ")"
+        If grew Then Exit For
+        swModel.ClearSelection2 True
+        ext.Select2 False, 0
+        Trace nm & ": wrong direction - removed " & swModel.Extension.DeleteSelection2(0)
+        Set ext = Nothing
+    Next flp
+    Check nm & " extruded the right way", grew
+    If ext Is Nothing Then Exit Sub
+    ext.Name = nm & "_BODY"
+    Dim d2 As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    names = ""
+    Set d2 = ext.GetFirstDisplayDimension
+    Do While Not d2 Is Nothing
+        Set dm = d2.GetDimension2(0)
+        If Left(dm.Name, 1) = "D" And IsNumeric(Mid(dm.Name, 2)) Then
+            If Abs(dm.SystemValue - dep) < 0.000001 Then dm.Name = "HEXL"
+            If off0 > 0 And Abs(dm.SystemValue - off0) < 0.000001 Then dm.Name = "COLLARL"
+        End If
+        names = names & dm.Name & " "
+        Set d2 = ext.GetNextDisplayDimension(d2)
+    Loop
+    Check nm & " dims named (" & names & ")", InStr(names, "HEXL") > 0
+End Sub

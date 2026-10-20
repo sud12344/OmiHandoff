@@ -1,0 +1,216 @@
+Build_6505_MASTER  10/19/2026 11:50:38 PM
+OK    dim L15 = 1.9800 in (expect 1.9800)
+OK    dim BODYR = 0.5081 in (expect 0.5081)
+OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
+OK    dim NPTFA_THDL = 0.5337 in (expect 0.5337)
+      NPTFA_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFA_TAPER = 1.79 deg
+OK    dim NPTFA_RELL = 0.2163 in (expect 0.2163)
+OK    dim SWB_BODYS = 0.8850 in (expect 0.8850)
+OK    dim SWB_NECKR = 0.2920 in (expect 0.2920)
+OK    dim SWB_NUTL = 0.8270 in (expect 0.8270)
+OK    dim SWB_SKIRTR = 0.4108 in (expect 0.4108)
+OK    dim SWB_SKIRTL = 0.1800 in (expect 0.1800)
+OK    dim SWB_SKIRTFR = 0.4361 in (expect 0.4361)
+OK    dim SWB_NUTHEXL = 0.4499 in (expect 0.4499)
+OK    dim SWB_NUTR = 0.5081 in (expect 0.5081)
+OK    dim SWB_CSR = 0.3750 in (expect 0.3750)
+      SWB_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      SWB_CSANG angle try 0 at (1.523, -0.067): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 1 at (1.808, 0.067): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 2 at (1.380, -0.133): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 3 at (1.951, 0.133): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 4 at (1.966, 0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 5 at (1.966, -0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 6 at (-1.966, 0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 7 at (-1.966, -0.455): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 8 at (2.084, 0.079): 130.0 deg (want 50.0)
+      SWB_CSANG angle try 9 at (1.848, 0.079): 130.0 deg (want 50.0)
+OK    angle SWB_CSANG held by its supplement SWB_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
+OK    dim SWB_MINR = 0.3412 in (expect 0.3412)
+OK    dim SWB_THDL = 0.3283 in (expect 0.3283)
+      SWB_RELANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SWB_RELANG = 45.00 deg
+OK    dim SWB_RELR = 0.3925 in (expect 0.3925)
+OK    dim SWB_FLOOR = 0.6723 in (expect 0.6723)
+OK    dim SWB_NOSER = 0.3400 in (expect 0.3400)
+OK    dim SWB_NOSETIP = 0.4200 in (expect 0.4200)
+OK    dim SWB_SEATR = 0.2825 in (expect 0.2825)
+OK    angle SWB_SEATANG = 37.00 deg
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 1.0586 in^3 (expect 1.0586)
+OK    HEX: sketch plane selected (Right Plane)
+OK    dim HEXB = 0.8800 in (expect 0.8800)
+OK    HEX sketch fully defined
+      HEXCUT attempt 0: CreateDefinition returned Nothing
+      HEXCUT attempt 0: FeatureCut4 scope off -> False
+      HEXCUT attempt 0: FeatureCut4 scope on -> False
+      HEXCUT attempt 1: CreateDefinition returned Nothing
+      HEXCUT attempt 1: FeatureCut4 scope off -> True
+      HEXCUT attempt 1: removed 0.04840 in^3, new faces span x=0.7500..1.0950 (zone 0.0000..1.0950)
+OK    HEXCUT created in the right zone and removed material (attempt 1)
+OK    HEXCUT removed only the corners (4.6% of volume)
+OK    HEXCUT dims: DEPTH=1.0950 HEXB=0.8800 
+OK    NUTHEX: sketch plane selected (End B face)
+OK    dim NUTHEX = 0.8800 in (expect 0.8800)
+OK    NUTHEX sketch fully defined
+      NUTCUT attempt 0: CreateDefinition returned Nothing
+      NUTCUT attempt 0: FeatureCut4 scope off -> True
+      NUTCUT attempt 0: removed 0.06312 in^3, new faces span x=1.5301..1.9800 (zone 1.5301..1.9800)
+OK    NUTCUT created in the right zone and removed material (attempt 0)
+OK    NUTCUT removed only the corners (6.2% of volume)
+OK    NUTCUT dims: DEPTH=0.4499 NUTHEX=0.8800 
+OK    NUTHEX@NUTHEX reachable
+OK    DEPTH@NUTCUT reachable
+OK    HEXB@HEX reachable
+OK    DEPTH@HEXCUT reachable
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.3900 in (expect 0.3900)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.9225 DA=0.3900 
+OK    select end face for BORE_B at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.3900 in (expect 0.3900)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> False
+      BORECUT_B attempt 0: FeatureCut4 scope on -> False
+      BORECUT_B attempt 1: CreateDefinition returned Nothing
+      BORECUT_B attempt 1: FeatureCut4 scope off -> False
+      BORECUT_B attempt 1: FeatureCut4 scope on -> False
+      BORECUT_B attempt 2: CreateDefinition returned Nothing
+      BORECUT_B attempt 2: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 2)
+OK    BORECUT_B dims: DEPTH=0.6375 START=0.9225 DB=0.3900 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=1.9800)
+OK    bore reaches the swivel seat (no bore bottom at the nose-tip plane x=1.5600)
+OK    bore step open (no face across the axis at x=0.9225)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.4078)
+      THD_EndA: helix start = (0.0000, 0.0000, 0.4078)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.4078) axialIsX=True apex dir 1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.4078 (want 0.4078)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+      APEXR: try 0 value 0.3506 (want 0.3506)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.03723 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+OK    THD_EndB: end face found at 1.9800
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (1.9800, 0.0000, -0.3412)
+      THD_EndB: helix start = (1.9800, 0.0000, -0.3412)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (1.9800,0.3412) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.9800 (want 1.9800)
+OK    dim PROF_AX = 1.9800 in (expect 1.9800)
+      PROF_R: try 0 value 0.3412 (want 0.3412)
+OK    dim PROF_R = 0.3412 in (expect 0.3412)
+      APEXR: try 0 value 0.3750 (want 0.3750)
+OK    dim APEXR = 0.3750 in (expect 0.3750)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.00818 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 2.0361 (nominal 1.9800; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.9800
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Across flats / corners 0.8800 / 1.0161 (body hex 0.8800, nut hex 0.8800: expect between 0.8800 and 1.0161)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_6505_SW2.xlsx
+OK    Configurations after table: 22 (expect 22)
+      config check 1: 6505-02-04
+OK    6505-02-04 L15@DRIVE = 1.3600 (table 1.3600)
+OK    6505-02-04 BODYR@DRIVE = 0.2887 (table 0.2887)
+OK    6505-02-04 HEXB@HEX = 0.5000 (table 0.5000)
+OK    6505-02-04 NPTFA_MAJR@DRIVE = 0.1966 (table 0.1966)
+OK    6505-02-04 NPTFA_THDL@DRIVE = 0.2639 (table 0.2639)
+OK    6505-02-04 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    6505-02-04 NPTFA_RELL@DRIVE = 0.1161 (table 0.1161)
+OK    6505-02-04 SWB_BODYS@DRIVE = 0.6850 (table 0.6850)
+OK    6505-02-04 PROF_R@THDPROF_A = 0.1966 (table 0.1966)
+OK    6505-02-04 PROF_R@THDPROF_B = 0.1917 (table 0.1917)
+OK    6505-02-04 DEPTH@BORECUT_A = 0.5275 (table 0.5275)
+OK    6505-02-04 DEPTH@BORECUT_B = 0.4825 (table 0.4825)
+OK    6505-02-04 one solid body (found 1)
+      6505-02-04 box x -0.020..1.376  y -0.280..0.280
+      config check 2: 6505-32-32
+OK    6505-32-32 L15@DRIVE = 3.4400 (table 3.4400)
+OK    6505-32-32 BODYR@DRIVE = 1.5155 (table 1.5155)
+OK    6505-32-32 HEXB@HEX = 2.6250 (table 2.6250)
+OK    6505-32-32 NPTFA_MAJR@DRIVE = 1.1693 (table 1.1693)
+OK    6505-32-32 NPTFA_THDL@DRIVE = 0.7565 (table 0.7565)
+OK    6505-32-32 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    6505-32-32 NPTFA_RELL@DRIVE = 0.2735 (table 0.2735)
+OK    6505-32-32 SWB_BODYS@DRIVE = 1.6700 (table 1.6700)
+OK    6505-32-32 PROF_R@THDPROF_A = 1.1693 (table 1.1693)
+OK    6505-32-32 PROF_R@THDPROF_B = 1.2049 (table 1.2049)
+OK    6505-32-32 DEPTH@BORECUT_A = 1.4000 (table 1.4000)
+OK    6505-32-32 DEPTH@BORECUT_B = 1.1000 (table 1.1000)
+OK    6505-32-32 one solid body (found 1)
+      6505-32-32 box x -0.081..3.519  y -1.440..1.440
+      All-config sweep: rebuilding 21 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/21  6505-02-04  rebuilt in 2.6 s
+      sweep 2/21  6505-04-04  rebuilt in 2.6 s
+      sweep 3/21  6505-04-05  rebuilt in 2.9 s
+      sweep 4/21  6505-04-06  rebuilt in 2.8 s
+      sweep 5/21  6505-06-04  rebuilt in 2.5 s
+      sweep 6/21  6505-06-06  rebuilt in 2.4 s
+      sweep 7/21  6505-06-08  rebuilt in 2.6 s
+      sweep 8/21  6505-08-06  rebuilt in 6.4 s
+      sweep 9/21  6505-08-08  rebuilt in 3.6 s
+      sweep 10/21  6505-08-10  rebuilt in 7.0 s
+      sweep 11/21  6505-08-12  rebuilt in 6.7 s
+      sweep 12/21  6505-12-08  rebuilt in 11.6 s
+      sweep 13/21  6505-12-10  rebuilt in 12.0 s
+      sweep 14/21  6505-12-12  rebuilt in 11.6 s
+      sweep 15/21  6505-12-16  rebuilt in 11.0 s
+      sweep 16/21  6505-16-12  rebuilt in 12.9 s
+      sweep 17/21  6505-16-16  rebuilt in 13.1 s
+      sweep 18/21  6505-16-20  rebuilt in 13.2 s
+      sweep 19/21  6505-20-20  rebuilt in 9.1 s
+      sweep 20/21  6505-24-24  rebuilt in 12.3 s
+      sweep 21/21  6505-32-32  rebuilt in 6.7 s
+OK    All-config sweep: 21 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 6505-08-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 22 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 22 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6505\6505_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/19/2026 11:54:09 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6505\6505_MASTER.SLDPRT

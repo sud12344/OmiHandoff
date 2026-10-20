@@ -78,6 +78,36 @@ for r in load_review('5404')[1]:
     dd = [int(x) for x in re.findall(r'-(\d\d)', r['$PRP@PartNo'])[:2]]
     if len(dd) == 2 and r.get('NPTFA_ENDL@DRIVE'):
         ENDL.setdefault(dd[0], r['NPTFA_ENDL@DRIVE']); ENDL.setdefault(dd[1], r['NPTFB_ENDL@DRIVE'])
+# 2026-10-18 (genfeat straights, -40 PIPE END): the 2-1/2 NPTF (-40) male and female pipe ends, BRENNAN-MEASURED (user 2026-10-02: "Brennan-
+# measured threads accepted" for the -40 sizes instead of the ASME B1.20.1 row, which is not transcribed in the project; threads only need to
+# show on drawings). Extractors: tools/measure/nptfm40.py (male end) and tools/measure/fgelbow.py --port (female port); evidence in
+# tools/_out/genfeat_20261018/straights/measure_40/.
+#  MALE (Brennan 5404-40-40 both ends, 5406-40-32, and the NPT leg of 2501-40-40-FG): 45deg tip chamfer 0.1042, blank cone 1.788deg of dia
+#  2.7769 extrapolated to the tip face, end length 1.515 to the hex face (all four ends), collar 2.875 (5406-40-32) / 2.880 (5404-40-40).
+#  VALIDATION of the extractor on 22 male NPTF ends of 22 Brennan STEPs (-04 .. -32, 1404 / 2404-L / 2706 / 4404 / 5404 / 5406 / 6404) and the
+#  -08 leg of 2501-LL-08-08-FG: end length = ENDL (5404 table) exactly at every size, and the Brennan blank cone at the tip face = ASME E0 + k P
+#  with k = 0.4585 .. 0.4595 at all 8 library sizes (3 pitches; mean 0.4589). Hence, at -40:
+#    threads per inch 8 = the Brennan TFA catalog callout "2-1/2-8" (5000 / 5404 / 5406 tables, PIPE_THD_NAME);
+#    pipe OD D 2.875 = the smaller Brennan collar (the library D at -16 / -24 / -32 equals the smaller of the Brennan collars too);
+#    pitch dia at the small end E0 = 2.7769 - 0.4589 / 8 = 2.71954 (ASSUMPTION: Brennan's blank rule of the 8 smaller sizes holds at -40);
+#    thread length L2 from the ASME relation D = E0 + 0.8P + (L2 - 2P) / 16 (crest cone meets D at L5 = L2 - 2P; holds to 1e-4 on all 9
+#    library sizes) -> L2 = 1.1374;  end length ENDL 1.515 (measured);  E1 / L1 (hand-tight plane) are read by no end module -> None.
+#  FEMALE (Brennan 5000-40-40, both ports identical): 45deg mouth chamfer 0.0799, tapered minor 2.7892 -> 2.729 over 1.0443 from the face,
+#  then a plain 2.729 bore through between the two ports - NO separate tap drill (as 5406-40-32's -32 port, A9 README). FPT[40]: tap drill
+#  2.729, P1 = the taper (thread) depth 1.0443. Validation: the same extractor returns the recorded 5405-08-08 port (drill 0.718 to 0.90 =
+#  FPT[8] P1) and the 5405-16-16 port (drill to 1.14 = FPT[16] P1).
+NPTF40_MEAS = dict(nps='2-1/2', tpi=8, D=2.875, cone_tip=2.7769, k=0.4589, ENDL=1.515, FPT_P1=1.0443, FPT_TD=2.729)
+if 40 not in NPTF:
+    _m40 = NPTF40_MEAS; _E0_40 = round(_m40['cone_tip'] - _m40['k'] / _m40['tpi'], 5); _P40 = 1 / _m40['tpi']
+    NPTF[40] = (_m40['nps'], _m40['tpi'], _m40['D'], _E0_40, None, None, round(16 * (_m40['D'] - _E0_40 - 0.8 * _P40) + 2 * _P40, 4))
+if 40 not in ENDL: ENDL[40] = NPTF40_MEAS['ENDL']
+if 40 not in FPT: FPT[40] = dict(P1=NPTF40_MEAS['FPT_P1'], TD=NPTF40_MEAS['FPT_TD'], thr='2 1/2-8 NPTF (female)', src40=True)
+NPTF40_ASSUME = ('-40 PIPE END (2-1/2-8 NPTF) IS BRENNAN-MEASURED, NOT ASME B1.20.1 (user 2026-10-02: Brennan-measured threads accepted for -40): '
+                 'male end - pitch dia at the tip E0 2.71954 = the Brennan blank cone 2.7769 (5404-40-40 / 5406-40-32 / 2501-40-40-FG STEPs) - 0.4589 P '
+                 '(the Brennan blank sits 0.4585-0.4595 P above ASME E0 at all 8 library sizes -04..-32, ASSUMED to hold at -40), crest E0 + 0.8P, '
+                 'taper 1.7899deg, thread length L2 1.1374 from D = E0 + 0.8P + (L2 - 2P)/16 with pipe OD D 2.875 (Brennan collar), end length 1.515 '
+                 '(measured on all four Brennan -40 male ends); female port - tap drill 2.729 and thread depth 1.0443 = the Brennan 5000-40-40 tapered '
+                 'port (no separate drill: the 2.729 bore runs through); 8 threads per inch = Brennan TFA catalog callout 2-1/2-8; single manufacturer, ASSUMED')
 ORB = {}   # dash -> dict(TM, THDL, GD, GW)  from 6401 + 6405 + 6410 review tables (ORD-5700 / measured)
 for root in ('6401', '6405', '6410'):
     for r in load_review(root)[1]:
@@ -186,7 +216,7 @@ def end_NPTFM(dash, sfx, endl=None):
     if 'rel' in seg: cols[f'NPTF{sfx}_RELL@DRIVE'] = round(endl - L2, 4)
     cols.update({f'HELIXDIA@HELIXSK_{sfx}': round(2 * rS, 5), f'HEIGHT@HELIX_{sfx}': L2, f'PITCH@HELIX_{sfx}': round(P, 5),
                  f'PROF_R@THDPROF_{sfx}': round(rS, 5), f'APEXR@THDPROF_{sfx}': round(rS - 0.8 * P, 5)})
-    return dict(kind='NPTFM', V=V, endlen=x, seg=seg, cols=cols, thr=npt_thr(dash) + ' NPTF', faceR=rS * 0.5, rS=rS, rL=rL,
+    return dict(kind='NPTFM', V=V, endlen=x, seg=seg, cols=cols, thr=npt_thr(dash) + ' NPTF', faceR=rS * 0.5, rS=rS, rL=rL, n40=(dash == 40),
                 thread=dict(type='HELIX', r=rS, height=L2, pitch=P, thdh=0.8 * P, taper=TAPER, taperOut=True, apexOut=False))
 
 
@@ -196,7 +226,7 @@ def end_NPTFF(dash, sfx, td):
     cols = {f'TAPDRILL{sfx}@POCKET_{sfx}': td, f'DEPTH@POCKETCUT_{sfx}': f['P1'],
             f'HELIXDIA@HELIXSK_{sfx}': td, f'HEIGHT@HELIX_{sfx}': f['P1'], f'PITCH@HELIX_{sfx}': round(P, 4),
             f'PROF_R@THDPROF_{sfx}': round(td / 2, 4), f'APEXR@THDPROF_{sfx}': round(td / 2 + 0.8 * P, 4)}
-    return dict(kind='NPTFF', V=[], endlen=0.0, seg=dict(face=0), cols=cols, thr=f['thr'], faceR=None, td=td, P1=f['P1'],
+    return dict(kind='NPTFF', V=[], endlen=0.0, seg=dict(face=0), cols=cols, thr=f['thr'], faceR=None, td=td, P1=f['P1'], n40=bool(f.get('src40')),
                 thread=dict(type='HELIX', r=td / 2, height=f['P1'], pitch=P, thdh=0.8 * P, taper=TAPER, taperOut=False, apexOut=True))
 
 
@@ -321,7 +351,11 @@ ORBF_MEAS = {8: dict(RF=0.4065, RC=0.378, P=0.688, CHANG=15.0),
              4: dict(RF=0.245, RC=0.2233, P=0.547, CHANG=12.0), 6: dict(RF=0.309, RC=0.2865, P=0.609, CHANG=12.0),
              10: dict(RF=0.4725, RC=0.4441, P=0.781, CHANG=15.0), 12: dict(RF=0.575, RC=0.538, P=0.906, CHANG=15.0),
              16: dict(RF=0.70, RC=0.663, P=0.906, CHANG=15.0), 20: dict(RF=0.8575, RC=0.8205, P=0.906, CHANG=15.0),
-             24: dict(RF=0.983, RC=0.946, P=0.906, CHANG=15.0)}
+             24: dict(RF=0.983, RC=0.946, P=0.906, CHANG=15.0),
+             # 2026-10-18 (genfeat straights): -02 (5/16-24) female ORB port measured on the Brennan 6410-04-02-O STEP with tools/measure/ports.py
+             # (same run reproduces the -04 / -08 entries on 6404-04-04 / 6404-08-08 / 6410-12-08-O): O-ring chamfer 12deg from dia 0.360 to 0.3248,
+             # minor bore dia 0.270 to 0.468 from the face - single STEP (ASSUMED); no -02 port drill published (OMi / Air-Way / catalog)
+             2: dict(RF=0.18, RC=0.1624, P=0.468, CHANG=12.0)}
 # Female 37deg JIC port, measured on Brennan 2406-08-08: face -> 45deg countersink from dia 0.755 -> minor bore to 0.375 from
 # the face -> 37deg internal seat straight from the minor down to the bore (no flat).
 JICF_MEAS = {8: dict(RCS=0.3775, P=0.375),
@@ -369,6 +403,12 @@ def end_ORBF(dash, sfx, minor, bore=None):
               f'thread length unchanged (= the measured port depth) (ASSUMPTION - the nine Brennan STEPs with a female ORB port, 6404-04/-06/-08/-10/-12/-16/-24 '
               f'and 6410-12-08-O / -24-20-O, all have a through-bore SMALLER than the port minor, joined by the 120deg drill point; the Brennan TFA catalog '
               f'p16 (6410-O, B DRILL) gives the through drill = the port minor on the short reducers, i.e. drilled through; no Brennan STEP of such a part yet)') if deep else None
+    if dash == 2:
+        # 2026-10-18 (genfeat straights): the -02 port is measured on one Brennan STEP and has no published port drill - logged on every row using it
+        n02_ = ('female -02 ORB port (5/16-24): O-ring chamfer 12deg from dia 0.360 to 0.3248 and minor-bore depth 0.468 measured on the Brennan '
+                '6410-04-02-O STEP only (tools/measure/ports.py; ASSUMED, single STEP); port drill D3 = the minor bore measured there (0.270) - no '
+                'OMi / Air-Way / catalog value for the -02 port drill')
+        axnote = (axnote + '; ' + n02_) if axnote else n02_
     return dict(kind='ORBF', V=[], VG=VG, cav=True, endlen=0.0, seg=dict(face=0), cols=cols, thr=thr + ' (female ORB port)', faceR=None,
                 td=minor, P1=apex, m=m, c1=c1, c2=c2, rmin=rmin, deep=deep, drill=drill, apex60=apex60, axnote=axnote,
                 thread=dict(type='HELIX', r=rmin, height=m['P'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
@@ -581,7 +621,7 @@ FLG61_ASSUME = ('SAE code 61 flange head: head OD = Air-Way O, head thickness an
                 'flange sizes -08/-12/-16/-20/-24/-32')
 
 
-def end_FLG61(dash, sfx, O):
+def end_FLG61(dash, sfx, O, neck=None):
     if dash not in FLG61_MEAS: raise KeyError(f'code 61 flange head not measured for -{dash:02d}')
     m = FLG61_MEAS[dash]; rO = O / 2
     if not (m['GO'] < rO - 0.03 and m['GI'] < m['GO'] - 0.05): raise AssertionError(f'O-ring groove does not fit the head (O {O})')
@@ -589,8 +629,78 @@ def end_FLG61(dash, sfx, O):
     seg = dict(face=0, gin=1, gbot=2, gout=3, face2=4, head=5)
     cols = {f'FLG{sfx}_GRVIR@DRIVE': m['GI'], f'FLG{sfx}_GRVD@DRIVE': m['GD'], f'FLG{sfx}_GRVOR@DRIVE': m['GO'],
             f'FLG{sfx}_HEADR@DRIVE': round(rO, 5), f'FLG{sfx}_HEADT@DRIVE': m['TH']}
+    if neck is not None:
+        # 2026-10-18 (A16, genfeat flange): the head on a round neck + 30deg chamfer up to the round collar (the Brennan 1700 / 1800 body)
+        return flg_neck_end(dict(kind='FLG61', V=V, endlen=m['TH'], seg=seg, cols=cols, thr=f'SAE code 61 flange -{dash:02d} (O {O:g})',
+                                 faceR=(m['GO'] + rO) / 2, m=m, rO=rO, thread=None), sfx, neck)
     return dict(kind='FLG61', V=V, endlen=m['TH'], seg=seg, cols=cols, thr=f'SAE code 61 flange -{dash:02d} (O {O:g})', faceR=(m['GO'] + rO) / 2,
                 m=m, rO=rO, thread=None)
+
+
+# 2026-10-18 (genfeat flange; ported from the unmerged wave-1 group FLANGE62, tools/_out/newmasters_20261002/work/FLANGE62/patch.diff): SAE code 62
+# FLANGE HEAD by flange size. GEOMETRY from the Brennan pilot STEPs, measured with tools/measure/flange62.py (validated first: on the Brennan
+# 1700-08/-12/-16/-20/-24/-32 STEPs it returns FLG61_MEAS and tools/measure/flange.py exactly): head OD O, head thickness TH, face O-ring groove
+# inner / outer radius GI / GO and depth GD. -08: 1800-08-08 (O 1.250, TH 0.305, GI 0.345, GO 0.500, GD 0.110), 1824-08 (1.250 / 0.3051 / 0.3449 /
+# 0.500 / 0.1098) and 1804-08-08-FG (1.250 / 0.305 / 0.345 / 0.500 / 0.110) agree to 0.0002 - one manufacturer, so ASSUMED. Only -08 is measured:
+# no Brennan STEP with a -12..-32 code 62 head is in 09_STEP_FILES (the Brennan Flange catalog p.8 3300-62 head connector prints those heads, but
+# that is another part - Q-TRANSFER-FLG62-HEAD, open).
+FLG62_MEAS = {8: dict(O=1.250, TH=0.305, GI=0.345, GO=0.500, GD=0.110)}
+FLG62_ASSUME = ('SAE code 62 flange head: head OD, head thickness and face O-ring groove (inner / outer dia, depth) measured by flange size on the Brennan '
+                '1800-08-08 / 1824-08 / 1804-08-08-FG STEPs (tools/measure/flange62.py; the three agree to 0.0002; single manufacturer - SAE J518 / ISO 6162-2 '
+                'not in the repo); the 0.0088 x 45deg head edge chamfers of 1824-08 and the bore chamfer at the flange face (1800-08-08: 0.0113 x 60deg) are '
+                'NOT modelled; built for flange size -08 only (no Brennan STEP with a -12..-32 code 62 head yet)')
+# the round collar + two wrench flats + 30deg chamfer + neck body of the Brennan code 61 / code 62 straights (A16 2026-10-18 "do the same as Brennan")
+FLG_NECK_ASSUME = ('body behind the JIC end = the Brennan construction (Brennan 1800-08-08 pilot STEP, tools/measure/flange62.py; the Brennan 1700 STEPs '
+                   'show the same body): ROUND collar (dia {collar}) carrying TWO wrench flats (across flats {waf}, flats normal to model Y, cut on the '
+                   'Right Plane) over the zone {zone} from the collar face, a 30deg chamfer from the collar down to the neck (the flats cut ends where '
+                   'the neck starts), the round neck (dia {neckd}) up to the flange head; the neck length is what L leaves (L - JIC end - {zone} - head '
+                   'thickness); collar / flats zone / neck / bore from the part\'s own Brennan STEP')
+FLG_NECK_CHAMANG = 30      # deg, collar-to-neck chamfer against the neck line: Brennan 1800-08-08 STEP 30.0 (flange62.py); the 1700 own-STEP readings fit it
+
+
+def flg62_head(dash):
+    if dash not in FLG62_MEAS:
+        raise KeyError(f'code 62 flange head not measured for -{dash:02d}: needs code 62 head STEP - a Brennan STEP with a -{dash:02d} code 62 head '
+                       f'(1824-{dash:02d} plug preferred) measured with tools/measure/flange62.py, or an answer to Q-TRANSFER-FLG62-HEAD (Brennan Flange '
+                       f'catalog p.8 3300-62)')
+    return FLG62_MEAS[dash]
+
+
+def flg_neck_end(E, sfx, neck):
+    """2026-10-18: append the round neck (radius rN, length NL) and the 30deg chamfer up to the collar radius rB to a flange head end (FLG61 /
+    FLG62); the chamfer belongs to this end, so the body line (xa..xb) is the round part of the collar only"""
+    rN, NL, rB = neck['rN'], neck['NL'], neck['rB']
+    CL = (rB - rN) / math.tan(math.radians(FLG_NECK_CHAMANG)); TH = E['m']['TH']
+    E['V'] = E['V'] + [(TH, rN), (TH + NL, rN)]
+    E['seg'] = dict(E['seg'], back=6, neck=7, cham=8)
+    E['cols'] = dict(E['cols'], **{f'FLG{sfx}_NECKR@DRIVE': round(rN, 5), f'FLG{sfx}_NECKL@DRIVE': round(NL, 8), f'FLG{sfx}_CHAMANG@DRIVE': FLG_NECK_CHAMANG})
+    E['endlen'] = TH + NL + CL; E['neck'] = dict(rN=rN, NL=NL, rB=rB, CL=CL)
+    return E
+
+
+def end_FLG62(dash, sfx, neck=None):
+    """code 62 flange head end. neck=None: the head steps straight down to the body (plug 1824). neck=dict(rN, NL, rB): head on a round neck that
+    rises with a 30deg chamfer to the round collar rB (1800)"""
+    m = flg62_head(dash); rO = m['O'] / 2
+    if not (m['GO'] < rO - 0.03 and m['GI'] < m['GO'] - 0.05): raise AssertionError(f'O-ring groove does not fit the head (O {m["O"]})')
+    V = [(0, m['GI']), (m['GD'], m['GI']), (m['GD'], m['GO']), (0, m['GO']), (0, rO), (m['TH'], rO)]
+    seg = dict(face=0, gin=1, gbot=2, gout=3, face2=4, head=5)
+    cols = {f'FLG{sfx}_GRVIR@DRIVE': m['GI'], f'FLG{sfx}_GRVD@DRIVE': m['GD'], f'FLG{sfx}_GRVOR@DRIVE': m['GO'],
+            f'FLG{sfx}_HEADR@DRIVE': round(rO, 5), f'FLG{sfx}_HEADT@DRIVE': m['TH']}
+    E = dict(kind='FLG62', V=V, endlen=m['TH'], seg=seg, cols=cols, thr=f'SAE code 62 flange -{dash:02d} (O {m["O"]:g})', faceR=(m['GO'] + rO) / 2,
+             m=m, rO=rO, neck=None, thread=None)
+    return flg_neck_end(E, sfx, neck) if neck is not None else E
+
+
+def flg_neck(r, a, head, L_col, collar_col, zone_col, neck_col, also=()):
+    """the neck of a flange end from the row: neck radius, and the neck length L leaves after the JIC end, the flats zone (collar + 30deg
+    chamfer) and the head (head = the FLG61_MEAS / FLG62_MEAS entry); the collar radius is the body radius. An empty input cell -> KeyError (row
+    skipped with the column named)"""
+    for c_ in (L_col, collar_col, zone_col, neck_col) + tuple(also):
+        if r.get(c_) is None: raise KeyError(f'row without {c_}')
+    je = end_JICM(a, 'A')['endlen']
+    # NL to 8 decimals: the neck start (L - TH - NL in the DRIVE sketch) must coincide with the end of the flats cut (START + DEPTH) to 1e-8
+    return dict(rN=r[neck_col] / 2, rB=r[collar_col] / 2, NL=round(r[L_col] - je - r[zone_col] - head['TH'], 8))
 
 
 def end_PLAIN(sfx):
@@ -773,6 +883,9 @@ SPEC = {
               bore=('mid', 'D@BORE', 'D@BORE'), ref='4604-08-08-O', thrchk=(('B', 'THDMAJ_B@DRIVE'),),
               assume='beaded hose stub: tube OD = Air-Way TUBE OD (hose size), bead dia = Air-Way AA, through bore D; stub length 1.500 from the hex face, bead centre 0.251 from the stub tip and bead chord width from the bead section radius 0.060 - all three measured on the Brennan 4404-08-06 STEP and ASSUMED for the other sizes (with them, Air-Way L gives hex lengths that grow smoothly with the hex, e.g. 0.29 on 4404-08-06 = Brennan); the round bead section is modelled as a flat-topped ring of the same chord width; hex end chamfers NOT modelled' + '; male ORB end: thread length + groove from the 6401/6405/6410 review tables (ORD-5700 groove, measured thread length; no tip chamfer modelled)'),
  '5404N': dict(name='Straight Pipe Nipple (round, NPTF x NPTF)', L='L@DRIVE', hex='COD@REF', round=True, dashre2=r'-N-(\d+)-(\d+)',
+              # 2026-10-18 (user A4 "keep OMi's form"): OMi part numbers 5404-N-04X2.500 = one pipe dash (both ends) + the cut length after X;
+              # read when the Air-Way form "5404-N-4-4 X 2" (dashre2) does not match; the X length must equal L@DRIVE
+              dashre1=r'-N-(\d+)X(\d+(?:\.\d+)?)$',
               A=lambda r, a, b: end_NPTFM(a, 'A', NPTF[a][6]), B=lambda r, a, b: end_NPTFM(b, 'B', NPTF[b][6]),
               bore=('mid', 'D1@BORE', 'D2@BORE'), ref='5404-N-8-8 X 3', thrchk=(('A', 'THDMAJ_A1@DRIVE'), ('B', 'THDMAJ_A2@DRIVE')),
               assume='round bar of Air-Way diameter C (no hex); male NPTF ends per ASME B1.20.3, threaded over L2 only (vanish threads NOT modelled - ASSUMPTION), the small step from the thread to the bar diameter is the difference between C and the pipe OD as printed; bore step at mid-length (ASSUMPTION)'),
@@ -1033,6 +1146,105 @@ SPEC['0306'] = dict(name='JIC Bulkhead Locknut', L='h2@DRIVE', hex='S4@DRIVE', s
                     desc=lambda r, tA, tB: f"JIC Bulkhead Locknut, {tB.split(' (')[0]}, thread through, 45 deg countersink both faces", assume=NUT_ASSUME)
 
 
+# ---- 2026-10-18 (genfeat straights, user A6 "rebuild 6400 with the generator, fold 6400-L in"): SPEC 6400 = male 37deg JIC x male SAE ORB
+# straight thread connector, until now the hand-made master (DesignTable_6400_SW2.xlsx; the master file is not in the repo). Built from the
+# existing END LIBRARIES only: End A = the male ORB end of the SECOND part-number dash (ORB library: 6401 / 6405 / 6410 rows + the 6408 -02 /
+# -14 / -32 merges, groove width 0.125 at -14 / -32 measured on the Brennan 6400-14-14-O / -32-32-O STEPs = A18), End B = the male JIC end of
+# the FIRST dash (MS33656J chain, 2403 table). The review table's own ORB / JIC columns are not read for geometry; they are cross-checked
+# against the libraries (equal on every 6400 row today, the empty -14 / -32 groove width excepted) and a difference blocks the row.
+# Body: hex over the whole length between the two ends, bores D4 (ORB side, End A) / D3 (JIC side, End B) stepped at the hex mid-plane - the
+# hand-made table's own rule (its DEPTH@BORECUT_A = ORB end + half the hex at every row).
+# 6400-L (DesignTable_6400L.xlsx, Air-Way s90) folds in as rows: the Brennan 6400-L-08-08-O STEP (tools/measure, section through the axis) has the
+# 6400 ORB end (0.438), a hex 0.382 long (6400-08-08-O: 0.385) and a LONG JIC end: seat 0.1546 / land 0.0984 = MS33656J -08, then the 3/4-16
+# thread cylinder straight to the hex face at 1.880 from the tip (no relief), overall 2.700 = Air-Way L6. Modelled as the library JIC end with
+# its thread zone extended (end_JICBH, as the bulkhead unions 2700 / 2705 / 2706) so that the JIC end is L6 - ORB end - the hex length of the
+# 6400 row of the same dashes long (6400-L-08-08-O: 2.70 - 1.48 + 0.657 = 1.877 vs Brennan 1.880).
+L6400_ASSUME = ('6400-L = the LONG straight thread connector (OMi "Straight Thread Connector Long", Air-Way s90, review table DesignTable_6400L.xlsx), '
+                'folded into the 6400 master (user A6 2026-10-18): overall = Air-Way L6, hex = C4, bores D2 (ORB side) / D1 (JIC side) stepped at the hex '
+                'mid-plane, same ORB end per dash; the extra length is a LONG JIC THREAD: the library JIC end with its thread zone extended (bulkhead '
+                'construction of 2700 / 2705 / 2706) so that the hex keeps the length of the 6400 row of the same dashes (ASSUMPTION - measured on the '
+                'Brennan 6400-L-08-08-O STEP only: JIC end 1.880 from the tip to the hex face, hex 0.382 (6400-08-08-O model 0.385), ORB end 0.438, overall '
+                '2.700; Brennan runs the thread cylinder straight into the hex face, the model keeps the library 60deg ramp + relief there)')
+S6400_ASSUME = ('End A male SAE ORB end of the second dash and End B male 37deg JIC end of the first dash from the END LIBRARIES (ORB: thread major / length, '
+                'groove dia / width of the 6401 / 6405 / 6410 review rows + the 6408 -02 / -14 / -32 rows, groove width 0.125 at -14 / -32 measured on the '
+                'Brennan 6400-14-14-O / 6400-32-32-O STEPs (A18 2026-10-18); JIC: MS33656J chain per dash, 2403 table, VERIFIED vs Brennan; no tip chamfers) - '
+                'equal to the ORB / JIC columns of the 6400 review table (cross-checked per row); D1 overall / hex / bores D4 (ORB side) and D3 (JIC side): '
+                'review table (Air-Way; OMi = Air-Way on the A23 rows); hex over the whole length between the two ends; bore step D4 / D3 at the hex mid-plane '
+                '(ASSUMPTION - the rule of the hand-made 6400 table, as 2403); hex end chamfers NOT modelled; rebuilt by the generator 2026-10-18 (user A6), '
+                'replaces the hand-made 6400 master')
+ROW6400_LIBCHK = (('THDMAJ_A@DRIVE', 'ORB', 'TM'), ('ORB_THDL@DRIVE', 'ORB', 'THDL'), ('ORB_GRVDIA@DRIVE', 'ORB', 'GD'), ('ORB_GRVW@DRIVE', 'ORB', 'GW'),
+                  ('THDMAJ_B@DRIVE', 'JIC', 'TM'), ('JIC_RELIEFL@DRIVE', 'JIC', 'RL'), ('JIC_THDZ@DRIVE', 'JIC', 'TZ'), ('JIC_CONEDIA@DRIVE', 'JIC', 'CD'),
+                  ('JIC_LANDL@DRIVE', 'JIC', 'LL'), ('JIC_SEATL@DRIVE', 'JIC', 'SL'))
+BRENNAN_6400L = {'6400-L-08-08-O': 'Brennan 6400-L-08-08-O STEP: overall 2.700, JIC end 1.880 (thread cylinder 0.750 to the hex face, no relief), hex 0.382 '
+                                   '(A/F 0.875), ORB end 0.438, bore 0.391 through'}
+
+
+def _libchk_6400(n, a, b):
+    """the 6400 review row's own ORB / JIC columns against the end libraries the SPEC builds from: a difference > 0.0005 holds the row"""
+    bad = []
+    for col, lib, k in ROW6400_LIBCHK:
+        v = n.get(col)
+        if v is None: continue                       # empty column: the library value is used (ORB_GRVW at -14 / -32 = A18)
+        src = (ORB.get(b) if lib == 'ORB' else JIC.get(a)) or {}
+        if k in src and abs(v - src[k]) > 5e-4: bad.append(f'{col} {v} vs the {lib} library {src[k]}')
+    if bad: n['_HOLD'] = ('HELD: the 6400 row\'s own end columns differ from the end library the generator builds from (' + '; '.join(bad) +
+                          ') - settle which is right before building')
+
+
+def end_JICLONG(dash, sfx, I1):
+    """6400-L long JIC end: the library JIC end with its thread zone extended to the end length I1 (end_JICBH construction), labelled long"""
+    E = end_JICBH(dash, sfx, I1)
+    E['thr'] = E['e']['thr'] + ' (long thread)'; E['long'] = True
+    return E
+
+
+def load_6400():
+    """6400 review rows + the 6400-L rows (DesignTable_6400L.xlsx) mapped onto the 6400 columns; the long JIC end length _I1 per 6400-L row"""
+    h, rows = load_review('6400')
+    out, std = [], {}
+    for r in rows:
+        n = dict(r); dd = [int(x) for x in re.findall(r'-(\d\d)', str(r['$PRP@PartNo']))[:2]]
+        if len(dd) == 2:
+            std.setdefault(tuple(dd), r)
+            if dd[1] in ORB and dd[0] in JIC: _libchk_6400(n, dd[0], dd[1])
+        c_ = str(n.get('$COMMENT') or '')
+        if len(dd) == 2 and dd[1] in ORB_GW_MEASURED and c_.startswith('BLOCKED - ORB groove width unpublished'):
+            # the -14 / -32 rows' hand-made-table note: settled by A18 (2026-10-18) - the ORB library carries the measured groove width
+            n['$COMMENT'] = (f'RESOLVED 2026-10-18 (A18: ORB -{dd[1]:02d} groove width {ORB[dd[1]]["GW"]} measured on the {ORB_GW_SRC[dd[1]]}, ORB library) (was: '
+                             + c_[len('BLOCKED - '):] + ')')
+        out.append(n)
+    for r in _load_table('DesignTable_6400L.xlsx')[1]:
+        pn = str(r['$PRP@PartNo']); dd = [int(x) for x in re.findall(r'-(\d\d)', pn)[:2]]
+        n = {'$PRP@PartNo': pn, 'D1@DRIVE': r.get('L6@DRIVE'), 'HEXB@HEX': r.get('C4HEX@HEX'), 'D4@BORE_A': r.get('D2@BORE'), 'D3@BORE_B': r.get('D1@BORE'),
+             'THDMAJ_A@DRIVE': r.get('THDMAJ_B2@DRIVE'), 'THDMAJ_B@DRIVE': r.get('THDMAJ_B1@DRIVE'), 'ORB_GRVDIA@DRIVE': r.get('ORB_GRVDIA@DRIVE'),
+             'ORB_GRVW@DRIVE': r.get('ORB_GRVW@DRIVE'), '$PRP@DataStatus': r.get('$PRP@DataStatus'), '$PRP@AxialSource': r.get('$PRP@AxialSource'),
+             '$COMMENT': r.get('$COMMENT'), '$PRP@ScopeAction': r.get('$PRP@ScopeAction'), '$PRP@OMiSKU': r.get('$PRP@OMiSKU'),
+             '_DESCNAME': 'Straight Thread Connector Long', '_ASSUME': L6400_ASSUME, '_LONG': True}
+        if len(dd) == 2 and dd[1] in ORB and dd[0] in JIC:
+            _libchk_6400(n, dd[0], dd[1])
+            s_ = std.get(tuple(dd))
+            if s_ is None or s_.get('D1@DRIVE') is None or n['D1@DRIVE'] is None:
+                n.setdefault('_HOLD', f'HELD: no 6400-{dd[0]:02d}-{dd[1]:02d}-O row with an overall length - the hex length of the long variant is taken from it')
+            else:
+                jl_ = end_JICM(dd[0], 'B')['endlen']; ol_ = end_ORBM(dd[1], 'A')['endlen']
+                hexl_ = s_['D1@DRIVE'] - ol_ - jl_
+                n['_I1'] = round(n['D1@DRIVE'] - ol_ - hexl_, 4)
+                _note(n, f"6400-L: JIC end {n['_I1']} long = L6 {n['D1@DRIVE']} - ORB end {ol_:.4f} - the hex length {hexl_:.4f} of {s_['$PRP@PartNo']} (D1 {s_['D1@DRIVE']})")
+                if pn in BRENNAN_6400L: _note(n, BRENNAN_6400L[pn] + f" - model: JIC end {n['_I1']}, hex {hexl_:.4f}, ORB end {ol_:.4f}, overall {n['D1@DRIVE']}")
+                _assumed(n, 'the long JIC end length rests on the hex-length rule measured on one Brennan STEP (6400-L-08-08-O)')
+        out.append(n)
+    return h, out
+
+
+SPEC['6400'] = dict(name='Straight Thread Connector (male JIC x male ORB)', L='D1@DRIVE', hex='HEXB@HEX', load=load_6400,
+                    A=lambda r, a, b: end_ORBM(b, 'A'),
+                    B=lambda r, a, b: end_JICLONG(a, 'B', r['_I1']) if r.get('_LONG') else end_JICM(a, 'B'),
+                    bore=('mid', 'D4@BORE_A', 'D3@BORE_B'), ref='6400-08-08-O', thrchk=(('A', 'THDMAJ_A@DRIVE', 'b'), ('B', 'THDMAJ_B@DRIVE', 'a')),
+                    carry=('$PRP@Material', '$PRP@Finish', '$PRP@PressureRating'),
+                    desc=lambda r, tA, tB: f"{r.get('_DESCNAME') or 'Straight Thread Connector'}, Male 37 deg Flare (JIC) x Male SAE ORB, {tB} x {tA.replace(' (male ORB)', '')}",
+                    assume=S6400_ASSUME)
+
+
 # ---- 2026-10-02 (work group PLUGS): three new plug masters - socket-head ORB plug 6408HHP, hollow-hex pipe plug 5406HHP, square-head
 # pipe plug 5406SHP. One master per shape: their rows stay in the 6408 / 5406 review tables (OMi part numbers 6408-HHP-nn-O, 5406-HHP-nn,
 # 5406-SHP-nn; Brennan numbers 6408-Hnn-O, 5406-HP-nn, 5406-SHP-nn), the loaders below pick them out, and SPECs 6408 / 5406 skip them
@@ -1158,6 +1370,78 @@ BRENNAN_OAL = {'6410-12-08-O': (1.480, 'Brennan: male -12 ORB end 0.594 + hex 0.
 BRENNAN_1700 = {'1700-61-08-08': (2.600, 1.000), '1700-61-12-12': (2.750, 1.374), '1700-61-24-24': (3.500, 2.000)}
 
 
+# ---- 2026-10-18 (genfeat flange): flange straights / plugs with the Brennan body. A16 (user 2026-10-18, Q-NEW-1700BODY "do the same as Brennan"):
+# the 1700 rows named without '-61-' (1700-20-16 / -24-20 / -32-24, Brennan catalog + own STEP values) get Brennan's round collar with two wrench
+# flats, 30deg chamfer and neck. That is a different DRIVE sketch (collar + chamfer + neck instead of a hex running to the head), so those rows
+# cannot share the hex-body 1700 design table: SPEC 1700RC builds them as their own master from DesignTable_1700.xlsx; SPEC 1700 skips them
+# (and keeps every Air-Way row exactly as built). Wave-1 groups FLANGE62 (1800 / 1824) and FLANGE61-PLUG (1724), never merged, are merged here
+# (their SPECs and gates ported onto the batch-16 toolchain; FLANGE62's 'flats' option now also serves 1700RC).
+def flg_cell(r, col):
+    if r.get(col) is None: raise KeyError(f'row without {col}')
+    return r[col]
+
+
+def flg61_head(dash):
+    if dash not in FLG61_MEAS: raise KeyError(f'code 61 flange head not measured for -{dash:02d}: needs a FLG61_MEAS[{dash}] entry (head thickness, face '
+                                              f'groove) measured with tools/measure/flange.py on a Brennan STEP with a -{dash:02d} code 61 head')
+    return FLG61_MEAS[dash]
+
+
+SPEC['1700'].update(exclude=r'^1700-\d\d-\d\d$', exclude_why='round collar with two wrench flats (A16 2026-10-18): built in master 1700RC (other DRIVE sketch)')
+SPEC['1700RC'] = dict(name='Code 61 Flange Adapter, round collar (male JIC x SAE code 61 flange head)', L='L28@DRIVE', hex='CHEX@HEX',
+                      load=lambda: load_review('1700'), exclude=r'-61-', exclude_why='hex-body 1700 row: built in master 1700',
+                      dashre2=r'^1700-(\d\d)-(\d\d)$', flats=dict(collar='COLLARD@DRIVE', zone='FLATL@DRIVE'),
+                      A=lambda r, a, b: end_JICM(a, 'A'),
+                      B=lambda r, a, b: end_FLG61(b, 'B', flg_cell(r, 'O@DRIVE'), neck=flg_neck(r, a, flg61_head(b), 'L28@DRIVE', 'COLLARD@DRIVE', 'FLATL@DRIVE', 'NECKD@DRIVE',
+                                                                                                             also=('CHEX@HEX', 'D@BORE'))),
+                      bore=('mid', 'D@BORE', 'D@BORE'), ref='1700-20-16', thrchk=(('A', 'THDMAJ_B@DRIVE', 'a'),),
+                      assume='JIC end: MS33656J chain per dash (2403 table, VERIFIED vs Brennan); L28 = JIC tip to the flange face; '
+                             + FLG_NECK_ASSUME.format(collar='COLLARD', waf='CHEX', zone='FLATL', neckd='NECKD')
+                             + '; neck dia below the wrench flats on these rows, so the flats run out in the 30deg chamfer as on the Brennan 1700 STEPs (the '
+                               'flats cut takes nothing below the flats there); SAE code 61 flange head: head thickness and face O-ring groove = FLG61_MEAS by '
+                               'flange size (Brennan 1700-08/-12/-16/-20/-24/-32 STEPs, tools/measure/flange.py), head OD = the row O (end library: the head OD '
+                               'of that flange size as built in the 1700 master, Q-TRANSFER-ENDLIB 2026-10-08); one through bore D (the smaller bore where the '
+                               'own STEP is stepped) cut from both faces to the middle of the round collar; bore chamfer at the flange face and the collar / head '
+                               'edge chamfers NOT modelled; single manufacturer (Brennan) -> ASSUMED at most')
+SPEC['1800'] = dict(name='Code 62 Flange Adapter (male JIC x SAE code 62 flange head)', L='L@DRIVE', hex='WAF@DRIVE',
+                    flats=dict(collar='COLLARD@DRIVE', zone='COLLARL@DRIVE'),
+                    A=lambda r, a, b: end_JICM(a, 'A'),
+                    B=lambda r, a, b: end_FLG62(b, 'B', neck=flg_neck(r, a, flg62_head(b), 'L@DRIVE', 'COLLARD@DRIVE', 'COLLARL@DRIVE', 'NECKD@DRIVE',
+                                                                                     also=('WAF@DRIVE', 'D@BORE'))),
+                    bore=('mid', 'D@BORE', 'D@BORE'), ref='1800-08-08', thrchk=(('A', 'THDMAJ_B@DRIVE', 'a'),),
+                    assume='JIC end: MS33656J chain per dash (2403 table, VERIFIED vs Brennan; tools/measure/jicm.py on the Brennan 1800-08-08 STEP returns the -08 '
+                           'chain exactly); L = JIC tip to the flange face; ' + FLG_NECK_ASSUME.format(collar='COLLARD', waf='WAF', zone='COLLARL', neckd='NECKD')
+                           + '; ' + FLG62_ASSUME + '; one through bore D cut from both faces to the middle of the round collar (as the STEP); single manufacturer '
+                           '(Brennan) -> ASSUMED at most')
+SPEC['1824'] = dict(name='Code 62 Flange Plug (SAE code 62 flange head, solid)', L='L@DRIVE', hex='STUBD@DRIVE', round=True, dashre=r'^1824-(\d\d)',
+                    A=lambda r, a, b: (flg_cell(r, 'L@DRIVE'), flg_cell(r, 'STUBD@DRIVE'), end_FLG62(a, 'A'))[-1], B=lambda r, a, b: end_PLAIN('B'),
+                    bore=('none', None, None), ref='1824-08',
+                    assume='solid plug = the Brennan 1824-08 STEP construction: code 62 flange head (End A = the flange face) on a round stub of dia STUBD to the plain back '
+                           'face; L = flange face to the back face; ' + FLG62_ASSUME + '; the 0.0088 x 45deg chamfer at the stub back edge NOT modelled; no thread (no THD_ feature); '
+                           'single manufacturer (Brennan) -> ASSUMED at most')
+FLG61PLUG_ASSUME = ('code 61 O-ring face FLANGE PLUG (Brennan Flange catalog p.7 drawing + Brennan 1724-08 STEP: solid of revolution, 9 faces): '
+                    'End B = SAE code 61 flange head - head thickness and face O-ring groove (inner/outer dia, depth 0.11) per flange size from FLG61_MEAS '
+                    '(measured on the Brennan 1700-08/-12/-16/-20/-24/-32 STEPs; the Brennan 1724-08 STEP agrees within 0.0002: TH 0.2650, groove 0.3449 / 0.5000 radius x 0.1098 deep), '
+                    'head OD O from the row; body = plain ROUND shank of the row dia SHANKD from the back face to the head (no hex, no wrench flats - as the 1724-08 STEP; '
+                    'SOP step 5 exception, question Q-SOP5), L = back face to the flange face; End A = plain flat back face; solid (no bore, no port); '
+                    'edge chamfers and the O-ring NOT modelled (the 1724-08 STEP has no chamfers); single manufacturer (Brennan) -> ASSUMED at most')
+FLGPLUG_SHOULDER_MIN = 0.03     # 1724: the flange head must stand at least this much (radius) above the round shank - the split flange clamps on that shoulder
+
+
+def flgplug_row(r, b):
+    # 1724: a row that is not MISSING must carry all three of its own values (a partly filled row is skipped with the reason, never half-built); a
+    # flange size without FLG61_MEAS (-40) reports that gap first
+    flg61_head(b)
+    miss = [c for c in ('L@DRIVE', 'SHANKD@REF', 'O@DRIVE') if r.get(c) is None]
+    if miss: raise KeyError('1724 row without ' + ' / '.join(miss) + ' (L, shank dia and head OD are all needed)')
+    return r['O@DRIVE']
+
+
+SPEC['1724'] = dict(name='O-Ring Face Code 61 Flange Plug', L='L@DRIVE', hex='SHANKD@REF', round=True, single=True, flgplug=True,
+                    A=lambda r, a, b: dict(end_PLAIN('A'), thr='plain back face (solid plug)'), B=lambda r, a, b: end_FLG61(b, 'B', flgplug_row(r, b)),
+                    bore=('none', None, None), ref='1724-08', assume=FLG61PLUG_ASSUME)
+
+
 def cav_r(E, d):
     # radius of a female port cavity at depth d from its face (piecewise linear over VG; 0 beyond the drill point)
     VG = E['VG']; best = 0.0
@@ -1207,6 +1491,20 @@ def dashes(pn):
     return [int(x) for x in re.findall(r'-(\d\d)', pn)[:2]]
 
 
+# 2026-10-01 (work group 5404N-06, deployed 2026-10-18 by genfeat straights): smallest radial step allowed between an end's outermost radius
+# and a ROUND bar body. A hex body keeps the 0.005 margin below its corner radius (the hex cut must not leave a sliver at the end step). A round
+# bar has no hex cut: its body radius is the real outer surface, so the step only has to be real. 0.0025 = half the 0.01 print step of Air-Way's
+# bar diameter C (C 0.69 means 0.685..0.695): with at least this step the bar stays above the end's crest cone even if the true C is 0.005
+# smaller. 5404N -06: ASME B1.20.3 3/8 NPTF crest cone at L2 = E0 + 0.8P + L2/16 = 0.6819 dia vs C 0.69 -> step 0.0040 (built, with a
+# warning); -12: 1.0589 vs 1.06 -> 0.0005 and -16: 1.3259 vs 1.31 -> negative stay BLOCKED. Rows with a step >= 0.005 (every built 5404N
+# configuration) are untouched. (tools/_out/tier1_20261001/work/5404N-06/NOTES.md; QA #163: the SolidWorks dry run of 2026-10-01 built the
+# -06 bodies but THD_EndA / THD_EndB failed to rebuild in the -06 configurations - the -06 rows carry NEEDS SOLIDWORKS CHECK in $COMMENT.)
+ROUND_STEP_MIN = 0.0025
+ROUND_STEP_SWCHECK = ('NEEDS SOLIDWORKS CHECK: on 2026-10-01 (QA #163) the thread features THD_EndA / THD_EndB failed to rebuild in every '
+                      'configuration with a round-bar step below 0.005 (5404N -06 TEST rows; bodies built) - dry-run and sweep the threads live '
+                      'before shipping')
+
+
 def build_rows(root):
     sp = SPEC[root]; h, rows = sp['load']() if sp.get('load') else load_review(root)     # 2026-10-01: 'load' = a root with folded tables (2403 + 2403-LH, 2404 + 2404-L)
     out = []; skipped = []
@@ -1225,10 +1523,15 @@ def build_rows(root):
         if sp.get('solid_only') and r.get('HOLE@BORE') is not None:
             skipped.append((pn, 'hollow variant', 'hole depth unpublished - not built')); continue
         try:
+            xlen_ = None
             if sp.get('dashre2'):
                 m = re.search(sp['dashre2'], pn)
-                if not m: raise KeyError('part number has no dash pair')
-                a, b = int(m.group(1)), int(m.group(2))
+                m1_ = re.search(sp['dashre1'], pn) if (not m and sp.get('dashre1')) else None
+                if m1_:
+                    # 2026-10-18 (5404N, user A4): OMi form 5404-N-04X2.500 - one dash for both ends, the cut length after X
+                    a = b = int(m1_.group(1)); xlen_ = float(m1_.group(2))
+                elif not m: raise KeyError('part number has no dash pair')
+                else: a, b = int(m.group(1)), int(m.group(2))
             elif sp.get('dashre'):
                 m = re.search(sp['dashre'], pn)
                 if not m: raise KeyError('part number has no dash')
@@ -1257,8 +1560,13 @@ def build_rows(root):
         if EB['thread'] and EB['thread']['type'] == 'HELIX': EB['cols']['PROF_AX@THDPROF_B'] = L
         body = L - EA['endlen'] - EB['endlen']
         rB = hexb / 2 if sp.get('round') else hexb / math.cos(math.radians(30)) / 2
+        if sp.get('flats'): rB = r[sp['flats']['collar']] / 2     # 2026-10-18 (1700RC / 1800): round collar - the body radius is the collar, the A/F cuts two flats
         chk = list(chk0); warn = []
         if body < 0.05: chk.append(f'hex length {body:.3f}')
+        if xlen_ is not None and (L is None or abs(xlen_ - L) > 1e-6): chk.append(f'length {xlen_:g} in the part number differs from {sp["L"].split("@")[0]} {L}')
+        if sp.get('flgplug') and EB['rO'] - rB < FLGPLUG_SHOULDER_MIN:
+            # 2026-10-18 (1724, FLANGE61-PLUG): round shank behind the flange head - the head must stand above it (the split flange clamps on that shoulder)
+            chk.append(f'flange head dia {2 * EB["rO"]:.4f} is not at least {2 * FLGPLUG_SHOULDER_MIN:.3f} above the shank dia {2 * rB:.4f} (no clamping shoulder)')
         if r.get('_NOTE'): warn.append(r['_NOTE'])
         if r.get('_T20') is not None:
             # 2026-10-01 (2404-L rows): the hex length follows from L20 and the two ends; Air-Way T20 (= hex length) is the cross-check
@@ -1267,9 +1575,22 @@ def build_rows(root):
             else: warn.append(f'hex length {body:.4f} (L20 - both ends) vs Air-Way T20 {r["_T20"]}: {"agree" if abs(dT_) <= 0.005 else "differ by %+.4f (L20 printed to 2 decimals)" % dT_}')
         for E in (EA, EB):
             if E['kind'] == 'FLG61': continue          # flange head: its own zone, not hex-cut
+            if E['kind'] == 'FLG62' or sp.get('flats'): continue      # 2026-10-18: code 62 head; flats body (the flats zone starts at the collar face)
             for (x, rr) in E['V']:
                 if not sp.get('round') and rr > hexb / 2 - 0.002 and rr < rB - 0.005: warn.append(f'{E["kind"]} radius {rr:.4f} is above the hex flats {hexb/2:.4f} - the hex cut will flat it'); break
+        model_extra = []    # 2026-10-01 (5404N-06): modelling assumptions that apply to this row only (appended to its $PRP@AxialSource)
         for E in (EA, EB):
+            if E['kind'] in ('FLG61', 'FLG62') and (E['kind'] == 'FLG62' or E.get('neck')):
+                # 2026-10-18 (FLANGE62 gates, also the 1700RC code 61 head on a neck): the head steps down to the neck (1700RC / 1800) or straight to the
+                # body (1824 stub)
+                nk_ = E.get('neck')
+                if abs(E['rO'] - (nk_['rN'] if nk_ else rB)) < 0.003: chk.append(f'flange head radius {E["rO"]:.4f} equals the {"neck" if nk_ else "body"} radius (zero-height step)')
+                if nk_:
+                    if nk_['NL'] < 0.02: chk.append(f'neck length {nk_["NL"]:.4f} (L - JIC end - flats zone - head thickness)')
+                    if nk_['rN'] > rB - 0.01: chk.append(f'neck dia {2 * nk_["rN"]:.4f} not below the collar dia {2 * rB:.4f} (no 30deg chamfer)')
+                    bd_ = r.get(sp['bore'][1]) if isinstance(sp['bore'][1], str) else None
+                    if bd_ is not None and nk_['rN'] - bd_ / 2 < 0.03: chk.append(f'neck wall {nk_["rN"] - bd_ / 2:.4f} (neck dia {2 * nk_["rN"]:.4f}, bore {bd_})')
+                continue
             if E['kind'] == 'FLG61':
                 if abs(E['rO'] - rB) < 0.003: chk.append(f'flange head radius {E["rO"]:.4f} equals the hex corner radius {rB:.4f} (zero-height step)')
                 continue
@@ -1279,9 +1600,41 @@ def build_rows(root):
                     # 2026-10-02 (PLUGS): square head corners below the round D collar - its own zone cut, so only a real step is needed (no hex-cut margin)
                     if rr >= rB - 0.001: chk.append(f'square head corner radius {rr:.4f} not below the body radius {rB:.4f} (step < 0.001)')
                     continue
-                if rr >= rB - 0.005: chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
+                if rr >= rB - 0.005:
+                    if sp.get('round') and rB - rr >= ROUND_STEP_MIN - 1e-9:
+                        # round bar (5404N): a small real step from the end of the thread cone to the bar (see ROUND_STEP_MIN)
+                        sfx_ = 'A' if E is EA else 'B'
+                        msg_ = (f'ROUND-BAR STEP End {sfx_}: bar dia {2 * rB:.4f} (Air-Way C) is only {rB - rr:.4f} (radius) above the '
+                                f'{E["kind"]} end at {x:.4f} from its tip (dia {2 * rr:.4f}' + (' = ASME B1.20.3 crest cone E0 + 0.8P + L2/16' if E['kind'] == 'NPTFM' else '') +
+                                f') - built with that step (round bar: allowed down to {ROUND_STEP_MIN}, half the 0.01 print step of C; a hex body needs 0.005)')
+                        if msg_ not in warn: warn.append(msg_)
+                        if ROUND_STEP_SWCHECK not in warn: warn.append(ROUND_STEP_SWCHECK)
+                        if not model_extra:
+                            model_extra.append(f'round bar only {rB - rr:.4f} (radius) above the {E["kind"]} crest cone at the end of the thread: modelled as that small '
+                                               f'step, as at every 5404N size - the vanish threads of the real part (crest cone running on into the bar) are NOT '
+                                               f'modelled (ASSUMPTION); allowed because the step is at least {ROUND_STEP_MIN} = half the 0.01 print step of Air-Way C, '
+                                               f'so the bar stays above the crest cone even if the true C is 0.005 smaller')
+                    else:
+                        chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
         cols = dict(); cols[sp['L'].split('@')[0] + '@DRIVE'] = L; cols['BODYR@DRIVE'] = round(rB, 5)
-        if not sp.get('round'): cols['HEXB@HEX'] = hexb
+        if sp.get('flats'):
+            # 2026-10-18 (FLANGE62 'flats', 1700RC / 1800): two wrench flats on the round collar, cut outside a centre rectangle (height = A/F, width =
+            # collar dia + 0.25) sketched on the Right Plane, blind from the middle of the JIC relief (radius below the flats: nothing is cut there, so the
+            # flats begin exactly at the collar face without a coincident start plane) to the neck start = collar face + the flats zone; DEPTH to 8
+            # decimals so the cut ends on the neck start of the DRIVE sketch (L - head thickness - NECKL, NECKL to 8 decimals)
+            if EA['kind'] != 'JICM': raise ValueError(f'{root}: the flats option needs a male JIC End A (the flats cut starts in its relief)')
+            fz_ = r[sp['flats']['zone']]; nk_ = EB.get('neck') or {}
+            st_ = round(EA['endlen'] - EA['e']['RL'] / 2, 4)
+            cols['WAF@FLATS'] = hexb; cols['FLATW@FLATS'] = round(2 * rB + 0.25, 4)
+            cols['START@FLATCUT'] = st_; cols['DEPTH@FLATCUT'] = round(EA['endlen'] + fz_ - st_, 8)
+            if hexb / 2 < EA['e']['CD'] / 2 + 0.01: chk.append(f'wrench flats {hexb} reach into the JIC relief (dia {EA["e"]["CD"]}) where the flats cut starts')
+            if hexb / 2 > rB - 0.005: chk.append(f'wrench flats {hexb} do not cut the collar (dia {2 * rB:.4f})')
+            if nk_ and fz_ - nk_['CL'] < 0.02: chk.append(f'flats zone {fz_} leaves no round collar before the 30deg chamfer ({nk_["CL"]:.4f} long)')
+            if abs(cols['START@FLATCUT'] - cols['DEPTH@FLATCUT']) < 1e-4: chk.append('flats cut start offset equals its depth (dimension naming would be ambiguous)')
+            bd_ = r.get(sp['bore'][1])
+            if bd_ is not None and hexb / 2 - bd_ / 2 < 0.05: chk.append(f'wall under the wrench flats {hexb / 2 - bd_ / 2:.4f}')
+            if nk_ and abs(nk_['rN'] - hexb / 2) < 0.003: chk.append(f'neck dia {2 * nk_["rN"]:.4f} equals the wrench flats {hexb} (flats end tangent to the neck)')
+        elif not sp.get('round'): cols['HEXB@HEX'] = hexb
         cols.update(EA['cols']); cols.update(EB['cols'])
         # bores
         mode, cA, cB = sp['bore']
@@ -1534,15 +1887,19 @@ def build_rows(root):
         if st_ == 'VERIFIED' and any((E_.get('e') or {}).get('src40') for E_ in (EA, EB)):
             # review fix F2 (2026-10-01, SIZE-40): the -40 JIC end is measured on ONE Brennan STEP (JIC40_ASSUME says ASSUMED) - the row cannot stay VERIFIED
             st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the -40 JIC end (JIC_MEAS_40) is measured on one Brennan STEP - single manufacturer')
+        if st_ == 'VERIFIED' and any(E_.get('n40') for E_ in (EA, EB)):
+            # 2026-10-18: the -40 pipe end is Brennan-measured (one manufacturer) - the row cannot stay VERIFIED
+            st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the -40 pipe end is measured on Brennan STEPs - single manufacturer')
         cols['$PRP@DataStatus'] = 'BLOCKED' if chk else st_
         asm_ = sp['assume'](r) if callable(sp['assume']) else sp['assume']     # review fix F2: SPEC 2404 words its source clause per row
-        cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + asm_
+        cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + asm_ + ''.join('; ' + m_ for m_ in model_extra)
         # 2026-10-01 (ORB-02): an ORB end merged from another series' row carries its own source note (empty for every older ORB size)
         cols['$PRP@AxialSource'] += ''.join('; ' + E_['o']['note'] for E_ in (EA, EB) if E_.get('kind') == 'ORBM' and E_.get('o', {}).get('note'))
         for E_ in (EA, EB):
             if E_.get('axnote'): cols['$PRP@AxialSource'] += '; ' + E_['axnote']     # per-row modelling assumption (2026-10-01: deep-bore ORB port)
         if r.get('_ASSUME'): cols['$PRP@AxialSource'] += '; ' + r['_ASSUME']     # 2026-10-01: assumptions that touch only some rows (folded 2403-LH / 2404-L rows, 2404 counterbores)
         if any((E_.get('e') or {}).get('src40') for E_ in (EA, EB)): cols['$PRP@AxialSource'] += '; ' + JIC40_ASSUME   # SIZE-40
+        if any(E_.get('n40') for E_ in (EA, EB)): cols['$PRP@AxialSource'] += '; ' + NPTF40_ASSUME   # 2026-10-18: -40 pipe end (Brennan-measured)
         if pn in BRENNAN_1700:
             bl_, bf_ = BRENNAN_1700[pn]
             warn.append(f'Brennan {pn.replace("-61", "")} STEP: overall {bl_:.3f} (Air-Way L28 {L}), round collar dia O with wrench flats {bf_:.3f} (Air-Way hex C {hexb}) - built to Air-Way (user decision 2026-09-24)')
@@ -1792,6 +2149,129 @@ ZONEHEX = """Function ZoneHexCut(onEndB As Boolean, faceXM As Double, afM As Dou
 End Function
 """
 HELP += ZONEHEX
+# 2026-10-18 (genfeat flange; FLANGE62 1800, now also 1700RC): two wrench flats on a round collar. Appended ONLY to macros of a SPEC with 'flats' (emit),
+# so every other macro text stays as it was. Same cut logic as ZoneHexCut (blind cut with a start offset from the Right Plane, both directions tried,
+# kept where it removes material inside the zone); the sketch is a centre rectangle instead of a hexagon. Ported verbatim from FLANGE62/patch.diff.
+FLATSCUT = """
+Function FlatsCut(afM As Double, wM As Double, startM As Double, depthM As Double, skName As String, dimAF As String, dimW As String, featName As String) As SldWorks.Feature
+    ' two wrench flats across afM on a round collar: a centre rectangle (height afM = across the flats, width wM wider than the collar)
+    ' sketched on the Right Plane (the End A tip plane), its OUTSIDE cut blind over depthM, starting startM from the sketch plane
+    On Error Resume Next
+    Dim ok As Boolean
+    swModel.ClearSelection2 True
+    ok = swModel.Extension.SelectByID2("Right Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+    Check skName & ": sketch plane selected (Right Plane)", ok
+    swSkMgr.InsertSketch True
+    Dim fcR As Variant, fcK As Long, fcSg As SldWorks.SketchSegment, fcLn As SldWorks.SketchLine, fcNs As Long
+    Dim fcV As SldWorks.SketchSegment, fcH As SldWorks.SketchSegment, fcD As SldWorks.SketchSegment
+    fcR = swSkMgr.CreateCenterRectangle(0, 0, 0, wM / 2, afM / 2, 0)
+    If IsEmpty(fcR) Then
+        Check skName & ": centre rectangle created", False
+        swSkMgr.InsertSketch True
+        Exit Function
+    End If
+    fcNs = 0
+    For fcK = LBound(fcR) To UBound(fcR)
+        Set fcSg = fcR(fcK)
+        If fcSg.GetType = swSketchSegments_e.swSketchLINE Then
+            Set fcLn = fcSg
+            If fcSg.ConstructionGeometry Then
+                If fcD Is Nothing Then Set fcD = fcSg
+            Else
+                fcNs = fcNs + 1
+                If Abs(fcLn.GetStartPoint2.X - fcLn.GetEndPoint2.X) < 0.0000001 Then
+                    Set fcV = fcSg
+                ElseIf Abs(fcLn.GetStartPoint2.Y - fcLn.GetEndPoint2.Y) < 0.0000001 Then
+                    Set fcH = fcSg
+                End If
+            End If
+        End If
+    Next fcK
+    Trace skName & ": centre rectangle -> " & (UBound(fcR) - LBound(fcR) + 1) & " segments, " & fcNs & " sides, construction diagonal " & IIf(fcD Is Nothing, "none", "found")
+    Check skName & ": rectangle has a vertical and a horizontal side", (Not fcV Is Nothing) And (Not fcH Is Nothing)
+    If fcV Is Nothing Or fcH Is Nothing Then
+        swSkMgr.InsertSketch True
+        Exit Function
+    End If
+    ' across flats = the length of a vertical side (sketch Y = model Y on the Right Plane); width = the length of a horizontal side
+    Dim dd As SldWorks.DisplayDimension
+    swModel.ClearSelection2 True
+    fcV.Select4 False, Nothing
+    Set dd = swModel.AddDimension2(0, 0, wM * 0.7)
+    NameDim dd, dimAF, afM
+    swModel.ClearSelection2 True
+    fcH.Select4 False, Nothing
+    Set dd = swModel.AddDimension2(0, afM * 0.7, 0)
+    NameDim dd, dimW, wM
+    ' centre the rectangle on the axis: the origin at the middle of the construction diagonal; fallback = the centre point on the origin
+    Dim fcSk As SldWorks.Sketch
+    Set fcSk = swSkMgr.ActiveSketch
+    Trace skName & ": constrained status after the two dimensions = " & fcSk.GetConstrainedStatus
+    If fcSk.GetConstrainedStatus <> swConstrainedStatus_e.swFullyConstrained And Not fcD Is Nothing Then
+        swModel.ClearSelection2 True
+        fcD.Select4 False, Nothing
+        swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+        swModel.SketchAddConstraints "sgATMIDDLE"
+        Trace skName & ": origin at the middle of the diagonal -> status " & fcSk.GetConstrainedStatus
+    End If
+    If fcSk.GetConstrainedStatus <> swConstrainedStatus_e.swFullyConstrained Then
+        Dim fcPts As Variant, fcP As SldWorks.SketchPoint
+        fcPts = fcSk.GetSketchPoints2
+        If Not IsEmpty(fcPts) Then
+            For fcK = LBound(fcPts) To UBound(fcPts)
+                Set fcP = fcPts(fcK)
+                If Abs(fcP.X) < 0.0000001 And Abs(fcP.Y) < 0.0000001 Then
+                    swModel.ClearSelection2 True
+                    fcP.Select4 False, Nothing
+                    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+                    swModel.SketchAddConstraints "sgCOINCIDENT"
+                    Trace skName & ": centre point made coincident with the origin -> status " & fcSk.GetConstrainedStatus
+                    Exit For
+                End If
+            Next fcK
+        End If
+    End If
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Dim skF As SldWorks.Feature
+    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    Dim v0 As Double, v1 As Double, cut As SldWorks.Feature, attempt As Long, fLo As Double, fHi As Double, okPos As Boolean
+    v0 = Volume()
+    For attempt = 0 To 3
+        Set cut = MakeCut(skF, swEndConditions_e.swEndCondBlind, depthM, True, (attempt Mod 2 = 1), startM, (attempt >= 2), featName & " attempt " & attempt)
+        If Not cut Is Nothing Then
+            v1 = Volume()
+            FeatSpanX cut, fLo, fHi
+            okPos = (fLo > startM - 0.0005) And (fHi < startM + depthM + 0.0005) And (fHi > fLo)
+            Trace featName & " attempt " & attempt & ": removed " & Format((v0 - v1) / IN_ ^ 3, "0.00000") & " in^3, new faces span x=" & Format(fLo / IN_, "0.0000") & ".." & Format(fHi / IN_, "0.0000") & " (zone " & Format(startM / IN_, "0.0000") & ".." & Format((startM + depthM) / IN_, "0.0000") & ")"
+            If v1 < v0 - 1E-12 And okPos Then Exit For
+            swModel.ClearSelection2 True
+            cut.Select2 False, 0
+            swModel.Extension.DeleteSelection2 0
+            Set cut = Nothing
+        End If
+    Next attempt
+    Check featName & " created in the flats zone and removed material (attempt " & attempt & ")", Not cut Is Nothing
+    If cut Is Nothing Then Exit Function
+    cut.Name = featName
+    Check featName & " removed only the two collar segments (" & Format(100 * (v0 - v1) / v0, "0.0") & "% of volume)", (v1 < v0) And (v1 > 0.6 * v0)
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = cut.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - depthM) < 0.000001 Then
+            dm.Name = "DEPTH"
+        ElseIf Abs(dm.SystemValue - startM) < 0.000001 Then
+            dm.Name = "START"
+        End If
+        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
+        Set d = cut.GetNextDisplayDimension(d)
+    Loop
+    Check featName & " dims: " & names, InStr(names, "DEPTH=") > 0 And InStr(names, "START=") > 0
+    Set FlatsCut = cut
+End Function
+"""
 HELP += """Sub FeatSpanX(f As SldWorks.Feature, lo As Double, hi As Double)
     ' x-range (along the straight's axis) of the faces a feature created
     On Error Resume Next
@@ -1986,7 +2466,7 @@ def emit(root, hdr, ok, refrow, table_path):
             dl(g(s['top']), f'HOSE{sfx}_BEADW', E['w'], mid(g(s['top'])), rB + 0.35)
             dl(g(s['tail']), f'HOSE{sfx}_TAILL', E['endlen'] - E['p2'], mid(g(s['tail'])), rB + 0.15)
             REL.append(f'    Call Collinear({g(s["s1"])}, {g(s["tail"])})')
-        elif k == 'FLG61':
+        elif k in ('FLG61', 'FLG62'):
             m = E['m']
             dr(g(s['head']), f'FLG{sfx}_HEADR', E['rO'], mid(g(s['head'])), -0.35)
             dl(g(s['head']), f'FLG{sfx}_HEADT', m['TH'], mid(g(s['head'])), E['rO'] + 0.3)
@@ -1994,6 +2474,12 @@ def emit(root, hdr, ok, refrow, table_path):
             dl(g(s['gin']), f'FLG{sfx}_GRVD', m['GD'], mid(g(s['gin'])), E['rO'] + 0.45)
             dr(g(s['gout']), f'FLG{sfx}_GRVOR', m['GO'], mid(g(s['gout'])), -0.25)
             REL.append(f'    Call Collinear({g(s["face2"])}, {g(s["face"])})')
+            if E.get('neck'):
+                # 2026-10-18 (FLANGE62 neck, also the 1700RC code 61 head): neck radius and length, and the 30deg chamfer from the neck up to the round collar
+                nk = E['neck']
+                dr(g(s['neck']), f'FLG{sfx}_NECKR', nk['rN'], mid(g(s['neck'])), -0.55)
+                dl(g(s['neck']), f'FLG{sfx}_NECKL', nk['NL'], mid(g(s['neck'])), E['rO'] + 0.6)
+                da(g(s['cham']), g(s['neck']), f'FLG{sfx}_CHAMANG', FLG_NECK_CHAMANG, mid(g(s['cham'])), nk['rB'] + 0.12)
         elif k == 'NUTCSA':
             # 2026-10-02 (0306 locknut End A): core apex at the origin -> countersink bottom (cs, rmin) -> 45deg countersink -> face (0, rcs).
             # The origin also lies on the End A face line (segment 2), which puts that face at x = 0 (the core apex alone would not).
@@ -2225,6 +2711,8 @@ def emit(root, hdr, ok, refrow, table_path):
             T.append(f'    Call HelixThread({tip*IN:.9f}, {t["r"]*IN:.9f}, {t["height"]*IN:.9f}, {t["pitch"]*IN:.9f}, {t["thdh"]*IN:.9f}, {t["taper"]:.9f}, {str(t["taperOut"])}, {str(t["apexOut"])}, "{sfx}", "THD_End{sfx}")')
     # ---- config spot check: smallest and largest config, key params
     params = [c for c in hdr if '@' in c and not c.startswith('$') and c.split('@')[1] in ('DRIVE', 'HEX')][:8] + [c for c in hdr if c.startswith(('THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'SWA_SEATENDR@', 'SWB_SEATENDR@', 'SOCKAF@', 'DEPTH@SOCKETCUT', 'SQAF@', 'DEPTH@SQCUT'))]
+    if sp.get('flats'):     # 2026-10-18 (FLANGE62 review): the wrench flats cut and the flange neck are table-driven too - spot-check them
+        params += [c for c in hdr if c.startswith(('WAF@FLATS', 'FLATW@FLATS', 'START@FLATCUT', 'DEPTH@FLATCUT', 'FLGB_NECKR@', 'FLGB_NECKL@')) and c not in params]
     names = [b[0]['$PRP@PartNo'] for b in ok]
     chk_rows = [ok[1], ok[-1]] if len(ok) > 2 else [ok[-1]]
     params = [p for p in params if all(b[0][p] is not None for b in chk_rows)]
@@ -2565,7 +3053,7 @@ Sub {entry}()
         Set st_f = st_f.GetNextFeature
     Loop
     swModel.ForceRebuild3 False
-    Check "Threads suppressed in all configurations before save (" & st_n & " THD_ features)", st_n > 0 And st_bad = 0
+{{THDCHK}}
 
     stepName = "Save"
     Dim e As Long, w As Long, t0 As Date, fdt As Date
@@ -2654,8 +3142,43 @@ End Sub
         i0 = vba.index('    stepName = "HEX cut"'); i1 = vba.index('    stepName = "Pockets and bores"')
         vba = vba[:i0] + "    ' (round bar - no hex cut)\n\n" + vba[i1:]
         i0 = vba.index('    Check "Hex across flats'); i1 = vba.index('\n', i0)
-        vba = vba[:i0] + f'    Check "Body diameter " & Format(dY, "0.0000") & " / " & Format(dZ, "0.0000") & " (expect {2*rB:.4f})", Abs(dY - {2*rB:.4f}) < 0.01 And Abs(dZ - {2*rB:.4f}) < 0.01' + vba[i1:]
+        rF_ = max([E_['rO'] for E_ in (EA, EB) if E_['kind'] in ('FLG61', 'FLG62')] + [0.0])
+        if rF_ > rB:   # 2026-10-18 (1724 / 1824, FLANGE62 / FLANGE61-PLUG): a flange head wider than the round body sets the box
+            vba = vba[:i0] + f'    Check "Outer diameter " & Format(dY, "0.0000") & " / " & Format(dZ, "0.0000") & " (expect the flange head {2*rF_:.4f}; round body {2*rB:.4f})", Abs(dY - {2*rF_:.4f}) < 0.01 And Abs(dZ - {2*rF_:.4f}) < 0.01' + vba[i1:]
+            vba = vba.replace("Body revolved at BODYR then hex-cut; SP3 radius dims.", "Body revolved at BODYR (round stub, no hex cut) behind the flange head; SP3 radius dims.")
+        else:
+            vba = vba[:i0] + f'    Check "Body diameter " & Format(dY, "0.0000") & " / " & Format(dZ, "0.0000") & " (expect {2*rB:.4f})", Abs(dY - {2*rB:.4f}) < 0.01 And Abs(dZ - {2*rB:.4f}) < 0.01' + vba[i1:]
         assert 'HEXCUT' not in vba.split('Sub Build')[1].split('End Sub')[0]
+        k_ = vba.index('    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - ')     # the box check must follow the intact length check line
+        assert vba[vba.index('\n', k_) + 1:].startswith(('    Check "Outer diameter ', '    Check "Body diameter ')), 'round-body box check spliced at stale offsets'
+    if sp.get('flats'):
+        # 2026-10-18 (FLANGE62 'flats', 1700RC / 1800): two wrench flats on the round collar instead of the hex cut (FlatsCut, appended to the helpers)
+        i0 = vba.index('    stepName = "HEX cut"'); i1 = vba.index('    stepName = "Pockets and bores"')
+        st_, dp_ = cols['START@FLATCUT'], cols['DEPTH@FLATCUT']
+        vba = vba[:i0] + f'''    stepName = "Wrench flats cut"
+    Dim hexcut As SldWorks.Feature
+    ' two wrench flats (A/F {hexb:.4f}) on the round collar (dia {2*rB:.4f}): outside a centre rectangle on the Right Plane, cut from the
+    ' middle of the JIC relief (x={st_:.4f}, relief below the flats - nothing cut there) to the neck start (x={st_ + dp_:.4f}); the neck is not touched
+    Set hexcut = FlatsCut({hexb*IN:.9f}, {cols['FLATW@FLATS']*IN:.9f}, {st_*IN:.9f}, {dp_*IN:.9f}, "FLATS", "WAF", "FLATW", "FLATCUT")
+    Check "WAF@FLATS reachable", Not swModel.Parameter("WAF@FLATS") Is Nothing
+    Check "FLATW@FLATS reachable", Not swModel.Parameter("FLATW@FLATS") Is Nothing
+    Check "START@FLATCUT reachable", Not swModel.Parameter("START@FLATCUT") Is Nothing
+    Check "DEPTH@FLATCUT reachable", Not swModel.Parameter("DEPTH@FLATCUT") Is Nothing
+
+''' + vba[i1:]
+        i0 = vba.index('    Check "Hex across flats'); i1 = vba.index('\n', i0)
+        rF_ = max([E_['rO'] for E_ in (EA, EB) if E_['kind'] in ('FLG61', 'FLG62')] + [0.0])
+        lo_, hi_ = max(hexb, 2 * rF_), max(2 * rB, 2 * rF_)
+        vba = vba[:i0] + f'    Check "Across the flats / across the round " & Format(dY, "0.0000") & " / " & Format(dZ, "0.0000") & " (flats {hexb:.4f}, collar {2*rB:.4f}, flange head {2*rF_:.4f}: expect {lo_:.4f} and {hi_:.4f})", (Abs(dY - {lo_:.4f}) < 0.01 And Abs(dZ - {hi_:.4f}) < 0.01) Or (Abs(dZ - {lo_:.4f}) < 0.01 And Abs(dY - {hi_:.4f}) < 0.01)' + vba[i1:]
+        vba = vba.replace("Body revolved at BODYR then hex-cut; SP3 radius dims.", "Body revolved at BODYR (round collar) then two wrench flats cut on the collar; SP3 radius dims.")
+        assert 'HEXCUT' not in vba.split('Sub Build')[1].split('End Sub')[0] and 'FlatsCut(' in vba
+        k_ = vba.index('    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - ')
+        assert vba[vba.index('\n', k_) + 1:].startswith('    Check "Across the flats / across the round '), 'flats box check spliced at stale offsets'
+    if T:
+        vba = vba.replace('{THDCHK}', '    Check "Threads suppressed in all configurations before save (" & st_n & " THD_ features)", st_n > 0 And st_bad = 0')
+    else:   # 2026-10-18 (1724 / 1824 plugs): no threaded end - there is no THD_ feature to suppress
+        vba = vba.replace('{THDCHK}', '    Check "No threaded end: no THD_ feature to suppress before save (" & st_n & " found)", st_n = 0')
+    if sp.get('flats'): vba += FLATSCUT      # 2026-10-18: the wrench-flats cut helper, only in macros that use it
     if EB['kind'] == 'SQHEAD':
         # 2026-10-02 (PLUGS): the square head - the OUTSIDE of a square sketched on the End B face, cut back over the head length only
         i1 = vba.index('    stepName = "Pockets and bores"')

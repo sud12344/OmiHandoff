@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6401_MASTER"
 ' ============================================================================
-'  Build_6401_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_straight2.py
+'  Build_6401_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
 '  Straight Thread (ORB) x Male Pipe Adapter - master from reference configuration 6401-08-08-O (DesignTable_6401_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = NPTFM.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6401.  Report: 03_SCRIPTS\Build_6401_report.txt

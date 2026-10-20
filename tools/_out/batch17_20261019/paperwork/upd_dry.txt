@@ -1,0 +1,30 @@
+live workbook sha256 8a597a84adac87d5e3a7ff564de641bbd8b80483df935abd1c973ab037131ce3
+QA_Log last row 173, last # '172'
+no Topologies row for 5406C: note not written
+no Topologies row for 5406HHP: note not written
+no Topologies row for 5406P: note not written
+no Topologies row for 5406SHP: note not written
+no Topologies row for 6408HHP: note not written
+Topologies notes prepended: 73 roots: 0318 0403 1404 1405 1501 1502 1503 1504 1601 1602 1603 1703 1704 1724 1800 1804 1824 2403 2404 2405 2406 2501 2503 2504 2505 2601 2602 2605 2611 2650 2700 2701 2705 2706 4501 4503 4601 4603 5000 5404 5405 5406 5500 5501 5502 5503 5504 5505 5600 5601 5603 5652 6400 6401 6402 6404 6405 6408 6410 6500 6501 6502 6503 6504 6505 6506 6600 6602 6606 6801 6803 6807 6902; master status changed: {'1503': ('TABLED', 'BUILT'), '1504': ('TABLED', 'BUILT'), '1601': ('TABLED', 'BUILT'), '1602': ('TABLED', 'BUILT'), '1603': ('TABLED', 'BUILT'), '1704': ('TABLED', 'BUILT'), '1724': ('SKELETON-MISSING', 'BUILT'), '1804': ('SKELETON-MISSING', 'BUILT'), '1824': ('SKELETON-MISSING', 'BUILT'), '4501': ('TABLED', 'BUILT'), '4601': ('TABLED', 'BUILT'), '5501': ('TABLED', 'BUILT'), '5503': ('TABLED', 'BUILT'), '5505': ('TABLED', 'BUILT'), '5601': ('TABLED', 'BUILT'), '5603': ('TABLED - master not built', 'BUILT'), '5652': ('TABLED', 'BUILT'), '6606': ('TABLED', 'BUILT'), '6807': ('TABLED', 'BUILT'), '6902': ('TABLED', 'BUILT')}
+sheets before ['_README', 'CarbonSteel_Scope', 'Parts_v2', 'Topologies', 'StandardsData', 'EndGeometry', 'DimensionMap', 'DimensionNaming', 'Parts', 'Scope', 'DashSizes', 'PipeThreads', 'Standards', 'QA_Log', 'Series']
+sheets after  ['_README', 'CarbonSteel_Scope', 'Parts_v2', 'Topologies', 'StandardsData', 'EndGeometry', 'DimensionMap', 'DimensionNaming', 'Parts', 'Scope', 'DashSizes', 'PipeThreads', 'Standards', 'QA_Log', 'Series']
+_README            rows   35 ->   35  cols   1 ->   1  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+CarbonSteel_Scope  rows   23 ->   23  cols   3 ->   3  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+Parts_v2           rows  293 ->  293  cols  34 ->  34  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 15 dv 0
+Topologies         rows  127 ->  127  cols   7 ->   7  changed cells  93 (intended 93, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+StandardsData      rows   73 ->   73  cols   6 ->   6  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+EndGeometry        rows   51 ->   51  cols   8 ->   8  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+DimensionMap       rows   19 ->   19  cols  11 ->  11  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+DimensionNaming    rows   26 ->   26  cols   4 ->   4  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+Parts              rows   60 ->   60  cols  57 ->  57  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 57 dv 0
+Scope              rows   48 ->   48  cols   3 ->   3  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+DashSizes          rows   14 ->   14  cols   8 ->   8  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+PipeThreads        rows   10 ->   10  cols   7 ->   7  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+Standards          rows   14 ->   14  cols   6 ->   6  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+QA_Log             rows  173 ->  176  cols   7 ->   7  changed cells  21 (intended 21, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+Series             rows  411 ->  411  cols  11 ->  11  changed cells   0 (intended 0, OTHER 0, intended-not-written 0)  style diffs outside new cells 0  freeze/filter/widths/heights/merged/dv/cf/comments same: True  comments 0 dv 0
+QA_Log rows added: 3 (#173-#175 expected 3)
+zip members identical list/order: True
+raw XML parts that differ from the live file: ['docProps/core.xml', 'xl/worksheets/sheet4.xml', 'xl/worksheets/sheet14.xml']
+RESULT OK - only the intended cells changed
+new workbook sha256 29abc3cec6f99b85d2b277b1c2385b59bb52f76555a7f1c35d163849bba9ebce

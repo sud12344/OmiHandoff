@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6410_MASTER"
 ' ============================================================================
-'  Build_6410_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_straight2.py
+'  Build_6410_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
 '  ORB Reducer/Expander (male ORB x female ORB port) - master from reference configuration 6410-12-08-O (DesignTable_6410_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = ORBF.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6410.  Report: 03_SCRIPTS\Build_6410_report.txt
@@ -233,13 +233,13 @@ Sub Build6410()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 31)", (UBound(cfgs) + 1) >= 30
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 35)", (UBound(cfgs) + 1) >= 34
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("6410-04-04-O", "6410-24-20-O")
+    cx_c = Array("6410-04-02-O", "6410-24-20-O")
     cx_p = Array("L33@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "THDMAJR_A@DRIVE", "ORBA_THDL@DRIVE", "ORBA_GRVR@DRIVE", "ORBA_GRVW@DRIVE", "ORBFB_FACER@DRIVE", "THDPITCH@THD_EndA", "Profile_Height@THD_EndA_PROF", "THDPITCH@THD_EndA_PROF", "PROF_R@THDPROF_B", "DEPTH@BORECUT_A")
-    cx_w = Array(Array(1.10000, 0.36084, 0.62500, 0.21875, 0.26500, 0.18200, 0.07500, 0.24500, 0.05000, 0.02706, 0.05000, 0.19000, 0.55300), Array(1.75000, 1.22976, 2.13000, 0.93750, 0.46900, 0.87800, 0.12500, 0.85750, 0.08333, 0.04511, 0.08333, 0.76500, 0.84400))
+    cx_w = Array(Array(1.10000, 0.32447, 0.56200, 0.21875, 0.26500, 0.18200, 0.07500, 0.18000, 0.05000, 0.02706, 0.05000, 0.13500, 0.63200), Array(1.75000, 1.22976, 2.13000, 0.93750, 0.46900, 0.87800, 0.12500, 0.85750, 0.08333, 0.04511, 0.08333, 0.76500, 0.84400))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -267,38 +267,42 @@ Sub Build6410()
     ' ---- female ORB port bottom, every configuration (2026-10-01): ORBFB_DRILLANG 60 = 120deg drill point, 90 = deep bore (no point)
     stepName = "ORB port bottom check"
     Dim db_p As SldWorks.Dimension, db_i As Long, db_c() As String, db_x() As Double, db_a() As Double, db_v As Double
-    ReDim db_c(29): ReDim db_x(29): ReDim db_a(29)
+    ReDim db_c(33): ReDim db_x(33): ReDim db_a(33)
     db_c(0) = "6410-12-08-O": db_x(0) = 0.020116800: db_a(0) = 60
-    db_c(1) = "6410-04-04-O": db_x(1) = 0.014046200: db_a(1) = 60
-    db_c(2) = "6410-04-06-O": db_x(2) = 0.013995400: db_a(2) = 60
-    db_c(3) = "6410-06-04-O": db_x(3) = 0.014554200: db_a(3) = 60
-    db_c(4) = "6410-06-06-O": db_x(4) = 0.017297400: db_a(4) = 60
-    db_c(5) = "6410-08-06-O": db_x(5) = 0.013995400: db_a(5) = 60
-    db_c(6) = "6410-08-08-O": db_x(6) = 0.018338800: db_a(6) = 60
-    db_c(7) = "6410-08-10-O": db_x(7) = 0.017754600: db_a(7) = 60
-    db_c(8) = "6410-08-12-O": db_x(8) = 0.019151600: db_a(8) = 60
-    db_c(9) = "6410-10-04-O": db_x(9) = 0.009728200: db_a(9) = 90
-    db_c(10) = "6410-10-06-O": db_x(10) = 0.008153400: db_a(10) = 90
-    db_c(11) = "6410-10-08-O": db_x(11) = 0.016052800: db_a(11) = 60
-    db_c(12) = "6410-10-12-O": db_x(12) = 0.022453600: db_a(12) = 60
-    db_c(13) = "6410-12-04-O": db_x(13) = 0.011506200: db_a(13) = 90
-    db_c(14) = "6410-12-06-O": db_x(14) = 0.012217400: db_a(14) = 90
-    db_c(15) = "6410-12-10-O": db_x(15) = 0.017754600: db_a(15) = 60
-    db_c(16) = "6410-12-12-O": db_x(16) = 0.023469600: db_a(16) = 60
-    db_c(17) = "6410-12-16-O": db_x(17) = 0.025755600: db_a(17) = 60
-    db_c(18) = "6410-16-06-O": db_x(18) = 0.009931400: db_a(18) = 90
-    db_c(19) = "6410-16-08-O": db_x(19) = 0.010972800: db_a(19) = 90
-    db_c(20) = "6410-16-10-O": db_x(20) = 0.020040600: db_a(20) = 90
-    db_c(21) = "6410-16-12-O": db_x(21) = 0.020421600: db_a(21) = 60
-    db_c(22) = "6410-16-16-O": db_x(22) = 0.022961600: db_a(22) = 60
-    db_c(23) = "6410-16-20-O": db_x(23) = 0.031343600: db_a(23) = 60
-    db_c(24) = "6410-20-12-O": db_x(24) = 0.007467600: db_a(24) = 90
-    db_c(25) = "6410-20-16-O": db_x(25) = 0.007467600: db_a(25) = 90
-    db_c(26) = "6410-20-24-O": db_x(26) = 0.027279600: db_a(26) = 60
-    db_c(27) = "6410-24-12-O": db_x(27) = 0.008991600: db_a(27) = 90
-    db_c(28) = "6410-24-16-O": db_x(28) = 0.009245600: db_a(28) = 90
-    db_c(29) = "6410-24-20-O": db_x(29) = 0.021437600: db_a(29) = 60
-    For db_i = 0 To 29
+    db_c(1) = "6410-04-02-O": db_x(1) = 0.016052800: db_a(1) = 60
+    db_c(2) = "6410-04-04-O": db_x(2) = 0.014046200: db_a(2) = 60
+    db_c(3) = "6410-04-06-O": db_x(3) = 0.013995400: db_a(3) = 60
+    db_c(4) = "6410-06-04-O": db_x(4) = 0.014554200: db_a(4) = 60
+    db_c(5) = "6410-06-06-O": db_x(5) = 0.017297400: db_a(5) = 60
+    db_c(6) = "6410-06-08-O": db_x(6) = 0.019354800: db_a(6) = 60
+    db_c(7) = "6410-08-04-O": db_x(7) = 0.014046200: db_a(7) = 90
+    db_c(8) = "6410-08-06-O": db_x(8) = 0.013995400: db_a(8) = 60
+    db_c(9) = "6410-08-08-O": db_x(9) = 0.018338800: db_a(9) = 60
+    db_c(10) = "6410-08-10-O": db_x(10) = 0.017754600: db_a(10) = 60
+    db_c(11) = "6410-08-12-O": db_x(11) = 0.019151600: db_a(11) = 60
+    db_c(12) = "6410-10-04-O": db_x(12) = 0.009728200: db_a(12) = 90
+    db_c(13) = "6410-10-06-O": db_x(13) = 0.008153400: db_a(13) = 90
+    db_c(14) = "6410-10-08-O": db_x(14) = 0.016052800: db_a(14) = 60
+    db_c(15) = "6410-10-12-O": db_x(15) = 0.022453600: db_a(15) = 60
+    db_c(16) = "6410-12-04-O": db_x(16) = 0.011506200: db_a(16) = 90
+    db_c(17) = "6410-12-06-O": db_x(17) = 0.012217400: db_a(17) = 90
+    db_c(18) = "6410-12-10-O": db_x(18) = 0.017754600: db_a(18) = 60
+    db_c(19) = "6410-12-12-O": db_x(19) = 0.023469600: db_a(19) = 60
+    db_c(20) = "6410-12-16-O": db_x(20) = 0.025755600: db_a(20) = 60
+    db_c(21) = "6410-16-04-O": db_x(21) = 0.011506200: db_a(21) = 60
+    db_c(22) = "6410-16-06-O": db_x(22) = 0.009931400: db_a(22) = 90
+    db_c(23) = "6410-16-08-O": db_x(23) = 0.010972800: db_a(23) = 90
+    db_c(24) = "6410-16-10-O": db_x(24) = 0.020040600: db_a(24) = 90
+    db_c(25) = "6410-16-12-O": db_x(25) = 0.020421600: db_a(25) = 60
+    db_c(26) = "6410-16-16-O": db_x(26) = 0.022961600: db_a(26) = 60
+    db_c(27) = "6410-16-20-O": db_x(27) = 0.031343600: db_a(27) = 60
+    db_c(28) = "6410-20-12-O": db_x(28) = 0.007467600: db_a(28) = 90
+    db_c(29) = "6410-20-16-O": db_x(29) = 0.007467600: db_a(29) = 90
+    db_c(30) = "6410-20-24-O": db_x(30) = 0.027279600: db_a(30) = 60
+    db_c(31) = "6410-24-12-O": db_x(31) = 0.008991600: db_a(31) = 90
+    db_c(32) = "6410-24-16-O": db_x(32) = 0.009245600: db_a(32) = 90
+    db_c(33) = "6410-24-20-O": db_x(33) = 0.021437600: db_a(33) = 60
+    For db_i = 0 To 33
         swModel.ShowConfiguration2 db_c(db_i)
         swModel.ForceRebuild3 False
         Set db_p = swModel.Parameter("ORBFB_DRILLANG@DRIVE")

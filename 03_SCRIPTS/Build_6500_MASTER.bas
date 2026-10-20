@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6500_MASTER"
 ' ============================================================================
-'  Build_6500_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_tee.py
+'  Build_6500_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
 '  90 deg Female Swivel Elbow (elbow), forged hex body (2500HX pattern).  Reference config 6500-12-12-FG: JICM -12, JICSW -12
 '  Entry: Sub Build6500.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_6500_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -64,9 +64,9 @@ Sub LoadLeg(i As Long)
     0.030531816, 0.013944600, _
     0.022547580, 0.013944600, _
     0.022547580, 0.012217400, _
-    0.030226000, 0.012217400, _
-    0.030226000, 0.010731500, _
-    0.015984818, 0.000000000)
+    0.029972000, 0.012217400, _
+    0.029972000, 0.010731500, _
+    0.015730818, 0.000000000)
     NPTS = (UBound(v) + 1) \ 2
     ReDim PX(NPTS - 1): ReDim PR(NPTS - 1)
     For k = 0 To NPTS - 1
@@ -149,10 +149,10 @@ Sub Build6500()
     Call Dim_ang(12, 18, "SW2_RELANG", 0.785398163, 0.013618, 0.031330)
     Call Dim_rad(13, "SW2_RELR", 0.013944600, -0.019050, 0.026540)
     Call Dim_pair(14, 9, "SW2_FLOOR", 0.021902420, 0.034841, 0.033499)
-    Call Dim_rad(15, "SW2_NOSER", 0.012217400, -0.022860, 0.026387)
-    Call Dim_pair(16, 9, "SW2_NOSETIP", 0.014224000, 0.037381, 0.037338)
-    Call Dim_ptline(17, False, 18, "SW2_SEATR", 0.010731500, 0.005366, 0.028956)
-    Call Dim_ang(17, 18, "SW2_SEATANG", 0.645771823, 0.003219, 0.027686)
+    Call Dim_rad(15, "SW2_NOSER", 0.012217400, -0.022860, 0.026260)
+    Call Dim_pair(16, 9, "SW2_NOSETIP", 0.014478000, 0.037381, 0.037211)
+    Call Dim_ptline(17, False, 18, "SW2_SEATR", 0.010731500, 0.005366, 0.028702)
+    Call Dim_ang(17, 18, "SW2_SEATANG", 0.645771823, 0.003219, 0.027432)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -241,7 +241,7 @@ Sub Build6500()
     Call BoreCut("BORE2", "D2", 0.015494000, 0.044450000, 0#, "BORECUT2", True, 0.009658350)
     curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.6600)", Not AxisCoveredAx(0.042164000)
     curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+1.7500)", Not AxisCoveredAx(0.044450000)
-    curAxis = 1: Check "leg 2 bore reaches the swivel seat (no face across the axis at the nose-tip plane Y=+1.1900)", Not AxisCoveredAx(0.030226000)
+    curAxis = 1: Check "leg 2 bore reaches the swivel seat (no face across the axis at the nose-tip plane Y=+1.1800)", Not AxisCoveredAx(0.029972000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
@@ -270,7 +270,7 @@ Sub Build6500()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 25)", (UBound(cfgs) + 1) = 25
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 27)", (UBound(cfgs) + 1) = 27
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

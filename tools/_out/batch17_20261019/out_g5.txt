@@ -1,0 +1,267 @@
+=== sw_status {}
+{"revision": "34.4.0", "docs": [], "active": null}
+--- 0.1s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_5406_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"ran": "Build5406", "ok": true, "error": null, "secs": 462.2, "msgbox": ["Build_5406_MASTER finished with 0 problem(s).", "Report: C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406\\Build_5406_report.txt", "", "OK    dim L2 = 1.3600 in (expect 1.3600)", "OK    dim BODYR = 0.7967 in (expect 0.7967)", "OK    dim NPTFA_MAJR = 0.6416 in (expect 0.6416)", "OK    dim NPTFA_THDL = 0.6828 in (expect 0.6828)", "OK    angle NPTFA_TAPER = 1.79 deg", "OK    dim NPTFA_RELL = 0.2572 in (expect 0.2572)", "OK    DRIVE sketch fully defined", "OK    Revolve created", "OK    Revolved volume 2.1054 in^3 (expect 2.1054)", "OK    dim HEXB = 1.3800 in (expect 1.3800)", "OK    hex sketch fully defined", "OK    HEXCUT created", "OK    HEXCUT removed only the corners (6.9% of volume)", "OK    select end face for POCKET_B at x=1.3600", "OK    POCKET_B sk"], "report": {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406\\Build_5406_report.txt", "ok": 87, "fail": 0, "fail_lines": [], "tail": ["OK    All-config sweep: 31 configurations rebuilt, 0 feature/body failures", "      Master left in its reference configuration 5406-16-08 for the save (it opens in this size)", "      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 32 configs, 0 still live", "      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 32 configs, 0 still live", "OK    Threads suppressed in all configurations before save (2 THD_ features)", "      SaveAs C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406\\5406_MASTER.SLDPRT returned True (error 0, warning 0)", "        file on disk written 10/19/2026 11:05:23 PM - saved (SaveAs return value ignored)", "OK    Saved to C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406\\5406_MASTER.SLDPRT"]}, "save_path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406\\5406_MASTER.SLDPRT", "new_docs": [{"title": "5406_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406\\5406_MASTER.SLDPRT", "type": "part", "config": "5406-16-08", "unsaved": false}], "active": "5406_MASTER", "swb": "C:\\Users\\sudha\\AppData\\Local\\Temp\\sw_mcp\\Build_5406_MASTER__mcp.swb"}
+--- 462.6s
+=== sweep_configs {"doc": "5406_MASTER", "timeout_s": 1700}
+{"doc": "5406_MASTER", "units": "in", "checked": 32, "not_ok": 0, "restored": "5406-16-08", "rows": [{"config": "5406-04-02", "ok": true, "bodies": 1, "volume": 0.154288, "size": [0.85, 0.63, 0.72746], "secs": 1.87}, {"config": "5406-06-02", "ok": true, "bodies": 1, "volume": 0.267613, "size": [0.85, 0.75, 0.86602], "secs": 1.47}, {"config": "5406-06-04", "ok": true, "bodies": 1, "volume": 0.216876, "size": [0.85, 0.75, 0.86602], "secs": 1.58}, {"config": "5406-08-02", "ok": true, "bodies": 1, "volume": 0.553453, "size": [1.1, 0.88, 1.01614], "secs": 1.52}, {"config": "5406-08-04", "ok": true, "bodies": 1, "volume": 0.487794, "size": [1.1, 0.88, 1.01614], "secs": 1.37}, {"config": "5406-08-06", "ok": true, "bodies": 1, "volume": 0.366843, "size": [1.1, 0.88, 1.01614], "secs": 1.48}, {"config": "5406-12-02", "ok": true, "bodies": 1, "volume": 1.00958, "size": [1.17, 1.13, 1.30481], "secs": 1.53}, {"config": "5406-12-04", "ok": true, "bodies": 1, "volume": 0.939742, "size": [1.17, 1.13, 1.30481], "secs": 1.49}, {"config": "5406-12-06", "ok": true, "bodies": 1, "volume": 0.811094, "size": [1.17, 1.13, 1.30481], "secs": 1.45}, {"config": "5406-12-08", "ok": true, "bodies": 1, "volume": 0.659381, "size": [1.17, 1.13, 1.30481], "secs": 1.5}, {"config": "5406-16-02", "ok": true, "bodies": 1, "volume": 1.844195, "size": [1.36, 1.38, 1.59348], "secs": 1.6}, {"config": "5406-16-04", "ok": true, "bodies": 1, "volume": 1.763017, "size": [1.36, 1.38, 1.59348], "secs": 1.39}, {"config": "5406-16-06", "ok": true, "bodies": 1, "volume": 1.613477, "size": [1.36, 1.38, 1.59348], "secs": 1.48}, {"config": "5406-16-08", "ok": true, "bodies": 1, "volume": 1.437127, "size": [1.36, 1.38, 1.59348], "secs": 1.56}, {"config": "5406-16-12", "ok": true, "bodies": 1, "volume": 1.075988, "size": [1.36, 1.38, 1.59348], "secs": 1.26}, {"config": "5406-20-04", "ok": true, "bodies": 1, "volume": 3.198927, "size": [1.47, 1.75, 2.02072], "secs": 1.51}, {"config": "5406-20-06", "ok": true, "bodies": 1, "volume": 3.037292, "size": [1.47, 1.75, 2.02072], "secs": 1.43}, {"config": "5406-20-08", "ok": true, "bodies": 1, "volume": 2.846678, "size": [1.47, 1.75, 2.02072], "secs": 1.61}, {"config": "5406-20-12", "ok": true, "bodies": 1, "volume": 2.45633, "size": [1.47, 1.75, 2.02072], "secs": 1.46}, {"config": "5406-20-16", "ok": true, "bodies": 1, "volume": 1.911966, "size": [1.47, 1.75, 2.02072], "secs": 1.41}, {"config": "5406-24-04", "ok": true, "bodies": 1, "volume": 4.499299, "size": [1.55, 2.0, 2.3094], "secs": 1.38}, {"config": "5406-24-08", "ok": true, "bodies": 1, "volume": 4.189466, "size": [1.57, 2.0, 2.3094], "secs": 1.51}, {"config": "5406-24-12", "ok": true, "bodies": 1, "volume": 3.772563, "size": [1.57, 2.0, 2.3094], "secs": 1.46}, {"config": "5406-24-16", "ok": true, "bodies": 1, "volume": 3.191168, "size": [1.57, 2.0, 2.3094], "secs": 1.56}, {"config": "5406-24-20", "ok": true, "bodies": 1, "volume": 2.092745, "size": [1.57, 2.0, 2.3094], "secs": 1.59}, {"config": "5406-32-04", "ok": true, "bodies": 1, "volume": 8.181268, "size": [1.75, 2.5, 2.88675], "secs": 1.48}, {"config": "5406-32-08", "ok": true, "bodies": 1, "volume": 7.761924, "size": [1.75, 2.5, 2.88675], "secs": 1.43}, {"config": "5406-32-12", "ok": true, "bodies": 1, "volume": 7.297224, "size": [1.75, 2.5, 2.88675], "secs": 1.4}, {"config": "5406-32-16", "ok": true, "bodies": 1, "volume": 6.649172, "size": [1.75, 2.5, 2.88675], "secs": 1.6}, {"config": "5406-32-20", "ok": true, "bodies": 1, "volume": 5.424815, "size": [1.75, 2.5, 2.88675], "secs": 1.41}, {"config": "5406-32-24", "ok": true, "bodies": 1, "volume": 4.36924, "size": [1.75, 2.5, 2.88675], "secs": 1.47}, {"config": "Default", "ok": true, "bodies": 1, "volume": 1.437118, "size": [1.36, 1.38, 1.59349], "secs": 1.47}]}
+--- 48.2s
+=== close_doc {"doc": "5406_MASTER", "discard_unsaved": true}
+{"closed": "5406_MASTER"}
+--- 0.5s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5406_MASTER.SLDPRT", "read_only": true}
+{"title": "5406_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5406_MASTER.SLDPRT", "type": "part", "config": "5406-04-02", "unsaved": false}
+--- 2.6s
+=== sweep_configs {"doc": "5406_MASTER", "timeout_s": 1700}
+{"doc": "5406_MASTER", "units": "in", "checked": 29, "not_ok": 0, "restored": "5406-04-02", "rows": [{"config": "5406-04-02", "ok": true, "bodies": 1, "volume": 0.154288, "size": [0.85, 0.63, 0.72746], "secs": 1.03}, {"config": "5406-06-02", "ok": true, "bodies": 1, "volume": 0.267613, "size": [0.85, 0.75, 0.86602], "secs": 1.47}, {"config": "5406-06-04", "ok": true, "bodies": 1, "volume": 0.216876, "size": [0.85, 0.75, 0.86602], "secs": 1.42}, {"config": "5406-08-02", "ok": true, "bodies": 1, "volume": 0.553453, "size": [1.1, 0.88, 1.01614], "secs": 1.6}, {"config": "5406-12-02", "ok": true, "bodies": 1, "volume": 1.00958, "size": [1.17, 1.13, 1.30481], "secs": 1.64}, {"config": "5406-12-04", "ok": true, "bodies": 1, "volume": 0.939742, "size": [1.17, 1.13, 1.30481], "secs": 1.58}, {"config": "5406-12-06", "ok": true, "bodies": 1, "volume": 0.811094, "size": [1.17, 1.13, 1.30481], "secs": 1.57}, {"config": "5406-12-08", "ok": true, "bodies": 1, "volume": 0.659381, "size": [1.17, 1.13, 1.30481], "secs": 1.52}, {"config": "5406-16-02", "ok": true, "bodies": 1, "volume": 1.844195, "size": [1.36, 1.38, 1.59348], "secs": 1.56}, {"config": "5406-16-04", "ok": true, "bodies": 1, "volume": 1.763017, "size": [1.36, 1.38, 1.59348], "secs": 1.54}, {"config": "5406-16-06", "ok": true, "bodies": 1, "volume": 1.613477, "size": [1.36, 1.38, 1.59348], "secs": 1.46}, {"config": "5406-16-08", "ok": true, "bodies": 1, "volume": 1.437127, "size": [1.36, 1.38, 1.59348], "secs": 1.51}, {"config": "5406-16-12", "ok": true, "bodies": 1, "volume": 1.075988, "size": [1.36, 1.38, 1.59348], "secs": 1.54}, {"config": "5406-20-04", "ok": true, "bodies": 1, "volume": 3.198927, "size": [1.47, 1.75, 2.02072], "secs": 1.51}, {"config": "5406-20-06", "ok": true, "bodies": 1, "volume": 3.037292, "size": [1.47, 1.75, 2.02072], "secs": 1.49}, {"config": "5406-20-08", "ok": true, "bodies": 1, "volume": 2.846678, "size": [1.47, 1.75, 2.02072], "secs": 1.57}, {"config": "5406-20-12", "ok": true, "bodies": 1, "volume": 2.45633, "size": [1.47, 1.75, 2.02072], "secs": 1.56}, {"config": "5406-20-16", "ok": true, "bodies": 1, "volume": 1.911966, "size": [1.47, 1.75, 2.02072], "secs": 1.51}, {"config": "5406-24-04", "ok": true, "bodies": 1, "volume": 4.499299, "size": [1.55, 2.0, 2.3094], "secs": 1.52}, {"config": "5406-24-08", "ok": true, "bodies": 1, "volume": 4.189466, "size": [1.57, 2.0, 2.3094], "secs": 1.64}, {"config": "5406-24-12", "ok": true, "bodies": 1, "volume": 3.772563, "size": [1.57, 2.0, 2.3094], "secs": 1.52}, {"config": "5406-24-16", "ok": true, "bodies": 1, "volume": 3.191168, "size": [1.57, 2.0, 2.3094], "secs": 1.47}, {"config": "5406-24-20", "ok": true, "bodies": 1, "volume": 2.092745, "size": [1.57, 2.0, 2.3094], "secs": 1.58}, {"config": "5406-32-08", "ok": true, "bodies": 1, "volume": 7.761924, "size": [1.75, 2.5, 2.88675], "secs": 1.61}, {"config": "5406-32-12", "ok": true, "bodies": 1, "volume": 7.297224, "size": [1.75, 2.5, 2.88675], "secs": 1.58}, {"config": "5406-32-16", "ok": true, "bodies": 1, "volume": 6.649172, "size": [1.75, 2.5, 2.88675], "secs": 1.6}, {"config": "5406-32-20", "ok": true, "bodies": 1, "volume": 5.424815, "size": [1.75, 2.5, 2.88675], "secs": 1.51}, {"config": "5406-32-24", "ok": true, "bodies": 1, "volume": 4.36924, "size": [1.75, 2.5, 2.88675], "secs": 1.54}, {"config": "Default", "ok": true, "bodies": 1, "volume": 1.437118, "size": [1.36, 1.38, 1.59349], "secs": 1.54}]}
+--- 44.7s
+=== close_doc {"doc": "5406_MASTER", "discard_unsaved": true}
+{"closed": "5406_MASTER"}
+--- 0.4s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_5406C_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Us
+{"ran": "Build5406C", "ok": true, "error": null, "secs": 38.7, "msgbox": ["Build_5406C_MASTER finished with 0 problem(s).", "Report: C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406C\\Build_5406C_report.txt", "", "OK    dim L = 1.2300 in (expect 1.2300)", "OK    dim BODYR = 0.6524 in (expect 0.6524)", "OK    DRIVE sketch fully defined", "OK    Revolve created", "OK    Revolved volume 1.6447 in^3 (expect 1.6447)", "OK    dim HEXB = 1.1300 in (expect 1.1300)", "OK    hex sketch fully defined", "OK    HEXCUT created", "OK    HEXCUT removed only the corners (17.3% of volume)", "OK    select end face for POCKET_A at x=0.0000", "OK    POCKET_A sketch opened (active sketch exists)", "OK    POCKET_A circle created", "OK    dim TAPDRILLA = 0.7000 in (expect 0.7000)", "OK    POCKET_A sketch closed and named (ProfileFeature)", "OK    POCKETC"], "report": {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406C\\Build_5406C_report.txt", "ok": 52, "fail": 0, "fail_lines": [], "tail": ["      sweep 7/7  5406-C-8  rebuilt in 1.2 s", "OK    All-config sweep: 7 configurations rebuilt, 0 feature/body failures", "      Master left in its reference configuration 5406-C-8 for the save (it opens in this size)", "      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live", "OK    Threads suppressed in all configurations before save (1 THD_ features)", "      SaveAs C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406C\\5406C_MASTER.SLDPRT returned True (error 0, warning 0)", "        file on disk written 10/19/2026 11:07:39 PM - saved (SaveAs return value ignored)", "OK    Saved to C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406C\\5406C_MASTER.SLDPRT"]}, "save_path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406C\\5406C_MASTER.SLDPRT", "new_docs": [{"title": "5406C_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406C\\5406C_MASTER.SLDPRT", "type": "part", "config": "5406-C-8", "unsaved": false}], "active": "5406C_MASTER", "swb": "C:\\Users\\sudha\\AppData\\Local\\Temp\\sw_mcp\\Build_5406C_MASTER__mcp.swb"}
+--- 39.2s
+=== sweep_configs {"doc": "5406C_MASTER", "timeout_s": 1700}
+{"doc": "5406C_MASTER", "units": "in", "checked": 8, "not_ok": 0, "restored": "5406-C-8", "rows": [{"config": "5406-C-12", "ok": true, "bodies": 1, "volume": 1.356704, "size": [1.44, 1.25, 1.44338], "secs": 1.58}, {"config": "5406-C-16", "ok": true, "bodies": 1, "volume": 2.540916, "size": [1.61, 1.63018, 1.88216], "secs": 1.33}, {"config": "5406-C-2", "ok": true, "bodies": 1, "volume": 0.14805, "size": [0.69, 0.56, 0.64663], "secs": 1.31}, {"config": "5406-C-20", "ok": true, "bodies": 1, "volume": 2.334532, "size": [1.25, 2.00022, 2.3094], "secs": 1.36}, {"config": "5406-C-4", "ok": true, "bodies": 1, "volume": 0.350871, "size": [0.92, 0.75007, 0.86602], "secs": 1.37}, {"config": "5406-C-6", "ok": true, "bodies": 1, "volume": 0.477011, "size": [0.97, 0.88, 1.01614], "secs": 1.33}, {"config": "5406-C-8", "ok": true, "bodies": 1, "volume": 1.013808, "size": [1.23, 1.13, 1.30481], "secs": 1.25}, {"config": "Default", "ok": true, "bodies": 1, "volume": 1.013808, "size": [1.23, 1.13, 1.30481], "secs": 1.1}]}
+--- 11.2s
+=== close_doc {"doc": "5406C_MASTER", "discard_unsaved": true}
+{"closed": "5406C_MASTER"}
+--- 0.4s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5406C_MASTER.SLDPRT", "read_only": true}
+{"title": "5406C_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5406C_MASTER.SLDPRT", "type": "part", "config": "5406-C-12", "unsaved": false}
+--- 2.7s
+=== sweep_configs {"doc": "5406C_MASTER", "timeout_s": 1700}
+{"doc": "5406C_MASTER", "units": "in", "checked": 7, "not_ok": 0, "restored": "5406-C-12", "rows": [{"config": "5406-C-12", "ok": true, "bodies": 1, "volume": 1.356704, "size": [1.44, 1.25, 1.44338], "secs": 0.81}, {"config": "5406-C-16", "ok": true, "bodies": 1, "volume": 2.540916, "size": [1.61, 1.63018, 1.88216], "secs": 1.19}, {"config": "5406-C-2", "ok": true, "bodies": 1, "volume": 0.14805, "size": [0.69, 0.56, 0.64663], "secs": 1.18}, {"config": "5406-C-4", "ok": true, "bodies": 1, "volume": 0.350871, "size": [0.92, 0.75007, 0.86602], "secs": 1.3}, {"config": "5406-C-6", "ok": true, "bodies": 1, "volume": 0.477011, "size": [0.97, 0.88, 1.01614], "secs": 1.37}, {"config": "5406-C-8", "ok": true, "bodies": 1, "volume": 1.013808, "size": [1.23, 1.13, 1.30481], "secs": 1.37}, {"config": "Default", "ok": true, "bodies": 1, "volume": 1.013808, "size": [1.23, 1.13, 1.30481], "secs": 1.33}]}
+--- 9.0s
+=== close_doc {"doc": "5406C_MASTER", "discard_unsaved": true}
+{"closed": "5406C_MASTER"}
+--- 0.5s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_5406P_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Us
+{"ran": "Build5406P", "ok": true, "error": null, "secs": 123.7, "msgbox": ["Build_5406P_MASTER finished with 0 problem(s).", "Report: C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406P\\Build_5406P_report.txt", "", "OK    dim L2 = 1.2400 in (expect 1.2400)", "OK    dim BODYR = 0.7967 in (expect 0.7967)", "OK    dim NPTFA_MAJR = 0.6416 in (expect 0.6416)", "OK    dim NPTFA_THDL = 0.6828 in (expect 0.6828)", "OK    angle NPTFA_TAPER = 1.79 deg", "OK    dim NPTFA_RELL = 0.2572 in (expect 0.2572)", "OK    DRIVE sketch fully defined", "OK    Revolve created", "OK    Revolved volume 1.8661 in^3 (expect 1.8661)", "OK    dim HEXB = 1.3800 in (expect 1.3800)", "OK    hex sketch fully defined", "OK    HEXCUT created", "OK    HEXCUT removed only the corners (5.5% of volume)", "OK    solid plug: End A face closed on the axis (x=0)", "OK    soli"], "report": {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406P\\Build_5406P_report.txt", "ok": 54, "fail": 0, "fail_lines": [], "tail": ["      sweep 9/9  5406-P-06  rebuilt in 1.6 s", "OK    All-config sweep: 9 configurations rebuilt, 0 feature/body failures", "      Master left in its reference configuration 5406-16P for the save (it opens in this size)", "      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 10 configs, 0 still live", "OK    Threads suppressed in all configurations before save (1 THD_ features)", "      SaveAs C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406P\\5406P_MASTER.SLDPRT returned True (error 0, warning 0)", "        file on disk written 10/19/2026 11:10:07 PM - saved (SaveAs return value ignored)", "OK    Saved to C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406P\\5406P_MASTER.SLDPRT"]}, "save_path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406P\\5406P_MASTER.SLDPRT", "new_docs": [{"title": "5406P_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406P\\5406P_MASTER.SLDPRT", "type": "part", "config": "5406-16P", "unsaved": false}], "active": "5406P_MASTER", "swb": "C:\\Users\\sudha\\AppData\\Local\\Temp\\sw_mcp\\Build_5406P_MASTER__mcp.swb"}
+--- 124.1s
+=== sweep_configs {"doc": "5406P_MASTER", "timeout_s": 1700}
+{"doc": "5406P_MASTER", "units": "in", "checked": 10, "not_ok": 0, "restored": "5406-16P", "rows": [{"config": "5406-08P", "ok": true, "bodies": 1, "volume": 0.553645, "size": [0.96, 0.88, 1.01614], "secs": 1.41}, {"config": "5406-12P", "ok": true, "bodies": 1, "volume": 0.97695, "size": [1.05, 1.13, 1.30481], "secs": 1.43}, {"config": "5406-16P", "ok": true, "bodies": 1, "volume": 1.762605, "size": [1.24, 1.38, 1.59348], "secs": 1.18}, {"config": "5406-20P", "ok": true, "bodies": 1, "volume": 3.4124, "size": [1.47, 1.75, 2.02072], "secs": 1.04}, {"config": "5406-24P", "ok": true, "bodies": 1, "volume": 4.793673, "size": [1.57, 2.0, 2.3094], "secs": 1.32}, {"config": "5406-32P", "ok": true, "bodies": 1, "volume": 8.435403, "size": [1.75, 2.5, 2.88675], "secs": 1.28}, {"config": "5406-P-02", "ok": true, "bodies": 1, "volume": 0.078936, "size": [0.562, 0.438, 0.50576], "secs": 1.2}, {"config": "5406-P-04", "ok": true, "bodies": 1, "volume": 0.179278, "size": [0.75, 0.562, 0.64894], "secs": 1.22}, {"config": "5406-P-06", "ok": true, "bodies": 1, "volume": 0.289227, "size": [0.78, 0.688, 0.79443], "secs": 1.26}, {"config": "Default", "ok": true, "bodies": 1, "volume": 1.762596, "size": [1.24, 1.38, 1.59349], "secs": 1.23}]}
+--- 13.1s
+=== close_doc {"doc": "5406P_MASTER", "discard_unsaved": true}
+{"closed": "5406P_MASTER"}
+--- 0.5s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5406P_MASTER.SLDPRT", "read_only": true}
+{"title": "5406P_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5406P_MASTER.SLDPRT", "type": "part", "config": "5406-16P", "unsaved": false}
+--- 2.6s
+=== sweep_configs {"doc": "5406P_MASTER", "timeout_s": 1700}
+{"doc": "5406P_MASTER", "units": "in", "checked": 5, "not_ok": 0, "restored": "5406-16P", "rows": [{"config": "5406-16P", "ok": true, "bodies": 1, "volume": 1.762605, "size": [1.24, 1.38, 1.59348], "secs": 0.84}, {"config": "5406-20P", "ok": true, "bodies": 1, "volume": 3.4124, "size": [1.47, 1.75, 2.02072], "secs": 1.19}, {"config": "5406-24P", "ok": true, "bodies": 1, "volume": 4.793673, "size": [1.57, 2.0, 2.3094], "secs": 1.2}, {"config": "5406-32P", "ok": true, "bodies": 1, "volume": 8.435403, "size": [1.75, 2.5, 2.88675], "secs": 1.34}, {"config": "Default", "ok": true, "bodies": 1, "volume": 1.762596, "size": [1.24, 1.38, 1.59349], "secs": 1.26}]}
+--- 6.3s
+=== close_doc {"doc": "5406P_MASTER", "discard_unsaved": true}
+{"closed": "5406P_MASTER"}
+--- 0.5s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_5406HHP_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\
+{"ran": "Build5406HHP", "ok": true, "error": null, "secs": 29.3, "msgbox": ["Build_5406HHP_MASTER finished with 1 problem(s).", "Report: C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406HHP\\Build_5406HHP_report.txt", "", "OK    dim L2 = 0.6100 in (expect 0.6100)", "OK    dim BODYR = 0.4200 in (expect 0.4200)", "OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)", "OK    angle NPTFA_TAPER = 1.79 deg", "OK    DRIVE sketch fully defined", "OK    Revolve created", "OK    Revolved volume 0.3318 in^3 (expect 0.3318)", "OK    SOCKET: head face selected at x=0.6100", "OK    dim SOCKAF = 0.3750 in (expect 0.3750)", "OK    SOCKET sketch fully defined", "OK    SOCKETCUT created in the head and removed material (attempt 0)", "OK    SOCKETCUT removed the hex prism volume (0.03045 vs 0.03045 in^3)", "OK    SOCKETCUT dims: DEPTH=0.2500 SOCKAF=0.3750 ", ""], "report": {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406HHP\\Build_5406HHP_report.txt", "ok": 49, "fail": 1, "fail_lines": ["FAIL  Body diameter 0.8526 / 0.8502 (expect 0.8400)"], "tail": ["      sweep 1/1  5406-HHP-08  rebuilt in 1.8 s", "OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures", "      Master left in its reference configuration 5406-HHP-08 for the save (it opens in this size)", "      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live", "OK    Threads suppressed in all configurations before save (1 THD_ features)", "      SaveAs C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406HHP\\5406HHP_MASTER.SLDPRT returned True (error 0, warning 0)", "        file on disk written 10/19/2026 11:11:00 PM - saved (SaveAs return value ignored)", "OK    Saved to C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406HHP\\5406HHP_MASTER.SLDPRT"]}, "save_path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406HHP\\5406HHP_MASTER.SLDPRT", "new_docs": [{"title": "5406HHP_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406HHP\\5406HHP_MASTER.SLDPRT", "type": "part", "config": "5406-HHP-08", "unsaved": false}], "active": "5406HHP_MASTER", "swb": "C:\\Users\\sudha\\AppData\\Local\\Temp\\sw_mcp\\Build_5406HHP_MASTER__mcp.swb"}
+--- 29.8s
+=== sweep_configs {"doc": "5406HHP_MASTER", "timeout_s": 1700}
+{"doc": "5406HHP_MASTER", "units": "in", "checked": 2, "not_ok": 0, "restored": "5406-HHP-08", "rows": [{"config": "5406-HHP-08", "ok": true, "bodies": 1, "volume": 0.301368, "size": [0.61, 0.84, 0.84], "secs": 1.02}, {"config": "Default", "ok": true, "bodies": 1, "volume": 0.301364, "size": [0.61, 0.84, 0.84], "secs": 1.29}]}
+--- 2.8s
+=== close_doc {"doc": "5406HHP_MASTER", "discard_unsaved": true}
+{"closed": "5406HHP_MASTER"}
+--- 0.5s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_5406SHP_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\
+{"ran": "Build5406SHP", "ok": true, "error": null, "secs": 27.4, "msgbox": ["Build_5406SHP_MASTER finished with 1 problem(s).", "Report: C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406SHP\\Build_5406SHP_report.txt", "", "OK    dim L2 = 1.0200 in (expect 1.0200)", "OK    dim BODYR = 0.4200 in (expect 0.4200)", "OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)", "OK    angle NPTFA_TAPER = 1.79 deg", "OK    dim SQB_HEADR = 0.3981 in (expect 0.3981)", "OK    dim SQB_HEADL = 0.4400 in (expect 0.4400)", "OK    DRIVE sketch fully defined", "OK    Revolve created", "OK    Revolved volume 0.5343 in^3 (expect 0.5343)", "OK    SQUARE: sketch plane selected (End B face)", "OK    dim SQAF = 0.5630 in (expect 0.5630)", "OK    SQUARE sketch fully defined", "OK    SQCUT created in the right zone and removed material (attempt 0)", "OK    SQCUT removed "], "report": {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406SHP\\Build_5406SHP_report.txt", "ok": 49, "fail": 1, "fail_lines": ["FAIL  Body diameter 0.8526 / 0.8502 (expect 0.8400)"], "tail": ["      sweep 1/1  5406-SHP-08  rebuilt in 1.7 s", "OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures", "      Master left in its reference configuration 5406-SHP-08 for the save (it opens in this size)", "      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live", "OK    Threads suppressed in all configurations before save (1 THD_ features)", "      SaveAs C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406SHP\\5406SHP_MASTER.SLDPRT returned True (error 0, warning 0)", "        file on disk written 10/19/2026 11:11:31 PM - saved (SaveAs return value ignored)", "OK    Saved to C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406SHP\\5406SHP_MASTER.SLDPRT"]}, "save_path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406SHP\\5406SHP_MASTER.SLDPRT", "new_docs": [{"title": "5406SHP_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\5406SHP\\5406SHP_MASTER.SLDPRT", "type": "part", "config": "5406-SHP-08", "unsaved": false}], "active": "5406SHP_MASTER", "swb": "C:\\Users\\sudha\\AppData\\Local\\Temp\\sw_mcp\\Build_5406SHP_MASTER__mcp.swb"}
+--- 27.9s
+=== sweep_configs {"doc": "5406SHP_MASTER", "timeout_s": 1700}
+{"doc": "5406SHP_MASTER", "units": "in", "checked": 2, "not_ok": 0, "restored": "5406-SHP-08", "rows": [{"config": "5406-SHP-08", "ok": true, "bodies": 1, "volume": 0.454655, "size": [1.02, 0.84, 0.84], "secs": 1.03}, {"config": "Default", "ok": true, "bodies": 1, "volume": 0.454652, "size": [1.02, 0.84, 0.84], "secs": 1.29}]}
+--- 2.7s
+=== close_doc {"doc": "5406SHP_MASTER", "discard_unsaved": true}
+{"closed": "5406SHP_MASTER"}
+--- 0.5s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6401_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"ran": "Build6401", "ok": true, "error": null, "secs": 294.4, "msgbox": ["Build_6401_MASTER finished with 0 problem(s).", "Report: C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\6401\\Build_6401_report.txt", "", "OK    dim L29 = 1.5500 in (expect 1.5500)", "OK    dim BODYR = 0.5081 in (expect 0.5081)", "OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)", "OK    dim ORBA_THDL = 0.3440 in (expect 0.3440)", "OK    dim ORBA_GRVR = 0.3300 in (expect 0.3300)", "OK    dim ORBA_GRVW = 0.0940 in (expect 0.0940)", "OK    dim NPTFB_MAJR = 0.4078 in (expect 0.4078)", "OK    dim NPTFB_THDL = 0.5337 in (expect 0.5337)", "OK    angle NPTFB_TAPER = 1.79 deg", "OK    dim NPTFB_RELL = 0.2163 in (expect 0.2163)", "OK    DRIVE sketch fully defined", "OK    Revolve created", "OK    Revolved volume 0.8905 in^3 (expect 0.8905)", "OK    dim HEXB = 0.880"], "report": {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\6401\\Build_6401_report.txt", "ok": 92, "fail": 0, "fail_lines": [], "tail": ["OK    All-config sweep: 24 configurations rebuilt, 0 feature/body failures", "      Master left in its reference configuration 6401-08-08-O for the save (it opens in this size)", "      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 25 configs, 0 still live", "      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 25 configs, 0 still live", "OK    Threads suppressed in all configurations before save (2 THD_ features)", "      SaveAs C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\6401\\6401_MASTER.SLDPRT returned True (error 0, warning 0)", "        file on disk written 10/19/2026 11:16:29 PM - saved (SaveAs return value ignored)", "OK    Saved to C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\6401\\6401_MASTER.SLDPRT"]}, "save_path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\6401\\6401_MASTER.SLDPRT", "new_docs": [{"title": "6401_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\sw_dryrun\\6401\\6401_MASTER.SLDPRT", "type": "part", "config": "6401-08-08-O", "unsaved": false}], "active": "6401_MASTER", "swb": "C:\\Users\\sudha\\AppData\\Local\\Temp\\sw_mcp\\Build_6401_MASTER__mcp.swb"}
+--- 294.8s
+=== sweep_configs {"doc": "6401_MASTER", "timeout_s": 1700}
+{"error": "com_error: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)", "trace": "  File \"C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\sw_mcp\\swcom.py\", line 222, in active_config\n    c = doc.GetActiveConfiguration()\n  File \"C:\\Users\\sudha\\AppData\\Local\\Temp\\gen_py\\3.14\\83A33D31-27C5-11CE-BFD4-00400513BB57x0x34x0.py\", line 38321, in GetActiveConfiguration\n    ret = self._oleobj_.InvokeTypes(65841, LCID, 1, (9, 0), (),)\npywintypes.com_error: (-2147417848, 'The object invoked has disconnected from its clients.', None, None)\n"}
+--- 10.1s
+=== close_doc {"doc": "6401_MASTER", "discard_unsaved": true}
+{"error": "'6401_MASTER' is not open. Open documents: []"}
+--- 0.2s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6401_MASTER.SLDPRT", "read_only": true}
+{"title": "6401_MASTER", "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6401_MASTER.SLDPRT", "type": "part", "config": "6401-08-08-O", "unsaved": false}
+--- 1.6s
+=== sweep_configs {"doc": "6401_MASTER", "timeout_s": 1700}
+{"error": "com_error: (-2147023179, 'The interface is unknown.', None, None)", "trace": "  File \"C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\sw_mcp\\swcom.py\", line 222, in active_config\n    c = doc.GetActiveConfiguration()\n  File \"C:\\Users\\sudha\\AppData\\Local\\Temp\\gen_py\\3.14\\83A33D31-27C5-11CE-BFD4-00400513BB57x0x34x0.py\", line 38321, in GetActiveConfiguration\n    ret = self._oleobj_.InvokeTypes(65841, LCID, 1, (9, 0), (),)\npywintypes.com_error: (-2147023179, 'The interface is unknown.', None, None)\n"}
+--- 8.1s
+=== close_doc {"doc": "6401_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6402_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6402_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6402_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6402_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6402_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6402_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6404_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6404_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6404_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6404_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6404_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6404_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6405_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6405_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6405_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6405_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6405_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6405_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6408_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6408_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6408_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6408_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6408_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6408_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6408HHP_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6408HHP_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6408HHP_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6410_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6410_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6410_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6410_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6410_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6410_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6504_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6504_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6504_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6504_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6504_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6504_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6505_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6505_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6505_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6505_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6505_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6505_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_6506_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6506_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6506_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6506_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "6506_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "6506_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== run_macro {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_20261019\\regen\\b17v2\\straight\\Build_2404_MASTER.bas", "timeout_s": 1750, "const_overrides": {"TABLE_PATH": "C:\\Use
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "2404_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "2404_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== open_doc {"path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2404_MASTER.SLDPRT", "read_only": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sweep_configs {"doc": "2404_MASTER", "timeout_s": 1700}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== close_doc {"doc": "2404_MASTER", "discard_unsaved": true}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s
+=== sw_status {}
+{"error": "SolidWorks is not running - start it (and sign in to 3DEXPERIENCE), then retry."}
+--- 0.0s

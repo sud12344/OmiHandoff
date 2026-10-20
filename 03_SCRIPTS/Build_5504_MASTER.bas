@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_5504_MASTER"
 ' ============================================================================
-'  Build_5504_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_tee.py
+'  Build_5504_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
 '  90 deg Female Pipe Elbow (elbow), forged hex body (2500HX pattern).  Reference config 5504-08-08-FG: NPTFF -08, NPTFF -08
 '  Entry: Sub Build5504.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_5504_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -213,13 +213,13 @@ Sub Build5504()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 6)", (UBound(cfgs) + 1) = 6
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 10)", (UBound(cfgs) + 1) = 10
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("5504-02-02-FG", "5504-16-16-FG")
+    cx_c = Array("5504-02-02-FG", "5504-20-20-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "M2@LEG2", "BODYR@LEG2", "DEPTH@POCKETCUT1", "DEPTH@POCKETCUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(0.66000, 0.28000, 0.66000, 0.28000, 0.66000, 0.66000, 0.16500, 0.16500, 0.56000, 0.40000, 0.56000, 0.40000, 0.16116, 0.32282), Array(1.62000, 0.81500, 1.62000, 0.81500, 1.62000, 1.62000, 0.57000, 0.57000, 1.63000, 1.36000, 1.63000, 1.36000, 0.47004, 0.94058))
+    cx_w = Array(Array(0.66000, 0.28000, 0.66000, 0.28000, 0.66000, 0.66000, 0.16500, 0.16500, 0.56000, 0.40000, 0.56000, 0.40000, 0.16116, 0.32282), Array(1.70000, 0.93750, 1.70000, 0.93750, 1.70000, 1.70000, 0.74000, 0.74000, 1.87500, 1.44000, 1.87500, 1.44000, 0.54077, 1.08203))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

@@ -1,0 +1,300 @@
+Build_6502_MASTER  10/20/2026 12:36:13 AM
+OK    dim M1 = 1.2800 in (expect 1.2800)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim SW1_BODYS = 0.8850 in (expect 0.8850)
+OK    dim SW1_NECKR = 0.2920 in (expect 0.2920)
+OK    dim SW1_NUTL = 0.8270 in (expect 0.8270)
+OK    dim SW1_SKIRTR = 0.4108 in (expect 0.4108)
+OK    dim SW1_SKIRTL = 0.1800 in (expect 0.1800)
+OK    dim SW1_SKIRTFR = 0.4361 in (expect 0.4361)
+OK    dim SW1_NUTHEXL = 0.4499 in (expect 0.4499)
+OK    dim SW1_NUTR = 0.5081 in (expect 0.5081)
+OK    dim SW1_CSR = 0.3750 in (expect 0.3750)
+      SW1_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      SW1_CSANG angle try 0 at (0.823, -0.067): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 1 at (1.108, 0.067): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 2 at (0.680, -0.133): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 3 at (1.251, 0.133): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 4 at (1.266, 0.455): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 5 at (1.266, -0.455): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 6 at (-1.266, 0.455): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 7 at (-1.266, -0.455): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 8 at (1.384, 0.079): 130.0 deg (want 50.0)
+      SW1_CSANG angle try 9 at (1.148, 0.079): 130.0 deg (want 50.0)
+OK    angle SW1_CSANG held by its supplement SW1_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
+OK    dim SW1_MINR = 0.3412 in (expect 0.3412)
+OK    dim SW1_THDL = 0.3283 in (expect 0.3283)
+      SW1_RELANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SW1_RELANG = 45.00 deg
+OK    dim SW1_RELR = 0.3925 in (expect 0.3925)
+OK    dim SW1_FLOOR = 0.6723 in (expect 0.6723)
+OK    dim SW1_NOSER = 0.3400 in (expect 0.3400)
+OK    dim SW1_NOSETIP = 0.4200 in (expect 0.4200)
+OK    dim SW1_SEATR = 0.2825 in (expect 0.2825)
+OK    angle SW1_SEATANG = 37.00 deg
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim HZREF = 0.5000 in (expect 0.5000)
+OK    angle LEGANG2 = 135.00 deg
+OK    dim M2 = 0.9800 in (expect 0.9800)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim THDMAJR_B2 = 0.3750 in (expect 0.3750)
+OK    dim JIC2_RELIEFL = 0.0940 in (expect 0.0940)
+OK    angle RELIEFANG2 = 60.00 deg
+OK    dim JIC2_THDZ = 0.2837 in (expect 0.2837)
+OK    dim JIC2_CONER = 0.3295 in (expect 0.3295)
+OK    dim JIC2_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JIC2_SEATL = 0.1546 in (expect 0.1546)
+      SEATB2: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB2 = 37.00 deg
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX1: sgVERTICAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.198 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    PLN2: leg tip face found 0.9800 along the leg
+      PLN2: InsertRefPlane ok
+OK    PLN2 reference plane created (RefPlane)
+      PLN2: plane z axis (-0.707, 0.707, 0.000), leg axis (-0.707, 0.707)
+OK    PLN2 is normal to the angled leg
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.130 in on axis 0 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.3750 in (expect 0.3750)
+OK    dim PUCK_HT = 0.3750 in (expect 0.3750)
+OK    dim PUCK_R1B = 0.2160 in (expect 0.2160)
+OK    dim PUCK_R1T = 0.2160 in (expect 0.2160)
+OK    dim PUCK_XC = 0.4325 in (expect 0.4325)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    dim TRIM_A0 = 0.3950 in (expect 0.3950)
+OK    dim TRIM_LEN = 0.0580 in (expect 0.0580)
+OK    dim TRIM_RIN = 0.2435 in (expect 0.2435)
+OK    dim TRIM_ROUT = 0.6495 in (expect 0.6495)
+OK    NECKTRIM1 sketch fully defined
+      NECKTRIM1: FeatureRevolve2 (cut = True, feature scope auto) -> True
+OK    NECKTRIM1 revolve cut took 0.004732 in^3 (at least the neck ring 0.004732)
+OK    dim FILL_A0 = 0.3950 in (expect 0.3950)
+OK    dim FILL_LEN = 0.0580 in (expect 0.0580)
+OK    dim FILL_RIN = 0.2435 in (expect 0.2435)
+OK    dim FILL_ROUT = 0.2920 in (expect 0.2920)
+OK    NECKFILL1 sketch fully defined
+      NECKFILL1: FeatureRevolve2 (cut = False, feature scope auto) -> True
+OK    NECKFILL1 revolve created (neck ring back)
+OK    NECKTRIM1 + NECKFILL1 leave the reference configuration unchanged: net 0.000000 in^3 (the corner stays inside the neck here: 0.1774 off the axis vs neck radius 0.2920)
+OK    NUTHEX1: nut face found at 1.2800 on axis 0
+OK    dim NUTHEX1 = 0.8800 in (expect 0.8800)
+      NUTHEX1: sgHORIZONTAL -> vertex |z| max 0.5081 (flats want 0.4400)
+      NUTHEX1: sketch removed, retrying with the other relation
+OK    NUTHEX1: nut face found at 1.2800 on axis 0
+OK    dim NUTHEX1 = 0.8800 in (expect 0.8800)
+      NUTHEX1: sgVERTICAL -> vertex |z| max 0.4400 (flats want 0.4400)
+OK    NUTHEX1 nut flats normal to Z
+OK    NUTHEX1 sketch fully defined
+      NUTCUT1 attempt 0: CreateDefinition returned Nothing
+      NUTCUT1 attempt 0: FeatureCut4 scope off -> True
+OK    NUTCUT1 created and removed material (attempt 0)
+OK    NUTCUT1 removed only the nut corners (6.6% of volume)
+OK    NUTCUT1 dims: DEPTH=0.4499 NUTHEX1=0.8800 
+OK    NUTHEX1@NUTHEX1 reachable
+OK    DEPTH@NUTCUT1 reachable
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=1.2800
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.3900 in (expect 0.3900)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=1.2800 D1=0.3900 
+OK    select end face for BORE2 at x=0.9800
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 0.3900 in (expect 0.3900)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=0.9800 D2=0.3900 
+OK    leg 1 bore open on the axis at its face (X=+1.2800)
+OK    leg 1 bore reaches the swivel seat (no face across the axis at the nose-tip plane X=+0.8600)
+OK    leg 2 bore open on the axis at its face (0.9800 along the 135-deg leg)
+OK    THD_End1: end face found at 1.2800
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
+OK    THD_End1 helix sketch made (ProfileFeature)
+      THD_End1: InsertHelix ok
+OK    THD_End1 helix created
+OK    THD_End1 helix dims named (D7 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (1.2800, 0.0000, -0.3412)
+      THD_End1: helix start = (1.2800, 0.0000, -0.3412)
+      THD_End1: profile on Top Plane
+      THD_End1: sketch start (1.2800,0.3412) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.2800 (want 1.2800)
+OK    dim PROF_AX = 1.2800 in (expect 1.2800)
+      PROF_R: try 0 value 0.3412 (want 0.3412)
+OK    dim PROF_R = 0.3412 in (expect 0.3412)
+      APEXR: try 0 value 0.3750 (want 0.3750)
+OK    dim APEXR = 0.3750 in (expect 0.3750)
+OK    THD_End1 60 deg tooth angle placed
+OK    THD_End1 profile sketch fully defined
+      THD_End1: sweep CreateFeature -> True
+OK    THD_End1 swept cut created
+OK    THD_End1 sweep removed material: 0.00818 in^3
+OK    THD_End1 suppressed
+      THD_End2: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End2: anchor edge found at x=0.4433 r=0.3750
+      THD_End2: Edge ok
+      THD_End2: Type=Inch Die ok
+      THD_End2: Size=0.7500-16 ok
+      THD_End2: ThreadMethod=Cut ok
+      THD_End2: EndCondition=Blind ok
+      THD_End2: BlindDepth=0.2837 ok
+      THD_End2: DiameterOverride ok
+      THD_End2: Diameter ok
+      THD_End2: PitchOverride ok
+      THD_End2: Pitch ok
+      THD_End2: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_End2: CreateFeature -> True
+OK    THD_End2 thread feature created
+      THD_End2: thread centre x = 0.5924 in, anchor 0.4433, wanted +X
+OK    THD_End2 runs along the thread flat (away from the hex)
+OK    THD_End2 rebuilds without error (code 0)
+OK    THD_End2 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.2837 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_End2: profile sketch renamed to THD_End2_PROF
+OK    THD_End2 profile dims reachable as Profile_Height@THD_End2_PROF
+OK    THD_End2 profile pitch reachable as THDPITCH@THD_End2_PROF
+      THD_End2: left live until the final suppress step
+OK    leg 1 tip (exact) 1.2800 along +X (expect 1.2800)
+OK    leg 2 tip (exact) 0.9800 along the 135-deg leg (expect 0.9800)
+OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: swivel nut flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_6502_SW2.xlsx
+OK    Configurations after table: 13 (expect 13)
+      config check 1: 6502-04-04-FG
+OK    6502-04-04-FG M1@LEG1 = 0.9400 (table 0.9400)
+OK    6502-04-04-FG BODYR@LEG1 = 0.2200 (table 0.2200)
+OK    6502-04-04-FG SW1_BODYS@LEG1 = 0.6850 (table 0.6850)
+OK    6502-04-04-FG SW1_NECKR@LEG1 = 0.1465 (table 0.1465)
+OK    6502-04-04-FG SW1_NUTL@LEG1 = 0.6490 (table 0.6490)
+OK    6502-04-04-FG SW1_SKIRTR@LEG1 = 0.2574 (table 0.2574)
+OK    6502-04-04-FG DEPTH@BORECUT1 = 0.9400 (table 0.9400)
+OK    6502-04-04-FG DEPTH@BORECUT2 = 0.7200 (table 0.7200)
+OK    6502-04-04-FG PROF_R@THDPROF_1 = 0.1917 (table 0.1917)
+OK    6502-04-04-FG THDPITCH@THD_End2 = 0.0500 (table 0.0500)
+OK    6502-04-04-FG Profile_Height@THD_End2_PROF = 0.0271 (table 0.0271)
+OK    6502-04-04-FG THDPITCH@THD_End2_PROF = 0.0500 (table 0.0500)
+OK    6502-04-04-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
+OK    6502-04-04-FG HEXL@HEX1_BODY = 0.2550 (table 0.2550)
+OK    6502-04-04-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
+OK    6502-04-04-FG HEXL@HEX2_BODY = 0.1700 (table 0.1700)
+OK    6502-04-04-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    6502-04-04-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
+OK    6502-04-04-FG TRIM_A0@NECKTRIM1 = 0.2550 (table 0.2550)
+OK    6502-04-04-FG TRIM_LEN@NECKTRIM1 = 0.0360 (table 0.0360)
+OK    6502-04-04-FG TRIM_RIN@NECKTRIM1 = 0.1158 (table 0.1158)
+OK    6502-04-04-FG TRIM_ROUT@NECKTRIM1 = 0.3811 (table 0.3811)
+OK    6502-04-04-FG FILL_A0@NECKFILL1 = 0.2550 (table 0.2550)
+OK    6502-04-04-FG FILL_LEN@NECKFILL1 = 0.0360 (table 0.0360)
+OK    6502-04-04-FG FILL_RIN@NECKFILL1 = 0.1158 (table 0.1158)
+OK    6502-04-04-FG FILL_ROUT@NECKFILL1 = 0.1465 (table 0.1465)
+OK    6502-04-04-FG one solid body (found 1)
+      6502-04-04-FG box x -0.577..0.940  y -0.323..0.577
+      config check 2: 6502-12-12-FG
+OK    6502-12-12-FG M1@LEG1 = 1.5000 (table 1.5000)
+OK    6502-12-12-FG BODYR@LEG1 = 0.5313 (table 0.5313)
+OK    6502-12-12-FG SW1_BODYS@LEG1 = 1.0890 (table 1.0890)
+OK    6502-12-12-FG SW1_NECKR@LEG1 = 0.4170 (table 0.4170)
+OK    6502-12-12-FG SW1_NUTL@LEG1 = 1.0470 (table 1.0470)
+OK    6502-12-12-FG SW1_SKIRTR@LEG1 = 0.5928 (table 0.5928)
+OK    6502-12-12-FG DEPTH@BORECUT1 = 1.5000 (table 1.5000)
+OK    6502-12-12-FG DEPTH@BORECUT2 = 1.2800 (table 1.2800)
+OK    6502-12-12-FG PROF_R@THDPROF_1 = 0.4861 (table 0.4861)
+OK    6502-12-12-FG THDPITCH@THD_End2 = 0.0833 (table 0.0833)
+OK    6502-12-12-FG Profile_Height@THD_End2_PROF = 0.0451 (table 0.0451)
+OK    6502-12-12-FG THDPITCH@THD_End2_PROF = 0.0833 (table 0.0833)
+OK    6502-12-12-FG HEXAF@HEX1 = 1.0625 (table 1.0625)
+OK    6502-12-12-FG HEXL@HEX1_BODY = 0.4110 (table 0.4110)
+OK    6502-12-12-FG HEXAF@HEX2 = 1.0625 (table 1.0625)
+OK    6502-12-12-FG HEXL@HEX2_BODY = 0.4160 (table 0.4160)
+OK    6502-12-12-FG PUCK_R1B@PUCK = 0.3062 (table 0.3062)
+OK    6502-12-12-FG PUCK_XC@PUCK = 0.6129 (table 0.6129)
+OK    6502-12-12-FG TRIM_A0@NECKTRIM1 = 0.4110 (table 0.4110)
+OK    6502-12-12-FG TRIM_LEN@NECKTRIM1 = 0.0420 (table 0.0420)
+OK    6502-12-12-FG TRIM_RIN@NECKTRIM1 = 0.3610 (table 0.3610)
+OK    6502-12-12-FG TRIM_ROUT@NECKTRIM1 = 0.9202 (table 0.9202)
+OK    6502-12-12-FG FILL_A0@NECKFILL1 = 0.4110 (table 0.4110)
+OK    6502-12-12-FG FILL_LEN@NECKFILL1 = 0.0420 (table 0.0420)
+OK    6502-12-12-FG FILL_RIN@NECKFILL1 = 0.3610 (table 0.3610)
+OK    6502-12-12-FG FILL_ROUT@NECKFILL1 = 0.4170 (table 0.4170)
+OK    6502-12-12-FG one solid body (found 1)
+      6502-12-12-FG box x -1.140..1.500  y -0.722..1.140
+      config check 3: 6502-32-32-FG
+OK    6502-32-32-FG M1@LEG1 = 2.9100 (table 2.9100)
+OK    6502-32-32-FG BODYR@LEG1 = 1.2500 (table 1.2500)
+OK    6502-32-32-FG SW1_BODYS@LEG1 = 1.6700 (table 1.6700)
+OK    6502-32-32-FG SW1_NECKR@LEG1 = 1.0785 (table 1.0785)
+OK    6502-32-32-FG SW1_NUTL@LEG1 = 1.6100 (table 1.6100)
+OK    6502-32-32-FG SW1_SKIRTR@LEG1 = 1.3936 (table 1.3936)
+OK    6502-32-32-FG DEPTH@BORECUT1 = 2.9100 (table 2.9100)
+OK    6502-32-32-FG DEPTH@BORECUT2 = 2.2200 (table 2.2200)
+OK    6502-32-32-FG PROF_R@THDPROF_1 = 1.2049 (table 1.2049)
+OK    6502-32-32-FG THDPITCH@THD_End2 = 0.0833 (table 0.0833)
+OK    6502-32-32-FG Profile_Height@THD_End2_PROF = 0.0451 (table 0.0451)
+OK    6502-32-32-FG THDPITCH@THD_End2_PROF = 0.0833 (table 0.0833)
+OK    6502-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
+OK    6502-32-32-FG HEXL@HEX1_BODY = 1.2400 (table 1.2400)
+OK    6502-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
+OK    6502-32-32-FG HEXL@HEX2_BODY = 0.8870 (table 0.8870)
+OK    6502-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    6502-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
+OK    6502-32-32-FG TRIM_A0@NECKTRIM1 = 1.2400 (table 1.2400)
+OK    6502-32-32-FG TRIM_LEN@NECKTRIM1 = 0.0600 (table 0.0600)
+OK    6502-32-32-FG TRIM_RIN@NECKTRIM1 = 0.9843 (table 0.9843)
+OK    6502-32-32-FG TRIM_ROUT@NECKTRIM1 = 2.1651 (table 2.1651)
+OK    6502-32-32-FG FILL_A0@NECKFILL1 = 1.2400 (table 1.2400)
+OK    6502-32-32-FG FILL_LEN@NECKFILL1 = 0.0600 (table 0.0600)
+OK    6502-32-32-FG FILL_RIN@NECKFILL1 = 0.9843 (table 0.9843)
+OK    6502-32-32-FG FILL_ROUT@NECKFILL1 = 1.0785 (table 1.0785)
+OK    6502-32-32-FG one solid body (found 1)
+      6502-32-32-FG box x -2.234..2.910  y -1.663..2.234
+      All-config sweep: rebuilding 12 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/12  6502-04-04-FG  rebuilt in 0.9 s
+      sweep 2/12  6502-05-05-FG  rebuilt in 1.2 s
+      sweep 3/12  6502-06-06-FG  rebuilt in 1.4 s
+      sweep 4/12  6502-08-06-FG  rebuilt in 1.2 s
+      sweep 5/12  6502-08-08-FG  rebuilt in 0.8 s
+      sweep 6/12  6502-10-08-FG  rebuilt in 1.4 s
+      sweep 7/12  6502-10-10-FG  rebuilt in 1.1 s
+      sweep 8/12  6502-12-12-FG  rebuilt in 1.0 s
+      sweep 9/12  6502-16-16-FG  rebuilt in 1.1 s
+      sweep 10/12  6502-20-20-FG  rebuilt in 1.3 s
+      sweep 11/12  6502-24-24-FG  rebuilt in 1.3 s
+      sweep 12/12  6502-32-32-FG  rebuilt in 0.9 s
+OK    All-config sweep: 12 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 6502-08-08-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6502\6502_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6502\6502_MASTER.SLDPRT

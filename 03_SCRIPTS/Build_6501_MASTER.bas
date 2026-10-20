@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6501_MASTER"
 ' ============================================================================
-'  Build_6501_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_tee.py
+'  Build_6501_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
 '  90 deg Male Pipe x Female Swivel Elbow (elbow), forged hex body (2500HX pattern).  Reference config 6501-04-04-FG: NPTFM -04, JICSW -04
 '  Entry: Sub Build6501.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_6501_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -46,23 +46,23 @@ Sub LoadLeg(i As Long)
     If i = 2 Then v = Array( _
     0.000000000, 0.000000000, _
     0.000000000, 0.007112000, _
-    0.010795000, 0.007112000, _
-    0.010795000, 0.003721100, _
-    0.011709400, 0.003721100, _
-    0.011709400, 0.006537960, _
-    0.015265400, 0.006537960, _
-    0.019893280, 0.007101840, _
-    0.019893280, 0.008212230, _
-    0.028194000, 0.008212230, _
-    0.028194000, 0.005556250, _
-    0.027617267, 0.004868926, _
-    0.020911820, 0.004868926, _
-    0.019811746, 0.005969000, _
-    0.014876780, 0.005969000, _
-    0.014876780, 0.004686300, _
-    0.019558000, 0.004686300, _
-    0.019558000, 0.003683000, _
-    0.014670494, 0.000000000)
+    0.011557000, 0.007112000, _
+    0.011557000, 0.003721100, _
+    0.012471400, 0.003721100, _
+    0.012471400, 0.006537960, _
+    0.016027400, 0.006537960, _
+    0.020655280, 0.007101840, _
+    0.020655280, 0.008212230, _
+    0.028956000, 0.008212230, _
+    0.028956000, 0.005556250, _
+    0.028379267, 0.004868926, _
+    0.021673820, 0.004868926, _
+    0.020573746, 0.005969000, _
+    0.015638780, 0.005969000, _
+    0.015638780, 0.004686300, _
+    0.020320000, 0.004686300, _
+    0.020320000, 0.003683000, _
+    0.015432494, 0.000000000)
     NPTS = (UBound(v) + 1) \ 2
     ReDim PX(NPTS - 1): ReDim PR(NPTS - 1)
     For k = 0 To NPTS - 1
@@ -118,32 +118,32 @@ Sub Build6501()
 
     ' ================= LEG 2 (JICSW -04, along Y +) =================
     stepName = "LEG2 sketch"
-    curAxis = 1: tipPos = 0.028194000
+    curAxis = 1: tipPos = 0.028956000
     LoadLeg 2
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile True, 1#
-    Call Dim_pair(0, 9, "M2", 0.028194000, 0.025992, 0.014097)
-    Call Dim_rad(1, "BODYR", 0.007112000, -0.010160, 0.005397)
-    Call Dim_pair(2, 9, "SW2_BODYS", 0.017399000, 0.022182, 0.019495)
-    Call Dim_rad(3, "SW2_NECKR", 0.003721100, -0.003810, 0.011252)
-    Call Dim_pair(4, 9, "SW2_NUTL", 0.016484600, 0.019642, 0.019952)
-    Call Dim_rad(5, "SW2_SKIRTR", 0.006537960, -0.007620, 0.013487)
-    Call Dim_len(5, "SW2_SKIRTL", 0.003556000, 0.013292, 0.013487)
-    Call Dim_ptline(7, False, 18, "SW2_SKIRTFR", 0.007101840, 0.003551, 0.018623)
-    Call Dim_len(8, "SW2_NUTHEXL", 0.008300720, 0.015832, 0.024044)
-    Call Dim_rad(8, "SW2_NUTR", 0.008212230, -0.011430, 0.024044)
-    Call Dim_ptline(10, False, 18, "SW2_CSR", 0.005556250, 0.002778, 0.030734)
-    Call Dim_ang(10, 18, "SW2_CSANG", 0.872664626, 0.007588, 0.027906)
-    Call Dim_rad(11, "SW2_MINR", 0.004868926, -0.015240, 0.024265)
-    Call Dim_len(11, "SW2_THDL", 0.006705447, 0.010752, 0.024265)
-    Call Dim_ang(12, 18, "SW2_RELANG", 0.785398163, 0.006139, 0.020362)
-    Call Dim_rad(13, "SW2_RELR", 0.005969000, -0.019050, 0.017344)
-    Call Dim_pair(14, 9, "SW2_FLOOR", 0.013317220, 0.024722, 0.021535)
-    Call Dim_rad(15, "SW2_NOSER", 0.004686300, -0.022860, 0.017217)
-    Call Dim_pair(16, 9, "SW2_NOSETIP", 0.008636000, 0.027262, 0.023876)
-    Call Dim_ptline(17, False, 18, "SW2_SEATR", 0.003683000, 0.001841, 0.018288)
-    Call Dim_ang(17, 18, "SW2_SEATANG", 0.645771823, 0.001105, 0.017018)
+    Call Dim_pair(0, 9, "M2", 0.028956000, 0.025992, 0.014478)
+    Call Dim_rad(1, "BODYR", 0.007112000, -0.010160, 0.005778)
+    Call Dim_pair(2, 9, "SW2_BODYS", 0.017399000, 0.022182, 0.020256)
+    Call Dim_rad(3, "SW2_NECKR", 0.003721100, -0.003810, 0.012014)
+    Call Dim_pair(4, 9, "SW2_NUTL", 0.016484600, 0.019642, 0.020714)
+    Call Dim_rad(5, "SW2_SKIRTR", 0.006537960, -0.007620, 0.014249)
+    Call Dim_len(5, "SW2_SKIRTL", 0.003556000, 0.013292, 0.014249)
+    Call Dim_ptline(7, False, 18, "SW2_SKIRTFR", 0.007101840, 0.003551, 0.019385)
+    Call Dim_len(8, "SW2_NUTHEXL", 0.008300720, 0.015832, 0.024806)
+    Call Dim_rad(8, "SW2_NUTR", 0.008212230, -0.011430, 0.024806)
+    Call Dim_ptline(10, False, 18, "SW2_CSR", 0.005556250, 0.002778, 0.031496)
+    Call Dim_ang(10, 18, "SW2_CSANG", 0.872664626, 0.007588, 0.028668)
+    Call Dim_rad(11, "SW2_MINR", 0.004868926, -0.015240, 0.025027)
+    Call Dim_len(11, "SW2_THDL", 0.006705447, 0.010752, 0.025027)
+    Call Dim_ang(12, 18, "SW2_RELANG", 0.785398163, 0.006139, 0.021124)
+    Call Dim_rad(13, "SW2_RELR", 0.005969000, -0.019050, 0.018106)
+    Call Dim_pair(14, 9, "SW2_FLOOR", 0.013317220, 0.024722, 0.022297)
+    Call Dim_rad(15, "SW2_NOSER", 0.004686300, -0.022860, 0.017979)
+    Call Dim_pair(16, 9, "SW2_NOSETIP", 0.008636000, 0.027262, 0.024638)
+    Call Dim_ptline(17, False, 18, "SW2_SEATR", 0.003683000, 0.001841, 0.019050)
+    Call Dim_ang(17, 18, "SW2_SEATANG", 0.645771823, 0.001105, 0.017780)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -163,7 +163,7 @@ Sub Build6501()
     stepName = "HEX1"
     Call HexArm("Right Plane", 0#, 0#, 0.013462000, 0.007112000, "HEX1", 0, 1#)
     stepName = "HEX2"
-    Call HexArm("Top Plane", 0#, 0#, 0.010795000, 0.007112000, "HEX2", 1, 1#)
+    Call HexArm("Top Plane", 0#, 0#, 0.011557000, 0.007112000, "HEX2", 1, 1#)
     ' ================= PUCK: 30 deg double cone about Z at the crossing (the turned hex corner, per Brennan) =================
     stepName = "PUCK"
     swModel.ClearSelection2 True
@@ -216,7 +216,7 @@ Sub Build6501()
 
     ' ================= swivel nut hex on leg 2: sketched on the nut face, flats normal to Z, cut over the nut hex length =================
     stepName = "NUTHEX2"
-    curAxis = 1: tipPos = 0.028194000
+    curAxis = 1: tipPos = 0.028956000
     Call NutHexCutAx(tipPos, 0.014224000, 0.008300720, "NUTHEX2", "NUTHEX2", "NUTCUT2")
     Check "NUTHEX2@NUTHEX2 reachable", Not swModel.Parameter("NUTHEX2@NUTHEX2") Is Nothing
     Check "DEPTH@NUTCUT2 reachable", Not swModel.Parameter("DEPTH@NUTCUT2") Is Nothing
@@ -228,24 +228,24 @@ Sub Build6501()
     stepName = "Bores"
     curAxis = 0: tipPos = 0.027686000
     Call BoreCut("BORE1", "D1", 0.007112000, 0.027686000, 0#, "BORECUT1", True, 0.005964568)
-    curAxis = 1: tipPos = 0.028194000
-    Call BoreCut("BORE2", "D2", 0.004318000, 0.028194000, 0#, "BORECUT2", True, 0.003314700)
+    curAxis = 1: tipPos = 0.028956000
+    Call BoreCut("BORE2", "D2", 0.004318000, 0.028956000, 0#, "BORECUT2", True, 0.003314700)
     curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.0900)", Not AxisCoveredAx(0.027686000)
-    curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+1.1100)", Not AxisCoveredAx(0.028194000)
-    curAxis = 1: Check "leg 2 bore reaches the swivel seat (no face across the axis at the nose-tip plane Y=+0.7700)", Not AxisCoveredAx(0.019558000)
+    curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+1.1400)", Not AxisCoveredAx(0.028956000)
+    curAxis = 1: Check "leg 2 bore reaches the swivel seat (no face across the axis at the nose-tip plane Y=+0.8000)", Not AxisCoveredAx(0.020320000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
     curAxis = 0: tipPos = 0.027686000
     Call HelixThread(0.027686000, 0.006627297, 0.010205720, 0.001411111, 0.001128889, 0.031239648, True, False, "1", "THD_End1")
-    curAxis = 1: tipPos = 0.028194000
-    Call HelixThread(0.028194000, 0.004868926, 0.007282180, 0.001270000, 0.000687413, 0.000000000, False, True, "2", "THD_End2")
+    curAxis = 1: tipPos = 0.028956000
+    Call HelixThread(0.028956000, 0.004868926, 0.007282180, 0.001270000, 0.000687413, 0.000000000, False, True, "2", "THD_End2")
 
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
     Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -0.323 .. 1.090; threads may add a little)", Abs(bb(3) / IN_ - 1.0900) < 0.08 And Abs(bb(0) / IN_ - (-0.3233)) < 0.08
-    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.323 .. 1.110)", Abs(bb(4) / IN_ - 1.1100) < 0.08 And Abs(bb(1) / IN_ - (-0.3233)) < 0.08
+    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.323 .. 1.140)", Abs(bb(4) / IN_ - 1.1400) < 0.08 And Abs(bb(1) / IN_ - (-0.3233)) < 0.08
     Trace "Bounding box z " & Format(bb(2) / IN_, "0.000") & " .. " & Format(bb(5) / IN_, "0.000") & " (approximate - loose around thread faces)"
     Dim zlo As Double, zhi As Double: zhi = ExtremeAlong(0#, 0#, 1#): zlo = -ExtremeAlong(0#, 0#, -1#)
     Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.2800 .. 0.2800: hex flats)", Abs(zlo / IN_ + 0.2800) < 0.001 And Abs(zhi / IN_ - 0.2800) < 0.001
