@@ -144,8 +144,8 @@ def lib_gap(lib, d):
 def lib_gaps(kinds_dashes):
     """messages for the ends of one part whose dash is missing from the end libraries they read (used by gen_tee before building)"""
     need = {'JICM': ('JIC',), 'JICBH': ('JIC',), 'JICSW': ('JIC',), 'NWO': ('JIC',), 'NPTFM': ('NPTF', 'ENDL'), 'NPTFF': ('FPT', 'NPTF'),
-            'NPSMSW': ('NPTF',)}
-    libs = dict(JIC=JIC, NPTF=NPTF, ENDL=ENDL, FPT=FPT)
+            'NPSMSW': ('NPTF',), 'FSM': ('FSM',), 'FSBH': ('FSM',)}
+    libs = dict(JIC=JIC, NPTF=NPTF, ENDL=ENDL, FPT=FPT, FSM=FSM_MEAS)
     out = []
     for kind, d in kinds_dashes:
         for lib in need.get(kind, ()):

@@ -1,0 +1,148 @@
+{
+ "FS6804": {
+  "configs": 1,
+  "ref": "FS6804-08-08-08-NWO-FG",
+  "skipped": [
+   [
+    "FS6804-04-04-04-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6804-06-06-06-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6804-08-06-08-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6804-10-10-10-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6804-12-12-12-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6804-16-16-16-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FF6804:FF6804-4-6-4 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-4-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-5-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-8-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-12-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-6-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-8-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-8-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-10-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-12-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-8-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-10-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-12-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-12-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-10-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-12-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-12-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-16-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-20-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-16-12-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-20-20-20 NWO",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6804-08-08-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)"
+  ],
+  "cols": 74
+ }
+}

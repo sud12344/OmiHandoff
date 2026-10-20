@@ -31,6 +31,15 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS generator step 2 - forged legs** (`tools\_out\orfs_gen_20261020\README.md`):
+- gen_tee: face-seal leg, bulkhead leg, FS adjustable stud; 12 forged FS SPECs -> 16 configurations (+5 straights = 21 FS configurations);
+- regression 99 / 99 identical; dofcheck 29 / 29 legs; OCP closed loop 484 checks, 0 off;
+- 3 FS2501 / FS2503 rows held: their flats are above the thread (needs the family pilot).
+**Count** (`tools\_out\count_20261020\count_ready.py`): of the 2,535 OMi parts:
+- 1,106 are in a shipped master;
+- 323 more are generated and wait only for the SolidWorks dry runs + ship (batch 17 + 21 ORFS + 21 O-rings);
+- = 1,429 ready after SolidWorks; 1,106 still need data, STEPs, decisions or OMi.
+
 **2026-10-20 (cloud): ORFS generator step 1 staged** (`tools\_out\orfs_gen_20261020\README.md`; toolset = merged batch-17 + ORFS):
 - male face-seal end `end_FSM` + ORB stud `end_ORBFS`; SPECs FS2403 / FS6400 (5 configurations: FS2403-08-08, FS6400-08-06/-08/-10/-12-O;
   the rest wait for per-dash STEPs);

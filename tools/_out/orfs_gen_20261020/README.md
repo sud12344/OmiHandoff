@@ -43,6 +43,40 @@ When it is unset, the behaviour is unchanged.
 - **Found in passing (not changed here):** SPEC `6400` of the batch-17 toolset labels End A's ORB thread (`$PRP@EndA_Thread`) from the FIRST
   part-number dash, while it builds that end from the second. On unequal-dash 6400 rows the label text is wrong; the geometry is right.
 
+## Step 2 (done): the forged legs in gen_tee + 12 forged FS masters
+- **`gen_tee.py`:**
+  - `leg_FSM`: the face-seal end on a forged leg. The thread major runs to the end length, then steps down to the hex flats (= the leg core),
+    as measured on the -08 legs of FS6500 / FS6801 / FS2701.
+  - `leg_FSBH`: the bulkhead leg (FS2701 pilot): FSM nose, thread to a 60 deg flank, relief, the i4 step, the collar face at Air-Way i2,
+    collar d17 x 0.20, then the arm.
+  - The FS adjustable stud: the 6801 adjustable-ORB leg with the measured FS values (`NWO_FS[8]`: neck, lock nut 0.41 x row S3, washer,
+    undercut). Its washer face sits at Air-Way L11 / L14 (Q-FS-ORBSTUD (a)). On -08 the neck lies AT the flats radius (no body face, as on
+    the pilot): `leg_NWO(..., flat_neck=True)` drops the zero-height body face and the NECKR dimension.
+  - Review tables are read through `omi_paths.review_table` (OMI_REV_EXTRA); the -LN tables fold in as plain parts (A10).
+  - Further hooks:
+    - FS rows go to ASSUMED (single source);
+    - FS legs are kept out of the 2603HX A/F rule (PLAN R1);
+    - the Z-extent self-check counts FS ends proud of the flats;
+    - an empty thread-major cell takes the dash thread (PLAN D1).
+- **SPECs:** FS2500, FS2501, FS2503, FS2603, FS2701 (+LN), FS2702 (+LN), FS2703 (+LN), FS2704 (+LN), FS6801, FS6802, FS6803, FS6804.
+- **16 configurations build:**
+  - FS2500-08-08-FG, FS2501-08-06-FG, FS2503-08-06-FG, FS2603-08-08-08-FG;
+  - FS2701 / FS2702 -08-08-FG and FS2703 / FS2704 -08-08-08-FG, each also as -LN;
+  - FS6801 / FS6802 -08-08-NWO-FG, FS6803 / FS6804 -08-08-08-NWO-FG.
+- **3 rows blocked on purpose** (FS2501-08-08 / -08-12, FS2503-08-08): their row flats (0.875 / 1.06) are at or above the 0.8125 thread.
+  The forged run-out was only seen where the thread stands proud of the flats, so they need their family pilot (STEPS_NEEDED part 3, F5 / F13).
+- **Checks:**
+  - vbacheck: 12 / 12 OK;
+  - dofcheck_tee: 29 / 29 legs fully defined, 0 redundant;
+  - allcfg_check: 0 outline problems;
+  - **regression: 99 existing roots identical** (14 FS roots new);
+  - **OCP closed loop** (`scripts/closed_loop_fs_tee.py` -> `ocp/closed_loop_tee.txt`):
+    - 16 configurations, **484 checks, 0 off**;
+    - legs are read in the plane through the flats; a 45 deg leg is read on a turned copy;
+    - the stud's washer face is checked against Air-Way L11 / L14;
+    - FS2701-08-08-FG is +0.68 % and FS6801-08-08-NWO-FG -1.4 % in volume vs the Brennan pilots.
+  - The straight closed loop still passes (122 checks, 0 off).
+
 ## Blocked: the female swivel on the STRAIGHTS (FS6540 / FS6504 / FS6505 / FS6565) needs one STEP
 - On the forged FS6500-08-08-FG pilot, Air-Way L21 (= Brennan AAA) runs from the crossing to the stem's SEAL face; the nut face is 0.433
   further out. PLAN.md had read the drawings as "to the nut face", for the straights as well.
@@ -57,10 +91,10 @@ When it is unset, the behaviour is unchanged.
 - **SolidWorks dry run of FS2403 / FS6400** (CLAUDE.md verify loop, PC): the first FS masters. Unknowns:
   - the Thread feature on the face-seal end;
   - the bore-cut face pick on the land.
-- **The gen_tee forged legs** (FSM with the step run-out, FSBH, FSSW, NWO_FS):
-  - every -08 forged pilot family can build after them: FS6500 / FS6801 / FS2701-08 rows.
-  - PLAN risk R1 is the open point: Brennan ends the thread with a step down to exactly the flats radius and a 75 deg chamfer to the corners,
-    a point on the flats that the hex cut meets tangentially. Whether it needs an offset shows only in a SolidWorks dry run.
+- **SolidWorks dry runs of the 12 forged FS masters.** The open point is PLAN risk R1: the end face where the thread steps down to the flats
+  (between the flats and the hex corners) is the shape that broke 2702 / 2703 -16 once.
+- **The forged swivel leg FSSW** (FS6500 / FS6600 / FS6602 / FS6809). Its -08 shape is measured (seal-face reference). It needs the swivel
+  branches of gen_tee (nut hex cut, puck / neck checks).
 - Nut / lock nut / sleeve masters (FS0318 / FS0306 / FS0319).
 - the female face-seal swivel end FSSW (straights FS6540 / FS6505 / FS6504 / FS6565);
 - the gen_tee legs (FSM on forged legs with the step run-out, FSBH, FSSW, NWO_FS);

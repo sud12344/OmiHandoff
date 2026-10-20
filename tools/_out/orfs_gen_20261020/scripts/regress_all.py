@@ -16,7 +16,9 @@ GENS = {'straight': ('gen_straight2.py', 'GS_OUT'), 'tee': ('gen_tee.py', 'GT_OU
 def roots(gen):
     s = open(gen, encoding='utf-8').read()
     i = s.index('SPEC = {'); j = s.index('\n}\n', i)
-    return list(dict.fromkeys(re.findall(r"^\s*'([0-9A-Z]+(?:-[A-Z]+)?)': dict\(", s[i:j], re.M) + re.findall(r"^SPEC\['([0-9A-Z]+)'\] = dict\(", s, re.M)))
+    upd = ''.join(s[k:s.index('\n})\n', k)] for k in [m.end() for m in re.finditer(r'^SPEC\.update\(\{', s, re.M)])
+    return list(dict.fromkeys(re.findall(r"^\s*'([0-9A-Z]+(?:-[A-Z]+)?)': dict\(", s[i:j], re.M) + re.findall(r"^SPEC\['([0-9A-Z]+)'\] = dict\(", s, re.M)
+                              + re.findall(r"^\s*'([0-9A-Z]+)': dict\(", upd, re.M)))
 
 
 def mac(p):
