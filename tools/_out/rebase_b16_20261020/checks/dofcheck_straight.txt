@@ -1,0 +1,4 @@
+Build_0304_MASTER.bas {'points': 8, 'unknowns': 16, 'constraints': 16, 'rank': 16, 'dims': 7, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_0306_MASTER.bas {'points': 8, 'unknowns': 16, 'constraints': 16, 'rank': 16, 'dims': 9, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_2404_MASTER.bas {'points': 14, 'unknowns': 28, 'constraints': 28, 'rank': 28, 'dims': 15, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_6505_MASTER.bas {'points': 22, 'unknowns': 44, 'constraints': 44, 'rank': 44, 'dims': 25, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}

@@ -1,0 +1,242 @@
+{
+ "FSM_MEAS[8]": {
+  "src": "BRENNAN_FS2403-08-08 (both ends), = FS6400-08-08-O, FS6500-08-08-FG, FS6801-08-08-NWO-FG, FS2701-08-08-FG male legs (checks.txt (1))",
+  "GI": 0.2125,
+  "GO": 0.3145,
+  "GD": 0.052,
+  "FR": 0.3595,
+  "CH": 0.0467,
+  "CH_ANG": 45.0,
+  "ENDL": 0.504,
+  "straight": {
+   "THD_END": 0.383,
+   "FLANK_ANG": 60.0,
+   "RELR": 0.3595,
+   "RELL": 0.094,
+   "note": "thread major from CH to THD_END, 60 deg flank to the relief, relief to the hex face at ENDL"
+  },
+  "forged": {
+   "THD_END": 0.504,
+   "note": "thread major from CH to ENDL, then a radial step down to the forged flats radius (row S2 / 2) and the body chamfer (75 deg) to the hex corners"
+  },
+  "oring_check": {
+   "ID": 0.489,
+   "W": 0.07,
+   "src": "fused O-ring in the groove = Air-Way FS4000-08; not modelled (as the ORB / NWO ends)"
+  },
+  "thread": "FS_THR[8] 13/16-16 UN (major 0.8125); bore from the row"
+ },
+ "FSBH_MEAS[8]": {
+  "src": "BRENNAN_FS2701-08-08-FG bulkhead leg; nose = FSM_MEAS[8] (checks.txt (1))",
+  "THD_END": 1.259,
+  "RELR": 0.3595,
+  "RELL": 0.094,
+  "REL_END": 1.38,
+  "STEPR": 0.4005,
+  "STEPL": 0.06,
+  "COLLARL": 0.2,
+  "note": "from the tip: FSM nose, thread major to THD_END, 60 deg flank, relief RELR to REL_END, step STEPR over STEPL (= Air-Way i4) to the collar face at i2 (row), collar d17 (row) over COLLARL, then the forged body. REL_END = i2 - i4 on the pilot."
+ },
+ "FSSW_MEAS[8]": {
+  "src": "BRENNAN_FS6500-08-08-FG swivel leg; nut outside / thread / lip = FS0318-08 where marked (checks.txt (2))",
+  "reference": "the row leg (Air-Way L21 / Brennan AAA) = crossing -> the stem SEAL FACE (not the nut face)",
+  "SEAL_TO_NUTFACE": 0.433,
+  "STEMR": 0.3725,
+  "HEADL": 0.197,
+  "NECKR": 0.321,
+  "SEAL_TO_BODYFACE": 0.855,
+  "NUTL": 0.827,
+  "NUT_AF": "row SHEX (= FS0318-08 0.938)",
+  "NUT_HEX_s": [
+   0.0471,
+   0.4349
+  ],
+  "NUT_CHAMFER_ANG": 30,
+  "NUT_SKIRT": {
+   "note": "from the rear hex chamfer foot (s 0.482, r 0.46) a 12.3 deg cone to r 0.419 at s 0.67, a groove r 0.4022 over s 0.685 - 0.812, r 0.419 to the rear face at s 0.827",
+   "raw": [
+    [
+     "L",
+     90.0,
+     0.0,
+     0.4095,
+     0.0,
+     0.46
+    ],
+    [
+     "L",
+     60.0,
+     -0.0,
+     0.46,
+     0.0471,
+     0.5416
+    ],
+    [
+     "L",
+     0.0,
+     0.0471,
+     0.5416,
+     0.4349,
+     0.5416
+    ],
+    [
+     "L",
+     60.0,
+     0.4349,
+     0.5416,
+     0.482,
+     0.46
+    ],
+    [
+     "L",
+     12.3,
+     0.482,
+     0.46,
+     0.67,
+     0.419
+    ],
+    [
+     "L",
+     0.0,
+     0.67,
+     0.419,
+     0.685,
+     0.419
+    ],
+    [
+     "L",
+     90.0,
+     0.685,
+     0.419,
+     0.685,
+     0.4022
+    ],
+    [
+     "L",
+     0.0,
+     0.685,
+     0.4022,
+     0.812,
+     0.4022
+    ],
+    [
+     "L",
+     90.0,
+     0.812,
+     0.4022,
+     0.812,
+     0.419
+    ],
+    [
+     "L",
+     0.0,
+     0.812,
+     0.419,
+     0.827,
+     0.419
+    ],
+    [
+     "L",
+     90.0,
+     0.827,
+     0.419,
+     0.827,
+     0.3235
+    ]
+   ]
+  },
+  "MOUTH_R": 0.4095,
+  "MOUTH_DEPTH": 0.0371,
+  "MINR": 0.3724,
+  "TE": 0.4059,
+  "CAV_REL": {
+   "note": "45 deg up to r 0.4165 at s 0.45, then a 13 deg cone down to r 0.375 at s 0.63 (= the stem head rear)",
+   "raw": [
+    [
+     13.0,
+     0.63,
+     0.375,
+     0.45,
+     0.4165
+    ],
+    [
+     45.0,
+     0.45,
+     0.4165,
+     0.4059,
+     0.3724
+    ]
+   ]
+  },
+  "LIPR": 0.3235,
+  "LIP_s": [
+   0.63,
+   0.827
+  ],
+  "thread": "HELIX (helix + swept cut), FS_THR[8] minor 0.7448 - never SolidWorks Thread on a female edge"
+ },
+ "FSNUT_MEAS[8]": {
+  "src": "BRENNAN_FS0318-08 (loose nut; its outside differs from the swivel nut, checks.txt (2))",
+  "AF": 0.938,
+  "L": 0.8272,
+  "END_CHAMFER_ANG": 75,
+  "END_CHAMFER_R": 0.469,
+  "MOUTH_DEPTH": 0.0371,
+  "MINR": 0.3724,
+  "TE": 0.47,
+  "RELR": 0.377,
+  "LIP_START": 0.63,
+  "LIPR": 0.326,
+  "note": "A/F and length are row inputs (Air-Way S / h); the rest is shape"
+ },
+ "FSLOCKNUT_MEAS[8]": {
+  "src": "BRENNAN_FS0306-08",
+  "AF": 1.125,
+  "H": 0.3502,
+  "END_CHAMFER_ANG": 75,
+  "END_CHAMFER_R": 0.5625,
+  "COUNTERSINK": "45 deg x 0.0371 both faces to r 0.4095",
+  "MINR": 0.3724,
+  "note": "A/F and thickness are row inputs (Air-Way S4 / h2)"
+ },
+ "FSSLEEVE_MEAS[8]": {
+  "src": "BRENNAN_FS0319-08",
+  "L": 0.374,
+  "COLLAR_R": 0.3725,
+  "COLLARL": 0.197,
+  "SPIGOT_R": 0.321,
+  "TAPER": "15 deg from r 0.2975 at the tube-side face to r 0.321 at 0.0877",
+  "BORE_R": 0.253,
+  "BRAZE_CLEAR": 0.006,
+  "STOP_R": 0.189,
+  "note": "seal face at the collar end (flat, r 0.2047 - 0.3725); L and d8 are row inputs; per-size rule: R7 / STEPS_NEEDED part 4"
+ },
+ "ORB_FS[8]": {
+  "src": "BRENNAN_FS6400-08-08-O",
+  "TIPCH": 0.0475,
+  "RMAJ": 0.375,
+  "THD_END": 0.431,
+  "FLANK_END": 0.457,
+  "UCR": 0.33,
+  "UCL": 0.094,
+  "SHOULDER": 0.551,
+  "note": "= ORB[8] undercut 0.660 x 0.094; the thread is longer (tip -> flank end 0.457 vs ORB THDL 0.344); the tip -> hex face length is the row input (Air-Way L8 - L9, Q-FS-ORBSTUD (a))"
+ },
+ "NWO_FS[8]": {
+  "src": "BRENNAN_FS6801-08-08-NWO-FG",
+  "TIPCH": 0.0475,
+  "RMAJ": 0.375,
+  "THD_END": 0.368,
+  "FLANK_END": 0.394,
+  "UCR": 0.33,
+  "UCL": 0.146,
+  "WASHER_R": 0.505,
+  "WASHER_T": 0.041,
+  "LOCKNUT_T": 0.41,
+  "LOCKNUT_AF": "row S3HEX (0.938)",
+  "LOCKNUT_CHAMFER": "75 deg to r 0.469 both faces",
+  "NECKR": 0.375,
+  "NECKL": 0.039,
+  "note": "= NWO_MEAS[8] undercut 0.146 + washer 0.505 x 0.041; thread longer (+0.050); lock nut bigger than the JIC 6801 one (0.938 x 0.41 vs 0.875 x 0.31); the tip -> washer face length is the row input (Air-Way L10 - L11)"
+ }
+}

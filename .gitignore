@@ -39,6 +39,13 @@ tools/_out/*
 !tools/_out/airway_20261014/
 !tools/_out/brennan_catalog_20261001/
 !tools/_out/airway_first_20261020/
+!tools/_out/a14_1603bore_20261020/
+!tools/_out/rebase_b16_20261020/
+!tools/_out/orfs_pilots_20261020/
+!tools/_out/orfs_wp2_20261020/
+!tools/_out/orfs_gen_20261020/
+!tools/_out/count_20261020/
+!tools/_out/orfs_steps2_20261020/
 
 # brennan_yes: keep stage, stage_orfs, scripts, wave reports / cell lists; drop test copies and regenerations
 tools/_out/brennan_yes_20261018/base_root/
@@ -124,3 +131,14 @@ tools/_out/batch17_20261019/paperwork/*.xlsx
 !tools/_out/batch17_20261019/out_*.txt
 !tools/_out/batch17_20261019/run_groups_log*.txt
 !tools/_out/batch17_20261019/sw_dryrun/
+# a14 (2026-10-20): keep scripts, surveys, regen, checks, closed-loop text; drop the OCP model STEPs
+tools/_out/a14_1603bore_20261020/ocp/1603/
+tools/_out/a14_1603bore_20261020/checks/gt_scratch/
+# rebase_b16 (2026-10-20): keep scripts, README, summaries, checks; drop the regenerated macros / SW2 (rerun scripts/regen_b16roots.py)
+tools/_out/rebase_b16_20261020/regen/
+tools/_out/rebase_b16_20261020/checks/gt/
+tools/_out/rebase_b16_20261020/checks/gs/
+# orfs_gen (2026-10-20): keep the staging tools, scripts, README, summaries; drop the regenerated macros and OCP model STEPs
+tools/_out/orfs_gen_20261020/regen/
+tools/_out/orfs_gen_20261020/ocp/*.stp
+tools/_out/orfs_gen_20261020/scratch/

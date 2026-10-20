@@ -1,0 +1,142 @@
+# 2026-10-20 static checks of the FS forged masters after the per-size STEPs (out/tee): forged legs, swivels, no-step / raised-neck / counterbore masters
+## vbacheck
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2500N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2500_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2501N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2501_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2503N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2503_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2603N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2603_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2701_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2702_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2703_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2704_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6500C_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6500NC_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6500N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6500_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6600C_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6600NC_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6600N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6600_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6602C_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6602NC_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6602N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6602_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6801NR_MASTER.bas 52 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6801R_MASTER.bas 52 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6801_MASTER.bas 52 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6802NR_MASTER.bas 52 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6802_MASTER.bas 52 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6803_MASTER.bas 52 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6804_MASTER.bas 52 procedures OK
+## dofcheck_tee
+Build_FS2500N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2500N_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2500_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2500_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2501N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2501N_MASTER.bas LEG 2 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2501_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2501_MASTER.bas LEG 2 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2503N_MASTER.bas LEG 1 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2503N_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2503_MASTER.bas LEG 1 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2503_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2603N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2603N_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2603N_MASTER.bas LEG 3 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2603_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2603_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2603_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2701_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2701_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2702_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2702_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2703_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2703_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2703_MASTER.bas LEG 3 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2704_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2704_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2704_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6500C_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6500C_MASTER.bas LEG 2 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6500NC_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6500NC_MASTER.bas LEG 2 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6500N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6500N_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6500_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6500_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6600C_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6600C_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6600C_MASTER.bas LEG 3 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6600NC_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6600NC_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6600NC_MASTER.bas LEG 3 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6600N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6600N_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6600N_MASTER.bas LEG 3 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6600_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6600_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6600_MASTER.bas LEG 3 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6602C_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6602C_MASTER.bas LEG 2 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6602C_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6602NC_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6602NC_MASTER.bas LEG 2 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6602NC_MASTER.bas LEG 3 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6602N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6602N_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6602N_MASTER.bas LEG 3 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6602_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6602_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6602_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6801NR_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6801NR_MASTER.bas LEG 2 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
+Build_FS6801R_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6801R_MASTER.bas LEG 2 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
+Build_FS6801_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6801_MASTER.bas LEG 2 {'n': 15, 'unknowns': 30, 'cons': 30, 'rank': 30, 'fully': True, 'redundant': 0}
+Build_FS6802NR_MASTER.bas LEG 1 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
+Build_FS6802NR_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS6802_MASTER.bas LEG 1 {'n': 15, 'unknowns': 30, 'cons': 30, 'rank': 30, 'fully': True, 'redundant': 0}
+Build_FS6802_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6803_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6803_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6803_MASTER.bas LEG 3 {'n': 15, 'unknowns': 30, 'cons': 30, 'rank': 30, 'fully': True, 'redundant': 0}
+Build_FS6804_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6804_MASTER.bas LEG 2 {'n': 15, 'unknowns': 30, 'cons': 30, 'rank': 30, 'fully': True, 'redundant': 0}
+Build_FS6804_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+## allcfg_check
+FS2500N   3 configs  leg outline problems: 0 []
+FS2500   5 configs  leg outline problems: 0 []
+FS2501N   3 configs  leg outline problems: 0 []
+FS2501   9 configs  leg outline problems: 0 []
+FS2503N   4 configs  leg outline problems: 0 []
+FS2503   4 configs  leg outline problems: 0 []
+FS2603N   2 configs  leg outline problems: 0 []
+FS2603   4 configs  leg outline problems: 0 []
+FS2701   2 configs  leg outline problems: 0 []
+FS2702   2 configs  leg outline problems: 0 []
+FS2703   2 configs  leg outline problems: 0 []
+FS2704   2 configs  leg outline problems: 0 []
+FS6500C   2 configs  leg outline problems: 0 []
+FS6500NC   2 configs  leg outline problems: 0 []
+FS6500N   1 configs  leg outline problems: 0 []
+FS6500   3 configs  leg outline problems: 0 []
+FS6600C   1 configs  leg outline problems: 0 []
+FS6600NC   1 configs  leg outline problems: 0 []
+FS6600N   1 configs  leg outline problems: 0 []
+FS6600   2 configs  leg outline problems: 0 []
+FS6602C   2 configs  leg outline problems: 0 []
+FS6602NC   2 configs  leg outline problems: 0 []
+FS6602N   1 configs  leg outline problems: 0 []
+FS6602   2 configs  leg outline problems: 0 []
+FS6801NR   1 configs  leg outline problems: 0 []
+FS6801R   1 configs  leg outline problems: 0 []
+FS6801   3 configs  leg outline problems: 0 []
+FS6802NR   1 configs  leg outline problems: 0 []
+FS6802   2 configs  leg outline problems: 0 []
+FS6803   1 configs  leg outline problems: 0 []
+FS6804   1 configs  leg outline problems: 0 []

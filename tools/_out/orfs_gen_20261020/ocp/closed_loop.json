@@ -1,0 +1,112 @@
+[
+ {
+  "pn": "FS2403-08-08",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.5822,
+  "bad": [],
+  "brennan_volume": 0.58654,
+  "diff_pct": -0.74
+ },
+ {
+  "pn": "FS2403-24-24",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.34275,
+  "bad": [],
+  "brennan_volume": 4.35986,
+  "diff_pct": -0.39
+ },
+ {
+  "pn": "FS6400-08-06-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.55002,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-08-08-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.57539,
+  "bad": [],
+  "brennan_volume": 0.58255,
+  "diff_pct": -1.23
+ },
+ {
+  "pn": "FS6400-08-10-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.75684,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-08-12-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.18938,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-24-24-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.32282,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-04",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.51432,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-06",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.551,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.74433,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.2832,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-24-24",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.74941,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-08-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.55931,
+  "bad": []
+ }
+]

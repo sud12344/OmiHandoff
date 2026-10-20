@@ -1,0 +1,2606 @@
+[
+ {
+  "pn": "1603-02-02-02-FG",
+  "info": {
+   "solids": 1,
+   "volume": 0.361224,
+   "nutcut": {
+    "NUTCUT1": 0.011444,
+    "NUTCUT2": 0.011444,
+    "NUTCUT3": 0.011444
+   }
+  },
+  "checks": [
+   [
+    "one solid",
+    1,
+    1,
+    true
+   ],
+   [
+    "leg 1 extent = nut face",
+    0.84,
+    0.84,
+    true
+   ],
+   [
+    "leg 1 NPSM nut face (W5_2)",
+    0.84,
+    0.84,
+    true
+   ],
+   [
+    "leg 1 NPSM stem tip (M2_2)",
+    0.7,
+    0.7,
+    true
+   ],
+   [
+    "leg 1 nut hex (C2HEX)",
+    0.562,
+    0.562,
+    true
+   ],
+   [
+    "leg 1 NPSM HEXL (NPSM_MEAS[2])",
+    0.2,
+    0.2,
+    true
+   ],
+   [
+    "leg 1 NPSM SKF (NPSM_MEAS[2])",
+    0.281,
+    0.281,
+    true
+   ],
+   [
+    "leg 1 NPSM SKS (NPSM_MEAS[2])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 1 NPSM SKR (NPSM_MEAS[2])",
+    0.2496,
+    0.2496,
+    true
+   ],
+   [
+    "leg 1 NPSM NUTL (NPSM_MEAS[2])",
+    0.38,
+    0.38,
+    true
+   ],
+   [
+    "leg 1 NPSM CSR (NPSM_MEAS[2])",
+    0.1984,
+    0.1984,
+    true
+   ],
+   [
+    "leg 1 NPSM MINR (NPSM_MEAS[2])",
+    0.182,
+    0.182,
+    true
+   ],
+   [
+    "leg 1 NPSM TE (NPSM_MEAS[2])",
+    0.1736,
+    0.1736,
+    true
+   ],
+   [
+    "leg 1 NPSM RELR (NPSM_MEAS[2])",
+    0.1984,
+    0.1984,
+    true
+   ],
+   [
+    "leg 1 NPSM RB0 (NPSM_MEAS[2])",
+    0.19,
+    0.19,
+    true
+   ],
+   [
+    "leg 1 NPSM CBR (NPSM_MEAS[2])",
+    0.2275,
+    0.2275,
+    true
+   ],
+   [
+    "leg 1 NPSM CBEND (NPSM_MEAS[2])",
+    0.3066,
+    0.3066,
+    true
+   ],
+   [
+    "leg 1 NPSM NECKR (NPSM_MEAS[2])",
+    0.129,
+    0.129,
+    true
+   ],
+   [
+    "leg 1 NPSM BODY_TO_TIP (NPSM_MEAS[2])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 1 NPSM CONEL (NPSM_MEAS[2])",
+    0.0961,
+    0.0961,
+    true
+   ],
+   [
+    "leg 1 NPSM STEMR (NPSM_MEAS[2])",
+    0.1725,
+    0.1725,
+    true
+   ],
+   [
+    "leg 1 NPSM TIPR (NPSM_MEAS[2])",
+    0.117,
+    0.117,
+    true
+   ],
+   [
+    "leg 1 bore (D2)",
+    0.11,
+    0.11,
+    true
+   ],
+   [
+    "leg 2 extent = nut face",
+    0.84,
+    0.84,
+    true
+   ],
+   [
+    "leg 2 NPSM nut face (W5_3)",
+    0.84,
+    0.84,
+    true
+   ],
+   [
+    "leg 2 NPSM stem tip (M2_3)",
+    0.7,
+    0.7,
+    true
+   ],
+   [
+    "leg 2 nut hex (C3HEX)",
+    0.562,
+    0.562,
+    true
+   ],
+   [
+    "leg 2 NPSM HEXL (NPSM_MEAS[2])",
+    0.2,
+    0.2,
+    true
+   ],
+   [
+    "leg 2 NPSM SKF (NPSM_MEAS[2])",
+    0.281,
+    0.281,
+    true
+   ],
+   [
+    "leg 2 NPSM SKS (NPSM_MEAS[2])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 2 NPSM SKR (NPSM_MEAS[2])",
+    0.2496,
+    0.2496,
+    true
+   ],
+   [
+    "leg 2 NPSM NUTL (NPSM_MEAS[2])",
+    0.38,
+    0.38,
+    true
+   ],
+   [
+    "leg 2 NPSM CSR (NPSM_MEAS[2])",
+    0.1984,
+    0.1984,
+    true
+   ],
+   [
+    "leg 2 NPSM MINR (NPSM_MEAS[2])",
+    0.182,
+    0.182,
+    true
+   ],
+   [
+    "leg 2 NPSM TE (NPSM_MEAS[2])",
+    0.1736,
+    0.1736,
+    true
+   ],
+   [
+    "leg 2 NPSM RELR (NPSM_MEAS[2])",
+    0.1984,
+    0.1984,
+    true
+   ],
+   [
+    "leg 2 NPSM RB0 (NPSM_MEAS[2])",
+    0.19,
+    0.19,
+    true
+   ],
+   [
+    "leg 2 NPSM CBR (NPSM_MEAS[2])",
+    0.2275,
+    0.2275,
+    true
+   ],
+   [
+    "leg 2 NPSM CBEND (NPSM_MEAS[2])",
+    0.3066,
+    0.3066,
+    true
+   ],
+   [
+    "leg 2 NPSM NECKR (NPSM_MEAS[2])",
+    0.129,
+    0.129,
+    true
+   ],
+   [
+    "leg 2 NPSM BODY_TO_TIP (NPSM_MEAS[2])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 2 NPSM CONEL (NPSM_MEAS[2])",
+    0.0961,
+    0.0961,
+    true
+   ],
+   [
+    "leg 2 NPSM STEMR (NPSM_MEAS[2])",
+    0.1725,
+    0.1725,
+    true
+   ],
+   [
+    "leg 2 NPSM TIPR (NPSM_MEAS[2])",
+    0.117,
+    0.117,
+    true
+   ],
+   [
+    "leg 2 bore (D2)",
+    0.11,
+    0.11,
+    true
+   ],
+   [
+    "leg 3 extent = nut face",
+    0.84,
+    0.84,
+    true
+   ],
+   [
+    "leg 3 NPSM nut face (W3)",
+    0.84,
+    0.84,
+    true
+   ],
+   [
+    "leg 3 NPSM stem tip (M1)",
+    0.7,
+    0.7,
+    true
+   ],
+   [
+    "leg 3 nut hex (C_1HEX)",
+    0.562,
+    0.562,
+    true
+   ],
+   [
+    "leg 3 NPSM HEXL (NPSM_MEAS[2])",
+    0.2,
+    0.2,
+    true
+   ],
+   [
+    "leg 3 NPSM SKF (NPSM_MEAS[2])",
+    0.281,
+    0.281,
+    true
+   ],
+   [
+    "leg 3 NPSM SKS (NPSM_MEAS[2])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 3 NPSM SKR (NPSM_MEAS[2])",
+    0.2496,
+    0.2496,
+    true
+   ],
+   [
+    "leg 3 NPSM NUTL (NPSM_MEAS[2])",
+    0.38,
+    0.38,
+    true
+   ],
+   [
+    "leg 3 NPSM CSR (NPSM_MEAS[2])",
+    0.1984,
+    0.1984,
+    true
+   ],
+   [
+    "leg 3 NPSM MINR (NPSM_MEAS[2])",
+    0.182,
+    0.182,
+    true
+   ],
+   [
+    "leg 3 NPSM TE (NPSM_MEAS[2])",
+    0.1736,
+    0.1736,
+    true
+   ],
+   [
+    "leg 3 NPSM RELR (NPSM_MEAS[2])",
+    0.1984,
+    0.1984,
+    true
+   ],
+   [
+    "leg 3 NPSM RB0 (NPSM_MEAS[2])",
+    0.19,
+    0.19,
+    true
+   ],
+   [
+    "leg 3 NPSM CBR (NPSM_MEAS[2])",
+    0.2275,
+    0.2275,
+    true
+   ],
+   [
+    "leg 3 NPSM CBEND (NPSM_MEAS[2])",
+    0.3066,
+    0.3066,
+    true
+   ],
+   [
+    "leg 3 NPSM NECKR (NPSM_MEAS[2])",
+    0.129,
+    0.129,
+    true
+   ],
+   [
+    "leg 3 NPSM BODY_TO_TIP (NPSM_MEAS[2])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 3 NPSM CONEL (NPSM_MEAS[2])",
+    0.0961,
+    0.0961,
+    true
+   ],
+   [
+    "leg 3 NPSM STEMR (NPSM_MEAS[2])",
+    0.1725,
+    0.1725,
+    true
+   ],
+   [
+    "leg 3 NPSM TIPR (NPSM_MEAS[2])",
+    0.117,
+    0.117,
+    true
+   ],
+   [
+    "leg 3 bore (D1)",
+    0.11,
+    0.11,
+    true
+   ],
+   [
+    "body hex run bar +X (C1HEX)",
+    0.438,
+    0.438,
+    true
+   ],
+   [
+    "body hex run bar -X (C1HEX)",
+    0.438,
+    0.438,
+    true
+   ],
+   [
+    "body hex branch arm (C1HEX)",
+    0.438,
+    0.438,
+    true
+   ]
+  ]
+ },
+ {
+  "pn": "1603-04-04-04-FG",
+  "info": {
+   "solids": 1,
+   "volume": 0.673123,
+   "nutcut": {
+    "NUTCUT1": 0.024012,
+    "NUTCUT2": 0.024012,
+    "NUTCUT3": 0.024012
+   }
+  },
+  "checks": [
+   [
+    "one solid",
+    1,
+    1,
+    true
+   ],
+   [
+    "leg 1 extent = nut face",
+    1.07,
+    1.07,
+    true
+   ],
+   [
+    "leg 1 NPSM nut face (W5_2)",
+    1.07,
+    1.07,
+    true
+   ],
+   [
+    "leg 1 NPSM stem tip (M2_2)",
+    0.88,
+    0.88,
+    true
+   ],
+   [
+    "leg 1 nut hex (C2HEX)",
+    0.688,
+    0.688,
+    true
+   ],
+   [
+    "leg 1 NPSM HEXL (NPSM_MEAS[4])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 1 NPSM SKF (NPSM_MEAS[4])",
+    0.344,
+    0.345,
+    true
+   ],
+   [
+    "leg 1 NPSM SKS (NPSM_MEAS[4])",
+    0.43,
+    0.43,
+    true
+   ],
+   [
+    "leg 1 NPSM SKR (NPSM_MEAS[4])",
+    0.3146,
+    0.3146,
+    true
+   ],
+   [
+    "leg 1 NPSM NUTL (NPSM_MEAS[4])",
+    0.54,
+    0.54,
+    true
+   ],
+   [
+    "leg 1 NPSM CSR (NPSM_MEAS[4])",
+    0.263,
+    0.263,
+    true
+   ],
+   [
+    "leg 1 NPSM MINR (NPSM_MEAS[4])",
+    0.2405,
+    0.2405,
+    true
+   ],
+   [
+    "leg 1 NPSM TE (NPSM_MEAS[4])",
+    0.2875,
+    0.2875,
+    true
+   ],
+   [
+    "leg 1 NPSM RELR (NPSM_MEAS[4])",
+    0.263,
+    0.263,
+    true
+   ],
+   [
+    "leg 1 NPSM RB0 (NPSM_MEAS[4])",
+    0.31,
+    0.31,
+    true
+   ],
+   [
+    "leg 1 NPSM CBR (NPSM_MEAS[4])",
+    0.29,
+    0.29,
+    true
+   ],
+   [
+    "leg 1 NPSM CBEND (NPSM_MEAS[4])",
+    0.4459,
+    0.4459,
+    true
+   ],
+   [
+    "leg 1 NPSM NECKR (NPSM_MEAS[4])",
+    0.1825,
+    0.1825,
+    true
+   ],
+   [
+    "leg 1 NPSM BODY_TO_TIP (NPSM_MEAS[4])",
+    0.39,
+    0.39,
+    true
+   ],
+   [
+    "leg 1 NPSM CONEL (NPSM_MEAS[4])",
+    0.1325,
+    0.1325,
+    true
+   ],
+   [
+    "leg 1 NPSM STEMR (NPSM_MEAS[4])",
+    0.225,
+    0.225,
+    true
+   ],
+   [
+    "leg 1 NPSM TIPR (NPSM_MEAS[4])",
+    0.1485,
+    0.1485,
+    true
+   ],
+   [
+    "leg 1 bore (D2)",
+    0.22,
+    0.22,
+    true
+   ],
+   [
+    "leg 2 extent = nut face",
+    1.07,
+    1.07,
+    true
+   ],
+   [
+    "leg 2 NPSM nut face (W5_3)",
+    1.07,
+    1.07,
+    true
+   ],
+   [
+    "leg 2 NPSM stem tip (M2_3)",
+    0.88,
+    0.88,
+    true
+   ],
+   [
+    "leg 2 nut hex (C3HEX)",
+    0.688,
+    0.688,
+    true
+   ],
+   [
+    "leg 2 NPSM HEXL (NPSM_MEAS[4])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 2 NPSM SKF (NPSM_MEAS[4])",
+    0.344,
+    0.345,
+    true
+   ],
+   [
+    "leg 2 NPSM SKS (NPSM_MEAS[4])",
+    0.43,
+    0.43,
+    true
+   ],
+   [
+    "leg 2 NPSM SKR (NPSM_MEAS[4])",
+    0.3146,
+    0.3146,
+    true
+   ],
+   [
+    "leg 2 NPSM NUTL (NPSM_MEAS[4])",
+    0.54,
+    0.54,
+    true
+   ],
+   [
+    "leg 2 NPSM CSR (NPSM_MEAS[4])",
+    0.263,
+    0.263,
+    true
+   ],
+   [
+    "leg 2 NPSM MINR (NPSM_MEAS[4])",
+    0.2405,
+    0.2405,
+    true
+   ],
+   [
+    "leg 2 NPSM TE (NPSM_MEAS[4])",
+    0.2875,
+    0.2875,
+    true
+   ],
+   [
+    "leg 2 NPSM RELR (NPSM_MEAS[4])",
+    0.263,
+    0.263,
+    true
+   ],
+   [
+    "leg 2 NPSM RB0 (NPSM_MEAS[4])",
+    0.31,
+    0.31,
+    true
+   ],
+   [
+    "leg 2 NPSM CBR (NPSM_MEAS[4])",
+    0.29,
+    0.29,
+    true
+   ],
+   [
+    "leg 2 NPSM CBEND (NPSM_MEAS[4])",
+    0.4459,
+    0.4459,
+    true
+   ],
+   [
+    "leg 2 NPSM NECKR (NPSM_MEAS[4])",
+    0.1825,
+    0.1825,
+    true
+   ],
+   [
+    "leg 2 NPSM BODY_TO_TIP (NPSM_MEAS[4])",
+    0.39,
+    0.39,
+    true
+   ],
+   [
+    "leg 2 NPSM CONEL (NPSM_MEAS[4])",
+    0.1325,
+    0.1325,
+    true
+   ],
+   [
+    "leg 2 NPSM STEMR (NPSM_MEAS[4])",
+    0.225,
+    0.225,
+    true
+   ],
+   [
+    "leg 2 NPSM TIPR (NPSM_MEAS[4])",
+    0.1485,
+    0.1485,
+    true
+   ],
+   [
+    "leg 2 bore (D2)",
+    0.22,
+    0.22,
+    true
+   ],
+   [
+    "leg 3 extent = nut face",
+    1.07,
+    1.07,
+    true
+   ],
+   [
+    "leg 3 NPSM nut face (W3)",
+    1.07,
+    1.07,
+    true
+   ],
+   [
+    "leg 3 NPSM stem tip (M1)",
+    0.88,
+    0.88,
+    true
+   ],
+   [
+    "leg 3 nut hex (C_1HEX)",
+    0.688,
+    0.688,
+    true
+   ],
+   [
+    "leg 3 NPSM HEXL (NPSM_MEAS[4])",
+    0.28,
+    0.28,
+    true
+   ],
+   [
+    "leg 3 NPSM SKF (NPSM_MEAS[4])",
+    0.344,
+    0.345,
+    true
+   ],
+   [
+    "leg 3 NPSM SKS (NPSM_MEAS[4])",
+    0.43,
+    0.43,
+    true
+   ],
+   [
+    "leg 3 NPSM SKR (NPSM_MEAS[4])",
+    0.3146,
+    0.3146,
+    true
+   ],
+   [
+    "leg 3 NPSM NUTL (NPSM_MEAS[4])",
+    0.54,
+    0.54,
+    true
+   ],
+   [
+    "leg 3 NPSM CSR (NPSM_MEAS[4])",
+    0.263,
+    0.263,
+    true
+   ],
+   [
+    "leg 3 NPSM MINR (NPSM_MEAS[4])",
+    0.2405,
+    0.2405,
+    true
+   ],
+   [
+    "leg 3 NPSM TE (NPSM_MEAS[4])",
+    0.2875,
+    0.2875,
+    true
+   ],
+   [
+    "leg 3 NPSM RELR (NPSM_MEAS[4])",
+    0.263,
+    0.263,
+    true
+   ],
+   [
+    "leg 3 NPSM RB0 (NPSM_MEAS[4])",
+    0.31,
+    0.31,
+    true
+   ],
+   [
+    "leg 3 NPSM CBR (NPSM_MEAS[4])",
+    0.29,
+    0.29,
+    true
+   ],
+   [
+    "leg 3 NPSM CBEND (NPSM_MEAS[4])",
+    0.4459,
+    0.4459,
+    true
+   ],
+   [
+    "leg 3 NPSM NECKR (NPSM_MEAS[4])",
+    0.1825,
+    0.1825,
+    true
+   ],
+   [
+    "leg 3 NPSM BODY_TO_TIP (NPSM_MEAS[4])",
+    0.39,
+    0.39,
+    true
+   ],
+   [
+    "leg 3 NPSM CONEL (NPSM_MEAS[4])",
+    0.1325,
+    0.1325,
+    true
+   ],
+   [
+    "leg 3 NPSM STEMR (NPSM_MEAS[4])",
+    0.225,
+    0.225,
+    true
+   ],
+   [
+    "leg 3 NPSM TIPR (NPSM_MEAS[4])",
+    0.1485,
+    0.1485,
+    true
+   ],
+   [
+    "leg 3 bore (D1)",
+    0.22,
+    0.22,
+    true
+   ],
+   [
+    "body hex run bar +X (C1HEX)",
+    0.562,
+    0.562,
+    true
+   ],
+   [
+    "body hex run bar -X (C1HEX)",
+    0.562,
+    0.562,
+    true
+   ],
+   [
+    "body hex branch arm (C1HEX)",
+    0.562,
+    0.562,
+    true
+   ]
+  ]
+ },
+ {
+  "pn": "1603-06-06-06-FG",
+  "info": {
+   "solids": 1,
+   "volume": 1.216693,
+   "nutcut": {
+    "NUTCUT1": 0.044387,
+    "NUTCUT2": 0.044387,
+    "NUTCUT3": 0.044387
+   }
+  },
+  "checks": [
+   [
+    "one solid",
+    1,
+    1,
+    true
+   ],
+   [
+    "leg 1 extent = nut face",
+    1.2,
+    1.2,
+    true
+   ],
+   [
+    "leg 1 NPSM nut face (W5_2)",
+    1.2,
+    1.2,
+    true
+   ],
+   [
+    "leg 1 NPSM stem tip (M2_2)",
+    0.99,
+    0.99,
+    true
+   ],
+   [
+    "leg 1 nut hex (C2HEX)",
+    0.875,
+    0.875,
+    true
+   ],
+   [
+    "leg 1 NPSM HEXL (NPSM_MEAS[6])",
+    0.32,
+    0.32,
+    true
+   ],
+   [
+    "leg 1 NPSM SKF (NPSM_MEAS[6])",
+    0.4375,
+    0.4375,
+    true
+   ],
+   [
+    "leg 1 NPSM SKS (NPSM_MEAS[6])",
+    0.455,
+    0.455,
+    true
+   ],
+   [
+    "leg 1 NPSM SKR (NPSM_MEAS[6])",
+    0.4056,
+    0.4056,
+    true
+   ],
+   [
+    "leg 1 NPSM NUTL (NPSM_MEAS[6])",
+    0.58,
+    0.58,
+    true
+   ],
+   [
+    "leg 1 NPSM CSR (NPSM_MEAS[6])",
+    0.331,
+    0.331,
+    true
+   ],
+   [
+    "leg 1 NPSM MINR (NPSM_MEAS[6])",
+    0.306,
+    0.306,
+    true
+   ],
+   [
+    "leg 1 NPSM TE (NPSM_MEAS[6])",
+    0.29,
+    0.29,
+    true
+   ],
+   [
+    "leg 1 NPSM RELR (NPSM_MEAS[6])",
+    0.331,
+    0.331,
+    true
+   ],
+   [
+    "leg 1 NPSM RB0 (NPSM_MEAS[6])",
+    0.315,
+    0.315,
+    true
+   ],
+   [
+    "leg 1 NPSM CBR (NPSM_MEAS[6])",
+    0.36,
+    0.36,
+    true
+   ],
+   [
+    "leg 1 NPSM CBEND (NPSM_MEAS[6])",
+    0.4707,
+    0.4707,
+    true
+   ],
+   [
+    "leg 1 NPSM NECKR (NPSM_MEAS[6])",
+    0.2465,
+    0.2465,
+    true
+   ],
+   [
+    "leg 1 NPSM BODY_TO_TIP (NPSM_MEAS[6])",
+    0.41,
+    0.41,
+    true
+   ],
+   [
+    "leg 1 NPSM CONEL (NPSM_MEAS[6])",
+    0.1429,
+    0.1429,
+    true
+   ],
+   [
+    "leg 1 NPSM STEMR (NPSM_MEAS[6])",
+    0.2935,
+    0.2935,
+    true
+   ],
+   [
+    "leg 1 NPSM TIPR (NPSM_MEAS[6])",
+    0.211,
+    0.211,
+    true
+   ],
+   [
+    "leg 1 bore (D2)",
+    0.34,
+    0.34,
+    true
+   ],
+   [
+    "leg 2 extent = nut face",
+    1.2,
+    1.2,
+    true
+   ],
+   [
+    "leg 2 NPSM nut face (W5_3)",
+    1.2,
+    1.2,
+    true
+   ],
+   [
+    "leg 2 NPSM stem tip (M2_3)",
+    0.99,
+    0.99,
+    true
+   ],
+   [
+    "leg 2 nut hex (C3HEX)",
+    0.875,
+    0.875,
+    true
+   ],
+   [
+    "leg 2 NPSM HEXL (NPSM_MEAS[6])",
+    0.32,
+    0.32,
+    true
+   ],
+   [
+    "leg 2 NPSM SKF (NPSM_MEAS[6])",
+    0.4375,
+    0.4375,
+    true
+   ],
+   [
+    "leg 2 NPSM SKS (NPSM_MEAS[6])",
+    0.455,
+    0.455,
+    true
+   ],
+   [
+    "leg 2 NPSM SKR (NPSM_MEAS[6])",
+    0.4056,
+    0.4056,
+    true
+   ],
+   [
+    "leg 2 NPSM NUTL (NPSM_MEAS[6])",
+    0.58,
+    0.58,
+    true
+   ],
+   [
+    "leg 2 NPSM CSR (NPSM_MEAS[6])",
+    0.331,
+    0.331,
+    true
+   ],
+   [
+    "leg 2 NPSM MINR (NPSM_MEAS[6])",
+    0.306,
+    0.306,
+    true
+   ],
+   [
+    "leg 2 NPSM TE (NPSM_MEAS[6])",
+    0.29,
+    0.29,
+    true
+   ],
+   [
+    "leg 2 NPSM RELR (NPSM_MEAS[6])",
+    0.331,
+    0.331,
+    true
+   ],
+   [
+    "leg 2 NPSM RB0 (NPSM_MEAS[6])",
+    0.315,
+    0.315,
+    true
+   ],
+   [
+    "leg 2 NPSM CBR (NPSM_MEAS[6])",
+    0.36,
+    0.36,
+    true
+   ],
+   [
+    "leg 2 NPSM CBEND (NPSM_MEAS[6])",
+    0.4707,
+    0.4707,
+    true
+   ],
+   [
+    "leg 2 NPSM NECKR (NPSM_MEAS[6])",
+    0.2465,
+    0.2465,
+    true
+   ],
+   [
+    "leg 2 NPSM BODY_TO_TIP (NPSM_MEAS[6])",
+    0.41,
+    0.41,
+    true
+   ],
+   [
+    "leg 2 NPSM CONEL (NPSM_MEAS[6])",
+    0.1429,
+    0.1429,
+    true
+   ],
+   [
+    "leg 2 NPSM STEMR (NPSM_MEAS[6])",
+    0.2935,
+    0.2935,
+    true
+   ],
+   [
+    "leg 2 NPSM TIPR (NPSM_MEAS[6])",
+    0.211,
+    0.211,
+    true
+   ],
+   [
+    "leg 2 bore (D2)",
+    0.34,
+    0.34,
+    true
+   ],
+   [
+    "leg 3 extent = nut face",
+    1.2,
+    1.2,
+    true
+   ],
+   [
+    "leg 3 NPSM nut face (W3)",
+    1.2,
+    1.2,
+    true
+   ],
+   [
+    "leg 3 NPSM stem tip (M1)",
+    0.99,
+    0.99,
+    true
+   ],
+   [
+    "leg 3 nut hex (C_1HEX)",
+    0.875,
+    0.875,
+    true
+   ],
+   [
+    "leg 3 NPSM HEXL (NPSM_MEAS[6])",
+    0.32,
+    0.32,
+    true
+   ],
+   [
+    "leg 3 NPSM SKF (NPSM_MEAS[6])",
+    0.4375,
+    0.4375,
+    true
+   ],
+   [
+    "leg 3 NPSM SKS (NPSM_MEAS[6])",
+    0.455,
+    0.455,
+    true
+   ],
+   [
+    "leg 3 NPSM SKR (NPSM_MEAS[6])",
+    0.4056,
+    0.4056,
+    true
+   ],
+   [
+    "leg 3 NPSM NUTL (NPSM_MEAS[6])",
+    0.58,
+    0.58,
+    true
+   ],
+   [
+    "leg 3 NPSM CSR (NPSM_MEAS[6])",
+    0.331,
+    0.331,
+    true
+   ],
+   [
+    "leg 3 NPSM MINR (NPSM_MEAS[6])",
+    0.306,
+    0.306,
+    true
+   ],
+   [
+    "leg 3 NPSM TE (NPSM_MEAS[6])",
+    0.29,
+    0.29,
+    true
+   ],
+   [
+    "leg 3 NPSM RELR (NPSM_MEAS[6])",
+    0.331,
+    0.331,
+    true
+   ],
+   [
+    "leg 3 NPSM RB0 (NPSM_MEAS[6])",
+    0.315,
+    0.315,
+    true
+   ],
+   [
+    "leg 3 NPSM CBR (NPSM_MEAS[6])",
+    0.36,
+    0.36,
+    true
+   ],
+   [
+    "leg 3 NPSM CBEND (NPSM_MEAS[6])",
+    0.4707,
+    0.4707,
+    true
+   ],
+   [
+    "leg 3 NPSM NECKR (NPSM_MEAS[6])",
+    0.2465,
+    0.2465,
+    true
+   ],
+   [
+    "leg 3 NPSM BODY_TO_TIP (NPSM_MEAS[6])",
+    0.41,
+    0.41,
+    true
+   ],
+   [
+    "leg 3 NPSM CONEL (NPSM_MEAS[6])",
+    0.1429,
+    0.1429,
+    true
+   ],
+   [
+    "leg 3 NPSM STEMR (NPSM_MEAS[6])",
+    0.2935,
+    0.2935,
+    true
+   ],
+   [
+    "leg 3 NPSM TIPR (NPSM_MEAS[6])",
+    0.211,
+    0.211,
+    true
+   ],
+   [
+    "leg 3 bore (D1)",
+    0.34,
+    0.34,
+    true
+   ],
+   [
+    "body hex run bar +X (C1HEX)",
+    0.75,
+    0.75,
+    true
+   ],
+   [
+    "body hex run bar -X (C1HEX)",
+    0.75,
+    0.75,
+    true
+   ],
+   [
+    "body hex branch arm (C1HEX)",
+    0.75,
+    0.75,
+    true
+   ]
+  ]
+ },
+ {
+  "pn": "1603-08-08-08-FG",
+  "info": {
+   "solids": 1,
+   "volume": 1.689563,
+   "nutcut": {
+    "NUTCUT1": 0.072469,
+    "NUTCUT2": 0.072469,
+    "NUTCUT3": 0.072469
+   }
+  },
+  "checks": [
+   [
+    "one solid",
+    1,
+    1,
+    true
+   ],
+   [
+    "leg 1 extent = nut face",
+    1.39,
+    1.39,
+    true
+   ],
+   [
+    "leg 1 NPSM nut face (W5_2)",
+    1.39,
+    1.39,
+    true
+   ],
+   [
+    "leg 1 NPSM stem tip (M2_2)",
+    1.11,
+    1.11,
+    true
+   ],
+   [
+    "leg 1 nut hex (C2HEX)",
+    1.0,
+    1,
+    true
+   ],
+   [
+    "leg 1 NPSM HEXL (NPSM_MEAS[8])",
+    0.4,
+    0.4,
+    true
+   ],
+   [
+    "leg 1 NPSM SKF (NPSM_MEAS[8])",
+    0.5,
+    0.5,
+    true
+   ],
+   [
+    "leg 1 NPSM SKS (NPSM_MEAS[8])",
+    0.58,
+    0.58,
+    true
+   ],
+   [
+    "leg 1 NPSM SKR (NPSM_MEAS[8])",
+    0.455,
+    0.455,
+    true
+   ],
+   [
+    "leg 1 NPSM NUTL (NPSM_MEAS[8])",
+    0.72,
+    0.72,
+    true
+   ],
+   [
+    "leg 1 NPSM CSR (NPSM_MEAS[8])",
+    0.4115,
+    0.4115,
+    true
+   ],
+   [
+    "leg 1 NPSM MINR (NPSM_MEAS[8])",
+    0.3795,
+    0.3795,
+    true
+   ],
+   [
+    "leg 1 NPSM TE (NPSM_MEAS[8])",
+    0.388,
+    0.388,
+    true
+   ],
+   [
+    "leg 1 NPSM RELR (NPSM_MEAS[8])",
+    0.4115,
+    0.4115,
+    true
+   ],
+   [
+    "leg 1 NPSM RB0 (NPSM_MEAS[8])",
+    0.42,
+    0.42,
+    true
+   ],
+   [
+    "leg 1 NPSM CBR (NPSM_MEAS[8])",
+    0.4425,
+    0.4425,
+    true
+   ],
+   [
+    "leg 1 NPSM CBEND (NPSM_MEAS[8])",
+    0.595,
+    0.595,
+    true
+   ],
+   [
+    "leg 1 NPSM NECKR (NPSM_MEAS[8])",
+    0.304,
+    0.304,
+    true
+   ],
+   [
+    "leg 1 NPSM BODY_TO_TIP (NPSM_MEAS[8])",
+    0.48,
+    0.48,
+    true
+   ],
+   [
+    "leg 1 NPSM CONEL (NPSM_MEAS[8])",
+    0.1542,
+    0.1542,
+    true
+   ],
+   [
+    "leg 1 NPSM STEMR (NPSM_MEAS[8])",
+    0.37,
+    0.37,
+    true
+   ],
+   [
+    "leg 1 NPSM TIPR (NPSM_MEAS[8])",
+    0.281,
+    0.281,
+    true
+   ],
+   [
+    "leg 1 bore (D2)",
+    0.45,
+    0.45,
+    true
+   ],
+   [
+    "leg 2 extent = nut face",
+    1.39,
+    1.39,
+    true
+   ],
+   [
+    "leg 2 NPSM nut face (W5_3)",
+    1.39,
+    1.39,
+    true
+   ],
+   [
+    "leg 2 NPSM stem tip (M2_3)",
+    1.11,
+    1.11,
+    true
+   ],
+   [
+    "leg 2 nut hex (C3HEX)",
+    1.0,
+    1,
+    true
+   ],
+   [
+    "leg 2 NPSM HEXL (NPSM_MEAS[8])",
+    0.4,
+    0.4,
+    true
+   ],
+   [
+    "leg 2 NPSM SKF (NPSM_MEAS[8])",
+    0.5,
+    0.5,
+    true
+   ],
+   [
+    "leg 2 NPSM SKS (NPSM_MEAS[8])",
+    0.58,
+    0.58,
+    true
+   ],
+   [
+    "leg 2 NPSM SKR (NPSM_MEAS[8])",
+    0.455,
+    0.455,
+    true
+   ],
+   [
+    "leg 2 NPSM NUTL (NPSM_MEAS[8])",
+    0.72,
+    0.72,
+    true
+   ],
+   [
+    "leg 2 NPSM CSR (NPSM_MEAS[8])",
+    0.4115,
+    0.4115,
+    true
+   ],
+   [
+    "leg 2 NPSM MINR (NPSM_MEAS[8])",
+    0.3795,
+    0.3795,
+    true
+   ],
+   [
+    "leg 2 NPSM TE (NPSM_MEAS[8])",
+    0.388,
+    0.388,
+    true
+   ],
+   [
+    "leg 2 NPSM RELR (NPSM_MEAS[8])",
+    0.4115,
+    0.4115,
+    true
+   ],
+   [
+    "leg 2 NPSM RB0 (NPSM_MEAS[8])",
+    0.42,
+    0.42,
+    true
+   ],
+   [
+    "leg 2 NPSM CBR (NPSM_MEAS[8])",
+    0.4425,
+    0.4425,
+    true
+   ],
+   [
+    "leg 2 NPSM CBEND (NPSM_MEAS[8])",
+    0.595,
+    0.595,
+    true
+   ],
+   [
+    "leg 2 NPSM NECKR (NPSM_MEAS[8])",
+    0.304,
+    0.304,
+    true
+   ],
+   [
+    "leg 2 NPSM BODY_TO_TIP (NPSM_MEAS[8])",
+    0.48,
+    0.48,
+    true
+   ],
+   [
+    "leg 2 NPSM CONEL (NPSM_MEAS[8])",
+    0.1542,
+    0.1542,
+    true
+   ],
+   [
+    "leg 2 NPSM STEMR (NPSM_MEAS[8])",
+    0.37,
+    0.37,
+    true
+   ],
+   [
+    "leg 2 NPSM TIPR (NPSM_MEAS[8])",
+    0.281,
+    0.281,
+    true
+   ],
+   [
+    "leg 2 bore (D2)",
+    0.45,
+    0.45,
+    true
+   ],
+   [
+    "leg 3 extent = nut face",
+    1.39,
+    1.39,
+    true
+   ],
+   [
+    "leg 3 NPSM nut face (W3)",
+    1.39,
+    1.39,
+    true
+   ],
+   [
+    "leg 3 NPSM stem tip (M1)",
+    1.11,
+    1.11,
+    true
+   ],
+   [
+    "leg 3 nut hex (C_1HEX)",
+    1.0,
+    1,
+    true
+   ],
+   [
+    "leg 3 NPSM HEXL (NPSM_MEAS[8])",
+    0.4,
+    0.4,
+    true
+   ],
+   [
+    "leg 3 NPSM SKF (NPSM_MEAS[8])",
+    0.5,
+    0.5,
+    true
+   ],
+   [
+    "leg 3 NPSM SKS (NPSM_MEAS[8])",
+    0.58,
+    0.58,
+    true
+   ],
+   [
+    "leg 3 NPSM SKR (NPSM_MEAS[8])",
+    0.455,
+    0.455,
+    true
+   ],
+   [
+    "leg 3 NPSM NUTL (NPSM_MEAS[8])",
+    0.72,
+    0.72,
+    true
+   ],
+   [
+    "leg 3 NPSM CSR (NPSM_MEAS[8])",
+    0.4115,
+    0.4115,
+    true
+   ],
+   [
+    "leg 3 NPSM MINR (NPSM_MEAS[8])",
+    0.3795,
+    0.3795,
+    true
+   ],
+   [
+    "leg 3 NPSM TE (NPSM_MEAS[8])",
+    0.388,
+    0.388,
+    true
+   ],
+   [
+    "leg 3 NPSM RELR (NPSM_MEAS[8])",
+    0.4115,
+    0.4115,
+    true
+   ],
+   [
+    "leg 3 NPSM RB0 (NPSM_MEAS[8])",
+    0.42,
+    0.42,
+    true
+   ],
+   [
+    "leg 3 NPSM CBR (NPSM_MEAS[8])",
+    0.4425,
+    0.4425,
+    true
+   ],
+   [
+    "leg 3 NPSM CBEND (NPSM_MEAS[8])",
+    0.595,
+    0.595,
+    true
+   ],
+   [
+    "leg 3 NPSM NECKR (NPSM_MEAS[8])",
+    0.304,
+    0.304,
+    true
+   ],
+   [
+    "leg 3 NPSM BODY_TO_TIP (NPSM_MEAS[8])",
+    0.48,
+    0.48,
+    true
+   ],
+   [
+    "leg 3 NPSM CONEL (NPSM_MEAS[8])",
+    0.1542,
+    0.1542,
+    true
+   ],
+   [
+    "leg 3 NPSM STEMR (NPSM_MEAS[8])",
+    0.37,
+    0.37,
+    true
+   ],
+   [
+    "leg 3 NPSM TIPR (NPSM_MEAS[8])",
+    0.281,
+    0.281,
+    true
+   ],
+   [
+    "leg 3 bore (D1)",
+    0.45,
+    0.45,
+    true
+   ],
+   [
+    "body hex run bar +X (C1HEX)",
+    0.875,
+    0.875,
+    true
+   ],
+   [
+    "body hex run bar -X (C1HEX)",
+    0.875,
+    0.875,
+    true
+   ],
+   [
+    "body hex branch arm (C1HEX)",
+    0.875,
+    0.875,
+    true
+   ]
+  ]
+ },
+ {
+  "pn": "1603-12-12-12-FG",
+  "info": {
+   "solids": 1,
+   "volume": 2.707008,
+   "nutcut": {
+    "NUTCUT1": 0.113233,
+    "NUTCUT2": 0.113233,
+    "NUTCUT3": 0.113233
+   }
+  },
+  "checks": [
+   [
+    "one solid",
+    1,
+    1,
+    true
+   ],
+   [
+    "leg 1 extent = nut face",
+    1.65,
+    1.65,
+    true
+   ],
+   [
+    "leg 1 NPSM nut face (W5_2)",
+    1.65,
+    1.65,
+    true
+   ],
+   [
+    "leg 1 NPSM stem tip (M2_2)",
+    1.3,
+    1.3,
+    true
+   ],
+   [
+    "leg 1 nut hex (C2HEX)",
+    1.25,
+    1.25,
+    true
+   ],
+   [
+    "leg 1 NPSM HEXL (NPSM_MEAS[12])",
+    0.4,
+    0.4,
+    true
+   ],
+   [
+    "leg 1 NPSM SKF (NPSM_MEAS[12])",
+    0.625,
+    0.625,
+    true
+   ],
+   [
+    "leg 1 NPSM SKS (NPSM_MEAS[12])",
+    0.61,
+    0.61,
+    true
+   ],
+   [
+    "leg 1 NPSM SKR (NPSM_MEAS[12])",
+    0.5694,
+    0.5694,
+    true
+   ],
+   [
+    "leg 1 NPSM NUTL (NPSM_MEAS[12])",
+    0.745,
+    0.745,
+    true
+   ],
+   [
+    "leg 1 NPSM CSR (NPSM_MEAS[12])",
+    0.517,
+    0.517,
+    true
+   ],
+   [
+    "leg 1 NPSM MINR (NPSM_MEAS[12])",
+    0.485,
+    0.485,
+    true
+   ],
+   [
+    "leg 1 NPSM TE (NPSM_MEAS[12])",
+    0.393,
+    0.393,
+    true
+   ],
+   [
+    "leg 1 NPSM RELR (NPSM_MEAS[12])",
+    0.517,
+    0.517,
+    true
+   ],
+   [
+    "leg 1 NPSM RB0 (NPSM_MEAS[12])",
+    0.425,
+    0.425,
+    true
+   ],
+   [
+    "leg 1 NPSM CBR (NPSM_MEAS[12])",
+    0.5625,
+    0.5625,
+    true
+   ],
+   [
+    "leg 1 NPSM CBEND (NPSM_MEAS[12])",
+    0.6189,
+    0.6189,
+    true
+   ],
+   [
+    "leg 1 NPSM NECKR (NPSM_MEAS[12])",
+    0.389,
+    0.389,
+    true
+   ],
+   [
+    "leg 1 NPSM BODY_TO_TIP (NPSM_MEAS[12])",
+    0.45,
+    0.45,
+    true
+   ],
+   [
+    "leg 1 NPSM CONEL (NPSM_MEAS[12])",
+    0.1533,
+    0.1533,
+    true
+   ],
+   [
+    "leg 1 NPSM STEMR (NPSM_MEAS[12])",
+    0.4635,
+    0.4635,
+    true
+   ],
+   [
+    "leg 1 NPSM TIPR (NPSM_MEAS[12])",
+    0.375,
+    0.375,
+    true
+   ],
+   [
+    "leg 1 bore (D2)",
+    0.62,
+    0.62,
+    true
+   ],
+   [
+    "leg 2 extent = nut face",
+    1.65,
+    1.65,
+    true
+   ],
+   [
+    "leg 2 NPSM nut face (W5_3)",
+    1.65,
+    1.65,
+    true
+   ],
+   [
+    "leg 2 NPSM stem tip (M2_3)",
+    1.3,
+    1.3,
+    true
+   ],
+   [
+    "leg 2 nut hex (C3HEX)",
+    1.25,
+    1.25,
+    true
+   ],
+   [
+    "leg 2 NPSM HEXL (NPSM_MEAS[12])",
+    0.4,
+    0.4,
+    true
+   ],
+   [
+    "leg 2 NPSM SKF (NPSM_MEAS[12])",
+    0.625,
+    0.625,
+    true
+   ],
+   [
+    "leg 2 NPSM SKS (NPSM_MEAS[12])",
+    0.61,
+    0.61,
+    true
+   ],
+   [
+    "leg 2 NPSM SKR (NPSM_MEAS[12])",
+    0.5694,
+    0.5694,
+    true
+   ],
+   [
+    "leg 2 NPSM NUTL (NPSM_MEAS[12])",
+    0.745,
+    0.745,
+    true
+   ],
+   [
+    "leg 2 NPSM CSR (NPSM_MEAS[12])",
+    0.517,
+    0.517,
+    true
+   ],
+   [
+    "leg 2 NPSM MINR (NPSM_MEAS[12])",
+    0.485,
+    0.485,
+    true
+   ],
+   [
+    "leg 2 NPSM TE (NPSM_MEAS[12])",
+    0.393,
+    0.393,
+    true
+   ],
+   [
+    "leg 2 NPSM RELR (NPSM_MEAS[12])",
+    0.517,
+    0.517,
+    true
+   ],
+   [
+    "leg 2 NPSM RB0 (NPSM_MEAS[12])",
+    0.425,
+    0.425,
+    true
+   ],
+   [
+    "leg 2 NPSM CBR (NPSM_MEAS[12])",
+    0.5625,
+    0.5625,
+    true
+   ],
+   [
+    "leg 2 NPSM CBEND (NPSM_MEAS[12])",
+    0.6189,
+    0.6189,
+    true
+   ],
+   [
+    "leg 2 NPSM NECKR (NPSM_MEAS[12])",
+    0.389,
+    0.389,
+    true
+   ],
+   [
+    "leg 2 NPSM BODY_TO_TIP (NPSM_MEAS[12])",
+    0.45,
+    0.45,
+    true
+   ],
+   [
+    "leg 2 NPSM CONEL (NPSM_MEAS[12])",
+    0.1533,
+    0.1533,
+    true
+   ],
+   [
+    "leg 2 NPSM STEMR (NPSM_MEAS[12])",
+    0.4635,
+    0.4635,
+    true
+   ],
+   [
+    "leg 2 NPSM TIPR (NPSM_MEAS[12])",
+    0.375,
+    0.375,
+    true
+   ],
+   [
+    "leg 2 bore (D2)",
+    0.62,
+    0.62,
+    true
+   ],
+   [
+    "leg 3 extent = nut face",
+    1.65,
+    1.65,
+    true
+   ],
+   [
+    "leg 3 NPSM nut face (W3)",
+    1.65,
+    1.65,
+    true
+   ],
+   [
+    "leg 3 NPSM stem tip (M1)",
+    1.3,
+    1.3,
+    true
+   ],
+   [
+    "leg 3 nut hex (C_1HEX)",
+    1.25,
+    1.25,
+    true
+   ],
+   [
+    "leg 3 NPSM HEXL (NPSM_MEAS[12])",
+    0.4,
+    0.4,
+    true
+   ],
+   [
+    "leg 3 NPSM SKF (NPSM_MEAS[12])",
+    0.625,
+    0.625,
+    true
+   ],
+   [
+    "leg 3 NPSM SKS (NPSM_MEAS[12])",
+    0.61,
+    0.61,
+    true
+   ],
+   [
+    "leg 3 NPSM SKR (NPSM_MEAS[12])",
+    0.5694,
+    0.5694,
+    true
+   ],
+   [
+    "leg 3 NPSM NUTL (NPSM_MEAS[12])",
+    0.745,
+    0.745,
+    true
+   ],
+   [
+    "leg 3 NPSM CSR (NPSM_MEAS[12])",
+    0.517,
+    0.517,
+    true
+   ],
+   [
+    "leg 3 NPSM MINR (NPSM_MEAS[12])",
+    0.485,
+    0.485,
+    true
+   ],
+   [
+    "leg 3 NPSM TE (NPSM_MEAS[12])",
+    0.393,
+    0.393,
+    true
+   ],
+   [
+    "leg 3 NPSM RELR (NPSM_MEAS[12])",
+    0.517,
+    0.517,
+    true
+   ],
+   [
+    "leg 3 NPSM RB0 (NPSM_MEAS[12])",
+    0.425,
+    0.425,
+    true
+   ],
+   [
+    "leg 3 NPSM CBR (NPSM_MEAS[12])",
+    0.5625,
+    0.5625,
+    true
+   ],
+   [
+    "leg 3 NPSM CBEND (NPSM_MEAS[12])",
+    0.6189,
+    0.6189,
+    true
+   ],
+   [
+    "leg 3 NPSM NECKR (NPSM_MEAS[12])",
+    0.389,
+    0.389,
+    true
+   ],
+   [
+    "leg 3 NPSM BODY_TO_TIP (NPSM_MEAS[12])",
+    0.45,
+    0.45,
+    true
+   ],
+   [
+    "leg 3 NPSM CONEL (NPSM_MEAS[12])",
+    0.1533,
+    0.1533,
+    true
+   ],
+   [
+    "leg 3 NPSM STEMR (NPSM_MEAS[12])",
+    0.4635,
+    0.4635,
+    true
+   ],
+   [
+    "leg 3 NPSM TIPR (NPSM_MEAS[12])",
+    0.375,
+    0.375,
+    true
+   ],
+   [
+    "leg 3 bore (D1)",
+    0.62,
+    0.62,
+    true
+   ],
+   [
+    "body hex run bar +X (C1HEX)",
+    1.062,
+    1.062,
+    true
+   ],
+   [
+    "body hex run bar -X (C1HEX)",
+    1.062,
+    1.062,
+    true
+   ],
+   [
+    "body hex branch arm (C1HEX)",
+    1.062,
+    1.062,
+    true
+   ]
+  ]
+ },
+ {
+  "pn": "1603-16-16-16-FG",
+  "info": {
+   "solids": 1,
+   "volume": 4.727907,
+   "nutcut": {
+    "NUTCUT1": 0.203819,
+    "NUTCUT2": 0.203819,
+    "NUTCUT3": 0.203819
+   }
+  },
+  "checks": [
+   [
+    "one solid",
+    1,
+    1,
+    true
+   ],
+   [
+    "leg 1 extent = nut face",
+    1.89,
+    1.89,
+    true
+   ],
+   [
+    "leg 1 NPSM nut face (W5_2)",
+    1.89,
+    1.89,
+    true
+   ],
+   [
+    "leg 1 NPSM stem tip (M2_2)",
+    1.54,
+    1.54,
+    true
+   ],
+   [
+    "leg 1 nut hex (C2HEX)",
+    1.5,
+    1.5,
+    true
+   ],
+   [
+    "leg 1 NPSM HEXL (NPSM_MEAS[16])",
+    0.5,
+    0.5,
+    true
+   ],
+   [
+    "leg 1 NPSM SKF (NPSM_MEAS[16])",
+    0.75,
+    0.75,
+    true
+   ],
+   [
+    "leg 1 NPSM SKS (NPSM_MEAS[16])",
+    0.725,
+    0.725,
+    true
+   ],
+   [
+    "leg 1 NPSM SKR (NPSM_MEAS[16])",
+    0.7098,
+    0.7098,
+    true
+   ],
+   [
+    "leg 1 NPSM NUTL (NPSM_MEAS[16])",
+    0.9,
+    0.9,
+    true
+   ],
+   [
+    "leg 1 NPSM CSR (NPSM_MEAS[16])",
+    0.6465,
+    0.6465,
+    true
+   ],
+   [
+    "leg 1 NPSM MINR (NPSM_MEAS[16])",
+    0.6055,
+    0.6055,
+    true
+   ],
+   [
+    "leg 1 NPSM TE (NPSM_MEAS[16])",
+    0.469,
+    0.469,
+    true
+   ],
+   [
+    "leg 1 NPSM RELR (NPSM_MEAS[16])",
+    0.6465,
+    0.6465,
+    true
+   ],
+   [
+    "leg 1 NPSM RB0 (NPSM_MEAS[16])",
+    0.51,
+    0.51,
+    true
+   ],
+   [
+    "leg 1 NPSM CBR (NPSM_MEAS[16])",
+    0.67,
+    0.67,
+    true
+   ],
+   [
+    "leg 1 NPSM CBEND (NPSM_MEAS[16])",
+    0.7447,
+    0.7447,
+    true
+   ],
+   [
+    "leg 1 NPSM NECKR (NPSM_MEAS[16])",
+    0.525,
+    0.525,
+    true
+   ],
+   [
+    "leg 1 NPSM BODY_TO_TIP (NPSM_MEAS[16])",
+    0.59,
+    0.59,
+    true
+   ],
+   [
+    "leg 1 NPSM CONEL (NPSM_MEAS[16])",
+    0.1827,
+    0.1827,
+    true
+   ],
+   [
+    "leg 1 NPSM STEMR (NPSM_MEAS[16])",
+    0.59,
+    0.59,
+    true
+   ],
+   [
+    "leg 1 NPSM TIPR (NPSM_MEAS[16])",
+    0.4845,
+    0.4845,
+    true
+   ],
+   [
+    "leg 1 bore (D2)",
+    0.78,
+    0.78,
+    true
+   ],
+   [
+    "leg 2 extent = nut face",
+    1.89,
+    1.89,
+    true
+   ],
+   [
+    "leg 2 NPSM nut face (W5_3)",
+    1.89,
+    1.89,
+    true
+   ],
+   [
+    "leg 2 NPSM stem tip (M2_3)",
+    1.54,
+    1.54,
+    true
+   ],
+   [
+    "leg 2 nut hex (C3HEX)",
+    1.5,
+    1.5,
+    true
+   ],
+   [
+    "leg 2 NPSM HEXL (NPSM_MEAS[16])",
+    0.5,
+    0.5,
+    true
+   ],
+   [
+    "leg 2 NPSM SKF (NPSM_MEAS[16])",
+    0.75,
+    0.75,
+    true
+   ],
+   [
+    "leg 2 NPSM SKS (NPSM_MEAS[16])",
+    0.725,
+    0.725,
+    true
+   ],
+   [
+    "leg 2 NPSM SKR (NPSM_MEAS[16])",
+    0.7098,
+    0.7098,
+    true
+   ],
+   [
+    "leg 2 NPSM NUTL (NPSM_MEAS[16])",
+    0.9,
+    0.9,
+    true
+   ],
+   [
+    "leg 2 NPSM CSR (NPSM_MEAS[16])",
+    0.6465,
+    0.6465,
+    true
+   ],
+   [
+    "leg 2 NPSM MINR (NPSM_MEAS[16])",
+    0.6055,
+    0.6055,
+    true
+   ],
+   [
+    "leg 2 NPSM TE (NPSM_MEAS[16])",
+    0.469,
+    0.469,
+    true
+   ],
+   [
+    "leg 2 NPSM RELR (NPSM_MEAS[16])",
+    0.6465,
+    0.6465,
+    true
+   ],
+   [
+    "leg 2 NPSM RB0 (NPSM_MEAS[16])",
+    0.51,
+    0.51,
+    true
+   ],
+   [
+    "leg 2 NPSM CBR (NPSM_MEAS[16])",
+    0.67,
+    0.67,
+    true
+   ],
+   [
+    "leg 2 NPSM CBEND (NPSM_MEAS[16])",
+    0.7447,
+    0.7447,
+    true
+   ],
+   [
+    "leg 2 NPSM NECKR (NPSM_MEAS[16])",
+    0.525,
+    0.525,
+    true
+   ],
+   [
+    "leg 2 NPSM BODY_TO_TIP (NPSM_MEAS[16])",
+    0.59,
+    0.59,
+    true
+   ],
+   [
+    "leg 2 NPSM CONEL (NPSM_MEAS[16])",
+    0.1827,
+    0.1827,
+    true
+   ],
+   [
+    "leg 2 NPSM STEMR (NPSM_MEAS[16])",
+    0.59,
+    0.59,
+    true
+   ],
+   [
+    "leg 2 NPSM TIPR (NPSM_MEAS[16])",
+    0.4845,
+    0.4845,
+    true
+   ],
+   [
+    "leg 2 bore (D2)",
+    0.78,
+    0.78,
+    true
+   ],
+   [
+    "leg 3 extent = nut face",
+    1.89,
+    1.89,
+    true
+   ],
+   [
+    "leg 3 NPSM nut face (W3)",
+    1.89,
+    1.89,
+    true
+   ],
+   [
+    "leg 3 NPSM stem tip (M1)",
+    1.54,
+    1.54,
+    true
+   ],
+   [
+    "leg 3 nut hex (C_1HEX)",
+    1.5,
+    1.5,
+    true
+   ],
+   [
+    "leg 3 NPSM HEXL (NPSM_MEAS[16])",
+    0.5,
+    0.5,
+    true
+   ],
+   [
+    "leg 3 NPSM SKF (NPSM_MEAS[16])",
+    0.75,
+    0.75,
+    true
+   ],
+   [
+    "leg 3 NPSM SKS (NPSM_MEAS[16])",
+    0.725,
+    0.725,
+    true
+   ],
+   [
+    "leg 3 NPSM SKR (NPSM_MEAS[16])",
+    0.7098,
+    0.7098,
+    true
+   ],
+   [
+    "leg 3 NPSM NUTL (NPSM_MEAS[16])",
+    0.9,
+    0.9,
+    true
+   ],
+   [
+    "leg 3 NPSM CSR (NPSM_MEAS[16])",
+    0.6465,
+    0.6465,
+    true
+   ],
+   [
+    "leg 3 NPSM MINR (NPSM_MEAS[16])",
+    0.6055,
+    0.6055,
+    true
+   ],
+   [
+    "leg 3 NPSM TE (NPSM_MEAS[16])",
+    0.469,
+    0.469,
+    true
+   ],
+   [
+    "leg 3 NPSM RELR (NPSM_MEAS[16])",
+    0.6465,
+    0.6465,
+    true
+   ],
+   [
+    "leg 3 NPSM RB0 (NPSM_MEAS[16])",
+    0.51,
+    0.51,
+    true
+   ],
+   [
+    "leg 3 NPSM CBR (NPSM_MEAS[16])",
+    0.67,
+    0.67,
+    true
+   ],
+   [
+    "leg 3 NPSM CBEND (NPSM_MEAS[16])",
+    0.7447,
+    0.7447,
+    true
+   ],
+   [
+    "leg 3 NPSM NECKR (NPSM_MEAS[16])",
+    0.525,
+    0.525,
+    true
+   ],
+   [
+    "leg 3 NPSM BODY_TO_TIP (NPSM_MEAS[16])",
+    0.59,
+    0.59,
+    true
+   ],
+   [
+    "leg 3 NPSM CONEL (NPSM_MEAS[16])",
+    0.1827,
+    0.1827,
+    true
+   ],
+   [
+    "leg 3 NPSM STEMR (NPSM_MEAS[16])",
+    0.59,
+    0.59,
+    true
+   ],
+   [
+    "leg 3 NPSM TIPR (NPSM_MEAS[16])",
+    0.4845,
+    0.4845,
+    true
+   ],
+   [
+    "leg 3 bore (D1)",
+    0.78,
+    0.78,
+    true
+   ],
+   [
+    "body hex run bar +X (C1HEX)",
+    1.312,
+    1.312,
+    true
+   ],
+   [
+    "body hex run bar -X (C1HEX)",
+    1.312,
+    1.312,
+    true
+   ],
+   [
+    "body hex branch arm (C1HEX)",
+    1.312,
+    1.312,
+    true
+   ]
+  ]
+ }
+]

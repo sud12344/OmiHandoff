@@ -17,6 +17,12 @@ log): the 2026-10-18 stage incl. the 37 adapters (apply_77.py never run - done) 
 master, 95 masters. Live `tools/` = `batch17_20261019/tools_b17` (Atan2V ByVal fix). Held for generator work: 4503 4603 1703 1700RC 1800 5404N.
 Excel can crash during a design-table insert and leave a window open that breaks every later insert ("Configurations after table: 1") - close
 it and re-run. Supersedes the 2026-10-19 lines below.
+
+**2026-10-20 (cloud, branch `claude/pensive-planck-t9i90d`): READ `00_DOCS/NEXT_SESSION_PROMPT_2026-10-20.md` too** - ORFS generator staged
+(`tools/_out/orfs_gen_20261020/`: 133 FS configurations in 50 masters + 8 FS4000 O-rings, all checks clean, no SolidWorks dry run yet; 29 more
+Brennan STEPs measured in `tools/_out/orfs_steps2_20261020/`); branch rebased on batch 17 (fb1d145), staging tools = live tools + ORFS (Atan2V
+fix ported; 99 / 99 roots identical to live). A14 (1603-08-08-08-FG) is staged only - not in batch 17. 1,351 shipped + 197 ready after
+SolidWorks = 1,548 of 2,535. The ORFS work is not shipped.
 **2026-10-19: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`** (everything staged on 2026-10-18: Brennan data allowed and
 marked, OMi answers, A1-A24 answers, the batch-17 stage + merged generator tools, 1,357 configurations generate; SolidWorks sign-in is
 broken; nothing shipped since batch 15). The pointers below are older background.

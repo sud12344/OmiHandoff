@@ -1,0 +1,30 @@
+# 2026-10-20 static checks of the straight face-seal swivels (out/)
+## vbacheck
+tools/_out/orfs_gen_20261020/out/Build_FS6565_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6565C_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6540_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6540C_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6504_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6504C_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6505_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6505C_MASTER.bas 33 procedures OK
+## dofcheck_straight
+Build_FS6565_MASTER.bas {'points': 30, 'unknowns': 60, 'constraints': 60, 'rank': 60, 'dims': 36, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6565C_MASTER.bas {'points': 32, 'unknowns': 64, 'constraints': 64, 'rank': 64, 'dims': 38, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6540_MASTER.bas {'points': 21, 'unknowns': 42, 'constraints': 42, 'rank': 42, 'dims': 23, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6540C_MASTER.bas {'points': 22, 'unknowns': 44, 'constraints': 44, 'rank': 44, 'dims': 24, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6504_MASTER.bas {'points': 24, 'unknowns': 48, 'constraints': 48, 'rank': 48, 'dims': 28, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6504C_MASTER.bas {'points': 25, 'unknowns': 50, 'constraints': 50, 'rank': 50, 'dims': 29, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6505_MASTER.bas {'points': 20, 'unknowns': 40, 'constraints': 40, 'rank': 40, 'dims': 23, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6505C_MASTER.bas {'points': 21, 'unknowns': 42, 'constraints': 42, 'rank': 42, 'dims': 24, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+## allcfg_check
+FS6565   3 configs  outline problems: 0 []
+FS6565C   1 configs  outline problems: 0 []
+FS6540   3 configs  outline problems: 0 []
+FS6540C   2 configs  outline problems: 0 []
+FS6504   3 configs  outline problems: 0 []
+FS6504C   4 configs  outline problems: 0 []
+FS6505   2 configs  outline problems: 0 []
+FS6505C   2 configs  outline problems: 0 []
+## forged masters after moving FSSW_MEAS into gen_straight2: 31 / 31 macros and SW2 tables identical
+## regression (scripts/regress_all.py): 0 root(s) differ or lost, 99 identical

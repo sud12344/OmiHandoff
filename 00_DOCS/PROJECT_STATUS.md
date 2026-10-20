@@ -48,6 +48,91 @@ prints a value, including the numbers of OMi's website file. Stage + evidence: `
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS branch rebased on batch 17 (fb1d145)** - conflicts only in `.gitignore` / this file / CLAUDE.md (both sides kept);
+the batch-17 generator fix (Atan2V ByVal, QA #174) ported into the staging gen_tee; `regress_all.py` now compares against the LIVE tools on the
+LIVE tables: 99 / 99 roots identical, no FS macro changed. A14 (1603-08-08-08-FG, MISSING in the live table) is staged only - batch 17 did not
+take it; it ships with the next batch. Count: **1,351 shipped + 197 waiting for SolidWorks = 1,548 of 2,535** (ORFS 133 configurations staged).
+
+**2026-10-20 (cloud): ORFS step 7 - FS2404 / FS6403 / FS2601 / FS6502** (README step 7; staged): 12 configurations (FS2404 5 at -08 / -24, FS6403
+-08-08, FS2601 5, FS6502-08-08); FS2404 / FS6403 other sizes need straight STEPs (FS2403-NN-NN), FS6502 -06 / -10 / -12 / -16 need
+BRENNAN_FS6502-NN-NN-FG (corner-puck check), FS0304-C needs a shape STEP; checks clean, closed loops 0 off, regression 99 / 99;
+count **1,549 of 2,535**.
+
+**2026-10-20 (user decision): straight FS swivel body hex = Air-Way** ("yes keep airway"): where Air-Way prints the hex length (FS6540 L37,
+FS6504 L39) the body hex is built to it; Brennan's swivel body face stays a note in `$COMMENT`. Then: "go on with" FS2404 / FS6403 / FS0304-C /
+FS6502 / FS2601.
+
+**2026-10-20 (cloud): ORFS step 6 - the straight face-seal swivels** (user "yes start on the straight swivels"; README step 6; staged):
+- FS6565 / FS6540 / FS6504 / FS6505 + counterbored-mouth masters ...C: 20 configurations; length to the seal face (FS6565-08-08), nut hex per
+  Q-FS-NUT; body hex built to Air-Way's printed hex length (FS6540 L37 / FS6504 L39) - 0.015 ... 0.09 shorter than the Brennan swivel: tell the user;
+- static checks clean, OCP closed loop 482 checks 0 off, FS6565-08-08 seal -> seal = Brennan 2.12; regression 99 / 99;
+- count: **1,537 of 2,535** ready after SolidWorks (ORFS 121 configurations).
+
+**2026-10-20 (cloud): ORFS step 5 - 29 per-size Brennan STEPs (user upload)** (`tools\_out\orfs_gen_20261020\README.md` step 5; staged, not shipped):
+- loose parts at every size (FS0306 / FS0318 -04 ... -24, FS0319 + coned-collar master FS0319C); forged male legs -04 ... -20 and swivels -04 ... -20
+  from FS6500-NN; straights -24 (FS2403-24-24); one master per leg-shape variant (`<root>N / R / C`);
+- Brennan's FS0306 / FS0318 -10 / -24 thread bores are smaller than the basic minor: modelled at the basic minor, noted per row (tell the user);
+- FS6565-08-08: Air-Way's straight swivel lengths run to the stem seal face (L45 = Brennan seal to seal) - the straight swivel end is next;
+- checks: all static checks clean, OCP closed loops 2,636 checks 0 off, regression 99 / 99;
+- count: 1,106 shipped + 411 waiting for SolidWorks = **1,517 of 2,535** (was 1,443); ORFS 101 configurations.
+
+**2026-10-20 (cloud): ORFS generator step 4 - loose -08 parts** (`tools\_out\orfs_gen_20261020\README.md` step 4; staged, not shipped):
+- FS4000-04 ... -24 face-seal O-rings folded into the O-ring master 4000 (staging `gen_ring.py` -> `out/ring/`, 29 configurations, the 21
+  old rows cell-identical); FS0306-08 locknut, FS0318-08 tube nut, FS0319-08 braze sleeve in the staging `gen_straight2.py` (`out/`);
+- vbacheck 4 / 4, dofcheck 3 / 3, allcfg 0, regression 99 / 99; OCP closed loop 59 checks, 0 off, against the rows and the Brennan pilots;
+- other FS0306 / FS0318 / FS0319 sizes need their own Brennan STEP; FS0319-24 held (D5);
+- count (`tools/_out/count_20261020/count_ready.py`): 1,106 shipped + 337 waiting for SolidWorks = 1,443 of 2,535 (was 1,432); 1,092 not yet.
+
+**2026-10-20 (cloud): ORFS generator step 3 - forged face-seal swivel leg** (FS6500 / FS6600 / FS6602 -08 build):
+- leg length = Air-Way L21 to the seal face, nut face +0.433;
+- regression 99 / 99; dofcheck 37 / 37 legs; OCP closed loop 589 + 122 checks, 0 off;
+- ORFS: 24 configurations in 17 staged masters;
+- count: 1,432 of 2,535 ready after SolidWorks (1,106 shipped + 326 waiting).
+
+**2026-10-20 (cloud): ORFS generator step 2 - forged legs** (`tools\_out\orfs_gen_20261020\README.md`):
+- gen_tee: face-seal leg, bulkhead leg, FS adjustable stud; 12 forged FS SPECs -> 16 configurations (+5 straights = 21 FS configurations);
+- regression 99 / 99 identical; dofcheck 29 / 29 legs; OCP closed loop 484 checks, 0 off;
+- 3 FS2501 / FS2503 rows held: their flats are above the thread (needs the family pilot).
+**Count** (`tools\_out\count_20261020\count_ready.py`): of the 2,535 OMi parts:
+- 1,106 are in a shipped master;
+- 323 more are generated and wait only for the SolidWorks dry runs + ship (batch 17 + 21 ORFS + 21 O-rings);
+- = 1,429 ready after SolidWorks; 1,106 still need data, STEPs, decisions or OMi.
+
+**2026-10-20 (cloud): ORFS generator step 1 staged** (`tools\_out\orfs_gen_20261020\README.md`; toolset = merged batch-17 + ORFS):
+- male face-seal end `end_FSM` + ORB stud `end_ORBFS`; SPECs FS2403 / FS6400 (5 configurations: FS2403-08-08, FS6400-08-06/-08/-10/-12-O;
+  the rest wait for per-dash STEPs);
+- regression 99 / 99 existing roots identical; dofcheck / allcfg / vbacheck clean; OCP closed loop 122 checks, 0 off;
+- SolidWorks dry run of FS2403 / FS6400 next (PC);
+- straight swivels blocked on BRENNAN_FS6540-08-08-O or FS6565-08-08 (seal face vs nut face);
+- found: SPEC 6400 (batch-17 tools) labels End A's ORB thread from the wrong dash on unequal-dash rows (text only).
+
+**2026-10-20 (cloud): ORFS WP2 extractors written and validated on the 8 pilots** (`tools\_out\orfs_wp2_20261020\README.md`;
+46 checks, 0 FAIL; -08 end entries proposed in `end_lib_08.json`). The male face-seal end is one shape on all 7 copies. The swivel nut
+and FS0318 agree on hex / length / thread / lip. The fused O-ring = FS4000-08. Air-Way rows match the STEPs. Plan changes:
+- Air-Way L21 = crossing -> swivel SEAL face (nut face +0.433), not the nut face;
+- i4 = a 0.06 step, the bulkhead collar is 0.20 thick;
+- the FS studs = library undercut + a longer thread.
+Next: generator end functions + OCP closed loop; E1-E8 / F1-F15 can be downloaded now.
+
+**2026-10-20 (cloud): 8 of the 9 ORFS pilot STEPs received** (user download, Brennan PARTcommunity) -> `09_STEP_FILES/BRENNAN_FS*.stp`:
+FS2403-08-08, FS6500-08-08-FG, FS2701-08-08-FG, FS6400-08-08-O, FS6801-08-08-NWO-FG, FS0318-08, FS0319-08, FS0306-08 (each 1 solid;
+sizes match Air-Way). **FS2406-08-06 has no CAD file at Brennan** -> stand-in FS2406-08-04 proposed. Extractors / ORFS generator not
+started. `tools\_out\orfs_pilots_20261020\README.md`.
+
+**2026-10-20 (cloud): batch-17 work rebased on batch 16 (d63e1a6) and the 24 batch-16 roots regenerated from the new state**
+(`tools\_out\rebase_b16_20261020\README.md`):
+- live tools + shipped tables reproduce the shipped macros / SW2 24 / 24;
+- the merged batch-17 tools change nothing on them;
+- the 12 shipped review tables = their batch-17 stage copies minus logged batch-17 changes (0 unexplained);
+- batch-17 data: 372 -> 417 configurations (+45); 32 built configurations change geometry, all from A19 (rebuild in batch 17);
+- vbacheck / dofcheck / allcfg clean.
+
+**2026-10-20 (cloud): A14 done for 1603-08-08-08-FG** - both bores measured on `BRENNAN_1603-08-08-08-FG.stp` = 0.450 (catalog prints
+"0.44/0.46"); the whole row staged in `tools\_out\brennan_yes_20261018\stage` (15 prepared Brennan-catalog / end-library cells + the 2
+bores, DimSource BRENNAN, MISSING -> ASSUMED; every catalog value confirmed on the STEP). 1603 now generates 6 of 6 -FG rows with the
+merged tools; old 5 unchanged; vbacheck / dofcheck / allcfg / OCP closed loop pass. Not shipped, not dry-run in SolidWorks.
+Evidence: `tools\_out\a14_1603bore_20261020\README.md`. A14's 7 6901 / 6902 rows still wait for their STEPs.
+
 **2026-10-19: BATCH 16 SHIPPED (`03_SCRIPTS\RUN_ME_batch16.txt`, QA #170-#172; user: "Yes, ship batch 16 as planned.").** Plan +
 evidence: `tools\_out\ship_20261019\` (SHIP_PLAN.md, checks\, scripts\ship_b16.py, old_files\ + MANIFEST*.txt; second copy
 `_to_delete\superseded_20261019\batch16_replaced\`).

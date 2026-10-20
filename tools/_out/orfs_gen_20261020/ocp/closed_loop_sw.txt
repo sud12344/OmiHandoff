@@ -1,0 +1,22 @@
+FS6565-04-04: 33 checks, 0 off; solids 1, volume 0.45777 in^3
+FS6565-06-06: 33 checks, 0 off; solids 1, volume 0.6898 in^3
+FS6565-08-08: 40 checks, 0 off; solids 1, volume 1.104 in^3; Brennan pilot 1.06863 in^3 (+3.31 %); seal -> seal pilot 2.12 / model 2.12
+FS6565-12-12: 37 checks, 0 off; solids 1, volume 2.82234 in^3
+FS6540-04-04-O: 25 checks, 0 off; solids 1, volume 0.36613 in^3
+FS6540-06-06-O: 25 checks, 0 off; solids 1, volume 0.54115 in^3
+FS6540-08-08-O: 25 checks, 0 off; solids 1, volume 0.92747 in^3
+FS6540-12-12-O: 27 checks, 0 off; solids 1, volume 2.20058 in^3
+FS6540-16-16-O: 27 checks, 0 off; solids 1, volume 3.22505 in^3
+FS6504-04-04: 18 checks, 0 off; solids 1, volume 0.31722 in^3
+FS6504-06-06: 18 checks, 0 off; solids 1, volume 0.49242 in^3
+FS6504-08-08: 18 checks, 0 off; solids 1, volume 0.83663 in^3
+FS6504-10-10: 20 checks, 0 off; solids 1, volume 1.26573 in^3
+FS6504-12-12: 20 checks, 0 off; solids 1, volume 2.05807 in^3
+FS6504-16-16: 20 checks, 0 off; solids 1, volume 2.8024 in^3
+FS6504-20-20: 20 checks, 0 off; solids 1, volume 3.99476 in^3
+FS6505-04-04: 18 checks, 0 off; solids 1, volume 0.36484 in^3
+FS6505-08-08: 18 checks, 0 off; solids 1, volume 0.87293 in^3
+FS6505-12-12: 20 checks, 0 off; solids 1, volume 1.96568 in^3
+FS6505-16-16: 20 checks, 0 off; solids 1, volume 3.08009 in^3
+
+FS straight swivel closed loop PASS: 20 configurations, 482 checks, 0 off (tolerance 0.0015)
