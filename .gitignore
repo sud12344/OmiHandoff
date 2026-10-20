@@ -111,3 +111,11 @@ tools/_out/ship_20261019/paperwork/*.xlsx
 !tools/_out/puckfix_20261009/cmp_dryrun_resume_out.txt
 !tools/_out/puckfix_20261009/sliver_scaling.py
 !tools/_out/puckfix_20261009/sliver_scaling_out.txt
+# --- batch 17 rebase (cloud, 2026-10-20): plan, checks, scripts, the b17 regeneration + table root + dry-run kit; not the control
+#     regeneration, the per-root reruns, the check scratch or the root's symlinks (all reproducible)
+!tools/_out/batch17_rebase_20261020/
+tools/_out/batch17_rebase_20261020/regen/live/
+tools/_out/batch17_rebase_20261020/regen/b17_per_root/
+tools/_out/batch17_rebase_20261020/checks/_scratch/
+tools/_out/batch17_rebase_20261020/root/*
+!tools/_out/batch17_rebase_20261020/root/04_DESIGN_TABLES/

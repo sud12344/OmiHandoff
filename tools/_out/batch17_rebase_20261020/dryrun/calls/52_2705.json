@@ -1,0 +1,55 @@
+[
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2705_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2705_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2705_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\straight\\Build_2705_MASTER.bas",
+   "const_overrides": {
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\2705\\2705_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\2705\\Build_2705_report.txt",
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\straight\\DesignTable_2705_SW2.xlsx"
+   },
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\2705\\2705_MASTER.SLDPRT"
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2705_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2705_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

@@ -1,0 +1,151 @@
+DesignTable_0318.xlsx: 35 logged, 0 UNLOGGED
+DesignTable_0403.xlsx: 11 logged, 0 UNLOGGED
+DesignTable_1404.xlsx: 89 logged, 0 UNLOGGED
+DesignTable_1405.xlsx: 27 logged, 0 UNLOGGED
+DesignTable_1501.xlsx: 29 logged, 0 UNLOGGED
+DesignTable_1502.xlsx: 99 logged, 0 UNLOGGED
+DesignTable_1503.xlsx: 71 logged, 0 UNLOGGED
+DesignTable_1504.xlsx: 86 logged, 0 UNLOGGED
+DesignTable_1601.xlsx: 134 logged, 0 UNLOGGED
+DesignTable_1602.xlsx: 134 logged, 0 UNLOGGED
+DesignTable_1603.xlsx: 101 logged, 0 UNLOGGED
+DesignTable_1700.xlsx: 46 logged, 0 UNLOGGED
+DesignTable_1703.xlsx: 15 logged, 0 UNLOGGED
+DesignTable_1704.xlsx: 15 logged, 0 UNLOGGED
+DesignTable_1724.xlsx: 10 logged, 0 UNLOGGED
+DesignTable_1800.xlsx: 18 logged, 0 UNLOGGED
+DesignTable_1804.xlsx: 23 logged, 0 UNLOGGED
+DesignTable_1824.xlsx: 8 logged, 0 UNLOGGED
+DesignTable_2403.xlsx: 101 logged, 0 UNLOGGED
+DesignTable_2403LH.xlsx: 12 logged, 0 UNLOGGED
+DesignTable_2404_FINAL.xlsx: 67 logged, 0 UNLOGGED
+DesignTable_2405.xlsx: 39 logged, 0 UNLOGGED
+DesignTable_2406.xlsx: 169 logged, 0 UNLOGGED
+DesignTable_2501.xlsx: 11 logged, 0 UNLOGGED
+DesignTable_2501L.xlsx: 5 logged, 0 UNLOGGED
+DesignTable_2501LL.xlsx: 73 logged, 0 UNLOGGED
+DesignTable_2502.xlsx: 41 logged, 0 UNLOGGED
+DesignTable_2503.xlsx: 19 logged, 0 UNLOGGED
+DesignTable_2504.xlsx: 16 logged, 0 UNLOGGED
+DesignTable_2505.xlsx: 31 logged, 0 UNLOGGED
+DesignTable_2601.xlsx: 18 logged, 0 UNLOGGED
+DesignTable_2602.xlsx: 16 logged, 0 UNLOGGED
+DesignTable_2603.xlsx: 4 logged, 0 UNLOGGED
+DesignTable_2605.xlsx: 16 logged, 0 UNLOGGED
+DesignTable_2611.xlsx: 12 logged, 0 UNLOGGED
+DesignTable_2613.xlsx: 21 logged, 0 UNLOGGED
+DesignTable_2650.xlsx: 4 logged, 0 UNLOGGED
+DesignTable_2700.xlsx: 25 logged, 0 UNLOGGED
+DesignTable_2701.xlsx: 39 logged, 0 UNLOGGED
+DesignTable_2705.xlsx: 34 logged, 0 UNLOGGED
+DesignTable_2706.xlsx: 31 logged, 0 UNLOGGED
+DesignTable_3474.xlsx: 47 logged, 0 UNLOGGED
+DesignTable_4501.xlsx: 148 logged, 0 UNLOGGED
+DesignTable_4503.xlsx: 93 logged, 0 UNLOGGED
+DesignTable_4601.xlsx: 120 logged, 0 UNLOGGED
+DesignTable_4603.xlsx: 14 logged, 0 UNLOGGED
+DesignTable_5000.xlsx: 34 logged, 0 UNLOGGED
+DesignTable_5404.xlsx: 115 logged, 0 UNLOGGED
+DesignTable_5404N.xlsx: 176 logged, 0 UNLOGGED
+DesignTable_5405.xlsx: 56 logged, 0 UNLOGGED
+DesignTable_5406.xlsx: 35 logged, 0 UNLOGGED
+DesignTable_5406C.xlsx: 10 logged, 0 UNLOGGED
+DesignTable_5406P.xlsx: 33 logged, 0 UNLOGGED
+DesignTable_5500.xlsx: 24 logged, 0 UNLOGGED
+DesignTable_5501.xlsx: 85 logged, 0 UNLOGGED
+DesignTable_5502.xlsx: 91 logged, 0 UNLOGGED
+DesignTable_5503.xlsx: 39 logged, 0 UNLOGGED
+DesignTable_5504.xlsx: 49 logged, 0 UNLOGGED
+DesignTable_5505.xlsx: 16 logged, 0 UNLOGGED
+DesignTable_5600.xlsx: 31 logged, 0 UNLOGGED
+DesignTable_5601.xlsx: 103 logged, 0 UNLOGGED
+DesignTable_5603.xlsx: 91 logged, 0 UNLOGGED
+DesignTable_5652.xlsx: 109 logged, 0 UNLOGGED
+DesignTable_6400.xlsx: 131 logged, 0 UNLOGGED
+DesignTable_6400L.xlsx: 12 logged, 0 UNLOGGED
+DesignTable_6401.xlsx: 10 logged, 0 UNLOGGED
+DesignTable_6402.xlsx: 78 logged, 0 UNLOGGED
+DesignTable_6404.xlsx: 4 logged, 0 UNLOGGED
+DesignTable_6405.xlsx: 46 logged, 0 UNLOGGED
+DesignTable_6408.xlsx: 31 logged, 0 UNLOGGED
+DesignTable_6410.xlsx: 104 logged, 0 UNLOGGED
+DesignTable_6420.xlsx: 1 logged, 0 UNLOGGED
+DesignTable_6500.xlsx: 26 logged, 0 UNLOGGED
+DesignTable_6501.xlsx: 4 logged, 0 UNLOGGED
+DesignTable_6502.xlsx: 25 logged, 0 UNLOGGED
+DesignTable_6503.xlsx: 4 logged, 0 UNLOGGED
+DesignTable_6504.xlsx: 59 logged, 0 UNLOGGED
+DesignTable_6505.xlsx: 64 logged, 0 UNLOGGED
+DesignTable_6506.xlsx: 39 logged, 0 UNLOGGED
+DesignTable_6600.xlsx: 6 logged, 0 UNLOGGED
+DesignTable_6602.xlsx: 4 logged, 0 UNLOGGED
+DesignTable_6606.xlsx: 77 logged, 0 UNLOGGED
+DesignTable_6801.xlsx: 40 logged, 0 UNLOGGED
+DesignTable_6803.xlsx: 30 logged, 0 UNLOGGED
+DesignTable_6807.xlsx: 40 logged, 30 UNLOGGED
+DesignTable_6809.xlsx: 61 logged, 0 UNLOGGED
+DesignTable_6901.xlsx: 48 logged, 0 UNLOGGED
+DesignTable_6902.xlsx: 2 logged, 32 UNLOGGED
+
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	#col1	live='6807-06-06 NWO-FG'	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	$PRP@DataStatus	live='ASSUMED'	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	$PRP@OMiSKU	live='6807-06-06-NWO-FG'	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	$PRP@PartNo	live='6807-06-06 NWO-FG'	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	$PRP@ScopeAction	live='BUILD'	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	$PRP@Threads	live='9/16-18 (B (1) UN/UNF-2A) x 9/16-18 (B (2) UN/UNF-2A)'	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	C4_1HEX@HEX	live=0.69	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	C4_2HEX@HEX	live=0.69	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	D1@BORE	live=0.3	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	D2@BORE	live=0.3	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	M7_1@DRIVE	live=1.25	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	M7_2@DRIVE	live=1.25	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	THDMAJ_B1@DRIVE	live=0.5625	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	THDMAJ_B2@DRIVE	live=0.5625	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06 NWO-FG	Y@HEX	live=0.56	stage=None	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	#col1	live=None	stage='6807-06-06-NWO-FG'	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	$PRP@DataStatus	live=None	stage='ASSUMED'	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	$PRP@OMiSKU	live=None	stage='6807-06-06-NWO-FG'	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	$PRP@PartNo	live=None	stage='6807-06-06-NWO-FG'	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	$PRP@ScopeAction	live=None	stage='BUILD'	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	$PRP@Threads	live=None	stage='9/16-18 (B (1) UN/UNF-2A) x 9/16-18 (B (2) UN/UNF-2A)'	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	C4_1HEX@HEX	live=None	stage=0.69	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	C4_2HEX@HEX	live=None	stage=0.69	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	D1@BORE	live=None	stage=0.3	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	D2@BORE	live=None	stage=0.3	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	M7_1@DRIVE	live=None	stage=1.25	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	M7_2@DRIVE	live=None	stage=1.25	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	THDMAJ_B1@DRIVE	live=None	stage=0.5625	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	THDMAJ_B2@DRIVE	live=None	stage=0.5625	log=[]
+UNLOGGED	DesignTable_6807.xlsx	Sheet1	6807-06-06-NWO-FG	Y@HEX	live=None	stage=0.56	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	#col1	live='6902-12-12 NWO-FG'	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	$PRP@DataStatus	live='ASSUMED'	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	$PRP@OMiSKU	live='6902-12-12-NWO-FG'	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	$PRP@PartNo	live='6902-12-12 NWO-FG'	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	$PRP@ScopeAction	live='BUILD'	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	$PRP@Threads	live='1 1/16-12 (B UN/UNF-2A) x 3/4-14 (A1 NPSM)'	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	C1HEX@HEX	live=1.06	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	C4HEX@HEX	live=1.25	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	CHEX@HEX	live=1.25	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	D1@BORE	live=0.61	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	D@BORE	live=0.63	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	M@DRIVE	live=1.06	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	N4@DRIVE	live=1.73	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	THDMAJ_A1@DRIVE	live=1.05	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	THDMAJ_B@DRIVE	live=1.0625	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12 NWO-FG	W2@HEX	live=1.39	stage=None	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	#col1	live=None	stage='6902-12-12-NWO-FG'	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	$PRP@DataStatus	live=None	stage='ASSUMED'	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	$PRP@OMiSKU	live=None	stage='6902-12-12-NWO-FG'	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	$PRP@PartNo	live=None	stage='6902-12-12-NWO-FG'	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	$PRP@ScopeAction	live=None	stage='BUILD'	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	$PRP@Threads	live=None	stage='1 1/16-12 (B UN/UNF-2A) x 3/4-14 (A1 NPSM)'	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	C1HEX@HEX	live=None	stage=1.06	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	C4HEX@HEX	live=None	stage=1.25	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	CHEX@HEX	live=None	stage=1.25	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	D1@BORE	live=None	stage=0.61	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	D@BORE	live=None	stage=0.63	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	M@DRIVE	live=None	stage=1.06	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	N4@DRIVE	live=None	stage=1.73	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	THDMAJ_A1@DRIVE	live=None	stage=1.05	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	THDMAJ_B@DRIVE	live=None	stage=1.0625	log=[]
+UNLOGGED	DesignTable_6902.xlsx	Sheet1	6902-12-12-NWO-FG	W2@HEX	live=None	stage=1.39	log=[]

@@ -8,6 +8,9 @@ spec-sheet work).
 
 **Current state, open work, user decisions: `00_DOCS/PROJECT_STATUS.md` - read it before starting
 anything, update it when a batch ships or the user decides something.**
+**2026-10-20: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-20.md`** - batch 17 REBASED on batch 16 and regenerated in the cloud
+(`tools/_out/batch17_rebase_20261020/SHIP_PLAN.md`: 80 roots, 1,357 configurations, static checks clean, adapters77 folded in - never run
+`apply_77.py`); NOT shipped: the SolidWorks dry runs (`dryrun/` kit) come first, on the PC.
 **2026-10-19: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`** (everything staged on 2026-10-18: Brennan data allowed and
 marked, OMi answers, A1-A24 answers, the batch-17 stage + merged generator tools, 1,357 configurations generate; SolidWorks sign-in is
 broken; nothing shipped since batch 15). The pointers below are older background.

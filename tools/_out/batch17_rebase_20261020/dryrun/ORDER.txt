@@ -1,0 +1,85 @@
+Run on the PC, SolidWorks 2026 SP4 running and signed in (3DEXPERIENCE), one file per call, output kept next to it:
+  mkdir tools\_out\batch17_rebase_20261020\dryrun\<root>   (the macro does not create it)
+  python sw_mcp\call.py @tools\_out\batch17_rebase_20261020\dryrun\calls\NN_<root>.json > tools\_out\batch17_rebase_20261020\dryrun\out\NN_<root>.txt
+Restart SolidWorks every ~40 builds (CLAUDE.md). Then: python tools\_out\batch17_rebase_20261020\scripts\cmp_dryrun_b17.py
+
+01  4501     tee        0 ->  12 configs  NEVER TRIED: hose barb face-off
+02  4503     tee        0 ->   7 configs  NEVER TRIED: hose barb face-off
+03  4601     tee        0 ->  15 configs  NEVER TRIED: hose barb face-off
+04  4603     tee        0 ->   5 configs  NEVER TRIED: hose barb face-off
+05  1503     tee        0 ->  19 configs  NEVER TRIED: threads on 45 deg legs
+06  1504     tee        0 ->   3 configs  NEVER TRIED: threads on 45 deg legs
+07  5501     tee        0 ->   7 configs  NEVER TRIED: threads on 45 deg legs
+08  5503     tee        0 ->   6 configs  NEVER TRIED: threads on 45 deg legs
+09  5505     tee        0 ->   2 configs  NEVER TRIED: threads on 45 deg legs
+10  6902     tee        0 ->   1 configs  NEVER TRIED: threads on 45 deg legs
+11  1601     tee        0 ->   7 configs  NEVER TRIED: per-leg swivels / NPSM nut on leg 2
+12  1602     tee        0 ->   7 configs  NEVER TRIED: per-leg swivels / NPSM nut on leg 2
+13  1603     tee        0 ->   5 configs  NEVER TRIED: per-leg swivels / NPSM nut on leg 2
+14  6606     tee        0 ->   4 configs  NEVER TRIED: per-leg swivels / NPSM nut on leg 2
+15  6807     tee        0 ->   1 configs  NEVER TRIED: per-leg swivels / NPSM nut on leg 2
+16  5404N    straight   4 ->  22 configs  NEVER TRIED: 5404N OMi names + -06 threads
+17  1703     tee        0 ->   1 configs  NEVER TRIED: flange legs / collars
+18  1704     tee        0 ->   1 configs  NEVER TRIED: flange legs / collars
+19  1804     tee        0 ->   1 configs  NEVER TRIED: flange legs / collars
+20  1700RC   straight   0 ->   3 configs  NEVER TRIED: flange legs / collars
+21  1724     straight   0 ->   1 configs  NEVER TRIED: flange legs / collars
+22  1800     straight   0 ->   1 configs  NEVER TRIED: flange legs / collars
+23  1824     straight   0 ->   1 configs  NEVER TRIED: flange legs / collars
+24  6400     straight  58 ->  66 configs  NEVER TRIED: 6400 generator rebuild (A6; replaces the hand-built master)
+25  5406HHP  straight   0 ->   1 configs  new root
+26  5406SHP  straight   0 ->   1 configs  new root
+27  5601     tee        0 ->   6 configs  new root
+28  5603     tee        0 ->   6 configs  new root
+29  5652     tee        0 ->   6 configs  new root
+30  6408HHP  straight   0 ->   1 configs  new root
+31  0318     straight  12 ->  12 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+32  0403     straight   7 ->   7 configs  table change
+33  1404     straight  24 ->  24 configs  macro + table change
+34  1405     straight  15 ->  17 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+35  1501     tee       17 ->  19 configs  macro + table change
+36  1502     tee        1 ->   8 configs  macro + table change
+37  2403     straight  34 ->  40 configs  macro + table change
+38  2404     straight  57 ->  59 configs  macro + table change
+39  2405     straight  28 ->  30 configs  macro + table change
+40  2406     straight  40 ->  51 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+41  2501     tee       48 ->  56 configs  macro + table change
+42  2503     tee       29 ->  29 configs  table change
+43  2504     tee        4 ->   5 configs  macro + table change
+44  2505     tee        1 ->   2 configs  macro + table change
+45  2601     tee       10 ->  10 configs  table change
+46  2602     tee        5 ->   6 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+47  2605     tee        7 ->   7 configs  table change (pre-2026-09-25 macro in 03_SCRIPTS)
+48  2611     tee        2 ->   3 configs  macro + table change
+49  2650     tee        4 ->   5 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+50  2700     straight  24 ->  26 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+51  2701     tee       15 ->  18 configs  macro + table change
+52  2705     straight  14 ->  18 configs  macro + table change
+53  2706     straight  23 ->  25 configs  macro + table change
+54  5000     straight  19 ->  22 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+55  5404     straight  25 ->  31 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+56  5405     straight  26 ->  31 configs  macro + table change
+57  5406     straight  28 ->  31 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+58  5406C    straight   6 ->   7 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+59  5406P    straight   4 ->   9 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+60  5500     tee       16 ->  16 configs  macro + table change
+61  5502     tee       13 ->  20 configs  macro + table change
+62  5504     tee        5 ->   9 configs  macro + table change
+63  5600     tee        6 ->   8 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+64  6401     straight  24 ->  24 configs  table change
+65  6402     straight  15 ->  16 configs  macro + table change
+66  6404     straight  14 ->  14 configs  table change
+67  6405     straight  40 ->  44 configs  macro + table change
+68  6408     straight  14 ->  14 configs  table change
+69  6410     straight  30 ->  34 configs  macro + table change
+70  6500     tee       24 ->  26 configs  macro + table change
+71  6501     tee       14 ->  14 configs  macro + table change
+72  6502     tee       11 ->  12 configs  macro + table change
+73  6503     tee        1 ->   1 configs  macro + table change
+74  6504     straight  10 ->  14 configs  macro + table change
+75  6505     straight  19 ->  21 configs  macro + table change
+76  6506     straight  14 ->  14 configs  macro + table change
+77  6600     tee        9 ->  10 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+78  6602     tee        9 ->  10 configs  macro + table change (pre-2026-09-25 macro in 03_SCRIPTS)
+79  6801     tee       35 ->  39 configs  macro + table change
+80  6803     tee        5 ->   8 configs  macro + table change

@@ -1,0 +1,55 @@
+[
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5405_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "5405_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "5405_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\straight\\Build_5405_MASTER.bas",
+   "const_overrides": {
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\5405\\5405_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\5405\\Build_5405_report.txt",
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\straight\\DesignTable_5405_SW2.xlsx"
+   },
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\5405\\5405_MASTER.SLDPRT"
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "5405_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "5405_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

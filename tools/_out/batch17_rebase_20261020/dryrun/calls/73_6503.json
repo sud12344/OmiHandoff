@@ -1,0 +1,55 @@
+[
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\6503_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "6503_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "6503_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\tee\\Build_6503_MASTER.bas",
+   "const_overrides": {
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\6503\\6503_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\6503\\Build_6503_report.txt",
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\tee\\DesignTable_6503_SW2.xlsx"
+   },
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\6503\\6503_MASTER.SLDPRT"
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "6503_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "6503_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

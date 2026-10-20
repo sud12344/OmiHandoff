@@ -1,0 +1,265 @@
+DesignTable_0304.xlsx: B16-CARRIED 105
+DesignTable_0306.xlsx: B16-CARRIED 97
+DesignTable_1502.xlsx: B16-CARRIED 3, B17 99
+DesignTable_2504.xlsx: B16-CARRIED 40, B17 16
+DesignTable_2505.xlsx: B16-CARRIED 41, B17 31
+DesignTable_2606.xlsx: B16-CARRIED 77
+DesignTable_2609.xlsx: B16-CARRIED 13
+DesignTable_2611.xlsx: B16-CARRIED 41, B16-CONFLICT 2, B17 10
+DesignTable_6500.xlsx: B16-CARRIED 52, B17 26
+DesignTable_6500L.xlsx: B16-CARRIED 60
+DesignTable_6501.xlsx: B16-CARRIED 42, B17 4
+DesignTable_6505.xlsx: B16-CARRIED 13, B17 64
+
+B17	DesignTable_1502.xlsx	Sheet1	#row2	#col18	pre16=None	live=None	stage='$PRP@DimSource'
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-06-06 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-06-06 dims are NOT assumed 
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 1502-06-06 (differs by -FG suffix) -> dims NOT copied'	live='OMi catalog SKU (omindustrial.com collections
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='VERIFIED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI-DRAWING'
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	$PRP@Threads	pre16=None	live=None	stage='3/8-18 (A NPTF) x 3/8-18 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	C1HEX@HEX	pre16=None	live=None	stage=0.875
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	CHEX@HEX	pre16=None	live=None	stage=0.875
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	D@BORE	pre16=None	live=None	stage=0.32
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	M1@DRIVE	pre16=None	live=None	stage=1.06
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	N3@DRIVE	pre16=None	live=None	stage=1.02
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	TAPDRILL@BORE	pre16=None	live=None	stage=0.57
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=0.675
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=0.675
+B17	DesignTable_1502.xlsx	Sheet1	1502-06-06-FG	W3@HEX	pre16=None	live=None	stage=1.27
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	$COMMENT	pre16='BUILD-MISSING: part exists in OMi catalog but Air-Way s-page has no row; needs a second dimensional source'	live='BUILD-MISSING: part exists in OMi catalog but Air-Way s-page has no row; needs a second dimensional source'	stage="BUILD-MISSING: part exists in OMi catalog but Air-Way s-page has no row; needs a second dimensional source |
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); NO Air-Way row for this size -> dimensions MISSING'	live='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flan
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='VERIFIED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI-DRAWING'
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	$PRP@Threads	pre16=None	live=None	stage='3/4-14 (A NPTF) x 1/2-14 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	C1HEX@HEX	pre16=None	live=None	stage=1.312
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	CHEX@HEX	pre16=None	live=None	stage=1
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	D@BORE	pre16=None	live=None	stage=0.44
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	M1@DRIVE	pre16=None	live=None	stage=1.47
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	N3@DRIVE	pre16=None	live=None	stage=1.36
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	TAPDRILL@BORE	pre16=None	live=None	stage=0.91
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=0.84
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=1.05
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-08-FG	W3@HEX	pre16=None	live=None	stage=1.75
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-12-12 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-12-12 dims are NOT assumed 
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 1502-12-12 (differs by -FG suffix) -> dims NOT copied'	live='OMi catalog SKU (omindustrial.com collections
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='VERIFIED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI-DRAWING'
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	$PRP@Threads	pre16=None	live=None	stage='3/4-14 (A NPTF) x 3/4-14 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	C1HEX@HEX	pre16=None	live=None	stage=1.312
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	CHEX@HEX	pre16=None	live=None	stage=1.25
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	D@BORE	pre16=None	live=None	stage=0.61
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	M1@DRIVE	pre16=None	live=None	stage=1.47
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	N3@DRIVE	pre16=None	live=None	stage=1.36
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	TAPDRILL@BORE	pre16=None	live=None	stage=0.91
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=1.05
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=1.05
+B17	DesignTable_1502.xlsx	Sheet1	1502-12-12-FG	W3@HEX	pre16=None	live=None	stage=1.82
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-16-16 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-16-16 dims are NOT assumed 
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 1502-16-16 (differs by -FG suffix) -> dims NOT copied'	live='OMi catalog SKU (omindustrial.com collections
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='ASSUMED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	$PRP@DimSource	pre16=None	live=None	stage='BRENNAN'
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	$PRP@Threads	pre16=None	live=None	stage='1-11 1/2 (A NPTF) x 1-11 1/2 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	C1HEX@HEX	pre16=None	live=None	stage=1.625
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	CHEX@HEX	pre16=None	live=None	stage=1.5
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	D@BORE	pre16=None	live=None	stage=0.78
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	M1@DRIVE	pre16=None	live=None	stage=1.73
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	N3@DRIVE	pre16=None	live=None	stage=1.62
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	TAPDRILL@BORE	pre16=None	live=None	stage=1.14
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=1.315
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=1.315
+B17	DesignTable_1502.xlsx	Sheet1	1502-16-16-FG	W3@HEX	pre16=None	live=None	stage=2.08
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-20-20 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-20-20 dims are NOT assumed 
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 1502-20-20 (differs by -FG suffix) -> dims NOT copied'	live='OMi catalog SKU (omindustrial.com collections
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='VERIFIED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI-DRAWING'
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	$PRP@Threads	pre16=None	live=None	stage='1 1/4-11 1/2 (A NPTF) x 1 1/4-11 1/2 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	C1HEX@HEX	pre16=None	live=None	stage=1.875
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	CHEX@HEX	pre16=None	live=None	stage=1.875
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	D@BORE	pre16=None	live=None	stage=1.01
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	M1@DRIVE	pre16=None	live=None	stage=1.83
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	N3@DRIVE	pre16=None	live=None	stage=1.7
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	TAPDRILL@BORE	pre16=None	live=None	stage=1.48
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=1.66
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=1.66
+B17	DesignTable_1502.xlsx	Sheet1	1502-20-20-FG	W3@HEX	pre16=None	live=None	stage=2.25
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-24-24 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-24-24 dims are NOT assumed 
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 1502-24-24 (differs by -FG suffix) -> dims NOT copied'	live='OMi catalog SKU (omindustrial.com collections
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='VERIFIED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI-DRAWING'
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	$PRP@Threads	pre16=None	live=None	stage='1 1/2-11 1/2 (A NPTF) x 1 1/2-11 1/2 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	C1HEX@HEX	pre16=None	live=None	stage=2.559
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	CHEX@HEX	pre16=None	live=None	stage=2.125
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	D@BORE	pre16=None	live=None	stage=1.25
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	M1@DRIVE	pre16=None	live=None	stage=2.41
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	N3@DRIVE	pre16=None	live=None	stage=2.08
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	TAPDRILL@BORE	pre16=None	live=None	stage=1.72
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=1.9
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=1.9
+B17	DesignTable_1502.xlsx	Sheet1	1502-24-24-FG	W3@HEX	pre16=None	live=None	stage=2.83
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-32-32 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 1502-32-32 dims are NOT assumed 
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 1502-32-32 (differs by -FG suffix) -> dims NOT copied'	live='OMi catalog SKU (omindustrial.com collections
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='VERIFIED'
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI-DRAWING'
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	$PRP@Threads	pre16=None	live=None	stage='2-11 1/2 (A NPTF) x 2-11 1/2 (A1 NPSM)'
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	C1HEX@HEX	pre16=None	live=None	stage=2.811
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	CHEX@HEX	pre16=None	live=None	stage=2.625
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	D@BORE	pre16=None	live=None	stage=1.72
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	M1@DRIVE	pre16=None	live=None	stage=2.57
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	N3@DRIVE	pre16=None	live=None	stage=2.39
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	TAPDRILL@BORE	pre16=None	live=None	stage=2.19
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	THDMAJ_A1@DRIVE	pre16=None	live=None	stage=2.375
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=2.375
+B17	DesignTable_1502.xlsx	Sheet1	1502-32-32-FG	W3@HEX	pre16=None	live=None	stage=2.99
+B17	DesignTable_2504.xlsx	Sheet1	#row2	#col17	pre16=None	live=None	stage='$PRP@DimSource'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	#col1	pre16=None	live=None	stage='2504-16-16-FG'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$COMMENT	pre16=None	live=None	stage='2026-10-18 (wave 3 adapters, staged, not shipped): NEW row - OMi sells this part (SKU dropped by the 2026-09-23 crawl; two-pass crawl 2026-10-16, tools/_out/adapters77_20261016/REPORT_77.md); Air-Way does not print this size; legs / flats / bores from OMi Items (= Brennan TFA p.26, one source)'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$PRP@AxialSource	pre16=None	live=None	stage='OMi catalog SKU dropped by the 2026-09-23 crawl (adapters77, 2026-10-16); NO Air-Way row for this size; legs / flats / bores: OMi WebsitePartsInfo2026 Items M 1 / M 2 / Hex Flat / Side 1 ID / Side 2 ID (= Brennan TFA p.26, one source); JIC ends MS33656J'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$PRP@DataStatus	pre16=None	live=None	stage='ASSUMED'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$PRP@OMiSKU	pre16=None	live=None	stage='2504-16-16-FG'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$PRP@PartNo	pre16=None	live=None	stage='2504-16-16-FG'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	$PRP@ScopeAction	pre16=None	live=None	stage='BUILD'
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	D1@BORE	pre16=None	live=None	stage=0.844
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	D2@BORE	pre16=None	live=None	stage=0.844
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	M2_1@DRIVE	pre16=None	live=None	stage=1.47
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	M2_2@DRIVE	pre16=None	live=None	stage=1.47
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	THDMAJ_B1@DRIVE	pre16=None	live=None	stage=1.3125
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	THDMAJ_B2@DRIVE	pre16=None	live=None	stage=1.3125
+B17	DesignTable_2504.xlsx	Sheet1	2504-16-16-FG	Y@HEX	pre16=None	live=None	stage=1.312
+B17	DesignTable_2505.xlsx	Sheet1	#row2	#col18	pre16=None	live=None	stage='$PRP@DimSource'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	#col1	pre16=None	live=None	stage='2505-04-04-FG'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$COMMENT	pre16=None	live=None	stage='2026-10-18 (wave 3 adapters, staged, not shipped): NEW row - OMi sells this part (SKU dropped by the 2026-09-23 crawl; two-pass crawl 2026-10-16, tools/_out/adapters77_20261016/REPORT_77.md); Air-Way does not print this size; legs / flats / bore from OMi Items (= Brennan TFA p.27, one source); end details from the 
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$PRP@AxialSource	pre16=None	live=None	stage='OMi catalog SKU dropped by the 2026-09-23 crawl (adapters77, 2026-10-16); NO Air-Way row for this size; legs / flats / bore: OMi WebsitePartsInfo2026 Items (= Brennan TFA p.27, one source); tap drill = Air-Way per size (A1); JIC end MS33656J'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$PRP@DataStatus	pre16=None	live=None	stage='MISSING'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$PRP@OMiSKU	pre16=None	live=None	stage='2505-04-04-FG'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$PRP@PartNo	pre16=None	live=None	stage='2505-04-04-FG'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	$PRP@ScopeAction	pre16=None	live=None	stage='BUILD'
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	D@BORE	pre16=None	live=None	stage=0.172
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	M2@DRIVE	pre16=None	live=None	stage=0.87
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	N6@DRIVE	pre16=None	live=None	stage=0.62
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	TAPDRILL@BORE	pre16=None	live=None	stage=0.43
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=0.54
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	THDMAJ_B@DRIVE	pre16=None	live=None	stage=0.4375
+B17	DesignTable_2505.xlsx	Sheet1	2505-04-04-FG	Y1@HEX	pre16=None	live=None	stage=0.75
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	#col1	pre16=None	live=None	stage='2505-06-06-FG'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$COMMENT	pre16=None	live=None	stage='2026-10-18 (wave 3 adapters, staged, not shipped): NEW row - OMi sells this part (SKU dropped by the 2026-09-23 crawl; two-pass crawl 2026-10-16, tools/_out/adapters77_20261016/REPORT_77.md); Air-Way does not print this size; legs / flats / bore from OMi Items (= Brennan TFA p.27, one source); end details from the 
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$PRP@AxialSource	pre16=None	live=None	stage='OMi catalog SKU dropped by the 2026-09-23 crawl (adapters77, 2026-10-16); NO Air-Way row for this size; legs / flats / bore: OMi WebsitePartsInfo2026 Items (= Brennan TFA p.27, one source); tap drill = Air-Way per size (A1); JIC end MS33656J'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$PRP@DataStatus	pre16=None	live=None	stage='ASSUMED'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$PRP@DimSource	pre16=None	live=None	stage='OMI'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$PRP@OMiSKU	pre16=None	live=None	stage='2505-06-06-FG'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$PRP@PartNo	pre16=None	live=None	stage='2505-06-06-FG'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	$PRP@ScopeAction	pre16=None	live=None	stage='BUILD'
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	D@BORE	pre16=None	live=None	stage=0.297
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	M2@DRIVE	pre16=None	live=None	stage=0.88
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	N6@DRIVE	pre16=None	live=None	stage=0.75
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	TAPDRILL@BORE	pre16=None	live=None	stage=0.57
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	THDMAJ_A@DRIVE	pre16=None	live=None	stage=0.675
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	THDMAJ_B@DRIVE	pre16=None	live=None	stage=0.5625
+B17	DesignTable_2505.xlsx	Sheet1	2505-06-06-FG	Y1@HEX	pre16=None	live=None	stage=0.875
+B17	DesignTable_2611.xlsx	Sheet1	#row2	#col21	pre16=None	live=None	stage='$PRP@DimSource'
+B16-CONFLICT	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	$COMMENT	pre16='BUILD-NEAR: forged (-FG) and non-FG variants differ in length on other series (e.g. 1501 N1, 2701 Y), so 2611-12-12-12 dims are NOT assumed for this SKU; confirm with OMi/Brennan before modelling'	live='2026-10-02 (JIC-TEES): stays MISSING - OMi gives no body dimensions for this part (M1@DRIVE, N5@DRIVE, N1@DRIVE, Y1@HEX, D
+B16-CONFLICT	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	$PRP@AxialSource	pre16='OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way has the same size only as 2611-12-12-12 (differs by -FG suffix) -> dims NOT copied'	live='2026-10-02 new master (JIC-TEE
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	$PRP@DataStatus	pre16='MISSING'	live='MISSING'	stage='ASSUMED'
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	$PRP@DimSource	pre16=None	live=None	stage='BRENNAN'
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	D1@BORE	pre16=None	live=None	stage=0.719
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	D@BORE	pre16=None	live=None	stage=0.609
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	M1@DRIVE	pre16=None	live=None	stage=1.89
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	N1@DRIVE	pre16=None	live=None	stage=1.36
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	N5@DRIVE	pre16=None	live=None	stage=1.59
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	TAPDRILL@BORE	pre16=None	live=None	stage=0.91
+B17	DesignTable_2611.xlsx	Sheet1	2611-12-12-12-FG	Y1@HEX	pre16=None	live=None	stage=1.312
+B17	DesignTable_6500.xlsx	Sheet1	6500-05-05-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-05-05-FG	$PRP@AxialSource	pre16='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1)'	live='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1)'	stage='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1); LEG_M10@DRIVE: OMi WebsitePa
+B17	DesignTable_6500.xlsx	Sheet1	6500-05-05-FG	LEG_M10@DRIVE	pre16=0.69	live=0.69	stage=0.68
+B17	DesignTable_6500.xlsx	Sheet1	6500-06-08-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-06-08-FG	$PRP@DataStatus	pre16='ASSUMED'	live='ASSUMED'	stage='VERIFIED'
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-06-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-06-FG	$PRP@OMiSKU	pre16=None	live=None	stage='6500-08-06-FG'
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-06-FG	$PRP@ScopeAction	pre16='DROP'	live='DROP'	stage='BUILD'
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-06-FG	LEG_M10@DRIVE	pre16=0.95	live=0.95	stage=0.91
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-06-FG	LEG_M5@DRIVE	pre16=1.33	live=1.33	stage=1.28
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-08-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-08-FG	$PRP@DataStatus	pre16='VERIFIED-LEGS'	live='VERIFIED-LEGS'	stage='VERIFIED'
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-08-FG	$PRP@OMiSKU	pre16=None	live=None	stage='6500-08-08-FG'
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-08-FG	$PRP@ScopeAction	pre16='DROP'	live='DROP'	stage='BUILD'
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-10-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-08-10-FG	$PRP@DataStatus	pre16='ASSUMED'	live='ASSUMED'	stage='VERIFIED'
+B17	DesignTable_6500.xlsx	Sheet1	6500-10-08-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-10-08-FG	$PRP@DataStatus	pre16='ASSUMED'	live='ASSUMED'	stage='VERIFIED'
+B17	DesignTable_6500.xlsx	Sheet1	6500-10-12-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-10-12-FG	$PRP@AxialSource	pre16='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1)'	live='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1)'	stage='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1); LEG_M10@DRIVE: OMi WebsitePa
+B17	DesignTable_6500.xlsx	Sheet1	6500-10-12-FG	LEG_M10@DRIVE	pre16=1.19	live=1.19	stage=1.18
+B17	DesignTable_6500.xlsx	Sheet1	6500-12-12-FG	$COMMENT	pre16='BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN818 cross-check) - Air-Way nut as sold NOT confirmed; intern
+B17	DesignTable_6500.xlsx	Sheet1	6500-12-12-FG	$PRP@AxialSource	pre16='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1)'	live='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1)'	stage='Male JIC end VERIFIED (MS33656J); legs: Air-Way (MS51521D Amd1 corroborates matched-dash M/M1); LEG_M10@DRIVE: OMi WebsitePa
+B17	DesignTable_6500.xlsx	Sheet1	6500-12-12-FG	LEG_M10@DRIVE	pre16=1.19	live=1.19	stage=1.18
+B17	DesignTable_6500.xlsx	Sheet1	6500-16-16-FG	$COMMENT	pre16='legs differ from MS51521: AW M=1.81/M5=2.0 vs MS 1.8/2.0; BLOCKED: female-JIC swivel nut internal geometry UNPUBLISHED (nut thread depth, nose, sleeve seat) - measure a Brennan 6500 STEP | 2026-09-15: nut ENVELOPE (hex, bore, lengths, thread depth) now available as standard-nut reference in sheet NutRef_MS51531D (MS51531D primary, AN81
+B17	DesignTable_6500.xlsx	Sheet1	6500-16-16-FG	$PRP@DataStatus	pre16='ASSUMED'	live='ASSUMED'	stage='VERIFIED'
+B17	DesignTable_6501.xlsx	Sheet1	6501-04-04-FG	$COMMENT	pre16=None	live=None	stage='A19 (user 2026-10-18, group 2 settled): M10@DRIVE 0.77 -> OMi 0.800 (Items!N1941, M127) | A19 (user 2026-10-18, group 2 settled): M5@DRIVE 1.11 -> OMi 1.140 (Items!O1941, M128)'
+B17	DesignTable_6501.xlsx	Sheet1	6501-04-04-FG	$PRP@AxialSource	pre16='Air-Way s132 only (double-pass 16 rows)'	live='Air-Way s132 only (double-pass 16 rows)'	stage='Air-Way s132 only (double-pass 16 rows); M10@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!N1941 = 0.800 (table had 0.77) [user 2026-10-18 A19]; M5@DRIVE: OMi WebsitePartsInfo2026.xlsx Items!O1941 = 1.140 (table had 1.11) [user 2026-10-1
+B17	DesignTable_6501.xlsx	Sheet1	6501-04-04-FG	M10@DRIVE	pre16=0.77	live=0.77	stage=0.8
+B17	DesignTable_6501.xlsx	Sheet1	6501-04-04-FG	M5@DRIVE	pre16=1.11	live=1.11	stage=1.14
+B17	DesignTable_6505.xlsx	Sheet1	6505-02-04	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.34 -> OMi 1.36 (Items!L2009, M031) | A19 (user 2026-
+B17	DesignTable_6505.xlsx	Sheet1	6505-02-04	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows; CHEX@HEX: OMi WebsitePartsInfo2026.xlsx Items!R2009 Hex Flat = 0.500 (table had 0.44) [user 2026-09-25: OMi dims > Air-Way, ASSUMED]'	live='Air-Way s101 only (double-pass 20 rows); D1 
+B17	DesignTable_6505.xlsx	Sheet1	6505-02-04	L15@DRIVE	pre16=1.34	live=1.34	stage=1.36
+B17	DesignTable_6505.xlsx	Sheet1	6505-02-04	L16@DRIVE	pre16=1	live=1	stage=1.01
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-04	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.53 -> OMi 1.56 (Items!L2011, M031) | A19 (user 2026-
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-04	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-04	L15@DRIVE	pre16=1.53	live=1.53	stage=1.56
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-04	L16@DRIVE	pre16=1.19	live=1.19	stage=1.21
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-05	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.63 -> OMi 1.64 (Items!L2012, M031)'
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-05	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-05	L15@DRIVE	pre16=1.63	live=1.63	stage=1.64
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-06	$COMMENT	pre16=None	live=None	stage='A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.72 -> OMi 1.68 (Items!L2013, M031) | A19 (user 2026-10-18, group 2 settled): L16@DRIVE 1.34 -> OMi 1.30 (Items!P2013, M032)'
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-06	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-06	L15@DRIVE	pre16=1.72	live=1.72	stage=1.68
+B17	DesignTable_6505.xlsx	Sheet1	6505-04-06	L16@DRIVE	pre16=1.34	live=1.34	stage=1.3
+B17	DesignTable_6505.xlsx	Sheet1	6505-06-06	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.72 -> OMi 1.64 (Items!L2015, M031) | A19 (user 2026-
+B17	DesignTable_6505.xlsx	Sheet1	6505-06-06	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-06-06	L15@DRIVE	pre16=1.72	live=1.72	stage=1.64
+B17	DesignTable_6505.xlsx	Sheet1	6505-06-06	L16@DRIVE	pre16=1.34	live=1.34	stage=1.26
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-06	$COMMENT	pre16=None	live=None	stage='A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.86 -> OMi 1.88 (Items!L2017, M031) | A19 (user 2026-10-18, group 2 settled): L16@DRIVE 1.48 -> OMi 1.51 (Items!P2017, M032)'
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-06	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-06	L15@DRIVE	pre16=1.86	live=1.86	stage=1.88
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-06	L16@DRIVE	pre16=1.48	live=1.48	stage=1.51
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-08	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 1.9 -> OMi 1.98 (Items!L2018, M031) | A19 (user 2026-1
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-08	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-08	L15@DRIVE	pre16=1.9	live=1.9	stage=1.98
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-08	L16@DRIVE	pre16=1.48	live=1.48	stage=1.56
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-10	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 2.28 -> OMi 2.10 (Items!L2019, M031) | A19 (user 2026-
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-10	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows; CHEX@HEX: OMi WebsitePartsInfo2026.xlsx Items!R2019 Hex Flat = 1.000 (table had 0.94) [user 2026-09-25: OMi dims > Air-Way, ASSUMED]'	live='Air-Way s101 only (double-pass 20 rows); D1 
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-10	L15@DRIVE	pre16=2.28	live=2.28	stage=2.1
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-10	L16@DRIVE	pre16=1.78	live=1.78	stage=1.6
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-12	$COMMENT	pre16=None	live=None	stage='A19 (user 2026-10-18, group 2 settled): L15@DRIVE 2.26 -> OMi 2.14 (Items!L2020, M031) | A19 (user 2026-10-18, group 2 settled): L16@DRIVE 1.7 -> OMi 1.58 (Items!P2020, M032)'
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-12	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows; CHEX@HEX: OMi WebsitePartsInfo2026.xlsx Items!R2020 Hex Flat = 1.000 (table had 1.13) [user 2026-09-25: OMi dims > Air-Way, ASSUMED]'	live='Air-Way s101 only (double-pass 20 rows); D1 
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-12	L15@DRIVE	pre16=2.26	live=2.26	stage=2.14
+B17	DesignTable_6505.xlsx	Sheet1	6505-08-12	L16@DRIVE	pre16=1.7	live=1.7	stage=1.58
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-10	$COMMENT	pre16=None	live=None	stage='A19 (user 2026-10-18, group 2 settled): L15@DRIVE 2.22 -> OMi 2.21 (Items!L2022, M031) | A19 (user 2026-10-18, group 2 settled): L16@DRIVE 1.72 -> OMi 1.70 (Items!P2022, M032)'
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-10	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-10	L15@DRIVE	pre16=2.22	live=2.22	stage=2.21
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-10	L16@DRIVE	pre16=1.72	live=1.72	stage=1.7
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-12	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 2.26 -> OMi 2.28 (Items!L2023, M031) | A19 (user 2026-
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-12	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-12	L15@DRIVE	pre16=2.26	live=2.26	stage=2.28
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-12	L16@DRIVE	pre16=1.7	live=1.7	stage=1.72
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-16	$COMMENT	pre16=None	live=None	stage='A19 (user 2026-10-18, group 2 settled): L15@DRIVE 2.36 -> OMi 2.38 (Items!L2024, M031) | A19 (user 2026-10-18, group 2 settled): L16@DRIVE 1.77 -> OMi 1.79 (Items!P2024, M032)'
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-16	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows; D@BORE: OMi WebsitePartsInfo2026.xlsx Items!X2024 Side 2 ID = 0.719 (table had 0.84) [user 2026-09-25: OMi dims > Air-Way, ASSUMED]'	live='Air-Way s101 only (double-pass 20 rows); D1 c
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-16	L15@DRIVE	pre16=2.36	live=2.36	stage=2.38
+B17	DesignTable_6505.xlsx	Sheet1	6505-12-16	L16@DRIVE	pre16=1.77	live=1.77	stage=1.79
+B17	DesignTable_6505.xlsx	Sheet1	6505-16-16	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A23 (user 2026-10-18): VERIFIED - OMi = Air-Way on L15@DRIVE=2.56~2.56; L16@DRIVE=1.97~1.97; CHEX@HEX=1.
+B17	DesignTable_6505.xlsx	Sheet1	6505-16-16	$PRP@DataStatus	pre16='ASSUMED'	live='ASSUMED'	stage='VERIFIED'
+B17	DesignTable_6505.xlsx	Sheet1	6505-20-20	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty'	stage='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | A19 (user 2026-10-18, group 2 settled): L15@DRIVE 2.66 -> OMi 2.84 (Items!L2028, M031) | A19 (user 2026-
+B17	DesignTable_6505.xlsx	Sheet1	6505-20-20	$PRP@AxialSource	pre16='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	live='Air-Way s101 only (double-pass 20 rows); D1 column printed "---" on most rows (no value) -> cell left empty in table, MISSING for D1 on those rows'	stage='Air-Way s101 only (doub
+B17	DesignTable_6505.xlsx	Sheet1	6505-20-20	L15@DRIVE	pre16=2.66	live=2.66	stage=2.84
+B17	DesignTable_6505.xlsx	Sheet1	6505-20-20	L16@DRIVE	pre16=2.03	live=2.03	stage=2.21
+B17	DesignTable_6505.xlsx	Sheet1	6505-24-24	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | DROP: Air-Way row with no matching OMi SKU in catalog feed (2026-09-23)'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | DROP: Air-Way row with no matching OMi SKU in catalog feed (2026-09-23)'	stage='D1: printed "---" on Air-Way (n
+B17	DesignTable_6505.xlsx	Sheet1	6505-24-24	$PRP@OMiSKU	pre16=None	live=None	stage='6505-24-24'
+B17	DesignTable_6505.xlsx	Sheet1	6505-24-24	$PRP@ScopeAction	pre16='DROP'	live='DROP'	stage='BUILD'
+B17	DesignTable_6505.xlsx	Sheet1	6505-24-24	L15@DRIVE	pre16=2.94	live=2.94	stage=3
+B17	DesignTable_6505.xlsx	Sheet1	6505-24-24	L16@DRIVE	pre16=2.21	live=2.21	stage=2.27
+B17	DesignTable_6505.xlsx	Sheet1	6505-32-32	$COMMENT	pre16='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | DROP: Air-Way row with no matching OMi SKU in catalog feed (2026-09-23)'	live='D1: printed "---" on Air-Way (not applicable to this size) -> cell empty | DROP: Air-Way row with no matching OMi SKU in catalog feed (2026-09-23)'	stage='D1: printed "---" on Air-Way (n
+B17	DesignTable_6505.xlsx	Sheet1	6505-32-32	$PRP@OMiSKU	pre16=None	live=None	stage='6505-32-32'
+B17	DesignTable_6505.xlsx	Sheet1	6505-32-32	$PRP@ScopeAction	pre16='DROP'	live='DROP'	stage='BUILD'
+B17	DesignTable_6505.xlsx	Sheet1	6505-32-32	CHEX@HEX	pre16=2.5	live=2.5	stage=2.625
+B17	DesignTable_6505.xlsx	Sheet1	6505-32-32	L15@DRIVE	pre16=3.59	live=3.59	stage=3.44
+B17	DesignTable_6505.xlsx	Sheet1	6505-32-32	L16@DRIVE	pre16=2.65	live=2.65	stage=2.5

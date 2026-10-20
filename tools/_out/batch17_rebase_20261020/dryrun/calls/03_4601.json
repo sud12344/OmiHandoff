@@ -1,0 +1,34 @@
+[
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\tee\\Build_4601_MASTER.bas",
+   "const_overrides": {
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\4601\\4601_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\4601\\Build_4601_report.txt",
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\tee\\DesignTable_4601_SW2.xlsx"
+   },
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\4601\\4601_MASTER.SLDPRT"
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "4601_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "4601_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

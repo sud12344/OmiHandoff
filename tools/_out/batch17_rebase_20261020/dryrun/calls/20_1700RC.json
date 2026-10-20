@@ -1,0 +1,34 @@
+[
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\straight\\Build_1700RC_MASTER.bas",
+   "const_overrides": {
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\1700RC\\1700RC_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\1700RC\\Build_1700RC_report.txt",
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\regen\\b17\\straight\\DesignTable_1700RC_SW2.xlsx"
+   },
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch17_rebase_20261020\\dryrun\\1700RC\\1700RC_MASTER.SLDPRT"
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "1700RC_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "1700RC_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

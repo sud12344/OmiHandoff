@@ -1,0 +1,97 @@
+0304     straight unchanged              shipped  12 -> b17  12  new   0 lost 0  blocked 0
+0306     straight unchanged              shipped  11 -> b17  11  new   0 lost 0  blocked 0
+0318     straight macro + table change   shipped  12 -> b17  12  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+0403     straight table change           shipped   7 -> b17   7  new   0 lost 0  blocked 0
+1404     straight macro + table change   shipped  24 -> b17  24  new   0 lost 0  blocked 0
+1405     straight macro + table change   shipped  15 -> b17  17  new   2 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+1700RC   straight NEW root               shipped   0 -> b17   3  new   3 lost 0  blocked 0
+1700     straight unchanged              shipped  10 -> b17  10  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+1724     straight NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+1800     straight NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+1824     straight NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+2403     straight macro + table change   shipped  34 -> b17  40  new   6 lost 0  blocked 0
+2404     straight macro + table change   shipped  57 -> b17  59  new   2 lost 0  blocked 0
+2405     straight macro + table change   shipped  28 -> b17  30  new   2 lost 0  blocked 0
+2406     straight macro + table change   shipped  40 -> b17  51  new  11 lost 0  blocked 1  [pre-2026-09-25 macro in 03_SCRIPTS]
+2408     straight unchanged              shipped  15 -> b17  15  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+2700     straight macro + table change   shipped  24 -> b17  26  new   2 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+2705     straight macro + table change   shipped  14 -> b17  18  new   4 lost 0  blocked 0
+2706     straight macro + table change   shipped  23 -> b17  25  new   2 lost 0  blocked 0
+4404     straight unchanged              shipped  13 -> b17  13  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+4604     straight unchanged              shipped  14 -> b17  14  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5000     straight macro + table change   shipped  19 -> b17  22  new   3 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5404N    straight macro + table change   shipped   4 -> b17  22  new  18 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5404     straight macro + table change   shipped  25 -> b17  31  new   6 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5405     straight macro + table change   shipped  26 -> b17  31  new   5 lost 0  blocked 0
+5406C    straight macro + table change   shipped   6 -> b17   7  new   1 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5406HHP  straight NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+5406P    straight macro + table change   shipped   4 -> b17   9  new   5 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5406SHP  straight NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+5406     straight macro + table change   shipped  28 -> b17  31  new   3 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+6400     straight macro + table change   shipped  58 -> b17  66  new  12 lost 4  blocked 0  [hand-built master]
+6401     straight table change           shipped  24 -> b17  24  new   0 lost 0  blocked 0
+6402     straight macro + table change   shipped  15 -> b17  16  new   1 lost 0  blocked 0
+6404     straight table change           shipped  14 -> b17  14  new   0 lost 0  blocked 0
+6405     straight macro + table change   shipped  40 -> b17  44  new   4 lost 0  blocked 1
+6408HHP  straight NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+6408     straight table change           shipped  14 -> b17  14  new   0 lost 0  blocked 0
+6410     straight macro + table change   shipped  30 -> b17  34  new   4 lost 0  blocked 0
+6504     straight macro + table change   shipped  10 -> b17  14  new   4 lost 0  blocked 0
+6505     straight macro + table change   shipped  19 -> b17  21  new   2 lost 0  blocked 0
+6506     straight macro + table change   shipped  14 -> b17  14  new   0 lost 0  blocked 0
+6565     straight unchanged              shipped   8 -> b17   8  new   0 lost 0  blocked 0
+1501     tee      macro + table change   shipped  17 -> b17  19  new   2 lost 0  blocked 2
+1502     tee      macro + table change   shipped   1 -> b17   8  new   7 lost 0  blocked 1
+1503     tee      NEW root               shipped   0 -> b17  19  new  19 lost 0  blocked 0
+1504     tee      NEW root               shipped   0 -> b17   3  new   3 lost 0  blocked 0
+1601     tee      NEW root               shipped   0 -> b17   7  new   7 lost 0  blocked 0
+1602     tee      NEW root               shipped   0 -> b17   7  new   7 lost 0  blocked 0
+1603     tee      NEW root               shipped   0 -> b17   5  new   5 lost 0  blocked 0
+1703     tee      NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+1704     tee      NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+1804     tee      NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+2501     tee      macro + table change   shipped  48 -> b17  56  new   8 lost 0  blocked 0
+2503     tee      table change           shipped  29 -> b17  29  new   0 lost 0  blocked 0
+2504     tee      macro + table change   shipped   4 -> b17   5  new   1 lost 0  blocked 0
+2505     tee      macro + table change   shipped   1 -> b17   2  new   1 lost 0  blocked 2
+2601     tee      table change           shipped  10 -> b17  10  new   0 lost 0  blocked 0
+2602     tee      macro + table change   shipped   5 -> b17   6  new   1 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+2605     tee      table change           shipped   7 -> b17   7  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+2606     tee      unchanged              shipped   5 -> b17   5  new   0 lost 0  blocked 0
+2609     tee      unchanged              shipped   1 -> b17   1  new   0 lost 0  blocked 0
+2611     tee      macro + table change   shipped   2 -> b17   3  new   1 lost 0  blocked 0
+2650     tee      macro + table change   shipped   4 -> b17   5  new   1 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+2701     tee      macro + table change   shipped  15 -> b17  18  new   3 lost 0  blocked 0
+2702     tee      unchanged              shipped  11 -> b17  11  new   0 lost 0  blocked 1
+2703     tee      unchanged              shipped  12 -> b17  12  new   0 lost 0  blocked 0
+2704     tee      unchanged              shipped  12 -> b17  12  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+4501     tee      NEW root               shipped   0 -> b17  12  new  12 lost 0  blocked 0
+4503     tee      NEW root               shipped   0 -> b17   7  new   7 lost 0  blocked 0
+4601     tee      NEW root               shipped   0 -> b17  15  new  15 lost 0  blocked 0
+4603     tee      NEW root               shipped   0 -> b17   5  new   5 lost 0  blocked 0
+5500     tee      macro + table change   shipped  16 -> b17  16  new   0 lost 0  blocked 0
+5501     tee      NEW root               shipped   0 -> b17   7  new   7 lost 0  blocked 0
+5502     tee      macro + table change   shipped  13 -> b17  20  new   7 lost 0  blocked 0
+5503     tee      NEW root               shipped   0 -> b17   6  new   6 lost 0  blocked 1
+5504     tee      macro + table change   shipped   5 -> b17   9  new   4 lost 0  blocked 0
+5505     tee      NEW root               shipped   0 -> b17   2  new   2 lost 0  blocked 0
+5600     tee      macro + table change   shipped   6 -> b17   8  new   2 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5601     tee      NEW root               shipped   0 -> b17   6  new   6 lost 0  blocked 0
+5602     tee      unchanged              shipped   2 -> b17   2  new   0 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+5603     tee      NEW root               shipped   0 -> b17   6  new   6 lost 0  blocked 0
+5604     tee      unchanged              shipped   4 -> b17   4  new   0 lost 0  blocked 0
+5605     tee      unchanged              shipped   4 -> b17   4  new   0 lost 0  blocked 0
+5652     tee      NEW root               shipped   0 -> b17   6  new   6 lost 0  blocked 0
+6500     tee      macro + table change   shipped  24 -> b17  26  new   2 lost 0  blocked 0
+6501     tee      macro + table change   shipped  14 -> b17  14  new   0 lost 0  blocked 0
+6502     tee      macro + table change   shipped  11 -> b17  12  new   1 lost 0  blocked 0
+6503     tee      macro + table change   shipped   1 -> b17   1  new   0 lost 0  blocked 0
+6600     tee      macro + table change   shipped   9 -> b17  10  new   1 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+6602     tee      macro + table change   shipped   9 -> b17  10  new   1 lost 0  blocked 0  [pre-2026-09-25 macro in 03_SCRIPTS]
+6606     tee      NEW root               shipped   0 -> b17   4  new   4 lost 0  blocked 0
+6801     tee      macro + table change   shipped  35 -> b17  39  new   4 lost 0  blocked 0
+6802     tee      unchanged              shipped  20 -> b17  20  new   0 lost 0  blocked 1
+6803     tee      macro + table change   shipped   5 -> b17   8  new   3 lost 0  blocked 0
+6804     tee      unchanged              shipped   8 -> b17   8  new   0 lost 0  blocked 0
+6807     tee      NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0
+6902     tee      NEW root               shipped   0 -> b17   1  new   1 lost 0  blocked 0

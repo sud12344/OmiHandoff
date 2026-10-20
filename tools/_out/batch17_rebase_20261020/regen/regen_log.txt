@@ -1,0 +1,202 @@
+live straight 0304 rc 0 
+live straight 0306 rc 0 
+live straight 0318 rc 0 
+live straight 0403 rc 0 
+live straight 1404 rc 0 
+live straight 1405 rc 0 
+live straight 1700 rc 0 
+live straight 1700RC rc 1 KeyError: '1700RC'
+live straight 1724 rc 1 KeyError: '1724'
+live straight 1800 rc 1 KeyError: '1800'
+live straight 1824 rc 1 KeyError: '1824'
+live straight 2403 rc 0 
+live straight 2404 rc 0 
+live straight 2405 rc 0 
+live straight 2406 rc 0 
+live straight 2408 rc 0 
+live straight 2700 rc 0 
+live straight 2705 rc 0 
+live straight 2706 rc 0 
+live straight 4404 rc 0 
+live straight 4604 rc 0 
+live straight 5000 rc 0 
+live straight 5404 rc 0 
+live straight 5404N rc 0 
+live straight 5405 rc 0 
+live straight 5406 rc 0 
+live straight 5406C rc 0 
+live straight 5406HHP rc 0 
+live straight 5406P rc 0 
+live straight 5406SHP rc 0 
+live straight 6400 rc 1 KeyError: '6400'
+live straight 6401 rc 0 
+live straight 6402 rc 0 
+live straight 6404 rc 0 
+live straight 6405 rc 0 
+live straight 6408 rc 0 
+live straight 6408HHP rc 0 
+live straight 6410 rc 0 
+live straight 6504 rc 0 
+live straight 6505 rc 0 
+live straight 6506 rc 0 
+live straight 6565 rc 0 
+live tee 1501 rc 0 
+live tee 1502 rc 0 
+live tee 1503 rc 1 AssertionError: angled leg must carry a Thread-feature (JIC) end
+live tee 1504 rc 1 KeyError: '1504'
+live tee 1601 rc 1 KeyError: '1601'
+live tee 1602 rc 1 KeyError: '1602'
+live tee 1603 rc 1 KeyError: '1603'
+live tee 1703 rc 1 KeyError: '1703'
+live tee 1704 rc 1 KeyError: '1704'
+live tee 1803 rc 1 KeyError: '1803'
+live tee 1804 rc 1 KeyError: '1804'
+live tee 2501 rc 0 
+live tee 2503 rc 0 
+live tee 2504 rc 0 
+live tee 2505 rc 0 
+live tee 2601 rc 0 
+live tee 2602 rc 0 
+live tee 2605 rc 0 
+live tee 2606 rc 0 
+live tee 2609 rc 0 
+live tee 2611 rc 0 
+live tee 2650 rc 0 
+live tee 2701 rc 0 
+live tee 2702 rc 0 
+live tee 2703 rc 0 
+live tee 2704 rc 0 
+live tee 4501 rc 1 KeyError: '4501'
+live tee 4503 rc 1 KeyError: '4503'
+live tee 4601 rc 1 KeyError: '4601'
+live tee 4603 rc 1 KeyError: '4603'
+live tee 5500 rc 0 
+live tee 5501 rc 1 KeyError: '5501'
+live tee 5502 rc 0 
+live tee 5503 rc 1 KeyError: '5503'
+live tee 5504 rc 0 
+live tee 5505 rc 1 KeyError: '5505'
+live tee 5600 rc 0 
+live tee 5601 rc 0 
+live tee 5602 rc 0 
+live tee 5603 rc 0 
+live tee 5604 rc 0 
+live tee 5605 rc 0 
+live tee 5652 rc 0 
+live tee 6500 rc 0 
+live tee 6501 rc 0 
+live tee 6502 rc 0 
+live tee 6503 rc 0 
+live tee 6566 rc 1 KeyError: '6566'
+live tee 6600 rc 0 
+live tee 6602 rc 0 
+live tee 6603 rc 1 KeyError: '6603'
+live tee 6606 rc 1 KeyError: '6606'
+live tee 6801 rc 0 
+live tee 6802 rc 0 
+live tee 6803 rc 0 
+live tee 6804 rc 0 
+live tee 6807 rc 1 KeyError: '6807'
+live tee 6810 rc 1 KeyError: '6810'
+live tee 6902 rc 1 KeyError: '6902'
+b17 straight 0304 rc 0 
+b17 straight 0306 rc 0 
+b17 straight 0318 rc 0 
+b17 straight 0403 rc 0 
+b17 straight 1404 rc 0 
+b17 straight 1405 rc 0 
+b17 straight 1700 rc 0 
+b17 straight 1700RC rc 0 
+b17 straight 1724 rc 0 
+b17 straight 1800 rc 0 
+b17 straight 1824 rc 0 
+b17 straight 2403 rc 0 
+b17 straight 2404 rc 0 
+b17 straight 2405 rc 0 
+b17 straight 2406 rc 0 
+b17 straight 2408 rc 0 
+b17 straight 2700 rc 0 
+b17 straight 2705 rc 0 
+b17 straight 2706 rc 0 
+b17 straight 4404 rc 0 
+b17 straight 4604 rc 0 
+b17 straight 5000 rc 0 
+b17 straight 5404 rc 0 
+b17 straight 5404N rc 0 
+b17 straight 5405 rc 0 
+b17 straight 5406 rc 0 
+b17 straight 5406C rc 0 
+b17 straight 5406HHP rc 0 
+b17 straight 5406P rc 0 
+b17 straight 5406SHP rc 0 
+b17 straight 6400 rc 0 
+b17 straight 6401 rc 0 
+b17 straight 6402 rc 0 
+b17 straight 6404 rc 0 
+b17 straight 6405 rc 0 
+b17 straight 6408 rc 0 
+b17 straight 6408HHP rc 0 
+b17 straight 6410 rc 0 
+b17 straight 6504 rc 0 
+b17 straight 6505 rc 0 
+b17 straight 6506 rc 0 
+b17 straight 6565 rc 0 
+b17 tee 1501 rc 0 
+b17 tee 1502 rc 0 
+b17 tee 1503 rc 0 
+b17 tee 1504 rc 0 
+b17 tee 1601 rc 0 
+b17 tee 1602 rc 0 
+b17 tee 1603 rc 0 
+b17 tee 1703 rc 0 
+b17 tee 1704 rc 0 
+b17 tee 1803 rc 0 
+b17 tee 1804 rc 0 
+b17 tee 2501 rc 0 
+b17 tee 2503 rc 0 
+b17 tee 2504 rc 0 
+b17 tee 2505 rc 0 
+b17 tee 2601 rc 0 
+b17 tee 2602 rc 0 
+b17 tee 2605 rc 0 
+b17 tee 2606 rc 0 
+b17 tee 2609 rc 0 
+b17 tee 2611 rc 0 
+b17 tee 2650 rc 0 
+b17 tee 2701 rc 0 
+b17 tee 2702 rc 0 
+b17 tee 2703 rc 0 
+b17 tee 2704 rc 0 
+b17 tee 4501 rc 0 
+b17 tee 4503 rc 0 
+b17 tee 4601 rc 0 
+b17 tee 4603 rc 0 
+b17 tee 5500 rc 0 
+b17 tee 5501 rc 0 
+b17 tee 5502 rc 0 
+b17 tee 5503 rc 0 
+b17 tee 5504 rc 0 
+b17 tee 5505 rc 0 
+b17 tee 5600 rc 0 
+b17 tee 5601 rc 0 
+b17 tee 5602 rc 0 
+b17 tee 5603 rc 0 
+b17 tee 5604 rc 0 
+b17 tee 5605 rc 0 
+b17 tee 5652 rc 0 
+b17 tee 6500 rc 0 
+b17 tee 6501 rc 0 
+b17 tee 6502 rc 0 
+b17 tee 6503 rc 0 
+b17 tee 6566 rc 1 KeyError: '6566'
+b17 tee 6600 rc 0 
+b17 tee 6602 rc 0 
+b17 tee 6603 rc 1 KeyError: '6603'
+b17 tee 6606 rc 0 
+b17 tee 6801 rc 0 
+b17 tee 6802 rc 0 
+b17 tee 6803 rc 0 
+b17 tee 6804 rc 0 
+b17 tee 6807 rc 0 
+b17 tee 6810 rc 0 
+b17 tee 6902 rc 0 

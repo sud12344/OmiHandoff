@@ -7,6 +7,19 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-20 (cloud): BATCH 17 REBASED ON BATCH 16, NOT SHIPPED (no SolidWorks in the cloud)** - `tools\_out\batch17_rebase_20261020\SHIP_PLAN.md`.
+- **adapters77 is folded into batch 17** (user: "fold them into batch 17 or do them first; just don't stage both in parallel"): the 37 rows
+  were already rebased into the stage on 2026-10-18 (`wave3\adapters`, all 37 BUILD, 34 generate); `adapters77_20261016\apply_77.py`
+  must NOT be run (it would apply them a second time to pre-batch-16 tables).
+- The stage already carries every batch-16 table change (3-way check of the 12 tables: 0 stale cells); every other stage difference is a
+  logged edit, a new row or a note. The merged toolset = live tools (PUCK_INSET) + `patch_merged.diff`, byte for byte. The stage's own
+  SW2 copies were not used.
+- Regenerated from the live state: **80 roots change (28 new), 1,357 configurations (+280 vs the shipped SW2s)**; 92 old configurations
+  change, all from A19 / A20 / A21 (+ 6400's A6 rebuild); static checks clean (vbacheck 97 OK, dofcheck, allcfg 0, regress). New BLOCKED
+  row: 5503-02-02-FG (port depth 0.46 >= leg 0.47).
+- **Next (PC):** the dry-run kit `batch17_rebase_20261020\dryrun\` (80 call files, never-tried features first) -> `cmp_dryrun_b17.py`
+  -> ship per SHIP_PLAN section 5.
+
 **2026-10-19: BATCH 16 SHIPPED (`03_SCRIPTS\RUN_ME_batch16.txt`, QA #170-#172; user: "Yes, ship batch 16 as planned.").** Plan +
 evidence: `tools\_out\ship_20261019\` (SHIP_PLAN.md, checks\, scripts\ship_b16.py, old_files\ + MANIFEST*.txt; second copy
 `_to_delete\superseded_20261019\batch16_replaced\`).
@@ -37,8 +50,7 @@ evidence: `tools\_out\ship_20261019\` (SHIP_PLAN.md, checks\, scripts\ship_b16.p
 - SolidWorks: the 2026-10-09 dry-run session stopped when SolidWorks closed; on 2026-10-18 it kept closing with "License not granted:
   X1W ... (License error 20)" = the desktop app had lost its 3DEXPERIENCE sign-in since 2026-10-15 (SWXDesktopHelper logs: the role
   query answered by the login page). The user signed in again on 2026-10-19; the 9 remaining roots were dry-run then.
-- **Next:** the 37 wrongly-DROP adapters (`tools\_out\adapters77_20261016`, `apply_77.py --apply`, needs the user's OK), then batch 17
-  (Brennan / OMi-answer rows staged by another session on top of this state).
+- **Next:** batch 17 with the 37 wrongly-DROP adapters folded in (2026-10-20, above; `apply_77.py` is NOT run).
 
 **2026-10-18 (later): OMi's answers staged** - 15 more rows have dimensions (`tools\_out\omi_answers_20261018\README.md`,
 section 5). Not in the count below.
