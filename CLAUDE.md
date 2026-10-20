@@ -16,8 +16,9 @@ it and re-run. Supersedes the 2026-10-19 lines below.
 
 **2026-10-20 (cloud, branch `claude/pensive-planck-t9i90d`): READ `00_DOCS/NEXT_SESSION_PROMPT_2026-10-20.md` too** - ORFS generator staged
 (`tools/_out/orfs_gen_20261020/`: 133 FS configurations in 50 masters + 8 FS4000 O-rings, all checks clean, no SolidWorks dry run yet; 29 more
-Brennan STEPs measured in `tools/_out/orfs_steps2_20261020/`), the batch-17 work rebased on batch 16, A14 done; 1,549 of 2,535 ready after
-SolidWorks. Nothing shipped since batch 16.
+Brennan STEPs measured in `tools/_out/orfs_steps2_20261020/`); branch rebased on batch 17 (fb1d145), staging tools = live tools + ORFS (Atan2V
+fix ported; 99 / 99 roots identical to live). A14 (1603-08-08-08-FG) is staged only - not in batch 17. 1,351 shipped + 197 ready after
+SolidWorks = 1,548 of 2,535. The ORFS work is not shipped.
 **2026-10-19: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`** (everything staged on 2026-10-18: Brennan data allowed and
 marked, OMi answers, A1-A24 answers, the batch-17 stage + merged generator tools, 1,357 configurations generate; SolidWorks sign-in is
 broken; nothing shipped since batch 15). The pointers below are older background.

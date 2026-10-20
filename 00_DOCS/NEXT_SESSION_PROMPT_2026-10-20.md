@@ -1,16 +1,16 @@
 # Next session (written 2026-10-20, end of the cloud session) - what was staged, what waits on the PC, what waits on the user
 
-Nothing has shipped since batch 16 (2026-10-19). Everything below is STAGED in the cloud (Python side only, no SolidWorks). It is on the branch
-`claude/pensive-planck-t9i90d`, rebased on batch 16 (d63e1a6).
+Batch 17 shipped on 2026-10-20 (fb1d145, from the PC). Everything below is STAGED in the cloud (Python side only, no SolidWorks). It is on the
+branch `claude/pensive-planck-t9i90d`, rebased on batch 17 (fb1d145).
 
 ## Count (`tools/_out/count_20261020/count_ready.py`)
 | | parts of 2,535 |
 |---|---|
-| shipped now (in a master) | 1,106 |
-| generated, waiting for the SolidWorks dry runs + ship | 443 |
+| shipped now (in a master, batch 17) | 1,351 |
+| generated, waiting for the SolidWorks dry runs + ship | 197 |
 | of which ORFS (FS...) | 133 (+ 8 FS4000 O-rings in the 4000 master) |
-| = ready after SolidWorks | **1,549** |
-| not yet (data, STEP, decision or OMi needed) | 986 |
+| = ready after SolidWorks | **1,548** (A14's 1603 row is staged only) |
+| not yet (data, STEP, decision or OMi needed) | 987 |
 
 ## What the 2026-10-20 session staged (details: `00_DOCS/PROJECT_STATUS.md` section 1, the 2026-10-20 entries)
 1. A14: the 1603-08-08-08-FG bores (`tools/_out/a14_1603bore_20261020/`), in the batch-17 stage.
@@ -29,7 +29,7 @@ Nothing has shipped since batch 16 (2026-10-19). Everything below is STAGED in t
    the rows and the Brennan pilots found 0 off.
 
 ## On the PC (SolidWorks; the user signs in to 3DEXPERIENCE first - never start SLDWORKS.exe yourself)
-1. **Batch 17** as planned in `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`. adapters77 goes first, with the user's OK.
+1. **Batch 17 is shipped** (fb1d145). A14 (1603-08-08-08-FG, staged in `brennan_yes_20261018/stage`) goes with the next batch.
 2. **ORFS dry runs**, using the CLAUDE.md verify loop. `TABLE_PATH` points at `tools/_out/orfs_gen_20261020/out` (or at `out/tee` / `out/ring`).
    SAVE / REPORT go to a scratch folder. Run them in this order:
    - FS2403, then FS6400: the first face-seal ends (the Thread feature, the bore-cut face pick on the land);

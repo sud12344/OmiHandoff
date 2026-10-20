@@ -1,5 +1,5 @@
-"""regress_all.py (2026-10-20, ORFS generator staging): regenerate EVERY root of both generators with the OLD toolset (the merged batch-17
-tools, tools/_out/genfeat_20261018/merged/tools) and the NEW one (tools/_out/orfs_gen_20261020/tools), same inputs (OMI_ROOT = the batch-17
+"""regress_all.py (2026-10-20, ORFS generator staging): regenerate EVERY root of both generators with the OLD toolset (the live tools/ =
+batch 17 as shipped) and the NEW one (tools/_out/orfs_gen_20261020/tools), same inputs (OMI_ROOT = the batch-17
 stage; OMI_REV_EXTRA = the staged ORFS tables for the new FS roots), each root in its own process, and compare: macro (generated-date line
 aside, line endings ignored), SW2 cell by cell, summary json, exit code. Expected: every existing root identical; only the FS roots new.
 Output: regen/{old,new}/{straight,tee}/, regress_all.txt"""
@@ -7,8 +7,9 @@ import os, re, subprocess, sys, json
 import openpyxl
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', '..'))
-TOOLS = {'old': os.path.join(ROOT, 'tools', '_out', 'genfeat_20261018', 'merged', 'tools'), 'new': os.path.join(HERE, 'tools')}
-STAGE = os.path.join(ROOT, 'tools', '_out', 'brennan_yes_20261018', 'stage')
+# 2026-10-20: 'old' = the live tools/ (batch 17 shipped = the merged batch-17 tools + the Atan2V ByVal fix, QA #174; before: genfeat merged/tools)
+TOOLS = {'old': os.path.join(ROOT, 'tools'), 'new': os.path.join(HERE, 'tools')}
+STAGE = ROOT      # 2026-10-20: the live tables (batch 17 shipped the 2026-10-18 stage into 04_DESIGN_TABLES)
 EXTRA = os.path.join(ROOT, 'tools', '_out', 'brennan_yes_20261018', 'stage_orfs', '04_DESIGN_TABLES')
 GENS = {'straight': ('gen_straight2.py', 'GS_OUT'), 'tee': ('gen_tee.py', 'GT_OUT')}
 

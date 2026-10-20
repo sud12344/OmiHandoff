@@ -1,68 +1,4 @@
 {
- "FS2500": {
-  "configs": 5,
-  "ref": "FS2500-08-08-FG",
-  "skipped": [
-   [
-    "FS2500-04-04-FG",
-    "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
-   ],
-   [
-    "FS2500-06-04-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2500-08-06-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2500-10-08-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2500-12-08-FG",
-    "other shape family",
-    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
-   ],
-   [
-    "FS2500-12-12-FG",
-    "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
-   ],
-   [
-    "FS2500-16-12-FG",
-    "other shape family",
-    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
-   ],
-   [
-    "FS2500-16-16-FG",
-    "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
-   ],
-   [
-    "FS2500-24-20-FG",
-    "no end data",
-    "no -24 entry in the FSMF end library; needs the male O-ring face-seal end of -24 on a FORGED leg (face groove, land, nose chamfer, thread end), measured on BRENNAN_FS6500-24-24-FG (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSMF_MEAS[24]"
-   ],
-   [
-    "FS2500-24-24-FG",
-    "no end data",
-    "no -24 entry in the FSMF end library; needs the male O-ring face-seal end of -24 on a FORGED leg (face groove, land, nose chamfer, thread end), measured on BRENNAN_FS6500-24-24-FG (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSMF_MEAS[24]"
-   ],
-   [
-    "FS2500-32-32-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 52
- },
  "FS2500N": {
   "configs": 3,
   "ref": "FS2500-04-04-FG",
@@ -137,72 +73,69 @@
   "warnings": [],
   "cols": 48
  },
- "FS2501": {
-  "configs": 9,
-  "ref": "FS2501-08-08-FG",
+ "FS2500": {
+  "configs": 5,
+  "ref": "FS2500-08-08-FG",
   "skipped": [
    [
-    "FS2501-04-02-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2501-04-04-FG",
+    "FS2500-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
    ],
    [
-    "FS2501-12-08-FG",
-    "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
-   ],
-   [
-    "FS2501-16-16-FG",
-    "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
-   ],
-   [
-    "FS2501-24-24-FG",
+    "FS2500-06-04-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FS2501-32-32-FG",
+    "FS2500-08-06-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FF2501:FF2501-4-6-O",
+    "FS2500-10-08-FG",
     "DROP",
-    "ASSUMED"
+    "MISSING"
    ],
    [
-    "FF2501:FF2501-10-12-O",
-    "DROP",
-    "ASSUMED"
+    "FS2500-12-08-FG",
+    "other shape family",
+    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
    ],
    [
-    "FF2501:FF2501-12-16-O",
-    "DROP",
-    "ASSUMED"
+    "FS2500-12-12-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
    ],
    [
-    "FF2501:FF2501-16-20-O",
-    "DROP",
-    "ASSUMED"
+    "FS2500-16-12-FG",
+    "other shape family",
+    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
    ],
    [
-    "FF2501:FF2501-20-16-O",
+    "FS2500-16-16-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
+   ],
+   [
+    "FS2500-24-20-FG",
+    "no end data",
+    "no -24 entry in the FSMF end library; needs the male O-ring face-seal end of -24 on a FORGED leg (face groove, land, nose chamfer, thread end), measured on BRENNAN_FS6500-24-24-FG (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSMF_MEAS[24]"
+   ],
+   [
+    "FS2500-24-24-FG",
+    "no end data",
+    "no -24 entry in the FSMF end library; needs the male O-ring face-seal end of -24 on a FORGED leg (face groove, land, nose chamfer, thread end), measured on BRENNAN_FS6500-24-24-FG (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSMF_MEAS[24]"
+   ],
+   [
+    "FS2500-32-32-FG",
     "DROP",
-    "ASSUMED"
+    "MISSING"
    ]
   ],
   "blocked": [],
-  "warnings": [
-   "FS2501-08-12-FG: THDMAJ_D@DRIVE empty: thread major 0.8125 = the -08 end library (Q-TRANSFER-ENDLIB); leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0600 (round end flush with the flats by 0.0005; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)",
-   "FS2501-20-20-FG: leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
-  ],
-  "cols": 49
+  "warnings": [],
+  "cols": 52
  },
  "FS2501N": {
   "configs": 3,
@@ -298,57 +231,70 @@
   "warnings": [],
   "cols": 47
  },
- "FS2503": {
-  "configs": 4,
-  "ref": "FS2503-06-04-FG",
+ "FS2501": {
+  "configs": 9,
+  "ref": "FS2501-08-08-FG",
   "skipped": [
    [
-    "FS2503-04-02-FG",
+    "FS2501-04-02-FG",
     "BUILD",
     "MISSING"
    ],
    [
-    "FS2503-04-04-FG",
+    "FS2501-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
    ],
    [
-    "FS2503-12-08-FG",
+    "FS2501-12-08-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
    ],
    [
-    "FS2503-12-12-FG",
+    "FS2501-16-16-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
    ],
    [
-    "FS2503-16-16-FG",
-    "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
-   ],
-   [
-    "FS2503-24-24-FG",
+    "FS2501-24-24-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FF2503:FF2503-4-6-O",
+    "FS2501-32-32-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FF2501:FF2501-4-6-O",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF2503:FF2503-16-12-O",
+    "FF2501:FF2501-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2501:FF2501-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2501:FF2501-16-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2501:FF2501-20-16-O",
     "DROP",
     "ASSUMED"
    ]
   ],
-  "blocked": [
-   "FS2503-08-08-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0025)",
-   "FS2503-10-08-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0248)"
-  ],
+  "blocked": [],
   "warnings": [
-   "FS2503-20-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+   "FS2501-08-12-FG: THDMAJ_D@DRIVE empty: thread major 0.8125 = the -08 end library (Q-TRANSFER-ENDLIB); leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0600 (round end flush with the flats by 0.0005; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)",
+   "FS2501-20-20-FG: leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
   ],
   "cols": 49
  },
@@ -414,54 +360,59 @@
   ],
   "cols": 47
  },
- "FS2601": {
-  "configs": 3,
-  "ref": "FS2601-08-08-08-FG",
+ "FS2503": {
+  "configs": 4,
+  "ref": "FS2503-06-04-FG",
   "skipped": [
    [
-    "FS2601-04-04-02-FG",
-    "DROP",
+    "FS2503-04-02-FG",
+    "BUILD",
     "MISSING"
    ],
    [
-    "FS2601-04-04-04-FG",
+    "FS2503-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2601N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
    ],
    [
-    "FS2601-06-06-04-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2601-08-08-06-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2601-12-12-12-FG",
+    "FS2503-12-08-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2601N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
    ],
    [
-    "FS2601-16-16-16-FG",
+    "FS2503-12-12-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
+   ],
+   [
+    "FS2503-16-16-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
+   ],
+   [
+    "FS2503-24-24-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FS2601-20-20-20-FG",
+    "FF2503:FF2503-4-6-O",
     "DROP",
-    "MISSING"
+    "ASSUMED"
    ],
    [
-    "FS2601-24-24-24-FG",
+    "FF2503:FF2503-16-12-O",
     "DROP",
-    "MISSING"
+    "ASSUMED"
    ]
   ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 63
+  "blocked": [
+   "FS2503-08-08-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0025)",
+   "FS2503-10-08-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0248)"
+  ],
+  "warnings": [
+   "FS2503-20-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)"
+  ],
+  "cols": 49
  },
  "FS2601N": {
   "configs": 2,
@@ -517,94 +468,54 @@
   "warnings": [],
   "cols": 59
  },
- "FS2603": {
-  "configs": 4,
-  "ref": "FS2603-08-08-08-FG",
+ "FS2601": {
+  "configs": 3,
+  "ref": "FS2601-08-08-08-FG",
   "skipped": [
    [
-    "FS2603-04-04-04-FG",
+    "FS2601-04-04-02-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-04-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2603N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2601N"
    ],
    [
-    "FS2603-06-06-04-FG",
+    "FS2601-06-06-04-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FS2603-08-08-06-FG",
+    "FS2601-08-08-06-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FS2603-16-16-16-FG",
+    "FS2601-12-12-12-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2603N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2601N"
    ],
    [
-    "FS2603-20-20-20-FG",
+    "FS2601-16-16-16-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FS2603-24-24-24-FG",
+    "FS2601-20-20-20-FG",
     "DROP",
     "MISSING"
    ],
    [
-    "FS2603-32-32-32-FG",
+    "FS2601-24-24-24-FG",
     "DROP",
     "MISSING"
-   ],
-   [
-    "FF2603:FF2603-4-4-6-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-8-6-6-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-8-8-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-10-6-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-10-10-8-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-12-12-6-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-12-12-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-16-16-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2603:FF2603-16-16-12-O",
-    "DROP",
-    "ASSUMED"
    ]
   ],
   "blocked": [],
   "warnings": [],
-  "cols": 66
+  "cols": 63
  },
  "FS2603N": {
   "configs": 2,
@@ -704,6 +615,95 @@
   "blocked": [],
   "warnings": [],
   "cols": 60
+ },
+ "FS2603": {
+  "configs": 4,
+  "ref": "FS2603-08-08-08-FG",
+  "skipped": [
+   [
+    "FS2603-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2603N"
+   ],
+   [
+    "FS2603-06-06-04-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2603-08-08-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2603-16-16-16-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2603N"
+   ],
+   [
+    "FS2603-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2603-24-24-24-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2603-32-32-32-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FF2603:FF2603-4-4-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-8-6-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-8-8-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-10-6-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-10-10-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-12-12-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-12-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-16-16-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2603:FF2603-16-16-12-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 66
  },
  "FS2701": {
   "configs": 2,
@@ -809,120 +809,6 @@
   "warnings": [],
   "cols": 59
  },
- "FS2701N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS2701-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-08-06-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2701-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2701"
-   ],
-   [
-    "FS2701-10-10-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -10 (FSBH_MEAS has -08; needs BRENNAN_FS2701-10-10-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-16-16-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2701-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2701-24-24-FG",
-    "DROP",
-    "VERIFIED"
-   ],
-   [
-    "FS2701-32-32-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2701-LN-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-LN-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-LN-06-08-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2701-LN-08-06-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2701-LN-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2701"
-   ],
-   [
-    "FS2701-LN-10-10-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -10 (FSBH_MEAS has -08; needs BRENNAN_FS2701-10-10-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-LN-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2701-LN-16-16-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2701-LN-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2701-LN-24-24-FG",
-    "DROP",
-    "VERIFIED"
-   ],
-   [
-    "FS2701-LN-32-32-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
  "FS2702": {
   "configs": 2,
   "ref": "FS2702-08-08-FG",
@@ -1011,105 +897,6 @@
   "blocked": [],
   "warnings": [],
   "cols": 59
- },
- "FS2702N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS2702-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2702"
-   ],
-   [
-    "FS2702-10-10-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -10 (FSBH_MEAS has -08; needs BRENNAN_FS2701-10-10-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-16-16-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2702-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2702-24-24-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2702-32-32-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2702-LN-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-LN-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-LN-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2702"
-   ],
-   [
-    "FS2702-LN-10-10-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -10 (FSBH_MEAS has -08; needs BRENNAN_FS2701-10-10-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-LN-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2702-LN-16-16-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2702-LN-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2702-LN-24-24-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2702-LN-32-32-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
  },
  "FS2703": {
   "configs": 2,
@@ -1214,120 +1001,6 @@
   "blocked": [],
   "warnings": [],
   "cols": 73
- },
- "FS2703N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS2703-04-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2703-06-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2703-08-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2703"
-   ],
-   [
-    "FS2703-12-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2703-16-16-16-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2703-20-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2703-24-24-24-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2703-32-32-32-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FF2703:FF2703-8-8-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2703:FF2703-8-8-12-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2703:FF2703-10-10-6-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2703:FF2703-10-10-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FS2703-LN-04-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2703-LN-06-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2703-LN-08-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2703"
-   ],
-   [
-    "FS2703-LN-12-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2703-LN-16-16-16-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS2703-LN-20-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2703-LN-24-24-24-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2703-LN-32-32-32-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FF2703:2703-10-10-10-LN-O",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
  },
  "FS2704": {
   "configs": 2,
@@ -1448,221 +1121,6 @@
   "warnings": [],
   "cols": 73
  },
- "FS2704N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS2704-04-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-06-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-08-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2704"
-   ],
-   [
-    "FS2704-10-10-10-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -10 (FSBH_MEAS has -08; needs BRENNAN_FS2701-10-10-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-12-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-16-16-16-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -16 (FSBH_MEAS has -08; needs BRENNAN_FS2701-16-16-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-20-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2704-24-24-24-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2704-32-32-32-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FF2704:FF2704-6-8-6-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2704:FF2704-8-8-12-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2704:FF2704-8-10-8-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2704:FF2704-10-12-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2704:FF2704-20-20-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF2704:FF2704-24-24-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FS2704-LN-04-04-04-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -04 (FSBH_MEAS has -08; needs BRENNAN_FS2701-04-04-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-LN-06-06-06-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -08; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-LN-08-08-08-FG",
-    "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS2704"
-   ],
-   [
-    "FS2704-LN-10-10-10-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -10 (FSBH_MEAS has -08; needs BRENNAN_FS2701-10-10-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-LN-12-12-12-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -08; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-LN-16-16-16-FG",
-    "no end data",
-    "face-seal bulkhead leg not measured for -16 (FSBH_MEAS has -08; needs BRENNAN_FS2701-16-16-FG or another FS bulkhead part of that size)"
-   ],
-   [
-    "FS2704-LN-20-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2704-LN-24-24-24-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS2704-LN-32-32-32-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
- "FS6500": {
-  "configs": 3,
-  "ref": "FS6500-08-08-FG",
-  "skipped": [
-   [
-    "FS6500-04-04-FG",
-    "other shape family",
-    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6500N"
-   ],
-   [
-    "FS6500-04-06-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6500-06-04-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6500-06-08-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6500-08-12-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6500-10-10-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
-   ],
-   [
-    "FS6500-12-12-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
-   ],
-   [
-    "FS6500-16-16-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
-   ],
-   [
-    "FS6500-20-20-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
-   ],
-   [
-    "FS6500-24-24-FG",
-    "no end data",
-    "female face-seal swivel not measured for -24 (FSSW_MEAS has -04/-06/-08/-10/-12/-16/-20; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
-   ],
-   [
-    "FF6500:FF6500-10-8-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6500:FF6500-10-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6500:FF6500-12-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6500:FF6500-20-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6500:FF6500-20-24-O",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [
-   "FS6500-06-06-FG: leg 2: the corner puck (radius 0.433) reaches 0.018 past the swivel body face (0.415) but stays inside the neck (max 0.124 off the axis vs neck radius 0.261) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings; leg 2 hex arm 0.415 barely clears the corner puck (radius 0.433)"
-  ],
-  "cols": 64
- },
  "FS6500C": {
   "configs": 2,
   "ref": "FS6500-10-10-FG",
@@ -1753,6 +1211,97 @@
    "FS6500-10-10-FG: leg 2 hex arm 0.640 barely clears the corner puck (radius 0.612)"
   ],
   "cols": 65
+ },
+ "FS6500NC": {
+  "configs": 2,
+  "ref": "FS6500-12-12-FG",
+  "skipped": [
+   [
+    "FS6500-04-04-FG",
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6500N"
+   ],
+   [
+    "FS6500-04-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-06-04-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-06-08-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-08-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-08-12-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
+   ],
+   [
+    "FS6500-20-20-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
+   ],
+   [
+    "FS6500-24-24-FG",
+    "no end data",
+    "female face-seal swivel not measured for -24 (FSSW_MEAS has -04/-06/-08/-10/-12/-16/-20; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
+   ],
+   [
+    "FF6500:FF6500-10-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-10-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-20-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-20-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6500-12-12-FG: leg 2 hex arm 0.700 barely clears the corner puck (radius 0.687)"
+  ],
+  "cols": 63
  },
  "FS6500N": {
   "configs": 1,
@@ -1848,9 +1397,9 @@
   "warnings": [],
   "cols": 62
  },
- "FS6500NC": {
-  "configs": 2,
-  "ref": "FS6500-12-12-FG",
+ "FS6500": {
+  "configs": 3,
+  "ref": "FS6500-08-08-FG",
   "skipped": [
    [
     "FS6500-04-04-FG",
@@ -1868,24 +1417,9 @@
     "MISSING"
    ],
    [
-    "FS6500-06-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
-   ],
-   [
     "FS6500-06-08-FG",
     "DROP",
     "MISSING"
-   ],
-   [
-    "FS6500-08-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
-   ],
-   [
-    "FS6500-08-08-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
    ],
    [
     "FS6500-08-12-FG",
@@ -1896,6 +1430,16 @@
     "FS6500-10-10-FG",
     "other shape family",
     "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
+   ],
+   [
+    "FS6500-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
+   ],
+   [
+    "FS6500-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
    ],
    [
     "FS6500-20-20-FG",
@@ -1935,9 +1479,9 @@
   ],
   "blocked": [],
   "warnings": [
-   "FS6500-12-12-FG: leg 2 hex arm 0.700 barely clears the corner puck (radius 0.687)"
+   "FS6500-06-06-FG: leg 2: the corner puck (radius 0.433) reaches 0.018 past the swivel body face (0.415) but stays inside the neck (max 0.124 off the axis vs neck radius 0.261) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings; leg 2 hex arm 0.415 barely clears the corner puck (radius 0.433)"
   ],
-  "cols": 63
+  "cols": 64
  },
  "FS6502": {
   "configs": 1,
@@ -1980,179 +1524,6 @@
   "warnings": [],
   "cols": 64
  },
- "FS6502C": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6502-04-04-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6502-06-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
-   ],
-   [
-    "FS6502-08-08-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
-   ],
-   [
-    "FS6502-12-12-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
-   ],
-   [
-    "FS6502-16-16-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
-   ],
-   [
-    "FS6502-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6502-24-24-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [
-   "FS6502-10-10-FG: leg 1: the corner puck (radius 0.613) reaches past the swivel body face (0.460) outside the neck (0.405 off the axis vs neck radius 0.408) or into the swivel slot (starts 1.204); leg 2: the corner puck buries the inner thread edge (margin -0.0248)"
-  ],
-  "warnings": [],
-  "cols": 0
- },
- "FS6502N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6502-04-04-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6502-06-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
-   ],
-   [
-    "FS6502-08-08-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
-   ],
-   [
-    "FS6502-10-10-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6502C"
-   ],
-   [
-    "FS6502-12-12-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
-   ],
-   [
-    "FS6502-16-16-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
-   ],
-   [
-    "FS6502-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6502-24-24-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
- "FS6502NC": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6502-04-04-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6502-06-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
-   ],
-   [
-    "FS6502-08-08-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
-   ],
-   [
-    "FS6502-10-10-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6502C"
-   ],
-   [
-    "FS6502-20-20-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6502-24-24-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [
-   "FS6502-12-12-FG: leg 1: the corner puck (radius 0.686) reaches past the swivel body face (0.360) outside the neck (0.584 off the axis vs neck radius 0.468) or into the swivel slot (starts 1.224)",
-   "FS6502-16-16-FG: leg 1: the corner puck (radius 0.830) reaches past the swivel body face (0.320) outside the neck (0.766 off the axis vs neck radius 0.565) or into the swivel slot (starts 1.244)"
-  ],
-  "warnings": [],
-  "cols": 0
- },
- "FS6600": {
-  "configs": 2,
-  "ref": "FS6600-08-08-08-FG",
-  "skipped": [
-   [
-    "FS6600-04-04-04-FG",
-    "other shape family",
-    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6600N"
-   ],
-   [
-    "FS6600-10-10-10-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
-   ],
-   [
-    "FS6600-12-12-12-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
-   ],
-   [
-    "FS6600-16-16-16-FG",
-    "DROP",
-    "VERIFIED"
-   ],
-   [
-    "FS6600-20-20-20-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [
-   "FS6600-06-06-06-FG: leg 3 hex arm 0.415 barely clears the run bar corner (0.433)"
-  ],
-  "cols": 78
- },
  "FS6600C": {
   "configs": 1,
   "ref": "FS6600-10-10-10-FG",
@@ -2193,45 +1564,6 @@
    "FS6600-10-10-10-FG: leg 3 hex arm 0.640 barely clears the run bar corner (0.612)"
   ],
   "cols": 79
- },
- "FS6600N": {
-  "configs": 1,
-  "ref": "FS6600-04-04-04-FG",
-  "skipped": [
-   [
-    "FS6600-06-06-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
-   ],
-   [
-    "FS6600-08-08-08-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
-   ],
-   [
-    "FS6600-10-10-10-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
-   ],
-   [
-    "FS6600-12-12-12-FG",
-    "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
-   ],
-   [
-    "FS6600-16-16-16-FG",
-    "DROP",
-    "VERIFIED"
-   ],
-   [
-    "FS6600-20-20-20-FG",
-    "DROP",
-    "MISSING"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 74
  },
  "FS6600NC": {
   "configs": 1,
@@ -2274,108 +1606,79 @@
   ],
   "cols": 75
  },
- "FS6602": {
-  "configs": 2,
-  "ref": "FS6602-08-08-08-FG",
+ "FS6600N": {
+  "configs": 1,
+  "ref": "FS6600-04-04-04-FG",
   "skipped": [
    [
-    "FS6602-04-04-04-FG",
+    "FS6600-06-06-06-FG",
     "other shape family",
-    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6602N"
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
    ],
    [
-    "FS6602-10-10-10-FG",
+    "FS6600-08-08-08-FG",
     "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
    ],
    [
-    "FS6602-12-12-12-FG",
+    "FS6600-10-10-10-FG",
     "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
    ],
    [
-    "FS6602-16-16-16-FG",
+    "FS6600-12-12-12-FG",
     "other shape family",
-    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
    ],
    [
-    "FS6602-20-20-20-FG",
-    "other shape family",
-    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
-   ],
-   [
-    "FF6602:FF6602-6-12-12-O",
+    "FS6600-16-16-16-FG",
     "DROP",
-    "ASSUMED"
+    "VERIFIED"
    ],
    [
-    "FF6602:FF6602-8-8-6-O",
+    "FS6600-20-20-20-FG",
     "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-10-10-6-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-10-10-12-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-10-12-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-12-10-10-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-12-12-4-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-12-10-12-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-12-12-8-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-16-12-16-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-16-16-12-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-20-20-12-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-24-20-20-O",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6602:FF6602-24-24-24-O",
-    "DROP",
-    "ASSUMED"
+    "MISSING"
    ]
   ],
   "blocked": [],
   "warnings": [],
+  "cols": 74
+ },
+ "FS6600": {
+  "configs": 2,
+  "ref": "FS6600-08-08-08-FG",
+  "skipped": [
+   [
+    "FS6600-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6600N"
+   ],
+   [
+    "FS6600-10-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
+   ],
+   [
+    "FS6600-12-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
+   ],
+   [
+    "FS6600-16-16-16-FG",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS6600-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6600-06-06-06-FG: leg 3 hex arm 0.415 barely clears the run bar corner (0.433)"
+  ],
   "cols": 78
  },
  "FS6602C": {
@@ -2481,6 +1784,110 @@
   "blocked": [],
   "warnings": [],
   "cols": 79
+ },
+ "FS6602NC": {
+  "configs": 2,
+  "ref": "FS6602-12-12-12-FG",
+  "skipped": [
+   [
+    "FS6602-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6602N"
+   ],
+   [
+    "FS6602-06-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
+   ],
+   [
+    "FS6602-08-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
+   ],
+   [
+    "FS6602-10-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FS6602-20-20-20-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FF6602:FF6602-6-12-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-8-8-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-10-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-12-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-10-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-12-4-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-12-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-16-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-16-16-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-20-20-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-24-20-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-24-24-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 75
  },
  "FS6602N": {
   "configs": 1,
@@ -2591,9 +1998,9 @@
   "warnings": [],
   "cols": 74
  },
- "FS6602NC": {
+ "FS6602": {
   "configs": 2,
-  "ref": "FS6602-12-12-12-FG",
+  "ref": "FS6602-08-08-08-FG",
   "skipped": [
    [
     "FS6602-04-04-04-FG",
@@ -2601,19 +2008,19 @@
     "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6602N"
    ],
    [
-    "FS6602-06-06-06-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
-   ],
-   [
-    "FS6602-08-08-08-FG",
-    "other shape family",
-    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
-   ],
-   [
     "FS6602-10-10-10-FG",
     "other shape family",
     "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FS6602-12-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
+   ],
+   [
+    "FS6602-16-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
    ],
    [
     "FS6602-20-20-20-FG",
@@ -2693,384 +2100,7 @@
   ],
   "blocked": [],
   "warnings": [],
-  "cols": 75
- },
- "FS6801": {
-  "configs": 3,
-  "ref": "FS6801-08-08-NWO-FG",
-  "skipped": [
-   [
-    "FS6801-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-04-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-06-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-06-05-NWO-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6801-06-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-06-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-06-12-NWO-FG",
-    "DROP",
-    "VERIFIED"
-   ],
-   [
-    "FS6801-08-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-08-10-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-08-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-10-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SR (stepped face-seal legs, stud neck below the flats): built in master FS6801R"
-   ],
-   [
-    "FS6801-10-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-10-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-12-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6801NR"
-   ],
-   [
-    "FS6801-12-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-12-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-16-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-16-20-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -20 (NWO_FS has -08; needs BRENNAN_FS6801-20-20-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-20-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-20-20-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-24-24-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -24 (NWO_FS has -08; needs BRENNAN_FS6801-24-24-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-32-32-NWO-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FF6801:FF6801-4-5 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-10-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-10-16 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-12-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-16-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-16-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-16-14 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-20-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-24-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [
-   "FS6801-08-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)",
-   "FS6801-04-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)",
-   "FS6801-06-08-NWO-FG: THDMAJ_D@DRIVE empty: thread major 0.6875 = the -06 end library (Q-TRANSFER-ENDLIB); leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)"
-  ],
-  "cols": 60
- },
- "FS6801N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6801-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-04-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-04-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6801"
-   ],
-   [
-    "FS6801-06-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-06-05-NWO-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6801-06-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-06-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6801"
-   ],
-   [
-    "FS6801-06-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-06-12-NWO-FG",
-    "DROP",
-    "VERIFIED"
-   ],
-   [
-    "FS6801-08-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6801"
-   ],
-   [
-    "FS6801-08-10-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-08-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-10-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SR (stepped face-seal legs, stud neck below the flats): built in master FS6801R"
-   ],
-   [
-    "FS6801-10-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-10-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-12-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6801NR"
-   ],
-   [
-    "FS6801-12-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-12-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-16-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-16-20-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -20 (NWO_FS has -08; needs BRENNAN_FS6801-20-20-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-20-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-20-20-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6801-24-24-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -24 (NWO_FS has -08; needs BRENNAN_FS6801-24-24-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6801-32-32-NWO-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FF6801:FF6801-4-5 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-10-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-10-16 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-12-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-16-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-16-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-16-14 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-20-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6801:FF6801-24-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
+  "cols": 78
  },
  "FS6801NR": {
   "configs": 1,
@@ -3454,266 +2484,188 @@
   ],
   "cols": 61
  },
- "FS6802": {
-  "configs": 2,
-  "ref": "FS6802-08-08-NWO-FG",
+ "FS6801": {
+  "configs": 3,
+  "ref": "FS6801-08-08-NWO-FG",
   "skipped": [
    [
-    "FS6802-04-04-NWO-FG",
+    "FS6801-04-04-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-04-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
+    "FS6801-04-06-NWO-FG",
+    "BUILD",
+    "MISSING"
    ],
    [
-    "FS6802-06-04-NWO-FG",
+    "FS6801-06-04-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-06-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
+    "FS6801-06-05-NWO-FG",
+    "DROP",
+    "MISSING"
    ],
    [
-    "FS6802-06-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
+    "FS6801-06-06-NWO-FG",
+    "BUILD",
+    "MISSING"
    ],
    [
-    "FS6802-08-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-08-10-NWO-FG",
+    "FS6801-06-10-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-08-12-NWO-FG",
+    "FS6801-06-12-NWO-FG",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS6801-08-06-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-08-10-NWO-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6801-08-12-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-12-08-NWO-FG",
+    "FS6801-10-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
+    "face-seal leg shape SR (stepped face-seal legs, stud neck below the flats): built in master FS6801R"
    ],
    [
-    "FS6802-12-10-NWO-FG",
-    "DROP",
-    "MISSING"
+    "FS6801-10-10-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-12-12-NWO-FG",
+    "FS6801-10-12-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-12-16-NWO-FG",
-    "BUILD",
-    "MISSING"
+    "FS6801-12-08-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6801NR"
    ],
    [
-    "FS6802-16-12-NWO-FG",
+    "FS6801-12-10-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-12-12-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-16-16-NWO-FG",
+    "FS6801-12-16-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-16-12-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-16-16-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-16-20-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -20 (NWO_FS has -08; needs BRENNAN_FS6801-20-20-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-20-16-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-20-20-NWO-FG",
     "BUILD",
     "MISSING"
    ],
    [
-    "FS6802-20-20-NWO-FG",
-    "BUILD",
+    "FS6801-24-24-NWO-FG",
+    "no end data",
+    "adjustable ORB stud on an FS part not measured for -24 (NWO_FS has -08; needs BRENNAN_FS6801-24-24-NWO-FG or another FS part with that stud)"
+   ],
+   [
+    "FS6801-32-32-NWO-FG",
+    "DROP",
     "MISSING"
    ],
    [
-    "FF6802:FF6802-4-8 NWO",
+    "FF6801:FF6801-4-5 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-10-8 NWO",
+    "FF6801:FF6801-10-6 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-10-10 NWO",
+    "FF6801:FF6801-10-16 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-10-12 NWO",
+    "FF6801:FF6801-12-6 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-16-20 NWO",
+    "FF6801:FF6801-12-20 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-20-24 NWO",
+    "FF6801:FF6801-16-8 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-24-20 NWO",
+    "FF6801:FF6801-16-10 NWO",
     "DROP",
     "ASSUMED"
    ],
    [
-    "FF6802:FF6802-24-24 NWO",
+    "FF6801:FF6801-16-14 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6801:FF6801-20-24 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6801:FF6801-24-20 NWO",
     "DROP",
     "ASSUMED"
    ]
   ],
   "blocked": [],
   "warnings": [
-   "FS6802-08-08-NWO-FG: leg 1: adjustable stud tip -> washer face 0.54 = L13 - L14 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.033 past the body face (0.400) inside the neck (max 0.166 off the axis vs neck radius 0.375) - as on the 45 deg Brennan forgings",
-   "FS6802-06-08-NWO-FG: leg 1: adjustable stud tip -> washer face 0.54 = L13 - L14 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.033 past the body face (0.400) inside the neck (max 0.166 off the axis vs neck radius 0.375) - as on the 45 deg Brennan forgings"
+   "FS6801-08-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)",
+   "FS6801-04-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)",
+   "FS6801-06-08-NWO-FG: THDMAJ_D@DRIVE empty: thread major 0.6875 = the -06 end library (Q-TRANSFER-ENDLIB); leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)"
   ],
   "cols": 60
- },
- "FS6802N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6802-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-04-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-06-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-06-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-06-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6802"
-   ],
-   [
-    "FS6802-06-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-08-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6802"
-   ],
-   [
-    "FS6802-08-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-08-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-12-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
-   ],
-   [
-    "FS6802-12-10-NWO-FG",
-    "DROP",
-    "MISSING"
-   ],
-   [
-    "FS6802-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-12-16-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6802-16-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-16-16-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6802-20-20-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FF6802:FF6802-4-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-10-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-10-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-16-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-20-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-24-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6802:FF6802-24-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
  },
  "FS6802NR": {
   "configs": 1,
@@ -3846,9 +2798,9 @@
   ],
   "cols": 59
  },
- "FS6802R": {
-  "configs": 0,
-  "ref": null,
+ "FS6802": {
+  "configs": 2,
+  "ref": "FS6802-08-08-NWO-FG",
   "skipped": [
    [
     "FS6802-04-04-NWO-FG",
@@ -3871,11 +2823,6 @@
     "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
    ],
    [
-    "FS6802-06-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6802"
-   ],
-   [
     "FS6802-06-10-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
@@ -3884,11 +2831,6 @@
     "FS6802-08-06-NWO-FG",
     "no end data",
     "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6802-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6802"
    ],
    [
     "FS6802-08-10-NWO-FG",
@@ -3977,8 +2919,11 @@
    ]
   ],
   "blocked": [],
-  "warnings": [],
-  "cols": 0
+  "warnings": [
+   "FS6802-08-08-NWO-FG: leg 1: adjustable stud tip -> washer face 0.54 = L13 - L14 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.033 past the body face (0.400) inside the neck (max 0.166 off the axis vs neck radius 0.375) - as on the 45 deg Brennan forgings",
+   "FS6802-06-08-NWO-FG: leg 1: adjustable stud tip -> washer face 0.54 = L13 - L14 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.033 past the body face (0.400) inside the neck (max 0.166 off the axis vs neck radius 0.375) - as on the 45 deg Brennan forgings"
+  ],
+  "cols": 60
  },
  "FS6803": {
   "configs": 1,
@@ -4085,333 +3030,6 @@
    "FS6803-08-08-08-NWO-FG: leg 3: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)"
   ],
   "cols": 74
- },
- "FS6803N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6803-04-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6803-06-06-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6803-08-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6803"
-   ],
-   [
-    "FS6803-12-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6803-16-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FF6803:FF6803-4-4-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-4 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-5 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-8-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-10-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-12-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-12-12-16 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-16-16-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-20-20-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-24-24-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
- "FS6803NR": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6803-04-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6803-06-06-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6803-08-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6803"
-   ],
-   [
-    "FS6803-12-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6803-16-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FF6803:FF6803-4-4-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-4 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-5 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-8-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-10-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-12-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-12-12-16 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-16-16-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-20-20-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-24-24-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
- "FS6803R": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6803-04-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6803-06-06-06-NWO-FG",
-    "BUILD",
-    "MISSING"
-   ],
-   [
-    "FS6803-08-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6803"
-   ],
-   [
-    "FS6803-12-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6803-16-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FF6803:FF6803-4-4-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-4 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-5 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-6-6-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-8-8-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-10-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-10-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-12-6-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-12-12-16 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-16-16-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-20-20-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6803:FF6803-24-24-24 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
  },
  "FS6804": {
   "configs": 1,
@@ -4558,452 +3176,5 @@
    "FS6804-08-08-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)"
   ],
   "cols": 74
- },
- "FS6804N": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6804-04-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-06-06-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-08-06-08-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-08-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6804"
-   ],
-   [
-    "FS6804-10-10-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-12-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-16-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FF6804:FF6804-4-6-4 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-4-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-5-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-12-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-6-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-8-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-12-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-8-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-10-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-16-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-20-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-16-12-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-20-20-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
- "FS6804NR": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6804-04-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-06-06-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-08-06-08-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-08-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6804"
-   ],
-   [
-    "FS6804-10-10-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-12-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-16-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FF6804:FF6804-4-6-4 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-4-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-5-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-12-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-6-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-8-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-12-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-8-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-10-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-16-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-20-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-16-12-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-20-20-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
- },
- "FS6804R": {
-  "configs": 0,
-  "ref": null,
-  "skipped": [
-   [
-    "FS6804-04-04-04-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-06-06-06-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-08-06-08-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -06 (NWO_FS has -08; needs BRENNAN_FS6801-06-06-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-08-08-08-NWO-FG",
-    "other shape family",
-    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6804"
-   ],
-   [
-    "FS6804-10-10-10-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-12-12-12-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FS6804-16-16-16-NWO-FG",
-    "no end data",
-    "adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)"
-   ],
-   [
-    "FF6804:FF6804-4-6-4 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-4-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-5-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-6-12-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-6-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-8-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-8-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-8-12-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-8-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-10-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-8 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-10-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-12-6 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-10-12-10 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-16-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-12-20-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-16-12-12 NWO",
-    "DROP",
-    "ASSUMED"
-   ],
-   [
-    "FF6804:FF6804-20-20-20 NWO",
-    "DROP",
-    "ASSUMED"
-   ]
-  ],
-  "blocked": [],
-  "warnings": [],
-  "cols": 0
  }
 }

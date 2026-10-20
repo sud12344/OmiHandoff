@@ -3580,7 +3580,7 @@ Sub HelixThreadV(tipD As Double, rM As Double, heightM As Double, pitchM As Doub
     Trace nm & ": left live until the final suppress step"
 End Sub
 
-Function Atan2V(y As Double, x As Double) As Double
+Function Atan2V(ByVal y As Double, ByVal x As Double) As Double
     If Abs(x) < 1E-12 And Abs(y) < 1E-12 Then Atan2V = 0: Exit Function
     If Abs(x) < 1E-12 Then Atan2V = IIf(y > 0, 1.5707963267949, -1.5707963267949): Exit Function
     Atan2V = Atn(y / x)

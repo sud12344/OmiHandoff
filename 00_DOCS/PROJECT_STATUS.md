@@ -31,6 +31,11 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS branch rebased on batch 17 (fb1d145)** - conflicts only in `.gitignore` / this file / CLAUDE.md (both sides kept);
+the batch-17 generator fix (Atan2V ByVal, QA #174) ported into the staging gen_tee; `regress_all.py` now compares against the LIVE tools on the
+LIVE tables: 99 / 99 roots identical, no FS macro changed. A14 (1603-08-08-08-FG, MISSING in the live table) is staged only - batch 17 did not
+take it; it ships with the next batch. Count: **1,351 shipped + 197 waiting for SolidWorks = 1,548 of 2,535** (ORFS 133 configurations staged).
+
 **2026-10-20 (cloud): ORFS step 7 - FS2404 / FS6403 / FS2601 / FS6502** (README step 7; staged): 12 configurations (FS2404 5 at -08 / -24, FS6403
 -08-08, FS2601 5, FS6502-08-08); FS2404 / FS6403 other sizes need straight STEPs (FS2403-NN-NN), FS6502 -06 / -10 / -12 / -16 need
 BRENNAN_FS6502-NN-NN-FG (corner-puck check), FS0304-C needs a shape STEP; checks clean, closed loops 0 off, regression 99 / 99;
