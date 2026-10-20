@@ -6,7 +6,7 @@
    [
     "FS2500-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2500N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
    ],
    [
     "FS2500-06-04-FG",
@@ -26,22 +26,22 @@
    [
     "FS2500-12-08-FG",
     "other shape family",
-    "face-seal leg shape X (mixed): no master yet (one sketch per master)"
+    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
    ],
    [
     "FS2500-12-12-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2500N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
    ],
    [
     "FS2500-16-12-FG",
     "other shape family",
-    "face-seal leg shape X (mixed): no master yet (one sketch per master)"
+    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
    ],
    [
     "FS2500-16-16-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2500N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2500N"
    ],
    [
     "FS2500-24-20-FG",
@@ -100,12 +100,12 @@
    [
     "FS2500-12-08-FG",
     "other shape family",
-    "face-seal leg shape X (mixed): no master yet (one sketch per master)"
+    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
    ],
    [
     "FS2500-16-12-FG",
     "other shape family",
-    "face-seal leg shape X (mixed): no master yet (one sketch per master)"
+    "face-seal leg shape X (mixed legs): no master yet (one sketch per master)"
    ],
    [
     "FS2500-20-16-FG",
@@ -149,17 +149,17 @@
    [
     "FS2501-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2501N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
    ],
    [
     "FS2501-12-08-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2501N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
    ],
    [
     "FS2501-16-16-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2501N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2501N"
    ],
    [
     "FS2501-24-24-FG",
@@ -310,22 +310,22 @@
    [
     "FS2503-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
    ],
    [
     "FS2503-12-08-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
    ],
    [
     "FS2503-12-12-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
    ],
    [
     "FS2503-16-16-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2503N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2503N"
    ],
    [
     "FS2503-24-24-FG",
@@ -421,7 +421,7 @@
    [
     "FS2603-04-04-04-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2603N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2603N"
    ],
    [
     "FS2603-06-06-04-FG",
@@ -436,7 +436,7 @@
    [
     "FS2603-16-16-16-FG",
     "other shape family",
-    "face-seal leg shape N (face-seal legs with the flats = the thread major, no step): built in master FS2603N"
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2603N"
    ],
    [
     "FS2603-20-20-20-FG",
@@ -1475,13 +1475,13 @@
   "cols": 0
  },
  "FS6500": {
-  "configs": 1,
+  "configs": 3,
   "ref": "FS6500-08-08-FG",
   "skipped": [
    [
     "FS6500-04-04-FG",
-    "no end data",
-    "female face-seal swivel not measured for -04 (FSSW_MEAS has -08; needs BRENNAN_FS6500-04-04-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6500N"
    ],
    [
     "FS6500-04-06-FG",
@@ -1494,19 +1494,9 @@
     "MISSING"
    ],
    [
-    "FS6500-06-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
-   ],
-   [
     "FS6500-06-08-FG",
     "DROP",
     "MISSING"
-   ],
-   [
-    "FS6500-08-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
    ],
    [
     "FS6500-08-12-FG",
@@ -1515,28 +1505,28 @@
    ],
    [
     "FS6500-10-10-FG",
-    "no end data",
-    "female face-seal swivel not measured for -10 (FSSW_MEAS has -08; needs BRENNAN_FS6500-10-10-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
    ],
    [
     "FS6500-12-12-FG",
-    "no end data",
-    "female face-seal swivel not measured for -12 (FSSW_MEAS has -08; needs BRENNAN_FS6500-12-12-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
    ],
    [
     "FS6500-16-16-FG",
-    "no end data",
-    "female face-seal swivel not measured for -16 (FSSW_MEAS has -08; needs BRENNAN_FS6500-16-16-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
    ],
    [
     "FS6500-20-20-FG",
-    "no end data",
-    "female face-seal swivel not measured for -20 (FSSW_MEAS has -08; needs BRENNAN_FS6500-20-20-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
    ],
    [
     "FS6500-24-24-FG",
     "no end data",
-    "female face-seal swivel not measured for -24 (FSSW_MEAS has -08; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
+    "female face-seal swivel not measured for -24 (FSSW_MEAS has -04/-06/-08/-10/-12/-16/-20; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
    ],
    [
     "FF6500:FF6500-10-8-O",
@@ -1565,17 +1555,19 @@
    ]
   ],
   "blocked": [],
-  "warnings": [],
+  "warnings": [
+   "FS6500-06-06-FG: leg 2: the corner puck (radius 0.433) reaches 0.018 past the swivel body face (0.415) but stays inside the neck (max 0.124 off the axis vs neck radius 0.261) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings; leg 2 hex arm 0.415 barely clears the corner puck (radius 0.433)"
+  ],
   "cols": 64
  },
- "FS6500N": {
-  "configs": 0,
-  "ref": null,
+ "FS6500C": {
+  "configs": 2,
+  "ref": "FS6500-10-10-FG",
   "skipped": [
    [
     "FS6500-04-04-FG",
-    "no end data",
-    "female face-seal swivel not measured for -04 (FSSW_MEAS has -08; needs BRENNAN_FS6500-04-04-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6500N"
    ],
    [
     "FS6500-04-06-FG",
@@ -1589,8 +1581,8 @@
    ],
    [
     "FS6500-06-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
    ],
    [
     "FS6500-06-08-FG",
@@ -1599,13 +1591,99 @@
    ],
    [
     "FS6500-08-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
    ],
    [
     "FS6500-08-08-FG",
     "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS6500"
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-08-12-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
+   ],
+   [
+    "FS6500-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
+   ],
+   [
+    "FS6500-24-24-FG",
+    "no end data",
+    "female face-seal swivel not measured for -24 (FSSW_MEAS has -04/-06/-08/-10/-12/-16/-20; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
+   ],
+   [
+    "FF6500:FF6500-10-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-10-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-20-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-20-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6500-10-10-FG: leg 2 hex arm 0.640 barely clears the corner puck (radius 0.612)"
+  ],
+  "cols": 65
+ },
+ "FS6500N": {
+  "configs": 1,
+  "ref": "FS6500-04-04-FG",
+  "skipped": [
+   [
+    "FS6500-04-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-06-04-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-06-08-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-08-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
    ],
    [
     "FS6500-08-12-FG",
@@ -1614,28 +1692,28 @@
    ],
    [
     "FS6500-10-10-FG",
-    "no end data",
-    "female face-seal swivel not measured for -10 (FSSW_MEAS has -08; needs BRENNAN_FS6500-10-10-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
    ],
    [
     "FS6500-12-12-FG",
-    "no end data",
-    "female face-seal swivel not measured for -12 (FSSW_MEAS has -08; needs BRENNAN_FS6500-12-12-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
    ],
    [
     "FS6500-16-16-FG",
-    "no end data",
-    "female face-seal swivel not measured for -16 (FSSW_MEAS has -08; needs BRENNAN_FS6500-16-16-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6500NC"
    ],
    [
     "FS6500-20-20-FG",
-    "no end data",
-    "female face-seal swivel not measured for -20 (FSSW_MEAS has -08; needs BRENNAN_FS6500-20-20-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
    ],
    [
     "FS6500-24-24-FG",
     "no end data",
-    "female face-seal swivel not measured for -24 (FSSW_MEAS has -08; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
+    "female face-seal swivel not measured for -24 (FSSW_MEAS has -04/-06/-08/-10/-12/-16/-20; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
    ],
    [
     "FF6500:FF6500-10-8-O",
@@ -1665,31 +1743,117 @@
   ],
   "blocked": [],
   "warnings": [],
-  "cols": 0
+  "cols": 62
+ },
+ "FS6500NC": {
+  "configs": 2,
+  "ref": "FS6500-12-12-FG",
+  "skipped": [
+   [
+    "FS6500-04-04-FG",
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6500N"
+   ],
+   [
+    "FS6500-04-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-06-04-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-06-08-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-08-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6500"
+   ],
+   [
+    "FS6500-08-12-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6500-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
+   ],
+   [
+    "FS6500-20-20-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6500C"
+   ],
+   [
+    "FS6500-24-24-FG",
+    "no end data",
+    "female face-seal swivel not measured for -24 (FSSW_MEAS has -04/-06/-08/-10/-12/-16/-20; needs BRENNAN_FS6500-24-24-FG, STEPS_NEEDED part 2)"
+   ],
+   [
+    "FF6500:FF6500-10-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-10-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-20-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6500:FF6500-20-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6500-12-12-FG: leg 2 hex arm 0.700 barely clears the corner puck (radius 0.687)"
+  ],
+  "cols": 63
  },
  "FS6600": {
-  "configs": 1,
+  "configs": 2,
   "ref": "FS6600-08-08-08-FG",
   "skipped": [
    [
     "FS6600-04-04-04-FG",
-    "no end data",
-    "female face-seal swivel not measured for -04 (FSSW_MEAS has -08; needs BRENNAN_FS6500-04-04-FG, STEPS_NEEDED part 2)"
-   ],
-   [
-    "FS6600-06-06-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6600N"
    ],
    [
     "FS6600-10-10-10-FG",
-    "no end data",
-    "female face-seal swivel not measured for -10 (FSSW_MEAS has -08; needs BRENNAN_FS6500-10-10-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
    ],
    [
     "FS6600-12-12-12-FG",
-    "no end data",
-    "female face-seal swivel not measured for -12 (FSSW_MEAS has -08; needs BRENNAN_FS6500-12-12-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
    ],
    [
     "FS6600-16-16-16-FG",
@@ -1703,37 +1867,75 @@
    ]
   ],
   "blocked": [],
-  "warnings": [],
+  "warnings": [
+   "FS6600-06-06-06-FG: leg 3 hex arm 0.415 barely clears the run bar corner (0.433)"
+  ],
   "cols": 78
  },
- "FS6600N": {
-  "configs": 0,
-  "ref": null,
+ "FS6600C": {
+  "configs": 1,
+  "ref": "FS6600-10-10-10-FG",
   "skipped": [
    [
     "FS6600-04-04-04-FG",
-    "no end data",
-    "female face-seal swivel not measured for -04 (FSSW_MEAS has -08; needs BRENNAN_FS6500-04-04-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6600N"
    ],
    [
     "FS6600-06-06-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
    ],
    [
     "FS6600-08-08-08-FG",
     "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS6600"
-   ],
-   [
-    "FS6600-10-10-10-FG",
-    "no end data",
-    "female face-seal swivel not measured for -10 (FSSW_MEAS has -08; needs BRENNAN_FS6500-10-10-FG, STEPS_NEEDED part 2)"
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
    ],
    [
     "FS6600-12-12-12-FG",
-    "no end data",
-    "female face-seal swivel not measured for -12 (FSSW_MEAS has -08; needs BRENNAN_FS6500-12-12-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
+   ],
+   [
+    "FS6600-16-16-16-FG",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS6600-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6600-10-10-10-FG: leg 3 hex arm 0.640 barely clears the run bar corner (0.612)"
+  ],
+  "cols": 79
+ },
+ "FS6600N": {
+  "configs": 1,
+  "ref": "FS6600-04-04-04-FG",
+  "skipped": [
+   [
+    "FS6600-06-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
+   ],
+   [
+    "FS6600-08-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
+   ],
+   [
+    "FS6600-10-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
+   ],
+   [
+    "FS6600-12-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6600NC"
    ],
    [
     "FS6600-16-16-16-FG",
@@ -1748,41 +1950,77 @@
   ],
   "blocked": [],
   "warnings": [],
-  "cols": 0
+  "cols": 74
+ },
+ "FS6600NC": {
+  "configs": 1,
+  "ref": "FS6600-12-12-12-FG",
+  "skipped": [
+   [
+    "FS6600-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6600N"
+   ],
+   [
+    "FS6600-06-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
+   ],
+   [
+    "FS6600-08-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6600"
+   ],
+   [
+    "FS6600-10-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6600C"
+   ],
+   [
+    "FS6600-16-16-16-FG",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS6600-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6600-12-12-12-FG: leg 3 hex arm 0.700 barely clears the run bar corner (0.687)"
+  ],
+  "cols": 75
  },
  "FS6602": {
-  "configs": 1,
+  "configs": 2,
   "ref": "FS6602-08-08-08-FG",
   "skipped": [
    [
     "FS6602-04-04-04-FG",
-    "no end data",
-    "female face-seal swivel not measured for -04 (FSSW_MEAS has -08; needs BRENNAN_FS6500-04-04-FG, STEPS_NEEDED part 2)"
-   ],
-   [
-    "FS6602-06-06-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6602N"
    ],
    [
     "FS6602-10-10-10-FG",
-    "no end data",
-    "female face-seal swivel not measured for -10 (FSSW_MEAS has -08; needs BRENNAN_FS6500-10-10-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
    ],
    [
     "FS6602-12-12-12-FG",
-    "no end data",
-    "female face-seal swivel not measured for -12 (FSSW_MEAS has -08; needs BRENNAN_FS6500-12-12-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
    ],
    [
     "FS6602-16-16-16-FG",
-    "no end data",
-    "female face-seal swivel not measured for -16 (FSSW_MEAS has -08; needs BRENNAN_FS6500-16-16-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
    ],
    [
     "FS6602-20-20-20-FG",
-    "no end data",
-    "female face-seal swivel not measured for -20 (FSSW_MEAS has -08; needs BRENNAN_FS6500-20-20-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
    ],
    [
     "FF6602:FF6602-6-12-12-O",
@@ -1859,44 +2097,34 @@
   "warnings": [],
   "cols": 78
  },
- "FS6602N": {
-  "configs": 0,
-  "ref": null,
+ "FS6602C": {
+  "configs": 2,
+  "ref": "FS6602-10-10-10-FG",
   "skipped": [
    [
     "FS6602-04-04-04-FG",
-    "no end data",
-    "female face-seal swivel not measured for -04 (FSSW_MEAS has -08; needs BRENNAN_FS6500-04-04-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6602N"
    ],
    [
     "FS6602-06-06-06-FG",
-    "no end data",
-    "female face-seal swivel not measured for -06 (FSSW_MEAS has -08; needs BRENNAN_FS6500-06-06-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
    ],
    [
     "FS6602-08-08-08-FG",
     "other shape family",
-    "face-seal leg shape S (stepped face-seal legs): built in master FS6602"
-   ],
-   [
-    "FS6602-10-10-10-FG",
-    "no end data",
-    "female face-seal swivel not measured for -10 (FSSW_MEAS has -08; needs BRENNAN_FS6500-10-10-FG, STEPS_NEEDED part 2)"
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
    ],
    [
     "FS6602-12-12-12-FG",
-    "no end data",
-    "female face-seal swivel not measured for -12 (FSSW_MEAS has -08; needs BRENNAN_FS6500-12-12-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
    ],
    [
     "FS6602-16-16-16-FG",
-    "no end data",
-    "female face-seal swivel not measured for -16 (FSSW_MEAS has -08; needs BRENNAN_FS6500-16-16-FG, STEPS_NEEDED part 2)"
-   ],
-   [
-    "FS6602-20-20-20-FG",
-    "no end data",
-    "female face-seal swivel not measured for -20 (FSSW_MEAS has -08; needs BRENNAN_FS6500-20-20-FG, STEPS_NEEDED part 2)"
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
    ],
    [
     "FF6602:FF6602-6-12-12-O",
@@ -1971,7 +2199,220 @@
   ],
   "blocked": [],
   "warnings": [],
-  "cols": 0
+  "cols": 79
+ },
+ "FS6602N": {
+  "configs": 1,
+  "ref": "FS6602-04-04-04-FG",
+  "skipped": [
+   [
+    "FS6602-06-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
+   ],
+   [
+    "FS6602-08-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
+   ],
+   [
+    "FS6602-10-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FS6602-12-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
+   ],
+   [
+    "FS6602-16-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6602NC"
+   ],
+   [
+    "FS6602-20-20-20-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FF6602:FF6602-6-12-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-8-8-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-10-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-12-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-10-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-12-4-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-12-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-16-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-16-16-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-20-20-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-24-20-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-24-24-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 74
+ },
+ "FS6602NC": {
+  "configs": 2,
+  "ref": "FS6602-12-12-12-FG",
+  "skipped": [
+   [
+    "FS6602-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape NK (face-seal legs with the flats = the thread major (no step), swivel nut mouth countersunk 45deg): built in master FS6602N"
+   ],
+   [
+    "FS6602-06-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
+   ],
+   [
+    "FS6602-08-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6602"
+   ],
+   [
+    "FS6602-10-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FS6602-20-20-20-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6602C"
+   ],
+   [
+    "FF6602:FF6602-6-12-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-8-8-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-10-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-10-12-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-10-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-12-4-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-10-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-12-12-8-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-16-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-16-16-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-20-20-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-24-20-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6602:FF6602-24-24-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 75
  },
  "FS6801": {
   "configs": 3,
@@ -2045,7 +2486,7 @@
    [
     "FS6801-12-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (no-step face-seal legs, stud neck below the flats): built in master FS6801NR"
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6801NR"
    ],
    [
     "FS6801-12-10-NWO-FG",
@@ -2243,7 +2684,7 @@
    [
     "FS6801-12-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (no-step face-seal legs, stud neck below the flats): built in master FS6801NR"
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6801NR"
    ],
    [
     "FS6801-12-10-NWO-FG",
@@ -2623,7 +3064,7 @@
    [
     "FS6801-12-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (no-step face-seal legs, stud neck below the flats): built in master FS6801NR"
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6801NR"
    ],
    [
     "FS6801-12-10-NWO-FG",
@@ -2779,7 +3220,7 @@
    [
     "FS6802-12-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (no-step face-seal legs, stud neck below the flats): built in master FS6802NR"
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
    ],
    [
     "FS6802-12-10-NWO-FG",
@@ -2916,7 +3357,7 @@
    [
     "FS6802-12-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (no-step face-seal legs, stud neck below the flats): built in master FS6802NR"
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
    ],
    [
     "FS6802-12-10-NWO-FG",
@@ -3181,7 +3622,7 @@
    [
     "FS6802-12-08-NWO-FG",
     "other shape family",
-    "face-seal leg shape NR (no-step face-seal legs, stud neck below the flats): built in master FS6802NR"
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
    ],
    [
     "FS6802-12-10-NWO-FG",

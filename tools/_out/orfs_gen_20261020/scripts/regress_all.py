@@ -30,9 +30,17 @@ def sw2(p):
     return [tuple(r) for r in ws.iter_rows(values_only=True)]
 
 
+def roots_live(tools, g):
+    """2026-10-20: every SPEC key the generator holds once imported - also the roots a loop derives (gen_tee <root>N / R / C ...)"""
+    code = (f"import sys, json, io, contextlib; sys.path[:0] = [{os.path.join(tools, 'generators')!r}, {tools!r}]\n"
+            f"with contextlib.redirect_stdout(io.StringIO()):\n    import {g[:-3]} as m\nprint(json.dumps(list(m.SPEC)))")
+    p = subprocess.run([sys.executable, '-I', '-c', code], env=dict(os.environ, OMI_ROOT=STAGE, OMI_REV_EXTRA=EXTRA), capture_output=True, text=True)
+    return json.loads(p.stdout.strip().splitlines()[-1]) if p.returncode == 0 else []
+
+
 out, bad = [], 0
 for kind, (g, var) in GENS.items():
-    rs = {v: roots(os.path.join(TOOLS[v], 'generators', g)) for v in TOOLS}
+    rs = {v: list(dict.fromkeys(roots(os.path.join(TOOLS[v], 'generators', g)) + roots_live(TOOLS[v], g))) for v in TOOLS}
     allr = list(dict.fromkeys(rs['old'] + rs['new']))
     for r in allr:
         res = {}

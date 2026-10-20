@@ -151,9 +151,15 @@ def main(roots, out):
                     m = M.measure_fssw(f, ax, sg, oth, pn=pnl, model=True)
                     Mt = lg['Mtip']; rmin = g(f'FSW{i}_MINR')
                     exp = dict(SEAL_a=Mi, NUTFACE_a=Mt, SEAL_TO_NUTFACE=g(f'FSW{i}_SEAL'), STEMR=g(f'FSW{i}_STEMR'), HEAD_REAR_a=Mi - g(f'FSW{i}_HEADL'),
-                               MINR=rmin, MOUTH_R=g(f'FSW{i}_CSR'), MOUTH_DEPTH=lg['cs'], TE=lg['cs'] + g(f'FSW{i}_THDL'), NUTL=g(f'FSW{i}_NUTL'),
+                               MINR=rmin, TE=lg['cs'] + g(f'FSW{i}_THDL'), NUTL=g(f'FSW{i}_NUTL'),
                                NECKR=g(f'FSW{i}_NECKR'), BODYFACE_a=Mi - g(f'FSW{i}_BODYS'), BORER=c[f'D{i}@BORE{i}'] / 2,
                                NUT_CORNER_R=c[f'NUTHEX{i}@NUTHEX{i}'] / 2)        # flats plane: the nut hex reads its A/F / 2
+                    if lg.get('cb'):      # 2026-10-20: counterbore mouth (-10 up) + 60deg countersink to the minor
+                        exp.update(CBR=g(f'FSW{i}_CBR'), CBD=g(f'FSW{i}_CBD'), CB_ANG=g(f'FSW{i}_CSANG'), CB_CS_DEPTH=lg['cs'] - g(f'FSW{i}_CBD'))
+                        n += 1
+                        if m.get('MOUTH') != 'cb': bad.append(f'leg {i} FSSW mouth {m.get("MOUTH")} (expected the counterbore)')
+                    else:
+                        exp.update(MOUTH_R=g(f'FSW{i}_CSR'), MOUTH_DEPTH=lg['cs'])
                     n += cmp(exp, m, f'leg {i} FSSW', bad)
                     # the nut hex runs from the nut face over NUTHEXL, then the skirt cone / skirt
                     hx = m['NUT_HEX_s']; n += 1

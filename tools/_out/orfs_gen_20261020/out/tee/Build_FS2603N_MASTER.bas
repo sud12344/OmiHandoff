@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_FS2603N_MASTER"
 ' ============================================================================
 '  Build_FS2603N_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
-'  ORFS Union Tee (male face seal x 3) - face-seal legs without a step (flats = thread) (tee), forged hex body (2603HX pattern).  Reference config FS2603-04-04-04-FG: FSM -04, FSM -04, FSM -04
+'  ORFS Union Tee (male face seal x 3) - face-seal legs with the flats = the thread major (no step) (tee), forged hex body (2603HX pattern).  Reference config FS2603-04-04-04-FG: FSM -04, FSM -04, FSM -04
 '  Entry: Sub BuildFS2603N.  Legs 1/2 along +X/-X, leg 3 along +Y.
 '  Builds from DesignTable_FS2603N_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.

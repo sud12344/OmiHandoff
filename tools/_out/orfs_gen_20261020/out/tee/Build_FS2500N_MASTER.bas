@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_FS2500N_MASTER"
 ' ============================================================================
 '  Build_FS2500N_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
-'  ORFS 90 deg Elbow (male face seal x male face seal) - face-seal legs without a step (flats = thread) (elbow), forged hex body (2500HX pattern).  Reference config FS2500-04-04-FG: FSM -04, FSM -04
+'  ORFS 90 deg Elbow (male face seal x male face seal) - face-seal legs with the flats = the thread major (no step) (elbow), forged hex body (2500HX pattern).  Reference config FS2500-04-04-FG: FSM -04, FSM -04
 '  Entry: Sub BuildFS2500N.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_FS2500N_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.

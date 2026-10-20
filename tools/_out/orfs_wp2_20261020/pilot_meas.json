@@ -531,6 +531,7 @@
   "MOUTH_R": 0.4095,
   "MOUTH_DEPTH": 0.0371,
   "MOUTH_ANG": 45.0,
+  "MOUTH": "cs",
   "TE": 0.4059,
   "CAV_REL": [
    [
@@ -655,6 +656,7 @@
    0.63
   ],
   "NECKR": 0.321,
+  "NECK_TAPER": 0.0,
   "BODYFACE_a": 0.635,
   "AFTER": [
    [

@@ -265,14 +265,14 @@ Sub BuildFS6500()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 2)", (UBound(cfgs) + 1) = 2
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 4)", (UBound(cfgs) + 1) = 4
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS6500-08-08-FG")
+    cx_c = Array("FS6500-06-06-FG", "FS6500-08-06-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "THDMAJR_B1@LEG1", "FSM1_THDL@LEG1", "FSMCHANG1@LEG1", "FSM1_FACER@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(1.10000, 0.37500, 0.40625, 0.45725, 45.00000, 0.35950, 1.10000, 1.92300, 0.06250, 0.03383, 0.06250, 0.37242, 0.75000, 0.59600, 0.75000, 0.63500, 0.21601, 0.43251))
-    For cx_q = 0 To 0
+    cx_w = Array(Array(0.98000, 0.37500, 0.34375, 0.39425, 45.00000, 0.29700, 0.98000, 1.52500, 0.06250, 0.03383, 0.06250, 0.30992, 0.75000, 0.53900, 0.75000, 0.41500, 0.21601, 0.43251), Array(1.10000, 0.37500, 0.40625, 0.45725, 45.00000, 0.35950, 1.10000, 1.70500, 0.06250, 0.03383, 0.06250, 0.30992, 0.75000, 0.59600, 0.75000, 0.59500, 0.21601, 0.43251))
+    For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
         swModel.ForceRebuild3 False

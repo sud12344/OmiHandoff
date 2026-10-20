@@ -31,6 +31,14 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS step 5 - 29 per-size Brennan STEPs (user upload)** (`tools\_out\orfs_gen_20261020\README.md` step 5; staged, not shipped):
+- loose parts at every size (FS0306 / FS0318 -04 ... -24, FS0319 + coned-collar master FS0319C); forged male legs -04 ... -20 and swivels -04 ... -20
+  from FS6500-NN; straights -24 (FS2403-24-24); one master per leg-shape variant (`<root>N / R / C`);
+- Brennan's FS0306 / FS0318 -10 / -24 thread bores are smaller than the basic minor: modelled at the basic minor, noted per row (tell the user);
+- FS6565-08-08: Air-Way's straight swivel lengths run to the stem seal face (L45 = Brennan seal to seal) - the straight swivel end is next;
+- checks: all static checks clean, OCP closed loops 2,636 checks 0 off, regression 99 / 99;
+- count: 1,106 shipped + 411 waiting for SolidWorks = **1,517 of 2,535** (was 1,443); ORFS 101 configurations.
+
 **2026-10-20 (cloud): ORFS generator step 4 - loose -08 parts** (`tools\_out\orfs_gen_20261020\README.md` step 4; staged, not shipped):
 - FS4000-04 ... -24 face-seal O-rings folded into the O-ring master 4000 (staging `gen_ring.py` -> `out/ring/`, 29 configurations, the 21
   old rows cell-identical); FS0306-08 locknut, FS0318-08 tube nut, FS0319-08 braze sleeve in the staging `gen_straight2.py` (`out/`);

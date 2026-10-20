@@ -466,13 +466,18 @@ SPEC.update({
 })
 # 2026-10-20 (per-size STEPs): a forged FS row whose face-seal legs have the flats = the thread major (no step, Brennan FS6500-04 / -12 / -16) is
 # another DRIVE sketch -> its own master <root>N, reading the same review table (rows sorted between the two by build_rows)
-# an adjustable-stud row whose stud neck lies below the flats (a larger body than the -08 pilot's) is a third / fourth sketch: <root>R / <root>NR
-for _r in [r_ for r_ in list(SPEC) if r_.startswith('FS') and any(l[0] == 'FSM' for l in SPEC[r_]['legs'])]:
-    SPEC[_r + 'N'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - face-seal legs without a step (flats = thread)', table=_r, nostep=True, ref=None)
-    if any(l[0] == 'NWO' for l in SPEC[_r]['legs']):
-        SPEC[_r + 'R'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - stud neck below the flats', table=_r, nwo_raised=True, ref=None)
-        SPEC[_r + 'NR'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - face-seal legs without a step, stud neck below the flats', table=_r, nostep=True,
-                               nwo_raised=True, ref=None)
+FS_CODE_WHY = dict(S='stepped face-seal legs', N='face-seal legs with the flats = the thread major (no step)', F='stud neck flush with the flats',
+                   R='stud neck below the flats', K='swivel nut mouth countersunk 45deg', C='swivel nut mouth counterbored (-10 up)', X='mixed legs')
+# the other leg-shape variants of a forged FS root (fs_code): one master each, reading the root's review table
+for _r in [r_ for r_ in list(SPEC) if r_.startswith('FS') and SPEC[r_].get('fs') and 'table' not in SPEC[r_]]:
+    _k = [l[0] for l in SPEC[_r]['legs']]
+    for _n in ([False, True] if 'FSM' in _k else [False]):
+        for _rs in ([False, True] if 'NWO' in _k else [False]):
+            for _cb in ([False, True] if 'FSSW' in _k else [False]):
+                if not (_n or _rs or _cb): continue
+                _sfx = ('N' if _n else '') + ('R' if _rs else '') + ('C' if _cb else '')
+                SPEC[_r + _sfx] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - ' + ', '.join(FS_CODE_WHY[x] for x in _sfx), table=_r, nostep=_n,
+                                       nwo_raised=_rs, fssw_cb=_cb, ref=None)
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
@@ -729,25 +734,36 @@ def fsm_nostep(dash, BR):
     return abs(G.fs_major(dash) / 2 - BR) <= FSM_NOSTEP_TOL
 
 
-FS_MASTER_SUFFIX = {'S': '', 'N': 'N', 'SF': '', 'NF': 'N', 'SR': 'R', 'NR': 'NR'}
-FS_CODE_WHY = {'S': 'stepped face-seal legs', 'N': 'face-seal legs with the flats = the thread major, no step', 'SF': 'stepped face-seal legs, stud neck flush with the flats',
-               'NF': 'no-step face-seal legs, stud neck flush with the flats', 'SR': 'stepped face-seal legs, stud neck below the flats',
-               'NR': 'no-step face-seal legs, stud neck below the flats'}
+# 2026-10-20: one DRIVE sketch per master - an FS row's leg-shape code: step S / N (face-seal legs with / without a step at the flats),
+# stud neck F / R (adjustable stud neck flush with / below the flats; roots with an NWO leg), swivel mouth K / C (45deg countersink / counterbore
+# + 60deg countersink; roots with an FSSW leg). Base master = S, F, K; the others: <root> + 'N' / 'R' / 'C' in that order (e.g. FS6500NC).
 
 
 def fs_code(sp, dd, BR, r):
     """the leg-shape code of a row (FS roots only; '' for every other root)"""
     if not sp.get('fs'): return ''
-    ns = [fsm_nostep(d, BR) for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'FSM']
+    lk = list(zip(legs4(sp), dd))
+    ns = [fsm_nostep(d, BR) for (kind, lc, bc, tc), d in lk if kind == 'FSM']
     c = 'N' if ns and all(ns) else 'S' if not any(ns) else 'X'
-    fl = [abs(NWO_FS[d]['NECKR'] - BR) <= 0.003 for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'NWO' and d in NWO_FS]
-    if any(l[0] == 'NWO' for l in sp['legs']): c += 'F' if fl and all(fl) else 'R' if fl and not any(fl) else 'X' if fl else 'F'
+    if any(l[0] == 'NWO' for l in sp['legs']):
+        fl = [abs(NWO_FS[d]['NECKR'] - BR) <= 0.003 for (kind, lc, bc, tc), d in lk if kind == 'NWO' and d in NWO_FS]
+        c += 'F' if not fl or all(fl) else 'R' if not any(fl) else 'X'
+    if any(l[0] == 'FSSW' for l in sp['legs']):
+        cb = ['CBR' in FSSW_MEAS[d] for (kind, lc, bc, tc), d in lk if kind == 'FSSW' and d in FSSW_MEAS]
+        c += 'K' if not cb or not any(cb) else 'C' if all(cb) else 'X'
     return c
 
 
 def sp_code(sp):
     if not sp.get('fs'): return ''
-    return ('N' if sp.get('nostep') else 'S') + (('R' if sp.get('nwo_raised') else 'F') if any(l[0] == 'NWO' for l in sp['legs']) else '')
+    c = 'N' if sp.get('nostep') else 'S'
+    if any(l[0] == 'NWO' for l in sp['legs']): c += 'R' if sp.get('nwo_raised') else 'F'
+    if any(l[0] == 'FSSW' for l in sp['legs']): c += 'C' if sp.get('fssw_cb') else 'K'
+    return c
+
+
+def fs_suffix(code):
+    return None if 'X' in code else ''.join(x for x in code if x in 'NRC')
 
 
 def leg_FSM(i, dash, M, BR, nostep=False):
@@ -829,8 +845,18 @@ def leg_FSBH(i, dash, M, BR, i2, i4, d17):
 # minor (13/16-16 basic minor), minor to TE, 45deg relief up to RELR at RELS, a cone down to the stem head radius STEMR at LIPS, the stem head
 # back to the seal face at SEAL, the seal face to the bore. NOT modelled (as every swivel here): the nut hex chamfers, the shallow groove in the
 # skirt (r 0.4022 over 0.127), the 0.0025 nut / stem clearance (nut and body one solid, the lip bore under the nut omitted), the O-ring.
-FSSW_MEAS = {8: dict(AF=0.938, HEXL=0.482, SKF=0.46, SKS=0.67, SKR=0.419, NUTL=0.827, NECKR=0.321, SEAL=0.433, BODYS=1.288, CSR=0.4095,
-                     TE=0.4059, RELS=0.45, RELR=0.4165, LIPS=0.63, STEMR=0.3725)}
+# 2026-10-20 (per-size STEPs): every size from the swivel leg of its own BRENNAN_FS6500-NN-NN-FG (tools/_out/orfs_steps2_20261020 fssw_table.txt, mapped as
+# the -08 entry; -08 identical). -04 ... -08: a 45deg mouth countersink from the nut face to the minor (CSR); -10 ... -20: a counterbore at the
+# nut face (CBR, CBD 0.05) and a 60deg countersink down to the minor (FSSW_CBANG) - another sketch, masters <root>C. -04 / -06: no lip bore
+# under the nut (the nut rear face meets the stem neck; modelled as every size, nut and stem one solid).
+FSSW_MEAS = {4: dict(AF=0.687, HEXL=0.337, SKF=0.335, SKS=0.504, SKR=0.294, NUTL=0.622, NECKR=0.201, SEAL=0.325, BODYS=0.975, TE=0.2947, RELS=0.342, RELR=0.2985, LIPS=0.482, STEMR=0.251, CSR=0.2835),
+             6: dict(AF=0.812, HEXL=0.392, SKF=0.4, SKS=0.572, SKR=0.3575, NUTL=0.707, NECKR=0.261, SEAL=0.375, BODYS=1.11, TE=0.3409, RELS=0.392, RELR=0.361, LIPS=0.552, STEMR=0.31, CSR=0.3465),
+             8: dict(AF=0.938, HEXL=0.482, SKF=0.46, SKS=0.67, SKR=0.419, NUTL=0.827, NECKR=0.321, SEAL=0.433, BODYS=1.288, TE=0.4059, RELS=0.45, RELR=0.4165, LIPS=0.63, STEMR=0.3725, CSR=0.4095),
+             10: dict(AF=1.125, HEXL=0.548, SKF=0.555, SKS=0.796, SKR=0.516, NUTL=0.953, NECKR=0.4085, SEAL=0.532, BODYS=1.512, TE=0.484, RELS=0.548, RELR=0.51, LIPS=0.768, STEMR=0.4615, CBR=0.51, CBD=0.05),
+             12: dict(AF=1.375, HEXL=0.599, SKF=0.68, SKS=0.863, SKR=0.608, NUTL=1.024, NECKR=0.468, SEAL=0.571, BODYS=1.691, TE=0.5356, RELS=0.587, RELR=0.6, LIPS=0.827, STEMR=0.5485, CBR=0.604, CBD=0.05),
+             16: dict(AF=1.625, HEXL=0.65, SKF=0.805, SKS=0.895, SKR=0.71, NUTL=1.095, NECKR=0.565, SEAL=0.583, BODYS=1.783, TE=0.5477, RELS=0.599, RELR=0.725, LIPS=0.859, STEMR=0.6735, CBR=0.729, CBD=0.05),
+             20: dict(AF=1.875, HEXL=0.65, SKF=0.93, SKS=0.895, SKR=0.8655, NUTL=1.095, NECKR=0.7005, SEAL=0.583, BODYS=1.783, TE=0.5376, RELS=0.599, RELR=0.86, LIPS=0.859, STEMR=0.7985, CBR=0.854, CBD=0.05)}
+FSSW_CBANG = 60.0
 FSSW_CSANG = 45.0; FSSW_RELANG = 45.0
 FSSW_ASSUME = ('female face-seal SWIVEL leg (Brennan FS6500-08-08-FG, SAE J1453): leg length = the row L21, crossing -> the stem\'s flat SEAL face (= Brennan AAA; '
                'measured - the nut face is 0.433 further out at -08, PLAN.md had read L21 as the nut face); nut hex = the row SHEX (= FF318 S, Q-FS-NUT) over '
@@ -845,44 +871,55 @@ def leg_FSSW(i, dash, M, BR, nutAF):
     m = FSSW_MEAS[dash]; thr = G.FS_THR[dash]; TM = G.fs_major(dash); P_ = 1 / G.tpi_of(thr)
     rmin = round((TM - 1.082532 * P_) / 2, 5)
     if abs(nutAF - m['AF']) > 0.007: raise AssertionError(f'row nut hex {nutAF} differs from the Brennan nut {m["AF"]} for -{dash:02d} (Q-FS-NUT: take FF318 S)')
-    cs = round((m['CSR'] - rmin) / math.tan(math.radians(FSSW_CSANG)), 5)
+    cb = 'CBR' in m
+    cs = round(((m['CBR'] - rmin) / math.tan(math.radians(FSSW_CBANG)) + m['CBD']) if cb else (m['CSR'] - rmin) / math.tan(math.radians(FSSW_CSANG)), 5)
     Rn = nutAF / math.sqrt(3); Mt = round(M + m['SEAL'], 4); sh = round(Mt - m['BODYS'], 4)
     VO = [(0.0, Rn), (m['HEXL'], Rn), (m['HEXL'], m['SKF']), (m['SKS'], m['SKR']), (m['NUTL'], m['SKR']), (m['NUTL'], m['NECKR']), (m['BODYS'], m['NECKR'])]
-    VG = [(0.0, m['CSR']), (cs, rmin), (m['TE'], rmin), (m['RELS'], m['RELR']), (m['LIPS'], m['STEMR']), (m['SEAL'], m['STEMR']), (m['SEAL'], 0.0)]
+    VG = ([(0.0, m['CBR']), (m['CBD'], m['CBR'])] if cb else [(0.0, m['CSR'])]) + [(cs, rmin), (m['TE'], rmin), (m['RELS'], m['RELR']), (m['LIPS'], m['STEMR']), (m['SEAL'], m['STEMR']), (m['SEAL'], 0.0)]
     if not (m['SKF'] < nutAF / 2 and m['SKR'] < m['SKF'] and m['NECKR'] < m['SKR'] and m['NECKR'] < BR - 0.02): raise AssertionError('radial order neck < skirt < skirt front < nut flats, neck below the body flats')
     if not (cs < m['TE'] < m['RELS'] < m['LIPS'] < m['NUTL'] < m['BODYS'] and m['TE'] < m['SEAL'] < m['LIPS']): raise AssertionError('axial order of the swivel')
-    if not (rmin < m['RELR'] and m['STEMR'] < m['RELR'] and m['RELR'] < m['SKR'] - 0.0): raise AssertionError('cavity radial order')
+    # 2026-10-20: the nut wall at the relief - the outside there is the nut hex (relief under the hex) or the rear skirt cone (FS6500-04)
+    rout = nutAF / 2 if m['RELS'] <= m['HEXL'] else m['SKF'] + (m['SKR'] - m['SKF']) * (min(m['RELS'], m['SKS']) - m['HEXL']) / (m['SKS'] - m['HEXL'])
+    if not (rmin < m['RELR'] and m['STEMR'] < m['RELR'] and m['RELR'] < rout - 0.02): raise AssertionError(f'cavity radial order / nut wall at the relief ({rout - m["RELR"]:.4f})')
+    if cb and not (rmin < m['CBR'] < m['RELR'] + 0.01 and m['CBD'] < cs < m['TE']): raise AssertionError('counterbore mouth order')
     if sh < 0.03: raise AssertionError(f'swivel leg {M} leaves no hex arm ({sh})')
     V = [(0, 0), (0, BR), (sh, BR)] + [(Mt - s_, r_) for (s_, r_) in VO[::-1]] + [(Mt - s_, r_) for (s_, r_) in VG]
-    assert len(V) == 17 and abs(V[-1][0] - M) < 1e-9
-    AX = 16; a_ = lambda s_: Mt - s_
+    assert len(V) == (18 if cb else 17) and abs(V[-1][0] - M) < 1e-9
+    AX = len(V) - 1; a_ = lambda s_: Mt - s_; o = 1 if cb else 0      # o: the counterbore shifts every cavity segment after the nut face by one
     cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5), f'FSW{i}_BODYS@LEG{i}': round(m['BODYS'] - m['SEAL'], 4), f'FSW{i}_NECKR@LEG{i}': m['NECKR'],
             f'FSW{i}_NUTL@LEG{i}': m['NUTL'], f'FSW{i}_SKIRTR@LEG{i}': m['SKR'], f'FSW{i}_SKIRTL@LEG{i}': round(m['NUTL'] - m['SKS'], 4), f'FSW{i}_SKIRTFR@LEG{i}': m['SKF'],
-            f'FSW{i}_NUTHEXL@LEG{i}': m['HEXL'], f'FSW{i}_NUTR@LEG{i}': round(Rn, 5), f'FSW{i}_SEAL@LEG{i}': m['SEAL'], f'FSW{i}_CSR@LEG{i}': m['CSR'],
+            f'FSW{i}_NUTHEXL@LEG{i}': m['HEXL'], f'FSW{i}_NUTR@LEG{i}': round(Rn, 5), f'FSW{i}_SEAL@LEG{i}': m['SEAL'], f'FSW{i}_CSR@LEG{i}': m.get('CSR'),
             f'FSW{i}_CSANG@LEG{i}': FSSW_CSANG, f'FSW{i}_MINR@LEG{i}': rmin, f'FSW{i}_THDL@LEG{i}': round(m['TE'] - cs, 5), f'FSW{i}_RELANG@LEG{i}': FSSW_RELANG,
             f'FSW{i}_RELR@LEG{i}': m['RELR'], f'FSW{i}_STEMR@LEG{i}': m['STEMR'], f'FSW{i}_HEADL@LEG{i}': round(m['LIPS'] - m['SEAL'], 4),
             f'NUTHEX{i}@NUTHEX{i}': nutAF, f'DEPTH@NUTCUT{i}': m['HEXL']}
+    if cb:
+        del cols[f'FSW{i}_CSR@LEG{i}']; cols[f'FSW{i}_CSANG@LEG{i}'] = FSSW_CBANG
+        cols[f'FSW{i}_CBR@LEG{i}'] = m['CBR']; cols[f'FSW{i}_CBD@LEG{i}'] = m['CBD']
     tcols = {f'HELIXDIA@HELIXSK_{i}': round(2 * rmin, 5), f'HEIGHT@HELIX_{i}': m['TE'], f'PITCH@HELIX_{i}': round(P_, 5),
              f'PROF_R@THDPROF_{i}': rmin, f'APEXR@THDPROF_{i}': round(rmin + 0.54127 * P_, 5), f'PROF_AX@THDPROF_{i}': Mt}
     top = max(BR, Rn)
     dims = [('len', -1, f'M{i}', M, M / 2, top + 0.8), ('rad', 1, 'BODYR', BR, sh / 2, -0.4),
-            ('pair', 2, 15, f'FSW{i}_BODYS', m['BODYS'] - m['SEAL'], (sh + M) / 2, top + 0.55), ('rad', 3, f'FSW{i}_NECKR', m['NECKR'], (sh + a_(m['NUTL'])) / 2, -0.15),
+            ('pair', 2, 15 + o, f'FSW{i}_BODYS', m['BODYS'] - m['SEAL'], (sh + M) / 2, top + 0.55), ('rad', 3, f'FSW{i}_NECKR', m['NECKR'], (sh + a_(m['NUTL'])) / 2, -0.15),
             ('pair', 4, 9, f'FSW{i}_NUTL', m['NUTL'], a_(m['NUTL'] / 2), top + 0.45), ('rad', 5, f'FSW{i}_SKIRTR', m['SKR'], a_((m['NUTL'] + m['SKS']) / 2), -0.3),
             ('len', 5, f'FSW{i}_SKIRTL', m['NUTL'] - m['SKS'], a_((m['NUTL'] + m['SKS']) / 2), top + 0.2),
             ('ptl', 7, 'False', AX, f'FSW{i}_SKIRTFR', m['SKF'], a_(m['HEXL']) - 0.05, m['SKF'] / 2),
             ('len', 8, f'FSW{i}_NUTHEXL', m['HEXL'], a_(m['HEXL'] / 2), top + 0.3), ('rad', 8, f'FSW{i}_NUTR', Rn, a_(m['HEXL'] / 2), -0.45),
-            ('pair', 9, 15, f'FSW{i}_SEAL', m['SEAL'], a_(m['SEAL'] / 2), top + 0.65),
-            ('ptl', 10, 'False', AX, f'FSW{i}_CSR', m['CSR'], Mt + 0.1, m['CSR'] / 2), ('ang', 10, AX, f'FSW{i}_CSANG', FSSW_CSANG, a_(cs / 2), m['CSR'] + 0.08),
-            ('rad', 11, f'FSW{i}_MINR', rmin, a_((cs + m['TE']) / 2), -0.6), ('len', 11, f'FSW{i}_THDL', m['TE'] - cs, a_((cs + m['TE']) / 2), top + 0.1),
-            ('ang', 12, AX, f'FSW{i}_RELANG', FSSW_RELANG, a_((m['TE'] + m['RELS']) / 2), rmin + 0.05),
-            ('ptl', 12, 'True', AX, f'FSW{i}_RELR', m['RELR'], a_(m['RELS']) - 0.03, m['RELR'] / 2),
-            ('rad', 14, f'FSW{i}_STEMR', m['STEMR'], a_((m['SEAL'] + m['LIPS']) / 2), -0.75),
-            ('len', 14, f'FSW{i}_HEADL', m['LIPS'] - m['SEAL'], a_((m['SEAL'] + m['LIPS']) / 2), top + 0.15)]
+            ('pair', 9, 15 + o, f'FSW{i}_SEAL', m['SEAL'], a_(m['SEAL'] / 2), top + 0.65)]
+    if cb:      # 2026-10-20: counterbore (segment 10) -> 60deg countersink (11) -> minor (12)
+        dims += [('rad', 10, f'FSW{i}_CBR', m['CBR'], a_(m['CBD'] / 2), -0.5), ('len', 10, f'FSW{i}_CBD', m['CBD'], a_(m['CBD'] / 2), top + 0.05),
+                 ('ang', 11, AX, f'FSW{i}_CSANG', FSSW_CBANG, a_((m['CBD'] + cs) / 2), m['CBR'] + 0.08)]
+    else:
+        dims += [('ptl', 10, 'False', AX, f'FSW{i}_CSR', m['CSR'], Mt + 0.1, m['CSR'] / 2), ('ang', 10, AX, f'FSW{i}_CSANG', FSSW_CSANG, a_(cs / 2), m['CSR'] + 0.08)]
+    dims += [('rad', 11 + o, f'FSW{i}_MINR', rmin, a_((cs + m['TE']) / 2), -0.6), ('len', 11 + o, f'FSW{i}_THDL', m['TE'] - cs, a_((cs + m['TE']) / 2), top + 0.1),
+             ('ang', 12 + o, AX, f'FSW{i}_RELANG', FSSW_RELANG, a_((m['TE'] + m['RELS']) / 2), rmin + 0.05),
+             ('ptl', 12 + o, 'True', AX, f'FSW{i}_RELR', m['RELR'], a_(m['RELS']) - 0.03, m['RELR'] / 2),
+             ('rad', 14 + o, f'FSW{i}_STEMR', m['STEMR'], a_((m['SEAL'] + m['LIPS']) / 2), -0.75),
+             ('len', 14 + o, f'FSW{i}_HEADL', m['LIPS'] - m['SEAL'], a_((m['SEAL'] + m['LIPS']) / 2), top + 0.15)]
     mm = dict(m, MINR=rmin, CAVEND=m['LIPS'])
     return dict(kind='FSSW', dash=dash, V=V, endlen=m['BODYS'], cols=cols, tcols=tcols, dims=dims, rmax=nutAF / 2, nut_af=nutAF,
                 thr=thr + ' UN (female O-ring face-seal swivel, SAE J1453)',
                 thread=dict(type='HELIX', r=rmin, height=m['TE'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True),
-                tipR=m['STEMR'], Mtip=Mt, s_seal=m['SEAL'], m=mm, cs=cs, Rn=Rn)
+                tipR=m['STEMR'], Mtip=Mt, s_seal=m['SEAL'], m=mm, cs=cs, Rn=Rn, cb=cb)
 
 
 # 2026-10-18 (genfeat flange, Q-NEW-FLG61LEG / Q-NEW-FLG62LEG): FLANGE LEG of a forged elbow. The head is the end library's: code 61 =
@@ -1842,8 +1879,8 @@ def build_rows(root):
         # F / R = the adjustable stud's neck flush with the flats (the -08 pilot) / below them (a larger body)
         _code = fs_code(sp, dd, BR, r)
         if _code != sp_code(sp):
-            _m = FS_MASTER_SUFFIX.get(_code)
-            skipped.append((pn, 'other shape family', f'face-seal leg shape {_code} ({FS_CODE_WHY.get(_code, "mixed")}): ' +
+            _m = fs_suffix(_code)
+            skipped.append((pn, 'other shape family', f'face-seal leg shape {_code} (' + ', '.join(FS_CODE_WHY[x] for x in _code) + '): ' +
                             (f'built in master {sp.get("table", root)}{_m}' if _m is not None else 'no master yet (one sketch per master)'))); continue
         # male NPTF: the thread cylinder at its vanish point (radius rL) must sit inside the hex flats with a real shoulder
         for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):

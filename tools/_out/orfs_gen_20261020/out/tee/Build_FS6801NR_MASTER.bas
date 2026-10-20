@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_FS6801NR_MASTER"
 ' ============================================================================
 '  Build_FS6801NR_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
-'  ORFS 90 deg Male Face Seal x Adjustable Male ORB Elbow - face-seal legs without a step, stud neck below the flats (elbow), forged hex body (2500HX pattern).  Reference config FS6801-12-08-NWO-FG: FSM -12, NWO -08
+'  ORFS 90 deg Male Face Seal x Adjustable Male ORB Elbow - face-seal legs with the flats = the thread major (no step), stud neck below the flats (elbow), forged hex body (2500HX pattern).  Reference config FS6801-12-08-NWO-FG: FSM -12, NWO -08
 '  Entry: Sub BuildFS6801NR.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_FS6801NR_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.

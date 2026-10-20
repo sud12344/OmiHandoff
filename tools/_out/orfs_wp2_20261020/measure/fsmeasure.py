@@ -239,6 +239,13 @@ def measure_fssw(p, axis, sign, others=(), pn=2, model=False):
     o['SEAL_TO_NUTFACE'] = R4(anut - aseal)
     s_ = lambda a: R4(anut - a)
     cs = cav[-1]; o['MOUTH_R'] = R4(cs['q'][1]); o['MOUTH_DEPTH'] = s_(cs['p'][0]); o['MOUTH_ANG'] = A(cs)
+    if H(cs) and len(cav) >= 2 and cav[-2]['k'] == 'L' and 50 < A(cav[-2]) < 70:
+        # 2026-10-20 (per-size STEPs FS6500-10 ... -20): a counterbore at the nut face (radius CBR, depth CBD) behind which a 60deg countersink
+        # runs down to the thread minor (-04 / -06 / -08: a 45deg countersink straight from the nut face)
+        k_ = cav[-2]; o['MOUTH'] = 'cb'; o['CBR'] = R4(cs['p'][1]); o['CBD'] = R4(abs(cs['q'][0] - cs['p'][0])); o['CB_ANG'] = A(k_)
+        o['CB_CS_DEPTH'] = R4(abs(k_['q'][0] - k_['p'][0]))
+    else:
+        o['MOUTH'] = 'cs'
     o['TE'] = s_(o['MIN_a'][0])                                                # nut face -> end of the minor
     rel = [e for e in cav if e['k'] == 'L' and e['p'][0] < o['MIN_a'][0] + TOL and e is not mn]
     o['CAV_REL'] = [(A(e), s_(e['p'][0]), R4(e['p'][1]), s_(e['q'][0]), R4(e['q'][1])) for e in rel]
@@ -247,7 +254,8 @@ def measure_fssw(p, axis, sign, others=(), pn=2, model=False):
     i_out0 = i
     while True:
         e = E[i]; outside.append(e); i += 1
-        if V(e) and e['q'][1] < e['p'][1] - 0.03 and e['p'][0] < anut - 0.2: break      # the nut rear face (radial, falling)
+        # the nut rear face (radial, falling, down below the stem head radius - 2026-10-20: the -20 skirt groove wall also falls 0.035)
+        if V(e) and e['q'][1] < e['p'][1] - 0.03 and e['p'][0] < anut - 0.2 and e['q'][1] < o['STEMR'] + 0.02: break
     o['NUT_OUTSIDE'] = [(e['k'], A(e), s_(e['p'][0]), R4(e['p'][1]), s_(e['q'][0]), R4(e['q'][1])) for e in outside]
     corner = max(outside, key=lambda e: max(e['p'][1], e['q'][1]))
     o['NUT_CORNER_R'] = R4(max(corner['p'][1], corner['q'][1]))
@@ -256,10 +264,16 @@ def measure_fssw(p, axis, sign, others=(), pn=2, model=False):
     o['NUT_REAR_s'] = s_(outside[-1]['p'][0]); o['NUTL'] = o['NUT_REAR_s']
     o['NUT_REAR_R'] = (R4(outside[-1]['q'][1]), R4(outside[-1]['p'][1]))
     # lip bore and the neck to the body face
-    if not model:
-        e = E[i]; assert H(e), ('lip bore', _fmt(E[i:i + 2])); o['LIPR'] = R4(e['p'][1]); o['LIP_s'] = (s_(e['p'][0]), s_(e['q'][0])); i += 1
+    nearH = lambda e: e['k'] == 'L' and A(e) is not None and A(e) < 1.0 and abs(e['p'][0] - e['q'][0]) > 0.05
+    if not model and H(E[i]) and E[i]['q'][0] > E[i]['p'][0]:
+        # the lip bore under the nut runs back toward the seal (-08 ... -20), then a small radial step to the stem neck
+        e = E[i]; o['LIPR'] = R4(e['p'][1]); o['LIP_s'] = (s_(e['p'][0]), s_(e['q'][0])); i += 1
         while V(E[i]) and abs(E[i]['q'][1] - E[i]['p'][1]) < 0.01: i += 1
-    e = E[i]; assert H(e), ('neck', _fmt(E[i:i + 2])); o['NECKR'] = R4(e['p'][1]); o['BODYFACE_a'] = R4(e['q'][0]); i += 1
+    elif not model:
+        # 2026-10-20 (FS6500-04 / -06): no lip bore - the nut rear face meets the neck, which tapers by ~0.0015 to the body face
+        o['LIPR'] = None
+    e = E[i]; assert H(e) or (nearH(e) and not model), ('neck', _fmt(E[i:i + 2]))
+    o['NECKR'] = R4(min(e['p'][1], e['q'][1])); o['NECK_TAPER'] = R4(abs(e['p'][1] - e['q'][1])) if not H(e) else 0.0; o['BODYFACE_a'] = R4(e['q'][0]); i += 1
     o['AFTER'] = _fmt(E[i:i + 3])
     o['RINGS'] = [dict(a=R4(x), rc=R4(y), W=R4(2 * R)) for x, y, R in rings]
     return o
