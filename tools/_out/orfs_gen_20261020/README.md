@@ -1,6 +1,6 @@
 # ORFS generator end functions (2026-10-20, cloud session) - STAGING, work in progress
 
-**Status:** staged. Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
+**Status:** staged (steps 1-4 done). Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
 - **Toolset:** `tools/` = a copy of the merged batch-17 toolset (`tools/_out/genfeat_20261018/merged/tools`) plus the ORFS additions below.
 - **Plan:** `tools/_out/orfs_modeltype_20261016/PLAN.md`.
 - **End data:** `tools/_out/orfs_wp2_20261020/end_lib_08.json` (extractors + validation on the Brennan pilots).
@@ -110,6 +110,34 @@ When it is unset, the behaviour is unchanged.
 - **ORFS total now:** 24 configurations: 5 straights + 19 forged in 17 masters.
 - **FS6809** (face-seal swivel + adjustable stud) has no -08 row yet and is not given a SPEC.
 
+## Step 4 (done): loose -08 parts - face-seal O-rings FS4000, nuts FS0306 / FS0318, braze sleeve FS0319
+- **`gen_ring.py`** (new staging copy of `tools/_out/newtypes_20261014/generators/gen_ring.py`):
+  - `LIVE` = the tools/ folder it sits in (was the Windows path; `GR_TOOLS` overrides);
+  - a table missing from `GR_REV` is looked up in `OMI_REV_EXTRA`; SPEC 4000 reads `4000`, `4001` and `FS4000`;
+  - the O-ring spot check keeps the largest ring (the FS rows come last in the table).
+  - Run: `GR_REV=tools/_out/newtypes_20261014/review_tables OMI_REV_EXTRA=... python -I tools/generators/gen_ring.py 4000` -> `out/ring/`.
+  - 29 configurations: the 21 rows 4000 / 4001 cell-identical to the old generator, + FS4000-04 ... -24 (SAE J1453 face-seal O-rings, all 8
+    sizes: the O-ring needs no STEP). The sleeve TEST root 0319T is identical too.
+- **`gen_straight2.py`** (loose nuts and the sleeve, -08 only - every other size needs its own STEP, see below):
+  - `FSLOCK_RCS` / `FSNUT_MEAS` / `FSSLEEVE_MEAS` (measured on BRENNAN_FS0306-08 / FS0318-08 / FS0319-08);
+  - `end_FSNUTCSA` / `end_FSNUTCSB` (locknut countersinks + the through thread), `end_FSNUTF` (tube-nut thread pocket to the lip face),
+    `end_FSSLV` (sleeve: tube-side face, 15 deg taper, spigot, step up to the collar; the braze bore is its pocket) + its dimension block;
+  - SPECs FS0306 (hex S4 / thickness h2), FS0318 (hex S / length h, lip bore 0.652 through the back face), FS0319 (round, L / d8; the
+    tube-stop bore 0.378 from the seal face to the braze-bore bottom);
+  - the FS thread check covers the nut ends; FS0318 / FS0319 End B labels name the lip bore / seal face (not "plug head"); the sleeve's own wall
+    checks; the generic "port drill depth near the far tip" warning is off for the sleeve (the stop lip is by design).
+  - Not modelled (in each row's `$PRP@AxialSource`): threads (suppressed as always), hex end chamfers, the FS0318 thread relief + mouth
+    countersink, the FS0319 inner chamfers + spigot fillet. FS0319: collar length and stop lip held from the seal face (Air-Way L 0.37 vs pilot 0.374).
+- **Checks** (`checks/static_checks_loose.txt`): vbacheck 4 / 4 OK; dofcheck_straight 3 / 3 fully defined, 0 redundant; allcfg 0 problems;
+  regression 99 / 99 existing roots identical.
+- **OCP closed loop** (`scripts/closed_loop_fs_loose.py` -> `ocp/closed_loop_loose.txt`): 3 configurations, 59 checks, 0 off - each rebuild
+  read with the same extractor as its pilot (`measure_nut` / `measure_sleeve`) returns the row and the pilot (hex and length within the
+  Air-Way rounding); volumes vs the Brennan pilots +2.18 % / +2.9 % / +1.34 % (the unmodelled chamfers).
+- **ORFS total now:** 27 configurations in 20 masters + 8 FS4000 O-rings in the 4000 master = **35**; `count_20261020`: 1,443 of 2,535 ready
+  after SolidWorks (was 1,432).
+- **Other sizes of FS0306 / FS0318 / FS0319 need their own STEP** (BRENNAN_FS0306-NN, FS0318-NN, FS0319-NN): the -08 countersink / lip / sleeve
+  shapes are not scaled to other sizes (the JIC 0306 precedent was measured per size). FS0319-24 stays held (Air-Way / Brennan OD conflict, D5).
+
 ## Blocked: the female swivel on the STRAIGHTS (FS6540 / FS6504 / FS6505 / FS6565) needs one STEP
 - On the forged FS6500-08-08-FG pilot, Air-Way L21 (= Brennan AAA) runs from the crossing to the stem's SEAL face; the nut face is 0.433
   further out. PLAN.md had read the drawings as "to the nut face", for the straights as well.
@@ -121,12 +149,9 @@ When it is unset, the behaviour is unchanged.
 - **Needs BRENNAN_FS6540-08-08-O or BRENNAN_FS6565-08-08** (STEPS_NEEDED part 4 lists FS6565-08-08 as optional; it now decides 20 rows).
 
 ## Next
-- **SolidWorks dry run of FS2403 / FS6400** (CLAUDE.md verify loop, PC): the first FS masters. Unknowns:
-  - the Thread feature on the face-seal end;
-  - the bore-cut face pick on the land.
-- **SolidWorks dry runs of the 12 forged FS masters.** The open point is PLAN risk R1: the end face where the thread steps down to the flats
-  (between the flats and the hex corners) is the shape that broke 2702 / 2703 -16 once.
-- Nut / lock nut / sleeve masters (FS0318 / FS0306 / FS0319).
-- the female face-seal swivel end FSSW (straights FS6540 / FS6505 / FS6504 / FS6565);
-- the gen_tee legs (FSM on forged legs with the step run-out, FSBH, FSSW, NWO_FS);
-- nut / lock nut / sleeve.
+- **SolidWorks dry runs on the PC** (CLAUDE.md verify loop; `TABLE_PATH` -> this `out/` folder), in this order:
+  - FS2403 / FS6400 (the first FS masters: the Thread feature on the face-seal end, the bore-cut face pick on the land);
+  - the 15 forged FS masters in `out/tee/` (PLAN risk R1: the end face where the thread steps down to the flats);
+  - FS0306 / FS0318 / FS0319 (`out/`) and the O-ring master 4000 (`out/ring/`, 29 configurations; the 21 old rows dry-ran clean 2026-10-14).
+- The female face-seal swivel on the straights (FS6540 / FS6505 / FS6504 / FS6565): needs the STEP above.
+- More sizes: per-size Brennan STEPs (STEPS_NEEDED part 4, E1-E8) for the male end, the swivel, the nuts and the sleeve.

@@ -291,5 +291,167 @@
   "blocked": [],
   "verts": 17,
   "cols": 42
+ },
+ "FS0306": {
+  "configs": 1,
+  "ref": "FS0306-08",
+  "skipped": [
+   [
+    "FS0306-04",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -04: needs BRENNAN_FS0306-04')"
+   ],
+   [
+    "FS0306-06",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -06: needs BRENNAN_FS0306-06')"
+   ],
+   [
+    "FS0306-10",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -10: needs BRENNAN_FS0306-10')"
+   ],
+   [
+    "FS0306-12",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -12: needs BRENNAN_FS0306-12')"
+   ],
+   [
+    "FS0306-16",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -16: needs BRENNAN_FS0306-16')"
+   ],
+   [
+    "FS0306-20",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -20: needs BRENNAN_FS0306-20')"
+   ],
+   [
+    "FS0306-24",
+    "no end data",
+    "KeyError('face-seal locknut countersink not measured for -24: needs BRENNAN_FS0306-24')"
+   ],
+   [
+    "FS0306-32",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "verts": 8,
+  "cols": 24
+ },
+ "FS0318": {
+  "configs": 1,
+  "ref": "FS0318-08",
+  "skipped": [
+   [
+    "FS0318-04",
+    "no end data",
+    "KeyError('face-seal nut not measured for -04: needs BRENNAN_FS0318-04')"
+   ],
+   [
+    "FS0318-06",
+    "no end data",
+    "KeyError('face-seal nut not measured for -06: needs BRENNAN_FS0318-06')"
+   ],
+   [
+    "FS0318-10",
+    "no end data",
+    "KeyError('face-seal nut not measured for -10: needs BRENNAN_FS0318-10')"
+   ],
+   [
+    "FS0318-12",
+    "no end data",
+    "KeyError('face-seal nut not measured for -12: needs BRENNAN_FS0318-12')"
+   ],
+   [
+    "FS0318-16",
+    "no end data",
+    "KeyError('face-seal nut not measured for -16: needs BRENNAN_FS0318-16')"
+   ],
+   [
+    "FS0318-20",
+    "no end data",
+    "KeyError('face-seal nut not measured for -20: needs BRENNAN_FS0318-20')"
+   ],
+   [
+    "FS0318-24",
+    "no end data",
+    "KeyError('face-seal nut not measured for -24: needs BRENNAN_FS0318-24')"
+   ],
+   [
+    "FS0318-32",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 4,
+  "cols": 21
+ },
+ "FS0319": {
+  "configs": 1,
+  "ref": "FS0319-08",
+  "skipped": [
+   [
+    "FS0319-04",
+    "no end data",
+    "KeyError('face-seal braze sleeve not measured for -04: needs BRENNAN_FS0319-04')"
+   ],
+   [
+    "FS0319-06",
+    "no end data",
+    "KeyError('face-seal braze sleeve not measured for -06: needs BRENNAN_FS0319-06')"
+   ],
+   [
+    "FS0319-10",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS0319-12",
+    "no end data",
+    "KeyError('face-seal braze sleeve not measured for -12: needs BRENNAN_FS0319-12')"
+   ],
+   [
+    "FS0319-16",
+    "no end data",
+    "KeyError('face-seal braze sleeve not measured for -16: needs BRENNAN_FS0319-16')"
+   ],
+   [
+    "FS0319-20",
+    "no end data",
+    "KeyError('face-seal braze sleeve not measured for -20: needs BRENNAN_FS0319-20')"
+   ],
+   [
+    "FS0319-24",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS0319-32",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF319:FF319-4-5 UNPL",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF319:FF319-6-4 UNPL",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF319:FF319-6-5 UNPL",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 7,
+  "cols": 19
  }
 }

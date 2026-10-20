@@ -31,6 +31,13 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS generator step 4 - loose -08 parts** (`tools\_out\orfs_gen_20261020\README.md` step 4; staged, not shipped):
+- FS4000-04 ... -24 face-seal O-rings folded into the O-ring master 4000 (staging `gen_ring.py` -> `out/ring/`, 29 configurations, the 21
+  old rows cell-identical); FS0306-08 locknut, FS0318-08 tube nut, FS0319-08 braze sleeve in the staging `gen_straight2.py` (`out/`);
+- vbacheck 4 / 4, dofcheck 3 / 3, allcfg 0, regression 99 / 99; OCP closed loop 59 checks, 0 off, against the rows and the Brennan pilots;
+- other FS0306 / FS0318 / FS0319 sizes need their own Brennan STEP; FS0319-24 held (D5);
+- count (`tools/_out/count_20261020/count_ready.py`): 1,106 shipped + 337 waiting for SolidWorks = 1,443 of 2,535 (was 1,432); 1,092 not yet.
+
 **2026-10-20 (cloud): ORFS generator step 3 - forged face-seal swivel leg** (FS6500 / FS6600 / FS6602 -08 build):
 - leg length = Air-Way L21 to the seal face, nut face +0.433;
 - regression 99 / 99; dofcheck 37 / 37 legs; OCP closed loop 589 + 122 checks, 0 off;

@@ -1,0 +1,18 @@
+# 2026-10-20 static checks of the loose ORFS parts (staging tools tools/_out/orfs_gen_20261020/tools, outputs out/ and out/ring/)
+## vbacheck
+tools/_out/orfs_gen_20261020/out/Build_FS0306_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS0318_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS0319_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/ring/Build_4000_MASTER.bas 6 procedures OK
+## dofcheck_straight
+Build_FS0306_MASTER.bas {'points': 8, 'unknowns': 16, 'constraints': 16, 'rank': 16, 'dims': 9, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS0318_MASTER.bas {'points': 4, 'unknowns': 8, 'constraints': 8, 'rank': 8, 'dims': 2, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS0319_MASTER.bas {'points': 7, 'unknowns': 14, 'constraints': 14, 'rank': 14, 'dims': 6, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+## allcfg_check
+FS0306   1 configs  outline problems: 0 []
+FS0318   1 configs  outline problems: 0 []
+FS0319   1 configs  outline problems: 0 []
+## O-ring master 4000 (gen_ring): old generator (tools/_out/newtypes_20261014/generators/gen_ring.py, LIVE path pointed at tools/) vs the staging copy, same review tables
+21 old configurations: SW2 cells identical; 8 added (FS4000-04 ... -24); macro diff = the description line, the expected configuration count and the 8 added size-check rows (spot check still 4000-02 / 4001-32)
+sleeve TEST root 0319T (GR_TEST=1): macro and SW2 identical
+## regression (scripts/regress_all.py): 0 root(s) differ or lost, 99 identical
