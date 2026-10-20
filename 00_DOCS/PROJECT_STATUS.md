@@ -22,6 +22,11 @@ prints a value, including the numbers of OMi's website file. Stage + evidence: `
   1.00 < pocket), 6504-24-24 D1 1.312 (Air-Way 1.38 >= tip 1.381), 6565-10-10 nut hexes 1.000 (Air-Way 0.94 vs the Brennan nut) - Brennan TFA
   catalog values = the values built now; rows marked `$PRP@DimSource` BRENNAN + `[BRENNAN-CELL 2026-10-20: <col>]`. 6405-24-16-O D3 follows
   the rule (Air-Way 1.14). Kept at OMi: 6504-06-08 bores (Air-Way garbled). Now 320 cells to Air-Way, 236 configurations, 26 roots (+6565).
+- **Q2 (user 2026-10-20: option C):** check the look-at cells against the two review PDFs first, then send Triveni the rest. Drafted (not
+  sent): `10_DRAWINGS\for_OMi_2026-10-20\` - `AirWay_values_to_confirm_2026-10-20.xlsx` (40 rows: AW / BI per row; column I "PDF check" is
+  internal - fill it from the PDFs, delete the settled rows and the column) + `Email_to_Triveni_2026-10-20.txt`. None of these cells is on a
+  configuration that was in the dimension-check drawings (one -08 size per series), so the PDFs will mostly tell the rule, not the cells.
+  Batch 18 waits for the answer on these cells (or ships them as staged = Air-Way, if the user decides so).
 - **Look at (43 cells, `checks\look_at.csv`):** 6405 bores where Air-Way's D equals the tap drill ("column bleed"), 6405 L31 values flagged
   suspect in 2026-09, 5502-20-20-FG / -24-24-FG N, 6410-12-08-O 1.48 -> 1.09 and other moves > 0.15 in.
 - DataStatus unchanged (6500-08-06-FG back to VERIFIED: its logged OMi downgrade undone).

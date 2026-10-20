@@ -1,0 +1,30 @@
+DRAFT - not sent. Before sending: check the two "Review of Drawings" PDFs against the attached list and delete every row their AW / BI
+marks already answer (column I "PDF check" is for that; delete column I before sending).
+
+To: Triveni (OM Industrial)
+Subject: Air-Way values to confirm before the next model update
+
+Hi Triveni,
+
+Thank you for the drawing review. We are switching the models to Air-Way dimensions wherever Air-Way has them, as you asked, including the
+numbers that came from your website parts file.
+
+On most parts that is straightforward. On the parts in the attached sheet, Air-Way's printed value looks doubtful, so we would like you
+to confirm which value to use before we update them:
+
+- 6405 (ORB x female pipe): several bores where Air-Way's bore equals the pipe tap drill (it looks like the tap-drill column was printed in
+  the bore column), and several overall lengths that differ from the Brennan / website values, two of them exactly 1.00.
+- 5502-20-20-FG and 5502-24-24-FG: Air-Way's forged leg length is 0.35-0.37 in longer than the plain part of the same size.
+- 6410-08-04-O, 6410-12-08-O, 6410-16-10-O, 6404-06-04, 6404-06-08: overall lengths 0.2 to 0.5 in shorter on Air-Way.
+- A few others (2705, 2706, 5502 hex, 6410-16-16-O, 6505, 6506) that differ by about 0.16 to 0.32 in.
+
+For each row, please mark AW (use Air-Way) or BI (use Brennan / your website value) in column H.
+
+Three parts cannot be made with Air-Way's value at all, so we are using Brennan's there:
+- 6405-24-16-O overall length (Air-Way 1.00 is shorter than the 1" pipe port)
+- 6504-24-24 bore (Air-Way 1.38 is as large as the -24 tip)
+- 6565-10-10 nut hex (Air-Way 0.94; the -10 swivel nut is 1.000)
+Please let us know if you see it differently.
+
+Best regards,
+Sudhanva
