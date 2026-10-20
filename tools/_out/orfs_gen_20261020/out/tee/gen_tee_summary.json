@@ -414,6 +414,109 @@
   ],
   "cols": 47
  },
+ "FS2601": {
+  "configs": 3,
+  "ref": "FS2601-08-08-08-FG",
+  "skipped": [
+   [
+    "FS2601-04-04-02-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2601N"
+   ],
+   [
+    "FS2601-06-06-04-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-08-08-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-12-12-12-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2601N"
+   ],
+   [
+    "FS2601-16-16-16-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-24-24-24-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 63
+ },
+ "FS2601N": {
+  "configs": 2,
+  "ref": "FS2601-04-04-04-FG",
+  "skipped": [
+   [
+    "FS2601-04-04-02-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-06-06-04-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-06-06-06-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2601"
+   ],
+   [
+    "FS2601-08-08-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-08-08-08-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2601"
+   ],
+   [
+    "FS2601-10-10-08-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2601"
+   ],
+   [
+    "FS2601-16-16-16-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2601-24-24-24-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 59
+ },
  "FS2603": {
   "configs": 4,
   "ref": "FS2603-08-08-08-FG",
@@ -1835,6 +1938,184 @@
    "FS6500-12-12-FG: leg 2 hex arm 0.700 barely clears the corner puck (radius 0.687)"
   ],
   "cols": 63
+ },
+ "FS6502": {
+  "configs": 1,
+  "ref": "FS6502-08-08-FG",
+  "skipped": [
+   [
+    "FS6502-04-04-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6502-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6502C"
+   ],
+   [
+    "FS6502-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
+   ],
+   [
+    "FS6502-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
+   ],
+   [
+    "FS6502-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6502-24-24-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [
+   "FS6502-06-06-FG: leg 1: the corner puck (radius 0.433) reaches past the swivel body face (0.325) outside the neck (0.286 off the axis vs neck radius 0.261) or into the swivel slot (starts 0.883)"
+  ],
+  "warnings": [],
+  "cols": 64
+ },
+ "FS6502C": {
+  "configs": 0,
+  "ref": null,
+  "skipped": [
+   [
+    "FS6502-04-04-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6502-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
+   ],
+   [
+    "FS6502-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
+   ],
+   [
+    "FS6502-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
+   ],
+   [
+    "FS6502-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
+   ],
+   [
+    "FS6502-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6502-24-24-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [
+   "FS6502-10-10-FG: leg 1: the corner puck (radius 0.613) reaches past the swivel body face (0.460) outside the neck (0.405 off the axis vs neck radius 0.408) or into the swivel slot (starts 1.204); leg 2: the corner puck buries the inner thread edge (margin -0.0248)"
+  ],
+  "warnings": [],
+  "cols": 0
+ },
+ "FS6502N": {
+  "configs": 0,
+  "ref": null,
+  "skipped": [
+   [
+    "FS6502-04-04-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6502-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
+   ],
+   [
+    "FS6502-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
+   ],
+   [
+    "FS6502-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6502C"
+   ],
+   [
+    "FS6502-12-12-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
+   ],
+   [
+    "FS6502-16-16-FG",
+    "other shape family",
+    "face-seal leg shape NC (face-seal legs with the flats = the thread major (no step), swivel nut mouth counterbored (-10 up)): built in master FS6502NC"
+   ],
+   [
+    "FS6502-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6502-24-24-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 0
+ },
+ "FS6502NC": {
+  "configs": 0,
+  "ref": null,
+  "skipped": [
+   [
+    "FS6502-04-04-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6502-06-06-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
+   ],
+   [
+    "FS6502-08-08-FG",
+    "other shape family",
+    "face-seal leg shape SK (stepped face-seal legs, swivel nut mouth countersunk 45deg): built in master FS6502"
+   ],
+   [
+    "FS6502-10-10-FG",
+    "other shape family",
+    "face-seal leg shape SC (stepped face-seal legs, swivel nut mouth counterbored (-10 up)): built in master FS6502C"
+   ],
+   [
+    "FS6502-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6502-24-24-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [
+   "FS6502-12-12-FG: leg 1: the corner puck (radius 0.686) reaches past the swivel body face (0.360) outside the neck (0.584 off the axis vs neck radius 0.468) or into the swivel slot (starts 1.224)",
+   "FS6502-16-16-FG: leg 1: the corner puck (radius 0.830) reaches past the swivel body face (0.320) outside the neck (0.766 off the axis vs neck radius 0.565) or into the swivel slot (starts 1.244)"
+  ],
+  "warnings": [],
+  "cols": 0
  },
  "FS6600": {
   "configs": 2,

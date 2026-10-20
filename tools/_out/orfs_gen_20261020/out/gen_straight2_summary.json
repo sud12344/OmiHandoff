@@ -282,6 +282,174 @@
   "verts": 17,
   "cols": 42
  },
+ "FS2404": {
+  "configs": 5,
+  "ref": "FS2404-08-08",
+  "skipped": [
+   [
+    "FS2404-04-02",
+    "no end data",
+    "KeyError('no -04 entry in the FSM end library; needs the male O-ring face-seal end of -04 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-04-04 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[4] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-04-04",
+    "no end data",
+    "KeyError('no -04 entry in the FSM end library; needs the male O-ring face-seal end of -04 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-04-04 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[4] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-04-06",
+    "no end data",
+    "KeyError('no -04 entry in the FSM end library; needs the male O-ring face-seal end of -04 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-04-04 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[4] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-04-08",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2404-06-02",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FS2404-06-04",
+    "no end data",
+    "KeyError('no -06 entry in the FSM end library; needs the male O-ring face-seal end of -06 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-06-06 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[6] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-06-06",
+    "no end data",
+    "KeyError('no -06 entry in the FSM end library; needs the male O-ring face-seal end of -06 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-06-06 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[6] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-06-08",
+    "no end data",
+    "KeyError('no -06 entry in the FSM end library; needs the male O-ring face-seal end of -06 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-06-06 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[6] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-10-08",
+    "no end data",
+    "KeyError('no -10 entry in the FSM end library; needs the male O-ring face-seal end of -10 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-10-10 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[10] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-10-12",
+    "no end data",
+    "KeyError('no -10 entry in the FSM end library; needs the male O-ring face-seal end of -10 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-10-10 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[10] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-12-08",
+    "no end data",
+    "KeyError('no -12 entry in the FSM end library; needs the male O-ring face-seal end of -12 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-12-12 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[12] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-12-12",
+    "no end data",
+    "KeyError('no -12 entry in the FSM end library; needs the male O-ring face-seal end of -12 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-12-12 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[12] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-12-16",
+    "no end data",
+    "KeyError('no -12 entry in the FSM end library; needs the male O-ring face-seal end of -12 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-12-12 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[12] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-16-12",
+    "no end data",
+    "KeyError('no -16 entry in the FSM end library; needs the male O-ring face-seal end of -16 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-16-16 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[16] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-16-16",
+    "no end data",
+    "KeyError('no -16 entry in the FSM end library; needs the male O-ring face-seal end of -16 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-16-16 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[16] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-16-20",
+    "no end data",
+    "KeyError('no -16 entry in the FSM end library; needs the male O-ring face-seal end of -16 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-16-16 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[16] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-20-16",
+    "no end data",
+    "KeyError('no -20 entry in the FSM end library; needs the male O-ring face-seal end of -20 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-20-20 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[20] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-20-20",
+    "no end data",
+    "KeyError('no -20 entry in the FSM end library; needs the male O-ring face-seal end of -20 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-20-20 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[20] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS2404-32-32",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FF2404:FF2404-4-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2404:FF2404-10-6-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 16,
+  "cols": 41
+ },
+ "FS6403": {
+  "configs": 1,
+  "ref": "FS6403-08-08",
+  "skipped": [
+   [
+    "FS6403-04-04",
+    "no end data",
+    "KeyError('no -04 entry in the FSM end library; needs the male O-ring face-seal end of -04 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-04-04 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[4] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS6403-06-06",
+    "no end data",
+    "KeyError('no -06 entry in the FSM end library; needs the male O-ring face-seal end of -06 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-06-06 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[6] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS6403-10-10",
+    "no end data",
+    "KeyError('no -10 entry in the FSM end library; needs the male O-ring face-seal end of -10 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-10-10 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[10] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS6403-12-12",
+    "no end data",
+    "KeyError('no -12 entry in the FSM end library; needs the male O-ring face-seal end of -12 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-12-12 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[12] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS6403-16-16",
+    "no end data",
+    "KeyError('no -16 entry in the FSM end library; needs the male O-ring face-seal end of -16 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-16-16 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[16] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS6403-20-20",
+    "no end data",
+    "KeyError('no -20 entry in the FSM end library; needs the male O-ring face-seal end of -20 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-20-20 (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSM_MEAS[20] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)')"
+   ],
+   [
+    "FS6403-24-24",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF7403:FF7403-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF7403:FF7403-16-20-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 20,
+  "cols": 45
+ },
  "FS0306": {
   "configs": 8,
   "ref": "FS0306-08",

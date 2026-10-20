@@ -31,6 +31,15 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS step 7 - FS2404 / FS6403 / FS2601 / FS6502** (README step 7; staged): 12 configurations (FS2404 5 at -08 / -24, FS6403
+-08-08, FS2601 5, FS6502-08-08); FS2404 / FS6403 other sizes need straight STEPs (FS2403-NN-NN), FS6502 -06 / -10 / -12 / -16 need
+BRENNAN_FS6502-NN-NN-FG (corner-puck check), FS0304-C needs a shape STEP; checks clean, closed loops 0 off, regression 99 / 99;
+count **1,549 of 2,535**.
+
+**2026-10-20 (user decision): straight FS swivel body hex = Air-Way** ("yes keep airway"): where Air-Way prints the hex length (FS6540 L37,
+FS6504 L39) the body hex is built to it; Brennan's swivel body face stays a note in `$COMMENT`. Then: "go on with" FS2404 / FS6403 / FS0304-C /
+FS6502 / FS2601.
+
 **2026-10-20 (cloud): ORFS step 6 - the straight face-seal swivels** (user "yes start on the straight swivels"; README step 6; staged):
 - FS6565 / FS6540 / FS6504 / FS6505 + counterbored-mouth masters ...C: 20 configurations; length to the seal face (FS6565-08-08), nut hex per
   Q-FS-NUT; body hex built to Air-Way's printed hex length (FS6540 L37 / FS6504 L39) - 0.015 ... 0.09 shorter than the Brennan swivel: tell the user;

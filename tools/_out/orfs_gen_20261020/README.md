@@ -1,6 +1,6 @@
 # ORFS generator end functions (2026-10-20, cloud session) - STAGING, work in progress
 
-**Status:** staged (steps 1-6 done). Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
+**Status:** staged (steps 1-7 done). Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
 - **Toolset:** `tools/` = a copy of the merged batch-17 toolset (`tools/_out/genfeat_20261018/merged/tools`) plus the ORFS additions below.
 - **Plan:** `tools/_out/orfs_modeltype_20261016/PLAN.md`.
 - **End data:** `tools/_out/orfs_wp2_20261020/end_lib_08.json` (extractors + validation on the Brennan pilots).
@@ -183,6 +183,20 @@ When it is unset, the behaviour is unchanged.
   seal -> seal 2.12 / 2.12, volume +3.31 %.
 - **ORFS total now: 121 configurations** in 45 masters (14 straight + 31 forged) + 8 FS4000 O-rings; count 1,537 of 2,535.
 
+## Step 7 (done): FS2404 / FS6403 / FS2601 / FS6502 (user "keep airway and go on with those")
+- **FS2404** (male face seal x male pipe, gen_straight2): -08-04 / -08-06 / -08-08 / -08-12 / -24-24 (the straight FSM end exists at -08 / -24 /
+  -32 only; the other 16 rows need BRENNAN_FS2403-NN-NN). FS2404-08-06's empty thread cell takes the -08 face-seal thread (PLAN D1, now also
+  in gen_straight2).
+- **FS6403** (male face seal x male JIC): -08-08 only (same reason).
+- **FS2601** (forged branch tee, male face-seal run x male pipe branch, Brennan-catalog rows): 5 rows in FS2601 + FS2601N (no-step legs).
+- **FS6502** (45deg forged elbow, male face seal x female face-seal swivel): -08-08 builds; L2 read as the crossing -> seal face (ASSUMPTION
+  logged, `fs_assume`; no FS6502 STEP). -06 / -10 / -12 / -16 are blocked by the generator's own corner-puck check (the 45deg body's corner
+  reaches past the swivel body face outside the neck) - they need BRENNAN_FS6502-NN-NN-FG to show where the swivel sits on a 45deg body.
+- **FS0304-C** (cap assembly, insert + nut): no Air-Way source and no shape STEP - not built (needs BRENNAN_FS0304-C-08 or similar).
+- **Checks** (`checks/static_checks_new4.txt`): vbacheck 5 / 5, dofcheck 2 / 2 straights + 8 / 8 legs, allcfg 0; OCP closed loops
+  (`ocp/closed_loop.txt` 13 straights / 271 checks, `ocp/closed_loop_tee_new4.txt` 6 / 161) 0 off; regression 99 / 99 identical.
+- **ORFS total now: 133 configurations**; count 1,549 of 2,535.
+
 ## Blocked: the female swivel on the STRAIGHTS (FS6540 / FS6504 / FS6505 / FS6565) needs one STEP
 - On the forged FS6500-08-08-FG pilot, Air-Way L21 (= Brennan AAA) runs from the crossing to the stem's SEAL face; the nut face is 0.433
   further out. PLAN.md had read the drawings as "to the nut face", for the straights as well.
@@ -196,4 +210,4 @@ When it is unset, the behaviour is unchanged.
 ## Next
 - **SolidWorks dry runs on the PC** (CLAUDE.md verify loop; `TABLE_PATH` -> `out/`, `out/tee/`, `out/ring/`): first FS2403 / FS6400, one forged
   stepped (FS2500), one no-step (FS2500N), one counterbore swivel (FS6500C), one straight swivel each (FS6565, FS6540C), then the rest.
-- New SPECs without new files: FS2404, FS6403, FS0304-C, FS6502, FS2601 (and FS2700 once the bulkhead files exist).
+- FS2700 (bulkhead union) once the bulkhead files exist; FS2406 once FS2406-08-04 arrives; FS2408 after the hole decision.

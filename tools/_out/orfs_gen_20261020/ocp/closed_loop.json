@@ -60,5 +60,53 @@
   "solids": 1,
   "volume": 4.32282,
   "bad": []
+ },
+ {
+  "pn": "FS2404-08-04",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.51432,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-06",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.551,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.74433,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.2832,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-24-24",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.74941,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-08-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.55931,
+  "bad": []
  }
 ]

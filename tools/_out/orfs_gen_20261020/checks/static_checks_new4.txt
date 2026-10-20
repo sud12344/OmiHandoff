@@ -1,0 +1,21 @@
+# 2026-10-20 static checks of FS2404 / FS6403 (out/) and FS2601 / FS2601N / FS6502 (out/tee/)
+tools/_out/orfs_gen_20261020/out/Build_FS2404_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/Build_FS6403_MASTER.bas 33 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2601_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS2601N_MASTER.bas 51 procedures OK
+tools/_out/orfs_gen_20261020/out/tee/Build_FS6502_MASTER.bas 51 procedures OK
+Build_FS2404_MASTER.bas {'points': 16, 'unknowns': 32, 'constraints': 32, 'rank': 32, 'dims': 17, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6403_MASTER.bas {'points': 20, 'unknowns': 40, 'constraints': 40, 'rank': 40, 'dims': 22, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS2601_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2601_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2601_MASTER.bas LEG 3 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2601N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2601N_MASTER.bas LEG 2 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2601N_MASTER.bas LEG 3 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS6502_MASTER.bas LEG 1 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS6502_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+FS2404   5 configs  outline problems: 0 []
+FS6403   1 configs  outline problems: 0 []
+FS2601   3 configs  leg outline problems: 0 []
+FS2601N   2 configs  leg outline problems: 0 []
+FS6502   1 configs  leg outline problems: 0 []

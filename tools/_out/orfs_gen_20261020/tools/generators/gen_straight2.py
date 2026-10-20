@@ -1622,6 +1622,19 @@ SPEC['FS2403'] = dict(name='ORFS Male Union (male face seal x male face seal)', 
                       bore=('mid', 'D1_1@BORE', 'D1_2@BORE'), ref='FS2403-08-08', thrchk=(('A', 'THDMAJ_D_1@DRIVE', 'a'), ('B', 'THDMAJ_D_2@DRIVE', 'b')),
                       fs=True, assume='L6 face -> face, hex S1, bores D1 (both sides): ' + FS_DIM_SRC + '; hex over the whole length between the two ends; '
                                       'bore step at the hex mid-plane (ASSUMPTION, as 2403; no effect where the two bores are equal); hex end chamfers NOT modelled')
+# 2026-10-20 (user "go on with those"): male face seal x male pipe / x male JIC straights - the straight FSM end exists at -08 / -24 / -32 only
+# (FS2403-08-08, FS2403-24-24, FS6400-32-32-O); the other sizes skip naming the straight STEP they need
+SPEC['FS2404'] = dict(name='ORFS Straight Connector (male face seal x male pipe)', L='L@DRIVE', hex='S1HEX@HEX',
+                      A=lambda r, a, b: end_NPTFM(b, 'A'), B=lambda r, a, b: end_FSM(a, 'B'),
+                      bore=('mid', 'D2@BORE', 'D1@BORE'), ref='FS2404-08-08', thrchk=(('B', 'THDMAJ_D@DRIVE', 'a'),),
+                      fs=True, assume='L face -> pipe tip, hex S1, bores D2 (pipe side) / D1 (face-seal side): ' + FS_DIM_SRC + '; male NPTF end per ASME B1.20.3 '
+                                      'with the 5404 Brennan-measured end length (ASSUMPTION, as 2404); hex between the two ends; bore step at the hex mid-plane '
+                                      '(ASSUMPTION, as 2403); hex end chamfers NOT modelled')
+SPEC['FS6403'] = dict(name='ORFS Straight Connector (male face seal x male JIC)', L='L41@DRIVE', hex='S1HEX@HEX',
+                      A=lambda r, a, b: end_JICM(b, 'A'), B=lambda r, a, b: end_FSM(a, 'B'),
+                      bore=('mid', 'D@BORE', 'D1@BORE'), ref='FS6403-08-08', thrchk=(('A', 'THDMAJ_B@DRIVE', 'b'), ('B', 'THDMAJ_D@DRIVE', 'a')),
+                      fs=True, assume='L41 face -> JIC tip, hex S1, bores D (JIC side) / D1 (face-seal side): ' + FS_DIM_SRC + '; male JIC end MS33656J (2403 table, '
+                                      'VERIFIED vs Brennan); hex between the two ends; bore step at the hex mid-plane (ASSUMPTION, as 2403); hex end chamfers NOT modelled')
 SPEC['FS6400'] = dict(name='ORFS Straight Thread Connector (male face seal x male ORB)', L='L8@DRIVE', hex='S5HEX@HEX',
                       A=lambda r, a, b: end_ORBFS(b, 'A', round(r['L8@DRIVE'] - r['L9@DRIVE'], 4), 'L8 - L9'), B=lambda r, a, b: end_FSM(a, 'B'),
                       bore=('mid', 'D20@BORE', 'D1@BORE'), ref='FS6400-08-08-O', thrchk=(('A', 'THDMAJ_N@DRIVE', 'b'), ('B', 'THDMAJ_D@DRIVE', 'a')),
@@ -1934,7 +1947,7 @@ def build_rows(root):
             skipped.append((pn, 'other shape family', 'face-seal swivel with a ' + ('mixed mouth (no master yet)' if len(set(_cb)) > 1 else
                             ('counterbored mouth (-10 up): built in master ' + root + 'C') if any(_cb) else ('countersunk mouth: built in master ' + sp.get('cb_base', root)))))
             continue
-        chk0 = []
+        chk0 = []; warn0 = []
         for tc_ in sp.get('thrchk', ()):
             sfx_, col_ = tc_[0], tc_[1]
             E_ = EA if sfx_ == 'A' else EB
@@ -1942,6 +1955,8 @@ def build_rows(root):
             else: d_ = a if sfx_ == 'A' else b
             if E_['kind'] in ('FSM', 'FSSW') or (sp.get('fs') and E_['kind'] in ('NUTCSA', 'NUTCSB', 'UNFF')):      # 2026-10-20 (ORFS): face-seal thread of the dash
                 want_ = fs_major(d_)
+                if r.get(col_) is None and sp.get('fs'):      # 2026-10-20: an empty cell takes the face-seal thread of the dash (PLAN D1, as gen_tee)
+                    warn0.append(f'{col_} empty: thread major {want_} = the -{d_:02d} face-seal thread (FS_THR, PLAN D1)'); continue
                 if r.get(col_) is None or abs(r[col_] - want_) > 1e-3: chk0.append(f'{col_} {r.get(col_)} does not match the End {sfx_} -{d_:02d} FSM thread ({want_})')
                 continue
             if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM', 'JICCAP', 'NUTCSB') and d_ not in NPTF: chk0.append(lib_gap('NPTF', d_)); continue
@@ -1953,7 +1968,7 @@ def build_rows(root):
         body = L - EA['endlen'] - EB['endlen']
         rB = hexb / 2 if sp.get('round') else hexb / math.cos(math.radians(30)) / 2
         if sp.get('flats'): rB = r[sp['flats']['collar']] / 2     # 2026-10-18 (1700RC / 1800): round collar - the body radius is the collar, the A/F cuts two flats
-        chk = list(chk0); warn = []
+        chk = list(chk0); warn = list(warn0)
         if body < 0.05: chk.append(f'hex length {body:.3f}')
         if xlen_ is not None and (L is None or abs(xlen_ - L) > 1e-6): chk.append(f'length {xlen_:g} in the part number differs from {sp["L"].split("@")[0]} {L}')
         if sp.get('flgplug') and EB['rO'] - rB < FLGPLUG_SHOULDER_MIN:

@@ -459,6 +459,17 @@ SPEC.update({
                    nwo=(None, 'S3HEX@HEX', None, None), fs_wf='L11@DRIVE',
                    legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('FSM', 'L7_2@DRIVE', 'D1_2@BORE', 'THDMAJ_D_2@DRIVE'),
                          ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE')]),
+    # 2026-10-20 (user "go on with those"): the male pipe branch tee and the 45deg swivel elbow - both sized from the Brennan ORFS catalog
+    # (no Air-Way forged source; staged Brennan rows, DimSource BRENNAN)
+    'FS2601': dict(name='ORFS Branch Tee (male face seal run x male pipe branch)', hex='S2HEX@HEX', fs=True, ref='FS2601-08-08-08-FG',
+                   legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('FSM', 'L7_2@DRIVE', 'D1_2@BORE', 'THDMAJ_D_2@DRIVE'),
+                         ('NPTFM', 'N@DRIVE', 'D2@BORE', None)]),
+    'FS6502': dict(name='ORFS 45 deg Male Face Seal x Female Face Seal Swivel Elbow', hex='S2HEX@HEX', elbow=True, e45=True, dmap=(1, 0), fs=True,
+                   ref='FS6502-08-08-FG', fssw=('SHEX@HEX',),
+                   fs_assume=('swivel leg length L2 (Brennan ORFS catalog p9 "L2 LGTH") read as the crossing -> the stem SEAL face, as measured where Brennan '
+                              'STEPs exist (FS6500 AAA = L21, FS6565 L45; ASSUMPTION - no BRENNAN_FS6502 STEP); the swivel on the X leg and the male face seal on '
+                              'the 45deg leg, as 6502'),
+                   legs=[('FSSW', 'L2@DRIVE', 'D19@BORE', 'THDMAJ_D_2@DRIVE'), ('FSM', 'L7@DRIVE', 'D1@BORE', 'THDMAJ_D_1@DRIVE')]),
     'FS6804': dict(name='ORFS Male Face Seal x Adjustable Male ORB Run Tee', hex='S2HEX@HEX', fs=True, ref='FS6804-08-08-08-NWO-FG',
                    nwo=(None, 'S3HEX@HEX', None, None), fs_wf='L11@DRIVE',
                    legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE'),
@@ -2392,6 +2403,7 @@ def assume_text(root, legs):
     if k & {'FSM', 'FSBH'}: t.append(FSLEG_ASSUME)          # 2026-10-20 (ORFS)
     if 'FSBH' in k: t.append(FSBH_ASSUME)
     if 'FSSW' in k: t.append(FSSW_ASSUME)
+    if sp.get('fs_assume'): t.append(sp['fs_assume'])          # 2026-10-20: a root's own modelling assumption (FS6502 swivel-leg reference)
     if 'NWO' in k and sp.get('fs'): t.append(NWOFS_ASSUME)
     if any(L['kind'] in ('JICM', 'JICBH') and G.JIC.get(L['dash'], {}).get('src40') for L in legs): t.append(G.JIC40_ASSUME)   # SIZE-40
     if 'JICBH' in k: t.append('bulkhead leg (Brennan 2701-08-08-FG STEP): hex arm -> round collar of Air-Way dia O (flush with the hex flats where Air-Way prints O = the flats, e.g. 2701 -06/-10/-12; the revolved core under the hex arm is drawn 0.02 inside the flats and is hidden by the hex) -> JIC bulkhead end, relief to tip = Air-Way i2 (STEP 2.11 - 0.86 = 1.25 = i2), JIC thread run from the relief to the land; K1 read as the collar thickness (ASSUMPTION: the STEP collar is 0.875 x 0.125 followed by a 0.125 round shank at the thread dia, not modelled); -LN configs ship with a locknut (separate part, not modelled)')

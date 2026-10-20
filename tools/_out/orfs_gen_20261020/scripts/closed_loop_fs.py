@@ -89,6 +89,8 @@ def main(roots, out):
                     if abs(tip - want) > TOL: bad.append(f'End {sfx} tip at x {tip} (row {want})')
                     bo = cols['DA@BORE_A' if sfx == 'A' else 'DB@BORE_B'] / 2; n += 1
                     if abs(m['BORER'] - bo) > TOL: bad.append(f'End {sfx} bore r {m["BORER"]} (row {bo})')
+                elif E['kind'] in ('JICM', 'NPTFM'):
+                    pass       # 2026-10-20: the accepted library ends (MS33656J / ASME B1.20.3), closed-looped with their own masters - not read here
                 else:
                     bad.append(f'End {sfx}: kind {E["kind"]} has no closed-loop reader here')
             # hex across flats (thin probe: section normal to X at the hex mid-plane, plane through the flats = Z extent)

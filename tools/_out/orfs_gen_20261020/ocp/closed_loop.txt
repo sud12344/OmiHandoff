@@ -5,5 +5,11 @@ FS6400-08-08-O: 23 checks, 0 off; solids 1, volume 0.57539 in^3; Brennan pilot 0
 FS6400-08-10-O: 23 checks, 0 off; solids 1, volume 0.75684 in^3
 FS6400-08-12-O: 23 checks, 0 off; solids 1, volume 1.18938 in^3
 FS6400-24-24-O: 23 checks, 0 off; solids 1, volume 4.32282 in^3
+FS2404-08-04: 16 checks, 0 off; solids 1, volume 0.51432 in^3
+FS2404-08-06: 16 checks, 0 off; solids 1, volume 0.551 in^3
+FS2404-08-08: 16 checks, 0 off; solids 1, volume 0.74433 in^3
+FS2404-08-12: 16 checks, 0 off; solids 1, volume 1.2832 in^3
+FS2404-24-24: 16 checks, 0 off; solids 1, volume 4.74941 in^3
+FS6403-08-08: 16 checks, 0 off; solids 1, volume 0.55931 in^3
 
-FS closed loop PASS: 7 configurations, 175 checks, 0 off (tolerance 0.0015)
+FS closed loop PASS: 13 configurations, 271 checks, 0 off (tolerance 0.0015)

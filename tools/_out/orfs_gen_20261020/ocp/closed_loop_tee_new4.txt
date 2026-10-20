@@ -1,0 +1,9 @@
+FS2601-06-06-06-FG: 28 checks, 0 off; solids 1, volume 0.93631 in^3
+FS2601-08-08-08-FG: 28 checks, 0 off; solids 1, volume 1.38551 in^3
+FS2601-10-10-08-FG: 28 checks, 0 off; solids 1, volume 2.26109 in^3
+FS2601-04-04-04-FG: 24 checks, 0 off; solids 1, volume 0.5346 in^3
+FS2601-12-12-12-FG: 24 checks, 0 off; solids 1, volume 3.00772 in^3
+FS6502-06-06-FG: generator-blocked ['leg 1: the corner puck (radius 0.433) reaches past the swivel body face (0.325) outside the neck (0.286 off the axis vs neck radius 0.261) or into the swivel slot (starts 0.883)']
+FS6502-08-08-FG: 29 checks, 0 off; solids 1, volume 0.92389 in^3
+
+FS tee / elbow closed loop PASS: 6 configurations, 161 checks, 0 off (tolerance 0.0015)

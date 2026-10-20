@@ -7,10 +7,10 @@ Nothing has shipped since batch 16 (2026-10-19). Everything below is STAGED in t
 | | parts of 2,535 |
 |---|---|
 | shipped now (in a master) | 1,106 |
-| generated, waiting for the SolidWorks dry runs + ship | 431 |
-| of which ORFS (FS...) | 121 (+ 8 FS4000 O-rings in the 4000 master) |
-| = ready after SolidWorks | **1,537** |
-| not yet (data, STEP, decision or OMi needed) | 998 |
+| generated, waiting for the SolidWorks dry runs + ship | 443 |
+| of which ORFS (FS...) | 133 (+ 8 FS4000 O-rings in the 4000 master) |
+| = ready after SolidWorks | **1,549** |
+| not yet (data, STEP, decision or OMi needed) | 986 |
 
 ## What the 2026-10-20 session staged (details: `00_DOCS/PROJECT_STATUS.md` section 1, the 2026-10-20 entries)
 1. A14: the 1603-08-08-08-FG bores (`tools/_out/a14_1603bore_20261020/`), in the batch-17 stage.
@@ -45,7 +45,9 @@ Received 2026-10-20 and in the generator: the per-size nuts / sleeves, FS6500-04
 FS6565-08-08. Still missing:
 - **Bulkhead legs:** FS2701-04-04-FG, FS2701-06-06-FG, FS2701-10-10-FG, FS2701-12-12-FG, FS2701-16-16-FG.
 - **Adjustable studs:** FS6801-04-04-NWO-FG, -06-06, -10-10, -12-12, -16-16, -20-20, -24-24 (all -NWO-FG).
-- **Straight male ends** (a forged leg has no thread relief): FS2403-04-04, -06-06, -10-10, -12-12, -16-16, -20-20.
+- **Straight male ends** (a forged leg has no thread relief): FS2403-04-04, -06-06, -10-10, -12-12, -16-16, -20-20 (also unlock FS2404 / FS6403).
+- **45deg swivel elbow:** FS6502-06-06-FG (or -12-12): where the swivel sits on a 45deg body (FS6502 -06 / -10 / -12 / -16).
+- **Cap assembly:** FS0304-C-08 (insert + nut; no Air-Way source).
 - **-24 forged leg / swivel:** FS6500-24-24-FG.
 - **FS2406-08-04:** the stand-in for the missing FS2406-08-06 pilot.
 
@@ -54,8 +56,7 @@ FS6565-08-08. Still missing:
   (-04 / -06 / -08). OK? (Sleeve sizes: settled - the user sent every FS0319 STEP.)
 - **Tell the user:** Brennan's FS0306 / FS0318 -10 and -24 thread bores (dia 0.892 / 1.817) are smaller than the ASME basic minor of 1-14 /
   2-12 (0.9227 / 1.9098); the model keeps the basic minor (each row's `$COMMENT` says BRENNAN DIFFERS).
-- **Straight swivel body hex:** where Air-Way prints the hex length (FS6540 L37, FS6504 L39) the body hex is built to it; it is 0.015 ... 0.09
-  shorter than the Brennan swivel (hex face -> seal face, e.g. -12: Air-Way 1.03 / Brennan 1.12). Keep Air-Way, or use Brennan's?
+- (settled 2026-10-20: straight swivel body hex = Air-Way, user "yes keep airway")
 - **New masters per leg shape** (`<root>N / R / C`): SolidWorks needs one sketch per master, so e.g. FS6500 is now four masters. OK, or should a
   different split be used?
 - **Still open from before:**
