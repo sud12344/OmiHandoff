@@ -1,0 +1,97 @@
+split_b.py (after regen_b16roots.py): split the A -> B differences of the 24 batch-16 roots into
+  tools: C = merged batch-17 tools + the SHIPPED tables, compared with A (live tools + shipped tables);
+  data : B (merged tools + batch-17 stage) compared with C.
+For every A configuration whose SW2 cells change in B, the review-table row must carry a logged batch-17 dimension change (stage/CHANGES.csv
+or omi_answers CHANGES.csv; not a text / status column) - otherwise it is reported UNTRACED. Output: split_b.txt
+6505  tools (A vs C): identical | data (C vs B): +2 configs, 14 old configs changed, macro lines 106
+      6505-08-08: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 1.9 -> 1.98; L16@DRIVE 1.48 -> 1.56
+      6505-02-04: 6 geometry cells (L15@DRIVE, SWB_NOSETIP@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 1.34 -> 1.36; L16@DRIVE 1 -> 1.01
+      6505-04-04: 7 geometry cells (L15@DRIVE, SWB_NOSETIP@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B ...) <- L15@DRIVE 1.53 -> 1.56; L16@DRIVE 1.19 -> 1.21
+      6505-04-05: 7 geometry cells (L15@DRIVE, SWB_NOSETIP@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B ...) <- L15@DRIVE 1.63 -> 1.64
+      6505-04-06: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 1.72 -> 1.68; L16@DRIVE 1.34 -> 1.3
+      6505-06-06: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 1.72 -> 1.64; L16@DRIVE 1.34 -> 1.26
+      6505-08-06: 7 geometry cells (L15@DRIVE, SWB_NOSETIP@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B ...) <- L15@DRIVE 1.86 -> 1.88; L16@DRIVE 1.48 -> 1.51
+      6505-08-10: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 2.28 -> 2.1; L16@DRIVE 1.78 -> 1.6
+      6505-08-12: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 2.26 -> 2.14; L16@DRIVE 1.7 -> 1.58
+      6505-12-10: 7 geometry cells (L15@DRIVE, SWB_NOSETIP@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B ...) <- L15@DRIVE 2.22 -> 2.21; L16@DRIVE 1.72 -> 1.7
+      6505-12-12: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 2.26 -> 2.28; L16@DRIVE 1.7 -> 1.72
+      6505-12-16: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 2.36 -> 2.38; L16@DRIVE 1.77 -> 1.79
+      6505-16-16: text/status only ['$PRP@DataStatus', '$COMMENT']
+      6505-20-20: 6 geometry cells (L15@DRIVE, PROF_AX@THDPROF_B, DEPTH@BORECUT_A, DEPTH@BORECUT_B, START@BORECUT_B, DEPTH@HEXCUT) <- L15@DRIVE 2.66 -> 2.84; L16@DRIVE 2.03 -> 2.21
+2404  tools (A vs C): identical | data (C vs B): +2 configs, 0 old configs changed, macro lines 2
+0304  tools (A vs C): identical | data (C vs B): +0 configs, 0 old configs changed, macro lines 0
+0306  tools (A vs C): identical | data (C vs B): +0 configs, 0 old configs changed, macro lines 0
+2606  tools (A vs C): identical | data (C vs B): +0 configs, 0 old configs changed, macro lines 0
+2609  tools (A vs C): identical | data (C vs B): +0 configs, 0 old configs changed, macro lines 0
+2611  tools (A vs C): identical | data (C vs B): +1 configs, 0 old configs changed, macro lines 8
+2501  tools (A vs C): identical | data (C vs B): +8 configs, 3 old configs changed, macro lines 6
+      2501-20-24-FG: 3 geometry cells (M1@LEG1, DEPTH@BORECUT1, HEXL@HEX1_BODY) <- M@DRIVE 2.3 -> 2.2
+      2501-L-04-02-FG: 4 geometry cells (M2@LEG2, DEPTH@BORECUT2, PROF_AX@THDPROF_2, HEXL@HEX2_BODY) <- N3@DRIVE 1.19 -> 1.17
+      2501-L-06-06-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+5500  tools (A vs C): identical | data (C vs B): +0 configs, 11 old configs changed, macro lines 2
+      5500-08-08-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-02-02-FG: 8 geometry cells (M1@LEG1, M2@LEG2, DEPTH@BORECUT1, DEPTH@BORECUT2, PROF_AX@THDPROF_1, PROF_AX@THDPROF_2 ...) <- N1@DRIVE 0.72 -> 0.78; N2@DRIVE 0.72 -> 0.78
+      5500-04-02-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-04-04-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-06-04-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-06-06-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-08-06-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-12-08-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-12-12-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-16-16-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5500-20-20-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+5502  tools (A vs C): identical | data (C vs B): +7 configs, 12 old configs changed, macro lines 4
+      5502-08-08-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5502-02-02-FG: 4 geometry cells (M1@LEG1, DEPTH@BORECUT1, PROF_AX@THDPROF_1, HEXL@HEX1_BODY) <- N@DRIVE 0.89 -> 0.78
+      5502-04-04-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5502-04-06-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5502-06-04-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5502-06-06-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5502-08-04-FG: 4 geometry cells (M2@LEG2, DEPTH@BORECUT2, PROF_AX@THDPROF_2, HEXL@HEX2_BODY) <- N1@DRIVE 1 -> 1.01
+      5502-08-06-FG: 4 geometry cells (M2@LEG2, DEPTH@BORECUT2, PROF_AX@THDPROF_2, HEXL@HEX2_BODY) <- N1@DRIVE 1.01 -> 1.02
+      5502-08-12-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      5502-20-20-FG: 4 geometry cells (M1@LEG1, DEPTH@BORECUT1, PROF_AX@THDPROF_1, HEXL@HEX1_BODY) <- N@DRIVE 2.75 -> 2.38
+      5502-24-24-FG: 4 geometry cells (M1@LEG1, DEPTH@BORECUT1, PROF_AX@THDPROF_1, HEXL@HEX1_BODY) <- N@DRIVE 3.05 -> 2.64
+      5502-32-32-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+5504  tools (A vs C): identical | data (C vs B): +4 configs, 0 old configs changed, macro lines 6
+2503  tools (A vs C): identical | data (C vs B): +0 configs, 8 old configs changed, macro lines 0
+      2503-02-02-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      2503-03-02-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      2503-05-04-FG: 4 geometry cells (M1@LEG1, DEPTH@BORECUT1, PROF_AX@THDPROF_1, HEXL@HEX1_BODY) <- N2@DRIVE 0.88 -> 0.86
+      2503-06-06-FG: 3 geometry cells (M2@LEG2, DEPTH@BORECUT2, HEXL@HEX2_BODY) <- M2@DRIVE 0.91 -> 0.87
+      2503-08-08-FG: 3 geometry cells (M2@LEG2, DEPTH@BORECUT2, HEXL@HEX2_BODY) <- M2@DRIVE 1.11 -> 0.99
+      2503-12-16-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      2503-16-20-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+      2503-20-16-FG: text/status only ['$PRP@DataStatus', '$COMMENT']
+2504  tools (A vs C): identical | data (C vs B): +1 configs, 0 old configs changed, macro lines 6
+2505  tools (A vs C): identical | data (C vs B): +1 configs, 0 old configs changed, macro lines 6
+2701  tools (A vs C): identical | data (C vs B): +3 configs, 0 old configs changed, macro lines 2
+2702  tools (A vs C): identical | data (C vs B): +0 configs, 0 old configs changed, macro lines 0
+6500  tools (A vs C): identical | data (C vs B): +2 configs, 7 old configs changed, macro lines 18
+      6500-12-12-FG: 1 geometry cells (SW2_NOSETIP@LEG2) <- LEG_M10@DRIVE 1.19 -> 1.18
+      6500-05-05-FG: 1 geometry cells (SW2_NOSETIP@LEG2) <- LEG_M10@DRIVE 0.69 -> 0.68
+      6500-06-08-FG: text/status only ['$COMMENT']
+      6500-08-10-FG: text/status only ['$COMMENT']
+      6500-10-08-FG: text/status only ['$COMMENT']
+      6500-10-12-FG: 1 geometry cells (SW2_NOSETIP@LEG2) <- LEG_M10@DRIVE 1.19 -> 1.18
+      6500-16-16-FG: text/status only ['$COMMENT']
+6501  tools (A vs C): identical | data (C vs B): +0 configs, 1 old configs changed, macro lines 96
+      6501-04-04-FG: 4 geometry cells (M2@LEG2, DEPTH@BORECUT2, PROF_AX@THDPROF_2, HEXL@HEX2_BODY) <- M10@DRIVE 0.77 -> 0.8; M5@DRIVE 1.11 -> 1.14
+6503  tools (A vs C): identical | data (C vs B): +0 configs, 1 old configs changed, macro lines 98
+      6503-08-08-FG: 5 geometry cells (M2@LEG2, SW2_NOSETIP@LEG2, DEPTH@BORECUT2, PROF_AX@THDPROF_2, HEXL@HEX2_BODY) <- M10@DRIVE 1.1 -> 1.128; M5@DRIVE 1.52 -> 1.55
+6502  tools (A vs C): identical | data (C vs B): +1 configs, 9 old configs changed, macro lines 94
+      6502-08-08-FG: 7 geometry cells (M1@LEG1, SW1_NOSETIP@LEG1, DEPTH@BORECUT1, PROF_AX@THDPROF_1, HEXL@HEX1_BODY, TRIM_A0@NECKTRIM1 ...) <- M6@DRIVE 1.25 -> 1.28
+      6502-04-04-FG: text/status only ['$COMMENT']
+      6502-05-05-FG: text/status only ['$COMMENT']
+      6502-06-06-FG: text/status only ['$COMMENT']
+      6502-10-10-FG: text/status only ['$COMMENT']
+      6502-12-12-FG: 1 geometry cells (SW1_NOSETIP@LEG1) <- M14@DRIVE 0.94 -> 0.93
+      6502-20-20-FG: 1 geometry cells (SW1_NOSETIP@LEG1) <- M14@DRIVE 1.4 -> 1.41
+      6502-24-24-FG: text/status only ['$COMMENT']
+      6502-32-32-FG: text/status only ['$COMMENT']
+1501  tools (A vs C): identical | data (C vs B): +2 configs, 0 old configs changed, macro lines 2
+1502  tools (A vs C): identical | data (C vs B): +7 configs, 0 old configs changed, macro lines 8
+6802  tools (A vs C): identical | data (C vs B): +0 configs, 0 old configs changed, macro lines 0
+6801  tools (A vs C): identical | data (C vs B): +4 configs, 0 old configs changed, macro lines 2
+
+tools differ on 0 of 24 roots; untraced geometry changes: 0

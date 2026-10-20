@@ -31,6 +31,14 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): batch-17 work rebased on batch 16 (d63e1a6) and the 24 batch-16 roots regenerated from the new state**
+(`tools\_out\rebase_b16_20261020\README.md`):
+- live tools + shipped tables reproduce the shipped macros / SW2 24 / 24;
+- the merged batch-17 tools change nothing on them;
+- the 12 shipped review tables = their batch-17 stage copies minus logged batch-17 changes (0 unexplained);
+- batch-17 data: 372 -> 417 configurations (+45); 32 built configurations change geometry, all from A19 (rebuild in batch 17);
+- vbacheck / dofcheck / allcfg clean.
+
 **2026-10-20 (cloud): A14 done for 1603-08-08-08-FG** - both bores measured on `BRENNAN_1603-08-08-08-FG.stp` = 0.450 (catalog prints
 "0.44/0.46"); the whole row staged in `tools\_out\brennan_yes_20261018\stage` (15 prepared Brennan-catalog / end-library cells + the 2
 bores, DimSource BRENNAN, MISSING -> ASSUMED; every catalog value confirmed on the STEP). 1603 now generates 6 of 6 -FG rows with the

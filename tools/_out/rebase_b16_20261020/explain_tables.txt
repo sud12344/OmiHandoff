@@ -1,0 +1,22 @@
+0304: 0 differing cells/rows, 0 unexplained
+0306: 0 differing cells/rows, 0 unexplained
+1502: 98 differing cells/rows, 0 unexplained
+  2504 2504-16-16-FG: row only in the stage - logged new row
+2504: 1 differing cells/rows, 0 unexplained
+  2505 2505-04-04-FG: row only in the stage - logged new row
+  2505 2505-06-06-FG: row only in the stage - logged new row
+2505: 2 differing cells/rows, 0 unexplained
+2606: 0 differing cells/rows, 0 unexplained
+2609: 0 differing cells/rows, 0 unexplained
+2611: 11 differing cells/rows, 0 unexplained
+6500: 26 differing cells/rows, 0 unexplained
+6500L: 0 differing cells/rows, 0 unexplained
+  6501 6501-04-04-FG $COMMENT: A19 note on an empty cell (apply_a19.py did not log notes; its dimension cells are logged)
+6501: 4 differing cells/rows, 0 unexplained
+  6505 6505-04-06 $COMMENT: A19 note on an empty cell (apply_a19.py did not log notes; its dimension cells are logged)
+  6505 6505-08-06 $COMMENT: A19 note on an empty cell (apply_a19.py did not log notes; its dimension cells are logged)
+  6505 6505-08-12 $COMMENT: A19 note on an empty cell (apply_a19.py did not log notes; its dimension cells are logged)
+  6505 6505-12-10 $COMMENT: A19 note on an empty cell (apply_a19.py did not log notes; its dimension cells are logged)
+  6505 6505-12-16 $COMMENT: A19 note on an empty cell (apply_a19.py did not log notes; its dimension cells are logged)
+6505: 64 differing cells/rows, 0 unexplained
+TOTAL 206 differing, 0 unexplained
