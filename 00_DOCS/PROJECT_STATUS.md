@@ -31,6 +31,11 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): 8 of the 9 ORFS pilot STEPs received** (user download, Brennan PARTcommunity) -> `09_STEP_FILES/BRENNAN_FS*.stp`:
+FS2403-08-08, FS6500-08-08-FG, FS2701-08-08-FG, FS6400-08-08-O, FS6801-08-08-NWO-FG, FS0318-08, FS0319-08, FS0306-08 (each 1 solid;
+sizes match Air-Way). **FS2406-08-06 has no CAD file at Brennan** -> stand-in FS2406-08-04 proposed. Extractors / ORFS generator not
+started. `tools\_out\orfs_pilots_20261020\README.md`.
+
 **2026-10-20 (cloud): batch-17 work rebased on batch 16 (d63e1a6) and the 24 batch-16 roots regenerated from the new state**
 (`tools\_out\rebase_b16_20261020\README.md`):
 - live tools + shipped tables reproduce the shipped macros / SW2 24 / 24;

@@ -1,0 +1,10 @@
+file BRENNAN_FS0319-08.stp solids 1 cyl/cone faces 9
+{"kind": "cone", "dia": 0.4095, "semi_angle": 45.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.334, 0.0, 0.0], "a_min": -0.0157, "a_max": 0.0, "sweep_deg": 360.0, "hole": true, "area": 0.0275}
+{"kind": "cone", "dia": 0.506, "semi_angle": 45.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.3264, 0.0, 0.0], "a_min": -0.0076, "a_max": 0.0, "sweep_deg": 360.0, "hole": true, "area": 0.0168}
+{"kind": "cone", "dia": 0.5161, "semi_angle": 45.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0051, "a_max": 0.0, "sweep_deg": 360.0, "hole": true, "area": 0.0115}
+{"kind": "cyl", "dia": 0.378, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.374, 0.0, 0.0], "a_min": -0.0243, "a_max": -0.0157, "sweep_deg": 360.0, "hole": true, "area": 0.0101}
+{"kind": "cone", "dia": 0.378, "semi_angle": 45.0, "axis": [1.0, 0.0, 0.0], "origin": [0.3583, 0.0, 0.0], "a_min": 0.0, "a_max": 0.0157, "sweep_deg": 360.0, "hole": true, "area": 0.0275}
+{"kind": "cyl", "dia": 0.506, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.374, 0.0, 0.0], "a_min": -0.3689, "a_max": -0.0476, "sweep_deg": 360.0, "hole": true, "area": 0.5108}
+{"kind": "cyl", "dia": 0.642, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.374, 0.0, 0.0], "a_min": -0.2863, "a_max": -0.2034, "sweep_deg": 360.0, "hole": false, "area": 0.1672}
+{"kind": "cone", "dia": 0.642, "semi_angle": 15.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0877, 0.0, 0.0], "a_min": -0.0877, "a_max": 0.0, "sweep_deg": 360.0, "hole": false, "area": 0.1764}
+{"kind": "cyl", "dia": 0.745, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.374, 0.0, 0.0], "a_min": -0.197, "a_max": 0.0, "sweep_deg": 360.0, "hole": false, "area": 0.4611}

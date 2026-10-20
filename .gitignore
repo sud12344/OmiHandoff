@@ -40,6 +40,7 @@ tools/_out/*
 !tools/_out/brennan_catalog_20261001/
 !tools/_out/a14_1603bore_20261020/
 !tools/_out/rebase_b16_20261020/
+!tools/_out/orfs_pilots_20261020/
 
 # brennan_yes: keep stage, stage_orfs, scripts, wave reports / cell lists; drop test copies and regenerations
 tools/_out/brennan_yes_20261018/base_root/

@@ -1,0 +1,21 @@
+file BRENNAN_FS0318-08.stp solids 1 cyl/cone faces 20
+{"kind": "cone", "dia": 0.819, "semi_angle": 45.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0371, "a_max": 0.0, "sweep_deg": 360.0, "hole": true, "area": 0.1289}
+{"kind": "cone", "dia": 1.1256, "semi_angle": 75.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.8019, 0.0, 0.0], "a_min": -0.0251, "a_max": -0.0057, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 1.1256, "semi_angle": 75.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.8019, 0.0, 0.0], "a_min": -0.0251, "a_max": -0.0057, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 1.1256, "semi_angle": 75.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.8019, 0.0, 0.0], "a_min": -0.0251, "a_max": -0.0057, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 1.1256, "semi_angle": 75.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.8019, 0.0, 0.0], "a_min": -0.0251, "a_max": -0.0057, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 1.1256, "semi_angle": 75.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.8019, 0.0, 0.0], "a_min": -0.0251, "a_max": -0.0057, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 1.1256, "semi_angle": 75.0, "axis": [-1.0, 0.0, 0.0], "origin": [0.8019, 0.0, 0.0], "a_min": -0.0251, "a_max": -0.0057, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cyl", "dia": 0.028, "semi_angle": 0.0, "axis": [0.0, 0.0, 1.0], "origin": [0.4025, 0.0208, 0.467], "a_min": 0.0, "a_max": 0.002, "sweep_deg": 117.0, "hole": false, "area": 0.0001}
+{"kind": "cyl", "dia": 0.056, "semi_angle": 0.0, "axis": [0.0, 0.0, 1.0], "origin": [0.4395, -0.0138, 0.467], "a_min": 0.0, "a_max": 0.002, "sweep_deg": 63.0, "hole": false, "area": 0.0001}
+{"kind": "cyl", "dia": 0.24, "semi_angle": 0.0, "axis": [0.0, 0.0, 1.0], "origin": [0.4135, -0.0, 0.467], "a_min": 0.0, "a_max": 0.002, "sweep_deg": 152.5, "hole": true, "area": 0.0006}
+{"kind": "cyl", "dia": 0.24, "semi_angle": 0.0, "axis": [0.0, 0.0, 1.0], "origin": [0.4135, 0.0, 0.467], "a_min": 0.0, "a_max": 0.002, "sweep_deg": 152.5, "hole": true, "area": 0.0006}
+{"kind": "cyl", "dia": 0.652, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.827, 0.0, 0.0], "a_min": -0.197, "a_max": 0.0, "sweep_deg": 360.0, "hole": true, "area": 0.4035}
+{"kind": "cyl", "dia": 0.7448, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.47, 0.0, 0.0], "a_min": -0.4329, "a_max": 0.0, "sweep_deg": 360.0, "hole": true, "area": 1.0129}
+{"kind": "cyl", "dia": 0.754, "semi_angle": 0.0, "axis": [1.0, 0.0, 0.0], "origin": [0.827, 0.0, 0.0], "a_min": -0.357, "a_max": -0.197, "sweep_deg": 360.0, "hole": true, "area": 0.379}
+{"kind": "cone", "dia": 0.938, "semi_angle": 75.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0, "a_max": 0.0194, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 0.938, "semi_angle": 75.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0, "a_max": 0.0194, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 0.938, "semi_angle": 75.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0, "a_max": 0.0194, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 0.938, "semi_angle": 75.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0, "a_max": 0.0194, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 0.938, "semi_angle": 75.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0, "a_max": 0.0194, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
+{"kind": "cone", "dia": 0.938, "semi_angle": 75.0, "axis": [1.0, 0.0, 0.0], "origin": [0.0, 0.0, 0.0], "a_min": -0.0, "a_max": 0.0194, "sweep_deg": 60.0, "hole": false, "area": 0.0122}
