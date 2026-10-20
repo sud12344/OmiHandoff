@@ -7,7 +7,9 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
-**2026-10-20 (later): AIR-WAY FIRST - STAGED (cloud session), not shipped.** OMi's rule (section 5): Air-Way over Brennan wherever Air-Way
+**2026-10-20 (later): AIR-WAY FIRST - STAGED (cloud session), not shipped.** Branch `claude/review-drawings-update-eflmmf` also carries the
+merged ORFS / A14 branch (`claude/pensive-planck-t9i90d`); `claude/quirky-sagan-ajqv46` (cloud batch-17 rebase, 01:32) is superseded by the
+batch-17 ship - do not merge it. OMi's rule (section 5): Air-Way over Brennan wherever Air-Way
 prints a value, including the numbers of OMi's website file. Stage + evidence: `tools\_out\airway_first_20261020\` (README.md).
 - **319 cells** in 26 review tables (235 rows) go back from the OMi-file value to Air-Way: Task A (2026-09-25), batch-15 OMi values, A19,
   the A19-style "7 pending", A20 (1404 nut faces), 2404-10-04 / -20-32 lengths (question 26). 261 checked against Air-Way's raw extract;
@@ -21,7 +23,8 @@ prints a value, including the numbers of OMi's website file. Stage + evidence: `
 - **Look at (42 cells, `checks\look_at.csv`):** 6405 bores where Air-Way's D equals the tap drill ("column bleed"), 6405 L31 values flagged
   suspect in 2026-09, 5502-20-20-FG / -24-24-FG N, 6410-12-08-O 1.48 -> 1.09 and other moves > 0.15 in.
 - DataStatus unchanged (6500-08-06-FG back to VERIFIED: its logged OMi downgrade undone).
-- **Next (PC):** read the two "Review of Drawings" PDFs (not in the repo) against the stage; SolidWorks dry runs of the 25 roots; ship as
+- **Next (PC):** read the two "Review of Drawings" PDFs (not in the repo) against the stage; SolidWorks dry runs of the 25 roots
+  (ready: `tools\_out\airway_first_20261020\dryrun\RUN_DRYRUN.md` - 3 groups, memory check, verdict script); ship as
   batch 18 (macros + SW2 + review tables + `tools_af`). The dimension-check drawings of these roots go stale.
 
 **2026-10-20: BATCH 17 SHIPPED (`03_SCRIPTS\RUN_ME_batch17.txt`, QA #173-#175; user: "can you ship batch 17?").** Evidence and scripts:

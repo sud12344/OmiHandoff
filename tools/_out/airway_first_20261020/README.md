@@ -74,7 +74,7 @@ to `tools/` with the ship (back up first).
 1. Read the two review PDFs against `revert_list.csv` / `look_at.csv` (any AW / BI mark that disagrees with this stage).
 2. Re-check the 58 log-sourced cells (6401 / 6405 / 6408 / 6500) on the Air-Way pages.
 3. User: the 3 held configurations; the look-at list (ask OMi or accept).
-4. SolidWorks dry runs of the 25 roots (`regen/stage/{straight,tee}/Build_<root>_MASTER.bas` + SW2, `TABLE_PATH` to the regen folder),
+4. SolidWorks dry runs of the 25 roots - ready to run: `dryrun/RUN_DRYRUN.md` (`scripts/run_dryrun.py`, `scripts/verdict.py`); was: (`regen/stage/{straight,tee}/Build_<root>_MASTER.bas` + SW2, `TABLE_PATH` to the regen folder),
    sweep every configuration, compare with the current masters (unchanged configurations identical).
 5. Ship as batch 18: macros + SW2 + the 26 review tables from `stage/04_DESIGN_TABLES`, deploy `tools_af`, RUN_ME_batch18.txt, QA_Log,
    coverage, PROJECT_STATUS. The 2026-10-09 / 10-08 dimension-check drawings of these roots go stale (6401 drawing: 16 cells).

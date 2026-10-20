@@ -1,0 +1,433 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\Build_0318_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\DesignTable_0318_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\0318\\0318_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\0318\\Build_0318_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "0318_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "0318_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\0318_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "0318_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "0318_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\Build_0403_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\DesignTable_0403_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\0403\\0403_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\0403\\Build_0403_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "0403_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "0403_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\0403_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "0403_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "0403_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\Build_1404_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\DesignTable_1404_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\1404\\1404_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\1404\\Build_1404_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "1404_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "1404_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\1404_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "1404_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "1404_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\Build_2404_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\DesignTable_2404_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2404\\2404_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2404\\Build_2404_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2404_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2404_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2404_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2404_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2404_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\tee\\Build_2501_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\tee\\DesignTable_2501_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2501\\2501_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2501\\Build_2501_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2501_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2501_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2501_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2501_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2501_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\tee\\Build_2503_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\tee\\DesignTable_2503_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2503\\2503_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2503\\Build_2503_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2503_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2503_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2503_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2503_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2503_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\tee\\Build_2605_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\tee\\DesignTable_2605_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2605\\2605_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2605\\Build_2605_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2605_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2605_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2605_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2605_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2605_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\Build_2705_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\DesignTable_2705_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2705\\2705_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2705\\Build_2705_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2705_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2705_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2705_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2705_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2705_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\Build_2706_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\regen\\stage\\straight\\DesignTable_2706_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2706\\2706_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\airway_first_20261020\\dryrun\\2706\\Build_2706_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2706_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2706_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\2706_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "2706_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "2706_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "sw_status",
+  {}
+ ]
+]
