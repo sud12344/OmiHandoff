@@ -417,5 +417,317 @@
   "blocked": [],
   "verts": 8,
   "cols": 21
+ },
+ "FS6565": {
+  "configs": 3,
+  "ref": "FS6565-08-08",
+  "skipped": [
+   [
+    "FS6565-10-10",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6565-12-12",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6565C"
+   ],
+   [
+    "FS6565-16-16",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF6565:FF6565-20-20",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 30,
+  "cols": 68
+ },
+ "FS6565C": {
+  "configs": 1,
+  "ref": "FS6565-12-12",
+  "skipped": [
+   [
+    "FS6565-04-04",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6565"
+   ],
+   [
+    "FS6565-06-06",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6565"
+   ],
+   [
+    "FS6565-08-08",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6565"
+   ],
+   [
+    "FS6565-10-10",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6565-16-16",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF6565:FF6565-20-20",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 32,
+  "cols": 70
+ },
+ "FS6540": {
+  "configs": 3,
+  "ref": "FS6540-08-08-O",
+  "skipped": [
+   [
+    "FS6540-10-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FS6540-12-12-O",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6540C"
+   ],
+   [
+    "FS6540-16-16-O",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6540C"
+   ],
+   [
+    "FF6402:FF6402-8-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-8-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-16-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-20-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-24-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 21,
+  "cols": 53
+ },
+ "FS6540C": {
+  "configs": 2,
+  "ref": "FS6540-12-12-O",
+  "skipped": [
+   [
+    "FS6540-04-04-O",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6540"
+   ],
+   [
+    "FS6540-06-06-O",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6540"
+   ],
+   [
+    "FS6540-08-08-O",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6540"
+   ],
+   [
+    "FS6540-10-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-8-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-8-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-16-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-20-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6402:FF6402-24-24-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 22,
+  "cols": 54
+ },
+ "FS6504": {
+  "configs": 3,
+  "ref": "FS6504-08-08",
+  "skipped": [
+   [
+    "FS6504-10-10",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C"
+   ],
+   [
+    "FS6504-12-12",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C"
+   ],
+   [
+    "FS6504-16-16",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C"
+   ],
+   [
+    "FS6504-20-20",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C"
+   ],
+   [
+    "FF7504:FF7504-10-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF7504:FF7504-24-24",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 24,
+  "cols": 57
+ },
+ "FS6504C": {
+  "configs": 4,
+  "ref": "FS6504-10-10",
+  "skipped": [
+   [
+    "FS6504-04-04",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6504"
+   ],
+   [
+    "FS6504-06-06",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6504"
+   ],
+   [
+    "FS6504-08-08",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6504"
+   ],
+   [
+    "FF7504:FF7504-10-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF7504:FF7504-24-24",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 25,
+  "cols": 58
+ },
+ "FS6505": {
+  "configs": 2,
+  "ref": "FS6505-08-08",
+  "skipped": [
+   [
+    "FS6505-06-06",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6505-10-08",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6505-12-12",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6505C"
+   ],
+   [
+    "FS6505-16-16",
+    "other shape family",
+    "face-seal swivel with a counterbored mouth (-10 up): built in master FS6505C"
+   ],
+   [
+    "FF6505:FF6505-8-12",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 20,
+  "cols": 52
+ },
+ "FS6505C": {
+  "configs": 2,
+  "ref": "FS6505-12-12",
+  "skipped": [
+   [
+    "FS6505-04-04",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6505"
+   ],
+   [
+    "FS6505-06-06",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6505-08-08",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6505"
+   ],
+   [
+    "FS6505-10-08",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF6505:FF6505-8-12",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 21,
+  "cols": 53
  }
 }

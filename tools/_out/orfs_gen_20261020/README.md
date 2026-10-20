@@ -1,6 +1,6 @@
 # ORFS generator end functions (2026-10-20, cloud session) - STAGING, work in progress
 
-**Status:** staged (steps 1-5 done). Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
+**Status:** staged (steps 1-6 done). Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
 - **Toolset:** `tools/` = a copy of the merged batch-17 toolset (`tools/_out/genfeat_20261018/merged/tools`) plus the ORFS additions below.
 - **Plan:** `tools/_out/orfs_modeltype_20261016/PLAN.md`.
 - **End data:** `tools/_out/orfs_wp2_20261020/end_lib_08.json` (extractors + validation on the Brennan pilots).
@@ -164,6 +164,25 @@ When it is unset, the behaviour is unchanged.
 - **Still needs files:** FS2701-NN-NN-FG (bulkhead legs -04 ... -16), FS6801-NN-NN-NWO-FG (adjustable studs -04 ... -24), FS2403-NN-NN (straight
   male ends -04 ... -20), FS6500-24-24-FG (-24 swivel / forged leg), FS2406-08-04.
 
+## Step 6 (done): the straight face-seal swivels FS6565 / FS6540 / FS6504 / FS6505 (20 rows)
+- **Reference** (FS6565-08-08, step 5): Air-Way's lengths L45 / L34 / L40 / L16 run to the stem SEAL face; the model length `LNUT` = that
+  length + the measured seal -> nut face distance SEAL (SPEC `Lfun`).
+- **gen_straight2:** `FSSW_MEAS` moved here (gen_tee reads `G.FSSW_MEAS`; its 31 forged masters regenerate identical); `end_FSSW` (kind FSSW: nut
+  outside VO + cavity VG, as end_JICSW) with the End A (double swivel) and End B dimension blocks, the swivel kind lists `SW_KINDS` / `SWA_KINDS`,
+  the nut-hex zone cut, the seal-face bore check (the bore runs 0.02 past the seal face into the nut cavity).
+  - nut hex per Q-FS-NUT (user yes): the row's column where it equals Air-Way FF318 S, else FF318 S (FS6504's S is not a nut hex: FF318 S at
+    every size; FS6505-16-16 1.61 -> 1.63) - noted in `$COMMENT`;
+  - **body hex end = Air-Way where it prints the hex length** (FS6540 L37, FS6504 L39: the swivel-side hex face at L35 - L37 / L38 - L39 before
+    the seal face); FS6565 / FS6505 print none: the measured swivel body face (= Brennan FS6565-08-08). Air-Way is 0.015 ... 0.09 shorter than the
+    Brennan swivel at -04 ... -16 (each row's `$COMMENT`: tell the user).
+  - masters FS6565 / FS6540 / FS6504 / FS6505 (countersunk mouth, -04 ... -08) and **...C** (counterbored mouth, -10 up).
+- **Checks** (`checks/static_checks_sw.txt`): vbacheck 8 / 8, dofcheck_straight 8 / 8 fully defined, allcfg 0; forged masters unchanged;
+  regression 99 / 99 identical.
+- **OCP closed loop** (`scripts/closed_loop_fs_sw.py` -> `ocp/closed_loop_sw.txt`): zone hex cuts and stepped bores as the macro, each swivel read
+  with measure_fssw (End A on a turned copy), the FS6540 stud with measure_stud: 20 configurations, 482 checks, 0 off; FS6565-08-08 vs Brennan:
+  seal -> seal 2.12 / 2.12, volume +3.31 %.
+- **ORFS total now: 121 configurations** in 45 masters (14 straight + 31 forged) + 8 FS4000 O-rings; count 1,537 of 2,535.
+
 ## Blocked: the female swivel on the STRAIGHTS (FS6540 / FS6504 / FS6505 / FS6565) needs one STEP
 - On the forged FS6500-08-08-FG pilot, Air-Way L21 (= Brennan AAA) runs from the crossing to the stem's SEAL face; the nut face is 0.433
   further out. PLAN.md had read the drawings as "to the nut face", for the straights as well.
@@ -176,6 +195,5 @@ When it is unset, the behaviour is unchanged.
 
 ## Next
 - **SolidWorks dry runs on the PC** (CLAUDE.md verify loop; `TABLE_PATH` -> `out/`, `out/tee/`, `out/ring/`): first FS2403 / FS6400, one forged
-  stepped (FS2500), one no-step (FS2500N), one counterbore swivel (FS6500C), then the rest.
-- The straight female swivel end in gen_straight2 (FS6565 / FS6540 / FS6504 / FS6505, 20 rows): reference = the seal face (FS6565-08-08 above).
+  stepped (FS2500), one no-step (FS2500N), one counterbore swivel (FS6500C), one straight swivel each (FS6565, FS6540C), then the rest.
 - New SPECs without new files: FS2404, FS6403, FS0304-C, FS6502, FS2601 (and FS2700 once the bulkhead files exist).

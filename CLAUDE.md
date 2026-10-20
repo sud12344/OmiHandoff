@@ -15,8 +15,8 @@ Excel can crash during a design-table insert and leave a window open that breaks
 it and re-run. Supersedes the 2026-10-19 lines below.
 
 **2026-10-20 (cloud, branch `claude/pensive-planck-t9i90d`): READ `00_DOCS/NEXT_SESSION_PROMPT_2026-10-20.md` too** - ORFS generator staged
-(`tools/_out/orfs_gen_20261020/`: 101 FS configurations in 37 masters + 8 FS4000 O-rings, all checks clean, no SolidWorks dry run yet; 29 more
-Brennan STEPs measured in `tools/_out/orfs_steps2_20261020/`), the batch-17 work rebased on batch 16, A14 done; 1,517 of 2,535 ready after
+(`tools/_out/orfs_gen_20261020/`: 121 FS configurations in 45 masters + 8 FS4000 O-rings, all checks clean, no SolidWorks dry run yet; 29 more
+Brennan STEPs measured in `tools/_out/orfs_steps2_20261020/`), the batch-17 work rebased on batch 16, A14 done; 1,537 of 2,535 ready after
 SolidWorks. Nothing shipped since batch 16.
 **2026-10-19: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`** (everything staged on 2026-10-18: Brennan data allowed and
 marked, OMi answers, A1-A24 answers, the batch-17 stage + merged generator tools, 1,357 configurations generate; SolidWorks sign-in is

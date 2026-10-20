@@ -2,13 +2,13 @@
  "summary": {
   "universe (OMi website, carbon steel)": 2535,
   "shipped now (configurations in a master), OMi parts": 1106,
-  "generated, waiting for the SolidWorks dry runs + ship": 411,
-  "  of which ORFS (FS...)": 101,
+  "generated, waiting for the SolidWorks dry runs + ship": 431,
+  "  of which ORFS (FS...)": 121,
   "  of which ORFS loose parts FS0306 / FS0318 / FS0319": 22,
   "  of which O-rings 4000 / 4001 / FS4000": 29,
   "    (FS4000 face-seal O-rings)": 8,
-  "= ready after SolidWorks": 1517,
-  "not yet (data, STEP, decision or OMi needed)": 1018,
+  "= ready after SolidWorks": 1537,
+  "not yet (data, STEP, decision or OMi needed)": 998,
   "configurations not matching an OMi part number (not counted)": 69
  },
  "not_in_universe": [

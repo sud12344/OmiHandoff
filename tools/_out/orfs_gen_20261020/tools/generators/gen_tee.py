@@ -845,19 +845,8 @@ def leg_FSBH(i, dash, M, BR, i2, i4, d17):
 # minor (13/16-16 basic minor), minor to TE, 45deg relief up to RELR at RELS, a cone down to the stem head radius STEMR at LIPS, the stem head
 # back to the seal face at SEAL, the seal face to the bore. NOT modelled (as every swivel here): the nut hex chamfers, the shallow groove in the
 # skirt (r 0.4022 over 0.127), the 0.0025 nut / stem clearance (nut and body one solid, the lip bore under the nut omitted), the O-ring.
-# 2026-10-20 (per-size STEPs): every size from the swivel leg of its own BRENNAN_FS6500-NN-NN-FG (tools/_out/orfs_steps2_20261020 fssw_table.txt, mapped as
-# the -08 entry; -08 identical). -04 ... -08: a 45deg mouth countersink from the nut face to the minor (CSR); -10 ... -20: a counterbore at the
-# nut face (CBR, CBD 0.05) and a 60deg countersink down to the minor (FSSW_CBANG) - another sketch, masters <root>C. -04 / -06: no lip bore
-# under the nut (the nut rear face meets the stem neck; modelled as every size, nut and stem one solid).
-FSSW_MEAS = {4: dict(AF=0.687, HEXL=0.337, SKF=0.335, SKS=0.504, SKR=0.294, NUTL=0.622, NECKR=0.201, SEAL=0.325, BODYS=0.975, TE=0.2947, RELS=0.342, RELR=0.2985, LIPS=0.482, STEMR=0.251, CSR=0.2835),
-             6: dict(AF=0.812, HEXL=0.392, SKF=0.4, SKS=0.572, SKR=0.3575, NUTL=0.707, NECKR=0.261, SEAL=0.375, BODYS=1.11, TE=0.3409, RELS=0.392, RELR=0.361, LIPS=0.552, STEMR=0.31, CSR=0.3465),
-             8: dict(AF=0.938, HEXL=0.482, SKF=0.46, SKS=0.67, SKR=0.419, NUTL=0.827, NECKR=0.321, SEAL=0.433, BODYS=1.288, TE=0.4059, RELS=0.45, RELR=0.4165, LIPS=0.63, STEMR=0.3725, CSR=0.4095),
-             10: dict(AF=1.125, HEXL=0.548, SKF=0.555, SKS=0.796, SKR=0.516, NUTL=0.953, NECKR=0.4085, SEAL=0.532, BODYS=1.512, TE=0.484, RELS=0.548, RELR=0.51, LIPS=0.768, STEMR=0.4615, CBR=0.51, CBD=0.05),
-             12: dict(AF=1.375, HEXL=0.599, SKF=0.68, SKS=0.863, SKR=0.608, NUTL=1.024, NECKR=0.468, SEAL=0.571, BODYS=1.691, TE=0.5356, RELS=0.587, RELR=0.6, LIPS=0.827, STEMR=0.5485, CBR=0.604, CBD=0.05),
-             16: dict(AF=1.625, HEXL=0.65, SKF=0.805, SKS=0.895, SKR=0.71, NUTL=1.095, NECKR=0.565, SEAL=0.583, BODYS=1.783, TE=0.5477, RELS=0.599, RELR=0.725, LIPS=0.859, STEMR=0.6735, CBR=0.729, CBD=0.05),
-             20: dict(AF=1.875, HEXL=0.65, SKF=0.93, SKS=0.895, SKR=0.8655, NUTL=1.095, NECKR=0.7005, SEAL=0.583, BODYS=1.783, TE=0.5376, RELS=0.599, RELR=0.86, LIPS=0.859, STEMR=0.7985, CBR=0.854, CBD=0.05)}
-FSSW_CBANG = 60.0
-FSSW_CSANG = 45.0; FSSW_RELANG = 45.0
+# 2026-10-20: the swivel table lives in gen_straight2 (the straight swivels FS6565 / FS6540 / FS6504 / FS6505 read it too)
+FSSW_MEAS = G.FSSW_MEAS; FSSW_CBANG = G.FSSW_CBANG; FSSW_CSANG = G.FSSW_CSANG; FSSW_RELANG = G.FSSW_RELANG
 FSSW_ASSUME = ('female face-seal SWIVEL leg (Brennan FS6500-08-08-FG, SAE J1453): leg length = the row L21, crossing -> the stem\'s flat SEAL face (= Brennan AAA; '
                'measured - the nut face is 0.433 further out at -08, PLAN.md had read L21 as the nut face); nut hex = the row SHEX (= FF318 S, Q-FS-NUT) over '
                'the measured hex length; rear skirt cone, skirt, nut rear face, neck and body face measured; nut thread = the face-seal thread of the dash, '

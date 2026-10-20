@@ -31,6 +31,12 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS step 6 - the straight face-seal swivels** (user "yes start on the straight swivels"; README step 6; staged):
+- FS6565 / FS6540 / FS6504 / FS6505 + counterbored-mouth masters ...C: 20 configurations; length to the seal face (FS6565-08-08), nut hex per
+  Q-FS-NUT; body hex built to Air-Way's printed hex length (FS6540 L37 / FS6504 L39) - 0.015 ... 0.09 shorter than the Brennan swivel: tell the user;
+- static checks clean, OCP closed loop 482 checks 0 off, FS6565-08-08 seal -> seal = Brennan 2.12; regression 99 / 99;
+- count: **1,537 of 2,535** ready after SolidWorks (ORFS 121 configurations).
+
 **2026-10-20 (cloud): ORFS step 5 - 29 per-size Brennan STEPs (user upload)** (`tools\_out\orfs_gen_20261020\README.md` step 5; staged, not shipped):
 - loose parts at every size (FS0306 / FS0318 -04 ... -24, FS0319 + coned-collar master FS0319C); forged male legs -04 ... -20 and swivels -04 ... -20
   from FS6500-NN; straights -24 (FS2403-24-24); one master per leg-shape variant (`<root>N / R / C`);
