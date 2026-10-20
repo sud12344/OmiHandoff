@@ -121,7 +121,7 @@ def R4(x): return round(x, 4)
 def face_corner(S):
     """the end face x bore corner: the bore = the smallest-radius horizontal reaching the far end; the face = the vertical at the
     largest a that starts at the bore radius"""
-    hz = [s for s in S if s['k'] == 'L' and abs(s['r1'] - s['r2']) < TOL and s['a2'] - s['a1'] > 0.05]
+    hz = [s for s in S if s['k'] == 'L' and abs(s['r1'] - s['r2']) < TOL and s['a2'] - s['a1'] > 0.05 and min(s['r1'], s['r2']) > 0.01]   # (not a line on the axis: FS2501-08-08-FG)
     # the bore of THIS end: among the smallest-radius horizontals, the one reaching furthest out (a part with a bore step has two bores;
     # 2026-10-20: the smallest bore overall can belong to the other end)
     rlow = min(min(s['r1'], s['r2']) for s in hz)
@@ -139,7 +139,7 @@ def _fmt(E):
 
 
 # ------------------------------------------------------------------------------------------------------------------------------ FSM
-def measure_fsm(p, axis, sign, others=(), pn=2, bulkhead=False):
+def measure_fsm(p, axis, sign, others=(), pn=2, bulkhead=False, partial=False):
     """male face-seal end (and, bulkhead=True, the bulkhead end FSBH: the same nose, a long thread, relief, step, collar).
     Returns the face groove, land, chamfer, thread major + length, run-out and the end length, distances s from the seal face."""
     S = half(p, axis, sign, pn, others)
@@ -168,6 +168,10 @@ def measure_fsm(p, axis, sign, others=(), pn=2, bulkhead=False):
     out['CH'] = s_(e['q'][0]); out['CH_ANG'] = A(e); i += 1
     e = E[i]; assert H(e), ('thread major', _fmt(E[i:i + 2]))
     out['RMAJ'] = R4(e['p'][1]); out['THD_END'] = s_(e['q'][0]); out['THDL'] = R4(e['p'][0] - e['q'][0]); i += 1
+    if partial:
+        # 2026-10-20 (closed loop of a no-step leg on OUR rebuild): the leg line runs on into the forged body - stop at the thread major
+        out['RUNOUT'] = 'unread'; out['AFTER'] = _fmt(E[i:i + 3]); out['RINGS'] = [dict(s=R4(af - x), rc=R4(y), W=R4(2 * R)) for x, y, R in rings]
+        return out
     # run-out: (a) 60 deg flank down to a relief, relief to a radial shoulder (straights, bulkhead), or
     #          (b) a radial step down at the thread end, then the body (forged legs)
     e = E[i]
@@ -181,6 +185,12 @@ def measure_fsm(p, axis, sign, others=(), pn=2, bulkhead=False):
         out['SHOULDER_R'] = R4(e['q'][1]); i += 1
     elif V(e) and e['q'][1] < e['p'][1]:
         out['RUNOUT'] = 'step'; out['STEPR'] = R4(e['q'][1]); out['ENDL'] = out['THD_END']; i += 1
+    elif V(e) and e['q'][1] > e['p'][1]:
+        # 2026-10-20 (per-size STEPs, FS6500-06 / -10, FS2501-08-08-FG): the leg's turned flats dia is ABOVE the thread - a radial step UP
+        out['RUNOUT'] = 'step_up'; out['STEPR'] = R4(e['q'][1]); out['ENDL'] = out['THD_END']; i += 1
+    elif e['k'] == 'L' and 70 < A(e) < 80 and e['q'][1] > e['p'][1]:
+        # 2026-10-20 (FS6500-04 / -12 / -16): flats dia = thread major - the thread runs straight into the 75deg hex end chamfer (no step)
+        out['RUNOUT'] = 'none'; out['STEPR'] = out['RMAJ']; out['ENDL'] = out['THD_END']
     else:
         raise AssertionError(('run-out', _fmt(E[i:i + 2])))
     if bulkhead:

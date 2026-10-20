@@ -10,6 +10,16 @@
   "diff_pct": -0.74
  },
  {
+  "pn": "FS2403-24-24",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.34275,
+  "bad": [],
+  "brennan_volume": 4.35986,
+  "diff_pct": -0.39
+ },
+ {
   "pn": "FS6400-08-06-O",
   "checks": 23,
   "off": 0,
@@ -41,6 +51,14 @@
   "off": 0,
   "solids": 1,
   "volume": 1.18938,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-24-24-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.32282,
   "bad": []
  }
 ]

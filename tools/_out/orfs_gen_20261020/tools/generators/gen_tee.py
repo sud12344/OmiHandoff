@@ -464,6 +464,15 @@ SPEC.update({
                    legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE'),
                          ('FSM', 'L7_3@DRIVE', 'D1_3@BORE', 'THDMAJ_D_3@DRIVE')]),
 })
+# 2026-10-20 (per-size STEPs): a forged FS row whose face-seal legs have the flats = the thread major (no step, Brennan FS6500-04 / -12 / -16) is
+# another DRIVE sketch -> its own master <root>N, reading the same review table (rows sorted between the two by build_rows)
+# an adjustable-stud row whose stud neck lies below the flats (a larger body than the -08 pilot's) is a third / fourth sketch: <root>R / <root>NR
+for _r in [r_ for r_ in list(SPEC) if r_.startswith('FS') and any(l[0] == 'FSM' for l in SPEC[r_]['legs'])]:
+    SPEC[_r + 'N'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - face-seal legs without a step (flats = thread)', table=_r, nostep=True, ref=None)
+    if any(l[0] == 'NWO' for l in SPEC[_r]['legs']):
+        SPEC[_r + 'R'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - stud neck below the flats', table=_r, nwo_raised=True, ref=None)
+        SPEC[_r + 'NR'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - face-seal legs without a step, stud neck below the flats', table=_r, nostep=True,
+                               nwo_raised=True, ref=None)
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
@@ -592,7 +601,7 @@ def place(sp):
 
 
 def load_review(root):
-    ws = openpyxl.load_workbook(P.review_table(root), read_only=True).active
+    ws = openpyxl.load_workbook(P.review_table(SPEC.get(root, {}).get('table', root)), read_only=True).active   # 2026-10-20: 'table' = another root's table (SPEC <root>N)
     rows = list(ws.iter_rows(values_only=True)); h = rows[1]
     out = [dict(zip(h, r)) for r in rows[2:] if r[0]]
     for sub, ren, *note in SPEC.get(root, {}).get('fold', []):
@@ -680,9 +689,11 @@ def leg_JICBH(i, dash, M, BR, i2, K1, O):
 # the -08 legs of BRENNAN_FS6500-08-08-FG / FS6801-08-08-NWO-FG / FS2701-08-08-FG: the thread major runs to the end length ENDL, then a radial
 # step down to the hex flats radius (the leg core here) - the end stands proud of the flats (PLAN risk R1; Brennan adds a 75deg chamfer on the hex
 # arm end, not modelled as every hex-end chamfer). FS legs are kept out of the 2603HX A/F rule (the flats stay the VERIFIED Air-Way S2).
-FSLEG_ASSUME = ('face-seal legs (SAE J1453 male face seal): face, rectangular O-ring groove, land, 45deg nose chamfer and end length = gen_straight2 FSM_MEAS '
-                '(Brennan FS2403-08-08); on the forged legs the thread major runs to the end length and steps down to the hex flats (Brennan FS6500 / FS6801 / '
-                'FS2701-08 forged legs) - the end stands proud of the flats; hex A/F = the row S2 (face-seal threads are not in the 2603HX A/F rule, PLAN R1); '
+FSLEG_ASSUME = ('face-seal legs (SAE J1453 male face seal): face, rectangular O-ring groove, land, 45deg nose chamfer and end length measured per dash on '
+                'the male leg of BRENNAN_FS6500-NN-NN-FG (gen_straight2 FSMF_MEAS; -08 also = FS2403-08-08); the thread major runs to the end length, then '
+                'meets the hex flats of the row with a radial step down (thread above the flats), a step up (flats above the thread; Brennan FS6500-06 / -10, '
+                'FS2501-08-08-FG) or no step where the flats = the thread major within 0.003 (Brennan FS6500-04 / -12 / -16; masters <root>N); '
+                'hex A/F = the row S2 (face-seal threads are not in the 2603HX A/F rule, PLAN R1); '
                 'the 75deg chamfer of the hex arm end and the O-ring are NOT modelled; single manufacturer (Brennan pilots; Air-Way 3D models not yet measured)')
 # FSBH leg (bulkhead, BRENNAN_FS2701-08-08-FG): FSM nose, thread major to the 60deg flank, relief, a step (dia 0.801 at -08) of Air-Way i4, the
 # collar face at Air-Way i2 from the tip, the collar (Air-Way d17) over COLLARL (0.20 at -08: Air-Way prints no collar thickness), then the hex arm.
@@ -711,13 +722,57 @@ def fsnwo_inputs(r, d, leg_col, wf_col):
     return I3, THDL, G.ORB[d]['GD'], m, stud
 
 
-def leg_FSM(i, dash, M, BR):
-    if dash not in G.FSM_MEAS: raise KeyError(G.lib_gap('FSM', dash))
-    f = G.FSM_MEAS[dash]; TM = G.fs_major(dash); rM = TM / 2; thr = G.FS_THR[dash]
+FSM_NOSTEP_TOL = 0.003      # radius: a leg whose flats radius is within this of the thread major has NO step (Brennan FS6500-04 / -12 / -16)
+
+
+def fsm_nostep(dash, BR):
+    return abs(G.fs_major(dash) / 2 - BR) <= FSM_NOSTEP_TOL
+
+
+FS_MASTER_SUFFIX = {'S': '', 'N': 'N', 'SF': '', 'NF': 'N', 'SR': 'R', 'NR': 'NR'}
+FS_CODE_WHY = {'S': 'stepped face-seal legs', 'N': 'face-seal legs with the flats = the thread major, no step', 'SF': 'stepped face-seal legs, stud neck flush with the flats',
+               'NF': 'no-step face-seal legs, stud neck flush with the flats', 'SR': 'stepped face-seal legs, stud neck below the flats',
+               'NR': 'no-step face-seal legs, stud neck below the flats'}
+
+
+def fs_code(sp, dd, BR, r):
+    """the leg-shape code of a row (FS roots only; '' for every other root)"""
+    if not sp.get('fs'): return ''
+    ns = [fsm_nostep(d, BR) for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'FSM']
+    c = 'N' if ns and all(ns) else 'S' if not any(ns) else 'X'
+    fl = [abs(NWO_FS[d]['NECKR'] - BR) <= 0.003 for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'NWO' and d in NWO_FS]
+    if any(l[0] == 'NWO' for l in sp['legs']): c += 'F' if fl and all(fl) else 'R' if fl and not any(fl) else 'X' if fl else 'F'
+    return c
+
+
+def sp_code(sp):
+    if not sp.get('fs'): return ''
+    return ('N' if sp.get('nostep') else 'S') + (('R' if sp.get('nwo_raised') else 'F') if any(l[0] == 'NWO' for l in sp['legs']) else '')
+
+
+def leg_FSM(i, dash, M, BR, nostep=False):
+    # 2026-10-20 (per-size STEPs): forged legs read FSMF_MEAS; the thread meets the leg's turned flats with a radial step down (thread above the
+    # flats), a step up (flats above the thread) or - flats = thread within FSM_NOSTEP_TOL - no step (nostep=True: the leg line runs straight from
+    # the crossing to the nose chamfer; its own masters, SPEC <root>N, one sketch per master)
+    if dash not in G.FSMF_MEAS: raise KeyError(G.lib_gap('FSMF', dash))
+    f = G.FSMF_MEAS[dash]; TM = G.fs_major(dash); rM = TM / 2; thr = G.FS_THR[dash]
     ch = round(rM - f['FR'], 5); sh = round(M - f['ENDL'], 4); thdl = round(f['ENDL'] - ch, 5)
-    if not rM > BR + 0.003:
-        raise AssertionError(f'hex flats {2 * BR:.4f} at or above the thread major {TM}: the forged run-out was measured only where the thread stands proud of '
-                             f'the flats (Brennan -08 legs on 0.75 flats); a leg on larger flats needs its own pilot (e.g. the family pilot of this root, STEPS_NEEDED part 3)')
+    if fsm_nostep(dash, BR) != nostep:
+        raise AssertionError(f'hex flats {2 * BR:.4f} vs thread major {TM}: ' + ('a step' if nostep else 'no step (flats = thread)') + ' - built in the other master of this root')
+    if nostep:
+        V = [(0, 0), (0, rM), (M - ch, rM), (M, f['FR']), (M, f['GO']), (M - f['GD'], f['GO']), (M - f['GD'], f['GI']), (M, f['GI']), (M, 0)]
+        cols = {f'M{i}@LEG{i}': M, f'THDMAJR_B{i}@LEG{i}': rM, f'FSMCHANG{i}@LEG{i}': G.FSM_CHANG,
+                f'FSM{i}_FACER@LEG{i}': f['FR'], f'FSM{i}_GRVOR@LEG{i}': f['GO'], f'FSM{i}_GRVD@LEG{i}': f['GD'], f'FSM{i}_GRVIR@LEG{i}': f['GI']}
+        pitch = 1 / G.tpi_of(thr)
+        tcols = {f'THDDIA@THD_End{i}': TM, f'THDPITCH@THD_End{i}': round(pitch, 5), f'DEPTH@THD_End{i}': thdl,
+                 f'Profile_Height@THD_End{i}_PROF': round(0.54127 * pitch, 5), f'Profile_Land@THD_End{i}_PROF': round(0.25 * pitch, 5), f'THDPITCH@THD_End{i}_PROF': round(pitch, 5)}
+        dims = [('len', -1, f'M{i}', M, M / 2, rM + 0.6), ('rad', 1, f'THDMAJR_B{i}', rM, M / 2, -0.3),
+                ('ang', 2, 8, f'FSMCHANG{i}', G.FSM_CHANG, M - ch / 2, rM + 0.1), ('ptl', 3, 'False', 8, f'FSM{i}_FACER', f['FR'], M + 0.12, f['FR'] * 0.8),
+                ('rad', 4, f'FSM{i}_GRVOR', f['GO'], M - f['GD'] / 2, -0.25), ('len', 4, f'FSM{i}_GRVD', f['GD'], M - f['GD'] / 2, rM + 0.45),
+                ('rad', 6, f'FSM{i}_GRVIR', f['GI'], M - f['GD'] / 2, -0.15), ('col', 3, 7)]
+        return dict(kind='FSM', dash=dash, V=V, endlen=f['ENDL'], cols=cols, tcols=tcols, dims=dims, rmax=rM, f=f, rM=rM, ch=ch, nostep=True,
+                    thr=thr + ' UN (male O-ring face seal, SAE J1453)', thread=dict(type='CUT', ex=sh, er=rM, depth=thdl, size=f'{TM:.4f}-{G.tpi_of(thr):g}', pitch=pitch),
+                    tipR=f['GI'], thr_in=1, thr_pt=(sh, rM))
     V = [(0, 0), (0, BR), (sh, BR), (sh, rM), (M - ch, rM), (M, f['FR']), (M, f['GO']), (M - f['GD'], f['GO']), (M - f['GD'], f['GI']), (M, f['GI']), (M, 0)]
     cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5), f'THDMAJR_B{i}@LEG{i}': rM, f'FSM{i}_THDL@LEG{i}': thdl, f'FSMCHANG{i}@LEG{i}': G.FSM_CHANG,
             f'FSM{i}_FACER@LEG{i}': f['FR'], f'FSM{i}_GRVOR@LEG{i}': f['GO'], f'FSM{i}_GRVD@LEG{i}': f['GD'], f'FSM{i}_GRVIR@LEG{i}': f['GI']}
@@ -1783,6 +1838,13 @@ def build_rows(root):
         maxes = [G.JIC[d]['TM'] for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind in ('JICM', 'JICBH')]
         AF = max([Y] + maxes); BR = AF / 2
         if AF > Y + 1e-9: warn.append(f'hex A/F raised from Air-Way {Y} to {AF:.4f} (JIC thread major; 2603HX rule)')
+        # 2026-10-20: which master builds this row - one DRIVE sketch per master: S / N = the face-seal legs with / without a step at the flats,
+        # F / R = the adjustable stud's neck flush with the flats (the -08 pilot) / below them (a larger body)
+        _code = fs_code(sp, dd, BR, r)
+        if _code != sp_code(sp):
+            _m = FS_MASTER_SUFFIX.get(_code)
+            skipped.append((pn, 'other shape family', f'face-seal leg shape {_code} ({FS_CODE_WHY.get(_code, "mixed")}): ' +
+                            (f'built in master {sp.get("table", root)}{_m}' if _m is not None else 'no master yet (one sketch per master)'))); continue
         # male NPTF: the thread cylinder at its vanish point (radius rL) must sit inside the hex flats with a real shoulder
         for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
             if kind == 'NPTFM':
@@ -1801,7 +1863,7 @@ def build_rows(root):
             M = r[lc]
             if kind == 'JICM': L = leg_JICM(i, d, M, BR)
             elif kind == 'FSM':       # 2026-10-20 (ORFS)
-                try: L = leg_FSM(i, d, M, BR)
+                try: L = leg_FSM(i, d, M, BR, nostep=bool(sp.get('nostep')))
                 except AssertionError as ex: chk.append(f'leg {i} face seal: {ex}'); L = leg_JICM(i, d, M, BR) if d in G.JIC else None
             elif kind == 'FSBH':      # 2026-10-20 (ORFS)
                 try: L = leg_FSBH(i, d, M, BR, r[sp['bh'][0]], r[sp['bh'][1]], r[sp['bh'][2]])
@@ -1893,6 +1955,7 @@ def build_rows(root):
         # geometry checks
         for i, L in enumerate(legs, 1):
             L['hexl'] = round(L['V'][2][0], 4)
+            if L.get('nostep'): L['hexl'] = round(L['thr_pt'][0], 4)     # 2026-10-20: a no-step FSM leg - the hex arm ends where the thread ends (Brennan FS6500-04 / -12 / -16)
             if bh_arm_short(root, sp, L, BR, AC):
                 # 2026-10-02 (BH_ARM_SHORT): end the bulkhead hex arm 0.001 before the collar face (the leg profile V is unchanged)
                 f_ = f'HEX{i}' if sp.get('elbow') else 'RUN' if i <= 2 else 'RUN2' if sp.get('cross') else 'HEX3'
@@ -1967,7 +2030,7 @@ def build_rows(root):
                 # Brennan 2504-08-08-FG: hex shoulders at 0.323 from the centre, inside the puck (radius 0.433) - normal for
                 # a 45 deg forging. Only the thread must stay clear of the puck.
                 if L['kind'] in ('JICM', 'NPTFM', 'JICBH', 'FSM', 'FSBH'):
-                    ta, tr = L['V'][5] if L['kind'] == 'JICM' else L['V'][7] if L['kind'] == 'JICBH' else L['V'][L['thr_in']] if L['kind'] in ('FSM', 'FSBH') else L['V'][4]      # inner end of the thread zone
+                    ta, tr = L['V'][5] if L['kind'] == 'JICM' else L['V'][7] if L['kind'] == 'JICBH' else (L.get('thr_pt') or L['V'][L['thr_in']]) if L['kind'] in ('FSM', 'FSBH') else L['V'][4]      # inner end of the thread zone (2026-10-20: a no-step FSM leg has no sketch point there - thr_pt)
                     m = puck_margin(ta, tr, AC, BR)
                     if m < 0: chk.append(f'leg {i}: the corner puck buries the inner thread edge (margin {m:.4f})')
                     elif m < 0.01: warn.append(f'leg {i}: inner thread edge clears the corner puck by only {m:.4f}')

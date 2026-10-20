@@ -75,6 +75,14 @@ def cmp(exp, got, tag, bad):
     return n
 
 
+def inside(f, P):
+    from OCP.BRepClass3d import BRepClass3d_SolidClassifier
+    from OCP.TopAbs import TopAbs_IN
+    from section import load
+    c = BRepClass3d_SolidClassifier(load(f), gp_Pnt(*[x * MM for x in P]), 1e-6)
+    return c.State() == TopAbs_IN
+
+
 def main(roots, out):
     os.makedirs(out, exist_ok=True)
     lines, res, nbad, nchk = [], [], 0, 0
@@ -108,13 +116,18 @@ def main(roots, out):
                 g = lambda k: c[f'{k}@LEG{i}']
                 Mi = g(f'M{i}')
                 if lg['kind'] in ('FSM', 'FSBH'):
-                    m = M.measure_fsm(f, ax, sg, oth, pn=pnl, bulkhead=lg['kind'] == 'FSBH')
+                    m = M.measure_fsm(f, ax, sg, oth, pn=pnl, bulkhead=lg['kind'] == 'FSBH', partial=bool(lg.get('nostep')))
                     rM = g(f'THDMAJR_B{i}'); ch = rM - g(f'FSM{i}_FACER')
                     exp = dict(face_a=Mi, GI=g(f'FSM{i}_GRVIR'), GO=g(f'FSM{i}_GRVOR'), GD=g(f'FSM{i}_GRVD'), FR=g(f'FSM{i}_FACER'), CH=ch,
                                CH_ANG=g(f'FSMCHANG{i}'), RMAJ=rM, BORER=c[f'D{i}@BORE{i}'] / 2)
-                    if lg['kind'] == 'FSM':
+                    if lg['kind'] == 'FSM' and lg.get('nostep'):
+                        # 2026-10-20: no step - the thread major line runs on past the end length into the forged body
+                        n += 1
+                        if m.get('THD_END') is None or m['THD_END'] < lg['endlen'] - TOL: bad.append(f'leg {i} no-step leg: thread line ends at {m.get("THD_END")} (end length {lg["endlen"]})')
+                    elif lg['kind'] == 'FSM':
                         exp.update(THD_END=ch + g(f'FSM{i}_THDL'), ENDL=ch + g(f'FSM{i}_THDL'), STEPR=g('BODYR'))
-                        if m.get('RUNOUT') != 'step': bad.append(f'leg {i} FSM run-out {m.get("RUNOUT")} (expected the forged step)')
+                        want_ = 'step' if rM > g('BODYR') else 'step_up'
+                        if m.get('RUNOUT') != want_: bad.append(f'leg {i} FSM run-out {m.get("RUNOUT")} (expected the forged {want_})')
                     else:
                         i2, i4 = g(f'FSBH{i}_I2'), g(f'FSBH{i}_STEPL')
                         exp.update(RELR=g(f'FSBH{i}_RELR'), RELL=g(f'FSBH{i}_RELL'), REL_END=i2 - i4, FLANK_ANG=g(f'RELIEFANG{i}'))
@@ -124,6 +137,16 @@ def main(roots, out):
                                       COLLAR_s1=i2 + g(f'COLLARL{i}')), got_b, f'leg {i} FSBH', bad)
                     n += cmp(exp, m, f'leg {i} {lg["kind"]}', bad)
                     if m['RINGS']: bad.append(f'leg {i}: an O-ring arc in the model')
+                    if lg['kind'] == 'FSM':
+                        # 2026-10-20: the thread zone is free of the hex arm - a point just above the thread major, in the hex CORNER direction
+                        # (in the legs' plane, normal to the leg), halfway between the hex arm end and the nose chamfer, must lie outside the solid
+                        a_ = (Mi - lg['endlen'] + Mi - (rM - g(f'FSM{i}_FACER'))) / 2; q_ = rM + 0.004     # (the measured thread zone, not the arm being checked)
+                        P_ = [0.0, 0.0, 0.0]; P_[ax] = sg * a_; P_[1 - ax] = q_
+                        n += 1
+                        if inside(f, P_): bad.append(f'leg {i}: hex material over the thread at {round(a_, 4)} from the crossing (r {q_:.4f}, hex corner direction)')
+                        P0 = [0.0, 0.0, 0.0]; P0[ax] = sg * (lg['hexl'] - 0.01); P0[1 - ax] = (c[f'D{i}@BORE{i}'] / 2 + min(rM, g('BODYR') if lg.get('nostep') is None else rM)) / 2
+                        n += 1
+                        if not inside(f, P0): bad.append(f'leg {i}: classifier sanity - a point in the leg wall at {P0} reads outside')
                 elif lg['kind'] == 'FSSW':
                     m = M.measure_fssw(f, ax, sg, oth, pn=pnl, model=True)
                     Mt = lg['Mtip']; rmin = g(f'FSW{i}_MINR')

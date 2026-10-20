@@ -1,24 +1,59 @@
-FS2500-08-08-FG: 24 checks, 0 off; solids 1, volume 0.83467 in^3
-FS2501-08-06-FG: 12 checks, 0 off; solids 1, volume 0.77353 in^3
-FS2501-08-08-FG: generator-blocked ['leg 1 face seal: hex flats 0.8750 at or above the thread major 0.8125: the forged run-out was measured only where the thread stands proud of the flats (Brennan -08 legs on 0.75 flats); a leg on larger flats needs its own pilot (e.g. the family pilot of this root, STEPS_NEEDED part 3)']
-FS2501-08-12-FG: generator-blocked ['leg 1 face seal: hex flats 1.0600 at or above the thread major 0.8125: the forged run-out was measured only where the thread stands proud of the flats (Brennan -08 legs on 0.75 flats); a leg on larger flats needs its own pilot (e.g. the family pilot of this root, STEPS_NEEDED part 3)']
-FS2503-08-06-FG: 12 checks, 0 off; solids 1, volume 0.57377 in^3
-FS2503-08-08-FG: generator-blocked ['leg 2 face seal: hex flats 0.8750 at or above the thread major 0.8125: the forged run-out was measured only where the thread stands proud of the flats (Brennan -08 legs on 0.75 flats); a leg on larger flats needs its own pilot (e.g. the family pilot of this root, STEPS_NEEDED part 3)', 'leg 2: the corner puck buries the inner thread edge (margin -0.0470)']
-FS2603-08-08-08-FG: 36 checks, 0 off; solids 1, volume 1.11857 in^3
-FS2701-08-08-FG: 31 checks, 0 off; solids 1, volume 1.33584 in^3; Brennan pilot 1.32688 in^3 (+0.68 %)
-FS2701-LN-08-08-FG: 31 checks, 0 off; solids 1, volume 1.33584 in^3
-FS2702-08-08-FG: 31 checks, 0 off; solids 1, volume 1.14384 in^3
-FS2702-LN-08-08-FG: 31 checks, 0 off; solids 1, volume 1.14384 in^3
-FS2703-08-08-08-FG: 43 checks, 0 off; solids 1, volume 1.63492 in^3
-FS2703-LN-08-08-08-FG: 43 checks, 0 off; solids 1, volume 1.63492 in^3
-FS2704-08-08-08-FG: 43 checks, 0 off; solids 1, volume 1.63434 in^3
-FS2704-LN-08-08-08-FG: 43 checks, 0 off; solids 1, volume 1.63434 in^3
-FS6500-08-08-FG: 27 checks, 0 off; solids 1, volume 1.09453 in^3; Brennan pilot 1.07232 in^3 (+2.07 %)
-FS6600-08-08-08-FG: 39 checks, 0 off; solids 1, volume 1.37772 in^3
-FS6602-08-08-08-FG: 39 checks, 0 off; solids 1, volume 1.37842 in^3
-FS6801-08-08-NWO-FG: 20 checks, 0 off; solids 1, volume 1.08712 in^3; Brennan pilot 1.10255 in^3 (-1.4 %)
-FS6802-08-08-NWO-FG: 20 checks, 0 off; solids 1, volume 0.92119 in^3
-FS6803-08-08-08-NWO-FG: 32 checks, 0 off; solids 1, volume 1.37168 in^3
-FS6804-08-08-08-NWO-FG: 32 checks, 0 off; solids 1, volume 1.37102 in^3
+FS2500-06-06-FG: 28 checks, 0 off; solids 1, volume 0.71591 in^3
+FS2500-08-08-FG: 28 checks, 0 off; solids 1, volume 0.83467 in^3
+FS2500-10-10-FG: 28 checks, 0 off; solids 1, volume 1.76537 in^3
+FS2500-20-16-FG: 28 checks, 0 off; solids 1, volume 5.09896 in^3
+FS2500-20-20-FG: 28 checks, 0 off; solids 1, volume 5.07054 in^3
+FS2500-04-04-FG: 24 checks, 0 off; solids 1, volume 0.38077 in^3
+FS2500-12-12-FG: 24 checks, 0 off; solids 1, volume 2.5147 in^3
+FS2500-16-16-FG: 24 checks, 0 off; solids 1, volume 3.87666 in^3
+FS2501-06-04-FG: 14 checks, 0 off; solids 1, volume 0.66932 in^3
+FS2501-06-06-FG: 14 checks, 0 off; solids 1, volume 0.71232 in^3
+FS2501-06-08-FG: 14 checks, 0 off; solids 1, volume 1.11893 in^3
+FS2501-08-06-FG: 14 checks, 0 off; solids 1, volume 0.77353 in^3
+FS2501-08-08-FG: 14 checks, 0 off; solids 1, volume 1.07801 in^3; Brennan pilot 1.04192 in^3 (+3.46 %)
+FS2501-08-12-FG: 14 checks, 0 off; solids 1, volume 1.68615 in^3
+FS2501-10-08-FG: 14 checks, 0 off; solids 1, volume 1.66397 in^3
+FS2501-12-12-FG: 14 checks, 0 off; solids 1, volume 2.24668 in^3
+FS2501-20-20-FG: 14 checks, 0 off; solids 1, volume 4.99819 in^3
+FS2501-04-04-FG: 12 checks, 0 off; solids 1, volume 0.39835 in^3
+FS2501-12-08-FG: 12 checks, 0 off; solids 1, volume 2.31911 in^3
+FS2501-16-16-FG: 12 checks, 0 off; solids 1, volume 3.68117 in^3
+FS2503-06-04-FG: 14 checks, 0 off; solids 1, volume 0.48545 in^3
+FS2503-06-06-FG: 14 checks, 0 off; solids 1, volume 0.52442 in^3
+FS2503-08-06-FG: 14 checks, 0 off; solids 1, volume 0.57377 in^3
+FS2503-08-08-FG: generator-blocked ['leg 2: the corner puck buries the inner thread edge (margin -0.0025)']
+FS2503-10-08-FG: generator-blocked ['leg 2: the corner puck buries the inner thread edge (margin -0.0248)']
+FS2503-20-20-FG: 14 checks, 0 off; solids 1, volume 3.4935 in^3
+FS2503-04-04-FG: 12 checks, 0 off; solids 1, volume 0.29594 in^3
+FS2503-12-08-FG: 12 checks, 0 off; solids 1, volume 1.6548 in^3
+FS2503-12-12-FG: 12 checks, 0 off; solids 1, volume 1.55333 in^3
+FS2503-16-16-FG: 12 checks, 0 off; solids 1, volume 2.69019 in^3
+FS2603-06-06-06-FG: 42 checks, 0 off; solids 1, volume 0.93768 in^3
+FS2603-08-08-08-FG: 42 checks, 0 off; solids 1, volume 1.11857 in^3
+FS2603-10-10-10-FG: 42 checks, 0 off; solids 1, volume 2.26924 in^3
+FS2603-12-12-12-FG: 42 checks, 0 off; solids 1, volume 3.20822 in^3
+FS2603-04-04-04-FG: 36 checks, 0 off; solids 1, volume 0.51432 in^3
+FS2603-16-16-16-FG: 36 checks, 0 off; solids 1, volume 4.88496 in^3
+FS2701-08-08-FG: 33 checks, 0 off; solids 1, volume 1.33584 in^3; Brennan pilot 1.32688 in^3 (+0.68 %)
+FS2701-LN-08-08-FG: 33 checks, 0 off; solids 1, volume 1.33584 in^3
+FS2702-08-08-FG: 33 checks, 0 off; solids 1, volume 1.14384 in^3
+FS2702-LN-08-08-FG: 33 checks, 0 off; solids 1, volume 1.14384 in^3
+FS2703-08-08-08-FG: 47 checks, 0 off; solids 1, volume 1.63492 in^3
+FS2703-LN-08-08-08-FG: 47 checks, 0 off; solids 1, volume 1.63492 in^3
+FS2704-08-08-08-FG: 47 checks, 0 off; solids 1, volume 1.63434 in^3
+FS2704-LN-08-08-08-FG: 47 checks, 0 off; solids 1, volume 1.63434 in^3
+FS6500-08-08-FG: 29 checks, 0 off; solids 1, volume 1.09453 in^3; Brennan pilot 1.07232 in^3 (+2.07 %)
+FS6600-08-08-08-FG: 43 checks, 0 off; solids 1, volume 1.37772 in^3
+FS6602-08-08-08-FG: 43 checks, 0 off; solids 1, volume 1.37842 in^3
+FS6801-04-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.0074 in^3
+FS6801-06-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.05231 in^3
+FS6801-08-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.08712 in^3; Brennan pilot 1.10255 in^3 (-1.4 %)
+FS6801-12-08-NWO-FG: 20 checks, 0 off; solids 1, volume 2.58124 in^3
+FS6801-10-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.98279 in^3
+FS6802-06-08-NWO-FG: 22 checks, 0 off; solids 1, volume 0.87202 in^3
+FS6802-08-08-NWO-FG: 22 checks, 0 off; solids 1, volume 0.92119 in^3
+FS6802-12-08-NWO-FG: 20 checks, 0 off; solids 1, volume 1.98523 in^3
+FS6803-08-08-08-NWO-FG: 36 checks, 0 off; solids 1, volume 1.37168 in^3
+FS6804-08-08-08-NWO-FG: 36 checks, 0 off; solids 1, volume 1.37102 in^3
 
-FS tee / elbow closed loop PASS: 19 configurations, 589 checks, 0 off (tolerance 0.0015)
+FS tee / elbow closed loop PASS: 55 configurations, 1397 checks, 0 off (tolerance 0.0015)

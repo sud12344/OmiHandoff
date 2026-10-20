@@ -130,9 +130,11 @@ LIB_NEED = {
     'FPT': 'the female NPTF port drill depth P1 of -{d:02d} (MS51503 / the 2405 table stop at -32), measured on a Brennan STEP with a '
            '-{d:02d} female NPTF port (5000-{d:02d}-{d:02d} preferred) -> a measured FPT entry',
     'JIC': 'the male 37deg JIC chain of -{d:02d} (seat, land, thread zone, relief), measured on a Brennan STEP with a -{d:02d} male JIC end',
-    'FSM': 'the male O-ring face-seal end of -{d:02d} (face groove, land, nose chamfer, thread length, relief, end length), measured on '
-           'BRENNAN_FS6500-{d:02d}-{d:02d}-FG or BRENNAN_FS2403-{d:02d}-{d:02d} (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py '
-           '-> FSM_MEAS[{d}]',
+    'FSM': 'the male O-ring face-seal end of -{d:02d} on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), '
+           'measured on BRENNAN_FS2403-{d:02d}-{d:02d} (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py '
+           '-> FSM_MEAS[{d}] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)',
+    'FSMF': 'the male O-ring face-seal end of -{d:02d} on a FORGED leg (face groove, land, nose chamfer, thread end), measured on '
+            'BRENNAN_FS6500-{d:02d}-{d:02d}-FG (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSMF_MEAS[{d}]',
 }
 
 
@@ -144,8 +146,8 @@ def lib_gap(lib, d):
 def lib_gaps(kinds_dashes):
     """messages for the ends of one part whose dash is missing from the end libraries they read (used by gen_tee before building)"""
     need = {'JICM': ('JIC',), 'JICBH': ('JIC',), 'JICSW': ('JIC',), 'NWO': ('JIC',), 'NPTFM': ('NPTF', 'ENDL'), 'NPTFF': ('FPT', 'NPTF'),
-            'NPSMSW': ('NPTF',), 'FSM': ('FSM',), 'FSBH': ('FSM',)}
-    libs = dict(JIC=JIC, NPTF=NPTF, ENDL=ENDL, FPT=FPT, FSM=FSM_MEAS)
+            'NPSMSW': ('NPTF',), 'FSM': ('FSMF',), 'FSBH': ('FSM',)}     # 2026-10-20: a forged FSM leg reads FSMF_MEAS (the bulkhead leg its flank / relief: FSM_MEAS)
+    libs = dict(JIC=JIC, NPTF=NPTF, ENDL=ENDL, FPT=FPT, FSM=FSM_MEAS, FSMF=FSMF_MEAS)
     out = []
     for kind, d in kinds_dashes:
         for lib in need.get(kind, ()):
@@ -1457,8 +1459,23 @@ FS_THR = {4: '9/16-18', 6: '11/16-16', 8: '13/16-16', 10: '1-14', 12: '1 3/16-12
 # 60deg flank down to the relief RELR, relief to the hex face at the end length ENDL. -08: BRENNAN_FS2403-08-08 (both ends; = the male ends of
 # FS6400-08-08-O, and the nose of the forged FS6500 / FS6801 / FS2701 -08 legs, whose run-out differs - gen_tee). The fused O-ring = Air-Way
 # FS4000-08 (I.D. 0.489, W 0.070) and is not modelled (as the ORB / NWO ends).
-FSM_MEAS = {8: dict(GI=0.2125, GO=0.3145, GD=0.052, FR=0.3595, THDS=0.383, RELR=0.3595, ENDL=0.504)}
-FSM_SRC = {8: 'Brennan FS2403-08-08 (both ends) = FS6400-08-08-O (fsmeasure.measure_fsm, orfs_wp2_20261020 checks (1))'}
+FSM_MEAS = {8: dict(GI=0.2125, GO=0.3145, GD=0.052, FR=0.3595, THDS=0.383, RELR=0.3595, ENDL=0.504),
+            # 2026-10-20 (per-size STEPs, tools/_out/orfs_steps2_20261020/ends_survey.txt): the straight ends with a flank + relief run-out
+            24: dict(GI=0.7125, GO=0.8145, GD=0.052, FR=0.938, THDS=0.5296, RELR=0.9405, ENDL=0.689),
+            32: dict(GI=0.9605, GO=1.0625, GD=0.052, FR=1.19, THDS=0.7104, RELR=1.19, ENDL=0.87)}
+FSM_SRC = {8: 'Brennan FS2403-08-08 (both ends) = FS6400-08-08-O (fsmeasure.measure_fsm, orfs_wp2_20261020 checks (1))',
+           24: 'Brennan FS2403-24-24 (both ends; fsmeasure.measure_fsm, orfs_steps2_20261020 ends_survey)',
+           32: 'Brennan FS6400-32-32-O (fsmeasure.measure_fsm, orfs_steps2_20261020 ends_survey)'}
+# 2026-10-20: the male face-seal end on a FORGED leg (gen_tee leg_FSM): face, groove, land, nose chamfer and the thread end ENDL, where the leg's
+# turned flats diameter takes over (no flank / relief on a forged leg). Measured on the -NN leg of BRENNAN_FS6500-NN-NN-FG (-08: = FSM_MEAS[8],
+# also FS2501-08-08-FG); the flats meet the thread with a radial step down (thread above the flats: -08 / -20), a step up (flats above the
+# thread: -06 / -10, FS2501-08-08-FG) or no step (flats = thread: -04 / -12 / -16, the thread runs into the 75deg hex end chamfer).
+FSMF_MEAS = {4: dict(GI=0.1145, GO=0.2165, GD=0.052, FR=0.2415, ENDL=0.386), 6: dict(GI=0.15, GO=0.252, GD=0.052, FR=0.297, ENDL=0.441),
+             8: dict(GI=0.2125, GO=0.3145, GD=0.052, FR=0.3595, ENDL=0.504), 10: dict(GI=0.276, GO=0.378, GD=0.052, FR=0.445, ENDL=0.61),
+             12: dict(GI=0.3385, GO=0.4405, GD=0.052, FR=0.5315, ENDL=0.67), 16: dict(GI=0.4315, GO=0.5335, GD=0.052, FR=0.6565, ENDL=0.689),
+             20: dict(GI=0.5565, GO=0.6585, GD=0.052, FR=0.7825, ENDL=0.689)}
+FSMF_SRC = {d: f'Brennan FS6500-{d:02d}-{d:02d}-FG male leg (fsmeasure.measure_fsm, ' + ('orfs_wp2_20261020 checks (1))' if d == 8 else 'orfs_steps2_20261020 ends_survey)')
+            for d in FSMF_MEAS}
 FSM_CHANG = 45.0; FSM_FLANKANG = 60.0
 FSM_ASSUME = ('male O-ring face-seal end (SAE J1453): thread = the face-seal thread of the dash (Air-Way callout = Brennan ORFS catalog); face '
               'O-ring groove (inner / outer dia, depth), land, 45deg nose chamfer, thread length, 60deg flank, relief and end length measured on the '

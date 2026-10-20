@@ -261,13 +261,13 @@ Sub BuildFS6802()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 2)", (UBound(cfgs) + 1) = 2
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 3)", (UBound(cfgs) + 1) = 3
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS6802-08-08-NWO-FG")
+    cx_c = Array("FS6802-06-08-NWO-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "NW1_BODYL@LEG1", "NW1_NECKL@LEG1", "NW1_CHR@LEG1", "NW1_CHANG1@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "THDPITCH@THD_End2", "Profile_Height@THD_End2_PROF", "THDPITCH@THD_End2_PROF", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(1.43000, 0.37500, 0.40000, 0.03900, 0.47500, 75.00000, 1.43000, 0.80000, 0.06250, 0.03383, 0.06250, 0.06250, 0.03383, 0.06250, 0.75000, 0.40000, 0.75000, 0.29600, 0.21601, 0.43251))
+    cx_w = Array(Array(1.43000, 0.37500, 0.40000, 0.03900, 0.47500, 75.00000, 1.43000, 0.74000, 0.06250, 0.03383, 0.06250, 0.06250, 0.03383, 0.06250, 0.75000, 0.40000, 0.75000, 0.29900, 0.21601, 0.43251))
     For cx_q = 0 To 0
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
