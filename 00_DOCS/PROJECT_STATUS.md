@@ -31,6 +31,14 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS generator step 1 staged** (`tools\_out\orfs_gen_20261020\README.md`; toolset = merged batch-17 + ORFS):
+- male face-seal end `end_FSM` + ORB stud `end_ORBFS`; SPECs FS2403 / FS6400 (5 configurations: FS2403-08-08, FS6400-08-06/-08/-10/-12-O;
+  the rest wait for per-dash STEPs);
+- regression 99 / 99 existing roots identical; dofcheck / allcfg / vbacheck clean; OCP closed loop 122 checks, 0 off;
+- SolidWorks dry run of FS2403 / FS6400 next (PC);
+- straight swivels blocked on BRENNAN_FS6540-08-08-O or FS6565-08-08 (seal face vs nut face);
+- found: SPEC 6400 (batch-17 tools) labels End A's ORB thread from the wrong dash on unequal-dash rows (text only).
+
 **2026-10-20 (cloud): ORFS WP2 extractors written and validated on the 8 pilots** (`tools\_out\orfs_wp2_20261020\README.md`;
 46 checks, 0 FAIL; -08 end entries proposed in `end_lib_08.json`). The male face-seal end is one shape on all 7 copies. The swivel nut
 and FS0318 agree on hex / length / thread / lip. The fused O-ring = FS4000-08. Air-Way rows match the STEPs. Plan changes:

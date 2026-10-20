@@ -43,7 +43,25 @@ When it is unset, the behaviour is unchanged.
 - **Found in passing (not changed here):** SPEC `6400` of the batch-17 toolset labels End A's ORB thread (`$PRP@EndA_Thread`) from the FIRST
   part-number dash, while it builds that end from the second. On unequal-dash 6400 rows the label text is wrong; the geometry is right.
 
+## Blocked: the female swivel on the STRAIGHTS (FS6540 / FS6504 / FS6505 / FS6565) needs one STEP
+- On the forged FS6500-08-08-FG pilot, Air-Way L21 (= Brennan AAA) runs from the crossing to the stem's SEAL face; the nut face is 0.433
+  further out. PLAN.md had read the drawings as "to the nut face", for the straights as well.
+- On the straights, Air-Way puts the swivel point 0.84 behind the hex face (FS6540-08-08-O: L35 - L37 = 1.39 - 0.55; FS6504-08-08:
+  L38 - L39 = 1.24 - 0.40). Two readings fit that number:
+  - (a) the nut face: the 0.827 nut then sits 0.013 clear of the hex;
+  - (b) the seal face: the same as the forged leg's body face -> seal face of 0.855.
+- (b) is the more likely, because the drawing reading was wrong on the elbow, but it is an inference. Not built.
+- **Needs BRENNAN_FS6540-08-08-O or BRENNAN_FS6565-08-08** (STEPS_NEEDED part 4 lists FS6565-08-08 as optional; it now decides 20 rows).
+
 ## Next
+- **SolidWorks dry run of FS2403 / FS6400** (CLAUDE.md verify loop, PC): the first FS masters. Unknowns:
+  - the Thread feature on the face-seal end;
+  - the bore-cut face pick on the land.
+- **The gen_tee forged legs** (FSM with the step run-out, FSBH, FSSW, NWO_FS):
+  - every -08 forged pilot family can build after them: FS6500 / FS6801 / FS2701-08 rows.
+  - PLAN risk R1 is the open point: Brennan ends the thread with a step down to exactly the flats radius and a 75 deg chamfer to the corners,
+    a point on the flats that the hex cut meets tangentially. Whether it needs an offset shows only in a SolidWorks dry run.
+- Nut / lock nut / sleeve masters (FS0318 / FS0306 / FS0319).
 - the female face-seal swivel end FSSW (straights FS6540 / FS6505 / FS6504 / FS6565);
 - the gen_tee legs (FSM on forged legs with the step run-out, FSBH, FSSW, NWO_FS);
 - nut / lock nut / sleeve.
