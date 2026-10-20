@@ -1,5 +1,7 @@
 # Running this project in a Claude Code cloud session (2026-10-18)
 
+GitHub: https://github.com/sud12344/OmiHandoff (private, branch main; pushed 2026-10-19).
+
 The cloud runs on a Linux machine. It can do the **Python side**:
 - filling and checking review tables;
 - generators, regeneration and regression;
