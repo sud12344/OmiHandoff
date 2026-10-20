@@ -1526,26 +1526,51 @@ SPEC['FS6400'] = dict(name='ORFS Straight Thread Connector (male face seal x mal
                                       'BRENNAN_FS6400-L-08-08-O)')
 
 
-# ---- 2026-10-20 (ORFS, staging): loose face-seal parts, -08 measured on the Brennan pilots (tools/_out/orfs_wp2_20261020 end_lib_08.json).
-# Other sizes need their own STEP (one pilot gives no per-size rule; the JIC locknut countersink is also measured per size, JICF_MEAS).
-# FS0306 bulkhead LOCKNUT (BRENNAN_FS0306-08): face-seal thread through, 45deg countersink on both faces from the minor to FSLOCK_RCS.
-FSLOCK_RCS = {8: 0.4095}
-# FS0318 NUT (BRENNAN_FS0318-08): thread from the open face to TE, a 0.0046 radial relief (not modelled: the pocket stays at the minor), the
-# inner lip face at LIP from the open face, the lip bore through the back face.
-FSNUT_MEAS = {8: dict(TE=0.47, LIP=0.63, LIPD=0.652)}
+# ---- 2026-10-20 (ORFS, staging): loose face-seal parts, every size measured on its own Brennan STEP (-08: the pilots, end_lib_08.json; the other
+# sizes: tools/_out/orfs_steps2_20261020/loose_survey.txt, read with the same extractors fsmeasure.measure_nut / measure_sleeve). No per-size rule:
+# a size without its STEP is skipped (the JIC locknut countersink is also measured per size, JICF_MEAS).
+FSLOOSE_SRC = 'tools/_out/orfs_steps2_20261020/loose_survey.txt (-08: tools/_out/orfs_wp2_20261020/end_lib_08.json)'
+# Thread bore of the Brennan nut STEPs (radius) - the model uses the ASME B1.1 basic minor of the face-seal thread; where Brennan's bore differs
+# (-10: 0.892 dia vs 1-14 basic minor 0.9227; -24: 1.817 vs 2-12 basic minor 1.9098 - on both nuts) the row's $COMMENT says so.
+FSNUT_BMINR = {4: 0.2512, 6: 0.3099, 8: 0.3724, 10: 0.446, 12: 0.5486, 16: 0.6736, 20: 0.7986, 24: 0.9085}
+# FS0306 bulkhead LOCKNUT (BRENNAN_FS0306-NN): face-seal thread through, 45deg countersink on both faces from the minor to FSLOCK_RCS.
+FSLOCK_RCS = {4: 0.2805, 6: 0.3465, 8: 0.4095, 10: 0.502, 12: 0.5965, 16: 0.7205, 20: 0.8465, 24: 1.002}
+# FS0318 NUT (BRENNAN_FS0318-NN): thread from the open face to TE, a small radial relief (not modelled: the pocket stays at the minor), the inner
+# lip face at LIP from the open face, the lip bore LIPD through the back face.
+FSNUT_MEAS = {4: dict(TE=0.35, LIP=0.482, LIPD=0.412), 6: dict(TE=0.41, LIP=0.552, LIPD=0.532), 8: dict(TE=0.47, LIP=0.63, LIPD=0.652),
+              10: dict(TE=0.57, LIP=0.768, LIPD=0.829), 12: dict(TE=0.61, LIP=0.827, LIPD=0.95), 16: dict(TE=0.63, LIP=0.859, LIPD=1.144),
+              20: dict(TE=0.63, LIP=0.859, LIPD=1.415), 24: dict(TE=0.63, LIP=0.859, LIPD=1.728)}
+
+
+def _fsd(r):
+    return dashes(r['$PRP@PartNo'])[0]
+
+
 FSLOOSE_ASSUME = {
-    'FS0319': ('face-seal braze sleeve (Brennan FS0319-08): length L / collar OD d8 = Air-Way; the shape measured on the -08 pilot (other sizes need '
-               'their own STEP): tube-side face r 0.2975, 15deg taper to the spigot r 0.321, collar 0.197 long behind the flat seal face, braze bore '
-               'dia 0.506 (1/2 tube + 0.006 braze clearance) to the tube-stop face 0.040 below the seal face, tube-stop bore dia 0.378 - collar length and '
-               'stop-lip length held from the seal face, so Air-Way L 0.37 vs the pilot 0.374 shortens the spigot; NOT modelled: the 45deg inner chamfers '
-               '(0.005 at the tube-side bore, 0.016 on both stop-lip corners), the 0.006 fillet at the spigot / collar step; single manufacturer'),
-    'FS0306': ('face-seal bulkhead locknut (Brennan FS0306-08): hex S4 / thickness h2 = Air-Way; thread = the face-seal thread of the dash through, minor = '
-               'ASME B1.1 basic minor; 45deg countersink on both faces from the minor to r 0.4095 measured on the -08 pilot (other sizes need their own '
-               'STEP); hex end chamfers (75deg) NOT modelled; single manufacturer'),
-    'FS0318': ('face-seal tube nut (Brennan FS0318-08): hex S / length h = Air-Way; thread = the face-seal thread of the dash from the open face over 0.47, '
-               'minor = ASME B1.1 basic minor, the thread pocket to the inner lip face at 0.63, lip bore 0.652 through the back face (measured on the -08 '
-               'pilot; other sizes need their own STEP); the 0.0046 radial thread relief, the 45deg mouth countersink and the 75deg hex end chamfers NOT '
-               'modelled (as the 0318 nut); single manufacturer')}
+    'FS0319': lambda r: (f'face-seal braze sleeve (Brennan FS0319-{_fsd(r):02d}): length L / collar OD d8 = the row; the shape measured on BRENNAN_FS0319-{_fsd(r):02d} '
+               f'({FSLOOSE_SRC}): tube-side face r {FSSLEEVE_MEAS[_fsd(r)]["RT"]}, 15deg taper to the spigot r {FSSLEEVE_MEAS[_fsd(r)]["RS"]}, '
+               + (f'collar {FSSLEEVE_MEAS[_fsd(r)]["COLLARL"]} long behind the flat seal face' if 'CONEL' not in FSSLEEVE_MEAS[_fsd(r)] else
+                  f'collar step {FSSLEEVE_MEAS[_fsd(r)]["COLLARL"]} from the seal face, the last {FSSLEEVE_MEAS[_fsd(r)]["CONEL"]} a shallow cone down to the seal-face '
+                  f'radius {FSSLEEVE_MEAS[_fsd(r)]["RSEAL"]}')
+               + f', braze bore dia {2 * FSSLEEVE_MEAS[_fsd(r)]["BORER"]:.3f} to the tube-stop face {FSSLEEVE_MEAS[_fsd(r)]["LIPL"]} below the seal face, tube-stop '
+               f'bore dia {2 * FSSLEEVE_MEAS[_fsd(r)]["STOPR"]:.3f} - collar and stop-lip lengths held from the seal face, so a row L that rounds the STEP length '
+               'changes the spigot; NOT modelled: the 45deg inner chamfers (tube-side bore, both stop-lip corners), the small fillet at the spigot / collar '
+               'step; single manufacturer'),
+    'FS0306': lambda r: (f'face-seal bulkhead locknut (Brennan FS0306-{_fsd(r):02d}): hex S4 / thickness h2 = the row; thread = the face-seal thread of the dash '
+               f'through, minor = ASME B1.1 basic minor; 45deg countersink on both faces from the minor to r {FSLOCK_RCS[_fsd(r)]} measured on '
+               f'BRENNAN_FS0306-{_fsd(r):02d} ({FSLOOSE_SRC}); hex end chamfers (75deg) NOT modelled; single manufacturer'),
+    'FS0318': lambda r: (f'face-seal tube nut (Brennan FS0318-{_fsd(r):02d}): hex S / length h = the row; thread = the face-seal thread of the dash from the open '
+               f'face over {FSNUT_MEAS[_fsd(r)]["TE"]}, minor = ASME B1.1 basic minor, the thread pocket to the inner lip face at {FSNUT_MEAS[_fsd(r)]["LIP"]}, '
+               f'lip bore {FSNUT_MEAS[_fsd(r)]["LIPD"]} through the back face (measured on BRENNAN_FS0318-{_fsd(r):02d}, {FSLOOSE_SRC}); the small radial '
+               'thread relief, the 45deg mouth countersink and the 75deg hex end chamfers NOT modelled (as the 0318 nut); single manufacturer')}
+
+
+def fs_bore_note(dash, rmin, pn_root):
+    """$COMMENT text where the Brennan STEP's thread bore differs from the basic minor the model uses"""
+    b = FSNUT_BMINR.get(dash)
+    if b is None or abs(b - rmin) <= 0.002: return None
+    return (f'BRENNAN DIFFERS: BRENNAN_{pn_root}-{dash:02d} has its thread bore at dia {2 * b:.4f}; the model uses the ASME B1.1 basic minor {2 * rmin:.4f} of '
+            f'{FS_THR[dash]} (the thread of the row) - tell the user')
 
 
 def fs_nut_csk(dash):
@@ -1558,7 +1583,7 @@ def end_FSNUTCSA(dash, sfx):
     e, P_, rmin, rcs, cs = fs_nut_csk(dash)
     return dict(kind='NUTCSA', V=[(cs, rmin), (0.0, rcs)], endlen=0.0, seg=dict(core=0, csk=1, face=2), faceseg=2,
                 cols={f'NUTCS{sfx}_MINR@DRIVE': rmin, f'NUTCS{sfx}_CSR@DRIVE': rcs}, thr=e['thr'] + ' UN (45deg countersink)', faceR=None,
-                td=2 * rmin, P1=cs, e=e, rmin=rmin, rcs=rcs, cs=cs, dash=dash, thread=None)
+                td=2 * rmin, P1=cs, e=e, rmin=rmin, rcs=rcs, cs=cs, dash=dash, thread=None, fsnote=fs_bore_note(dash, rmin, 'FS0306'))
 
 
 def end_FSNUTCSB(dash, sfx, W):
@@ -1579,7 +1604,8 @@ def end_FSNUTF(dash, sfx):
             f'HELIXDIA@HELIXSK_{sfx}': td, f'HEIGHT@HELIX_{sfx}': m['TE'], f'PITCH@HELIX_{sfx}': round(P, 5),
             f'PROF_R@THDPROF_{sfx}': round(td / 2, 5), f'APEXR@THDPROF_{sfx}': round(td / 2 + 0.54127 * P, 5)}
     return dict(kind='UNFF', V=[], endlen=0.0, seg=dict(face=0), cols=cols, thr=thr + ' UN-2B (face-seal nut)', faceR=None, td=td, P1=m['LIP'], D1=m['LIPD'],
-                thread=dict(type='HELIX', r=td / 2, height=m['TE'], pitch=P, thdh=0.54127 * P, taper=0.0, taperOut=False, apexOut=True))
+                thread=dict(type='HELIX', r=td / 2, height=m['TE'], pitch=P, thdh=0.54127 * P, taper=0.0, taperOut=False, apexOut=True),
+                fsnote=fs_bore_note(dash, td / 2, 'FS0318'))
 
 
 SPEC['FS0306'] = dict(name='ORFS Bulkhead Locknut', L='H2@DRIVE', hex='S4HEX@HEX', single=True, fs=True,
@@ -1594,10 +1620,16 @@ SPEC['FS0318'] = dict(name='ORFS Tube Nut', L='H@DRIVE', hex='SHEX@HEX', single=
                       assume=FSLOOSE_ASSUME['FS0318'])
 
 # 2026-10-20 (ORFS staging): FS0319 braze sleeve = a round straight: End A = tube side (face, 15deg taper, spigot, step up to the collar) with the
-# braze bore as its pocket (kind BRAZE), End B = the flat seal face (PLAIN), BORE_B = the tube-stop bore from the seal face to the pocket bottom.
-# Shape measured on BRENNAN_FS0319-08 (fsmeasure.measure_sleeve; end_lib_08.json FSSLEEVE_MEAS[8]); radii and the taper angle are shape, the collar
-# length and the stop-lip length are held from the seal face (the length L is the Air-Way row input).
-FSSLEEVE_MEAS = {8: dict(RT=0.2975, TAPANG=15.0, RS=0.321, COLLARL=0.197, LIPL=0.040, BORER=0.253, STOPR=0.189)}
+# braze bore as its pocket (kind BRAZE), End B = the seal face: flat on the collar (-04 / -06 / -08, PLAIN) or, from -12 up, at the end of a
+# shallow cone CONEL long down to RSEAL (end_FSSEAL); BORE_B = the tube-stop bore from the seal face to the pocket bottom. Every size measured on
+# its own BRENNAN_FS0319-NN (fsmeasure.measure_sleeve); radii and the taper angle are shape, the collar step (COLLARL, from the seal face) and the
+# stop-lip length are held from the seal face (the length L is the row input).
+FSSLEEVE_MEAS = {4: dict(RT=0.1675, TAPANG=15.0, RS=0.201, COLLARL=0.157, LIPL=0.040, BORER=0.128, STOPR=0.086),
+                 6: dict(RT=0.2325, TAPANG=15.0, RS=0.261, COLLARL=0.177, LIPL=0.040, BORER=0.1905, STOPR=0.132),
+                 8: dict(RT=0.2975, TAPANG=15.0, RS=0.321, COLLARL=0.197, LIPL=0.040, BORER=0.253, STOPR=0.189),
+                 12: dict(RT=0.435, TAPANG=15.0, RS=0.468, COLLARL=0.256, LIPL=0.060, BORER=0.3785, STOPR=0.3045, CONEL=0.206, RSEAL=0.5315),
+                 16: dict(RT=0.5525, TAPANG=15.0, RS=0.565, COLLARL=0.276, LIPL=0.060, BORER=0.5035, STOPR=0.4055, CONEL=0.216, RSEAL=0.6565),
+                 20: dict(RT=0.67, TAPANG=15.0, RS=0.7005, COLLARL=0.276, LIPL=0.060, BORER=0.6285, STOPR=0.512, CONEL=0.225, RSEAL=0.782)}
 
 
 def end_FSSLV(dash, sfx, L):
@@ -1611,11 +1643,25 @@ def end_FSSLV(dash, sfx, L):
                 dash=dash, thread=None)
 
 
+def end_FSSEAL(dash, sfx):
+    """the FS0319 seal end from -12 up: the collar runs into a shallow cone CONEL long that ends on the flat seal face at RSEAL"""
+    m = FSSLEEVE_MEAS[dash]
+    return dict(kind='FSSEAL', V=[(0.0, m['RSEAL'])], endlen=m['CONEL'], seg=dict(face=0, cone=1),
+                cols={f'FSSEAL{sfx}_SEALR@DRIVE': m['RSEAL'], f'FSSEAL{sfx}_CONEL@DRIVE': m['CONEL']}, thr='flat seal face', faceR=None, td=0.0, P1=0.0,
+                m=m, dash=dash, thread=None)
+
+
 SPEC['FS0319'] = dict(name='ORFS Braze Sleeve', L='L@DRIVE', hex='D8@DRIVE', round=True, single=True, fs=True,
-                      A=lambda r, a, b: end_FSSLV(a, 'A', r['L@DRIVE']), B=lambda r, a, b: end_PLAIN('B'),
+                      A=lambda r, a, b: end_FSSLV(a, 'A', r['L@DRIVE']),
+                      B=lambda r, a, b: end_FSSEAL(a, 'B') if 'CONEL' in FSSLEEVE_MEAS.get(a, {}) else end_PLAIN('B'),
                       bore=('A_to_pocket', lambda r, a, b: round(2 * FSSLEEVE_MEAS[a]['STOPR'], 5), None), ref='FS0319-08',
                       desc=lambda r, tA, tB: f"ORFS Braze Sleeve, {tA} x flat seal face (for {r.get('$PRP@TubeOD') or '?'} tube)",
-                      thrB_fix=lambda r, a, bv: f'flat seal face (SAE J1453), tube-stop bore {bv:.3f}', assume=FSLOOSE_ASSUME['FS0319'])
+                      thrB_fix=lambda r, a, bv: f'flat seal face (SAE J1453), tube-stop bore {bv:.3f}', assume=FSLOOSE_ASSUME['FS0319'],
+                      exclude=r'^FS0319-(12|16|20|24|32)$', exclude_why='sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)')
+# the coned-collar sleeves: same review table, End B = end_FSSEAL (one more profile point, so a master of its own - one sketch per master)
+SPEC['FS0319C'] = dict(SPEC['FS0319'], name='ORFS Braze Sleeve (coned collar)', load=lambda: load_review('FS0319'), ref='FS0319-16',
+                       B=lambda r, a, b: end_FSSEAL(a, 'B'), exclude=r'^FS0319-(04|06|08|10)$',
+                       exclude_why='sleeve with a plain collar (BRENNAN_FS0319-04 / -06 / -08): built in master FS0319')
 
 def cav_r(E, d):
     # radius of a female port cavity at depth d from its face (piecewise linear over VG; 0 beyond the drill point)
@@ -2053,6 +2099,10 @@ def build_rows(root):
                 warn.append(f'square head length {EB["H"]} = the Brennan 5406-SHP-08 pilot (measured)')
         for E in (EA, EB):
             if E['kind'] in ('NPTFF', 'BRAZE', 'UNFF') and E['td'] >= hexb - 0.05: chk.append(f'pocket {E["td"]} too close to hex {hexb}')
+            if E.get('fsnote'): warn.append(E['fsnote'])     # 2026-10-20 (ORFS staging): a measured difference from the model rule (fs_bore_note)
+            if E['kind'] == 'FSSEAL':
+                if (L - E['endlen']) - EA.get('xS', 0) < 0.02: chk.append(f'sleeve collar cylinder {(L - E["endlen"]) - EA.get("xS", 0):.4f} before the seal cone')
+                if rB - E['m']['RSEAL'] < 0.005: chk.append(f'seal-face radius {E["m"]["RSEAL"]} not below the collar radius {rB:.4f}')
             if E.get('fsslv'):    # 2026-10-20 (ORFS staging, FS0319): walls of the sleeve's own shape at this row's length
                 if E['m']['RT'] - E['m']['BORER'] < 0.03: chk.append(f'sleeve wall at the tube-side face {E["m"]["RT"] - E["m"]["BORER"]:.4f}')
                 if E['xS'] - E['xT'] < 0.02: chk.append(f'spigot length {E["xS"] - E["xT"]:.4f} (L {L} - collar {E["m"]["COLLARL"]} - taper {E["xT"]})')
@@ -2706,6 +2756,10 @@ def emit(root, hdr, ok, refrow, table_path):
             dr(g(s['rel']), f'FSM{sfx}_RELR', m['RELR'], mid(g(s['rel'])), -0.2)
             dl(g(s['rel']), f'FSM{sfx}_RELL', E['rell'], mid(g(s['rel'])), rB + 0.15)
             REL.append(f'    Call Collinear({g(s["land"])}, {g(s["face"])})')
+        elif k == 'FSSEAL':
+            # 2026-10-20 (ORFS staging, FS0319 -12 up, End B): collar -> shallow cone (segment 'cone') -> flat seal face (segment 'face') down to the axis
+            dp(g(s['face']), 'False', axis, f'FSSEAL{sfx}_SEALR', E['m']['RSEAL'], L + 0.1, E['m']['RSEAL'] / 2)
+            dp(g(s['cone']), 'False', g(s['face']), f'FSSEAL{sfx}_CONEL', E['m']['CONEL'], L - E['m']['CONEL'] / 2, rB + 0.3)
         elif k == 'BRAZE' and E.get('fsslv'):
             # 2026-10-20 (ORFS staging, FS0319 sleeve End A): tube-side face (origin -> FACER) | 15deg taper | spigot | step up to the collar (chain)
             dp(g(s['face']), 'True', axis, f'FSSLV{sfx}_FACER', E['m']['RT'], -0.1, E['m']['RT'] / 2)

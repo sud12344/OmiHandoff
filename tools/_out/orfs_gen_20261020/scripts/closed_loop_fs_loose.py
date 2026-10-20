@@ -5,7 +5,7 @@ written as a STEP and read back with fsmeasure.measure_nut / measure_sleeve - th
 row and (2) the Brennan pilot's readings for everything the model carries (hex, length, thread minor, countersinks, lip face, lip bore).
 Not modelled, so not compared: threads (THD_* suppressed), hex end chamfers, the FS0318 0.0046 thread relief and mouth countersink, the
 FS0319 inner 45deg chamfers and the spigot fillet.
-  OMI_ROOT=<repo> OMI_REV_EXTRA=<stage_orfs/04_DESIGN_TABLES> python closed_loop_fs_loose.py FS0306 FS0318 FS0319 [--out DIR]"""
+  OMI_ROOT=<repo> OMI_REV_EXTRA=<stage_orfs/04_DESIGN_TABLES> python closed_loop_fs_loose.py FS0306 FS0318 FS0319 FS0319C [--out DIR]"""
 import os, sys, json
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', '..'))
@@ -66,7 +66,8 @@ def sleeve_read(p):
     E = [(k, a_, round(a1 - x0, 4), r1, round(a2 - x0, 4), r2) for k, a_, a1, r1, a2, r2 in o['EDGES']]
     tp = [e for e in E if e[0] == 'L' and e[1] is not None and 10 < e[1] < 20]
     st = [e for e in E if e[0] == 'L' and e[1] == 90.0 and o['STOP_R'] - 1e-4 <= min(e[3], e[5]) and max(e[3], e[5]) <= o['BORE_R'] + 1e-4 and e[2] > 0.05]
-    return dict(L=o['L'], OD_R=o['OD_R'], COLLARL=o['COLLARL'], BORE_R=o['BORE_R'], STOP_R=o['STOP_R'],
+    sf = [max(e[3], e[5]) for e in E if e[0] == 'L' and e[1] == 90.0 and abs(e[2] - o['L']) < 1e-3 and abs(e[4] - o['L']) < 1e-3]
+    return dict(L=o['L'], OD_R=o['OD_R'], COLLARL=o['COLLARL'], BORE_R=o['BORE_R'], STOP_R=o['STOP_R'], SEALR=max(sf) if sf else None,
                 SPIGOT_R=o['SPIGOT'][0][0] if o['SPIGOT'] else None,
                 TAPER=(tp[0][1], min(tp[0][3], tp[0][5]), max(tp[0][3], tp[0][5])) if tp else None,
                 LIPL=round(o['L'] - st[0][2], 4) if st else None)
@@ -75,7 +76,9 @@ def sleeve_read(p):
 def sleeve(f, cols, EA, L, hexb, pn):
     m = EA['m']; bad = []; n = 0
     mm = sleeve_read(f)
-    row = dict(L=L, OD_R=hexb / 2, COLLARL=round(L - cols['FSSLVA_SPIGOTL@DRIVE'], 5), BORE_R=cols['SOCKDIA@POCKET_A'] / 2, STOP_R=cols['DB@BORE_B'] / 2,
+    coned = 'FSSEALB_CONEL@DRIVE' in cols     # FS0319C: the collar cylinder ends where the seal cone starts
+    row = dict(L=L, OD_R=hexb / 2, COLLARL=round(L - cols['FSSLVA_SPIGOTL@DRIVE'] - (cols['FSSEALB_CONEL@DRIVE'] if coned else 0.0), 5),
+               SEALR=cols['FSSEALB_SEALR@DRIVE'] if coned else hexb / 2, BORE_R=cols['SOCKDIA@POCKET_A'] / 2, STOP_R=cols['DB@BORE_B'] / 2,
                SPIGOT_R=cols['FSSLVA_SPIGOTR@DRIVE'], TAPER=(cols['FSSLVA_TAPANG@DRIVE'], cols['FSSLVA_FACER@DRIVE'], cols['FSSLVA_SPIGOTR@DRIVE']),
                LIPL=round(L - cols['DEPTH@POCKETCUT_A'], 5))
     for k in row:
@@ -92,7 +95,7 @@ def sleeve(f, cols, EA, L, hexb, pn):
         for k in ('L', 'OD_R'):           # Air-Way row inputs: rounding allowance 0.01 (radius 0.005)
             n += 1
             if abs(pp[k] - mm[k]) > (0.01 if k == 'L' else 0.005): bad.append(f'pilot {k}: {pp[k]} / model {mm[k]}')
-        for k in ('COLLARL', 'BORE_R', 'STOP_R', 'SPIGOT_R', 'LIPL'):
+        for k in ('COLLARL', 'BORE_R', 'STOP_R', 'SPIGOT_R', 'LIPL') + (('SEALR',) if coned else ()):
             n += num_cmp(pp[k], mm[k], f'pilot {k}', bad)
         n += 1
         if abs(pp['TAPER'][0] - mm['TAPER'][0]) > 0.15: bad.append(f'pilot taper angle {pp["TAPER"][0]} / model {mm["TAPER"][0]}')
@@ -144,8 +147,13 @@ def main(roots, out):
                 for k in ('AF', 'L'):
                     n += 1
                     if abs(pp[k] - mm[k]) > 0.01: bad.append(f'pilot {k}: {pp[k]} / model {mm[k]}')
-                n += num_cmp(pp['MINR'], mm['MINR'], 'pilot MINR', bad)
-                if EA['kind'] == 'NUTCSA':
+                known = EA.get('fsnote')      # Brennan's thread bore differs from the basic minor the model uses (noted in the row's $COMMENT)
+                if known: r['expected_difference'] = f"thread bore r: Brennan {pp['MINR']} / model {mm['MINR']} (basic minor; {known.split(' - ')[0]})"
+                else: n += num_cmp(pp['MINR'], mm['MINR'], 'pilot MINR', bad)
+                if EA['kind'] == 'NUTCSA' and known:
+                    # countersink outer radius only (its depth follows from the minor)
+                    n += num_cmp([max(q[0][1], q[1][1]) for q in pp['MOUTH']], [max(q[0][1], q[1][1]) for q in mm['MOUTH']], 'pilot countersink outer radius', bad)
+                elif EA['kind'] == 'NUTCSA':
                     # countersinks: radial extent and depth on both faces
                     dep = lambda q: round(abs(q[1][0] - q[0][0]), 4); rad = lambda q: (min(q[0][1], q[1][1]), max(q[0][1], q[1][1]))
                     n += num_cmp([dep(q) for q in pp['MOUTH']], [dep(q) for q in mm['MOUTH']], 'pilot countersink depth', bad)
@@ -166,7 +174,8 @@ def main(roots, out):
             res.append(r); nbad += len(bad); nchk += n
             lines.append(f"{pn}: {n} checks, {len(bad)} off; solids {r['solids']}, volume {r['volume']} in^3"
                          + (f"; Brennan pilot {r['brennan_volume']} in^3 ({r['diff_pct']:+} %)" if 'brennan_volume' in r else '')
-                         + f"\n   model {mm}" + (f"\n   pilot {r['pilot']}" if 'pilot' in r else '') + ''.join('\n   OFF ' + b for b in bad))
+                         + f"\n   model {mm}" + (f"\n   pilot {r['pilot']}" if 'pilot' in r else '')
+                         + (f"\n   EXPECTED {r['expected_difference']}" if 'expected_difference' in r else '') + ''.join('\n   OFF ' + b for b in bad))
     lines.append(f'\nFS loose-part closed loop {"PASS" if nbad == 0 else "FAIL"}: {len(res)} configurations, {nchk} checks, {nbad} off (tolerance {TOL})')
     json.dump(res, open(os.path.join(out, 'closed_loop_loose.json'), 'w'), indent=1)
     open(os.path.join(out, 'closed_loop_loose.txt'), 'w').write('\n'.join(lines) + '\n')

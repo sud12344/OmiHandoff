@@ -174,14 +174,14 @@ Sub BuildFS0319()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 2)", (UBound(cfgs) + 1) >= 1
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 4)", (UBound(cfgs) + 1) >= 3
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS0319-08")
+    cx_c = Array("FS0319-04", "FS0319-06")
     cx_p = Array("L@DRIVE", "BODYR@DRIVE", "FSSLVA_FACER@DRIVE", "FSSLVA_TAPANG@DRIVE", "FSSLVA_SPIGOTR@DRIVE", "FSSLVA_SPIGOTL@DRIVE", "DEPTH@POCKETCUT_A", "DEPTH@BORECUT_B")
-    cx_w = Array(Array(0.37000, 0.37500, 0.29750, 15.00000, 0.32100, 0.17300, 0.33000, 0.04000))
-    For cx_q = 0 To 0
+    cx_w = Array(Array(0.37000, 0.25000, 0.16750, 15.00000, 0.20100, 0.21300, 0.33000, 0.04000), Array(0.37000, 0.31000, 0.23250, 15.00000, 0.26100, 0.19300, 0.33000, 0.04000))
+    For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
         swModel.ForceRebuild3 False
