@@ -18,9 +18,11 @@ prints a value, including the numbers of OMi's website file. Stage + evidence: `
   dofcheck / allcfg / vbacheck clean; every change traced to a reverted cell (`checks\trace.txt`).
 - **6410 reference configuration -> 6410-24-20-O** (`tools_af\generators\gen_straight2.py`, 1 line): with Air-Way's bore 0.68 the old
   reference 6410-12-08-O is a deep-bore port. Deploy with the ship.
-- **Held for you (7 cells, `revert_excluded.csv`):** 6405-24-16-O (Air-Way L 1.00 < pocket), 6504-24-24 (bore 1.38 >= tip 1.381),
-  6565-10-10 (Air-Way nut hex 0.94 vs the Brennan nut 1.000) - Air-Way cannot be built; kept at OMi as now. 6504-06-08 bores: Air-Way garbled.
-- **Look at (42 cells, `checks\look_at.csv`):** 6405 bores where Air-Way's D equals the tap drill ("column bleed"), 6405 L31 values flagged
+- **Air-Way not buildable -> Brennan (user Q1 2026-10-20: "use brennans"; `brennan_cells.csv`, 4 cells):** 6405-24-16-O L31 1.75 (Air-Way L
+  1.00 < pocket), 6504-24-24 D1 1.312 (Air-Way 1.38 >= tip 1.381), 6565-10-10 nut hexes 1.000 (Air-Way 0.94 vs the Brennan nut) - Brennan TFA
+  catalog values = the values built now; rows marked `$PRP@DimSource` BRENNAN + `[BRENNAN-CELL 2026-10-20: <col>]`. 6405-24-16-O D3 follows
+  the rule (Air-Way 1.14). Kept at OMi: 6504-06-08 bores (Air-Way garbled). Now 320 cells to Air-Way, 236 configurations, 26 roots (+6565).
+- **Look at (43 cells, `checks\look_at.csv`):** 6405 bores where Air-Way's D equals the tap drill ("column bleed"), 6405 L31 values flagged
   suspect in 2026-09, 5502-20-20-FG / -24-24-FG N, 6410-12-08-O 1.48 -> 1.09 and other moves > 0.15 in.
 - DataStatus unchanged (6500-08-06-FG back to VERIFIED: its logged OMi downgrade undone).
 - **Next (PC):** read the two "Review of Drawings" PDFs (not in the repo) against the stage; SolidWorks dry runs of the 25 roots
@@ -704,6 +706,8 @@ harmless; move it to `_to_delete` when SolidWorks is closed.
   1.480 answer (question 4), A19 / A20 and Task A where OMi differed from Air-Way. Staged: section 1 (`tools\_out\airway_first_20261020\`).
   Unchanged: ORFS (already Air-Way first), Brennan 3D files for shape, the 2-source VERIFIED rule, conflicts that cannot be built go to the
   user. Still to read: the AW / BI marks in the two PDFs.
+- 2026-10-20 (Q1): **an Air-Way value that cannot be built -> Brennan's value** ("use brennans"): 6405-24-16-O L31, 6504-24-24 D1,
+  6565-10-10 nut hexes; marked `$PRP@DimSource` BRENNAN.
 
 ## 6. Conventions that grew during the build (keep them)
 

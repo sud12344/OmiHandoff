@@ -16,7 +16,7 @@ def roots(g):
     keys = re.findall(r"^\s*'([0-9A-Z]{3,8})'\s*:\s*dict\(", code[m.end():], re.M) if m else []
     keys += re.findall(r"^SPEC\['([0-9A-Z]{3,8})'\]\s*=", code, re.M)
     return set(keys)
-want = sorted({r['root'].replace('_FINAL', '') for r in csv.DictReader(open(os.path.join(A, 'revert_list.csv')))})
+want = sorted({r['root'].replace('_FINAL', '') for f in ('revert_list.csv', 'brennan_cells.csv') for r in csv.DictReader(open(os.path.join(A, f)))})
 gs, gt = roots('gen_straight2.py'), roots('gen_tee.py')
 def run(sub, root_dir, g, r, gen=GEN):
     o = os.path.join(OUT, sub); os.makedirs(o, exist_ok=True)

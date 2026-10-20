@@ -69,7 +69,7 @@
  },
  "6410": {
   "sub": "straight",
-  "group": "g3"
+  "group": "g2"
  },
  "6500": {
   "sub": "tee",
@@ -96,6 +96,10 @@
   "group": "g3"
  },
  "6506": {
+  "sub": "straight",
+  "group": "g3"
+ },
+ "6565": {
   "sub": "straight",
   "group": "g3"
  }

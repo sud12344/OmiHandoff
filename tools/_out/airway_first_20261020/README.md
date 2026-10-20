@@ -16,11 +16,12 @@ Every review-table cell that holds an OMi-file value where Air-Way prints a diff
 
 | | |
 |---|---|
-| Cells reverted | **319** in 26 review tables, 235 rows (`revert_list.csv`, log `stage/CHANGES.csv`) |
-| Configurations whose SW2 row changes | **233** (built masters) |
-| Roots to rebuild | 25: 0318 0403 1404 2404 2501 (+2501L rows) 2503 2605 2705 2706 5500 5502 6400 6401 6402 6404 6405 6408 6410 6500 6501 6502 6503 6504 6505 6506 |
+| Cells reverted to Air-Way | **320** in 26 review tables, 236 rows (`revert_list.csv`, log `stage/CHANGES.csv`) |
+| Cells set to Brennan (Air-Way not buildable, user Q1) | 4 in 3 rows (`brennan_cells.csv`) |
+| Configurations whose SW2 row changes | **236** (built masters; 6504-24-24 / 6565-10-10 in property text only) |
+| Roots to rebuild | 26: 0318 0403 1404 2404 2501 (+2501L rows) 2503 2605 2705 2706 5500 5502 6400 6401 6402 6404 6405 6408 6410 6500 6501 6502 6503 6504 6505 6506 6565 |
 | Configurations lost | 0 |
-| Held (kept at the OMi value, user decision) | 7 cells (`revert_excluded.csv`) |
+| Kept at the OMi value | 2 cells (`revert_excluded.csv`: 6504-06-08 bores, Air-Way garbled) |
 
 Sources of the list (`scripts/build_revert_list.py`):
 1. `checks/aw_audit.csv` (`scripts/audit_vs_airway.py`): every BUILD cell compared with Air-Way's raw extract `07_RAW_EXTRACTS/<root>.csv`
@@ -37,16 +38,18 @@ DataStatus: unchanged (rows go back to their Air-Way state; VERIFIED-LEGS / -COR
 is only on the PC (`tools\_out\omi_apply_20260925\originals_before_apply`). Every reverted cell carries the OMi / Brennan value in
 `$COMMENT` and `$PRP@AxialSource`.
 
-## Held for the user (`revert_excluded.csv`) - Air-Way's value cannot be built
-- **6405-24-16-O** L31: Air-Way L 1.00 is shorter than the 1-NPTF pocket (1.14) - the generator blocks it (it was blocked before Task A
-  too). Its D3 is held with it.
-- **6504-24-24** D1: Air-Way bore 1.38 >= the -24 JIC tip diameter 1.381 - blocked.
-- **6565-10-10** C3 nut hexes: Air-Way 0.94 vs the Brennan -10 swivel nut (1.000) the nut shape is measured from - no end data.
-- 6504-06-08 D1 / D2: Air-Way prints ".030" / ".039" (garbled).
-These three configurations exist only because Task A gave them OMi values. Options: keep them at OMi (as staged), or drop them back to
-MISSING / blocked.
+## Air-Way's value cannot be built -> Brennan (user 2026-10-20, Q1: "use brennans"; `brennan_cells.csv`)
+- **6405-24-16-O** L31 = Brennan 1.75 (TFA p16 "L LGTH"): Air-Way L 1.00 is shorter than the 1-NPTF pocket (1.14) - blocked. Its D3 now
+  follows the rule: Air-Way 1.14 (on the look-at list: Air-Way's D equals the tap drill; Brennan prints 1.312, OMi 1.080).
+- **6504-24-24** D1 = Brennan 1.312 (TFA p17 "B1 DRILL"): Air-Way bore 1.38 >= the -24 JIC tip diameter 1.381 - blocked.
+- **6565-10-10** C3_1 / C3_2 nut hexes = Brennan 1.000 (TFA p18 "C1 HEX" / "C2 HEX"): Air-Way 0.94 vs the Brennan -10 swivel nut the nut
+  shape is measured from - no end data.
+Brennan's values equal the values the masters carry now (OMi = Brennan), so the geometry of these cells does not change - only the
+source notes. Each row gets `$PRP@DimSource` = BRENNAN (6565 table: column added) and `[BRENNAN-CELL 2026-10-20: <col>]` at the start of
+`$PRP@AxialSource`, so the cell can be found and changed later.
+- Kept at OMi: 6504-06-08 D1 / D2 (Air-Way prints ".030" / ".039", garbled).
 
-## Look at before shipping (`checks/look_at.csv`, 42 cells)
+## Look at before shipping (`checks/look_at.csv`, 43 cells)
 Air-Way values that move by more than 0.15 in or that the tables already flagged:
 - 6405: 12 cells where the table says "D equals tap drill ... column bleed suspected, as-printed" (Air-Way's bore column probably holds
   the tap drill), and L31 values the 2026-09 build flagged "Air-Way L31 suspect" (e.g. 6405-32-20-O / -32-24-O 2.00 -> 1.43).
@@ -65,7 +68,7 @@ to `tools/` with the ship (back up first).
 ## Checks (`checks/`)
 - `regen/cmp.txt`: the live tools on the live tables reproduce the shipped `03_SCRIPTS` macro and `04_DESIGN_TABLES` SW2 of every root
   (control); stage = `tools_af` on `stage/`.
-- `trace.txt`: every changed SW2 configuration is in the revert list (UNTRACED 0); 6405-32-24-O and 6410-32-24-O are reverted but stay
+- `trace.txt`: every changed SW2 configuration is in the revert list or `brennan_cells.csv` (UNTRACED 0); 6405-32-24-O and 6410-32-24-O are reverted but stay
   unbuilt (blocked / held as before).
 - `dofcheck_straight.txt` / `dofcheck_tee.txt`: every sketch exactly defined; `allcfg_*.txt`: 0 outline problems; `vbacheck.txt`: all OK;
   `regress.txt`: the old-configuration changes, each one a reverted cell or its derived columns.
@@ -73,10 +76,10 @@ to `tools/` with the ship (back up first).
 ## Next (on the PC - SolidWorks)
 1. Read the two review PDFs against `revert_list.csv` / `look_at.csv` (any AW / BI mark that disagrees with this stage).
 2. Re-check the 58 log-sourced cells (6401 / 6405 / 6408 / 6500) on the Air-Way pages.
-3. User: the 3 held configurations; the look-at list (ask OMi or accept).
-4. SolidWorks dry runs of the 25 roots - ready to run: `dryrun/RUN_DRYRUN.md` (`scripts/run_dryrun.py`, `scripts/verdict.py`); was: (`regen/stage/{straight,tee}/Build_<root>_MASTER.bas` + SW2, `TABLE_PATH` to the regen folder),
-   sweep every configuration, compare with the current masters (unchanged configurations identical).
-5. Ship as batch 18: macros + SW2 + the 26 review tables from `stage/04_DESIGN_TABLES`, deploy `tools_af`, RUN_ME_batch18.txt, QA_Log,
+3. User: the look-at list (ask OMi or accept). (The 3 unbuildable cells: answered, Brennan.)
+4. SolidWorks dry runs of the 26 roots - ready to run: `dryrun/RUN_DRYRUN.md` (`scripts/run_dryrun.py`, `scripts/verdict.py`): each macro
+   + SW2 from `regen/stage/`, every configuration swept and compared with the current master (unchanged configurations identical).
+5. Ship as batch 18: macros + SW2 + the 27 review tables from `stage/04_DESIGN_TABLES`, deploy `tools_af`, RUN_ME_batch18.txt, QA_Log,
    coverage, PROJECT_STATUS. The 2026-10-09 / 10-08 dimension-check drawings of these roots go stale (6401 drawing: 16 cells).
 
 Scripts (run from the repo root, Linux or Windows): `audit_vs_airway.py <outdir>`, `build_revert_list.py`, `apply_airway_first.py`

@@ -4,6 +4,9 @@ Per cell: checks the cell still holds the 'current' value, writes the Air-Way va
 VERIFIED-CORE rows were verified on their Air-Way values), except rows whose VERIFIED -> ASSUMED was logged as caused by the OMi values
 (brennan_yes_20261018/stage/CHANGES.csv): those go back to VERIFIED. Task A (2026-09-25) set ASSUMED without a cloud copy of the old
 status - those rows stay ASSUMED (old status: tools/_out/omi_apply_20260925/originals_before_apply on the PC).
+Then brennan_cells.csv (user 2026-10-20, Q1 "use brennans": Air-Way's value cannot be built): the cell takes Brennan's catalog value
+(checked equal to the current value), notes in $COMMENT / $PRP@AxialSource, and the row's $PRP@DimSource = BRENNAN (the reversible marker
+of 2026-10-18; the column is added where a table has none).
 Logs every cell to stage/CHANGES.csv."""
 import csv, os, shutil, collections, openpyxl
 H = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', '..'))
@@ -39,6 +42,27 @@ prev = {}
 for x in csv.reader(open(os.path.join(H, 'tools', '_out', 'brennan_yes_20261018', 'stage', 'CHANGES.csv'), encoding='utf-8')):
     if len(x) > 7 and x[3] == '$PRP@DataStatus' and x[5] == 'VERIFIED' and x[6] == 'ASSUMED' and ('A19' in x[7] or 'pending OMi' in x[7]):
         prev[(x[0][12:-5], x[1])] = x[7]
+TAGB = 'user 2026-10-20 Q1: Air-Way value cannot be built -> Brennan'
+for x in csv.DictReader(open(os.path.join(A, 'brennan_cells.csv'), encoding='utf-8')):
+    t, pn, col = x['root'], x['cfg'], x['col']
+    p, wb, ws, hdr, hr = sheet(t)
+    if '$PRP@DimSource' not in hdr:
+        c0 = ws.max_column + 1; ws.cell(hr, c0).value = '$PRP@DimSource'; hdr['$PRP@DimSource'] = c0
+        log.append((f'DesignTable_{t}.xlsx', '(header)', hr, '$PRP@DimSource', ws.cell(hr, c0).coordinate, '', '$PRP@DimSource', 'new column (2026-10-18 marking)'))
+    rr = [c.row for c in ws['A'] if c.row > hr and str(c.value) == pn]
+    assert len(rr) == 1, (t, pn, rr)
+    c = ws.cell(rr[0], hdr[col]); old = c.value
+    assert abs(float(old) - float(x['current'])) < 1e-6 and abs(float(old) - float(x['brennan'])) < 1e-6, (t, pn, col, old, x)
+    c.value = float(x['brennan'])
+    cm = ws.cell(rr[0], hdr['$COMMENT'])
+    cm.value = (str(cm.value) + ' | ' if cm.value else '') + f'2026-10-20 {col} = Brennan {float(x["brennan"]):g} (Air-Way {x["airway"]} cannot be built: {x["why_not_airway"]})'
+    ax = ws.cell(rr[0], hdr['$PRP@AxialSource'])
+    ax.value = f'[BRENNAN-CELL 2026-10-20: {col}] ' + (str(ax.value) if ax.value else '') + f'; {col}: {x["cite"]} [{TAGB}]'
+    d = ws.cell(rr[0], hdr['$PRP@DimSource']); dold = d.value; d.value = 'BRENNAN'
+    log.append((f'DesignTable_{t}.xlsx', pn, rr[0], col, c.coordinate, old, c.value, 'Brennan cell (Q1): ' + x['cite']))
+    if dold != 'BRENNAN':
+        log.append((f'DesignTable_{t}.xlsx', pn, rr[0], '$PRP@DimSource', d.coordinate, dold, 'BRENNAN', 'row carries a Brennan-only cell (' + col + ')'))
+    n[t] += 1
 down = dim = 0
 for (t, pn, r), cols in touched.items():
     p, wb, ws, hdr, hr = sheet(t)

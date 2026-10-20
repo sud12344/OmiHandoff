@@ -27,6 +27,8 @@ open(os.path.join(C, 'regress.txt'), 'w', encoding='utf-8').write(''.join(out))
 rev = collections.defaultdict(set)
 for x in csv.DictReader(open(os.path.join(A, 'revert_list.csv'), encoding='utf-8')):
     rev[x['root'].replace('_FINAL', '').replace('2501L', '2501')].add(x['cfg'])
+for x in csv.DictReader(open(os.path.join(A, 'brennan_cells.csv'), encoding='utf-8')):
+    rev[x['root']].add(x['cfg'])
 def load(p):
     rows = list(openpyxl.load_workbook(p, read_only=True).active.iter_rows(values_only=True))
     h = rows[0]; return {r[0]: dict(zip(h, r)) for r in rows[1:] if r[0]}

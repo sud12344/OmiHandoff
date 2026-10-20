@@ -37,6 +37,7 @@ root,cfg,col,now_omi,airway,delta,flagged
 6405,6405-20-08-O,D3@BORE,0.649,0.7,0.051,"D=0.7 equals tap drill and differs from dash-expected bore 1.078 - column bleed suspected, as-printed"
 6405,6405-20-12-O,D3@BORE,0.854,0.91,0.056,"D=0.91 equals tap drill and differs from dash-expected bore 1.078 - column bleed suspected, as-printed"
 6405,6405-24-12-O,L31@DRIVE,1.27,1.0,-0.27,"D=0.91 equals tap drill and differs from dash-expected bore 1.312 - column bleed suspected, as-printed"
+6405,6405-24-16-O,D3@BORE,1.08,1.14,0.06,"D=1.14 equals tap drill and differs from dash-expected bore 1.312 - column bleed suspected, as-printed"
 6405,6405-24-20-O,L31@DRIVE,2.16,1.85,-0.31,
 6405,6405-24-24-O,L31@DRIVE,2.16,2.0,-0.16,
 6405,6405-32-20-O,L31@DRIVE,2,1.43,-0.57,"D=1.48 equals tap drill and differs from dash-expected bore 1.781 - column bleed suspected, as-printed"

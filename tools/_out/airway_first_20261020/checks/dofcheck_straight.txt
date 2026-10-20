@@ -14,3 +14,4 @@ Build_6410_MASTER.bas {'points': 12, 'unknowns': 24, 'constraints': 24, 'rank': 
 Build_6504_MASTER.bas {'points': 26, 'unknowns': 52, 'constraints': 52, 'rank': 52, 'dims': 30, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
 Build_6505_MASTER.bas {'points': 22, 'unknowns': 44, 'constraints': 44, 'rank': 44, 'dims': 25, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
 Build_6506_MASTER.bas {'points': 19, 'unknowns': 38, 'constraints': 38, 'rank': 38, 'dims': 21, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_6565_MASTER.bas {'points': 36, 'unknowns': 72, 'constraints': 72, 'rank': 72, 'dims': 42, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}

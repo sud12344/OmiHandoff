@@ -15,11 +15,17 @@ H = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', '.
 A = os.path.join(H, 'tools', '_out', 'airway_first_20261020')
 DT = os.path.join(H, '04_DESIGN_TABLES')
 out, excl = [], []
-HOLD = {('6405', '6405-24-16-O', 'L31@DRIVE'): 'Air-Way L 1.00 < NPTF pocket depth 1.14: no room for a bore (generator BLOCKED; flagged "Air-Way L31 suspect" since 2026-09)',
-        ('6405', '6405-24-16-O', 'D3@BORE'): 'held with its L31 so the row stays one source (OMi) until the user decides',
-        ('6504', '6504-24-24', 'D1@BORE'): 'Air-Way bore 1.38 >= the -24 JIC tip dia 1.381 (generator BLOCKED)',
-        ('6565', '6565-10-10', 'C3_1HEX@HEX'): 'Air-Way nut hex 0.94 vs the Brennan -10 swivel nut 1.000 the nut shape is measured from (generator: no end data)',
-        ('6565', '6565-10-10', 'C3_2HEX@HEX'): 'Air-Way nut hex 0.94 vs the Brennan -10 swivel nut 1.000 the nut shape is measured from (generator: no end data)'}
+HOLD = {}   # 2026-10-20 Q1 answered (user: "use brennans"): the unbuildable Air-Way cells take Brennan's value -> BRENNAN_CELLS
+# Air-Way's value cannot be built; Brennan TFA catalog value instead (user 2026-10-20, Q1 "use brennans"); written to brennan_cells.csv
+BRENNAN_CELLS = {
+    ('6405', '6405-24-16-O', 'L31@DRIVE'): (1.75, 'Brennan TFA catalog p16 table TFA-p016-t01 "MORB-FP STRAIGHT" row 6405-24-16-O col "L LGTH" = 1.75',
+                                            'Air-Way L 1.00 < the 1-NPTF pocket depth 1.14: no room for a bore (generator BLOCKED)'),
+    ('6504', '6504-24-24', 'D1@BORE'): (1.312, 'Brennan TFA catalog p17 table TFA-p017-t05 "MJ-FJS STRAIGHT" row 6504-24-24 col "B1 DRILL" = 1.312',
+                                        'Air-Way bore 1.38 >= the -24 JIC tip dia 1.381 (generator BLOCKED)'),
+    ('6565', '6565-10-10', 'C3_1HEX@HEX'): (1.0, 'Brennan TFA catalog p18 table TFA-p018-t04 "FJS-FJS STRAIGHT" row 6565-10-10 col "C1 HEX" = 1.000',
+                                            'Air-Way nut hex 0.94 vs the Brennan -10 swivel nut (1.000) the nut shape is measured from (generator: no end data)'),
+    ('6565', '6565-10-10', 'C3_2HEX@HEX'): (1.0, 'Brennan TFA catalog p18 table TFA-p018-t04 "FJS-FJS STRAIGHT" row 6565-10-10 col "C2 HEX" = 1.000',
+                                            'Air-Way nut hex 0.94 vs the Brennan -10 swivel nut (1.000) the nut shape is measured from (generator: no end data)')}
 for r in csv.DictReader(open(os.path.join(A, 'checks', 'aw_audit.csv'))):
     if r['kind'] != 'OMi':
         continue
@@ -60,17 +66,23 @@ for row in ws.iter_rows(values_only=True):
     if v is not None and abs(float(v) - float(a[4])) > 0.005:
         out.append(dict(root='2404_FINAL', cfg=str(row[0]), col='D1@DRIVE', current=v, target=float(a[4]), verified='raw 07_RAW_EXTRACTS (2404.csv col 5 L)',
                         why=str(d.get('$COMMENT'))[:300]))
-keep = []
+keep, bren = [], []
 for o in out:
     k = (o['root'], o['cfg'], o['col'])
-    if k in HOLD: excl.append(dict(o, reason='HOLD (cannot be built at Air-Way): ' + HOLD[k]))
+    if k in HOLD: excl.append(dict(o, reason='HOLD: ' + HOLD[k]))
+    elif k in BRENNAN_CELLS:
+        v, cite, why = BRENNAN_CELLS[k]
+        bren.append(dict(root=o['root'], cfg=o['cfg'], col=o['col'], current=o['current'], airway=o['target'], brennan=v, cite=cite, why_not_airway=why))
     else: keep.append(o)
+assert len(bren) == len(BRENNAN_CELLS), bren
 out = keep
+with open(os.path.join(A, 'brennan_cells.csv'), 'w', newline='', encoding='utf-8') as fh:
+    w = csv.DictWriter(fh, fieldnames=list(bren[0].keys())); w.writeheader(); w.writerows(bren)
 f = ['root', 'cfg', 'col', 'current', 'target', 'verified', 'why']
 with open(os.path.join(A, 'revert_list.csv'), 'w', newline='', encoding='utf-8') as fh:
     w = csv.DictWriter(fh, fieldnames=f); w.writeheader(); w.writerows(out)
 with open(os.path.join(A, 'revert_excluded.csv'), 'w', newline='', encoding='utf-8') as fh:
     w = csv.DictWriter(fh, fieldnames=sorted({k for e in excl for k in e}), restval=''); w.writeheader(); w.writerows(excl)
 import collections
-print('revert cells', len(out), 'configs', len({(o['root'], o['cfg']) for o in out}), 'roots', len({o['root'] for o in out}), '| excluded', len(excl))
+print('brennan cells', len(bren), '| revert cells', len(out), 'configs', len({(o['root'], o['cfg']) for o in out}), 'roots', len({o['root'] for o in out}), '| excluded', len(excl))
 print(collections.Counter(o['root'] for o in out))

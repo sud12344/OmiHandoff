@@ -3,14 +3,14 @@
 Nothing here writes to `11_MASTERS` or `03_SCRIPTS`: every macro saves its part and report into `dryrun\<root>\`, and the shipped
 masters are opened read-only and closed without saving.
 
-1. SolidWorks 2026 signed in (start SOLIDWORKS Design from 3DEXPERIENCE). Close every master of the 25 roots and any open VBA editor.
+1. SolidWorks 2026 signed in (start SOLIDWORKS Design from 3DEXPERIENCE). Close every master of the 26 roots and any open VBA editor.
 2. In `OMi_Handoff` (PowerShell):
    ```
    python tools\_out\airway_first_20261020\scripts\run_dryrun.py g1 g2 g3
    ```
    - g1: 0318 0403 1404 2404 2501 2503 2605 2705 2706
-   - g2: 5500 5502 6400 6401 6402 6404 6405 6408
-   - g3: 6410 6500 6501 6502 6503 6504 6505 6506
+   - g2: 5500 5502 6400 6401 6402 6404 6405 6408 6410
+   - g3: 6500 6501 6502 6503 6504 6505 6506 6565
    It stops before a group when SolidWorks uses > 8 GB or free virtual memory is < 6 GB. Then restart SolidWorks and run the
    remaining groups (e.g. `... run_dryrun.py g3`). If Excel crashes during a design-table insert ("Configurations after table: 1"),
    close the leftover Excel window and re-run that group.

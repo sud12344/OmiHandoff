@@ -9,9 +9,9 @@ spec-sheet work).
 **Current state, open work, user decisions: `00_DOCS/PROJECT_STATUS.md` - read it before starting
 anything, update it when a batch ships or the user decides something.**
 **2026-10-20 (later): AIR-WAY FIRST - OMi's rule** (Triveni: Air-Way over Brennan, incl. OMi's own website file). STAGED, not shipped:
-`tools/_out/airway_first_20261020/README.md` - 319 OMi-file cells back to Air-Way (233 built configurations, 25 roots, 0 lost; static checks
-clean; 6410 reference -> 6410-24-20-O in `tools_af`), 7 cells held (Air-Way value not buildable), 42 cells to look at. Next on the PC: read the
-two "Review of Drawings" PDFs (not in the repo), SolidWorks dry runs, ship as batch 18.
+`tools/_out/airway_first_20261020/README.md` - 320 OMi-file cells back to Air-Way + 4 unbuildable Air-Way cells -> Brennan (user Q1) (236 configurations,
+26 roots, 0 lost; static checks clean; 6410 reference -> 6410-24-20-O in `tools_af`), 43 cells to look at; PC dry-run kit in `dryrun/`. Next on the PC: read the
+two "Review of Drawings" PDFs (being committed by the local session), SolidWorks dry runs, ship as batch 18.
 **2026-10-20: BATCH 17 SHIPPED** (`03_SCRIPTS/RUN_ME_batch17.txt`, QA #173-#175, `tools/_out/batch17_20261019/` - RESUME.md is the run
 log): the 2026-10-18 stage incl. the 37 adapters (apply_77.py never run - done) + the 5 generator features -> 1,354 of 1,874 configurations in a
 master, 95 masters. Live `tools/` = `batch17_20261019/tools_b17` (Atan2V ByVal fix). Held for generator work: 4503 4603 1703 1700RC 1800 5404N.
@@ -188,7 +188,7 @@ Gotchas
   includes the numbers of OMi's own website file `07_RAW_EXTRACTS/omi_dimensions/WebsitePartsInfo2026.xlsx`, which are
   Brennan's data); the OMi file / OMi's answers fill what Air-Way does not give, then Brennan (marked `$PRP@DimSource` BRENNAN).
   Supersedes the 2026-09-25 order (OMi > Air-Way). Rounding-only differences are not changes; an Air-Way value that cannot
-  be built goes to the user (never picked silently). GEOMETRY (end shapes, forged bodies, seats, nuts, ports):
+  be built takes Brennan's value, marked BRENNAN (user 2026-10-20, Q1 "use brennans") - tell the user which cells. GEOMETRY (end shapes, forged bodies, seats, nuts, ports):
   Brennan STEPs, which also cross-check (differences: note in `$COMMENT`, tell the user). Enumerate rows; never trust a
   stated count.
 - Log every modelling assumption (it goes into `$PRP@AxialSource` of every row it touches).

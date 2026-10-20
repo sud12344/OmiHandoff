@@ -2,7 +2,7 @@
 Per root: run_macro (macro + SW2 from regen/stage/<sub>; SAVE_PATH / REPORT_PATH / TABLE_PATH overridden -> dryrun/<root>/, so 11_MASTERS
 and 03_SCRIPTS stay untouched), sweep_configs of the new part, close (discard); then the shipped 11_MASTERS part read-only, sweep, close
 (discard) - for verdict.py's old-configuration comparison. Paths are the PC's (OMI_DEV, default the user's OMi_Handoff), so the files can be
-written in the cloud. Groups of 8-9 roots (CLAUDE.md: restart SolidWorks every ~40 builds; run_dryrun.py checks memory between groups)."""
+written in the cloud. Groups of 8-9 roots (26 roots: 25 with reverted cells + 6565, property text only) (CLAUDE.md: restart SolidWorks every ~40 builds; run_dryrun.py checks memory between groups)."""
 import json, ntpath, os, re
 H = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', '..'))
 A = os.path.join(H, 'tools', '_out', 'airway_first_20261020')
@@ -14,7 +14,7 @@ for l in open(os.path.join(A, 'regen', 'cmp.txt'), encoding='utf-8'):
     if m: roots.append((m.group(1), m.group(2)))
 # largest first in each group spreads the memory; 25 roots -> 3 groups
 order = sorted(roots, key=lambda x: x[0])
-groups = {'g1': order[0:9], 'g2': order[9:17], 'g3': order[17:]}
+groups = {'g1': order[0:9], 'g2': order[9:18], 'g3': order[18:]}
 info = {}
 for g, rr in groups.items():
     calls = [['sw_status', {}]]

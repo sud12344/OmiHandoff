@@ -1,0 +1,5 @@
+root,cfg,col,current,airway,brennan,cite,why_not_airway
+6504,6504-24-24,D1@BORE,1.312,1.38,1.312,"Brennan TFA catalog p17 table TFA-p017-t05 ""MJ-FJS STRAIGHT"" row 6504-24-24 col ""B1 DRILL"" = 1.312",Air-Way bore 1.38 >= the -24 JIC tip dia 1.381 (generator BLOCKED)
+6565,6565-10-10,C3_1HEX@HEX,1.0,0.94,1.0,"Brennan TFA catalog p18 table TFA-p018-t04 ""FJS-FJS STRAIGHT"" row 6565-10-10 col ""C1 HEX"" = 1.000",Air-Way nut hex 0.94 vs the Brennan -10 swivel nut (1.000) the nut shape is measured from (generator: no end data)
+6565,6565-10-10,C3_2HEX@HEX,1.0,0.94,1.0,"Brennan TFA catalog p18 table TFA-p018-t04 ""FJS-FJS STRAIGHT"" row 6565-10-10 col ""C2 HEX"" = 1.000",Air-Way nut hex 0.94 vs the Brennan -10 swivel nut (1.000) the nut shape is measured from (generator: no end data)
+6405,6405-24-16-O,L31@DRIVE,1.75,1.0,1.75,"Brennan TFA catalog p16 table TFA-p016-t01 ""MORB-FP STRAIGHT"" row 6405-24-16-O col ""L LGTH"" = 1.75",Air-Way L 1.00 < the 1-NPTF pocket depth 1.14: no room for a bore (generator BLOCKED)
