@@ -1,0 +1,47 @@
+PASS  (1) FSM FSM FS2403-08-08 -X = FS2403-08-08 +X: all of BORER/GI/GO/GD/FR/CH/RMAJ/ENDL within 0.0015
+PASS  (1) FSM FSM FS6400-08-08-O = FS2403-08-08 +X: all of BORER/GI/GO/GD/FR/CH/RMAJ/ENDL within 0.0015
+PASS  (1) FSM FSM FS6500-08-08-FG = FS2403-08-08 +X: all of BORER/GI/GO/GD/FR/CH/RMAJ/ENDL within 0.0015
+PASS  (1) FSM FSM FS6801-08-08-NWO-FG = FS2403-08-08 +X: all of BORER/GI/GO/GD/FR/CH/RMAJ/ENDL within 0.0015
+PASS  (1) FSM FSM FS2701-08-08-FG = FS2403-08-08 +X: all of BORER/GI/GO/GD/FR/CH/RMAJ/ENDL within 0.0015
+PASS  (1) FSM FSBH FS2701-08-08-FG = FS2403-08-08 +X: all of BORER/GI/GO/GD/FR/CH/RMAJ within 0.0015
+NOTE  (1b) FSM run-out on a straight (FSM FS2403-08-08 +X): thread to s 0.383, 60.0 deg flank, relief r 0.3595 x 0.094 to the hex face at s 0.504
+NOTE  (1b) FSM run-out on a straight (FSM FS2403-08-08 -X): thread to s 0.383, 60.0 deg flank, relief r 0.3595 x 0.094 to the hex face at s 0.504
+NOTE  (1b) FSM run-out on a straight (FSM FS6400-08-08-O): thread to s 0.383, 60.0 deg flank, relief r 0.3595 x 0.094 to the hex face at s 0.504
+NOTE  (1c) FSM run-out on a forged leg (FSM FS6500-08-08-FG): thread major to s 0.504 = ENDL, then a radial step down to r 0.375 (= the 0.75 forged flats / 2) and the 75 deg body chamfer to the hex corners: the end stands proud of the flats (PLAN risk R1)
+NOTE  (1c) FSM run-out on a forged leg (FSM FS6801-08-08-NWO-FG): thread major to s 0.504 = ENDL, then a radial step down to r 0.375 (= the 0.75 forged flats / 2) and the 75 deg body chamfer to the hex corners: the end stands proud of the flats (PLAN risk R1)
+NOTE  (1c) FSM run-out on a forged leg (FSM FS2701-08-08-FG): thread major to s 0.504 = ENDL, then a radial step down to r 0.375 (= the 0.75 forged flats / 2) and the 75 deg body chamfer to the hex corners: the end stands proud of the flats (PLAN risk R1)
+PASS  (2) swivel nut hex = FS0318-08 hex: corner r 0.5416 / 0.5416 -> A/F 0.938
+PASS  (2) swivel nut length = FS0318-08 length: 0.827 / 0.8272
+PASS  (2) FS0318-08 = Air-Way FF318-8: A/F 0.938 vs S 0.94, L 0.8272 vs h 0.83
+PASS  (2) swivel nut thread minor + mouth = FS0318-08: minor r 0.3724 / 0.3724; mouth countersink 45 deg x 0.0371 both
+NOTE  (2) swivel nut inner lip = FS0318-08 lip: lip from s 0.63 on both; lip bore r 0.3235 (swivel) / 0.326 (loose)
+NOTE  (2) swivel nut differs from the loose nut outside and in the relief: thread minor length 0.4059 (swivel) / 0.47 (loose); swivel nut: hex flats over s (0.0471, 0.4349) with 30 deg chamfers + a 12.3 deg rear skirt with a groove; loose nut: hex over the full length, 75 deg end chamfers -> FSNUT_MEAS cannot be copied from FSSW_MEAS as a whole (PLAN FSNUTF: 'if P6 shows the loose nut = the swivel nut'): the loose nut keeps its own entry
+PASS  (3) fused face O-ring = Air-Way FS4000-08: I.D. 0.489 (centreline dia 0.559 - W) vs 0.489, W 0.07 vs 0.07
+PASS  (3) groove I.D. within the O-ring I.D.: groove I.D. 0.425 <= 0.489
+PASS  (3) groove O.D. = O-ring O.D.: groove O.D. 0.629 vs O-ring O.D. 0.629: the O-ring sits on the outer wall
+NOTE  (3) groove depth vs W: depth 0.052 = 26 % squeeze of W 0.07 when the face closes
+PASS  thread: FSM major = 13/16-16: major dia 0.8124
+PASS  thread: FSSW / nut minor = 13/16-16 basic minor: minor dia 0.7448 vs 0.7448
+PASS  thread: stud major = 3/4-16 UNF: major dia 0.75
+PASS  Air-Way FS2403-08-08 L6 (face -> face): 1.39 vs 1.39
+PASS  Air-Way FS6500-08-08-FG L7 (crossing -> male face): 1.1 vs 1.1
+PASS  Air-Way FS6500-08-08-FG L21 = crossing -> SWIVEL SEAL FACE (not the nut face): seal face 1.49, nut face 1.923, L21 1.49 -> PLAN R3 settled the other way: the FSSW leg input is the seal face; nut face = seal + 0.433
+PASS  Air-Way FS6500-08-08-FG SHEX (swivel nut): 0.9381 vs 0.94
+PASS  Air-Way FS2701-08-08-FG L16 / L17: 1.14 / 2.18 vs 1.14 / 2.18
+PASS  Air-Way FS2701-08-08-FG i2 = tip -> collar face: collar face at s 1.44 vs i2 1.44
+PASS  Air-Way FS2701-08-08-FG d17 = collar dia: 1.0 vs 1
+NOTE  Air-Way FS2701-08-08-FG i4 vs the STEP: i4 0.06 = the length of the dia 0.801 step in front of the collar (s 1.38 -> 1.44); the collar itself is 0.2 thick (s 1.44 -> 1.64, then the 0.75 flats). PLAN read i4 as the collar thickness: it is not
+PASS  Air-Way FS6400-08-08-O L8 (face -> ORB tip): 1.441 vs 1.44
+PASS  Air-Way FS6400-08-08-O L9 (face -> hex ORB-side face): 0.89 vs 0.89
+PASS  Air-Way FS6400-08-08-O stud L8 - L9 (Q-FS-ORBSTUD): tip -> hex face 0.551 vs 0.55
+PASS  Air-Way FS6801-08-08-NWO-FG L7 / L10 / L11: 1.1 / 1.6 / washer face 1.06 vs 1.1 / 1.6 / 1.06
+PASS  Air-Way FS6801-08-08-NWO-FG S3HEX (lock nut): 0.9381 vs 0.94
+PASS  Air-Way FS0319-08 L / d8: 0.374 / 0.745 vs 0.37 / 0.75
+NOTE  FS0319-08 braze bore vs tube 1/2: bore dia 0.506 = tube OD 0.500 + 0.006 braze clearance; tube stop dia 0.378
+PASS  Air-Way FS0306-08 S4 / H2: 1.125 / 0.3502 vs 1.13 / 0.35
+PASS  ORB_FS vs ORB[8]: undercut: 0.66 x 0.094 vs 0.66 x 0.094
+NOTE  ORB_FS vs ORB[8]: thread: tip -> flank end 0.457 vs ORB THDL 0.344: the FS stud's extra 0.113 is thread (no plain shank); tip chamfer 45 deg x 0.0475
+PASS  NWO_FS vs NWO_MEAS[8]: undercut + washer: undercut 0.146 vs UL_B 0.146; washer r 0.505 x 0.041 vs WR 0.505 x WT 0.041
+NOTE  NWO_FS vs NWO_MEAS[8]: thread + lock nut: tip -> flank end 0.394 vs THDL_B 0.344 (+0.05 thread); lock nut A/F 0.938 (Air-Way S3) x 0.41 thick vs the JIC 6801 lock nut AF_B 0.875 x NUTT 0.31
+
+0 FAIL

@@ -31,6 +31,14 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS WP2 extractors written and validated on the 8 pilots** (`tools\_out\orfs_wp2_20261020\README.md`;
+46 checks, 0 FAIL; -08 end entries proposed in `end_lib_08.json`). The male face-seal end is one shape on all 7 copies. The swivel nut
+and FS0318 agree on hex / length / thread / lip. The fused O-ring = FS4000-08. Air-Way rows match the STEPs. Plan changes:
+- Air-Way L21 = crossing -> swivel SEAL face (nut face +0.433), not the nut face;
+- i4 = a 0.06 step, the bulkhead collar is 0.20 thick;
+- the FS studs = library undercut + a longer thread.
+Next: generator end functions + OCP closed loop; E1-E8 / F1-F15 can be downloaded now.
+
 **2026-10-20 (cloud): 8 of the 9 ORFS pilot STEPs received** (user download, Brennan PARTcommunity) -> `09_STEP_FILES/BRENNAN_FS*.stp`:
 FS2403-08-08, FS6500-08-08-FG, FS2701-08-08-FG, FS6400-08-08-O, FS6801-08-08-NWO-FG, FS0318-08, FS0319-08, FS0306-08 (each 1 solid;
 sizes match Air-Way). **FS2406-08-06 has no CAD file at Brennan** -> stand-in FS2406-08-04 proposed. Extractors / ORFS generator not
