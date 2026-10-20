@@ -1,0 +1,9 @@
+header identical: True 103 cols
+before configs ['1603-06-06-06-FG', '1603-02-02-02-FG', '1603-04-04-04-FG', '1603-12-12-12-FG', '1603-16-16-16-FG']
+after configs ['1603-06-06-06-FG', '1603-02-02-02-FG', '1603-04-04-04-FG', '1603-08-08-08-FG', '1603-12-12-12-FG', '1603-16-16-16-FG']
+1603-06-06-06-FG unchanged
+1603-02-02-02-FG unchanged
+1603-04-04-04-FG unchanged
+1603-12-12-12-FG unchanged
+1603-16-16-16-FG unchanged
+NEW 1603-08-08-08-FG {'D1@BORE1': 0.45, 'DEPTH@BORECUT1': 1.39, 'D2@BORE2': 0.45, 'DEPTH@BORECUT2': 1.39, 'D3@BORE3': 0.45, 'DEPTH@BORECUT3': 1.39}

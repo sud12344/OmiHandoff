@@ -65,7 +65,8 @@ The user's Claude memory files are NOT in the repo; everything needed is in thes
    - Ship per CLAUDE.md with RUN_ME_batch17.
    - Re-word the stale "BUILD-NEAR / MISSING" comments on now-built rows at ship time.
 3. **Python work a cloud session can do now:**
-   - measure the 1603-08-08-08-FG range bores from its STEP (A14);
+   - ~~measure the 1603-08-08-08-FG range bores from its STEP (A14)~~ DONE 2026-10-20: 0.450 / 0.450, row staged
+     (`tools/_out/a14_1603bore_20261020/README.md`; 1603 now 6 of 6 -FG rows generate);
    - prepare the 3474 family (toolchain never merged);
    - re-count the whole catalog (`tools/_out/adapters77_20261016/scripts/possible_2535.py` needs updating for today's decisions);
    - stage new data as the user downloads STEPs.

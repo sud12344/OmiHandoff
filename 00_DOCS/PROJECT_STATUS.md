@@ -31,6 +31,12 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): A14 done for 1603-08-08-08-FG** - both bores measured on `BRENNAN_1603-08-08-08-FG.stp` = 0.450 (catalog prints
+"0.44/0.46"); the whole row staged in `tools\_out\brennan_yes_20261018\stage` (15 prepared Brennan-catalog / end-library cells + the 2
+bores, DimSource BRENNAN, MISSING -> ASSUMED; every catalog value confirmed on the STEP). 1603 now generates 6 of 6 -FG rows with the
+merged tools; old 5 unchanged; vbacheck / dofcheck / allcfg / OCP closed loop pass. Not shipped, not dry-run in SolidWorks.
+Evidence: `tools\_out\a14_1603bore_20261020\README.md`. A14's 7 6901 / 6902 rows still wait for their STEPs.
+
 **2026-10-19: BATCH 16 SHIPPED (`03_SCRIPTS\RUN_ME_batch16.txt`, QA #170-#172; user: "Yes, ship batch 16 as planned.").** Plan +
 evidence: `tools\_out\ship_20261019\` (SHIP_PLAN.md, checks\, scripts\ship_b16.py, old_files\ + MANIFEST*.txt; second copy
 `_to_delete\superseded_20261019\batch16_replaced\`).

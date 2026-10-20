@@ -1,0 +1,4 @@
+329c329
+<     Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 6)", (UBound(cfgs) + 1) = 6
+---
+>     Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 7)", (UBound(cfgs) + 1) = 7

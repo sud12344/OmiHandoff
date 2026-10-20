@@ -38,6 +38,7 @@ tools/_out/*
 !tools/_out/adapters77_20261016/
 !tools/_out/airway_20261014/
 !tools/_out/brennan_catalog_20261001/
+!tools/_out/a14_1603bore_20261020/
 
 # brennan_yes: keep stage, stage_orfs, scripts, wave reports / cell lists; drop test copies and regenerations
 tools/_out/brennan_yes_20261018/base_root/
@@ -123,3 +124,6 @@ tools/_out/batch17_20261019/paperwork/*.xlsx
 !tools/_out/batch17_20261019/out_*.txt
 !tools/_out/batch17_20261019/run_groups_log*.txt
 !tools/_out/batch17_20261019/sw_dryrun/
+# a14 (2026-10-20): keep scripts, surveys, regen, checks, closed-loop text; drop the OCP model STEPs
+tools/_out/a14_1603bore_20261020/ocp/1603/
+tools/_out/a14_1603bore_20261020/checks/gt_scratch/

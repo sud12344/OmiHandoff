@@ -1,0 +1,54 @@
+{
+ "1603": {
+  "configs": 5,
+  "ref": "1603-06-06-06-FG",
+  "skipped": [
+   [
+    "1603-02-02-02",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-04-04-04",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-06-06-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-08-08-08",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-12-12-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-16-16-16",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-20-20-20",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "1603-08-08-08-FG",
+    "BUILD",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "1603-06-06-06-FG: leg 1: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 3: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed",
+   "1603-12-12-12-FG: leg 1: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 3: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed"
+  ],
+  "cols": 102
+ }
+}
