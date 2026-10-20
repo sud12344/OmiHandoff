@@ -1,0 +1,4 @@
+# OMi toolchain (tools/). Python 3.10+.
+openpyxl>=3.1        # review / SW2 design tables, workbook, coverage
+numpy>=1.24          # checks/dofcheck_*.py (constraint Jacobian rank)
+cadquery-ocp>=7.7    # measure/*.py only (OpenCascade: STEP reading, sections, solid rebuilds)

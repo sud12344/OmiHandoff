@@ -1,0 +1,43 @@
+root,cfg,col,now_omi,airway,delta,flagged
+2705,2705-08-10,L24@DRIVE,2.84,2.66,-0.18,
+2705,2705-08-10-LN,L24@DRIVE,2.84,2.66,-0.18,
+2706,2706-24-24,D1@BORE,1.312,1.5,0.188,
+2706,2706-24-24-LN,L25@DRIVE,3.5,3.44,-0.06,"copied as printed in $PRP@Threads - as-printed, likely typo / THDMAJ_A@DRIVE: 1.900 = ASME B1.20.1 1-1/2 NPT OD (ms51500.NPTF[24]) for the part-number dash -24 (table had empty: Air-Way callout ""1 1/2-11"" = nominal 1 1/2 w"
+2706,2706-24-24-LN,D1@BORE,1.312,1.5,0.188,"copied as printed in $PRP@Threads - as-printed, likely typo / THDMAJ_A@DRIVE: 1.900 = ASME B1.20.1 1-1/2 NPT OD (ms51500.NPTF[24]) for the part-number dash -24 (table had empty: Air-Way callout ""1 1/2-11"" = nominal 1 1/2 w"
+5502,5502-04-02-FG,W@REF,0.562,0.75,0.188,
+5502,5502-08-04-FG,W@REF,0.875,1.06,0.185,
+5502,5502-08-06-FG,W@REF,0.875,1.06,0.185,
+5502,5502-16-12-FG,W@REF,1.312,1.63,0.318,
+5502,5502-20-20-FG,N@DRIVE,2.38,2.75,0.37,"N 2.75 vs non-FG 2.38 (FG > non-FG by .37, unusual) - as-printed"
+5502,5502-24-24-FG,N@DRIVE,2.64,3.05,0.41,N 3.05 vs non-FG 2.70 - as-printed
+6404,6404-06-04,L32@DRIVE,1.59,1.38,-0.21,
+6404,6404-06-08,L32@DRIVE,1.58,1.1,-0.48,
+6410,6410-08-04-O,L33@DRIVE,1.1,0.8,-0.3,
+6410,6410-12-08-O,L33@DRIVE,1.48,1.09,-0.39,
+6410,6410-16-10-O,L33@DRIVE,1.57,1.12,-0.45,
+6410,6410-16-16-O,L33@DRIVE,1.81,1.97,0.16,"L33/C1/D3 progression supports -16) - as-printed, likely typo"
+6505,6505-08-10,L15@DRIVE,2.1,2.28,0.18,
+6505,6505-08-10,L16@DRIVE,1.6,1.78,0.18,
+6505,6505-20-20,L15@DRIVE,2.84,2.66,-0.18,
+6505,6505-20-20,L16@DRIVE,2.21,2.03,-0.18,
+6506,6506-06-08,L17@DRIVE,1.78,1.61,-0.17,
+6506,6506-06-08,L18@DRIVE,1.36,1.19,-0.17,
+6405,6405-06-02-O,L31@DRIVE,1.02,0.73,-0.29,"D=0.33 equals tap drill and differs from dash-expected bore 0.297 - column bleed suspected, as-printed"
+6405,6405-06-02-O,D3@BORE,0.297,0.33,0.033,"D=0.33 equals tap drill and differs from dash-expected bore 0.297 - column bleed suspected, as-printed"
+6405,6405-08-02-O,D3@BORE,0.315,0.33,0.015,"D=0.33 equals tap drill and differs from dash-expected bore 0.391 - column bleed suspected, as-printed"
+6405,6405-08-04-O,D3@BORE,0.391,0.43,0.039,"D=0.43 equals tap drill and differs from dash-expected bore 0.391 - column bleed suspected, as-printed"
+6405,6405-08-08-O,L31@DRIVE,1.47,1.63,0.16,
+6405,6405-08-12-O,L31@DRIVE,1.78,1.63,-0.15,
+6405,6405-12-06-O,L31@DRIVE,1.49,1.09,-0.4,"D=0.57 equals tap drill and differs from dash-expected bore 0.609 - column bleed suspected, as-printed"
+6405,6405-14-12-O,L31@DRIVE,1.78,1.6,-0.18,
+6405,6405-16-04-O,L31@DRIVE,1.14,1.12,-0.02,"D=0.43 equals tap drill and differs from dash-expected bore 0.844 - column bleed suspected, as-printed"
+6405,6405-16-06-O,L31@DRIVE,1.13,1.0,-0.13,"D=0.57 equals tap drill and differs from dash-expected bore 0.844 - column bleed suspected, as-printed"
+6405,6405-16-08-O,L31@DRIVE,1.72,1.47,-0.25,"D=0.7 equals tap drill and differs from dash-expected bore 0.844 - column bleed suspected, as-printed"
+6405,6405-16-20-O,L31@DRIVE,2.27,2.09,-0.18,
+6405,6405-20-08-O,D3@BORE,0.649,0.7,0.051,"D=0.7 equals tap drill and differs from dash-expected bore 1.078 - column bleed suspected, as-printed"
+6405,6405-20-12-O,D3@BORE,0.854,0.91,0.056,"D=0.91 equals tap drill and differs from dash-expected bore 1.078 - column bleed suspected, as-printed"
+6405,6405-24-12-O,L31@DRIVE,1.27,1.0,-0.27,"D=0.91 equals tap drill and differs from dash-expected bore 1.312 - column bleed suspected, as-printed"
+6405,6405-24-20-O,L31@DRIVE,2.16,1.85,-0.31,
+6405,6405-24-24-O,L31@DRIVE,2.16,2.0,-0.16,
+6405,6405-32-20-O,L31@DRIVE,2,1.43,-0.57,"D=1.48 equals tap drill and differs from dash-expected bore 1.781 - column bleed suspected, as-printed"
+6405,6405-32-24-O,L31@DRIVE,2,1.43,-0.57,

@@ -1,0 +1,9 @@
+2706: 25 configs (ref 2706-08-08), 6 skipped (DROP/MISSING/no data), 0 geometry-blocked, 14 profile points, 39 table cols
+   skipped ('2706-08-12', 'DROP', 'ASSUMED')
+   skipped ('2706-08-12-LN', 'DROP', 'ASSUMED')
+   skipped ('2706-06-04', 'BUILD', 'MISSING')
+   skipped ('2706-32-32', 'BUILD', 'MISSING')
+   skipped ('2706-LN-06-04', 'BUILD', 'MISSING')
+   skipped ('2706-LN-08-06', 'BUILD', 'MISSING')
+
+--- stderr ---

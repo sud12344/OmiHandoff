@@ -1,0 +1,7 @@
+6405: 44 configs (ref 6405-08-08-O), 3 skipped (DROP/MISSING/no data), 1 geometry-blocked, 8 profile points, 32 table cols
+   BLOCKED 6405-32-24-O: bore 2.38 > pocket 1.72
+   skipped ('6405-20-04-O', 'DROP', 'ASSUMED')
+   skipped ('6405-16-24-O', 'BUILD', 'MISSING')
+   skipped ('6405-32-16-O', 'BUILD', 'MISSING')
+
+--- stderr ---

@@ -38,6 +38,7 @@ tools/_out/*
 !tools/_out/adapters77_20261016/
 !tools/_out/airway_20261014/
 !tools/_out/brennan_catalog_20261001/
+!tools/_out/airway_first_20261020/
 
 # brennan_yes: keep stage, stage_orfs, scripts, wave reports / cell lists; drop test copies and regenerations
 tools/_out/brennan_yes_20261018/base_root/

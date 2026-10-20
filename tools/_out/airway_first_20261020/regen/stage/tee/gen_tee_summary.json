@@ -1,0 +1,83 @@
+{
+ "6503": {
+  "configs": 1,
+  "ref": "6503-08-08-FG",
+  "skipped": [
+   [
+    "6503-02-04",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-04-04",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-04-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-04-12-FG",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-06-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-06-08",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-08-08",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-08-10",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-12-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-16-16",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6503-04-04-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6503-06-06-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6503-12-12-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6503-16-16-FG",
+    "BUILD",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "6503-08-08-FG: leg 2 hex arm 0.635 barely clears the corner puck (radius 0.612)"
+  ],
+  "cols": 58
+ }
+}

@@ -1,0 +1,3 @@
+6503: 1 configs (ref 6503-08-08-FG), 14 skipped, 0 blocked, 58 cols
+
+--- stderr ---

@@ -1,4 +1,4 @@
-# OMi fitting library: project status and open work (2026-10-20: batch 17 shipped - the 2026-10-18 stage + 5 generator features; before: batch 16 2026-10-19)
+# OMi fitting library: project status and open work (2026-10-20: Air-Way-first stage (OMi's rule); batch 17 shipped - the 2026-10-18 stage + 5 generator features; before: batch 16 2026-10-19)
 
 This is the handover state from the Cowork sessions (2026-09-04 to 2026-09-25), updated after Claude's overnight
 SolidWorks build of 2026-09-25 (details: `00_DOCS/OVERNIGHT_BUILD_2026-09-25.md`) and after batch 14 (2026-10-02,
@@ -6,6 +6,23 @@ SolidWorks build of 2026-09-25 (details: `00_DOCS/OVERNIGHT_BUILD_2026-09-25.md`
 the detail behind it. Keep it current: update it whenever a batch ships or a decision is made.
 
 ## 1. Where things stand
+
+**2026-10-20 (later): AIR-WAY FIRST - STAGED (cloud session), not shipped.** OMi's rule (section 5): Air-Way over Brennan wherever Air-Way
+prints a value, including the numbers of OMi's website file. Stage + evidence: `tools\_out\airway_first_20261020\` (README.md).
+- **319 cells** in 26 review tables (235 rows) go back from the OMi-file value to Air-Way: Task A (2026-09-25), batch-15 OMi values, A19,
+  the A19-style "7 pending", A20 (1404 nut faces), 2404-10-04 / -20-32 lengths (question 26). 261 checked against Air-Way's raw extract;
+  58 (6401 / 6405 / 6408 / 6500, no raw extract in the repo) from the change logs - re-check on the Air-Way pages.
+- Regenerated (live tools + one SPEC line): **233 configurations change in 25 roots, 0 lost**; control reproduces every shipped macro / SW2;
+  dofcheck / allcfg / vbacheck clean; every change traced to a reverted cell (`checks\trace.txt`).
+- **6410 reference configuration -> 6410-24-20-O** (`tools_af\generators\gen_straight2.py`, 1 line): with Air-Way's bore 0.68 the old
+  reference 6410-12-08-O is a deep-bore port. Deploy with the ship.
+- **Held for you (7 cells, `revert_excluded.csv`):** 6405-24-16-O (Air-Way L 1.00 < pocket), 6504-24-24 (bore 1.38 >= tip 1.381),
+  6565-10-10 (Air-Way nut hex 0.94 vs the Brennan nut 1.000) - Air-Way cannot be built; kept at OMi as now. 6504-06-08 bores: Air-Way garbled.
+- **Look at (42 cells, `checks\look_at.csv`):** 6405 bores where Air-Way's D equals the tap drill ("column bleed"), 6405 L31 values flagged
+  suspect in 2026-09, 5502-20-20-FG / -24-24-FG N, 6410-12-08-O 1.48 -> 1.09 and other moves > 0.15 in.
+- DataStatus unchanged (6500-08-06-FG back to VERIFIED: its logged OMi downgrade undone).
+- **Next (PC):** read the two "Review of Drawings" PDFs (not in the repo) against the stage; SolidWorks dry runs of the 25 roots; ship as
+  batch 18 (macros + SW2 + review tables + `tools_af`). The dimension-check drawings of these roots go stale.
 
 **2026-10-20: BATCH 17 SHIPPED (`03_SCRIPTS\RUN_ME_batch17.txt`, QA #173-#175; user: "can you ship batch 17?").** Evidence and scripts:
 `tools\_out\batch17_20261019\` (RESUME.md = the run log, checks\, scripts\ship_b17.py, old_files\ + MANIFEST*.txt; second copy
@@ -591,11 +608,20 @@ harmless; move it to `_to_delete` when SolidWorks is closed.
   - Stage: 1,377 BUILD rows with data, 310 VERIFIED, 440 MISSING.
   - **NOT YET:** SolidWorks dry runs (license), the ship of batch 16, then batch 17.
 
+- 2026-10-20: **AIR-WAY FIRST (OMi's rule).** OMi (Triveni) returned the drawings with "Review of Drawings" / "Review of Drawings #2"
+  (PDFs, on the PC): "AW means Airway. BI means Brennan Industries. We will prefer to use Airway over Brennan dimension when Airway has
+  them available." Asked whether that also covers the numbers of OMi's own website parts file (= Brennan's data, evidence 2026-09-26):
+  **Triveni said yes.** = Air-Way is the first dimension source wherever it prints a value; OMi's file / OMi's answers fill what Air-Way
+  does not give; Brennan last (marked BRENNAN). **Reverses the 2026-09-25 order** (OMi dims > Air-Way) and with it the 6410-12-08-O
+  1.480 answer (question 4), A19 / A20 and Task A where OMi differed from Air-Way. Staged: section 1 (`tools\_out\airway_first_20261020\`).
+  Unchanged: ORFS (already Air-Way first), Brennan 3D files for shape, the 2-source VERIFIED rule, conflicts that cannot be built go to the
+  user. Still to read: the AW / BI marks in the two PDFs.
+
 ## 6. Conventions that grew during the build (keep them)
 
 **Sources and data status:**
-- Dimensions (lengths, legs, hexes, bores): the OMi dimension file first, Air-Way fills what OMi does not give (user
-  2026-09-25; rounding-only differences are no change). Geometry (end shapes: swivel nut, ports, NPSM, flange head,
+- Dimensions (lengths, legs, hexes, bores): **Air-Way first** wherever it prints a value, then the OMi dimension file / OMi's answers,
+  then Brennan (OMi 2026-10-20, section 5; before: OMi file first, user 2026-09-25; rounding-only differences are no change). Geometry (end shapes: swivel nut, ports, NPSM, flange head,
   adjustable ORB; forged bodies, seats): Brennan STEPs, which also cross-check the dimensions.
 - OMi and Brennan count as ONE source (OMi's lengths are Brennan's data, evidence 2026-09-26); Brennan catalog values are
   the same source. A row taking an OMi or catalog value is ASSUMED, with the cell, the old value and the decision in

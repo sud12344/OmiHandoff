@@ -1,0 +1,966 @@
+"""
+gen_macro_straight.py - emit a SolidWorks VBA macro (.bas) that builds a STRAIGHT master
+(JIC end at End B, and at End A either a second JIC end or a plain hex face with an NPTF
+tap-drill pocket), names every driving dimension, cuts the hex and the bores, and inserts
+the SW2 design table.  v1: no Thread features (add THD_EndA/THD_EndB by hand for now).
+
+Usage:  python3 gen_macro_straight.py 2403   -> Build_2403_MASTER.bas
+        python3 gen_macro_straight.py 2405   -> Build_2405_MASTER.bas
+Reads the reference row (first data row) of DesignTable_<topo>_SW2.xlsx.
+All geometry values come from that row; nothing is typed here.
+"""
+import sys, math, openpyxl
+topo=sys.argv[1]
+SW2=f'/tmp/omi/DesignTable_{topo}_SW2.xlsx'
+ws=openpyxl.load_workbook(SW2,read_only=True).active
+rows=list(ws.iter_rows(values_only=True)); h=rows[0]; ref=dict(zip(h,rows[1]))
+PN=rows[1][0]
+def g(k): return ref[k]
+tan60=math.tan(math.radians(60)); tan37=math.tan(math.radians(37))
+
+if topo=='2403':
+    L=g('L1@DRIVE'); mode='JIC_JIC'
+    A=dict(TM=g('THDMAJ_A@DRIVE'),RL=g('JICA_RELIEFL@DRIVE'),TZ=g('JICA_THDZ@DRIVE'),CD=g('JICA_CONEDIA@DRIVE'),LL=g('JICA_LANDL@DRIVE'),SL=g('JICA_SEATL@DRIVE'))
+    B=dict(TM=g('THDMAJ_B@DRIVE'),RL=g('JICB_RELIEFL@DRIVE'),TZ=g('JICB_THDZ@DRIVE'),CD=g('JICB_CONEDIA@DRIVE'),LL=g('JICB_LANDL@DRIVE'),SL=g('JICB_SEATL@DRIVE'))
+    pfxA,pfxB='JICA_','JICB_'; LNAME='L1'
+    boreA=dict(sk='BORE_A',dim='D1',dia=g('D1@BORE_A'),depth=g('DEPTH@BORECUT_A'))
+    boreB=dict(sk='BORE_B',dim='D2',dia=g('D2@BORE_B'),start=g('START@BORECUT_B'),depth=g('DEPTH@BORECUT_B'))
+elif topo=='2405':
+    L=g('L2@DRIVE'); mode='HEX_JIC'
+    A=None
+    B=dict(TM=g('THDMAJ_B@DRIVE'),RL=g('JIC_RELIEFL@DRIVE'),TZ=g('JIC_THDZ@DRIVE'),CD=g('JIC_CONEDIA@DRIVE'),LL=g('JIC_LANDL@DRIVE'),SL=g('JIC_SEATL@DRIVE'))
+    pfxB='JIC_'; LNAME='L2'
+    boreA=dict(sk='BORE_A',dim='TAPDRILL',dia=g('TAPDRILL@BORE_A'),depth=g('DEPTH@BORECUT_A'))
+    boreB=dict(sk='BORE_B',dim='D3',dia=g('D3@BORE_B'),depth=g('DEPTH@BORECUT_B'),fromB=True)
+else:
+    raise SystemExit('topology not supported by this generator yet')
+BODY=g('BODYDIA@DRIVE'); HEXB=g('HEXB@HEX')
+def endlen(E): return E['RL']+(E['TM']-E['CD'])/2/tan60+E['TZ']+E['LL']+E['SL']
+def tip(E): return E['CD']-2*E['SL']*tan37
+EB=endlen(B); EA=endlen(A) if A else 0.0
+rB=BODY/2
+
+# ---- vertex chain (x, r) in inches, End A tip/face at x=0 ----
+V=[(0,0)]
+if A:
+    rT,rC,rM=tip(A)/2,A['CD']/2,A['TM']/2; x=0
+    V+= [(0,rT)]; x+=A['SL']; V+=[(x,rC)]; x+=A['LL']; V+=[(x,rC),(x,rM)]; x+=A['TZ']; V+=[(x,rM)]
+    x+=(A['TM']-A['CD'])/2/tan60; V+=[(x,rC)]; x+=A['RL']; V+=[(x,rC),(x,rB)]
+    segA=dict(seat=1,land=2,stepA=3,thd=4,ramp=5,relief=6,stepB=7)   # segment index = line from V[i] to V[i+1]
+else:
+    V+=[(0,rB)]
+xh=L-EB; V+=[(xh,rB)]
+hexseg=len(V)-2
+rT,rC,rM=tip(B)/2,B['CD']/2,B['TM']/2; x=xh
+V+=[(x,rC)]; x+=B['RL']; V+=[(x,rC)]; x+=(B['TM']-B['CD'])/2/tan60; V+=[(x,rM)]; x+=B['TZ']; V+=[(x,rM),(x,rC)]; x+=B['LL']; V+=[(x,rC)]; x+=B['SL']; V+=[(x,rT)]
+assert abs(x-L)<1e-6, (x,L)
+V+=[(L,0)]
+n=len(V)  # lines: V[i]->V[i+1] for i in 0..n-2, plus closing V[n-1]->V[0] along the axis (index n-1)
+# segment indices for End B
+base=hexseg+1
+segB=dict(stepdown=base,relief=base+1,ramp=base+2,thd=base+3,stepland=base+4,land=base+5,seat=base+6,face=base+7)
+axis=n-1
+IN=0.0254
+# expected volume of revolution (sum of frustums) in m^3
+_vol=0.0
+for i in range(len(V)-1):
+    (x1,r1),(x2,r2)=V[i],V[i+1]
+    hgt=abs(x2-x1)*IN; a,b=r1*IN,r2*IN
+    _vol+=math.pi*hgt*(a*a+a*b+b*b)/3
+EXPVOL=_vol
+pts=', _\n'.join(f'    {x*IN:.9f}, {r*IN:.9f}' for x,r in V)
+
+def dimline(seg,name,val_in,kind,tx,ty,extra=''):
+    """emit VBA for one dimension. kind: 'len' (line length), 'dia' (line + centerline), 'ang' (two lines)"""
+    fn = 'Dim_len2' if (kind=='len' and extra) else f'Dim_{kind}'
+    return f"    Call {fn}({seg}{extra}, \"{name}\", {val_in*IN if kind!='ang' else math.radians(val_in):.9f}, {tx*IN:.6f}, {ty*IN:.6f})\n"
+
+dims=''
+dims+=dimline(-1,LNAME,L,'len',L/2,rB+0.6,extra=f', {axis}')  # overall: between the two end faces -> handled specially
+if A:
+    dims+=dimline(segA['thd'],'THDMAJ_A',A['TM'],'dia',(V[segA['thd']][0]+V[segA['thd']+1][0])/2,-0.3)
+    dims+=dimline(segA['relief'],pfxA+'RELIEFL',A['RL'],'len',(V[segA['relief']][0]+V[segA['relief']+1][0])/2,rB+0.25)
+    dims+=dimline(segA['ramp'],'RELIEFANG',60,'ang',V[segA['ramp']][0]+0.1,rB+0.1,extra=f', {segA["thd"]}')
+    dims+=dimline(segA['thd'],pfxA+'THDZ',A['TZ'],'len',(V[segA['thd']][0]+V[segA['thd']+1][0])/2,rB+0.35)
+    dims+=dimline(segA['land'],pfxA+'CONEDIA',A['CD'],'dia',(V[segA['land']][0]+V[segA['land']+1][0])/2,-0.2)
+    dims+=dimline(segA['land'],pfxA+'LANDL',A['LL'],'len',(V[segA['land']][0]+V[segA['land']+1][0])/2,rB+0.15)
+    dims+=f"    Call Dim_ptline({segA['seat']}, True, 0, \"{pfxA}SEATL\", {A['SL']*IN:.9f}, {(V[segA['seat']][0]+V[segA['seat']+1][0])/2*IN:.6f}, {(rB+0.45)*IN:.6f})\n"
+    dims+=dimline(segA['seat'],'SEATB',37,'ang',V[segA['seat']][0]+0.05,-0.15,extra=f', {axis}')
+dims+=dimline(hexseg,'BODYDIA',BODY,'dia',(V[hexseg][0]+V[hexseg+1][0])/2,-0.4)
+dims+=dimline(segB['thd'],'THDMAJ_B',B['TM'],'dia',(V[segB['thd']][0]+V[segB['thd']+1][0])/2,-0.3)
+dims+=dimline(segB['relief'],pfxB+'RELIEFL',B['RL'],'len',(V[segB['relief']][0]+V[segB['relief']+1][0])/2,rB+0.25)
+angB='RELIEFANG' if not A else 'RELIEFANG_B_plain'
+dims+=dimline(segB['ramp'],angB,60,'ang',V[segB['ramp']][0]-0.1,rB+0.1,extra=f', {segB["thd"]}')
+dims+=dimline(segB['thd'],pfxB+'THDZ',B['TZ'],'len',(V[segB['thd']][0]+V[segB['thd']+1][0])/2,rB+0.35)
+dims+=dimline(segB['land'],pfxB+'CONEDIA',B['CD'],'dia',(V[segB['land']][0]+V[segB['land']+1][0])/2,-0.2)
+dims+=dimline(segB['land'],pfxB+'LANDL',B['LL'],'len',(V[segB['land']][0]+V[segB['land']+1][0])/2,rB+0.15)
+dims+=f"    Call Dim_ptline({segB['seat']}, False, {segB['face']}, \"{pfxB}SEATL\", {B['SL']*IN:.9f}, {(V[segB['seat']][0]+V[segB['seat']+1][0])/2*IN:.6f}, {(rB+0.45)*IN:.6f})\n"
+seatB='SEATB' if not A else 'SEATB_B_plain'
+dims+=dimline(segB['seat'],seatB,37,'ang',V[segB['seat']][0]-0.05,-0.15,extra=f', {axis}')
+
+collinear=f"    Call Collinear({segB['relief']}, {segB['land']})\n"
+if A: collinear+=f"    Call Collinear({segA['relief']}, {segA['land']})\n"
+
+# thread anchors: circular edge at the hex-side end of each thread flat (x, radius) in metres
+thrB_x = (V[segB['thd']+0][0] if False else V[segB['ramp']+1][0])*IN   # ramp top = start of End B thread flat
+thrB_r = B['TM']/2*IN
+import re as _re
+def _size(thr_text, tm):
+    m=_re.search(r'-(\d+(?:\.5)?)', thr_text.replace(' 1/2','.5'))
+    return f"{tm:.4f}-{m.group(1)}" if m else None
+thrB_size = _size(str(ref['$PRP@EndB_Thread']), B['TM'])
+def _pitch(thr_text):
+    m=_re.search(r'-(\d+(?:\s1/2)?)(?!\s*/)', thr_text); return 1/float(m.group(1).replace(' 1/2','.5'))*IN
+thrB_pitch=_pitch(str(ref['$PRP@EndB_Thread']))
+if A:
+    thrA_x = V[segA['thd']+1][0]*IN      # end of End A thread flat (ramp start)
+    thrA_r = A['TM']/2*IN
+    thrA_size = _size(str(ref['$PRP@EndA_Thread']), A['TM'])
+    thrA_pitch=_pitch(str(ref['$PRP@EndA_Thread']))
+if A:
+    threadA_vba = f'    Call HelixThread(0#, {A["TM"]/2*IN:.9f}, {(A["SL"]+A["LL"]+A["TZ"])*IN:.9f}, {thrA_pitch:.9f}, {0.5408*thrA_pitch:.9f}, 0#, False, "A", "THD_EndA")\n'
+else:
+    # female NPTF at End A: tapered helix + V sweep (values from the SW2 table columns)
+    threadA_vba = (f'    Call HelixThread(0#, {g("HELIXDIA@HELIXSK_A")/2*IN:.9f}, {g("HEIGHT@HELIX_A")*IN:.9f}, {g("PITCH@HELIX_A")*IN:.9f}, '
+                   f'{(g("APEXR@THDPROF_A")-g("PROF_R@THDPROF_A"))*IN:.9f}, {math.radians(1.7899):.9f}, True, "A", "THD_EndA")\n')
+faceA_r = (tip(A)/2 if A else HEXB/2*0.9)*IN      # radius of a safe pick point on the End A face
+faceB_r = tip(B)/2*IN
+boreB_vba = (f"    Call BoreCut(\"{boreB['sk']}\", \"{boreB['dim']}\", {boreB['dia']*IN:.9f}, {boreB['depth']*IN:.9f}, {boreB['start']*IN:.9f}, \"BORECUT_B\", False, {faceA_r:.9f})\n"
+             if 'start' in boreB else
+             f"    Call BoreCut(\"{boreB['sk']}\", \"{boreB['dim']}\", {boreB['dia']*IN:.9f}, {boreB['depth']*IN:.9f}, 0#, \"BORECUT_B\", True, {faceB_r:.9f})\n")
+
+vba = f'''Attribute VB_Name = "Build_{topo}_MASTER"
+' ============================================================================
+'  Build_{topo}_MASTER.bas  -  OMi fitting library, generated {__import__('datetime').date.today()}
+'  Builds the {topo} master model from the reference configuration {PN}
+'  (values read from DesignTable_{topo}_SW2.xlsx row 2), names every driving
+'  dimension, cuts hex + bores, inserts the design table, self-checks, saves.
+'  Run inside SolidWorks: Tools > Macro > Run.  Edit the two paths below first.
+'  Validated on SolidWorks 2026 (2403, 2026-09-16): cuts need feature-scope OFF, hex = two-direction cut,\n'  threads via swFmSweepThread definition. Threads are created suppressed (resting state).
+' ============================================================================
+Option Explicit
+
+Const IN_ As Double = 0.0254
+Const TABLE_PATH As String = "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\04_DESIGN_TABLES\\DesignTable_{topo}_SW2.xlsx"
+Const SAVE_PATH  As String = "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\{topo}_MASTER_macro.SLDPRT"
+Const REPORT_PATH As String = "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\03_SCRIPTS\\Build_{topo}_report.txt"
+
+Dim swApp As SldWorks.SldWorks
+Dim swModel As SldWorks.ModelDoc2
+Dim swSkMgr As SldWorks.SketchManager
+Dim swFeatMgr As SldWorks.FeatureManager
+Dim swSelMgr As SldWorks.SelectionMgr
+Dim seg() As SldWorks.SketchSegment
+Dim axisCL As SldWorks.SketchSegment
+Dim report As String
+Dim nErr As Long
+Dim fnRep As Integer
+Dim stepName As String
+Dim curAxis As Long
+
+' ---- reference geometry (inches converted to metres), {PN} ----
+Const NPTS As Long = {n}
+Dim PX({n-1}) As Double, PR({n-1}) As Double
+
+Sub LoadPoints()
+    Dim v As Variant, i As Long
+    v = Array( _
+{pts})
+    For i = 0 To NPTS - 1
+        PX(i) = v(2 * i): PR(i) = v(2 * i + 1)
+    Next i
+End Sub
+
+Sub main()
+    Set swApp = Application.SldWorks
+    swApp.SetUserPreferenceToggle swUserPreferenceToggle_e.swInputDimValOnCreate, False
+    Dim tpl As String
+    tpl = swApp.GetUserPreferenceStringValue(swUserPreferenceStringValue_e.swDefaultTemplatePart)
+    Set swModel = swApp.NewDocument(tpl, 0, 0, 0)
+    If swModel Is Nothing Then MsgBox "Could not create a new part - check the default part template.": Exit Sub
+    swModel.Extension.SetUserPreferenceInteger swUserPreferenceIntegerValue_e.swUnitSystem, swUserPreferenceOption_e.swDetailingNoOptionSpecified, swUnitSystem_e.swUnitSystem_IPS
+    Set swSkMgr = swModel.SketchManager
+    Set swFeatMgr = swModel.FeatureManager
+    Set swSelMgr = swModel.SelectionManager
+    LoadPoints
+    report = "": nErr = 0
+    fnRep = FreeFile
+    Open REPORT_PATH For Output As #fnRep
+    Print #fnRep, "Build_{topo}_MASTER  " & Now
+    On Error GoTo Trap
+    stepName = "DRIVE sketch"
+
+    ' ================= 1. DRIVE sketch =================
+    swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
+    swSkMgr.InsertSketch True
+    swSkMgr.AddToDB = True
+    ReDim seg(NPTS - 1)
+    Dim i As Long
+    For i = 0 To NPTS - 2
+        Set seg(i) = swSkMgr.CreateLine(PX(i), PR(i), 0, PX(i + 1), PR(i + 1), 0)
+    Next i
+    Set seg(NPTS - 1) = swSkMgr.CreateLine(PX(NPTS - 1), 0, 0, PX(0), 0, 0)     ' closing line along the axis
+    Set axisCL = swSkMgr.CreateCenterLine(0, 0, 0, PX(NPTS - 1), 0, 0)
+    swSkMgr.AddToDB = False
+    swModel.ClearSelection2 True
+    ' chain the profile: merge consecutive endpoints, add horizontal / vertical relations
+    Dim ln1 As SldWorks.SketchLine, ln2 As SldWorks.SketchLine
+    For i = 0 To NPTS - 1
+        Set ln1 = seg(i): Set ln2 = seg((i + 1) Mod NPTS)
+        swModel.ClearSelection2 True
+        ln1.GetEndPoint2.Select4 False, Nothing
+        ln2.GetStartPoint2.Select4 True, Nothing
+        swModel.SketchAddConstraints "sgMERGEPOINTS"
+    Next i
+    For i = 0 To NPTS - 1
+        Dim x1 As Double, y1 As Double, x2 As Double, y2 As Double
+        If i < NPTS - 1 Then
+            x1 = PX(i): y1 = PR(i): x2 = PX(i + 1): y2 = PR(i + 1)
+        Else
+            x1 = PX(NPTS - 1): y1 = 0: x2 = PX(0): y2 = 0
+        End If
+        swModel.ClearSelection2 True
+        If Abs(y1 - y2) < 0.000000001 Then
+            seg(i).Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL"
+        ElseIf Abs(x1 - x2) < 0.000000001 Then
+            seg(i).Select4 False, Nothing: swModel.SketchAddConstraints "sgVERTICAL"
+        End If
+    Next i
+    ' pin the revolve centerline onto the profile's axis endpoints
+    Dim cl As SldWorks.SketchLine
+    Set cl = axisCL: Set ln1 = seg(0): Set ln2 = seg(NPTS - 2)
+    swModel.ClearSelection2 True
+    cl.GetStartPoint2.Select4 False, Nothing: ln1.GetStartPoint2.Select4 True, Nothing
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    cl.GetEndPoint2.Select4 False, Nothing: ln2.GetEndPoint2.Select4 True, Nothing
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    ' anchor: End A face bottom vertex on the origin
+    Set ln1 = seg(0)
+    ln1.GetStartPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    ' relations
+{collinear}
+    ' dimensions (order = walkthrough order)
+{dims}
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Dim swFeat As SldWorks.Feature
+    Set swFeat = swModel.FeatureByPositionReverse(0)
+    swFeat.Name = "DRIVE"
+    Check "DRIVE sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+
+    stepName = "Revolve"
+    ' ================= 2. Revolve =================
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 "DRIVE", "SKETCH", 0, 0, 0, False, 0, Nothing, 0
+    Dim sd As SldWorks.SelectData
+    Set sd = swSelMgr.CreateSelectData: sd.Mark = 16
+    axisCL.Select4 True, sd
+    Dim rev As SldWorks.Feature
+    Set rev = swFeatMgr.FeatureRevolve2(True, True, False, False, False, False, 0, 0, 6.28318530717959, 0, False, False, 0, 0, 0, 0, 0, True, True, True)
+    Check "Revolve created", Not rev Is Nothing
+    If rev Is Nothing Then GoTo Finish
+    rev.Name = "BODY"
+    Dim vrev As Double: vrev = Volume()
+    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect {EXPVOL/0.0254**3:.4f})", Abs(vrev - {EXPVOL:.12e}) < {EXPVOL:.12e} * 0.002
+    Dim bods As Variant, bd As SldWorks.Body2, faultCnt As Long
+    bods = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
+    If Not IsEmpty(bods) Then
+        Set bd = bods(0)
+        Dim faults As Variant
+        Check "Body faces = " & bd.GetFaceCount & " (expect 17 for 2403 / 10 for 2405)", bd.GetFaceCount > 0
+    End If
+
+    stepName = "HEX cut"
+    ' ================= 3. HEX cut =================
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 "Right Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
+    swSkMgr.InsertSketch True
+    Dim poly As Variant
+    poly = swSkMgr.CreatePolygon(0, 0, 0, {HEXB/2*IN:.9f}, 0, 0, 6, True)    ' inscribed circle = across flats
+    Dim circ As SldWorks.SketchSegment, k As Long
+    For k = LBound(poly) To UBound(poly)
+        If poly(k).GetType = swSketchSegments_e.swSketchARC Then Set circ = poly(k)
+    Next k
+    swModel.ClearSelection2 True
+    circ.Select4 False, Nothing
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2({HEXB*0.7*IN:.6f}, {HEXB*0.7*IN:.6f}, 0)
+    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = {HEXB*IN:.9f}
+    NameDim dd, "HEXB", {HEXB*IN:.9f}
+    ' center the polygon on the origin
+    swModel.ClearSelection2 True
+    For k = LBound(poly) To UBound(poly)
+        If poly(k).GetType = swSketchSegments_e.swSketchLINE Then poly(k).Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL": Exit For
+    Next k
+    swModel.ClearSelection2 True
+    Dim arc As SldWorks.SketchArc
+    Set arc = circ
+    arc.GetCenterPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Set swFeat = swModel.FeatureByPositionReverse(0): swFeat.Name = "HEX"
+    Check "last feature is the hex sketch (" & swFeat.GetTypeName2 & ")", swFeat.GetTypeName2 = "ProfileFeature"
+    Check "no sketch is open before the hex cut", swSkMgr.ActiveSketch Is Nothing
+    Check "hex sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    Dim hexcut As SldWorks.Feature, v0 As Double, v1 As Double
+    v0 = Volume()
+    Set hexcut = MakeCut2(swFeat, True, {L*IN*1.5:.6f}, "HEXCUT flip")
+    If hexcut Is Nothing Then
+        Set hexcut = MakeCut2(swFeat, False, {L*IN*1.5:.6f}, "HEXCUT plain (to flip)")
+        If Not hexcut Is Nothing Then
+            Dim xd2 As SldWorks.ExtrudeFeatureData2
+            Set xd2 = hexcut.GetDefinition
+            xd2.AccessSelections swModel, Nothing
+            xd2.FlipSideToCut = True
+            Check "HEXCUT flipped via definition", hexcut.ModifyDefinition(xd2, swModel, Nothing)
+        End If
+    End If
+    Check "HEXCUT created", Not hexcut Is Nothing
+    If Not hexcut Is Nothing Then
+        hexcut.Name = "HEXCUT"
+        v1 = Volume()
+        Check "HEXCUT removed only the corners (" & Format(100 * (v0 - v1) / v0, "0.0") & "% of volume)", (v1 < v0) And (v1 > 0.7 * v0)
+    End If
+
+    stepName = "Bores"
+    ' ================= 4. Bores =================
+    Call BoreCut("{boreA['sk']}", "{boreA['dim']}", {boreA['dia']*IN:.9f}, {boreA['depth']*IN:.9f}, 0#, "BORECUT_A", False, {faceA_r:.9f})
+{boreB_vba}
+    stepName = "Threads"
+    ' ================= 4b. Thread features (experimental) =================
+    curAxis = 0
+    Call HelixThread({L*IN:.9f}, {B['TM']/2*IN:.9f}, {(B['SL']+B['LL']+B['TZ'])*IN:.9f}, {thrB_pitch:.9f}, {0.5408*thrB_pitch:.9f}, 0#, False, "B", "THD_EndB")
+{threadA_vba}    stepName = "Self-checks"
+    ' ================= 5. Self-checks =================
+    Dim bb As Variant
+    bb = swModel.GetPartBox(True)
+    Dim lenX As Double, dY As Double
+    lenX = (bb(3) - bb(0)) / IN_: dY = (bb(4) - bb(1)) / IN_
+    Check "Overall length " & Format(lenX, "0.0000") & " (expect {L:.4f})", Abs(lenX - {L}) < 0.01
+    Dim dZ As Double: dZ = (bb(5) - bb(2)) / IN_
+    Check "Hex across flats " & Format(dY, "0.0000") & " (expect {HEXB:.4f}) / across corners " & Format(dZ, "0.0000") & " (expect {BODY:.4f})", (Abs(dY - {HEXB}) < 0.01 And Abs(dZ - {BODY}) < 0.01) Or (Abs(dZ - {HEXB}) < 0.01 And Abs(dY - {BODY}) < 0.01)
+    Dim bodies As Variant
+    bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
+    If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)
+
+    stepName = "Design table"
+    ' ================= 6. Design table =================
+    swModel.ClearSelection2 True
+    Dim ok As Boolean
+    ok = swModel.InsertFamilyTableOpen(TABLE_PATH)
+    Check "Design table inserted from " & TABLE_PATH, ok
+    swModel.CloseFamilyTable
+    swModel.ForceRebuild3 False
+    Dim cfgs As Variant
+    cfgs = swModel.GetConfigurationNames
+    Check "Configurations after table: " & (UBound(cfgs) + 1), (UBound(cfgs) + 1) >= 2
+    ' verify the NPTF sweep on the largest configuration
+    Dim lastCfg As String, ci As Long
+    lastCfg = cfgs(UBound(cfgs))
+    For ci = LBound(cfgs) To UBound(cfgs)
+        If InStr(cfgs(ci), "-32-24") > 0 Then lastCfg = cfgs(ci)
+    Next ci
+    Dim thA As SldWorks.Feature
+    Set thA = swModel.FeatureByName("THD_EndA")
+    If Not thA Is Nothing Then
+        swModel.ShowConfiguration2 lastCfg
+        swModel.ForceRebuild3 True
+        Dim vA As Double, vB As Double
+        vA = Volume()
+        thA.SetSuppression2 swFeatureSuppressionAction_e.swUnSuppressFeature, swInConfigurationOpts_e.swThisConfiguration, Empty
+        swModel.ForceRebuild3 True
+        vB = Volume()
+        Check "THD_EndA cuts on " & lastCfg & ": removed " & Format((vA - vB) / IN_ ^ 3, "0.00000") & " in^3 (error code " & thA.GetErrorCode2(True) & ")", (vA - vB) > 0.000000001
+        thA.SetSuppression2 swFeatureSuppressionAction_e.swSuppressFeature, swInConfigurationOpts_e.swAllConfiguration, Empty
+        swModel.ForceRebuild3 True
+    End If
+    swModel.ShowConfiguration2 "{PN}"
+
+    stepName = "Save"
+    ' ================= 7. Save =================
+    Dim e As Long, w As Long
+    ok = swModel.Extension.SaveAs(SAVE_PATH, swSaveAsVersion_e.swSaveAsCurrentVersion, swSaveAsOptions_e.swSaveAsOptions_Silent, Nothing, e, w)
+    If Not ok Then
+        Dim alt As String: alt = Replace(SAVE_PATH, ".SLDPRT", "_" & Format(Now, "hhnnss") & ".SLDPRT")
+        ok = swModel.Extension.SaveAs(alt, swSaveAsVersion_e.swSaveAsCurrentVersion, swSaveAsOptions_e.swSaveAsOptions_Silent, Nothing, e, w)
+        Check "Saved to " & alt & " (first name was locked, error " & e & ")", ok
+    Else
+        Check "Saved to " & SAVE_PATH, ok
+    End If
+
+Finish:
+    On Error Resume Next
+    Close #fnRep
+    MsgBox "Build_{topo}_MASTER finished with " & nErr & " problem(s)." & vbCrLf & "Full report written to:" & vbCrLf & REPORT_PATH & vbCrLf & vbCrLf & Left(report, 600), vbInformation
+    Exit Sub
+Trap:
+    Check "RUNTIME ERROR during '" & stepName & "' at line " & Erl & ": " & Err.Number & " - " & Err.Description, False
+    Resume Next
+End Sub
+
+' ---------------------------------------------------------------- helpers
+Sub Trace(what As String)
+    Debug.Print "      " & what
+    On Error Resume Next
+    Print #fnRep, "      " & what
+End Sub
+
+Sub Check(what As String, passed As Boolean)
+    Dim line As String
+    line = IIf(passed, "OK    ", "FAIL  ") & what
+    report = report & line & vbCrLf
+    If passed = False Then nErr = nErr + 1      ' not 'If Not passed': SolidWorks returns True as 1 and Not 1 = -2 (2026-09-25)
+    Debug.Print line
+    On Error Resume Next
+    Print #fnRep, line
+End Sub
+
+Sub NameDim(dd As SldWorks.DisplayDimension, nm As String, valMetres As Double)
+    If dd Is Nothing Then Check "dimension " & nm & " was not created", False: Exit Sub
+    Dim d As SldWorks.Dimension
+    Set d = dd.GetDimension2(0)
+    d.Name = nm
+    Dim v As Double: v = d.SystemValue
+    Check "dim " & nm & " = " & Format(v / IN_, "0.0000") & " in (expect " & Format(valMetres / IN_, "0.0000") & ")", Abs(v - valMetres) < 0.000005
+End Sub
+
+Sub NameAng(dd As SldWorks.DisplayDimension, nm As String, valRad As Double)
+    If dd Is Nothing Then Check "angle " & nm & " was not created", False: Exit Sub
+    Dim d As SldWorks.Dimension
+    Set d = dd.GetDimension2(0)
+    d.Name = nm
+    Dim v As Double: v = d.SystemValue
+    Check "angle " & nm & " = " & Format(v * 180 / 3.14159265358979, "0.00") & " deg", Abs(v - valRad) < 0.0005
+End Sub
+
+' length of one line: select the line, dimension it
+Sub Dim_len(i As Long, nm As String, valM As Double, tx As Double, ty As Double)
+    swModel.ClearSelection2 True
+    If i = -1 Then      ' overall: between the two end faces (segment 0 and the last profile line)
+        seg(0).Select4 False, Nothing
+        seg(NPTS - 2).Select4 True, Nothing
+    Else
+        seg(i).Select4 False, Nothing
+    End If
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2(tx, ty, 0)
+    NameDim dd, nm, valM
+End Sub
+' horizontal length of a slanted line = distance from one of its endpoints to a vertical line (end face)
+Sub Dim_ptline(segPt As Long, useEnd As Boolean, segLine As Long, nm As String, valM As Double, tx As Double, ty As Double)
+    Dim lp As SldWorks.SketchLine
+    Set lp = seg(segPt)
+    swModel.ClearSelection2 True
+    If useEnd Then lp.GetEndPoint2.Select4 False, Nothing Else lp.GetStartPoint2.Select4 False, Nothing
+    seg(segLine).Select4 True, Nothing
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2(tx, ty, 0)
+    NameDim dd, nm, valM
+End Sub
+' overload signature used by the generator for the overall length (extra arg ignored)
+Sub Dim_len2(i As Long, j As Long, nm As String, valM As Double, tx As Double, ty As Double)
+    Dim_len i, nm, valM, tx, ty
+End Sub
+
+' diameter: select the line and the centerline, place text on the far side of the axis.
+' If SolidWorks made a radius dimension instead, delete it and retry further out.
+Sub Dim_dia(i As Long, nm As String, valM As Double, tx As Double, ty As Double)
+    Dim dd As SldWorks.DisplayDimension, k As Long, v As Double
+    For k = 1 To 3
+        swModel.ClearSelection2 True
+        seg(i).Select4 False, Nothing
+        axisCL.Select4 True, Nothing
+        Set dd = swModel.AddDimension2(tx, ty * k, 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - valM) < 0.000005 Then Exit For
+        DeleteDisp dd: Set dd = Nothing
+    Next k
+    NameDim dd, nm, valM
+End Sub
+
+Sub DeleteDisp(dd As SldWorks.DisplayDimension)
+    swModel.ClearSelection2 True
+    If dd.GetAnnotation.Select2(False, 0) Then     ' Select3(False, Nothing) selects nothing in an open sketch (2026-09-25)
+        If swSelMgr.GetSelectedObjectCount2(-1) = 1 Then swModel.EditDelete
+    End If
+    swModel.ClearSelection2 True
+End Sub
+
+' angle between two lines
+Sub Dim_ang(i As Long, j As Long, nm As String, valRad As Double, tx As Double, ty As Double)
+    Dim dd As SldWorks.DisplayDimension, v As Double, k As Long
+    Dim cand(3) As Double, candy(3) As Double
+    cand(0) = tx: candy(0) = ty: cand(1) = tx: candy(1) = -ty: cand(2) = tx + 0.003: candy(2) = 0.002: cand(3) = tx - 0.003: candy(3) = 0.002
+    For k = 0 To 3
+        swModel.ClearSelection2 True
+        seg(i).Select4 False, Nothing
+        If j = {axis} Then axisCL.Select4 True, Nothing Else seg(j).Select4 True, Nothing
+        Set dd = swModel.AddDimension2(cand(k), candy(k), 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - valRad) < 0.0005 Then Exit For        ' got the wanted angle, not its supplement
+        DeleteDisp dd: Set dd = Nothing
+    Next k
+    If Right(nm, 6) = "_plain" Then
+        Check "plain angle " & Left(nm, Len(nm) - 6) & " placed = " & Format(v * 180 / 3.14159265358979, "0.0") & " deg", (Not dd Is Nothing) And Abs(v - valRad) < 0.0005
+    Else
+        NameAng dd, nm, valRad
+    End If
+End Sub
+
+Sub Collinear(i As Long, j As Long)
+    swModel.ClearSelection2 True
+    seg(i).Select4 False, Nothing
+    seg(j).Select4 True, Nothing
+    swModel.SketchAddConstraints "sgCOLINEAR"
+    swModel.ClearSelection2 True
+End Sub
+
+' Bore: circle on an end face, blind cut. fromEndB = sketch on the End B tip face instead of End A.
+' startOff > 0 -> From: Offset (cut starts startOff into the part from the sketch face).
+' Direction is found by trial: the cut must REDUCE the volume; otherwise it is flipped.
+Sub BoreCut(skName As String, dimName As String, diaM As Double, depthM As Double, startOff As Double, featName As String, fromEndB As Boolean, faceR As Double)
+    On Error GoTo BErr
+    Dim faceX As Double
+    faceX = IIf(fromEndB, PX(NPTS - 1), 0#)
+    swModel.ClearSelection2 True
+    ' pick the end face by a point on it, near its outer rim (so it still hits after an earlier bore)
+    Dim ok As Boolean
+    ok = SelectEndFace(faceX)
+    Check "select end face for " & skName & " at x=" & Format(faceX / IN_, "0.0000"), ok
+    Trace "selected object type = " & swSelMgr.GetSelectedObjectType3(1, -1) & " (2 = face), count = " & swSelMgr.GetSelectedObjectCount2(-1)
+    Trace "ok = " & ok
+    Trace "about to InsertSketch on the face"
+    swSkMgr.InsertSketch True
+    Trace "returned from InsertSketch"
+    Dim ask As SldWorks.Sketch
+    Set ask = swSkMgr.ActiveSketch
+    Trace "ActiveSketch fetched"
+    If ask Is Nothing Then
+        Trace "no active sketch - trying ModelDoc2.InsertSketch2"
+        SelectEndFace faceX
+        swModel.InsertSketch2 True
+        Set ask = swSkMgr.ActiveSketch
+    End If
+    Check skName & " sketch opened (active sketch exists)", Not ask Is Nothing
+    Dim c As SldWorks.SketchSegment
+    Set c = swSkMgr.CreateCircleByRadius(0, 0, 0, diaM / 2)
+    Check skName & " circle created", Not c Is Nothing
+    If c Is Nothing Then swSkMgr.InsertSketch True: Exit Sub
+    swModel.ClearSelection2 True
+    Dim ca As SldWorks.SketchArc
+    Set ca = c
+    ca.GetCenterPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    c.Select4 False, Nothing
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2(diaM, diaM, 0)
+    NameDim dd, dimName, diaM
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Dim skF As SldWorks.Feature
+    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+    Check skName & " sketch closed and named (" & skF.GetTypeName2 & ")", skF.GetTypeName2 = "ProfileFeature"
+
+    Dim vol0 As Double, vol1 As Double
+    vol0 = Volume()
+    Dim cut As SldWorks.Feature
+    Dim flipDir As Boolean, flipOff As Boolean, attempt As Long
+    For attempt = 0 To 3
+        flipDir = (attempt Mod 2 = 1): flipOff = (attempt >= 2)
+        Set cut = MakeCut(skF, swEndConditions_e.swEndCondBlind, depthM, False, flipDir, startOff, flipOff, featName & " attempt " & attempt)
+        If Not cut Is Nothing Then
+            vol1 = Volume()
+            If vol1 < vol0 - 1E-12 Then Exit For
+            ' wrong direction: remove and retry
+            swModel.ClearSelection2 True
+            cut.Select2 False, 0
+            swModel.Extension.DeleteSelection2 0      ' keep the sketch
+            Set cut = Nothing
+        End If
+        If startOff = 0 And attempt = 1 Then Exit For
+    Next attempt
+    Check featName & " cut removes material (attempt " & attempt & ")", Not cut Is Nothing
+    If cut Is Nothing Then Exit Sub
+    cut.Name = featName
+    ' name the feature dimensions: depth -> DEPTH, start offset -> START (identified by value)
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension
+    Set d = cut.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - depthM) < 0.000001 And dm.Name <> "DEPTH" And (startOff = 0 Or Abs(depthM - startOff) > 0.000001 Or dm.Name = "D1") Then
+            dm.Name = "DEPTH"
+        ElseIf startOff > 0 And Abs(dm.SystemValue - startOff) < 0.000001 Then
+            dm.Name = "START"
+        End If
+        Set d = cut.GetNextDisplayDimension(d)
+    Loop
+    Dim names As String: names = ""
+    Set d = cut.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        names = names & d.GetDimension2(0).Name & "=" & Format(d.GetDimension2(0).SystemValue / IN_, "0.0000") & " "
+        Set d = cut.GetNextDisplayDimension(d)
+    Loop
+    Check featName & " dims: " & names, InStr(names, "DEPTH=") > 0 And (startOff = 0 Or InStr(names, "START=") > 0)
+    Exit Sub
+BErr:
+    Check "RUNTIME ERROR in BoreCut(" & skName & ") at line " & Erl & ": " & Err.Number & " - " & Err.Description, False
+    Resume Next
+End Sub
+
+' Create an extruded cut from an (unselected) sketch feature. Tries the definition route first,
+' then FeatureCut4 with feature scope off, then FeatureCut4 as recorded macros use it.
+Function MakeCut(skF As SldWorks.Feature, endType As Long, depthM As Double, flipSide As Boolean, rev As Boolean, startOff As Double, flipOff As Boolean, tag As String) As SldWorks.Feature
+    On Error Resume Next
+    Dim f As SldWorks.Feature
+    Dim xd As SldWorks.ExtrudeFeatureData2
+    Set xd = swFeatMgr.CreateDefinition(swFeatureNameID_e.swFmCut)
+    If Not xd Is Nothing Then
+        swModel.ClearSelection2 True
+        skF.Select2 False, 0
+        xd.SetEndCondition True, endType
+        If endType = swEndConditions_e.swEndCondBlind Then xd.SetDepth True, depthM
+        xd.FlipSideToCut = flipSide
+        xd.ReverseDirection = rev
+        If startOff > 0 Then
+            xd.StartCondition = swStartConditions_e.swStartOffset
+            xd.StartOffset = startOff
+            xd.FlipStartOffset = flipOff
+        End If
+        Set f = swFeatMgr.CreateFeature(xd)
+        Trace tag & ": definition route -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, "  [err " & Err.Number & " " & Err.Description & "]", "")
+        Err.Clear
+    Else
+        Trace tag & ": CreateDefinition returned Nothing"
+    End If
+    If f Is Nothing Then
+        swModel.ClearSelection2 True
+        skF.Select2 False, 0
+        Set f = swFeatMgr.FeatureCut4(True, flipSide, rev, endType, 0, depthM, 0, False, False, False, False, 0, 0, False, False, False, False, False, False, False, False, False, False, IIf(startOff > 0, swStartConditions_e.swStartOffset, swStartConditions_e.swStartSketchPlane), startOff, flipOff, False)
+        Trace tag & ": FeatureCut4 scope off -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, "  [err " & Err.Number & " " & Err.Description & "]", "")
+        Err.Clear
+    End If
+    If f Is Nothing Then
+        swModel.ClearSelection2 True
+        skF.Select2 False, 0
+        Set f = swFeatMgr.FeatureCut4(True, flipSide, rev, endType, 0, depthM, 0, False, False, False, False, 0, 0, False, False, False, False, False, True, True, True, True, False, IIf(startOff > 0, swStartConditions_e.swStartOffset, swStartConditions_e.swStartSketchPlane), startOff, flipOff, False)
+        Trace tag & ": FeatureCut4 scope on -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, "  [err " & Err.Number & " " & Err.Description & "]", "")
+        Err.Clear
+    End If
+    Set MakeCut = f
+End Function
+
+' Two-direction cut (Direction 1 and 2), feature scope off. Used for the hex: ThroughAll both ways,
+' falling back to Blind both ways with a generous depth.
+Function MakeCut2(skF As SldWorks.Feature, flipSide As Boolean, bigDepth As Double, tag As String) As SldWorks.Feature
+    On Error Resume Next
+    Dim f As SldWorks.Feature
+    swModel.ClearSelection2 True
+    skF.Select2 False, 0
+    Set f = swFeatMgr.FeatureCut4(False, flipSide, False, swEndConditions_e.swEndCondThroughAll, swEndConditions_e.swEndCondThroughAll, 0, 0, False, False, False, False, 0, 0, False, False, False, False, False, False, False, False, False, False, 0, 0, False, False)
+    Trace tag & ": two-dir ThroughAll/ThroughAll -> " & (Not f Is Nothing): Err.Clear
+    If f Is Nothing Then
+        swModel.ClearSelection2 True
+        skF.Select2 False, 0
+        Set f = swFeatMgr.FeatureCut4(False, flipSide, False, swEndConditions_e.swEndCondBlind, swEndConditions_e.swEndCondBlind, bigDepth, bigDepth, False, False, False, False, 0, 0, False, False, False, False, False, False, False, False, False, False, 0, 0, False, False)
+        Trace tag & ": two-dir Blind/Blind " & Format(bigDepth / IN_, "0.0") & " in -> " & (Not f Is Nothing): Err.Clear
+    End If
+    If f Is Nothing Then
+        swModel.ClearSelection2 True
+        skF.Select2 False, 0
+        Set f = swFeatMgr.FeatureCut4(True, flipSide, False, swEndConditions_e.swEndCondBlind, 0, bigDepth, 0, False, False, False, False, 0, 0, False, False, False, False, False, False, False, False, False, False, 0, 0, False, False)
+        Trace tag & ": one-dir Blind " & Format(bigDepth / IN_, "0.0") & " in -> " & (Not f Is Nothing): Err.Clear
+        If f Is Nothing Then
+            swModel.ClearSelection2 True
+            skF.Select2 False, 0
+            Set f = swFeatMgr.FeatureCut4(True, flipSide, True, swEndConditions_e.swEndCondBlind, 0, bigDepth, 0, False, False, False, False, 0, 0, False, False, False, False, False, False, False, False, False, False, 0, 0, False, False)
+            Trace tag & ": one-dir Blind reversed -> " & (Not f Is Nothing): Err.Clear
+        End If
+    End If
+    Set MakeCut2 = f
+End Function
+
+' ---- Generic helical thread by sweep: works for internal (NPTF, apexOut=True) and external (JIC, apexOut=False)
+'      threads on a leg along X or Y (curAxis), starting at the planar end face at axial position tipAx.
+'      Sketch/feature names: HELIXSK_<sfx>, HELIX_<sfx>, THDPROF_<sfx>, feature <nm>.  All driving values are
+'      named dimensions: HELIXDIA, HEIGHT, PITCH, PROF_AX (if tipAx <> 0), PROF_R, APEXR.
+Sub HelixThread(tipAx As Double, rM As Double, heightM As Double, pitchM As Double, thdhM As Double, taperRad As Double, apexOut As Boolean, sfx As String, nm As String)
+    On Error Resume Next
+    Dim ok As Boolean, f As SldWorks.Feature, sk As SldWorks.Feature, hx As SldWorks.Feature, dd As SldWorks.DisplayDimension
+    ' --- helix sketch on the end face
+    ok = SelectEndFace(tipAx)
+    Check nm & ": end face found at " & Format(tipAx / IN_, "0.0000"), ok
+    If Not ok Then Exit Sub
+    swSkMgr.InsertSketch True
+    Dim c As SldWorks.SketchSegment, ca As SldWorks.SketchArc
+    swSkMgr.AddToDB = True           ' no inference: the circle must not snap to a nearby edge (nose OD, 2026-09-25)
+    Set c = swSkMgr.CreateCircleByRadius(0, 0, 0, rM)
+    swSkMgr.AddToDB = False
+    Set ca = c
+    swModel.ClearSelection2 True
+    ca.GetCenterPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    c.Select4 False, Nothing
+    Set dd = swModel.AddDimension2(rM * 2, rM * 2, 0)
+    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = 2 * rM
+    NameDim dd, "HELIXDIA", 2 * rM
+    ' sketch X axis of this face sketch, in model coords (= helix start direction, start angle 0)
+    Dim skc As SldWorks.Sketch, xf As SldWorks.MathTransform, ad As Variant, xd(2) As Double, au(2) As Double
+    Set skc = swSkMgr.ActiveSketch
+    Set xf = skc.ModelToSketchTransform: Set xf = xf.Inverse
+    ad = xf.ArrayData
+    xd(0) = ad(0): xd(1) = ad(1): xd(2) = ad(2)
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Set sk = swModel.FeatureByPositionReverse(0): sk.Name = "HELIXSK_" & sfx
+    Check nm & " helix sketch made (" & sk.GetTypeName2 & ")", sk.GetTypeName2 = "ProfileFeature"
+    ' --- helix (into the part)
+    swModel.ClearSelection2 True
+    sk.Select2 False, 0
+    Dim mdLate As Object: Set mdLate = swModel
+    mdLate.InsertHelix True, True, (taperRad > 0), False, swHelixDefinedBy_e.swHelixDefinedByHeightAndPitch, heightM, pitchM, 0#, taperRad, 0#
+    Trace nm & ": InsertHelix " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    Set hx = swModel.FeatureByPositionReverse(0)
+    If hx.GetTypeName2 <> "Helix" Then Set hx = Nothing
+    Check nm & " helix created", Not hx Is Nothing
+    If hx Is Nothing Then Exit Sub
+    hx.Name = "HELIX_" & sfx
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = hx.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - heightM) < 0.000001 Then dm.Name = "HEIGHT"
+        If Abs(dm.SystemValue - pitchM) < 0.000001 Then dm.Name = "PITCH"
+        names = names & dm.Name & " "
+        Set d = hx.GetNextDisplayDimension(d)
+    Loop
+    Check nm & " helix dims named (" & names & ")", InStr(names, "HEIGHT") > 0 And InStr(names, "PITCH") > 0
+    ' --- helix start point in model coords
+    au(0) = 0: au(1) = 0: au(2) = 0: au(curAxis) = 1
+    Dim sp(2) As Double, k As Long
+    For k = 0 To 2: sp(k) = au(k) * tipAx + xd(k) * rM: Next k
+    ' the helix start is READ from the helix curve: the face sketch's X axis does not always give it (2026-09-25:
+    ' 6565 had it 90 deg off - the thread profile then sat beside the helix and the swept cut failed)
+    Dim rcv As Object, egv As Object, vxa As Object, vxb As Object, pa As Variant, pb As Variant
+    Set rcv = hx.GetSpecificFeature2
+    If Not rcv Is Nothing Then Set egv = rcv.GetFirstSegment
+    If Not egv Is Nothing Then
+        Set vxa = egv.GetStartVertex: Set vxb = egv.GetEndVertex
+        If Not vxa Is Nothing Then
+            pa = vxa.GetPoint
+            If Not vxb Is Nothing Then
+                pb = vxb.GetPoint
+                If Abs(pb(curAxis) - tipAx) < Abs(pa(curAxis) - tipAx) Then pa = pb
+            End If
+            If Abs(pa(curAxis) - tipAx) < 0.00001 Then
+                Trace nm & ": helix start from the curve (" & Format(pa(0) / IN_, "0.0000") & ", " & Format(pa(1) / IN_, "0.0000") & ", " & Format(pa(2) / IN_, "0.0000") & ")"
+                For k = 0 To 2: sp(k) = pa(k): xd(k) = (pa(k) - au(k) * tipAx) / rM: Next k
+            End If
+        End If
+    End If
+    Err.Clear
+    Trace nm & ": helix start = (" & Format(sp(0) / IN_, "0.0000") & ", " & Format(sp(1) / IN_, "0.0000") & ", " & Format(sp(2) / IN_, "0.0000") & ")"
+    ' --- profile plane = principal plane containing the axis and the start point
+    Dim nrm(2) As Double, plane As String, pinPlane As String
+    nrm(0) = au(1) * xd(2) - au(2) * xd(1): nrm(1) = au(2) * xd(0) - au(0) * xd(2): nrm(2) = au(0) * xd(1) - au(1) * xd(0)
+    If Abs(nrm(2)) >= Abs(nrm(0)) And Abs(nrm(2)) >= Abs(nrm(1)) Then
+        plane = "Front Plane"
+    ElseIf Abs(nrm(1)) >= Abs(nrm(0)) Then
+        plane = "Top Plane"
+    Else
+        plane = "Right Plane"
+    End If
+    pinPlane = IIf(curAxis = 0, "Right Plane", "Top Plane")
+    Trace nm & ": profile on " & plane
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 plane, "PLANE", 0, 0, 0, False, 0, Nothing, 0
+    swSkMgr.InsertSketch True
+    ' sketch coords of start point, origin and an axial probe
+    Dim mu As SldWorks.MathUtility, mp As SldWorks.MathPoint, xf2 As SldWorks.MathTransform, pd As Variant
+    Set mu = swApp.GetMathUtility
+    Set xf2 = swSkMgr.ActiveSketch.ModelToSketchTransform
+    Set mp = mu.CreatePoint(sp): Set mp = mp.MultiplyTransform(xf2): pd = mp.ArrayData
+    Dim u0 As Double, v0 As Double: u0 = pd(0): v0 = pd(1)
+    Dim oz(2) As Double: Set mp = mu.CreatePoint(oz): Set mp = mp.MultiplyTransform(xf2): pd = mp.ArrayData
+    Dim ou As Double, ov As Double: ou = pd(0): ov = pd(1)
+    Set mp = mu.CreatePoint(au): Set mp = mp.MultiplyTransform(xf2): pd = mp.ArrayData
+    Dim axialIsX As Boolean: axialIsX = (Abs(pd(0) - ou) > Abs(pd(1) - ov))
+    Dim sRad As Double     ' +1/-1: direction "away from the axis" along the radial sketch axis
+    If axialIsX Then sRad = IIf(v0 - ov >= 0, 1#, -1#) Else sRad = IIf(u0 - ou >= 0, 1#, -1#)
+    Dim sApex As Double: sApex = IIf(apexOut, sRad, -sRad)
+    Dim half As Double: half = thdhM * Tan(3.14159265358979 / 6)
+    Trace nm & ": sketch start (" & Format(u0 / IN_, "0.0000") & "," & Format(v0 / IN_, "0.0000") & ") axialIsX=" & axialIsX & " apex dir " & sApex
+    ' local (a = axial, q = radial) -> sketch (u, v)
+    Dim a0 As Double, q0 As Double: If axialIsX Then a0 = u0: q0 = v0 Else a0 = v0: q0 = u0
+    swSkMgr.AddToDB = True
+    Dim l1 As SldWorks.SketchSegment, l1b As SldWorks.SketchSegment, l2 As SldWorks.SketchSegment, l3 As SldWorks.SketchSegment, lc As SldWorks.SketchSegment
+    Set l1 = MkLine(axialIsX, a0 - half, q0, a0, q0)
+    Set l1b = MkLine(axialIsX, a0, q0, a0 + half, q0)
+    Set l2 = MkLine(axialIsX, a0 + half, q0, a0, q0 + sApex * thdhM)
+    Set l3 = MkLine(axialIsX, a0, q0 + sApex * thdhM, a0 - half, q0)
+    Set lc = MkLine(axialIsX, a0, q0, a0, q0 + sApex * thdhM)
+    swSkMgr.AddToDB = False
+    lc.ConstructionGeometry = True
+    Dim ln1 As SldWorks.SketchLine, ln1b As SldWorks.SketchLine, ln2 As SldWorks.SketchLine, ln3 As SldWorks.SketchLine, lnc As SldWorks.SketchLine
+    Set ln1 = l1: Set ln1b = l1b: Set ln2 = l2: Set ln3 = l3: Set lnc = lc
+    swModel.ClearSelection2 True: ln1.GetEndPoint2.Select4 False, Nothing: ln1b.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: ln1b.GetEndPoint2.Select4 False, Nothing: ln2.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: ln2.GetEndPoint2.Select4 False, Nothing: ln3.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: ln3.GetEndPoint2.Select4 False, Nothing: ln1.GetStartPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: lnc.GetStartPoint2.Select4 False, Nothing: ln1.GetEndPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    swModel.ClearSelection2 True: lnc.GetEndPoint2.Select4 False, Nothing: ln2.GetEndPoint2.Select4 True, Nothing: swModel.SketchAddConstraints "sgMERGEPOINTS"
+    Dim baseRel As String, perpRel As String
+    baseRel = IIf(axialIsX, "sgHORIZONTAL", "sgVERTICAL"): perpRel = IIf(axialIsX, "sgVERTICAL", "sgHORIZONTAL")
+    swModel.ClearSelection2 True: l1.Select4 False, Nothing: swModel.SketchAddConstraints baseRel
+    swModel.ClearSelection2 True: l1b.Select4 False, Nothing: swModel.SketchAddConstraints baseRel
+    swModel.ClearSelection2 True: lc.Select4 False, Nothing: swModel.SketchAddConstraints perpRel
+    swModel.ClearSelection2 True: l1.Select4 False, Nothing: l1b.Select4 True, Nothing: swModel.SketchAddConstraints "sgSAMELENGTH"
+    swModel.ClearSelection2 True: l2.Select4 False, Nothing: l3.Select4 True, Nothing: swModel.SketchAddConstraints "sgSAMELENGTH"
+    ' axial pin of the centre point P
+    If Abs(tipAx) < 0.0000001 Then
+        swModel.ClearSelection2 True: ln1.GetEndPoint2.Select4 False, Nothing
+        swModel.Extension.SelectByID2 pinPlane, "PLANE", 0, 0, 0, True, 0, Nothing, 0
+        swModel.SketchAddConstraints "sgCOINCIDENT"
+        Trace nm & ": P on " & pinPlane & " " & IIf(Err.Number <> 0, "[err " & Err.Description & "]", "ok"): Err.Clear
+    Else
+        Call DimPtOrigin(ln1.GetEndPoint2, "PROF_AX", Abs(tipAx), axialIsX, True, u0, v0, ou, ov)
+    End If
+    Call DimPtOrigin(ln1.GetEndPoint2, "PROF_R", Abs(q0 - IIf(axialIsX, ov, ou)), axialIsX, False, u0, v0, ou, ov)
+    Call DimPtOrigin(ln2.GetEndPoint2, "APEXR", Abs(q0 + sApex * thdhM - IIf(axialIsX, ov, ou)), axialIsX, False, u0, v0, ou, ov)
+    ' 60 deg between the sloped sides
+    Dim kk As Long, v As Double
+    For kk = 0 To 5
+        swModel.ClearSelection2 True
+        l2.Select4 False, Nothing: l3.Select4 True, Nothing
+        If axialIsX Then
+            Set dd = swModel.AddDimension2(a0 + IIf(kk >= 4, 0.003 * (kk - 4.5), 0), q0 + sApex * thdhM * (1.6 - (kk Mod 2) * 2.4), 0)
+        Else
+            Set dd = swModel.AddDimension2(q0 + sApex * thdhM * (1.6 - (kk Mod 2) * 2.4), a0 + IIf(kk >= 4, 0.003 * (kk - 4.5), 0), 0)
+        End If
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - 3.14159265358979 / 3) < 0.001 Then Exit For
+        DeleteDisp dd: Set dd = Nothing
+    Next kk
+    Check nm & " 60 deg tooth angle placed", (Not dd Is Nothing) And Abs(v - 3.14159265358979 / 3) < 0.001
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Dim pf As SldWorks.Feature
+    Set pf = swModel.FeatureByPositionReverse(0): pf.Name = "THDPROF_" & sfx
+    Check nm & " profile sketch fully defined", (pf.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    ' --- swept cut
+    Dim vol0 As Double: vol0 = Volume()
+    Dim swd As Object
+    Set swd = swFeatMgr.CreateDefinition(swFeatureNameID_e.swFmSweepCut)
+    If Not swd Is Nothing Then
+        Set swd.Profile = pf: Set swd.Path = hx
+        swModel.ClearSelection2 True
+        pf.Select2 False, 1: hx.Select2 True, 4
+        Set f = swFeatMgr.CreateFeature(swd)
+        Trace nm & ": sweep CreateFeature -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+    End If
+    Check nm & " swept cut created", Not f Is Nothing
+    If f Is Nothing Then Exit Sub
+    f.Name = nm
+    Dim vol1 As Double: vol1 = Volume()
+    Check nm & " sweep removed material: " & Format((vol0 - vol1) / IN_ ^ 3, "0.00000") & " in^3", vol1 < vol0
+    Dim sup As Boolean
+    sup = f.SetSuppression2(swFeatureSuppressionAction_e.swSuppressFeature, swInConfigurationOpts_e.swAllConfiguration, Empty)
+    Check nm & " suppressed", sup
+End Sub
+
+Function MkLine(axialIsX As Boolean, a1 As Double, q1 As Double, a2 As Double, q2 As Double) As SldWorks.SketchSegment
+    If axialIsX Then
+        Set MkLine = swSkMgr.CreateLine(a1, q1, 0, a2, q2, 0)
+    Else
+        Set MkLine = swSkMgr.CreateLine(q1, a1, 0, q2, a2, 0)
+    End If
+End Function
+
+' point-to-origin linear dimension of a given kind (axial or radial), placed so SolidWorks picks that kind;
+' tries the alternative placement if the value read back is not the expected one.
+Sub DimPtOrigin(pt As SldWorks.SketchPoint, nm As String, expectM As Double, axialIsX As Boolean, axialDim As Boolean, u0 As Double, v0 As Double, ou As Double, ov As Double)
+    On Error Resume Next
+    Dim dd As SldWorks.DisplayDimension, k As Long, v As Double, tx As Double, ty As Double, far As Double
+    far = 0.05
+    For k = 0 To 3
+        ' a dimension measured along sketch X is obtained by placing the text well outside the points in Y, and vice versa
+        Dim wantX As Boolean: wantX = (axialDim = axialIsX)
+        If wantX Then
+            tx = (u0 + ou) / 2: ty = IIf(k Mod 2 = 0, 1, -1) * (far + Abs(v0 - ov)) * (1 + k \ 2)
+        Else
+            ty = (v0 + ov) / 2: tx = IIf(k Mod 2 = 0, 1, -1) * (far + Abs(u0 - ou)) * (1 + k \ 2)
+        End If
+        swModel.ClearSelection2 True
+        pt.Select4 False, Nothing
+        swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+        Set dd = swModel.AddDimension2(tx, ty, 0)
+        If dd Is Nothing Then Exit For
+        v = dd.GetDimension2(0).SystemValue
+        If Abs(v - expectM) < 0.000005 Then Exit For
+        DeleteDisp dd: Set dd = Nothing
+    Next k
+    NameDim dd, nm, expectM
+End Sub
+
+Function SelectEndFace(fx As Double) As Boolean
+    ' geometric pick of the planar end face whose normal is along the axis and which sits at axial position fx
+    On Error Resume Next
+    Dim bods As Variant, bd As SldWorks.Body2, fcs As Variant, i As Long, f As SldWorks.Face2, sf As SldWorks.Surface, pp As Variant
+    SelectEndFace = False
+    swModel.ClearSelection2 True
+    Dim pd As SldWorks.PartDoc: Set pd = swModel
+    bods = pd.GetBodies2(swBodyType_e.swSolidBody, True)
+    If IsEmpty(bods) Then Trace "SelectEndFace: no solid bodies": Exit Function
+    Dim nPl As Long
+    For Each bd In bods
+        fcs = bd.GetFaces
+        For i = 0 To UBound(fcs)
+            Set f = fcs(i)
+            Set sf = f.GetSurface
+            If sf.IsPlane Then
+                pp = sf.PlaneParams   ' (0..2) normal, (3..5) root point
+                nPl = nPl + 1
+            If Abs(Abs(pp(0)) - 1) < 0.0001 And Abs(pp(3) - fx) < 0.00002 Then
+                    SelectEndFace = f.Select4(False, Nothing)
+                    Exit Function
+                End If
+            End If
+        Next i
+    Next bd
+    Trace "SelectEndFace: no planar face at " & Format(fx / IN_, "0.0000") & " (" & nPl & " planar faces scanned)"
+End Function
+Function Volume() As Double
+    Dim mp As SldWorks.MassProperty
+    Set mp = swModel.Extension.CreateMassProperty
+    Volume = mp.Volume
+End Function
+'''
+
+def number_block(text, start_marker, end_marker, first):
+    lines=text.split('\n'); out=[]; on=False; n=first
+    for ln in lines:
+        if start_marker in ln: on=True
+        if end_marker in ln and on and ln.strip()!=start_marker.strip(): on=False
+        st=ln.strip()
+        if on and st and not st.startswith("'") and not st.endswith(':') and not st.startswith('Sub ') and not st.startswith('End Sub') and not st.startswith('On Error'):
+            out.append(f"{n} {ln.lstrip()}"); n+=10
+        else:
+            out.append(ln)
+    return '\n'.join(out)
+vba = number_block(vba, "' ================= 3. HEX cut", "stepName = \"Bores\"", 300)
+vba = number_block(vba, "Sub BoreCut(", "End Sub", 1000)
+open(f'/tmp/omi/Build_{topo}_MASTER.bas','w').write(vba)
+print('wrote', f'Build_{topo}_MASTER.bas', 'points', n, 'segments', n, 'hexseg', hexseg, 'segB', segB, 'segA', segA if A else None)

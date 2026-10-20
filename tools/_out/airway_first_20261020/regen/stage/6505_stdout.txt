@@ -1,0 +1,6 @@
+6505: 21 configs (ref 6505-08-08), 3 skipped (DROP/MISSING/no data), 0 geometry-blocked, 22 profile points, 51 table cols
+   skipped ('6505-06-10', 'DROP', 'ASSUMED')
+   skipped ('6505-20-24', 'DROP', 'ASSUMED')
+   skipped ('6505-04-02', 'BUILD', 'MISSING')
+
+--- stderr ---

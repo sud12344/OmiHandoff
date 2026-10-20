@@ -1,0 +1,4 @@
+0318: 12 configs (ref 0318-08), 1 skipped (DROP/MISSING/no data), 0 geometry-blocked, 4 profile points, 21 table cols
+   skipped ('0318-14', 'DROP', 'ASSUMED')
+
+--- stderr ---

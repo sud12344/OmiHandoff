@@ -1,0 +1,9 @@
+2501    56 configs  leg outline problems: 0 []
+2503    29 configs  leg outline problems: 0 []
+2605     7 configs  leg outline problems: 0 []
+5500    16 configs  leg outline problems: 0 []
+5502    20 configs  leg outline problems: 0 []
+6500    26 configs  leg outline problems: 0 []
+6501    14 configs  leg outline problems: 0 []
+6502    12 configs  leg outline problems: 0 [] (neck turns checked: 12)
+6503     1 configs  leg outline problems: 0 []

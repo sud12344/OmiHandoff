@@ -1,0 +1,16 @@
+2503: 29 configs (ref 2503-08-06-FG), 33 skipped, 0 blocked, 50 cols
+   warn 2503-06-04-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 2503-06-08-FG: leg 2: inner thread edge clears the corner puck by only 0.0062
+   warn 2503-08-12-FG: leg 1: male NPTF thread dia at L2 1.0589 vs hex flats 1.0600 (round end flush with the flats by 0.0005; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-10-12-FG: leg 1: male NPTF thread dia at L2 1.0589 vs hex flats 1.0600 (round end flush with the flats by 0.0005; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-12-08-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 2503-12-12-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule); leg 1: male NPTF thread dia at L2 1.0589 vs hex flats 1.0625 (round end flush with the flats by 0.0018; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-12-16-FG: leg 1: male NPTF thread dia at L2 1.3259 vs hex flats 1.3100 (round end proud of the flats by 0.0079; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-16-12-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 2503-16-16-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 1: male NPTF thread dia at L2 1.3259 vs hex flats 1.3125 (round end proud of the flats by 0.0067; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-16-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-20-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-20-24-FG: leg 1: male NPTF thread dia at L2 1.9109 vs hex flats 1.8750 (round end proud of the flats by 0.0179; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2503-24-24-FG: leg 1: male NPTF thread dia at L2 1.9109 vs hex flats 1.8800 (round end proud of the flats by 0.0154; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

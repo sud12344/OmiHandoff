@@ -1,0 +1,14 @@
+6500: 26 configs (ref 6500-12-12-FG), 36 skipped, 0 blocked, 64 cols
+   warn 6500-12-12-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 6500-05-05-FG: leg 2: the corner puck (radius 0.323) reaches 0.009 past the swivel body face (0.314) but stays inside the neck (max 0.077 off the axis vs neck radius 0.178) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings; leg 2 hex arm 0.314 barely clears the corner puck (radius 0.323)
+   warn 6500-06-04-FG: hex A/F raised from Air-Way 0.562 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6500-06-06-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6500-12-08-FG: hex A/F raised from Air-Way 1.062 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 6500-16-12-FG: hex A/F raised from Air-Way 1.312 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 6500-16-16-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 6500-20-20-FG: hex A/F raised from Air-Way 1.62 to 1.6250 (JIC thread major; 2603HX rule); leg 2: Air-Way nut-face-to-seat 0.620 vs Brennan 0.640
+   warn 6500-L-06-06-FG: hex A/F raised from OMi Hex Flat 0.562 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6500-L-12-12-FG: hex A/F raised from OMi Hex Flat 1.062 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 6500-L-16-16-FG: hex A/F raised from OMi Hex Flat 1.312 to 1.3125 (JIC thread major; 2603HX rule)
+
+--- stderr ---

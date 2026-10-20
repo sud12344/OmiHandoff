@@ -1,0 +1,51 @@
+{
+ "6506": {
+  "configs": 14,
+  "ref": "6506-08-08",
+  "skipped": [
+   [
+    "6506-02-06",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6506-04-08",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6506-08-12",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6506-12-14",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6506-06-04",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6506-06-10",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6506-12-08",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "6506-32-32",
+    "BUILD",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "verts": 19,
+  "cols": 46
+ }
+}

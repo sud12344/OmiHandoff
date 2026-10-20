@@ -1,0 +1,9 @@
+6404: 14 configs (ref 6404-08-08), 13 skipped (DROP/MISSING/no data), 0 geometry-blocked, 11 profile points, 35 table cols
+   skipped ('6404-04-06', 'DROP', 'ASSUMED')
+   skipped ('6404-04-08', 'DROP', 'MISSING')
+   skipped ('6404-05-02', 'DROP', 'ASSUMED')
+   skipped ('6404-05-08', 'DROP', 'ASSUMED')
+   skipped ('6404-08-16', 'DROP', 'ASSUMED')
+   skipped ('6404-08-24', 'DROP', 'ASSUMED')
+
+--- stderr ---
