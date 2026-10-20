@@ -1,0 +1,284 @@
+{
+ "5000": {
+  "kind": "straight",
+  "live": "19 -> 19 configurations; macro lines differ 1056; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5404": {
+  "kind": "straight",
+  "live": "25 -> 25 configurations; macro lines differ 1056; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5405": {
+  "kind": "straight",
+  "live": "26 -> 26 configurations; macro lines differ 632; SW2 columns differ 0",
+  "dry": "dry run = live 03_SCRIPTS macro + live SW2 BUT REGEN DIFFERS FROM LIVE",
+  "dry_dir": null
+ },
+ "2408": {
+  "kind": "straight",
+  "live": "15 -> 15 configurations; macro lines differ 643; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "0318": {
+  "kind": "straight",
+  "live": "12 -> 12 configurations; macro lines differ 643; SW2 columns differ 1 ['$COMMENT']",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5406": {
+  "kind": "straight",
+  "live": "28 -> 28 configurations; macro lines differ 1027; SW2 columns differ 1 ['$COMMENT']",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5406C": {
+  "kind": "straight",
+  "live": "6 -> 6 configurations; macro lines differ 1027; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5406P": {
+  "kind": "straight",
+  "live": "4 -> 4 configurations; macro lines differ 1027; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2700": {
+  "kind": "straight",
+  "live": "24 -> 24 configurations; macro lines differ 643; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "4404": {
+  "kind": "straight",
+  "live": "13 -> 13 configurations; macro lines differ 643; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "4604": {
+  "kind": "straight",
+  "live": "14 -> 14 configurations; macro lines differ 643; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5404N": {
+  "kind": "straight",
+  "live": "4 -> 4 configurations; macro lines differ 643; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2406": {
+  "kind": "straight",
+  "live": "40 -> 40 configurations; macro lines differ 632; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "6505": {
+  "kind": "straight",
+  "live": "18 -> 19 configurations; macro lines differ 1; SW2 columns differ 52 ['$COMMENT', '$PRP@AxialSource', '$PRP@DataStatus', '$PRP@Description', '$PRP@EndA_Thread', '$PRP@EndB_Thread', '$PRP@GeometryRoot', '$PRP@OMiSKU']...; added ['6505-12-08']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\wave1_ship_20261009\\regen\\leftovers\\straight"
+ },
+ "1405": {
+  "kind": "straight",
+  "live": "15 -> 15 configurations; macro lines differ 632; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "1700": {
+  "kind": "straight",
+  "live": "10 -> 10 configurations; macro lines differ 632; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2404": {
+  "kind": "straight",
+  "live": "NEW (live macro False, live SW2 True), 57 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\r2404_20261009\\regen\\after"
+ },
+ "0304": {
+  "kind": "straight",
+  "live": "NEW (live macro False, live SW2 False), 12 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\wave1_ship_20261009\\regen\\after\\straight"
+ },
+ "0306": {
+  "kind": "straight",
+  "live": "NEW (live macro False, live SW2 False), 11 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\wave1_ship_20261009\\regen\\after\\straight"
+ },
+ "2650": {
+  "kind": "tee",
+  "live": "4 -> 4 configurations; macro lines differ 1977; SW2 columns differ 1 ['$COMMENT']",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2602": {
+  "kind": "tee",
+  "live": "5 -> 5 configurations; macro lines differ 1274; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2605": {
+  "kind": "tee",
+  "live": "7 -> 7 configurations; macro lines differ 1918; SW2 columns differ 1 ['$COMMENT']",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2606": {
+  "kind": "tee",
+  "live": "NEW (live macro False, live SW2 False), 5 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\wave1_ship_20261009\\regen\\jictees"
+ },
+ "2609": {
+  "kind": "tee",
+  "live": "NEW (live macro False, live SW2 False), 1 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\wave1_ship_20261009\\regen\\jictees"
+ },
+ "2611": {
+  "kind": "tee",
+  "live": "NEW (live macro False, live SW2 False), 2 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\wave1_ship_20261009\\regen\\jictees"
+ },
+ "5600": {
+  "kind": "tee",
+  "live": "6 -> 6 configurations; macro lines differ 1900; SW2 columns differ 1 ['$COMMENT']",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "5602": {
+  "kind": "tee",
+  "live": "2 -> 2 configurations; macro lines differ 1274; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "2501": {
+  "kind": "tee",
+  "live": "48 -> 48 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "5500": {
+  "kind": "tee",
+  "live": "16 -> 16 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "5502": {
+  "kind": "tee",
+  "live": "13 -> 13 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "5504": {
+  "kind": "tee",
+  "live": "5 -> 5 configurations; macro lines differ 1285; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "2503": {
+  "kind": "tee",
+  "live": "29 -> 29 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "2504": {
+  "kind": "tee",
+  "live": "NEW (live macro False, live SW2 False), 4 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "2505": {
+  "kind": "tee",
+  "live": "NEW (live macro False, live SW2 False), 1 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "2701": {
+  "kind": "tee",
+  "live": "15 -> 15 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "2702": {
+  "kind": "tee",
+  "live": "11 -> 11 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "2704": {
+  "kind": "tee",
+  "live": "12 -> 12 configurations; macro lines differ 1275; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "6500": {
+  "kind": "tee",
+  "live": "15 -> 24 configurations; macro lines differ 13; SW2 columns differ 65 ['$COMMENT', '$PRP@AxialSource', '$PRP@DataStatus', '$PRP@Description', '$PRP@End1_Thread', '$PRP@End2_Thread', '$PRP@GeometryRoot', '$PRP@OMiSKU']...; added ['6500-04-06-FG', '6500-12-08-FG', '6500-12-16-FG', '6500-16-12-FG', '6500-L-04-04-FG', '6500-L-06-06-FG', '6500-L-08-08-FG', '6500-L-12-12-FG', '6500-L-16-16-FG']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "6501": {
+  "kind": "tee",
+  "live": "11 -> 14 configurations; macro lines differ 12; SW2 columns differ 61 ['$COMMENT', '$PRP@AxialSource', '$PRP@DataStatus', '$PRP@Description', '$PRP@End1_Thread', '$PRP@End2_Thread', '$PRP@GeometryRoot', '$PRP@OMiSKU']...; added ['6501-06-06-FG', '6501-12-08-FG', '6501-12-12-FG']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "6503": {
+  "kind": "tee",
+  "live": "1 -> 1 configurations; macro lines differ 1285; SW2 columns differ 4 ['$PRP@AxialSource', 'PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "6502": {
+  "kind": "tee",
+  "live": "11 -> 11 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "6600": {
+  "kind": "tee",
+  "live": "9 -> 9 configurations; macro lines differ 1274; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "1501": {
+  "kind": "tee",
+  "live": "17 -> 17 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "1502": {
+  "kind": "tee",
+  "live": "NEW (live macro False, live SW2 False), 1 configurations",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "6602": {
+  "kind": "tee",
+  "live": "9 -> 9 configurations; macro lines differ 1275; SW2 columns differ 0",
+  "dry": "NOT DRY-RUN",
+  "dry_dir": null
+ },
+ "6802": {
+  "kind": "tee",
+  "live": "20 -> 20 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ },
+ "6801": {
+  "kind": "tee",
+  "live": "35 -> 35 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']",
+  "dry": "IDENTICAL to dry-run",
+  "dry_dir": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\puckfix_20261009\\regen\\new"
+ }
+}

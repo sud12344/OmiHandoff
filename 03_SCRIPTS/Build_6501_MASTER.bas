@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6501_MASTER"
 ' ============================================================================
-'  Build_6501_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_tee.py
+'  Build_6501_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_tee.py
 '  90 deg Male Pipe x Female Swivel Elbow (elbow), forged hex body (2500HX pattern).  Reference config 6501-04-04-FG: NPTFM -04, JICSW -04
 '  Entry: Sub Build6501.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_6501_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -171,12 +171,12 @@ Sub Build6501()
     swSkMgr.InsertSketch True
     swSkMgr.AddToDB = True
     Dim pA As SldWorks.SketchSegment, pB As SldWorks.SketchSegment, pC As SldWorks.SketchSegment, pD As SldWorks.SketchSegment, pE As SldWorks.SketchSegment, pX As SldWorks.SketchSegment
-    Set pA = swSkMgr.CreateLine(0#, -0.007112000, 0, 0.004106115, -0.007112000, 0)
-    Set pB = swSkMgr.CreateLine(0.004106115, -0.007112000, 0, 0.008212230, 0#, 0)
-    Set pC = swSkMgr.CreateLine(0.008212230, 0#, 0, 0.004106115, 0.007112000, 0)
-    Set pD = swSkMgr.CreateLine(0.004106115, 0.007112000, 0, 0#, 0.007112000, 0)
+    Set pA = swSkMgr.CreateLine(0#, -0.007112000, 0, 0.004093415, -0.007112000, 0)
+    Set pB = swSkMgr.CreateLine(0.004093415, -0.007112000, 0, 0.008199530, 0#, 0)
+    Set pC = swSkMgr.CreateLine(0.008199530, 0#, 0, 0.004093415, 0.007112000, 0)
+    Set pD = swSkMgr.CreateLine(0.004093415, 0.007112000, 0, 0#, 0.007112000, 0)
     Set pE = swSkMgr.CreateCenterLine(0#, 0.007112000, 0, 0#, -0.007112000, 0)
-    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.008212230, 0#, 0)
+    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.008199530, 0#, 0)
     swSkMgr.AddToDB = False
     pX.ConstructionGeometry = True
     Dim qa As SldWorks.SketchLine, qb As SldWorks.SketchLine, qc As SldWorks.SketchLine, qd As SldWorks.SketchLine, qe As SldWorks.SketchLine, qx As SldWorks.SketchLine
@@ -197,11 +197,11 @@ Sub Build6501()
     swModel.ClearSelection2 True: pE.Select4 False, Nothing
     swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
     swModel.SketchAddConstraints "sgCOINCIDENT"
-    Call DimSegOrigin(pA, "PUCK_HB", 0.007112000, 0.002053, -0.016002)
-    Call DimSegOrigin(pD, "PUCK_HT", 0.007112000, 0.002053, 0.016002)
-    Call DimSeg1(pA, "PUCK_R1B", 0.004106115, 0.002053, -0.024892)
-    Call DimSeg1(pD, "PUCK_R1T", 0.004106115, 0.002053, 0.024892)
-    Call DimSeg1(pX, "PUCK_XC", 0.008212230, 0.004106, -0.006350)
+    Call DimSegOrigin(pA, "PUCK_HB", 0.007112000, 0.002047, -0.016002)
+    Call DimSegOrigin(pD, "PUCK_HT", 0.007112000, 0.002047, 0.016002)
+    Call DimSeg1(pA, "PUCK_R1B", 0.004093415, 0.002047, -0.024892)
+    Call DimSeg1(pD, "PUCK_R1T", 0.004093415, 0.002047, 0.024892)
+    Call DimSeg1(pX, "PUCK_XC", 0.008199530, 0.004100, -0.006350)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0): swFeat.Name = "PUCK"
@@ -261,13 +261,13 @@ Sub Build6501()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 12)", (UBound(cfgs) + 1) = 12
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 15)", (UBound(cfgs) + 1) = 15
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
     cx_c = Array("6501-04-06-FG", "6501-32-32-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "NPTF1_MAJR@LEG1", "NPTF1_THDL@LEG1", "NPTF1_TAPER@LEG1", "NPTF1_RELL@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(1.09000, 0.28100, 0.26092, 0.40180, 1.78990, 0.15820, 1.09000, 1.25000, 0.26092, 0.25118, 0.56200, 0.53000, 0.56200, 0.46500, 0.16224, 0.32447), Array(3.00000, 1.25000, 1.16929, 0.75650, 1.78990, 0.27350, 3.00000, 3.38000, 1.16929, 1.20489, 2.50000, 1.97000, 2.50000, 1.71000, 0.72169, 1.44338))
+    cx_w = Array(Array(1.09000, 0.28100, 0.26092, 0.40180, 1.78990, 0.15820, 1.09000, 1.25000, 0.26092, 0.25118, 0.56200, 0.53000, 0.56200, 0.46500, 0.16174, 0.32397), Array(3.00000, 1.25000, 1.16929, 0.75650, 1.78990, 0.27350, 3.00000, 3.38000, 1.16929, 1.20489, 2.50000, 1.97000, 2.50000, 1.71000, 0.72119, 1.44288))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

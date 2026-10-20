@@ -1,4 +1,4 @@
-Build_1501_MASTER  10/2/2026 8:22:20 PM
+Build_1501_MASTER  10/19/2026 7:31:36 PM
 OK    dim M1 = 1.4700 in (expect 1.4700)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim NPTF1_MAJR = 0.4078 in (expect 0.4078)
@@ -54,9 +54,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.4400 in (expect 0.4400)
 OK    dim PUCK_HT = 0.4400 in (expect 0.4400)
-OK    dim PUCK_R1B = 0.2540 in (expect 0.2540)
-OK    dim PUCK_R1T = 0.2540 in (expect 0.2540)
-OK    dim PUCK_XC = 0.5081 in (expect 0.5081)
+OK    dim PUCK_R1B = 0.2535 in (expect 0.2535)
+OK    dim PUCK_R1T = 0.2535 in (expect 0.2535)
+OK    dim PUCK_XC = 0.5076 in (expect 0.5076)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    NUTHEX2: nut face found at 1.3400 on axis 1
@@ -152,7 +152,7 @@ OK    Y extent -0.508 .. 1.340 (expect -0.508 .. 1.340)
       Bounding box z -0.500 .. 0.500 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.5000 .. 0.5000 (expect -0.5000 .. 0.5000: swivel nut flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_1501_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_1501_SW2.xlsx
 OK    Configurations after table: 18 (expect 18)
       config check 1: 1501-02-02-FG
 OK    1501-02-02-FG M1@LEG1 = 0.7200 (table 0.7200)
@@ -169,8 +169,8 @@ OK    1501-02-02-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
 OK    1501-02-02-FG HEXL@HEX1_BODY = 0.3400 (table 0.3400)
 OK    1501-02-02-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
 OK    1501-02-02-FG HEXL@HEX2_BODY = 0.4200 (table 0.4200)
-OK    1501-02-02-FG PUCK_R1B@PUCK = 0.1270 (table 0.1270)
-OK    1501-02-02-FG PUCK_XC@PUCK = 0.2540 (table 0.2540)
+OK    1501-02-02-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    1501-02-02-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
 OK    1501-02-02-FG one solid body (found 1)
       1501-02-02-FG box x -0.323..0.720  y -0.254..0.850
       config check 2: 1501-32-32-FG
@@ -188,32 +188,32 @@ OK    1501-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
 OK    1501-32-32-FG HEXL@HEX1_BODY = 2.1000 (table 2.1000)
 OK    1501-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
 OK    1501-32-32-FG HEXL@HEX2_BODY = 1.4650 (table 1.4650)
-OK    1501-32-32-FG PUCK_R1B@PUCK = 0.7217 (table 0.7217)
-OK    1501-32-32-FG PUCK_XC@PUCK = 1.4434 (table 1.4434)
+OK    1501-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    1501-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
 OK    1501-32-32-FG one solid body (found 1)
       1501-32-32-FG box x -1.518..3.130  y -1.443..2.620
       All-config sweep: rebuilding 17 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/17  1501-02-02-FG  rebuilt in 0.7 s
+      sweep 1/17  1501-02-02-FG  rebuilt in 0.9 s
       sweep 2/17  1501-02-04-FG  rebuilt in 0.7 s
-      sweep 3/17  1501-04-04-FG  rebuilt in 0.9 s
-      sweep 4/17  1501-04-06-FG  rebuilt in 0.9 s
-      sweep 5/17  1501-06-04-FG  rebuilt in 1.2 s
-      sweep 6/17  1501-06-06-FG  rebuilt in 1.0 s
-      sweep 7/17  1501-06-08-FG  rebuilt in 1.1 s
+      sweep 3/17  1501-04-04-FG  rebuilt in 0.8 s
+      sweep 4/17  1501-04-06-FG  rebuilt in 0.7 s
+      sweep 5/17  1501-06-04-FG  rebuilt in 1.0 s
+      sweep 6/17  1501-06-06-FG  rebuilt in 0.7 s
+      sweep 7/17  1501-06-08-FG  rebuilt in 0.7 s
       sweep 8/17  1501-08-06-FG  rebuilt in 1.0 s
       sweep 9/17  1501-08-08-FG  rebuilt in 0.7 s
-      sweep 10/17  1501-08-12-FG  rebuilt in 0.7 s
-      sweep 11/17  1501-12-08-FG  rebuilt in 0.9 s
+      sweep 10/17  1501-08-12-FG  rebuilt in 0.6 s
+      sweep 11/17  1501-12-08-FG  rebuilt in 0.8 s
       sweep 12/17  1501-12-12-FG  rebuilt in 1.1 s
-      sweep 13/17  1501-12-16-FG  rebuilt in 1.0 s
-      sweep 14/17  1501-16-12-FG  rebuilt in 0.9 s
-      sweep 15/17  1501-16-16-FG  rebuilt in 0.9 s
-      sweep 16/17  1501-20-20-FG  rebuilt in 0.9 s
-      sweep 17/17  1501-32-32-FG  rebuilt in 0.7 s
+      sweep 13/17  1501-12-16-FG  rebuilt in 0.7 s
+      sweep 14/17  1501-16-12-FG  rebuilt in 0.7 s
+      sweep 15/17  1501-16-16-FG  rebuilt in 1.0 s
+      sweep 16/17  1501-20-20-FG  rebuilt in 0.7 s
+      sweep 17/17  1501-32-32-FG  rebuilt in 0.6 s
 OK    All-config sweep: 17 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 1501-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\1501_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\1501_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\1501\1501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\1501\1501_MASTER.SLDPRT

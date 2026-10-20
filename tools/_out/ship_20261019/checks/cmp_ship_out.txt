@@ -1,0 +1,80 @@
+Batch 16 ship check 2 (2026-10-19). For every regenerated root (regen/, scripts/regen_all.py):
+  A. vs LIVE: 03_SCRIPTS macro (line endings + the 'Generated' date line ignored) and 04_DESIGN_TABLES SW2 (cell by cell)
+     -> which roots batch 16 changes;
+  B. vs the macro + SW2 that was DRY-RUN in SolidWorks (DRY below) -> what ships is exactly what was built.
+Output: checks/cmp_ship_out.txt + checks/changed_roots.json.
+straight 5000    CHANGED 19 -> 19 configurations; macro lines differ 1056; SW2 columns differ 0  || NOT DRY-RUN
+straight 5404    CHANGED 25 -> 25 configurations; macro lines differ 1056; SW2 columns differ 0  || NOT DRY-RUN
+straight 5405    CHANGED 26 -> 26 configurations; macro lines differ 632; SW2 columns differ 0  || dry run = live 03_SCRIPTS macro + live SW2 BUT REGEN DIFFERS FROM LIVE
+straight 6401    same    24 -> 24 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 6405    same    40 -> 40 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 2408    CHANGED 15 -> 15 configurations; macro lines differ 643; SW2 columns differ 0  || NOT DRY-RUN
+straight 6408    same    14 -> 14 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 0318    CHANGED 12 -> 12 configurations; macro lines differ 643; SW2 columns differ 1 ['$COMMENT']  || NOT DRY-RUN
+straight 5406    CHANGED 28 -> 28 configurations; macro lines differ 1027; SW2 columns differ 1 ['$COMMENT']  || NOT DRY-RUN
+straight 5406C   CHANGED 6 -> 6 configurations; macro lines differ 1027; SW2 columns differ 0  || NOT DRY-RUN
+straight 5406P   CHANGED 4 -> 4 configurations; macro lines differ 1027; SW2 columns differ 0  || NOT DRY-RUN
+straight 2700    CHANGED 24 -> 24 configurations; macro lines differ 643; SW2 columns differ 0  || NOT DRY-RUN
+straight 2705    same    14 -> 14 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 2706    same    23 -> 23 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 4404    CHANGED 13 -> 13 configurations; macro lines differ 643; SW2 columns differ 0  || NOT DRY-RUN
+straight 4604    CHANGED 14 -> 14 configurations; macro lines differ 643; SW2 columns differ 0  || NOT DRY-RUN
+straight 5404N   CHANGED 4 -> 4 configurations; macro lines differ 643; SW2 columns differ 0  || NOT DRY-RUN
+straight 6404    same    14 -> 14 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 6410    same    30 -> 30 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 2406    CHANGED 40 -> 40 configurations; macro lines differ 632; SW2 columns differ 0  || NOT DRY-RUN
+straight 6504    same    10 -> 10 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 6505    CHANGED 18 -> 19 configurations; macro lines differ 1; SW2 columns differ 52 ['$COMMENT', '$PRP@AxialSource', '$PRP@DataStatus', '$PRP@Description', '$PRP@EndA_Thread', '$PRP@EndB_Thread', '$PRP@GeometryRoot', '$PRP@OMiSKU']...; added ['6505-12-08']  || IDENTICAL to dry-run
+straight 6506    same    14 -> 14 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 6402    same    15 -> 15 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 6565    same    8 -> 8 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 1404    same    24 -> 24 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 1405    CHANGED 15 -> 15 configurations; macro lines differ 632; SW2 columns differ 0  || NOT DRY-RUN
+straight 1700    CHANGED 10 -> 10 configurations; macro lines differ 632; SW2 columns differ 0  || NOT DRY-RUN
+straight 0403    same    7 -> 7 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 2403    same    34 -> 34 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 2405    same    28 -> 28 configurations; macro lines differ 0; SW2 columns differ 0  || 
+straight 2404    CHANGED NEW (live macro False, live SW2 True), 57 configurations  || IDENTICAL to dry-run
+straight 0304    CHANGED NEW (live macro False, live SW2 False), 12 configurations  || IDENTICAL to dry-run
+straight 0306    CHANGED NEW (live macro False, live SW2 False), 11 configurations  || IDENTICAL to dry-run
+straight 6408HHP no macro (0 rows)
+straight 5406HHP no macro (0 rows)
+straight 5406SHP no macro (0 rows)
+tee      2650    CHANGED 4 -> 4 configurations; macro lines differ 1977; SW2 columns differ 1 ['$COMMENT']  || NOT DRY-RUN
+tee      2601    same    10 -> 10 configurations; macro lines differ 0; SW2 columns differ 0  || 
+tee      2602    CHANGED 5 -> 5 configurations; macro lines differ 1274; SW2 columns differ 0  || NOT DRY-RUN
+tee      2605    CHANGED 7 -> 7 configurations; macro lines differ 1918; SW2 columns differ 1 ['$COMMENT']  || NOT DRY-RUN
+tee      2606    CHANGED NEW (live macro False, live SW2 False), 5 configurations  || IDENTICAL to dry-run
+tee      2609    CHANGED NEW (live macro False, live SW2 False), 1 configurations  || IDENTICAL to dry-run
+tee      2611    CHANGED NEW (live macro False, live SW2 False), 2 configurations  || IDENTICAL to dry-run
+tee      5600    CHANGED 6 -> 6 configurations; macro lines differ 1900; SW2 columns differ 1 ['$COMMENT']  || NOT DRY-RUN
+tee      5602    CHANGED 2 -> 2 configurations; macro lines differ 1274; SW2 columns differ 0  || NOT DRY-RUN
+tee      5604    same    4 -> 4 configurations; macro lines differ 0; SW2 columns differ 0  || 
+tee      5605    same    4 -> 4 configurations; macro lines differ 0; SW2 columns differ 0  || 
+tee      5652    no macro (0 rows)
+tee      5603    no macro (0 rows)
+tee      5601    no macro (0 rows)
+tee      2501    CHANGED 48 -> 48 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      5500    CHANGED 16 -> 16 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      5502    CHANGED 13 -> 13 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      5504    CHANGED 5 -> 5 configurations; macro lines differ 1285; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      2503    CHANGED 29 -> 29 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      2504    CHANGED NEW (live macro False, live SW2 False), 4 configurations  || IDENTICAL to dry-run
+tee      2505    CHANGED NEW (live macro False, live SW2 False), 1 configurations  || IDENTICAL to dry-run
+tee      2701    CHANGED 15 -> 15 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      2702    CHANGED 11 -> 11 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      2703    same    12 -> 12 configurations; macro lines differ 0; SW2 columns differ 0  || 
+tee      2704    CHANGED 12 -> 12 configurations; macro lines differ 1275; SW2 columns differ 0  || NOT DRY-RUN
+tee      6500    CHANGED 15 -> 24 configurations; macro lines differ 13; SW2 columns differ 65 ['$COMMENT', '$PRP@AxialSource', '$PRP@DataStatus', '$PRP@Description', '$PRP@End1_Thread', '$PRP@End2_Thread', '$PRP@GeometryRoot', '$PRP@OMiSKU']...; added ['6500-04-06-FG', '6500-12-08-FG', '6500-12-16-FG', '6500-16-12-FG', '6500-L-04-04-FG', '6500-L-06-06-FG', '6500-L-08-08-FG', '6500-L-12-12-FG', '6500-L-16-16-FG']  || IDENTICAL to dry-run
+tee      6501    CHANGED 11 -> 14 configurations; macro lines differ 12; SW2 columns differ 61 ['$COMMENT', '$PRP@AxialSource', '$PRP@DataStatus', '$PRP@Description', '$PRP@End1_Thread', '$PRP@End2_Thread', '$PRP@GeometryRoot', '$PRP@OMiSKU']...; added ['6501-06-06-FG', '6501-12-08-FG', '6501-12-12-FG']  || IDENTICAL to dry-run
+tee      6503    CHANGED 1 -> 1 configurations; macro lines differ 1285; SW2 columns differ 4 ['$PRP@AxialSource', 'PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      6502    CHANGED 11 -> 11 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      6600    CHANGED 9 -> 9 configurations; macro lines differ 1274; SW2 columns differ 0  || NOT DRY-RUN
+tee      1501    CHANGED 17 -> 17 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      1503    no macro (0 rows)
+tee      1502    CHANGED NEW (live macro False, live SW2 False), 1 configurations  || IDENTICAL to dry-run
+tee      6602    CHANGED 9 -> 9 configurations; macro lines differ 1275; SW2 columns differ 0  || NOT DRY-RUN
+tee      6802    CHANGED 20 -> 20 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run
+tee      6803    same    5 -> 5 configurations; macro lines differ 0; SW2 columns differ 0  || 
+tee      6804    same    8 -> 8 configurations; macro lines differ 0; SW2 columns differ 0  || 
+tee      6801    CHANGED 35 -> 35 configurations; macro lines differ 11; SW2 columns differ 3 ['PUCK_R1B@PUCK', 'PUCK_R1T@PUCK', 'PUCK_XC@PUCK']  || IDENTICAL to dry-run

@@ -96,3 +96,18 @@ tools/_out/omi_answers_20261018/scratch_root/
 tools/_out/newtypes_20261014/swtest/
 tools/_out/newtypes_20261014/out/
 tools/_out/newtypes_20261014/history/
+# --- batch 16 ship (2026-10-19): the plan, checks, scripts and paperwork scripts; not the regenerated macros, old files or
+#     workbook copies (the parts and old files stay local)
+!tools/_out/ship_20261019/
+tools/_out/ship_20261019/*
+!tools/_out/ship_20261019/SHIP_PLAN.md
+!tools/_out/ship_20261019/checks/
+!tools/_out/ship_20261019/scripts/
+!tools/_out/ship_20261019/paperwork/
+tools/_out/ship_20261019/paperwork/*.xlsx
+# --- puck-fix dry-run verdict (the rest of puckfix_20261009 stays local, tools_new is re-included above)
+!tools/_out/puckfix_20261009/DRYRUN_VERDICT_2026-10-19.txt
+!tools/_out/puckfix_20261009/cmp_dryrun_resume.py
+!tools/_out/puckfix_20261009/cmp_dryrun_resume_out.txt
+!tools/_out/puckfix_20261009/sliver_scaling.py
+!tools/_out/puckfix_20261009/sliver_scaling_out.txt

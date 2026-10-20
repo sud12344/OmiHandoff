@@ -1,4 +1,4 @@
-Build_6502_MASTER  10/2/2026 8:30:17 PM
+Build_6502_MASTER  10/19/2026 7:29:33 PM
 OK    dim M1 = 1.2500 in (expect 1.2500)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim SW1_BODYS = 0.8850 in (expect 0.8850)
@@ -72,9 +72,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.3750 in (expect 0.3750)
 OK    dim PUCK_HT = 0.3750 in (expect 0.3750)
-OK    dim PUCK_R1B = 0.2165 in (expect 0.2165)
-OK    dim PUCK_R1T = 0.2165 in (expect 0.2165)
-OK    dim PUCK_XC = 0.4330 in (expect 0.4330)
+OK    dim PUCK_R1B = 0.2160 in (expect 0.2160)
+OK    dim PUCK_R1T = 0.2160 in (expect 0.2160)
+OK    dim PUCK_XC = 0.4325 in (expect 0.4325)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    dim TRIM_A0 = 0.3650 in (expect 0.3650)
@@ -189,7 +189,7 @@ OK    leg 1 tip (exact) 1.2500 along +X (expect 1.2500)
 OK    leg 2 tip (exact) 0.9800 along the 135-deg leg (expect 0.9800)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: swivel nut flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_6502_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_6502_SW2.xlsx
 OK    Configurations after table: 12 (expect 12)
       config check 1: 6502-04-04-FG
 OK    6502-04-04-FG M1@LEG1 = 0.9400 (table 0.9400)
@@ -208,8 +208,8 @@ OK    6502-04-04-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
 OK    6502-04-04-FG HEXL@HEX1_BODY = 0.2550 (table 0.2550)
 OK    6502-04-04-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
 OK    6502-04-04-FG HEXL@HEX2_BODY = 0.1700 (table 0.1700)
-OK    6502-04-04-FG PUCK_R1B@PUCK = 0.1270 (table 0.1270)
-OK    6502-04-04-FG PUCK_XC@PUCK = 0.2540 (table 0.2540)
+OK    6502-04-04-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    6502-04-04-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
 OK    6502-04-04-FG TRIM_A0@NECKTRIM1 = 0.2550 (table 0.2550)
 OK    6502-04-04-FG TRIM_LEN@NECKTRIM1 = 0.0360 (table 0.0360)
 OK    6502-04-04-FG TRIM_RIN@NECKTRIM1 = 0.1158 (table 0.1158)
@@ -237,8 +237,8 @@ OK    6502-12-12-FG HEXAF@HEX1 = 1.0625 (table 1.0625)
 OK    6502-12-12-FG HEXL@HEX1_BODY = 0.4110 (table 0.4110)
 OK    6502-12-12-FG HEXAF@HEX2 = 1.0625 (table 1.0625)
 OK    6502-12-12-FG HEXL@HEX2_BODY = 0.4160 (table 0.4160)
-OK    6502-12-12-FG PUCK_R1B@PUCK = 0.3067 (table 0.3067)
-OK    6502-12-12-FG PUCK_XC@PUCK = 0.6134 (table 0.6134)
+OK    6502-12-12-FG PUCK_R1B@PUCK = 0.3062 (table 0.3062)
+OK    6502-12-12-FG PUCK_XC@PUCK = 0.6129 (table 0.6129)
 OK    6502-12-12-FG TRIM_A0@NECKTRIM1 = 0.4110 (table 0.4110)
 OK    6502-12-12-FG TRIM_LEN@NECKTRIM1 = 0.0420 (table 0.0420)
 OK    6502-12-12-FG TRIM_RIN@NECKTRIM1 = 0.3610 (table 0.3610)
@@ -266,8 +266,8 @@ OK    6502-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
 OK    6502-32-32-FG HEXL@HEX1_BODY = 1.2400 (table 1.2400)
 OK    6502-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
 OK    6502-32-32-FG HEXL@HEX2_BODY = 0.8870 (table 0.8870)
-OK    6502-32-32-FG PUCK_R1B@PUCK = 0.7217 (table 0.7217)
-OK    6502-32-32-FG PUCK_XC@PUCK = 1.4434 (table 1.4434)
+OK    6502-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    6502-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
 OK    6502-32-32-FG TRIM_A0@NECKTRIM1 = 1.2400 (table 1.2400)
 OK    6502-32-32-FG TRIM_LEN@NECKTRIM1 = 0.0600 (table 0.0600)
 OK    6502-32-32-FG TRIM_RIN@NECKTRIM1 = 0.9843 (table 0.9843)
@@ -279,21 +279,21 @@ OK    6502-32-32-FG FILL_ROUT@NECKFILL1 = 1.0785 (table 1.0785)
 OK    6502-32-32-FG one solid body (found 1)
       6502-32-32-FG box x -2.234..2.910  y -1.663..2.234
       All-config sweep: rebuilding 11 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/11  6502-04-04-FG  rebuilt in 0.9 s
-      sweep 2/11  6502-05-05-FG  rebuilt in 1.2 s
-      sweep 3/11  6502-06-06-FG  rebuilt in 1.4 s
+      sweep 1/11  6502-04-04-FG  rebuilt in 1.1 s
+      sweep 2/11  6502-05-05-FG  rebuilt in 1.5 s
+      sweep 3/11  6502-06-06-FG  rebuilt in 1.7 s
       sweep 4/11  6502-08-06-FG  rebuilt in 1.3 s
-      sweep 5/11  6502-08-08-FG  rebuilt in 1.0 s
+      sweep 5/11  6502-08-08-FG  rebuilt in 0.8 s
       sweep 6/11  6502-10-08-FG  rebuilt in 1.1 s
       sweep 7/11  6502-10-10-FG  rebuilt in 1.3 s
-      sweep 8/11  6502-12-12-FG  rebuilt in 0.4 s
-      sweep 9/11  6502-20-20-FG  rebuilt in 1.3 s
-      sweep 10/11  6502-24-24-FG  rebuilt in 1.4 s
-      sweep 11/11  6502-32-32-FG  rebuilt in 1.1 s
+      sweep 8/11  6502-12-12-FG  rebuilt in 1.0 s
+      sweep 9/11  6502-20-20-FG  rebuilt in 1.6 s
+      sweep 10/11  6502-24-24-FG  rebuilt in 2.0 s
+      sweep 11/11  6502-32-32-FG  rebuilt in 1.0 s
 OK    All-config sweep: 11 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6502-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6502_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6502_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6502\6502_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6502\6502_MASTER.SLDPRT

@@ -11,6 +11,11 @@ anything, update it when a batch ships or the user decides something.**
 **2026-10-19: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`** (everything staged on 2026-10-18: Brennan data allowed and
 marked, OMi answers, A1-A24 answers, the batch-17 stage + merged generator tools, 1,357 configurations generate; SolidWorks sign-in is
 broken; nothing shipped since batch 15). The pointers below are older background.
+**2026-10-19: BATCH 16 SHIPPED** (`03_SCRIPTS/RUN_ME_batch16.txt`, QA #170-#172, `tools/_out/ship_20261019/`): wave 1, leftovers,
+JIC tees, 2404 (generated, two bores), 5405 + the corner-puck fix (`PUCK_INSET` in the live gen_tee.py) -> 1,103 of 1,804
+configurations in a master, 71 masters in `11_MASTERS`. Live `tools/` + `04_DESIGN_TABLES` = the batch-16 state. Next: adapters77
+(user OK), then batch 17. SolidWorks "License not granted ... License error 20" = lost 3DEXPERIENCE sign-in: the user signs in and
+starts SOLIDWORKS Design from the platform; never start SLDWORKS.exe yourself.
 **2026-10-18 (night): the folder is a git repo (branch main, `.gitignore` keeps it ~70 MB: no SolidWorks parts, old staging copies,
 _to_delete, _archive) for Claude Code cloud sessions - see `CLOUD_SETUP.md` (the cloud runs the Python side only, never SolidWorks).
 Commit new staging work you want in the cloud.**
@@ -32,7 +37,7 @@ tables; on OMi's website 269 of 385 ORFS parts have dimensions (216 VERIFIED / 5
 plain = Brennan forged on every cell, user 2026-10-15). Website lists: `tools/_out/omi_enum_20261015/` (OMi's store allows ~2
 requests/h - don't crawl it from a second session). ORFS model-type plan + STEP list: `tools/_out/orfs_modeltype_20261016/`.
 The 77 adapters the 2026-09 crawl dropped: 37 wrongly-DROP rows staged to BUILD in `tools/_out/adapters77_20261016/` (do not
-overwrite; apply with `apply_77.py --apply` only at ship time, after batch 16). In flight before it: `00_DOCS/NEXT_SESSION_PROMPT_2026-10-10.md` (puck-fix dry runs, batch 16 not shipped).**
+overwrite; apply with `apply_77.py --apply` only at ship time, after batch 16 - batch 16 shipped 2026-10-19).**
 **2026-10-09: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-09.md`** (drawings + OMi email done; 2404 / wave 1 / leftovers / JIC tees
 staged and checked, SolidWorks dry runs next). The pointers below are older background.
 **START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-01.md`** (2026-10-01 / 02), then `00_DOCS/NEXT_SESSION_PROMPT_2026-09-26.md`
@@ -72,7 +77,9 @@ ASSUMED. Evidence 2026-09-26: OMi's lengths are Brennan's data - OMi + Brennan c
   held-out 5404N-06 fix, `work/5404N-06/`) and `ship_20261002/` (batch 14: build plan, build outputs, `old_files/` = the
   second copy of every file batch 14 replaced), `fix2702_20261002/` + `ship_20261002b/` (batch 14b), `batch15_20261002/`
   (batch 15 staging: CHANGES.csv per group, staged tables, the macros that built the parts, dry runs, held-row proposals),
-  `ship_20261008/` (batch 15 ship: checks, scripts, `old_files/`) and `newmasters_20261002/` (wave 1, paused, unmerged).
+  `ship_20261008/` (batch 15 ship: checks, scripts, `old_files/`), `newmasters_20261002/` (wave 1 history), and the batch-16
+  folders `wave1_ship_20261009/`, `r2404_20261009/`, `puckfix_20261009/` (staging, the dry-run parts) + `ship_20261019/` (ship:
+  checks, scripts, `old_files/`).
   Do not overwrite those: point env vars `GS_OUT` / `GT_OUT` at a new folder.
 - `09_STEP_FILES` - Brennan reference STEPs `BRENNAN_<part number>.stp`; `11_MASTERS` - built masters;
   `11_MASTERS_NEW` - STAGING for builds waiting for the user's review (empty since batch 15 shipped on 2026-10-08: its 18

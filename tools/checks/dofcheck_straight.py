@@ -13,6 +13,8 @@ def parse(path):
     P = np.array([(nums[i], nums[i + 1]) for i in range(0, len(nums), 2)])
     blk = t.split('================= 1. DRIVE sketch')[1].split('swFeat.Name = "DRIVE"')[0]
     dims = re.findall(r'Call (Dim_\w+|Collinear)\(([^)]*)\)', blk)
+    # 2026-10-02 (0306 locknut): an inline "origin lies on segment i" relation, tagged by the generator with this marker comment
+    dims += [('OriginOnLine', i) for i in re.findall(r"' ORIGIN-ON-LINE seg\((\d+)\)", blk)]
     return P, dims
 
 def check(path, verbose=False):
@@ -58,6 +60,13 @@ def check(path, verbose=False):
         elif name == 'Dim_ang':
             i, j = int(a[0]), int(a[1])
             cons.append((f'ang {a[2]}', lambda q, i=i, j=j: math.sin(segang(q, i) - segang(q, j)) if j != n - 1 else math.sin(segang(q, i))))
+        elif name == 'OriginOnLine':
+            # the sketch origin (0, 0) lies on the (extended) line through segment i
+            i = int(a[0]); a0, b0 = segs[i]
+            def onl(q, a0=a0, b0=b0):
+                x1, y1, x2, y2 = X(q, a0), Y(q, a0), X(q, b0), Y(q, b0)
+                return ((0.0 - x1) * (y2 - y1) - (0.0 - y1) * (x2 - x1)) / math.hypot(x2 - x1, y2 - y1)
+            cons.append((f'origin on seg{i}', onl))
         elif name == 'Collinear':
             i, j = int(a[0]), int(a[1])     # two horizontal lines made collinear -> same radius
             a0, b0 = segs[i]

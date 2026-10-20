@@ -1,0 +1,67 @@
+2026-10-19 resume of cmp_dryrun.py (unchanged logic). The 2026-10-09 run (out_dryrun.txt) stopped after 2701 when SolidWorks
+closed; 2702 5500 5502 5504 6502 6503 1501 6801 6802 were dry-run on 2026-10-18/19 through the MCP tools directly (the CLI could not
+reach SolidWorks): their reports are sw_dryrun/<root>/Build_<root>_report.txt and their puck audits sw_dryrun/<root>/puck_audit.json
+(same audit code as make_calls.py). Output: cmp_dryrun_resume_out.txt.
+
+2026-10-09 puck fix: check the SolidWorks dry runs of the 17 elbow roots built with PUCK_INSET (out_dryrun.txt).
+
+Per root: report FAIL lines; every configuration 1 body and its corner puck present (cone area about Z / AF^2 > 0.2; a merged
+puck gives ~0.79 on 90 deg elbows, ~0.39 on 45 deg, a dropped one 0).
+Per configuration against the build before the fix:
+  shipped configurations  puck_audit_20261009/audit_rows.json (read-only audit of the 11_MASTERS parts, same measure)
+  new configurations      wave1_ship_20261009/swtest/calls/out_all.txt (today's dry runs of the staged batch, before the fix)
+Expected: a configuration whose puck was there loses only the PUCK_INSET sliver (-0.0005 in radially on the outer corner:
+0 > dV > -0.002 in^3); one whose puck was dropped gains the outer corner = 0.1527 AF^3 (quarter puck, 90 deg) or 0.0764 AF^3
+(eighth, 45 deg) minus the sliver (within 3 %).
+
+2504   OK  report FAIL 0 (49.3 s; OK    All-config sweep: 4 configurations rebuilt, 0 feature/body failures); 4 configurations, puck present in all: True; sliver only 2 (dV -0.000192 .. -0.000096); corner restored 2
+    restored 2504-04-04-FG +0.006384 (corner 0.006416; was staged dry run 10-09)
+    restored 2504-06-06-FG +0.013536 (corner 0.013590; was staged dry run 10-09)
+2505   OK  report FAIL 0 (30.9 s; OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures); 1 configurations, puck present in all: True; sliver only 1 (dV -0.000296 .. -0.000296); corner restored 0
+1502   OK  report FAIL 0 (32.9 s; OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures); 1 configurations, puck present in all: True; sliver only 1 (dV -0.000107 .. -0.000107); corner restored 0
+6500   BAD report FAIL 0 (62.6 s; OK    All-config sweep: 24 configurations rebuilt, 0 feature/body failures); 24 configurations, puck present in all: True; sliver only 19 (dV -0.001202 .. -0.000065); corner restored 4
+    restored 6500-06-04-FG +0.027072 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    restored 6500-06-06-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    restored 6500-L-04-04-FG +0.012768 (corner 0.012832; was staged dry run 10-09)
+    restored 6500-L-06-06-FG +0.027073 (corner 0.027180; was staged dry run 10-09)
+    CHECK 6500-32-32-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+6501   BAD report FAIL 0 (51.2 s; OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures); 14 configurations, puck present in all: True; sliver only 13 (dV -0.001195 .. -0.000107); corner restored 0
+    CHECK 6501-32-32-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+2501   BAD report FAIL 0 (101.4 s; OK    All-config sweep: 48 configurations rebuilt, 0 feature/body failures); 48 configurations, puck present in all: True; sliver only 43 (dV -0.001201 .. -0.000066); corner restored 2
+    restored 2501-06-02-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    restored 2501-L-06-04-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    CHECK 2501-24-32-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+    CHECK 2501-32-24-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+    CHECK 2501-32-32-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+2503   OK  report FAIL 0 (67.2 s; OK    All-config sweep: 29 configurations rebuilt, 0 feature/body failures); 29 configurations, puck present in all: True; sliver only 28 (dV -0.001062 .. -0.000033); corner restored 1
+    restored 2503-06-04-FG +0.013537 (corner 0.013590; was 11_MASTERS audit, ratio 0.0)
+2701   OK  report FAIL 0 (74.2 s; OK    All-config sweep: 15 configurations rebuilt, 0 feature/body failures); 15 configurations, puck present in all: True; sliver only 12 (dV -0.000903 .. -0.000066); corner restored 3
+    restored 2701-02-02-FG +0.012767 (corner 0.012832; was 11_MASTERS audit, ratio 0.0)
+    restored 2701-06-06-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    restored 2701-06-06-FG-LN +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+2702   OK  report FAIL 0 (mcp s; OK    All-config sweep: 11 configurations rebuilt, 0 feature/body failures); 11 configurations, puck present in all: True; sliver only 9 (dV -0.000449 .. -0.000033); corner restored 2
+    restored 2702-06-06-FG +0.013537 (corner 0.013590; was 11_MASTERS audit, ratio 0.0)
+    restored 2702-06-06-FG-LN +0.013537 (corner 0.013590; was 11_MASTERS audit, ratio 0.0)
+5500   BAD report FAIL 0 (mcp s; OK    All-config sweep: 16 configurations rebuilt, 0 feature/body failures); 16 configurations, puck present in all: True; sliver only 15 (dV -0.001195 .. -0.000066); corner restored 0
+    CHECK 5500-32-32-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+5502   BAD report FAIL 0 (mcp s; OK    All-config sweep: 13 configurations rebuilt, 0 feature/body failures); 13 configurations, puck present in all: True; sliver only 11 (dV -0.001202 .. -0.000107); corner restored 0
+    CHECK 5502-24-24-FG: dV -0.002228 (corner would be 2.562134) [11_MASTERS audit]
+    CHECK 5502-32-32-FG: dV -0.002685 (corner would be 3.388448) [11_MASTERS audit]
+5504   OK  report FAIL 0 (mcp s; OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures); 5 configurations, puck present in all: True; sliver only 5 (dV -0.000903 .. -0.000106); corner restored 0
+6502   OK  report FAIL 0 (mcp s; OK    All-config sweep: 11 configurations rebuilt, 0 feature/body failures); 11 configurations, puck present in all: True; sliver only 10 (dV -0.001063 .. -0.000033); corner restored 1
+    restored 6502-06-06-FG +0.013536 (corner 0.013590; was 11_MASTERS audit, ratio 0.0)
+6503   OK  report FAIL 0 (mcp s; OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures); 1 configurations, puck present in all: True; sliver only 1 (dV -0.000382 .. -0.000382); corner restored 0
+1501   BAD report FAIL 0 (mcp s; OK    All-config sweep: 17 configurations rebuilt, 0 feature/body failures); 17 configurations, puck present in all: True; sliver only 16 (dV -0.000903 .. -0.000065); corner restored 0
+    CHECK 1501-32-32-FG: dV -0.002126 (corner would be 2.386173) [11_MASTERS audit]
+6801   BAD report FAIL 0 (mcp s; OK    All-config sweep: 35 configurations rebuilt, 0 feature/body failures); 35 configurations, puck present in all: True; sliver only 30 (dV -0.001202 .. -0.000065); corner restored 3
+    restored 6801-06-04-NWO-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    restored 6801-06-05-NWO-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    restored 6801-06-06-NWO-FG +0.027073 (corner 0.027180; was 11_MASTERS audit, ratio 0.0)
+    CHECK 6801-24-32-NWO-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+    CHECK 6801-32-32-NWO-FG: dV -0.002125 (corner would be 2.386173) [11_MASTERS audit]
+6802   OK  report FAIL 0 (mcp s; OK    All-config sweep: 20 configurations rebuilt, 0 feature/body failures); 20 configurations, puck present in all: True; sliver only 18 (dV -0.001063 .. -0.000033); corner restored 2
+    restored 6802-06-04-NWO-FG +0.013537 (corner 0.013590; was 11_MASTERS audit, ratio 0.0)
+    restored 6802-06-06-NWO-FG +0.013536 (corner 0.013590; was 11_MASTERS audit, ratio 0.0)
+
+20 configurations got their outer corner back
+SOMETHING TO CHECK - see above

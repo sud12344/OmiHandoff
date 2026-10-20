@@ -30,7 +30,7 @@ def straight_chain(EA, EB, L, rB):
     if swA:
         V = [(x, r) for (x, r) in EA['VG'][::-1]]; V += [(x, r) for (x, r) in EA['VO']]; V += [(EA['endlen'], rB)]
     else:
-        V = [(0.0, 0.0)] + (EA['V'] if EA['V'] else []) + [(EA['endlen'], rB)]
+        V = [(0.0, 0.0)] + (EA['V'] if EA['V'] else []) + ([] if EA.get('cap') else [(EA['endlen'], rB)])   # 2026-10-02 (PLUGS): capped NPTF cone ends on the body line
     V += [(L - EB['endlen'], rB)]
     if EB.get('cav') and EB['kind'] in ('JICSW', 'NPSMSW'):
         V += [(L - x, r) for (x, r) in EB['VO'][::-1]]; V += [(L - x, r) for (x, r) in EB['VG']]

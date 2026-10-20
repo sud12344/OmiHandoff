@@ -1,0 +1,18 @@
+Puck-fix SolidWorks dry runs - verdict 2026-10-19
+
+17 elbow roots built from regen/new (tools_new = wave1_ship tools + PUCK_INSET 0.0005):
+  2504 2505 1502 6500 6501 2501 2503 2701  - out_dryrun.txt (2026-10-09; SolidWorks closed during 2702)
+  2702 5500 5502 5504 6502 6503 1501 6801 6802 - 2026-10-18/19 through the MCP tools (sw_dryrun/<root>/Build_<root>_report.txt,
+  puck_audit.json). SolidWorks had lost its 3DEXPERIENCE sign-in since 2026-10-15 ("License not granted: X1W ... License error 20",
+  the platform answered the role query with its login page - SWXDesktopHelper logs); the user signed in again on 2026-10-19.
+
+cmp_dryrun_resume.py -> cmp_dryrun_resume_out.txt:
+  every report 0 FAIL lines, every configuration rebuilt, 1 solid body, puck present (cone ratio >= 0.39 / 0.78) - 245 + 20 = 265
+  configurations; 20 configurations got their outer corner back (the 16 shipped ones of the audit + 2504-04-04 / -06-06,
+  6500-L-04-04 / -L-06-06 - exactly the puck_audit_20261009 list); every other configuration of a shipped or staged build changes by
+  the PUCK_INSET sliver only.
+  The script says "SOMETHING TO CHECK" for 11 configurations (-24 / -32 sizes of 1501 2501 5500 5502 6500 6501 6801): dV -0.0021 ..
+  -0.0027 in^3, just outside its fixed sliver window (-0.002). sliver_scaling.py -> sliver_scaling_out.txt: the sliver is a 0.0005 in
+  shell over the puck cones, so it scales with AF^2; dV / AF^2 = -0.000340 (min -0.000342, max -0.000336) on all 177 kept 90 deg
+  configurations, these 11 included; 45 deg -0.000169 .. -0.000263 (68). => the 11 are the sliver, nothing else.
+VERDICT: PASS - 0 FAIL, 1 body each, old configurations unchanged apart from the intended puck inset.

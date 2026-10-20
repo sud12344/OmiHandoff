@@ -1,4 +1,4 @@
-Build_5500_MASTER  10/2/2026 8:39:01 PM
+Build_5500_MASTER  10/19/2026 7:26:38 PM
 OK    dim M1 = 1.4700 in (expect 1.4700)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim NPTF1_MAJR = 0.4078 in (expect 0.4078)
@@ -35,9 +35,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.4400 in (expect 0.4400)
 OK    dim PUCK_HT = 0.4400 in (expect 0.4400)
-OK    dim PUCK_R1B = 0.2540 in (expect 0.2540)
-OK    dim PUCK_R1T = 0.2540 in (expect 0.2540)
-OK    dim PUCK_XC = 0.5081 in (expect 0.5081)
+OK    dim PUCK_R1B = 0.2535 in (expect 0.2535)
+OK    dim PUCK_R1T = 0.2535 in (expect 0.2535)
+OK    dim PUCK_XC = 0.5076 in (expect 0.5076)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    One solid body after legs+hex
@@ -120,7 +120,7 @@ OK    Y extent -0.508 .. 1.470 (expect -0.508 .. 1.470)
       Bounding box z -0.440 .. 0.440 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_5500_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_5500_SW2.xlsx
 OK    Configurations after table: 17 (expect 17)
       config check 1: 5500-02-02-FG
 OK    5500-02-02-FG M1@LEG1 = 0.7200 (table 0.7200)
@@ -137,8 +137,8 @@ OK    5500-02-02-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
 OK    5500-02-02-FG HEXL@HEX1_BODY = 0.3400 (table 0.3400)
 OK    5500-02-02-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
 OK    5500-02-02-FG HEXL@HEX2_BODY = 0.3400 (table 0.3400)
-OK    5500-02-02-FG PUCK_R1B@PUCK = 0.1270 (table 0.1270)
-OK    5500-02-02-FG PUCK_XC@PUCK = 0.2540 (table 0.2540)
+OK    5500-02-02-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    5500-02-02-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
 OK    5500-02-02-FG one solid body (found 1)
       5500-02-02-FG box x -0.254..0.720  y -0.254..0.720
       config check 2: 5500-32-32-FG
@@ -156,31 +156,31 @@ OK    5500-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
 OK    5500-32-32-FG HEXL@HEX1_BODY = 1.9700 (table 1.9700)
 OK    5500-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
 OK    5500-32-32-FG HEXL@HEX2_BODY = 1.9700 (table 1.9700)
-OK    5500-32-32-FG PUCK_R1B@PUCK = 0.7217 (table 0.7217)
-OK    5500-32-32-FG PUCK_XC@PUCK = 1.4434 (table 1.4434)
+OK    5500-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    5500-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
 OK    5500-32-32-FG one solid body (found 1)
       5500-32-32-FG box x -1.443..3.000  y -1.443..3.000
       All-config sweep: rebuilding 16 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/16  5500-02-02-FG  rebuilt in 0.8 s
-      sweep 2/16  5500-04-02-FG  rebuilt in 0.7 s
-      sweep 3/16  5500-04-04-FG  rebuilt in 0.9 s
-      sweep 4/16  5500-06-04-FG  rebuilt in 0.9 s
+      sweep 1/16  5500-02-02-FG  rebuilt in 0.6 s
+      sweep 2/16  5500-04-02-FG  rebuilt in 0.8 s
+      sweep 3/16  5500-04-04-FG  rebuilt in 0.7 s
+      sweep 4/16  5500-06-04-FG  rebuilt in 0.7 s
       sweep 5/16  5500-06-06-FG  rebuilt in 0.8 s
-      sweep 6/16  5500-08-04-FG  rebuilt in 0.9 s
-      sweep 7/16  5500-08-06-FG  rebuilt in 1.0 s
-      sweep 8/16  5500-08-08-FG  rebuilt in 0.7 s
-      sweep 9/16  5500-12-08-FG  rebuilt in 0.7 s
-      sweep 10/16  5500-12-12-FG  rebuilt in 0.9 s
-      sweep 11/16  5500-16-08-FG  rebuilt in 0.9 s
+      sweep 6/16  5500-08-04-FG  rebuilt in 1.0 s
+      sweep 7/16  5500-08-06-FG  rebuilt in 0.7 s
+      sweep 8/16  5500-08-08-FG  rebuilt in 0.6 s
+      sweep 9/16  5500-12-08-FG  rebuilt in 0.8 s
+      sweep 10/16  5500-12-12-FG  rebuilt in 0.6 s
+      sweep 11/16  5500-16-08-FG  rebuilt in 0.7 s
       sweep 12/16  5500-16-12-FG  rebuilt in 0.9 s
-      sweep 13/16  5500-16-16-FG  rebuilt in 0.9 s
-      sweep 14/16  5500-20-20-FG  rebuilt in 0.9 s
-      sweep 15/16  5500-24-24-FG  rebuilt in 0.9 s
-      sweep 16/16  5500-32-32-FG  rebuilt in 0.7 s
+      sweep 13/16  5500-16-16-FG  rebuilt in 1.0 s
+      sweep 14/16  5500-20-20-FG  rebuilt in 0.7 s
+      sweep 15/16  5500-24-24-FG  rebuilt in 0.8 s
+      sweep 16/16  5500-32-32-FG  rebuilt in 1.0 s
 OK    All-config sweep: 16 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 5500-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 17 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 17 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\5500_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\5500_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\5500\5500_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\5500\5500_MASTER.SLDPRT

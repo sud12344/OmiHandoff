@@ -331,7 +331,12 @@ JICF_MEAS = {8: dict(RCS=0.3775, P=0.375),
              # minor at every size, as at -08; the model keeps the basic minor.)
              4: dict(RCS=0.2215, P=0.328), 5: dict(RCS=0.2525, P=0.344), 6: dict(RCS=0.2835, P=0.344), 10: dict(RCS=0.44, P=0.469),
              12: dict(RCS=0.5335, P=0.50), 14: dict(RCS=0.5965, P=0.531), 16: dict(RCS=0.6585, P=0.563), 20: dict(RCS=0.835, P=0.563),
-             24: dict(RCS=0.9605, P=0.655), 32: dict(RCS=1.2735, P=0.828)}
+             24: dict(RCS=0.9605, P=0.655), 32: dict(RCS=1.2735, P=0.828),
+             # 2026-10-02 (new masters, group NUTS-CAPS): -03 measured on the Brennan 2406-03-04 STEP (user download 2026-10-02) with
+             # tools/measure/ports.py (which reproduces every entry above) and the new capnut.py --port walker (same values): 45deg countersink
+             # from dia 0.380, minor bore (Brennan 0.334 dia, ASME basic minor 0.3299) to 0.266 from the face, 37deg seat straight to the bore.
+             # No 2406 configuration uses it yet (the 2406-03-04 review row is DataStatus MISSING); the 0304-C / 0306 -03 rows do.
+             3: dict(RCS=0.19, P=0.266)}
 
 
 def end_ORBF(dash, sfx, minor, bore=None):
@@ -593,6 +598,96 @@ def end_PLAIN(sfx):
     return dict(kind='PLAIN', V=[], endlen=0.0, seg=dict(face=0), cols={}, thr='plug head', faceR=None, td=0.0, P1=0.0, thread=None)
 
 
+# ---- 2026-10-02 (new masters, group NUTS-CAPS): JIC CAP NUT 0304-C and JIC BULKHEAD LOCKNUT 0306 -----------------------------------
+# Pilots (user downloads, 09_STEP_FILES): Brennan 0304-C-08 and 0306-08, sectioned with tools/measure/capnut.py / locknut.py (walkers
+# validated on the twelve Brennan 2406 female JIC ports: they return JICF_MEAS above at every size). Both parts are a hex prism with the
+# female JIC thread of their dash; the per-size internal geometry is taken from the Brennan female JIC PORT of the same dash (JICF_MEAS,
+# 2406 STEPs) - the pilots show that the cap cavity and the locknut countersinks ARE that port:
+#   0304-C-08 cap (L 0.750, hex 0.875): open face -> thread minor 0.6823 (= ASME B1.1 basic minor) to 0.276 -> 0.688 bore to 0.3779 ->
+#             37deg seat from r 0.344 down to r 0.1955 at 0.575 -> flat-bottomed pocket dia 0.391 to 0.625 -> flat crown 0.125 thick.
+#             Brennan 2406-08-08 port: 0.688 bore to 0.375 -> 37deg seat from r 0.344 down to the 0.391 bore at 0.572 (same seat within
+#             0.003; the port has a 45deg countersink, the cap none).
+#   0306-08 locknut (W 0.310, hex 1.000): thread minor 0.6824 (basic minor) through, 45deg countersink from dia 0.755 at BOTH faces =
+#             the Brennan 2406-08-08 port countersink (dia 0.755) exactly.
+#   Both: hex corner chamfers (cap 30deg to the axis from dia 0.86, 0.130 long at each end; locknut 15deg to the face from dia 1.000) and
+#   0.002-deep marking recesses on the flats are NOT modelled (library convention: hex end chamfers are not modelled on any master).
+CAP_POCKETL = 0.050      # 0304-C-08 STEP: flat-bottomed pocket 0.050 deep below the end of the 37deg seat (one STEP: ASSUMED at every size)
+JICBORE = {}             # JIC dash -> the through bore of the matched-dash JIC union 2403-dd-dd (Air-Way D1 == MS51501D, VERIFIED): cap pocket dia
+for _r in load_review('2403')[1]:
+    _dd = re.findall(r'-(\d\d)', str(_r['$PRP@PartNo']))
+    if len(_dd) == 2 and _dd[0] == _dd[1] and _r.get('D1@BORE') is not None: JICBORE.setdefault(int(_dd[0]), _r['D1@BORE'])
+# pilot STEP values (capnut.py / locknut.py), compared per row in the generator summary
+PILOT_NUTCAP = {'0304-C-08': ('Brennan 0304-C-08 STEP: L 0.750, hex 0.875, thread minor 0.6823 to 0.276 then 0.688 bore to 0.3779, 37deg seat '
+                              'to r 0.1955 at 0.575, pocket dia 0.391 to 0.625, crown 0.125; hex corner chamfers 30deg to the axis from dia 0.860 '
+                              '(0.130 long) at both ends'),
+                '0306-08': ('Brennan 0306-08 STEP: W 0.310, hex 1.000, thread minor 0.6824 through, 45deg countersinks from dia 0.755 (0.036 deep) '
+                            'at both faces, hex corner chamfers 15deg to the face from dia 1.000 (0.021 long) at both faces')}
+CAP_ASSUME = ('JIC CAP NUT (one piece): L / hex: review table (OMi dimension file = Brennan, one source); closed FLAT crown at End A, hex over '
+              'the full length; female 37deg JIC cavity at End B = the Brennan female JIC port of the same dash (JICF_MEAS: minor-bore depth P '
+              'measured per size on the Brennan 2406-03..-32 STEPs) WITHOUT its countersink: thread minor = ASME B1.1 basic minor, straight '
+              'helical UN-2B thread over P, 37deg seat from the minor at depth P down to the pocket, pocket dia = the bore of the matched-dash '
+              'JIC union 2403-dd-dd (Air-Way D1 == MS51501D), flat pocket bottom 0.050 below the seat end, crown = L - pocket bottom '
+              '(ASSUMPTION - construction measured on the Brennan 0304-C-08 STEP only: seat start 0.3779 deep vs the 2406-08-08 port 0.375, '
+              'pocket 0.391, pocket 0.050, crown 0.125; the 0.688 bore between the thread (to 0.276) and the seat is drawn at the thread '
+              'minor, as on every library JIC port); hex corner chamfers (30deg to the axis, 0.130 long at -08) and flats marking NOT modelled')
+NUT_ASSUME = ('JIC BULKHEAD LOCKNUT (thin hex nut): thickness / hex: review table (OMi dimension file = Brennan, one source); thread = the JIC '
+              'thread of the dash, minor = ASME B1.1 basic minor (= the Brennan 0306-08 STEP), helical UN-2B thread through the whole thickness; '
+              '45deg countersink at BOTH faces from the countersink dia of the Brennan female JIC port of the same dash (JICF_MEAS RCS, 2406-03..-32 '
+              'STEPs) (ASSUMPTION - equal on the Brennan 0306-08 STEP: dia 0.755 at both faces = 2406-08-08); the DRIVE sketch carries the two '
+              'countersinks with a construction core (apex at the End A origin, flat end behind the End B countersink) that the through bore '
+              'BORECUT_A (= the thread minor) removes; hex corner chamfers (15deg to the face at -08) and flats marking NOT modelled')
+
+
+def end_CROWN(sfx):
+    # 0304 cap: closed flat crown (a PLAIN end - the hex runs to a flat face); only the thread text differs from a plug head
+    return dict(end_PLAIN(sfx), thr='closed cap crown (flat)')
+
+
+def end_JICCAP(dash, sfx, pkd):
+    # female 37deg JIC cap cavity (End B face at x = L): basic-minor thread bore to the port depth P, 37deg seat to the pocket radius,
+    # pocket CAP_POCKETL deep, flat bottom on the axis
+    if dash not in JICF_MEAS: raise KeyError(f'female JIC port geometry not measured for -{dash:02d}: needs a Brennan STEP with a female -{dash:02d} '
+                                             f'JIC thread + seat (BRENNAN_0304-C-{dash:02d} or a 2406-{dash:02d}-xx)')
+    if pkd is None: raise KeyError(f'no matched-dash JIC union bore for -{dash:02d} (2403-{dash:02d}-{dash:02d} D1)')
+    m = JICF_MEAS[dash]; e = JIC[dash]; P_ = 1 / tpi_of(e['thr']); rmin = round((e['TM'] - 1.082532 * P_) / 2, 5); rpk = round(pkd / 2, 5)
+    if not rpk < rmin - 0.02: raise AssertionError(f'cap pocket dia {pkd} not below the thread minor {2 * rmin:.4f}')
+    sE = m['P'] + (rmin - rpk) / TAN37; bot = sE + CAP_POCKETL
+    VG = [(0.0, rmin), (m['P'], rmin), (sE, rpk), (bot, rpk), (bot, 0.0)]
+    cols = {f'JCAP{sfx}_MINR@DRIVE': rmin, f'JCAP{sfx}_MINL@DRIVE': m['P'], f'JCAP{sfx}_PKR@DRIVE': rpk, f'JCAP{sfx}_PKL@DRIVE': CAP_POCKETL,
+            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rmin, 5), f'HEIGHT@HELIX_{sfx}': m['P'], f'PITCH@HELIX_{sfx}': round(P_, 5),
+            f'PROF_R@THDPROF_{sfx}': rmin, f'APEXR@THDPROF_{sfx}': round(rmin + 0.54127 * P_, 5)}
+    return dict(kind='JICCAP', V=[], VG=VG, cav=True, endlen=0.0, seg=dict(face=0), cols=cols, thr=e['thr'] + ' UN-2B (female 37deg JIC cap)',
+                faceR=None, td=2 * rmin, P1=bot, m=m, e=e, rmin=rmin, rpk=rpk, seat_end=sE, bottom=bot, dash=dash,
+                thread=dict(type='HELIX', r=rmin, height=m['P'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
+
+
+def nut_csk(dash):
+    if dash not in JICF_MEAS: raise KeyError(f'female JIC thread countersink not measured for -{dash:02d}: needs a Brennan STEP with a female '
+                                             f'-{dash:02d} JIC thread (BRENNAN_0306-{dash:02d} or a 2406-{dash:02d}-xx)')
+    e = JIC[dash]; P_ = 1 / tpi_of(e['thr']); rmin = round((e['TM'] - 1.082532 * P_) / 2, 5); rcs = JICF_MEAS[dash]['RCS']
+    return e, P_, rmin, rcs, round(rcs - rmin, 5)       # 45deg countersink: axial = radial
+
+
+def end_NUTCSA(dash, sfx):
+    # locknut End A (x = 0): construction core from the origin (axis) to the countersink bottom (cs, rmin), then the 45deg countersink back
+    # to the face at (0, rcs); segment 2 = the End A face (the origin lies on it). The through bore removes the core.
+    e, P_, rmin, rcs, cs = nut_csk(dash)
+    return dict(kind='NUTCSA', V=[(cs, rmin), (0.0, rcs)], endlen=0.0, seg=dict(core=0, csk=1, face=2), faceseg=2,
+                cols={f'NUTCS{sfx}_MINR@DRIVE': rmin, f'NUTCS{sfx}_CSR@DRIVE': rcs}, thr=e['thr'] + ' (45deg countersink)', faceR=None,
+                td=2 * rmin, P1=cs, e=e, rmin=rmin, rcs=rcs, cs=cs, dash=dash, thread=None)
+
+
+def end_NUTCSB(dash, sfx, W):
+    # locknut End B (x = W): 45deg countersink from the face to the minor, then a flat construction core end down to the axis
+    e, P_, rmin, rcs, cs = nut_csk(dash)
+    cols = {f'NUTCS{sfx}_CSR@DRIVE': rcs, f'NUTCS{sfx}_MINR@DRIVE': rmin,
+            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rmin, 5), f'HEIGHT@HELIX_{sfx}': W, f'PITCH@HELIX_{sfx}': round(P_, 5),
+            f'PROF_R@THDPROF_{sfx}': rmin, f'APEXR@THDPROF_{sfx}': round(rmin + 0.54127 * P_, 5)}
+    return dict(kind='NUTCSB', V=[], VG=[(0.0, rcs), (cs, rmin), (cs, 0.0)], cav=True, endlen=0.0, seg=dict(face=0), cols=cols,
+                thr=e['thr'] + ' UN-2B (locknut thread, through)', faceR=None, td=2 * rmin, P1=cs, e=e, rmin=rmin, rcs=rcs, cs=cs, dash=dash,
+                thread=dict(type='HELIX', r=rmin, height=W, pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
+
+
 def end_BRAZE(sfx, d2, l7):
     return dict(kind='BRAZE', V=[], endlen=0.0, seg=dict(face=0), cols={f'SOCKDIA@POCKET_{sfx}': d2, f'DEPTH@POCKETCUT_{sfx}': l7},
                 thr='braze socket', faceR=None, td=d2, P1=l7, thread=None)
@@ -630,6 +725,7 @@ SPEC = {
  '6408': dict(name='ORB Hex Head Plug', L='L@DRIVE', hex='HEXB@HEX', single=True,
               A=lambda r, a, b: end_ORBM(a, 'A', r), B=lambda r, a, b: end_PLAIN('B'),
               bore=('A_blind', 'HOLE@BORE', None), ref='6408-08-O-H',
+              exclude=r'^6408-HHP-', exclude_why='socket-head (hollow hex) ORB plug: built by SPEC 6408HHP (2026-10-02), never as a hex-head plug',
               assume='ORB end: thread length + groove from the 6408 review table (SAE J1926 plug end; no tip chamfer modelled) - Brennan 6408-08-O / 6408-20-O STEPs: identical ORB ends; '
                      'L / hex: Air-Way (Brennan -08 / -20 STEPs agree: L 0.800 / 1.200, hex 0.875 / 1.875); plug head = hex to a plain flat face (hex end chamfers not modelled); '
                      'HOLLOW (-H) configs = the OMi 6408-xx-O cored plug: blind hole HOLE (Air-Way; Brennan 0.422 / 1.093) drilled from the ORB tip, full diameter to the ORB end length + '
@@ -644,6 +740,7 @@ SPEC = {
  '5406': dict(name='Pipe Reducer Bushing (male NPTF x female NPTF)', L='L2@DRIVE', hex='C2HEX@HEX',
               A=lambda r, a, b: end_NPTFM(a, 'A'), B=lambda r, a, b: end_NPTFF(b, 'B', r['TAPDRILL@BORE']),
               bore=('A_to_pocket', lambda r, a, b: r['TAPDRILL@BORE'], None), ref='5406-16-08', bushing=True,
+              exclude=r'^5406-(HHP|SHP)-', exclude_why='hollow-hex / square-head pipe plug: built by SPEC 5406HHP / 5406SHP (2026-10-02), never as a bushing',
               assume='male NPTF end per ASME B1.20.3 with the 5404 Brennan-measured end length for the same dash (ASSUMPTION), hex head behind it; female NPTF port from the hex face: Air-Way tap drill to MS51503 P1 max per pipe dash (2405 table), helical thread over P1; '
                      'Brennan 5405-08-08 STEP confirms the P1 rule for 1/2 NPTF (VERIFIED -08 only); Air-Way publishes no through-bore for the bushing -> the tap drill is carried through to the male tip (ASSUMPTION, machined-bushing practice); '
                      'wall between the female thread crests and the male thread roots checked per row'),
@@ -924,6 +1021,134 @@ SPEC['2404'] = dict(name='Male Connector', L='D1@DRIVE', hex='HEXB@HEX', load=lo
                            + r.get('_SRC', SRC2404_AIRWAY) + '; hex over the whole length between the two ends; hex end chamfers NOT modelled'))
 
 
+# 2026-10-02 (new masters, group NUTS-CAPS): JIC cap nut and JIC bulkhead locknut - see CAP_ASSUME / NUT_ASSUME and the end modules above.
+# Review columns: 0304 L (cap length) / CHEX (hex) / THDMAJ_B (thread major); 0306 h2 (nut thickness) / S4 (hex) / THDMAJ_d (thread major)
+# - the existing review-table headers (the DROP rows carry Air-Way's tube nut 304 / ORFS locknut FF306 under the same letters).
+SPEC['0304'] = dict(name='JIC Cap Nut', L='L@DRIVE', hex='CHEX@HEX', single=True,
+                    A=lambda r, a, b: end_CROWN('A'), B=lambda r, a, b: end_JICCAP(a, 'B', JICBORE.get(a)),
+                    bore=('cav_only', None, None), ref='0304-C-08', thrchk=(('B', 'THDMAJ_B@DRIVE', 'a'),), assume=CAP_ASSUME)
+SPEC['0306'] = dict(name='JIC Bulkhead Locknut', L='h2@DRIVE', hex='S4@DRIVE', single=True,
+                    A=lambda r, a, b: end_NUTCSA(a, 'A'), B=lambda r, a, b: end_NUTCSB(a, 'B', r['h2@DRIVE']),
+                    bore=('nut_thru', None, None), ref='0306-08', thrchk=(('B', 'THDMAJ_d@DRIVE', 'a'),),
+                    desc=lambda r, tA, tB: f"JIC Bulkhead Locknut, {tB.split(' (')[0]}, thread through, 45 deg countersink both faces", assume=NUT_ASSUME)
+
+
+# ---- 2026-10-02 (work group PLUGS): three new plug masters - socket-head ORB plug 6408HHP, hollow-hex pipe plug 5406HHP, square-head
+# pipe plug 5406SHP. One master per shape: their rows stay in the 6408 / 5406 review tables (OMi part numbers 6408-HHP-nn-O, 5406-HHP-nn,
+# 5406-SHP-nn; Brennan numbers 6408-Hnn-O, 5406-HP-nn, 5406-SHP-nn), the loaders below pick them out, and SPECs 6408 / 5406 skip them
+# ('exclude'), so a filled HHP / SHP row can never be built as a hex-head plug or a bushing.
+# GEOMETRY measured on the Brennan pilot STEPs (09_STEP_FILES) with tools/measure/plugs.py. The extractor was validated first: it reproduces
+# PLUG_HOLE_MEAS -08 / -20 (hole 0.422 / 1.093, full-diameter depth 0.4582 / 0.6345, drill apex 0.580 / 0.950, L 0.800 / 1.200, hex 0.875 /
+# 1.875), the ORB library ORB[8] / ORB[20] (thread length 0.344 / 0.469, groove dia 0.660 / 1.507, groove width 0.094 / 0.125) and the
+# 5404 end length ENDL[8] = 0.750 (Brennan 5406-08-04) exactly.
+#   BRENNAN_6408-H08-O: L 0.580; round head dia 0.875, 0.142 long (= L - the -08 ORB end 0.344 + 0.094), 45deg x 0.0087 chamfers at both
+#     head edges; hex socket A/F 0.313 (corner radius 0.1807), 0.188 deep, FLAT bottom, 45deg countersink to dia 0.375 at the face; ORB end
+#     = ORB[8] (thread 0.750 to 0.344, groove 0.660 x 0.094) with a 0.0475 x 45deg tip chamfer; O-ring (3-908 section) fused into the solid.
+#   BRENNAN_5406-HP-08: L 0.610; hex socket A/F 0.375 (corner radius 0.2165), 0.250 deep, flat bottom, 45deg countersink to dia 0.438;
+#     outside: 0.0626 x 45deg tip chamfer, a 1.788deg cone (dia 0.7952 -> 0.8254) to 0.549 from the tip, then a plain dia 0.840 (= pipe OD D)
+#     collar 0.061 long to the face.
+#   BRENNAN_5406-SHP-08: L 1.020; square head A/F 0.563, SHARP corners (corner radius 0.3981 = 0.563 / sqrt 2), 0.440 long, flat end face,
+#     no chamfers; thread end 0.580 to the shoulder: the same tip chamfer / 1.788deg cone (to 0.529) / dia 0.840 collar (0.051 long).
+#   The Brennan male NPTF blank (tip chamfer, cone dia 0.7912 extrapolated to the tip, D collar) is the same on all three -08 STEPs and on
+#   the bushing 5406-08-04; only where the cone stops differs. The models keep the project's ASME crest cone (end_NPTFMC below).
+# DIMENSIONS per row: 6408HHP from the OMi dimension file (Overall Length, Body Diameter = round head, Hex Flat = socket A/F); 5406HHP / 5406SHP
+# rows have no OMi / Air-Way dimension - their Brennan catalog values wait in the proposal file (Q-BRENNAN-ONLY) and the rows stay MISSING.
+PLUG_PILOT = {
+    '6408HHP': dict(step='BRENNAN_6408-H08-O.stp', pn='6408-HHP-08-O', L=0.580, head_dia=0.875, head_len=0.142, sock_af=0.313, sock_depth=0.188, csk_dia=0.375, vol=0.26307),
+    '5406HHP': dict(step='BRENNAN_5406-HP-08.stp', pn='5406-HHP-08', L=0.610, sock_af=0.375, sock_depth=0.250, csk_dia=0.438, collar_dia=0.840, cone_end=0.549, vol=0.28030),
+    '5406SHP': dict(step='BRENNAN_5406-SHP-08.stp', pn='5406-SHP-08', L=1.020, sq_af=0.563, head_len=0.440, shoulder=0.580, collar_dia=0.840, cone_end=0.529, vol=0.43435),
+}
+
+
+def sock_depth(root, af):
+    """hex socket depth: the pilot's depth / across-flats ratio applied to the row's socket A/F (6408HHP 0.188 / 0.313, 5406HHP 0.250 / 0.375).
+    ASSUMPTION for every size but the pilot (hex-key engagement taken to scale with the key size); exact for the pilot size."""
+    m = PLUG_PILOT[root]
+    return round(af * m['sock_depth'] / m['sock_af'], 4)
+
+
+def sq_head_len(af):
+    """square head length: the pilot's head length / across-flats ratio 0.440 / 0.563 applied to the row's A/F (ASSUMPTION except -08)"""
+    m = PLUG_PILOT['5406SHP']
+    return round(af * m['head_len'] / m['sq_af'], 4)
+
+
+def end_NPTFMC(dash, sfx, rcap):
+    """male NPTF end of a pipe PLUG turned from a blank of the pipe OD: the ASME B1.20.3 crest cone of end_NPTFM (major E0+0.8P at the tip,
+    1.7899deg) runs from the tip until it meets the blank radius rcap (= D/2), and the blank carries on from there as the round body - the cone's
+    last point lies ON the body line (cap=True: emit() adds no separate body start point and no cone-length dimension; the cone length is driven
+    by MAJR, TAPER and BODYR). The crest cone at L2 (E0+0.8P+L2/16) is above D at every size, so the helical thread still runs over L2 and its
+    last turns are truncated by the blank (vanish threads), as on a plug turned from D bar. Brennan pilots: blank (collar) dia 0.840 = D."""
+    if dash not in NPTF: raise KeyError(lib_gap('NPTF', dash))
+    nps, tpi, D, E0, E1, L1, L2 = NPTF[dash]; P = 1 / tpi
+    rS = (E0 + 0.8 * P) / 2; xc = (rcap - rS) / math.tan(TAPER)
+    if not (0.05 < xc < L2): raise AssertionError(f'crest cone meets the blank radius {rcap} at {xc:.4f} from the tip (expected between 0.05 and L2 {L2})')
+    cols = {f'NPTF{sfx}_MAJR@DRIVE': round(rS, 5), f'NPTF{sfx}_TAPER@DRIVE': 1.7899,
+            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rS, 5), f'HEIGHT@HELIX_{sfx}': L2, f'PITCH@HELIX_{sfx}': round(P, 5),
+            f'PROF_R@THDPROF_{sfx}': round(rS, 5), f'APEXR@THDPROF_{sfx}': round(rS - 0.8 * P, 5)}
+    return dict(kind='NPTFM', cap=True, V=[(0, rS), (xc, rcap)], endlen=xc, seg=dict(face=0, cone=1), cols=cols, thr=npt_thr(dash) + ' NPTF', faceR=rS * 0.5,
+                rS=rS, rL=rcap, L2=L2, P=P, thread=dict(type='HELIX', r=rS, height=L2, pitch=P, thdh=0.8 * P, taper=TAPER, taperOut=True, apexOut=False))
+
+
+def end_PLAINSOCK(sfx, af, depth):
+    """plug head face (plain in the DRIVE profile) with an internal hex socket: across flats af, depth deep, flat bottom (Brennan pilots).
+    The socket is its own cut (VBA SocketCut: sketch SOCKET on the face, dimension SOCKAF, blind cut SOCKETCUT); the mouth countersink is not modelled."""
+    E = end_PLAIN(sfx)
+    E.update(socket=dict(af=af, depth=depth, rc=af / math.sqrt(3)), thr=f'plug head, internal hex socket {af:g} A/F',
+             cols={'SOCKAF@SOCKET': af, 'DEPTH@SOCKETCUT': depth})
+    return E
+
+
+def end_SQHEAD(sfx, af, H):
+    """square head at End B: revolved at the square's corner radius af / sqrt 2 (rounded UP to 1e-5 so the cylinder never clips the sharp
+    corners - Brennan 5406-SHP-08 has sharp corners), then cut to the square over the head length H by ZoneSquareCut (sketch SQUARE,
+    dimension SQAF, feature SQCUT); the head end face is plain (no chamfer on the pilot)."""
+    rH = math.ceil(af / math.sqrt(2) * 1e5) / 1e5
+    cols = {f'SQ{sfx}_HEADR@DRIVE': rH, f'SQ{sfx}_HEADL@DRIVE': H, 'SQAF@SQUARE': af, 'DEPTH@SQCUT': H}
+    return dict(kind='SQHEAD', V=[(0, rH), (H, rH)], endlen=H, seg=dict(face=0, top=1), cols=cols, thr=f'square head {af:g} A/F', faceR=rH * 0.5,
+                rH=rH, af=af, H=H, thread=None)
+
+
+def _load_family(root, pat):
+    """the rows of one shape family kept in another root's review table (6408-HHP rows in DesignTable_6408, 5406-HHP / -SHP in DesignTable_5406)"""
+    h, rows = load_review(root)
+    return h, [r for r in rows if re.search(pat, str(r['$PRP@PartNo']))]
+
+
+PLUG_SOCK_NOTE = ('internal hex socket: one flat horizontal, FLAT bottom, sharp edges (the 45deg mouth countersink of the Brennan pilots NOT modelled); '
+                  'depth = the pilot depth / A/F ratio x the row A/F (ASSUMPTION for every size but the pilot)')
+SPEC['6408HHP'] = dict(name='ORB Hollow Hex Plug (round head, internal hex socket)', L='L@DRIVE', hex='HEADDIA@REF', round=True, single=True,
+                       load=lambda: _load_family('6408', r'^6408-HHP-'),
+                       A=lambda r, a, b: end_ORBM(a, 'A'),
+                       B=lambda r, a, b: end_PLAINSOCK('B', r['SOCKAF@SOCKET'], sock_depth('6408HHP', r['SOCKAF@SOCKET'])),
+                       bore=('socket', None, None), ref='6408-HHP-10-O',
+                       assume='GEOMETRY from the Brennan pilot 6408-H08-O STEP (tools/measure/plugs.py): male ORB end from the ORB library (thread major / length, groove dia / width: '
+                              '6401 / 6405 / 6410 review tables; -32 from the 6408-32-O-SOLID row + groove width measured on the Brennan 6400-32-32-O STEP) - the pilot carries exactly the '
+                              '-08 library end (thread 0.750 to 0.344, groove 0.660 x 0.094); as on 6408: no tip chamfer, the 60deg thread run-out drawn as a step, O-ring not modelled; '
+                              'round head (no hex) from the ORB end to L, head dia = OMi "Body Diameter" (column meaning: the pilot head 0.875 equals the -08 hex A/F, and OMi Body Diameter '
+                              'equals the 6408 hex A/F at all seven sizes - open question Q-B-OTHER-6408HHP), head edge chamfers (45deg x 0.0087 on the pilot) NOT modelled; '
+                              'socket A/F = OMi "Hex Flat" (= Brennan TFA catalog p67 6408-H-O C5 HEX); ' + PLUG_SOCK_NOTE + ' - 6408HHP ratio 0.188 / 0.313 = 0.6006')
+SPEC['5406HHP'] = dict(name='Hollow Hex Pipe Plug (NPTF, internal hex socket)', L='L2@DRIVE', hex=lambda r, a, b: NPTF[a][2] if a in NPTF else None, round=True, single=True,
+                       load=lambda: _load_family('5406', r'^5406-HHP-'),
+                       A=lambda r, a, b: end_NPTFMC(a, 'A', NPTF[a][2] / 2 if a in NPTF else None),
+                       B=lambda r, a, b: end_PLAINSOCK('B', r['SOCKAF@SOCKET'], sock_depth('5406HHP', r['SOCKAF@SOCKET'])),
+                       bore=('socket', None, None), ref='5406-HHP-08',
+                       assume='GEOMETRY from the Brennan pilot 5406-HP-08 STEP (tools/measure/plugs.py): male NPTF per ASME B1.20.3 - crest cone (major E0+0.8P at the tip, 1.7899deg) up to '
+                              'where it meets the pipe OD D (ASME B1.20.1), then a round blank of dia D to the head face (the pilot blank / collar is dia 0.840 = D); helical thread over '
+                              'L2, its last turns truncated by the D blank (vanish threads); the pilot\'s 45deg tip chamfer and its simplified thread cone (dia 0.791 -> 0.825, then the D collar '
+                              '0.061 long) NOT copied - the project\'s ASME crest cone is used as on every male NPTF end (ASSUMPTION); L2 = overall length; socket A/F = Brennan TFA catalog p67 '
+                              '5406-HP C HEX; ' + PLUG_SOCK_NOTE + ' - 5406HHP ratio 0.250 / 0.375 = 0.6667')
+SPEC['5406SHP'] = dict(name='Square Head Pipe Plug (NPTF)', L='L2@DRIVE', hex=lambda r, a, b: NPTF[a][2] if a in NPTF else None, round=True, single=True,
+                       load=lambda: _load_family('5406', r'^5406-SHP-'),
+                       A=lambda r, a, b: end_NPTFMC(a, 'A', NPTF[a][2] / 2 if a in NPTF else None),
+                       B=lambda r, a, b: end_SQHEAD('B', r['SQAF@SQUARE'], sq_head_len(r['SQAF@SQUARE'])),
+                       bore=('none', None, None), ref='5406-SHP-08',
+                       assume='GEOMETRY from the Brennan pilot 5406-SHP-08 STEP (tools/measure/plugs.py): male NPTF end as 5406HHP (ASME crest cone capped at the pipe OD D, round D blank up to the '
+                              'head shoulder, helical thread over L2, the pilot\'s tip chamfer / simplified cone NOT copied - ASSUMPTION); square head with SHARP corners (pilot: corner radius 0.3981 = '
+                              '0.563 / sqrt 2), flat end face, no chamfers, square cut over the head length only (the D collar stays round); L2 = overall length; square A/F = Brennan TFA catalog p67 '
+                              '5406-SHP Y FLATS; head length = the pilot ratio 0.440 / 0.563 = 0.7815 x the row A/F (ASSUMPTION except -08)')
+
+
 # overall lengths measured on the Brennan STEP bundle (inch files, vertex bounding box along the fitting axis)
 BRENNAN_OAL = {'6410-12-08-O': (1.480, 'Brennan: male -12 ORB end 0.594 + hex 0.886 carrying the whole -08 port; Air-Way puts the port inside the male end'),
                '6404-08-08': (1.650, 'Brennan: male NPTF end 0.75 + hex 0.90')}
@@ -988,6 +1213,9 @@ def build_rows(root):
     for r in rows:
         pn = r['$PRP@PartNo']
         if (r.get('$PRP@ScopeAction') == 'DROP' and not sp.get('include_drop')) or r.get('$PRP@DataStatus') == 'MISSING': skipped.append((pn, r.get('$PRP@ScopeAction'), r.get('$PRP@DataStatus'))); continue
+        if sp.get('exclude') and re.search(sp['exclude'], str(pn)):
+            # 2026-10-02 (PLUGS): a row of another shape family kept in this review table (6408-HHP -> SPEC 6408HHP; 5406-HHP / -SHP -> 5406HHP / 5406SHP)
+            skipped.append((pn, 'other shape family', sp['exclude_why'])); continue
         if sp.get('skip_blocked') and str(r.get('$COMMENT') or '').startswith('BLOCKED'):
             # 2026-10-01 (2404): rows the review table itself marks BLOCKED (placeholder counterbore depth / unmeasured -40 / -48 pipe end)
             skipped.append((pn, 'BLOCKED in the review table', r.get('$COMMENT'))); continue
@@ -1011,7 +1239,7 @@ def build_rows(root):
             else:
                 if len(dashes(pn)) < 2: raise KeyError('part number has no dash pair')
                 a, b = dashes(pn)
-            L = r[sp['L']]; hexb = r[sp['hex']]
+            L = r[sp['L']]; hexb = sp['hex'](r, a, b) if callable(sp['hex']) else r[sp['hex']]     # 2026-10-02: callable (PLUGS: pipe OD of the dash)
             EA = sp['A'](r, a, b); EB = sp['B'](r, a, b)
         except (KeyError, AssertionError) as ex:
             skipped.append((pn, 'no end data', repr(ex))); continue
@@ -1021,8 +1249,8 @@ def build_rows(root):
             E_ = EA if sfx_ == 'A' else EB
             if len(tc_) > 2: d_ = a if tc_[2] == 'a' else b     # explicit: which part-number dash that end is built from
             else: d_ = a if sfx_ == 'A' else b
-            if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM') and d_ not in NPTF: chk0.append(lib_gap('NPTF', d_)); continue
-            want_ = (JIC[d_]['TM'] if d_ in JIC else E_['e']['TM']) if E_['kind'] in ('JICM', 'JICSW', 'JICF') else ORB[d_]['TM'] if E_['kind'] == 'ORBM' else NPTF[d_][2]   # (d_ not in JIC: a row-supplied JIC chain, SPEC 2404 -40)
+            if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM', 'JICCAP', 'NUTCSB') and d_ not in NPTF: chk0.append(lib_gap('NPTF', d_)); continue
+            want_ = (JIC[d_]['TM'] if d_ in JIC else E_['e']['TM']) if E_['kind'] in ('JICM', 'JICSW', 'JICF', 'JICCAP', 'NUTCSB') else ORB[d_]['TM'] if E_['kind'] == 'ORBM' else NPTF[d_][2]   # (d_ not in JIC: a row-supplied JIC chain, SPEC 2404 -40)
             if r.get(col_) is None or abs(r[col_] - want_) > 1e-3: chk0.append(f'{col_} {r.get(col_)} does not match the End {sfx_} -{d_:02d} {E_["kind"]} thread ({want_})')
         if sp.get('p1col') and EB['kind'] == 'NPTFF':
             EB['P1'] = r[sp['p1col']]; EB['cols'][f'DEPTH@POCKETCUT_B'] = EB['P1']; EB['cols']['HEIGHT@HELIX_B'] = EB['P1']; EB['thread']['height'] = EB['P1']
@@ -1046,6 +1274,11 @@ def build_rows(root):
                 if abs(E['rO'] - rB) < 0.003: chk.append(f'flange head radius {E["rO"]:.4f} equals the hex corner radius {rB:.4f} (zero-height step)')
                 continue
             for (x, rr) in E['V']:
+                if E.get('cap') and abs(rr - rB) < 1e-9: continue      # 2026-10-02 (PLUGS): the capped NPTF crest cone ends ON the body (blank) line
+                if E['kind'] == 'SQHEAD':
+                    # 2026-10-02 (PLUGS): square head corners below the round D collar - its own zone cut, so only a real step is needed (no hex-cut margin)
+                    if rr >= rB - 0.001: chk.append(f'square head corner radius {rr:.4f} not below the body radius {rB:.4f} (step < 0.001)')
+                    continue
                 if rr >= rB - 0.005: chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
         cols = dict(); cols[sp['L'].split('@')[0] + '@DRIVE'] = L; cols['BODYR@DRIVE'] = round(rB, 5)
         if not sp.get('round'): cols['HEXB@HEX'] = hexb
@@ -1221,6 +1454,39 @@ def build_rows(root):
                 cols['DA@BORE_A'] = None; cols['DEPTH@BORECUT_A'] = None; cols['$STATE@BORECUT_A'] = 'S'
         elif mode in ('none', 'pocket_only'):
             if mode == 'pocket_only' and L - EA['P1'] < 0.05: chk.append(f'port depth P1 {EA["P1"]} leaves < 0.05 end wall in L {L}')
+        elif mode == 'cav_only':
+            # 2026-10-02 (0304 cap): closed crown at End A, female JIC cap cavity at End B, no bore
+            crown_ = L - EB['bottom']
+            if crown_ < 0.05: chk.append(f'crown {crown_:.4f} thick (L {L} - pocket bottom {EB["bottom"]:.4f}) - below 0.05')
+            else: warn.append(f'cap cavity: thread / seat start {EB["m"]["P"]} deep, seat end {EB["seat_end"]:.4f}, pocket dia {2 * EB["rpk"]:.4f} to {EB["bottom"]:.4f} -> crown {crown_:.4f}' + (' (THIN)' if crown_ < 0.08 else ''))
+        elif mode == 'nut_thru':
+            # 2026-10-02 (0306 locknut): through bore = the thread minor, cut from the End A face over the whole thickness; it removes the
+            # construction core of the DRIVE sketch (apex at the origin, flat end behind the End B countersink)
+            cols['DA@BORE_A'] = round(2 * EA['rmin'], 5); cols['DEPTH@BORECUT_A'] = L
+            thd_ = L - EA['cs'] - EB['cs']
+            if thd_ < 0.05: chk.append(f'thread zone between the two countersinks only {thd_:.4f} (W {L})')
+        elif mode == 'socket':
+            # 2026-10-02 (PLUGS): internal hex socket in the End B (head) face, flat bottom; the plug is solid otherwise
+            so_ = EB['socket']; dep_ = so_['depth']; rc_ = so_['rc']
+            if dep_ > L - 0.10: chk.append(f'socket depth {dep_} leaves {L - dep_:.3f} (< 0.10) to the End A tip')
+            if rc_ > rB - 0.03: chk.append(f'socket corner radius {rc_:.4f} leaves {rB - rc_:.4f} (< 0.03) to the body radius {rB:.4f}')
+            wmin_, xw_ = None, None
+            for k_ in range(201):
+                x_ = L - dep_ + dep_ * k_ / 200
+                if x_ <= EA['endlen'] + 1e-9: ro_ = male_root_r(EA, x_)
+                elif EA['thread'] and EA['thread']['type'] == 'HELIX' and x_ <= EA['thread']['height'] + 1e-9:
+                    ro_ = min(rB, EA['thread']['r'] + x_ * math.tan(EA['thread']['taper'])) - EA['thread']['thdh']   # thread root beyond a capped cone
+                else: ro_ = rB
+                if ro_ is not None and (wmin_ is None or ro_ - rc_ < wmin_): wmin_, xw_ = ro_ - rc_, x_
+            if wmin_ is not None:
+                if wmin_ < 0.015: chk.append(f'wall between the socket corners and the End A thread root / groove only {wmin_:.3f} at x={xw_:.3f}')
+                elif wmin_ < 0.03: warn.append(f'thin wall {wmin_:.3f} between the socket corners and the End A thread root / groove at x={xw_:.3f}')
+            pil_ = PLUG_PILOT.get(root)
+            if pil_ and abs(so_['af'] - pil_['sock_af']) > 1e-9:
+                warn.append(f'SOCKET DEPTH by the pilot rule: {dep_} = A/F {so_["af"]} x {pil_["sock_depth"]} / {pil_["sock_af"]} (Brennan {pil_["step"][8:-4]}; no source for this size)')
+                EB['axnote'] = f'socket depth {dep_} = the {pil_["step"][8:-4]} pilot ratio {pil_["sock_depth"]} / {pil_["sock_af"]} x A/F {so_["af"]} (ASSUMPTION - no published / measured depth for this size)'
+            elif pil_:
+                warn.append(f'socket depth {dep_} = the Brennan {pil_["step"][8:-4]} pilot (measured)')
         elif mode == 'meet':
             dep = max(EA['P1'], L / 2 + 0.005); cols['DEPTH@POCKETCUT_A'] = round(dep, 4)
             dep = max(EB['P1'], L / 2 + 0.005); cols['DEPTH@POCKETCUT_B'] = round(dep, 4)
@@ -1228,6 +1494,27 @@ def build_rows(root):
             for E, sfx in ((EA, 'A'), (EB, 'B')):
                 h = round(min(E['P1'], L / 2), 4); E['cols'][f'HEIGHT@HELIX_{sfx}'] = h; E['thread']['height'] = h
                 cols[f'HEIGHT@HELIX_{sfx}'] = h
+        for E_ in (EA, EB):
+            if E_['kind'] in ('JICCAP', 'NUTCSB'):
+                # 2026-10-02: wall between the female thread major (basic major = the JIC thread size) and the hex flats
+                w_ = hexb / 2 - E_['e']['TM'] / 2
+                if w_ < 0.03: chk.append(f'wall between the thread major dia {E_["e"]["TM"]} and the hex flats {hexb} only {w_:.4f}')
+        if pn in PILOT_NUTCAP:
+            warn.append(PILOT_NUTCAP[pn] + f' - model: {sp["L"].split("@")[0]} {L}, hex {hexb}' + (
+                f', thread minor {2 * EB["rmin"]:.4f} to the seat start {EB["m"]["P"]} (2406 port depth), seat to dia {2 * EB["rpk"]:.4f} at {EB["seat_end"]:.4f}, '
+                f'pocket to {EB["bottom"]:.4f}, crown {L - EB["bottom"]:.4f}' if EB['kind'] == 'JICCAP' else
+                f', thread minor {2 * EA["rmin"]:.4f} through, countersinks from dia {2 * EA["rcs"]:.4f} ({EA["cs"]:.4f} deep) at both faces') + '; chamfers / marking not modelled')
+        if EB['kind'] == 'SQHEAD':
+            # 2026-10-02 (PLUGS): the helical NPTF thread must end before the square-head shoulder; head length by the pilot rule
+            sh_ = L - EB['endlen']
+            if EA['thread'] and EA['thread']['height'] > sh_ - 0.02: chk.append(f'thread length L2 {EA["thread"]["height"]} reaches the square-head shoulder at {sh_:.4f} (< 0.02 left)')
+            if sh_ < EA['endlen'] + 0.02: chk.append(f'square head shoulder at {sh_:.4f} is not past the end of the thread cone {EA["endlen"]:.4f}')
+            pil_ = PLUG_PILOT['5406SHP']
+            if abs(EB['af'] - pil_['sq_af']) > 1e-9:
+                warn.append(f'SQUARE HEAD LENGTH by the pilot rule: {EB["H"]} = A/F {EB["af"]} x {pil_["head_len"]} / {pil_["sq_af"]} (Brennan 5406-SHP-08; no source for this size)')
+                EB['axnote'] = f'square head length {EB["H"]} = the 5406-SHP-08 pilot ratio {pil_["head_len"]} / {pil_["sq_af"]} x A/F {EB["af"]} (ASSUMPTION - no published / measured length for this size)'
+            else:
+                warn.append(f'square head length {EB["H"]} = the Brennan 5406-SHP-08 pilot (measured)')
         for E in (EA, EB):
             if E['kind'] in ('NPTFF', 'BRAZE', 'UNFF') and E['td'] >= hexb - 0.05: chk.append(f'pocket {E["td"]} too close to hex {hexb}')
             if E.get('cav') and 2 * E['VG'][0][1] >= (E['nut_af'] if E['kind'] in ('JICSW', 'NPSMSW') else hexb) - 0.05: chk.append(f'port face dia {2*E["VG"][0][1]:.3f} too close to hex {E.get("nut_af", hexb)}')
@@ -1277,7 +1564,7 @@ def build_rows(root):
 def write_sw2(root, built):
     sp = SPEC[root]
     ok = [b for b in built if not b[7]]
-    ref = [b for b in ok if b[0]['$PRP@PartNo'] == sp['ref']] or ok
+    ref = [b for b in ok if b[0]['$PRP@PartNo'] == sp['ref']] or [b for b in ok if b[0]['$PRP@PartNo'] == sp['ref'] + ' TEST'] or ok   # 2026-10-02: a TEST row of the reference size (scratch roots)
     refrow = ref[0]
     ok.sort(key=lambda b: (b[0]['$PRP@PartNo'] != refrow[0]['$PRP@PartNo'], b[0]['$PRP@PartNo']))
     hdr = list(refrow[0].keys())
@@ -1519,6 +1806,87 @@ HELP += """Sub FeatSpanX(f As SldWorks.Feature, lo As Double, hi As Double)
     Next i
 End Sub
 """
+# 2026-10-02 (PLUGS): helpers emitted ONLY into the macros that use them (every other macro stays byte-identical):
+# SocketCut - the internal hex socket of the 6408HHP / 5406HHP plugs; ZoneSquareCut - the square head of 5406SHP (ZoneHexCut with 4 sides)
+SOCKETCUT = """
+Function SocketCut(faceXM As Double, afM As Double, depthM As Double, skName As String, dimName As String, featName As String) As SldWorks.Feature
+    ' 2026-10-02 (PLUGS): internal hex socket in the plug head face (End B, x = faceXM): a hexagon of across flats afM (dimension on the
+    ' polygon's construction circle, one side horizontal, centre on the axis) sketched ON that face and cut blind depthM INTO the part
+    ' (both directions tried; kept where it removes material between faceX - depth and faceX). Flat bottom, as on the Brennan pilot STEPs.
+    On Error Resume Next
+    Dim ok As Boolean
+    swModel.ClearSelection2 True
+    ok = SelectEndFace(faceXM)
+    Check skName & ": head face selected at x=" & Format(faceXM / IN_, "0.0000"), ok
+    swSkMgr.InsertSketch True
+    Dim poly As Variant, k As Long, circ As SldWorks.SketchSegment
+    poly = swSkMgr.CreatePolygon(0, 0, 0, afM / 2, 0, 0, 6, True)
+    For k = LBound(poly) To UBound(poly)
+        If poly(k).GetType = swSketchSegments_e.swSketchARC Then Set circ = poly(k)
+    Next k
+    swModel.ClearSelection2 True
+    circ.Select4 False, Nothing
+    Dim dd As SldWorks.DisplayDimension
+    Set dd = swModel.AddDimension2(afM * 0.7, afM * 0.7, 0)
+    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = afM
+    NameDim dd, dimName, afM
+    swModel.ClearSelection2 True
+    For k = LBound(poly) To UBound(poly)
+        If poly(k).GetType = swSketchSegments_e.swSketchLINE Then poly(k).Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL": Exit For
+    Next k
+    swModel.ClearSelection2 True
+    Dim arc As SldWorks.SketchArc
+    Set arc = circ
+    arc.GetCenterPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    swSkMgr.InsertSketch True
+    Dim skF As SldWorks.Feature
+    Set skF = swModel.FeatureByPositionReverse(0): skF.Name = skName
+    Check skName & " sketch fully defined", (skF.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
+    Dim v0 As Double, v1 As Double, vexp As Double, cut As SldWorks.Feature, attempt As Long, fLo As Double, fHi As Double, okPos As Boolean
+    vexp = Sqr(3#) / 2# * afM * afM * depthM
+    v0 = Volume()
+    For attempt = 0 To 1
+        Set cut = MakeCut(skF, swEndConditions_e.swEndCondBlind, depthM, False, (attempt = 1), 0#, False, featName & " attempt " & attempt)
+        If Not cut Is Nothing Then
+            v1 = Volume()
+            FeatSpanX cut, fLo, fHi
+            okPos = (fLo > faceXM - depthM - 0.0005) And (fHi < faceXM + 0.0005) And (fHi > fLo)
+            Trace featName & " attempt " & attempt & ": removed " & Format((v0 - v1) / IN_ ^ 3, "0.00000") & " in^3 (hex prism " & Format(vexp / IN_ ^ 3, "0.00000") & "), new faces span x=" & Format(fLo / IN_, "0.0000") & ".." & Format(fHi / IN_, "0.0000")
+            If v1 < v0 - 1E-12 And okPos Then Exit For
+            swModel.ClearSelection2 True
+            cut.Select2 False, 0
+            swModel.Extension.DeleteSelection2 0
+            Set cut = Nothing
+        End If
+    Next attempt
+    Check featName & " created in the head and removed material (attempt " & attempt & ")", Not cut Is Nothing
+    If cut Is Nothing Then Exit Function
+    cut.Name = featName
+    Check featName & " removed the hex prism volume (" & Format((v0 - v1) / IN_ ^ 3, "0.00000") & " vs " & Format(vexp / IN_ ^ 3, "0.00000") & " in^3)", Abs((v0 - v1) - vexp) < 0.01 * vexp
+    Dim d As SldWorks.DisplayDimension, dm As SldWorks.Dimension, names As String
+    Set d = cut.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        Set dm = d.GetDimension2(0)
+        If Abs(dm.SystemValue - depthM) < 0.000001 Then dm.Name = "DEPTH"
+        names = names & dm.Name & "=" & Format(dm.SystemValue / IN_, "0.0000") & " "
+        Set d = cut.GetNextDisplayDimension(d)
+    Loop
+    Check featName & " dims: " & names, InStr(names, "DEPTH=") > 0
+    Set SocketCut = cut
+End Function
+"""
+ZONESQ = ZONEHEX
+for _o, _n in (('Function ZoneHexCut(', 'Function ZoneSquareCut('), ('Set ZoneHexCut = cut', 'Set ZoneSquareCut = cut'),
+               ('CreatePolygon(0, 0, 0, afM / 2, 0, 0, 6, True)', 'CreatePolygon(0, 0, 0, afM / 2, 0, 0, 4, True)'),
+               ("    ' hex prism cut limited to one axial zone: sketch a hexagon (across flats afM)",
+                "    ' 2026-10-02 (PLUGS): ZoneHexCut with 4 sides - SQUARE prism cut limited to one axial zone: sketch a square (across flats afM)")):
+    assert ZONESQ.count(_o) == 1, _o
+    ZONESQ = ZONESQ.replace(_o, _n)
+ZONESQ = '\n' + ZONESQ
+
 # threads: suppression governed by one constant
 HELP = HELP.replace('sup = f.SetSuppression2(swFeatureSuppressionAction_e.swSuppressFeature, swInConfigurationOpts_e.swAllConfiguration, Empty)\n    Check nm & " suppressed", sup',
                     'If SUPPRESS_THREADS Then\n        sup = f.SetSuppression2(swFeatureSuppressionAction_e.swSuppressFeature, swInConfigurationOpts_e.swAllConfiguration, Empty)\n        Check nm & " suppressed (resting state)", sup\n    Else\n        Trace nm & ": left UNSUPPRESSED (SUPPRESS_THREADS = False)"\n    End If')
@@ -1553,10 +1921,11 @@ def emit(root, hdr, ok, refrow, table_path):
         V += [(x, r) for (x, r) in EA['VO']]          # (0, Rn) -> nut hex zone -> skirt -> nut rear -> neck -> (BODYS, NECKR)
         xa = EA['endlen']; V += [(xa, rB)]
     else:
-        faceA = 0
+        faceA = EA.get('faceseg', 0)     # 2026-10-02 (0306 locknut): segment 2 - segments 0 / 1 are the construction core and the End A countersink
         V = [(0.0, 0.0)]
         V += EA['V'] if EA['V'] else []
-        xa = EA['endlen']; V += [(xa, rB)]
+        xa = EA['endlen']
+        if not EA.get('cap'): V += [(xa, rB)]      # 2026-10-02 (PLUGS): a capped NPTF crest cone already ends on the body line
     xb = L - EB['endlen']; V += [(xb, rB)]
     bodyseg = len(V) - 2          # segment index of the body top line (V[k]->V[k+1])
     if EB.get('cav') and EB['kind'] in ('JICSW', 'NPSMSW'):
@@ -1605,7 +1974,8 @@ def emit(root, hdr, ok, refrow, table_path):
             REL.append(f'    Call Collinear({g(s["relief"])}, {g(s["land"])})')
         elif k == 'NPTFM':
             dl(g(s['face']), f'NPTF{sfx}_MAJR', E['rS'], V[g(s['face'])][0] - 0.15 * side, E['rS'] / 2)
-            if side > 0: dp(g(s['cone']), 'True', g(s['face']), f'NPTF{sfx}_THDL', E['cols'][f'NPTF{sfx}_THDL@DRIVE'], mid(g(s['cone'])), rB + 0.25)
+            if E.get('cap'): pass      # 2026-10-02 (PLUGS): capped cone - its length is driven (MAJR, TAPER and BODYR fix where it meets the blank)
+            elif side > 0: dp(g(s['cone']), 'True', g(s['face']), f'NPTF{sfx}_THDL', E['cols'][f'NPTF{sfx}_THDL@DRIVE'], mid(g(s['cone'])), rB + 0.25)
             else: dp(g(s['cone']), 'False', g(s['face']), f'NPTF{sfx}_THDL', E['cols'][f'NPTF{sfx}_THDL@DRIVE'], mid(g(s['cone'])), rB + 0.25)
             da(g(s['cone']), axis, f'NPTF{sfx}_TAPER', 1.7899, mid(g(s['cone'])), E['rS'] * 0.5)
             if 'rel' in s: dl(g(s['rel']), f'NPTF{sfx}_RELL', E['cols'][f'NPTF{sfx}_RELL@DRIVE'], mid(g(s['rel'])), rB + 0.15)
@@ -1624,6 +1994,21 @@ def emit(root, hdr, ok, refrow, table_path):
             dl(g(s['gin']), f'FLG{sfx}_GRVD', m['GD'], mid(g(s['gin'])), E['rO'] + 0.45)
             dr(g(s['gout']), f'FLG{sfx}_GRVOR', m['GO'], mid(g(s['gout'])), -0.25)
             REL.append(f'    Call Collinear({g(s["face2"])}, {g(s["face"])})')
+        elif k == 'NUTCSA':
+            # 2026-10-02 (0306 locknut End A): core apex at the origin -> countersink bottom (cs, rmin) -> 45deg countersink -> face (0, rcs).
+            # The origin also lies on the End A face line (segment 2), which puts that face at x = 0 (the core apex alone would not).
+            dp(g(s['core']), 'True', axis, f'NUTCS{sfx}_MINR', E['rmin'], E['cs'] + 0.05, E['rmin'] * 0.5)
+            da(g(s['csk']), axis, f'NUTCS{sfx}_CSANG', 45, E['cs'] / 2, E['rcs'] + 0.1)
+            dp(g(s['csk']), 'True', axis, f'NUTCS{sfx}_CSR', E['rcs'], -0.1, E['rcs'] / 2)
+            REL.append(f'''    ' ORIGIN-ON-LINE seg({g(s['face'])}) (0306 locknut: the End A face line passes through the origin)
+    swModel.ClearSelection2 True
+    seg({g(s['face'])}).Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True''')
+        elif k == 'SQHEAD':      # 2026-10-02 (PLUGS): square head revolved at its corner radius, cut to the square by ZoneSquareCut
+            dr(g(s['top']), f'SQ{sfx}_HEADR', E['rH'], mid(g(s['top'])), -0.3)
+            dl(g(s['top']), f'SQ{sfx}_HEADL', E['H'], mid(g(s['top'])), rB + 0.25)
         elif k == 'ORBM':
             o = E['o']
             dr(g(s['thd']), f'THDMAJR_{sfx}', o['TM'] / 2, mid(g(s['thd'])), -0.3)
@@ -1720,6 +2105,21 @@ def emit(root, hdr, ok, refrow, table_path):
             # must have the point: a 90deg line would be drawn vertical and get an automatic Vertical relation on top of this angle.
             assert not E['deep'], f'reference configuration {PN} has a deep-bore ORB port (flat bottom) - choose a reference with a drill point'
             da(k + 4, axis, f'ORBF{sfx}_DRILLANG', E['drill'], L - m['P'] - 0.05, E['rmin'] * 0.4)
+        elif E['kind'] == 'JICCAP':
+            # 2026-10-02 (0304 cap): face -> thread minor (k+1) -> 37deg seat (k+2) -> pocket (k+3) -> flat pocket bottom (k+4, vertical) -> axis
+            m = E['m']
+            dr(k + 1, f'JCAP{sfx}_MINR', E['rmin'], L - m['P'] / 2, -0.25)
+            dl(k + 1, f'JCAP{sfx}_MINL', m['P'], L - m['P'] / 2, rB + 0.3)
+            da(k + 2, axis, f'JCAP{sfx}_SEATANG', 37, L - m['P'] - 0.05, E['rmin'] * 0.6)
+            dr(k + 3, f'JCAP{sfx}_PKR', E['rpk'], L - (E['seat_end'] + E['bottom']) / 2, -0.4)
+            dl(k + 3, f'JCAP{sfx}_PKL', CAP_POCKETL, L - (E['seat_end'] + E['bottom']) / 2, rB + 0.45)
+            assert k + 5 == axis, (k, axis)
+        elif E['kind'] == 'NUTCSB':
+            # 2026-10-02 (0306 locknut End B): face -> 45deg countersink (k+1) -> flat core end (k+2, vertical) -> axis
+            dp(k + 1, 'False', axis, f'NUTCS{sfx}_CSR', E['rcs'], L + 0.1, E['rcs'] / 2)
+            da(k + 1, axis, f'NUTCS{sfx}_CSANG', 45, L - E['cs'] / 2, E['rcs'] + 0.1)
+            dp(k + 1, 'True', axis, f'NUTCS{sfx}_MINR', E['rmin'], L - E['cs'] - 0.05, E['rmin'] * 0.5)
+            assert k + 3 == axis, (k, axis)
         else:
             m = E['m']
             dp(k + 1, 'False', axis, f'JICF{sfx}_CSR', m['RCS'], L + 0.1, m['RCS'] / 2)
@@ -1738,6 +2138,13 @@ def emit(root, hdr, ok, refrow, table_path):
         if E['kind'] in ('NPTFF', 'BRAZE', 'UNFF'):
             nm = 'TAPDRILL' + sfx if E['kind'] in ('NPTFF', 'UNFF') else 'SOCKDIA'
             F.append(f'    Call BoreCut("POCKET_{sfx}", "{nm}", {E["td"]*IN:.9f}, {cols[f"DEPTH@POCKETCUT_{sfx}"]*IN:.9f}, 0#, "POCKETCUT_{sfx}", {fromB}, {fr*IN:.9f})')
+    if EB.get('socket'):
+        # 2026-10-02 (PLUGS): internal hex socket in the End B (head) face
+        so_ = EB['socket']
+        F += ['    Dim sockcut As SldWorks.Feature',
+              f'    Set sockcut = SocketCut({L*IN:.9f}, {so_["af"]*IN:.9f}, {so_["depth"]*IN:.9f}, "SOCKET", "SOCKAF", "SOCKETCUT")',
+              '    Check "SOCKAF@SOCKET reachable", Not swModel.Parameter("SOCKAF@SOCKET") Is Nothing',
+              '    Check "DEPTH@SOCKETCUT reachable", Not swModel.Parameter("DEPTH@SOCKETCUT") Is Nothing']
     if mode == 'mid':
         F.append(f'    Call BoreCut("BORE_A", "DA", {cols["DA@BORE_A"]*IN:.9f}, {cols["DEPTH@BORECUT_A"]*IN:.9f}, 0#, "BORECUT_A", False, {fA*IN:.9f})')
         F.append(f'    Call BoreCut("BORE_B", "DB", {cols["DB@BORE_B"]*IN:.9f}, {cols["DEPTH@BORECUT_B"]*IN:.9f}, 0#, "BORECUT_B", True, {fB*IN:.9f})')
@@ -1750,6 +2157,8 @@ def emit(root, hdr, ok, refrow, table_path):
     elif mode == 'sw2':
         F.append(f'    Call BoreCut("BORE_A", "DA", {cols["DA@BORE_A"]*IN:.9f}, {cols["DEPTH@BORECUT_A"]*IN:.9f}, 0#, "BORECUT_A", False, {fA*IN:.9f})')
         F.append(f'    Call BoreCut("BORE_B", "DB", {cols["DB@BORE_B"]*IN:.9f}, {cols["DEPTH@BORECUT_B"]*IN:.9f}, {cols["START@BORECUT_B"]*IN:.9f}, "BORECUT_B", False, {fA*IN:.9f})')
+    elif mode == 'nut_thru':     # 2026-10-02 (0306 locknut): the thread-minor bore through the whole nut, removing the DRIVE construction core
+        F.append(f'    Call BoreCut("BORE_A", "DA", {cols["DA@BORE_A"]*IN:.9f}, {cols["DEPTH@BORECUT_A"]*IN:.9f}, 0#, "BORECUT_A", False, {fA*IN:.9f})')
     elif mode == 'A_to_pocket':
         if EA['kind'] in ('NPTFF', 'BRAZE', 'UNFF'):   # 0403: pocket at End A -> bore from the End B face back to the socket bottom (v1 used a start offset; bore did not reach End B)
             F.append(f'    Call BoreCut("BORE_B", "DB", {cols["DB@BORE_B"]*IN:.9f}, {cols["DEPTH@BORECUT_B"]*IN:.9f}, 0#, "BORECUT_B", True, {fB*IN:.9f})')
@@ -1768,6 +2177,19 @@ def emit(root, hdr, ok, refrow, table_path):
         OPEN = [f'    Check "port open on the axis at End A (x=0)", Not AxisCovered(0#)',
                 f'    Check "port bottom present at x={cols["DEPTH@POCKETCUT_A"]:.4f}", AxisCovered({cols["DEPTH@POCKETCUT_A"]*IN:.9f})',
                 f'    Check "cap closed on the axis at End B (x={L:.4f})", AxisCovered({L*IN:.9f})']
+    elif mode == 'cav_only':     # 2026-10-02 (0304 cap)
+        OPEN = [f'    Check "cap crown closed on the axis at End A (x=0)", AxisCovered(0#)',
+                f'    Check "cap cavity open on the axis at End B (x={L:.4f})", Not AxisCovered({L*IN:.9f})',
+                f'    Check "cap pocket bottom present at x={L - EB["bottom"]:.4f} (crown {L - EB["bottom"]:.4f})", AxisCovered({(L - EB["bottom"])*IN:.9f})']
+    elif mode == 'nut_thru':     # 2026-10-02 (0306 locknut): the bore must have removed the whole construction core
+        OPEN = [f'    Check "locknut bore open on the axis at End A (x=0)", Not AxisCovered(0#)',
+                f'    Check "locknut bore open on the axis at End B (x={L:.4f})", Not AxisCovered({L*IN:.9f})',
+                f'    Check "construction core end removed (no face across the axis at x={L - EB["cs"]:.4f})", Not AxisCovered({(L - EB["cs"])*IN:.9f})']
+    elif mode == 'socket':
+        dso_ = EB['socket']['depth']
+        OPEN = [f'    Check "socket plug: End A (thread tip) closed on the axis (x=0)", AxisCovered(0#)',
+                f'    Check "socket open on the axis at the head face (x={L:.4f})", Not AxisCovered({L*IN:.9f})',
+                f'    Check "socket bottom present at x={L - dso_:.4f}", AxisCovered({(L - dso_)*IN:.9f})']
     elif mode == 'none':
         OPEN = [f'    Check "solid plug: End A face closed on the axis (x=0)", AxisCovered(0#)',
                 f'    Check "solid plug: End B face closed on the axis (x={L:.4f})", AxisCovered({L*IN:.9f})']
@@ -1802,7 +2224,7 @@ def emit(root, hdr, ok, refrow, table_path):
         else:
             T.append(f'    Call HelixThread({tip*IN:.9f}, {t["r"]*IN:.9f}, {t["height"]*IN:.9f}, {t["pitch"]*IN:.9f}, {t["thdh"]*IN:.9f}, {t["taper"]:.9f}, {str(t["taperOut"])}, {str(t["apexOut"])}, "{sfx}", "THD_End{sfx}")')
     # ---- config spot check: smallest and largest config, key params
-    params = [c for c in hdr if '@' in c and not c.startswith('$') and c.split('@')[1] in ('DRIVE', 'HEX')][:8] + [c for c in hdr if c.startswith(('THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'SWA_SEATENDR@', 'SWB_SEATENDR@'))]
+    params = [c for c in hdr if '@' in c and not c.startswith('$') and c.split('@')[1] in ('DRIVE', 'HEX')][:8] + [c for c in hdr if c.startswith(('THDPITCH@', 'Profile_Height@', 'PROF_R@', 'DEPTH@BORECUT', 'DEPTH@POCKETCUT', 'SWA_SEATENDR@', 'SWB_SEATENDR@', 'SOCKAF@', 'DEPTH@SOCKETCUT', 'SQAF@', 'DEPTH@SQCUT'))]
     names = [b[0]['$PRP@PartNo'] for b in ok]
     chk_rows = [ok[1], ok[-1]] if len(ok) > 2 else [ok[-1]]
     params = [p for p in params if all(b[0][p] is not None for b in chk_rows)]
@@ -1825,6 +2247,18 @@ def emit(root, hdr, ok, refrow, table_path):
             hl_ += [f'    swModel.ShowConfiguration2 "{nm_}"', '    swModel.ForceRebuild3 False',
                     f'    Check "{nm_}: solid plug - ORB tip closed on the axis (hole feature suppressed)", AxisCovered(0#)']
         holechk = '\n'.join(hl_) + '\n'
+    if EB.get('socket'):
+        # 2026-10-02 (PLUGS): in EVERY configuration the socket must be open at the head face, end in its flat bottom at L - depth, and leave
+        # the thread tip closed (the socket depth / A/F are table columns; a cut that went the wrong way would still give one body)
+        sk_ = ["    ' ---- hex socket in every configuration (2026-10-02, PLUGS): open at the head face, flat bottom at L - depth, thread tip closed",
+               '    stepName = "Socket check"']
+        for b_ in ok:
+            nm_ = b_[0]['$PRP@PartNo']; L_ = b_[3]; so_ = b_[2]['socket']
+            sk_ += [f'    swModel.ShowConfiguration2 "{nm_}"', '    swModel.ForceRebuild3 False',
+                    f'    Check "{nm_}: socket open on the axis at the head face (x={L_:.4f})", Not AxisCovered({L_*IN:.9f})',
+                    f'    Check "{nm_}: socket bottom at x={L_ - so_["depth"]:.4f} (depth {so_["depth"]}, A/F {so_["af"]})", AxisCovered({(L_ - so_["depth"])*IN:.9f})',
+                    f'    Check "{nm_}: End A tip closed on the axis (x=0)", AxisCovered(0#)']
+        holechk += '\n'.join(sk_) + '\n'
     deepchk = ''
     if EB['kind'] == 'ORBF':
         # 2026-10-01 (ORBF-DEEPBORE): ORBFB_DRILLANG is a table column - 60 (120deg drill point) or 90 (through-bore = port minor: flat port bottom,
@@ -2222,6 +2656,23 @@ End Sub
         i0 = vba.index('    Check "Hex across flats'); i1 = vba.index('\n', i0)
         vba = vba[:i0] + f'    Check "Body diameter " & Format(dY, "0.0000") & " / " & Format(dZ, "0.0000") & " (expect {2*rB:.4f})", Abs(dY - {2*rB:.4f}) < 0.01 And Abs(dZ - {2*rB:.4f}) < 0.01' + vba[i1:]
         assert 'HEXCUT' not in vba.split('Sub Build')[1].split('End Sub')[0]
+    if EB['kind'] == 'SQHEAD':
+        # 2026-10-02 (PLUGS): the square head - the OUTSIDE of a square sketched on the End B face, cut back over the head length only
+        i1 = vba.index('    stepName = "Pockets and bores"')
+        vba = vba[:i1] + f'''    stepName = "Square head cut"
+    Dim sqcut As SldWorks.Feature
+    ' square head: sketched on the End B face, the outside of the square cut over the head length only (the round D collar is not touched)
+    Set sqcut = ZoneSquareCut(True, {L*IN:.9f}, {EB['af']*IN:.9f}, 0#, {EB['H']*IN:.9f}, {(L - EB['H'] / 2)*IN:.9f}, "SQUARE", "SQAF", "SQCUT")
+    Check "SQAF@SQUARE reachable", Not swModel.Parameter("SQAF@SQUARE") Is Nothing
+    Check "DEPTH@SQCUT reachable", Not swModel.Parameter("DEPTH@SQCUT") Is Nothing
+
+''' + vba[i1:]
+    if EB.get('socket') or EB['kind'] == 'SQHEAD':
+        o_ = "Body revolved at BODYR then hex-cut; SP3 radius dims."
+        assert vba.count(o_) == 1
+        vba = vba.replace(o_, 'Round body revolved at BODYR (no hex)' + ('; square head cut to the square over its length' if EB['kind'] == 'SQHEAD' else '')
+                          + ('; internal hex socket cut into the head face' if EB.get('socket') else '') + '; SP3 radius dims.')
+        vba += (SOCKETCUT if EB.get('socket') else '') + (ZONESQ if EB['kind'] == 'SQHEAD' else '')
     vba = ref_config_at_save(add_progress(vba))      # 2026-09-24: one report/status-bar line per configuration in the sweep; 2026-09-25: saved in the reference configuration (progress_patch.py)
     p = f'{OUT}/Build_{root}_MASTER.bas'; open(p, 'w').write(vba)
     return p, n, V
@@ -2231,6 +2682,14 @@ if __name__ == '__main__':
     summary = {}
     for root in sys.argv[1:]:
         built, skipped = build_rows(root)
+        if not [b for b in built if not b[7]]:
+            # 2026-10-02 (PLUGS): no buildable row (every row MISSING / DROP / skipped / blocked) - no macro or SW2 table; the summary says why
+            blocked = [b[0]['$PRP@PartNo'] + ': ' + '; '.join(b[7]) for b in built if b[7]]
+            summary[root] = dict(configs=0, ref=None, skipped=skipped, blocked=blocked, verts=0, cols=0)
+            print(f"{root}: 0 configs - nothing to build ({len(skipped)} skipped (DROP/MISSING/no data), {len(blocked)} geometry-blocked); no macro / table written")
+            for b in blocked: print('   BLOCKED', b)
+            for s in skipped[:6]: print('   skipped', s)
+            continue
         table, hdr, ok, refrow = write_sw2(root, built)
         macro, n, V = emit(root, hdr, ok, refrow, table)
         blocked = [b[0]['$PRP@PartNo'] + ': ' + '; '.join(b[7]) for b in built if b[7]]

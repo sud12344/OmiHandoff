@@ -1,4 +1,4 @@
-Build_2702_MASTER  10/2/2026 12:56:13 PM
+Build_2702_MASTER  10/18/2026 2:46:24 PM
 OK    dim M1 = 0.9800 in (expect 0.9800)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
@@ -52,9 +52,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.3750 in (expect 0.3750)
 OK    dim PUCK_HT = 0.3750 in (expect 0.3750)
-OK    dim PUCK_R1B = 0.2165 in (expect 0.2165)
-OK    dim PUCK_R1T = 0.2165 in (expect 0.2165)
-OK    dim PUCK_XC = 0.4330 in (expect 0.4330)
+OK    dim PUCK_R1B = 0.2160 in (expect 0.2160)
+OK    dim PUCK_R1T = 0.2160 in (expect 0.2160)
+OK    dim PUCK_XC = 0.4325 in (expect 0.4325)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    One solid body after legs+hex
@@ -138,7 +138,7 @@ OK    leg 1 tip (exact) 0.9800 along +X (expect 0.9800)
 OK    leg 2 tip (exact) 1.9400 along the 135-deg leg (expect 1.9400)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: bulkhead collar)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2702_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_2702_SW2.xlsx
 OK    Configurations after table: 12 (expect 12)
       config check 1: 2702-04-04-FG
 OK    2702-04-04-FG M1@LEG1 = 0.7200 (table 0.7200)
@@ -159,8 +159,8 @@ OK    2702-04-04-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
 OK    2702-04-04-FG HEXL@HEX1_BODY = 0.1700 (table 0.1700)
 OK    2702-04-04-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
 OK    2702-04-04-FG HEXL@HEX2_BODY = 0.4200 (table 0.4200)
-OK    2702-04-04-FG PUCK_R1B@PUCK = 0.1270 (table 0.1270)
-OK    2702-04-04-FG PUCK_XC@PUCK = 0.2540 (table 0.2540)
+OK    2702-04-04-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    2702-04-04-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
 OK    2702-04-04-FG one solid body (found 1)
       2702-04-04-FG box x -1.150..0.720  y -0.254..1.150
       config check 2: 2702-20-20-FG
@@ -182,26 +182,26 @@ OK    2702-20-20-FG HEXAF@HEX1 = 1.6250 (table 1.6250)
 OK    2702-20-20-FG HEXL@HEX1_BODY = 0.6320 (table 0.6320)
 OK    2702-20-20-FG HEXAF@HEX2 = 1.6250 (table 1.6250)
 OK    2702-20-20-FG HEXL@HEX2_BODY = 0.9150 (table 0.9150)
-OK    2702-20-20-FG PUCK_R1B@PUCK = 0.4691 (table 0.4691)
-OK    2702-20-20-FG PUCK_XC@PUCK = 0.9382 (table 0.9382)
+OK    2702-20-20-FG PUCK_R1B@PUCK = 0.4686 (table 0.4686)
+OK    2702-20-20-FG PUCK_XC@PUCK = 0.9377 (table 0.9377)
 OK    2702-20-20-FG one solid body (found 1)
       2702-20-20-FG box x -2.279..1.590  y -0.938..2.279
       All-config sweep: rebuilding 11 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/11  2702-04-04-FG  rebuilt in 2.2 s
-      sweep 2/11  2702-04-04-FG-LN  rebuilt in 3.7 s
-      sweep 3/11  2702-06-06-FG  rebuilt in 3.6 s
-      sweep 4/11  2702-06-06-FG-LN  rebuilt in 3.8 s
-      sweep 5/11  2702-08-08-FG  rebuilt in 2.6 s
-      sweep 6/11  2702-08-08-FG-LN  rebuilt in 2.9 s
-      sweep 7/11  2702-10-10-FG  rebuilt in 4.0 s
-      sweep 8/11  2702-12-12-FG  rebuilt in 3.3 s
-      sweep 9/11  2702-16-16-FG  rebuilt in 2.4 s
-      sweep 10/11  2702-16-16-FG-LN  rebuilt in 4.0 s
-      sweep 11/11  2702-20-20-FG  rebuilt in 2.4 s
+      sweep 1/11  2702-04-04-FG  rebuilt in 1.6 s
+      sweep 2/11  2702-04-04-FG-LN  rebuilt in 2.7 s
+      sweep 3/11  2702-06-06-FG  rebuilt in 2.9 s
+      sweep 4/11  2702-06-06-FG-LN  rebuilt in 2.6 s
+      sweep 5/11  2702-08-08-FG  rebuilt in 1.9 s
+      sweep 6/11  2702-08-08-FG-LN  rebuilt in 3.1 s
+      sweep 7/11  2702-10-10-FG  rebuilt in 2.7 s
+      sweep 8/11  2702-12-12-FG  rebuilt in 2.6 s
+      sweep 9/11  2702-16-16-FG  rebuilt in 3.0 s
+      sweep 10/11  2702-16-16-FG-LN  rebuilt in 2.7 s
+      sweep 11/11  2702-20-20-FG  rebuilt in 2.0 s
 OK    All-config sweep: 11 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2702-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2702_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\2702_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\2702\2702_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\2702\2702_MASTER.SLDPRT

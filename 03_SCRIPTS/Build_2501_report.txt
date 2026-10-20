@@ -1,4 +1,4 @@
-Build_2501_MASTER  10/2/2026 8:49:04 PM
+Build_2501_MASTER  10/9/2026 10:16:58 AM
 OK    dim M1 = 1.3300 in (expect 1.3300)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
@@ -39,9 +39,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.4400 in (expect 0.4400)
 OK    dim PUCK_HT = 0.4400 in (expect 0.4400)
-OK    dim PUCK_R1B = 0.2540 in (expect 0.2540)
-OK    dim PUCK_R1T = 0.2540 in (expect 0.2540)
-OK    dim PUCK_XC = 0.5081 in (expect 0.5081)
+OK    dim PUCK_R1B = 0.2535 in (expect 0.2535)
+OK    dim PUCK_R1T = 0.2535 in (expect 0.2535)
+OK    dim PUCK_XC = 0.5076 in (expect 0.5076)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    One solid body after legs+hex
@@ -125,7 +125,7 @@ OK    Y extent -0.508 .. 1.470 (expect -0.508 .. 1.470)
       Bounding box z -0.442 .. 0.442 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_2501_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_2501_SW2.xlsx
 OK    Configurations after table: 49 (expect 49)
       config check 1: 2501-02-02-FG
 OK    2501-02-02-FG M1@LEG1 = 0.7700 (table 0.7700)
@@ -144,8 +144,8 @@ OK    2501-02-02-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
 OK    2501-02-02-FG HEXL@HEX1_BODY = 0.3220 (table 0.3220)
 OK    2501-02-02-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
 OK    2501-02-02-FG HEXL@HEX2_BODY = 0.3400 (table 0.3400)
-OK    2501-02-02-FG PUCK_R1B@PUCK = 0.1270 (table 0.1270)
-OK    2501-02-02-FG PUCK_XC@PUCK = 0.2540 (table 0.2540)
+OK    2501-02-02-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    2501-02-02-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
 OK    2501-02-02-FG one solid body (found 1)
       2501-02-02-FG box x -0.254..0.770  y -0.254..0.720
       config check 2: 2501-L-16-16-FG
@@ -165,63 +165,63 @@ OK    2501-L-16-16-FG HEXAF@HEX1 = 1.3125 (table 1.3125)
 OK    2501-L-16-16-FG HEXL@HEX1_BODY = 0.8990 (table 0.8990)
 OK    2501-L-16-16-FG HEXAF@HEX2 = 1.3125 (table 1.3125)
 OK    2501-L-16-16-FG HEXL@HEX2_BODY = 2.0700 (table 2.0700)
-OK    2501-L-16-16-FG PUCK_R1B@PUCK = 0.3789 (table 0.3789)
-OK    2501-L-16-16-FG PUCK_XC@PUCK = 0.7578 (table 0.7578)
+OK    2501-L-16-16-FG PUCK_R1B@PUCK = 0.3784 (table 0.3784)
+OK    2501-L-16-16-FG PUCK_XC@PUCK = 0.7573 (table 0.7573)
 OK    2501-L-16-16-FG one solid body (found 1)
       2501-L-16-16-FG box x -0.758..1.810  y -0.758..3.010
       All-config sweep: rebuilding 48 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/48  2501-02-02-FG  rebuilt in 0.8 s
-      sweep 2/48  2501-03-02-FG  rebuilt in 1.1 s
-      sweep 3/48  2501-04-02-FG  rebuilt in 1.3 s
-      sweep 4/48  2501-04-04-FG  rebuilt in 1.3 s
-      sweep 5/48  2501-04-06-FG  rebuilt in 1.3 s
-      sweep 6/48  2501-04-08-FG  rebuilt in 1.3 s
-      sweep 7/48  2501-04-12-FG  rebuilt in 1.3 s
-      sweep 8/48  2501-05-02-FG  rebuilt in 1.4 s
-      sweep 9/48  2501-05-04-FG  rebuilt in 1.3 s
-      sweep 10/48  2501-05-06-FG  rebuilt in 1.4 s
+      sweep 1/48  2501-02-02-FG  rebuilt in 0.7 s
+      sweep 2/48  2501-03-02-FG  rebuilt in 1.0 s
+      sweep 3/48  2501-04-02-FG  rebuilt in 1.4 s
+      sweep 4/48  2501-04-04-FG  rebuilt in 1.4 s
+      sweep 5/48  2501-04-06-FG  rebuilt in 1.1 s
+      sweep 6/48  2501-04-08-FG  rebuilt in 1.5 s
+      sweep 7/48  2501-04-12-FG  rebuilt in 1.4 s
+      sweep 8/48  2501-05-02-FG  rebuilt in 1.6 s
+      sweep 9/48  2501-05-04-FG  rebuilt in 1.1 s
+      sweep 10/48  2501-05-06-FG  rebuilt in 1.3 s
       sweep 11/48  2501-06-02-FG  rebuilt in 1.3 s
-      sweep 12/48  2501-06-08-FG  rebuilt in 1.3 s
+      sweep 12/48  2501-06-08-FG  rebuilt in 1.6 s
       sweep 13/48  2501-06-12-FG  rebuilt in 1.3 s
-      sweep 14/48  2501-08-04-FG  rebuilt in 1.2 s
-      sweep 15/48  2501-08-06-FG  rebuilt in 1.2 s
-      sweep 16/48  2501-08-08-FG  rebuilt in 0.9 s
-      sweep 17/48  2501-08-12-FG  rebuilt in 1.1 s
+      sweep 14/48  2501-08-04-FG  rebuilt in 1.1 s
+      sweep 15/48  2501-08-06-FG  rebuilt in 1.1 s
+      sweep 16/48  2501-08-08-FG  rebuilt in 0.7 s
+      sweep 17/48  2501-08-12-FG  rebuilt in 1.0 s
       sweep 18/48  2501-08-16-FG  rebuilt in 1.2 s
-      sweep 19/48  2501-10-06-FG  rebuilt in 1.3 s
-      sweep 20/48  2501-10-08-FG  rebuilt in 1.2 s
-      sweep 21/48  2501-10-12-FG  rebuilt in 1.3 s
-      sweep 22/48  2501-10-16-FG  rebuilt in 1.3 s
-      sweep 23/48  2501-12-06-FG  rebuilt in 1.3 s
-      sweep 24/48  2501-12-08-FG  rebuilt in 1.4 s
-      sweep 25/48  2501-12-12-FG  rebuilt in 1.3 s
-      sweep 26/48  2501-12-16-FG  rebuilt in 1.2 s
-      sweep 27/48  2501-12-20-FG  rebuilt in 1.2 s
-      sweep 28/48  2501-16-08-FG  rebuilt in 1.2 s
-      sweep 29/48  2501-16-12-FG  rebuilt in 1.2 s
-      sweep 30/48  2501-16-16-FG  rebuilt in 1.2 s
-      sweep 31/48  2501-16-20-FG  rebuilt in 1.4 s
-      sweep 32/48  2501-16-24-FG  rebuilt in 1.3 s
-      sweep 33/48  2501-20-16-FG  rebuilt in 1.6 s
-      sweep 34/48  2501-20-20-FG  rebuilt in 1.3 s
-      sweep 35/48  2501-20-24-FG  rebuilt in 1.3 s
-      sweep 36/48  2501-24-16-FG  rebuilt in 1.4 s
-      sweep 37/48  2501-24-20-FG  rebuilt in 1.3 s
-      sweep 38/48  2501-24-24-FG  rebuilt in 1.3 s
+      sweep 19/48  2501-10-06-FG  rebuilt in 1.1 s
+      sweep 20/48  2501-10-08-FG  rebuilt in 0.9 s
+      sweep 21/48  2501-10-12-FG  rebuilt in 0.9 s
+      sweep 22/48  2501-10-16-FG  rebuilt in 0.9 s
+      sweep 23/48  2501-12-06-FG  rebuilt in 1.0 s
+      sweep 24/48  2501-12-08-FG  rebuilt in 0.9 s
+      sweep 25/48  2501-12-12-FG  rebuilt in 1.0 s
+      sweep 26/48  2501-12-16-FG  rebuilt in 1.0 s
+      sweep 27/48  2501-12-20-FG  rebuilt in 0.9 s
+      sweep 28/48  2501-16-08-FG  rebuilt in 1.0 s
+      sweep 29/48  2501-16-12-FG  rebuilt in 0.9 s
+      sweep 30/48  2501-16-16-FG  rebuilt in 0.9 s
+      sweep 31/48  2501-16-20-FG  rebuilt in 1.0 s
+      sweep 32/48  2501-16-24-FG  rebuilt in 0.9 s
+      sweep 33/48  2501-20-16-FG  rebuilt in 1.0 s
+      sweep 34/48  2501-20-20-FG  rebuilt in 1.0 s
+      sweep 35/48  2501-20-24-FG  rebuilt in 1.0 s
+      sweep 36/48  2501-24-16-FG  rebuilt in 1.1 s
+      sweep 37/48  2501-24-20-FG  rebuilt in 1.7 s
+      sweep 38/48  2501-24-24-FG  rebuilt in 1.1 s
       sweep 39/48  2501-24-32-FG  rebuilt in 1.3 s
-      sweep 40/48  2501-32-24-FG  rebuilt in 1.3 s
+      sweep 40/48  2501-32-24-FG  rebuilt in 1.4 s
       sweep 41/48  2501-32-32-FG  rebuilt in 1.3 s
-      sweep 42/48  2501-L-04-02-FG  rebuilt in 1.3 s
-      sweep 43/48  2501-L-04-04-FG  rebuilt in 1.3 s
-      sweep 44/48  2501-L-06-04-FG  rebuilt in 1.2 s
-      sweep 45/48  2501-L-06-06-FG  rebuilt in 1.2 s
-      sweep 46/48  2501-L-08-08-FG  rebuilt in 1.2 s
-      sweep 47/48  2501-L-12-12-FG  rebuilt in 1.2 s
+      sweep 42/48  2501-L-04-02-FG  rebuilt in 1.1 s
+      sweep 43/48  2501-L-04-04-FG  rebuilt in 1.2 s
+      sweep 44/48  2501-L-06-04-FG  rebuilt in 1.3 s
+      sweep 45/48  2501-L-06-06-FG  rebuilt in 1.0 s
+      sweep 46/48  2501-L-08-08-FG  rebuilt in 1.3 s
+      sweep 47/48  2501-L-12-12-FG  rebuilt in 1.4 s
       sweep 48/48  2501-L-16-16-FG  rebuilt in 0.9 s
 OK    All-config sweep: 48 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2501-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 49 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 49 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\2501_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\2501_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\2501\2501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\2501\2501_MASTER.SLDPRT

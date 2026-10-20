@@ -1,4 +1,4 @@
-Build_6501_MASTER  10/2/2026 8:47:39 PM
+Build_6501_MASTER  10/9/2026 10:15:42 AM
 OK    dim M1 = 1.0900 in (expect 1.0900)
 OK    dim BODYR = 0.2800 in (expect 0.2800)
 OK    dim NPTF1_MAJR = 0.2609 in (expect 0.2609)
@@ -61,9 +61,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.2800 in (expect 0.2800)
 OK    dim PUCK_HT = 0.2800 in (expect 0.2800)
-OK    dim PUCK_R1B = 0.1617 in (expect 0.1617)
-OK    dim PUCK_R1T = 0.1617 in (expect 0.1617)
-OK    dim PUCK_XC = 0.3233 in (expect 0.3233)
+OK    dim PUCK_R1B = 0.1612 in (expect 0.1612)
+OK    dim PUCK_R1T = 0.1612 in (expect 0.1612)
+OK    dim PUCK_XC = 0.3228 in (expect 0.3228)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    NUTHEX2: nut face found at 1.1100 on axis 1
@@ -159,8 +159,8 @@ OK    Y extent -0.323 .. 1.110 (expect -0.323 .. 1.110)
       Bounding box z -0.280 .. 0.280 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.2800 .. 0.2800 (expect -0.2800 .. 0.2800: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_6501_SW2.xlsx
-OK    Configurations after table: 12 (expect 12)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_6501_SW2.xlsx
+OK    Configurations after table: 15 (expect 15)
       config check 1: 6501-04-06-FG
 OK    6501-04-06-FG M1@LEG1 = 1.0900 (table 1.0900)
 OK    6501-04-06-FG BODYR@LEG1 = 0.2810 (table 0.2810)
@@ -176,8 +176,8 @@ OK    6501-04-06-FG HEXAF@HEX1 = 0.5620 (table 0.5620)
 OK    6501-04-06-FG HEXL@HEX1_BODY = 0.5300 (table 0.5300)
 OK    6501-04-06-FG HEXAF@HEX2 = 0.5620 (table 0.5620)
 OK    6501-04-06-FG HEXL@HEX2_BODY = 0.4650 (table 0.4650)
-OK    6501-04-06-FG PUCK_R1B@PUCK = 0.1622 (table 0.1622)
-OK    6501-04-06-FG PUCK_XC@PUCK = 0.3245 (table 0.3245)
+OK    6501-04-06-FG PUCK_R1B@PUCK = 0.1617 (table 0.1617)
+OK    6501-04-06-FG PUCK_XC@PUCK = 0.3240 (table 0.3240)
 OK    6501-04-06-FG one solid body (found 1)
       6501-04-06-FG box x -0.397..1.090  y -0.324..1.250
       config check 2: 6501-32-32-FG
@@ -195,26 +195,29 @@ OK    6501-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
 OK    6501-32-32-FG HEXL@HEX1_BODY = 1.9700 (table 1.9700)
 OK    6501-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
 OK    6501-32-32-FG HEXL@HEX2_BODY = 1.7100 (table 1.7100)
-OK    6501-32-32-FG PUCK_R1B@PUCK = 0.7217 (table 0.7217)
-OK    6501-32-32-FG PUCK_XC@PUCK = 1.4434 (table 1.4434)
+OK    6501-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    6501-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
 OK    6501-32-32-FG one solid body (found 1)
       6501-32-32-FG box x -1.660..3.000  y -1.443..3.380
-      All-config sweep: rebuilding 11 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/11  6501-04-04-FG  rebuilt in 0.3 s
-      sweep 2/11  6501-04-06-FG  rebuilt in 0.7 s
-      sweep 3/11  6501-06-04-FG  rebuilt in 0.7 s
-      sweep 4/11  6501-06-08-FG  rebuilt in 0.9 s
-      sweep 5/11  6501-08-06-FG  rebuilt in 0.9 s
-      sweep 6/11  6501-08-08-FG  rebuilt in 0.9 s
-      sweep 7/11  6501-08-10-FG  rebuilt in 0.9 s
-      sweep 8/11  6501-16-16-FG  rebuilt in 0.9 s
-      sweep 9/11  6501-20-20-FG  rebuilt in 0.9 s
-      sweep 10/11  6501-24-24-FG  rebuilt in 0.9 s
-      sweep 11/11  6501-32-32-FG  rebuilt in 0.7 s
-OK    All-config sweep: 11 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 14 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/14  6501-04-04-FG  rebuilt in 0.2 s
+      sweep 2/14  6501-04-06-FG  rebuilt in 0.6 s
+      sweep 3/14  6501-06-04-FG  rebuilt in 0.6 s
+      sweep 4/14  6501-06-06-FG  rebuilt in 0.8 s
+      sweep 5/14  6501-06-08-FG  rebuilt in 0.8 s
+      sweep 6/14  6501-08-06-FG  rebuilt in 0.8 s
+      sweep 7/14  6501-08-08-FG  rebuilt in 0.7 s
+      sweep 8/14  6501-08-10-FG  rebuilt in 0.7 s
+      sweep 9/14  6501-12-08-FG  rebuilt in 0.8 s
+      sweep 10/14  6501-12-12-FG  rebuilt in 0.7 s
+      sweep 11/14  6501-16-16-FG  rebuilt in 0.9 s
+      sweep 12/14  6501-20-20-FG  rebuilt in 0.9 s
+      sweep 13/14  6501-24-24-FG  rebuilt in 0.7 s
+      sweep 14/14  6501-32-32-FG  rebuilt in 0.6 s
+OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6501-04-04-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6501_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6501_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6501\6501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6501\6501_MASTER.SLDPRT

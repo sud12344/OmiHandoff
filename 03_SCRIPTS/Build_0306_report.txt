@@ -1,0 +1,109 @@
+Build_0306_MASTER  10/9/2026 9:40:33 AM
+OK    dim h2 = 0.3100 in (expect 0.3100)
+OK    dim BODYR = 0.5774 in (expect 0.5774)
+OK    dim NUTCSA_MINR = 0.3412 in (expect 0.3412)
+      NUTCSA_CSANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NUTCSA_CSANG = 45.00 deg
+OK    dim NUTCSA_CSR = 0.3775 in (expect 0.3775)
+OK    dim NUTCSB_CSR = 0.3775 in (expect 0.3775)
+      NUTCSB_CSANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NUTCSB_CSANG = 45.00 deg
+OK    dim NUTCSB_MINR = 0.3412 in (expect 0.3412)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.2996 in^3 (expect 0.2996)
+OK    dim HEXB = 1.0000 in (expect 1.0000)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (18.7% of volume)
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.6823 in (expect 0.6823)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.3100 DA=0.6823 
+OK    locknut bore open on the axis at End A (x=0)
+OK    locknut bore open on the axis at End B (x=0.3100)
+OK    construction core end removed (no face across the axis at x=0.2737)
+OK    THD_EndB: end face found at 0.3100
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (0.3100, 0.0000, -0.3412)
+      THD_EndB: helix start = (0.3100, 0.0000, -0.3412)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (0.3100,0.3412) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 0.3100 (want 0.3100)
+OK    dim PROF_AX = 0.3100 in (expect 0.3100)
+      PROF_R: try 0 value 0.3412 (want 0.3412)
+OK    dim PROF_R = 0.3412 in (expect 0.3412)
+      APEXR: try 0 value 0.3750 (want 0.3750)
+OK    dim APEXR = 0.3750 in (expect 0.3750)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.00609 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 0.3484 (nominal 0.3100; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=0.3100
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 1.0000 / corners 1.1547 (expect 1.0000 / 1.1547)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\regen\after\straight\DesignTable_0306_SW2.xlsx
+OK    Configurations after table: 12 (expect 12)
+      config check 1: 0306-03
+OK    0306-03 h2@DRIVE = 0.2200 (table 0.2200)
+OK    0306-03 BODYR@DRIVE = 0.3608 (table 0.3608)
+OK    0306-03 HEXB@HEX = 0.6250 (table 0.6250)
+OK    0306-03 NUTCSA_MINR@DRIVE = 0.1650 (table 0.1650)
+OK    0306-03 NUTCSA_CSR@DRIVE = 0.1900 (table 0.1900)
+OK    0306-03 NUTCSB_CSR@DRIVE = 0.1900 (table 0.1900)
+OK    0306-03 NUTCSB_MINR@DRIVE = 0.1650 (table 0.1650)
+OK    0306-03 PROF_R@THDPROF_B = 0.1650 (table 0.1650)
+OK    0306-03 DEPTH@BORECUT_A = 0.2200 (table 0.2200)
+OK    0306-03 one solid body (found 1)
+      0306-03 box x -0.012..0.232  y -0.315..0.315
+      config check 2: 0306-32
+OK    0306-32 h2@DRIVE = 0.4100 (table 0.4100)
+OK    0306-32 BODYR@DRIVE = 1.5877 (table 1.5877)
+OK    0306-32 HEXB@HEX = 2.7500 (table 2.7500)
+OK    0306-32 NUTCSA_MINR@DRIVE = 1.2049 (table 1.2049)
+OK    0306-32 NUTCSA_CSR@DRIVE = 1.2735 (table 1.2735)
+OK    0306-32 NUTCSB_CSR@DRIVE = 1.2735 (table 1.2735)
+OK    0306-32 NUTCSB_MINR@DRIVE = 1.2049 (table 1.2049)
+OK    0306-32 PROF_R@THDPROF_B = 1.2049 (table 1.2049)
+OK    0306-32 DEPTH@BORECUT_A = 0.4100 (table 0.4100)
+OK    0306-32 one solid body (found 1)
+      0306-32 box x -0.005..0.415  y -1.379..1.379
+      All-config sweep: rebuilding 11 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/11  0306-03  rebuilt in 0.6 s
+      sweep 2/11  0306-04  rebuilt in 0.8 s
+      sweep 3/11  0306-05  rebuilt in 0.9 s
+      sweep 4/11  0306-06  rebuilt in 0.9 s
+      sweep 5/11  0306-08  rebuilt in 0.7 s
+      sweep 6/11  0306-10  rebuilt in 0.6 s
+      sweep 7/11  0306-12  rebuilt in 0.8 s
+      sweep 8/11  0306-16  rebuilt in 0.8 s
+      sweep 9/11  0306-20  rebuilt in 0.8 s
+      sweep 10/11  0306-24  rebuilt in 0.8 s
+      sweep 11/11  0306-32  rebuilt in 0.6 s
+OK    All-config sweep: 11 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 0306-08 for the save (it opens in this size)
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 12 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\0306\0306_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/9/2026 9:40:59 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\0306\0306_MASTER.SLDPRT

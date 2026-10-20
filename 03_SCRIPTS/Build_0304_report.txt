@@ -1,0 +1,92 @@
+Build_0304_MASTER  10/9/2026 9:39:45 AM
+OK    dim L = 0.7500 in (expect 0.7500)
+OK    dim BODYR = 0.5052 in (expect 0.5052)
+OK    dim JCAPB_MINR = 0.3412 in (expect 0.3412)
+OK    dim JCAPB_MINL = 0.3750 in (expect 0.3750)
+      JCAPB_SEATANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle JCAPB_SEATANG = 37.00 deg
+OK    dim JCAPB_PKR = 0.1950 in (expect 0.1950)
+OK    dim JCAPB_PKL = 0.0500 in (expect 0.0500)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.4133 in^3 (expect 0.4133)
+OK    dim HEXB = 0.8750 in (expect 0.8750)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (25.2% of volume)
+OK    cap crown closed on the axis at End A (x=0)
+OK    cap cavity open on the axis at End B (x=0.7500)
+OK    cap pocket bottom present at x=0.1310 (crown 0.1310)
+OK    THD_EndB: end face found at 0.7500
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (0.7500, 0.0000, -0.3412)
+      THD_EndB: helix start = (0.7500, 0.0000, -0.3412)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (0.7500,0.3412) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 0.7500 (want 0.7500)
+OK    dim PROF_AX = 0.7500 in (expect 0.7500)
+      PROF_R: try 0 value 0.3412 (want 0.3412)
+OK    dim PROF_R = 0.3412 in (expect 0.3412)
+      APEXR: try 0 value 0.3750 (want 0.3750)
+OK    dim APEXR = 0.3750 in (expect 0.3750)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.01024 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 0.7723 (nominal 0.7500; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=0.7500
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 0.8750 / corners 1.0104 (expect 0.8750 / 1.0104)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\regen\after\straight\DesignTable_0304_SW2.xlsx
+OK    Configurations after table: 13 (expect 13)
+      config check 1: 0304-C-03
+OK    0304-C-03 L@DRIVE = 0.5600 (table 0.5600)
+OK    0304-C-03 BODYR@DRIVE = 0.2529 (table 0.2529)
+OK    0304-C-03 HEXB@HEX = 0.4380 (table 0.4380)
+OK    0304-C-03 JCAPB_MINR@DRIVE = 0.1650 (table 0.1650)
+OK    0304-C-03 JCAPB_MINL@DRIVE = 0.2660 (table 0.2660)
+OK    0304-C-03 JCAPB_PKR@DRIVE = 0.0650 (table 0.0650)
+OK    0304-C-03 JCAPB_PKL@DRIVE = 0.0500 (table 0.0500)
+OK    0304-C-03 PROF_R@THDPROF_B = 0.1650 (table 0.1650)
+OK    0304-C-03 one solid body (found 1)
+      0304-C-03 box x 0.000..0.575  y -0.219..0.219
+      config check 2: 0304-C-32
+OK    0304-C-32 L@DRIVE = 1.4400 (table 1.4400)
+OK    0304-C-32 BODYR@DRIVE = 1.6599 (table 1.6599)
+OK    0304-C-32 HEXB@HEX = 2.8750 (table 2.8750)
+OK    0304-C-32 JCAPB_MINR@DRIVE = 1.2049 (table 1.2049)
+OK    0304-C-32 JCAPB_MINL@DRIVE = 0.8280 (table 0.8280)
+OK    0304-C-32 JCAPB_PKR@DRIVE = 0.8900 (table 0.8900)
+OK    0304-C-32 JCAPB_PKL@DRIVE = 0.0500 (table 0.0500)
+OK    0304-C-32 PROF_R@THDPROF_B = 1.2049 (table 1.2049)
+OK    0304-C-32 one solid body (found 1)
+      0304-C-32 box x -0.004..1.472  y -1.441..1.441
+      All-config sweep: rebuilding 12 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/12  0304-C-03  rebuilt in 0.7 s
+      sweep 2/12  0304-C-04  rebuilt in 0.7 s
+      sweep 3/12  0304-C-05  rebuilt in 0.9 s
+      sweep 4/12  0304-C-06  rebuilt in 0.9 s
+      sweep 5/12  0304-C-08  rebuilt in 0.7 s
+      sweep 6/12  0304-C-10  rebuilt in 0.8 s
+      sweep 7/12  0304-C-12  rebuilt in 0.9 s
+      sweep 8/12  0304-C-14  rebuilt in 0.9 s
+      sweep 9/12  0304-C-16  rebuilt in 0.9 s
+      sweep 10/12  0304-C-20  rebuilt in 0.9 s
+      sweep 11/12  0304-C-24  rebuilt in 0.9 s
+      sweep 12/12  0304-C-32  rebuilt in 0.7 s
+OK    All-config sweep: 12 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 0304-C-08 for the save (it opens in this size)
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 13 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\0304\0304_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/9/2026 9:40:16 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\0304\0304_MASTER.SLDPRT

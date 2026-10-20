@@ -1,4 +1,4 @@
-# OMi fitting library: project status and open work (2026-10-08: batch 15 shipped - 52 new configurations in 18 masters; before: batch 14 / 14b 2026-10-02)
+# OMi fitting library: project status and open work (2026-10-19: batch 16 shipped - wave 1, leftovers, JIC tees, 2404, 5405, corner-puck fix; before: batch 15 2026-10-08)
 
 This is the handover state from the Cowork sessions (2026-09-04 to 2026-09-25), updated after Claude's overnight
 SolidWorks build of 2026-09-25 (details: `00_DOCS/OVERNIGHT_BUILD_2026-09-25.md`) and after batch 14 (2026-10-02,
@@ -6,6 +6,39 @@ SolidWorks build of 2026-09-25 (details: `00_DOCS/OVERNIGHT_BUILD_2026-09-25.md`
 the detail behind it. Keep it current: update it whenever a batch ships or a decision is made.
 
 ## 1. Where things stand
+
+**2026-10-19: BATCH 16 SHIPPED (`03_SCRIPTS\RUN_ME_batch16.txt`, QA #170-#172; user: "Yes, ship batch 16 as planned.").** Plan +
+evidence: `tools\_out\ship_20261019\` (SHIP_PLAN.md, checks\, scripts\ship_b16.py, old_files\ + MANIFEST*.txt; second copy
+`_to_delete\superseded_20261019\batch16_replaced\`).
+- **25 masters -> `11_MASTERS`** (the SolidWorks dry-run parts, copied unchanged - sha256): NEW 0304 (JIC cap nut, 12) 0306 (bulkhead
+  locknut, 11) 1502 (1) 2504 (4) 2505 (1) 2606 (5) 2609 (1) 2611 (2) and 2404 (57, generated: two bores, 2404-L folded, replaces the
+  hand-built master); more sizes 6500 15 -> 24 (4 OMi leftovers + 6500-L x5), 6501 11 -> 14, 6505 18 -> 19, 5405 rebuilt (its 3 unbuilt
+  configurations now in the file); the corner-puck fix re-ships 2501 2503 2701 2702 5500 5502 5504 6502 6503 1501 6801 6802 (+ 6500 /
+  6501 / 2504). 24 macros (LF) + 25 reports -> `03_SCRIPTS`, 24 SW2 + 12 review tables (0304 0306 1502 2504 2505 2606 2609 2611 6500
+  6500L 6501 6505) -> `04_DESIGN_TABLES`. All new rows ASSUMED.
+- **Toolchain:** `tools\_out\puckfix_20261009\tools_new` deployed to the live `tools\` (wave-1 merged generators + 2404 + polish +
+  `PUCK_INSET`; gen_tee.py, gen_straight2.py, checks\allcfg_check.py, checks\dofcheck_straight.py, measure\npsm.py, measure\prof.py
+  changed, 17 measure scripts added). Undo = the files in `ship_20261019\old_files\tools\`.
+- **Corner-puck defect (QA #171):** the elbow corner puck sat exactly on the hex corner radius and SolidWorks silently dropped it in
+  20 configurations (16 shipped + 4 staged; list in RUN_ME). Now 0.0005 in inside (`PUCK_INSET`): all 20 have their corner, every
+  other configuration of the 17 elbow roots changes by that sliver only (dV / AF^2 = -0.000340 on 90 deg elbows). The 2026-10-09
+  dimension-check drawings predate the fix (dimensions unchanged).
+- **Checks** (`ship_20261019\checks`): every root regenerated from the staged tables with the staged tools - the 24 changed roots
+  identical to the macros that were dry-run (cmp_ship_out.txt); dry runs 0 FAIL, 1 body each
+  (`puckfix_20261009\DRYRUN_VERDICT_2026-10-19.txt`, `wave1_ship_20261009\swtest\cmp_out.txt`); old configurations identical or
+  changed by the puck inset only; after shipping the live tools + tables regenerate the shipped files exactly (verify_b16.txt, 0 BAD).
+- **Not re-shipped on purpose (QA #172):** 2505-08-08 / -16-16-FG and 1502-04-04-FG blocked; 0318 5406 2650 2605 5600 regenerate
+  with a cosmetic `$COMMENT` change only; 22 roots keep their pre-2026-09-25 macros (5000 5404 2408 0318 5406 5406C 5406P 2700 4404
+  4604 5404N 2406 1405 1700 2650 2602 2605 5600 5602 2704 6600 6602 - dry-run before re-shipping any).
+- **Now: 1,103 of 1,804 configurations in a master** (1,053 in `11_MASTERS` + 50 in the hand-built 6400); 619 BUILD rows MISSING,
+  82 with data but no master configuration; **71 masters in `11_MASTERS`**; 19 topologies fully modelled
+  (`ship_20261019\paperwork\count_now.txt`). Coverage refreshed: A1 1,050, A2 50 (6400), D 105, E 1, F1 208, F2 236, F3 138, F4 11,
+  F5 2, X 30.
+- SolidWorks: the 2026-10-09 dry-run session stopped when SolidWorks closed; on 2026-10-18 it kept closing with "License not granted:
+  X1W ... (License error 20)" = the desktop app had lost its 3DEXPERIENCE sign-in since 2026-10-15 (SWXDesktopHelper logs: the role
+  query answered by the login page). The user signed in again on 2026-10-19; the 9 remaining roots were dry-run then.
+- **Next:** the 37 wrongly-DROP adapters (`tools\_out\adapters77_20261016`, `apply_77.py --apply`, needs the user's OK), then batch 17
+  (Brennan / OMi-answer rows staged by another session on top of this state).
 
 **2026-10-18 (later): OMi's answers staged** - 15 more rows have dimensions (`tools\_out\omi_answers_20261018\README.md`,
 section 5). Not in the count below.
@@ -201,7 +234,7 @@ stop flat at the crossing. At -32 this is 0.75 in^3.
    `tools\_out\omi_enum_20261015\` hit OMi's store rate limit). Compression and test gauge: no Air-Way source (Brennan only V0318 /
    V0319) -> MISSING. Needed before models: an ORFS end type (male face
    seal + O-ring groove, female face-seal swivel nut) - FS series need their own masters (a different end sketch than JIC).
-   **2026-10-09 (later): staged, NOT shipped, SolidWorks dry runs pending.**
+   **2026-10-09 (later): staged** - **SHIPPED 2026-10-19 as batch 16 (section 1)**; the items below are the staging history.
    - **2404 (Q-2404-BORE answered, s5):** LIVE `04_DESIGN_TABLES\DesignTable_2404_FINAL.xlsx` edited (29 rows: two bores from OMi, 2404-24-20
      from Air-Way, step at the hex mid-plane, the 4 "CB depth unsourced" rows released, 2404-40-32's Brennan depth dropped, question-26
      lengths 2404-10-04 1.69 / 2404-20-32 2.74) and LIVE `tools\generators\gen_straight2.py` (2404-L two bores, texts). Old files:

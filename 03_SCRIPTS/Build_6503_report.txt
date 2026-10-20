@@ -1,4 +1,4 @@
-Build_6503_MASTER  9/25/2026 3:23:24 AM
+Build_6503_MASTER  10/19/2026 7:31:02 PM
 OK    dim M1 = 1.2300 in (expect 1.2300)
 OK    dim BODYR = 0.5300 in (expect 0.5300)
 OK    LEG1 sketch fully defined
@@ -15,13 +15,17 @@ OK    dim SW2_NUTHEXL = 0.4499 in (expect 0.4499)
 OK    dim SW2_NUTR = 0.5081 in (expect 0.5081)
 OK    dim SW2_CSR = 0.3750 in (expect 0.3750)
       SW2_CSANG: the two lines share no endpoint - vertex candidates unavailable
-      SW2_CSANG angle try 0 at (0.455, 1.506): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 1 at (0.455, -1.506): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 2 at (-0.455, 1.506): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 3 at (-0.455, -1.506): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 4 at (0.573, 0.079): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 5 at (0.337, 0.079): 130.0 deg (want 50.0)
-FAIL  angle SW2_CSANG was not created
+      SW2_CSANG angle try 0 at (-0.067, 1.063): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 1 at (0.067, 1.348): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 2 at (-0.133, 0.920): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 3 at (0.133, 1.491): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 4 at (0.455, 1.506): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 5 at (0.455, -1.506): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 6 at (-0.455, 1.506): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 7 at (-0.455, -1.506): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 8 at (0.573, 0.079): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 9 at (0.337, 0.079): 130.0 deg (want 50.0)
+OK    angle SW2_CSANG held by its supplement SW2_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
 OK    dim SW2_MINR = 0.3412 in (expect 0.3412)
 OK    dim SW2_THDL = 0.3283 in (expect 0.3283)
       SW2_RELANG: the two lines share no endpoint - vertex candidates unavailable
@@ -52,9 +56,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.5300 in (expect 0.5300)
 OK    dim PUCK_HT = 0.5300 in (expect 0.5300)
-OK    dim PUCK_R1B = 0.3060 in (expect 0.3060)
-OK    dim PUCK_R1T = 0.3060 in (expect 0.3060)
-OK    dim PUCK_XC = 0.6120 in (expect 0.6120)
+OK    dim PUCK_R1B = 0.3055 in (expect 0.3055)
+OK    dim PUCK_R1T = 0.3055 in (expect 0.3055)
+OK    dim PUCK_XC = 0.6115 in (expect 0.6115)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    NUTHEX2: nut face found at 1.5200 on axis 1
@@ -122,6 +126,7 @@ OK    THD_End1 helix sketch made (ProfileFeature)
       THD_End1: InsertHelix ok
 OK    THD_End1 helix created
 OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (1.2300, 0.0000, -0.3500)
       THD_End1: helix start = (1.2300, 0.0000, -0.3500)
       THD_End1: profile on Top Plane
       THD_End1: sketch start (1.2300,0.3500) axialIsX=True apex dir 1
@@ -138,14 +143,15 @@ OK    THD_End1 swept cut created
 OK    THD_End1 sweep removed material: 0.03232 in^3
 OK    THD_End1 suppressed
 OK    THD_End2: end face found at 1.5200
-FAIL  dim HELIXDIA = 0.6800 in (expect 0.6823)
+OK    dim HELIXDIA = 0.6823 in (expect 0.6823)
 OK    THD_End2 helix sketch made (ProfileFeature)
       THD_End2: InsertHelix ok
 OK    THD_End2 helix created
 OK    THD_End2 helix dims named (D7 D5 PITCH HEIGHT )
-      THD_End2: helix start = (0.3412, 1.5200, 0.0000)
-      THD_End2: profile on Front Plane
-      THD_End2: sketch start (0.3412,1.5200) axialIsX=False apex dir 1
+      THD_End2: helix start from the curve (0.0000, 1.5200, 0.3412)
+      THD_End2: helix start = (0.0000, 1.5200, 0.3412)
+      THD_End2: profile on Right Plane
+      THD_End2: sketch start (-0.3412,1.5200) axialIsX=False apex dir -1
       PROF_AX: try 0 value 1.5200 (want 1.5200)
 OK    dim PROF_AX = 1.5200 in (expect 1.5200)
       PROF_R: try 0 value 0.3412 (want 0.3412)
@@ -156,14 +162,14 @@ OK    THD_End2 60 deg tooth angle placed
 OK    THD_End2 profile sketch fully defined
       THD_End2: sweep CreateFeature -> True
 OK    THD_End2 swept cut created
-OK    THD_End2 sweep removed material: 0.00682 in^3
+OK    THD_End2 sweep removed material: 0.00818 in^3
 OK    THD_End2 suppressed
 OK    X extent -0.612 .. 1.230 (expect -0.612 .. 1.230; threads may add a little)
 OK    Y extent -0.612 .. 1.520 (expect -0.612 .. 1.520)
       Bounding box z -0.530 .. 0.530 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.5300 .. 0.5300 (expect -0.5300 .. 0.5300: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_6503_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_6503_SW2.xlsx
 OK    Configurations after table: 2 (expect 2)
       config check 1: 6503-08-08-FG
 OK    6503-08-08-FG M1@LEG1 = 1.2300 (table 1.2300)
@@ -181,8 +187,8 @@ OK    6503-08-08-FG HEXAF@HEX1 = 1.0600 (table 1.0600)
 OK    6503-08-08-FG HEXL@HEX1_BODY = 0.9700 (table 0.9700)
 OK    6503-08-08-FG HEXAF@HEX2 = 1.0600 (table 1.0600)
 OK    6503-08-08-FG HEXL@HEX2_BODY = 0.6350 (table 0.6350)
-OK    6503-08-08-FG PUCK_R1B@PUCK = 0.3060 (table 0.3060)
-OK    6503-08-08-FG PUCK_XC@PUCK = 0.6120 (table 0.6120)
+OK    6503-08-08-FG PUCK_R1B@PUCK = 0.3055 (table 0.3055)
+OK    6503-08-08-FG PUCK_XC@PUCK = 0.6115 (table 0.6115)
 OK    6503-08-08-FG one solid body (found 1)
       6503-08-08-FG box x -0.612..1.230  y -0.612..1.520
       All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
@@ -192,5 +198,5 @@ OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\6503\6503_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\6503\6503_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6503\6503_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6503\6503_MASTER.SLDPRT

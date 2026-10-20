@@ -1,4 +1,4 @@
-Build_5504_MASTER  9/24/2026 7:54:31 PM
+Build_5504_MASTER  10/19/2026 7:28:51 PM
 OK    dim M1 = 1.2300 in (expect 1.2300)
 OK    dim BODYR = 0.5300 in (expect 0.5300)
 OK    LEG1 sketch fully defined
@@ -25,9 +25,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.5300 in (expect 0.5300)
 OK    dim PUCK_HT = 0.5300 in (expect 0.5300)
-OK    dim PUCK_R1B = 0.3060 in (expect 0.3060)
-OK    dim PUCK_R1T = 0.3060 in (expect 0.3060)
-OK    dim PUCK_XC = 0.6120 in (expect 0.6120)
+OK    dim PUCK_R1B = 0.3055 in (expect 0.3055)
+OK    dim PUCK_R1T = 0.3055 in (expect 0.3055)
+OK    dim PUCK_XC = 0.6115 in (expect 0.6115)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    One solid body after legs+hex
@@ -67,6 +67,7 @@ OK    THD_End1 helix sketch made (ProfileFeature)
       THD_End1: InsertHelix ok
 OK    THD_End1 helix created
 OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (1.2300, 0.0000, -0.3500)
       THD_End1: helix start = (1.2300, 0.0000, -0.3500)
       THD_End1: profile on Top Plane
       THD_End1: sketch start (1.2300,0.3500) axialIsX=True apex dir 1
@@ -88,9 +89,10 @@ OK    THD_End2 helix sketch made (ProfileFeature)
       THD_End2: InsertHelix ok
 OK    THD_End2 helix created
 OK    THD_End2 helix dims named (D7 D6 D5 PITCH HEIGHT )
-      THD_End2: helix start = (0.3500, 1.2300, 0.0000)
-      THD_End2: profile on Front Plane
-      THD_End2: sketch start (0.3500,1.2300) axialIsX=False apex dir 1
+      THD_End2: helix start from the curve (0.0000, 1.2300, 0.3500)
+      THD_End2: helix start = (0.0000, 1.2300, 0.3500)
+      THD_End2: profile on Right Plane
+      THD_End2: sketch start (-0.3500,1.2300) axialIsX=False apex dir -1
       PROF_AX: try 0 value 1.2300 (want 1.2300)
 OK    dim PROF_AX = 1.2300 in (expect 1.2300)
       PROF_R: try 0 value 0.3500 (want 0.3500)
@@ -101,14 +103,14 @@ OK    THD_End2 60 deg tooth angle placed
 OK    THD_End2 profile sketch fully defined
       THD_End2: sweep CreateFeature -> True
 OK    THD_End2 swept cut created
-OK    THD_End2 sweep removed material: 0.03087 in^3
+OK    THD_End2 sweep removed material: 0.03205 in^3
 OK    THD_End2 suppressed
 OK    X extent -0.612 .. 1.230 (expect -0.612 .. 1.230; threads may add a little)
 OK    Y extent -0.612 .. 1.230 (expect -0.612 .. 1.230)
       Bounding box z -0.530 .. 0.530 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.5300 .. 0.5300 (expect -0.5300 .. 0.5300: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5504_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_5504_SW2.xlsx
 OK    Configurations after table: 6 (expect 6)
       config check 1: 5504-02-02-FG
 OK    5504-02-02-FG M1@LEG1 = 0.6600 (table 0.6600)
@@ -123,8 +125,8 @@ OK    5504-02-02-FG HEXAF@HEX1 = 0.5600 (table 0.5600)
 OK    5504-02-02-FG HEXL@HEX1_BODY = 0.4000 (table 0.4000)
 OK    5504-02-02-FG HEXAF@HEX2 = 0.5600 (table 0.5600)
 OK    5504-02-02-FG HEXL@HEX2_BODY = 0.4000 (table 0.4000)
-OK    5504-02-02-FG PUCK_R1B@PUCK = 0.1617 (table 0.1617)
-OK    5504-02-02-FG PUCK_XC@PUCK = 0.3233 (table 0.3233)
+OK    5504-02-02-FG PUCK_R1B@PUCK = 0.1612 (table 0.1612)
+OK    5504-02-02-FG PUCK_XC@PUCK = 0.3228 (table 0.3228)
 OK    5504-02-02-FG one solid body (found 1)
       5504-02-02-FG box x -0.323..0.660  y -0.323..0.660
       config check 2: 5504-16-16-FG
@@ -140,19 +142,20 @@ OK    5504-16-16-FG HEXAF@HEX1 = 1.6300 (table 1.6300)
 OK    5504-16-16-FG HEXL@HEX1_BODY = 1.3600 (table 1.3600)
 OK    5504-16-16-FG HEXAF@HEX2 = 1.6300 (table 1.6300)
 OK    5504-16-16-FG HEXL@HEX2_BODY = 1.3600 (table 1.3600)
-OK    5504-16-16-FG PUCK_R1B@PUCK = 0.4705 (table 0.4705)
-OK    5504-16-16-FG PUCK_XC@PUCK = 0.9411 (table 0.9411)
+OK    5504-16-16-FG PUCK_R1B@PUCK = 0.4700 (table 0.4700)
+OK    5504-16-16-FG PUCK_XC@PUCK = 0.9406 (table 0.9406)
 OK    5504-16-16-FG one solid body (found 1)
       5504-16-16-FG box x -0.941..1.620  y -0.941..1.620
       All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/5  5504-02-02-FG  rebuilt in 1.4 s
-      sweep 2/5  5504-04-04-FG  rebuilt in 0.9 s
-      sweep 3/5  5504-08-08-FG  rebuilt in 0.9 s
-      sweep 4/5  5504-12-12-FG  rebuilt in 0.9 s
-      sweep 5/5  5504-16-16-FG  rebuilt in 0.8 s
+      sweep 1/5  5504-02-02-FG  rebuilt in 1.0 s
+      sweep 2/5  5504-04-04-FG  rebuilt in 0.6 s
+      sweep 3/5  5504-08-08-FG  rebuilt in 0.7 s
+      sweep 4/5  5504-12-12-FG  rebuilt in 0.7 s
+      sweep 5/5  5504-16-16-FG  rebuilt in 0.9 s
 OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 5504-08-08-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\5504_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\5504_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\5504\5504_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\5504\5504_MASTER.SLDPRT

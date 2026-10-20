@@ -47,6 +47,41 @@ SPEC = {
     '2605': dict(name='Male Run Tee', hex='Y@HEX', ref='2605-08-08-08-FG',
                  legs=[('JICM', 'M1@DRIVE', 'D_1@BORE', 'THDMAJ_B1@DRIVE'), ('NPTFM', 'N@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'),
                        ('JICM', 'M3@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')]),
+    # ---- 2026-10-02 (new masters from the Brennan pilot STEPs, user: "yes, go ahead"): forged -FG tees with a female pipe port, measured with
+    #      tools/measure/forged.py (validated by forged_validate.py on 2650-08 / 5605-08 / 5600-16 / 6502-08) = the existing 2603HX tee pattern
+    #      (run bar through the crossing, branch hex arm, 0.26 round collar at the female port, every bore from its face to the crossing).
+    #      PN order = leg order (end 1 = +X, end 2 = -X, end 3 = +Y branch); Brennan draws end 1 on -X (mirror image, same part).
+    #      p1 = the female port thread length column (measured on the part's own STEP; the MS51503 P1 library value where the row has none).
+    '2606': dict(name='Female Run Tee', hex='Y1@HEX', ref='2606-08-08-08-FG', conn=None, p1='PORTDEPTH@BORE',
+                 legs=[('JICM', 'M1_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('NPTFF', 'N1@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE'),
+                       ('JICM', 'M1_3@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')],
+                 conn_src='the tap drill carried to the crossing (MEASURED: Brennan 2606-08-08-08-FG STEP - the 0.718 drill runs from the bottom of the '
+                          '0.75 deep tapered port to the axis crossing; the tapered port itself and its 45deg mouth chamfer are drawn as the tap-drill '
+                          'cylinder + the Thread feature, as on every built female port)',
+                 assume_extra=['Brennan 2606-08-08-08-FG STEP (2026-10-02, tools/measure/forged.py): run hex bar from the JIC hex face (0.863 = M - the '
+                               '2403 -08 JIC end length 0.657) through the crossing to the female collar (0.970), branch hex arm to 0.863, female port '
+                               'round collar 0.260 long at the flats dia, A/F 1.062, flats normal to Z, bores 0.391 = this pattern; JIC seat / land / '
+                               'cone / thread major = the 2403 -08 chain, but the STEP shows NO thread relief (thread major runs to the hex face): the '
+                               'model keeps the MS33656J relief of the 2403 chain, as every built tee / elbow (ASSUMPTION; Brennan 2505-08-08-FG and the '
+                               '2403 straights show the relief)']),
+    # 2026-10-09: male JIC run x female pipe run x female pipe branch (Air-Way s-page 2609: M1 / N1_2 / N1_3 / Y1 / D / TAPDRILL2 / 3); the
+    # forged body of 2606 (JIC run end) with the 5605 female legs (collar); rows filled from OMi, ports = end library (Q-TRANSFER-ENDLIB = yes)
+    '2609': dict(name='Female Run x Female Branch Tee', hex='Y1@HEX', ref='2609-08-08-08-FG', conn=None,
+                 legs=[('JICM', 'M1@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('NPTFF', 'N1_2@DRIVE', 'TAPDRILL2@BORE', 'THDMAJ_A2@DRIVE'),
+                       ('NPTFF', 'N1_3@DRIVE', 'TAPDRILL3@BORE', 'THDMAJ_A3@DRIVE')]),
+    '2611': dict(name='Male Run x Female Branch Tee', hex='Y1@HEX', ref='2611-06-06-06-FG', conn=None, p1='PORTDEPTH@BORE',
+                 legs=[('JICM', 'M1@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('NPTFM', 'N5@DRIVE', 'D1@BORE', 'THDMAJ_A2@DRIVE'),
+                       ('NPTFF', 'N1@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A3@DRIVE')],
+                 conn_src='the tap drill carried to the crossing (MEASURED: Brennan 2611-06-06-06-FG STEP - the 0.578 drill runs from the bottom of the '
+                          '0.58 deep tapered port to the run axis; the tapered port itself and its 45deg mouth chamfer are drawn as the tap-drill '
+                          'cylinder + the Thread feature, as on every built female port)',
+                 assume_extra=['Brennan 2611-06-06-06-FG STEP (2026-10-02, tools/measure/forged.py): run hex bar from the JIC hex face (0.754 = M - the '
+                               '2403 -06 JIC end length 0.556) through the crossing to the male pipe hex face (0.660 = N - the 5404 -06 end length 0.56), '
+                               'branch hex arm to the female collar (0.760), collar 0.260 long at the flats dia, A/F 0.875, flats normal to Z, bores '
+                               '0.297 / 0.406 from each face to the crossing = this pattern; JIC end = the 2403 -06 chain but with NO thread relief on '
+                               'the STEP (model keeps the MS33656J relief, ASSUMPTION as on every built tee); male pipe end: STEP taper 0.4817 from a '
+                               '45deg tip chamfer + a 0.028 relief at the pipe OD 0.675, model = ASME B1.20.3 cone + relief (library, as every built '
+                               'male pipe leg) with the same end length 0.56']),
     '5600': dict(name='Male Pipe Tee', hex='Y@HEX', ref='5600-08-08-08-FG',
                  legs=[('NPTFM', 'N1@DRIVE', 'D1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N2@DRIVE', 'D2@BORE', 'THDMAJ_A2@DRIVE'),
                        ('NPTFM', 'N3@DRIVE', 'D3@BORE', 'THDMAJ_A3@DRIVE')]),
@@ -59,13 +94,50 @@ SPEC = {
     '5605': dict(name='Female Pipe Tee', hex='W@HEX', ref='5605-06-06-06-FG', conn=None,
                  legs=[('NPTFF', 'N1_1@DRIVE', 'TAPDRILL1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFF', 'N1_2@DRIVE', 'TAPDRILL2@BORE', 'THDMAJ_A2@DRIVE'),
                        ('NPTFF', 'N1_3@DRIVE', 'TAPDRILL3@BORE', 'THDMAJ_A3@DRIVE')]),
+    # ---- 2026-10-02 (new masters wave 1, PIPE-TEES): forged pipe tees / cross from their Brennan pilot STEPs, measured with
+    #      tools/measure/pipetee.py (validated on Brennan 5605-08-08-08-FG = COLLAR_L 0.26, 5600-16-16-16-FG = hex stop N - 0.94, relief 1.315).
+    #      The pilots show the existing BODY modules: run hex bar continuous through the crossing (+ branch hex arm, or a second continuous bar
+    #      on the cross), flats normal to Z; male legs: hex stops at the 5404 end length; female legs: round collar 0.26 at the flats and the
+    #      drill of the TAPDRILL column from the port face to the axis crossing (conn=None: on all three STEPs the drill reaches the crossing).
+    #      The END SHAPES stay the library NPTFM / NPTFF ends, as on the accepted 5600 / 5602 / 5604 / 5605 masters - NOT the pilots' own
+    #      (Brennan relief ring, simplified cone, tip chamfer, countersink; tapered port + mouth chamfer): user gate Q-TRANSFER-ENDLIB is open.
+    #      'pilot' = the Brennan STEP the root is measured on; __main__ then rewrites the MODEL part of each row's $PRP@AxialSource with
+    #      pilot_rows() / pilot_text() (per row). 'pilot_port' (depth of the pilot's 1.79deg tapered port, measured) and 'pilot_notes'
+    #      (root-specific modelling notes) are text only.
+    '5652': dict(name='Female Pipe Cross', hex='W@HEX', cross=True, ref='5652-08-08-08-08-FG', conn=None,
+                 pilot='5652-08-08-08-08-FG', pilot_port=0.750,
+                 legs=[('NPTFF', 'N1_1@DRIVE', 'TAPDRILL1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFF', 'N1_2@DRIVE', 'TAPDRILL2@BORE', 'THDMAJ_A2@DRIVE'),
+                       ('NPTFF', 'N1_3@DRIVE', 'TAPDRILL3@BORE', 'THDMAJ_A3@DRIVE'), ('NPTFF', 'N1_4@DRIVE', 'TAPDRILL4@BORE', 'THDMAJ_A4@DRIVE')]),
+    '5603': dict(name='Female Run Pipe Tee', hex='W@REF', ref='5603-08-08-08-FG', conn=None,
+                 pilot='5603-08-08-08-FG', pilot_port=0.750,
+                 pilot_notes=('orientation: A1 (male run, first dash) on +X, A2 (female run) on -X, A3 (male branch) on +Y - the leg order of every '
+                              'gen_tee tee; the Brennan 5603-08-08-08-FG STEP draws A1 on -X and A2 on +X: the same part turned 180deg about Y (flats '
+                              'stay normal to Z), no dimension changes',),
+                 legs=[('NPTFM', 'N1@DRIVE', 'D1_1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFF', 'N1_2@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A2@DRIVE'),
+                       ('NPTFM', 'N3@DRIVE', 'D1_3@BORE', 'THDMAJ_A3@DRIVE')]),
+    '5601': dict(name='Female Branch Pipe Tee', hex='W@HEX', ref='5601-06-06-06-FG', conn=None,
+                 pilot='5601-06-06-06-FG', pilot_port=0.580,
+                 legs=[('NPTFM', 'N_1@DRIVE', 'D1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N2@DRIVE', 'D2@BORE', 'THDMAJ_A2@DRIVE'),
+                       ('NPTFF', 'N1@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A3@DRIVE')]),
     # ---- 90 deg elbows: 2500HX pattern (two hex arms + 30deg double-cone corner puck), legs along +X and +Y
     '2501': dict(name='90 deg Male Elbow', hex='Y@REF', elbow=True, ref='2501-08-08-FG',
                  legs=[('JICM', 'M@DRIVE', 'D@BORE', 'THDMAJ_A@DRIVE'), ('NPTFM', 'N@DRIVE', 'D1@DRILL', 'PIPEOD@DRIVE')],
                  # 2026-09-25 (user decision: fold the long variant into the base master): 2501-L rows join as extra configurations -
                  # the long NPTF leg is Air-Way N3; Brennan 2501-L-06-04-FG STEP: the forged hex arm simply runs longer (to N3 - the NPTF
                  # end length 0.56 = the 5404 value), same shape otherwise -> same topology
-                 fold=[('2501L', {'N3@DRIVE': 'N@DRIVE', 'THDMAJ_B@DRIVE': 'THDMAJ_A@DRIVE', 'THDMAJ_A@DRIVE': 'PIPEOD@DRIVE', 'D1@BORE': 'D1@DRILL'})]),
+                 fold=[('2501L', {'N3@DRIVE': 'N@DRIVE', 'THDMAJ_B@DRIVE': 'THDMAJ_A@DRIVE', 'THDMAJ_A@DRIVE': 'PIPEOD@DRIVE', 'D1@BORE': 'D1@DRILL'}),
+                       # 2026-10-02 (FOLDS): 2501-LL (extra long) rows join the same way - the long NPTF leg is Air-Way / Brennan N4 / L.
+                       # Brennan 2501-LL-08-08-FG STEP (pilot), tools/measure/elbow90.py (validated on 2501-L-06-04-FG and 6500-04/-08/-12/-16-FG):
+                       # forged hex arm A/F 0.875 continuous from the crossing to 2.120 = N4 2.870 - 0.750 (= ENDL[8], the 5404 -08 NPTF end
+                       # length, also the 5502-08-08-FG forged male end), no step on the arm; JIC end 0.657 = the MS33656J chain -> same topology
+                       ('2501LL', {'N4@DRIVE': 'N@DRIVE', 'THDMAJ_B@DRIVE': 'THDMAJ_A@DRIVE', 'THDMAJ_A@DRIVE': 'PIPEOD@DRIVE', 'D1@BORE': 'D1@DRILL'},
+                        dict(why='2501-LL row folded into the 2501 master: Brennan 2501-LL-08-08-FG STEP (pilot) shows the forged hex arm simply running '
+                                 'on along the pipe leg (Q-NEW-FOLD-2501LL, 2026-10-02)',
+                             assume='2501-LL fold: forged hex arm runs on along the pipe leg to N4 minus the 5404 NPTF end length (Brennan '
+                                    '2501-LL-08-08-FG STEP, tools/measure/elbow90.py: arm 0..2.120 continuous, end 0.750 = ENDL[8]; measured at -08-08 only)',
+                             # the 2501-LL -FG rows have no OMi or Air-Way dimension (Brennan only): the generic text names the row's own source
+                             src=[('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row's hex Y (its source: the start of this AxialSource), JIC thread majors)"),
+                                  ('hex A/F raised from Air-Way ', "hex A/F raised from the row's hex Y ")]))]),
     '5500': dict(name='90 deg Male Pipe Elbow', hex='Y@REF', elbow=True, ref='5500-08-08-FG',
                  legs=[('NPTFM', 'N1@DRIVE', 'D1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N2@DRIVE', 'D2@BORE', 'THDMAJ_A2@DRIVE')]),
     '5502': dict(name='90 deg Street Pipe Elbow', hex='W@REF', elbow=True, ref='5502-08-08-FG', conn='D@BORE',
@@ -76,6 +148,28 @@ SPEC = {
     #      Leg 1 (male NPTF) along +X, leg 2 (JIC) along (cos135, sin135) - part numbers are JIC-NPTF, so dmap swaps them.
     '2503': dict(name='45 deg Male Elbow', hex='Y@REF', elbow=True, e45=True, dmap=(1, 0), ref='2503-08-06-FG',
                  legs=[('NPTFM', 'N2@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('JICM', 'M2@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
+    # 2026-10-02 (new masters from the Brennan pilot STEPs): 45 deg JIC union elbow - the STEP this e45 pattern was taken from; both legs JIC
+    '2504': dict(name='45 deg Male JIC Union Elbow', hex='Y@HEX', elbow=True, e45=True, ref='2504-08-08-FG',
+                 legs=[('JICM', 'M2_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICM', 'M2_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE')],
+                 # 2026-10-09 (wave-1 polish): the 2504 rows are filled from OMi Items (M 1 / M 2 / Hex Flat / Side IDs), not from Air-Way
+                 src=[('A/F = max(Air-Way hex, JIC thread majors)', 'A/F = max(OMi Hex Flat (Y), JIC thread majors)'),
+                      ('hex A/F raised from Air-Way ', 'hex A/F raised from OMi Hex Flat ')],
+                 assume_extra=['Brennan 2504-08-08-FG STEP (re-measured 2026-10-02, tools/measure/forged.py): both JIC tips 0.980, hex arms end 0.323 '
+                               '(= M - the 2403 -08 JIC end length 0.657), A/F 0.750, corner puck radius 0.433 = the hex corner radius, bores 0.391 = this '
+                               'pattern; JIC seat / land / cone / thread major = the 2403 -08 chain, but the STEP shows NO thread relief (thread major runs '
+                               'to the hex face): the model keeps the MS33656J relief of the 2403 chain, as every built tee / elbow (ASSUMPTION)']),
+    # 45 deg JIC x female pipe elbow: the female port on leg 1 (+X; the angled leg carries only Thread-feature ends), JIC on the 135 deg leg;
+    # PN = 2505-JIC-NPTF, so dmap swaps them (as 2503)
+    '2505': dict(name='45 deg Male JIC x Female Pipe Elbow', hex='Y1@HEX', elbow=True, e45=True, dmap=(1, 0), ref='2505-08-08-FG', conn=None, p1='PORTDEPTH@BORE',
+                 legs=[('NPTFF', 'N6@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE'), ('JICM', 'M2@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')],
+                 conn_src='the tap drill carried to the crossing (MEASURED: Brennan 2505-08-08-FG STEP - the 0.718 drill runs from the bottom of the '
+                          '0.75 deep tapered port to the axis crossing; the tapered port itself and its 45deg mouth chamfer are drawn as the tap-drill '
+                          'cylinder + the Thread feature, as on every built female port)',
+                 assume_extra=['Brennan 2505-08-08-FG STEP (2026-10-02, tools/measure/forged.py): JIC leg tip 1.040, its hex arm ends 0.383 (= M - the '
+                               '2403 -08 JIC end length 0.657), JIC end = the 2403 -08 chain INCLUDING the thread relief (0.094 at the cone dia + 60deg '
+                               'ramp); female leg face 0.940, hex arm to 0.680 then the round collar 0.260 at the flats dia; A/F 1.062, corner puck radius '
+                               '0.6131 = the hex corner radius, flats normal to Z, legs 135 deg apart = the gen_tee e45 pattern (Brennan draws the JIC '
+                               'leg on -X and the port at 45 deg - the same part turned)']),
     # ---- bulkhead elbows / tees (Brennan 2701-08-08-FG STEP): the bulkhead leg carries a collar (Air-Way O x K1) and the
     #      JIC bulkhead end (relief-to-tip = Air-Way i2)
     '2701': dict(name='90 deg Bulkhead Elbow', hex='Y@HEX', elbow=True, ref='2701-08-08-FG', bh=('i2@DRIVE', 'K1@DRIVE', 'O@DRIVE'),
@@ -92,7 +186,30 @@ SPEC = {
                        ('JICM', 'M3_3@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')]),
     # ---- female JIC SWIVEL families (Brennan 6500-04/-08/-12/-16-FG STEPs: nut + nose measured, one solid)
     '6500': dict(name='90 deg Female Swivel Elbow', hex='Y@REF', elbow=True, ref='6500-12-12-FG', sw=('LEG_M10@DRIVE', 'HEXB@HEX'),
-                 legs=[('JICM', 'LEG_M@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('JICSW', 'LEG_M5@DRIVE', 'D2@BORE', 'THDMAJ_B@DRIVE')]),
+                 legs=[('JICM', 'LEG_M@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('JICSW', 'LEG_M5@DRIVE', 'D2@BORE', 'THDMAJ_B@DRIVE')],
+                 # 2026-10-02 (FOLDS): 6500-L (long) rows join as extra configurations. Brennan 6500-L-08-08-FG STEP (pilot) vs 6500-08-08-FG:
+                 # tools/measure/swiv.py -> swivel end = SWIV_MEAS[8] exactly (nut, skirt, neck, body face 0.885 behind the nut face, thread,
+                 # nose, seat); tools/measure/elbow90.py -> JIC leg identical, swivel hex arm continuous from the crossing to 1.925 (6500:
+                 # 0.495) - the whole extra length (2.81 - 1.38 = 1.430) is the forged swivel hex arm; STEP volume difference 0.52492 in^3
+                 # = 1.430 x (hex A/F 0.75 - bore 0.391 section) 0.52491 -> same topology. 6500L column M9 = crossing to the swivel-nut face
+                 # (OMi 'M 2 Size' = Brennan catalog M6), M12 = crossing to the nose tip (OMi 'M 1 Size' = Brennan M4), M = male JIC leg
+                 fold=[('6500L', {'M@DRIVE': 'LEG_M@DRIVE', 'M9@DRIVE': 'LEG_M5@DRIVE', 'M12@DRIVE': 'LEG_M10@DRIVE', 'CHEX@HEX': 'HEXB@HEX',
+                                  'THDMAJ_B1@DRIVE': 'THDMAJ_A@DRIVE', 'THDMAJ_B2@DRIVE': 'THDMAJ_B@DRIVE'},
+                        dict(why='6500-L row folded into the 6500 master: Brennan 6500-L-08-08-FG STEP (pilot) = 6500-08-08-FG with the forged '
+                                 'swivel hex arm 1.430 longer (Q-NEW-FOLD-6500L, 2026-10-02)',
+                             assume='6500-L fold: the extra length is the forged swivel hex arm, the swivel end is the 6500 one of the same size '
+                                    '(Brennan 6500-L-08-08-FG STEP, tools/measure/swiv.py + elbow90.py: swivel end = SWIV_MEAS[8], arm 0..1.925 '
+                                    'continuous; measured at -08 only, ASSUMED for the other sizes)',
+                             # the 6500-L -FG rows are filled from OMi Items (M 1 / M 2 / Hex Flat / Nut Hex 1), not from Air-Way: the generic
+                             # 6500 text names OMi instead (a 6500-L row filled from another source would need its own wording here)
+                             src=[('A/F = max(Air-Way hex, JIC thread majors)', 'A/F = max(OMi Hex Flat (Y), JIC thread majors)'),
+                                  ('hex A/F raised from Air-Way ', 'hex A/F raised from OMi Hex Flat '),
+                                  ('swivel nut hex = Air-Way C3', 'swivel nut hex = OMi Nut Hex 1 (CHEX)'),
+                                  ('nose tip at Air-Way L minus the to-seat length (Brennan within 0.01)', 'nose tip at OMi M 1 Size (M12)'),
+                                  ('swivel leg length = Air-Way M5 (crossing to the nut face), nose tip at Air-Way M10',
+                                   'swivel leg length = OMi M 2 Size (M9, crossing to the nut face), nose tip at OMi M 1 Size (M12, crossing to the nose tip)'),
+                                  ('Air-Way nut-face-to-seat', 'OMi nut-face-to-nose-tip (M 2 - M 1)'),
+                                  ('Air-Way nut hex C3', 'OMi Nut Hex 1')]))]),
     '6501': dict(name='90 deg Male Pipe x Female Swivel Elbow', hex='Y@HEX', elbow=True, ref='6501-04-04-FG', sw=('M10@DRIVE', 'C3HEX@HEX'),
                  legs=[('NPTFM', 'N@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE'), ('JICSW', 'M5@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
     '6503': dict(name='90 deg Female Pipe x Female Swivel Elbow', hex='Y1@HEX', elbow=True, ref='6503-08-08-FG', conn='D@BORE', sw=('M10@DRIVE', 'C3HEX@HEX'),
@@ -107,6 +224,40 @@ SPEC = {
                  legs=[('NPTFM', 'N1@DRIVE', 'D2@BORE', 'THDMAJ_A@DRIVE'), ('NPSMSW', 'M1@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE')]),
     '1503': dict(name='45 deg Male Pipe x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, e45=True, dmap=(1, 0), ref='1503-08-08-FG', npsm=('W2@HEX', 'CHEX@HEX'),
                  legs=[('NPSMSW', 'M@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N@DRIVE', 'D2@BORE', 'THDMAJ_A@DRIVE')]),
+    # 2026-10-02 (new master 1502; user 2026-10-02 "yes, go ahead": new masters from the pilot STEPs): 90 deg female pipe x female NPSM swivel
+    # FORGED elbow. Pilot Brennan 1502-08-08-FG STEP, measured with tools/measure/fgelbow.py + npsm.py --leg 1,1 (validated first on 2500-06-06-FG,
+    # 5504-08-08-FG, 5502-04/-08/-16-FG, 2502-06-04-FG, 5405-08-08 and the 9 1404 STEPs): the 2500HX elbow body (hex arms, flats normal to Z,
+    # 30deg corner puck about Z, radius = hex corner, within 0.0001), the 5504 forged female pipe leg (hex arm to 0.26 short of the port face,
+    # round collar dia = the hex flats; tap drill running on below the thread to the crossing) and the 1501 / 1404 NPSM swivel leg (= NPSM_MEAS[8]
+    # on every value; body face 0.48 behind the stem tip) - only existing modules. Leg 1 (+X) = the female pipe end (first dash), leg 2 (+Y) = the
+    # NPSM swivel (second dash); Brennan draws the pipe leg along -X (mirror image, same part). N3 = port face to the swivel axis, M1 = pipe axis
+    # to the stem tip, W3 = pipe axis to the nut face (Air-Way letters = Brennan TFA p21 L / M / M1 on the pilot).
+    # npsm_bodyface: per size (leg dashes) - the body face is measured on an elbow forging only at 1502-08-08-FG; every other size keeps the
+    # 1404 straight value as an ASSUMPTION (review 2026-10-02). arm_ridge_check: see build_rows (the other arm's corner beyond the body face).
+    '1502': dict(name='90 deg Female Pipe x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, ref='1502-08-08-FG', conn=None, npsm=('W3@HEX', 'CHEX@HEX'),
+                 npsm_bodyface={(8, 8): 'CONFIRMED on the Brennan 1502-08-08-FG elbow forging: its hex arm ends 0.48 behind the stem tip, at 0.76 from the crossing',
+                                'other': 'ASSUMED for the elbow forging of this size: measured on an elbow forging only at 1502-08-08-FG (hex arm ends 0.48 behind '
+                                         'the stem tip = the 1404-08 straight); no 1502 forging of this size measured'},
+                 arm_ridge_check=True,
+                 # 2026-10-09 (wave-1 polish): texts name Air-Way only - the built 1502 rows are Air-Way rows; the own-file pilot
+                 # 1502-08-08-FG is held (ruling 2026-10-08). Re-word these if a row from another source is ever built.
+                 assume_reps=(('forged elbow body per the 2500HX pattern (Brennan 2500-06-06-FG STEP)',
+                               'forged elbow body per the 2500HX pattern (Brennan 2500-06-06-FG STEP; CONFIRMED on the pilot Brennan 1502-08-08-FG STEP, '
+                               'tools/measure/fgelbow.py: hex arms with flats normal to Z, corner = 30deg double cone about Z of the hex corner radius, within 0.0001)'),
+                              ('A/F = max(Air-Way hex, JIC thread majors)', 'A/F = the row body hex C1HEX (Air-Way; no JIC leg)'),
+                              ('nut hex = Air-Way C(2) (must equal the Brennan nut, checked per row)', 'nut hex = the row CHEX (must equal the Brennan nut, checked per row)'),
+                              ('NUT FACE AT AIR-WAY W3 AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip) (user decision 2026-09-24: follow Air-Way - at -08 '
+                               'Air-Way W-L 0.33 vs Brennan 0.28, so the nut sits 0.05 further out than on the Brennan part)',
+                               'NUT FACE AT THE ROW W3 AND STEM TIP AT THE ROW M1 (pipe-leg axis to the nut face / to the stem tip; Air-Way; shape check: the '
+                               'Brennan 1502-08-08-FG part has W3 - M1 = 0.28); where W3 - M1 differs from the Brennan 1404 nut-face-to-stem-tip '
+                               'the row is followed (user decision 2026-09-24) and the row carries a warning')),
+                 nptff_text=('female NPTF leg: tap drill = the row TAPDRILL (Air-Way) from the '
+                             'port face to the axis crossing, tapered helical thread over MS51503 P1 max (' + BR5405 + ') - the Brennan 1502-08-08-FG and '
+                             '5504-08-08-FG STEPs show this tap drill running on below the thread to the crossing (Brennan 1502: it ends in a ball 0.23 past '
+                             'the crossing, at the far wall of the NPSM bore; modelled with a flat end at the crossing: ASSUMPTION, the NPSM bore opens into it); '
+                             'the thread-zone minor cone (1.79deg, -08: dia 0.791 -> 0.747 over 0.75 deep) and the 45deg port-mouth chamfer are NOT modelled '
+                             '(the helical thread represents the thread zone; its length is MS51503 P1 max, 0.90 at -08, vs the Brennan thread zone 0.75)'),
+                 legs=[('NPTFF', 'N3@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE'), ('NPSMSW', 'M1@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE')]),
     '6602': dict(name='Female Swivel Run Tee', hex='Y@HEX', ref='6602-08-08-08-FG', sw=('M10@DRIVE', 'C3HEX@HEX'),
                  legs=[('JICM', 'M1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICSW', 'M5@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE'),
                        ('JICM', 'M3@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')]),
@@ -135,6 +286,11 @@ PLACE_ELBOW = {1: (0, +1), 2: (1, +1)}
 PLACE_E45 = {1: (0, +1), 2: ('U', +1)}
 UXV, UYV = math.cos(math.radians(135)), math.sin(math.radians(135))
 TAN30 = math.tan(math.radians(30))
+# 2026-10-09 (puck audit): the corner PUCK sits PUCK_INSET radially inside the hex corners (equator AC - PUCK_INSET, 30 deg cones kept).
+# With the equator exactly on the hex corner radius its section through Z equals the hex-arm end face, the faces coincide and SolidWorks
+# silently dropped the puck from the union in some configurations (no error; the outer corner stayed square: 2504-04-04 / -06-06-FG,
+# 6500-L-04-04 / -L-06-06-FG, 6500-06-06-FG, 2501-06-02 / -L-06-04-FG). A construction margin, not a part dimension.
+PUCK_INSET = 0.0005
 COLLAR_L = 0.26      # female pipe port collar length, Brennan-measured (constant at -04/-08/-16)
 # 2026-10-02 (user decision "OK to stop the bulkhead hex arm 0.001 in short of the collar", PROJECT_STATUS section 3 item 1;
 # 00_DOCS/OVERNIGHT_BUILD_2026-09-25.md "The 2 held-back parts"): a JICBH leg's hex arm ends exactly on the bulkhead collar face
@@ -171,6 +327,19 @@ def bh_len(x):
 
 
 BRENNAN_NOTES = {   # per-part comparisons with a Brennan STEP of the same part number (Air-Way values are the ones built)
+    # 2026-10-02 (new masters, tools/measure/forged.py validated by forged_validate.py): the pilot STEP of each new root vs its row (OMi values)
+    '2504-08-08-FG': 'Brennan 2504-08-08-FG STEP (2026-10-02, tools/measure/forged.py): JIC tips 0.980 / 0.980 = OMi M 1 / M 2; hex arms end 0.323; A/F 0.750 = OMi; '
+                     'corner puck radius 0.433; bores 0.391 / 0.391 = OMi; JIC chain = 2403 -08 (no thread relief on the STEP, modelled with it); volume 0.57131 in^3',
+    '2505-08-08-FG': 'Brennan 2505-08-08-FG STEP (2026-10-02, tools/measure/forged.py): JIC tip 1.040 = OMi M 1; female face 0.940 = OMi M 2; A/F 1.062 = OMi; JIC bore '
+                     '0.391 = OMi; JIC hex arm to 0.383 and chain = 2403 -08 incl. the relief; port: collar 0.260, tapered port 0.75 deep (minor 0.747 -> 0.792 dia, '
+                     '45deg mouth to 0.855), drill 0.718 from the port bottom to the crossing (= TAPDRILL / PORTDEPTH of this row); volume 0.94759 in^3',
+    '2606-08-08-08-FG': 'Brennan 2606-08-08-08-FG STEP (2026-10-02, tools/measure/forged.py): JIC tips 1.520 / 1.520 = OMi M 1 / L 1; female face 1.230 = OMi M 2; '
+                        'A/F 1.062 = OMi; JIC bores 0.391 / 0.391 = OMi; JIC hex faces 0.863, chain = 2403 -08 (no thread relief on the STEP, modelled with it); '
+                        'port: collar 0.260, tapered port 0.75 deep, drill 0.718 from the port bottom to the crossing (= TAPDRILL / PORTDEPTH of this row); volume 2.01024 in^3',
+    '2611-06-06-06-FG': 'Brennan 2611-06-06-06-FG STEP (2026-10-02, tools/measure/forged.py): JIC tip 1.310 = OMi M 1; male pipe tip 1.220 = OMi M 2; female face 1.020 = '
+                        'OMi L 1; A/F 0.875 = OMi; bores 0.297 (JIC) / 0.406 (male pipe) = OMi; JIC hex face 0.754, chain = 2403 -06 (no thread relief on the STEP, '
+                        'modelled with it); male pipe end 0.560 = 5404 -06; port: collar 0.260, tapered port 0.58 deep, drill 0.578 from the port bottom to the run '
+                        'axis (= TAPDRILL / PORTDEPTH of this row); volume 1.12766 in^3',
     # 6801: every Brennan 6801-XX-XX-NWO-FG STEP of an OMi part, compared with its Air-Way row (tools/measure/nwo_cmp.py)
     '6801-04-02-NWO-FG': 'Brennan 6801-04-02-NWO-FG STEP (2026-09-25): JIC leg 0.890, ORB leg 0.920, tip to body face 0.590, ORB thread 0.234, nut hex 0.438, body hex 0.438, undercut dia 0.250 - DIFFERS: LEG_ORB Air-Way 1.03 vs Brennan 0.92 - built to Air-Way (flag for OMi); the rest agrees with Air-Way',
     '6801-04-04-NWO-FG': 'Brennan 6801-04-04-NWO-FG STEP (2026-09-25): JIC leg 0.890, ORB leg 1.030, tip to body face 0.730, ORB thread 0.265, nut hex 0.563, body hex 0.438, undercut dia 0.364 - all agree with Air-Way (within its 2-decimal rounding)',
@@ -184,6 +353,13 @@ BRENNAN_NOTES = {   # per-part comparisons with a Brennan STEP of the same part 
     '6801-32-32-NWO-FG': 'Brennan 6801-32-32-NWO-FG STEP (2026-09-25): JIC leg 3.060, ORB leg 2.890, tip to body face 1.140, ORB thread 0.469, nut hex 2.750, body hex 2.500, undercut dia 2.381 - all agree with Air-Way (within its 2-decimal rounding)',
     '6502-08-08-FG': 'Brennan 6502-08-08-FG STEP (2026-09-24): JIC hex arm to 0.323 and JIC tip 0.98 = model; body hex 0.75 = model; corner radius 0.433 = model; '
                      'nut face 1.28 from the crossing vs Air-Way -FG M6 1.25 (Air-Way non-FG row 1.28) - built to Air-Way; Brennan body face 0.395 = nut face - 0.885 as modelled',
+    # 2026-10-02 (new master 1502): the pilot - its row values ARE this STEP (forged -FG part built from its own Brennan STEP)
+    '1502-08-08-FG': 'Brennan 1502-08-08-FG STEP (2026-10-02, tools/measure/fgelbow.py + npsm.py --leg 1,1): the row values are this STEP (forged part built '
+                     'from its own Brennan STEP): port face 1.230 (N3), nut face 1.520 (W3), stem tip 1.240 (M1), body hex 1.062 (corner radius 0.6131 = the '
+                     '30deg puck radius), nut hex 1.000, NPSM bore 0.460, tap drill 0.718, round collar 0.26 x dia 1.062 at the port, swivel body face 0.76; '
+                     'the NPSM swivel end equals NPSM_MEAS[8] (Brennan 1404-08-08) on every value; Brennan TFA catalog p21 prints the same L/M/M1/C/Y/A2 DRILL. '
+                     'NOT modelled: the thread-zone minor cone and the port-mouth 45deg chamfer, the ball end of the tap drill past the crossing, the nut 30deg '
+                     'face chamfer and 45deg rear hex chamfer, the nut rear undercut and the nut/body joint, 0.01 fillets, the 0.002 deep marking on the hex flats',
     # 2026-10-01 (NECK-6502): tools/measure/neck45.py (body face, neck, what stands outside the neck) + prof45.py (JIC leg)
     '6502-12-12-FG': 'Brennan 6502-12-12-FG STEP (2026-10-01, tools/measure/neck45.py + prof45.py): JIC tip 1.280 = model (Air-Way M2); JIC hex arm to 0.416 = model; '
                      'JIC bore 0.609 (Air-Way D1 0.61); body hex corner radius 0.6131 (A/F 1.062; model 1.0625 = the JIC thread major, 2603HX rule); swivel nut face '
@@ -201,8 +377,13 @@ def load_review(root):
     ws = openpyxl.load_workbook(f'{REV}/DesignTable_{root}.xlsx', read_only=True).active
     rows = list(ws.iter_rows(values_only=True)); h = rows[1]
     out = [dict(zip(h, r)) for r in rows[2:] if r[0]]
-    for sub, ren in SPEC.get(root, {}).get('fold', []):
+    for sub, ren, *note in SPEC.get(root, {}).get('fold', []):
         # length variant folded into this master (one master per topology): its rows, with its column names mapped to ours
+        # 2026-10-02 (FOLDS): an optional third item dict(why=..., assume=..., src=...) gives the fold's own $COMMENT text, the modelling
+        # assumption it adds to each folded row's $PRP@AxialSource, and src = (generic wording, this fold's wording) pairs that build_rows
+        # applies to the folded rows' generated MODEL text, warnings and check messages, which name Air-Way as the dimension source
+        # (the 2501L fold keeps its text: its output is unchanged)
+        note = note[0] if note else {}
         ws2 = openpyxl.load_workbook(f'{REV}/DesignTable_{sub}.xlsx', read_only=True).active
         rows2 = list(ws2.iter_rows(values_only=True)); h2 = rows2[1]
         for r2 in rows2[2:]:
@@ -210,7 +391,9 @@ def load_review(root):
             d2 = dict(zip(h2, r2)); d = {}
             for k, v in d2.items():
                 d[ren.get(k, k)] = v
-            d['$COMMENT'] = ' | '.join(x for x in (d2.get('$COMMENT'), f'{sub} row folded into the {root} master (user decision 2026-09-25)') if x)
+            d['$COMMENT'] = ' | '.join(x for x in (d2.get('$COMMENT'), note.get('why') or f'{sub} row folded into the {root} master (user decision 2026-09-25)') if x)
+            if note.get('assume') and d.get('$PRP@AxialSource'): d['$PRP@AxialSource'] = d['$PRP@AxialSource'] + ' | FOLD: ' + note['assume']
+            if note.get('src'): d['_FOLD_SRC'] = note['src']        # read by build_rows only (never a table column)
             out.append(d)
     return h, out
 
@@ -506,8 +689,9 @@ def leg_NPTFM(i, dash, M, BR):
                 tipR=rS)
 
 
-def leg_NPTFF(i, dash, M, BR, td, conn, split=False):
+def leg_NPTFF(i, dash, M, BR, td, conn, split=False, p1=None):
     f = G.FPT[dash]; P = 1 / G.tpi_of(f['thr'])
+    P1 = f['P1'] if p1 is None else p1      # 2026-10-02: a row's own measured port thread length (SPEC 'p1' column) replaces the MS51503 P1
     V = [(0, 0), (0, BR), (M, BR), (M, 0)]
     cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5)}
     if split and conn is not None and conn > td:
@@ -515,13 +699,13 @@ def leg_NPTFF(i, dash, M, BR, td, conn, split=False):
         # tap drill (= the tap drill carried to the crossing, as on the tees), cut as a separate BORE feature
         conn = td
     to_centre = conn is None or (conn >= td - 1e-9 and not split)
-    pk = M if to_centre else f['P1']
-    tcols = {f'HELIXDIA@HELIXSK_{i}': td, f'HEIGHT@HELIX_{i}': f['P1'], f'PITCH@HELIX_{i}': round(P, 5),
+    pk = M if to_centre else P1
+    tcols = {f'HELIXDIA@HELIXSK_{i}': td, f'HEIGHT@HELIX_{i}': P1, f'PITCH@HELIX_{i}': round(P, 5),
              f'PROF_R@THDPROF_{i}': round(td / 2, 5), f'APEXR@THDPROF_{i}': round(td / 2 + 0.8 * P, 5), f'PROF_AX@THDPROF_{i}': M}
     dims = [('len', -1, f'M{i}', M, M / 2, BR + 0.6), ('rad', 1, 'BODYR', BR, M / 2, -0.4)]
-    return dict(kind='NPTFF', dash=dash, V=V, endlen=0.0, cols=cols, tcols=tcols, dims=dims, rmax=td / 2, td=td, P1=f['P1'],
+    return dict(kind='NPTFF', dash=dash, V=V, endlen=0.0, cols=cols, tcols=tcols, dims=dims, rmax=td / 2, td=td, P1=P1,
                 pocket=pk, to_centre=to_centre, conn=conn, thr=f['thr'],
-                thread=dict(type='HELIX', r=td / 2, height=f['P1'], pitch=P, thdh=0.8 * P, taperOut=False, apexOut=True), tipR=None)
+                thread=dict(type='HELIX', r=td / 2, height=P1, pitch=P, thdh=0.8 * P, taperOut=False, apexOut=True), tipR=None)
 
 
 def leg_JICSW(i, dash, M5, BR, M10, nutAF):
@@ -672,6 +856,68 @@ def dashes(pn):
     return [int(x) for x in re.findall(r'-(\d\d)(?=-|$)', pn)]
 
 
+def pilot_text(root, legs, pn):
+    """2026-10-02 (new masters wave 1, PIPE-TEES): the $PRP@AxialSource MODEL text of a row of a root whose shape is measured on its own
+    Brennan pilot STEP (SPEC 'pilot'). = assume_text() with its shared body / collar / port / male sentences reworded for these roots - every
+    rewording must match exactly once, so a changed shared sentence stops the generator here instead of leaving a wrong source in the
+    table - plus the SPEC 'pilot_notes' and, per row, every female leg whose helical thread runs out into a perpendicular bore. Per row: only
+    the pilot row is said to carry a value measured on its own STEP. Kept out of assume_text() (below) so no other root's text changes."""
+    sp = SPEC[root]; pl = sp['pilot']; own = pn == pl; k = {L['kind'] for L in legs}; s = assume_text(root, legs)
+    bars = 'two continuous bars (X and Y)' if sp.get('cross') else 'run bar continuous through the branch, branch hex arm'
+    lib = 'end shape NOT taken from the pilot STEP, as on the accepted 5600 / 5602 / 5604 / 5605 masters - user decision Q-TRANSFER-ENDLIB open'
+    hc = sp['hex'].split('@')[0]; port = f"1.79deg, {sp['pilot_port']:.3f} deep"
+    af = f'max(the row {hc}, male thread majors)' if k - {'NPTFF'} else f'the row {hc} (no male leg)'
+    ends = ' / '.join(x for c, x in (('NPTFF', 'to 0.26 short of a female face (round collar)'), ('NPTFM', 'to the 5404 end length of a male leg')) if c in k)
+    reps = [('hex bars A/F = max(Air-Way hex, male thread majors), flats normal to Z, ' + bars + '; hex-end 75deg chamfers and edge fillets NOT modelled',
+             f'hex bars A/F = {af}, flats normal to Z, {bars}; CONFIRMED on the Brennan {pl} pilot STEP (tools/measure/pipetee.py 2026-10-02, validated '
+             f'on Brennan 5605-08-08-08-FG and 5600-16-16-16-FG): hex {ends}, flat hex ends with no chamfer and no edge fillet (the STEP has plane, '
+             'cylinder and cone faces only); the 0.002-deep marks on its hex flats near the crossing are NOT modelled')]
+    if 'NPTFM' in k:
+        a = '0.001 proud of the 1.3125 flats)'
+        reps.append((a, a + f"; male legs = the library NPTFM end ({lib}): on the Brennan {pl} pilot STEP the hex stops at the 5404 end length and "
+                        "the bore of the row's drill column runs from the tip to the crossing (= the model); Brennan's relief ring at the pipe OD (0.03-0.04 "
+                        'long), its simplified thread cone, the 45deg tip chamfer and the 30deg bore-mouth countersink are NOT modelled (ASSUMPTION)'))
+    if 'NPTFF' in k:
+        reps.append(('single manufacturer); port-mouth 45deg chamfer and hex chamfers not modelled',
+                     f'single manufacturer; the Brennan {pl} pilot STEP too: collar 0.260 on every female leg); port-mouth 45deg chamfer not modelled'))
+        reps.append(('female NPTF legs: Air-Way tap drill to MS51503 P1 max (' + BR5405 + '), tapered helix over P1; connecting drill to the axis crossing = '
+                     'the tap drill carried to the crossing (ASSUMPTION: Air-Way publishes no bore for this part)',
+                     f'female NPTF legs = the library NPTFF end ({lib}): a drill of the row TAPDRILL ('
+                     + ('this row: the drill MEASURED on its own Brennan STEP' if own else "its source: this row's cell sources before ' | MODEL:'")
+                     + f') from the port face to the axis crossing - on the Brennan {pl} pilot STEP the drill runs from the bottom of the tapered port '
+                     f"to the crossing, so no separate connecting drill; helical NPTF thread over MS51503 P1 max ({BR5405}); the pilot's port taper "
+                     f"({port}, shorter than P1) and its 45deg mouth chamfer are NOT modelled (ASSUMPTION: the thread representation of "
+                     'the library NPTFF end)'))
+    for a, b in reps:
+        assert s.count(a) == 1, (root, a[:90]); s = s.replace(a, b)
+    t = [s] + list(sp.get('pilot_notes', ()))
+    # a female leg's helical thread (P1 from the face) that ends inside a perpendicular bore: legs 1, 2 lie on X, legs 3 (, 4) on Y (PLACE)
+    ax = {j: place(sp)[j + 1][0] for j in range(len(legs))}
+    rad = [(L['td'] / 2 if L.get('to_centre') else (L.get('conn') or 0) / 2) if L['kind'] == 'NPTFF' else (L.get('bore') or 0) / 2 for L in legs]
+    run = {}
+    for j, L in enumerate(legs):
+        if L['kind'] != 'NPTFF': continue
+        end = L['V'][-1][0] - L['P1']; rp = max([rad[q] for q in ax if ax[q] != ax[j]] or [0])
+        if rp > end + 1e-9: run.setdefault((L['P1'], round(end, 4), round(rp, 4), round(L['V'][-1][0] - sp['pilot_port'], 4)), []).append(j + 1)
+    for (P1, end, rp, pend), js in run.items():
+        t.append(f"leg{'s' if len(js) > 1 else ''} {', '.join(map(str, js))}: the helical NPTF thread (MS51503 P1 {P1:.3f} from the face) ends {end:.3f} "
+                 f'from the axis crossing, {rp - end:.3f} inside the perpendicular bore (radius {rp:.4f}): it runs out into the cross hole (ASSUMPTION; '
+                 'drawing-only thread, suppressed in the saved model and STEP'
+                 + ((f"; the pilot's own {sp['pilot_port']:.3f}-deep tapered port ends {pend:.3f} from the crossing, " + (f'{pend - rp:.3f} short of that bore)' if pend > rp else 'inside that bore too)')) if own else ')'))
+    return '; '.join(t)
+
+
+def pilot_rows(root, built):
+    """2026-10-02 (new masters wave 1, PIPE-TEES): for a root with a SPEC 'pilot', replace the MODEL part of each built row's
+    $PRP@AxialSource by pilot_text(). Called by __main__ right after build_rows(), so build_rows() itself stays as it is (its
+    $PRP@AxialSource line is rewritten by another wave-1 patch, FOLDS). The MODEL part must be exactly assume_text() of the row - anything
+    else (e.g. a merged patch that changed how build_rows() writes it) stops the generator here instead of leaving a wrong source in the table."""
+    for b in built:
+        c = b['cols']; s = c['$PRP@AxialSource']; a = ' | MODEL: ' + assume_text(root, b['legs'])
+        assert s.endswith(a), (root, b['pn'], 'the MODEL part of $PRP@AxialSource is not assume_text() - pilot_rows() cannot reword it')
+        c['$PRP@AxialSource'] = s[:-len(a)] + ' | MODEL: ' + pilot_text(root, b['legs'], b['pn'])
+
+
 # ---------------------------------------------------------------- table rows
 def build_rows(root):
     sp = SPEC[root]; h, rows = load_review(root)
@@ -746,6 +992,11 @@ def build_rows(root):
                     if i3c.startswith('='): warn.append(f'leg {i}: adjustable ORB tip-to-body-face {I3} = Air-Way {i3c[1:]} ORB_I3 for -{d:02d} (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)')
                     L = leg_NWO(i, d, M, BR, I3, r[sp['nwo'][1]], r[sp['nwo'][2]], r[sp['nwo'][3]])
                 except (AssertionError, KeyError, TypeError) as ex: chk.append(f'leg {i} adjustable ORB: {ex}'); L = leg_JICM(i, d, M, BR)
+            elif sp.get('p1'):
+                # 2026-10-02: the row's own measured port thread length where it has one, else the MS51503 P1 library value (said in $COMMENT)
+                p1_ = r.get(sp['p1'])
+                if p1_ is None: warn.append(f'leg {i}: female port thread length = MS51503 P1 {G.FPT[d]["P1"]} (library) - the row has no measured {sp["p1"]}')
+                L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')), p1=p1_)
             else: L = leg_NPTFF(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')))
             L['bore'] = r[bc] if kind != 'NPTFF' else None
             legs.append(L)
@@ -818,10 +1069,30 @@ def build_rows(root):
                     if m < 0: chk.append(f'leg {i}: the corner puck buries the inner thread edge (margin {m:.4f})')
                     elif m < 0.01: warn.append(f'leg {i}: inner thread edge clears the corner puck by only {m:.4f}')
             elif sp.get('elbow'):
-                if L['hexl'] < AC + 0.03:
+                if sp.get('arm_ridge_check') and L['hexl'] < AC:        # 2026-10-02 (1502): an arm ending inside the corner radius does not clear it
+                    warn.append(f'leg {i} hex arm {L["hexl"]:.3f} ends {AC - L["hexl"]:.3f} INSIDE the hex corner radius ({AC:.3f})')
+                elif L['hexl'] < AC + 0.03:
                     warn.append(f'leg {i} hex arm {L["hexl"]:.3f} barely clears the corner puck (radius {AC:.3f})')
             elif i >= 3 and L['hexl'] < AC + 0.03 and not sp.get('cross'):
                 warn.append(f'leg {i} hex arm {L["hexl"]:.3f} barely clears the run bar corner ({AC:.3f})')
+        # 2026-10-02 (1502, review of the new master): on a 90 deg elbow the OTHER leg's hex arm (flats normal to Z) has its corner at z = 0,
+        # at AC from its own axis over its whole length - i.e. at AC along the swivel axis. When the swivel body face lies inside AC
+        # (hexl < AC), that arm stands AC - hexl beyond the body face, as a ridge |z| <= (AC - hexl) / tan30, OUTSIDE the neck wherever the
+        # arm runs farther from the swivel axis than the neck radius. The puck check above sees only the 30deg corner, not this ridge.
+        # Brennan 6500-05-05-FG STEP (90 deg forged swivel elbow; swivel body face 0.314 inside the hex corner radius 0.3245): the male arm's
+        # corner is faced off at the body face - nothing outside the neck from the body face on (section y = 0.319: only the neck and the
+        # bore). The 90 deg elbow has no such facing cut (NECKTRIM / NECKFILL serve the +X swivel leg of a 45 deg elbow only), so such a
+        # row is BLOCKED. Opt-in per root (SPEC arm_ridge_check): 6500 carries the same ridge on its built 6500-05-05-FG (0.009) - not
+        # switched on there (it would block a shipped configuration); left to the main session.
+        if sp.get('arm_ridge_check') and sp.get('elbow') and not sp.get('e45'):
+            for i, L in enumerate(legs, 1):
+                if L['kind'] not in ('JICSW', 'NPSMSW'): continue
+                oth_ = [o for o in legs if o is not L][0]; nr_ = L['m']['NECKR']; h_ = AC - L['hexl']
+                if h_ > 1e-4 and oth_['hexl'] > nr_:
+                    chk.append(f'leg {i}: the other leg\'s hex arm corner (hex corner radius {AC:.4f}) stands {h_:.4f} beyond the swivel body face '
+                               f'({L["hexl"]:.4f}) OUTSIDE the neck (radius {nr_:.4f}), from the neck out to the arm end {oth_["hexl"]:.3f} along the other '
+                               f'leg (ridge {2 * h_ / TAN30:.4f} wide) - Brennan faces it off at the body face (6500-05-05-FG STEP: body face 0.314 inside '
+                               f'the corner radius 0.3245, nothing outside the neck beyond it); the 90 deg elbow has no facing cut')
         # 2026-10-01 (NECK-6502): the neck turn of a swivel leg on a 45 deg elbow - in EVERY configuration of the root (the master carries
         # the two features in all of them), whether or not the corner reaches out of the neck in this one
         for i, L in enumerate(legs, 1):
@@ -901,11 +1172,11 @@ def build_rows(root):
         for L in legs: cols.update(L['tcols'])
         # hex bars
         if sp.get('elbow'):
-            R1 = AC - BR * TAN30
+            R1 = AC - PUCK_INSET - BR * TAN30
             cols['HEXAF@HEX1'] = round(AF, 5); cols['HEXL@HEX1_BODY'] = legs[0]['hexl']
             cols['HEXAF@HEX2'] = round(AF, 5); cols['HEXL@HEX2_BODY'] = legs[1]['hexl']
             cols['PUCK_HB@PUCK'] = round(BR, 5); cols['PUCK_HT@PUCK'] = round(BR, 5)
-            cols['PUCK_R1B@PUCK'] = round(R1, 5); cols['PUCK_R1T@PUCK'] = round(R1, 5); cols['PUCK_XC@PUCK'] = round(AC, 5)
+            cols['PUCK_R1B@PUCK'] = round(R1, 5); cols['PUCK_R1T@PUCK'] = round(R1, 5); cols['PUCK_XC@PUCK'] = round(AC - PUCK_INSET, 5)
             for i, L in enumerate(legs, 1):
                 if L.get('trim'):
                     t_ = L['trim']
@@ -939,8 +1210,20 @@ def build_rows(root):
             if ds_ not in ('ASSUMED', 'MISSING'):
                 c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the swivel nut/nose geometry is single-source (Brennan STEPs)'
                 ds_ = 'ASSUMED'
+        model_ = assume_text(root, legs)
+        src_ = r.get('_FOLD_SRC') or SPEC[root].get('src')
+        if src_:
+            # 2026-10-02 (FOLDS): a folded row filled from another source than the base table names that source, not Air-Way, in the
+            # generated text (fold note 'src'); generic Air-Way wording left over is a check failure, so a wrong attribution never ships.
+            # 2026-10-09 (wave-1 polish): a SPEC may carry the same 'src' pairs for all its rows (2504: every value is OMi's)
+            for a_, b_ in src_:
+                model_ = model_.replace(a_, b_); warn[:] = [w_.replace(a_, b_) for w_ in warn]; chk[:] = [c_.replace(a_, b_) for c_ in chk]
+            left_ = [t_ for t_ in [model_] + warn + chk if 'Air-Way' in t_]
+            if left_: chk.append(('folded row' if r.get('_FOLD_SRC') else 'root with its own src pairs')
+                                 + ': generic Air-Way source wording not renamed by the src pairs: '
+                                 + ' / '.join(t_[max(0, t_.index('Air-Way') - 40):t_.index('Air-Way') + 60] for t_ in left_))
         cols['$PRP@DataStatus'] = 'BLOCKED' if chk else ds_
-        cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + assume_text(root, legs)
+        cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + model_
         for L in legs:      # 2026-10-02 (BH_ARM_SHORT): a modelling assumption of this row only
             s_ = L.get('arm_short')
             if s_: cols['$PRP@AxialSource'] += (f'; bulkhead hex arm (MODELLING ASSUMPTION, user decision 2026-10-02): {s_["feat"]}_BODY did not '
@@ -964,6 +1247,14 @@ def build_rows(root):
     return out, skipped
 
 
+def npsm_bodyface_text(sp, legs):
+    """2026-10-02 (1502): how the NPSM swivel body face of this row is sourced - per size (the leg dashes), from SPEC npsm_bodyface
+    {(dash, dash): text, 'other': text}; roots without it keep the shared wording"""
+    bf = sp.get('npsm_bodyface')
+    if not bf: return 'ASSUMED for the elbow forging'
+    return bf.get(tuple(L['dash'] for L in legs), bf['other'])
+
+
 def assume_text(root, legs):
     sp = SPEC[root]; k = {L['kind'] for L in legs}; t = []
     if sp.get('elbow'):
@@ -985,7 +1276,7 @@ def assume_text(root, legs):
     if 'JICSW' in k: t.append(G.SWIV_ASSUME.replace('the body hex stops at the measured body-face position of the 6500 forged arm (ASSUMED for a straight body)',
                                      'the forged hex arm stops at the measured body-face position (= the 6500 forged-arm end on all 4 STEPs' + ('' if sp.get('elbow') else '; ASSUMED for a tee') + ')') + '; swivel leg length = Air-Way M5 (crossing to the nut face), nose tip at Air-Way M10')
     if 'NPSMSW' in k: t.append(G.NPSM_ASSUME.replace('NUT FACE AT AIR-WAY W AND STEM TIP AT AIR-WAY L', 'NUT FACE AT AIR-WAY ' + sp['npsm'][0].split('@')[0] + ' AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)')
-                                .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (Brennan 1404 straight body face - ASSUMED for the elbow forging)'))
+                                .replace('neck behind the nut, body face at the measured distance behind the stem tip (Brennan)', 'neck behind the nut, the forged hex arm ends at the measured body face behind the stem tip (Brennan 1404 straight body face - ' + npsm_bodyface_text(sp, legs) + ')'))
     if 'NWO' in k: t.append(NWO_ASSUME)
     if any(L.get('nwo_trim') for L in legs): t.append(NWO_TRIM_ASSUME)
     if any(L.get('trim') for L in legs): t.append(NECK_ASSUME)
@@ -994,10 +1285,22 @@ def assume_text(root, legs):
         t.append('female legs: the forged hex arm stops 0.26 short of the port face and the end is a ROUND COLLAR of dia = the hex flats - MEASURED on the '
                  'Brennan 2502-06-04-FG, 5502-04-04/-08-08/-16-16-FG, 5504-08-08-FG and 5605-08-08-08-FG STEPs (collar 0.260 at every size and leg; '
                  'single manufacturer); port-mouth 45deg chamfer and hex chamfers not modelled')
-        t.append('female NPTF legs: Air-Way tap drill to MS51503 P1 max (' + BR5405 + '), tapered helix over P1; connecting drill to the axis crossing = '
+        if sp.get('nptff_text'): t.append(sp['nptff_text'])        # 2026-10-02 (1502): the root words its own port sentence (source per row)
+        elif sp.get('p1'):
+            # 2026-10-02 (new masters 2505 / 2606 / 2611): tap drill and port thread length per row, sources named
+            # 2026-10-09 (Q-TRANSFER-ENDLIB = yes, user 2026-10-08): the rows take the end-library port values, not their own Brennan file
+            t.append("female NPTF legs: tap drill = the row's TAPDRILL (end library: the per-size tap drill every built female pipe port carries = "
+                     "Air-Way's per-size value; user 2026-10-08 'reuse end details - yes'), tapered helix over MS51503 P1 max (" + BR5405 + "; the row's "
+                     + sp['p1'].split('@')[0] + ' only where the row carries one - said in $COMMENT); connecting drill to the axis crossing = '
+                     + sp['conn_src'])
+        else: t.append('female NPTF legs: Air-Way tap drill to MS51503 P1 max (' + BR5405 + '), tapered helix over P1; connecting drill to the axis crossing = '
                  + (f"the part's own {sp['conn'].split('@')[0]} column (ASSUMPTION{'; capped at the tap drill where larger' if sp.get('elbow') else ''})" if sp.get('conn') else 'the tap drill carried to the crossing (ASSUMPTION: Air-Way publishes no bore for this part)'))
     t.append('each leg bore runs from its face to the axis crossing')
-    return '; '.join(t)
+    t += sp.get('assume_extra', [])          # 2026-10-02: per-root notes (pilot STEP comparison) - only the new roots carry them
+    s_ = '; '.join(t)
+    for a_, b_ in sp.get('assume_reps', ()):        # 2026-10-02 (1502): per-root wording of the shared texts (every pair must apply)
+        assert a_ in s_, (root, a_); s_ = s_.replace(a_, b_)
+    return s_
 
 
 def write_sw2(root, built):
@@ -1369,7 +1672,7 @@ assert 'SuppressEverywhere' in SWEEP and 'All-config sweep' in SWEEP
 
 def puck_vba(BR, AC):
     """30 deg double cone about Z at the crossing - the turned hex corner of a forged elbow (2500HX, built and swept clean)."""
-    h = BR * IN; r1 = (AC - BR * TAN30) * IN; xc = AC * IN; o35 = 0.35 * IN; o70 = 0.70 * IN; o25 = 0.25 * IN
+    h = BR * IN; r1 = (AC - PUCK_INSET - BR * TAN30) * IN; xc = (AC - PUCK_INSET) * IN; o35 = 0.35 * IN; o70 = 0.70 * IN; o25 = 0.25 * IN
     f = lambda v: f'{v:.9f}'
     return f"""    ' ================= PUCK: 30 deg double cone about Z at the crossing (the turned hex corner, per Brennan) =================
     stepName = "PUCK"
@@ -1866,6 +2169,14 @@ if __name__ == '__main__':
     summary = {}
     for root in sys.argv[1:]:
         built, skipped = build_rows(root)
+        if not [b for b in built if not b['chk']]:
+            # 2026-10-09 (wave-1 polish): no buildable row - report and go on, as gen_straight2 does (was an IndexError in write_sw2)
+            blocked = [b['pn'] + ': ' + '; '.join(b['chk']) for b in built if b['chk']]
+            summary[root] = dict(configs=0, ref=None, skipped=skipped, blocked=blocked, warnings=[], cols=0)
+            print(f"{root}: 0 configs - nothing to build ({len(skipped)} skipped, {len(blocked)} blocked); no macro / table written")
+            for b in blocked: print('   BLOCKED', b)
+            continue
+        if SPEC[root].get('pilot'): pilot_rows(root, built)        # 2026-10-02 PIPE-TEES: $PRP@AxialSource of the pilot-measured roots
         hdr, ok, refrow = write_sw2(root, built)
         emit(root, hdr, ok, refrow)
         blocked = [b['pn'] + ': ' + '; '.join(b['chk']) for b in built if b['chk']]

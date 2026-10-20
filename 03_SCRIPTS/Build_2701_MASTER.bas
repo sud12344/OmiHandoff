@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2701_MASTER"
 ' ============================================================================
-'  Build_2701_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_tee.py
+'  Build_2701_MASTER.bas  -  OMi fitting library, generated 2026-10-09 by gen_tee.py
 '  90 deg Bulkhead Elbow (elbow), forged hex body (2500HX pattern).  Reference config 2701-08-08-FG: JICM -08, JICBH -08
 '  Entry: Sub Build2701.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_2701_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -166,12 +166,12 @@ Sub Build2701()
     swSkMgr.InsertSketch True
     swSkMgr.AddToDB = True
     Dim pA As SldWorks.SketchSegment, pB As SldWorks.SketchSegment, pC As SldWorks.SketchSegment, pD As SldWorks.SketchSegment, pE As SldWorks.SketchSegment, pX As SldWorks.SketchSegment
-    Set pA = swSkMgr.CreateLine(0#, -0.009525000, 0, 0.005499261, -0.009525000, 0)
-    Set pB = swSkMgr.CreateLine(0.005499261, -0.009525000, 0, 0.010998523, 0#, 0)
-    Set pC = swSkMgr.CreateLine(0.010998523, 0#, 0, 0.005499261, 0.009525000, 0)
-    Set pD = swSkMgr.CreateLine(0.005499261, 0.009525000, 0, 0#, 0.009525000, 0)
+    Set pA = swSkMgr.CreateLine(0#, -0.009525000, 0, 0.005486561, -0.009525000, 0)
+    Set pB = swSkMgr.CreateLine(0.005486561, -0.009525000, 0, 0.010985823, 0#, 0)
+    Set pC = swSkMgr.CreateLine(0.010985823, 0#, 0, 0.005486561, 0.009525000, 0)
+    Set pD = swSkMgr.CreateLine(0.005486561, 0.009525000, 0, 0#, 0.009525000, 0)
     Set pE = swSkMgr.CreateCenterLine(0#, 0.009525000, 0, 0#, -0.009525000, 0)
-    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.010998523, 0#, 0)
+    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.010985823, 0#, 0)
     swSkMgr.AddToDB = False
     pX.ConstructionGeometry = True
     Dim qa As SldWorks.SketchLine, qb As SldWorks.SketchLine, qc As SldWorks.SketchLine, qd As SldWorks.SketchLine, qe As SldWorks.SketchLine, qx As SldWorks.SketchLine
@@ -192,11 +192,11 @@ Sub Build2701()
     swModel.ClearSelection2 True: pE.Select4 False, Nothing
     swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
     swModel.SketchAddConstraints "sgCOINCIDENT"
-    Call DimSegOrigin(pA, "PUCK_HB", 0.009525000, 0.002750, -0.018415)
-    Call DimSegOrigin(pD, "PUCK_HT", 0.009525000, 0.002750, 0.018415)
-    Call DimSeg1(pA, "PUCK_R1B", 0.005499261, 0.002750, -0.027305)
-    Call DimSeg1(pD, "PUCK_R1T", 0.005499261, 0.002750, 0.027305)
-    Call DimSeg1(pX, "PUCK_XC", 0.010998523, 0.005499, -0.006350)
+    Call DimSegOrigin(pA, "PUCK_HB", 0.009525000, 0.002743, -0.018415)
+    Call DimSegOrigin(pD, "PUCK_HT", 0.009525000, 0.002743, 0.018415)
+    Call DimSeg1(pA, "PUCK_R1B", 0.005486561, 0.002743, -0.027305)
+    Call DimSeg1(pD, "PUCK_R1T", 0.005486561, 0.002743, 0.027305)
+    Call DimSeg1(pX, "PUCK_XC", 0.010985823, 0.005493, -0.006350)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0): swFeat.Name = "PUCK"
@@ -255,7 +255,7 @@ Sub Build2701()
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
     cx_c = Array("2701-02-02-FG", "2701-20-20-FG-LN")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "THDMAJR_B1@LEG1", "JIC1_RELIEFL@LEG1", "JIC1_THDZ@LEG1", "JIC1_CONER@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "THDPITCH@THD_End2", "Profile_Height@THD_End2_PROF", "THDPITCH@THD_End2_PROF", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(0.88000, 0.21900, 0.15625, 0.06300, 0.19000, 0.12500, 0.88000, 1.50000, 0.04167, 0.02255, 0.04167, 0.04167, 0.02255, 0.04167, 0.43800, 0.43200, 0.43800, 0.48600, 0.12644, 0.25288), Array(2.17000, 0.81500, 0.81250, 0.12500, 0.43160, 0.75300, 2.17000, 3.12000, 0.08333, 0.04511, 0.08333, 0.08333, 0.04511, 0.08333, 1.63000, 1.21200, 1.63000, 1.38000, 0.47054, 0.94108))
+    cx_w = Array(Array(0.88000, 0.21900, 0.15625, 0.06300, 0.19000, 0.12500, 0.88000, 1.50000, 0.04167, 0.02255, 0.04167, 0.04167, 0.02255, 0.04167, 0.43800, 0.43200, 0.43800, 0.48600, 0.12594, 0.25238), Array(2.17000, 0.81500, 0.81250, 0.12500, 0.43160, 0.75300, 2.17000, 3.12000, 0.08333, 0.04511, 0.08333, 0.08333, 0.04511, 0.08333, 1.63000, 1.21200, 1.63000, 1.38000, 0.47004, 0.94058))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

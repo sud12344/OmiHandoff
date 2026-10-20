@@ -1,4 +1,4 @@
-Build_6802_MASTER  10/2/2026 9:02:16 PM
+Build_6802_MASTER  10/19/2026 7:35:29 PM
 OK    dim M1 = 1.3000 in (expect 1.3000)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim NW1_BODYL = 0.4200 in (expect 0.4200)
@@ -55,9 +55,9 @@ OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.3750 in (expect 0.3750)
 OK    dim PUCK_HT = 0.3750 in (expect 0.3750)
-OK    dim PUCK_R1B = 0.2165 in (expect 0.2165)
-OK    dim PUCK_R1T = 0.2165 in (expect 0.2165)
-OK    dim PUCK_XC = 0.4330 in (expect 0.4330)
+OK    dim PUCK_R1B = 0.2160 in (expect 0.2160)
+OK    dim PUCK_R1T = 0.2160 in (expect 0.2160)
+OK    dim PUCK_XC = 0.4325 in (expect 0.4325)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
 OK    NUTHEX1: locknut inner face found at 0.4390 on axis 0
@@ -92,7 +92,7 @@ OK    ORBTRIM1 revolve cut created
 OK    ORBTRIM1 (creation only: inner radius below the neck) removed 0.00153 in^3 = the neck ring (expect 0.00153)
       ORBTRIM1: SetSuppression2(this configuration) -> True
 OK    ORBTRIM1 suppressed in this configuration (the reference size needs no trim; the design table sets it per configuration)
-OK    ORBTRIM1 suppressed: volume back to 1.05398 in^3 (before the cut 1.05398)
+OK    ORBTRIM1 suppressed: volume back to 1.05388 in^3 (before the cut 1.05388)
       ORBTRIM1 feature dims: D1 OT1_AXL OT1_X0 OT1_NECKL OT1_FACEH OT1_CHL OT1_TOPH OT1_NECKR OT1_RO 
 OK    OT1_NECKR@ORBTRIM1_SK reachable
 OK    One solid body after legs+hex
@@ -176,7 +176,7 @@ OK    leg 1 tip (exact) 1.3000 along +X (expect 1.3000)
 OK    leg 2 tip (exact) 0.9800 along the 135-deg leg (expect 0.9800)
 OK    Z extent (exact) -0.5050 .. 0.5050 (expect -0.5050 .. 0.5050: adjustable ORB washer)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_6802_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\regen\new\DesignTable_6802_SW2.xlsx
 OK    Configurations after table: 21 (expect 21)
       config check 1: 6802-04-04-NWO-FG
 OK    6802-04-04-NWO-FG M1@LEG1 = 1.0500 (table 1.0500)
@@ -197,8 +197,8 @@ OK    6802-04-04-NWO-FG HEXAF@HEX1 = 0.4400 (table 0.4400)
 OK    6802-04-04-NWO-FG HEXL@HEX1_BODY = 0.3500 (table 0.3500)
 OK    6802-04-04-NWO-FG HEXAF@HEX2 = 0.4400 (table 0.4400)
 OK    6802-04-04-NWO-FG HEXL@HEX2_BODY = 0.1700 (table 0.1700)
-OK    6802-04-04-NWO-FG PUCK_R1B@PUCK = 0.1270 (table 0.1270)
-OK    6802-04-04-NWO-FG PUCK_XC@PUCK = 0.2540 (table 0.2540)
+OK    6802-04-04-NWO-FG PUCK_R1B@PUCK = 0.1265 (table 0.1265)
+OK    6802-04-04-NWO-FG PUCK_XC@PUCK = 0.2535 (table 0.2535)
 OK    6802-04-04-NWO-FG one solid body (found 1)
       6802-04-04-NWO-FG box x -0.577..1.066  y -0.325..0.577
       config check 2: 6802-32-32-NWO-FG
@@ -220,8 +220,8 @@ OK    6802-32-32-NWO-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
 OK    6802-32-32-NWO-FG HEXL@HEX1_BODY = 0.7200 (table 0.7200)
 OK    6802-32-32-NWO-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
 OK    6802-32-32-NWO-FG HEXL@HEX2_BODY = 0.8870 (table 0.8870)
-OK    6802-32-32-NWO-FG PUCK_R1B@PUCK = 0.7217 (table 0.7217)
-OK    6802-32-32-NWO-FG PUCK_XC@PUCK = 1.4434 (table 1.4434)
+OK    6802-32-32-NWO-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    6802-32-32-NWO-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
 OK    6802-32-32-NWO-FG one solid body (found 1)
       6802-32-32-NWO-FG box x -2.234..1.886  y -1.588..2.234
 OK    6802-32-32-NWO-FG: ORBTRIM1 live (table $STATE U)
@@ -235,30 +235,30 @@ OK    6802-32-32-NWO-FG OT1_TOPH@ORBTRIM1_SK = 0.5435 (table 0.5435)
 OK    6802-32-32-NWO-FG OT1_RO@ORBTRIM1_SK = 2.1412 (table 2.1412)
 OK    6802-08-08-NWO-FG: ORBTRIM1 suppressed (table $STATE S)
       All-config sweep: rebuilding 20 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/20  6802-04-04-NWO-FG  rebuilt in 1.3 s
-      sweep 2/20  6802-06-04-NWO-FG  rebuilt in 1.7 s
+      sweep 1/20  6802-04-04-NWO-FG  rebuilt in 1.6 s
+      sweep 2/20  6802-06-04-NWO-FG  rebuilt in 2.0 s
       sweep 3/20  6802-06-06-NWO-FG  rebuilt in 2.0 s
-      sweep 4/20  6802-06-08-NWO-FG  rebuilt in 1.9 s
-      sweep 5/20  6802-08-06-NWO-FG  rebuilt in 1.8 s
-      sweep 6/20  6802-08-08-NWO-FG  rebuilt in 1.2 s
-      sweep 7/20  6802-08-10-NWO-FG  rebuilt in 1.6 s
-      sweep 8/20  6802-10-08-NWO-FG  rebuilt in 1.8 s
-      sweep 9/20  6802-10-10-NWO-FG  rebuilt in 1.8 s
-      sweep 10/20  6802-10-12-NWO-FG  rebuilt in 1.9 s
-      sweep 11/20  6802-12-10-NWO-FG  rebuilt in 1.8 s
-      sweep 12/20  6802-12-12-NWO-FG  rebuilt in 1.9 s
-      sweep 13/20  6802-12-16-NWO-FG  rebuilt in 1.9 s
-      sweep 14/20  6802-16-12-NWO-FG  rebuilt in 2.0 s
-      sweep 15/20  6802-16-16-NWO-FG  rebuilt in 1.9 s
-      sweep 16/20  6802-16-20-NWO-FG  rebuilt in 1.9 s
-      sweep 17/20  6802-20-16-NWO-FG  rebuilt in 1.9 s
-      sweep 18/20  6802-20-20-NWO-FG  rebuilt in 2.0 s
-      sweep 19/20  6802-24-24-NWO-FG  rebuilt in 2.1 s
-      sweep 20/20  6802-32-32-NWO-FG  rebuilt in 1.4 s
+      sweep 4/20  6802-06-08-NWO-FG  rebuilt in 1.6 s
+      sweep 5/20  6802-08-06-NWO-FG  rebuilt in 1.5 s
+      sweep 6/20  6802-08-08-NWO-FG  rebuilt in 1.3 s
+      sweep 7/20  6802-08-10-NWO-FG  rebuilt in 1.3 s
+      sweep 8/20  6802-10-08-NWO-FG  rebuilt in 1.7 s
+      sweep 9/20  6802-10-10-NWO-FG  rebuilt in 1.4 s
+      sweep 10/20  6802-10-12-NWO-FG  rebuilt in 1.6 s
+      sweep 11/20  6802-12-10-NWO-FG  rebuilt in 1.4 s
+      sweep 12/20  6802-12-12-NWO-FG  rebuilt in 1.8 s
+      sweep 13/20  6802-12-16-NWO-FG  rebuilt in 1.8 s
+      sweep 14/20  6802-16-12-NWO-FG  rebuilt in 1.6 s
+      sweep 15/20  6802-16-16-NWO-FG  rebuilt in 1.8 s
+      sweep 16/20  6802-16-20-NWO-FG  rebuilt in 1.5 s
+      sweep 17/20  6802-20-16-NWO-FG  rebuilt in 1.7 s
+      sweep 18/20  6802-20-20-NWO-FG  rebuilt in 1.7 s
+      sweep 19/20  6802-24-24-NWO-FG  rebuilt in 1.8 s
+      sweep 20/20  6802-32-32-NWO-FG  rebuilt in 1.3 s
 OK    All-config sweep: 20 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6802-08-08-NWO-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 21 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 21 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6802_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6802_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6802\6802_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\puckfix_20261009\sw_dryrun\6802\6802_MASTER.SLDPRT

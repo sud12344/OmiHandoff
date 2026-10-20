@@ -18,15 +18,16 @@ def bbox(p):
     b = Bnd_Box(); BRepBndLib.Add_s(shape(p), b)
     return [round(v / 25.4, 4) for v in (b.CornerMin().X(), b.CornerMin().Y(), b.CornerMin().Z(), b.CornerMax().X(), b.CornerMax().Y(), b.CornerMax().Z())]
 
-def leg_edges(p, axis, sign, plane_normal=2, a0=-9.0):
+def leg_edges(p, axis, sign, plane_normal=2, a0=-9.0, rside=1):
     """edges of the section by the plane normal to `plane_normal` (through the origin), in leg coordinates.
-    Only the half with the radial coordinate >= 0 (the other in-plane axis, positive side) is returned."""
+    Only the half with the radial coordinate >= 0 (the other in-plane axis, positive side) is returned.
+    rside=-1 (2026-10-02): the NEGATIVE side of the other in-plane axis instead (the side away from an elbow's other leg)."""
     n = [0, 0, 0]; n[plane_normal] = 1
     E = edges(section(shape(p), tuple(n)))
     other = [k for k in (0, 1, 2) if k not in (axis, plane_normal)][0]
     out = []
     for kind, pts in E:
-        P = [(sign * q[axis], q[other]) for q in pts]
+        P = [(sign * q[axis], rside * q[other]) for q in pts]
         if max(r for a, r in P) < -1e-6: continue          # the negative half
         if min(r for a, r in P) < -1e-6 and max(r for a, r in P) > 1e-6: pass
         if max(a for a, r in P) < a0: continue

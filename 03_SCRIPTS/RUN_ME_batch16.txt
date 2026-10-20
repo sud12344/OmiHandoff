@@ -1,0 +1,77 @@
+BATCH 16 - NEW MASTERS WAVE 1 + BATCH-15 LEFTOVERS + JIC TEES + 2404 (TWO BORES) + 5405 + THE CORNER-PUCK FIX (2026-10-19)
+==================================================================================================================================
+NOTHING TO RUN. Batch 16 is ALREADY BUILT: Claude built all 25 masters through the SolidWorks MCP (SolidWorks 2026 SP4) as dry
+runs into staging - 2026-10-09 and, after SolidWorks' 3DEXPERIENCE sign-in was renewed, 2026-10-18/19 - and copied them into
+11_MASTERS on 2026-10-19 after your "Yes, ship batch 16 as planned." Their macros are in 03_SCRIPTS, their SW2 tables in
+04_DESIGN_TABLES. The reports in 03_SCRIPTS still say "Saved to ...\tools\_out\...\sw_dryrun\..." or "...\swtest\..." (the
+staging builds); the parts were copied unchanged (same sha256: tools\_out\ship_20261019\checks\shipped_files_sha256.txt).
+
+If you ever re-run one: close <root>_MASTER, remove any old module of the same name in the VBA editor first, import the .bas
+from 03_SCRIPTS, run the entry sub (Sub Build<root>). A good run ends with "finished with 0 problem(s)", "All-config sweep: N
+configurations rebuilt, 0 feature/body failures", "Master left in its reference configuration ..." and "Saved to
+...\11_MASTERS\...".
+
+25 MASTERS                                                configurations  new
+ NEW MASTERS (wave 1 + JIC tees)
+   Build_0304_MASTER.bas   Sub Build0304   JIC cap nut          0 -> 12   0304-C-03 ... -C-32 (0304-C-02 MISSING)
+   Build_0306_MASTER.bas   Sub Build0306   JIC bulkhead locknut 0 -> 11   0306-03 ... -32 (0306-02 MISSING)
+   Build_1502_MASTER.bas   Sub Build1502   90 deg elbow         0 -> 1    1502-02-02-FG (1502-04-04-FG blocked)
+   Build_2504_MASTER.bas   Sub Build2504   90 deg elbow         0 -> 4    2504-04-04 / -06-06 / -08-08 / -12-12-FG
+   Build_2505_MASTER.bas   Sub Build2505   90 deg elbow         0 -> 1    2505-12-12-FG (-08-08 / -16-16-FG BLOCKED, below)
+   Build_2606_MASTER.bas   Sub Build2606   tee                  0 -> 5    2606-04-04-04 ... (end-library ports)
+   Build_2609_MASTER.bas   Sub Build2609   tee                  0 -> 1    2609-08-08-08-FG (new SPEC)
+   Build_2611_MASTER.bas   Sub Build2611   tee                  0 -> 2    2611-06-06-06 / -08-08-08-FG
+ 2404 (two bores, your answer of 2026-10-09)
+   Build_2404_MASTER.bas   Sub Build2404   straight             -> 57     generated master replaces the hand-built one (48-row
+                                                                          table): 2404-L folded in (x5), the 4 "CB depth unsourced"
+                                                                          rows released, the step at the hex mid-plane
+ MORE SIZES IN SHIPPED MASTERS (batch-15 leftovers from OMi, 6500-L fold)
+   Build_6500_MASTER.bas   Sub Build6500                       15 -> 24   6500-04-06 / -12-08 / -12-16 / -16-12-FG,
+                                                                          6500-L-04-04 / -06-06 / -08-08 / -12-12 / -16-16-FG
+   Build_6501_MASTER.bas   Sub Build6501                       11 -> 14   6501-06-06 / -12-08 / -12-12-FG
+   Build_6505_MASTER.bas   Sub Build6505                       18 -> 19   6505-12-08
+   Build_5405_MASTER.bas   (macro unchanged)                   23 -> 26   5405-12-08 / -16-08 / -16-12 now in the built file
+ CORNER-PUCK FIX ONLY (same configurations; re-shipped)
+   2501 (48)  2503 (29)  2701 (15)  2702 (11)  5500 (16)  5502 (13)  5504 (5)  6502 (11)  6503 (1)  1501 (17)  6801 (35)  6802 (20)
+                                                                          (6500 / 6501 above and 2504 also carry it)
+                                                          ----------
+   Configurations in a master: 1,044 -> 1,103 of 1,804. 71 masters in 11_MASTERS (was 62).
+
+THE CORNER-PUCK FIX (QA #171)
+  On 90 / 45 deg elbows the outer corner is filled by a "puck" (two 30 deg cones). Its equator sat exactly on the hex corner radius,
+  so its section equalled the hex-arm end face and SolidWorks silently dropped it from the union in 20 configurations - the outer
+  corner stayed square, with no error: 2501-06-02-FG, 2501-L-06-04-FG, 2503-06-04-FG, 2701-02-02 / -06-06 / -06-06-LN-FG,
+  2702-06-06 / -06-06-LN-FG, 6500-06-04 / -06-06-FG, 6502-06-06-FG, 6801-06-04 / -06-05 / -06-06-NWO-FG, 6802-06-04 / -06-06-NWO-FG
+  (16 shipped) + 2504-04-04 / -06-06-FG, 6500-L-04-04 / -L-06-06-FG (new). The generator now puts the puck 0.0005 in inside the hex
+  corners (PUCK_INSET in gen_tee.py; a construction margin, not a part dimension). All 20 got their corner back; every other
+  configuration of the 17 elbow masters changes by that 0.0005 in sliver only (volume -0.00034 x AF^2 in^3 on 90 deg elbows).
+  The dimension-check drawings of these masters (10_DRAWINGS\dimension_check_20261009) were made before the fix: no dimension
+  changes, only the 20 corners are now filled.
+
+WHERE THE VALUES COME FROM (every new row ASSUMED - one source)
+  - 0304-C / 0306 / 2504 / 2505 / 2606 / 2609 / 2611: the OMi dimension file (07_RAW_EXTRACTS\omi_dimensions\WebsitePartsInfo2026.xlsx,
+    cell by cell) or Air-Way where OMi gives no value; end details from the existing end libraries (your Q-TRANSFER-ENDLIB yes,
+    2026-10-08); the Brennan pilot STEPs for SHAPE only (your "shape is fine"). 1502-02-02-FG: Air-Way s114.
+  - 6500 / 6501 / 6505 leftovers: OMi dimension file (wave1_ship_20261009\leftovers_changes.csv). 6500-L: folded, wave 1.
+  - 2404: OMi / Air-Way lengths, the two bores from OMi (tools\_out\r2404_20261009\changes_2404.csv).
+  - Every changed cell and its source: $PRP@AxialSource of each row; the staging records above.
+
+CHECKED BEFORE SHIPPING (tools\_out\ship_20261019\checks, SHIP_PLAN.md)
+  - Every root regenerated from the staged review tables with the staged toolchain: the 24 changed roots are identical (macro +
+    SW2, date line aside) to the macros that built the parts - cmp_ship_out.txt.
+  - SolidWorks dry runs: 0 FAIL lines, every configuration rebuilt with 1 body - puckfix_20261009\DRYRUN_VERDICT_2026-10-19.txt
+    (17 elbow roots), wave1_ship_20261009\swtest\cmp_out.txt (0304 0306 2606 2609 2611 6505 5405 2404).
+  - Old configurations: 6505 18 / 18 and 5405 23 / 23 identical, 2404's 24 kept rows identical to the tier-1 dry run, the 17 elbow
+    roots changed only by the puck inset (sliver_scaling_out.txt) or got their corner back.
+  - After shipping: the LIVE tools + LIVE review tables regenerate exactly the shipped macros + SW2 - verify_b16.txt (0 BAD).
+  - Old files: _to_delete\superseded_20261019\batch16_replaced\ and tools\_out\ship_20261019\old_files\ (MANIFEST*.txt).
+
+LEFT OUT ON PURPOSE (QA #172)
+  - 2505-08-08-FG / -16-16-FG: BLOCKED - the library female-pipe port is deeper than the short leg.
+  - 1502-04-04-FG: BLOCKED by the generator - the other leg's hex-arm corner stands 0.008 in beyond the swivel body face (Brennan
+    faces it off there; the 90 deg elbow has no facing cut yet).
+  - 0318 5406 2650 2605 5600: regenerate with a cosmetic $COMMENT change only - not re-shipped.
+  - Wave 2 (hose barb, several swivels per part): not in this batch; the hose-barb bore choice stays an assumption until Q-HOSEB-BORE.
+  - Next: the 37 wrongly-DROP adapters (tools\_out\adapters77_20261016, needs your OK), then batch 17 (Brennan / OMi-answer rows).
+
+QA_Log #170-#172 (01_MASTER_DATA). Coverage refreshed (00_DOCS\OMi_Coverage_2026-09-24.xlsx): A1 1,050 built in 11_MASTERS.

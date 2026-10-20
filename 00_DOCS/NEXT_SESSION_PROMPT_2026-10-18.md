@@ -53,8 +53,9 @@ new two-pass lists `omi_skus_orfs.txt` 385, `omi_skus_compression.txt` 230, `omi
    - The other 40 have no Air-Way row.
 5. **Website listing tools + report**: `tools/_out/omi_enum_20261015/` (REPORT.md). omindustrial.com throttles scripts (HTTP 429,
    at times ~2 requests / hour) - never crawl it from two sessions at once.
-6. **Still in flight from before: batch 16, staged, not shipped** - `00_DOCS/NEXT_SESSION_PROMPT_2026-10-10.md` (puck-fix dry runs
-   to re-run / check; wave 1, leftovers, JIC tees, 2404, 5405).
+6. ~~Still in flight from before: batch 16~~ **BATCH 16 SHIPPED 2026-10-19** (`03_SCRIPTS/RUN_ME_batch16.txt`, QA #170-#172,
+   `tools/_out/ship_20261019/`): wave 1, leftovers, JIC tees, 2404, 5405 + the corner-puck fix; 1,103 of 1,804 configurations in a
+   master, 71 masters in `11_MASTERS`. The live `tools/` and `04_DESIGN_TABLES` are now the batch-16 state - stage later batches on it.
 
 ## Waiting on the user
 - Send the OMi size request (`10_DRAWINGS/for_OMi_2026-10-14/`). It could also ask: compression / test-gauge dimensions, the FS2408
@@ -65,7 +66,7 @@ new two-pass lists `omi_skus_orfs.txt` 385, `omi_skus_compression.txt` 230, `omi
   - V0318-08 / V0319-08.
   - 1704-16-16 / 1803-16-16 / 6701-08-08 (bent-tube shape checks).
 - Decisions:
-  - Ship batch 16 (then apply the 77-adapter changes).
+  - ~~Ship batch 16~~ (shipped 2026-10-19). Next: OK to apply the 77-adapter changes.
   - The employer's feedback on using Brennan data (up to 570 more parts).
   - The open questions of the 142 rows (`tools/_out/unblock_20261008/rows.csv`, gates re-judged by `possible_2535.py`).
 
@@ -73,6 +74,12 @@ new two-pass lists `omi_skus_orfs.txt` 385, `omi_skus_compression.txt` 230, `omi
 - SolidWorks' Thread feature (Inch Tap) on a female edge off the origin axis CRASHED SolidWorks. Use gen_bent's `HelixThreadY`
   (helix on a plane + 60 deg profile + swept cut).
 - After a SolidWorks restart a second instance may show a 3DEXPERIENCE "go to the platform?" dialog. Answer No; never sign in.
+- 2026-10-19: "License not granted: X1W ... roles have changed ... (License error 20)" and SolidWorks closing mid-job = the desktop app
+  lost its 3DEXPERIENCE sign-in (since 2026-10-15), not a role change: `%APPDATA%\DassaultSystemes\SWXDesktopHelper\<date>_*.log` shows
+  the role query answered by the 3DPassport login page ("pageId = \"login\"", "JSON parse error"). The user signs in again and starts
+  SOLIDWORKS Design from the platform compass. Never start SLDWORKS.exe yourself (it starts without a license).
+- `python sw_mcp/call.py` from the Bash / PowerShell tools can report "SolidWorks is not running" while the MCP tools reach it - use
+  the MCP tools then.
 - `run_macro` with a missing report / save folder raises VBA error 76: a modal box that blocks SolidWorks. Create the folders first
   (the new macros check this).
 - Circular-profile sweep: select the path sketch with mark 4, then CreateDefinition + CircularProfile. Setting `.Path` silently

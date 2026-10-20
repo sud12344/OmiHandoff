@@ -1,4 +1,4 @@
-Build_6505_MASTER  10/2/2026 8:53:36 PM
+Build_6505_MASTER  10/9/2026 9:45:21 AM
 OK    dim L15 = 1.9000 in (expect 1.9000)
 OK    dim BODYR = 0.5081 in (expect 0.5081)
 OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
@@ -152,8 +152,8 @@ OK    End B face present at x=1.9000
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Across flats / corners 0.8800 / 1.0161 (body hex 0.8800, nut hex 0.8800: expect between 0.8800 and 1.0161)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch15_20261002\staged_all\DesignTable_6505_SW2.xlsx
-OK    Configurations after table: 19 (expect 19)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\regen\leftovers\straight\DesignTable_6505_SW2.xlsx
+OK    Configurations after table: 20 (expect 20)
       config check 1: 6505-02-04
 OK    6505-02-04 L15@DRIVE = 1.3400 (table 1.3400)
 OK    6505-02-04 BODYR@DRIVE = 0.2887 (table 0.2887)
@@ -184,30 +184,31 @@ OK    6505-20-20 DEPTH@BORECUT_A = 1.1850 (table 1.1850)
 OK    6505-20-20 DEPTH@BORECUT_B = 0.8450 (table 0.8450)
 OK    6505-20-20 one solid body (found 1)
       6505-20-20 box x -0.055..2.712  y -1.000..1.000
-      All-config sweep: rebuilding 18 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/18  6505-02-04  rebuilt in 3.1 s
-      sweep 2/18  6505-04-04  rebuilt in 2.9 s
-      sweep 3/18  6505-04-05  rebuilt in 3.1 s
-      sweep 4/18  6505-04-06  rebuilt in 3.1 s
-      sweep 5/18  6505-06-04  rebuilt in 2.9 s
-      sweep 6/18  6505-06-06  rebuilt in 2.9 s
-      sweep 7/18  6505-06-08  rebuilt in 2.9 s
-      sweep 8/18  6505-08-06  rebuilt in 8.4 s
-      sweep 9/18  6505-08-08  rebuilt in 4.5 s
-      sweep 10/18  6505-08-10  rebuilt in 8.2 s
-      sweep 11/18  6505-08-12  rebuilt in 9.4 s
-      sweep 12/18  6505-12-10  rebuilt in 13.7 s
-      sweep 13/18  6505-12-12  rebuilt in 13.9 s
-      sweep 14/18  6505-12-16  rebuilt in 14.3 s
-      sweep 15/18  6505-16-12  rebuilt in 15.6 s
-      sweep 16/18  6505-16-16  rebuilt in 16.1 s
-      sweep 17/18  6505-16-20  rebuilt in 16.0 s
-      sweep 18/18  6505-20-20  rebuilt in 6.2 s
-OK    All-config sweep: 18 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 19 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/19  6505-02-04  rebuilt in 2.5 s
+      sweep 2/19  6505-04-04  rebuilt in 2.4 s
+      sweep 3/19  6505-04-05  rebuilt in 2.6 s
+      sweep 4/19  6505-04-06  rebuilt in 2.5 s
+      sweep 5/19  6505-06-04  rebuilt in 2.3 s
+      sweep 6/19  6505-06-06  rebuilt in 2.3 s
+      sweep 7/19  6505-06-08  rebuilt in 2.3 s
+      sweep 8/19  6505-08-06  rebuilt in 6.5 s
+      sweep 9/19  6505-08-08  rebuilt in 3.6 s
+      sweep 10/19  6505-08-10  rebuilt in 6.5 s
+      sweep 11/19  6505-08-12  rebuilt in 6.8 s
+      sweep 12/19  6505-12-08  rebuilt in 11.0 s
+      sweep 13/19  6505-12-10  rebuilt in 10.9 s
+      sweep 14/19  6505-12-12  rebuilt in 11.2 s
+      sweep 15/19  6505-12-16  rebuilt in 11.2 s
+      sweep 16/19  6505-16-12  rebuilt in 12.8 s
+      sweep 17/19  6505-16-16  rebuilt in 12.5 s
+      sweep 18/19  6505-16-20  rebuilt in 12.5 s
+      sweep 19/19  6505-20-20  rebuilt in 4.8 s
+OK    All-config sweep: 19 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6505-08-08 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 19 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 19 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 20 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 20 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6505_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/2/2026 8:57:11 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS_NEW\6505_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\6505\6505_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/9/2026 9:48:21 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\wave1_ship_20261009\swtest\6505\6505_MASTER.SLDPRT
