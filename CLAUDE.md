@@ -8,6 +8,9 @@ spec-sheet work).
 
 **Current state, open work, user decisions: `00_DOCS/PROJECT_STATUS.md` - read it before starting
 anything, update it when a batch ships or the user decides something.**
+**2026-10-19: START WITH `00_DOCS/NEXT_SESSION_PROMPT_2026-10-19.md`** (everything staged on 2026-10-18: Brennan data allowed and
+marked, OMi answers, A1-A24 answers, the batch-17 stage + merged generator tools, 1,357 configurations generate; SolidWorks sign-in is
+broken; nothing shipped since batch 15). The pointers below are older background.
 **2026-10-18 (night): the folder is a git repo (branch main, `.gitignore` keeps it ~70 MB: no SolidWorks parts, old staging copies,
 _to_delete, _archive) for Claude Code cloud sessions - see `CLOUD_SETUP.md` (the cloud runs the Python side only, never SolidWorks).
 Commit new staging work you want in the cloud.**
