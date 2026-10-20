@@ -200,9 +200,10 @@ def measure_fsm(p, axis, sign, others=(), pn=2, bulkhead=False):
 
 
 # ----------------------------------------------------------------------------------------------------------------------------- FSSW
-def measure_fssw(p, axis, sign, others=(), pn=2):
+def measure_fssw(p, axis, sign, others=(), pn=2, model=False):
     """female face-seal swivel: the stem's flat seal face, the nut (cavity: mouth countersink, thread minor, relief, inner lip; outside:
-    hex, chamfers, rear skirt), the neck behind the nut and the body face. All from the crossing (a) and from the nut face (s)."""
+    hex, chamfers, rear skirt), the neck behind the nut and the body face. All from the crossing (a) and from the nut face (s).
+    model=True (closed loop on OUR rebuild): nut and body are one solid there - the nut rear face runs down to the neck (no lip bore under the nut)."""
     S = half(p, axis, sign, pn, others)
     # the stem seal face: a radial edge starting at the bore radius, below the nut face
     hz = [s for s in S if s['k'] == 'L' and abs(s['r1'] - s['r2']) < TOL and s['a2'] - s['a1'] > 0.05]
@@ -245,8 +246,9 @@ def measure_fssw(p, axis, sign, others=(), pn=2):
     o['NUT_REAR_s'] = s_(outside[-1]['p'][0]); o['NUTL'] = o['NUT_REAR_s']
     o['NUT_REAR_R'] = (R4(outside[-1]['q'][1]), R4(outside[-1]['p'][1]))
     # lip bore and the neck to the body face
-    e = E[i]; assert H(e), ('lip bore', _fmt(E[i:i + 2])); o['LIPR'] = R4(e['p'][1]); o['LIP_s'] = (s_(e['p'][0]), s_(e['q'][0])); i += 1
-    while V(E[i]) and abs(E[i]['q'][1] - E[i]['p'][1]) < 0.01: i += 1
+    if not model:
+        e = E[i]; assert H(e), ('lip bore', _fmt(E[i:i + 2])); o['LIPR'] = R4(e['p'][1]); o['LIP_s'] = (s_(e['p'][0]), s_(e['q'][0])); i += 1
+        while V(E[i]) and abs(E[i]['q'][1] - E[i]['p'][1]) < 0.01: i += 1
     e = E[i]; assert H(e), ('neck', _fmt(E[i:i + 2])); o['NECKR'] = R4(e['p'][1]); o['BODYFACE_a'] = R4(e['q'][0]); i += 1
     o['AFTER'] = _fmt(E[i:i + 3])
     o['RINGS'] = [dict(a=R4(x), rc=R4(y), W=R4(2 * R)) for x, y, R in rings]

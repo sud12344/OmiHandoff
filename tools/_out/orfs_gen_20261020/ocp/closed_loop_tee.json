@@ -98,6 +98,32 @@
   "bad": []
  },
  {
+  "pn": "FS6500-08-08-FG",
+  "checks": 27,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.09453,
+  "bad": [],
+  "brennan_volume": 1.07232,
+  "diff_pct": 2.07
+ },
+ {
+  "pn": "FS6600-08-08-08-FG",
+  "checks": 39,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.37772,
+  "bad": []
+ },
+ {
+  "pn": "FS6602-08-08-08-FG",
+  "checks": 39,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.37842,
+  "bad": []
+ },
+ {
   "pn": "FS6801-08-08-NWO-FG",
   "checks": 20,
   "off": 0,

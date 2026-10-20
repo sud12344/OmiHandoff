@@ -438,6 +438,17 @@ SPEC.update({
                    fold=[_FSLN('FS2704-LN')],
                    legs=[('FSM', 'L16_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('FSBH', 'L17@DRIVE', 'D1_2@BORE', 'THDMAJ_D_2@DRIVE'),
                          ('FSM', 'L16_3@DRIVE', 'D1_3@BORE', 'THDMAJ_D_3@DRIVE')]),
+    'FS6500': dict(name='ORFS 90 deg Male Face Seal x Female Face Seal Swivel Elbow', hex='S2HEX@HEX', elbow=True, fs=True, ref='FS6500-08-08-FG',
+                   fssw=('SHEX@HEX',),
+                   legs=[('FSM', 'L7@DRIVE', 'D1@BORE', 'THDMAJ_D_1@DRIVE'), ('FSSW', 'L21@DRIVE', 'D19@BORE', 'THDMAJ_D_2@DRIVE')]),
+    'FS6600': dict(name='ORFS Swivel Branch Tee (male face seal run x female face-seal swivel branch)', hex='S2HEX@HEX', fs=True, ref='FS6600-08-08-08-FG',
+                   fssw=('SHEX@HEX',),
+                   legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('FSM', 'L7_2@DRIVE', 'D1_2@BORE', 'THDMAJ_D_2@DRIVE'),
+                         ('FSSW', 'L21@DRIVE', 'D19@BORE', 'THDMAJ_D_3@DRIVE')]),
+    'FS6602': dict(name='ORFS Swivel Run Tee (female face-seal swivel on the run)', hex='S2HEX@HEX', fs=True, ref='FS6602-08-08-08-FG',
+                   fssw=('SHEX@HEX',),
+                   legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('FSSW', 'L21@DRIVE', 'D19@BORE', 'THDMAJ_D_2@DRIVE'),
+                         ('FSM', 'L7@DRIVE', 'D1_3@BORE', 'THDMAJ_D_3@DRIVE')]),
     'FS6801': dict(name='ORFS 90 deg Male Face Seal x Adjustable Male ORB Elbow', hex='S2HEX@HEX', elbow=True, fs=True, ref='FS6801-08-08-NWO-FG',
                    nwo=(None, 'S3HEX@HEX', None, None), fs_wf='L11@DRIVE',
                    legs=[('FSM', 'L7@DRIVE', 'D1@BORE', 'THDMAJ_D@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE')]),
@@ -754,6 +765,69 @@ def leg_FSBH(i, dash, M, BR, i2, i4, d17):
     return dict(kind='FSBH', dash=dash, V=V, endlen=i2 + b['COLLARL'], cols=cols, tcols=tcols, dims=dims, rmax=max(rM, rO), f=f, rM=rM, ch=ch,
                 thr=thr + ' UN (male O-ring face seal bulkhead, SAE J1453)', thread=dict(type='CUT', ex=t0, er=rM, depth=thdl, size=f'{TM:.4f}-{G.tpi_of(thr):g}', pitch=pitch),
                 tipR=f['GI'], thr_in=9)
+
+
+# FSSW leg (female O-ring face-seal SWIVEL, BRENNAN_FS6500-08-08-FG swivel leg, tools/_out/orfs_wp2_20261020 end_lib_08.json FSSW_MEAS[8]).
+# The row leg (Air-Way L21 = Brennan AAA) runs from the crossing to the stem's flat SEAL face (measured: 1.49 = L21; the nut face is SEAL further
+# out) - PLAN.md had read it as the nut face. From the nut face (s): nut hex over HEXL (to the rear hex chamfer foot), the rear skirt cone from SKF
+# to SKR at SKS, the skirt to the nut rear face at NUTL, the neck to the body face at BODYS; cavity: 45deg mouth countersink from CSR to the thread
+# minor (13/16-16 basic minor), minor to TE, 45deg relief up to RELR at RELS, a cone down to the stem head radius STEMR at LIPS, the stem head
+# back to the seal face at SEAL, the seal face to the bore. NOT modelled (as every swivel here): the nut hex chamfers, the shallow groove in the
+# skirt (r 0.4022 over 0.127), the 0.0025 nut / stem clearance (nut and body one solid, the lip bore under the nut omitted), the O-ring.
+FSSW_MEAS = {8: dict(AF=0.938, HEXL=0.482, SKF=0.46, SKS=0.67, SKR=0.419, NUTL=0.827, NECKR=0.321, SEAL=0.433, BODYS=1.288, CSR=0.4095,
+                     TE=0.4059, RELS=0.45, RELR=0.4165, LIPS=0.63, STEMR=0.3725)}
+FSSW_CSANG = 45.0; FSSW_RELANG = 45.0
+FSSW_ASSUME = ('female face-seal SWIVEL leg (Brennan FS6500-08-08-FG, SAE J1453): leg length = the row L21, crossing -> the stem\'s flat SEAL face (= Brennan AAA; '
+               'measured - the nut face is 0.433 further out at -08, PLAN.md had read L21 as the nut face); nut hex = the row SHEX (= FF318 S, Q-FS-NUT) over '
+               'the measured hex length; rear skirt cone, skirt, nut rear face, neck and body face measured; nut thread = the face-seal thread of the dash, '
+               'minor = ASME B1.1 basic minor, helical 60deg thread over the measured length, 45deg mouth countersink and 45deg relief, a cone to the stem '
+               'head, stem head to the seal face (measured, -08 only - other sizes need BRENNAN_FS6500-NN-NN-FG); NOT modelled: nut hex chamfers, the '
+               'skirt groove, the nut / stem clearance (one solid), the O-ring; single manufacturer (Brennan)')
+
+
+def leg_FSSW(i, dash, M, BR, nutAF):
+    if dash not in FSSW_MEAS: raise KeyError(f'no -{dash:02d} entry in FSSW_MEAS (female face-seal swivel); needs BRENNAN_FS6500-{dash:02d}-{dash:02d}-FG (STEPS_NEEDED part 2)')
+    m = FSSW_MEAS[dash]; thr = G.FS_THR[dash]; TM = G.fs_major(dash); P_ = 1 / G.tpi_of(thr)
+    rmin = round((TM - 1.082532 * P_) / 2, 5)
+    if abs(nutAF - m['AF']) > 0.007: raise AssertionError(f'row nut hex {nutAF} differs from the Brennan nut {m["AF"]} for -{dash:02d} (Q-FS-NUT: take FF318 S)')
+    cs = round((m['CSR'] - rmin) / math.tan(math.radians(FSSW_CSANG)), 5)
+    Rn = nutAF / math.sqrt(3); Mt = round(M + m['SEAL'], 4); sh = round(Mt - m['BODYS'], 4)
+    VO = [(0.0, Rn), (m['HEXL'], Rn), (m['HEXL'], m['SKF']), (m['SKS'], m['SKR']), (m['NUTL'], m['SKR']), (m['NUTL'], m['NECKR']), (m['BODYS'], m['NECKR'])]
+    VG = [(0.0, m['CSR']), (cs, rmin), (m['TE'], rmin), (m['RELS'], m['RELR']), (m['LIPS'], m['STEMR']), (m['SEAL'], m['STEMR']), (m['SEAL'], 0.0)]
+    if not (m['SKF'] < nutAF / 2 and m['SKR'] < m['SKF'] and m['NECKR'] < m['SKR'] and m['NECKR'] < BR - 0.02): raise AssertionError('radial order neck < skirt < skirt front < nut flats, neck below the body flats')
+    if not (cs < m['TE'] < m['RELS'] < m['LIPS'] < m['NUTL'] < m['BODYS'] and m['TE'] < m['SEAL'] < m['LIPS']): raise AssertionError('axial order of the swivel')
+    if not (rmin < m['RELR'] and m['STEMR'] < m['RELR'] and m['RELR'] < m['SKR'] - 0.0): raise AssertionError('cavity radial order')
+    if sh < 0.03: raise AssertionError(f'swivel leg {M} leaves no hex arm ({sh})')
+    V = [(0, 0), (0, BR), (sh, BR)] + [(Mt - s_, r_) for (s_, r_) in VO[::-1]] + [(Mt - s_, r_) for (s_, r_) in VG]
+    assert len(V) == 17 and abs(V[-1][0] - M) < 1e-9
+    AX = 16; a_ = lambda s_: Mt - s_
+    cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5), f'FSW{i}_BODYS@LEG{i}': round(m['BODYS'] - m['SEAL'], 4), f'FSW{i}_NECKR@LEG{i}': m['NECKR'],
+            f'FSW{i}_NUTL@LEG{i}': m['NUTL'], f'FSW{i}_SKIRTR@LEG{i}': m['SKR'], f'FSW{i}_SKIRTL@LEG{i}': round(m['NUTL'] - m['SKS'], 4), f'FSW{i}_SKIRTFR@LEG{i}': m['SKF'],
+            f'FSW{i}_NUTHEXL@LEG{i}': m['HEXL'], f'FSW{i}_NUTR@LEG{i}': round(Rn, 5), f'FSW{i}_SEAL@LEG{i}': m['SEAL'], f'FSW{i}_CSR@LEG{i}': m['CSR'],
+            f'FSW{i}_CSANG@LEG{i}': FSSW_CSANG, f'FSW{i}_MINR@LEG{i}': rmin, f'FSW{i}_THDL@LEG{i}': round(m['TE'] - cs, 5), f'FSW{i}_RELANG@LEG{i}': FSSW_RELANG,
+            f'FSW{i}_RELR@LEG{i}': m['RELR'], f'FSW{i}_STEMR@LEG{i}': m['STEMR'], f'FSW{i}_HEADL@LEG{i}': round(m['LIPS'] - m['SEAL'], 4),
+            f'NUTHEX{i}@NUTHEX{i}': nutAF, f'DEPTH@NUTCUT{i}': m['HEXL']}
+    tcols = {f'HELIXDIA@HELIXSK_{i}': round(2 * rmin, 5), f'HEIGHT@HELIX_{i}': m['TE'], f'PITCH@HELIX_{i}': round(P_, 5),
+             f'PROF_R@THDPROF_{i}': rmin, f'APEXR@THDPROF_{i}': round(rmin + 0.54127 * P_, 5), f'PROF_AX@THDPROF_{i}': Mt}
+    top = max(BR, Rn)
+    dims = [('len', -1, f'M{i}', M, M / 2, top + 0.8), ('rad', 1, 'BODYR', BR, sh / 2, -0.4),
+            ('pair', 2, 15, f'FSW{i}_BODYS', m['BODYS'] - m['SEAL'], (sh + M) / 2, top + 0.55), ('rad', 3, f'FSW{i}_NECKR', m['NECKR'], (sh + a_(m['NUTL'])) / 2, -0.15),
+            ('pair', 4, 9, f'FSW{i}_NUTL', m['NUTL'], a_(m['NUTL'] / 2), top + 0.45), ('rad', 5, f'FSW{i}_SKIRTR', m['SKR'], a_((m['NUTL'] + m['SKS']) / 2), -0.3),
+            ('len', 5, f'FSW{i}_SKIRTL', m['NUTL'] - m['SKS'], a_((m['NUTL'] + m['SKS']) / 2), top + 0.2),
+            ('ptl', 7, 'False', AX, f'FSW{i}_SKIRTFR', m['SKF'], a_(m['HEXL']) - 0.05, m['SKF'] / 2),
+            ('len', 8, f'FSW{i}_NUTHEXL', m['HEXL'], a_(m['HEXL'] / 2), top + 0.3), ('rad', 8, f'FSW{i}_NUTR', Rn, a_(m['HEXL'] / 2), -0.45),
+            ('pair', 9, 15, f'FSW{i}_SEAL', m['SEAL'], a_(m['SEAL'] / 2), top + 0.65),
+            ('ptl', 10, 'False', AX, f'FSW{i}_CSR', m['CSR'], Mt + 0.1, m['CSR'] / 2), ('ang', 10, AX, f'FSW{i}_CSANG', FSSW_CSANG, a_(cs / 2), m['CSR'] + 0.08),
+            ('rad', 11, f'FSW{i}_MINR', rmin, a_((cs + m['TE']) / 2), -0.6), ('len', 11, f'FSW{i}_THDL', m['TE'] - cs, a_((cs + m['TE']) / 2), top + 0.1),
+            ('ang', 12, AX, f'FSW{i}_RELANG', FSSW_RELANG, a_((m['TE'] + m['RELS']) / 2), rmin + 0.05),
+            ('ptl', 12, 'True', AX, f'FSW{i}_RELR', m['RELR'], a_(m['RELS']) - 0.03, m['RELR'] / 2),
+            ('rad', 14, f'FSW{i}_STEMR', m['STEMR'], a_((m['SEAL'] + m['LIPS']) / 2), -0.75),
+            ('len', 14, f'FSW{i}_HEADL', m['LIPS'] - m['SEAL'], a_((m['SEAL'] + m['LIPS']) / 2), top + 0.15)]
+    mm = dict(m, MINR=rmin, CAVEND=m['LIPS'])
+    return dict(kind='FSSW', dash=dash, V=V, endlen=m['BODYS'], cols=cols, tcols=tcols, dims=dims, rmax=nutAF / 2, nut_af=nutAF,
+                thr=thr + ' UN (female O-ring face-seal swivel, SAE J1453)',
+                thread=dict(type='HELIX', r=rmin, height=m['TE'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True),
+                tipR=m['STEMR'], Mtip=Mt, s_seal=m['SEAL'], m=mm, cs=cs, Rn=Rn)
 
 
 # 2026-10-18 (genfeat flange, Q-NEW-FLG61LEG / Q-NEW-FLG62LEG): FLANGE LEG of a forged elbow. The head is the end library's: code 61 =
@@ -1539,14 +1613,14 @@ NUTSLAB_MIN = 0.003       # a nut cut's slab must start this far beyond every pe
 
 def nut_slab(L):
     """(start, end) along its own axis of the slab a leg's nut hex cut clears to the hexagon (None for legs without a nut cut)"""
-    if L['kind'] in ('JICSW', 'NPSMSW'): return (round(L['Mtip'] - L['m']['HEXL'], 4), L['Mtip'])
+    if L['kind'] in ('JICSW', 'NPSMSW', 'FSSW'): return (round(L['Mtip'] - L['m']['HEXL'], 4), L['Mtip'])
     if L['kind'] == 'NWO': return (L['nut']['n0'], L['nut']['w0'])
     return None
 
 
 def final_reach(o):
     """largest distance from its own axis of a leg in the FINISHED part: swivel nut corners / skirt, adjustable-ORB washer / nut corners, else rmax"""
-    if o['kind'] in ('JICSW', 'NPSMSW'): return max(o['nut_af'] / math.sqrt(3), o['m']['SKR'])
+    if o['kind'] in ('JICSW', 'NPSMSW', 'FSSW'): return max(o['nut_af'] / math.sqrt(3), o['m']['SKR'])
     if o['kind'] == 'NWO': return nwo_radial(o)
     return o['rmax']
 
@@ -1673,6 +1747,10 @@ def build_rows(root):
                                                f'needs BRENNAN_FS6801-{nwd[0]:02d}-{nwd[0]:02d}-NWO-FG or another FS part with that stud)')); continue
         if nwd:
             skipped.append((pn, 'no end data', f'adjustable ORB end not measured for -{nwd[0]:02d}')); continue
+        fsd = [d for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'FSSW' and d not in FSSW_MEAS]      # 2026-10-20 (ORFS)
+        if fsd:
+            skipped.append((pn, 'no end data', f'female face-seal swivel not measured for -{fsd[0]:02d} (FSSW_MEAS has {"/".join("-%02d" % k for k in sorted(FSSW_MEAS))}; '
+                                               f'needs BRENNAN_FS6500-{fsd[0]:02d}-{fsd[0]:02d}-FG, STEPS_NEEDED part 2)')); continue
         fbd = [d for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind == 'FSBH' and d not in FSBH_MEAS]      # 2026-10-20 (ORFS)
         if fbd:
             skipped.append((pn, 'no end data', f'face-seal bulkhead leg not measured for -{fbd[0]:02d} (FSBH_MEAS has {"/".join("-%02d" % k for k in sorted(FSBH_MEAS))}; '
@@ -1696,7 +1774,7 @@ def build_rows(root):
         for (kind, lc, bc, tc), d in zip(legs4(sp), dd):
             if tc is None: continue
             tm = r[tc]
-            want = G.fs_major(d) if kind in ('FSM', 'FSBH') else G.JIC[d]['TM'] if kind in ('JICM', 'JICBH', 'JICSW', 'NWO') else G.NPTF[d][2]
+            want = G.fs_major(d) if kind in ('FSM', 'FSBH', 'FSSW') else G.JIC[d]['TM'] if kind in ('JICM', 'JICBH', 'JICSW', 'NWO') else G.NPTF[d][2]
             if tm is None and (sp.get('perleg') or sp.get('fs')):      # 2026-10-09 (PERLEGSW): an empty cell takes the library major (a filled one must match); 2026-10-20: FS rows too (PLAN D1)
                 warn.append(f'{tc} empty: thread major {want} = the -{d:02d} end library (Q-TRANSFER-ENDLIB)'); continue
             if tm is None or abs(tm - want) > 1e-3: chk.append(f'{tc} {tm} does not match the -{d:02d} end ({want})')
@@ -1728,6 +1806,9 @@ def build_rows(root):
             elif kind == 'FSBH':      # 2026-10-20 (ORFS)
                 try: L = leg_FSBH(i, d, M, BR, r[sp['bh'][0]], r[sp['bh'][1]], r[sp['bh'][2]])
                 except AssertionError as ex: chk.append(f'leg {i} face-seal bulkhead: {ex}'); L = leg_FSM(i, d, M, BR)
+            elif kind == 'FSSW':      # 2026-10-20 (ORFS): female face-seal swivel; nut hex = the row column of SPEC fssw
+                try: L = leg_FSSW(i, d, M, BR, r[sp['fssw'][0]])
+                except AssertionError as ex: chk.append(f'leg {i} face-seal swivel: {ex}'); L = leg_FSM(i, d, M, BR)
             elif kind == 'NWO' and sp.get('fs'):
                 # 2026-10-20 (ORFS): adjustable stud on an FS part - washer face at the row's washer-face column (Q-FS-ORBSTUD (a)), FS lock nut
                 try:
@@ -1836,12 +1917,12 @@ def build_rows(root):
             else:
                 if L['td'] / 2 >= BR - 0.03: chk.append(f'leg {i}: tap drill {L["td"]} leaves < 0.03 wall in hex {AF}')
                 if L['P1'] >= L['V'][2][0] - 0.05: chk.append(f'leg {i}: port depth P1 {L["P1"]} >= leg length {L["V"][2][0]}')
-            if L['kind'] in ('JICSW', 'NPSMSW') and (sp.get('e45') or sp.get('elbow')) and L['hexl'] < AC + 0.002:
+            if L['kind'] in ('JICSW', 'NPSMSW', 'FSSW') and (sp.get('e45') or sp.get('elbow')) and L['hexl'] < AC + 0.002:
                 # 2026-09-24: Brennan's own 45 deg swivel forgings do this too (6502-08-08-FG: body face 0.395, corner radius 0.433;
                 # 1503-08-08-FG: 0.40 / 0.505). The puck part beyond the body face is harmless when it stays inside the neck (it adds no
                 # material outside the swivel) and ends before the swivel slot: at the body face the puck circle reaches
                 # q = sqrt(AC^2 - hexl^2) off the axis (less off the Z=0 plane), and it ends at AC along the axis.
-                m_ = L['m']; slot_a = L['Mtip'] - (m_['FLOOR'] if L['kind'] == 'JICSW' else m_['CBEND'])
+                m_ = L['m']; slot_a = L['Mtip'] - (m_['FLOOR'] if L['kind'] == 'JICSW' else m_['CAVEND'] if L['kind'] == 'FSSW' else m_['CBEND'])
                 q_ = math.sqrt(max(0.0, AC * AC - L['hexl'] ** 2))
                 if neck_trim_leg(sp, i, L):
                     # 2026-10-01 (NECK-6502): this leg carries the NECKTRIM / NECKFILL turn - whatever of the corner (puck and the start
@@ -2090,6 +2171,10 @@ def build_rows(root):
                         oth = max([0.0] + [nwo_radial(o) if o['kind'] == 'NWO' else o['rmax'] for o in legs if o is not L])
                         oth = max(oth, AC)
                         if n0_ < oth + 0.003 and not sp.get('perleg'): chk.append(f'leg {i}: locknut starts {n0_:.3f} from the crossing, inside the reach of the other legs / corner ({oth:.3f})')
+                if L['kind'] == 'FSSW':        # 2026-10-20 (ORFS)
+                    m_ = L['m']
+                    if m_['NECKR'] - L['bore'] / 2 < 0.03: chk.append(f'leg {i}: neck wall {m_["NECKR"] - L["bore"] / 2:.3f} (neck dia {2*m_["NECKR"]:.3f}, bore {L["bore"]})')
+                    if m_['STEMR'] - L['bore'] / 2 < 0.05: chk.append(f'leg {i}: seal face {m_["STEMR"] - L["bore"] / 2:.3f} wide (stem head dia {2*m_["STEMR"]:.3f}, bore {L["bore"]})')
                 if L['kind'] == 'JICSW':
                     m_ = L['m']
                     if m_['NECKR'] - L['bore'] / 2 < 0.03: chk.append(f'leg {i}: neck wall {m_["NECKR"] - L["bore"] / 2:.3f} (neck dia {2*m_["NECKR"]:.3f}, bore {L["bore"]})')
@@ -2151,7 +2236,7 @@ def build_rows(root):
             if ds_ not in ('ASSUMED', 'MISSING'):
                 c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the swivel nut/nose geometry is single-source (Brennan STEPs)'
                 ds_ = 'ASSUMED'
-        if any(L['kind'] in ('FSM', 'FSBH') for L in legs) and ds_ not in ('ASSUMED', 'MISSING', 'TEST'):
+        if any(L['kind'] in ('FSM', 'FSBH', 'FSSW') for L in legs) and ds_ not in ('ASSUMED', 'MISSING', 'TEST'):
             # 2026-10-20 (ORFS, PLAN R8): face-seal end shapes measured on Brennan pilots only (Air-Way 3D models not yet measured, Q-FS-2NDSHAPE)
             c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the face-seal end shapes are single-source (Brennan pilot STEPs)'
             ds_ = 'ASSUMED'
@@ -2215,8 +2300,9 @@ def assume_text(root, legs):
     else: t.append('forged hex body per the 2603HX pattern (Brennan 2603 + 2650 STEPs): hex bars A/F = max(Air-Way hex, male thread majors), flats normal to Z, '
              + ('two continuous bars (X and Y)' if sp.get('cross') else 'run bar continuous through the branch, branch hex arm') + '; hex-end 75deg chamfers and edge fillets NOT modelled')
     if 'JICM' in k: t.append('JIC legs: MS33656J chain per dash (2403 table, VERIFIED vs Brennan); Thread feature over THDZ')
-    if 'FSM' in k or 'FSBH' in k: t.append(FSLEG_ASSUME)          # 2026-10-20 (ORFS)
+    if k & {'FSM', 'FSBH'}: t.append(FSLEG_ASSUME)          # 2026-10-20 (ORFS)
     if 'FSBH' in k: t.append(FSBH_ASSUME)
+    if 'FSSW' in k: t.append(FSSW_ASSUME)
     if 'NWO' in k and sp.get('fs'): t.append(NWOFS_ASSUME)
     if any(L['kind'] in ('JICM', 'JICBH') and G.JIC.get(L['dash'], {}).get('src40') for L in legs): t.append(G.JIC40_ASSUME)   # SIZE-40
     if 'JICBH' in k: t.append('bulkhead leg (Brennan 2701-08-08-FG STEP): hex arm -> round collar of Air-Way dia O (flush with the hex flats where Air-Way prints O = the flats, e.g. 2701 -06/-10/-12; the revolved core under the hex arm is drawn 0.02 inside the flats and is hidden by the hex) -> JIC bulkhead end, relief to tip = Air-Way i2 (STEP 2.11 - 0.86 = 1.25 = i2), JIC thread run from the relief to the land; K1 read as the collar thickness (ASSUMPTION: the STEP collar is 0.875 x 0.125 followed by a 0.125 round shank at the thread dia, not modelled); -LN configs ship with a locknut (separate part, not modelled)')
@@ -3563,7 +3649,7 @@ def emit(root, hdr, ok, refrow):
         body.append('    stepName = "HEX3"')
         body.append(f'    Call HexArm("Top Plane", 0#, 0#, {legs[2]["hexl"]*IN:.9f}, {BR*IN:.9f}, "HEX3", 1, 1#)')
     for i, lg in enumerate(legs, 1):
-        if lg['kind'] not in ('JICSW', 'NPSMSW'): continue
+        if lg['kind'] not in ('JICSW', 'NPSMSW', 'FSSW'): continue
         ax, sg = place(sp)[i]
         if ax == 'U':
             # 2026-10-18 (ANGLED, Q-NEW-ANGLEDNUT): the swivel nut on the 135 deg leg
@@ -3664,6 +3750,9 @@ def emit(root, hdr, ok, refrow):
         if lg['kind'] == 'NPSMSW':
             xs_ = sg * (M - lg['s_tip'])
             body.append(f'    curAxis = {ax}: Check "leg {i} bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane {"XY"[ax]}={xs_:+.4f})", Not AxisCoveredAx({xs_*IN:.9f})')
+        if lg['kind'] == 'FSSW':       # 2026-10-20 (ORFS): the bore runs through the stem seal face
+            xs_ = sg * (M - lg['s_seal'])
+            body.append(f'    curAxis = {ax}: Check "leg {i} bore runs through the swivel seal face (no face across the axis at the seal-face plane {"XY"[ax]}={xs_:+.4f})", Not AxisCoveredAx({xs_*IN:.9f})')
         if lg['kind'] == 'JICSW':
             xs_ = sg * (M - lg['s_nt'])
             body.append(f'    curAxis = {ax}: Check "leg {i} bore reaches the swivel seat (no face across the axis at the nose-tip plane {"XY"[ax]}={xs_:+.4f})", Not AxisCoveredAx({xs_*IN:.9f})')
@@ -3698,15 +3787,15 @@ def emit(root, hdr, ok, refrow):
         xmax = Mt(legs[0]); xmin = -AC; ymax = Mt(legs[1]); ymin = -AC
         # a male NPTF end may stand proud of the flats (Brennan 5600-16 STEP) - then it sets the Z extent
         # (2026-09-25: + JICBH - the bulkhead collar stands proud of the hex flats, 2701/2702/2704 Z extent 0.44 vs 0.375)
-        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('NPTFM', 'JICSW', 'NPSMSW', 'NWO', 'JICBH', 'HOSEB', 'FSM', 'FSBH')])
+        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('NPTFM', 'JICSW', 'NPSMSW', 'NWO', 'JICBH', 'HOSEB', 'FSM', 'FSBH', 'FSSW')])
         if legs[0]['kind'] == 'HOSEB': ymin = -max(AC, legs[0]['rA'])            # 2026-10-09 (HOSEB): the bead around the +X hose leg
         if legs[1]['kind'] == 'HOSEB' and not e45: xmin = -max(AC, legs[1]['rA'])
         # an adjustable ORB leg's washer / locknut corners reach past the corner puck across the other axis
         if legs[1]['kind'] == 'NWO' and not e45: xmin = -max(AC, nwo_radial(legs[1]))
         if legs[0]['kind'] == 'NWO': ymin = -max(AC, nwo_radial(legs[0]))
         # a swivel nut's hex corners (flats normal to Z) lie on the other in-plane axis (2026-09-25: 6500 X -0.722 vs -0.613)
-        if legs[1]['kind'] in ('JICSW', 'NPSMSW') and not e45: xmin = min(xmin, -legs[1]['nut_af'] / math.sqrt(3))
-        if legs[0]['kind'] in ('JICSW', 'NPSMSW'): ymin = min(ymin, -legs[0]['nut_af'] / math.sqrt(3))
+        if legs[1]['kind'] in ('JICSW', 'NPSMSW', 'FSSW') and not e45: xmin = min(xmin, -legs[1]['nut_af'] / math.sqrt(3))
+        if legs[0]['kind'] in ('JICSW', 'NPSMSW', 'FSSW'): ymin = min(ymin, -legs[0]['nut_af'] / math.sqrt(3))
         # 2026-10-18: a flange head stands past the corner puck across the other in-plane axis, and may stand past the hex flats in Z
         zexp = max([zexp] + [lg['rmax'] for lg in legs if lg['kind'] in FLG_KINDS])
         if legs[0]['kind'] in FLG_KINDS: ymin = min(ymin, -legs[0]['rmax'])
@@ -3714,13 +3803,13 @@ def emit(root, hdr, ok, refrow):
     else:
         Mt = lambda lg: lg.get('Mtip', lg['V'][-1][0])
         xmax = Mt(legs[0]); xmin = -Mt(legs[1]); ymax = Mt(legs[2]); ymin = -Mt(legs[3]) if cross else -AC
-        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('JICSW', 'NPSMSW', 'NWO', 'JICBH', 'FSM', 'FSBH')])
+        zexp = max([BR] + [lg['rmax'] for lg in legs if lg['kind'] in ('JICSW', 'NPSMSW', 'NWO', 'JICBH', 'FSM', 'FSBH', 'FSSW')])
         # a swivel nut on the run: its hex corners lie on +/-Y, below the body (2026-09-25)
         for lg in legs[:2]:
-            if lg['kind'] in ('JICSW', 'NPSMSW') and not cross: ymin = min(ymin, -lg['nut_af'] / math.sqrt(3))
+            if lg['kind'] in ('JICSW', 'NPSMSW', 'FSSW') and not cross: ymin = min(ymin, -lg['nut_af'] / math.sqrt(3))
         if any(lg['kind'] == 'NWO' for lg in legs[:2]): ymin = -max([ymin * -1] + [nwo_radial(lg) for lg in legs[:2] if lg['kind'] == 'NWO'])
         if len(legs) > 2 and legs[2]['kind'] == 'NWO': xmin = min(xmin, -nwo_radial(legs[2])); xmax = max(xmax, nwo_radial(legs[2]))
-    zlab = 'hex flats' if zexp == BR else 'swivel nut flats' if any(lg['kind'] in ('JICSW', 'NPSMSW') and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
+    zlab = 'hex flats' if zexp == BR else 'swivel nut flats' if any(lg['kind'] in ('JICSW', 'NPSMSW', 'FSSW') and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
         'adjustable ORB washer' if any(lg['kind'] == 'NWO' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
         'bulkhead collar' if any(lg['kind'] == 'JICBH' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \
         'hose bead' if any(lg['kind'] == 'HOSEB' and abs(lg['rmax'] - zexp) < 1e-9 for lg in legs) else \

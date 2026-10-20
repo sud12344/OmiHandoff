@@ -31,6 +31,12 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
   and 23:16 (with ViewServerV6.exe); Excel crashed at 23:22 during a design-table insert and left an Excel window that broke every later
   insert - those dry runs were discarded and re-run after closing it.
 
+**2026-10-20 (cloud): ORFS generator step 3 - forged face-seal swivel leg** (FS6500 / FS6600 / FS6602 -08 build):
+- leg length = Air-Way L21 to the seal face, nut face +0.433;
+- regression 99 / 99; dofcheck 37 / 37 legs; OCP closed loop 589 + 122 checks, 0 off;
+- ORFS: 24 configurations in 17 staged masters;
+- count: 1,432 of 2,535 ready after SolidWorks (1,106 shipped + 326 waiting).
+
 **2026-10-20 (cloud): ORFS generator step 2 - forged legs** (`tools\_out\orfs_gen_20261020\README.md`):
 - gen_tee: face-seal leg, bulkhead leg, FS adjustable stud; 12 forged FS SPECs -> 16 configurations (+5 straights = 21 FS configurations);
 - regression 99 / 99 identical; dofcheck 29 / 29 legs; OCP closed loop 484 checks, 0 off;

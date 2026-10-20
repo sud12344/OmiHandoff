@@ -86,6 +86,14 @@ def main(roots, out):
             if b['chk']: lines.append(f'{pn}: generator-blocked {b["chk"]}'); continue
             if sp.get('elbow'): S, _ = NM.build(b, e45=bool(sp.get('e45')))
             else: S = build_tee(b)
+            # the swivel nut hex cut of a face-seal swivel leg (macro NutHexCutAx: from the nut face over NUTHEXL, flats normal to Z);
+            # nwo_model / build_tee cut only the adjustable-ORB lock nuts
+            plc = T.place(sp)
+            for i_, lg_ in enumerate(legs, 1):
+                if lg_['kind'] != 'FSSW': continue
+                ax_, sg_ = plc[i_]
+                assert ax_ != 'U', 'face-seal swivel on the 45 deg leg: no closed-loop nut cut here'
+                S = nut_cut(S, ax_, sg_, c[f'NUTHEX{i_}@NUTHEX{i_}'], lg_['Mtip'] - c[f'DEPTH@NUTCUT{i_}'], lg_['Mtip'])
             f0 = os.path.join(out, f'MODEL_{pn}.stp'); NM.write(S, f0)
             files = {0: f0}
             bad, n = [], 0
@@ -116,6 +124,17 @@ def main(roots, out):
                                       COLLAR_s1=i2 + g(f'COLLARL{i}')), got_b, f'leg {i} FSBH', bad)
                     n += cmp(exp, m, f'leg {i} {lg["kind"]}', bad)
                     if m['RINGS']: bad.append(f'leg {i}: an O-ring arc in the model')
+                elif lg['kind'] == 'FSSW':
+                    m = M.measure_fssw(f, ax, sg, oth, pn=pnl, model=True)
+                    Mt = lg['Mtip']; rmin = g(f'FSW{i}_MINR')
+                    exp = dict(SEAL_a=Mi, NUTFACE_a=Mt, SEAL_TO_NUTFACE=g(f'FSW{i}_SEAL'), STEMR=g(f'FSW{i}_STEMR'), HEAD_REAR_a=Mi - g(f'FSW{i}_HEADL'),
+                               MINR=rmin, MOUTH_R=g(f'FSW{i}_CSR'), MOUTH_DEPTH=lg['cs'], TE=lg['cs'] + g(f'FSW{i}_THDL'), NUTL=g(f'FSW{i}_NUTL'),
+                               NECKR=g(f'FSW{i}_NECKR'), BODYFACE_a=Mi - g(f'FSW{i}_BODYS'), BORER=c[f'D{i}@BORE{i}'] / 2,
+                               NUT_CORNER_R=c[f'NUTHEX{i}@NUTHEX{i}'] / 2)        # flats plane: the nut hex reads its A/F / 2
+                    n += cmp(exp, m, f'leg {i} FSSW', bad)
+                    # the nut hex runs from the nut face over NUTHEXL, then the skirt cone / skirt
+                    hx = m['NUT_HEX_s']; n += 1
+                    if not hx or abs(hx[1] - g(f'FSW{i}_NUTHEXL')) > TOL: bad.append(f'leg {i} nut hex ends at {hx} (row NUTHEXL {g(f"FSW{i}_NUTHEXL")})')
                 elif lg['kind'] == 'NWO':
                     m = M.measure_stud(f, ax, sg, oth, pn=pnl, model=True)
                     n_ = lg['nut']
@@ -125,8 +144,10 @@ def main(roots, out):
                     # the washer face is where Air-Way puts it (L11 / L14 from the crossing)
                     n += 1; wf = round(Mi - m['SHOULDER'], 4); wrow = rows[pn][sp['fs_wf']]
                     if abs(wf - wrow) > TOL: bad.append(f'leg {i} washer face at {wf} from the crossing vs the row {sp["fs_wf"].split("@")[0]} {wrow}')
-                else:
+                elif lg['kind'] == 'NPTFM':
                     m = None          # male pipe legs: the closed loops of the accepted NPTFM legs cover them
+                else:
+                    bad.append(f'leg {i}: kind {lg["kind"]} has no closed-loop reader here')
             nchk += n; nbad += len(bad)
             r = dict(pn=pn, checks=n, off=len(bad), solids=NM.nsolids(S) if hasattr(NM, 'nsolids') else PT.nsolids(S), volume=round(PT.vol(S), 5), bad=bad)
             pil = T.G.P.step(pn)

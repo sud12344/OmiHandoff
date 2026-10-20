@@ -77,6 +77,39 @@ When it is unset, the behaviour is unchanged.
     - FS2701-08-08-FG is +0.68 % and FS6801-08-08-NWO-FG -1.4 % in volume vs the Brennan pilots.
   - The straight closed loop still passes (122 checks, 0 off).
 
+## Step 3 (done): the forged face-seal swivel leg + FS6500 / FS6600 / FS6602
+- **`gen_tee.py` `leg_FSSW`** (Brennan FS6500-08-08-FG swivel leg, `FSSW_MEAS[8]`):
+  - **Leg length = the row L21, crossing -> the stem's flat SEAL face.** The nut face is 0.433 further out (`Mtip`).
+  - **Nut:** hex = the row SHEX (Q-FS-NUT, |row - Brennan| <= 0.007) over 0.482, the 12.3 deg rear skirt, the rear face at 0.827.
+  - **Neck and body face:** neck 0.321, body face 1.288 behind the nut face (= Brennan 0.635 from the crossing).
+  - **Cavity:**
+    - 45 deg mouth countersink, then the 13/16-16 basic minor over 0.406;
+    - 45 deg relief to 0.4165, then a cone to the stem head (0.3725 x 0.197);
+    - the seal face, then the bore.
+  - **Not modelled:** nut hex chamfers, the skirt groove, the 0.0025 nut / stem clearance (one solid, as every swivel here), the O-ring.
+  - **Sketch:** 17 points, 19 dimensions, fully defined.
+  - **Thread:** helical (never SolidWorks' Thread feature on a female edge).
+- **Wiring:** the face-seal swivel joins every generic swivel branch of gen_tee:
+  - nut hex cut (NutHexCutAx from the nut face);
+  - nut slab / reach, the corner-puck / neck checks (cavity end = the relief cone end);
+  - the Z extent and the nut-corner extents of the self-checks;
+  - the bore-through-the-seal-face check.
+  - Plus its own neck-wall and seal-face-width checks, the DataStatus rule (ASSUMED) and the assumption text.
+- **SPECs:** FS6500 (elbow), FS6600 (swivel branch tee), FS6602 (swivel on the run).
+- **Rows:** FS6500-08-08-FG, FS6600-08-08-08-FG and FS6602-08-08-08-FG build. FS6500-08-06-FG waits for the -06 swivel (BRENNAN_FS6500-06-06-FG).
+- **Checks:**
+  - vbacheck: 15 / 15 forged macros OK;
+  - dofcheck_tee: 37 / 37 legs fully defined, 0 redundant;
+  - allcfg_check: 0 outline problems;
+  - regression: 99 / 99 existing roots identical;
+  - **OCP closed loop:**
+    - the swivel is read with `fsmeasure.measure_fssw(model=True)`, the nut hex cut is rebuilt as the macro does it;
+    - all 19 forged configurations: 589 checks, 0 off;
+    - FS6500-08-08-FG is +2.07 % in volume vs the Brennan pilot (the unmodelled nut chamfers, groove and clearance);
+    - the straights: 122 checks, 0 off.
+- **ORFS total now:** 24 configurations: 5 straights + 19 forged in 17 masters.
+- **FS6809** (face-seal swivel + adjustable stud) has no -08 row yet and is not given a SPEC.
+
 ## Blocked: the female swivel on the STRAIGHTS (FS6540 / FS6504 / FS6505 / FS6565) needs one STEP
 - On the forged FS6500-08-08-FG pilot, Air-Way L21 (= Brennan AAA) runs from the crossing to the stem's SEAL face; the nut face is 0.433
   further out. PLAN.md had read the drawings as "to the nut face", for the straights as well.
@@ -93,8 +126,6 @@ When it is unset, the behaviour is unchanged.
   - the bore-cut face pick on the land.
 - **SolidWorks dry runs of the 12 forged FS masters.** The open point is PLAN risk R1: the end face where the thread steps down to the flats
   (between the flats and the hex corners) is the shape that broke 2702 / 2703 -16 once.
-- **The forged swivel leg FSSW** (FS6500 / FS6600 / FS6602 / FS6809). Its -08 shape is measured (seal-face reference). It needs the swivel
-  branches of gen_tee (nut hex cut, puck / neck checks).
 - Nut / lock nut / sleeve masters (FS0318 / FS0306 / FS0319).
 - the female face-seal swivel end FSSW (straights FS6540 / FS6505 / FS6504 / FS6565);
 - the gen_tee legs (FSM on forged legs with the step run-out, FSBH, FSSW, NWO_FS);
