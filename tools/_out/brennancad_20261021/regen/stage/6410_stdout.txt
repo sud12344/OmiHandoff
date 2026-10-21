@@ -1,9 +1,0 @@
-6410: 36 configs (ref 6410-24-20-O), 15 skipped (DROP/MISSING/no data), 0 geometry-blocked, 12 profile points, 36 table cols
-   skipped ('6410-03-05-O', 'DROP', 'ASSUMED')
-   skipped ('6410-05-04-O', 'DROP', 'ASSUMED')
-   skipped ('6410-05-06-O', 'DROP', 'ASSUMED')
-   skipped ('6410-06-03-O', 'DROP', 'ASSUMED')
-   skipped ('6410-06-05-O', 'DROP', 'ASSUMED')
-   skipped ('6410-08-05-O', 'DROP', 'ASSUMED')
-
---- stderr ---

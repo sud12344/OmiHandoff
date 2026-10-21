@@ -7,7 +7,7 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
-**2026-10-21 (cloud, evening): Brennan CAD cells STAGED** (`tools\_out\brennancad_20261021\README.md`; user "stage"). On top of the Air-Way-first stage: 421 verified Brennan CAD cells in 103 rows (`DimSource` BRENNAN), 40 rows MISSING -> ASSUMED -> **5 new configurations** (2408-14-SOLID, 2501-40-40-FG, 2501-LL-08-08-FG, 2706-32-32, 5503-02-02-FG); 0 lost / changed; dofcheck / allcfg / vbacheck / regress clean. The 63 one-per-family Brennan STEPs arrived (`tools\_out\steps63_20261021`). Still blocking most staged rows: the -24 / -32 tap drill (A9 -> download BRENNAN_5405-24-24 / -32-32), adjustable-family end data, missing generator SPECs. Next: SolidWorks dry runs of the 4 roots.
+**2026-10-21 (cloud, evening): Brennan CAD cells STAGED** (`tools\_out\brennancad_20261021\README.md`; user "stage"). On top of the Air-Way-first stage: 421 verified Brennan CAD cells in 103 rows (`DimSource` BRENNAN), 40 rows MISSING -> ASSUMED -> **8 new configurations** (2408-14-SOLID, 2501-40-40-FG, 2501-LL-08-08-FG, 2706-32-32, 5000-24-20, 5405-16-24, 5406-40-32, 5503-02-02-FG; A9 tap drills applied: -24 1.72 / -32 2.20); 0 lost / changed; dofcheck / allcfg / vbacheck / regress clean. The 63 one-per-family Brennan STEPs arrived (`tools\_out\steps63_20261021`). Still blocking most staged rows: the -24 / -32 tap drill (A9 -> download BRENNAN_5405-24-24 / -32-32), adjustable-family end data, missing generator SPECs. Next: SolidWorks dry runs of the 4 roots.
 
 **2026-10-21 (cloud, later): Brennan CAD portal lookup** (`tools\_out\partcommunity_20261021\README.md`; network: brennaninc.com + *.partcommunity.com allowed). Brennan has a CAD model for 693 of the 1,022 not-ready parts; of the 240 STEP downloads 217 exist, 23 do not (struck in `STEP_CHECKLIST.md`). The records = Brennan's CAD parameters (checked against BRENNAN_FS2403-08-08: bore / thread / hex / length match) - not applied; user decides whether to use them as Brennan values. OMi package rebuilt: 140 parts (compression 70 of 230). Downloads stay with the user (contact form + reCAPTCHA).
 
@@ -746,6 +746,18 @@ harmless; move it to `_to_delete` when SolidWorks is closed.
 - 2026-10-20 (Q1): **an Air-Way value that cannot be built -> Brennan's value** ("use brennans"): 6405-24-16-O L31, 6504-24-24 D1,
   6565-10-10 nut hexes; marked `$PRP@DimSource` BRENNAN.
 - 2026-10-21: **Brennan's CAD parameter records may be used as Brennan values, following the rule** ("yes you can use them following my rule"): the records Brennan's CAD portal returns (`tools\_out\partcommunity_20261021`, PARTcommunity reversemap) count as Brennan data - Air-Way first, then OMi's file / answers, then Brennan; cells taken from a record are marked `$PRP@DimSource` BRENNAN. A family's letter codes are mapped against a real Brennan STEP of that family before its records are used.
+- 2026-10-21: **Q-CODE62-CAT = yes** ("do the recommended"): code 62 flange heads -12 ... -32 come from Brennan's Flange catalog table
+  3300-62 (head OD, thickness, groove OD) instead of downloading 1824-12 ... -32; for the 1803 / 1804 -Tube bent tubes and FS1800 / FS1804.
+- 2026-10-21: **FS2408 plug: built the way Brennan builds it** ("build it however brennan builds it"; Q-FS2408-HOLE): solid or blind
+  hole as in BRENNAN_FS2408-08.stp (received 2026-10-21).
+- 2026-10-21: **6801-L / 6801-LL: as the earlier long variants** ("keep it the same as that"): folded into the 6801 master as rows,
+  like 2501-L / 2501-LL (gen_tee SPEC 'fold'); where the extra length goes is measured on BRENNAN_6801-L-08-08-NWO-FG /
+  6801-LL-08-08-NWO-FG (received 2026-10-21) - Q-NEW-FOLD-6801L.
+- 2026-10-21: **A9 settled by the Brennan STEPs** (user 2026-10-18 "wait for a brennan step"; files received 2026-10-21):
+  BRENNAN_5405-24-24 / -32-32 measured (puckfix fgelbow.py --port, -08 check reproduces 0.718 / 0.75 / 0.90): -24 tap drill 1.734, taper
+  0.94, drill depth 1.16; -32 tap drill 2.218, taper 0.97, drill depth 1.18. The Air-Way value nearest Brennan is used (Air-Way first):
+  **-24 = 1.72, -32 = 2.20** for empty tap-drill cells (A1 per-size transfer); rows with their own Air-Way value keep it. (Brennan's
+  1.734 / 2.218 is the alternative if the user prefers.)
 
 ## 6. Conventions that grew during the build (keep them)
 

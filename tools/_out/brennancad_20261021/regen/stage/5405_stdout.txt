@@ -1,7 +1,6 @@
-5405: 31 configs (ref 5405-08-08), 4 skipped (DROP/MISSING/no data), 0 geometry-blocked, 7 profile points, 31 table cols
+5405: 32 configs (ref 5405-08-08), 3 skipped (DROP/MISSING/no data), 0 geometry-blocked, 7 profile points, 31 table cols
    skipped ('5405-08-16', 'BUILD', 'MISSING')
    skipped ('5405-20-16', 'DROP', 'ASSUMED')
-   skipped ('5405-16-24', 'BUILD', 'MISSING')
    skipped ('5405-20-32', 'BUILD', 'MISSING')
 
 --- stderr ---

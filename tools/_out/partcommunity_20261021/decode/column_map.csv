@@ -176,7 +176,7 @@ root,family,column,code,agree,both,status
 2403LH,tube_fittings_and_adapters/2403_lh,L1@DRIVE,L,8,8,MAPPED
 2403LH,tube_fittings_and_adapters/2403_lh,THDMAJ_B1@DRIVE,B2THD,8,8,tie: B2THD / B1THD
 2403LH,tube_fittings_and_adapters/2403_lh,THDMAJ_B2@DRIVE,B2THD,8,8,tie: B2THD / B1THD
-2404L,tube_fittings_and_adapters/2404_l,CHEX@HEX,C,4,5,weak
+2404L,tube_fittings_and_adapters/2404_l,CHEX@HEX,C,4,5,MAPPED
 2404L,tube_fittings_and_adapters/2404_l,D1@BORE,A2D,2,5,weak
 2404L,tube_fittings_and_adapters/2404_l,D@BORE,B1D,5,5,MAPPED
 2404L,tube_fittings_and_adapters/2404_l,L20@DRIVE,L,4,5,weak
@@ -436,7 +436,7 @@ root,family,column,code,agree,both,status
 2706,tube_fittings_and_adapters/2706,THDMAJ_A@DRIVE,A1THD,13,13,MAPPED
 2706,tube_fittings_and_adapters/2706,THDMAJ_B@DRIVE,B2THD,13,13,MAPPED
 3051,tube_fittings_and_adapters/3051,D@BORE,,0,0,no code agrees
-3051,tube_fittings_and_adapters/3051,N@DRIVE,N,3,4,weak
+3051,tube_fittings_and_adapters/3051,N@DRIVE,N,3,4,MAPPED
 3051,tube_fittings_and_adapters/3051,TAPDRILL@BORE,,0,0,no code agrees
 3051,tube_fittings_and_adapters/3051,THDMAJ_A1@DRIVE,CL,4,4,tie: CL / A2THD / A1THD
 3051,tube_fittings_and_adapters/3051,THDMAJ_A2@DRIVE,CL,4,4,tie: CL / A2THD / A1THD
@@ -507,7 +507,7 @@ root,family,column,code,agree,both,status
 5404,tube_fittings_and_adapters/5404,PIPEODB@DRIVE,A2THD,31,31,MAPPED
 5405,tube_fittings_and_adapters/5405,CHEX@HEX,C,31,32,MAPPED
 5405,tube_fittings_and_adapters/5405,D@BORE,A1D,31,32,MAPPED
-5405,tube_fittings_and_adapters/5405,L@DRIVE,L,27,32,weak
+5405,tube_fittings_and_adapters/5405,L@DRIVE,L,27,32,MAPPED
 5405,tube_fittings_and_adapters/5405,TAPDRILL@BORE,ER,2,32,weak
 5405,tube_fittings_and_adapters/5405,THDMAJ_A1@DRIVE,A1THD,32,32,MAPPED
 5405,tube_fittings_and_adapters/5405,THDMAJ_A2@DRIVE,A2THD,32,32,MAPPED

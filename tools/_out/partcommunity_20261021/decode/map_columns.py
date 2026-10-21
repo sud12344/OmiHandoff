@@ -120,7 +120,9 @@ for path in tables + stage_orfs:
                 k, tied = named[0], named
         b = both[(c, fam)][k]
         tie = len(tied) > 1
-        ok = n >= 3 and n >= 0.9 * b and not tie
+        # a code named like the column (L = L@DRIVE) needs 75 %: its misses are Air-Way-vs-Brennan differences, not a wrong match
+        # (2026-10-21: 5405 L 27/32); any other code needs 90 %
+        ok = n >= 3 and not tie and (n >= 0.9 * b or (k == base(c) and n >= 0.75 * b))
         cmap.append(dict(root=root, family=fam, column=c, code=k, agree=n, both=b,
                          status='MAPPED' if ok else ('tie: ' + ' / '.join(tied) if tie else 'weak')))
         if ok:

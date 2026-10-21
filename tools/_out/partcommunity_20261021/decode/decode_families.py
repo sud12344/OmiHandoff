@@ -51,7 +51,7 @@ def features(path):
     planes, cyls, out = [], [], collections.defaultdict(set)
     ex = TopExp_Explorer(s, TopAbs_FACE)
     while ex.More():
-        a = BRepAdaptor_Surface(TopoDS.Face_s(ex.Current()))
+        a = BRepAdaptor_Surface((getattr(TopoDS, "Face", None) or TopoDS.Face_s)(ex.Current()))   # OCP 8 (Face) and 7.x (Face_s)
         t = a.GetType()
         if t == GeomAbs_Plane:
             pl = a.Plane(); n = pl.Axis().Direction(); p = pl.Location()

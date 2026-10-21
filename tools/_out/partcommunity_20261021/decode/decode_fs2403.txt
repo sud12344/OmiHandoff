@@ -10,8 +10,8 @@ BL       DECODED  AX_PL 2/2 (chance 1/4)   values: 0.094, 0.125
 BR       DECODED  AX_PL 2/2 (chance 1/4)   values: 0.094, 0.125
 CL       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.719, 1.881
 CR       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.719, 1.881
-DL       PARTIAL  GAP 1/2 (chance 1/4), CYL_D 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.719, 1.876
-DR       PARTIAL  GAP 1/2 (chance 1/4), CYL_D 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.719, 1.876
+DL       PARTIAL  CYL_D 1/2 (chance 0/4), GAP 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.719, 1.876
+DR       PARTIAL  CYL_D 1/2 (chance 0/4), GAP 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.719, 1.876
 EL       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.629, 1.629
 ER       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.629, 1.629
 FF       DECODED  GAP 2/2 (chance 0/4)   values: 1.390, 2.090
