@@ -438,6 +438,22 @@ SPEC['6809'] = dict(name='90 deg Adjustable Male ORB x Female JIC Swivel Elbow',
                     sw=('M10@DRIVE', 'C3HEX@HEX'), nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'), assume_reps=_GB_REPS,
                     legs=[('NWO', 'M7@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICSW', 'M5@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE')])
 
+# 6801-L / 6801-LL folded into 6801 (user 2026-10-21 "keep it the same as that" = as 2501-L / -LL; Q-NEW-FOLD-6801L): Brennan 6801-08-08 /
+# 6801-L-08-08 / 6801-LL-08-08-NWO-FG STEPs - ORB tip 1.450 / 1.970 / 2.480, ORB body face 0.590 / 1.110 / 1.620 (tip to body face 0.860 on
+# all three), JIC leg 1.250 on all three: the ORB leg's forged hex arm runs longer, the adjustable ORB end is the 6801 one -> same topology.
+# The -L / -LL tables carry ORB_I3 / ORB_THDL / ORB_GRVDIA from the 6801 table's own Air-Way rows of the same ORB size (A5; scripts/edit_6801L.py).
+_F6801 = {'M@DRIVE': 'LEG_JIC@DRIVE', 'C4HEX@HEX': 'HEXB@HEX', 'THDMAJ_B1@DRIVE': 'THDMAJ_A@DRIVE', 'THDMAJ_B2@DRIVE': 'THDMAJ_B@DRIVE'}
+_F6801_ASSUME = ('{v} fold: the forged hex arm of the adjustable-ORB leg runs on to the longer ORB leg {c} minus the 6801 tip-to-body-face ORB_I3; '
+                 'JIC leg, body and adjustable ORB end as 6801 (Brennan 6801-08-08 / 6801-L-08-08 / 6801-LL-08-08-NWO-FG STEPs, tools/measure/prof.py: '
+                 'ORB body face 0.590 / 1.110 / 1.620, tip to body face 0.860 on all three; measured at -08-08 only)')
+SPEC['6801']['fold'] = [
+    ('6801L', dict(_F6801, **{'M11@DRIVE': 'LEG_ORB@DRIVE'}),
+     dict(why='6801-L row folded into the 6801 master: Brennan 6801-L-08-08-NWO-FG STEP shows the ORB leg\'s forged hex arm simply running longer '
+              '(Q-NEW-FOLD-6801L, user 2026-10-21)', assume=_F6801_ASSUME.format(v='6801-L', c='M11'))),
+    ('6801LL', dict(_F6801, **{'M12@DRIVE': 'LEG_ORB@DRIVE'}),
+     dict(why='6801-LL row folded into the 6801 master: Brennan 6801-LL-08-08-NWO-FG STEP shows the ORB leg\'s forged hex arm simply running longer '
+              '(Q-NEW-FOLD-6801L, user 2026-10-21)', assume=_F6801_ASSUME.format(v='6801-LL', c='M12')))]
+
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
