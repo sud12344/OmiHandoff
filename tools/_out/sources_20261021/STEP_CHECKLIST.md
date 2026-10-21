@@ -4,7 +4,7 @@ Source: the PC session's blocked-needs list of 2026-10-20 (section 1), expanded 
 Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_STEP_FILES/BRENNAN_<part number>.stp`
 (the file name column). Re-run `python -I tools/_out/sources_20261021/step_checklist.py` afterwards: the box column fills in.
 
-**188 files to download** (29 already in the repo, 0 listed twice, **23 that Brennan has no CAD model for** - struck through, do not search for them). Checked 2026-10-21 against Brennan's CAD portal (`tools/_out/partcommunity_20261021`). Files marked * are not printed in Brennan's PDF catalogs but do exist on the portal.
+**170 files to download** (47 already in the repo, 0 listed twice, **23 that Brennan has no CAD model for** - struck through, do not search for them). Checked 2026-10-21 against Brennan's CAD portal (`tools/_out/partcommunity_20261021`). Files marked * are not printed in Brennan's PDF catalogs but do exist on the portal.
 
 ## 1. Quick wins (2) - together free 18 parts (5405 family)
 
@@ -17,24 +17,24 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 
 | | File | For (not-ready OMi parts of this size) |
 |---|---|---|
-| [ ] | `BRENNAN_FS2403-04-04.stp` | FS2403-04-04 |
-| [ ] | `BRENNAN_FS2403-06-06.stp` | FS2403-06-06 |
-| [ ] | `BRENNAN_FS2403-10-10.stp` | FS2403-10-10 |
-| [ ] | `BRENNAN_FS2403-12-12.stp` | FS2403-12-12 |
-| [ ] | `BRENNAN_FS2403-16-16.stp` | FS2403-16-16 |
-| [ ] | `BRENNAN_FS2403-20-20.stp` | FS2403-20-20 |
-| [ ] | `BRENNAN_FS2701-04-04-FG.stp` | FS2701-04-04-FG |
-| [ ] | `BRENNAN_FS2701-06-06-FG.stp` | FS2701-06-06-FG |
-| [ ] | `BRENNAN_FS2701-10-10-FG.stp` | FS2701-10-10-FG |
-| [ ] | `BRENNAN_FS2701-12-12-FG.stp` | FS2701-12-12-FG |
-| [ ] | `BRENNAN_FS2701-16-16-FG.stp` | FS2701-16-16-FG |
-| [ ] | `BRENNAN_FS6801-04-04-NWO-FG.stp` | FS6801-04-04-NWO-FG |
-| [ ] | `BRENNAN_FS6801-06-06-NWO-FG.stp` | FS6801-06-06-NWO-FG |
-| [ ] | `BRENNAN_FS6801-10-10-NWO-FG.stp` | FS6801-10-10-NWO-FG |
-| [ ] | `BRENNAN_FS6801-12-12-NWO-FG.stp` | FS6801-12-12-NWO-FG |
-| [ ] | `BRENNAN_FS6801-16-16-NWO-FG.stp` | FS6801-16-16-NWO-FG |
-| [ ] | `BRENNAN_FS6801-20-20-NWO-FG.stp` | FS6801-20-20-NWO-FG |
-| [ ] | `BRENNAN_FS6801-24-24-NWO-FG.stp` | FS6801-24-24-NWO-FG |
+| [x] | `BRENNAN_FS2403-04-04.stp` | FS2403-04-04 |
+| [x] | `BRENNAN_FS2403-06-06.stp` | FS2403-06-06 |
+| [x] | `BRENNAN_FS2403-10-10.stp` | FS2403-10-10 |
+| [x] | `BRENNAN_FS2403-12-12.stp` | FS2403-12-12 |
+| [x] | `BRENNAN_FS2403-16-16.stp` | FS2403-16-16 |
+| [x] | `BRENNAN_FS2403-20-20.stp` | FS2403-20-20 |
+| [x] | `BRENNAN_FS2701-04-04-FG.stp` | FS2701-04-04-FG |
+| [x] | `BRENNAN_FS2701-06-06-FG.stp` | FS2701-06-06-FG |
+| [x] | `BRENNAN_FS2701-10-10-FG.stp` | FS2701-10-10-FG |
+| [x] | `BRENNAN_FS2701-12-12-FG.stp` | FS2701-12-12-FG |
+| [x] | `BRENNAN_FS2701-16-16-FG.stp` | FS2701-16-16-FG |
+| [x] | `BRENNAN_FS6801-04-04-NWO-FG.stp` | FS6801-04-04-NWO-FG |
+| [x] | `BRENNAN_FS6801-06-06-NWO-FG.stp` | FS6801-06-06-NWO-FG |
+| [x] | `BRENNAN_FS6801-10-10-NWO-FG.stp` | FS6801-10-10-NWO-FG |
+| [x] | `BRENNAN_FS6801-12-12-NWO-FG.stp` | FS6801-12-12-NWO-FG |
+| [x] | `BRENNAN_FS6801-16-16-NWO-FG.stp` | FS6801-16-16-NWO-FG |
+| [x] | `BRENNAN_FS6801-20-20-NWO-FG.stp` | FS6801-20-20-NWO-FG |
+| [x] | `BRENNAN_FS6801-24-24-NWO-FG.stp` | FS6801-24-24-NWO-FG |
 | [ ] | `BRENNAN_FS6500-24-24-FG.stp` | FS6500-24-24-FG |
 | [x] | `BRENNAN_FS6502-06-06-FG.stp` | FS6502-06-06-FG |
 | [no CAD] | ~~`BRENNAN_FS2406-08-04.stp`~~ | FS2406-08-04 |

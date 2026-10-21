@@ -1,24 +1,24 @@
 priority,group,requested,brennan_pn,file_name,brennan_cad,have,duplicate,in_brennan_catalog,frees_parts,frees,group_note
 1,Quick wins,5405-24-24,5405-24-24,BRENNAN_5405-24-24.stp,yes,yes,,TFA p12,0,,together free 18 parts (5405 family)
 1,Quick wins,5405-32-32,5405-32-32,BRENNAN_5405-32-32.stp,yes,yes,,TFA p12,0,,together free 18 parts (5405 family)
-2,ORFS shared shape files,FS2403-04-04,FS2403-04-04,BRENNAN_FS2403-04-04.stp,yes,,,ORFS p3,1,FS2403-04-04,each serves several FS masters
-2,ORFS shared shape files,FS2403-06-06,FS2403-06-06,BRENNAN_FS2403-06-06.stp,yes,,,ORFS p3,1,FS2403-06-06,each serves several FS masters
-2,ORFS shared shape files,FS2403-10-10,FS2403-10-10,BRENNAN_FS2403-10-10.stp,yes,,,ORFS p3,1,FS2403-10-10,each serves several FS masters
-2,ORFS shared shape files,FS2403-12-12,FS2403-12-12,BRENNAN_FS2403-12-12.stp,yes,,,ORFS p3,1,FS2403-12-12,each serves several FS masters
-2,ORFS shared shape files,FS2403-16-16,FS2403-16-16,BRENNAN_FS2403-16-16.stp,yes,,,ORFS p3,1,FS2403-16-16,each serves several FS masters
-2,ORFS shared shape files,FS2403-20-20,FS2403-20-20,BRENNAN_FS2403-20-20.stp,yes,,,ORFS p3,1,FS2403-20-20,each serves several FS masters
-2,ORFS shared shape files,FS2701-04-04-FG,FS2701-04-04-FG,BRENNAN_FS2701-04-04-FG.stp,yes,,,ORFS p8,1,FS2701-04-04-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-06-06-FG,FS2701-06-06-FG,BRENNAN_FS2701-06-06-FG.stp,yes,,,ORFS p8,1,FS2701-06-06-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-10-10-FG,FS2701-10-10-FG,BRENNAN_FS2701-10-10-FG.stp,yes,,,ORFS p8,1,FS2701-10-10-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-12-12-FG,FS2701-12-12-FG,BRENNAN_FS2701-12-12-FG.stp,yes,,,ORFS p8,1,FS2701-12-12-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-16-16-FG,FS2701-16-16-FG,BRENNAN_FS2701-16-16-FG.stp,yes,,,ORFS p8,1,FS2701-16-16-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-04-04-NWO-FG,FS6801-04-04-NWO-FG,BRENNAN_FS6801-04-04-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-04-04-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-06-06-NWO-FG,FS6801-06-06-NWO-FG,BRENNAN_FS6801-06-06-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-06-06-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-10-10-NWO-FG,FS6801-10-10-NWO-FG,BRENNAN_FS6801-10-10-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-10-10-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-12-12-NWO-FG,FS6801-12-12-NWO-FG,BRENNAN_FS6801-12-12-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-12-12-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-16-16-NWO-FG,FS6801-16-16-NWO-FG,BRENNAN_FS6801-16-16-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-16-16-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-20-20-NWO-FG,FS6801-20-20-NWO-FG,BRENNAN_FS6801-20-20-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-20-20-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-24-24-NWO-FG,FS6801-24-24-NWO-FG,BRENNAN_FS6801-24-24-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-24-24-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS2403-04-04,FS2403-04-04,BRENNAN_FS2403-04-04.stp,yes,yes,,ORFS p3,1,FS2403-04-04,each serves several FS masters
+2,ORFS shared shape files,FS2403-06-06,FS2403-06-06,BRENNAN_FS2403-06-06.stp,yes,yes,,ORFS p3,1,FS2403-06-06,each serves several FS masters
+2,ORFS shared shape files,FS2403-10-10,FS2403-10-10,BRENNAN_FS2403-10-10.stp,yes,yes,,ORFS p3,1,FS2403-10-10,each serves several FS masters
+2,ORFS shared shape files,FS2403-12-12,FS2403-12-12,BRENNAN_FS2403-12-12.stp,yes,yes,,ORFS p3,1,FS2403-12-12,each serves several FS masters
+2,ORFS shared shape files,FS2403-16-16,FS2403-16-16,BRENNAN_FS2403-16-16.stp,yes,yes,,ORFS p3,1,FS2403-16-16,each serves several FS masters
+2,ORFS shared shape files,FS2403-20-20,FS2403-20-20,BRENNAN_FS2403-20-20.stp,yes,yes,,ORFS p3,1,FS2403-20-20,each serves several FS masters
+2,ORFS shared shape files,FS2701-04-04-FG,FS2701-04-04-FG,BRENNAN_FS2701-04-04-FG.stp,yes,yes,,ORFS p8,1,FS2701-04-04-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-06-06-FG,FS2701-06-06-FG,BRENNAN_FS2701-06-06-FG.stp,yes,yes,,ORFS p8,1,FS2701-06-06-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-10-10-FG,FS2701-10-10-FG,BRENNAN_FS2701-10-10-FG.stp,yes,yes,,ORFS p8,1,FS2701-10-10-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-12-12-FG,FS2701-12-12-FG,BRENNAN_FS2701-12-12-FG.stp,yes,yes,,ORFS p8,1,FS2701-12-12-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-16-16-FG,FS2701-16-16-FG,BRENNAN_FS2701-16-16-FG.stp,yes,yes,,ORFS p8,1,FS2701-16-16-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-04-04-NWO-FG,FS6801-04-04-NWO-FG,BRENNAN_FS6801-04-04-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-04-04-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-06-06-NWO-FG,FS6801-06-06-NWO-FG,BRENNAN_FS6801-06-06-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-06-06-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-10-10-NWO-FG,FS6801-10-10-NWO-FG,BRENNAN_FS6801-10-10-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-10-10-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-12-12-NWO-FG,FS6801-12-12-NWO-FG,BRENNAN_FS6801-12-12-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-12-12-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-16-16-NWO-FG,FS6801-16-16-NWO-FG,BRENNAN_FS6801-16-16-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-16-16-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-20-20-NWO-FG,FS6801-20-20-NWO-FG,BRENNAN_FS6801-20-20-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-20-20-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-24-24-NWO-FG,FS6801-24-24-NWO-FG,BRENNAN_FS6801-24-24-NWO-FG.stp,yes,yes,,ORFS p10,1,FS6801-24-24-NWO-FG,each serves several FS masters
 2,ORFS shared shape files,FS6500-24-24-FG,FS6500-24-24-FG,BRENNAN_FS6500-24-24-FG.stp,yes,,,ORFS p9,1,FS6500-24-24-FG,each serves several FS masters
 2,ORFS shared shape files,FS6502-06-06-FG,FS6502-06-06-FG,BRENNAN_FS6502-06-06-FG.stp,yes,yes,,ORFS p9,1,FS6502-06-06-FG,each serves several FS masters
 2,ORFS shared shape files,FS2406-08-04,FS2406-08-04,BRENNAN_FS2406-08-04.stp,no,,,ORFS p4,1,FS2406-08-04,each serves several FS masters
