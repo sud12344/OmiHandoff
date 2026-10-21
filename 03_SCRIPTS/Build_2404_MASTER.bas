@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2404_MASTER"
 ' ============================================================================
-'  Build_2404_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
+'  Build_2404_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
 '  Male Connector - master from reference configuration 2404-08-08 (DesignTable_2404_SW2.xlsx row 2)
 '  Ends: A = NPTFM  B = JICM.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build2404.  Report: 03_SCRIPTS\Build_2404_report.txt

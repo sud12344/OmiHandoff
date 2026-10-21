@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_6410_MASTER"
 ' ============================================================================
-'  Build_6410_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
-'  ORB Reducer/Expander (male ORB x female ORB port) - master from reference configuration 6410-12-08-O (DesignTable_6410_SW2.xlsx row 2)
+'  Build_6410_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
+'  ORB Reducer/Expander (male ORB x female ORB port) - master from reference configuration 6410-24-20-O (DesignTable_6410_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = ORBF.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6410.  Report: 03_SCRIPTS\Build_6410_report.txt
 ' ============================================================================
@@ -33,17 +33,17 @@ Sub LoadPoints()
     Dim v As Variant, i As Long
     v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.013493750, _
-    0.011912600, 0.013493750, _
-    0.011912600, 0.012001500, _
-    0.015087600, 0.012001500, _
-    0.015087600, 0.018330871, _
-    0.037592000, 0.018330871, _
-    0.037592000, 0.010325100, _
-    0.034890368, 0.009601200, _
-    0.033925168, 0.008636000, _
-    0.020116800, 0.008636000, _
-    0.015130803, 0.000000000)
+    0.000000000, 0.023812500, _
+    0.011912600, 0.023812500, _
+    0.011912600, 0.022301200, _
+    0.015087600, 0.022301200, _
+    0.015087600, 0.031235804, _
+    0.044450000, 0.031235804, _
+    0.044450000, 0.021780500, _
+    0.040942619, 0.020840700, _
+    0.039532919, 0.019431000, _
+    0.021437600, 0.019431000, _
+    0.010219107, 0.000000000)
     For i = 0 To NPTS - 1
         PX(i) = v(2 * i): PR(i) = v(2 * i + 1)
     Next i
@@ -118,19 +118,19 @@ Sub Build6410()
     swModel.SketchAddConstraints "sgCOINCIDENT"
     swModel.ClearSelection2 True
 
-    Call Dim_pair(0, 6, "L33", 0.037592000, 0.018796, 0.041191)
-    Call Dim_rad(5, "BODYR", 0.018330871, 0.026340, -0.011430)
-    Call Dim_rad(1, "THDMAJR_A", 0.013493750, 0.005956, -0.007620)
-    Call Dim_len(1, "ORBA_THDL", 0.011912600, 0.005956, 0.024681)
-    Call Dim_rad(3, "ORBA_GRVR", 0.012001500, 0.013500, -0.005080)
-    Call Dim_len(3, "ORBA_GRVW", 0.003175000, 0.013500, 0.022141)
-    Call Dim_ptline(7, False, 11, "ORBFB_FACER", 0.010325100, 0.040132, 0.005163)
-    Call Dim_ang(7, 11, "ORBFB_CHAMANG", 0.261799388, 0.036241, 0.012865)
-    Call Dim_ptline(8, False, 11, "ORBFB_CHAMR", 0.009601200, 0.034890, 0.004801)
-    Call Dim_ang(8, 11, "ORBFB_LEADANG", 0.785398163, 0.034408, 0.012141)
-    Call Dim_rad(9, "ORBFB_MINR", 0.008636000, 0.027021, -0.006350)
-    Call Dim_len(9, "ORBFB_MINL", 0.013808368, 0.027021, 0.025951)
-    Call Dim_ang(10, 11, "ORBFB_DRILLANG", 1.047197551, 0.018847, 0.003454)
+    Call Dim_pair(0, 6, "L33", 0.044450000, 0.022225, 0.054096)
+    Call Dim_rad(5, "BODYR", 0.031235804, 0.029769, -0.011430)
+    Call Dim_rad(1, "THDMAJR_A", 0.023812500, 0.005956, -0.007620)
+    Call Dim_len(1, "ORBA_THDL", 0.011912600, 0.005956, 0.037586)
+    Call Dim_rad(3, "ORBA_GRVR", 0.022301200, 0.013500, -0.005080)
+    Call Dim_len(3, "ORBA_GRVW", 0.003175000, 0.013500, 0.035046)
+    Call Dim_ptline(7, False, 11, "ORBFB_FACER", 0.021780500, 0.046990, 0.010890)
+    Call Dim_ang(7, 11, "ORBFB_CHAMANG", 0.261799388, 0.042696, 0.024320)
+    Call Dim_ptline(8, False, 11, "ORBFB_CHAMR", 0.020840700, 0.040943, 0.010420)
+    Call Dim_ang(8, 11, "ORBFB_LEADANG", 0.785398163, 0.040238, 0.023381)
+    Call Dim_rad(9, "ORBFB_MINR", 0.019431000, 0.030485, -0.006350)
+    Call Dim_len(9, "ORBFB_MINL", 0.018095319, 0.030485, 0.038856)
+    Call Dim_ang(10, 11, "ORBFB_DRILLANG", 1.047197551, 0.020168, 0.007772)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Dim swFeat As SldWorks.Feature
@@ -150,14 +150,14 @@ Sub Build6410()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "BODY"
     Dim vrev As Double: vrev = Volume()
-    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.6652)", Abs(vrev - 2.728759581745e-05) < 2.728759581745e-05 * 0.002
+    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 5.0944)", Abs(vrev - 8.348204645097e-05) < 8.348204645097e-05 * 0.002
 
     stepName = "HEX cut"
     swModel.ClearSelection2 True
     swModel.Extension.SelectByID2 "Right Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     Dim poly As Variant
-    poly = swSkMgr.CreatePolygon(0, 0, 0, 0.015875000, 0, 0, 6, True)
+    poly = swSkMgr.CreatePolygon(0, 0, 0, 0.027051000, 0, 0, 6, True)
     Dim circ As SldWorks.SketchSegment, k As Long
     For k = LBound(poly) To UBound(poly)
         If poly(k).GetType = swSketchSegments_e.swSketchARC Then Set circ = poly(k)
@@ -165,9 +165,9 @@ Sub Build6410()
     swModel.ClearSelection2 True
     circ.Select4 False, Nothing
     Dim dd As SldWorks.DisplayDimension
-    Set dd = swModel.AddDimension2(0.022225, 0.022225, 0)
-    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = 0.031750000
-    NameDim dd, "HEXB", 0.031750000
+    Set dd = swModel.AddDimension2(0.037871, 0.037871, 0)
+    If Not dd Is Nothing Then dd.GetDimension2(0).SystemValue = 0.054102000
+    NameDim dd, "HEXB", 0.054102000
     swModel.ClearSelection2 True
     For k = LBound(poly) To UBound(poly)
         If poly(k).GetType = swSketchSegments_e.swSketchLINE Then poly(k).Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL": Exit For
@@ -184,9 +184,9 @@ Sub Build6410()
     Check "hex sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
     Dim hexcut As SldWorks.Feature, v0 As Double, v1 As Double
     v0 = Volume()
-    Set hexcut = MakeCut2(swFeat, True, 0.056388, "HEXCUT flip")
+    Set hexcut = MakeCut2(swFeat, True, 0.066675, "HEXCUT flip")
     If hexcut Is Nothing Then
-        Set hexcut = MakeCut2(swFeat, False, 0.056388, "HEXCUT plain (to flip)")
+        Set hexcut = MakeCut2(swFeat, False, 0.066675, "HEXCUT plain (to flip)")
         If Not hexcut Is Nothing Then
             Dim xd2 As SldWorks.ExtrudeFeatureData2
             Set xd2 = hexcut.GetDefinition
@@ -203,23 +203,23 @@ Sub Build6410()
     End If
 
     stepName = "Pockets and bores"
-    Call BoreCut("BORE_A", "DA", 0.015468600, 0.020116800, 0#, "BORECUT_A", False, 0.006746875)
+    Call BoreCut("BORE_A", "DA", 0.033274000, 0.021437600, 0#, "BORECUT_A", False, 0.011906250)
     Check "bore open on the axis at End A (x=0)", Not AxisCovered(0#)
-    Check "bore open on the axis at End B (x=1.4800)", Not AxisCovered(0.037592000)
+    Check "bore open on the axis at End B (x=1.7500)", Not AxisCovered(0.044450000)
     stepName = "Threads"
     curAxis = 0
-    Call ThreadCut(0.011912600, 0.013493750, 0.011912600, "1.0625-12", "THD_EndA", -1#, 0.002116667)
-    Call HelixThread(0.037592000, 0.008636000, 0.017475200, 0.001587500, 0.000859266, 0.000000000, False, True, "B", "THD_EndB")
+    Call ThreadCut(0.011912600, 0.023812500, 0.011912600, "1.8750-12", "THD_EndA", -1#, 0.002116667)
+    Call HelixThread(0.044450000, 0.019431000, 0.023012400, 0.002116667, 0.001145688, 0.000000000, False, True, "B", "THD_EndB")
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
     Dim lenX As Double, dY As Double, dZ As Double
     lenX = (bb(3) - bb(0)) / IN_: dY = (bb(4) - bb(1)) / IN_: dZ = (bb(5) - bb(2)) / IN_
-    Trace "Bounding box length " & Format(lenX, "0.0000") & " (nominal 1.4800; loose around thread faces, informational)"
+    Trace "Bounding box length " & Format(lenX, "0.0000") & " (nominal 1.7500; loose around thread faces, informational)"
     Check "End A face present at x=0", SelectEndFace(0#)
-    Check "End B face present at x=1.4800", SelectEndFace(0.037592000)
-    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - 1.48) < 0.15
-    Check "Hex across flats " & Format(dY, "0.0000") & " / corners " & Format(dZ, "0.0000") & " (expect 1.2500 / 1.4434)", (Abs(dY - 1.25) < 0.01 And Abs(dZ - 1.4433756729740643) < 0.01) Or (Abs(dZ - 1.25) < 0.01 And Abs(dY - 1.4433756729740643) < 0.01)
+    Check "End B face present at x=1.7500", SelectEndFace(0.044450000)
+    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - 1.75) < 0.15
+    Check "Hex across flats " & Format(dY, "0.0000") & " / corners " & Format(dZ, "0.0000") & " (expect 2.1300 / 2.4595)", (Abs(dY - 2.13) < 0.01 And Abs(dZ - 2.4595121467478056) < 0.01) Or (Abs(dZ - 2.13) < 0.01 And Abs(dY - 2.4595121467478056) < 0.01)
     Dim bodies As Variant
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
     If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)
@@ -237,9 +237,9 @@ Sub Build6410()
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("6410-04-02-O", "6410-24-20-O")
+    cx_c = Array("6410-04-02-O", "6410-24-16-O")
     cx_p = Array("L33@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "THDMAJR_A@DRIVE", "ORBA_THDL@DRIVE", "ORBA_GRVR@DRIVE", "ORBA_GRVW@DRIVE", "ORBFB_FACER@DRIVE", "THDPITCH@THD_EndA", "Profile_Height@THD_EndA_PROF", "THDPITCH@THD_EndA_PROF", "PROF_R@THDPROF_B", "DEPTH@BORECUT_A")
-    cx_w = Array(Array(1.10000, 0.32447, 0.56200, 0.21875, 0.26500, 0.18200, 0.07500, 0.18000, 0.05000, 0.02706, 0.05000, 0.13500, 0.63200), Array(1.75000, 1.22976, 2.13000, 0.93750, 0.46900, 0.87800, 0.12500, 0.85750, 0.08333, 0.04511, 0.08333, 0.76500, 0.84400))
+    cx_w = Array(Array(1.10000, 0.32447, 0.56200, 0.21875, 0.26500, 0.18200, 0.07500, 0.18000, 0.05000, 0.02706, 0.05000, 0.13500, 0.63200), Array(1.27000, 1.22976, 2.13000, 0.93750, 0.46900, 0.87800, 0.12500, 0.70000, 0.08333, 0.04511, 0.08333, 0.61000, 0.36400))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -268,40 +268,40 @@ Sub Build6410()
     stepName = "ORB port bottom check"
     Dim db_p As SldWorks.Dimension, db_i As Long, db_c() As String, db_x() As Double, db_a() As Double, db_v As Double
     ReDim db_c(33): ReDim db_x(33): ReDim db_a(33)
-    db_c(0) = "6410-12-08-O": db_x(0) = 0.020116800: db_a(0) = 60
+    db_c(0) = "6410-24-20-O": db_x(0) = 0.021437600: db_a(0) = 60
     db_c(1) = "6410-04-02-O": db_x(1) = 0.016052800: db_a(1) = 60
-    db_c(2) = "6410-04-04-O": db_x(2) = 0.014046200: db_a(2) = 60
-    db_c(3) = "6410-04-06-O": db_x(3) = 0.013995400: db_a(3) = 60
-    db_c(4) = "6410-06-04-O": db_x(4) = 0.014554200: db_a(4) = 60
-    db_c(5) = "6410-06-06-O": db_x(5) = 0.017297400: db_a(5) = 60
-    db_c(6) = "6410-06-08-O": db_x(6) = 0.019354800: db_a(6) = 60
-    db_c(7) = "6410-08-04-O": db_x(7) = 0.014046200: db_a(7) = 90
+    db_c(2) = "6410-04-04-O": db_x(2) = 0.017856200: db_a(2) = 60
+    db_c(3) = "6410-04-06-O": db_x(3) = 0.015011400: db_a(3) = 60
+    db_c(4) = "6410-06-04-O": db_x(4) = 0.012268200: db_a(4) = 60
+    db_c(5) = "6410-06-06-O": db_x(5) = 0.013995400: db_a(5) = 60
+    db_c(6) = "6410-06-08-O": db_x(6) = 0.016052800: db_a(6) = 60
+    db_c(7) = "6410-08-04-O": db_x(7) = 0.006426200: db_a(7) = 90
     db_c(8) = "6410-08-06-O": db_x(8) = 0.013995400: db_a(8) = 60
-    db_c(9) = "6410-08-08-O": db_x(9) = 0.018338800: db_a(9) = 60
-    db_c(10) = "6410-08-10-O": db_x(10) = 0.017754600: db_a(10) = 60
+    db_c(9) = "6410-08-08-O": db_x(9) = 0.015798800: db_a(9) = 60
+    db_c(10) = "6410-08-10-O": db_x(10) = 0.017500600: db_a(10) = 60
     db_c(11) = "6410-08-12-O": db_x(11) = 0.019151600: db_a(11) = 60
     db_c(12) = "6410-10-04-O": db_x(12) = 0.009728200: db_a(12) = 90
     db_c(13) = "6410-10-06-O": db_x(13) = 0.008153400: db_a(13) = 90
-    db_c(14) = "6410-10-08-O": db_x(14) = 0.016052800: db_a(14) = 60
-    db_c(15) = "6410-10-12-O": db_x(15) = 0.022453600: db_a(15) = 60
+    db_c(14) = "6410-10-08-O": db_x(14) = 0.016560800: db_a(14) = 60
+    db_c(15) = "6410-10-12-O": db_x(15) = 0.019913600: db_a(15) = 60
     db_c(16) = "6410-12-04-O": db_x(16) = 0.011506200: db_a(16) = 90
     db_c(17) = "6410-12-06-O": db_x(17) = 0.012217400: db_a(17) = 90
-    db_c(18) = "6410-12-10-O": db_x(18) = 0.017754600: db_a(18) = 60
-    db_c(19) = "6410-12-12-O": db_x(19) = 0.023469600: db_a(19) = 60
-    db_c(20) = "6410-12-16-O": db_x(20) = 0.025755600: db_a(20) = 60
-    db_c(21) = "6410-16-04-O": db_x(21) = 0.011506200: db_a(21) = 60
-    db_c(22) = "6410-16-06-O": db_x(22) = 0.009931400: db_a(22) = 90
-    db_c(23) = "6410-16-08-O": db_x(23) = 0.010972800: db_a(23) = 90
-    db_c(24) = "6410-16-10-O": db_x(24) = 0.020040600: db_a(24) = 90
-    db_c(25) = "6410-16-12-O": db_x(25) = 0.020421600: db_a(25) = 60
-    db_c(26) = "6410-16-16-O": db_x(26) = 0.022961600: db_a(26) = 60
-    db_c(27) = "6410-16-20-O": db_x(27) = 0.031343600: db_a(27) = 60
-    db_c(28) = "6410-20-12-O": db_x(28) = 0.007467600: db_a(28) = 90
-    db_c(29) = "6410-20-16-O": db_x(29) = 0.007467600: db_a(29) = 90
-    db_c(30) = "6410-20-24-O": db_x(30) = 0.027279600: db_a(30) = 60
-    db_c(31) = "6410-24-12-O": db_x(31) = 0.008991600: db_a(31) = 90
-    db_c(32) = "6410-24-16-O": db_x(32) = 0.009245600: db_a(32) = 90
-    db_c(33) = "6410-24-20-O": db_x(33) = 0.021437600: db_a(33) = 60
+    db_c(18) = "6410-12-08-O": db_x(18) = 0.010210800: db_a(18) = 90
+    db_c(19) = "6410-12-10-O": db_x(19) = 0.019786600: db_a(19) = 60
+    db_c(20) = "6410-12-12-O": db_x(20) = 0.021437600: db_a(20) = 60
+    db_c(21) = "6410-12-16-O": db_x(21) = 0.024739600: db_a(21) = 60
+    db_c(22) = "6410-16-04-O": db_x(22) = 0.011506200: db_a(22) = 60
+    db_c(23) = "6410-16-06-O": db_x(23) = 0.009931400: db_a(23) = 90
+    db_c(24) = "6410-16-08-O": db_x(24) = 0.010972800: db_a(24) = 90
+    db_c(25) = "6410-16-10-O": db_x(25) = 0.008610600: db_a(25) = 90
+    db_c(26) = "6410-16-12-O": db_x(26) = 0.020167600: db_a(26) = 60
+    db_c(27) = "6410-16-16-O": db_x(27) = 0.027025600: db_a(27) = 60
+    db_c(28) = "6410-16-20-O": db_x(28) = 0.027787600: db_a(28) = 60
+    db_c(29) = "6410-20-12-O": db_x(29) = 0.007467600: db_a(29) = 90
+    db_c(30) = "6410-20-16-O": db_x(30) = 0.007467600: db_a(30) = 90
+    db_c(31) = "6410-20-24-O": db_x(31) = 0.024739600: db_a(31) = 60
+    db_c(32) = "6410-24-12-O": db_x(32) = 0.008991600: db_a(32) = 90
+    db_c(33) = "6410-24-16-O": db_x(33) = 0.009245600: db_a(33) = 90
     For db_i = 0 To 33
         swModel.ShowConfiguration2 db_c(db_i)
         swModel.ForceRebuild3 False
@@ -315,7 +315,7 @@ Sub Build6410()
         Check db_c(db_i) & ": bore meets the port - no face across the axis at the minor-bore bottom x=" & Format(db_x(db_i) / IN_, "0.0000"), Not AxisCovered(db_x(db_i))
     Next db_i
 
-    swModel.ShowConfiguration2 "6410-12-08-O"
+    swModel.ShowConfiguration2 "6410-24-20-O"
     swModel.ForceRebuild3 False
 
     ' ---- all-config rebuild sweep (2026-09-23, QA #124): every configuration, every feature must rebuild
@@ -350,10 +350,10 @@ Sub Build6410()
         End If
     Next sw_i
     Check "All-config sweep: " & sw_n & " configurations rebuilt, " & sw_bad & " feature/body failures", sw_bad = 0
-    ' 2026-09-25: leave the master in its reference configuration (6410-12-08-O) - SolidWorks opens a part in the configuration that is active when it is saved;
+    ' 2026-09-25: leave the master in its reference configuration (6410-24-20-O) - SolidWorks opens a part in the configuration that is active when it is saved;
     ' before this the master was left in the first name of the list (the smallest size)
-    swModel.ShowConfiguration2 "6410-12-08-O"
-    Trace "Master left in its reference configuration 6410-12-08-O for the save (it opens in this size)"
+    swModel.ShowConfiguration2 "6410-24-20-O"
+    Trace "Master left in its reference configuration 6410-24-20-O for the save (it opens in this size)"
 
     ' ---- resting state (project rule): every THD_* feature suppressed in EVERY configuration before the save.
     '      Threads stay live through the build, table insert, config checks and sweep so they are verified;

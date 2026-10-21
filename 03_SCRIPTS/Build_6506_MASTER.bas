@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6506_MASTER"
 ' ============================================================================
-'  Build_6506_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
+'  Build_6506_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
 '  Female Pipe x Female JIC Swivel Connector - master from reference configuration 6506-08-08 (DesignTable_6506_SW2.xlsx row 2)
 '  Ends: A = NPTFF  B = JICSW.  Body revolved at BODYR (body hex) / the nut radius (swivel nut hex), each hex cut over its own zone; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6506.  Report: 03_SCRIPTS\Build_6506_report.txt
@@ -48,9 +48,9 @@ Sub LoadPoints()
     0.038150038, 0.009969500, _
     0.031437580, 0.009969500, _
     0.031437580, 0.008636000, _
-    0.037592000, 0.008636000, _
-    0.037592000, 0.007175500, _
-    0.028069790, 0.000000000)
+    0.037846000, 0.008636000, _
+    0.037846000, 0.007175500, _
+    0.028323790, 0.000000000)
     For i = 0 To NPTS - 1
         PX(i) = v(2 * i): PR(i) = v(2 * i + 1)
     Next i
@@ -142,10 +142,10 @@ Sub Build6506()
     Call Dim_ang(12, 18, "SWB_RELANG", 0.785398163, 0.038802, 0.009936)
     Call Dim_rad(13, "SWB_RELR", 0.009969500, 0.034794, -0.019050)
     Call Dim_pair(14, 9, "SWB_FLOOR", 0.017076420, 0.039976, 0.033081)
-    Call Dim_rad(15, "SWB_NOSER", 0.008636000, 0.034515, -0.022860)
-    Call Dim_pair(16, 9, "SWB_NOSETIP", 0.010922000, 0.043053, 0.035621)
-    Call Dim_ptline(17, False, 18, "SWB_SEATR", 0.007175500, 0.036322, 0.003588)
-    Call Dim_ang(17, 18, "SWB_SEATANG", 0.645771823, 0.035052, 0.002153)
+    Call Dim_rad(15, "SWB_NOSER", 0.008636000, 0.034642, -0.022860)
+    Call Dim_pair(16, 9, "SWB_NOSETIP", 0.010668000, 0.043180, 0.035621)
+    Call Dim_ptline(17, False, 18, "SWB_SEATR", 0.007175500, 0.036576, 0.003588)
+    Call Dim_ang(17, 18, "SWB_SEATANG", 0.645771823, 0.035306, 0.002153)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Dim swFeat As SldWorks.Feature
@@ -165,7 +165,7 @@ Sub Build6506()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "BODY"
     Dim vrev As Double: vrev = Volume()
-    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.7330)", Abs(vrev - 2.839878168048e-05) < 2.839878168048e-05 * 0.002
+    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.7366)", Abs(vrev - 2.845829427122e-05) < 2.845829427122e-05 * 0.002
 
     stepName = "HEX cuts (body hex + swivel nut hex)"
     Dim hexcut As SldWorks.Feature, nutcut As SldWorks.Feature, nutcutA As SldWorks.Feature
@@ -180,10 +180,10 @@ Sub Build6506()
 
     stepName = "Pockets and bores"
     Call BoreCut("POCKET_A", "TAPDRILLA", 0.017780000, 0.022860000, 0#, "POCKETCUT_A", False, 0.011388090)
-    Call BoreCut("BORE_A", "DA", 0.009906000, 0.037592000, 0#, "BORECUT_A", False, 0.011388090)
+    Call BoreCut("BORE_A", "DA", 0.009906000, 0.037846000, 0#, "BORECUT_A", False, 0.011388090)
     Check "bore open on the axis at End A (x=0)", Not AxisCovered(0#)
     Check "bore open on the axis at End B (x=1.9100)", Not AxisCovered(0.048514000)
-    Check "bore reaches the swivel seat (no bore bottom at the nose-tip plane x=1.4800)", Not AxisCovered(0.037592000)
+    Check "bore reaches the swivel seat (no bore bottom at the nose-tip plane x=1.4900)", Not AxisCovered(0.037846000)
     Check "bore open through the End A pocket bottom (x=0.9000)", Not AxisCovered(0.022860000)
     stepName = "Threads"
     curAxis = 0
@@ -218,7 +218,7 @@ Sub Build6506()
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
     cx_c = Array("6506-02-04", "6506-24-24")
     cx_p = Array("L17@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "SWB_BODYS@DRIVE", "SWB_NECKR@DRIVE", "SWB_NUTL@DRIVE", "SWB_SKIRTR@DRIVE", "SWB_SKIRTL@DRIVE", "DEPTH@POCKETCUT_A", "PROF_R@THDPROF_A", "PROF_R@THDPROF_B", "DEPTH@BORECUT_A")
-    cx_w = Array(Array(1.26000, 0.32332, 0.56000, 0.68500, 0.14650, 0.64900, 0.25740, 0.14000, 0.46000, 0.16500, 0.19169, 0.92000), Array(3.00000, 1.37409, 2.38000, 1.41000, 0.77600, 1.32000, 1.05040, 0.23000, 1.16000, 0.86000, 0.89239, 2.27000))
+    cx_w = Array(Array(1.19000, 0.32332, 0.56000, 0.68500, 0.14650, 0.64900, 0.25740, 0.14000, 0.46000, 0.16500, 0.19169, 0.85000), Array(2.98000, 1.37409, 2.38000, 1.41000, 0.77600, 1.32000, 1.05040, 0.23000, 1.16000, 0.86000, 0.89239, 2.25000))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

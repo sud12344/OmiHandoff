@@ -26,13 +26,13 @@ def poly_issues(V):
     return bad
 
 def straight_chain(EA, EB, L, rB):
-    swA = EA['kind'] == 'JICSW'
+    swA = EA['kind'] in ('JICSW', 'FSSW')       # 2026-10-20: FSSW = the female face-seal swivel (FS6565)
     if swA:
         V = [(x, r) for (x, r) in EA['VG'][::-1]]; V += [(x, r) for (x, r) in EA['VO']]; V += [(EA['endlen'], rB)]
     else:
         V = [(0.0, 0.0)] + (EA['V'] if EA['V'] else []) + ([] if EA.get('cap') else [(EA['endlen'], rB)])   # 2026-10-02 (PLUGS): capped NPTF cone ends on the body line
     V += [(L - EB['endlen'], rB)]
-    if EB.get('cav') and EB['kind'] in ('JICSW', 'NPSMSW'):
+    if EB.get('cav') and EB['kind'] in ('JICSW', 'NPSMSW', 'FSSW'):
         V += [(L - x, r) for (x, r) in EB['VO'][::-1]]; V += [(L - x, r) for (x, r) in EB['VG']]
     elif EB.get('cav'):
         V += [(L - x, r) for (x, r) in EB['VG']]

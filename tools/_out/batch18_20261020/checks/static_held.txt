@@ -1,0 +1,15 @@
+Build_1700RC_MASTER.bas {'points': 19, 'unknowns': 38, 'constraints': 38, 'rank': 38, 'dims': 20, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_1800_MASTER.bas {'points': 19, 'unknowns': 38, 'constraints': 38, 'rank': 38, 'dims': 20, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_4603_MASTER.bas HOSEFACE2 STUBFILL_SK {'unknowns': 6, 'cons': 6, 'rank': 6, 'fully': True, 'redundant': 0}
+Build_4603_MASTER.bas HOSEFACE2 plane {'base': 'PLN2', 'offset_in': 0.19, 'dims': 1, 'fully': True}
+Build_4603_MASTER.bas HOSEFACE2 geometry {'rin_lt_rS': True, 'fill_ring_inside_cut_region': True, 'depth_pos': True, 'unit_axis': True}
+Build_1603_MASTER.bas LEG 1 {'n': 20, 'unknowns': 40, 'cons': 40, 'rank': 40, 'fully': True, 'redundant': 0}
+Build_1603_MASTER.bas LEG 2 {'n': 20, 'unknowns': 40, 'cons': 40, 'rank': 40, 'fully': True, 'redundant': 0}
+Build_1603_MASTER.bas LEG 3 {'n': 20, 'unknowns': 40, 'cons': 40, 'rank': 40, 'fully': True, 'redundant': 0}
+1700RC   3 configs  outline problems: 0 []
+1800     1 configs  outline problems: 0 []
+1703     1 configs  leg outline problems: 0 []
+4503     7 configs  leg outline problems: 0 [] (hose face-offs checked: 7, forged-corner sample points past the hose hex face: 9276, all inside the cut region)
+4603     5 configs  leg outline problems: 0 [] (hose face-offs checked: 5, forged-corner sample points past the hose hex face: 54466, all inside the cut region)
+1603     6 configs  leg outline problems: 0 []
+vbacheck done

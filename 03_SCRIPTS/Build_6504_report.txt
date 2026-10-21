@@ -1,4 +1,4 @@
-Build_6504_MASTER  10/19/2026 11:49:14 PM
+Build_6504_MASTER  10/20/2026 9:01:03 PM
 OK    dim L13 = 1.7300 in (expect 1.7300)
 OK    dim BODYR = 0.4677 in (expect 0.4677)
 OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
@@ -125,15 +125,15 @@ OK    THD_EndA thread feature created
       THD_EndA: thread centre x = 0.3842 in, anchor 0.5367, wanted -X
 OK    THD_EndA runs along the thread flat (away from the hex)
 OK    THD_EndA rebuilds without error (code 0)
-      THD_EndA: dim full name D8@THD_EndA@Part18.Part
-      THD_EndA: dim full name THDPITCH@THD_EndA@Part18.Part
-      THD_EndA: dim full name THDDIA@THD_EndA@Part18.Part
-      THD_EndA: dim full name DEPTH@THD_EndA@Part18.Part
-      THD_EndA: dim full name D1@THD_EndA@Part18.Part
-      THD_EndA: dim full name THDPITCH@Thread Profile1@Part18.Part
-      THD_EndA: dim full name Profile_Land@Thread Profile1@Part18.Part
-      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part18.Part
-      THD_EndA: dim full name Profile_Height@Thread Profile1@Part18.Part
+      THD_EndA: dim full name D8@THD_EndA@Part23.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part23.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part23.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part23.Part
+      THD_EndA: dim full name D1@THD_EndA@Part23.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part23.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part23.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part23.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part23.Part
 OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndA: profile sketch renamed to THD_EndA_PROF
 OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
@@ -167,7 +167,7 @@ OK    End B face present at x=1.7300
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Across flats / corners 0.8800 / 1.0161 (body hex 0.8100, nut hex 0.8800: expect between 0.8800 and 1.0161)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_6504_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_6504_SW2.xlsx
 OK    Configurations after table: 15 (expect 15)
       config check 1: 6504-04-04
 OK    6504-04-04 L13@DRIVE = 1.4200 (table 1.4200)
@@ -205,24 +205,24 @@ OK    6504-24-24 one solid body (found 1)
       6504-24-24 box x 0.000..3.116  y -1.125..1.125
       All-config sweep: rebuilding 14 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
       sweep 1/14  6504-04-04  rebuilt in 0.9 s
-      sweep 2/14  6504-04-06  rebuilt in 1.5 s
-      sweep 3/14  6504-06-04  rebuilt in 1.4 s
-      sweep 4/14  6504-06-06  rebuilt in 1.6 s
+      sweep 2/14  6504-04-06  rebuilt in 1.4 s
+      sweep 3/14  6504-06-04  rebuilt in 1.3 s
+      sweep 4/14  6504-06-06  rebuilt in 1.5 s
       sweep 5/14  6504-06-08  rebuilt in 1.3 s
-      sweep 6/14  6504-08-06  rebuilt in 1.7 s
+      sweep 6/14  6504-08-06  rebuilt in 1.5 s
       sweep 7/14  6504-08-08  rebuilt in 0.9 s
-      sweep 8/14  6504-08-10  rebuilt in 1.6 s
+      sweep 8/14  6504-08-10  rebuilt in 1.4 s
       sweep 9/14  6504-10-10  rebuilt in 1.3 s
-      sweep 10/14  6504-12-12  rebuilt in 1.6 s
-      sweep 11/14  6504-12-16  rebuilt in 1.2 s
-      sweep 12/14  6504-16-16  rebuilt in 1.7 s
-      sweep 13/14  6504-20-20  rebuilt in 1.6 s
-      sweep 14/14  6504-24-24  rebuilt in 1.3 s
+      sweep 10/14  6504-12-12  rebuilt in 1.3 s
+      sweep 11/14  6504-12-16  rebuilt in 1.4 s
+      sweep 12/14  6504-16-16  rebuilt in 1.4 s
+      sweep 13/14  6504-20-20  rebuilt in 1.7 s
+      sweep 14/14  6504-24-24  rebuilt in 1.1 s
 OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6504-08-08 for the save (it opens in this size)
       THD_EndA: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
       THD_EndB: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6504\6504_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/19/2026 11:50:06 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6504\6504_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6504\6504_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 9:01:56 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6504\6504_MASTER.SLDPRT

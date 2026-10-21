@@ -1,4 +1,4 @@
-Build_6400_MASTER  10/19/2026 9:46:39 PM
+Build_6400_MASTER  10/20/2026 8:30:27 PM
 OK    dim D1 = 1.4800 in (expect 1.4800)
 OK    dim BODYR = 0.5052 in (expect 0.5052)
 OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
@@ -70,15 +70,15 @@ OK    THD_EndA thread feature created
       THD_EndA: thread centre x = 0.1622 in, anchor 0.3440, wanted -X
 OK    THD_EndA runs along the thread flat (away from the hex)
 OK    THD_EndA rebuilds without error (code 0)
-      THD_EndA: dim full name D8@THD_EndA@Part14.Part
-      THD_EndA: dim full name THDPITCH@THD_EndA@Part14.Part
-      THD_EndA: dim full name THDDIA@THD_EndA@Part14.Part
-      THD_EndA: dim full name DEPTH@THD_EndA@Part14.Part
-      THD_EndA: dim full name D1@THD_EndA@Part14.Part
-      THD_EndA: dim full name THDPITCH@Thread Profile1@Part14.Part
-      THD_EndA: dim full name Profile_Land@Thread Profile1@Part14.Part
-      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part14.Part
-      THD_EndA: dim full name Profile_Height@Thread Profile1@Part14.Part
+      THD_EndA: dim full name D8@THD_EndA@Part12.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part12.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part12.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part12.Part
+      THD_EndA: dim full name D1@THD_EndA@Part12.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part12.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part12.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part12.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part12.Part
 OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.3440 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndA: profile sketch renamed to THD_EndA_PROF
 OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
@@ -102,15 +102,15 @@ OK    THD_EndB thread feature created
       THD_EndB: thread centre x = 1.0958 in, anchor 0.9433, wanted +X
 OK    THD_EndB runs along the thread flat (away from the hex)
 OK    THD_EndB rebuilds without error (code 0)
-      THD_EndB: dim full name D8@THD_EndB@Part14.Part
-      THD_EndB: dim full name THDPITCH@THD_EndB@Part14.Part
-      THD_EndB: dim full name THDDIA@THD_EndB@Part14.Part
-      THD_EndB: dim full name DEPTH@THD_EndB@Part14.Part
-      THD_EndB: dim full name D1@THD_EndB@Part14.Part
-      THD_EndB: dim full name THDPITCH@Thread Profile2@Part14.Part
-      THD_EndB: dim full name Profile_Land@Thread Profile2@Part14.Part
-      THD_EndB: dim full name Profile_Angle@Thread Profile2@Part14.Part
-      THD_EndB: dim full name Profile_Height@Thread Profile2@Part14.Part
+      THD_EndB: dim full name D8@THD_EndB@Part12.Part
+      THD_EndB: dim full name THDPITCH@THD_EndB@Part12.Part
+      THD_EndB: dim full name THDDIA@THD_EndB@Part12.Part
+      THD_EndB: dim full name DEPTH@THD_EndB@Part12.Part
+      THD_EndB: dim full name D1@THD_EndB@Part12.Part
+      THD_EndB: dim full name THDPITCH@Thread Profile2@Part12.Part
+      THD_EndB: dim full name Profile_Land@Thread Profile2@Part12.Part
+      THD_EndB: dim full name Profile_Angle@Thread Profile2@Part12.Part
+      THD_EndB: dim full name Profile_Height@Thread Profile2@Part12.Part
 OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndB: profile sketch renamed to THD_EndB_PROF
 OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
@@ -122,7 +122,7 @@ OK    End B face present at x=1.4800
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 0.8750 / corners 1.0104 (expect 0.8750 / 1.0104)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17\straight\DesignTable_6400_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_6400_SW2.xlsx
 OK    Configurations after table: 67 (expect 67)
       config check 1: 6400-02-02-O
 OK    6400-02-02-O D1@DRIVE = 1.0600 (table 1.0600)
@@ -163,77 +163,77 @@ OK    6400-L-16-16-O DEPTH@BORECUT_B = 3.1185 (table 3.1185)
 OK    6400-L-16-16-O one solid body (found 1)
       6400-L-16-16-O box x -0.026..3.980  y -0.750..0.750
       All-config sweep: rebuilding 66 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/66  6400-02-02-O  rebuilt in 0.9 s
-      sweep 2/66  6400-03-03-O  rebuilt in 1.2 s
-      sweep 3/66  6400-04-02-O  rebuilt in 1.5 s
-      sweep 4/66  6400-04-03-O  rebuilt in 1.3 s
+      sweep 1/66  6400-02-02-O  rebuilt in 1.0 s
+      sweep 2/66  6400-03-03-O  rebuilt in 1.3 s
+      sweep 3/66  6400-04-02-O  rebuilt in 1.4 s
+      sweep 4/66  6400-04-03-O  rebuilt in 1.4 s
       sweep 5/66  6400-04-04-O  rebuilt in 1.5 s
-      sweep 6/66  6400-04-05-O  rebuilt in 1.4 s
-      sweep 7/66  6400-04-06-O  rebuilt in 1.5 s
-      sweep 8/66  6400-04-08-O  rebuilt in 1.3 s
-      sweep 9/66  6400-04-10-O  rebuilt in 1.5 s
-      sweep 10/66  6400-04-12-O  rebuilt in 1.4 s
+      sweep 6/66  6400-04-05-O  rebuilt in 1.5 s
+      sweep 7/66  6400-04-06-O  rebuilt in 1.6 s
+      sweep 8/66  6400-04-08-O  rebuilt in 1.4 s
+      sweep 9/66  6400-04-10-O  rebuilt in 1.6 s
+      sweep 10/66  6400-04-12-O  rebuilt in 1.5 s
       sweep 11/66  6400-05-04-O  rebuilt in 1.5 s
-      sweep 12/66  6400-05-05-O  rebuilt in 1.4 s
+      sweep 12/66  6400-05-05-O  rebuilt in 1.5 s
       sweep 13/66  6400-05-06-O  rebuilt in 1.6 s
       sweep 14/66  6400-06-04-O  rebuilt in 1.5 s
       sweep 15/66  6400-06-05-O  rebuilt in 1.7 s
-      sweep 16/66  6400-06-06-O  rebuilt in 1.5 s
-      sweep 17/66  6400-06-08-O  rebuilt in 1.7 s
-      sweep 18/66  6400-06-10-O  rebuilt in 1.4 s
+      sweep 16/66  6400-06-06-O  rebuilt in 1.6 s
+      sweep 17/66  6400-06-08-O  rebuilt in 1.5 s
+      sweep 18/66  6400-06-10-O  rebuilt in 1.7 s
       sweep 19/66  6400-06-12-O  rebuilt in 1.6 s
-      sweep 20/66  6400-06-16-O  rebuilt in 1.6 s
-      sweep 21/66  6400-08-04-O  rebuilt in 1.5 s
-      sweep 22/66  6400-08-06-O  rebuilt in 1.6 s
+      sweep 20/66  6400-06-16-O  rebuilt in 1.8 s
+      sweep 21/66  6400-08-04-O  rebuilt in 1.6 s
+      sweep 22/66  6400-08-06-O  rebuilt in 1.5 s
       sweep 23/66  6400-08-08-O  rebuilt in 1.0 s
-      sweep 24/66  6400-08-10-O  rebuilt in 1.4 s
+      sweep 24/66  6400-08-10-O  rebuilt in 1.6 s
       sweep 25/66  6400-08-12-O  rebuilt in 1.6 s
       sweep 26/66  6400-08-16-O  rebuilt in 1.7 s
-      sweep 27/66  6400-08-20-O  rebuilt in 1.6 s
-      sweep 28/66  6400-10-06-O  rebuilt in 1.9 s
+      sweep 27/66  6400-08-20-O  rebuilt in 2.0 s
+      sweep 28/66  6400-10-06-O  rebuilt in 1.4 s
       sweep 29/66  6400-10-08-O  rebuilt in 1.6 s
-      sweep 30/66  6400-10-10-O  rebuilt in 1.6 s
-      sweep 31/66  6400-10-12-O  rebuilt in 1.7 s
-      sweep 32/66  6400-10-16-O  rebuilt in 1.5 s
-      sweep 33/66  6400-12-06-O  rebuilt in 1.6 s
-      sweep 34/66  6400-12-08-O  rebuilt in 1.3 s
-      sweep 35/66  6400-12-10-O  rebuilt in 1.4 s
-      sweep 36/66  6400-12-12-O  rebuilt in 1.4 s
+      sweep 30/66  6400-10-10-O  rebuilt in 1.5 s
+      sweep 31/66  6400-10-12-O  rebuilt in 1.6 s
+      sweep 32/66  6400-10-16-O  rebuilt in 1.6 s
+      sweep 33/66  6400-12-06-O  rebuilt in 1.4 s
+      sweep 34/66  6400-12-08-O  rebuilt in 1.6 s
+      sweep 35/66  6400-12-10-O  rebuilt in 1.5 s
+      sweep 36/66  6400-12-12-O  rebuilt in 1.7 s
       sweep 37/66  6400-12-14-O  rebuilt in 1.6 s
-      sweep 38/66  6400-12-16-O  rebuilt in 1.5 s
-      sweep 39/66  6400-12-20-O  rebuilt in 1.8 s
-      sweep 40/66  6400-12-24-O  rebuilt in 1.7 s
+      sweep 38/66  6400-12-16-O  rebuilt in 1.8 s
+      sweep 39/66  6400-12-20-O  rebuilt in 1.9 s
+      sweep 40/66  6400-12-24-O  rebuilt in 1.6 s
       sweep 41/66  6400-14-14-O  rebuilt in 1.7 s
-      sweep 42/66  6400-16-08-O  rebuilt in 1.7 s
-      sweep 43/66  6400-16-10-O  rebuilt in 1.5 s
-      sweep 44/66  6400-16-12-O  rebuilt in 2.2 s
-      sweep 45/66  6400-16-14-O  rebuilt in 2.4 s
-      sweep 46/66  6400-16-16-O  rebuilt in 2.0 s
-      sweep 47/66  6400-16-20-O  rebuilt in 1.9 s
-      sweep 48/66  6400-16-24-O  rebuilt in 2.3 s
-      sweep 49/66  6400-20-12-O  rebuilt in 2.3 s
-      sweep 50/66  6400-20-16-O  rebuilt in 2.4 s
-      sweep 51/66  6400-20-20-O  rebuilt in 2.2 s
-      sweep 52/66  6400-20-24-O  rebuilt in 2.7 s
-      sweep 53/66  6400-20-32-O  rebuilt in 2.1 s
-      sweep 54/66  6400-24-16-O  rebuilt in 1.9 s
-      sweep 55/66  6400-24-20-O  rebuilt in 2.2 s
-      sweep 56/66  6400-24-24-O  rebuilt in 2.2 s
-      sweep 57/66  6400-24-32-O  rebuilt in 2.4 s
-      sweep 58/66  6400-32-20-O  rebuilt in 2.5 s
+      sweep 42/66  6400-16-08-O  rebuilt in 1.5 s
+      sweep 43/66  6400-16-10-O  rebuilt in 1.7 s
+      sweep 44/66  6400-16-12-O  rebuilt in 1.7 s
+      sweep 45/66  6400-16-14-O  rebuilt in 1.6 s
+      sweep 46/66  6400-16-16-O  rebuilt in 1.8 s
+      sweep 47/66  6400-16-20-O  rebuilt in 1.7 s
+      sweep 48/66  6400-16-24-O  rebuilt in 1.9 s
+      sweep 49/66  6400-20-12-O  rebuilt in 1.8 s
+      sweep 50/66  6400-20-16-O  rebuilt in 1.8 s
+      sweep 51/66  6400-20-20-O  rebuilt in 1.9 s
+      sweep 52/66  6400-20-24-O  rebuilt in 2.0 s
+      sweep 53/66  6400-20-32-O  rebuilt in 1.8 s
+      sweep 54/66  6400-24-16-O  rebuilt in 2.0 s
+      sweep 55/66  6400-24-20-O  rebuilt in 2.0 s
+      sweep 56/66  6400-24-24-O  rebuilt in 1.8 s
+      sweep 57/66  6400-24-32-O  rebuilt in 2.0 s
+      sweep 58/66  6400-32-20-O  rebuilt in 2.4 s
       sweep 59/66  6400-32-24-O  rebuilt in 2.5 s
-      sweep 60/66  6400-32-32-O  rebuilt in 2.9 s
-      sweep 61/66  6400-L-04-04-O  rebuilt in 3.0 s
-      sweep 62/66  6400-L-06-06-O  rebuilt in 3.6 s
-      sweep 63/66  6400-L-08-08-O  rebuilt in 5.1 s
-      sweep 64/66  6400-L-10-10-O  rebuilt in 3.4 s
-      sweep 65/66  6400-L-12-12-O  rebuilt in 4.7 s
-      sweep 66/66  6400-L-16-16-O  rebuilt in 2.0 s
+      sweep 60/66  6400-32-32-O  rebuilt in 2.4 s
+      sweep 61/66  6400-L-04-04-O  rebuilt in 2.5 s
+      sweep 62/66  6400-L-06-06-O  rebuilt in 3.5 s
+      sweep 63/66  6400-L-08-08-O  rebuilt in 4.7 s
+      sweep 64/66  6400-L-10-10-O  rebuilt in 3.1 s
+      sweep 65/66  6400-L-12-12-O  rebuilt in 4.1 s
+      sweep 66/66  6400-L-16-16-O  rebuilt in 1.8 s
 OK    All-config sweep: 66 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6400-08-08-O for the save (it opens in this size)
       THD_EndA: SetSuppression2(all configs) -> True; per-config check: 67 configs, 0 still live
       THD_EndB: SetSuppression2(all configs) -> True; per-config check: 67 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6400\6400_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/19/2026 9:49:26 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6400\6400_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6400\6400_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 8:33:13 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6400\6400_MASTER.SLDPRT

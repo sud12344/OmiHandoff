@@ -1,4 +1,4 @@
-Build_6501_MASTER  10/20/2026 12:34:52 AM
+Build_6501_MASTER  10/20/2026 8:57:23 PM
 OK    dim M1 = 1.0900 in (expect 1.0900)
 OK    dim BODYR = 0.2800 in (expect 0.2800)
 OK    dim NPTF1_MAJR = 0.2609 in (expect 0.2609)
@@ -8,7 +8,7 @@ OK    angle NPTF1_TAPER = 1.79 deg
 OK    dim NPTF1_RELL = 0.1582 in (expect 0.1582)
 OK    LEG1 sketch fully defined
 OK    LEG1 revolve created
-OK    dim M2 = 1.1400 in (expect 1.1400)
+OK    dim M2 = 1.1100 in (expect 1.1100)
 OK    dim BODYR = 0.2800 in (expect 0.2800)
 OK    dim SW2_BODYS = 0.6850 in (expect 0.6850)
 OK    dim SW2_NECKR = 0.1465 in (expect 0.1465)
@@ -20,14 +20,14 @@ OK    dim SW2_NUTHEXL = 0.3268 in (expect 0.3268)
 OK    dim SW2_NUTR = 0.3233 in (expect 0.3233)
 OK    dim SW2_CSR = 0.2188 in (expect 0.2188)
       SW2_CSANG: the two lines share no endpoint - vertex candidates unavailable
-      SW2_CSANG angle try 0 at (-0.067, 0.814): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 1 at (0.067, 1.099): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 2 at (-0.133, 0.671): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 3 at (0.133, 1.242): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 4 at (0.299, 1.129): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 5 at (0.299, -1.129): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 6 at (-0.299, 1.129): 130.0 deg (want 50.0)
-      SW2_CSANG angle try 7 at (-0.299, -1.129): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 0 at (-0.067, 0.784): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 1 at (0.067, 1.069): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 2 at (-0.133, 0.641): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 3 at (0.133, 1.212): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 4 at (0.299, 1.099): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 5 at (0.299, -1.099): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 6 at (-0.299, 1.099): 130.0 deg (want 50.0)
+      SW2_CSANG angle try 7 at (-0.299, -1.099): 130.0 deg (want 50.0)
       SW2_CSANG angle try 8 at (0.417, 0.079): 130.0 deg (want 50.0)
       SW2_CSANG angle try 9 at (0.181, 0.079): 130.0 deg (want 50.0)
 OK    angle SW2_CSANG held by its supplement SW2_CSANG_SUPPL = 130.00 deg (same line; the segments do not meet)
@@ -56,7 +56,7 @@ OK    dim HEXAF = 0.5600 in (expect 0.5600)
 OK    HEX2 hex flats normal to Z
 OK    HEX2 hex sketch fully defined
       HEX2: FeatureExtrusion3 dir=0 -> True
-      HEX2: new faces centred at 0.147 in on axis 1 (want sign 1)
+      HEX2: new faces centred at 0.132 in on axis 1 (want sign 1)
 OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
 OK    dim PUCK_HB = 0.2800 in (expect 0.2800)
@@ -66,7 +66,7 @@ OK    dim PUCK_R1T = 0.1612 in (expect 0.1612)
 OK    dim PUCK_XC = 0.3228 in (expect 0.3228)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
-OK    NUTHEX2: nut face found at 1.1400 on axis 1
+OK    NUTHEX2: nut face found at 1.1100 on axis 1
 OK    dim NUTHEX2 = 0.5600 in (expect 0.5600)
       NUTHEX2: sgHORIZONTAL -> vertex |z| max 0.2800 (flats want 0.2800)
 OK    NUTHEX2 nut flats normal to Z
@@ -74,7 +74,7 @@ OK    NUTHEX2 sketch fully defined
       NUTCUT2 attempt 0: CreateDefinition returned Nothing
       NUTCUT2 attempt 0: FeatureCut4 scope off -> True
 OK    NUTCUT2 created and removed material (attempt 0)
-OK    NUTCUT2 removed only the nut corners (3.6% of volume)
+OK    NUTCUT2 removed only the nut corners (3.7% of volume)
 OK    NUTCUT2 dims: DEPTH=0.3268 NUTHEX2=0.5600 
 OK    NUTHEX2@NUTHEX2 reachable
 OK    DEPTH@NUTCUT2 reachable
@@ -93,7 +93,7 @@ OK    BORE1 sketch closed and named (ProfileFeature)
       BORECUT1 attempt 0: FeatureCut4 scope off -> True
 OK    BORECUT1 cut removes material (attempt 0)
 OK    BORECUT1 dims: DEPTH=1.0900 D1=0.2800 
-OK    select end face for BORE2 at x=1.1400
+OK    select end face for BORE2 at x=1.1100
       selected object type = 2 (2 = face), count = 1
       ok = True
       about to InsertSketch on the face
@@ -106,10 +106,10 @@ OK    BORE2 sketch closed and named (ProfileFeature)
       BORECUT2 attempt 0: CreateDefinition returned Nothing
       BORECUT2 attempt 0: FeatureCut4 scope off -> True
 OK    BORECUT2 cut removes material (attempt 0)
-OK    BORECUT2 dims: DEPTH=1.1400 D2=0.1700 
+OK    BORECUT2 dims: DEPTH=1.1100 D2=0.1700 
 OK    leg 1 bore open on the axis at its face (X=+1.0900)
-OK    leg 2 bore open on the axis at its face (Y=+1.1400)
-OK    leg 2 bore reaches the swivel seat (no face across the axis at the nose-tip plane Y=+0.8000)
+OK    leg 2 bore open on the axis at its face (Y=+1.1100)
+OK    leg 2 bore reaches the swivel seat (no face across the axis at the nose-tip plane Y=+0.7700)
 OK    THD_End1: end face found at 1.0900
 OK    dim HELIXDIA = 0.5218 in (expect 0.5218)
 OK    THD_End1 helix sketch made (ProfileFeature)
@@ -132,18 +132,18 @@ OK    THD_End1 profile sketch fully defined
 OK    THD_End1 swept cut created
 OK    THD_End1 sweep removed material: 0.01433 in^3
 OK    THD_End1 suppressed
-OK    THD_End2: end face found at 1.1400
+OK    THD_End2: end face found at 1.1100
 OK    dim HELIXDIA = 0.3834 in (expect 0.3834)
 OK    THD_End2 helix sketch made (ProfileFeature)
       THD_End2: InsertHelix ok
 OK    THD_End2 helix created
 OK    THD_End2 helix dims named (D7 D5 PITCH HEIGHT )
-      THD_End2: helix start from the curve (0.0000, 1.1400, 0.1917)
-      THD_End2: helix start = (0.0000, 1.1400, 0.1917)
+      THD_End2: helix start from the curve (0.0000, 1.1100, 0.1917)
+      THD_End2: helix start = (0.0000, 1.1100, 0.1917)
       THD_End2: profile on Right Plane
-      THD_End2: sketch start (-0.1917,1.1400) axialIsX=False apex dir -1
-      PROF_AX: try 0 value 1.1400 (want 1.1400)
-OK    dim PROF_AX = 1.1400 in (expect 1.1400)
+      THD_End2: sketch start (-0.1917,1.1100) axialIsX=False apex dir -1
+      PROF_AX: try 0 value 1.1100 (want 1.1100)
+OK    dim PROF_AX = 1.1100 in (expect 1.1100)
       PROF_R: try 0 value 0.1917 (want 0.1917)
 OK    dim PROF_R = 0.1917 in (expect 0.1917)
       APEXR: try 0 value 0.2188 (want 0.2188)
@@ -155,11 +155,11 @@ OK    THD_End2 swept cut created
 OK    THD_End2 sweep removed material: 0.00300 in^3
 OK    THD_End2 suppressed
 OK    X extent -0.323 .. 1.090 (expect -0.323 .. 1.090; threads may add a little)
-OK    Y extent -0.323 .. 1.140 (expect -0.323 .. 1.140)
+OK    Y extent -0.323 .. 1.110 (expect -0.323 .. 1.110)
       Bounding box z -0.280 .. 0.280 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.2800 .. 0.2800 (expect -0.2800 .. 0.2800: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_6501_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\tee\DesignTable_6501_SW2.xlsx
 OK    Configurations after table: 15 (expect 15)
       config check 1: 6501-04-06-FG
 OK    6501-04-06-FG M1@LEG1 = 1.0900 (table 1.0900)
@@ -206,18 +206,18 @@ OK    6501-32-32-FG one solid body (found 1)
       sweep 4/14  6501-06-06-FG  rebuilt in 0.7 s
       sweep 5/14  6501-06-08-FG  rebuilt in 0.7 s
       sweep 6/14  6501-08-06-FG  rebuilt in 1.0 s
-      sweep 7/14  6501-08-08-FG  rebuilt in 0.7 s
+      sweep 7/14  6501-08-08-FG  rebuilt in 0.8 s
       sweep 8/14  6501-08-10-FG  rebuilt in 0.7 s
-      sweep 9/14  6501-12-08-FG  rebuilt in 1.1 s
+      sweep 9/14  6501-12-08-FG  rebuilt in 1.0 s
       sweep 10/14  6501-12-12-FG  rebuilt in 0.7 s
       sweep 11/14  6501-16-16-FG  rebuilt in 0.7 s
-      sweep 12/14  6501-20-20-FG  rebuilt in 0.9 s
-      sweep 13/14  6501-24-24-FG  rebuilt in 0.8 s
+      sweep 12/14  6501-20-20-FG  rebuilt in 0.8 s
+      sweep 13/14  6501-24-24-FG  rebuilt in 0.9 s
       sweep 14/14  6501-32-32-FG  rebuilt in 0.6 s
 OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6501-04-04-FG for the save (it opens in this size)
       THD_End1: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6501\6501_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6501\6501_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6501\6501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6501\6501_MASTER.SLDPRT

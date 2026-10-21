@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2501_MASTER"
 ' ============================================================================
-'  Build_2501_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
+'  Build_2501_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
 '  90 deg Male Elbow (elbow), forged hex body (2500HX pattern).  Reference config 2501-08-08-FG: JICM -08, NPTFM -08
 '  Entry: Sub Build2501.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_2501_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the

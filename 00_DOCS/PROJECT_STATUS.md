@@ -7,6 +7,34 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-20 (night): BATCH 18 SHIPPED (`03_SCRIPTS\RUN_ME_batch18.txt`, QA #176-#178; user: "Ship batch 18 as staged, including the 40
+cells as Air-Way.").** 83 masters -> `11_MASTERS` (56 new: 50 FS + 4000 + 1700RC 1800 1703 4503 4603; 27 replaced: the 26 Air-Way-first
+roots + 1603), 83 macros (LF) + reports -> `03_SCRIPTS`, 83 SW2 + 81 review tables (Air-Way stage, A14, 51 FS, 4000 / 4001) ->
+`04_DESIGN_TABLES`; live `tools\` = `batch18_20261020\tools_b18` (4 files changed, gen_ring.py added; undo = `old_files\tools\`). Post-ship
+verify 0 BAD (`checks\verify_b18.txt`). **Now: 1,534 BUILD rows in a master of 2,259 (was 1,354 / 1,874), 151 masters; OMi's 2,535 parts:
+1,531 in a master (was 1,351).** Coverage A1 1,339 of the 1,831-part feed. Still held: 5404N (QA #178). Old files:
+`_to_delete\superseded_20261020\batch18_replaced\` + `batch18_20261020\old_files\`. The ship details below (written before the ship) stay
+valid. Next: 5404N, the BLOCKED_NEEDS list, send Triveni the 40-row list (an answer other than AW = later table edit).
+
+**2026-10-20 (PC, night): batch-18 candidate** (`tools\_out\batch18_20261020\README.md`) - SHIPPED as batch 18 (above).
+- **Review PDFs** (`07_RAW_EXTRACTS\omi_review_drawings_20261020\`, check `tools\_out\review_pdfs_20261020\PDF_CHECK.md`): no AW / BI mark
+  contradicts the Air-Way-first stage. 1404-08-08 (1.94, bores .53 / .45) and 0318-08 (0.84) confirm the stage. Triveni read Air-Way's plain
+  row for 2501-08-08-FG / 5502-08-08-FG and the "PF" row for 0403 D2. All 40 Triveni rows stay open (none drawn). OMi: "UNPL - mention in
+  notes, do not put in part#" (0403 names: user decision). Drawing feedback (threads, cone angle, both bores, missing L / M1 / C1) for later.
+- **Air-Way-first SolidWorks dry runs: 26 / 26 PASS** (`airway_first_20261020\checks\dryrun_verdict.txt`); 233 configurations change, each
+  with its own table cells. **1603 (A14): PASS.**
+- **One toolset** `tools_b18` = ORFS staging tools + the 6410 line + 3 held-root fixes; one input set `root18` (Air-Way stage + A14).
+  Every root regenerates identical to its tested / shipped file, except the 6 pre-2026-09-25 macro roots (= live-tools control) and the held
+  roots. Ring 4000 identical.
+- **Held roots (QA #175) fixed + dry-run PASS:** 1700RC / 1800 (FLATS rectangle had no rectangle relations - skewed flats), 1703 (45-deg
+  HEX2 direction test), 4503 / 4603 (45-deg hose face-off test) = 17 configurations. **5404N -06 still fails** (thread sweeps; not
+  sensitive to bar / thread radius / length; Brennan has no -06 STEP).
+- **Ship content:** 51 FS masters + O-ring 4000 (162 OMi parts), 1603 +1, the held roots +17, the 26 Air-Way-first roots (user: ship the 40
+  cells as Air-Way, or wait for Triveni). About 1,530 of 2,535 in a master after the ship.
+- **What the other ~987 parts need:** `tools\_out\blocked_needs_20261020\BLOCKED_NEEDS.md` (STEP list ~240 files, OMi questions, user
+  decisions, 94 parts of own generator / table work).
+- Not committed: git was blocked in this session (PDF folder, review check, batch-18 folder - commit with `git add -f` for tools\_out).
+
 **2026-10-20 (later): AIR-WAY FIRST - STAGED (cloud session), not shipped.** Branch `claude/review-drawings-update-eflmmf` also carries the
 merged ORFS / A14 branch (`claude/pensive-planck-t9i90d`); `claude/quirky-sagan-ajqv46` (cloud batch-17 rebase, 01:32) is superseded by the
 batch-17 ship - do not merge it. OMi's rule (section 5): Air-Way over Brennan wherever Air-Way

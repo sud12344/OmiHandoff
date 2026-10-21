@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6502_MASTER"
 ' ============================================================================
-'  Build_6502_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
+'  Build_6502_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
 '  45 deg Male JIC x Female Swivel Elbow (45-deg elbow), forged hex body (Brennan 2504 / 2500HX pattern).  Reference config 6502-08-08-FG: JICSW -08, JICM -08
 '  Entry: Sub Build6502.  Leg 1 along +X, leg 2 along the 135-deg direction (45-deg elbow); hex arms HEX1 / HEX2 (on plane PLN2) + 30deg corner PUCK about Z + swivel neck turn NECKTRIM1 / NECKFILL1.
 '  Builds from DesignTable_6502_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -38,20 +38,20 @@ Sub LoadLeg(i As Long)
     If i = 1 Then v = Array( _
     0.000000000, 0.000000000, _
     0.000000000, 0.009525000, _
-    0.010033000, 0.009525000, _
-    0.010033000, 0.007416800, _
-    0.011506200, 0.007416800, _
-    0.011506200, 0.010434320, _
-    0.016078200, 0.010434320, _
-    0.021084540, 0.011076940, _
-    0.021084540, 0.012904933, _
-    0.032512000, 0.012904933, _
-    0.032512000, 0.009525000, _
-    0.031790977, 0.008665718, _
-    0.023451820, 0.008665718, _
-    0.022148038, 0.009969500, _
-    0.015435580, 0.009969500, _
-    0.015435580, 0.008636000, _
+    0.009271000, 0.009525000, _
+    0.009271000, 0.007416800, _
+    0.010744200, 0.007416800, _
+    0.010744200, 0.010434320, _
+    0.015316200, 0.010434320, _
+    0.020322540, 0.011076940, _
+    0.020322540, 0.012904933, _
+    0.031750000, 0.012904933, _
+    0.031750000, 0.009525000, _
+    0.031028977, 0.008665718, _
+    0.022689820, 0.008665718, _
+    0.021386038, 0.009969500, _
+    0.014673580, 0.009969500, _
+    0.014673580, 0.008636000, _
     0.021844000, 0.008636000, _
     0.021844000, 0.007175500, _
     0.012321790, 0.000000000)
@@ -95,30 +95,30 @@ Sub Build6502()
     UX = -0.707106781186547: UY = 0.707106781186548      ' angled leg direction (135 deg from +X)
     ' ================= LEG 1 (JICSW -08, along X +) =================
     stepName = "LEG1 sketch"
-    curAxis = 0: tipPos = 0.032512000
+    curAxis = 0: tipPos = 0.031750000
     LoadLeg 1
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile False, 1#
-    Call Dim_pair(0, 9, "M1", 0.032512000, 0.016256, 0.030685)
-    Call Dim_rad(1, "BODYR", 0.009525000, 0.005017, -0.010160)
-    Call Dim_pair(2, 9, "SW1_BODYS", 0.022479000, 0.021272, 0.026875)
-    Call Dim_rad(3, "SW1_NECKR", 0.007416800, 0.010770, -0.003810)
-    Call Dim_pair(4, 9, "SW1_NUTL", 0.021005800, 0.022009, 0.024335)
-    Call Dim_rad(5, "SW1_SKIRTR", 0.010434320, 0.013792, -0.007620)
-    Call Dim_len(5, "SW1_SKIRTL", 0.004572000, 0.013792, 0.017985)
-    Call Dim_ptline(7, False, 18, "SW1_SKIRTFR", 0.011076940, 0.019815, 0.005538)
-    Call Dim_len(8, "SW1_NUTHEXL", 0.011427460, 0.026798, 0.020525)
-    Call Dim_rad(8, "SW1_NUTR", 0.012904933, 0.026798, -0.011430)
-    Call Dim_ptline(10, False, 18, "SW1_CSR", 0.009525000, 0.035052, 0.004762)
-    Call Dim_ang(10, 18, "SW1_CSANG", 0.872664626, 0.032151, 0.011557)
-    Call Dim_rad(11, "SW1_MINR", 0.008665718, 0.027621, -0.015240)
-    Call Dim_len(11, "SW1_THDL", 0.008339157, 0.027621, 0.015445)
-    Call Dim_ang(12, 18, "SW1_RELANG", 0.785398163, 0.022800, 0.009936)
-    Call Dim_rad(13, "SW1_RELR", 0.009969500, 0.018792, -0.019050)
-    Call Dim_pair(14, 9, "SW1_FLOOR", 0.017076420, 0.023974, 0.029415)
-    Call Dim_rad(15, "SW1_NOSER", 0.008636000, 0.018640, -0.022860)
-    Call Dim_pair(16, 9, "SW1_NOSETIP", 0.010668000, 0.027178, 0.031955)
+    Call Dim_pair(0, 9, "M1", 0.031750000, 0.015875, 0.030685)
+    Call Dim_rad(1, "BODYR", 0.009525000, 0.004635, -0.010160)
+    Call Dim_pair(2, 9, "SW1_BODYS", 0.022479000, 0.020510, 0.026875)
+    Call Dim_rad(3, "SW1_NECKR", 0.007416800, 0.010008, -0.003810)
+    Call Dim_pair(4, 9, "SW1_NUTL", 0.021005800, 0.021247, 0.024335)
+    Call Dim_rad(5, "SW1_SKIRTR", 0.010434320, 0.013030, -0.007620)
+    Call Dim_len(5, "SW1_SKIRTL", 0.004572000, 0.013030, 0.017985)
+    Call Dim_ptline(7, False, 18, "SW1_SKIRTFR", 0.011076940, 0.019053, 0.005538)
+    Call Dim_len(8, "SW1_NUTHEXL", 0.011427460, 0.026036, 0.020525)
+    Call Dim_rad(8, "SW1_NUTR", 0.012904933, 0.026036, -0.011430)
+    Call Dim_ptline(10, False, 18, "SW1_CSR", 0.009525000, 0.034290, 0.004762)
+    Call Dim_ang(10, 18, "SW1_CSANG", 0.872664626, 0.031389, 0.011557)
+    Call Dim_rad(11, "SW1_MINR", 0.008665718, 0.026859, -0.015240)
+    Call Dim_len(11, "SW1_THDL", 0.008339157, 0.026859, 0.015445)
+    Call Dim_ang(12, 18, "SW1_RELANG", 0.785398163, 0.022038, 0.009936)
+    Call Dim_rad(13, "SW1_RELR", 0.009969500, 0.018030, -0.019050)
+    Call Dim_pair(14, 9, "SW1_FLOOR", 0.017076420, 0.023212, 0.029415)
+    Call Dim_rad(15, "SW1_NOSER", 0.008636000, 0.018259, -0.022860)
+    Call Dim_pair(16, 9, "SW1_NOSETIP", 0.009906000, 0.026797, 0.031955)
     Call Dim_ptline(17, False, 18, "SW1_SEATR", 0.007175500, 0.020574, 0.003588)
     Call Dim_ang(17, 18, "SW1_SEATANG", 0.645771823, 0.019304, 0.002153)
     swModel.ClearSelection2 True
@@ -172,7 +172,7 @@ Sub Build6502()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "HEX1"
-    Call HexArm("Right Plane", 0#, 0#, 0.010033000, 0.009525000, "HEX1", 0, 1#)
+    Call HexArm("Right Plane", 0#, 0#, 0.009271000, 0.009525000, "HEX1", 0, 1#)
     stepName = "PLN2"
     MakeLegPlane "PLN2", 0.024892000
     stepName = "HEX2"
@@ -228,26 +228,26 @@ Sub Build6502()
     If Not rev Is Nothing Then rev.Name = "PUCK_BODY"
 
     ' ================= NECKTRIM1 / NECKFILL1: swivel neck turned clear of the forged corner (Brennan 6502-12-12-FG STEP, 2026-10-01) =================
-    '  From the swivel body face (0.3950) to the nut rear face (0.4530) nothing stands outside the neck (radius 0.2920): the cut takes
+    '  From the swivel body face (0.3650) to the nut rear face (0.4230) nothing stands outside the neck (radius 0.2920): the cut takes
     '  the ring from 0.2435 out to 0.6495 (the corner puck and the start corner of the angled hex arm with it), the boss puts the ring
     '  0.2435 .. 0.2920 back. Both act in every configuration - the cut always takes that (solid) ring, so it never removes nothing.
     stepName = "NECKTRIM1"
     Dim nk1_v0 As Double, nk1_v1 As Double, nk1_v2 As Double, nk1_f As SldWorks.Feature
     nk1_v0 = Volume()
-    Set nk1_f = NeckRing("NECKTRIM1", "TRIM", 0.010033000, 0.001473200, 0.006184900, 0.016497808, True)
+    Set nk1_f = NeckRing("NECKTRIM1", "TRIM", 0.009271000, 0.001473200, 0.006184900, 0.016497808, True)
     nk1_v1 = Volume()
     Check "NECKTRIM1 revolve cut took " & Format((nk1_v0 - nk1_v1) / IN_ ^ 3, "0.000000") & " in^3 (at least the neck ring 0.004732)", (Not nk1_f Is Nothing) And (nk1_v0 - nk1_v1 > 0.98 * 7.754971924869e-08)
     If Not nk1_f Is Nothing Then nk1_f.Name = "NECKTRIM1_CUT"
     stepName = "NECKFILL1"
-    Set nk1_f = NeckRing("NECKFILL1", "FILL", 0.010033000, 0.001473200, 0.006184900, 0.007416800, False)
+    Set nk1_f = NeckRing("NECKFILL1", "FILL", 0.009271000, 0.001473200, 0.006184900, 0.007416800, False)
     nk1_v2 = Volume()
     Check "NECKFILL1 revolve created (neck ring back)", Not nk1_f Is Nothing
     If Not nk1_f Is Nothing Then nk1_f.Name = "NECKFILL1_BODY"
-    Check "NECKTRIM1 + NECKFILL1 leave the reference configuration unchanged: net " & Format((nk1_v2 - nk1_v0) / IN_ ^ 3, "0.000000") & " in^3 (the corner stays inside the neck here: 0.1774 off the axis vs neck radius 0.2920)", Abs(nk1_v2 - nk1_v0) < 7.754971924869e-11
+    Check "NECKTRIM1 + NECKFILL1 leave the reference configuration unchanged: net " & Format((nk1_v2 - nk1_v0) / IN_ ^ 3, "0.000000") & " in^3 (the corner stays inside the neck here: 0.2330 off the axis vs neck radius 0.2920)", Abs(nk1_v2 - nk1_v0) < 7.754971924869e-11
 
     ' ================= swivel nut hex on leg 1: sketched on the nut face, flats normal to Z, cut over the nut hex length =================
     stepName = "NUTHEX1"
-    curAxis = 0: tipPos = 0.032512000
+    curAxis = 0: tipPos = 0.031750000
     Call NutHexCutAx(tipPos, 0.022352000, 0.011427460, "NUTHEX1", "NUTHEX1", "NUTCUT1")
     Check "NUTHEX1@NUTHEX1 reachable", Not swModel.Parameter("NUTHEX1@NUTHEX1") Is Nothing
     Check "DEPTH@NUTCUT1 reachable", Not swModel.Parameter("DEPTH@NUTCUT1") Is Nothing
@@ -257,25 +257,25 @@ Sub Build6502()
 
     ' ================= pockets and bores (each from its leg face to the axis crossing) =================
     stepName = "Bores"
-    curAxis = 0: tipPos = 0.032512000
-    Call BoreCut("BORE1", "D1", 0.009906000, 0.032512000, 0#, "BORECUT1", True, 0.006457950)
+    curAxis = 0: tipPos = 0.031750000
+    Call BoreCut("BORE1", "D1", 0.009906000, 0.031750000, 0#, "BORECUT1", True, 0.006457950)
     tipPos = 0.024892000
     Call BoreCutV("BORE2", "D2", 0.009906000, 0.024892000, 0#, "BORECUT2", True, 0.004869192)
-    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.2800)", Not AxisCoveredAx(0.032512000)
+    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.2500)", Not AxisCoveredAx(0.031750000)
     curAxis = 0: Check "leg 1 bore reaches the swivel seat (no face across the axis at the nose-tip plane X=+0.8600)", Not AxisCoveredAx(0.021844000)
     Check "leg 2 bore open on the axis at its face (0.9800 along the 135-deg leg)", Not AxisCoveredV(0.024892000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
-    curAxis = 0: tipPos = 0.032512000
-    Call HelixThread(0.032512000, 0.008665718, 0.009060180, 0.001587500, 0.000859266, 0.000000000, False, True, "1", "THD_End1")
+    curAxis = 0: tipPos = 0.031750000
+    Call HelixThread(0.031750000, 0.008665718, 0.009060180, 0.001587500, 0.000859266, 0.000000000, False, True, "1", "THD_End1")
     tipPos = 0.024892000
     Call ThreadCutV(0.011259820, 0.009525000, 0.007205980, "0.7500-16", "THD_End2", 1#, 0.001587500)
 
     stepName = "Self-checks"
     Dim bb As Variant, ex1 As Double, ex2 As Double
     ex1 = ExtremeAlong(1#, 0#, 0#): ex2 = ExtremeAlong(UX, UY, 0#)
-    Check "leg 1 tip (exact) " & Format(ex1 / IN_, "0.0000") & " along +X (expect 1.2800)", Abs(ex1 / IN_ - 1.2800) < 0.001
+    Check "leg 1 tip (exact) " & Format(ex1 / IN_, "0.0000") & " along +X (expect 1.2500)", Abs(ex1 / IN_ - 1.2500) < 0.001
     Check "leg 2 tip (exact) " & Format(ex2 / IN_, "0.0000") & " along the 135-deg leg (expect 0.9800)", Abs(ex2 / IN_ - 0.9800) < 0.001
     Dim zlo As Double, zhi As Double: zhi = ExtremeAlong(0#, 0#, 1#): zlo = -ExtremeAlong(0#, 0#, -1#)
     Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.4400 .. 0.4400: swivel nut flats)", Abs(zlo / IN_ + 0.4400) < 0.001 And Abs(zhi / IN_ - 0.4400) < 0.001

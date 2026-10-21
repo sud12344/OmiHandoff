@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6400_MASTER"
 ' ============================================================================
-'  Build_6400_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
+'  Build_6400_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
 '  Straight Thread Connector (male JIC x male ORB) - master from reference configuration 6400-08-08-O (DesignTable_6400_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = JICM.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6400.  Report: 03_SCRIPTS\Build_6400_report.txt

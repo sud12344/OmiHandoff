@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6408_MASTER"
 ' ============================================================================
-'  Build_6408_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
+'  Build_6408_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
 '  ORB Hex Head Plug - master from reference configuration 6408-08-O-H (DesignTable_6408_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = PLAIN.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6408.  Report: 03_SCRIPTS\Build_6408_report.txt
