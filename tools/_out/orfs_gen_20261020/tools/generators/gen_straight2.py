@@ -1541,7 +1541,12 @@ FS_DIM_SRC = 'review table (Air-Way, staged FS table; OMi website list decides t
 FSSW_MEAS = {4: dict(AF=0.687, HEXL=0.337, SKF=0.335, SKS=0.504, SKR=0.294, NUTL=0.622, NECKR=0.201, SEAL=0.325, BODYS=0.975, TE=0.2947, RELS=0.342, RELR=0.2985, LIPS=0.482, STEMR=0.251, CSR=0.2835),
              6: dict(AF=0.812, HEXL=0.392, SKF=0.4, SKS=0.572, SKR=0.3575, NUTL=0.707, NECKR=0.261, SEAL=0.375, BODYS=1.11, TE=0.3409, RELS=0.392, RELR=0.361, LIPS=0.552, STEMR=0.31, CSR=0.3465),
              8: dict(AF=0.938, HEXL=0.482, SKF=0.46, SKS=0.67, SKR=0.419, NUTL=0.827, NECKR=0.321, SEAL=0.433, BODYS=1.288, TE=0.4059, RELS=0.45, RELR=0.4165, LIPS=0.63, STEMR=0.3725, CSR=0.4095),
-             10: dict(AF=1.125, HEXL=0.548, SKF=0.555, SKS=0.796, SKR=0.516, NUTL=0.953, NECKR=0.4085, SEAL=0.532, BODYS=1.512, TE=0.484, RELS=0.548, RELR=0.51, LIPS=0.768, STEMR=0.4615, CBR=0.51, CBD=0.05),
+             # 2026-10-20 (PC dry run FS6500C): TE 0.484 -> 0.4993. TE = where the measured 45deg relief (RELS, RELR) meets the modelled minor, as on every
+             # other size (RELS - (RELR - rmin)); the STEP's 0.484 sits on Brennan's -10 minor (dia 0.892, below the ASME basic 0.9227 the model keeps) and
+             # made a 37.2deg relief that FSW_RELANG (45) could not hold - the -20 thread then failed in the -10 built master.
+             # HTE 0.484 (PC dry run FS6602C): the HELIX stops at the STEP's measured thread end; a helix running to TE (0.4993, the tooth
+             # touching the relief cone) failed its swept cut in FS6602C -10 (swivel on -X) and builds at <= 0.49. The cavity keeps TE.
+             10: dict(AF=1.125, HEXL=0.548, SKF=0.555, SKS=0.796, SKR=0.516, NUTL=0.953, NECKR=0.4085, SEAL=0.532, BODYS=1.512, TE=0.4993, HTE=0.484, RELS=0.548, RELR=0.51, LIPS=0.768, STEMR=0.4615, CBR=0.51, CBD=0.05),
              12: dict(AF=1.375, HEXL=0.599, SKF=0.68, SKS=0.863, SKR=0.608, NUTL=1.024, NECKR=0.468, SEAL=0.571, BODYS=1.691, TE=0.5356, RELS=0.587, RELR=0.6, LIPS=0.827, STEMR=0.5485, CBR=0.604, CBD=0.05),
              16: dict(AF=1.625, HEXL=0.65, SKF=0.805, SKS=0.895, SKR=0.71, NUTL=1.095, NECKR=0.565, SEAL=0.583, BODYS=1.783, TE=0.5477, RELS=0.599, RELR=0.725, LIPS=0.859, STEMR=0.6735, CBR=0.729, CBD=0.05),
              20: dict(AF=1.875, HEXL=0.65, SKF=0.93, SKS=0.895, SKR=0.8655, NUTL=1.095, NECKR=0.7005, SEAL=0.583, BODYS=1.783, TE=0.5376, RELS=0.599, RELR=0.86, LIPS=0.859, STEMR=0.7985, CBR=0.854, CBD=0.05)}
@@ -1603,12 +1608,14 @@ def end_FSSW(dash, sfx, nut_af, bodys=None):
     if not (m['SKF'] < nut_af / 2 and m['SKR'] < m['SKF'] and m['NECKR'] < m['SKR']): raise AssertionError('radial order neck < skirt < skirt front < nut flats')
     if not (cs < m['TE'] < m['RELS'] < m['LIPS'] < m['NUTL'] < m['BODYS'] and m['TE'] < m['SEAL'] < m['LIPS']): raise AssertionError('axial order of the swivel')
     if not (rmin < m['RELR'] and m['STEMR'] < m['RELR'] and m['RELR'] < rout - 0.02): raise AssertionError(f'cavity radial order / nut wall at the relief ({rout - m["RELR"]:.4f})')
+    # 2026-10-20 (PC dry run): no FSW_CSANG table column (constant per master, held in the sketch) - as gen_tee leg_FSSW; a dead column
+    # stops the design-table insert with a dialog
     cols = {f'FSW{sfx}_BODYS@DRIVE': m['BODYS'], f'FSW{sfx}_NECKR@DRIVE': m['NECKR'], f'FSW{sfx}_NUTL@DRIVE': m['NUTL'], f'FSW{sfx}_SKIRTR@DRIVE': m['SKR'],
             f'FSW{sfx}_SKIRTL@DRIVE': round(m['NUTL'] - m['SKS'], 4), f'FSW{sfx}_SKIRTFR@DRIVE': m['SKF'], f'FSW{sfx}_NUTHEXL@DRIVE': m['HEXL'],
-            f'FSW{sfx}_NUTR@DRIVE': round(Rn, 5), f'FSW{sfx}_SEAL@DRIVE': m['SEAL'], f'FSW{sfx}_CSANG@DRIVE': FSSW_CBANG if cb else FSSW_CSANG,
+            f'FSW{sfx}_NUTR@DRIVE': round(Rn, 5), f'FSW{sfx}_SEAL@DRIVE': m['SEAL'],
             f'FSW{sfx}_MINR@DRIVE': rmin, f'FSW{sfx}_THDL@DRIVE': round(m['TE'] - cs, 5), f'FSW{sfx}_RELANG@DRIVE': FSSW_RELANG, f'FSW{sfx}_RELR@DRIVE': m['RELR'],
             f'FSW{sfx}_STEMR@DRIVE': m['STEMR'], f'FSW{sfx}_HEADL@DRIVE': round(m['LIPS'] - m['SEAL'], 4),
-            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rmin, 5), f'HEIGHT@HELIX_{sfx}': m['TE'], f'PITCH@HELIX_{sfx}': round(P_, 5),
+            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rmin, 5), f'HEIGHT@HELIX_{sfx}': m.get('HTE', m['TE']), f'PITCH@HELIX_{sfx}': round(P_, 5),
             f'PROF_R@THDPROF_{sfx}': rmin, f'APEXR@THDPROF_{sfx}': round(rmin + 0.54127 * P_, 5)}
     if cb: cols.update({f'FSW{sfx}_CBR@DRIVE': m['CBR'], f'FSW{sfx}_CBD@DRIVE': m['CBD']})
     else: cols[f'FSW{sfx}_CSR@DRIVE'] = m['CSR']
@@ -1616,7 +1623,7 @@ def end_FSSW(dash, sfx, nut_af, bodys=None):
                 thr=thr + ' UN (female O-ring face-seal swivel, SAE J1453)', faceR=None, td=2 * rmin, P1=m['SEAL'], m=m, cs=cs, cb=cb, rmin=rmin, Rn=Rn,
                 nut_af=nut_af, s_seal=m['SEAL'], dash=dash, bore_to=round(m['SEAL'] - 0.02, 4), open_at=m['SEAL'], bore_rmax=m['STEMR'] - 0.03,
                 assume=FSSW_ASSUME,
-                thread=dict(type='HELIX', r=rmin, height=m['TE'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
+                thread=dict(type='HELIX', r=rmin, height=m.get('HTE', m['TE']), pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
 SPEC['FS2403'] = dict(name='ORFS Male Union (male face seal x male face seal)', L='L6@DRIVE', hex='S1HEX@HEX',
                       A=lambda r, a, b: end_FSM(a, 'A'), B=lambda r, a, b: end_FSM(b, 'B'),
                       bore=('mid', 'D1_1@BORE', 'D1_2@BORE'), ref='FS2403-08-08', thrchk=(('A', 'THDMAJ_D_1@DRIVE', 'a'), ('B', 'THDMAJ_D_2@DRIVE', 'b')),

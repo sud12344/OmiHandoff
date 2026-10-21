@@ -213,7 +213,7 @@ Sub BuildFS2503N()
     curAxis = 0: tipPos = 0.021844000
     Call HelixThread(0.021844000, 0.006627297, 0.010205720, 0.001411111, 0.001128889, 0.031239648, True, False, "1", "THD_End1")
     tipPos = 0.016002000
-    Call ThreadCutV(0.006197600, 0.007143750, 0.008794750, "0.5625-18", "THD_End2", 1#, 0.001411111)
+    Call ThreadCutV(0.014992350, 0.007143750, 0.008794750, "0.5625-18", "THD_End2", -1#, 0.001411111)
 
     stepName = "Self-checks"
     Dim bb As Variant, ex1 As Double, ex2 As Double

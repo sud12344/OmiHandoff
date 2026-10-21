@@ -232,7 +232,7 @@ Sub BuildFS6801NR()
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
     curAxis = 0: tipPos = 0.037338000
-    Call ThreadCut(0.020320000, 0.015081250, 0.015436850, "1.1875-12", "THD_End1", 1#, 0.002116667)
+    Call ThreadCut(0.035756850, 0.015081250, 0.015436850, "1.1875-12", "THD_End1", -1#, 0.002116667)
     curAxis = 1: tipPos = 0.046736000
     Call ThreadCut(0.036728400, 0.009525000, 0.010007600, "0.7500-16", "THD_End2", 1#, 0.001587500)
 

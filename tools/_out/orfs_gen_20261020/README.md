@@ -1,6 +1,8 @@
 # ORFS generator end functions (2026-10-20, cloud session) - STAGING, work in progress
 
-**Status:** staged (steps 1-7 done). Nothing is shipped, no SolidWorks dry run has been done, and the live `tools/` is untouched.
+**Status:** staged (steps 1-7 done). Nothing is shipped, and the live `tools/` is untouched.
+- **2026-10-20 (PC): SolidWorks dry runs done. All 51 masters in `out/` PASS** after 5 generator fixes made here; the `out/` files are the
+  tested ones. Run log and the fixes: `tools/_out/orfs_dryrun_20261020/RESUME.md`.
 - **Toolset:** `tools/` = a copy of the merged batch-17 toolset (`tools/_out/genfeat_20261018/merged/tools`) plus the ORFS additions below.
 - **Plan:** `tools/_out/orfs_modeltype_20261016/PLAN.md`.
 - **End data:** `tools/_out/orfs_wp2_20261020/end_lib_08.json` (extractors + validation on the Brennan pilots).

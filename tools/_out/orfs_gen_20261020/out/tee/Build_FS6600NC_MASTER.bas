@@ -232,9 +232,9 @@ Sub BuildFS6600NC()
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
     curAxis = 0: tipPos = 0.037338000
-    Call ThreadCut(0.020320000, 0.015081250, 0.015436850, "1.1875-12", "THD_End1", 1#, 0.002116667)
+    Call ThreadCut(0.035756850, 0.015081250, 0.015436850, "1.1875-12", "THD_End1", -1#, 0.002116667)
     curAxis = 0: tipPos = -0.037338000
-    Call ThreadCut(-0.020320000, 0.015081250, 0.015436850, "1.1875-12", "THD_End2", -1#, 0.002116667)
+    Call ThreadCut(-0.035756850, 0.015081250, 0.015436850, "1.1875-12", "THD_End2", 1#, 0.002116667)
     curAxis = 1: tipPos = 0.060731400
     Call HelixThread(0.060731400, 0.013935456, 0.013604240, 0.002116667, 0.001145688, 0.000000000, False, True, "3", "THD_End3")
 
