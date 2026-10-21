@@ -82,6 +82,20 @@ SPEC = {
                                'the STEP (model keeps the MS33656J relief, ASSUMPTION as on every built tee); male pipe end: STEP taper 0.4817 from a '
                                '45deg tip chamfer + a 0.028 relief at the pipe OD 0.675, model = ASME B1.20.3 cone + relief (library, as every built '
                                'male pipe leg) with the same end length 0.56']),
+    # 2026-10-20 (batch 19): male NPTF run (A1, +X) x female NPTF run (A2, -X) x male JIC branch (B3, +Y) - Brennan TFA p.53 table 2613-FG
+    # ("MP-FP-MJ TEE": L = A1 leg, L1 = A2 leg, M = B3 leg, Y flats, A1 / B3 drill), review table DesignTable_2613.xlsx (Air-Way s181 letters: N5 / N1 /
+    # M1 / Y1 / D1 / D / TAPDRILL). No Brennan 2613 STEP: the forged body is the pattern measured on the Brennan 2611-06-06-06-FG, 2606-08-08-08-FG
+    # and 5603-08-08-08-FG STEPs (run hex bar through the crossing, branch hex arm, 0.26 round collar at the female port) - the same leg kinds as
+    # the built 2611 / 5603 masters in another order. Ends = end library (Q-TRANSFER-ENDLIB = yes, user 2026-10-08).
+    '2613': dict(name='Male Run x Female Run Tee (male JIC branch)', hex='Y1@HEX', ref='2613-04-04-04-FG', conn=None,
+                 legs=[('NPTFM', 'N5@DRIVE', 'D1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFF', 'N1@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A2@DRIVE'),
+                       ('JICM', 'M1@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')],
+                 assume_extra=['2613-FG forged body: NO Brennan 2613 STEP - modelled with the forged-tee body measured on the Brennan 2611-06-06-06-FG, '
+                               '2606-08-08-08-FG and 5603-08-08-08-FG STEPs (run hex bar from the male pipe hex stop through the crossing to the female '
+                               'collar, branch hex arm to the JIC hex face, 0.26 round collar at the female port, flats normal to Z, every bore from its '
+                               'face to the crossing) - ASSUMED for 2613 (same leg kinds, other order); leg order = part-number order: A1 male pipe on +X, '
+                               'A2 female pipe on -X, B3 male JIC branch on +Y; L / L1 / M of the Brennan TFA p.53 table = the A1 / A2 / B3 legs (catalog '
+                               'drawing), A1 DRILL = the male pipe leg bore, B3 DRILL = the JIC leg bore']),
     '5600': dict(name='Male Pipe Tee', hex='Y@HEX', ref='5600-08-08-08-FG',
                  legs=[('NPTFM', 'N1@DRIVE', 'D1@BORE', 'THDMAJ_A1@DRIVE'), ('NPTFM', 'N2@DRIVE', 'D2@BORE', 'THDMAJ_A2@DRIVE'),
                        ('NPTFM', 'N3@DRIVE', 'D3@BORE', 'THDMAJ_A3@DRIVE')]),
@@ -407,6 +421,28 @@ SPEC = {
 }
 
 
+# ---- 2026-10-20 (batch 19 E_gen, user A7 2026-10-18 "move 2500HX / 2502HX / 2603HX to the generator"): the three hand-written masters as
+#      generator roots. Their bodies are the patterns this generator was written from (2500HX elbow: hex arm per leg + 30deg corner puck;
+#      2603HX tee: run hex bar through the crossing + branch hex arm), so the SPECs only name the review-table columns. Masters are named
+#      after the root (2500 / 2502 / 2603 = the GeometryRoot the HX tables already carried); the HX macros / SW2 tables / masters retire at ship.
+#      2502 = male JIC (leg 1, +X) x female NPTF port (leg 2, +Y): the port is the library NPTFF leg of 5502 / 2505 (tap-drill pocket to the
+#      MS51503 P1 depth, round collar COLLAR_L at the flats - Brennan-measured), the connecting drill = the row bore D (2502HX: D@BORE_P).
+#      The tables mix Air-Way rows with OMi / Brennan rows (the A7 rows): row_hex_src + _ROWHEX name the row's own hex, not Air-Way.
+_ROWHEX = (('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),)
+SPEC.update({
+    '2500': dict(name='90 deg Union Elbow', hex='Y@REF', elbow=True, ref='2500-08-08-FG', row_hex_src=True, assume_reps=_ROWHEX,
+                 legs=[('JICM', 'M1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICM', 'M2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE')]),
+    '2502': dict(name='90 deg Male JIC x Female Pipe Elbow', hex='Y1@DRIVE', elbow=True, ref='2502-08-08-FG', conn='D@BORE', row_hex_src=True,
+                 assume_reps=_ROWHEX,
+                 legs=[('JICM', 'M1@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('NPTFF', 'N1@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE')]),
+    '2603': dict(name='Union Tee', hex='Y@REF', ref='2603-08-08-08-FG', row_hex_src=True,
+                 assume_reps=(('hex bars A/F = max(Air-Way hex, male thread majors)', "hex bars A/F = max(the row hex A/F (its source: the start of this "
+                                                                                       "AxialSource), male thread majors)"),),
+                 legs=[('JICM', 'LEG1@DRIVE', 'D1@BORE', 'THDMAJ_1@DRIVE'), ('JICM', 'LEG2@DRIVE', 'D2@BORE', 'THDMAJ_2@DRIVE'),
+                       ('JICM', 'LEG3@DRIVE', 'D3@BORE', 'THDMAJ_3@DRIVE')]),
+})
+
+
 # ---- 2026-10-20 (ORFS WP2, staging): forged face-seal (OMi FS...) bodies - one master per FS series (Q-FS-MASTER, user 2026-10-18). Review
 #      tables: the staged FS tables (OMI_REV_EXTRA). Leg tuples: PLAN.md section 3 (column meanings read off Air-Way's drawings; L7 / L12 / L16
 #      legs to the face-seal face, L17 / L18 bulkhead legs to the tip, L10 / L13 stud legs to the tip, L11 / L14 crossing -> washer face, S2 the
@@ -489,6 +525,33 @@ for _r in [r_ for r_ in list(SPEC) if r_.startswith('FS') and SPEC[r_].get('fs')
                 _sfx = ('N' if _n else '') + ('R' if _rs else '') + ('C' if _cb else '')
                 SPEC[_r + _sfx] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - ' + ', '.join(FS_CODE_WHY[x] for x in _sfx), table=_r, nostep=_n,
                                        nwo_raised=_rs, fssw_cb=_cb, ref=None)
+
+
+def fs_code_why(code):
+    """2026-10-20: the words of a leg-shape code - one letter each, except 'N<leg numbers>' = only those face-seal legs without a step
+    (a MIXED row); for every code without digits the text is the old ', '.join(FS_CODE_WHY[x] for x in code)"""
+    out, i = [], 0
+    while i < len(code):
+        j = i + 1
+        while j < len(code) and code[j].isdigit(): j += 1
+        tok = code[i:j]
+        out.append(FS_CODE_WHY[tok] if len(tok) == 1 else
+                   f'face-seal leg{"s" if len(tok) > 2 else ""} {" + ".join(tok[1:])} with the flats = the thread major (no step), the other face-seal legs stepped')
+        i = j
+    return ', '.join(out)
+
+
+# 2026-10-20 (batch 19 E_gen, job 3): MIXED face-seal legs. A row whose male face-seal legs are partly no-step (flats = the thread major within
+# FSM_NOSTEP_TOL) and partly stepped is another DRIVE sketch (one sketch per master): its own master <root>N<no-step leg numbers>, reading the
+# root's review table, every leg drawn by the existing leg_FSM (stepped / no-step) - e.g. FS2500N1 = leg 1 without a step, leg 2 stepped
+# (FS2500-12-08-FG / FS2500-16-12-FG: the larger leg's thread major 1.1875 / 1.4375 = the flats S2 1.188 / 1.438). Declared per root and pattern
+# where rows need one (a scan of every FS base root on 2026-10-20 found only these two rows), so no empty masters are generated.
+FS_MIXED = {'FS2500': [(1,)]}
+for _r, _pats in FS_MIXED.items():
+    for _legs in _pats:
+        _sfx = 'N' + ''.join(str(k) for k in _legs)
+        SPEC[_r + _sfx] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - ' + fs_code_why(_sfx), table=_r, nostep=False, nostep_legs=tuple(_legs),
+                               nwo_raised=False, fssw_cb=False, ref=None)
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
@@ -508,6 +571,11 @@ SPEC_WAITING = {
                  legs=[('JICSW', 'M5_1@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE', ('M10_1@DRIVE', 'C3_1HEX@HEX')),
                        ('JICSW', 'M5_2@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE', ('M10_2@DRIVE', 'C3_2HEX@HEX'))]),
 }
+# 2026-10-21 (batch 19 dry run): '2502' back to waiting - at 2502-20-20-FG the MS51503 P1 pocket (1.16 deep in the 1.70 leg) ends 0.54 from the
+# crossing = exactly the run bore radius (D 1.08 / 2): the floor is tangent to that bore and POCKETCUT2 fails in SolidWorks (error 1, +15.6 % volume).
+# The hand-built 2502HX master (pocket 1.14) stays until the pocket / cross-bore meeting is decided.
+SPEC_WAITING['2502'] = SPEC.pop('2502')
+SPEC['6603'] = SPEC_WAITING.pop('6603')   # 2026-10-21 (batch 19): 6603 leaves SPEC_WAITING - its reference row 6603-06-06-06-FG now has data (Brennan TFA, measured on its own STEP; tools/_out/batch19_20261021/C_ownstep)
 # leg placement: (axis 0=X 1=Y, sign)
 PLACE = {1: (0, +1), 2: (0, -1), 3: (1, +1), 4: (1, -1)}
 PLACE_ELBOW = {1: (0, +1), 2: (1, +1)}
@@ -755,7 +823,9 @@ def fs_code(sp, dd, BR, r):
     if not sp.get('fs'): return ''
     lk = list(zip(legs4(sp), dd))
     ns = [fsm_nostep(d, BR) for (kind, lc, bc, tc), d in lk if kind == 'FSM']
-    c = 'N' if ns and all(ns) else 'S' if not any(ns) else 'X'
+    # 2026-10-20: mixed face-seal legs -> 'N' + the no-step leg numbers (was 'X'; their masters: FS_MIXED)
+    c = 'N' if ns and all(ns) else 'S' if not any(ns) else 'N' + ''.join(str(k) for k, ((kind, lc, bc, tc), d) in enumerate(lk, 1)
+                                                                          if kind == 'FSM' and fsm_nostep(d, BR))
     if any(l[0] == 'NWO' for l in sp['legs']):
         fl = [abs(NWO_FS[d]['NECKR'] - BR) <= 0.003 for (kind, lc, bc, tc), d in lk if kind == 'NWO' and d in NWO_FS]
         c += 'F' if not fl or all(fl) else 'R' if not any(fl) else 'X'
@@ -767,14 +837,14 @@ def fs_code(sp, dd, BR, r):
 
 def sp_code(sp):
     if not sp.get('fs'): return ''
-    c = 'N' if sp.get('nostep') else 'S'
+    c = ('N' + ''.join(str(k) for k in sp['nostep_legs'])) if sp.get('nostep_legs') else 'N' if sp.get('nostep') else 'S'     # 2026-10-20: FS_MIXED
     if any(l[0] == 'NWO' for l in sp['legs']): c += 'R' if sp.get('nwo_raised') else 'F'
     if any(l[0] == 'FSSW' for l in sp['legs']): c += 'C' if sp.get('fssw_cb') else 'K'
     return c
 
 
 def fs_suffix(code):
-    return None if 'X' in code else ''.join(x for x in code if x in 'NRC')
+    return None if 'X' in code else ''.join(x for x in code if x in 'NRC' or x.isdigit())      # 2026-10-20: digits = FS_MIXED legs
 
 
 def leg_FSM(i, dash, M, BR, nostep=False):
@@ -1883,8 +1953,10 @@ def build_rows(root):
         _code = fs_code(sp, dd, BR, r)
         if _code != sp_code(sp):
             _m = fs_suffix(_code)
-            skipped.append((pn, 'other shape family', f'face-seal leg shape {_code} (' + ', '.join(FS_CODE_WHY[x] for x in _code) + '): ' +
-                            (f'built in master {sp.get("table", root)}{_m}' if _m is not None else 'no master yet (one sketch per master)'))); continue
+            # 2026-10-20: fs_code_why (mixed codes 'N<legs>'); a code whose master is not declared (FS_MIXED) still says 'no master yet'
+            skipped.append((pn, 'other shape family', f'face-seal leg shape {_code} (' + fs_code_why(_code) + '): ' +
+                            (f'built in master {sp.get("table", root)}{_m}' if _m is not None and f'{sp.get("table", root)}{_m}' in SPEC
+                             else 'no master yet (one sketch per master)'))); continue
         # male NPTF: the thread cylinder at its vanish point (radius rL) must sit inside the hex flats with a real shoulder
         for i, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1):
             if kind == 'NPTFM':
@@ -1903,7 +1975,7 @@ def build_rows(root):
             M = r[lc]
             if kind == 'JICM': L = leg_JICM(i, d, M, BR)
             elif kind == 'FSM':       # 2026-10-20 (ORFS)
-                try: L = leg_FSM(i, d, M, BR, nostep=bool(sp.get('nostep')))
+                try: L = leg_FSM(i, d, M, BR, nostep=(i in sp['nostep_legs']) if sp.get('nostep_legs') else bool(sp.get('nostep')))     # 2026-10-20: FS_MIXED per leg
                 except AssertionError as ex: chk.append(f'leg {i} face seal: {ex}'); L = leg_JICM(i, d, M, BR) if d in G.JIC else None
             elif kind == 'FSBH':      # 2026-10-20 (ORFS)
                 try: L = leg_FSBH(i, d, M, BR, r[sp['bh'][0]], r[sp['bh'][1]], r[sp['bh'][2]])
@@ -2347,6 +2419,8 @@ def build_rows(root):
             if ds_ not in ('ASSUMED', 'MISSING', 'TEST'):
                 c0_ = (c0_ + ' | ' if c0_ else '') + f'DataStatus {ds_} -> ASSUMED: the flange head geometry is single-source (Brennan STEPs)'
                 ds_ = 'ASSUMED'
+            warn[:] = [w_.replace('hex A/F raised from Air-Way ', "hex A/F raised from the row's hex ") for w_ in warn]
+        if sp.get('row_hex_src'):     # 2026-10-20 (2500 / 2502 / 2603): rows from Air-Way, OMi and Brennan in one table - name the row's own hex
             warn[:] = [w_.replace('hex A/F raised from Air-Way ', "hex A/F raised from the row's hex ") for w_ in warn]
         model_ = assume_text(root, legs)
         src_ = r.get('_FOLD_SRC') or SPEC[root].get('src')

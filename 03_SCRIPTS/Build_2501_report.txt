@@ -1,4 +1,4 @@
-Build_2501_MASTER  10/20/2026 8:11:57 PM
+Build_2501_MASTER  10/21/2026 12:14:20 AM
 OK    dim M1 = 1.3300 in (expect 1.3300)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
@@ -125,8 +125,8 @@ OK    Y extent -0.508 .. 1.470 (expect -0.508 .. 1.470)
       Bounding box z -0.442 .. 0.442 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\tee\DesignTable_2501_SW2.xlsx
-OK    Configurations after table: 57 (expect 57)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\tee\DesignTable_2501_SW2.xlsx
+OK    Configurations after table: 58 (expect 58)
       config check 1: 2501-02-02-FG
 OK    2501-02-02-FG M1@LEG1 = 0.7700 (table 0.7700)
 OK    2501-02-02-FG BODYR@LEG1 = 0.2200 (table 0.2200)
@@ -169,67 +169,68 @@ OK    2501-LL-16-16-FG PUCK_R1B@PUCK = 0.3784 (table 0.3784)
 OK    2501-LL-16-16-FG PUCK_XC@PUCK = 0.7573 (table 0.7573)
 OK    2501-LL-16-16-FG one solid body (found 1)
       2501-LL-16-16-FG box x -0.758..1.810  y -0.758..4.050
-      All-config sweep: rebuilding 56 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/56  2501-02-02-FG  rebuilt in 1.1 s
-      sweep 2/56  2501-03-02-FG  rebuilt in 1.0 s
-      sweep 3/56  2501-04-02-FG  rebuilt in 1.4 s
-      sweep 4/56  2501-04-04-FG  rebuilt in 1.2 s
-      sweep 5/56  2501-04-06-FG  rebuilt in 1.1 s
-      sweep 6/56  2501-04-08-FG  rebuilt in 1.3 s
-      sweep 7/56  2501-04-12-FG  rebuilt in 1.1 s
-      sweep 8/56  2501-05-02-FG  rebuilt in 1.6 s
-      sweep 9/56  2501-05-04-FG  rebuilt in 1.2 s
-      sweep 10/56  2501-05-06-FG  rebuilt in 1.5 s
-      sweep 11/56  2501-06-02-FG  rebuilt in 1.1 s
-      sweep 12/56  2501-06-04-FG  rebuilt in 1.5 s
-      sweep 13/56  2501-06-06-FG  rebuilt in 1.1 s
-      sweep 14/56  2501-06-08-FG  rebuilt in 1.3 s
-      sweep 15/56  2501-06-12-FG  rebuilt in 1.1 s
-      sweep 16/56  2501-08-04-FG  rebuilt in 1.0 s
-      sweep 17/56  2501-08-06-FG  rebuilt in 1.4 s
-      sweep 18/56  2501-08-08-FG  rebuilt in 0.8 s
-      sweep 19/56  2501-08-12-FG  rebuilt in 1.0 s
-      sweep 20/56  2501-08-16-FG  rebuilt in 1.2 s
-      sweep 21/56  2501-10-06-FG  rebuilt in 1.1 s
-      sweep 22/56  2501-10-08-FG  rebuilt in 1.4 s
-      sweep 23/56  2501-10-12-FG  rebuilt in 1.1 s
-      sweep 24/56  2501-10-16-FG  rebuilt in 1.4 s
-      sweep 25/56  2501-12-06-FG  rebuilt in 1.0 s
-      sweep 26/56  2501-12-08-FG  rebuilt in 1.3 s
-      sweep 27/56  2501-12-12-FG  rebuilt in 1.1 s
-      sweep 28/56  2501-12-16-FG  rebuilt in 1.1 s
-      sweep 29/56  2501-12-20-FG  rebuilt in 1.3 s
-      sweep 30/56  2501-16-08-FG  rebuilt in 1.1 s
-      sweep 31/56  2501-16-12-FG  rebuilt in 1.4 s
-      sweep 32/56  2501-16-16-FG  rebuilt in 1.1 s
-      sweep 33/56  2501-16-20-FG  rebuilt in 1.4 s
-      sweep 34/56  2501-16-24-FG  rebuilt in 1.0 s
-      sweep 35/56  2501-20-16-FG  rebuilt in 1.3 s
-      sweep 36/56  2501-20-20-FG  rebuilt in 1.2 s
-      sweep 37/56  2501-20-24-FG  rebuilt in 1.1 s
-      sweep 38/56  2501-24-16-FG  rebuilt in 1.3 s
-      sweep 39/56  2501-24-20-FG  rebuilt in 1.1 s
-      sweep 40/56  2501-24-24-FG  rebuilt in 1.5 s
-      sweep 41/56  2501-24-32-FG  rebuilt in 1.2 s
-      sweep 42/56  2501-32-24-FG  rebuilt in 1.6 s
-      sweep 43/56  2501-32-32-FG  rebuilt in 1.2 s
-      sweep 44/56  2501-L-04-02-FG  rebuilt in 1.6 s
-      sweep 45/56  2501-L-04-04-FG  rebuilt in 1.2 s
-      sweep 46/56  2501-L-06-04-FG  rebuilt in 1.1 s
-      sweep 47/56  2501-L-06-06-FG  rebuilt in 1.1 s
-      sweep 48/56  2501-L-08-08-FG  rebuilt in 1.0 s
-      sweep 49/56  2501-L-12-12-FG  rebuilt in 1.1 s
-      sweep 50/56  2501-L-16-16-FG  rebuilt in 1.1 s
-      sweep 51/56  2501-LL-04-02-FG  rebuilt in 1.1 s
-      sweep 52/56  2501-LL-04-04-FG  rebuilt in 1.1 s
-      sweep 53/56  2501-LL-06-04-FG  rebuilt in 5.3 s
-      sweep 54/56  2501-LL-06-06-FG  rebuilt in 1.2 s
-      sweep 55/56  2501-LL-12-12-FG  rebuilt in 1.0 s
-      sweep 56/56  2501-LL-16-16-FG  rebuilt in 0.8 s
-OK    All-config sweep: 56 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 57 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/57  2501-02-02-FG  rebuilt in 0.8 s
+      sweep 2/57  2501-03-02-FG  rebuilt in 1.0 s
+      sweep 3/57  2501-04-02-FG  rebuilt in 1.5 s
+      sweep 4/57  2501-04-04-FG  rebuilt in 1.2 s
+      sweep 5/57  2501-04-06-FG  rebuilt in 1.4 s
+      sweep 6/57  2501-04-08-FG  rebuilt in 1.1 s
+      sweep 7/57  2501-04-12-FG  rebuilt in 1.4 s
+      sweep 8/57  2501-05-02-FG  rebuilt in 1.2 s
+      sweep 9/57  2501-05-04-FG  rebuilt in 1.3 s
+      sweep 10/57  2501-05-06-FG  rebuilt in 1.2 s
+      sweep 11/57  2501-06-02-FG  rebuilt in 1.1 s
+      sweep 12/57  2501-06-04-FG  rebuilt in 1.5 s
+      sweep 13/57  2501-06-06-FG  rebuilt in 1.1 s
+      sweep 14/57  2501-06-08-FG  rebuilt in 1.6 s
+      sweep 15/57  2501-06-12-FG  rebuilt in 1.1 s
+      sweep 16/57  2501-08-04-FG  rebuilt in 1.3 s
+      sweep 17/57  2501-08-06-FG  rebuilt in 1.1 s
+      sweep 18/57  2501-08-08-FG  rebuilt in 0.8 s
+      sweep 19/57  2501-08-12-FG  rebuilt in 1.3 s
+      sweep 20/57  2501-08-16-FG  rebuilt in 1.0 s
+      sweep 21/57  2501-10-06-FG  rebuilt in 1.3 s
+      sweep 22/57  2501-10-08-FG  rebuilt in 1.1 s
+      sweep 23/57  2501-10-12-FG  rebuilt in 1.4 s
+      sweep 24/57  2501-10-16-FG  rebuilt in 1.1 s
+      sweep 25/57  2501-12-06-FG  rebuilt in 1.0 s
+      sweep 26/57  2501-12-08-FG  rebuilt in 1.4 s
+      sweep 27/57  2501-12-12-FG  rebuilt in 1.1 s
+      sweep 28/57  2501-12-16-FG  rebuilt in 1.4 s
+      sweep 29/57  2501-12-20-FG  rebuilt in 1.0 s
+      sweep 30/57  2501-16-08-FG  rebuilt in 1.1 s
+      sweep 31/57  2501-16-12-FG  rebuilt in 1.5 s
+      sweep 32/57  2501-16-16-FG  rebuilt in 1.7 s
+      sweep 33/57  2501-16-20-FG  rebuilt in 1.5 s
+      sweep 34/57  2501-16-24-FG  rebuilt in 1.9 s
+      sweep 35/57  2501-20-16-FG  rebuilt in 1.3 s
+      sweep 36/57  2501-20-20-FG  rebuilt in 1.8 s
+      sweep 37/57  2501-20-24-FG  rebuilt in 1.5 s
+      sweep 38/57  2501-24-16-FG  rebuilt in 1.3 s
+      sweep 39/57  2501-24-20-FG  rebuilt in 1.2 s
+      sweep 40/57  2501-24-24-FG  rebuilt in 1.4 s
+      sweep 41/57  2501-24-32-FG  rebuilt in 1.2 s
+      sweep 42/57  2501-32-24-FG  rebuilt in 1.5 s
+      sweep 43/57  2501-32-32-FG  rebuilt in 1.3 s
+      sweep 44/57  2501-L-04-02-FG  rebuilt in 1.7 s
+      sweep 45/57  2501-L-04-04-FG  rebuilt in 1.2 s
+      sweep 46/57  2501-L-06-04-FG  rebuilt in 1.5 s
+      sweep 47/57  2501-L-06-06-FG  rebuilt in 1.2 s
+      sweep 48/57  2501-L-08-08-FG  rebuilt in 1.5 s
+      sweep 49/57  2501-L-12-12-FG  rebuilt in 1.1 s
+      sweep 50/57  2501-L-16-16-FG  rebuilt in 1.5 s
+      sweep 51/57  2501-LL-04-02-FG  rebuilt in 1.2 s
+      sweep 52/57  2501-LL-04-04-FG  rebuilt in 1.4 s
+      sweep 53/57  2501-LL-06-04-FG  rebuilt in 1.2 s
+      sweep 54/57  2501-LL-06-06-FG  rebuilt in 1.4 s
+      sweep 55/57  2501-LL-08-08-FG  rebuilt in 1.1 s
+      sweep 56/57  2501-LL-12-12-FG  rebuilt in 1.1 s
+      sweep 57/57  2501-LL-16-16-FG  rebuilt in 1.2 s
+OK    All-config sweep: 57 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2501-08-08-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 57 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 57 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 58 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 58 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\2501\2501_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\2501\2501_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\2501\2501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\2501\2501_MASTER.SLDPRT

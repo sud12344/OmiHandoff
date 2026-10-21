@@ -1,4 +1,4 @@
-Build_6410_MASTER  10/20/2026 8:51:37 PM
+Build_6410_MASTER  10/21/2026 12:00:47 AM
 OK    dim L33 = 1.7500 in (expect 1.7500)
 OK    dim BODYR = 1.2298 in (expect 1.2298)
 OK    dim THDMAJR_A = 0.9375 in (expect 0.9375)
@@ -66,15 +66,15 @@ OK    THD_EndA thread feature created
       THD_EndA: thread centre x = 0.2317 in, anchor 0.4690, wanted -X
 OK    THD_EndA runs along the thread flat (away from the hex)
 OK    THD_EndA rebuilds without error (code 0)
-      THD_EndA: dim full name D8@THD_EndA@Part18.Part
-      THD_EndA: dim full name THDPITCH@THD_EndA@Part18.Part
-      THD_EndA: dim full name THDDIA@THD_EndA@Part18.Part
-      THD_EndA: dim full name DEPTH@THD_EndA@Part18.Part
-      THD_EndA: dim full name D1@THD_EndA@Part18.Part
-      THD_EndA: dim full name Pitch@Thread Profile1@Part18.Part
-      THD_EndA: dim full name Profile_Land@Thread Profile1@Part18.Part
-      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part18.Part
-      THD_EndA: dim full name Profile_Height@Thread Profile1@Part18.Part
+      THD_EndA: dim full name D8@THD_EndA@Part58.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part58.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part58.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part58.Part
+      THD_EndA: dim full name D1@THD_EndA@Part58.Part
+      THD_EndA: dim full name Pitch@Thread Profile1@Part58.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part58.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part58.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part58.Part
 OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0833 THDDIA=1.8750 DEPTH=0.4690 D1=0.0000 Pitch=0.0125 Profile_Land=0.0031 Profile_Angle=41.2283 Profile_Height=0.0068 
       THD_EndA: profile sketch renamed to THD_EndA_PROF
 OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
@@ -109,8 +109,8 @@ OK    End B face present at x=1.7500
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 2.1300 / corners 2.4595 (expect 2.1300 / 2.4595)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_6410_SW2.xlsx
-OK    Configurations after table: 35 (expect 35)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6410_SW2.xlsx
+OK    Configurations after table: 41 (expect 41)
       config check 1: 6410-04-02-O
 OK    6410-04-02-O L33@DRIVE = 1.1000 (table 1.1000)
 OK    6410-04-02-O BODYR@DRIVE = 0.3245 (table 0.3245)
@@ -127,22 +127,22 @@ OK    6410-04-02-O PROF_R@THDPROF_B = 0.1350 (table 0.1350)
 OK    6410-04-02-O DEPTH@BORECUT_A = 0.6320 (table 0.6320)
 OK    6410-04-02-O one solid body (found 1)
       6410-04-02-O box x -0.014..1.100  y -0.281..0.281
-      config check 2: 6410-24-16-O
-OK    6410-24-16-O L33@DRIVE = 1.2700 (table 1.2700)
-OK    6410-24-16-O BODYR@DRIVE = 1.2298 (table 1.2298)
-OK    6410-24-16-O HEXB@HEX = 2.1300 (table 2.1300)
-OK    6410-24-16-O THDMAJR_A@DRIVE = 0.9375 (table 0.9375)
-OK    6410-24-16-O ORBA_THDL@DRIVE = 0.4690 (table 0.4690)
-OK    6410-24-16-O ORBA_GRVR@DRIVE = 0.8780 (table 0.8780)
-OK    6410-24-16-O ORBA_GRVW@DRIVE = 0.1250 (table 0.1250)
-OK    6410-24-16-O ORBFB_FACER@DRIVE = 0.7000 (table 0.7000)
-OK    6410-24-16-O THDPITCH@THD_EndA = 0.0833 (table 0.0833)
-OK    6410-24-16-O Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
-OK    6410-24-16-O THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
-OK    6410-24-16-O PROF_R@THDPROF_B = 0.6100 (table 0.6100)
-OK    6410-24-16-O DEPTH@BORECUT_A = 0.3640 (table 0.3640)
-OK    6410-24-16-O one solid body (found 1)
-      6410-24-16-O box x -0.026..1.270  y -1.065..1.065
+      config check 2: 6410-32-24-O
+OK    6410-32-24-O L33@DRIVE = 1.4300 (table 1.4300)
+OK    6410-32-24-O BODYR@DRIVE = 1.5877 (table 1.5877)
+OK    6410-32-24-O HEXB@HEX = 2.7500 (table 2.7500)
+OK    6410-32-24-O THDMAJR_A@DRIVE = 1.2500 (table 1.2500)
+OK    6410-32-24-O ORBA_THDL@DRIVE = 0.4690 (table 0.4690)
+OK    6410-32-24-O ORBA_GRVR@DRIVE = 1.1905 (table 1.1905)
+OK    6410-32-24-O ORBA_GRVW@DRIVE = 0.1250 (table 0.1250)
+OK    6410-32-24-O ORBFB_FACER@DRIVE = 0.9830 (table 0.9830)
+OK    6410-32-24-O THDPITCH@THD_EndA = 0.0833 (table 0.0833)
+OK    6410-32-24-O Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
+OK    6410-32-24-O THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
+OK    6410-32-24-O PROF_R@THDPROF_B = 0.8900 (table 0.8900)
+OK    6410-32-24-O DEPTH@BORECUT_A = 0.5240 (table 0.5240)
+OK    6410-32-24-O one solid body (found 1)
+      6410-32-24-O box x -0.026..1.430  y -1.375..1.375
 OK    6410-24-20-O: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
 OK    6410-24-20-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.8440
 OK    6410-04-02-O: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
@@ -201,6 +201,10 @@ OK    6410-16-16-O: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
 OK    6410-16-16-O: bore meets the port - no face across the axis at the minor-bore bottom x=1.0640
 OK    6410-16-20-O: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
 OK    6410-16-20-O: bore meets the port - no face across the axis at the minor-bore bottom x=1.0940
+OK    6410-20-06-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6410-20-06-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.5910
+OK    6410-20-08-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6410-20-08-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.5120
 OK    6410-20-12-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
 OK    6410-20-12-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.2940
 OK    6410-20-16-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
@@ -211,46 +215,60 @@ OK    6410-24-12-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
 OK    6410-24-12-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.3540
 OK    6410-24-16-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
 OK    6410-24-16-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.3640
-      All-config sweep: rebuilding 34 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/34  6410-04-02-O  rebuilt in 0.8 s
-      sweep 2/34  6410-04-04-O  rebuilt in 1.1 s
-      sweep 3/34  6410-04-06-O  rebuilt in 0.9 s
-      sweep 4/34  6410-06-04-O  rebuilt in 0.8 s
-      sweep 5/34  6410-06-06-O  rebuilt in 1.2 s
-      sweep 6/34  6410-06-08-O  rebuilt in 0.8 s
-      sweep 7/34  6410-08-04-O  rebuilt in 0.9 s
-      sweep 8/34  6410-08-06-O  rebuilt in 1.1 s
-      sweep 9/34  6410-08-08-O  rebuilt in 0.8 s
-      sweep 10/34  6410-08-10-O  rebuilt in 1.1 s
-      sweep 11/34  6410-08-12-O  rebuilt in 0.8 s
-      sweep 12/34  6410-10-04-O  rebuilt in 0.8 s
-      sweep 13/34  6410-10-06-O  rebuilt in 1.2 s
-      sweep 14/34  6410-10-08-O  rebuilt in 0.8 s
-      sweep 15/34  6410-10-12-O  rebuilt in 0.9 s
-      sweep 16/34  6410-12-04-O  rebuilt in 1.1 s
-      sweep 17/34  6410-12-06-O  rebuilt in 1.0 s
-      sweep 18/34  6410-12-08-O  rebuilt in 1.0 s
-      sweep 19/34  6410-12-10-O  rebuilt in 1.2 s
-      sweep 20/34  6410-12-12-O  rebuilt in 0.9 s
-      sweep 21/34  6410-12-16-O  rebuilt in 1.2 s
-      sweep 22/34  6410-16-04-O  rebuilt in 0.9 s
-      sweep 23/34  6410-16-06-O  rebuilt in 1.0 s
-      sweep 24/34  6410-16-08-O  rebuilt in 1.1 s
-      sweep 25/34  6410-16-10-O  rebuilt in 0.9 s
-      sweep 26/34  6410-16-12-O  rebuilt in 1.0 s
-      sweep 27/34  6410-16-16-O  rebuilt in 1.1 s
-      sweep 28/34  6410-16-20-O  rebuilt in 0.9 s
-      sweep 29/34  6410-20-12-O  rebuilt in 1.2 s
-      sweep 30/34  6410-20-16-O  rebuilt in 1.1 s
-      sweep 31/34  6410-20-24-O  rebuilt in 0.8 s
-      sweep 32/34  6410-24-12-O  rebuilt in 1.3 s
-      sweep 33/34  6410-24-16-O  rebuilt in 1.1 s
-      sweep 34/34  6410-24-20-O  rebuilt in 1.4 s
-OK    All-config sweep: 34 configurations rebuilt, 0 feature/body failures
+OK    6410-32-12-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6410-32-12-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.5240
+OK    6410-32-16-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6410-32-16-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.5240
+OK    6410-32-20-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6410-32-20-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.5240
+OK    6410-32-24-O: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6410-32-24-O: bore meets the port - no face across the axis at the minor-bore bottom x=0.5240
+      All-config sweep: rebuilding 40 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/40  6410-04-02-O  rebuilt in 1.3 s
+      sweep 2/40  6410-04-04-O  rebuilt in 1.2 s
+      sweep 3/40  6410-04-06-O  rebuilt in 1.2 s
+      sweep 4/40  6410-06-04-O  rebuilt in 1.3 s
+      sweep 5/40  6410-06-06-O  rebuilt in 1.4 s
+      sweep 6/40  6410-06-08-O  rebuilt in 1.5 s
+      sweep 7/40  6410-08-04-O  rebuilt in 1.4 s
+      sweep 8/40  6410-08-06-O  rebuilt in 1.9 s
+      sweep 9/40  6410-08-08-O  rebuilt in 1.5 s
+      sweep 10/40  6410-08-10-O  rebuilt in 1.0 s
+      sweep 11/40  6410-08-12-O  rebuilt in 1.4 s
+      sweep 12/40  6410-10-04-O  rebuilt in 0.8 s
+      sweep 13/40  6410-10-06-O  rebuilt in 1.0 s
+      sweep 14/40  6410-10-08-O  rebuilt in 1.1 s
+      sweep 15/40  6410-10-12-O  rebuilt in 0.9 s
+      sweep 16/40  6410-12-04-O  rebuilt in 0.9 s
+      sweep 17/40  6410-12-06-O  rebuilt in 1.2 s
+      sweep 18/40  6410-12-08-O  rebuilt in 1.0 s
+      sweep 19/40  6410-12-10-O  rebuilt in 1.0 s
+      sweep 20/40  6410-12-12-O  rebuilt in 1.2 s
+      sweep 21/40  6410-12-16-O  rebuilt in 0.9 s
+      sweep 22/40  6410-16-04-O  rebuilt in 1.2 s
+      sweep 23/40  6410-16-06-O  rebuilt in 1.0 s
+      sweep 24/40  6410-16-08-O  rebuilt in 1.1 s
+      sweep 25/40  6410-16-10-O  rebuilt in 1.2 s
+      sweep 26/40  6410-16-12-O  rebuilt in 0.9 s
+      sweep 27/40  6410-16-16-O  rebuilt in 1.2 s
+      sweep 28/40  6410-16-20-O  rebuilt in 1.0 s
+      sweep 29/40  6410-20-06-O  rebuilt in 1.0 s
+      sweep 30/40  6410-20-08-O  rebuilt in 1.2 s
+      sweep 31/40  6410-20-12-O  rebuilt in 1.0 s
+      sweep 32/40  6410-20-16-O  rebuilt in 1.4 s
+      sweep 33/40  6410-20-24-O  rebuilt in 0.9 s
+      sweep 34/40  6410-24-12-O  rebuilt in 1.0 s
+      sweep 35/40  6410-24-16-O  rebuilt in 1.3 s
+      sweep 36/40  6410-24-20-O  rebuilt in 1.0 s
+      sweep 37/40  6410-32-12-O  rebuilt in 1.3 s
+      sweep 38/40  6410-32-16-O  rebuilt in 1.1 s
+      sweep 39/40  6410-32-20-O  rebuilt in 1.2 s
+      sweep 40/40  6410-32-24-O  rebuilt in 1.5 s
+OK    All-config sweep: 40 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6410-24-20-O for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 35 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 35 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 41 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 41 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6410\6410_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/20/2026 8:53:38 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6410\6410_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6410\6410_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/21/2026 12:03:23 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6410\6410_MASTER.SLDPRT

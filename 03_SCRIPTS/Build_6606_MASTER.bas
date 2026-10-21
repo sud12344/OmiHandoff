@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6606_MASTER"
 ' ============================================================================
-'  Build_6606_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
+'  Build_6606_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_tee.py
 '  Female Swivel Tee (three swivels) (tee), forged hex body (2603HX pattern).  Reference config 6606-08-08-08-FG: JICSW -08, JICSW -08, JICSW -08
 '  Entry: Sub Build6606.  Legs 1/2 along +X/-X, leg 3 along +Y.
 '  Builds from DesignTable_6606_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -320,7 +320,7 @@ Sub Build6606()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 5)", (UBound(cfgs) + 1) = 5
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 6)", (UBound(cfgs) + 1) = 6
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

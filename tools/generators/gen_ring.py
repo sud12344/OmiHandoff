@@ -60,6 +60,39 @@ SPEC = {
                          'the Brennan 0319-08 STEP are NOT modelled'),
 }
 
+# ---- 2026-10-20 (batch 19 E_gen, job 1; user A2 2026-10-18: the 12 0319 JIC tube sleeves are included). The SLEEVE type on the live 0319
+#      review table: its rows give the sizes - L@DRIVE (Air-Way s48 L), X@DRIVE (Air-Way s48 X = the collar O.D.) and D@BORE (the through bore,
+#      OMi WebsitePartsInfo2026 Items "Side 1 ID") - and the four SHAPE values come from the one sleeve shape file on disk, BRENNAN_0319-08.stp
+#      (tools/_out/newtypes_20261014/scripts/probe_sleeve.py; re-read 2026-10-20: L 0.560, collar dia 0.6816, bore 0.505, collar length 0.220,
+#      spigot radius 0.2810, front-face inner radius 0.2945, inner cone 0.6491 = tan 33.0 deg from the front face, R0.062 blend to the bore),
+#      carried to the other sizes by SHAPE_RULE (a MODELLING ASSUMPTION, written into every row's $PRP@AxialSource):
+#        collar length  = 0.220 / 0.560 of L                         (the -08 proportion of the length)
+#        spigot radius  = bore + 0.3257 x (collar radius - bore)     (the -08 fraction of the collar wall: (0.2810 - 0.2525) / (0.34 - 0.2525))
+#        front-face inner radius = bore + 0.4800 x (collar wall)     ((0.2945 - 0.2525) / 0.0875)
+#        inner cone     = 33.0 deg to the axis (the -08 angle kept at every size; the cone length follows from the two radii)
+#      At -08 the rule returns the measured shape exactly (the 0319T TEST row). The 2026-10-14 TEST scaled the cone LENGTH with L instead (cone
+#      angle 33 ... 40.5 deg over the sizes); a cone angle is a shape feature, so this root keeps the angle (same at -08).
+SLEEVE_SHAPE_0319 = dict(ref='0319-08', L=0.56, COLLARR=0.34, BORER=0.2525, COLLARL=0.220, SPIGOTR=0.2810, FRONTIR=0.2945, CONE_TAN=0.6491)
+SPEC['0319'] = dict(name='JIC Tube Sleeve', kind='SLEEVE', tables=('0319',), ref='0319-08', desc='JIC Tube Sleeve', shape=SLEEVE_SHAPE_0319,
+                    assume='SHAPE_RULE (modelling assumption, user A2 2026-10-18: the 0319 sleeves are built; one Brennan shape file, '
+                           'BRENNAN_0319-08.stp, for all 12 sizes): sizes from this row (L, collar O.D. X, bore D), the four shape values '
+                           'carried from the -08 shape - collar length 0.220/0.560 of L, spigot radius = bore + 0.3257 x collar wall, front-face '
+                           'inner radius = bore + 0.4800 x collar wall, inner front cone 33.0 deg to the axis (cone length from the radii); '
+                           'half-section: front face at x = 0 from the front-face inner radius to the collar, collar, step down to the spigot, rear '
+                           'face at x = L, bore, straight inner cone back to the bore; the R0.062 cone-to-bore blend, the 0.010 corner chamfers and '
+                           'the 1 deg collar taper of the Brennan 0319-08 STEP are NOT modelled')
+
+
+def sleeve_from_shape(r, sh):
+    """2026-10-20: the seven DRIVE values of a sleeve row whose table gives only L / X (collar O.D.) / D@BORE (bore) - SHAPE_RULE above"""
+    L, Rc, Rb = r.get('L@DRIVE'), (r.get('X@DRIVE') or 0) / 2 or None, (r.get('D@BORE') or 0) / 2 or None
+    if not all(num(v) for v in (L, Rc, Rb)):
+        return None
+    w0 = sh['COLLARR'] - sh['BORER']; w = Rc - Rb
+    Rf = Rb + (sh['FRONTIR'] - sh['BORER']) / w0 * w
+    return dict(L=L, COLLARR=Rc, COLLARL=round(sh['COLLARL'] / sh['L'] * L, 4), SPIGOTR=round(Rb + (sh['SPIGOTR'] - sh['BORER']) / w0 * w, 4),
+                BORER=Rb, FRONTIR=round(Rf, 4), CONEL=round((Rf - Rb) / sh['CONE_TAN'], 4))
+
 
 def load_review(root):
     # 2026-10-20 (ORFS staging): a table missing from GR_REV is looked up in OMI_REV_EXTRA (the staged FS tables, e.g. FS4000)
@@ -136,6 +169,8 @@ def build_rows(root):
                         '$PRP@OMiSKU': r.get('$PRP@OMiSKU')}
             else:
                 vals = {k: r.get(f'{k}@DRIVE') for k in SLEEVE_DIMS}
+                if sp.get('shape'):         # 2026-10-20: sizes from the row, shape from SHAPE_RULE (0319)
+                    vals = sleeve_from_shape(r, sp['shape']) or {k: None for k in SLEEVE_DIMS}
                 miss = [k for k, v in vals.items() if not num(v)]
                 if miss:
                     skipped.append(f'{pn}: no {"/".join(miss)}')

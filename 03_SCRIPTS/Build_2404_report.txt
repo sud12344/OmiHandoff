@@ -1,4 +1,4 @@
-Build_2404_MASTER  10/20/2026 7:58:53 PM
+Build_2404_MASTER  10/20/2026 11:34:13 PM
 OK    dim D1 = 1.7900 in (expect 1.7900)
 OK    dim BODYR = 0.5052 in (expect 0.5052)
 OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
@@ -92,15 +92,15 @@ OK    THD_EndB thread feature created
       THD_EndB: thread centre x = 1.4058 in, anchor 1.2533, wanted +X
 OK    THD_EndB runs along the thread flat (away from the hex)
 OK    THD_EndB rebuilds without error (code 0)
-      THD_EndB: dim full name D8@THD_EndB@Part4.Part
-      THD_EndB: dim full name THDPITCH@THD_EndB@Part4.Part
-      THD_EndB: dim full name THDDIA@THD_EndB@Part4.Part
-      THD_EndB: dim full name DEPTH@THD_EndB@Part4.Part
-      THD_EndB: dim full name D1@THD_EndB@Part4.Part
-      THD_EndB: dim full name THDPITCH@Thread Profile1@Part4.Part
-      THD_EndB: dim full name Profile_Land@Thread Profile1@Part4.Part
-      THD_EndB: dim full name Profile_Angle@Thread Profile1@Part4.Part
-      THD_EndB: dim full name Profile_Height@Thread Profile1@Part4.Part
+      THD_EndB: dim full name D8@THD_EndB@Part52.Part
+      THD_EndB: dim full name THDPITCH@THD_EndB@Part52.Part
+      THD_EndB: dim full name THDDIA@THD_EndB@Part52.Part
+      THD_EndB: dim full name DEPTH@THD_EndB@Part52.Part
+      THD_EndB: dim full name D1@THD_EndB@Part52.Part
+      THD_EndB: dim full name THDPITCH@Thread Profile1@Part52.Part
+      THD_EndB: dim full name Profile_Land@Thread Profile1@Part52.Part
+      THD_EndB: dim full name Profile_Angle@Thread Profile1@Part52.Part
+      THD_EndB: dim full name Profile_Height@Thread Profile1@Part52.Part
 OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndB: profile sketch renamed to THD_EndB_PROF
 OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
@@ -112,8 +112,8 @@ OK    End B face present at x=1.7900
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 0.8750 / corners 1.0104 (expect 0.8750 / 1.0104)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_2404_SW2.xlsx
-OK    Configurations after table: 60 (expect 60)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2404_SW2.xlsx
+OK    Configurations after table: 61 (expect 61)
       config check 1: 2404-02-02
 OK    2404-02-02 D1@DRIVE = 1.1100 (table 1.1100)
 OK    2404-02-02 BODYR@DRIVE = 0.2526 (table 0.2526)
@@ -131,88 +131,89 @@ OK    2404-02-02 DEPTH@BORECUT_A = 0.4900 (table 0.4900)
 OK    2404-02-02 DEPTH@BORECUT_B = 0.6200 (table 0.6200)
 OK    2404-02-02 one solid body (found 1)
       2404-02-02 box x -0.020..1.110  y -0.219..0.219
-      config check 2: 2404-L-12-12
-OK    2404-L-12-12 D1@DRIVE = 3.5000 (table 3.5000)
-OK    2404-L-12-12 BODYR@DRIVE = 0.6524 (table 0.6524)
-OK    2404-L-12-12 HEXB@HEX = 1.1300 (table 1.1300)
-OK    2404-L-12-12 NPTFA_MAJR@DRIVE = 0.5124 (table 0.5124)
-OK    2404-L-12-12 NPTFA_THDL@DRIVE = 0.5457 (table 0.5457)
-OK    2404-L-12-12 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
-OK    2404-L-12-12 NPTFA_RELL@DRIVE = 0.2043 (table 0.2043)
-OK    2404-L-12-12 THDMAJR_B@DRIVE = 0.5313 (table 0.5313)
-OK    2404-L-12-12 PROF_R@THDPROF_A = 0.5124 (table 0.5124)
-OK    2404-L-12-12 THDPITCH@THD_EndB = 0.0833 (table 0.0833)
-OK    2404-L-12-12 Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
-OK    2404-L-12-12 THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
-OK    2404-L-12-12 DEPTH@BORECUT_A = 1.6930 (table 1.6930)
-OK    2404-L-12-12 DEPTH@BORECUT_B = 1.8070 (table 1.8070)
-OK    2404-L-12-12 one solid body (found 1)
-      2404-L-12-12 box x -0.037..3.500  y -0.565..0.565
-      All-config sweep: rebuilding 59 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/59  2404-02-02  rebuilt in 3.6 s
-      sweep 2/59  2404-02-04  rebuilt in 3.7 s
-      sweep 3/59  2404-03-02  rebuilt in 7.3 s
-      sweep 4/59  2404-04-02  rebuilt in 6.2 s
-      sweep 5/59  2404-04-04  rebuilt in 3.6 s
-      sweep 6/59  2404-04-06  rebuilt in 3.7 s
-      sweep 7/59  2404-04-08  rebuilt in 8.5 s
-      sweep 8/59  2404-04-12  rebuilt in 15.1 s
-      sweep 9/59  2404-05-02  rebuilt in 6.4 s
-      sweep 10/59  2404-05-04  rebuilt in 3.8 s
-      sweep 11/59  2404-05-06  rebuilt in 3.6 s
-      sweep 12/59  2404-06-02  rebuilt in 6.9 s
-      sweep 13/59  2404-06-04  rebuilt in 4.3 s
-      sweep 14/59  2404-06-06  rebuilt in 3.6 s
-      sweep 15/59  2404-06-08  rebuilt in 9.1 s
-      sweep 16/59  2404-06-12  rebuilt in 15.3 s
-      sweep 17/59  2404-06-16  rebuilt in 15.1 s
-      sweep 18/59  2404-08-02  rebuilt in 6.0 s
-      sweep 19/59  2404-08-04  rebuilt in 3.9 s
-      sweep 20/59  2404-08-06  rebuilt in 3.3 s
-      sweep 21/59  2404-08-08  rebuilt in 4.3 s
-      sweep 22/59  2404-08-12  rebuilt in 16.2 s
-      sweep 23/59  2404-08-16  rebuilt in 16.3 s
-      sweep 24/59  2404-10-04  rebuilt in 3.3 s
-      sweep 25/59  2404-10-06  rebuilt in 3.1 s
-      sweep 26/59  2404-10-08  rebuilt in 8.7 s
-      sweep 27/59  2404-10-12  rebuilt in 13.3 s
-      sweep 28/59  2404-10-16  rebuilt in 15.7 s
-      sweep 29/59  2404-12-06  rebuilt in 3.1 s
-      sweep 30/59  2404-12-08  rebuilt in 7.8 s
-      sweep 31/59  2404-12-12  rebuilt in 12.9 s
-      sweep 32/59  2404-12-16  rebuilt in 14.3 s
-      sweep 33/59  2404-12-20  rebuilt in 9.9 s
-      sweep 34/59  2404-12-24  rebuilt in 12.4 s
-      sweep 35/59  2404-14-12  rebuilt in 12.7 s
-      sweep 36/59  2404-16-08  rebuilt in 7.5 s
-      sweep 37/59  2404-16-12  rebuilt in 12.0 s
-      sweep 38/59  2404-16-16  rebuilt in 14.5 s
-      sweep 39/59  2404-16-20  rebuilt in 10.3 s
-      sweep 40/59  2404-16-24  rebuilt in 13.2 s
-      sweep 41/59  2404-16-32  rebuilt in 14.5 s
-      sweep 42/59  2404-20-12  rebuilt in 12.7 s
-      sweep 43/59  2404-20-16  rebuilt in 14.3 s
-      sweep 44/59  2404-20-20  rebuilt in 10.0 s
-      sweep 45/59  2404-20-24  rebuilt in 12.9 s
-      sweep 46/59  2404-20-32  rebuilt in 14.2 s
-      sweep 47/59  2404-24-16  rebuilt in 14.1 s
-      sweep 48/59  2404-24-20  rebuilt in 9.6 s
-      sweep 49/59  2404-24-24  rebuilt in 12.7 s
-      sweep 50/59  2404-24-32  rebuilt in 13.7 s
-      sweep 51/59  2404-32-20  rebuilt in 9.9 s
-      sweep 52/59  2404-32-24  rebuilt in 13.2 s
-      sweep 53/59  2404-32-32  rebuilt in 14.0 s
-      sweep 54/59  2404-40-32  rebuilt in 14.4 s
-      sweep 55/59  2404-L-04-04  rebuilt in 3.3 s
-      sweep 56/59  2404-L-06-04  rebuilt in 3.4 s
-      sweep 57/59  2404-L-06-06  rebuilt in 3.0 s
-      sweep 58/59  2404-L-08-08  rebuilt in 7.2 s
-      sweep 59/59  2404-L-12-12  rebuilt in 6.4 s
-OK    All-config sweep: 59 configurations rebuilt, 0 feature/body failures
+      config check 2: 2404-L-32-32
+OK    2404-L-32-32 D1@DRIVE = 5.6200 (table 5.6200)
+OK    2404-L-32-32 BODYR@DRIVE = 1.5155 (table 1.5155)
+OK    2404-L-32-32 HEXB@HEX = 2.6250 (table 2.6250)
+OK    2404-L-32-32 NPTFA_MAJR@DRIVE = 1.1693 (table 1.1693)
+OK    2404-L-32-32 NPTFA_THDL@DRIVE = 0.7565 (table 0.7565)
+OK    2404-L-32-32 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    2404-L-32-32 NPTFA_RELL@DRIVE = 0.2735 (table 0.2735)
+OK    2404-L-32-32 THDMAJR_B@DRIVE = 1.2500 (table 1.2500)
+OK    2404-L-32-32 PROF_R@THDPROF_A = 1.1693 (table 1.1693)
+OK    2404-L-32-32 THDPITCH@THD_EndB = 0.0833 (table 0.0833)
+OK    2404-L-32-32 Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
+OK    2404-L-32-32 THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
+OK    2404-L-32-32 DEPTH@BORECUT_A = 2.6585 (table 2.6585)
+OK    2404-L-32-32 DEPTH@BORECUT_B = 2.9615 (table 2.9615)
+OK    2404-L-32-32 one solid body (found 1)
+      2404-L-32-32 box x -0.081..5.620  y -1.314..1.314
+      All-config sweep: rebuilding 60 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/60  2404-02-02  rebuilt in 3.8 s
+      sweep 2/60  2404-02-04  rebuilt in 3.8 s
+      sweep 3/60  2404-03-02  rebuilt in 6.4 s
+      sweep 4/60  2404-04-02  rebuilt in 6.3 s
+      sweep 5/60  2404-04-04  rebuilt in 4.3 s
+      sweep 6/60  2404-04-06  rebuilt in 3.6 s
+      sweep 7/60  2404-04-08  rebuilt in 7.8 s
+      sweep 8/60  2404-04-12  rebuilt in 13.2 s
+      sweep 9/60  2404-05-02  rebuilt in 6.7 s
+      sweep 10/60  2404-05-04  rebuilt in 4.6 s
+      sweep 11/60  2404-05-06  rebuilt in 3.2 s
+      sweep 12/60  2404-06-02  rebuilt in 6.1 s
+      sweep 13/60  2404-06-04  rebuilt in 3.6 s
+      sweep 14/60  2404-06-06  rebuilt in 4.0 s
+      sweep 15/60  2404-06-08  rebuilt in 8.7 s
+      sweep 16/60  2404-06-12  rebuilt in 14.5 s
+      sweep 17/60  2404-06-16  rebuilt in 15.8 s
+      sweep 18/60  2404-08-02  rebuilt in 6.2 s
+      sweep 19/60  2404-08-04  rebuilt in 3.8 s
+      sweep 20/60  2404-08-06  rebuilt in 4.0 s
+      sweep 21/60  2404-08-08  rebuilt in 4.6 s
+      sweep 22/60  2404-08-12  rebuilt in 13.8 s
+      sweep 23/60  2404-08-16  rebuilt in 15.4 s
+      sweep 24/60  2404-10-04  rebuilt in 3.8 s
+      sweep 25/60  2404-10-06  rebuilt in 3.5 s
+      sweep 26/60  2404-10-08  rebuilt in 8.1 s
+      sweep 27/60  2404-10-12  rebuilt in 13.5 s
+      sweep 28/60  2404-10-16  rebuilt in 15.6 s
+      sweep 29/60  2404-12-06  rebuilt in 3.8 s
+      sweep 30/60  2404-12-08  rebuilt in 8.6 s
+      sweep 31/60  2404-12-12  rebuilt in 14.2 s
+      sweep 32/60  2404-12-16  rebuilt in 16.4 s
+      sweep 33/60  2404-12-20  rebuilt in 11.0 s
+      sweep 34/60  2404-12-24  rebuilt in 14.2 s
+      sweep 35/60  2404-14-12  rebuilt in 14.5 s
+      sweep 36/60  2404-16-08  rebuilt in 9.1 s
+      sweep 37/60  2404-16-12  rebuilt in 13.6 s
+      sweep 38/60  2404-16-16  rebuilt in 16.0 s
+      sweep 39/60  2404-16-20  rebuilt in 11.1 s
+      sweep 40/60  2404-16-24  rebuilt in 14.6 s
+      sweep 41/60  2404-16-32  rebuilt in 16.0 s
+      sweep 42/60  2404-20-12  rebuilt in 13.7 s
+      sweep 43/60  2404-20-16  rebuilt in 16.0 s
+      sweep 44/60  2404-20-20  rebuilt in 11.3 s
+      sweep 45/60  2404-20-24  rebuilt in 15.3 s
+      sweep 46/60  2404-20-32  rebuilt in 15.1 s
+      sweep 47/60  2404-24-16  rebuilt in 15.2 s
+      sweep 48/60  2404-24-20  rebuilt in 10.9 s
+      sweep 49/60  2404-24-24  rebuilt in 14.5 s
+      sweep 50/60  2404-24-32  rebuilt in 15.8 s
+      sweep 51/60  2404-32-20  rebuilt in 11.3 s
+      sweep 52/60  2404-32-24  rebuilt in 15.5 s
+      sweep 53/60  2404-32-32  rebuilt in 16.1 s
+      sweep 54/60  2404-40-32  rebuilt in 15.6 s
+      sweep 55/60  2404-L-04-04  rebuilt in 3.8 s
+      sweep 56/60  2404-L-06-04  rebuilt in 3.8 s
+      sweep 57/60  2404-L-06-06  rebuilt in 3.7 s
+      sweep 58/60  2404-L-08-08  rebuilt in 8.4 s
+      sweep 59/60  2404-L-12-12  rebuilt in 13.5 s
+      sweep 60/60  2404-L-32-32  rebuilt in 8.7 s
+OK    All-config sweep: 60 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2404-08-08 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 60 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 60 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 61 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 61 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\2404\2404_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/20/2026 8:09:32 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\2404\2404_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\2404\2404_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 11:45:47 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\2404\2404_MASTER.SLDPRT

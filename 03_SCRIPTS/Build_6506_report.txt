@@ -1,4 +1,4 @@
-Build_6506_MASTER  10/20/2026 9:07:01 PM
+Build_6506_MASTER  10/21/2026 12:31:27 AM
 OK    dim L17 = 1.9100 in (expect 1.9100)
 OK    dim BODYR = 0.6524 in (expect 0.6524)
 OK    dim SWB_BODYS = 0.8850 in (expect 0.8850)
@@ -141,8 +141,8 @@ OK    End B face present at x=1.9100
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Across flats / corners 1.1300 / 1.3048 (body hex 1.1300, nut hex 0.8800: expect between 1.1300 and 1.3048)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_6506_SW2.xlsx
-OK    Configurations after table: 15 (expect 15)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6506_SW2.xlsx
+OK    Configurations after table: 18 (expect 18)
       config check 1: 6506-02-04
 OK    6506-02-04 L17@DRIVE = 1.1900 (table 1.1900)
 OK    6506-02-04 BODYR@DRIVE = 0.3233 (table 0.3233)
@@ -173,26 +173,29 @@ OK    6506-24-24 PROF_R@THDPROF_B = 0.8924 (table 0.8924)
 OK    6506-24-24 DEPTH@BORECUT_A = 2.2500 (table 2.2500)
 OK    6506-24-24 one solid body (found 1)
       6506-24-24 box x -0.054..3.006  y -1.190..1.190
-      All-config sweep: rebuilding 14 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/14  6506-02-04  rebuilt in 1.1 s
-      sweep 2/14  6506-04-04  rebuilt in 1.6 s
-      sweep 3/14  6506-04-06  rebuilt in 1.9 s
-      sweep 4/14  6506-06-06  rebuilt in 1.7 s
-      sweep 5/14  6506-06-08  rebuilt in 2.0 s
-      sweep 6/14  6506-08-06  rebuilt in 1.9 s
-      sweep 7/14  6506-08-08  rebuilt in 1.1 s
-      sweep 8/14  6506-08-10  rebuilt in 1.9 s
-      sweep 9/14  6506-12-10  rebuilt in 2.0 s
-      sweep 10/14  6506-12-12  rebuilt in 1.9 s
-      sweep 11/14  6506-12-16  rebuilt in 2.1 s
-      sweep 12/14  6506-16-16  rebuilt in 2.3 s
-      sweep 13/14  6506-20-20  rebuilt in 2.4 s
-      sweep 14/14  6506-24-24  rebuilt in 1.5 s
-OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 17 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/17  6506-02-04  rebuilt in 1.5 s
+      sweep 2/17  6506-04-04  rebuilt in 1.9 s
+      sweep 3/17  6506-04-06  rebuilt in 2.4 s
+      sweep 4/17  6506-06-04  rebuilt in 2.6 s
+      sweep 5/17  6506-06-06  rebuilt in 2.4 s
+      sweep 6/17  6506-06-08  rebuilt in 2.3 s
+      sweep 7/17  6506-06-10  rebuilt in 2.1 s
+      sweep 8/17  6506-08-06  rebuilt in 2.3 s
+      sweep 9/17  6506-08-08  rebuilt in 1.6 s
+      sweep 10/17  6506-08-10  rebuilt in 2.3 s
+      sweep 11/17  6506-12-08  rebuilt in 2.1 s
+      sweep 12/17  6506-12-10  rebuilt in 2.6 s
+      sweep 13/17  6506-12-12  rebuilt in 2.5 s
+      sweep 14/17  6506-12-16  rebuilt in 2.5 s
+      sweep 15/17  6506-16-16  rebuilt in 2.3 s
+      sweep 16/17  6506-20-20  rebuilt in 2.6 s
+      sweep 17/17  6506-24-24  rebuilt in 1.5 s
+OK    All-config sweep: 17 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6506-08-08 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6506\6506_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/20/2026 9:08:02 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6506\6506_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6506\6506_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/21/2026 12:32:46 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6506\6506_MASTER.SLDPRT

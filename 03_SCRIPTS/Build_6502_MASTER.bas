@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6502_MASTER"
 ' ============================================================================
-'  Build_6502_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
+'  Build_6502_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_tee.py
 '  45 deg Male JIC x Female Swivel Elbow (45-deg elbow), forged hex body (Brennan 2504 / 2500HX pattern).  Reference config 6502-08-08-FG: JICSW -08, JICM -08
 '  Entry: Sub Build6502.  Leg 1 along +X, leg 2 along the 135-deg direction (45-deg elbow); hex arms HEX1 / HEX2 (on plane PLN2) + 30deg corner PUCK about Z + swivel neck turn NECKTRIM1 / NECKFILL1.
 '  Builds from DesignTable_6502_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -291,7 +291,7 @@ Sub Build6502()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 13)", (UBound(cfgs) + 1) = 13
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 14)", (UBound(cfgs) + 1) = 14
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

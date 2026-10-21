@@ -1,4 +1,4 @@
-Build_5501_MASTER  10/19/2026 9:57:08 PM
+Build_5501_MASTER  10/20/2026 11:55:31 PM
 OK    dim M1 = 1.1700 in (expect 1.1700)
 OK    dim BODYR = 0.4375 in (expect 0.4375)
 OK    dim NPTF1_MAJR = 0.4078 in (expect 0.4078)
@@ -130,8 +130,8 @@ OK    leg 1 tip (exact) 1.1700 along +X (expect 1.1700)
 OK    leg 2 tip (exact) 1.1700 along the 135-deg leg (expect 1.1700)
 OK    Z extent (exact) -0.4375 .. 0.4375 (expect -0.4375 .. 0.4375: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_5501_SW2.xlsx
-OK    Configurations after table: 8 (expect 8)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\tee\DesignTable_5501_SW2.xlsx
+OK    Configurations after table: 10 (expect 10)
       config check 1: 5501-02-02-FG
 OK    5501-02-02-FG M1@LEG1 = 0.6400 (table 0.6400)
 OK    5501-02-02-FG BODYR@LEG1 = 0.2190 (table 0.2190)
@@ -151,25 +151,25 @@ OK    5501-02-02-FG PUCK_R1B@PUCK = 0.1259 (table 0.1259)
 OK    5501-02-02-FG PUCK_XC@PUCK = 0.2524 (table 0.2524)
 OK    5501-02-02-FG one solid body (found 1)
       5501-02-02-FG box x -0.604..0.640  y -0.253..0.606
-      config check 2: 5501-20-20-FG
-OK    5501-20-20-FG M1@LEG1 = 1.6700 (table 1.6700)
-OK    5501-20-20-FG BODYR@LEG1 = 0.8125 (table 0.8125)
-OK    5501-20-20-FG NPTF1_MAJR@LEG1 = 0.8134 (table 0.8134)
-OK    5501-20-20-FG NPTF1_THDL@LEG1 = 0.7068 (table 0.7068)
-OK    5501-20-20-FG NPTF1_TAPER@LEG1 = 1.7899 (table 1.7899)
-OK    5501-20-20-FG NPTF1_RELL@LEG1 = 0.2632 (table 0.2632)
-OK    5501-20-20-FG DEPTH@BORECUT1 = 1.6700 (table 1.6700)
-OK    5501-20-20-FG DEPTH@BORECUT2 = 1.6700 (table 1.6700)
-OK    5501-20-20-FG PROF_R@THDPROF_1 = 0.8134 (table 0.8134)
-OK    5501-20-20-FG PROF_R@THDPROF_2 = 0.8134 (table 0.8134)
-OK    5501-20-20-FG HEXAF@HEX1 = 1.6250 (table 1.6250)
-OK    5501-20-20-FG HEXL@HEX1_BODY = 0.7000 (table 0.7000)
-OK    5501-20-20-FG HEXAF@HEX2 = 1.6250 (table 1.6250)
-OK    5501-20-20-FG HEXL@HEX2_BODY = 0.7000 (table 0.7000)
-OK    5501-20-20-FG PUCK_R1B@PUCK = 0.4686 (table 0.4686)
-OK    5501-20-20-FG PUCK_XC@PUCK = 0.9377 (table 0.9377)
-OK    5501-20-20-FG one solid body (found 1)
-      5501-20-20-FG box x -1.785..1.670  y -0.938..1.807
+      config check 2: 5501-32-32-FG
+OK    5501-32-32-FG M1@LEG1 = 2.1100 (table 2.1100)
+OK    5501-32-32-FG BODYR@LEG1 = 1.2500 (table 1.2500)
+OK    5501-32-32-FG NPTF1_MAJR@LEG1 = 1.1693 (table 1.1693)
+OK    5501-32-32-FG NPTF1_THDL@LEG1 = 0.7565 (table 0.7565)
+OK    5501-32-32-FG NPTF1_TAPER@LEG1 = 1.7899 (table 1.7899)
+OK    5501-32-32-FG NPTF1_RELL@LEG1 = 0.2735 (table 0.2735)
+OK    5501-32-32-FG DEPTH@BORECUT1 = 2.1100 (table 2.1100)
+OK    5501-32-32-FG DEPTH@BORECUT2 = 2.1100 (table 2.1100)
+OK    5501-32-32-FG PROF_R@THDPROF_1 = 1.1693 (table 1.1693)
+OK    5501-32-32-FG PROF_R@THDPROF_2 = 1.1693 (table 1.1693)
+OK    5501-32-32-FG HEXAF@HEX1 = 2.5000 (table 2.5000)
+OK    5501-32-32-FG HEXL@HEX1_BODY = 1.0800 (table 1.0800)
+OK    5501-32-32-FG HEXAF@HEX2 = 2.5000 (table 2.5000)
+OK    5501-32-32-FG HEXL@HEX2_BODY = 1.0800 (table 1.0800)
+OK    5501-32-32-FG PUCK_R1B@PUCK = 0.7212 (table 0.7212)
+OK    5501-32-32-FG PUCK_XC@PUCK = 1.4429 (table 1.4429)
+OK    5501-32-32-FG one solid body (found 1)
+      5501-32-32-FG box x -2.366..2.110  y -1.443..2.380
 OK    5501-08-08-FG: THD_End2 live and rebuilt (error code 0)
 OK    5501-08-08-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.1700 along the leg, table 1.1700; r 0.4078, table 0.4078)
 OK    5501-02-02-FG: THD_End2 live and rebuilt (error code 0)
@@ -184,18 +184,24 @@ OK    5501-16-16-FG: THD_End2 live and rebuilt (error code 0)
 OK    5501-16-16-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.4800 along the leg, table 1.4800; r 0.6416, table 0.6416)
 OK    5501-20-20-FG: THD_End2 live and rebuilt (error code 0)
 OK    5501-20-20-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.6700 along the leg, table 1.6700; r 0.8134, table 0.8134)
-      All-config sweep: rebuilding 7 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/7  5501-02-02-FG  rebuilt in 2.2 s
-      sweep 2/7  5501-04-04-FG  rebuilt in 1.4 s
-      sweep 3/7  5501-06-06-FG  rebuilt in 1.3 s
-      sweep 4/7  5501-08-08-FG  rebuilt in 3.9 s
-      sweep 5/7  5501-12-12-FG  rebuilt in 6.1 s
-      sweep 6/7  5501-16-16-FG  rebuilt in 6.5 s
-      sweep 7/7  5501-20-20-FG  rebuilt in 4.8 s
-OK    All-config sweep: 7 configurations rebuilt, 0 feature/body failures
+OK    5501-24-24-FG: THD_End2 live and rebuilt (error code 0)
+OK    5501-24-24-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.7700 along the leg, table 1.7700; r 0.9328, table 0.9328)
+OK    5501-32-32-FG: THD_End2 live and rebuilt (error code 0)
+OK    5501-32-32-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 2.1100 along the leg, table 2.1100; r 1.1693, table 1.1693)
+      All-config sweep: rebuilding 9 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/9  5501-02-02-FG  rebuilt in 3.5 s
+      sweep 2/9  5501-04-04-FG  rebuilt in 2.0 s
+      sweep 3/9  5501-06-06-FG  rebuilt in 1.9 s
+      sweep 4/9  5501-08-08-FG  rebuilt in 3.9 s
+      sweep 5/9  5501-12-12-FG  rebuilt in 6.6 s
+      sweep 6/9  5501-16-16-FG  rebuilt in 7.2 s
+      sweep 7/9  5501-20-20-FG  rebuilt in 5.2 s
+      sweep 8/9  5501-24-24-FG  rebuilt in 6.1 s
+      sweep 9/9  5501-32-32-FG  rebuilt in 6.6 s
+OK    All-config sweep: 9 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 5501-08-08-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 10 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 10 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5501\5501_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\5501\5501_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\5501\5501_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\5501\5501_MASTER.SLDPRT

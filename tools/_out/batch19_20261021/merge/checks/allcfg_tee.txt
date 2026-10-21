@@ -1,0 +1,22 @@
+1501    21 configs  leg outline problems: 0 []
+1502    10 configs  leg outline problems: 0 []
+1504     6 configs  leg outline problems: 0 [] (neck turns checked: 6)
+2500    15 configs  leg outline problems: 0 []
+2501    57 configs  leg outline problems: 0 []
+2505     3 configs  leg outline problems: 0 []
+2603    12 configs  leg outline problems: 0 []
+2613     1 configs  leg outline problems: 0 []
+5501     9 configs  leg outline problems: 0 []
+5505     3 configs  leg outline problems: 0 []
+5601     7 configs  leg outline problems: 0 []
+5603     7 configs  leg outline problems: 0 []
+5652     7 configs  leg outline problems: 0 []
+6502    13 configs  leg outline problems: 0 [] (neck turns checked: 13)
+6503     3 configs  leg outline problems: 0 []
+6603     1 configs  leg outline problems: 0 []
+6606     5 configs  leg outline problems: 0 []
+6802    21 configs  leg outline problems: 0 [] (corner neck trim loops checked: 21)
+6807     3 configs  leg outline problems: 0 []
+FS2500N1   2 configs  leg outline problems: 0 []
+
+--- stderr ---

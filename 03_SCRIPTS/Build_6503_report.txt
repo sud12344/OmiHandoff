@@ -1,4 +1,4 @@
-Build_6503_MASTER  10/20/2026 9:00:26 PM
+Build_6503_MASTER  10/20/2026 11:28:42 PM
 OK    dim M1 = 1.2300 in (expect 1.2300)
 OK    dim BODYR = 0.5300 in (expect 0.5300)
 OK    LEG1 sketch fully defined
@@ -169,34 +169,56 @@ OK    Y extent -0.612 .. 1.520 (expect -0.612 .. 1.520)
       Bounding box z -0.530 .. 0.530 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.5300 .. 0.5300 (expect -0.5300 .. 0.5300: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\tee\DesignTable_6503_SW2.xlsx
-OK    Configurations after table: 2 (expect 2)
-      config check 1: 6503-08-08-FG
-OK    6503-08-08-FG M1@LEG1 = 1.2300 (table 1.2300)
-OK    6503-08-08-FG BODYR@LEG1 = 0.5300 (table 0.5300)
-OK    6503-08-08-FG M2@LEG2 = 1.5200 (table 1.5200)
-OK    6503-08-08-FG BODYR@LEG2 = 0.5300 (table 0.5300)
-OK    6503-08-08-FG SW2_BODYS@LEG2 = 0.8850 (table 0.8850)
-OK    6503-08-08-FG SW2_NECKR@LEG2 = 0.2920 (table 0.2920)
-OK    6503-08-08-FG DEPTH@POCKETCUT1 = 0.9000 (table 0.9000)
-OK    6503-08-08-FG DEPTH@BORECUT1 = 1.2300 (table 1.2300)
-OK    6503-08-08-FG DEPTH@BORECUT2 = 1.5200 (table 1.5200)
-OK    6503-08-08-FG PROF_R@THDPROF_1 = 0.3500 (table 0.3500)
-OK    6503-08-08-FG PROF_R@THDPROF_2 = 0.3412 (table 0.3412)
-OK    6503-08-08-FG HEXAF@HEX1 = 1.0600 (table 1.0600)
-OK    6503-08-08-FG HEXL@HEX1_BODY = 0.9700 (table 0.9700)
-OK    6503-08-08-FG HEXAF@HEX2 = 1.0600 (table 1.0600)
-OK    6503-08-08-FG HEXL@HEX2_BODY = 0.6350 (table 0.6350)
-OK    6503-08-08-FG PUCK_R1B@PUCK = 0.3055 (table 0.3055)
-OK    6503-08-08-FG PUCK_XC@PUCK = 0.6115 (table 0.6115)
-OK    6503-08-08-FG one solid body (found 1)
-      6503-08-08-FG box x -0.612..1.230  y -0.612..1.520
-      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/1  6503-08-08-FG  rebuilt in 0.2 s
-OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6503_SW2.xlsx
+OK    Configurations after table: 4 (expect 4)
+      config check 1: 6503-04-04-FG
+OK    6503-04-04-FG M1@LEG1 = 0.8800 (table 0.8800)
+OK    6503-04-04-FG BODYR@LEG1 = 0.3750 (table 0.3750)
+OK    6503-04-04-FG M2@LEG2 = 1.1800 (table 1.1800)
+OK    6503-04-04-FG BODYR@LEG2 = 0.3750 (table 0.3750)
+OK    6503-04-04-FG SW2_BODYS@LEG2 = 0.6850 (table 0.6850)
+OK    6503-04-04-FG SW2_NECKR@LEG2 = 0.1465 (table 0.1465)
+OK    6503-04-04-FG DEPTH@POCKETCUT1 = 0.6700 (table 0.6700)
+OK    6503-04-04-FG DEPTH@BORECUT1 = 0.8800 (table 0.8800)
+OK    6503-04-04-FG DEPTH@BORECUT2 = 1.1800 (table 1.1800)
+OK    6503-04-04-FG PROF_R@THDPROF_1 = 0.2150 (table 0.2150)
+OK    6503-04-04-FG PROF_R@THDPROF_2 = 0.1917 (table 0.1917)
+OK    6503-04-04-FG HEXAF@HEX1 = 0.7500 (table 0.7500)
+OK    6503-04-04-FG HEXL@HEX1_BODY = 0.6200 (table 0.6200)
+OK    6503-04-04-FG HEXAF@HEX2 = 0.7500 (table 0.7500)
+OK    6503-04-04-FG HEXL@HEX2_BODY = 0.4950 (table 0.4950)
+OK    6503-04-04-FG PUCK_R1B@PUCK = 0.2160 (table 0.2160)
+OK    6503-04-04-FG PUCK_XC@PUCK = 0.4325 (table 0.4325)
+OK    6503-04-04-FG one solid body (found 1)
+      6503-04-04-FG box x -0.433..0.880  y -0.433..1.180
+      config check 2: 6503-12-12-FG
+OK    6503-12-12-FG M1@LEG1 = 1.3600 (table 1.3600)
+OK    6503-12-12-FG BODYR@LEG1 = 0.6560 (table 0.6560)
+OK    6503-12-12-FG M2@LEG2 = 1.8600 (table 1.8600)
+OK    6503-12-12-FG BODYR@LEG2 = 0.6560 (table 0.6560)
+OK    6503-12-12-FG SW2_BODYS@LEG2 = 1.0890 (table 1.0890)
+OK    6503-12-12-FG SW2_NECKR@LEG2 = 0.4170 (table 0.4170)
+OK    6503-12-12-FG DEPTH@POCKETCUT1 = 0.9100 (table 0.9100)
+OK    6503-12-12-FG DEPTH@BORECUT1 = 1.3600 (table 1.3600)
+OK    6503-12-12-FG DEPTH@BORECUT2 = 1.8600 (table 1.8600)
+OK    6503-12-12-FG PROF_R@THDPROF_1 = 0.4550 (table 0.4550)
+OK    6503-12-12-FG PROF_R@THDPROF_2 = 0.4861 (table 0.4861)
+OK    6503-12-12-FG HEXAF@HEX1 = 1.3120 (table 1.3120)
+OK    6503-12-12-FG HEXL@HEX1_BODY = 1.1000 (table 1.1000)
+OK    6503-12-12-FG HEXAF@HEX2 = 1.3120 (table 1.3120)
+OK    6503-12-12-FG HEXL@HEX2_BODY = 0.7710 (table 0.7710)
+OK    6503-12-12-FG PUCK_R1B@PUCK = 0.3782 (table 0.3782)
+OK    6503-12-12-FG PUCK_XC@PUCK = 0.7570 (table 0.7570)
+OK    6503-12-12-FG one solid body (found 1)
+      6503-12-12-FG box x -0.757..1.360  y -0.757..1.860
+      All-config sweep: rebuilding 3 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/3  6503-04-04-FG  rebuilt in 1.4 s
+      sweep 2/3  6503-08-08-FG  rebuilt in 0.7 s
+      sweep 3/3  6503-12-12-FG  rebuilt in 0.7 s
+OK    All-config sweep: 3 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6503-08-08-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6503\6503_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6503\6503_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6503\6503_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6503\6503_MASTER.SLDPRT

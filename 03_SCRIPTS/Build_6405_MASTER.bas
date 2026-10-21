@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6405_MASTER"
 ' ============================================================================
-'  Build_6405_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
+'  Build_6405_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_straight2.py
 '  Straight Thread (ORB) x Female Pipe Adapter - master from reference configuration 6405-08-08-O (DesignTable_6405_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = NPTFF.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6405.  Report: 03_SCRIPTS\Build_6405_report.txt
@@ -224,7 +224,7 @@ Sub Build6405()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 45)", (UBound(cfgs) + 1) >= 44
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 46)", (UBound(cfgs) + 1) >= 45
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

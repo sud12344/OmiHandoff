@@ -8,6 +8,10 @@ spec-sheet work).
 
 **Current state, open work, user decisions: `00_DOCS/PROJECT_STATUS.md` - read it before starting
 anything, update it when a batch ships or the user decides something.**
+**2026-10-21: BATCH 19 SHIPPED** (`03_SCRIPTS/RUN_ME_batch19.txt`, QA #179-#181, `tools/_out/batch19_20261021/merge/`): the no-input
+parts (answered rows, own-STEP rows, Brennan cells, new masters 0319 2500 2603 2613 3474 6603 FS2500N1; 2500HX / 2603HX retired) -> 1,610
+configurations in a master, 156 masters; 1,607 of 2,535 OMi parts. Live `tools/` = `merge/tools_b19`. 2502 parked (QA #180). Rows needing the
+user: QA #181 / PROJECT_STATUS s1.
 **2026-10-20 (night): BATCH 18 SHIPPED** (`03_SCRIPTS/RUN_ME_batch18.txt`, QA #176-#178, `tools/_out/batch18_20261020/` README.md): Air-Way
 first (incl. the 40 Triveni cells as Air-Way) + 50 ORFS masters + O-ring master 4000 + A14 + held roots 1700RC 1800 1703 4503 4603 fixed ->
 1,534 configurations in a master, 151 masters; 1,531 of 2,535 OMi parts. Live `tools/` = `batch18_20261020/tools_b18`. Still held: 5404N

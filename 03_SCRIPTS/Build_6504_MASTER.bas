@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6504_MASTER"
 ' ============================================================================
-'  Build_6504_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
+'  Build_6504_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_straight2.py
 '  Male JIC x Female JIC Swivel Union - master from reference configuration 6504-08-08 (DesignTable_6504_SW2.xlsx row 2)
 '  Ends: A = JICM  B = JICSW.  Body revolved at BODYR (body hex) / the nut radius (swivel nut hex), each hex cut over its own zone; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6504.  Report: 03_SCRIPTS\Build_6504_report.txt
@@ -214,13 +214,13 @@ Sub Build6504()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 15)", (UBound(cfgs) + 1) >= 14
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 21)", (UBound(cfgs) + 1) >= 20
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("6504-04-04", "6504-24-24")
+    cx_c = Array("6504-04-04", "6504-32-32")
     cx_p = Array("L13@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "THDMAJR_A@DRIVE", "JICA_RELIEFL@DRIVE", "JICA_THDZ@DRIVE", "JICA_CONER@DRIVE", "JICA_LANDL@DRIVE", "THDPITCH@THD_EndA", "Profile_Height@THD_EndA_PROF", "THDPITCH@THD_EndA_PROF", "PROF_R@THDPROF_B", "DEPTH@BORECUT_A", "DEPTH@BORECUT_B")
-    cx_w = Array(Array(1.42000, 0.28868, 0.50000, 0.21875, 0.07500, 0.26080, 0.18200, 0.07950, 0.05000, 0.02706, 0.05000, 0.19169, 0.64250, 0.43750), Array(3.09000, 1.15470, 2.00000, 0.93750, 0.12500, 0.54540, 0.87750, 0.12980, 0.08333, 0.04511, 0.08333, 0.89239, 1.38150, 0.97850))
+    cx_w = Array(Array(1.42000, 0.28868, 0.50000, 0.21875, 0.07500, 0.26080, 0.18200, 0.07950, 0.05000, 0.02706, 0.05000, 0.19169, 0.64250, 0.43750), Array(3.80000, 1.51554, 2.62500, 1.25000, 0.12500, 0.71240, 1.19000, 0.12920, 0.08333, 0.04511, 0.08333, 1.20489, 1.73150, 1.11850))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
