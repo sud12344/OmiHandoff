@@ -497,6 +497,17 @@ for _r in [r_ for r_ in list(SPEC) if r_.startswith('FS') and SPEC[r_].get('fs')
                 _sfx = ('N' if _n else '') + ('R' if _rs else '') + ('C' if _cb else '')
                 SPEC[_r + _sfx] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - ' + ', '.join(FS_CODE_WHY[x] for x in _sfx), table=_r, nostep=_n,
                                        nwo_raised=_rs, fssw_cb=_cb, ref=None)
+# 2026-10-21 (group B): FS6801-L folded into FS6801 (Q-FS-MASTER: long variants fold in as rows). BRENNAN_FS6801-L-08-08-NWO-FG vs the
+# FS6801-08-08 pilot (tools/measure/prof.py): face-seal leg 1.118 on both; stud tip 2.950 / 1.600, washer face 2.410 / 1.060 (tip -> washer
+# 0.540 on both), lock nut 0.41, neck 0.039 flush with the flats - only the forged hex arm of the stud leg is longer -> same sketch.
+# Every FS6801 master variant (fs_code) gets the fold, so a long row lands in the master of its own leg-shape code.
+for _k in [k_ for k_ in SPEC if k_ == 'FS6801' or SPEC[k_].get('table') == 'FS6801']:
+    SPEC[_k]['fold'] = list(SPEC[_k].get('fold', [])) + [
+        ('FS6801-L', {'L50@DRIVE': 'L10@DRIVE', 'L51@DRIVE': 'L11@DRIVE'},
+         dict(why='FS6801-L row folded into the FS6801 master: Brennan FS6801-L-08-08-NWO-FG STEP shows the stud leg\'s forged hex arm simply running '
+                  'longer (tip -> washer face 0.540 and the face-seal leg 1.118 as on FS6801-08-08; Q-FS-MASTER, user 2026-10-18)',
+              assume='FS6801-L fold: the forged hex arm of the adjustable-stud leg runs on to the longer stud leg L50 (washer face L51); stud, lock '
+                     'nut and face-seal leg as FS6801 (Brennan FS6801-L-08-08-NWO-FG STEP vs FS6801-08-08-NWO-FG; measured at -08-08 only)'))]
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.

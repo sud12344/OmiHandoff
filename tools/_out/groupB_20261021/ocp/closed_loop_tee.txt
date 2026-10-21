@@ -1,9 +1,6 @@
-FS6809-08-08-NWO-FG: 23 checks, 0 off; solids 1, volume 1.3489 in^3
-FS6809-06-06-NWO-FG: 23 checks, 0 off; solids 1, volume 0.9189 in^3; Brennan pilot 0.93841 in^3 (-2.08 %)
 FS6801-04-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.0074 in^3
 FS6801-06-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.05231 in^3
 FS6801-08-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.08712 in^3; Brennan pilot 1.10255 in^3 (-1.4 %)
-FS6801-08-06-NWO-FG: 22 checks, 0 off; solids 1, volume 0.87663 in^3
-FS6801-10-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.98279 in^3
+FS6801-L-08-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.58303 in^3; Brennan pilot 1.6087 in^3 (-1.6 %)
 
-FS tee / elbow closed loop PASS: 7 configurations, 156 checks, 0 off (tolerance 0.0015)
+FS tee / elbow closed loop PASS: 4 configurations, 88 checks, 0 off (tolerance 0.0015)
