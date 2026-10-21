@@ -3,8 +3,7 @@ in the committed staging), list which of the three dimension sources print it. R
 
 Sources checked (all from the repo; nothing fetched from the web):
 - AIR-WAY: the raw extracts 07_RAW_EXTRACTS/<root>.csv (first column), the 2026-10-14 Air-Way parses (tools/_out/airway_20261014,
-  O-rings / bent tubes), and the Air-Way columns of the ORFS review tables (tools/_out/orfs_airway_20261015/review_tables, rows whose
-  AxialSource names Air-Way).
+  O-rings / bent tubes), and the OMi -> Air-Way FF... row map of the ORFS parts (tools/_out/orfs_airway_20261015/compare_orfs.csv).
 - BRENNAN catalog: every printed row of the four Brennan PDF catalogs (tools/_out/brennan_catalog_20261001/catalog_verified.json).
 - BRENNAN STEP: 09_STEP_FILES/BRENNAN_<pn>.stp already in the repo.
 - OMi file: 07_RAW_EXTRACTS/omi_dimensions/WebsitePartsInfo2026.xlsx, rows with at least one dimension cell filled
@@ -114,9 +113,11 @@ for f, d in review_rows(sorted(glob.glob(J('04_DESIGN_TABLES', 'DesignTable_*.xl
         # prefer a BUILD row over a DROP donor row for the same OMi part
         if k not in rev or (rev[k]['scope'] != 'BUILD' and info['scope'] == 'BUILD'):
             rev[k] = info
-    if f in orfs_rev and 'AIR-WAY' in (info['axial'] + info['comment']).upper():
-        for k in keys:
-            aw.add(k, 'ORFS review table ' + os.path.basename(f))
+
+# ORFS: the 2026-10-15 OMi -> Air-Way comparison names the Air-Way row (FF...) of every OMi FS part that has one
+for r in csv.DictReader(open(J('tools', '_out', 'orfs_airway_20261015', 'compare_orfs.csv'), encoding='utf-8-sig')):
+    if r['Air-Way row'].strip():
+        aw.add(r['OMi part'], 'Air-Way ' + r['Air-Way row'].strip() + ' (orfs_airway_20261015/compare_orfs.csv)')
 
 # --- Brennan catalog + STEPs
 br = Src('BRENNAN catalog')

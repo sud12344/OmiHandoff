@@ -1,13 +1,13 @@
 {
  "not_ready": 1022,
  "by_class": {
-  "HAS SOURCE": 619,
+  "HAS SOURCE": 605,
   "HAS SOURCE (alias)": 17,
-  "NO SOURCE": 321,
+  "NO SOURCE": 335,
   "NEAR MATCH ONLY": 4,
   "BENT TUBE": 61
  },
- "airway_exact": 266,
+ "airway_exact": 210,
  "brennan_catalog_exact": 557,
  "brennan_step_in_repo": 31,
  "omi_file_dims_exact": 81

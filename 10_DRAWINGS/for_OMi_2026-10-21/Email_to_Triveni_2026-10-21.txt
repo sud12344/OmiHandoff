@@ -1,0 +1,31 @@
+DRAFT - not sent.
+
+To: Triveni (OM Industrial)
+Subject: Parts we have no dimensions for (290 part numbers)
+
+Hi Triveni,
+
+We have now checked every part number on your website that is not modelled yet against Air-Way's catalog, Brennan's catalogs and 3D
+files, and your website parts file. 290 of them appear in none of these with dimensions, so we cannot model them without your help.
+The attached PDF lists them; the attached workbook has a yellow cell for each value we need, using your parts file's column names.
+
+In short:
+1. Compression (bite-type) fittings, nuts and sleeves - 230 part numbers in 11 series. One supplier drawing per series with its size
+   table would cover them. Which standard does the bite-type port follow? And is each "(Body)" -M1 part the same body without the nut
+   and sleeve?
+2. Test-gauge tees TGT-6504 / TGT-FS2406 - 12 parts, two series.
+3. 34 single sizes that no catalog prints (the rest of each series is modelled), e.g. 1405-20-24, 2403-06-02, the
+   2700 bulkhead reducers and the 6500 / 6502 forged reducers. For the four 2700-LN parts: are they the same as the plain 2700 part?
+4. 4005 flange O-rings (9): code 61 or 62, AS568 size (or I.D. x cross-section), material and hardness.
+5. Flareless nut 0618 and sleeve 0619 (4): are they the same parts as Brennan's V0318 / V0319?
+6. FS0319-24 sleeve: Air-Way prints 1.71, Brennan 1.910, Air-Way's own -24 female face-seal end 2.00 - which is right?
+
+Drawings are the easiest for you and for us; if you send drawings, the cells do not need filling in. Also, we are treating the kits
+1901 / 1902 / 1927 as out of scope - please tell us if you need them modelled.
+
+Best regards,
+Sudhanva
+
+Attachments:
+- OMi_parts_without_dimensions_2026-10-21.pdf
+- OMi_parts_without_dimensions_2026-10-21.xlsx
