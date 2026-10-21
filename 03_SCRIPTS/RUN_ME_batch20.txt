@@ -1,0 +1,29 @@
+BATCH 20 - 5404N PIPE NIPPLES: THE -06 THREAD FIX + THE 4 LONG NIPPLES (2026-10-21)
+===================================================================================
+NOTHING TO RUN. Batch 20 is ALREADY BUILT: Claude built 5404N through the SolidWorks MCP (SolidWorks 2026 SP4) as a dry run into
+tools\_out\batch20_20261021\dryrun\5404N\ and copied it into 11_MASTERS after your "run the 5404N dry run and ship batch 20 if it passes".
+Macro in 03_SCRIPTS, SW2 + review table in 04_DESIGN_TABLES (sha256: tools\_out\batch20_20261021\checks\shipped_files_sha256.txt).
+
+1 MASTER
+   Build_5404N_MASTER.bas              4 ->   26  +22   the 18 held OMi-name nipples (-04 / -06 / -08) + 5404-N-06X4.500, -06X5.500,
+                                                         -08X2.500, -08X5.500
+   Configurations in a master: 1,610 -> 1,632. OMi's 2,535 parts: 1,629 in a master (was 1,607). The 4 old configurations are identical.
+
+WHAT WAS WRONG (QA #178, closed by QA #182)
+  On the -06 nipples the round bar (Air-Way C 0.69) is only 0.004 above the thread's crest at the end of the thread. The thread was cut
+  exactly to the thread length, so the end of the cut tooth sat on the shoulder edge and SolidWorks could not make the cut. Now the thread
+  stops 0.005 short of the shoulder on these rows (helix 0.4078 -> 0.4028; written into each row's AxialSource). Threads are cosmetic and
+  suppressed in the saved master.
+
+WHERE THE 4 NEW VALUES COME FROM: your A4 answer - length from the part number, bar diameter, bores and thread from the Air-Way nipple of the
+  same dash (-06: 5404-N-06-06-X1, -08: 5404-N-08-08-X3), exactly as their sibling rows. MISSING -> ASSUMED.
+
+CHECKED
+  - Every root regenerated with the new generator: only 5404N changes (tools\_out\batch20_20261021\regen_cmp.txt); dofcheck / allcfg / vbacheck clean.
+  - SolidWorks dry run: 26 configurations rebuilt with the threads LIVE, 0 feature failures, 1 body each; the 4 shipped configurations identical.
+    The report's one FAIL "Body diameter 0.8861 / 0.8931 (expect 0.8800)" is the self-check reading SolidWorks' loose part box around the live
+    thread at the reference size - the exact size is 0.88 x 0.88 (as accepted for 5406HHP / 5406SHP in batch 17).
+  - After shipping: the live tools + tables regenerate the shipped macro + SW2 exactly (checks\verify_b20.txt, 0 BAD).
+  - Old files: _to_delete\superseded_20261021b\batch20_replaced\ and tools\_out\batch20_20261021\old_files\.
+
+QA_Log #182 (01_MASTER_DATA). Coverage refreshed: A1 1,426 of the 1,831-part feed (was 1,405).

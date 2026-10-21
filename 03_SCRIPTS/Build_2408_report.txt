@@ -1,11 +1,8 @@
-Build_2408_MASTER  9/25/2026 2:58:30 AM
+Build_2408_MASTER  10/20/2026 11:16:56 PM
 OK    dim L3 = 0.9400 in (expect 0.9400)
 OK    dim BODYR = 0.4677 in (expect 0.4677)
 OK    dim THDMAJR_B = 0.3750 in (expect 0.3750)
 OK    dim JICB_RELIEFL = 0.0940 in (expect 0.0940)
-      RELIEFANG angle try 0 at (0.277, 0.568): 120.0 deg (want 60.0)
-      RELIEFANG angle try 1 at (0.277, -0.568): 120.0 deg (want 60.0)
-      RELIEFANG angle try 2 at (-0.277, 0.568): 120.0 deg (want 60.0)
 OK    angle RELIEFANG = 60.00 deg
 OK    dim JICB_THDZ = 0.2837 in (expect 0.2837)
 OK    dim JICB_CONER = 0.3295 in (expect 0.3295)
@@ -56,15 +53,15 @@ OK    THD_EndB thread feature created
       THD_EndB: thread centre x = 0.5558 in, anchor 0.4033, wanted +X
 OK    THD_EndB runs along the thread flat (away from the hex)
 OK    THD_EndB rebuilds without error (code 0)
-      THD_EndB: dim full name D8@THD_EndB@Part13.Part
-      THD_EndB: dim full name THDPITCH@THD_EndB@Part13.Part
-      THD_EndB: dim full name THDDIA@THD_EndB@Part13.Part
-      THD_EndB: dim full name DEPTH@THD_EndB@Part13.Part
-      THD_EndB: dim full name D1@THD_EndB@Part13.Part
-      THD_EndB: dim full name THDPITCH@Thread Profile1@Part13.Part
-      THD_EndB: dim full name Profile_Land@Thread Profile1@Part13.Part
-      THD_EndB: dim full name Profile_Angle@Thread Profile1@Part13.Part
-      THD_EndB: dim full name Profile_Height@Thread Profile1@Part13.Part
+      THD_EndB: dim full name D8@THD_EndB@Part42.Part
+      THD_EndB: dim full name THDPITCH@THD_EndB@Part42.Part
+      THD_EndB: dim full name THDDIA@THD_EndB@Part42.Part
+      THD_EndB: dim full name DEPTH@THD_EndB@Part42.Part
+      THD_EndB: dim full name D1@THD_EndB@Part42.Part
+      THD_EndB: dim full name THDPITCH@Thread Profile1@Part42.Part
+      THD_EndB: dim full name Profile_Land@Thread Profile1@Part42.Part
+      THD_EndB: dim full name Profile_Angle@Thread Profile1@Part42.Part
+      THD_EndB: dim full name Profile_Height@Thread Profile1@Part42.Part
 OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
       THD_EndB: profile sketch renamed to THD_EndB_PROF
 OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
@@ -76,8 +73,8 @@ OK    End B face present at x=0.9400
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Hex across flats 0.8100 / corners 0.9353 (expect 0.8100 / 0.9353)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_2408_SW2.xlsx
-OK    Configurations after table: 16 (expect 16)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2408_SW2.xlsx
+OK    Configurations after table: 17 (expect 17)
       config check 1: 2408-02-SOLID
 OK    2408-02-SOLID L3@DRIVE = 0.7000 (table 0.7000)
 OK    2408-02-SOLID BODYR@DRIVE = 0.2540 (table 0.2540)
@@ -106,26 +103,27 @@ OK    2408-32-H Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
 OK    2408-32-H THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
 OK    2408-32-H one solid body (found 1)
       2408-32-H box x -0.003..2.050  y -1.319..1.319
-      All-config sweep: rebuilding 15 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/15  2408-02-SOLID  rebuilt in 0.6 s
-      sweep 2/15  2408-03-SOLID  rebuilt in 0.7 s
-      sweep 3/15  2408-04-H  rebuilt in 1.0 s
-      sweep 4/15  2408-04-SOLID  rebuilt in 0.7 s
-      sweep 5/15  2408-05-H  rebuilt in 0.7 s
-      sweep 6/15  2408-06-H  rebuilt in 1.0 s
-      sweep 7/15  2408-06-SOLID  rebuilt in 0.8 s
-      sweep 8/15  2408-08-H  rebuilt in 0.6 s
-      sweep 9/15  2408-10-SOLID  rebuilt in 0.7 s
-      sweep 10/15  2408-12-SOLID  rebuilt in 0.9 s
-      sweep 11/15  2408-16-SOLID  rebuilt in 0.8 s
-      sweep 12/15  2408-20-H  rebuilt in 0.9 s
-      sweep 13/15  2408-20-SOLID  rebuilt in 1.0 s
-      sweep 14/15  2408-24-H  rebuilt in 0.9 s
-      sweep 15/15  2408-32-H  rebuilt in 1.0 s
-OK    All-config sweep: 15 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 16 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/16  2408-02-SOLID  rebuilt in 0.8 s
+      sweep 2/16  2408-03-SOLID  rebuilt in 0.9 s
+      sweep 3/16  2408-04-H  rebuilt in 1.2 s
+      sweep 4/16  2408-04-SOLID  rebuilt in 1.1 s
+      sweep 5/16  2408-05-H  rebuilt in 1.1 s
+      sweep 6/16  2408-06-H  rebuilt in 1.4 s
+      sweep 7/16  2408-06-SOLID  rebuilt in 1.8 s
+      sweep 8/16  2408-08-H  rebuilt in 1.0 s
+      sweep 9/16  2408-10-SOLID  rebuilt in 1.0 s
+      sweep 10/16  2408-12-SOLID  rebuilt in 1.2 s
+      sweep 11/16  2408-14-SOLID  rebuilt in 1.5 s
+      sweep 12/16  2408-16-SOLID  rebuilt in 1.5 s
+      sweep 13/16  2408-20-H  rebuilt in 1.6 s
+      sweep 14/16  2408-20-SOLID  rebuilt in 1.6 s
+      sweep 15/16  2408-24-H  rebuilt in 1.5 s
+      sweep 16/16  2408-32-H  rebuilt in 1.1 s
+OK    All-config sweep: 16 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 2408-08-H for the save (it opens in this size)
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 16 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 17 configs, 0 still live
 OK    Threads suppressed in all configurations before save (1 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\2408\2408_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 9/25/2026 2:59:05 AM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\2408\2408_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\2408\2408_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 11:17:42 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\2408\2408_MASTER.SLDPRT

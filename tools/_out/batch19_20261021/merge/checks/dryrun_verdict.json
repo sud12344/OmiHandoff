@@ -1,0 +1,219 @@
+{
+ "0319": {
+  "issues": [],
+  "n": 12,
+  "live": false,
+  "old_same": 0,
+  "old": 0
+ },
+ "1501": {
+  "issues": [],
+  "n": 21,
+  "live": true,
+  "old_same": 19,
+  "old": 19
+ },
+ "1502": {
+  "issues": [],
+  "n": 10,
+  "live": true,
+  "old_same": 8,
+  "old": 8
+ },
+ "1504": {
+  "issues": [],
+  "n": 6,
+  "live": true,
+  "old_same": 3,
+  "old": 3
+ },
+ "2404": {
+  "issues": [],
+  "n": 60,
+  "live": true,
+  "old_same": 59,
+  "old": 59
+ },
+ "2406": {
+  "issues": [],
+  "n": 52,
+  "live": true,
+  "old_same": 51,
+  "old": 51
+ },
+ "2408": {
+  "issues": [],
+  "n": 16,
+  "live": true,
+  "old_same": 15,
+  "old": 15
+ },
+ "2500": {
+  "issues": [],
+  "n": 15,
+  "live": true,
+  "old_same": 0,
+  "old": 27
+ },
+ "2501": {
+  "issues": [],
+  "n": 57,
+  "live": true,
+  "old_same": 56,
+  "old": 56
+ },
+ "2505": {
+  "issues": [],
+  "n": 3,
+  "live": true,
+  "old_same": 2,
+  "old": 2
+ },
+ "2603": {
+  "issues": [],
+  "n": 12,
+  "live": true,
+  "old_same": 11,
+  "old": 41
+ },
+ "2613": {
+  "issues": [],
+  "n": 1,
+  "live": false,
+  "old_same": 0,
+  "old": 0
+ },
+ "2705": {
+  "issues": [],
+  "n": 19,
+  "live": true,
+  "old_same": 18,
+  "old": 18
+ },
+ "2706": {
+  "issues": [],
+  "n": 29,
+  "live": true,
+  "old_same": 25,
+  "old": 25
+ },
+ "3474": {
+  "issues": [],
+  "n": 9,
+  "live": false,
+  "old_same": 0,
+  "old": 0
+ },
+ "5501": {
+  "issues": [],
+  "n": 9,
+  "live": true,
+  "old_same": 7,
+  "old": 7
+ },
+ "5505": {
+  "issues": [],
+  "n": 3,
+  "live": true,
+  "old_same": 2,
+  "old": 2
+ },
+ "5601": {
+  "issues": [],
+  "n": 7,
+  "live": true,
+  "old_same": 6,
+  "old": 6
+ },
+ "5603": {
+  "issues": [],
+  "n": 7,
+  "live": true,
+  "old_same": 6,
+  "old": 6
+ },
+ "5652": {
+  "issues": [],
+  "n": 7,
+  "live": true,
+  "old_same": 6,
+  "old": 6
+ },
+ "6405": {
+  "issues": [],
+  "n": 45,
+  "live": true,
+  "old_same": 44,
+  "old": 44
+ },
+ "6410": {
+  "issues": [],
+  "n": 40,
+  "live": true,
+  "old_same": 34,
+  "old": 34
+ },
+ "6502": {
+  "issues": [],
+  "n": 13,
+  "live": true,
+  "old_same": 12,
+  "old": 12
+ },
+ "6503": {
+  "issues": [],
+  "n": 3,
+  "live": true,
+  "old_same": 1,
+  "old": 1
+ },
+ "6504": {
+  "issues": [],
+  "n": 20,
+  "live": true,
+  "old_same": 14,
+  "old": 14
+ },
+ "6506": {
+  "issues": [],
+  "n": 17,
+  "live": true,
+  "old_same": 14,
+  "old": 14
+ },
+ "6603": {
+  "issues": [],
+  "n": 1,
+  "live": false,
+  "old_same": 0,
+  "old": 0
+ },
+ "6606": {
+  "issues": [],
+  "n": 5,
+  "live": true,
+  "old_same": 4,
+  "old": 4
+ },
+ "6802": {
+  "issues": [],
+  "n": 21,
+  "live": true,
+  "old_same": 20,
+  "old": 20
+ },
+ "6807": {
+  "issues": [],
+  "n": 3,
+  "live": true,
+  "old_same": 1,
+  "old": 1
+ },
+ "FS2500N1": {
+  "issues": [],
+  "n": 2,
+  "live": false,
+  "old_same": 0,
+  "old": 0
+ }
+}

@@ -1,0 +1,11 @@
+universe (OMi website, carbon steel)                               2535
+shipped now (configurations in a master), OMi parts                1531
+generated, waiting for the SolidWorks dry runs + ship                18
+  of which ORFS (FS...)                                               0
+  of which ORFS loose parts FS0306 / FS0318 / FS0319                  0
+  of which O-rings 4000 / 4001 / FS4000                               0
+    (FS4000 face-seal O-rings)                                        0
+= ready after SolidWorks                                           1549
+not yet (data, STEP, decision or OMi needed)                        986
+configurations not matching an OMi part number (not counted)         65
+examples not matching: ['2500-04-04', '2500-05-05', '2500-06-04', '2500-06-06', '2500-08-06', '2500-08-08', '2500-10-08', '2500-10-10', '2500-12-08', '2500-12-10', '2500-12-12', '2500-16-12', '2500-16-16', '2500-20-16', '2500-20-20']

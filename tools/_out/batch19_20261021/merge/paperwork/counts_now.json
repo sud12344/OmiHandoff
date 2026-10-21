@@ -1,0 +1,974 @@
+{
+ "state": "now",
+ "n_build": 2262,
+ "by_status": {
+  "ASSUMED": 1288,
+  "VERIFIED": 553,
+  "MISSING": 420,
+  "OTHER": 1
+ },
+ "tot": {
+  "11_MASTERS": 1610,
+  "waiting": 0,
+  "sw2_rows_11_MASTERS": 1629
+ },
+ "in_master": 1610,
+ "per_root": {
+  "0304": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "0306": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 11,
+   "build_rows": 11,
+   "non_build": []
+  },
+  "0318": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "0319": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "0403": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "1404": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 24,
+   "build_rows": 24,
+   "non_build": []
+  },
+  "1405": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 17,
+   "build_rows": 17,
+   "non_build": []
+  },
+  "1501": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 21,
+   "build_rows": 21,
+   "non_build": []
+  },
+  "1502": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 10,
+   "build_rows": 10,
+   "non_build": []
+  },
+  "1503": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 19,
+   "build_rows": 19,
+   "non_build": []
+  },
+  "1504": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 6,
+   "build_rows": 6,
+   "non_build": []
+  },
+  "1601": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "1602": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "1603": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 6,
+   "build_rows": 6,
+   "non_build": []
+  },
+  "1700RC": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "1700": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 10,
+   "build_rows": 10,
+   "non_build": []
+  },
+  "1703": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "1704": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "1724": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "1800": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "1804": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "1824": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "2403": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 40,
+   "build_rows": 40,
+   "non_build": []
+  },
+  "2404": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 60,
+   "build_rows": 60,
+   "non_build": []
+  },
+  "2405": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 30,
+   "build_rows": 30,
+   "non_build": []
+  },
+  "2406": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 52,
+   "build_rows": 52,
+   "non_build": []
+  },
+  "2408": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 16,
+   "build_rows": 16,
+   "non_build": []
+  },
+  "2500": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 15,
+   "build_rows": 15,
+   "non_build": []
+  },
+  "2501": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 57,
+   "build_rows": 57,
+   "non_build": []
+  },
+  "2502HX": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 29,
+   "build_rows": 10,
+   "non_build": [
+    "2502-08-08",
+    "2502-04-02",
+    "2502-04-04",
+    "2502-04-08",
+    "2502-06-02",
+    "2502-06-04",
+    "2502-06-06",
+    "2502-06-08",
+    "2502-08-04",
+    "2502-08-06",
+    "2502-08-12",
+    "2502-10-08",
+    "2502-12-08",
+    "2502-12-12",
+    "2502-12-16",
+    "2502-16-16",
+    "2502-16-20",
+    "2502-20-20",
+    "2502-24-24"
+   ]
+  },
+  "2503": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 29,
+   "build_rows": 29,
+   "non_build": []
+  },
+  "2504": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "2505": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "2601": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 10,
+   "build_rows": 10,
+   "non_build": []
+  },
+  "2602": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 6,
+   "build_rows": 6,
+   "non_build": []
+  },
+  "2603": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "2605": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "2606": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "2609": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "2611": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "2613": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "2650": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "2700": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 26,
+   "build_rows": 26,
+   "non_build": []
+  },
+  "2701": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 18,
+   "build_rows": 18,
+   "non_build": []
+  },
+  "2702": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 11,
+   "build_rows": 11,
+   "non_build": []
+  },
+  "2703": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "2704": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "2705": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 19,
+   "build_rows": 19,
+   "non_build": []
+  },
+  "2706": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 29,
+   "build_rows": 29,
+   "non_build": []
+  },
+  "3474": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 9,
+   "build_rows": 9,
+   "non_build": []
+  },
+  "4000": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 29,
+   "build_rows": 29,
+   "non_build": []
+  },
+  "4404": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 13,
+   "build_rows": 13,
+   "non_build": []
+  },
+  "4501": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 12,
+   "build_rows": 12,
+   "non_build": []
+  },
+  "4503": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "4601": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 15,
+   "build_rows": 15,
+   "non_build": []
+  },
+  "4603": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "4604": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 14,
+   "build_rows": 14,
+   "non_build": []
+  },
+  "5000": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 22,
+   "build_rows": 22,
+   "non_build": []
+  },
+  "5404N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "5404": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 31,
+   "build_rows": 31,
+   "non_build": []
+  },
+  "5405": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 31,
+   "build_rows": 31,
+   "non_build": []
+  },
+  "5406C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "5406HHP": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "5406P": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 9,
+   "build_rows": 9,
+   "non_build": []
+  },
+  "5406SHP": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "5406": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 31,
+   "build_rows": 31,
+   "non_build": []
+  },
+  "5500": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 16,
+   "build_rows": 16,
+   "non_build": []
+  },
+  "5501": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 9,
+   "build_rows": 9,
+   "non_build": []
+  },
+  "5502": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 20,
+   "build_rows": 20,
+   "non_build": []
+  },
+  "5503": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 6,
+   "build_rows": 6,
+   "non_build": []
+  },
+  "5504": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 9,
+   "build_rows": 9,
+   "non_build": []
+  },
+  "5505": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "5600": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 8,
+   "build_rows": 8,
+   "non_build": []
+  },
+  "5601": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "5602": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "5603": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "5604": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "5605": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "5652": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 7,
+   "build_rows": 7,
+   "non_build": []
+  },
+  "6400": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 66,
+   "build_rows": 66,
+   "non_build": []
+  },
+  "6401": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 24,
+   "build_rows": 24,
+   "non_build": []
+  },
+  "6402": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 16,
+   "build_rows": 16,
+   "non_build": []
+  },
+  "6404": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 14,
+   "build_rows": 14,
+   "non_build": []
+  },
+  "6405": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 45,
+   "build_rows": 45,
+   "non_build": []
+  },
+  "6408HHP": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "6408": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 14,
+   "build_rows": 14,
+   "non_build": []
+  },
+  "6410": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 40,
+   "build_rows": 40,
+   "non_build": []
+  },
+  "6500": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 26,
+   "build_rows": 26,
+   "non_build": []
+  },
+  "6501": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 14,
+   "build_rows": 14,
+   "non_build": []
+  },
+  "6502": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 13,
+   "build_rows": 13,
+   "non_build": []
+  },
+  "6503": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "6504": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 20,
+   "build_rows": 20,
+   "non_build": []
+  },
+  "6505": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 21,
+   "build_rows": 21,
+   "non_build": []
+  },
+  "6506": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 17,
+   "build_rows": 17,
+   "non_build": []
+  },
+  "6565": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 8,
+   "build_rows": 8,
+   "non_build": []
+  },
+  "6600": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 10,
+   "build_rows": 10,
+   "non_build": []
+  },
+  "6602": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 10,
+   "build_rows": 10,
+   "non_build": []
+  },
+  "6603": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "6606": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "6801": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 39,
+   "build_rows": 39,
+   "non_build": []
+  },
+  "6802": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 21,
+   "build_rows": 21,
+   "non_build": []
+  },
+  "6803": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 8,
+   "build_rows": 8,
+   "non_build": []
+  },
+  "6804": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 8,
+   "build_rows": 8,
+   "non_build": []
+  },
+  "6807": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "6902": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS0306": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 8,
+   "build_rows": 8,
+   "non_build": []
+  },
+  "FS0318": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 8,
+   "build_rows": 8,
+   "non_build": []
+  },
+  "FS0319C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS0319": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS2403": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2404": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "FS2500N1": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2500N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS2500": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "FS2501N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS2501": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 9,
+   "build_rows": 9,
+   "non_build": []
+  },
+  "FS2503N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "FS2503": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "FS2601N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2601": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS2603N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2603": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "FS2701": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2702": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2703": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS2704": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6400": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 5,
+   "build_rows": 5,
+   "non_build": []
+  },
+  "FS6403": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6500C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6500NC": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6500N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6500": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS6502": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6504C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 4,
+   "build_rows": 4,
+   "non_build": []
+  },
+  "FS6504": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS6505C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6505": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6540C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6540": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS6565C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6565": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS6600C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6600NC": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6600N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6600": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6602C": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6602NC": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6602N": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6602": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6801NR": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6801R": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6801": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 3,
+   "build_rows": 3,
+   "non_build": []
+  },
+  "FS6802NR": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6802": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 2,
+   "build_rows": 2,
+   "non_build": []
+  },
+  "FS6803": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  },
+  "FS6804": {
+   "kind": "11_MASTERS",
+   "sw2_rows": 1,
+   "build_rows": 1,
+   "non_build": []
+  }
+ }
+}

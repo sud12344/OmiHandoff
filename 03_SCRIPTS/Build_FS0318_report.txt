@@ -1,0 +1,105 @@
+Build_FS0318_MASTER  10/20/2026 5:57:17 PM
+OK    dim H = 0.8300 in (expect 0.8300)
+OK    dim BODYR = 0.5427 in (expect 0.5427)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.7680 in^3 (expect 0.7680)
+OK    dim HEXB = 0.9400 in (expect 0.9400)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (17.3% of volume)
+OK    select end face for POCKET_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET_A sketch opened (active sketch exists)
+OK    POCKET_A circle created
+OK    dim TAPDRILLA = 0.7448 in (expect 0.7448)
+OK    POCKET_A sketch closed and named (ProfileFeature)
+      POCKETCUT_A attempt 0: CreateDefinition returned Nothing
+      POCKETCUT_A attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT_A cut removes material (attempt 0)
+OK    POCKETCUT_A dims: DEPTH=0.6300 TAPDRILLA=0.7448 
+OK    select end face for BORE_B at x=0.8300
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.6520 in (expect 0.6520)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 0)
+OK    BORECUT_B dims: DEPTH=0.2000 DB=0.6520 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=0.8300)
+OK    bore open through the End A pocket bottom (x=0.6300)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 0.7448 in (expect 0.7448)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.3724)
+      THD_EndA: helix start = (0.0000, 0.0000, 0.3724)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.3724) axialIsX=True apex dir -1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.3724 (want 0.3724)
+OK    dim PROF_R = 0.3724 in (expect 0.3724)
+      APEXR: try 0 value 0.4062 (want 0.4062)
+OK    dim APEXR = 0.4062 in (expect 0.4062)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.01200 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 0.8526 (nominal 0.8300; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=0.8300
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 0.9400 / corners 1.0854 (expect 0.9400 / 1.0854)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_gen_20261020\out\DesignTable_FS0318_SW2.xlsx
+OK    Configurations after table: 9 (expect 9)
+      config check 1: FS0318-04
+OK    FS0318-04 H@DRIVE = 0.5800 (table 0.5800)
+OK    FS0318-04 BODYR@DRIVE = 0.3984 (table 0.3984)
+OK    FS0318-04 HEXB@HEX = 0.6900 (table 0.6900)
+OK    FS0318-04 DEPTH@POCKETCUT_A = 0.4820 (table 0.4820)
+OK    FS0318-04 PROF_R@THDPROF_A = 0.2512 (table 0.2512)
+OK    FS0318-04 DEPTH@BORECUT_B = 0.0980 (table 0.0980)
+OK    FS0318-04 one solid body (found 1)
+      FS0318-04 box x -0.020..0.580  y -0.347..0.347
+      config check 2: FS0318-24
+OK    FS0318-24 H@DRIVE = 1.1000 (table 1.1000)
+OK    FS0318-24 BODYR@DRIVE = 1.2990 (table 1.2990)
+OK    FS0318-24 HEXB@HEX = 2.2500 (table 2.2500)
+OK    FS0318-24 DEPTH@POCKETCUT_A = 0.8590 (table 0.8590)
+OK    FS0318-24 PROF_R@THDPROF_A = 0.9549 (table 0.9549)
+OK    FS0318-24 DEPTH@BORECUT_B = 0.2410 (table 0.2410)
+OK    FS0318-24 one solid body (found 1)
+      FS0318-24 box x -0.030..1.100  y -1.125..1.125
+      All-config sweep: rebuilding 8 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/8  FS0318-04  rebuilt in 0.8 s
+      sweep 2/8  FS0318-06  rebuilt in 1.1 s
+      sweep 3/8  FS0318-08  rebuilt in 1.0 s
+      sweep 4/8  FS0318-10  rebuilt in 1.1 s
+      sweep 5/8  FS0318-12  rebuilt in 1.5 s
+      sweep 6/8  FS0318-16  rebuilt in 1.5 s
+      sweep 7/8  FS0318-20  rebuilt in 1.6 s
+      sweep 8/8  FS0318-24  rebuilt in 0.9 s
+OK    All-config sweep: 8 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration FS0318-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS0318\FS0318_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 5:57:48 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS0318\FS0318_MASTER.SLDPRT

@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6565_MASTER"
 ' ============================================================================
-'  Build_6565_MASTER.bas  -  OMi fitting library, generated 2026-10-02 by gen_straight2.py
+'  Build_6565_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_straight2.py
 '  Double Female JIC Swivel Union - master from reference configuration 6565-08-08 (DesignTable_6565_SW2.xlsx row 2)
 '  Ends: A = JICSW  B = JICSW (both ends swivel; the origin sits on the End A nut face; each seat cone ends at the through-bore).  Body revolved at BODYR (body hex) / the nut radius (swivel nut hex), each hex cut over its own zone; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6565.  Report: 03_SCRIPTS\Build_6565_report.txt

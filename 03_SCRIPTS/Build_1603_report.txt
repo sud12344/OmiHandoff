@@ -1,4 +1,4 @@
-Build_1603_MASTER  10/19/2026 9:37:57 PM
+Build_1603_MASTER  10/20/2026 9:10:30 PM
 OK    dim M1 = 1.2000 in (expect 1.2000)
 OK    dim BODYR = 0.3750 in (expect 0.3750)
 OK    dim NP1_BODYS = 0.6200 in (expect 0.6200)
@@ -263,8 +263,8 @@ OK    Y extent -0.505 .. 1.200 (expect -0.505 .. 1.200)
       Bounding box z -0.438 .. 0.438 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4375 .. 0.4375 (expect -0.4375 .. 0.4375: swivel nut flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17\tee\DesignTable_1603_SW2.xlsx
-OK    Configurations after table: 6 (expect 6)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\regen\tee\DesignTable_1603_SW2.xlsx
+OK    Configurations after table: 7 (expect 7)
       config check 1: 1603-02-02-02-FG
 OK    1603-02-02-02-FG M1@LEG1 = 0.8400 (table 0.8400)
 OK    1603-02-02-02-FG BODYR@LEG1 = 0.2190 (table 0.2190)
@@ -305,17 +305,18 @@ OK    1603-16-16-16-FG HEXAF@HEX3 = 1.3120 (table 1.3120)
 OK    1603-16-16-16-FG HEXL@HEX3_BODY = 0.9500 (table 0.9500)
 OK    1603-16-16-16-FG one solid body (found 1)
       1603-16-16-16-FG box x -1.890..1.890  y -0.866..1.890
-      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/5  1603-02-02-02-FG  rebuilt in 0.7 s
-      sweep 2/5  1603-04-04-04-FG  rebuilt in 0.7 s
-      sweep 3/5  1603-06-06-06-FG  rebuilt in 0.8 s
-      sweep 4/5  1603-12-12-12-FG  rebuilt in 1.1 s
-      sweep 5/5  1603-16-16-16-FG  rebuilt in 0.7 s
-OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 6 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/6  1603-02-02-02-FG  rebuilt in 1.0 s
+      sweep 2/6  1603-04-04-04-FG  rebuilt in 0.7 s
+      sweep 3/6  1603-06-06-06-FG  rebuilt in 0.7 s
+      sweep 4/6  1603-08-08-08-FG  rebuilt in 1.1 s
+      sweep 5/6  1603-12-12-12-FG  rebuilt in 1.0 s
+      sweep 6/6  1603-16-16-16-FG  rebuilt in 0.7 s
+OK    All-config sweep: 6 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 1603-06-06-06-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
-      THD_End3: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1603\1603_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1603\1603_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\dryrun\1603\1603_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\dryrun\1603\1603_MASTER.SLDPRT

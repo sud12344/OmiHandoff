@@ -1,0 +1,138 @@
+Build_0403_MASTER  10/20/2026 7:51:52 PM
+OK    dim L3 = 0.9400 in (expect 0.9400)
+OK    dim BODYR = 0.4677 in (expect 0.4677)
+OK    dim THDMAJR_B = 0.3750 in (expect 0.3750)
+OK    dim JICB_RELIEFL = 0.0940 in (expect 0.0940)
+OK    angle RELIEFANG = 60.00 deg
+OK    dim JICB_THDZ = 0.2837 in (expect 0.2837)
+OK    dim JICB_CONER = 0.3295 in (expect 0.3295)
+OK    dim JICB_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JICB_SEATL = 0.1546 in (expect 0.1546)
+      SEATB: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB = 37.00 deg
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.4320 in^3 (expect 0.4320)
+OK    dim HEXB = 0.8100 in (expect 0.8100)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (7.8% of volume)
+OK    select end face for POCKET_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    POCKET_A sketch opened (active sketch exists)
+OK    POCKET_A circle created
+OK    dim SOCKDIA = 0.5040 in (expect 0.5040)
+OK    POCKET_A sketch closed and named (ProfileFeature)
+      POCKETCUT_A attempt 0: CreateDefinition returned Nothing
+      POCKETCUT_A attempt 0: FeatureCut4 scope off -> True
+OK    POCKETCUT_A cut removes material (attempt 0)
+OK    POCKETCUT_A dims: DEPTH=0.1880 SOCKDIA=0.5040 
+OK    select end face for BORE_B at x=0.9400
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.3900 in (expect 0.3900)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 0)
+OK    BORECUT_B dims: DEPTH=0.7520 DB=0.3900 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=0.9400)
+OK    bore open through the End A pocket bottom (x=0.1880)
+      THD_EndB: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndB: anchor edge found at x=0.4033 r=0.3750
+      THD_EndB: Edge ok
+      THD_EndB: Type=Inch Die ok
+      THD_EndB: Size=0.7500-16 ok
+      THD_EndB: ThreadMethod=Cut ok
+      THD_EndB: EndCondition=Blind ok
+      THD_EndB: BlindDepth=0.5367 ok
+      THD_EndB: DiameterOverride ok
+      THD_EndB: Diameter ok
+      THD_EndB: PitchOverride ok
+      THD_EndB: Pitch ok
+      THD_EndB: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_EndB: CreateFeature -> True
+OK    THD_EndB thread feature created
+      THD_EndB: thread centre x = 0.5558 in, anchor 0.4033, wanted +X
+OK    THD_EndB runs along the thread flat (away from the hex)
+OK    THD_EndB rebuilds without error (code 0)
+      THD_EndB: dim full name D8@THD_EndB@Part2.Part
+      THD_EndB: dim full name THDPITCH@THD_EndB@Part2.Part
+      THD_EndB: dim full name THDDIA@THD_EndB@Part2.Part
+      THD_EndB: dim full name DEPTH@THD_EndB@Part2.Part
+      THD_EndB: dim full name D1@THD_EndB@Part2.Part
+      THD_EndB: dim full name THDPITCH@Thread Profile1@Part2.Part
+      THD_EndB: dim full name Profile_Land@Thread Profile1@Part2.Part
+      THD_EndB: dim full name Profile_Angle@Thread Profile1@Part2.Part
+      THD_EndB: dim full name Profile_Height@Thread Profile1@Part2.Part
+OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_EndB: profile sketch renamed to THD_EndB_PROF
+OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
+OK    THD_EndB profile pitch reachable as THDPITCH@THD_EndB_PROF
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 0.9400 (nominal 0.9400; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=0.9400
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 0.8100 / corners 0.9353 (expect 0.8100 / 0.9353)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_0403_SW2.xlsx
+OK    Configurations after table: 8 (expect 8)
+      config check 1: 0403-04-04 UNPL
+OK    0403-04-04 UNPL L3@DRIVE = 0.8000 (table 0.8000)
+OK    0403-04-04 UNPL BODYR@DRIVE = 0.2887 (table 0.2887)
+OK    0403-04-04 UNPL HEXB@HEX = 0.5000 (table 0.5000)
+OK    0403-04-04 UNPL THDMAJR_B@DRIVE = 0.2188 (table 0.2188)
+OK    0403-04-04 UNPL JICB_RELIEFL@DRIVE = 0.0750 (table 0.0750)
+OK    0403-04-04 UNPL JICB_THDZ@DRIVE = 0.2608 (table 0.2608)
+OK    0403-04-04 UNPL JICB_CONER@DRIVE = 0.1820 (table 0.1820)
+OK    0403-04-04 UNPL JICB_LANDL@DRIVE = 0.0795 (table 0.0795)
+OK    0403-04-04 UNPL DEPTH@POCKETCUT_A = 0.1250 (table 0.1250)
+OK    0403-04-04 UNPL THDPITCH@THD_EndB = 0.0500 (table 0.0500)
+OK    0403-04-04 UNPL Profile_Height@THD_EndB_PROF = 0.0271 (table 0.0271)
+OK    0403-04-04 UNPL THDPITCH@THD_EndB_PROF = 0.0500 (table 0.0500)
+OK    0403-04-04 UNPL DEPTH@BORECUT_B = 0.6750 (table 0.6750)
+OK    0403-04-04 UNPL one solid body (found 1)
+      0403-04-04 UNPL box x 0.000..0.800  y -0.250..0.250
+      config check 2: 0403-20-20 UNPL
+OK    0403-20-20 UNPL L3@DRIVE = 1.4500 (table 1.4500)
+OK    0403-20-20 UNPL BODYR@DRIVE = 0.9757 (table 0.9757)
+OK    0403-20-20 UNPL HEXB@HEX = 1.6900 (table 1.6900)
+OK    0403-20-20 UNPL THDMAJR_B@DRIVE = 0.8125 (table 0.8125)
+OK    0403-20-20 UNPL JICB_RELIEFL@DRIVE = 0.1250 (table 0.1250)
+OK    0403-20-20 UNPL JICB_THDZ@DRIVE = 0.4316 (table 0.4316)
+OK    0403-20-20 UNPL JICB_CONER@DRIVE = 0.7530 (table 0.7530)
+OK    0403-20-20 UNPL JICB_LANDL@DRIVE = 0.1288 (table 0.1288)
+OK    0403-20-20 UNPL DEPTH@POCKETCUT_A = 0.3120 (table 0.3120)
+OK    0403-20-20 UNPL THDPITCH@THD_EndB = 0.0833 (table 0.0833)
+OK    0403-20-20 UNPL Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
+OK    0403-20-20 UNPL THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
+OK    0403-20-20 UNPL DEPTH@BORECUT_B = 1.1380 (table 1.1380)
+OK    0403-20-20 UNPL one solid body (found 1)
+      0403-20-20 UNPL box x -0.003..1.450  y -0.854..0.854
+      All-config sweep: rebuilding 7 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/7  0403-04-04 UNPL  rebuilt in 1.1 s
+      sweep 2/7  0403-06-06 UNPL  rebuilt in 1.4 s
+      sweep 3/7  0403-08-08 UNPL  rebuilt in 1.3 s
+      sweep 4/7  0403-10-10 UNPL  rebuilt in 1.6 s
+      sweep 5/7  0403-12-12 UNPL  rebuilt in 1.5 s
+      sweep 6/7  0403-16-16 UNPL  rebuilt in 1.5 s
+      sweep 7/7  0403-20-20 UNPL  rebuilt in 0.9 s
+OK    All-config sweep: 7 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 0403-08-08 UNPL for the save (it opens in this size)
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\0403\0403_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 7:52:31 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\0403\0403_MASTER.SLDPRT

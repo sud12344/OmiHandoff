@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_5500_MASTER"
 ' ============================================================================
-'  Build_5500_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
+'  Build_5500_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
 '  90 deg Male Pipe Elbow (elbow), forged hex body (2500HX pattern).  Reference config 5500-08-08-FG: NPTFM -08, NPTFM -08
 '  Entry: Sub Build5500.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_5500_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -233,7 +233,7 @@ Sub Build5500()
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
     cx_c = Array("5500-02-02-FG", "5500-32-32-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "NPTF1_MAJR@LEG1", "NPTF1_THDL@LEG1", "NPTF1_TAPER@LEG1", "NPTF1_RELL@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(0.78000, 0.22000, 0.19657, 0.26390, 1.78990, 0.11610, 0.78000, 0.78000, 0.19657, 0.19657, 0.44000, 0.40000, 0.44000, 0.40000, 0.12652, 0.25353), Array(3.00000, 1.25000, 1.16929, 0.75650, 1.78990, 0.27350, 3.00000, 3.00000, 1.16929, 1.16929, 2.50000, 1.97000, 2.50000, 1.97000, 0.72119, 1.44288))
+    cx_w = Array(Array(0.72000, 0.22000, 0.19657, 0.26390, 1.78990, 0.11610, 0.72000, 0.72000, 0.19657, 0.19657, 0.44000, 0.34000, 0.44000, 0.34000, 0.12652, 0.25353), Array(3.00000, 1.29000, 1.16929, 0.75650, 1.78990, 0.27350, 3.00000, 3.00000, 1.16929, 1.16929, 2.58000, 1.97000, 2.58000, 1.97000, 0.74428, 1.48906))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

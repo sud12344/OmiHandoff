@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_6405_MASTER"
 ' ============================================================================
-'  Build_6405_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
+'  Build_6405_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_straight2.py
 '  Straight Thread (ORB) x Female Pipe Adapter - master from reference configuration 6405-08-08-O (DesignTable_6405_SW2.xlsx row 2)
 '  Ends: A = ORBM  B = NPTFF.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build6405.  Report: 03_SCRIPTS\Build_6405_report.txt
@@ -38,8 +38,8 @@ Sub LoadPoints()
     0.008737600, 0.008382000, _
     0.011125200, 0.008382000, _
     0.011125200, 0.016571107, _
-    0.037338000, 0.016571107, _
-    0.037338000, 0.000000000)
+    0.041402000, 0.016571107, _
+    0.041402000, 0.000000000)
     For i = 0 To NPTS - 1
         PX(i) = v(2 * i): PR(i) = v(2 * i + 1)
     Next i
@@ -114,8 +114,8 @@ Sub Build6405()
     swModel.SketchAddConstraints "sgCOINCIDENT"
     swModel.ClearSelection2 True
 
-    Call Dim_len(-1, "L31", 0.037338000, 0.018669, 0.031811)
-    Call Dim_rad(5, "BODYR", 0.016571107, 0.024232, -0.011430)
+    Call Dim_len(-1, "L31", 0.041402000, 0.020701, 0.031811)
+    Call Dim_rad(5, "BODYR", 0.016571107, 0.026264, -0.011430)
     Call Dim_rad(1, "THDMAJR_A", 0.009525000, 0.004369, -0.007620)
     Call Dim_len(1, "ORBA_THDL", 0.008737600, 0.004369, 0.022921)
     Call Dim_rad(3, "ORBA_GRVR", 0.008382000, 0.009931, -0.005080)
@@ -139,7 +139,7 @@ Sub Build6405()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "BODY"
     Dim vrev As Double: vrev = Volume()
-    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.5641)", Abs(vrev - 2.563083727491e-05) < 2.563083727491e-05 * 0.002
+    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.7780)", Abs(vrev - 2.913679469646e-05) < 2.913679469646e-05 * 0.002
 
     stepName = "HEX cut"
     swModel.ClearSelection2 True
@@ -173,9 +173,9 @@ Sub Build6405()
     Check "hex sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
     Dim hexcut As SldWorks.Feature, v0 As Double, v1 As Double
     v0 = Volume()
-    Set hexcut = MakeCut2(swFeat, True, 0.056007, "HEXCUT flip")
+    Set hexcut = MakeCut2(swFeat, True, 0.062103, "HEXCUT flip")
     If hexcut Is Nothing Then
-        Set hexcut = MakeCut2(swFeat, False, 0.056007, "HEXCUT plain (to flip)")
+        Set hexcut = MakeCut2(swFeat, False, 0.062103, "HEXCUT plain (to flip)")
         If Not hexcut Is Nothing Then
             Dim xd2 As SldWorks.ExtrudeFeatureData2
             Set xd2 = hexcut.GetDefinition
@@ -193,23 +193,23 @@ Sub Build6405()
 
     stepName = "Pockets and bores"
     Call BoreCut("POCKET_B", "TAPDRILLB", 0.017780000, 0.022860000, 0#, "POCKETCUT_B", True, 0.011388090)
-    Call BoreCut("BORE_A", "DA", 0.009906000, 0.014478000, 0#, "BORECUT_A", False, 0.004762500)
+    Call BoreCut("BORE_A", "DA", 0.009906000, 0.018542000, 0#, "BORECUT_A", False, 0.004762500)
     Check "bore open on the axis at End A (x=0)", Not AxisCovered(0#)
-    Check "bore open on the axis at End B (x=1.4700)", Not AxisCovered(0.037338000)
-    Check "bore open through the End B pocket bottom (x=0.5700)", Not AxisCovered(0.014478000)
+    Check "bore open on the axis at End B (x=1.6300)", Not AxisCovered(0.041402000)
+    Check "bore open through the End B pocket bottom (x=0.7300)", Not AxisCovered(0.018542000)
     stepName = "Threads"
     curAxis = 0
     Call ThreadCut(0.008737600, 0.009525000, 0.008737600, "0.7500-16", "THD_EndA", -1#, 0.001587500)
-    Call HelixThread(0.037338000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "B", "THD_EndB")
+    Call HelixThread(0.041402000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "B", "THD_EndB")
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
     Dim lenX As Double, dY As Double, dZ As Double
     lenX = (bb(3) - bb(0)) / IN_: dY = (bb(4) - bb(1)) / IN_: dZ = (bb(5) - bb(2)) / IN_
-    Trace "Bounding box length " & Format(lenX, "0.0000") & " (nominal 1.4700; loose around thread faces, informational)"
+    Trace "Bounding box length " & Format(lenX, "0.0000") & " (nominal 1.6300; loose around thread faces, informational)"
     Check "End A face present at x=0", SelectEndFace(0#)
-    Check "End B face present at x=1.4700", SelectEndFace(0.037338000)
-    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - 1.47) < 0.15
+    Check "End B face present at x=1.6300", SelectEndFace(0.041402000)
+    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - 1.63) < 0.15
     Check "Hex across flats " & Format(dY, "0.0000") & " / corners " & Format(dZ, "0.0000") & " (expect 1.1300 / 1.3048)", (Abs(dY - 1.13) < 0.01 And Abs(dZ - 1.304811608368554) < 0.01) Or (Abs(dZ - 1.13) < 0.01 And Abs(dY - 1.304811608368554) < 0.01)
     Dim bodies As Variant
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
@@ -224,13 +224,13 @@ Sub Build6405()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 45)", (UBound(cfgs) + 1) >= 44
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 46)", (UBound(cfgs) + 1) >= 45
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
     cx_c = Array("6405-02-02-O", "6405-32-32-O")
     cx_p = Array("L31@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "THDMAJR_A@DRIVE", "ORBA_THDL@DRIVE", "ORBA_GRVR@DRIVE", "ORBA_GRVW@DRIVE", "THDPITCH@THD_EndA", "Profile_Height@THD_EndA_PROF", "THDPITCH@THD_EndA_PROF", "DEPTH@POCKETCUT_B", "PROF_R@THDPROF_B", "DEPTH@BORECUT_A")
-    cx_w = Array(Array(0.95000, 0.32447, 0.56200, 0.15625, 0.23400, 0.12500, 0.06300, 0.04167, 0.02255, 0.04167, 0.46000, 0.16500, 0.49000), Array(2.24000, 1.66277, 2.88000, 1.25000, 0.46900, 1.19050, 0.12500, 0.08333, 0.04511, 0.08333, 1.18000, 1.09500, 1.06000))
+    cx_w = Array(Array(0.95000, 0.32447, 0.56200, 0.15625, 0.23400, 0.12500, 0.06300, 0.04167, 0.02255, 0.04167, 0.46000, 0.16500, 0.49000), Array(2.23000, 1.66277, 2.88000, 1.25000, 0.46900, 1.19050, 0.12500, 0.08333, 0.04511, 0.08333, 1.18000, 1.09500, 1.05000))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

@@ -1,0 +1,149 @@
+Build_1800_MASTER  10/20/2026 9:18:16 PM
+OK    dim L = 2.6100 in (expect 2.6100)
+OK    dim BODYR = 0.5415 in (expect 0.5415)
+OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
+OK    dim JICA_RELIEFL = 0.0940 in (expect 0.0940)
+OK    angle RELIEFANG = 60.00 deg
+OK    dim JICA_THDZ = 0.2837 in (expect 0.2837)
+OK    dim JICA_CONER = 0.3295 in (expect 0.3295)
+OK    dim JICA_LANDL = 0.0984 in (expect 0.0984)
+OK    dim JICA_SEATL = 0.1546 in (expect 0.1546)
+      SEATB: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB = 37.00 deg
+OK    dim FLGB_HEADR = 0.6250 in (expect 0.6250)
+OK    dim FLGB_HEADT = 0.3050 in (expect 0.3050)
+OK    dim FLGB_GRVIR = 0.3450 in (expect 0.3450)
+OK    dim FLGB_GRVD = 0.1100 in (expect 0.1100)
+OK    dim FLGB_GRVOR = 0.5000 in (expect 0.5000)
+OK    dim FLGB_NECKR = 0.4685 in (expect 0.4685)
+OK    dim FLGB_NECKL = 1.1560 in (expect 1.1560)
+OK    angle FLGB_CHAMANG = 30.00 deg
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 1.8019 in^3 (expect 1.8019)
+OK    FLATS: sketch plane selected (Right Plane)
+      FLATS: centre rectangle -> 6 segments, 4 sides, construction diagonal found
+OK    FLATS: rectangle has a vertical and a horizontal side
+OK    dim WAF = 0.8120 in (expect 0.8120)
+OK    dim FLATW = 1.3330 in (expect 1.3330)
+      FLATS: constrained status after the two dimensions = 2
+      FLATS: origin at the middle of the diagonal -> status 2
+      FLATS: centre point made coincident with the origin -> status 2
+      FLATS: centre point at the middle of the second diagonal -> status 2
+      FLATS: horizontal relation on one side -> status 2
+      FLATS: vertical relation on one side -> status 3
+OK    FLATS sketch fully defined
+      FLATCUT attempt 0: CreateDefinition returned Nothing
+      FLATCUT attempt 0: FeatureCut4 scope off -> False
+      FLATCUT attempt 0: FeatureCut4 scope on -> False
+      FLATCUT attempt 1: CreateDefinition returned Nothing
+      FLATCUT attempt 1: FeatureCut4 scope off -> True
+      FLATCUT attempt 1: removed 0.05912 in^3, new faces span x=0.6570..1.1490 (zone 0.6100..1.1490)
+OK    FLATCUT created in the flats zone and removed material (attempt 1)
+OK    FLATCUT removed only the two collar segments (3.3% of volume)
+OK    FLATCUT dims: DEPTH=0.5390 START=0.6100 WAF=0.8120 FLATW=1.3330 
+OK    WAF@FLATS reachable
+OK    FLATW@FLATS reachable
+OK    START@FLATCUT reachable
+OK    DEPTH@FLATCUT reachable
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.3910 in (expect 0.3910)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.8397 DA=0.3910 
+OK    select end face for BORE_B at x=2.6100
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.3910 in (expect 0.3910)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 0)
+OK    BORECUT_B dims: DEPTH=1.7703 DB=0.3910 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=2.6100)
+      THD_EndA: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndA: anchor edge found at x=0.5367 r=0.3750
+      THD_EndA: Edge ok
+      THD_EndA: Type=Inch Die ok
+      THD_EndA: Size=0.7500-16 ok
+      THD_EndA: ThreadMethod=Cut ok
+      THD_EndA: EndCondition=Blind ok
+      THD_EndA: BlindDepth=0.5367 ok
+      THD_EndA: DiameterOverride ok
+      THD_EndA: Diameter ok
+      THD_EndA: PitchOverride ok
+      THD_EndA: Pitch ok
+      THD_EndA: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_EndA: CreateFeature -> True
+OK    THD_EndA thread feature created
+      THD_EndA: thread centre x = 0.3842 in, anchor 0.5367, wanted -X
+OK    THD_EndA runs along the thread flat (away from the hex)
+OK    THD_EndA rebuilds without error (code 0)
+      THD_EndA: dim full name D8@THD_EndA@Part33.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part33.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part33.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part33.Part
+      THD_EndA: dim full name D1@THD_EndA@Part33.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part33.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part33.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part33.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part33.Part
+OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.5367 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_EndA: profile sketch renamed to THD_EndA_PROF
+OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
+OK    THD_EndA profile pitch reachable as THDPITCH@THD_EndA_PROF
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 2.6100 (nominal 2.6100; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=2.6100
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Across the flats / across the round 1.2500 / 1.2500 (flats 0.8120, collar 1.0830, flange head 1.2500: expect 1.2500 and 1.2500)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\regen_flats\DesignTable_1800_SW2.xlsx
+OK    Configurations after table: 2 (expect 2)
+      config check 1: 1800-08-08
+OK    1800-08-08 L@DRIVE = 2.6100 (table 2.6100)
+OK    1800-08-08 BODYR@DRIVE = 0.5415 (table 0.5415)
+OK    1800-08-08 THDMAJR_A@DRIVE = 0.3750 (table 0.3750)
+OK    1800-08-08 JICA_RELIEFL@DRIVE = 0.0940 (table 0.0940)
+OK    1800-08-08 JICA_THDZ@DRIVE = 0.2837 (table 0.2837)
+OK    1800-08-08 JICA_CONER@DRIVE = 0.3295 (table 0.3295)
+OK    1800-08-08 JICA_LANDL@DRIVE = 0.0984 (table 0.0984)
+OK    1800-08-08 JICA_SEATL@DRIVE = 0.1546 (table 0.1546)
+OK    1800-08-08 THDPITCH@THD_EndA = 0.0625 (table 0.0625)
+OK    1800-08-08 Profile_Height@THD_EndA_PROF = 0.0338 (table 0.0338)
+OK    1800-08-08 THDPITCH@THD_EndA_PROF = 0.0625 (table 0.0625)
+OK    1800-08-08 DEPTH@BORECUT_A = 0.8397 (table 0.8397)
+OK    1800-08-08 DEPTH@BORECUT_B = 1.7703 (table 1.7703)
+OK    1800-08-08 WAF@FLATS = 0.8120 (table 0.8120)
+OK    1800-08-08 FLATW@FLATS = 1.3330 (table 1.3330)
+OK    1800-08-08 START@FLATCUT = 0.6100 (table 0.6100)
+OK    1800-08-08 DEPTH@FLATCUT = 0.5390 (table 0.5390)
+OK    1800-08-08 FLGB_NECKR@DRIVE = 0.4685 (table 0.4685)
+OK    1800-08-08 FLGB_NECKL@DRIVE = 1.1560 (table 1.1560)
+OK    1800-08-08 one solid body (found 1)
+      1800-08-08 box x 0.000..2.610  y -0.625..0.625
+      All-config sweep: rebuilding 1 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/1  1800-08-08  rebuilt in 0.5 s
+OK    All-config sweep: 1 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 1800-08-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 2 configs, 0 still live
+OK    Threads suppressed in all configurations before save (1 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\dryrun\1800\1800_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 9:18:38 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\dryrun\1800\1800_MASTER.SLDPRT
