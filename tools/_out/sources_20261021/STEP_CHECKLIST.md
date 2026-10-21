@@ -4,14 +4,14 @@ Source: the PC session's blocked-needs list of 2026-10-20 (section 1), expanded 
 Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_STEP_FILES/BRENNAN_<part number>.stp`
 (the file name column). Re-run `python -I tools/_out/sources_20261021/step_checklist.py` afterwards: the box column fills in.
 
-**190 files to download** (27 already in the repo, 0 listed twice, **23 that Brennan has no CAD model for** - struck through, do not search for them). Checked 2026-10-21 against Brennan's CAD portal (`tools/_out/partcommunity_20261021`). Files marked * are not printed in Brennan's PDF catalogs but do exist on the portal.
+**188 files to download** (29 already in the repo, 0 listed twice, **23 that Brennan has no CAD model for** - struck through, do not search for them). Checked 2026-10-21 against Brennan's CAD portal (`tools/_out/partcommunity_20261021`). Files marked * are not printed in Brennan's PDF catalogs but do exist on the portal.
 
 ## 1. Quick wins (2) - together free 18 parts (5405 family)
 
 | | File | For (not-ready OMi parts of this size) |
 |---|---|---|
-| [ ] | `BRENNAN_5405-24-24.stp` | (shape file for the family) |
-| [ ] | `BRENNAN_5405-32-32.stp` | (shape file for the family) |
+| [x] | `BRENNAN_5405-24-24.stp` | (shape file for the family) |
+| [x] | `BRENNAN_5405-32-32.stp` | (shape file for the family) |
 
 ## 2. ORFS shared shape files (24) - each serves several FS masters
 

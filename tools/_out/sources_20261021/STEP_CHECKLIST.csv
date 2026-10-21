@@ -1,6 +1,6 @@
 priority,group,requested,brennan_pn,file_name,brennan_cad,have,duplicate,in_brennan_catalog,frees_parts,frees,group_note
-1,Quick wins,5405-24-24,5405-24-24,BRENNAN_5405-24-24.stp,yes,,,TFA p12,0,,together free 18 parts (5405 family)
-1,Quick wins,5405-32-32,5405-32-32,BRENNAN_5405-32-32.stp,yes,,,TFA p12,0,,together free 18 parts (5405 family)
+1,Quick wins,5405-24-24,5405-24-24,BRENNAN_5405-24-24.stp,yes,yes,,TFA p12,0,,together free 18 parts (5405 family)
+1,Quick wins,5405-32-32,5405-32-32,BRENNAN_5405-32-32.stp,yes,yes,,TFA p12,0,,together free 18 parts (5405 family)
 2,ORFS shared shape files,FS2403-04-04,FS2403-04-04,BRENNAN_FS2403-04-04.stp,yes,,,ORFS p3,1,FS2403-04-04,each serves several FS masters
 2,ORFS shared shape files,FS2403-06-06,FS2403-06-06,BRENNAN_FS2403-06-06.stp,yes,,,ORFS p3,1,FS2403-06-06,each serves several FS masters
 2,ORFS shared shape files,FS2403-10-10,FS2403-10-10,BRENNAN_FS2403-10-10.stp,yes,,,ORFS p3,1,FS2403-10-10,each serves several FS masters
