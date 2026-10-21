@@ -1,0 +1,10 @@
+
+--- stderr ---
+Traceback (most recent call last):
+  File "/home/user/OmiHandoff/tools/_out/airway_first_20261020/tools_af/generators/gen_tee.py", line 3671, in <module>
+    built, skipped = build_rows(root)
+                     ~~~~~~~~~~^^^^^^
+  File "/home/user/OmiHandoff/tools/_out/airway_first_20261020/tools_af/generators/gen_tee.py", line 1538, in build_rows
+    AF = max([Y] + maxes); BR = AF / 2
+                                ~~~^~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'

@@ -31,8 +31,11 @@ for src, dst in ((BASE, ST), (BASE_FS, ST_FS)):
 
 # the 4 cells verify.csv flagged, each explained (2026-10-21): 1/4 NPT major 0.540 (= Air-Way); forged Y flats = Brennan's printed catalog
 # (the plain Air-Way part differs); FS6402-12-12 L 2.25 vs Brennan's catalog misprint 0.609 (BLOCKED_NEEDS: 'L misprinted')
-EXPLAINED = {('6805-04-04-NWO-FG', 'THDMAJ_A@DRIVE'), ('6807-08-08-NWO-FG', 'Y@HEX'), ('6809-10-10-NWO-FG', 'Y@HEX'), ('FS6402-12-12', 'L@DRIVE')}
-cells = [r for r in csv.DictReader(open(J('tools', '_out', 'partcommunity_20261021', 'decode', 'verify.csv'), encoding='utf-8'))
+EXPLAINED = {('6807-08-06-NWO-FG', 'THDMAJ_B2@DRIVE'),   # group A: 9/16 ORB thread major = Air-Way; the catalog test hit another column
+             ('6805-04-04-NWO-FG', 'THDMAJ_A@DRIVE'), ('6807-08-08-NWO-FG', 'Y@HEX'), ('6809-10-10-NWO-FG', 'Y@HEX'), ('FS6402-12-12', 'L@DRIVE')}
+cells = [r for f in ('verify.csv', 'verify_A.csv')     # verify_A.csv = group A (map_groupA.py, 2026-10-21)
+         if os.path.exists(J('tools', '_out', 'partcommunity_20261021', 'decode', f))
+         for r in csv.DictReader(open(J('tools', '_out', 'partcommunity_20261021', 'decode', f), encoding='utf-8'))
          if r['verdict'] == 'OK' or (r['part'], r['column']) in EXPLAINED]
 cache_pn = {r['part']: (r['tried_as'] or r['part']) for r in csv.DictReader(open(J('tools', '_out', 'partcommunity_20261021', 'pc_final.csv'), encoding='utf-8'))}
 shipped = set()

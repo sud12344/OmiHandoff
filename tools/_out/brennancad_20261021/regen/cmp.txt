@@ -36,8 +36,10 @@
 6805     NO GENERATOR SPEC - cells staged as data only
 6807     [tee] rc 0/0 | configs control   1 stage   1 | NEW 0 [] | LOST [] | changed [] | untraced []
 6809     NO GENERATOR SPEC - cells staged as data only
+6810     [tee] rc 0/1 | configs control   0 stage   0 | NEW 0 [] | LOST [] | changed [] | untraced []
 6900     NO GENERATOR SPEC - cells staged as data only
 6901     NO GENERATOR SPEC - cells staged as data only
+6902     [tee] rc 0/0 | configs control   1 stage   1 | NEW 0 [] | LOST [] | changed [] | untraced []
 FS0319   [straight] rc 0/0 | configs control   3 stage   3 | NEW 0 [] | LOST [] | changed [] | untraced []
 FS2503   [tee] rc 0/0 | configs control   4 stage   4 | NEW 0 [] | LOST [] | changed [] | untraced []
 FS2701   [tee] rc 0/0 | configs control   2 stage   2 | NEW 0 [] | LOST [] | changed [] | untraced []

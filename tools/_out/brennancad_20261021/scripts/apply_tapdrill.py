@@ -43,7 +43,14 @@ for path in sorted(glob.glob(os.path.join(A, 'stage', '04_DESIGN_TABLES', 'Desig
             if vals and ok >= 3 and ok >= 0.8 * len(vals) and (best is None or ok > best[1]):
                 best = (k, ok, len(vals))
         if best is None:
-            log.append(dict(table=os.path.basename(path), column=col, part='', value='', result='no clear end position - left alone')); continue
+            # equal-dash parts (5602-12-12-12-FG ...): every port has the same size, the end position does not matter (2026-10-21)
+            for i, p, d in rows:
+                if p in NOT_READY and d and len(set(d)) == 1 and d[0] in A1 and not isnum(ws.cell(row=i, column=head[col]).value) and \
+                        str(ws.cell(row=i, column=head['$PRP@ScopeAction']).value or '').upper() == 'BUILD':
+                    ws.cell(row=i, column=head[col]).value = A1[d[0]]; changed = True
+                    ax = ws.cell(row=i, column=head['$PRP@AxialSource']); ax.value = f'[A1/A9 TAPDRILL 2026-10-21: {col}] ' + (ax.value or '')
+                    log.append(dict(table=os.path.basename(path), column=col, part=p, value=A1[d[0]], result='written (equal-dash part)'))
+            log.append(dict(table=os.path.basename(path), column=col, part='', value='', result='no clear end position - equal-dash rows only')); continue
         k = best[0]
         for i, p, d in rows:
             if p not in NOT_READY or len(d) <= k or d[k] not in A1:

@@ -10,8 +10,8 @@ DesignTable_2502.xlsx,TAPDRILL@BORE,2502-16-20-FG,1.48,"written (dash position 2
 DesignTable_2502.xlsx,TAPDRILL@BORE,2502-20-16-FG,1.14,"written (dash position 2, 31/31 rows agree)"
 DesignTable_2502.xlsx,TAPDRILL@BORE,2502-24-24-FG,1.72,"written (dash position 2, 31/31 rows agree)"
 DesignTable_2502.xlsx,TAPDRILL@BORE,2502-32-32-FG,2.2,"written (dash position 2, 31/31 rows agree)"
-DesignTable_2609.xlsx,TAPDRILL2@BORE,,,no clear end position - left alone
-DesignTable_2609.xlsx,TAPDRILL3@BORE,,,no clear end position - left alone
+DesignTable_2609.xlsx,TAPDRILL2@BORE,,,no clear end position - equal-dash rows only
+DesignTable_2609.xlsx,TAPDRILL3@BORE,,,no clear end position - equal-dash rows only
 DesignTable_2705.xlsx,TAPDRILL@BORE,2705-04-02,0.43,"written (dash position 1, 22/22 rows agree)"
 DesignTable_2705.xlsx,TAPDRILL@BORE,2705-LN-04-02,0.43,"written (dash position 1, 22/22 rows agree)"
 DesignTable_2705.xlsx,TAPDRILL@BORE,2705-LN-06-04,0.57,"written (dash position 1, 22/22 rows agree)"

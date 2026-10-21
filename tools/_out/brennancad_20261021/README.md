@@ -51,3 +51,17 @@ ship together with (or after) batch 18 - the stage contains the Air-Way-first ta
 - Still blocking most of the 79 MISSING rows: single gaps the records do not fill under the mapping rules (e.g. 5504 / 5601 body flats
   W, 6506 L17), the -24 / -32 female-port drill depth P1 in the generator's FPT library (measurable: 1.16 / 1.18 from the two 5405 STEPs -
   a generator change), the adjustable-family end data (6801 ...), and the roots with no generator SPEC.
+
+## 2026-10-21 (later): group A (series with a generator, families with no calibration rows)
+- `tools/_out/partcommunity_20261021/decode/map_groupA.py` -> `column_map_A.csv`, `proposals_A.csv`: (column, code) used only when two
+  signals agree - NAME (code = the column's letters), SIBLING (same column mapped to the same code elsewhere), DONOR (the Air-Way row of the
+  same size agrees on >= 60 %); DONOR alone needs >= 4 sizes, >= 80 %, a clear winner and a fitting decoded geometry. Read from the BASE
+  tables. 93 cells in 36 parts; `verify_A.csv`: 91 OK + 1 explained (6807-08-06 ORB thread); 6902-06-04 C1HEX (Brennan 0.688 vs Air-Way
+  0.88) left empty.
+- Stage now: 497 cells written in 123 rows; still 8 new configurations (the group-A rows still miss columns whose Brennan letters do not
+  map confidently: 6902 N4 / M / W2 / CHEX / bores, 5602 / 5604 N1_n / W / bores, 6803 LEG1 / LEG2, 6807 M7_n / C4_n; they need a by-hand
+  mapping against their family STEP).
+- The FS part of group A (FS2404, FS2500, FS2503, FS2702-04, FS6403, FS6502, FS6802-04, ~70 parts) is blocked by per-dash END libraries
+  (FSM_MEAS / FSBH_MEAS / NWO_FS): the 18 STEPs FS2403-04 ... -20, FS2701-04 ... -16-FG, FS6801-04 ... -24-NWO-FG are needed (the records
+  give groove OD / face / relief / end length, not the thread start).
+- regen: 0 lost / changed; regress 0 changed cells in old configurations; vbacheck OK.

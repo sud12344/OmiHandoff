@@ -1,0 +1,4 @@
+6902: 1 configs (ref 6902-12-12-NWO-FG), 26 skipped, 0 blocked, 73 cols
+   warn 6902-12-12-NWO-FG: leg 1: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -12 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION); leg 1: adjustable ORB thread length 0.469 = Air-Way 6801 ORB_THDL for -12 (not printed for this series; Q-TRANSFER-ENDLIB 2026-10-08) - Brennan 6801 STEP 0.41; leg 1: adjustable ORB groove dia 0.945 = Air-Way 6801 ORB_GRVDIA for -12 (not printed for this series; Q-TRANSFER-ENDLIB 2026-10-08); leg 2: the corner puck (radius 0.612) reaches 0.002 past the swivel body face (0.610) but stays inside the neck (max 0.049 off the axis vs neck radius 0.389) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings; leg 1: the corner puck (radius 0.612) reaches 0.022 past the body face (0.590) inside the neck (max 0.163 off the axis vs neck radius 0.500) - as on the 45 deg Brennan forgings
+
+--- stderr ---

@@ -15,7 +15,9 @@ ROOT = os.path.normpath(os.path.join(PC, '..', '..', '..'))
 J = lambda *a: os.path.join(ROOT, *a)
 norm = lambda s: re.sub(r'\s+', '-', str(s).strip()).upper()
 isnum = lambda x: isinstance(x, (int, float)) and not isinstance(x, bool)
-props = list(csv.DictReader(open(os.path.join(H, 'proposals.csv'), encoding='utf-8')))
+import sys
+IN, OUT = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else ('proposals.csv', 'verify.csv')   # 2026-10-21: group A = proposals_A.csv -> verify_A.csv
+props = list(csv.DictReader(open(os.path.join(H, IN), encoding='utf-8')))
 cat = json.load(open(J('tools', '_out', 'brennan_catalog_20261001', 'catalog_verified.json')))
 printed = {}
 for t in cat['tables']:
@@ -92,7 +94,7 @@ for pr in props:
     out.append(dict(pr, catalog=cat_txt, airway_same_size=donor_txt, neighbours=trend_txt,
                     verdict='DOUBT' if flags else 'OK', why='; '.join(flags)))
 
-with open(os.path.join(H, 'verify.csv'), 'w', newline='', encoding='utf-8') as f:
+with open(os.path.join(H, OUT), 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(out[0])); w.writeheader(); w.writerows(out)
 c = collections.Counter(r['verdict'] for r in out)
 checked = sum(1 for r in out if r['catalog'] != 'n/a' or r['airway_same_size'] != 'n/a' or r['neighbours'] != 'n/a')
