@@ -1,0 +1,108 @@
+{
+ "FS6803": {
+  "configs": 1,
+  "ref": "FS6803-08-08-08-NWO-FG",
+  "skipped": [
+   [
+    "FS6803-04-04-04-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6803NR"
+   ],
+   [
+    "FS6803-06-06-06-NWO-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6803-12-12-12-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6803NR"
+   ],
+   [
+    "FS6803-16-16-16-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6803NR"
+   ],
+   [
+    "FF6803:FF6803-4-4-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-6-6-4 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-6-6-5 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-6-6-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-8-6-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-8-8-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-8-8-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-10-6-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-10-10-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-10-10-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-12-6-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-12-12-16 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-16-16-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-20-20-20 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6803:FF6803-24-24-24 NWO",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [
+   "FS6803-08-08-08-NWO-FG: leg 3: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)"
+  ],
+  "cols": 74
+ }
+}

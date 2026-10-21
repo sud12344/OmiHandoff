@@ -1,0 +1,5 @@
+# bulky regeneration / closed-loop outputs (reproducible with scripts/regen_all.py, closed_loop_fs*.py); the changed masters are in out/
+regen/
+ocp/*.stp
+ocp_tee/*.stp
+scratch/

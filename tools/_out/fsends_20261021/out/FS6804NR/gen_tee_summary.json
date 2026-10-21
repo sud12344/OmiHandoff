@@ -1,0 +1,141 @@
+{
+ "FS6804NR": {
+  "configs": 2,
+  "ref": "FS6804-12-12-12-NWO-FG",
+  "skipped": [
+   [
+    "FS6804-06-06-06-NWO-FG",
+    "other shape family",
+    "face-seal leg shape SR (stepped face-seal legs, stud neck below the flats): built in master FS6804R"
+   ],
+   [
+    "FS6804-08-06-08-NWO-FG",
+    "other shape family",
+    "face-seal leg shape SR (stepped face-seal legs, stud neck below the flats): built in master FS6804R"
+   ],
+   [
+    "FS6804-08-08-08-NWO-FG",
+    "other shape family",
+    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6804"
+   ],
+   [
+    "FS6804-10-10-10-NWO-FG",
+    "other shape family",
+    "face-seal leg shape SR (stepped face-seal legs, stud neck below the flats): built in master FS6804R"
+   ],
+   [
+    "FF6804:FF6804-4-6-4 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-4-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-5-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-8-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-6-12-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-6-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-8-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-8-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-10-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-8-12-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-8-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-10-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-12-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-12-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-10-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-12-6 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-10-12-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-16-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-12-20-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-16-12-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6804:FF6804-20-20-20 NWO",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [
+   "FS6804-04-04-04-NWO-FG: leg 2 adjustable stud: radial order neck < nut flats < washer, undercut < thread < washer"
+  ],
+  "warnings": [
+   "FS6804-12-12-12-NWO-FG: leg 2: adjustable stud tip -> washer face 0.73 = L10 - L11 (Air-Way), thread 0.546 = stud - undercut 0.184, tip -> body face 1.333 (FS lock nut 0.5 thick, NWO_FS)",
+   "FS6804-16-16-16-NWO-FG: leg 2: adjustable stud tip -> washer face 0.73 = L10 - L11 (Air-Way), thread 0.546 = stud - undercut 0.184, tip -> body face 1.363 (FS lock nut 0.54 thick, NWO_FS)"
+  ],
+  "cols": 71
+ }
+}

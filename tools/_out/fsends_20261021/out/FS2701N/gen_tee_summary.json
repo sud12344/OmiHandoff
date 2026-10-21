@@ -1,0 +1,101 @@
+{
+ "FS2701N": {
+  "configs": 3,
+  "ref": "FS2701-04-04-FG",
+  "skipped": [
+   [
+    "FS2701-06-06-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2701-08-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2701-08-08-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2701"
+   ],
+   [
+    "FS2701-10-10-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2701"
+   ],
+   [
+    "FS2701-12-12-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2701-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2701-24-24-FG",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS2701-32-32-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2701-LN-06-06-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2701-LN-06-08-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2701-LN-08-06-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2701-LN-08-08-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2701"
+   ],
+   [
+    "FS2701-LN-10-10-FG",
+    "other shape family",
+    "face-seal leg shape S (stepped face-seal legs): built in master FS2701"
+   ],
+   [
+    "FS2701-LN-12-12-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2701-LN-16-16-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS2701-LN-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2701-LN-24-24-FG",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS2701-LN-32-32-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 57
+ }
+}

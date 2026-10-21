@@ -1,0 +1,26 @@
+{
+ "FS6403": {
+  "configs": 7,
+  "ref": "FS6403-08-08",
+  "skipped": [
+   [
+    "FS6403-24-24",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF7403:FF7403-12-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF7403:FF7403-16-20-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 20,
+  "cols": 45
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "FS2702": {
+  "configs": 2,
+  "ref": "FS2702-08-08-FG",
+  "skipped": [
+   [
+    "FS2702-04-04-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2702N"
+   ],
+   [
+    "FS2702-06-06-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2702-12-12-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2702-16-16-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2702N"
+   ],
+   [
+    "FS2702-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2702-24-24-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2702-32-32-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2702-LN-04-04-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2702N"
+   ],
+   [
+    "FS2702-LN-06-06-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2702-LN-12-12-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2702-LN-16-16-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS2702-LN-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2702-LN-24-24-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2702-LN-32-32-FG",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [
+   "FS2702-10-10-FG: leg 1: the corner puck buries the inner thread edge (margin -0.0237)",
+   "FS2702-LN-10-10-FG: leg 1: the corner puck buries the inner thread edge (margin -0.0237)"
+  ],
+  "warnings": [],
+  "cols": 59
+ }
+}

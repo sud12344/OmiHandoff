@@ -1,0 +1,110 @@
+{
+ "FS6802R": {
+  "configs": 3,
+  "ref": "FS6802-06-04-NWO-FG",
+  "skipped": [
+   [
+    "FS6802-04-04-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
+   ],
+   [
+    "FS6802-06-08-NWO-FG",
+    "other shape family",
+    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6802"
+   ],
+   [
+    "FS6802-08-08-NWO-FG",
+    "other shape family",
+    "face-seal leg shape SF (stepped face-seal legs, stud neck flush with the flats): built in master FS6802"
+   ],
+   [
+    "FS6802-12-08-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
+   ],
+   [
+    "FS6802-12-10-NWO-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS6802-12-12-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
+   ],
+   [
+    "FS6802-12-16-NWO-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6802-16-12-NWO-FG",
+    "other shape family",
+    "face-seal leg shape NR (face-seal legs with the flats = the thread major (no step), stud neck below the flats): built in master FS6802NR"
+   ],
+   [
+    "FS6802-16-16-NWO-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6802-20-20-NWO-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF6802:FF6802-4-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-10-8 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-10-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-10-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-16-20 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-20-24 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-24-20 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6802:FF6802-24-24 NWO",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [
+   "FS6802-04-06-NWO-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0261)",
+   "FS6802-06-10-NWO-FG: leg 2: the corner puck buries the inner thread edge (margin -0.1442)",
+   "FS6802-08-10-NWO-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0985)",
+   "FS6802-08-12-NWO-FG: leg 2: the corner puck buries the inner thread edge (margin -0.1391)"
+  ],
+  "warnings": [
+   "FS6802-06-04-NWO-FG: leg 1: adjustable stud tip -> washer face 0.43 = L13 - L14 (Air-Way), thread 0.304 = stud - undercut 0.126, tip -> body face 0.807 (FS lock nut 0.28 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.020 past the body face (0.413) inside the neck (max 0.130 off the axis vs neck radius 0.219) - as on the 45 deg Brennan forgings",
+   "FS6802-06-06-NWO-FG: leg 1: adjustable stud tip -> washer face 0.48 = L13 - L14 (Air-Way), thread 0.359 = stud - undercut 0.121, tip -> body face 0.885 (FS lock nut 0.33 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.018 past the body face (0.415) inside the neck (max 0.124 off the axis vs neck radius 0.281) - as on the 45 deg Brennan forgings",
+   "FS6802-08-06-NWO-FG: leg 1: adjustable stud tip -> washer face 0.47 = L13 - L14 (Air-Way), thread 0.349 = stud - undercut 0.121, tip -> body face 0.875 (FS lock nut 0.33 thick, NWO_FS); leg 1: the corner puck (radius 0.433) reaches 0.038 past the body face (0.395) inside the neck (max 0.177 off the axis vs neck radius 0.281) - as on the 45 deg Brennan forgings"
+  ],
+  "cols": 61
+ }
+}

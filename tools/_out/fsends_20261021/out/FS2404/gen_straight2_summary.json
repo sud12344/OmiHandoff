@@ -1,0 +1,36 @@
+{
+ "FS2404": {
+  "configs": 21,
+  "ref": "FS2404-08-08",
+  "skipped": [
+   [
+    "FS2404-04-08",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2404-06-02",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FS2404-32-32",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FF2404:FF2404-4-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2404:FF2404-10-6-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 16,
+  "cols": 41
+ }
+}

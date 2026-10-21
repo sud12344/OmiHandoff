@@ -1,0 +1,580 @@
+[
+ {
+  "pn": "FS2403-04-04",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.24335,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-06-04",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.34719,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-06-06",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.38854,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-08-06",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.53174,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-08-08",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.5822,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-10-08",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.88956,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-10-10",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.02048,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-12-08",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.27502,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-12-10",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.40482,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-12-12",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.54444,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-16-12",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.06508,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-16-16",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.20965,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-20-16",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.88198,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-20-20",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.98792,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-24-20",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.17101,
+  "bad": []
+ },
+ {
+  "pn": "FS2403-24-24",
+  "checks": 30,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.34275,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-04-02",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.21163,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-04-04",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.29202,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-04-06",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.44397,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-06-04",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.37431,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-06-06",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.44604,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-06-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.72795,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-04",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.51432,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-06",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.551,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.74433,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-08-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.2832,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-10-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.97774,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-10-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.27386,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-12-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.33596,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-12-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.4953,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-12-16",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.27656,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-16-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.90606,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-16-16",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.31824,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-16-20",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.76921,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-20-16",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.77406,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-20-20",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.68169,
+  "bad": []
+ },
+ {
+  "pn": "FS2404-24-24",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.74941,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-04-04-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.22283,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-04-05-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.23043,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-04-06-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.27599,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-04-08-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.47028,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-04-10-O",
+  "checks": 16,
+  "off": 1,
+  "solids": 1,
+  "volume": 0.67074,
+  "bad": [
+   "End A: ORB stud reader failed on the model (measure_stud assertion)"
+  ]
+ },
+ {
+  "pn": "FS6400-06-04-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.38119,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-06-05-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.33033,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-06-06-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.35436,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-06-08-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.51615,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-06-10-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.70886,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-08-06-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.55002,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-08-08-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.57539,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-08-10-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.75684,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-08-12-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.18938,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-10-08-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.00553,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-10-10-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.93658,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-10-12-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.31919,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-12-08-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.45594,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-12-10-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.51009,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-12-12-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.45881,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-12-16-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.89136,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-16-12-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.22662,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-16-16-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.10304,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-16-20-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.01429,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-20-16-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.13689,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-20-20-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.22433,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-20-24-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.3868,
+  "bad": []
+ },
+ {
+  "pn": "FS6400-24-24-O",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.32282,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-04-04",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.22713,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-06-06",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.34015,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-08-08",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.55931,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-10-10",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.94126,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-12-12",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.43677,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-16-16",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.069,
+  "bad": []
+ },
+ {
+  "pn": "FS6403-20-20",
+  "checks": 16,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.92012,
+  "bad": []
+ }
+]

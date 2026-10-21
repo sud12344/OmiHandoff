@@ -1,0 +1,16 @@
+{
+ "FS2403": {
+  "configs": 16,
+  "ref": "FS2403-08-08",
+  "skipped": [
+   [
+    "FS2403-32-32",
+    "DROP",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "verts": 22,
+  "cols": 46
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "FS6400": {
+  "configs": 28,
+  "ref": "FS6400-08-08-O",
+  "skipped": [
+   [
+    "FS6400-10-06-O",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6400-12-20-O",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6400-24-20-O",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS6400-32-32-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-4-3-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-6-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-6-20-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-8-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-10-16-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-12-14-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-12-24",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-16-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-16-14-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-16-24-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF6400:FF6400-24-16-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 17,
+  "cols": 42
+ }
+}

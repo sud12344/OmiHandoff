@@ -1,0 +1,106 @@
+{
+ "FS2703": {
+  "configs": 2,
+  "ref": "FS2703-08-08-08-FG",
+  "skipped": [
+   [
+    "FS2703-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2703N"
+   ],
+   [
+    "FS2703-06-06-06-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2703-12-12-12-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2703-16-16-16-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2703N"
+   ],
+   [
+    "FS2703-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2703-24-24-24-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2703-32-32-32-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FF2703:FF2703-8-8-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2703:FF2703-8-8-12-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2703:FF2703-10-10-6-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF2703:FF2703-10-10-10-O",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FS2703-LN-04-04-04-FG",
+    "other shape family",
+    "face-seal leg shape N (face-seal legs with the flats = the thread major (no step)): built in master FS2703N"
+   ],
+   [
+    "FS2703-LN-06-06-06-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -06 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-06-06-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2703-LN-12-12-12-FG",
+    "no end data",
+    "face-seal bulkhead leg not measured for -12 (FSBH_MEAS has -04/-08/-10/-16; needs BRENNAN_FS2701-12-12-FG or another FS bulkhead part of that size)"
+   ],
+   [
+    "FS2703-LN-16-16-16-FG",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS2703-LN-20-20-20-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2703-LN-24-24-24-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FS2703-LN-32-32-32-FG",
+    "DROP",
+    "MISSING"
+   ],
+   [
+    "FF2703:2703-10-10-10-LN-O",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 73
+ }
+}

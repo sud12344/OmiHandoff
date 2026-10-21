@@ -1,0 +1,450 @@
+[
+ {
+  "pn": "FS2701-08-08-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.33584,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-10-10-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.54458,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-LN-08-08-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.33584,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-LN-10-10-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.54458,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-08-08-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.14384,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-LN-08-08-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.14384,
+  "bad": []
+ },
+ {
+  "pn": "FS2703-08-08-08-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63492,
+  "bad": []
+ },
+ {
+  "pn": "FS2703-LN-08-08-08-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63492,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-08-08-08-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63434,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-10-10-10-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.08767,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-08-08-08-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63434,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-10-10-10-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.08767,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-04-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.0074,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-06-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.05231,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-08-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.08712,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-16-20-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 6.23651,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-06-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.87202,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-08-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.92119,
+  "bad": []
+ },
+ {
+  "pn": "FS6803-08-08-08-NWO-FG",
+  "checks": 36,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.37168,
+  "bad": []
+ },
+ {
+  "pn": "FS6804-08-08-08-NWO-FG",
+  "checks": 36,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.37102,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-12-08-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.58124,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-12-10-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.74046,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-12-12-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.1978,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-16-12-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.54519,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-16-16-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.72534,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-06-10-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.01105,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-08-06-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.87774,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-08-12-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.01063,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-10-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.98279,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-10-10-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.13852,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-10-12-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.07908,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-12-16-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.68653,
+  "bad": []
+ },
+ {
+  "pn": "FS6801-20-16-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 5.9578,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-12-08-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.98523,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-12-12-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.63173,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-16-12-NWO-FG",
+  "checks": 20,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.58467,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-06-04-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.60338,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-06-06-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.66993,
+  "bad": []
+ },
+ {
+  "pn": "FS6802-08-06-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.70754,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.62516,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-16-16-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 5.23911,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-LN-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.62516,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.53759,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-16-16-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.3805,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-LN-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.53759,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-04-04-04-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.76856,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-16-16-16-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 6.2966,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-04-04-04-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.76856,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-16-16-16-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 6.2966,
+  "bad": []
+ },
+ {
+  "pn": "FS6803-12-12-12-NWO-FG",
+  "checks": 32,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.9242,
+  "bad": []
+ },
+ {
+  "pn": "FS6803-16-16-16-NWO-FG",
+  "checks": 32,
+  "off": 0,
+  "solids": 1,
+  "volume": 5.72283,
+  "bad": []
+ },
+ {
+  "pn": "FS6804-06-06-06-NWO-FG",
+  "checks": 36,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.04705,
+  "bad": []
+ },
+ {
+  "pn": "FS6804-08-06-08-NWO-FG",
+  "checks": 36,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.16796,
+  "bad": []
+ },
+ {
+  "pn": "FS6804-10-10-10-NWO-FG",
+  "checks": 36,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.64238,
+  "bad": []
+ },
+ {
+  "pn": "FS6804-12-12-12-NWO-FG",
+  "checks": 32,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.9242,
+  "bad": []
+ },
+ {
+  "pn": "FS6804-16-16-16-NWO-FG",
+  "checks": 32,
+  "off": 0,
+  "solids": 1,
+  "volume": 5.73364,
+  "bad": []
+ }
+]
