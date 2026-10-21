@@ -21,8 +21,20 @@ Build_6835_MASTER.bas LEG 2 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'f
 Build_6835_MASTER.bas LEG 3 {'n': 4, 'unknowns': 8, 'cons': 8, 'rank': 8, 'fully': True, 'redundant': 0}
 Build_6835_MASTER.bas ORBMOUTH1 {'n': 6, 'unknowns': 16, 'cons': 16, 'rank': 16, 'fully': True, 'redundant': 0, 'value_mismatch': []}
 Build_6835_MASTER.bas ORBMOUTH3 {'n': 6, 'unknowns': 16, 'cons': 16, 'rank': 16, 'fully': True, 'redundant': 0, 'value_mismatch': []}
+Build_FS2701_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2701_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2704_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2704_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2704_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
 Build_FS6801_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
 Build_FS6801_MASTER.bas LEG 2 {'n': 15, 'unknowns': 30, 'cons': 30, 'rank': 30, 'fully': True, 'redundant': 0}
+Build_FS2701N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2701N_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2702N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2702N_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2704N_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
+Build_FS2704N_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
+Build_FS2704N_MASTER.bas LEG 3 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}
 Build_FS6801R_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
 Build_FS6801R_MASTER.bas LEG 2 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
 Build_FS6801NR_MASTER.bas LEG 1 {'n': 9, 'unknowns': 18, 'cons': 18, 'rank': 18, 'fully': True, 'redundant': 0}

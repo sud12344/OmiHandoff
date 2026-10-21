@@ -154,6 +154,14 @@
   "diff_pct": -1.46
  },
  {
+  "pn": "FS6802-06-04-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.60338,
+  "bad": []
+ },
+ {
   "pn": "FS6802-06-06-NWO-FG",
   "checks": 22,
   "off": 0,
@@ -270,6 +278,14 @@
   "bad": []
  },
  {
+  "pn": "FS6809-04-04-NWO-FG",
+  "checks": 23,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.54681,
+  "bad": []
+ },
+ {
   "pn": "FS6809-06-06-NWO-FG",
   "checks": 23,
   "off": 0,
@@ -301,6 +317,156 @@
   "off": 0,
   "solids": 1,
   "volume": 5.41466,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-08-08-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.33584,
+  "bad": [],
+  "brennan_volume": 1.32688,
+  "diff_pct": 0.68
+ },
+ {
+  "pn": "FS2701-10-10-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.54458,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-LN-08-08-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.33584,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-LN-10-10-FG",
+  "checks": 33,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.54458,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-08-08-08-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63434,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-10-10-10-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.08767,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-08-08-08-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63434,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-10-10-10-FG",
+  "checks": 47,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.08767,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.62516,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-16-16-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 5.23911,
+  "bad": []
+ },
+ {
+  "pn": "FS2701-LN-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.62516,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.53759,
+  "bad": [],
+  "brennan_volume": 0.55208,
+  "diff_pct": -2.62
+ },
+ {
+  "pn": "FS2702-16-16-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.3805,
+  "bad": []
+ },
+ {
+  "pn": "FS2702-LN-04-04-FG",
+  "checks": 31,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.53759,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-04-04-04-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.76856,
+  "bad": [],
+  "brennan_volume": 0.79111,
+  "diff_pct": -2.85
+ },
+ {
+  "pn": "FS2704-16-16-16-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 6.2966,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-04-04-04-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.76856,
+  "bad": []
+ },
+ {
+  "pn": "FS2704-LN-16-16-16-FG",
+  "checks": 43,
+  "off": 0,
+  "solids": 1,
+  "volume": 6.2966,
   "bad": []
  }
 ]

@@ -739,10 +739,16 @@ FSLEG_ASSUME = ('face-seal legs (SAE J1453 male face seal): face, rectangular O-
 # FSBH leg (bulkhead, BRENNAN_FS2701-08-08-FG): FSM nose, thread major to the 60deg flank, relief, a step (dia 0.801 at -08) of Air-Way i4, the
 # collar face at Air-Way i2 from the tip, the collar (Air-Way d17) over COLLARL (0.20 at -08: Air-Way prints no collar thickness), then the hex arm.
 FSBH_MEAS = {8: dict(STEPR=0.4005, RELL=0.094, COLLARL=0.20)}
+# 2026-10-21 (group B, pasted from the group A stage claude/ecstatic-hopper-fk5p40 b272792 tools/_out/fsends_20261021/entries.json, at its
+# request, so both branches carry identical tables): Brennan FS2701-NN-NN-FG per size; NOT -06 / -12: their collar radius equals the forged flats
+# radius (0.435 / 0.433, 0.685 / 0.686) - the collar runs into the body, no collar face (a zero-height face) - needs a leg variant
+FSBH_MEAS.update({4: dict(STEPR=0.276, RELL=0.083, COLLARL=0.15),
+                  10: dict(STEPR=0.494, RELL=0.106, COLLARL=0.2),
+                  16: dict(STEPR=0.715, RELL=0.125, COLLARL=0.2)})
 FSBH_ASSUME = ('face-seal bulkhead leg (Brennan FS2701-08-08-FG): FSM nose, face-seal thread to a 60deg flank and a relief, then a step of Air-Way i4 (i4 = the '
                'length of that step on the STEP, not the collar thickness), the collar face at Air-Way i2 from the tip, collar dia = Air-Way d17 (column '
-               'D17@BORE, a collar dia), collar thickness and step dia / relief length measured on the -08 pilot (FSBH_MEAS; Air-Way prints no collar '
-               'thickness - other sizes need their own STEP); -LN rows = the plain part, the locknut is a separate part (user A10)')
+               'D17@BORE, a collar dia), collar thickness and step dia / relief length measured on the Brennan FS2701-NN-NN-FG of the size (FSBH_MEAS: -04 / -08 / -10 / -16; '
+               'Air-Way prints no collar thickness); -LN rows = the plain part, the locknut is a separate part (user A10)')
 # NWO_FS (adjustable stud on an FS part, BRENNAN_FS6801-08-08-NWO-FG): the 6801 adjustable-ORB leg with the FS values - neck, lock nut (thicker,
 # Air-Way S3 hex), washer and undercut (= NWO_MEAS); the stud tip -> washer face = Air-Way L10 - L11 (Q-FS-ORBSTUD (a)) and the extra length over
 # the library is thread (tip -> thread end = stud - undercut length).
@@ -757,6 +763,10 @@ NWO_FS.update({6: dict(NECKR=0.2812, NECKL=0.040, NUTT=0.33, WR=0.397, WT=0.035,
                12: dict(NECKR=0.5312, NECKL=0.053, NUTT=0.50, WR=0.722, WT=0.05, UL=0.184, AF_B=1.375),
                16: dict(NECKR=0.6562, NECKL=0.043, NUTT=0.54, WR=0.866, WT=0.05, UL=0.184, AF_B=1.625),
                20: dict(NECKR=0.8125, NECKL=0.043, NUTT=0.54, WR=1.0825, WT=0.05, UL=0.184, AF_B=1.875)})
+# -04 / -24 (group B, pasted from the group A stage fsends_20261021/entries.json - Brennan FS6801-04-04 / -24-24-NWO-FG, measured there; lock nut
+# A/F from the hex corner radius x 2 cos 30, 3 decimals). Its -06 ... -20 entries equal the group B readings above within 0.0001 (AF_B rounding).
+NWO_FS.update({4: dict(NECKR=0.2188, NECKL=0.067, NUTT=0.28, WR=0.325, WT=0.03, UL=0.126, AF_B=0.625),
+               24: dict(NECKR=0.9375, NECKL=0.043, NUTT=0.54, WR=1.227, WT=0.05, UL=0.184, AF_B=2.125)})
 # (NWO_FS_FS6809: with the FS6809 SPEC above)
 
 
@@ -764,7 +774,7 @@ def nwo_fs_of(sp, d):
     """the FS adjustable-stud end values of dash d for a root: its own SPEC 'nwo_fs' entry, else the NWO_FS library (group B 2026-10-21)"""
     return (sp.get('nwo_fs') or {}).get(d) or NWO_FS[d]
 NWOFS_ASSUME = ('adjustable ORB stud on an FS part (Brennan FS6801-08-08-NWO-FG): neck, lock nut (0.41 thick, hex = the row S3), washer and O-ring undercut '
-                'measured on the -08 pilot (NWO_FS; washer and undercut = the 6801 library NWO_MEAS); washer face at Air-Way L11 / L14 from the crossing '
+                'measured on the Brennan FS6801-NN-NN-NWO-FG of the size (NWO_FS -04 ... -24; -08: washer and undercut = the 6801 library NWO_MEAS); washer face at Air-Way L11 / L14 from the crossing '
                 '(stud = tip -> washer face, Q-FS-ORBSTUD (a)); thread from the tip to the undercut (the extra stud length is thread); thread major, '
                 'undercut dia = the ORB end library; O-ring not modelled')
 

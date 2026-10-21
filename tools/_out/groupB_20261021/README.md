@@ -4,9 +4,23 @@ Branch `claude/groupB-specs-20261021` (from `claude/ecstatic-hopper-fk5p40` @ a3
 group D bent tubes edit other copies of the same generators). Live `04_DESIGN_TABLES`, `03_SCRIPTS`, `tools/`, `11_MASTERS` and every older
 stage are untouched. The cloud cannot run SolidWorks: the dry runs are the PC's job (below).
 
-**Result (phase 2, 2026-10-21 later): 126 of the 168 group B parts generate** (phase 1: 109), plus **82 configurations of existing FS roots**
-(FS2403 / FS2404 / FS6400 / FS6403 / FS6801 / FS6802 / FS6803 / FS6804 families) that the STEPs the user sent unlocked: 208 new configurations,
-0 changed, 0 lost anywhere. 42 group B parts still need a STEP, a new end shape or a user decision (section 2).
+**Result (phase 2, 2026-10-21 later): 127 of the 168 group B parts generate** (phase 1: 109), plus **97 configurations of existing FS roots**
+(FS2403 / FS2404 / FS6400 / FS6403 / FS6801-6804 / FS2701 / FS2702 / FS2704 families) unlocked by the per-size STEPs: 224 new configurations,
+0 lost; the only changed cells are `$PRP@AxialSource` texts (below). 41 group B parts still need a STEP, a new end shape or a user decision (section 2).
+
+**Group A tables (2026-10-21, at the group A session's request):** its per-size end tables (branch `claude/ecstatic-hopper-fk5p40` b272792,
+`tools/_out/fsends_20261021/entries.json`, measured on 18 Brennan STEPs) are pasted into `tools_fs` so both branches carry identical tables:
+- FSM_MEAS -04 ... -20: identical to the group B readings (0 difference).
+- NWO_FS -06 ... -20: identical to the group B readings except AF_B, which differs by at most 0.0001 (rounding of the hex corner radius x 2 cos 30)
+  and is rounded to 3 decimals in both generators - no difference over 0.001 anywhere.
+- Added from group A (not measured here): NWO_FS -04 / -24 (Brennan FS6801-04-04 / -24-24-NWO-FG) and FSBH_MEAS -04 / -10 / -16 (Brennan
+  FS2701-NN-NN-FG). NWO_FS -04 unlocks FS6809-04-04 (group B); FSBH -04 / -10 / -16 add FS2701 / FS2702 / FS2704 (+ -LN, N masters) rows.
+- The source texts FSM_SRC / FSBH_ASSUME / NWOFS_ASSUME take the group A wording (the old "-08 pilot only" text was wrong for the per-size
+  rows) - the only "changed" cells in `regen/cmp.txt` (`$PRP@AxialSource` of 18 existing FS2701-2704 / FS6801-6804 configurations).
+- FS6809 keeps its own -06 stud (`NWO_FS_FS6809`, BRENNAN_FS6809-06-06: neck 0.300 x 0.058 / undercut 0.103 vs the FS6801-06 stud 0.2812 x 0.040
+  / 0.121 - the parts really differ).
+- Known, not fixed here (group A's generator, same code on both branches): `gen_tee.py FS2703N` stops with a TypeError - FS2703-16-16-16-FG has no
+  Air-Way I4, and with FSBH_MEAS[16] present `leg_FSBH` adds None. FS2703N produced no configurations before either; reported to group A.
 
 **Phase 2** (user 2026-10-21: "do the recommended for 1 and 2, use brennan for 5, for 4 i sent the STEP" + a PARTcommunity briefcase):
 - Decisions 1, 2 and 5 applied (section 7). Decision 3 is still open; decision 4 is measured but still blocked (section 7).
@@ -30,7 +44,7 @@ stage are untouched. The cloud cannot run SolidWorks: the dry runs are the PC's 
 | `scripts/run_checks.py` | vbacheck / dofcheck / allcfg / regress on every added or changed master -> `checks/*.txt`; copies them to `out/` |
 | `scripts/closed_loop_*.py` | OCP closed loops (`ocp/*/closed_loop*.txt`) |
 | `scripts/summary.py` | per series: configurations / not generated with the reason -> `checks/series_summary.txt` |
-| `out/af`, `out/fs` | the 28 macros + SW2 tables for the dry runs |
+| `out/af`, `out/fs` | the 33 macros + SW2 tables for the dry runs |
 | `dryrun/calls_g1..g4.json` | the dry-run call files (`scripts/make_calls.py`) |
 
 Generator edits are ADDITIVE (new SPEC entries, new functions, guarded branches); every existing root regenerates byte-identical
@@ -52,7 +66,7 @@ FS2403 / FS2404 / FS6400 / FS6403, FS6801 / FS6801R / FS6801NR / FS6802NR - and 
 | **4005** flange O-rings | **8 / 9** | records (I.D., W, Buna-N) checked on BRENNAN_4005-08 (I.D. 0.734 / O.D. 1.014 / W 0.140); folded into the 4000 ring master (gen_ring SPEC 4000 tables + '4005'). The code 61 and code 62 face grooves are the same at every measured size, so Q-NEW-4005CODE does not change the ring. | 4005-48 (no record) |
 | **FS2408** face-seal plug | **8 / 8** | new SPEC; built the way Brennan builds it (BRENNAN_FS2408-08: blind hole 0.378, full dia to 0.391, 120deg point to 0.500 of the 0.504 end length) -> rule "full dia to end length - 0.004 - drill-point height" (= the STEP at -08, ASSUMED at -24) | - (phase 2: FSM_MEAS -04 ... -20 from the FS2403 STEPs; the hole-depth rule is ASSUMED off -08) |
 | **FS6402** male FS x female JIC swivel | **7 / 7** | new SPEC (FSM + JICSW); nose = the record CC (0.422 measured on BRENNAN_FS6402-08-08) in a new column SNT | - |
-| **FS6809** FS swivel x FS adj. stud elbow | **6 / 7** | new SPEC (FSSW + FS stud); NEW `NWO_FS[6]` measured on BRENNAN_FS6809-06-06-NWO-FG (neck 0.300 x 0.058, nut 0.33 / AF 0.75, washer 0.397 x 0.035, undercut 0.103; tip -> washer 0.457 = record DT) | -04: no -04 FS adjustable stud measured (BRENNAN_FS6801-04-06 carries a -06 stud; needs e.g. BRENNAN_FS6801-04-04-NWO-FG). -10 ... -20 use the FS6801 studs (phase 2) |
+| **FS6809** FS swivel x FS adj. stud elbow | **7 / 7** | new SPEC (FSSW + FS stud); NEW `NWO_FS[6]` measured on BRENNAN_FS6809-06-06-NWO-FG (neck 0.300 x 0.058, nut 0.33 / AF 0.75, washer 0.397 x 0.035, undercut 0.103; tip -> washer 0.457 = record DT) | - (-04 = group A's NWO_FS[4]; -10 ... -20 = the FS6801 studs, phase 2) |
 | **FS6801-L** | **1 / 1** | folded into FS6801 (all fs_code variants); BRENNAN_FS6801-L-08-08 vs FS6801-08-08: only the stud's hex arm is longer (tip -> washer 0.540 on both) | - |
 | FS1700 / FS1704 / FS1800 / FS1804 | 0 / 16 | - | straights: the straight FSM end now exists at -04 ... -24 (phase 2), but FS1700 / FS1800 need their collar / neck body (FS1700-24 / FS1800-24 also need their collar / neck body: own STEP); forged FS1704 / FS1804: the FS leg on BRENNAN_FS1704-12-12-FG ends in a 45deg chamfer to a round NECK (dia 1.068 = record W1) before the hex - a run-out the forged FS leg module does not have yet (new variant + closed loop). Code 62 heads are ready: BRENNAN_FS1800-12-12 measured (O 1.625, TH 0.345, GI 0.47, GO 0.625, GD 0.11 = catalog 3300-62 A / D / H on the -12 row), the -16 / -20 / -24 heads = catalog 3300-62 A / D / H + the code-61 groove ID / depth (Q-CODE62-CAT) - NOT written into FLG62_MEAS here (no consumer in group B; group D may need the same lines) |
 | FS2700 bulkhead union | 0 / 7 | - | needs a STRAIGHT face-seal bulkhead end (BRENNAN_FS2700-08-08 measured: hex 0..0.356, step r 0.4005 x 0.06, relief 0.094, thread to the face 1.796; = FS2701's FSBH leg without the collar) - new end + emit block; all sizes have the FSM data now (phase 2) |
@@ -94,15 +108,16 @@ FS2403 / FS2404 / FS6400 / FS6403, FS6801 / FS6801R / FS6801NR / FS6802NR - and 
 - 4005: ring = torus I.D. x W from the record.
 
 ## 5. Checks (all clean)
-- `regen/cmp.txt`: every root of both toolsets, old vs new: **NEW only** (208 configurations), **0 lost, 0 changed**.
-- `checks/vbacheck.txt` 28 / 28 OK; `checks/dofcheck_tee.txt` + `dofcheck_straight.txt`: every sketch fully defined, 0 redundant (incl. 8
+- `regen/cmp.txt`: every root of both toolsets, old vs new: **224 new configurations, 0 lost**; changed cells only `$PRP@AxialSource` (source wording, above).
+- `checks/vbacheck.txt` 33 / 33 OK; `checks/dofcheck_tee.txt` + `dofcheck_straight.txt`: every sketch fully defined, 0 redundant (incl. 8
   ORBMOUTH sketches); `checks/allcfg.txt` 0 outline problems (22 mouth loops); `checks/regress.txt` 0 changed cells in old configurations
   (6801 39 -> 51, FS2403 2 -> 16, FS2404 5 -> 21, FS6400 5 -> 28, FS6403 1 -> 7, FS6801 3 -> 5, FS6801R 1 -> 8, FS6801NR 1 -> 5, FS6802NR 1 -> 3,
   4000 29 -> 37).
 - OCP closed loops (rebuild from the generator chain, measure with the extractors that read the Brennan STEPs):
   - `ocp/orbport/closed_loop_orbport.txt`: 14 configurations, 163 checks, 0 off; the model ports read the same as the Brennan 6815 / 6832 /
     6835-08 STEP ports (face, RF, RC, 15deg, minor within the 0.68 / 0.682 rounding); volumes vs Brennan +0.65 % / -0.01 % / +1.44 %.
-  - `ocp/tee/closed_loop_tee.txt` (every FS6801 / FS6802 / FS6803 / FS6804 / FS6809 variant): 36 configurations, 876 checks, 0 off; vs their
+  - `ocp/tee/closed_loop_tee.txt` (every FS6801 / FS6802 / FS6803 / FS6804 / FS6809 variant + FS2701 / FS2704 / FS2701N / FS2702N / FS2704N):
+    56 configurations, 1,599 checks, 0 off; FS2702-04-04 -2.62 %, FS2704-04-04-04 -2.85 % vs Brennan; vs their
     Brennan STEPs FS6801-10-10 -1.29 %, -12-12 +0.04 %, -16-16 -1.46 %, FS6809-06-06 -2.08 %, FS6801-L-08-08 -1.6 %, FS6802-08-06 -3.97 % (the
     Brennan FS6802 stud sits on the 45deg axis).
   - `ocp/straight/closed_loop.txt` (FS2403 / FS2404 / FS6400 / FS6403 / FS2408 / FS6402): 87 configurations, 1,812 checks, 0 off. Two reader
@@ -118,7 +133,7 @@ FS2403 / FS2404 / FS6400 / FS6403, FS6801 / FS6801R / FS6801NR / FS6802NR - and 
    - g1: 6900 6901 6805 6806 6809 6801 (6801 also sweeps the shipped 11_MASTERS part: its 39 old configurations must keep volume / size)
    - g2: 6815 6832 6835 (NEW: ORBMOUTH sketch + cut - look at the `ORBMOUTHi` trace lines and a section screenshot of one port) FS2408 FS6402 FS6809 FS6809C FS6809R FS6809RC
    - g3: FS6801 FS6801R FS6801NR FS6802R FS6802NR FS6803NR FS6804R FS6804NR 4000
-   - g4: FS2403 FS2404 FS6400 FS6403 (the straights with the new FSM sizes)
+   - g4: FS2403 FS2404 FS6400 FS6403 (the straights with the new FSM sizes) FS2701 FS2704 FS2701N FS2702N FS2704N (bulkhead rows)
    Each `run_macro` uses `TABLE_PATH` = `tools\_out\groupB_20261021\out\<af|fs>\DesignTable_<root>_SW2.xlsx`, `SAVE_PATH` / `REPORT_PATH` =
    `tools\_out\groupB_20261021\dryrun\<root>\` (11_MASTERS / 03_SCRIPTS untouched).
 3. PASS = 0 FAIL lines, every configuration 1 body, configuration set = the SW2; for 6815 / 6832 / 6835 also "ORBMOUTHi_SK sketch fully
@@ -140,9 +155,16 @@ FS2403 / FS2404 / FS6400 / FS6403, FS6801 / FS6801R / FS6801NR / FS6802NR - and 
 7. 6425-08-08: Brennan catalog hex 1.000 vs CAD record 1.062 (not built yet anyway).
 8. 6900: Brennan's records differ from Air-Way on 19 of the 21 Air-Way rows (W4 / L2 by 0.02 - 0.18, some bores); built to Air-Way,
    each row's `$COMMENT` lists the differences (tell OMi).
-9. Downloads still useful: an FS part with a -04 adjustable stud (e.g. BRENNAN_FS6801-04-04-NWO-FG) for FS6809-04-04.
 
-## 8. Merge notes (for whoever merges groups B / C / D)
+## 8. Configurations added because of the user's 2026-10-21 answers / the 6901-08-12 STEP
+- Decision 1 (6900-05-04-O): no new configuration - the row was built before; now W4 1.30 (Air-Way) + L2 1.09 (Brennan).
+- Decision 2 (6805-08-06-NWO-FG): no new configuration - built before; N1 = Brennan 1.02 (confirmed).
+- Decision 5: **6801-LL-08-08-NWO-FG** (new, in the 6801 master).
+- Decision 4 (6901-08-12-NWO-FG STEP): **none** - measured, still blocked by the generator margins (section 7).
+- From the FS STEPs (the user's briefcase + group A's tables): FS2408 -04 / -06 / -10 / -12 / -16 / -20, FS6402 -04 / -06 / -10 / -12 / -16 / -20,
+  FS6809 -04 / -10 / -12 / -16 / -20, and the 97 existing-root configurations listed in `checks/series_summary.txt`.
+
+## 9. Merge notes (for whoever merges groups B / C / D)
 - Every generator edit is a new SPEC / function / guarded branch; regenerate all roots after the merge and diff against `regen/cmp.txt`.
 - `ORBPORT_HELP` is appended to the macro header only when a leg has a port mouth; `assume_reps_opt` is a new optional SPEC key.
 - The code 62 head values (section 2, FS18xx) are NOT in FLG62_MEAS here; if group D adds them, the -12 row must equal the FS1800-12-12 STEP.

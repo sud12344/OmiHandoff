@@ -3,6 +3,8 @@ FS2403 configs 2 -> 16  new cols []  lost cols []  changed cells in old configs:
 FS2404 configs 5 -> 21  new cols []  lost cols []  changed cells in old configs: 0 []
 FS6403 configs 1 -> 7  new cols []  lost cols []  changed cells in old configs: 0 []
 FS6400 configs 5 -> 28  new cols []  lost cols []  changed cells in old configs: 0 []
+FS2701 configs 2 -> 4  new cols []  lost cols []  changed cells in old configs: 0 []
+FS2704 configs 2 -> 4  new cols []  lost cols []  changed cells in old configs: 0 []
 FS6801 configs 3 -> 5  new cols []  lost cols []  changed cells in old configs: 0 []
 FS6801R configs 1 -> 8  new cols []  lost cols []  changed cells in old configs: 0 []
 FS6801NR configs 1 -> 5  new cols []  lost cols []  changed cells in old configs: 0 []

@@ -13,7 +13,12 @@ regen/new/fs/FS6403/Build_FS6403_MASTER.bas 33 procedures OK
 regen/new/fs/FS6400/Build_FS6400_MASTER.bas 33 procedures OK
 regen/new/fs/FS2408/Build_FS2408_MASTER.bas 33 procedures OK
 regen/new/fs/FS6402/Build_FS6402_MASTER.bas 33 procedures OK
+regen/new/fs/FS2701/Build_FS2701_MASTER.bas 51 procedures OK
+regen/new/fs/FS2704/Build_FS2704_MASTER.bas 51 procedures OK
 regen/new/fs/FS6801/Build_FS6801_MASTER.bas 52 procedures OK
+regen/new/fs/FS2701N/Build_FS2701N_MASTER.bas 51 procedures OK
+regen/new/fs/FS2702N/Build_FS2702N_MASTER.bas 51 procedures OK
+regen/new/fs/FS2704N/Build_FS2704N_MASTER.bas 51 procedures OK
 regen/new/fs/FS6801R/Build_FS6801R_MASTER.bas 52 procedures OK
 regen/new/fs/FS6801NR/Build_FS6801NR_MASTER.bas 52 procedures OK
 regen/new/fs/FS6802R/Build_FS6802R_MASTER.bas 52 procedures OK
