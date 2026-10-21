@@ -743,6 +743,7 @@ harmless; move it to `_to_delete` when SolidWorks is closed.
   user. Still to read: the AW / BI marks in the two PDFs.
 - 2026-10-20 (Q1): **an Air-Way value that cannot be built -> Brennan's value** ("use brennans"): 6405-24-16-O L31, 6504-24-24 D1,
   6565-10-10 nut hexes; marked `$PRP@DimSource` BRENNAN.
+- 2026-10-21: **Brennan's CAD parameter records may be used as Brennan values, following the rule** ("yes you can use them following my rule"): the records Brennan's CAD portal returns (`tools\_out\partcommunity_20261021`, PARTcommunity reversemap) count as Brennan data - Air-Way first, then OMi's file / answers, then Brennan; cells taken from a record are marked `$PRP@DimSource` BRENNAN. A family's letter codes are mapped against a real Brennan STEP of that family before its records are used.
 
 ## 6. Conventions that grew during the build (keep them)
 
