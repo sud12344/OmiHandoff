@@ -4,9 +4,9 @@ A1D      DECODED  CYL_D 4/4 (chance 0/8), GAP 1/4 (chance 0/8)   values: 0.281, 
 A1THD    DECODED  CYL_D 4/4 (chance 0/8)   values: 0.5400, 0.8400, 1.0500, 1.3150
 A2THD    DECODED  CYL_D 4/4 (chance 0/8)   values: 0.5400, 0.8400, 1.0500, 1.3150
 BL       PARTIAL  GAP 1/4 (chance 0/8), AX_PL (mm) 1/4 (chance 0/8)   values: 0.410, 0.670, 0.880, 1.105
-BR       PARTIAL  GAP 3/4 (chance 1/8), AX_PL (mm) 1/4 (chance 0/8), AX_AX (mm) 1/4 (chance 0/8), GAP (mm) 1/4 (chance 1/8)   values: 0.560, 0.750, 0.770, 0.940
+BR       PARTIAL  GAP 3/4 (chance 1/8), GAP (mm) 1/4 (chance 1/8), AX_PL (mm) 1/4 (chance 0/8), AX_AX (mm) 1/4 (chance 0/8)   values: 0.560, 0.750, 0.770, 0.940
 C        DECODED  GAP 4/4 (chance 0/8)   values: 0.750, 1.125, 1.375, 1.625
-CL       PARTIAL  CYL_D 3/4 (chance 0/8), AX_PL (mm) 1/4 (chance 0/8), AX_AX (mm) 1/4 (chance 0/8), GAP (mm) 1/4 (chance 0/8)   values: 0.540, 0.840, 1.050, 1.317
+CL       PARTIAL  CYL_D 3/4 (chance 0/8), GAP (mm) 1/4 (chance 0/8), AX_PL (mm) 1/4 (chance 0/8), AX_AX (mm) 1/4 (chance 0/8)   values: 0.540, 0.840, 1.050, 1.317
 CR       DECODED  CYL_D 4/4 (chance 0/8), GAP 1/4 (chance 0/8)   values: 0.437, 0.718, 0.921, 1.156
 DL       DECODED  GAP 4/4 (chance 2/8)   values: 0.560, 0.750, 0.750, 0.940
 DR       PARTIAL  AX_PL (mm) 2/4 (chance 0/8), GAP (mm) 1/4 (chance 0/8)   values: 0.555, 0.855, 1.070, 1.355

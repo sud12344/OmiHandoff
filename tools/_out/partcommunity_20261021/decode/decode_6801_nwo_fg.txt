@@ -20,7 +20,7 @@ IT       DECODED  CYL_D 14/14 (chance 0/28), BOX 10/14 (chance 0/28), GAP 1/14 (
 JT       DECODED  TOR_r 14/14 (chance 0/28), AX_PL 12/14 (chance 12/28), GAP 11/14 (chance 10/28)   values: 0.064, 0.072, 0.072, 0.078
 M        DECODED  AX_PL 14/14 (chance 0/28)   values: 0.890, 0.890, 0.950, 1.060
 M7       DECODED  AX_PL 14/14 (chance 1/28)   values: 0.920, 1.030, 1.130, 1.250
-MDP      PARTIAL  AX_PL (mm) 4/13 (chance 0/26), TOR_r (mm) 1/13 (chance 0/26), GAP (mm) 1/13 (chance 0/26)   values: 5.000, 6.000, 6.000, 6.000
+MDP      PARTIAL  AX_PL (mm) 4/13 (chance 0/26), GAP (mm) 1/13 (chance 0/26), TOR_r (mm) 1/13 (chance 0/26)   values: 5.000, 6.000, 6.000, 6.000
 Y        DECODED  GAP 14/14 (chance 3/28), CYL_D 12/14 (chance 0/28), BOX 1/14 (chance 0/28)   values: 0.438, 0.438, 0.562, 0.562
 
 == 6801-04-02-NWO-FG (record 6801-04-02-NWO-FG)

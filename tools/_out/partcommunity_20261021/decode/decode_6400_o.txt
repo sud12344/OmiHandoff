@@ -12,7 +12,7 @@ D2       PARTIAL  GAP 1/2 (chance 1/4), AX_PL 1/2 (chance 1/4)   values: 0.125, 
 E1       PARTIAL  GAP 1/2 (chance 1/4), AX_PL 1/2 (chance 1/4)   values: 0.125, 0.125
 E2       DECODED  AX_PL (mm) 2/2 (chance 0/4)   values: 1.065, 2.375
 F1       DECODED  CYL_D 2/2 (chance 0/4)   values: 1.068, 2.380
-F2       DECODED  AX_PL 2/2 (chance 2/4), TOR_r 2/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.116, 0.118
+F2       DECODED  TOR_r 2/2 (chance 0/4), AX_PL 2/2 (chance 2/4), GAP 1/2 (chance 0/4)   values: 0.116, 0.118
 G1       DECODED  GAP 2/2 (chance 0/4)   values: 0.890, 1.333
 L5       DECODED  GAP 2/2 (chance 1/4), BOX 2/2 (chance 0/4)   values: 1.990, 2.780
 MDP      NO MATCH -   values: 5.000, 2.000

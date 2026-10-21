@@ -19,6 +19,26 @@ flange_fitting_and_accessories/1700,GFL,DECODED,CYL_D,9,1.000 1.250 1.560 1.560 
 flange_fitting_and_accessories/1700,GT,DECODED,GAP,9,0.657 0.864 0.911 0.958 0.958 1.083
 flange_fitting_and_accessories/1700,L,DECODED,GAP | BOX,9,2.600 2.750 2.800 2.800 2.800 3.400
 flange_fitting_and_accessories/1700,STYLE,PARTIAL,AX_PL 2/9 (chance 0/18) | GAP 1/9 (chance 0/18) | CYL_D 1/9 (chance 0/18),9,1.000 1.000 1.000 1.000 1.000 1.000
+flange_fitting_and_accessories/1703,AF,DECODED,GAP | AX_PL,1,0.87500000
+flange_fitting_and_accessories/1703,AFL,DECODED,BOX | CYL_D,1,1.188
+flange_fitting_and_accessories/1703,AT,DECODED,CYL_D,1,0.659
+flange_fitting_and_accessories/1703,BFL,DECODED,CYL_D,1,1.000
+flange_fitting_and_accessories/1703,CFL,DECODED,GAP (mm) | AX_PL (mm),1,0.433
+flange_fitting_and_accessories/1703,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+flange_fitting_and_accessories/1703,DFL,DECODED,CYL_D,1,0.945
+flange_fitting_and_accessories/1703,DRILLFL,DECODED,TOR_r | CYL_D,1,0.374
+flange_fitting_and_accessories/1703,DT,DECODED,GAP (mm),1,0.253
+flange_fitting_and_accessories/1703,EFL,DECODED,GAP,1,0.265
+flange_fitting_and_accessories/1703,ET,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flange_fitting_and_accessories/1703,FFL,DECODED,GAP,1,0.512
+flange_fitting_and_accessories/1703,FL,NO MATCH,,1,08
+flange_fitting_and_accessories/1703,FT,DECODED,CYL_D,1,0.659
+flange_fitting_and_accessories/1703,GT,DECODED,GAP,1,0.657
+flange_fitting_and_accessories/1703,IT,DECODED,CYL_D,1,1.004
+flange_fitting_and_accessories/1703,JT,DECODED,GAP,1,0.394
+flange_fitting_and_accessories/1703,L1,DECODED,GAP (mm),1,2.720
+flange_fitting_and_accessories/1703,L2,DECODED,GAP (mm),1,0.910
+flange_fitting_and_accessories/1703,TOD,DECODED,TOR_r | TOR_R | CYL_D,1,0.618
 flange_fitting_and_accessories/1703_fg,AB,DECODED,CYL_D,1,1.965
 flange_fitting_and_accessories/1703_fg,AF,DECODED,GAP | CYL_D,1,1.8750
 flange_fitting_and_accessories/1703_fg,AT,DECODED,CYL_D,1,1.755
@@ -36,6 +56,26 @@ flange_fitting_and_accessories/1703_fg,FT,DECODED,CYL_D,1,1.755
 flange_fitting_and_accessories/1703_fg,GT,DECODED,GAP,1,1.083
 flange_fitting_and_accessories/1703_fg,L1,DECODED,GAP | AX_PL,1,1.780
 flange_fitting_and_accessories/1703_fg,L2,DECODED,AX_PL,1,2.380
+flange_fitting_and_accessories/1704,AF,DECODED,GAP | AX_PL,1,0.87500000
+flange_fitting_and_accessories/1704,AFL,DECODED,BOX | CYL_D,1,1.188
+flange_fitting_and_accessories/1704,AT,DECODED,CYL_D,1,0.659
+flange_fitting_and_accessories/1704,BFL,DECODED,CYL_D,1,1.000
+flange_fitting_and_accessories/1704,CFL,DECODED,GAP (mm) | AX_PL (mm),1,0.433
+flange_fitting_and_accessories/1704,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+flange_fitting_and_accessories/1704,DFL,DECODED,CYL_D,1,0.945
+flange_fitting_and_accessories/1704,DRILLFL,DECODED,TOR_r | CYL_D,1,0.374
+flange_fitting_and_accessories/1704,DT,DECODED,GAP (mm),1,0.253
+flange_fitting_and_accessories/1704,EFL,DECODED,GAP,1,0.265
+flange_fitting_and_accessories/1704,ET,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flange_fitting_and_accessories/1704,FFL,DECODED,GAP,1,0.512
+flange_fitting_and_accessories/1704,FL,NO MATCH,,1,08
+flange_fitting_and_accessories/1704,FT,DECODED,CYL_D,1,0.659
+flange_fitting_and_accessories/1704,GT,DECODED,GAP,1,0.657
+flange_fitting_and_accessories/1704,IT,DECODED,CYL_D,1,1.004
+flange_fitting_and_accessories/1704,JT,DECODED,GAP,1,0.394
+flange_fitting_and_accessories/1704,L1,DECODED,AX_PL,1,2.320
+flange_fitting_and_accessories/1704,L2,DECODED,AX_PL,1,1.810
+flange_fitting_and_accessories/1704,TOD,DECODED,TOR_r | CYL_D,1,0.618
 flange_fitting_and_accessories/1704_fg,AB,DECODED,CYL_D,1,1.965
 flange_fitting_and_accessories/1704_fg,AF,DECODED,GAP | CYL_D,1,1.8750
 flange_fitting_and_accessories/1704_fg,AT,DECODED,CYL_D,1,1.755
@@ -54,7 +94,7 @@ flange_fitting_and_accessories/1704_fg,GT,DECODED,GAP,1,1.083
 flange_fitting_and_accessories/1704_fg,L1,DECODED,AX_PL,1,2.330
 flange_fitting_and_accessories/1704_fg,L2,DECODED,AX_PL,1,3.150
 flange_fitting_and_accessories/1724,C,DECODED,CYL_D (mm),1,23.48
-flange_fitting_and_accessories/1724,D,DECODED,BOX (mm) | CYL_D (mm),1,30.18
+flange_fitting_and_accessories/1724,D,DECODED,CYL_D (mm) | BOX (mm),1,30.18
 flange_fitting_and_accessories/1724,E,DECODED,GAP (mm),1,3.94
 flange_fitting_and_accessories/1724,F,DECODED,CYL_D (mm),1,25.40
 flange_fitting_and_accessories/1724,G,DECODED,GAP (mm),1,2.79
@@ -78,13 +118,70 @@ flange_fitting_and_accessories/1800,GFL,DECODED,CYL_D,1,1.000
 flange_fitting_and_accessories/1800,GT,DECODED,GAP,1,0.657
 flange_fitting_and_accessories/1800,L,DECODED,GAP | BOX,1,2.610
 flange_fitting_and_accessories/1800,STYLE,DECODED,CYL_D,1,1.000
+flange_fitting_and_accessories/1803,AF,DECODED,GAP,1,1.12500000
+flange_fitting_and_accessories/1803,AFL,DECODED,BOX | CYL_D,1,1.625
+flange_fitting_and_accessories/1803,AT,DECODED,CYL_D,1,0.943
+flange_fitting_and_accessories/1803,BFL,DECODED,CYL_D,1,1.250
+flange_fitting_and_accessories/1803,CFL,NO MATCH,,1,0.669
+flange_fitting_and_accessories/1803,CT,NO MATCH,,1,0.664
+flange_fitting_and_accessories/1803,DFL,DECODED,CYL_D,1,1.260
+flange_fitting_and_accessories/1803,DRILLFL,DECODED,TOR_r | CYL_D,1,0.551
+flange_fitting_and_accessories/1803,DT,DECODED,GAP (mm) | AX_PL (mm),1,0.315
+flange_fitting_and_accessories/1803,EFL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.345
+flange_fitting_and_accessories/1803,ET,DECODED,AX_PL,1,0.125
+flange_fitting_and_accessories/1803,FFL,DECODED,GAP,1,0.709
+flange_fitting_and_accessories/1803,FL,NO MATCH,,1,12
+flange_fitting_and_accessories/1803,FT,DECODED,CYL_D,1,0.943
+flange_fitting_and_accessories/1803,GT,DECODED,GAP,1,0.864
+flange_fitting_and_accessories/1803,IT,DECODED,CYL_D,1,1.300
+flange_fitting_and_accessories/1803,JT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.394
+flange_fitting_and_accessories/1803,L1,NO MATCH,,1,3.310
+flange_fitting_and_accessories/1803,L2,DECODED,AX_PL (mm) | AX_AX (mm),1,1.140
+flange_fitting_and_accessories/1803,TOD,DECODED,TOR_r | TOR_R | CYL_D,1,0.800
+flange_fitting_and_accessories/1803_fg,AB,DECODED,CYL_D,1,1.240
+flange_fitting_and_accessories/1803_fg,AF,DECODED,GAP | CYL_D,1,1.0625
+flange_fitting_and_accessories/1803_fg,AT,DECODED,CYL_D,1,0.943
+flange_fitting_and_accessories/1803_fg,B1DT,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/1803_fg,BB,DECODED,CYL_D,1,1.250
+flange_fitting_and_accessories/1803_fg,CB,DECODED,GAP,1,1.200
+flange_fitting_and_accessories/1803_fg,CT,NO MATCH,,1,0.664
+flange_fitting_and_accessories/1803_fg,DB,DECODED,BOX | CYL_D,1,1.625
+flange_fitting_and_accessories/1803_fg,DRILLB,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/1803_fg,DT,DECODED,AX_PL (mm),1,0.315
+flange_fitting_and_accessories/1803_fg,EB,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.345
+flange_fitting_and_accessories/1803_fg,ET,DECODED,AX_PL,1,0.125
+flange_fitting_and_accessories/1803_fg,FL,NO MATCH,,1,0.75000000
+flange_fitting_and_accessories/1803_fg,FT,DECODED,CYL_D,1,0.943
+flange_fitting_and_accessories/1803_fg,GT,DECODED,GAP,1,0.864
+flange_fitting_and_accessories/1803_fg,L1,DECODED,GAP | AX_PL,1,1.280
+flange_fitting_and_accessories/1803_fg,L2,DECODED,AX_PL,1,1.580
+flange_fitting_and_accessories/1804,AF,DECODED,GAP | AX_PL,1,0.87500000
+flange_fitting_and_accessories/1804,AFL,DECODED,BOX | CYL_D,1,1.250
+flange_fitting_and_accessories/1804,AT,DECODED,CYL_D,1,0.659
+flange_fitting_and_accessories/1804,BFL,DECODED,CYL_D,1,1.000
+flange_fitting_and_accessories/1804,CFL,DECODED,GAP (mm) | AX_PL (mm),1,0.433
+flange_fitting_and_accessories/1804,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+flange_fitting_and_accessories/1804,DFL,DECODED,CYL_D,1,0.945
+flange_fitting_and_accessories/1804,DRILLFL,DECODED,TOR_r | CYL_D,1,0.374
+flange_fitting_and_accessories/1804,DT,DECODED,GAP (mm),1,0.253
+flange_fitting_and_accessories/1804,EFL,DECODED,GAP,1,0.305
+flange_fitting_and_accessories/1804,ET,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flange_fitting_and_accessories/1804,FFL,DECODED,GAP,1,0.551
+flange_fitting_and_accessories/1804,FL,NO MATCH,,1,08
+flange_fitting_and_accessories/1804,FT,DECODED,CYL_D,1,0.659
+flange_fitting_and_accessories/1804,GT,DECODED,GAP,1,0.657
+flange_fitting_and_accessories/1804,IT,DECODED,CYL_D,1,1.004
+flange_fitting_and_accessories/1804,JT,DECODED,GAP,1,0.394
+flange_fitting_and_accessories/1804,L1,DECODED,AX_PL,1,2.320
+flange_fitting_and_accessories/1804,L2,DECODED,AX_PL,1,1.850
+flange_fitting_and_accessories/1804,TOD,DECODED,TOR_r | CYL_D,1,0.618
 flange_fitting_and_accessories/1804_fg,AB,DECODED,CYL_D,1,0.920
 flange_fitting_and_accessories/1804_fg,AF,DECODED,GAP,1,0.8750
 flange_fitting_and_accessories/1804_fg,AT,DECODED,CYL_D,1,0.659
 flange_fitting_and_accessories/1804_fg,B1DT,DECODED,CYL_D,1,0.391
 flange_fitting_and_accessories/1804_fg,BB,DECODED,CYL_D,1,1.000
 flange_fitting_and_accessories/1804_fg,CB,DECODED,GAP,1,1.437
-flange_fitting_and_accessories/1804_fg,CT,DECODED,AX_PL (mm) | GAP (mm),1,0.426
+flange_fitting_and_accessories/1804_fg,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.426
 flange_fitting_and_accessories/1804_fg,DB,DECODED,BOX | CYL_D,1,1.250
 flange_fitting_and_accessories/1804_fg,DRILLB,DECODED,CYL_D,1,0.391
 flange_fitting_and_accessories/1804_fg,DT,DECODED,GAP (mm),1,0.253
@@ -96,15 +193,292 @@ flange_fitting_and_accessories/1804_fg,GT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.657
 flange_fitting_and_accessories/1804_fg,L1,DECODED,AX_PL,1,1.520
 flange_fitting_and_accessories/1804_fg,L2,DECODED,AX_PL,1,2.050
 flange_fitting_and_accessories/1824,C,DECODED,CYL_D (mm),1,23.80
-flange_fitting_and_accessories/1824,D,DECODED,BOX (mm) | CYL_D (mm),1,31.75
+flange_fitting_and_accessories/1824,D,DECODED,CYL_D (mm) | BOX (mm),1,31.75
 flange_fitting_and_accessories/1824,E,DECODED,CYL_D (mm),1,25.40
 flange_fitting_and_accessories/1824,F,NO MATCH,,1,3.94
 flange_fitting_and_accessories/1824,G,DECODED,GAP (mm),1,2.79
+flange_fitting_and_accessories/fs1700,AF,DECODED,GAP,1,1.372
+flange_fitting_and_accessories/fs1700,AF1,NO MATCH,,1,1.375
+flange_fitting_and_accessories/fs1700,AFL,DECODED,GAP,1,1.372
+flange_fitting_and_accessories/fs1700,AT,DECODED,GAP,1,0.670
+flange_fitting_and_accessories/fs1700,BFL,DECODED,BOX | CYL_D,1,1.500
+flange_fitting_and_accessories/fs1700,BT,NO MATCH,,1,0.125
+flange_fitting_and_accessories/fs1700,CFL,NO MATCH,,1,0.466
+flange_fitting_and_accessories/fs1700,CT,NO MATCH,,1,1.069
+flange_fitting_and_accessories/fs1700,DFL,DECODED,CYL_D,1,1.234
+flange_fitting_and_accessories/fs1700,DRILLFL,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1700,DRILLT,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1700,DT,NO MATCH,,1,1.063
+flange_fitting_and_accessories/fs1700,EFL,DECODED,GAP,1,0.265
+flange_fitting_and_accessories/fs1700,ET,DECODED,CYL_D,1,0.881
+flange_fitting_and_accessories/fs1700,FFL,DECODED,BOX | CYL_D,1,1.500
+flange_fitting_and_accessories/fs1700,FL,NO MATCH,,1,12
+flange_fitting_and_accessories/fs1700,GFL,DECODED,CYL_D,1,1.250
+flange_fitting_and_accessories/fs1700,L,DECODED,GAP,1,2.750
+flange_fitting_and_accessories/fs1704_fg,AF,DECODED,GAP,1,1.062
+flange_fitting_and_accessories/fs1704_fg,AF1,DECODED,GAP,1,1.0629
+flange_fitting_and_accessories/fs1704_fg,H1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.1098
+flange_fitting_and_accessories/fs1704_fg,H2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.1023
+flange_fitting_and_accessories/fs1704_fg,L1,DECODED,AX_PL,1,1.66
+flange_fitting_and_accessories/fs1704_fg,L10,DECODED,GAP,1,0.81
+flange_fitting_and_accessories/fs1704_fg,L11,DECODED,CYL_D,1,1.25
+flange_fitting_and_accessories/fs1704_fg,L12,DECODED,GAP,1,1.062
+flange_fitting_and_accessories/fs1704_fg,L13,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1704_fg,L16,DECODED,GAP (mm),1,0.88
+flange_fitting_and_accessories/fs1704_fg,L2,DECODED,GAP | AX_PL,1,2.13
+flange_fitting_and_accessories/fs1704_fg,L3,DECODED,AX_PL (mm),1,1.179
+flange_fitting_and_accessories/fs1704_fg,L4,DECODED,BOX | CYL_D,1,1.5
+flange_fitting_and_accessories/fs1704_fg,L5,DECODED,GAP,1,0.964
+flange_fitting_and_accessories/fs1704_fg,L6,DECODED,GAP (mm),1,0.543
+flange_fitting_and_accessories/fs1704_fg,L7,DECODED,GAP,1,1.338
+flange_fitting_and_accessories/fs1704_fg,L8,DECODED,GAP,1,0.264
+flange_fitting_and_accessories/fs1704_fg,L9,DECODED,CYL_D,1,0.61
+flange_fitting_and_accessories/fs1704_fg,ND,DECODED,CYL_D,1,1.1875
+flange_fitting_and_accessories/fs1704_fg,RID,DECODED,AX_PL (mm),1,0.739
+flange_fitting_and_accessories/fs1704_fg,RW,DECODED,GAP | TOR_r | AX_PL,1,0.070
+flange_fitting_and_accessories/fs1704_fg,W1,DECODED,CYL_D,1,1.068
+flange_fitting_and_accessories/fs1704_fg,W2,DECODED,CYL_D,1,1.2401
+flange_fitting_and_accessories/fs1704_fg,W3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.1551
+flange_fitting_and_accessories/fs1704_fg,W4,DECODED,GAP,1,0.0519
+flange_fitting_and_accessories/fs1800,AF,DECODED,GAP,1,1.372
+flange_fitting_and_accessories/fs1800,AF1,NO MATCH,,1,1.375
+flange_fitting_and_accessories/fs1800,AFL,DECODED,GAP,1,1.372
+flange_fitting_and_accessories/fs1800,AT,DECODED,GAP,1,0.670
+flange_fitting_and_accessories/fs1800,BFL,DECODED,CYL_D,1,1.500
+flange_fitting_and_accessories/fs1800,BT,NO MATCH,,1,0.125
+flange_fitting_and_accessories/fs1800,CFL,NO MATCH,,1,0.780
+flange_fitting_and_accessories/fs1800,CT,NO MATCH,,1,1.069
+flange_fitting_and_accessories/fs1800,DFL,DECODED,CYL_D,1,1.234
+flange_fitting_and_accessories/fs1800,DRILLFL,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1800,DRILLT,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1800,DT,NO MATCH,,1,1.063
+flange_fitting_and_accessories/fs1800,EFL,DECODED,GAP,1,0.345
+flange_fitting_and_accessories/fs1800,ET,DECODED,CYL_D,1,0.881
+flange_fitting_and_accessories/fs1800,FFL,DECODED,BOX | CYL_D,1,1.625
+flange_fitting_and_accessories/fs1800,FL,NO MATCH,,1,12
+flange_fitting_and_accessories/fs1800,GFL,DECODED,CYL_D,1,1.250
+flange_fitting_and_accessories/fs1800,L,DECODED,GAP,1,2.750
+flange_fitting_and_accessories/fs1804_fg,AF,DECODED,GAP,1,1.0620
+flange_fitting_and_accessories/fs1804_fg,AFL,DECODED,CYL_D,1,1.232
+flange_fitting_and_accessories/fs1804_fg,AT,DECODED,GAP,1,0.670
+flange_fitting_and_accessories/fs1804_fg,BFL,DECODED,CYL_D,1,1.250
+flange_fitting_and_accessories/fs1804_fg,BT,DECODED,AX_PL,1,0.125
+flange_fitting_and_accessories/fs1804_fg,CFL,DECODED,GAP,1,1.322
+flange_fitting_and_accessories/fs1804_fg,CT,DECODED,AX_PL (mm),1,1.069
+flange_fitting_and_accessories/fs1804_fg,DFL,DECODED,BOX | CYL_D,1,1.625
+flange_fitting_and_accessories/fs1804_fg,DRILLFL,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1804_fg,DRILLT,DECODED,CYL_D,1,0.609
+flange_fitting_and_accessories/fs1804_fg,DT,DECODED,GAP,1,1.063
+flange_fitting_and_accessories/fs1804_fg,EFL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.345
+flange_fitting_and_accessories/fs1804_fg,ET,DECODED,CYL_D,1,0.881
+flange_fitting_and_accessories/fs1804_fg,FL,NO MATCH,,1,12
+flange_fitting_and_accessories/fs1804_fg,L1,DECODED,AX_PL,1,1.660
+flange_fitting_and_accessories/fs1804_fg,L2,DECODED,AX_PL,1,2.130
+flareless_bite_type_fittings/c0318,BTHD,DECODED,GAP (mm) | AX_PL (mm) | AX_AX (mm),1,0.75000
+flareless_bite_type_fittings/c0318,C,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c0318,D,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c0318,E,DECODED,AX_PL (mm) | AX_AX (mm),1,0.599
+flareless_bite_type_fittings/c0318,F,DECODED,GAP,1,0.516
+flareless_bite_type_fittings/c0318,L,DECODED,GAP | BOX,1,0.840
+flareless_bite_type_fittings/c0319,C,DECODED,BOX | CYL_D,1,0.663
+flareless_bite_type_fittings/c0319,C1,DECODED,BOX | CYL_D,1,0.663
+flareless_bite_type_fittings/c0319,D,DECODED,CYL_D,1,0.587
+flareless_bite_type_fittings/c0319,D1,NO MATCH,,1,0.577
+flareless_bite_type_fittings/c0319,E,DECODED,CYL_D,1,0.521
+flareless_bite_type_fittings/c0319,G,NO MATCH,,1,0.044
+flareless_bite_type_fittings/c0319,H,DECODED,GAP | BOX,1,0.429
+flareless_bite_type_fittings/c0319,H1,DECODED,GAP | BOX,1,0.429
+flareless_bite_type_fittings/c0319,K,NO MATCH,,1,0.030
+flareless_bite_type_fittings/c0319,L,NO MATCH,,1,0.162
+flareless_bite_type_fittings/c0319,M,DECODED,GAP,1,0.068
+flareless_bite_type_fittings/c0319,N,DECODED,CYL_D,1,0.555
+flareless_bite_type_fittings/c0319,PMAX,NO MATCH,,1,0.260
+flareless_bite_type_fittings/c0319,PMIN,NO MATCH,,1,0.240
+flareless_bite_type_fittings/c2402,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2402,AB2,DECODED,CYL_D,1,0.659
+flareless_bite_type_fittings/c2402,B1D,DECODED,AX_PL (mm),1,0.422
+flareless_bite_type_fittings/c2402,B1THD,DECODED,CYL_D,1,0.7500
+flareless_bite_type_fittings/c2402,B2D,DECODED,CYL_D,1,0.391
+flareless_bite_type_fittings/c2402,B2THD,DECODED,CYL_D,1,0.7500
+flareless_bite_type_fittings/c2402,BB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.244
+flareless_bite_type_fittings/c2402,C,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.812
+flareless_bite_type_fittings/c2402,CB1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2402,CB2,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2) | AX_PL (mm) 1/1 (chance 1/2),1,0.426
+flareless_bite_type_fittings/c2402,DB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.840
+flareless_bite_type_fittings/c2402,DB2,DECODED,GAP (mm),1,0.253
+flareless_bite_type_fittings/c2402,EB1,DECODED,CYL_D,1,0.660
+flareless_bite_type_fittings/c2402,EB2,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2402,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2402,FB2,DECODED,CYL_D,1,0.659
+flareless_bite_type_fittings/c2402,GB2,DECODED,GAP,1,0.657
+flareless_bite_type_fittings/c2402,K,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2402,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2402,L,DECODED,GAP,1,1.500
+flareless_bite_type_fittings/c2402,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2402,NW,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.281
+flareless_bite_type_fittings/c2402,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2403,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2403,AB2,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2403,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2403,B1THD,DECODED,CYL_D,1,0.7500
+flareless_bite_type_fittings/c2403,B2D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2403,B2THD,DECODED,CYL_D,1,0.7500
+flareless_bite_type_fittings/c2403,BB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.244
+flareless_bite_type_fittings/c2403,BB2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.244
+flareless_bite_type_fittings/c2403,C,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.812
+flareless_bite_type_fittings/c2403,CB1,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2403,CB2,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2403,DB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.840
+flareless_bite_type_fittings/c2403,DB2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.840
+flareless_bite_type_fittings/c2403,EB1,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c2403,EB2,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c2403,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2403,FB2,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2403,K1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.305
+flareless_bite_type_fittings/c2403,K2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.305
+flareless_bite_type_fittings/c2403,KB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.305
+flareless_bite_type_fittings/c2403,KB2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.305
+flareless_bite_type_fittings/c2403,L,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.422
+flareless_bite_type_fittings/c2403,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2403,MB2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2403,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2403,ODB2,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2405,A2THD,DECODED,CYL_D (mm),1,0.675
+flareless_bite_type_fittings/c2405,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2405,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2405,B1THD,DECODED,CYL_D,1,0.7500
+flareless_bite_type_fittings/c2405,BA2,DECODED,GAP,1,0.580
+flareless_bite_type_fittings/c2405,BB1,DECODED,GAP,1,0.244
+flareless_bite_type_fittings/c2405,C,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2405,CA2,DECODED,CYL_D,1,0.578
+flareless_bite_type_fittings/c2405,CB1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2405,DA2,DECODED,GAP,1,0.695
+flareless_bite_type_fittings/c2405,DB1,DECODED,GAP,1,0.840
+flareless_bite_type_fittings/c2405,EA2,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,0.680
+flareless_bite_type_fittings/c2405,EB1,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c2405,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2405,K,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2405,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2405,L,DECODED,GAP,1,1.470
+flareless_bite_type_fittings/c2405,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2405,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2500_fg,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2500_fg,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2500_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+flareless_bite_type_fittings/c2500_fg,B2D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2500_fg,BB1,DECODED,GAP,1,0.244
+flareless_bite_type_fittings/c2500_fg,CB1,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2500_fg,DB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.840
+flareless_bite_type_fittings/c2500_fg,EB1,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c2500_fg,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2500_fg,K1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2500_fg,K2,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2500_fg,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2500_fg,M1,DECODED,GAP | AX_PL,1,1.250
+flareless_bite_type_fittings/c2500_fg,M2,DECODED,GAP | AX_PL,1,1.250
+flareless_bite_type_fittings/c2500_fg,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2500_fg,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2500_fg,Y,DECODED,GAP | CYL_D,1,0.750
+flareless_bite_type_fittings/c2501_fg,A2D,DECODED,CYL_D,1,0.406
+flareless_bite_type_fittings/c2501_fg,A2THD,DECODED,AX_PL,1,0.675
+flareless_bite_type_fittings/c2501_fg,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2501_fg,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2501_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+flareless_bite_type_fittings/c2501_fg,BA2,DECODED,GAP (mm) | AX_PL (mm),1,0.540
+flareless_bite_type_fittings/c2501_fg,BB1,DECODED,GAP,1,0.244
+flareless_bite_type_fittings/c2501_fg,CA2,DECODED,AX_PL,1,0.675
+flareless_bite_type_fittings/c2501_fg,CB1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2501_fg,DA2,DECODED,GAP,1,0.560
+flareless_bite_type_fittings/c2501_fg,DB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.840
+flareless_bite_type_fittings/c2501_fg,EA2,DECODED,GAP (mm),1,0.469
+flareless_bite_type_fittings/c2501_fg,EB1,DECODED,GAP | AX_PL | CYL_D,1,0.660
+flareless_bite_type_fittings/c2501_fg,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2501_fg,K,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2501_fg,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2501_fg,M,DECODED,GAP,1,1.250
+flareless_bite_type_fittings/c2501_fg,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2501_fg,N,DECODED,AX_PL,1,1.220
+flareless_bite_type_fittings/c2501_fg,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2501_fg,PITCHA2,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.05556
+flareless_bite_type_fittings/c2501_fg,Y,DECODED,GAP | CYL_D,1,0.750
+flareless_bite_type_fittings/c2502_fg,A2THD,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,0.675
+flareless_bite_type_fittings/c2502_fg,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2502_fg,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2502_fg,B1THD,DECODED,CYL_D,1,0.7500
+flareless_bite_type_fittings/c2502_fg,BA2,DECODED,GAP,1,0.580
+flareless_bite_type_fittings/c2502_fg,BB1,DECODED,GAP,1,0.244
+flareless_bite_type_fittings/c2502_fg,CA2,DECODED,CYL_D,1,0.578
+flareless_bite_type_fittings/c2502_fg,CB1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2502_fg,DA2,DECODED,GAP,1,0.695
+flareless_bite_type_fittings/c2502_fg,DB1,DECODED,GAP,1,0.840
+flareless_bite_type_fittings/c2502_fg,EA2,DECODED,GAP | CYL_D,1,0.875
+flareless_bite_type_fittings/c2502_fg,EB1,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c2502_fg,FB1,DECODED,GAP | CYL_D,1,0.875
+flareless_bite_type_fittings/c2502_fg,K,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2502_fg,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2502_fg,M,DECODED,AX_PL,1,1.230
+flareless_bite_type_fittings/c2502_fg,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2502_fg,N,DECODED,AX_PL,1,1.020
+flareless_bite_type_fittings/c2502_fg,ODB1,DECODED,GAP | CYL_D,1,0.505
+flareless_bite_type_fittings/c2502_fg,PITCHA2,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.05556
+flareless_bite_type_fittings/c2502_fg,Y,DECODED,GAP | CYL_D,1,0.875
+flareless_bite_type_fittings/c2601_fg,A3D,DECODED,CYL_D,1,0.531
+flareless_bite_type_fittings/c2601_fg,A3THD,DECODED,GAP,1,0.840
+flareless_bite_type_fittings/c2601_fg,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c2601_fg,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2601_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+flareless_bite_type_fittings/c2601_fg,B2D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c2601_fg,BA3,DECODED,AX_PL (mm),1,0.670
+flareless_bite_type_fittings/c2601_fg,BB1,DECODED,GAP,1,0.244
+flareless_bite_type_fittings/c2601_fg,CA3,DECODED,GAP,1,0.840
+flareless_bite_type_fittings/c2601_fg,CB1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c2601_fg,DA3,DECODED,GAP | CYL_D,1,0.750
+flareless_bite_type_fittings/c2601_fg,DB1,DECODED,GAP,1,0.840
+flareless_bite_type_fittings/c2601_fg,EA3,DECODED,AX_PL (mm) | AX_AX (mm),1,0.625
+flareless_bite_type_fittings/c2601_fg,EB1,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c2601_fg,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c2601_fg,K1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2601_fg,K2,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2601_fg,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c2601_fg,M1,DECODED,AX_PL,1,1.350
+flareless_bite_type_fittings/c2601_fg,M2,DECODED,AX_PL,1,1.350
+flareless_bite_type_fittings/c2601_fg,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c2601_fg,N,DECODED,AX_PL,1,1.470
+flareless_bite_type_fittings/c2601_fg,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c2601_fg,PITCHA3,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.07143
+flareless_bite_type_fittings/c2601_fg,Y,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c6801_nwo_fg,AB1,DECODED,CYL_D,1,0.514
+flareless_bite_type_fittings/c6801_nwo_fg,AB2,DECODED,GAP,1,0.655
+flareless_bite_type_fittings/c6801_nwo_fg,B1D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c6801_nwo_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+flareless_bite_type_fittings/c6801_nwo_fg,B2D,DECODED,CYL_D,1,0.422
+flareless_bite_type_fittings/c6801_nwo_fg,B2THD,DECODED,GAP | CYL_D,1,0.750
+flareless_bite_type_fittings/c6801_nwo_fg,BB1,DECODED,GAP,1,0.244
+flareless_bite_type_fittings/c6801_nwo_fg,C,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c6801_nwo_fg,CB1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+flareless_bite_type_fittings/c6801_nwo_fg,CB2,DECODED,GAP (mm) | AX_PL (mm),1,0.344
+flareless_bite_type_fittings/c6801_nwo_fg,DB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.840
+flareless_bite_type_fittings/c6801_nwo_fg,DB2,DECODED,GAP,1,0.490
+flareless_bite_type_fittings/c6801_nwo_fg,EB1,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c6801_nwo_fg,EB2,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+flareless_bite_type_fittings/c6801_nwo_fg,FB1,DECODED,GAP,1,0.875
+flareless_bite_type_fittings/c6801_nwo_fg,FB2,DECODED,GAP,1,0.310
+flareless_bite_type_fittings/c6801_nwo_fg,GB2,DECODED,GAP,1,0.860
+flareless_bite_type_fittings/c6801_nwo_fg,HB2,DECODED,GAP | CYL_D,1,0.660
+flareless_bite_type_fittings/c6801_nwo_fg,IB2,DECODED,BOX | CYL_D,1,1.010
+flareless_bite_type_fittings/c6801_nwo_fg,JB2,DECODED,TOR_r | AX_PL,1,0.087
+flareless_bite_type_fittings/c6801_nwo_fg,K,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c6801_nwo_fg,KB1,DECODED,GAP,1,0.305
+flareless_bite_type_fittings/c6801_nwo_fg,M,DECODED,AX_PL,1,1.250
+flareless_bite_type_fittings/c6801_nwo_fg,M7,DECODED,AX_PL,1,1.450
+flareless_bite_type_fittings/c6801_nwo_fg,MB1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.318
+flareless_bite_type_fittings/c6801_nwo_fg,ODB1,DECODED,CYL_D,1,0.505
+flareless_bite_type_fittings/c6801_nwo_fg,Y,DECODED,GAP | CYL_D,1,0.750
 o_ring_face_seal_fittings/fs0306,C4,DECODED,GAP,8,0.812 1.000 1.125 1.312 1.500 1.750
 o_ring_face_seal_fittings/fs0306,T1,DECODED,GAP | BOX,8,0.270 0.310 0.350 0.410 0.410 0.410
 o_ring_face_seal_fittings/fs0306,V,PARTIAL,GAP (mm) 5/8 (chance 0/16) | AX_PL (mm) 4/8 (chance 0/16) | AX_AX (mm) 1/8 (chance 0/16) | CYL_D (mm) 1/8 (chance 0/16),8,0.561 0.693 0.819 1.004 1.193 1.441
 o_ring_face_seal_fittings/fs0306,X1,PARTIAL,GAP 7/8 (chance 0/16),8,0.8120 1.0000 1.1250 1.3120 1.5000 1.7500
-o_ring_face_seal_fittings/fs0318,AX,PARTIAL,AX_PL (mm) 6/8 (chance 0/16) | GAP (mm) 6/8 (chance 0/16) | CYL_D (mm) 2/8 (chance 0/16),8,0.567 0.693 0.819 1.020 1.207 1.458
+o_ring_face_seal_fittings/fs0318,AX,PARTIAL,GAP (mm) 6/8 (chance 0/16) | AX_PL (mm) 6/8 (chance 0/16) | CYL_D (mm) 2/8 (chance 0/16),8,0.567 0.693 0.819 1.020 1.207 1.458
 o_ring_face_seal_fittings/fs0318,BX,DECODED,CYL_D,8,0.512 0.630 0.754 0.934 1.109 1.358
 o_ring_face_seal_fittings/fs0318,CX,DECODED,GAP,8,0.350 0.410 0.470 0.570 0.610 0.630
 o_ring_face_seal_fittings/fs0318,DX,AMBIGUOUS,GAP 8/8 (chance 6/16),8,0.098 0.118 0.197 0.157 0.197 0.236
@@ -135,27 +509,99 @@ o_ring_face_seal_fittings/fs2403,EL,DECODED,CYL_D,2,0.629 1.629
 o_ring_face_seal_fittings/fs2403,ER,DECODED,CYL_D,2,0.629 1.629
 o_ring_face_seal_fittings/fs2403,FF,DECODED,GAP,2,1.390 2.090
 o_ring_face_seal_fittings/fs2403,H,DECODED,GAP,2,0.875 2.125
+o_ring_face_seal_fittings/fs2404,AD,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.264
+o_ring_face_seal_fittings/fs2404,AL,DECODED,GAP,1,0.441
+o_ring_face_seal_fittings/fs2404,ATHD,DECODED,CYL_D,1,0.6875
+o_ring_face_seal_fittings/fs2404,BD,DECODED,CYL_D,1,0.531
+o_ring_face_seal_fittings/fs2404,BL,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.097
+o_ring_face_seal_fittings/fs2404,BR,DECODED,GAP (mm) | AX_PL (mm),1,0.670
+o_ring_face_seal_fittings/fs2404,BTHD,NO MATCH,,1,0.8400
+o_ring_face_seal_fittings/fs2404,CL,DECODED,AX_PL | CYL_D,1,0.594
+o_ring_face_seal_fittings/fs2404,CR,NO MATCH,,1,0.840
+o_ring_face_seal_fittings/fs2404,DL,DECODED,AX_PL | CYL_D,1,0.594
+o_ring_face_seal_fittings/fs2404,DR,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs2404,EL,DECODED,GAP | CYL_D,1,0.504
+o_ring_face_seal_fittings/fs2404,ER,DECODED,AX_AX (mm),1,0.625
+o_ring_face_seal_fittings/fs2404,FF,DECODED,GAP,1,1.550
+o_ring_face_seal_fittings/fs2404,H,DECODED,GAP,1,0.938
+o_ring_face_seal_fittings/fs2408,AD,DECODED,AX_PL (mm),1,0.350
+o_ring_face_seal_fittings/fs2408,AL,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs2408,ATHD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs2408,BL,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+o_ring_face_seal_fittings/fs2408,CL,DECODED,CYL_D,1,0.719
+o_ring_face_seal_fittings/fs2408,DL,DECODED,CYL_D,1,0.719
+o_ring_face_seal_fittings/fs2408,DRILL,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs2408,EL,DECODED,CYL_D,1,0.629
+o_ring_face_seal_fittings/fs2408,H,DECODED,GAP,1,0.875
+o_ring_face_seal_fittings/fs2408,L,DECODED,GAP,1,0.850
+o_ring_face_seal_fittings/fs2500_fg,A1D,DECODED,CYL_D,1,0.609
+o_ring_face_seal_fittings/fs2500_fg,A1THD,DECODED,CYL_D,1,1.1875
+o_ring_face_seal_fittings/fs2500_fg,A2D,DECODED,TOR_r | CYL_D,1,0.378
+o_ring_face_seal_fittings/fs2500_fg,A2THD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs2500_fg,AL,DECODED,AX_PL (mm),1,1.063
+o_ring_face_seal_fittings/fs2500_fg,AT,DECODED,AX_PL (mm),1,0.719
+o_ring_face_seal_fittings/fs2500_fg,CL,DECODED,GAP,1,0.670
+o_ring_face_seal_fittings/fs2500_fg,CT,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs2500_fg,DL,DECODED,CYL_D,1,0.881
+o_ring_face_seal_fittings/fs2500_fg,DT,DECODED,CYL_D,1,0.629
+o_ring_face_seal_fittings/fs2500_fg,JJ,DECODED,CYL_D,1,1.188
+o_ring_face_seal_fittings/fs2500_fg,M1,DECODED,AX_PL,1,1.470
+o_ring_face_seal_fittings/fs2500_fg,M2,DECODED,AX_PL,1,1.320
 o_ring_face_seal_fittings/fs2501_fg,AD,DECODED,CYL_D,1,0.378
 o_ring_face_seal_fittings/fs2501_fg,AL,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.719
 o_ring_face_seal_fittings/fs2501_fg,ATHD,DECODED,GAP | CYL_D,1,0.8125
 o_ring_face_seal_fittings/fs2501_fg,BD,DECODED,CYL_D,1,0.531
-o_ring_face_seal_fittings/fs2501_fg,BT,DECODED,AX_PL (mm) | GAP (mm),1,0.670
+o_ring_face_seal_fittings/fs2501_fg,BT,DECODED,GAP (mm) | AX_PL (mm),1,0.670
 o_ring_face_seal_fittings/fs2501_fg,BTHD,DECODED,CYL_D,1,0.8400
 o_ring_face_seal_fittings/fs2501_fg,CL,DECODED,GAP,1,0.504
 o_ring_face_seal_fittings/fs2501_fg,CT,DECODED,CYL_D,1,0.840
 o_ring_face_seal_fittings/fs2501_fg,DL,DECODED,CYL_D,1,0.629
 o_ring_face_seal_fittings/fs2501_fg,DT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.750
-o_ring_face_seal_fittings/fs2501_fg,ET,DECODED,AX_AX (mm) | GAP (mm),1,0.625
+o_ring_face_seal_fittings/fs2501_fg,ET,DECODED,GAP (mm) | AX_AX (mm),1,0.625
 o_ring_face_seal_fittings/fs2501_fg,JJ,DECODED,GAP,1,0.875
 o_ring_face_seal_fittings/fs2501_fg,M,DECODED,AX_PL,1,1.100
 o_ring_face_seal_fittings/fs2501_fg,N,DECODED,GAP | AX_PL,1,1.470
+o_ring_face_seal_fittings/fs2503_fg,AD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs2503_fg,AL,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm) | AX_AX (mm),1,0.719
+o_ring_face_seal_fittings/fs2503_fg,ATHD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs2503_fg,BD,DECODED,CYL_D,1,0.531
+o_ring_face_seal_fittings/fs2503_fg,BT,DECODED,AX_PL (mm),1,0.670
+o_ring_face_seal_fittings/fs2503_fg,BTHD,DECODED,CYL_D,1,0.8400
+o_ring_face_seal_fittings/fs2503_fg,CL,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs2503_fg,CT,DECODED,CYL_D,1,0.840
+o_ring_face_seal_fittings/fs2503_fg,DL,DECODED,CYL_D,1,0.629
+o_ring_face_seal_fittings/fs2503_fg,DT,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs2503_fg,ET,DECODED,AX_PL (mm) | AX_AX (mm),1,0.625
+o_ring_face_seal_fittings/fs2503_fg,JJ,DECODED,GAP,1,0.875
+o_ring_face_seal_fittings/fs2503_fg,M,DECODED,AX_PL,1,0.800
+o_ring_face_seal_fittings/fs2503_fg,N,DECODED,GAP | AX_PL,1,1.170
+o_ring_face_seal_fittings/fs2700,A1D,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs2700,A1THD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs2700,A2D,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs2700,A2THD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs2700,AL,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs2700,BL,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+o_ring_face_seal_fittings/fs2700,BR,DECODED,CYL_D,1,0.801
+o_ring_face_seal_fittings/fs2700,CL,DECODED,CYL_D,1,0.719
+o_ring_face_seal_fittings/fs2700,CR,DECODED,CYL_D,1,0.719
+o_ring_face_seal_fittings/fs2700,DL,DECODED,CYL_D,1,0.719
+o_ring_face_seal_fittings/fs2700,DN2,NO MATCH,,1,08
+o_ring_face_seal_fittings/fs2700,DR,DECODED,AX_PL | CYL_D,1,0.629
+o_ring_face_seal_fittings/fs2700,EL,DECODED,AX_PL | CYL_D,1,0.629
+o_ring_face_seal_fittings/fs2700,ER,DECODED,CYL_D,1,0.719
+o_ring_face_seal_fittings/fs2700,FR,DECODED,GAP,1,1.440
+o_ring_face_seal_fittings/fs2700,GG,DECODED,GAP,1,2.300
+o_ring_face_seal_fittings/fs2700,GR,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+o_ring_face_seal_fittings/fs2700,HR,DECODED,GAP,1,0.060
+o_ring_face_seal_fittings/fs2700,PITCHL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.06300
+o_ring_face_seal_fittings/fs2700,PITCHR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.06300
 o_ring_face_seal_fittings/fs2701_fg,A1D,DECODED,CYL_D,1,0.378
 o_ring_face_seal_fittings/fs2701_fg,A1THD,DECODED,CYL_D,1,0.8125
 o_ring_face_seal_fittings/fs2701_fg,A2D,DECODED,CYL_D,1,0.378
 o_ring_face_seal_fittings/fs2701_fg,A2THD,DECODED,CYL_D,1,0.8125
 o_ring_face_seal_fittings/fs2701_fg,AL,DECODED,CYL_D,1,0.719
 o_ring_face_seal_fittings/fs2701_fg,AT,DECODED,BOX | CYL_D,1,1.000
-o_ring_face_seal_fittings/fs2701_fg,BT,DECODED,CYL_D | AX_PL,1,0.801
+o_ring_face_seal_fittings/fs2701_fg,BT,DECODED,AX_PL | CYL_D,1,0.801
 o_ring_face_seal_fittings/fs2701_fg,CL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.504
 o_ring_face_seal_fittings/fs2701_fg,CT,DECODED,CYL_D,1,0.719
 o_ring_face_seal_fittings/fs2701_fg,DL,DECODED,CYL_D,1,0.629
@@ -170,6 +616,85 @@ o_ring_face_seal_fittings/fs2701_fg,IT,DECODED,GAP,1,0.200
 o_ring_face_seal_fittings/fs2701_fg,JJ,DECODED,GAP,1,0.750
 o_ring_face_seal_fittings/fs2701_fg,R,DECODED,AX_PL,1,1.140
 o_ring_face_seal_fittings/fs2701_fg,S,DECODED,AX_PL,1,2.180
+o_ring_face_seal_fittings/fs2702_fg,A1D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2702_fg,A1THD,DECODED,GAP | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs2702_fg,A2D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2702_fg,A2THD,DECODED,GAP | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs2702_fg,AL,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs2702_fg,AT,DECODED,BOX | CYL_D,1,0.690
+o_ring_face_seal_fittings/fs2702_fg,BT,DECODED,CYL_D,1,0.552
+o_ring_face_seal_fittings/fs2702_fg,CL,DECODED,GAP,1,0.386
+o_ring_face_seal_fittings/fs2702_fg,CT,DECODED,AX_PL | CYL_D,1,0.478
+o_ring_face_seal_fittings/fs2702_fg,DL,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs2702_fg,DN2,NO MATCH,,1,04
+o_ring_face_seal_fittings/fs2702_fg,DNPN,NO MATCH,,1,04
+o_ring_face_seal_fittings/fs2702_fg,DT,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs2702_fg,ET,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs2702_fg,FT,DECODED,GAP,1,1.240
+o_ring_face_seal_fittings/fs2702_fg,GT,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.083
+o_ring_face_seal_fittings/fs2702_fg,HT,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.060
+o_ring_face_seal_fittings/fs2702_fg,IT,DECODED,GAP | CYL_D,1,0.150
+o_ring_face_seal_fittings/fs2702_fg,JJ,DECODED,GAP | CYL_D,1,0.562
+o_ring_face_seal_fittings/fs2702_fg,P,DECODED,AX_PL,1,0.630
+o_ring_face_seal_fittings/fs2702_fg,ZZ,DECODED,AX_PL,1,1.730
+o_ring_face_seal_fittings/fs2703_fg,A1D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2703_fg,A1THD,DECODED,GAP | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs2703_fg,A2D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2703_fg,A3D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2703_fg,A3THD,DECODED,GAP | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs2703_fg,AL,DECODED,AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs2703_fg,AT,DECODED,BOX | CYL_D,1,0.690
+o_ring_face_seal_fittings/fs2703_fg,BT,DECODED,CYL_D,1,0.552
+o_ring_face_seal_fittings/fs2703_fg,CL,DECODED,GAP,1,0.386
+o_ring_face_seal_fittings/fs2703_fg,CT,DECODED,CYL_D,1,0.478
+o_ring_face_seal_fittings/fs2703_fg,DL,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs2703_fg,DT,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs2703_fg,ET,DECODED,AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs2703_fg,FT,DECODED,GAP,1,1.240
+o_ring_face_seal_fittings/fs2703_fg,GT,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.083
+o_ring_face_seal_fittings/fs2703_fg,HT,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.060
+o_ring_face_seal_fittings/fs2703_fg,IT,DECODED,GAP | CYL_D,1,0.150
+o_ring_face_seal_fittings/fs2703_fg,JJ,DECODED,CYL_D,1,0.562
+o_ring_face_seal_fittings/fs2703_fg,R1,DECODED,AX_PL,1,0.890
+o_ring_face_seal_fittings/fs2703_fg,R2,DECODED,AX_PL,1,0.890
+o_ring_face_seal_fittings/fs2703_fg,S,DECODED,AX_PL,1,1.850
+o_ring_face_seal_fittings/fs2704_fg,A1D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2704_fg,A1THD,DECODED,GAP | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs2704_fg,A2D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2704_fg,A3D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs2704_fg,A3THD,DECODED,GAP | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs2704_fg,AL,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs2704_fg,AT,DECODED,BOX | CYL_D,1,0.690
+o_ring_face_seal_fittings/fs2704_fg,BT,DECODED,CYL_D,1,0.552
+o_ring_face_seal_fittings/fs2704_fg,CL,DECODED,GAP,1,0.386
+o_ring_face_seal_fittings/fs2704_fg,CT,DECODED,CYL_D,1,0.478
+o_ring_face_seal_fittings/fs2704_fg,DL,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs2704_fg,DT,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs2704_fg,ET,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs2704_fg,FT,DECODED,GAP,1,1.240
+o_ring_face_seal_fittings/fs2704_fg,GT,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.083
+o_ring_face_seal_fittings/fs2704_fg,HT,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.060
+o_ring_face_seal_fittings/fs2704_fg,IT,DECODED,GAP | CYL_D,1,0.150
+o_ring_face_seal_fittings/fs2704_fg,JJ,DECODED,GAP | CYL_D,1,0.562
+o_ring_face_seal_fittings/fs2704_fg,R1,DECODED,AX_PL,1,0.890
+o_ring_face_seal_fittings/fs2704_fg,R2,DECODED,AX_PL,1,0.890
+o_ring_face_seal_fittings/fs2704_fg,S,DECODED,AX_PL,1,1.850
+o_ring_face_seal_fittings/fs6400_l_o,AD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6400_l_o,AL,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm) | AX_AX (mm),1,0.719
+o_ring_face_seal_fittings/fs6400_l_o,AR,DECODED,GAP,1,0.551
+o_ring_face_seal_fittings/fs6400_l_o,ATHD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs6400_l_o,BD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6400_l_o,BTHD,DECODED,CYL_D,1,0.7500
+o_ring_face_seal_fittings/fs6400_l_o,CL,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs6400_l_o,CR,DECODED,CYL_D,1,0.660
+o_ring_face_seal_fittings/fs6400_l_o,DL,DECODED,CYL_D,1,0.629
+o_ring_face_seal_fittings/fs6400_l_o,DR,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+o_ring_face_seal_fittings/fs6400_l_o,ER,DECODED,AX_PL (mm),1,0.655
+o_ring_face_seal_fittings/fs6400_l_o,FR,DECODED,TOR_r | AX_PL,1,0.087
+o_ring_face_seal_fittings/fs6400_l_o,H,DECODED,GAP,1,0.875
+o_ring_face_seal_fittings/fs6400_l_o,HR,DECODED,GAP (mm) | AX_PL (mm),1,0.940
+o_ring_face_seal_fittings/fs6400_l_o,L,DECODED,GAP,1,2.671
+o_ring_face_seal_fittings/fs6400_l_o,X,DECODED,GAP,1,1.750
 o_ring_face_seal_fittings/fs6400_o,AD,DECODED,CYL_D,2,0.378 1.772
 o_ring_face_seal_fittings/fs6400_o,AL,DECODED,GAP,2,0.504 0.870
 o_ring_face_seal_fittings/fs6400_o,AR,DECODED,GAP,2,0.551 0.728
@@ -183,10 +708,58 @@ o_ring_face_seal_fittings/fs6400_o,DL,DECODED,CYL_D,2,0.719 2.380
 o_ring_face_seal_fittings/fs6400_o,DR,DECODED,AX_PL,2,0.094 0.125
 o_ring_face_seal_fittings/fs6400_o,EL,DECODED,CYL_D,2,0.629 2.125
 o_ring_face_seal_fittings/fs6400_o,ER,DECODED,AX_PL (mm),2,0.655 2.375
-o_ring_face_seal_fittings/fs6400_o,FR,DECODED,AX_PL | TOR_r,2,0.087 0.118
+o_ring_face_seal_fittings/fs6400_o,FR,DECODED,TOR_r | AX_PL,2,0.087 0.118
 o_ring_face_seal_fittings/fs6400_o,H,DECODED,GAP,2,0.875 2.750
-o_ring_face_seal_fittings/fs6400_o,HR,DECODED,AX_PL (mm) | GAP (mm),1,0.940
+o_ring_face_seal_fittings/fs6400_o,HR,DECODED,GAP (mm) | AX_PL (mm),1,0.940
 o_ring_face_seal_fittings/fs6400_o,L,DECODED,GAP,2,1.441 2.313
+o_ring_face_seal_fittings/fs6402,AC,DECODED,CYL_D,1,0.790
+o_ring_face_seal_fittings/fs6402,AD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6402,AL,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.504
+o_ring_face_seal_fittings/fs6402,ATHD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs6402,BC,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.180
+o_ring_face_seal_fittings/fs6402,BD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6402,BL,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
+o_ring_face_seal_fittings/fs6402,BN,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.875
+o_ring_face_seal_fittings/fs6402,BR,DECODED,CYL_D,1,0.680
+o_ring_face_seal_fittings/fs6402,BTHD,DECODED,AX_PL,1,0.7500
+o_ring_face_seal_fittings/fs6402,C,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.875
+o_ring_face_seal_fittings/fs6402,CC,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.422
+o_ring_face_seal_fittings/fs6402,CL,DECODED,GAP | CYL_D,1,0.719
+o_ring_face_seal_fittings/fs6402,CN,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.688
+o_ring_face_seal_fittings/fs6402,CR,DECODED,GAP,1,0.565
+o_ring_face_seal_fittings/fs6402,DL,DECODED,GAP | CYL_D,1,0.719
+o_ring_face_seal_fittings/fs6402,DNUT,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.785
+o_ring_face_seal_fittings/fs6402,DR,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.250
+o_ring_face_seal_fittings/fs6402,EL,DECODED,CYL_D,1,0.629
+o_ring_face_seal_fittings/fs6402,EN,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.875
+o_ring_face_seal_fittings/fs6402,ER,DECODED,AX_PL,1,0.205
+o_ring_face_seal_fittings/fs6402,FN,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.264
+o_ring_face_seal_fittings/fs6402,FR,DECODED,AX_PL | CYL_D,1,0.584
+o_ring_face_seal_fittings/fs6402,H,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.875
+o_ring_face_seal_fittings/fs6402,HN,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.875
+o_ring_face_seal_fittings/fs6402,JN,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.155
+o_ring_face_seal_fittings/fs6402,L,DECODED,GAP,1,1.770
+o_ring_face_seal_fittings/fs6402,LN,DECODED,AX_PL,1,0.827
+o_ring_face_seal_fittings/fs6402,MN,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 2/2),1,0.37
+o_ring_face_seal_fittings/fs6402,PITCHL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.06250
+o_ring_face_seal_fittings/fs6402,PITCHR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.06250
+o_ring_face_seal_fittings/fs6403,A1THD,DECODED,CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs6403,AD,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs6403,AL,DECODED,GAP,1,0.386
+o_ring_face_seal_fittings/fs6403,AR,DECODED,CYL_D,1,0.364
+o_ring_face_seal_fittings/fs6403,BD,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs6403,BL,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.083
+o_ring_face_seal_fittings/fs6403,BTHD,DECODED,CYL_D,1,0.4375
+o_ring_face_seal_fittings/fs6403,CL,DECODED,CYL_D,1,0.478
+o_ring_face_seal_fittings/fs6403,CR,DECODED,GAP (mm) | AX_PL (mm),1,0.193
+o_ring_face_seal_fittings/fs6403,DL,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs6403,DR,DECODED,GAP (mm) | AX_PL (mm),1,0.193
+o_ring_face_seal_fittings/fs6403,EL,DECODED,CYL_D,1,0.433
+o_ring_face_seal_fittings/fs6403,ER,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.075
+o_ring_face_seal_fittings/fs6403,FR,DECODED,CYL_D,1,0.364
+o_ring_face_seal_fittings/fs6403,GR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.550
+o_ring_face_seal_fittings/fs6403,H,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.625
+o_ring_face_seal_fittings/fs6403,L,DECODED,GAP,1,1.250
 o_ring_face_seal_fittings/fs6500_fg,AAA,DECODED,AX_PL,7,1.040 1.150 1.490 1.620 1.820 2.100
 o_ring_face_seal_fittings/fs6500_fg,AD,DECODED,CYL_D,7,0.172 0.264 0.378 0.484 0.609 0.811
 o_ring_face_seal_fittings/fs6500_fg,AL,PARTIAL,AX_AX (mm) 3/7 (chance 0/14) | GAP (mm) 3/7 (chance 2/14) | AX_PL (mm) 2/7 (chance 1/14) | GAP 1/7 (chance 2/14) | CYL_D (mm) 1/7 (chance 0/14),7,0.483 0.594 0.719 0.890 1.063 1.313
@@ -211,11 +784,40 @@ o_ring_face_seal_fittings/fs6500_fg,JJ,DECODED,GAP,7,0.562 0.750 0.750 1.062 1.1
 o_ring_face_seal_fittings/fs6500_fg,JN,PARTIAL,AX_PL (mm) 2/3 (chance 0/6) | GAP (mm) 1/3 (chance 1/6) | GAP 1/3 (chance 1/6),3,0.567 0.693 0.819
 o_ring_face_seal_fittings/fs6500_fg,KN,PARTIAL,AX_PL (mm) 4/7 (chance 2/14) | GAP (mm) 3/7 (chance 1/14) | AX_AX (mm) 1/7 (chance 0/14) | AX_PL 1/7 (chance 2/14),7,0.670 0.800 0.920 1.110 1.360 1.610
 o_ring_face_seal_fittings/fs6500_fg,M,DECODED,AX_PL,7,0.850 0.980 1.100 1.310 1.470 1.640
-o_ring_face_seal_fittings/fs6500_fg,MIN,PARTIAL,AX_AX (mm) 3/7 (chance 0/14) | GAP (mm) 3/7 (chance 0/14) | AX_PL (mm) 3/7 (chance 0/14) | GAP 1/7 (chance 0/14),7,0.508 0.625 0.751 0.929 1.103 1.353
+o_ring_face_seal_fittings/fs6500_fg,MIN,PARTIAL,GAP (mm) 3/7 (chance 0/14) | AX_AX (mm) 3/7 (chance 0/14) | AX_PL (mm) 3/7 (chance 0/14) | GAP 1/7 (chance 0/14),7,0.508 0.625 0.751 0.929 1.103 1.353
 o_ring_face_seal_fittings/fs6500_fg,MN,PARTIAL,AX_PL (mm) 3/7 (chance 0/14) | GAP (mm) 2/7 (chance 5/14) | AX_AX (mm) 1/7 (chance 0/14),7,0.337 0.392 0.482 0.548 0.599 0.650
 o_ring_face_seal_fittings/fs6500_fg,NN,AMBIGUOUS,GAP 7/7 (chance 4/14) | AX_PL 1/7 (chance 0/14),7,0.140 0.155 0.197 0.185 0.197 0.236
-o_ring_face_seal_fittings/fs6500_fg,PNUT,PARTIAL,AX_AX (mm) 3/7 (chance 0/14) | GAP (mm) 3/7 (chance 0/14) | AX_PL (mm) 3/7 (chance 0/14) | GAP 1/7 (chance 0/14),7,0.507 0.625 0.750 0.928 1.103 1.352
+o_ring_face_seal_fittings/fs6500_fg,PNUT,PARTIAL,GAP (mm) 3/7 (chance 0/14) | AX_AX (mm) 3/7 (chance 0/14) | AX_PL (mm) 3/7 (chance 0/14) | GAP 1/7 (chance 0/14),7,0.507 0.625 0.750 0.928 1.103 1.352
 o_ring_face_seal_fittings/fs6500_fg,QN,PARTIAL,AX_PL (mm) 4/7 (chance 3/14) | GAP 2/7 (chance 10/14) | GAP (mm) 1/7 (chance 10/14) | AX_PL 1/7 (chance 3/14),7,0.118 0.135 0.157 0.157 0.161 0.200
+o_ring_face_seal_fittings/fs6502_fg,AD,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.264
+o_ring_face_seal_fittings/fs6502_fg,AL,DECODED,AX_AX (mm),1,0.594
+o_ring_face_seal_fittings/fs6502_fg,AT1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.735
+o_ring_face_seal_fittings/fs6502_fg,ATHD,DECODED,AX_PL | CYL_D,1,0.6875
+o_ring_face_seal_fittings/fs6502_fg,BB,NO MATCH,,1,06
+o_ring_face_seal_fittings/fs6502_fg,BD,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.264
+o_ring_face_seal_fittings/fs6502_fg,BT1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.177
+o_ring_face_seal_fittings/fs6502_fg,BT2,DECODED,GAP,1,0.812
+o_ring_face_seal_fittings/fs6502_fg,BTHD,DECODED,AX_PL | CYL_D,1,0.6875
+o_ring_face_seal_fittings/fs6502_fg,C,DECODED,GAP,1,0.812
+o_ring_face_seal_fittings/fs6502_fg,CL,DECODED,GAP,1,0.441
+o_ring_face_seal_fittings/fs6502_fg,CT1,DECODED,CYL_D,1,0.620
+o_ring_face_seal_fittings/fs6502_fg,CT2,DECODED,CYL_D,1,0.525
+o_ring_face_seal_fittings/fs6502_fg,DL,DECODED,CYL_D,1,0.504
+o_ring_face_seal_fittings/fs6502_fg,DT1,DECODED,CYL_D,1,0.522
+o_ring_face_seal_fittings/fs6502_fg,DT2,DECODED,AX_PL,1,0.722
+o_ring_face_seal_fittings/fs6502_fg,ET2,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.715
+o_ring_face_seal_fittings/fs6502_fg,FT2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.160
+o_ring_face_seal_fittings/fs6502_fg,GT2,DECODED,GAP,1,0.707
+o_ring_face_seal_fittings/fs6502_fg,HLP,DECODED,GAP (mm),1,1.000
+o_ring_face_seal_fittings/fs6502_fg,JJ,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs6502_fg,JT2,DECODED,GAP | CYL_D,1,0.693
+o_ring_face_seal_fittings/fs6502_fg,KT2,DECODED,GAP (mm),1,0.800
+o_ring_face_seal_fittings/fs6502_fg,L1,DECODED,AX_PL,1,0.740
+o_ring_face_seal_fittings/fs6502_fg,L2,DECODED,AX_PL,1,1.060
+o_ring_face_seal_fittings/fs6502_fg,MT2,DECODED,GAP (mm) | AX_PL (mm),1,0.392
+o_ring_face_seal_fittings/fs6502_fg,NT2,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.155
+o_ring_face_seal_fittings/fs6502_fg,PT2,DECODED,AX_PL (mm) | AX_AX (mm),1,0.625
+o_ring_face_seal_fittings/fs6502_fg,QT2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.135
 o_ring_face_seal_fittings/fs6565,AD,DECODED,CYL_D,1,0.358
 o_ring_face_seal_fittings/fs6565,AS,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.855
 o_ring_face_seal_fittings/fs6565,BD,DECODED,CYL_D,1,0.358
@@ -237,9 +839,29 @@ o_ring_face_seal_fittings/fs6565,MINOR,DECODED,GAP,1,0.751
 o_ring_face_seal_fittings/fs6565,MN,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.482
 o_ring_face_seal_fittings/fs6565,NN,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.197
 o_ring_face_seal_fittings/fs6565,PNUT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.750
-o_ring_face_seal_fittings/fs6565,QN,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2) | GAP (mm) 1/1 (chance 1/2),1,0.157
+o_ring_face_seal_fittings/fs6565,QN,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2) | AX_PL (mm) 1/1 (chance 1/2),1,0.157
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,AD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,AL,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm) | AX_AX (mm),1,0.719
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,AT,DECODED,AX_PL (mm),1,0.655
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,ATHD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,BD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,BTHD,DECODED,GAP | CYL_D,1,0.7500
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,C,DECODED,GAP,1,0.938
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,CL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.504
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,CT,DECODED,AX_PL (mm),1,0.394
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,DL,DECODED,CYL_D,1,0.629
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,DT,DECODED,GAP,1,0.540
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,FT,DECODED,GAP,1,0.410
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,GT,DECODED,GAP (mm) | AX_PL (mm),1,1.030
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,HT,DECODED,CYL_D,1,0.660
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,IT,DECODED,CYL_D,1,1.010
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,JJ,DECODED,GAP | CYL_D,1,0.750
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,JT,DECODED,TOR_r | AX_PL,1,0.087
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,M,DECODED,AX_PL,1,1.100
+o_ring_face_seal_fittings/fs6801_l_nwo_fg,N,DECODED,AX_PL,1,2.950
 o_ring_face_seal_fittings/fs6801_nwo_fg,AD,DECODED,CYL_D,1,0.378
-o_ring_face_seal_fittings/fs6801_nwo_fg,AL,DECODED,AX_PL (mm) | CYL_D (mm) | AX_AX (mm) | GAP (mm),1,0.719
+o_ring_face_seal_fittings/fs6801_nwo_fg,AL,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm) | AX_AX (mm),1,0.719
 o_ring_face_seal_fittings/fs6801_nwo_fg,AT,DECODED,AX_PL (mm),1,0.655
 o_ring_face_seal_fittings/fs6801_nwo_fg,ATHD,DECODED,CYL_D,1,0.8125
 o_ring_face_seal_fittings/fs6801_nwo_fg,BD,DECODED,CYL_D,1,0.378
@@ -251,13 +873,146 @@ o_ring_face_seal_fittings/fs6801_nwo_fg,DL,DECODED,CYL_D,1,0.629
 o_ring_face_seal_fittings/fs6801_nwo_fg,DT,DECODED,GAP,1,0.540
 o_ring_face_seal_fittings/fs6801_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
 o_ring_face_seal_fittings/fs6801_nwo_fg,FT,DECODED,GAP,1,0.410
-o_ring_face_seal_fittings/fs6801_nwo_fg,GT,DECODED,AX_PL (mm) | GAP (mm),1,1.030
+o_ring_face_seal_fittings/fs6801_nwo_fg,GT,DECODED,GAP (mm) | AX_PL (mm),1,1.030
 o_ring_face_seal_fittings/fs6801_nwo_fg,HT,DECODED,CYL_D,1,0.660
 o_ring_face_seal_fittings/fs6801_nwo_fg,IT,DECODED,CYL_D,1,1.010
 o_ring_face_seal_fittings/fs6801_nwo_fg,JJ,DECODED,GAP | CYL_D,1,0.750
-o_ring_face_seal_fittings/fs6801_nwo_fg,JT,DECODED,AX_PL | TOR_r,1,0.087
+o_ring_face_seal_fittings/fs6801_nwo_fg,JT,DECODED,TOR_r | AX_PL,1,0.087
 o_ring_face_seal_fittings/fs6801_nwo_fg,M,DECODED,AX_PL,1,1.100
 o_ring_face_seal_fittings/fs6801_nwo_fg,N,DECODED,AX_PL,1,1.600
+o_ring_face_seal_fittings/fs6802_nwo_fg,AD,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6802_nwo_fg,AL,DECODED,CYL_D (mm) | GAP (mm) | AX_AX (mm),1,0.719
+o_ring_face_seal_fittings/fs6802_nwo_fg,AT,DECODED,AX_PL,1,0.475
+o_ring_face_seal_fittings/fs6802_nwo_fg,ATHD,DECODED,AX_PL | CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs6802_nwo_fg,BD,DECODED,CYL_D,1,0.264
+o_ring_face_seal_fittings/fs6802_nwo_fg,BTHD,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.5625
+o_ring_face_seal_fittings/fs6802_nwo_fg,C,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs6802_nwo_fg,CL,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs6802_nwo_fg,CT,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.354
+o_ring_face_seal_fittings/fs6802_nwo_fg,DL,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.629
+o_ring_face_seal_fittings/fs6802_nwo_fg,DT,DECODED,GAP,1,0.457
+o_ring_face_seal_fittings/fs6802_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.035
+o_ring_face_seal_fittings/fs6802_nwo_fg,FT,DECODED,GAP,1,0.330
+o_ring_face_seal_fittings/fs6802_nwo_fg,GT,DECODED,GAP,1,0.880
+o_ring_face_seal_fittings/fs6802_nwo_fg,HT,DECODED,CYL_D,1,0.482
+o_ring_face_seal_fittings/fs6802_nwo_fg,IT,DECODED,CYL_D,1,0.794
+o_ring_face_seal_fittings/fs6802_nwo_fg,JJ,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs6802_nwo_fg,JT,DECODED,TOR_r,1,0.078
+o_ring_face_seal_fittings/fs6802_nwo_fg,M,DECODED,GAP | AX_PL,1,0.800
+o_ring_face_seal_fittings/fs6802_nwo_fg,N,DECODED,AX_PL,1,1.270
+o_ring_face_seal_fittings/fs6803_nwo_fg,A1D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs6803_nwo_fg,A1THD,DECODED,AX_PL | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs6803_nwo_fg,A2D,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs6803_nwo_fg,A2THD,DECODED,AX_PL | CYL_D,1,0.5625
+o_ring_face_seal_fittings/fs6803_nwo_fg,AL,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs6803_nwo_fg,AR,DECODED,GAP (mm) | AX_AX (mm),1,0.483
+o_ring_face_seal_fittings/fs6803_nwo_fg,AT,DECODED,AX_PL (mm) | AX_AX (mm),1,0.360
+o_ring_face_seal_fittings/fs6803_nwo_fg,BD,DECODED,CYL_D,1,0.172
+o_ring_face_seal_fittings/fs6803_nwo_fg,BTHD,DECODED,CYL_D,1,0.4375
+o_ring_face_seal_fittings/fs6803_nwo_fg,C,DECODED,GAP,1,0.625
+o_ring_face_seal_fittings/fs6803_nwo_fg,CL,DECODED,GAP,1,0.386
+o_ring_face_seal_fittings/fs6803_nwo_fg,CR,DECODED,GAP,1,0.386
+o_ring_face_seal_fittings/fs6803_nwo_fg,CT,DECODED,AX_AX (mm),1,0.307
+o_ring_face_seal_fittings/fs6803_nwo_fg,DL,DECODED,GAP | CYL_D,1,0.433
+o_ring_face_seal_fittings/fs6803_nwo_fg,DN2,NO MATCH,,1,04
+o_ring_face_seal_fittings/fs6803_nwo_fg,DR,DECODED,GAP | CYL_D,1,0.433
+o_ring_face_seal_fittings/fs6803_nwo_fg,DT,DECODED,GAP | CYL_D,1,0.433
+o_ring_face_seal_fittings/fs6803_nwo_fg,ET,DECODED,AX_AX,1,0.030
+o_ring_face_seal_fittings/fs6803_nwo_fg,FT,DECODED,GAP | AX_PL,1,0.280
+o_ring_face_seal_fittings/fs6803_nwo_fg,GT,DECODED,GAP | AX_PL,1,0.810
+o_ring_face_seal_fittings/fs6803_nwo_fg,HT,DECODED,CYL_D,1,0.364
+o_ring_face_seal_fittings/fs6803_nwo_fg,IT,DECODED,CYL_D,1,0.650
+o_ring_face_seal_fittings/fs6803_nwo_fg,JJ,DECODED,CYL_D,1,0.562
+o_ring_face_seal_fittings/fs6803_nwo_fg,JT,DECODED,TOR_r,1,0.072
+o_ring_face_seal_fittings/fs6803_nwo_fg,M1,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.850
+o_ring_face_seal_fittings/fs6803_nwo_fg,M2,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.850
+o_ring_face_seal_fittings/fs6803_nwo_fg,N,DECODED,AX_PL,1,1.290
+o_ring_face_seal_fittings/fs6803_nwo_fg,NO,NO MATCH,,1,04
+o_ring_face_seal_fittings/fs6804_nwo_fg,A1D,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6804_nwo_fg,A1THD,DECODED,CYL_D,1,0.8125
+o_ring_face_seal_fittings/fs6804_nwo_fg,A2D,DECODED,CYL_D,1,0.378
+o_ring_face_seal_fittings/fs6804_nwo_fg,A2THD,DECODED,CYL_D,1,0.812
+o_ring_face_seal_fittings/fs6804_nwo_fg,AL,DECODED,CYL_D (mm) | AX_PL (mm) | AX_AX (mm),1,0.719
+o_ring_face_seal_fittings/fs6804_nwo_fg,AR,DECODED,CYL_D (mm) | AX_PL (mm) | AX_AX (mm),1,0.719
+o_ring_face_seal_fittings/fs6804_nwo_fg,AT,DECODED,GAP (mm),1,0.475
+o_ring_face_seal_fittings/fs6804_nwo_fg,BD,DECODED,CYL_D,1,0.264
+o_ring_face_seal_fittings/fs6804_nwo_fg,BTHD,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.5625
+o_ring_face_seal_fittings/fs6804_nwo_fg,C,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs6804_nwo_fg,CL,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs6804_nwo_fg,CR,DECODED,GAP,1,0.504
+o_ring_face_seal_fittings/fs6804_nwo_fg,CT,DECODED,AX_PL (mm),1,0.354
+o_ring_face_seal_fittings/fs6804_nwo_fg,DL,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.629
+o_ring_face_seal_fittings/fs6804_nwo_fg,DR,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.629
+o_ring_face_seal_fittings/fs6804_nwo_fg,DT,DECODED,GAP,1,0.457
+o_ring_face_seal_fittings/fs6804_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.035
+o_ring_face_seal_fittings/fs6804_nwo_fg,FT,DECODED,GAP,1,0.330
+o_ring_face_seal_fittings/fs6804_nwo_fg,GT,DECODED,GAP,1,0.880
+o_ring_face_seal_fittings/fs6804_nwo_fg,HT,DECODED,CYL_D,1,0.482
+o_ring_face_seal_fittings/fs6804_nwo_fg,IT,DECODED,CYL_D,1,0.794
+o_ring_face_seal_fittings/fs6804_nwo_fg,JJ,DECODED,GAP,1,0.750
+o_ring_face_seal_fittings/fs6804_nwo_fg,JT,DECODED,TOR_r,1,0.078
+o_ring_face_seal_fittings/fs6804_nwo_fg,M1,DECODED,GAP | AX_PL,1,1.100
+o_ring_face_seal_fittings/fs6804_nwo_fg,M2,DECODED,GAP | AX_PL,1,1.100
+o_ring_face_seal_fittings/fs6804_nwo_fg,N,DECODED,GAP | AX_PL,1,1.440
+o_ring_face_seal_fittings/fs6809_nwo_fg,AAA,DECODED,AX_PL,1,1.150
+o_ring_face_seal_fittings/fs6809_nwo_fg,AD,DECODED,CYL_D,1,0.264
+o_ring_face_seal_fittings/fs6809_nwo_fg,AL1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.735
+o_ring_face_seal_fittings/fs6809_nwo_fg,AT,DECODED,GAP (mm),1,0.475
+o_ring_face_seal_fittings/fs6809_nwo_fg,ATHD,DECODED,CYL_D,1,0.6875
+o_ring_face_seal_fittings/fs6809_nwo_fg,B11,NO MATCH,,1,06
+o_ring_face_seal_fittings/fs6809_nwo_fg,BD,DECODED,CYL_D,1,0.264
+o_ring_face_seal_fittings/fs6809_nwo_fg,BL1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.177
+o_ring_face_seal_fittings/fs6809_nwo_fg,BL2,DECODED,GAP,1,0.812
+o_ring_face_seal_fittings/fs6809_nwo_fg,BTHD,DECODED,GAP,1,0.5625
+o_ring_face_seal_fittings/fs6809_nwo_fg,C1,DECODED,GAP,1,0.812
+o_ring_face_seal_fittings/fs6809_nwo_fg,C2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.750
+o_ring_face_seal_fittings/fs6809_nwo_fg,CL1,DECODED,CYL_D,1,0.620
+o_ring_face_seal_fittings/fs6809_nwo_fg,CL2,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.525
+o_ring_face_seal_fittings/fs6809_nwo_fg,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.354
+o_ring_face_seal_fittings/fs6809_nwo_fg,DL1,DECODED,CYL_D,1,0.522
+o_ring_face_seal_fittings/fs6809_nwo_fg,DL2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.722
+o_ring_face_seal_fittings/fs6809_nwo_fg,DT,DECODED,GAP,1,0.457
+o_ring_face_seal_fittings/fs6809_nwo_fg,EL2,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.715
+o_ring_face_seal_fittings/fs6809_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.035
+o_ring_face_seal_fittings/fs6809_nwo_fg,FL2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.160
+o_ring_face_seal_fittings/fs6809_nwo_fg,FT,DECODED,GAP,1,0.330
+o_ring_face_seal_fittings/fs6809_nwo_fg,GL2,DECODED,GAP,1,0.707
+o_ring_face_seal_fittings/fs6809_nwo_fg,GT,DECODED,GAP,1,0.880
+o_ring_face_seal_fittings/fs6809_nwo_fg,HT,DECODED,CYL_D,1,0.482
+o_ring_face_seal_fittings/fs6809_nwo_fg,IT,DECODED,CYL_D,1,0.794
+o_ring_face_seal_fittings/fs6809_nwo_fg,JJ,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.750
+o_ring_face_seal_fittings/fs6809_nwo_fg,JL2,DECODED,CYL_D,1,0.693
+o_ring_face_seal_fittings/fs6809_nwo_fg,JT,DECODED,TOR_r,1,0.078
+o_ring_face_seal_fittings/fs6809_nwo_fg,KL2,DECODED,GAP (mm) | AX_PL (mm),1,0.800
+o_ring_face_seal_fittings/fs6809_nwo_fg,ML2,DECODED,GAP (mm) | AX_PL (mm),1,0.392
+o_ring_face_seal_fittings/fs6809_nwo_fg,N,DECODED,AX_PL,1,1.450
+o_ring_face_seal_fittings/fs6809_nwo_fg,NL2,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.155
+o_ring_face_seal_fittings/fs6809_nwo_fg,PL2,DECODED,GAP,1,0.625
+o_ring_face_seal_fittings/fs6809_nwo_fg,QL2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.135
+o_ring_face_seal_fittings/fs7202_nwo_fg,AD,DECODED,CYL_D (mm),1,6.70
+o_ring_face_seal_fittings/fs7202_nwo_fg,AL,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.594
+o_ring_face_seal_fittings/fs7202_nwo_fg,AT,NO MATCH,,1,10.9
+o_ring_face_seal_fittings/fs7202_nwo_fg,ATHD,DECODED,CYL_D,1,0.6875
+o_ring_face_seal_fittings/fs7202_nwo_fg,BD,DECODED,CYL_D (mm) | GAP (mm),1,7.50
+o_ring_face_seal_fittings/fs7202_nwo_fg,BT,NO MATCH,,1,8.0
+o_ring_face_seal_fittings/fs7202_nwo_fg,BTHD,DECODED,CYL_D (mm),1,13.1570
+o_ring_face_seal_fittings/fs7202_nwo_fg,C4,DECODED,GAP (mm),1,19.0
+o_ring_face_seal_fittings/fs7202_nwo_fg,CL,DECODED,GAP,1,0.441
+o_ring_face_seal_fittings/fs7202_nwo_fg,CT,DECODED,GAP (mm),1,11.2
+o_ring_face_seal_fittings/fs7202_nwo_fg,DL,DECODED,CYL_D,1,0.504
+o_ring_face_seal_fittings/fs7202_nwo_fg,DT,DECODED,GAP (mm) | AX_PL (mm),1,1.9
+o_ring_face_seal_fittings/fs7202_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.90
+o_ring_face_seal_fittings/fs7202_nwo_fg,FT,DECODED,GAP (mm),1,7.1
+o_ring_face_seal_fittings/fs7202_nwo_fg,HT,DECODED,GAP (mm),1,20.0
+o_ring_face_seal_fittings/fs7202_nwo_fg,IT,DECODED,CYL_D (mm),1,19.50
+o_ring_face_seal_fittings/fs7202_nwo_fg,JJ,DECODED,GAP (mm),1,19.0
+o_ring_face_seal_fittings/fs7202_nwo_fg,JT,DECODED,CYL_D (mm),1,20.2
+o_ring_face_seal_fittings/fs7202_nwo_fg,LT,DECODED,CYL_D (mm),1,11.1
+o_ring_face_seal_fittings/fs7202_nwo_fg,M,DECODED,AX_PL (mm),1,25.00
+o_ring_face_seal_fittings/fs7202_nwo_fg,MT,DECODED,TOR_r (mm) | AX_PL (mm),1,2.62
+o_ring_face_seal_fittings/fs7202_nwo_fg,N,DECODED,AX_PL (mm),1,36.00
+o_rings_and_seals/4005,ID,NO MATCH,,1,0.734
+o_rings_and_seals/4005,W,DECODED,TOR_r | BOX,1,0.140
 tube_fittings_and_adapters/0304_c,C,DECODED,GAP,1,0.875
 tube_fittings_and_adapters/0304_c,DIA1,DECODED,GAP (mm),1,0.860
 tube_fittings_and_adapters/0304_c,DIA2,DECODED,GAP | BOX,1,0.7500
@@ -290,12 +1045,12 @@ tube_fittings_and_adapters/1404,A2D1,DECODED,CYL_D,9,0.150 0.220 0.340 0.460 0.6
 tube_fittings_and_adapters/1404,A2THD,PARTIAL,AX_PL (mm) 5/9 (chance 3/18) | GAP (mm) 3/9 (chance 9/18) | GAP 2/9 (chance 9/18) | AX_PL 2/9 (chance 3/18) | AX_AX (mm) 1/9 (chance 0/18),9,0.3969 0.5260 0.6620 0.8230 1.0340 1.2930
 tube_fittings_and_adapters/1404,AT,DECODED,CYL_D,9,0.48 0.605 0.78 0.875 1.095 1.365
 tube_fittings_and_adapters/1404,BL,PARTIAL,GAP 5/9 (chance 6/18) | AX_PL 4/9 (chance 4/18) | GAP (mm) 2/9 (chance 6/18) | AX_AX 1/9 (chance 0/18) | AX_PL (mm) 1/9 (chance 4/18),9,0.310 0.410 0.540 0.670 0.880 1.105
-tube_fittings_and_adapters/1404,BT,PARTIAL,GAP 5/9 (chance 15/18) | AX_PL (mm) 4/9 (chance 3/18) | GAP (mm) 4/9 (chance 15/18) | AX_PL 1/9 (chance 3/18),9,0.100 0.110 0.125 0.140 0.150 0.175
+tube_fittings_and_adapters/1404,BT,PARTIAL,GAP 5/9 (chance 15/18) | GAP (mm) 4/9 (chance 15/18) | AX_PL (mm) 4/9 (chance 3/18) | AX_PL 1/9 (chance 3/18),9,0.100 0.110 0.125 0.140 0.150 0.175
 tube_fittings_and_adapters/1404,BT2,DECODED,CYL_D,9,0.258 0.365 0.493 0.608 0.778 1.050
 tube_fittings_and_adapters/1404,C,AMBIGUOUS,GAP 9/9 (chance 5/18),9,0.562 0.688 0.875 1.000 1.250 1.500
 tube_fittings_and_adapters/1404,C1,AMBIGUOUS,GAP 9/9 (chance 5/18),9,0.562 0.688 0.875 1.000 1.250 1.500
 tube_fittings_and_adapters/1404,CL,PARTIAL,CYL_D 8/9 (chance 0/18) | GAP 4/9 (chance 7/18) | AX_PL 3/9 (chance 6/18) | AX_AX 1/9 (chance 0/18),9,0.405 0.540 0.675 0.840 1.050 1.317
-tube_fittings_and_adapters/1404,CT,PARTIAL,GAP 8/9 (chance 14/18) | AX_PL 2/9 (chance 6/18) | AX_PL (mm) 1/9 (chance 6/18) | GAP (mm) 1/9 (chance 14/18),9,0.14 0.19 0.21 0.28 0.35 0.35
+tube_fittings_and_adapters/1404,CT,PARTIAL,GAP 8/9 (chance 14/18) | AX_PL 2/9 (chance 6/18) | GAP (mm) 1/9 (chance 14/18) | AX_PL (mm) 1/9 (chance 6/18),9,0.14 0.19 0.21 0.28 0.35 0.35
 tube_fittings_and_adapters/1404,CT2,PARTIAL,GAP 6/9 (chance 12/18) | AX_PL 3/9 (chance 3/18) | AX_AX (mm) 1/9 (chance 0/18) | CYL_D 1/9 (chance 0/18),9,0.234 0.297 0.422 0.562 0.750 0.969
 tube_fittings_and_adapters/1404,D1T,AMBIGUOUS,GAP 9/9 (chance 5/18),9,0.562 0.690 0.875 1.000 1.250 1.500
 tube_fittings_and_adapters/1404,D2T,PARTIAL,GAP 5/9 (chance 5/18) | AX_PL 2/9 (chance 3/18) | AX_AX 1/9 (chance 0/18) | CONE_A 1/9 (chance 0/18) | AX_PL (mm) 1/9 (chance 3/18) | AX_AX (mm) 1/9 (chance 0/18),9,0.358 0.468 0.603 0.747 0.968 1.201
@@ -303,10 +1058,10 @@ tube_fittings_and_adapters/1404,D3T,DECODED,CYL_D,9,0.455 0.580 0.720 0.885 1.12
 tube_fittings_and_adapters/1404,D4T,AMBIGUOUS,GAP 9/9 (chance 5/18),9,0.562 0.688 0.875 1.000 1.250 1.500
 tube_fittings_and_adapters/1404,DL,AMBIGUOUS,GAP 9/9 (chance 11/18) | AX_PL 4/9 (chance 8/18) | AX_AX 2/9 (chance 1/18),9,0.380 0.560 0.560 0.750 0.750 0.940
 tube_fittings_and_adapters/1404,DT2,DECODED,CYL_D,9,0.345 0.450 0.587 0.740 0.927 1.180
-tube_fittings_and_adapters/1404,EL,PARTIAL,GAP 5/9 (chance 11/18) | AX_PL 3/9 (chance 5/18) | AX_PL (mm) 2/9 (chance 5/18) | GAP (mm) 2/9 (chance 11/18) | AX_AX (mm) 1/9 (chance 0/18),9,0.281 0.344 0.469 0.625 0.813 1.031
+tube_fittings_and_adapters/1404,EL,PARTIAL,GAP 5/9 (chance 11/18) | AX_PL 3/9 (chance 5/18) | GAP (mm) 2/9 (chance 11/18) | AX_PL (mm) 2/9 (chance 5/18) | AX_AX (mm) 1/9 (chance 0/18),9,0.281 0.344 0.469 0.625 0.813 1.031
 tube_fittings_and_adapters/1404,ET2,AMBIGUOUS,GAP 9/9 (chance 12/18) | AX_PL 3/9 (chance 9/18),9,0.170 0.260 0.265 0.320 0.275 0.400
-tube_fittings_and_adapters/1404,FT2,PARTIAL,GAP 8/9 (chance 18/18) | AX_PL (mm) 1/9 (chance 6/18) | GAP (mm) 1/9 (chance 18/18),9,0.110 0.130 0.145 0.160 0.175 0.190
-tube_fittings_and_adapters/1404,HLP,PARTIAL,GAP 2/4 (chance 5/8) | AX_PL 2/4 (chance 1/8) | AX_PL (mm) 1/4 (chance 1/8) | GAP (mm) 1/4 (chance 5/8),4,1 1 1 1
+tube_fittings_and_adapters/1404,FT2,PARTIAL,GAP 8/9 (chance 18/18) | GAP (mm) 1/9 (chance 18/18) | AX_PL (mm) 1/9 (chance 6/18),9,0.110 0.130 0.145 0.160 0.175 0.190
+tube_fittings_and_adapters/1404,HLP,PARTIAL,GAP 2/4 (chance 5/8) | AX_PL 2/4 (chance 1/8) | GAP (mm) 1/4 (chance 5/8) | AX_PL (mm) 1/4 (chance 1/8),4,1 1 1 1
 tube_fittings_and_adapters/1404,HT,AMBIGUOUS,GAP 9/9 (chance 5/18),9,0.562 0.688 0.875 1.000 1.250 1.500
 tube_fittings_and_adapters/1404,L,DECODED,GAP | BOX,9,1.080 1.420 1.520 1.890 2.080 2.350
 tube_fittings_and_adapters/1404,L1,DECODED,GAP,9,0.940 1.230 1.300 1.610 1.750 2.000
@@ -316,6 +1071,32 @@ tube_fittings_and_adapters/1404,L3T,PARTIAL,GAP 6/9 (chance 13/18) | AX_PL 5/9 (
 tube_fittings_and_adapters/1404,L4T,AMBIGUOUS,GAP 9/9 (chance 12/18) | CYL_D 1/9 (chance 1/18) | AX_PL 1/9 (chance 8/18),9,0.380 0.540 0.580 0.720 0.760 0.900
 tube_fittings_and_adapters/1404,MDP,PARTIAL,GAP (mm) 5/9 (chance 2/18) | AX_PL (mm) 4/9 (chance 2/18) | CONE_A 1/9 (chance 0/18) | GAP 1/9 (chance 2/18),9,6.000 6.000 6.000 5.000 3.000 2.500
 tube_fittings_and_adapters/1404,PITCH2,PARTIAL,GAP 8/9 (chance 12/18) | AX_PL 5/9 (chance 8/18) | CYL_D 1/9 (chance 1/18),9,0.03700 0.05598 0.05598 0.07098 0.07098 0.08701
+tube_fittings_and_adapters/1501_fg,A1D,DECODED,AX_PL | CYL_D,1,0.281
+tube_fittings_and_adapters/1501_fg,A2D,DECODED,GAP,1,0.13
+tube_fittings_and_adapters/1501_fg,C,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.562
+tube_fittings_and_adapters/1501_fg,DN1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.56
+tube_fittings_and_adapters/1501_fg,DN2,DECODED,AX_PL (mm) | AX_AX (mm),1,0.358
+tube_fittings_and_adapters/1501_fg,DN3,DECODED,CYL_D,1,0.455
+tube_fittings_and_adapters/1501_fg,DN4,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.562
+tube_fittings_and_adapters/1501_fg,G,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.17
+tube_fittings_and_adapters/1501_fg,G1,DECODED,CYL_D,1,0.11
+tube_fittings_and_adapters/1501_fg,H,DECODED,CYL_D,1,0.344
+tube_fittings_and_adapters/1501_fg,H2,DECODED,CYL_D,1,0.258
+tube_fittings_and_adapters/1501_fg,H3,DECODED,AX_PL | CYL_D,1,0.345
+tube_fittings_and_adapters/1501_fg,H4,DECODED,GAP,1,0.234
+tube_fittings_and_adapters/1501_fg,L,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,1.09
+tube_fittings_and_adapters/1501_fg,L1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.671
+tube_fittings_and_adapters/1501_fg,L2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.560
+tube_fittings_and_adapters/1501_fg,LN1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.07
+tube_fittings_and_adapters/1501_fg,LN2,DECODED,GAP,1,0.12
+tube_fittings_and_adapters/1501_fg,LN3,DECODED,GAP (mm) | AX_PL (mm),1,0.18
+tube_fittings_and_adapters/1501_fg,LN4,DECODED,GAP | AX_PL,1,0.38
+tube_fittings_and_adapters/1501_fg,M,DECODED,AX_PL,1,0.77
+tube_fittings_and_adapters/1501_fg,M1,DECODED,AX_PL,1,0.91
+tube_fittings_and_adapters/1501_fg,MDP,DECODED,AX_PL (mm),1,6.000
+tube_fittings_and_adapters/1501_fg,N,DECODED,AX_PL | CYL_D,1,0.281
+tube_fittings_and_adapters/1501_fg,N1,DECODED,CYL_D,1,0.11
+tube_fittings_and_adapters/1501_fg,Y,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.562
 tube_fittings_and_adapters/1502_fg,A1THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
 tube_fittings_and_adapters/1502_fg,A2D,DECODED,CYL_D,1,0.460
 tube_fittings_and_adapters/1502_fg,A2THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8230
@@ -328,11 +1109,11 @@ tube_fittings_and_adapters/1502_fg,CL,DECODED,CYL_D,1,0.718
 tube_fittings_and_adapters/1502_fg,CT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.28
 tube_fittings_and_adapters/1502_fg,CT2,NO MATCH,,1,0.562
 tube_fittings_and_adapters/1502_fg,D1T,DECODED,GAP,1,1.000
-tube_fittings_and_adapters/1502_fg,D2T,DECODED,AX_PL (mm) | GAP (mm),1,0.747
+tube_fittings_and_adapters/1502_fg,D2T,DECODED,GAP (mm) | AX_PL (mm),1,0.747
 tube_fittings_and_adapters/1502_fg,D3T,DECODED,CYL_D,1,0.885
 tube_fittings_and_adapters/1502_fg,D4T,DECODED,GAP,1,1.000
 tube_fittings_and_adapters/1502_fg,DL,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.855
-tube_fittings_and_adapters/1502_fg,DT2,DECODED,CYL_D | AX_PL,1,0.740
+tube_fittings_and_adapters/1502_fg,DT2,DECODED,AX_PL | CYL_D,1,0.740
 tube_fittings_and_adapters/1502_fg,EL,DECODED,CYL_D,1,1.062
 tube_fittings_and_adapters/1502_fg,ET2,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.320
 tube_fittings_and_adapters/1502_fg,FT2,DECODED,AX_PL,1,0.160
@@ -379,7 +1160,7 @@ tube_fittings_and_adapters/1503_fg,M1,DECODED,AX_PL,2,0.880 1.050
 tube_fittings_and_adapters/1503_fg,MDP,DECODED,CONE_A,2,5.000 5.000
 tube_fittings_and_adapters/1503_fg,PITCH2,DECODED,GAP,2,0.07098 0.07098
 tube_fittings_and_adapters/1503_fg,Y,DECODED,GAP,2,0.875 1.062
-tube_fittings_and_adapters/1504_fg,A1THD,DECODED,AX_PL (mm) | CYL_D (mm) | GAP (mm),1,0.6750
+tube_fittings_and_adapters/1504_fg,A1THD,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,0.6750
 tube_fittings_and_adapters/1504_fg,A2D,DECODED,GAP | CYL_D,1,0.320
 tube_fittings_and_adapters/1504_fg,A2THD,DECODED,AX_PL (mm),1,0.6620
 tube_fittings_and_adapters/1504_fg,AT,DECODED,CYL_D,1,0.78
@@ -507,6 +1288,22 @@ tube_fittings_and_adapters/1603_fg,M2,DECODED,AX_PL,1,1.110
 tube_fittings_and_adapters/1603_fg,PITCH2,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.07098
 tube_fittings_and_adapters/1603_fg,PITCH3,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.07098
 tube_fittings_and_adapters/1603_fg,Y,DECODED,GAP | CYL_D,1,0.875
+tube_fittings_and_adapters/2404,A2D,DECODED,CYL_D,1,2.318
+tube_fittings_and_adapters/2404,A2THD,DECODED,CYL_D,1,2.8750
+tube_fittings_and_adapters/2404,AL,DECODED,CYL_D,1,2.880
+tube_fittings_and_adapters/2404,B1D,DECODED,CYL_D,1,2.318
+tube_fittings_and_adapters/2404,B1THD,DECODED,CYL_D,1,3.0000
+tube_fittings_and_adapters/2404,BR,NO MATCH,,1,2.575
+tube_fittings_and_adapters/2404,C,DECODED,GAP,1,3.250
+tube_fittings_and_adapters/2404,CL,DECODED,AX_PL (mm),1,2.400
+tube_fittings_and_adapters/2404,CR,DECODED,CYL_D,1,2.880
+tube_fittings_and_adapters/2404,DL,DECODED,GAP,1,0.391
+tube_fittings_and_adapters/2404,DR,DECODED,GAP,1,1.515
+tube_fittings_and_adapters/2404,EL,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.140
+tube_fittings_and_adapters/2404,ER,DECODED,GAP (mm),1,2.443
+tube_fittings_and_adapters/2404,FL,DECODED,CYL_D,1,2.880
+tube_fittings_and_adapters/2404,GL,DECODED,GAP,1,1.335
+tube_fittings_and_adapters/2404,L,DECODED,GAP | BOX,1,3.370
 tube_fittings_and_adapters/2404_l,A2D,DECODED,CYL_D,2,0.391 1.938
 tube_fittings_and_adapters/2404_l,A2THD,DECODED,CYL_D,2,0.8400 2.3750
 tube_fittings_and_adapters/2404_l,AL,DECODED,CYL_D,2,0.659 2.380
@@ -526,7 +1323,7 @@ tube_fittings_and_adapters/2404_l,L,DECODED,GAP | BOX,2,3.040 5.620
 tube_fittings_and_adapters/2404_l,MDP,NO MATCH,,2,6.000 2.000
 tube_fittings_and_adapters/2406,AL,PARTIAL,AX_PL (mm) 7/13 (chance 0/26) | GAP (mm) 5/13 (chance 0/26) | CYL_D (mm) 2/13 (chance 1/26) | AX_AX (mm) 2/13 (chance 0/26) | GAP 1/13 (chance 0/26),13,0.380 0.443 0.505 0.567 0.755 0.880
 tube_fittings_and_adapters/2406,AR,DECODED,CYL_D,13,0.364 0.481 0.364 0.481 0.659 0.659
-tube_fittings_and_adapters/2406,B1OD,PARTIAL,AX_PL (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 1/4),2,1 2
+tube_fittings_and_adapters/2406,B1OD,PARTIAL,GAP (mm) 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 0/4),2,1 2
 tube_fittings_and_adapters/2406,B1THD,PARTIAL,AX_PL (mm) 6/13 (chance 0/26) | GAP (mm) 4/13 (chance 1/26) | CYL_D (mm) 3/13 (chance 0/26) | AX_AX (mm) 2/13 (chance 0/26) | CYL_D 2/13 (chance 0/26),13,0.3750 0.4375 0.5000 0.5625 0.7500 0.8750
 tube_fittings_and_adapters/2406,B2D,DECODED,CYL_D,13,0.125 0.172 0.172 0.297 0.391 0.391
 tube_fittings_and_adapters/2406,B2OD,NO MATCH,,13,04 06 04 06 08 08
@@ -534,17 +1331,17 @@ tube_fittings_and_adapters/2406,B2THD,DECODED,CYL_D,13,0.4375 0.5625 0.4375 0.56
 tube_fittings_and_adapters/2406,C,DECODED,GAP | CYL_D,13,0.500 0.625 0.625 0.688 0.875 1.000
 tube_fittings_and_adapters/2406,CL,DECODED,CYL_D,13,0.334 0.388 0.451 0.508 0.688 0.804
 tube_fittings_and_adapters/2406,CR,PARTIAL,AX_PL (mm) 10/13 (chance 2/26) | GAP (mm) 8/13 (chance 4/26) | AX_AX (mm) 2/13 (chance 0/26) | GAP 1/13 (chance 4/26),13,0.193 0.318 0.193 0.318 0.426 0.426
-tube_fittings_and_adapters/2406,DL,PARTIAL,AX_PL (mm) 7/13 (chance 3/26) | GAP (mm) 7/13 (chance 4/26) | GAP 1/13 (chance 4/26),13,0.198 0.245 0.261 0.261 0.276 0.354
+tube_fittings_and_adapters/2406,DL,PARTIAL,GAP (mm) 7/13 (chance 4/26) | AX_PL (mm) 7/13 (chance 3/26) | GAP 1/13 (chance 4/26),13,0.198 0.245 0.261 0.261 0.276 0.354
 tube_fittings_and_adapters/2406,DR,PARTIAL,GAP (mm) 11/13 (chance 1/26) | AX_PL (mm) 6/13 (chance 1/26),13,0.193 0.198 0.193 0.198 0.253 0.253
 tube_fittings_and_adapters/2406,EL,PARTIAL,GAP (mm) 6/13 (chance 2/26) | AX_PL (mm) 3/13 (chance 0/26) | AX_AX (mm) 3/13 (chance 0/26) | AX_PL 1/13 (chance 0/26) | GAP 1/13 (chance 2/26),13,0.266 0.328 0.344 0.344 0.375 0.469
 tube_fittings_and_adapters/2406,ER,PARTIAL,AX_PL 5/13 (chance 10/26) | GAP 4/13 (chance 15/26) | GAP (mm) 3/13 (chance 15/26),13,0.075 0.083 0.075 0.083 0.094 0.094
-tube_fittings_and_adapters/2406,FL,PARTIAL,AX_PL (mm) 9/13 (chance 1/26) | GAP (mm) 9/13 (chance 8/26) | GAP 2/13 (chance 8/26),13,0.090 0.170 0.170 0.190 0.170 0.170
+tube_fittings_and_adapters/2406,FL,PARTIAL,GAP (mm) 9/13 (chance 8/26) | AX_PL (mm) 9/13 (chance 1/26) | GAP 2/13 (chance 8/26),13,0.090 0.170 0.170 0.190 0.170 0.170
 tube_fittings_and_adapters/2406,FR,DECODED,CYL_D,13,0.364 0.481 0.364 0.481 0.659 0.659
 tube_fittings_and_adapters/2406,GL,PARTIAL,GAP 7/10 (chance 0/20) | AX_PL (mm) 3/10 (chance 0/20) | GAP (mm) 2/10 (chance 0/20) | AX_AX (mm) 2/10 (chance 0/20) | CYL_D (mm) 1/10 (chance 0/20),10,0.531 0.625 0.719 0.781 0.781 0.843
 tube_fittings_and_adapters/2406,GR,DECODED,GAP,13,0.550 0.556 0.550 0.556 0.657 0.657
 tube_fittings_and_adapters/2406,HL,PARTIAL,CYL_D 9/10 (chance 0/20) | GAP 2/10 (chance 1/20) | GAP (mm) 1/10 (chance 1/20),10,0.172 0.391 0.484 0.609 0.609 0.719
 tube_fittings_and_adapters/2406,L0,DECODED,GAP | BOX,13,0.980 1.160 1.190 1.180 1.410 1.410
-tube_fittings_and_adapters/2406,X,PARTIAL,AX_PL (mm) 4/7 (chance 1/14) | GAP (mm) 4/7 (chance 2/14) | AX_PL 1/7 (chance 1/14),7,1 1 1 1 1 1
+tube_fittings_and_adapters/2406,X,PARTIAL,GAP (mm) 4/7 (chance 2/14) | AX_PL (mm) 4/7 (chance 1/14) | AX_PL 1/7 (chance 1/14),7,1 1 1 1 1 1
 tube_fittings_and_adapters/2408,AL,DECODED,CYL_D,2,0.659 1.506
 tube_fittings_and_adapters/2408,B1THD,DECODED,CYL_D,2,0.7500 1.6250
 tube_fittings_and_adapters/2408,BL,DECODED,CYL_D,2,0.391 1.078
@@ -560,10 +1357,10 @@ tube_fittings_and_adapters/2408,W,PARTIAL,GAP 1/2 (chance 1/4) | GAP (mm) 1/2 (c
 tube_fittings_and_adapters/2500_fg,AL,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2500_fg,AT,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2500_fg,B1D,DECODED,CYL_D,1,0.297
-tube_fittings_and_adapters/2500_fg,B1THD,DECODED,GAP | CYL_D | BOX,1,0.5625
+tube_fittings_and_adapters/2500_fg,B1THD,DECODED,GAP | BOX | CYL_D,1,0.5625
 tube_fittings_and_adapters/2500_fg,B2D,DECODED,CYL_D,1,0.297
 tube_fittings_and_adapters/2500_fg,B2OD,NO MATCH,,1,06
-tube_fittings_and_adapters/2500_fg,B2THD,DECODED,GAP | CYL_D | BOX,1,0.5625
+tube_fittings_and_adapters/2500_fg,B2THD,DECODED,GAP | BOX | CYL_D,1,0.5625
 tube_fittings_and_adapters/2500_fg,CL,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
 tube_fittings_and_adapters/2500_fg,CT,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
 tube_fittings_and_adapters/2500_fg,DL,DECODED,GAP,1,0.198
@@ -573,7 +1370,7 @@ tube_fittings_and_adapters/2500_fg,ET,DECODED,GAP,1,0.556
 tube_fittings_and_adapters/2500_fg,M1,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/2500_fg,M2,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/2500_fg,MDP,NO MATCH,,1,6.000
-tube_fittings_and_adapters/2500_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.562
+tube_fittings_and_adapters/2500_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.562
 tube_fittings_and_adapters/2501_fg,A2D,DECODED,CYL_D,1,2.318
 tube_fittings_and_adapters/2501_fg,A2THD,DECODED,AX_PL (mm),1,2.8750
 tube_fittings_and_adapters/2501_fg,AL,DECODED,CYL_D,1,2.880
@@ -589,14 +1386,14 @@ tube_fittings_and_adapters/2501_fg,ET,DECODED,GAP (mm),1,2.443
 tube_fittings_and_adapters/2501_fg,L,DECODED,AX_PL,1,3.950
 tube_fittings_and_adapters/2501_fg,M,DECODED,AX_PL,1,3.250
 tube_fittings_and_adapters/2501_fg,Y,DECODED,GAP | BOX,1,3.234
-tube_fittings_and_adapters/2501_l_fg,A2D,DECODED,CYL_D | AX_PL,1,0.281
-tube_fittings_and_adapters/2501_l_fg,A2THD,DECODED,AX_PL (mm) | GAP (mm),1,0.5400
+tube_fittings_and_adapters/2501_l_fg,A2D,DECODED,AX_PL | CYL_D,1,0.281
+tube_fittings_and_adapters/2501_l_fg,A2THD,DECODED,GAP (mm) | AX_PL (mm),1,0.5400
 tube_fittings_and_adapters/2501_l_fg,AL,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2501_l_fg,B1D,DECODED,CYL_D,1,0.297
-tube_fittings_and_adapters/2501_l_fg,B1THD,DECODED,GAP | CYL_D | BOX,1,0.5625
-tube_fittings_and_adapters/2501_l_fg,BT,DECODED,AX_PL (mm) | CYL_D (mm),1,0.410
+tube_fittings_and_adapters/2501_l_fg,B1THD,DECODED,GAP | BOX | CYL_D,1,0.5625
+tube_fittings_and_adapters/2501_l_fg,BT,DECODED,CYL_D (mm) | AX_PL (mm),1,0.410
 tube_fittings_and_adapters/2501_l_fg,CL,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
-tube_fittings_and_adapters/2501_l_fg,CT,DECODED,AX_PL (mm) | GAP (mm),1,0.540
+tube_fittings_and_adapters/2501_l_fg,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.540
 tube_fittings_and_adapters/2501_l_fg,DL,DECODED,GAP,1,0.198
 tube_fittings_and_adapters/2501_l_fg,DT,DECODED,GAP,1,0.560
 tube_fittings_and_adapters/2501_l_fg,EL,DECODED,GAP,1,0.556
@@ -604,14 +1401,14 @@ tube_fittings_and_adapters/2501_l_fg,ET,DECODED,AX_PL (mm) | AX_AX (mm),1,0.344
 tube_fittings_and_adapters/2501_l_fg,L,DECODED,AX_PL,1,1.580
 tube_fittings_and_adapters/2501_l_fg,M,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/2501_l_fg,MDP,NO MATCH,,1,6.000
-tube_fittings_and_adapters/2501_l_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.562
+tube_fittings_and_adapters/2501_l_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.562
 tube_fittings_and_adapters/2501_ll_fg,A2D,DECODED,CYL_D,1,0.531
 tube_fittings_and_adapters/2501_ll_fg,A2THD,NO MATCH,,1,0.8400
-tube_fittings_and_adapters/2501_ll_fg,AL,DECODED,CYL_D | AX_PL,1,0.659
+tube_fittings_and_adapters/2501_ll_fg,AL,DECODED,AX_PL | CYL_D,1,0.659
 tube_fittings_and_adapters/2501_ll_fg,B1D,DECODED,CYL_D,1,0.391
 tube_fittings_and_adapters/2501_ll_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
 tube_fittings_and_adapters/2501_ll_fg,BT,DECODED,AX_PL (mm),1,0.670
-tube_fittings_and_adapters/2501_ll_fg,CL,DECODED,AX_PL (mm) | GAP (mm),1,0.426
+tube_fittings_and_adapters/2501_ll_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.426
 tube_fittings_and_adapters/2501_ll_fg,CT,NO MATCH,,1,0.840
 tube_fittings_and_adapters/2501_ll_fg,DL,DECODED,GAP,1,0.253
 tube_fittings_and_adapters/2501_ll_fg,DT,DECODED,GAP | CYL_D,1,0.750
@@ -626,25 +1423,25 @@ tube_fittings_and_adapters/2502_fg,AL,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2502_fg,B1D,DECODED,CYL_D,1,0.297
 tube_fittings_and_adapters/2502_fg,B1THD,DECODED,CYL_D,1,0.5625
 tube_fittings_and_adapters/2502_fg,BT,DECODED,GAP,1,0.560
-tube_fittings_and_adapters/2502_fg,CL,DECODED,AX_PL (mm) | GAP (mm),1,0.318
+tube_fittings_and_adapters/2502_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.318
 tube_fittings_and_adapters/2502_fg,CT,DECODED,CYL_D,1,0.437
 tube_fittings_and_adapters/2502_fg,DL,DECODED,GAP,1,0.198
 tube_fittings_and_adapters/2502_fg,DT,DECODED,GAP,1,0.555
 tube_fittings_and_adapters/2502_fg,EL,DECODED,GAP,1,0.556
-tube_fittings_and_adapters/2502_fg,ET,DECODED,GAP | CYL_D | BOX,1,0.750
+tube_fittings_and_adapters/2502_fg,ET,DECODED,GAP | BOX | CYL_D,1,0.750
 tube_fittings_and_adapters/2502_fg,L,DECODED,AX_PL,1,0.880
 tube_fittings_and_adapters/2502_fg,M,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/2502_fg,MDP,NO MATCH,,1,6.000
-tube_fittings_and_adapters/2502_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.750
+tube_fittings_and_adapters/2502_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.750
 tube_fittings_and_adapters/2504_fg,AL,DECODED,CYL_D,1,0.659
 tube_fittings_and_adapters/2504_fg,AT,DECODED,CYL_D,1,0.659
 tube_fittings_and_adapters/2504_fg,B1D,DECODED,CYL_D,1,0.391
-tube_fittings_and_adapters/2504_fg,B1THD,DECODED,GAP | CYL_D | BOX,1,0.7500
+tube_fittings_and_adapters/2504_fg,B1THD,DECODED,GAP | BOX | CYL_D,1,0.7500
 tube_fittings_and_adapters/2504_fg,B2D,DECODED,CYL_D,1,0.391
 tube_fittings_and_adapters/2504_fg,B2OD,NO MATCH,,1,08
-tube_fittings_and_adapters/2504_fg,B2THD,DECODED,GAP | CYL_D | BOX,1,0.7500
-tube_fittings_and_adapters/2504_fg,CL,DECODED,AX_PL (mm) | GAP (mm),1,0.426
-tube_fittings_and_adapters/2504_fg,CT,DECODED,AX_PL (mm) | GAP (mm),1,0.426
+tube_fittings_and_adapters/2504_fg,B2THD,DECODED,GAP | BOX | CYL_D,1,0.7500
+tube_fittings_and_adapters/2504_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+tube_fittings_and_adapters/2504_fg,CT,DECODED,GAP (mm) | AX_PL (mm),1,0.426
 tube_fittings_and_adapters/2504_fg,DL,DECODED,GAP,1,0.253
 tube_fittings_and_adapters/2504_fg,DT,DECODED,GAP,1,0.253
 tube_fittings_and_adapters/2504_fg,EL,DECODED,GAP,1,0.657
@@ -652,7 +1449,7 @@ tube_fittings_and_adapters/2504_fg,ET,DECODED,GAP,1,0.657
 tube_fittings_and_adapters/2504_fg,M1,DECODED,AX_PL,1,0.980
 tube_fittings_and_adapters/2504_fg,M2,DECODED,AX_PL,1,0.980
 tube_fittings_and_adapters/2504_fg,MDP,NO MATCH,,1,6.000
-tube_fittings_and_adapters/2504_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.750
+tube_fittings_and_adapters/2504_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.750
 tube_fittings_and_adapters/2504_fg,YT,DECODED,AX_PL (mm),1,0.433
 tube_fittings_and_adapters/2505_fg,A2THD,DECODED,GAP (mm),1,0.8400
 tube_fittings_and_adapters/2505_fg,AL,DECODED,CYL_D,1,0.659
@@ -664,24 +1461,24 @@ tube_fittings_and_adapters/2505_fg,CT,DECODED,CYL_D,1,0.718
 tube_fittings_and_adapters/2505_fg,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.253
 tube_fittings_and_adapters/2505_fg,DT,NO MATCH,,1,0.855
 tube_fittings_and_adapters/2505_fg,EL,DECODED,AX_PL,1,0.094
-tube_fittings_and_adapters/2505_fg,ET,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/2505_fg,ET,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/2505_fg,FL,DECODED,CYL_D,1,0.659
 tube_fittings_and_adapters/2505_fg,GL,DECODED,GAP,1,0.657
 tube_fittings_and_adapters/2505_fg,M,DECODED,AX_PL,1,1.040
 tube_fittings_and_adapters/2505_fg,MDP,NO MATCH,,1,5.000
 tube_fittings_and_adapters/2505_fg,N,DECODED,GAP | AX_PL,1,0.940
 tube_fittings_and_adapters/2505_fg,PITCHA2,DECODED,GAP,1,0.0714
-tube_fittings_and_adapters/2505_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/2505_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/2505_fg,YT,DECODED,AX_PL (mm),1,0.613
 tube_fittings_and_adapters/2603_fg,AL,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2603_fg,AR,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2603_fg,AT,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2603_fg,B1D,DECODED,CYL_D,1,0.297
-tube_fittings_and_adapters/2603_fg,B1THD,DECODED,GAP | CYL_D | BOX,1,0.5625
+tube_fittings_and_adapters/2603_fg,B1THD,DECODED,GAP | BOX | CYL_D,1,0.5625
 tube_fittings_and_adapters/2603_fg,B2D,DECODED,CYL_D,1,0.297
-tube_fittings_and_adapters/2603_fg,B2THD,DECODED,GAP | CYL_D | BOX,1,0.5625
+tube_fittings_and_adapters/2603_fg,B2THD,DECODED,GAP | BOX | CYL_D,1,0.5625
 tube_fittings_and_adapters/2603_fg,B3D,DECODED,CYL_D,1,0.297
-tube_fittings_and_adapters/2603_fg,B3THD,DECODED,GAP | CYL_D | BOX,1,0.5625
+tube_fittings_and_adapters/2603_fg,B3THD,DECODED,GAP | BOX | CYL_D,1,0.5625
 tube_fittings_and_adapters/2603_fg,CL,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
 tube_fittings_and_adapters/2603_fg,CR,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
 tube_fittings_and_adapters/2603_fg,CT,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
@@ -695,7 +1492,7 @@ tube_fittings_and_adapters/2603_fg,M1,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/2603_fg,M2,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/2603_fg,M3,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/2603_fg,MDP,NO MATCH,,1,6.000
-tube_fittings_and_adapters/2603_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.562
+tube_fittings_and_adapters/2603_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.562
 tube_fittings_and_adapters/2606_fg,A2THD,DECODED,AX_PL,1,0.840
 tube_fittings_and_adapters/2606_fg,AL,DECODED,CYL_D,1,0.659
 tube_fittings_and_adapters/2606_fg,B1D,DECODED,CYL_D,1,0.391
@@ -714,27 +1511,27 @@ tube_fittings_and_adapters/2606_fg,N,DECODED,AX_PL,1,1.520
 tube_fittings_and_adapters/2606_fg,Y,DECODED,GAP | CYL_D,1,1.062
 tube_fittings_and_adapters/2611_fg,A2D,DECODED,CYL_D,1,0.406
 tube_fittings_and_adapters/2611_fg,A2PITCH,AMBIGUOUS,GAP 1/1 (chance 2/2) | CYL_D 1/1 (chance 1/2),1,0.05556
-tube_fittings_and_adapters/2611_fg,A2THD,DECODED,CYL_D | AX_PL,1,0.6750
+tube_fittings_and_adapters/2611_fg,A2THD,DECODED,AX_PL | CYL_D,1,0.6750
 tube_fittings_and_adapters/2611_fg,A3PITCH,AMBIGUOUS,GAP 1/1 (chance 2/2) | CYL_D 1/1 (chance 1/2),1,0.05556
-tube_fittings_and_adapters/2611_fg,A3THD,DECODED,CYL_D | AX_PL,1,0.675
+tube_fittings_and_adapters/2611_fg,A3THD,DECODED,AX_PL | CYL_D,1,0.675
 tube_fittings_and_adapters/2611_fg,AL,DECODED,CYL_D,1,0.481
 tube_fittings_and_adapters/2611_fg,B1D,DECODED,CYL_D,1,0.297
 tube_fittings_and_adapters/2611_fg,B1THD,DECODED,CYL_D,1,0.5625
-tube_fittings_and_adapters/2611_fg,BR,DECODED,AX_PL (mm) | GAP (mm),1,0.540
+tube_fittings_and_adapters/2611_fg,BR,DECODED,GAP (mm) | AX_PL (mm),1,0.540
 tube_fittings_and_adapters/2611_fg,BT,DECODED,GAP,1,0.580
-tube_fittings_and_adapters/2611_fg,CL,DECODED,AX_PL (mm) | GAP (mm),1,0.318
-tube_fittings_and_adapters/2611_fg,CR,DECODED,CYL_D | AX_PL,1,0.675
+tube_fittings_and_adapters/2611_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.318
+tube_fittings_and_adapters/2611_fg,CR,DECODED,AX_PL | CYL_D,1,0.675
 tube_fittings_and_adapters/2611_fg,CT,DECODED,CYL_D,1,0.578
 tube_fittings_and_adapters/2611_fg,DL,DECODED,GAP,1,0.198
 tube_fittings_and_adapters/2611_fg,DR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.560
 tube_fittings_and_adapters/2611_fg,DT,DECODED,GAP,1,0.695
 tube_fittings_and_adapters/2611_fg,EL,DECODED,GAP,1,0.556
 tube_fittings_and_adapters/2611_fg,ER,AMBIGUOUS,GAP (mm) 1/1 (chance 2/2),1,0.469
-tube_fittings_and_adapters/2611_fg,ET,DECODED,GAP | CYL_D | BOX,1,0.875
+tube_fittings_and_adapters/2611_fg,ET,DECODED,GAP | BOX | CYL_D,1,0.875
 tube_fittings_and_adapters/2611_fg,L,DECODED,GAP | AX_PL,1,1.22
 tube_fittings_and_adapters/2611_fg,L1,DECODED,GAP | AX_PL,1,1.020
 tube_fittings_and_adapters/2611_fg,M,DECODED,GAP | AX_PL,1,1.310
-tube_fittings_and_adapters/2611_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.875
+tube_fittings_and_adapters/2611_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.875
 tube_fittings_and_adapters/2650_fg,AL,DECODED,CYL_D,1,0.659
 tube_fittings_and_adapters/2650_fg,AR,DECODED,CYL_D,1,0.659
 tube_fittings_and_adapters/2650_fg,B1D,DECODED,CYL_D,1,0.391
@@ -743,8 +1540,8 @@ tube_fittings_and_adapters/2650_fg,B2D,DECODED,CYL_D,1,0.391
 tube_fittings_and_adapters/2650_fg,B2THD,DECODED,GAP | CYL_D,1,0.7500
 tube_fittings_and_adapters/2650_fg,B3D,DECODED,CYL_D,1,0.391
 tube_fittings_and_adapters/2650_fg,B4D,DECODED,CYL_D,1,0.391
-tube_fittings_and_adapters/2650_fg,CL,DECODED,AX_PL (mm) | GAP (mm),1,0.426
-tube_fittings_and_adapters/2650_fg,CR,DECODED,AX_PL (mm) | GAP (mm),1,0.426
+tube_fittings_and_adapters/2650_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+tube_fittings_and_adapters/2650_fg,CR,DECODED,GAP (mm) | AX_PL (mm),1,0.426
 tube_fittings_and_adapters/2650_fg,DL,DECODED,GAP,1,0.253
 tube_fittings_and_adapters/2650_fg,DR,DECODED,GAP,1,0.253
 tube_fittings_and_adapters/2650_fg,EL,DECODED,AX_PL (mm),1,0.657
@@ -756,17 +1553,17 @@ tube_fittings_and_adapters/2650_fg,M4,DECODED,AX_PL,1,1.250
 tube_fittings_and_adapters/2650_fg,Y,DECODED,GAP | CYL_D,1,0.750
 tube_fittings_and_adapters/2700,AL,DECODED,CYL_D,1,0.250
 tube_fittings_and_adapters/2700,AR,DECODED,CYL_D,1,0.250
-tube_fittings_and_adapters/2700,B1D,AMBIGUOUS,CYL_D 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.062
+tube_fittings_and_adapters/2700,B1D,AMBIGUOUS,AX_PL 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.062
 tube_fittings_and_adapters/2700,B1THD,DECODED,GAP | CYL_D,1,0.3125
-tube_fittings_and_adapters/2700,B2D,AMBIGUOUS,CYL_D 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.062
+tube_fittings_and_adapters/2700,B2D,AMBIGUOUS,AX_PL 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.062
 tube_fittings_and_adapters/2700,B2THD,DECODED,GAP | CYL_D,1,0.3125
 tube_fittings_and_adapters/2700,C,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.562
 tube_fittings_and_adapters/2700,CL,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.083
 tube_fittings_and_adapters/2700,CR,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.083
 tube_fittings_and_adapters/2700,DL,DECODED,GAP,1,0.177
 tube_fittings_and_adapters/2700,DR,DECODED,GAP,1,0.177
-tube_fittings_and_adapters/2700,EL,AMBIGUOUS,CYL_D 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.063
-tube_fittings_and_adapters/2700,ER,AMBIGUOUS,CYL_D 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.063
+tube_fittings_and_adapters/2700,EL,AMBIGUOUS,AX_PL 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.063
+tube_fittings_and_adapters/2700,ER,AMBIGUOUS,AX_PL 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.063
 tube_fittings_and_adapters/2700,FL,DECODED,CYL_D,1,0.250
 tube_fittings_and_adapters/2700,FR,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.040
 tube_fittings_and_adapters/2700,GL,DECODED,GAP,1,0.448
@@ -792,7 +1589,7 @@ tube_fittings_and_adapters/2701_fg,FT,AMBIGUOUS,GAP 3/3 (chance 2/6),3,0.094 0.0
 tube_fittings_and_adapters/2701_fg,GT,DECODED,GAP,3,0.920 1.020 1.250
 tube_fittings_and_adapters/2701_fg,HT,DECODED,CYL_D,3,0.250 0.426 0.659
 tube_fittings_and_adapters/2701_fg,IT,DECODED,CYL_D,3,0.311 0.494 0.748
-tube_fittings_and_adapters/2701_fg,JT,DECODED,CYL_D | BOX,3,0.438 0.625 0.875
+tube_fittings_and_adapters/2701_fg,JT,DECODED,BOX | CYL_D,3,0.438 0.625 0.875
 tube_fittings_and_adapters/2701_fg,L,DECODED,AX_PL,3,1.500 1.720 2.110
 tube_fittings_and_adapters/2701_fg,M,DECODED,AX_PL,3,0.880 1.060 1.360
 tube_fittings_and_adapters/2701_fg,Y,DECODED,GAP,3,0.438 0.562 0.750
@@ -823,7 +1620,7 @@ tube_fittings_and_adapters/2705,B2THD,DECODED,GAP | CYL_D,1,0.7500
 tube_fittings_and_adapters/2705,BL,DECODED,GAP | CYL_D,1,0.750
 tube_fittings_and_adapters/2705,C1,DECODED,GAP,1,1.125
 tube_fittings_and_adapters/2705,CL,DECODED,CYL_D,1,0.718
-tube_fittings_and_adapters/2705,CR,DECODED,AX_PL (mm) | GAP (mm),1,0.426
+tube_fittings_and_adapters/2705,CR,DECODED,GAP (mm) | AX_PL (mm),1,0.426
 tube_fittings_and_adapters/2705,DL,NO MATCH,,1,0.855
 tube_fittings_and_adapters/2705,DR,DECODED,GAP (mm),1,0.253
 tube_fittings_and_adapters/2705,EL,NO MATCH,,1,0.900
@@ -836,22 +1633,36 @@ tube_fittings_and_adapters/2705,L,DECODED,GAP | BOX,1,2.610
 tube_fittings_and_adapters/2706,A1D,DECODED,CYL_D,1,0.281
 tube_fittings_and_adapters/2706,A1THD,DECODED,CYL_D,1,0.5400
 tube_fittings_and_adapters/2706,AR,DECODED,CYL_D,1,0.250
-tube_fittings_and_adapters/2706,B2D,AMBIGUOUS,CYL_D 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.062
-tube_fittings_and_adapters/2706,B2THD,DECODED,CYL_D | AX_PL,1,0.3125
-tube_fittings_and_adapters/2706,BL,DECODED,AX_PL (mm) | CYL_D (mm),1,0.410
+tube_fittings_and_adapters/2706,B2D,AMBIGUOUS,AX_PL 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.062
+tube_fittings_and_adapters/2706,B2THD,DECODED,AX_PL | CYL_D,1,0.3125
+tube_fittings_and_adapters/2706,BL,DECODED,CYL_D (mm) | AX_PL (mm),1,0.410
 tube_fittings_and_adapters/2706,C1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.625
 tube_fittings_and_adapters/2706,CL,DECODED,CYL_D,1,0.540
 tube_fittings_and_adapters/2706,CR,AMBIGUOUS,GAP (mm) 1/1 (chance 2/2),1,0.083
 tube_fittings_and_adapters/2706,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.560
 tube_fittings_and_adapters/2706,DR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.177
-tube_fittings_and_adapters/2706,EL,DECODED,AX_PL (mm) | AX_AX (mm) | GAP (mm),1,0.344
-tube_fittings_and_adapters/2706,ER,AMBIGUOUS,CYL_D 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.063
+tube_fittings_and_adapters/2706,EL,DECODED,GAP (mm) | AX_PL (mm) | AX_AX (mm),1,0.344
+tube_fittings_and_adapters/2706,ER,AMBIGUOUS,AX_PL 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.063
 tube_fittings_and_adapters/2706,FR,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.040
 tube_fittings_and_adapters/2706,GR,DECODED,GAP,1,1.110
 tube_fittings_and_adapters/2706,HR,DECODED,GAP | AX_PL,1,0.311
 tube_fittings_and_adapters/2706,IR,DECODED,CYL_D,1,0.250
 tube_fittings_and_adapters/2706,L,DECODED,GAP | BOX,1,1.980
-tube_fittings_and_adapters/3474_nwo,AL,DECODED,AX_PL (mm) | GAP (mm),1,0.940
+tube_fittings_and_adapters/3051,A1D,DECODED,CYL_D,1,0.531
+tube_fittings_and_adapters/3051,A1THD,DECODED,GAP (mm),1,0.840
+tube_fittings_and_adapters/3051,A2THD,DECODED,GAP (mm),1,0.840
+tube_fittings_and_adapters/3051,BL,NO MATCH,,1,0.670
+tube_fittings_and_adapters/3051,BT,DECODED,GAP,1,0.750
+tube_fittings_and_adapters/3051,CL,DECODED,GAP (mm),1,0.840
+tube_fittings_and_adapters/3051,CT,DECODED,AX_PL (mm),1,0.718
+tube_fittings_and_adapters/3051,DL,DECODED,GAP,1,0.750
+tube_fittings_and_adapters/3051,DT,NO MATCH,,1,0.855
+tube_fittings_and_adapters/3051,EL,DECODED,GAP (mm) | AX_PL (mm),1,0.625
+tube_fittings_and_adapters/3051,ET,DECODED,GAP (mm),1,0.900
+tube_fittings_and_adapters/3051,L,DECODED,GAP | BOX,1,1.875
+tube_fittings_and_adapters/3051,N,DECODED,AX_PL,1,1.310
+tube_fittings_and_adapters/3051,Y,DECODED,GAP | BOX,1,1.125
+tube_fittings_and_adapters/3474_nwo,AL,DECODED,GAP (mm) | AX_PL (mm),1,0.940
 tube_fittings_and_adapters/3474_nwo,AR,DECODED,GAP | AX_PL,1,0.594
 tube_fittings_and_adapters/3474_nwo,B1D,DECODED,CYL_D,1,0.609
 tube_fittings_and_adapters/3474_nwo,B1THD,DECODED,CYL_D,1,1.0625
@@ -860,17 +1671,17 @@ tube_fittings_and_adapters/3474_nwo,B2THD,DECODED,CYL_D,1,1.0625
 tube_fittings_and_adapters/3474_nwo,C1,DECODED,GAP,1,1.250
 tube_fittings_and_adapters/3474_nwo,C2,DECODED,GAP,1,1.250
 tube_fittings_and_adapters/3474_nwo,CL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.410
-tube_fittings_and_adapters/3474_nwo,CR,DECODED,CYL_D | AX_PL,1,0.945
+tube_fittings_and_adapters/3474_nwo,CR,DECODED,AX_PL | CYL_D,1,0.945
 tube_fittings_and_adapters/3474_nwo,DL,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.653
 tube_fittings_and_adapters/3474_nwo,DR,DECODED,GAP,1,0.125
 tube_fittings_and_adapters/3474_nwo,EL,DECODED,AX_AX,1,0.050
-tube_fittings_and_adapters/3474_nwo,ER,DECODED,AX_PL (mm) | GAP (mm),1,0.940
+tube_fittings_and_adapters/3474_nwo,ER,DECODED,GAP (mm) | AX_PL (mm),1,0.940
 tube_fittings_and_adapters/3474_nwo,FL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.410
 tube_fittings_and_adapters/3474_nwo,FR,DECODED,TOR_r,1,0.116
 tube_fittings_and_adapters/3474_nwo,GL,DECODED,GAP,1,1.140
 tube_fittings_and_adapters/3474_nwo,GR,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.130
-tube_fittings_and_adapters/3474_nwo,HL,DECODED,CYL_D | AX_PL,1,0.945
-tube_fittings_and_adapters/3474_nwo,HR,DECODED,AX_PL (mm) | AX_AX (mm) | GAP (mm),1,1.310
+tube_fittings_and_adapters/3474_nwo,HL,DECODED,AX_PL | CYL_D,1,0.945
+tube_fittings_and_adapters/3474_nwo,HR,DECODED,GAP (mm) | AX_PL (mm) | AX_AX (mm),1,1.310
 tube_fittings_and_adapters/3474_nwo,IL,DECODED,BOX | CYL_D,1,1.444
 tube_fittings_and_adapters/3474_nwo,L1,DECODED,GAP | BOX,1,2.330
 tube_fittings_and_adapters/3474_nwo,ORIDL,AMBIGUOUS,GAP (mm) 1/1 (chance 2/2),1,0.924
@@ -878,7 +1689,7 @@ tube_fittings_and_adapters/3474_nwo,ORIDR,AMBIGUOUS,GAP (mm) 1/1 (chance 2/2),1,
 tube_fittings_and_adapters/3474_nwo,ORWL,DECODED,TOR_r,1,0.116
 tube_fittings_and_adapters/3474_nwo,ORWR,DECODED,TOR_r,1,0.116
 tube_fittings_and_adapters/4404,A2D,DECODED,CYL_D,2,0.406 0.938
-tube_fittings_and_adapters/4404,A2THD,PARTIAL,CYL_D 1/2 (chance 0/4) | AX_PL (mm) 1/2 (chance 0/4) | AX_AX (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 0/4),2,0.6750 1.3150
+tube_fittings_and_adapters/4404,A2THD,PARTIAL,CYL_D 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 0/4) | AX_PL (mm) 1/2 (chance 0/4) | AX_AX (mm) 1/2 (chance 0/4),2,0.6750 1.3150
 tube_fittings_and_adapters/4404,AL,PARTIAL,GAP 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 0/4),2,0.560 1.100
 tube_fittings_and_adapters/4404,B1D,DECODED,CYL_D,2,0.406 0.843
 tube_fittings_and_adapters/4404,BL,DECODED,CYL_D,2,0.500 1.000
@@ -906,15 +1717,15 @@ tube_fittings_and_adapters/4501_fg,Y,DECODED,GAP | BOX,1,0.875
 tube_fittings_and_adapters/4503_fg,A2D,DECODED,CYL_D,1,0.531
 tube_fittings_and_adapters/4503_fg,A2THD,DECODED,CYL_D,1,0.8400
 tube_fittings_and_adapters/4503_fg,AL,DECODED,AX_AX (mm),1,0.560
-tube_fittings_and_adapters/4503_fg,B1D,DECODED,CYL_D | AX_PL,1,0.406
+tube_fittings_and_adapters/4503_fg,B1D,DECODED,AX_PL | CYL_D,1,0.406
 tube_fittings_and_adapters/4503_fg,B1THD,DECODED,GAP,1,0.7500
 tube_fittings_and_adapters/4503_fg,BL,DECODED,CYL_D,1,0.500
 tube_fittings_and_adapters/4503_fg,BT,DECODED,AX_PL (mm),1,0.670
-tube_fittings_and_adapters/4503_fg,CL,DECODED,CYL_D | AX_PL,1,0.406
+tube_fittings_and_adapters/4503_fg,CL,DECODED,AX_PL | CYL_D,1,0.406
 tube_fittings_and_adapters/4503_fg,CT,DECODED,CYL_D,1,0.840
 tube_fittings_and_adapters/4503_fg,DT,DECODED,GAP,1,0.750
 tube_fittings_and_adapters/4503_fg,ET,DECODED,AX_PL (mm) | AX_AX (mm),1,0.625
-tube_fittings_and_adapters/4503_fg,HLP,DECODED,AX_PL (mm) | GAP (mm),1,1
+tube_fittings_and_adapters/4503_fg,HLP,DECODED,GAP (mm) | AX_PL (mm),1,1
 tube_fittings_and_adapters/4503_fg,L,DECODED,AX_PL,1,1.740
 tube_fittings_and_adapters/4503_fg,N,DECODED,AX_PL,1,1.180
 tube_fittings_and_adapters/4503_fg,Y,DECODED,GAP | BOX,1,0.937
@@ -924,7 +1735,7 @@ tube_fittings_and_adapters/4601_nwo_fg,C,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/4601_nwo_fg,DIA1,DECODED,AX_PL (mm) | AX_AX (mm),1,0.56
 tube_fittings_and_adapters/4601_nwo_fg,DIA2,DECODED,CYL_D,1,0.482
 tube_fittings_and_adapters/4601_nwo_fg,L,DECODED,GAP | AX_PL,1,1.980
-tube_fittings_and_adapters/4601_nwo_fg,L1,DECODED,AX_PL (mm) | GAP (mm),1,1.500
+tube_fittings_and_adapters/4601_nwo_fg,L1,DECODED,GAP (mm) | AX_PL (mm),1,1.500
 tube_fittings_and_adapters/4601_nwo_fg,L2,DECODED,GAP (mm),1,0.251
 tube_fittings_and_adapters/4601_nwo_fg,L3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.799
 tube_fittings_and_adapters/4601_nwo_fg,L4,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.157
@@ -935,28 +1746,28 @@ tube_fittings_and_adapters/4601_nwo_fg,R,DECODED,GAP,1,0.064
 tube_fittings_and_adapters/4601_nwo_fg,T1,DECODED,GAP | TOR_R,1,0.280
 tube_fittings_and_adapters/4601_nwo_fg,Y,DECODED,GAP,1,0.750
 tube_fittings_and_adapters/4603_nwo_fg,AL,DECODED,AX_PL (mm) | AX_AX (mm),1,1.100
-tube_fittings_and_adapters/4603_nwo_fg,AR,DECODED,AX_PL (mm) | CYL_D (mm),1,1.190
+tube_fittings_and_adapters/4603_nwo_fg,AR,DECODED,CYL_D (mm) | AX_PL (mm),1,1.190
 tube_fittings_and_adapters/4603_nwo_fg,B1D,DECODED,CYL_D,1,0.844
 tube_fittings_and_adapters/4603_nwo_fg,B2D,DECODED,CYL_D,1,0.844
-tube_fittings_and_adapters/4603_nwo_fg,B2THD,DECODED,GAP | CYL_D | AX_PL,1,1.312
+tube_fittings_and_adapters/4603_nwo_fg,B2THD,DECODED,GAP | AX_PL | CYL_D,1,1.312
 tube_fittings_and_adapters/4603_nwo_fg,BL,DECODED,CYL_D,1,1.000
 tube_fittings_and_adapters/4603_nwo_fg,C,DECODED,GAP,1,1.500
 tube_fittings_and_adapters/4603_nwo_fg,CL,DECODED,CYL_D,1,0.843
 tube_fittings_and_adapters/4603_nwo_fg,CR,DECODED,GAP (mm),1,0.469
 tube_fittings_and_adapters/4603_nwo_fg,DIA1,DECODED,AX_PL (mm),1,1.06
-tube_fittings_and_adapters/4603_nwo_fg,DIA2,DECODED,CYL_D | AX_PL,1,1.195
+tube_fittings_and_adapters/4603_nwo_fg,DIA2,DECODED,AX_PL | CYL_D,1,1.195
 tube_fittings_and_adapters/4603_nwo_fg,DR,DECODED,GAP | AX_PL,1,0.653
 tube_fittings_and_adapters/4603_nwo_fg,ER,DECODED,AX_PL | AX_AX,1,0.050
 tube_fittings_and_adapters/4603_nwo_fg,FR,DECODED,GAP,1,0.410
 tube_fittings_and_adapters/4603_nwo_fg,GR,DECODED,GAP,1,1.140
 tube_fittings_and_adapters/4603_nwo_fg,HLP,DECODED,CYL_D,1,1
-tube_fittings_and_adapters/4603_nwo_fg,HR,DECODED,CYL_D | AX_PL,1,1.195
+tube_fittings_and_adapters/4603_nwo_fg,HR,DECODED,AX_PL | CYL_D,1,1.195
 tube_fittings_and_adapters/4603_nwo_fg,ID,DECODED,AX_PL (mm),1,1.171
 tube_fittings_and_adapters/4603_nwo_fg,IR,DECODED,BOX | CYL_D,1,1.732
 tube_fittings_and_adapters/4603_nwo_fg,L,DECODED,AX_PL,1,1.960
 tube_fittings_and_adapters/4603_nwo_fg,M,DECODED,AX_PL,1,1.850
 tube_fittings_and_adapters/4603_nwo_fg,W,DECODED,TOR_r,1,0.116
-tube_fittings_and_adapters/4603_nwo_fg,Y,DECODED,GAP | CYL_D | AX_PL,1,1.312
+tube_fittings_and_adapters/4603_nwo_fg,Y,DECODED,GAP | AX_PL | CYL_D,1,1.312
 tube_fittings_and_adapters/5000,A1THD,DECODED,AX_PL (mm),1,2.8750
 tube_fittings_and_adapters/5000,A2THD,DECODED,AX_PL (mm),1,2.8750
 tube_fittings_and_adapters/5000,BL,DECODED,AX_PL (mm),1,1.057
@@ -966,8 +1777,8 @@ tube_fittings_and_adapters/5000,CL,DECODED,CYL_D,1,2.729
 tube_fittings_and_adapters/5000,CR,DECODED,CYL_D,1,2.729
 tube_fittings_and_adapters/5000,CXL,NO MATCH,,1,1
 tube_fittings_and_adapters/5000,CXR,NO MATCH,,1,1
-tube_fittings_and_adapters/5000,DL,DECODED,AX_PL (mm) | GAP (mm),1,2.949
-tube_fittings_and_adapters/5000,DR,DECODED,AX_PL (mm) | GAP (mm),1,2.949
+tube_fittings_and_adapters/5000,DL,DECODED,GAP (mm) | AX_PL (mm),1,2.949
+tube_fittings_and_adapters/5000,DR,DECODED,GAP (mm) | AX_PL (mm),1,2.949
 tube_fittings_and_adapters/5000,EL,DECODED,GAP | CYL_D,1,3.500
 tube_fittings_and_adapters/5000,ER,DECODED,GAP | CYL_D,1,3.500
 tube_fittings_and_adapters/5000,FL,DECODED,AX_PL (mm),1,0.690
@@ -993,9 +1804,9 @@ tube_fittings_and_adapters/5405,A1D,DECODED,CYL_D,4,0.281 0.531 0.719 0.938
 tube_fittings_and_adapters/5405,A1THD,DECODED,CYL_D,4,0.5400 0.8400 1.0500 1.3150
 tube_fittings_and_adapters/5405,A2THD,DECODED,CYL_D,4,0.5400 0.8400 1.0500 1.3150
 tube_fittings_and_adapters/5405,BL,PARTIAL,GAP 1/4 (chance 0/8) | AX_PL (mm) 1/4 (chance 0/8),4,0.410 0.670 0.880 1.105
-tube_fittings_and_adapters/5405,BR,PARTIAL,GAP 3/4 (chance 1/8) | AX_PL (mm) 1/4 (chance 0/8) | AX_AX (mm) 1/4 (chance 0/8) | GAP (mm) 1/4 (chance 1/8),4,0.560 0.750 0.770 0.940
+tube_fittings_and_adapters/5405,BR,PARTIAL,GAP 3/4 (chance 1/8) | GAP (mm) 1/4 (chance 1/8) | AX_PL (mm) 1/4 (chance 0/8) | AX_AX (mm) 1/4 (chance 0/8),4,0.560 0.750 0.770 0.940
 tube_fittings_and_adapters/5405,C,DECODED,GAP,4,0.750 1.125 1.375 1.625
-tube_fittings_and_adapters/5405,CL,PARTIAL,CYL_D 3/4 (chance 0/8) | AX_PL (mm) 1/4 (chance 0/8) | AX_AX (mm) 1/4 (chance 0/8) | GAP (mm) 1/4 (chance 0/8),4,0.540 0.840 1.050 1.317
+tube_fittings_and_adapters/5405,CL,PARTIAL,CYL_D 3/4 (chance 0/8) | GAP (mm) 1/4 (chance 0/8) | AX_PL (mm) 1/4 (chance 0/8) | AX_AX (mm) 1/4 (chance 0/8),4,0.540 0.840 1.050 1.317
 tube_fittings_and_adapters/5405,CR,DECODED,CYL_D,4,0.437 0.718 0.921 1.156
 tube_fittings_and_adapters/5405,DL,DECODED,GAP,4,0.560 0.750 0.750 0.940
 tube_fittings_and_adapters/5405,DR,PARTIAL,AX_PL (mm) 2/4 (chance 0/8) | GAP (mm) 1/4 (chance 0/8),4,0.555 0.855 1.070 1.355
@@ -1019,6 +1830,13 @@ tube_fittings_and_adapters/5406,ER,DECODED,AX_PL (mm),2,0.670 1.180
 tube_fittings_and_adapters/5406,L,DECODED,GAP | BOX,2,1.100 2.370
 tube_fittings_and_adapters/5406,MDP,NO MATCH,,1,6.000
 tube_fittings_and_adapters/5406,PITCH2,AMBIGUOUS,GAP 2/2 (chance 2/4) | CYL_D 1/2 (chance 1/4),2,0.05556 0.08696
+tube_fittings_and_adapters/5406_c,A1THD,DECODED,GAP (mm),1,1.900
+tube_fittings_and_adapters/5406_c,BX,DECODED,GAP,1,0.940
+tube_fittings_and_adapters/5406_c,C,DECODED,GAP,1,2.375
+tube_fittings_and_adapters/5406_c,CX,DECODED,CYL_D,1,1.734
+tube_fittings_and_adapters/5406_c,DX,DECODED,GAP (mm),1,1.935
+tube_fittings_and_adapters/5406_c,EX,DECODED,GAP,1,1.160
+tube_fittings_and_adapters/5406_c,L,DECODED,GAP | BOX,1,1.540
 tube_fittings_and_adapters/5406_hp,A1THD,DECODED,BOX | CYL_D,1,0.8400
 tube_fittings_and_adapters/5406_hp,BL,NO MATCH,,1,0.670
 tube_fittings_and_adapters/5406_hp,C,DECODED,GAP,1,0.375
@@ -1053,7 +1871,7 @@ tube_fittings_and_adapters/5501_fg,N1,DECODED,AX_PL,1,1.170
 tube_fittings_and_adapters/5501_fg,PITCH2,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.0714
 tube_fittings_and_adapters/5501_fg,Y,DECODED,GAP | BOX,1,0.875
 tube_fittings_and_adapters/5501_fg,Y1,DECODED,GAP (mm),1,0.505
-tube_fittings_and_adapters/5502_fg,A1D,DECODED,CYL_D | TOR_r,3,0.281 0.531 0.938
+tube_fittings_and_adapters/5502_fg,A1D,DECODED,TOR_r | CYL_D,3,0.281 0.531 0.938
 tube_fittings_and_adapters/5502_fg,A1THD,DECODED,CYL_D,3,0.5400 0.8400 1.3150
 tube_fittings_and_adapters/5502_fg,A2THD,DECODED,CYL_D,3,0.5400 0.8400 1.3150
 tube_fittings_and_adapters/5502_fg,BL,PARTIAL,AX_PL (mm) 2/3 (chance 1/6) | AX_AX (mm) 1/3 (chance 0/6),3,0.410 0.670 1.105
@@ -1063,12 +1881,12 @@ tube_fittings_and_adapters/5502_fg,CR,DECODED,CYL_D,3,0.437 0.718 1.156
 tube_fittings_and_adapters/5502_fg,DL,DECODED,GAP,3,0.560 0.750 0.940
 tube_fittings_and_adapters/5502_fg,DR,PARTIAL,GAP 2/3 (chance 0/6) | AX_PL (mm) 1/3 (chance 0/6),3,0.555 0.855 1.355
 tube_fittings_and_adapters/5502_fg,EL,PARTIAL,AX_PL (mm) 2/3 (chance 1/6) | AX_PL 1/3 (chance 1/6),3,0.344 0.625 1.031
-tube_fittings_and_adapters/5502_fg,ER,DECODED,GAP | CYL_D | BOX,3,0.750 1.062 1.625
-tube_fittings_and_adapters/5502_fg,MDP,PARTIAL,AX_PL (mm) 1/3 (chance 0/6) | GAP (mm) 1/3 (chance 0/6),3,6.000 5.000 3.000
+tube_fittings_and_adapters/5502_fg,ER,DECODED,GAP | BOX | CYL_D,3,0.750 1.062 1.625
+tube_fittings_and_adapters/5502_fg,MDP,PARTIAL,GAP (mm) 1/3 (chance 0/6) | AX_PL (mm) 1/3 (chance 0/6),3,6.000 5.000 3.000
 tube_fittings_and_adapters/5502_fg,N,DECODED,AX_PL,3,1.090 1.470 1.970
 tube_fittings_and_adapters/5502_fg,N1,DECODED,AX_PL,3,0.880 1.230 1.620
 tube_fittings_and_adapters/5502_fg,PITCH2,AMBIGUOUS,GAP 3/3 (chance 2/6) | CYL_D 1/3 (chance 1/6),3,0.05556 0.07143 0.08696
-tube_fittings_and_adapters/5502_fg,Y,DECODED,GAP | CYL_D | BOX,3,0.750 1.062 1.625
+tube_fittings_and_adapters/5502_fg,Y,DECODED,GAP | BOX | CYL_D,3,0.750 1.062 1.625
 tube_fittings_and_adapters/5503_fg,A1THD,DECODED,CYL_D,1,1.3150
 tube_fittings_and_adapters/5503_fg,A2THD,DECODED,CYL_D,1,1.3150
 tube_fittings_and_adapters/5503_fg,AD,DECODED,CYL_D,1,0.938
@@ -1078,12 +1896,12 @@ tube_fittings_and_adapters/5503_fg,CA,DECODED,CYL_D,1,1.156
 tube_fittings_and_adapters/5503_fg,CL,DECODED,AX_AX (mm),1,1.317
 tube_fittings_and_adapters/5503_fg,DA,DECODED,AX_PL (mm),1,1.355
 tube_fittings_and_adapters/5503_fg,DL,DECODED,GAP,1,0.940
-tube_fittings_and_adapters/5503_fg,EA,DECODED,GAP | CYL_D | BOX,1,1.625
+tube_fittings_and_adapters/5503_fg,EA,DECODED,GAP | BOX | CYL_D,1,1.625
 tube_fittings_and_adapters/5503_fg,EL,NO MATCH,,1,1.031
 tube_fittings_and_adapters/5503_fg,N,DECODED,AX_PL,1,1.720
 tube_fittings_and_adapters/5503_fg,N1,DECODED,GAP | AX_PL,1,1.120
 tube_fittings_and_adapters/5503_fg,PITCH2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.0870
-tube_fittings_and_adapters/5503_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.625
+tube_fittings_and_adapters/5503_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.625
 tube_fittings_and_adapters/5503_fg,Y1,DECODED,CYL_D,1,0.938
 tube_fittings_and_adapters/5504_fg,A1THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
 tube_fittings_and_adapters/5504_fg,A2THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
@@ -1093,21 +1911,21 @@ tube_fittings_and_adapters/5504_fg,CL,DECODED,CYL_D,1,0.718
 tube_fittings_and_adapters/5504_fg,CT,DECODED,CYL_D,1,0.718
 tube_fittings_and_adapters/5504_fg,DL,DECODED,GAP,1,0.855
 tube_fittings_and_adapters/5504_fg,DT,DECODED,GAP,1,0.855
-tube_fittings_and_adapters/5504_fg,EL,DECODED,GAP | CYL_D | BOX,1,1.062
-tube_fittings_and_adapters/5504_fg,ET,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5504_fg,EL,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/5504_fg,ET,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5504_fg,MDP,NO MATCH,,1,5.000
 tube_fittings_and_adapters/5504_fg,N,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/5504_fg,N1,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/5504_fg,PITCH2,DECODED,GAP,1,0.07143
-tube_fittings_and_adapters/5504_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5504_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5505_fg,A1THD,DECODED,GAP (mm),1,0.8400
 tube_fittings_and_adapters/5505_fg,BL,DECODED,GAP,1,0.750
-tube_fittings_and_adapters/5505_fg,CL,DECODED,CYL_D | AX_PL,1,0.718
+tube_fittings_and_adapters/5505_fg,CL,DECODED,AX_PL | CYL_D,1,0.718
 tube_fittings_and_adapters/5505_fg,DL,NO MATCH,,1,0.855
-tube_fittings_and_adapters/5505_fg,EL,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5505_fg,EL,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5505_fg,N,DECODED,AX_PL,1,0.940
 tube_fittings_and_adapters/5505_fg,N1,DECODED,AX_PL,1,0.940
-tube_fittings_and_adapters/5505_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5505_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5600_fg,A1D,DECODED,CYL_D,1,0.938
 tube_fittings_and_adapters/5600_fg,A2D,DECODED,CYL_D,1,0.938
 tube_fittings_and_adapters/5600_fg,A3D,DECODED,CYL_D,1,0.938
@@ -1131,11 +1949,34 @@ tube_fittings_and_adapters/5601_fg,CT,DECODED,CYL_D,1,0.578
 tube_fittings_and_adapters/5601_fg,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.560
 tube_fittings_and_adapters/5601_fg,DT,DECODED,GAP,1,0.695
 tube_fittings_and_adapters/5601_fg,EL,AMBIGUOUS,GAP (mm) 1/1 (chance 2/2),1,0.469
-tube_fittings_and_adapters/5601_fg,ET,DECODED,GAP | CYL_D | BOX,1,0.875
+tube_fittings_and_adapters/5601_fg,ET,DECODED,GAP | BOX | CYL_D,1,0.875
 tube_fittings_and_adapters/5601_fg,N1,DECODED,AX_PL,1,1.220
 tube_fittings_and_adapters/5601_fg,N2,DECODED,AX_PL,1,1.220
 tube_fittings_and_adapters/5601_fg,N3,DECODED,GAP | AX_PL,1,1.020
-tube_fittings_and_adapters/5601_fg,Y,DECODED,GAP | CYL_D | BOX,1,0.875
+tube_fittings_and_adapters/5601_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.875
+tube_fittings_and_adapters/5602_fg,A1D,DECODED,CYL_D,1,0.188
+tube_fittings_and_adapters/5602_fg,A2THD,DECODED,CYL_D (mm) | AX_PL (mm),1,0.4050
+tube_fittings_and_adapters/5602_fg,A3THD,DECODED,CYL_D (mm) | AX_PL (mm),1,0.4050
+tube_fittings_and_adapters/5602_fg,ATHD,DECODED,CYL_D (mm) | AX_PL (mm),1,0.4050
+tube_fittings_and_adapters/5602_fg,BL,DECODED,AX_AX (mm),1,0.310
+tube_fittings_and_adapters/5602_fg,BR,DECODED,GAP,1,0.380
+tube_fittings_and_adapters/5602_fg,BT,DECODED,GAP,1,0.380
+tube_fittings_and_adapters/5602_fg,CL,DECODED,CYL_D (mm) | AX_PL (mm),1,0.405
+tube_fittings_and_adapters/5602_fg,CR,DECODED,CYL_D,1,0.339
+tube_fittings_and_adapters/5602_fg,CT,DECODED,CYL_D,1,0.339
+tube_fittings_and_adapters/5602_fg,DL,DECODED,GAP,1,0.380
+tube_fittings_and_adapters/5602_fg,DR,DECODED,AX_PL,1,0.410
+tube_fittings_and_adapters/5602_fg,DT,DECODED,AX_PL,1,0.410
+tube_fittings_and_adapters/5602_fg,EL,DECODED,GAP | AX_PL,1,0.281
+tube_fittings_and_adapters/5602_fg,ER,DECODED,GAP | BOX | CYL_D,1,0.562
+tube_fittings_and_adapters/5602_fg,ET,DECODED,GAP | BOX | CYL_D,1,0.562
+tube_fittings_and_adapters/5602_fg,MDP,DECODED,GAP (mm),1,6.000
+tube_fittings_and_adapters/5602_fg,N,DECODED,GAP | AX_PL,1,0.780
+tube_fittings_and_adapters/5602_fg,N1,DECODED,GAP | AX_PL,1,0.660
+tube_fittings_and_adapters/5602_fg,N2,DECODED,GAP | AX_PL,1,0.660
+tube_fittings_and_adapters/5602_fg,PITCH2,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 2/2),1,0.03704
+tube_fittings_and_adapters/5602_fg,PITCH3,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 2/2),1,0.03704
+tube_fittings_and_adapters/5602_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.562
 tube_fittings_and_adapters/5603_fg,A1D,DECODED,CYL_D,1,0.531
 tube_fittings_and_adapters/5603_fg,A2THD,DECODED,CYL_D,1,0.8400
 tube_fittings_and_adapters/5603_fg,A3D,DECODED,CYL_D,1,0.531
@@ -1151,14 +1992,29 @@ tube_fittings_and_adapters/5603_fg,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.750
 tube_fittings_and_adapters/5603_fg,DR,NO MATCH,,1,0.855
 tube_fittings_and_adapters/5603_fg,DT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.750
 tube_fittings_and_adapters/5603_fg,EL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.625
-tube_fittings_and_adapters/5603_fg,ER,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5603_fg,ER,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5603_fg,ET,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.625
 tube_fittings_and_adapters/5603_fg,N,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/5603_fg,N1,DECODED,AX_PL,1,1.470
 tube_fittings_and_adapters/5603_fg,N2,DECODED,AX_PL,1,1.470
 tube_fittings_and_adapters/5603_fg,PITCH2,DECODED,GAP,1,0.07143
 tube_fittings_and_adapters/5603_fg,PITCH3,DECODED,GAP,1,0.07143
-tube_fittings_and_adapters/5603_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5603_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/5604_fg,A1PN,DECODED,GAP (mm),1,02
+tube_fittings_and_adapters/5604_fg,A3D,DECODED,AX_PL | CYL_D,1,0.188
+tube_fittings_and_adapters/5604_fg,DIA,DECODED,CYL_D,1,0.315
+tube_fittings_and_adapters/5604_fg,DIA33,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.281
+tube_fittings_and_adapters/5604_fg,G,DECODED,AX_PL,1,0.170
+tube_fittings_and_adapters/5604_fg,H1,DECODED,GAP,1,0.436
+tube_fittings_and_adapters/5604_fg,L1,DECODED,CYL_D (mm) | AX_PL (mm),1,0.380
+tube_fittings_and_adapters/5604_fg,L3,DECODED,CYL_D (mm) | AX_PL (mm),1,0.380
+tube_fittings_and_adapters/5604_fg,LA1,DECODED,GAP | AX_PL,1,0.260
+tube_fittings_and_adapters/5604_fg,N,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.780
+tube_fittings_and_adapters/5604_fg,N1,DECODED,AX_PL,1,0.660
+tube_fittings_and_adapters/5604_fg,N2,DECODED,AX_PL,1,0.660
+tube_fittings_and_adapters/5604_fg,R,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.010
+tube_fittings_and_adapters/5604_fg,THDNPSM,DECODED,GAP,1,0.3969
+tube_fittings_and_adapters/5604_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.562
 tube_fittings_and_adapters/5605_fg,A2THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
 tube_fittings_and_adapters/5605_fg,A3THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
 tube_fittings_and_adapters/5605_fg,ATHD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
@@ -1171,27 +2027,52 @@ tube_fittings_and_adapters/5605_fg,CT,DECODED,CYL_D,1,0.718
 tube_fittings_and_adapters/5605_fg,DL,DECODED,GAP,1,0.855
 tube_fittings_and_adapters/5605_fg,DR,DECODED,GAP,1,0.855
 tube_fittings_and_adapters/5605_fg,DT,DECODED,GAP,1,0.855
-tube_fittings_and_adapters/5605_fg,EL,DECODED,GAP | CYL_D | BOX,1,1.062
-tube_fittings_and_adapters/5605_fg,ER,DECODED,GAP | CYL_D | BOX,1,1.062
-tube_fittings_and_adapters/5605_fg,ET,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5605_fg,EL,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/5605_fg,ER,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/5605_fg,ET,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5605_fg,N1,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/5605_fg,N2,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/5605_fg,N3,DECODED,AX_PL,1,1.230
 tube_fittings_and_adapters/5605_fg,PITCH2,DECODED,GAP,1,0.07143
 tube_fittings_and_adapters/5605_fg,PITCH3,DECODED,GAP,1,0.07143
-tube_fittings_and_adapters/5605_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5605_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5652_fg,B1THD,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.8400
 tube_fittings_and_adapters/5652_fg,C,DECODED,CYL_D,1,0.718
 tube_fittings_and_adapters/5652_fg,D,DECODED,GAP,1,0.855
-tube_fittings_and_adapters/5652_fg,E,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5652_fg,E,DECODED,GAP | BOX | CYL_D,1,1.062
 tube_fittings_and_adapters/5652_fg,N,DECODED,AX_PL,1,1.230
-tube_fittings_and_adapters/5652_fg,Y,DECODED,GAP | CYL_D | BOX,1,1.062
+tube_fittings_and_adapters/5652_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/6316,AL,DECODED,CYL_D,1,0.790
+tube_fittings_and_adapters/6316,BD,DECODED,AX_PL | CYL_D,1,0.391
+tube_fittings_and_adapters/6316,BL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.180
+tube_fittings_and_adapters/6316,BL2,DECODED,CYL_D,1,0.680
+tube_fittings_and_adapters/6316,BL3,DECODED,AX_PL,1,0.875
+tube_fittings_and_adapters/6316,BR,DECODED,CYL_D,1,0.680
+tube_fittings_and_adapters/6316,BTHD,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.7500
+tube_fittings_and_adapters/6316,C,DECODED,AX_PL,1,0.875
+tube_fittings_and_adapters/6316,C4,DECODED,AX_PL,1,0.875
+tube_fittings_and_adapters/6316,CL,DECODED,GAP,1,0.422
+tube_fittings_and_adapters/6316,CL2,DECODED,GAP,1,0.565
+tube_fittings_and_adapters/6316,CL3,DECODED,GAP,1,0.688
+tube_fittings_and_adapters/6316,DL2,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.25
+tube_fittings_and_adapters/6316,DL3,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 2/2) | CYL_D 1/1 (chance 1/2),1,0.785
+tube_fittings_and_adapters/6316,DR,DECODED,AX_PL,1,0.434
+tube_fittings_and_adapters/6316,EL2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.205
+tube_fittings_and_adapters/6316,EL3,DECODED,AX_PL,1,0.875
+tube_fittings_and_adapters/6316,FL2,DECODED,AX_PL | CYL_D,1,0.584
+tube_fittings_and_adapters/6316,FL3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.264
+tube_fittings_and_adapters/6316,HL3,DECODED,AX_PL,1,0.875
+tube_fittings_and_adapters/6316,JL3,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.155
+tube_fittings_and_adapters/6316,L,DECODED,GAP | BOX,1,1.609
+tube_fittings_and_adapters/6316,L1,DECODED,GAP,1,1.187
+tube_fittings_and_adapters/6316,LL3,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 2/2),1,0.827
+tube_fittings_and_adapters/6316,ML3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.370
 tube_fittings_and_adapters/6400_l_o,AA,DECODED,GAP,1,1.880
 tube_fittings_and_adapters/6400_l_o,B1D,DECODED,CYL_D,1,0.391
 tube_fittings_and_adapters/6400_l_o,B1THD,DECODED,CYL_D,1,0.7500
 tube_fittings_and_adapters/6400_l_o,B2D,DECODED,CYL_D,1,0.391
 tube_fittings_and_adapters/6400_l_o,B2THD,DECODED,CYL_D,1,0.75000
-tube_fittings_and_adapters/6400_l_o,C1,DECODED,AX_PL (mm) | GAP (mm),1,0.426
+tube_fittings_and_adapters/6400_l_o,C1,DECODED,GAP (mm) | AX_PL (mm),1,0.426
 tube_fittings_and_adapters/6400_l_o,C2,DECODED,CYL_D,1,0.660
 tube_fittings_and_adapters/6400_l_o,C4,DECODED,GAP,1,0.875
 tube_fittings_and_adapters/6400_l_o,D1,DECODED,GAP (mm),1,0.253
@@ -1199,7 +2080,7 @@ tube_fittings_and_adapters/6400_l_o,D2,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.094
 tube_fittings_and_adapters/6400_l_o,E1,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.657
 tube_fittings_and_adapters/6400_l_o,E2,DECODED,GAP,1,0.655
 tube_fittings_and_adapters/6400_l_o,F1,DECODED,CYL_D,1,0.659
-tube_fittings_and_adapters/6400_l_o,F2,DECODED,AX_PL | TOR_r,1,0.087
+tube_fittings_and_adapters/6400_l_o,F2,DECODED,TOR_r | AX_PL,1,0.087
 tube_fittings_and_adapters/6400_l_o,G1,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.657
 tube_fittings_and_adapters/6400_l_o,L6,DECODED,GAP | BOX,1,2.700
 tube_fittings_and_adapters/6400_o,B1D,DECODED,CYL_D,2,0.719 1.781
@@ -1226,7 +2107,7 @@ tube_fittings_and_adapters/6404,BR,PARTIAL,AX_PL (mm) 4/7 (chance 0/14) | GAP (m
 tube_fittings_and_adapters/6404,BTHD,PARTIAL,AX_PL (mm) 4/7 (chance 0/14) | AX_AX (mm) 2/7 (chance 0/14) | CYL_D (mm) 1/7 (chance 0/14) | GAP 1/7 (chance 1/14) | GAP (mm) 1/7 (chance 1/14),7,0.4375 0.5625 0.7500 0.8750 1.0625 1.3125
 tube_fittings_and_adapters/6404,C4,DECODED,GAP,7,0.688 0.812 1.062 1.125 1.375 1.625
 tube_fittings_and_adapters/6404,CL,PARTIAL,AX_PL (mm) 3/7 (chance 0/14) | GAP (mm) 2/7 (chance 1/14) | AX_AX (mm) 2/7 (chance 0/14) | GAP 1/7 (chance 1/14),7,0.454 0.500 0.562 0.656 0.750 0.750
-tube_fittings_and_adapters/6404,CR,PARTIAL,CYL_D 5/7 (chance 0/14) | AX_PL (mm) 1/7 (chance 0/14) | AX_AX (mm) 1/7 (chance 0/14) | GAP (mm) 1/7 (chance 0/14),7,0.540 0.675 0.840 0.840 1.050 1.317
+tube_fittings_and_adapters/6404,CR,PARTIAL,CYL_D 5/7 (chance 0/14) | GAP (mm) 1/7 (chance 0/14) | AX_PL (mm) 1/7 (chance 0/14) | AX_AX (mm) 1/7 (chance 0/14),7,0.540 0.675 0.840 0.840 1.050 1.317
 tube_fittings_and_adapters/6404,DL,PARTIAL,GAP (mm) 4/7 (chance 0/14) | AX_PL (mm) 3/7 (chance 0/14) | AX_AX (mm) 2/7 (chance 0/14) | CYL_D 1/7 (chance 0/14),7,0.547 0.609 0.688 0.781 0.906 0.906
 tube_fittings_and_adapters/6404,DR,DECODED,GAP,7,0.560 0.560 0.750 0.750 0.750 0.940
 tube_fittings_and_adapters/6404,EL,DECODED,CONE_A,7,12 12 15 15 15 15
@@ -1234,6 +2115,21 @@ tube_fittings_and_adapters/6404,ER,PARTIAL,AX_PL (mm) 4/7 (chance 0/14) | GAP (m
 tube_fittings_and_adapters/6404,FL,DECODED,CYL_D,7,0.389 0.518 0.689 0.805 0.980 1.231
 tube_fittings_and_adapters/6404,L,DECODED,GAP | BOX,7,1.340 1.380 1.650 1.740 1.980 2.100
 tube_fittings_and_adapters/6404,PITCHR,PARTIAL,GAP 6/7 (chance 8/14) | AX_PL 5/7 (chance 6/14) | CYL_D 1/7 (chance 1/14),7,0.05556 0.05556 0.07143 0.07143 0.07143 0.08696
+tube_fittings_and_adapters/6405_o,AL,DECODED,GAP,1,0.594
+tube_fittings_and_adapters/6405_o,ATHD,NO MATCH,,1,1.9000
+tube_fittings_and_adapters/6405_o,BD,DECODED,CYL_D,1,1.734
+tube_fittings_and_adapters/6405_o,BR,DECODED,GAP,1,0.940
+tube_fittings_and_adapters/6405_o,BTHD,DECODED,CYL_D,1,2.5000
+tube_fittings_and_adapters/6405_o,C4,DECODED,GAP,1,2.750
+tube_fittings_and_adapters/6405_o,CL,DECODED,CYL_D,1,2.381
+tube_fittings_and_adapters/6405_o,CR,DECODED,CYL_D,1,1.734
+tube_fittings_and_adapters/6405_o,DL,DECODED,AX_PL,1,0.125
+tube_fittings_and_adapters/6405_o,DR,NO MATCH,,1,1.935
+tube_fittings_and_adapters/6405_o,EL,DECODED,AX_PL (mm),1,2.375
+tube_fittings_and_adapters/6405_o,ER,DECODED,AX_PL (mm),1,1.160
+tube_fittings_and_adapters/6405_o,FL,DECODED,GAP | TOR_r,1,0.118
+tube_fittings_and_adapters/6405_o,L,DECODED,GAP | BOX,1,2.000
+tube_fittings_and_adapters/6405_o,PITCHR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.08696
 tube_fittings_and_adapters/6408_h_o,BTHD,DECODED,CYL_D,1,0.75000
 tube_fittings_and_adapters/6408_h_o,C1,DECODED,CYL_D,1,0.660
 tube_fittings_and_adapters/6408_h_o,C5,DECODED,GAP,1,0.313
@@ -1249,7 +2145,7 @@ tube_fittings_and_adapters/6408_o,C1,DECODED,CYL_D,2,0.660 1.507
 tube_fittings_and_adapters/6408_o,C4,DECODED,GAP,2,0.875 1.875
 tube_fittings_and_adapters/6408_o,D1,DECODED,AX_PL,2,0.094 0.125
 tube_fittings_and_adapters/6408_o,E1,PARTIAL,AX_PL (mm) 1/2 (chance 0/4),2,0.655 1.500
-tube_fittings_and_adapters/6408_o,F1,DECODED,AX_PL | TOR_r,2,0.087 0.118
+tube_fittings_and_adapters/6408_o,F1,DECODED,TOR_r | AX_PL,2,0.087 0.118
 tube_fittings_and_adapters/6408_o,L,DECODED,GAP | BOX,2,0.800 1.200
 tube_fittings_and_adapters/6408_o,L2,PARTIAL,GAP (mm) 1/2 (chance 2/4) | AX_PL (mm) 1/2 (chance 1/4),2,0.220 0.250
 tube_fittings_and_adapters/6410_o,AL,DECODED,GAP,5,0.360 0.594 0.594 0.594 0.594
@@ -1260,7 +2156,7 @@ tube_fittings_and_adapters/6410_o,BR,PARTIAL,GAP 4/5 (chance 7/10) | AX_PL 4/5 (
 tube_fittings_and_adapters/6410_o,BTHD,DECODED,CYL_D,5,0.4375 1.0625 1.8750 2.5000 2.5000
 tube_fittings_and_adapters/6410_o,C4,DECODED,GAP,5,0.562 1.250 2.125 2.750 2.750
 tube_fittings_and_adapters/6410_o,CL,DECODED,CYL_D,5,0.364 0.945 1.756 2.381 2.381
-tube_fittings_and_adapters/6410_o,CR,PARTIAL,AX_PL (mm) 1/5 (chance 0/10) | CYL_D (mm) 1/5 (chance 0/10) | AX_AX (mm) 1/5 (chance 0/10),5,0.390 0.562 0.750 0.750 0.750
+tube_fittings_and_adapters/6410_o,CR,PARTIAL,CYL_D (mm) 1/5 (chance 0/10) | AX_PL (mm) 1/5 (chance 0/10) | AX_AX (mm) 1/5 (chance 0/10),5,0.390 0.562 0.750 0.750 0.750
 tube_fittings_and_adapters/6410_o,DL,PARTIAL,AX_PL 3/5 (chance 2/10) | GAP 2/5 (chance 4/10),5,0.075 0.125 0.125 0.125 0.125
 tube_fittings_and_adapters/6410_o,DR,PARTIAL,GAP (mm) 3/5 (chance 0/10) | AX_PL (mm) 1/5 (chance 0/10) | AX_AX (mm) 1/5 (chance 0/10) | CYL_D 1/5 (chance 0/10),5,0.468 0.688 0.906 0.906 0.906
 tube_fittings_and_adapters/6410_o,EL,PARTIAL,AX_PL (mm) 3/5 (chance 0/10) | GAP 2/5 (chance 0/10) | GAP (mm) 1/5 (chance 0/10) | BOX 1/5 (chance 0/10),5,0.360 0.940 1.750 2.375 2.375
@@ -1283,6 +2179,15 @@ tube_fittings_and_adapters/6420,EL,DECODED,CONE_A,1,15.000
 tube_fittings_and_adapters/6420,ER,DECODED,AX_PL (mm),1,0.900
 tube_fittings_and_adapters/6420,FL,DECODED,GAP | CYL_D,1,0.689
 tube_fittings_and_adapters/6420,L,DECODED,GAP | BOX,1,1.620
+tube_fittings_and_adapters/6425,AL,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.618
+tube_fittings_and_adapters/6425,BL,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.106
+tube_fittings_and_adapters/6425,BTHD,DECODED,AX_AX (mm),1,0.5625
+tube_fittings_and_adapters/6425,C4,DECODED,GAP,1,0.812
+tube_fittings_and_adapters/6425,CL,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.500
+tube_fittings_and_adapters/6425,DL,DECODED,AX_PL (mm) | AX_AX (mm),1,0.609
+tube_fittings_and_adapters/6425,EL,DECODED,CONE_A,1,12
+tube_fittings_and_adapters/6425,FL,DECODED,GAP | CYL_D,1,0.518
+tube_fittings_and_adapters/6425,L,DECODED,GAP | BOX,1,1.260
 tube_fittings_and_adapters/6500_fg,AL,DECODED,CYL_D,11,0.375 0.495 0.56 0.62 0.79 0.915
 tube_fittings_and_adapters/6500_fg,AR,DECODED,CYL_D,11,0.250 0.364 0.426 0.481 0.659 0.772
 tube_fittings_and_adapters/6500_fg,B1D,DECODED,CYL_D,11,0.062 0.172 0.234 0.297 0.391 0.484
@@ -1291,7 +2196,7 @@ tube_fittings_and_adapters/6500_fg,B2D,DECODED,CYL_D,11,0.062 0.172 0.234 0.297 
 tube_fittings_and_adapters/6500_fg,B2THD,DECODED,CYL_D,11,0.312 0.438 0.500 0.562 0.750 0.875
 tube_fittings_and_adapters/6500_fg,BL,PARTIAL,AX_PL (mm) 9/11 (chance 1/22) | GAP (mm) 6/11 (chance 13/22) | GAP 2/11 (chance 13/22),11,0.140 0.140 0.145 0.145 0.180 0.190
 tube_fittings_and_adapters/6500_fg,BL2,DECODED,CYL_D,11,0.254 0.369 0.436 0.492 0.680 0.788
-tube_fittings_and_adapters/6500_fg,BL3,PARTIAL,GAP 6/11 (chance 1/22) | GAP (mm) 3/11 (chance 1/22) | AX_PL (mm) 1/11 (chance 0/22) | CYL_D (mm) 1/11 (chance 0/22),11,0.438 0.562 0.625 0.688 0.875 1.000
+tube_fittings_and_adapters/6500_fg,BL3,PARTIAL,GAP 6/11 (chance 1/22) | GAP (mm) 3/11 (chance 1/22) | CYL_D (mm) 1/11 (chance 0/22) | AX_PL (mm) 1/11 (chance 0/22),11,0.438 0.562 0.625 0.688 0.875 1.000
 tube_fittings_and_adapters/6500_fg,C,DECODED,GAP,11,0.438 0.563 0.625 0.688 0.875 1.000
 tube_fittings_and_adapters/6500_fg,CL,PARTIAL,GAP 5/11 (chance 6/22) | AX_PL (mm) 5/11 (chance 1/22) | GAP (mm) 4/11 (chance 6/22) | CYL_D (mm) 2/11 (chance 1/22) | TOR_r (mm) 1/11 (chance 0/22),11,0.315 0.355 0.385 0.385 0.422 0.510
 tube_fittings_and_adapters/6500_fg,CL2,PARTIAL,AX_PL (mm) 5/11 (chance 1/22) | GAP (mm) 4/11 (chance 4/22) | AX_AX (mm) 4/11 (chance 0/22) | GAP 3/11 (chance 4/22) | AX_PL 1/11 (chance 1/22),11,0.190 0.290 0.350 0.430 0.565 0.675
@@ -1300,13 +2205,13 @@ tube_fittings_and_adapters/6500_fg,CR,PARTIAL,GAP (mm) 5/11 (chance 4/22) | AX_P
 tube_fittings_and_adapters/6500_fg,DL2,PARTIAL,GAP (mm) 8/11 (chance 1/22) | AX_PL (mm) 5/11 (chance 2/22) | GAP 3/11 (chance 1/22),11,0.18 0.18 0.219 0.22 0.25 0.28
 tube_fittings_and_adapters/6500_fg,DL3,DECODED,CYL_D,11,0.350 0.470 0.535 0.585 0.785 0.895
 tube_fittings_and_adapters/6500_fg,DR,DECODED,GAP,11,0.177 0.193 0.193 0.198 0.253 0.266
-tube_fittings_and_adapters/6500_fg,EL2,PARTIAL,AX_PL (mm) 5/11 (chance 3/22) | GAP (mm) 5/11 (chance 8/22) | GAP 5/11 (chance 8/22),11,0.180 0.155 0.145 0.185 0.205 0.205
+tube_fittings_and_adapters/6500_fg,EL2,PARTIAL,GAP (mm) 5/11 (chance 8/22) | AX_PL (mm) 5/11 (chance 3/22) | GAP 5/11 (chance 8/22),11,0.180 0.155 0.145 0.185 0.205 0.205
 tube_fittings_and_adapters/6500_fg,EL3,PARTIAL,GAP 8/11 (chance 1/22) | GAP (mm) 1/11 (chance 1/22),11,0.438 0.562 0.625 0.688 0.875 1.000
 tube_fittings_and_adapters/6500_fg,ER,AMBIGUOUS,GAP 11/11 (chance 6/22),11,0.448 0.550 0.550 0.556 0.657 0.758
 tube_fittings_and_adapters/6500_fg,FL2,DECODED,CYL_D,11,0.172 0.293 0.356 0.412 0.584 0.694
 tube_fittings_and_adapters/6500_fg,FL3,PARTIAL,GAP (mm) 8/11 (chance 1/22) | AX_PL (mm) 3/11 (chance 0/22) | GAP 2/11 (chance 1/22),11,0.194 0.194 0.229 0.234 0.264 0.294
 tube_fittings_and_adapters/6500_fg,HL3,DECODED,GAP,11,0.438 0.562 0.625 0.688 0.875 1.000
-tube_fittings_and_adapters/6500_fg,HLP,DECODED,TOR_r (mm) | AX_PL (mm) | GAP (mm),1,1
+tube_fittings_and_adapters/6500_fg,HLP,DECODED,GAP (mm) | TOR_r (mm) | AX_PL (mm),1,1
 tube_fittings_and_adapters/6500_fg,JL3,PARTIAL,GAP 7/11 (chance 11/22) | AX_PL (mm) 3/11 (chance 0/22) | GAP (mm) 2/11 (chance 11/22) | AX_PL 2/11 (chance 0/22),11,0.125 0.125 0.125 0.140 0.155 0.165
 tube_fittings_and_adapters/6500_fg,LL3,DECODED,GAP,11,0.610 0.649 0.715 0.735 0.827 0.944
 tube_fittings_and_adapters/6500_fg,M,DECODED,AX_PL,11,0.770 0.890 0.950 1.060 1.250 1.450
@@ -1323,7 +2228,7 @@ tube_fittings_and_adapters/6500_l_fg,BL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.180
 tube_fittings_and_adapters/6500_l_fg,BL2,DECODED,CYL_D,1,0.680
 tube_fittings_and_adapters/6500_l_fg,BL3,DECODED,GAP,1,0.875
 tube_fittings_and_adapters/6500_l_fg,C,DECODED,GAP,1,0.875
-tube_fittings_and_adapters/6500_l_fg,CL,DECODED,AX_PL (mm) | GAP (mm),1,0.422
+tube_fittings_and_adapters/6500_l_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.422
 tube_fittings_and_adapters/6500_l_fg,CL2,DECODED,AX_AX (mm),1,0.565
 tube_fittings_and_adapters/6500_l_fg,CL3,DECODED,AX_PL (mm) | GAP (mm),1,0.688
 tube_fittings_and_adapters/6500_l_fg,CR,DECODED,AX_PL (mm),1,0.426
@@ -1341,7 +2246,7 @@ tube_fittings_and_adapters/6500_l_fg,LL3,DECODED,GAP,1,0.827
 tube_fittings_and_adapters/6500_l_fg,M,DECODED,AX_PL,1,1.250
 tube_fittings_and_adapters/6500_l_fg,M4,DECODED,AX_PL,1,2.380
 tube_fittings_and_adapters/6500_l_fg,M6,DECODED,AX_PL,1,2.810
-tube_fittings_and_adapters/6500_l_fg,ML3,DECODED,AX_PL (mm) | GAP (mm),1,0.370
+tube_fittings_and_adapters/6500_l_fg,ML3,DECODED,GAP (mm) | AX_PL (mm),1,0.370
 tube_fittings_and_adapters/6500_l_fg,Y,DECODED,GAP | CYL_D,1,0.750
 tube_fittings_and_adapters/6502_fg,AL,DECODED,CYL_D,2,0.79 1.14
 tube_fittings_and_adapters/6502_fg,AR,DECODED,CYL_D,2,0.659 0.943
@@ -1351,12 +2256,12 @@ tube_fittings_and_adapters/6502_fg,B2D,DECODED,CYL_D,2,0.391 0.609
 tube_fittings_and_adapters/6502_fg,B2THD,DECODED,GAP | CYL_D,2,0.750 1.062
 tube_fittings_and_adapters/6502_fg,BL,PARTIAL,GAP 1/2 (chance 2/4) | AX_PL (mm) 1/2 (chance 1/4),2,0.180 0.200
 tube_fittings_and_adapters/6502_fg,BL2,DECODED,CYL_D,2,0.680 0.962
-tube_fittings_and_adapters/6502_fg,BL3,PARTIAL,GAP 1/2 (chance 0/4) | AX_PL (mm) 1/2 (chance 0/4) | CYL_D (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 0/4),2,0.875 1.230
+tube_fittings_and_adapters/6502_fg,BL3,PARTIAL,GAP 1/2 (chance 0/4) | CYL_D (mm) 1/2 (chance 0/4) | AX_PL (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 0/4),2,0.875 1.230
 tube_fittings_and_adapters/6502_fg,C,DECODED,GAP,2,0.875 1.250
 tube_fittings_and_adapters/6502_fg,CL,PARTIAL,AX_PL 1/2 (chance 0/4) | GAP 1/2 (chance 0/4),2,0.422 0.57
 tube_fittings_and_adapters/6502_fg,CL2,PARTIAL,AX_AX (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 0/4),2,0.565 0.845
-tube_fittings_and_adapters/6502_fg,CL3,PARTIAL,AX_PL (mm) 1/2 (chance 1/4) | CYL_D (mm) 1/2 (chance 1/4) | GAP (mm) 1/2 (chance 0/4),2,0.688 0.968
-tube_fittings_and_adapters/6502_fg,CR,PARTIAL,AX_PL (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 1/4) | TOR_r (mm) 1/2 (chance 0/4),2,0.426 0.664
+tube_fittings_and_adapters/6502_fg,CL3,PARTIAL,CYL_D (mm) 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 1/4) | GAP (mm) 1/2 (chance 0/4),2,0.688 0.968
+tube_fittings_and_adapters/6502_fg,CR,PARTIAL,GAP (mm) 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 0/4) | TOR_r (mm) 1/2 (chance 0/4),2,0.426 0.664
 tube_fittings_and_adapters/6502_fg,DL2,DECODED,GAP (mm),2,0.25 0.304
 tube_fittings_and_adapters/6502_fg,DL3,DECODED,CYL_D,2,0.785 1.098
 tube_fittings_and_adapters/6502_fg,DR,DECODED,GAP,2,0.253 0.315
@@ -1367,13 +2272,42 @@ tube_fittings_and_adapters/6502_fg,FL2,DECODED,CYL_D,2,0.584 0.834
 tube_fittings_and_adapters/6502_fg,FL3,PARTIAL,GAP (mm) 1/2 (chance 0/4) | GAP 1/2 (chance 0/4),2,0.264 0.314
 tube_fittings_and_adapters/6502_fg,HL3,DECODED,GAP,2,0.875 1.250
 tube_fittings_and_adapters/6502_fg,HLP,DECODED,TOR_r (mm),1,1
-tube_fittings_and_adapters/6502_fg,JL3,PARTIAL,AX_PL (mm) 1/2 (chance 0/4) | GAP (mm) 1/2 (chance 2/4) | GAP 1/2 (chance 2/4) | AX_PL 1/2 (chance 0/4),2,0.155 0.185
+tube_fittings_and_adapters/6502_fg,JL3,PARTIAL,GAP (mm) 1/2 (chance 2/4) | AX_PL (mm) 1/2 (chance 0/4) | GAP 1/2 (chance 2/4) | AX_PL 1/2 (chance 0/4),2,0.155 0.185
 tube_fittings_and_adapters/6502_fg,LL3,DECODED,GAP,2,0.827 1.047
 tube_fittings_and_adapters/6502_fg,M,DECODED,AX_PL,2,0.850 0.931
 tube_fittings_and_adapters/6502_fg,M2,DECODED,AX_PL,2,0.980 1.280
 tube_fittings_and_adapters/6502_fg,M6,DECODED,AX_PL,2,1.280 1.500
-tube_fittings_and_adapters/6502_fg,ML3,PARTIAL,AX_PL (mm) 1/2 (chance 1/4) | GAP (mm) 1/2 (chance 1/4) | CYL_D 1/2 (chance 0/4),2,0.370 0.440
+tube_fittings_and_adapters/6502_fg,ML3,PARTIAL,GAP (mm) 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 1/4) | CYL_D 1/2 (chance 0/4),2,0.370 0.440
 tube_fittings_and_adapters/6502_fg,Y,DECODED,GAP | CYL_D,2,0.750 1.062
+tube_fittings_and_adapters/6503_fg,AL,DECODED,AX_PL | CYL_D,1,0.62
+tube_fittings_and_adapters/6503_fg,ATHD,DECODED,GAP (mm),1,0.67500
+tube_fittings_and_adapters/6503_fg,BD,DECODED,TOR_r | CYL_D,1,0.297
+tube_fittings_and_adapters/6503_fg,BL,AMBIGUOUS,GAP (mm) 1/1 (chance 2/2) | AX_PL (mm) 1/1 (chance 1/2),1,0.145
+tube_fittings_and_adapters/6503_fg,BL2,DECODED,CYL_D,1,0.492
+tube_fittings_and_adapters/6503_fg,BL3,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.688
+tube_fittings_and_adapters/6503_fg,BR,DECODED,GAP,1,0.580
+tube_fittings_and_adapters/6503_fg,BTHD,DECODED,AX_AX (mm),1,0.5625
+tube_fittings_and_adapters/6503_fg,C,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.688
+tube_fittings_and_adapters/6503_fg,CL,DECODED,AX_PL (mm),1,0.385
+tube_fittings_and_adapters/6503_fg,CL2,DECODED,GAP (mm) | AX_PL (mm),1,0.430
+tube_fittings_and_adapters/6503_fg,CL3,DECODED,GAP (mm),1,0.5
+tube_fittings_and_adapters/6503_fg,CR,DECODED,GAP | CYL_D,1,0.578
+tube_fittings_and_adapters/6503_fg,DL2,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.22
+tube_fittings_and_adapters/6503_fg,DL3,DECODED,CYL_D,1,0.585
+tube_fittings_and_adapters/6503_fg,DR,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,0.695
+tube_fittings_and_adapters/6503_fg,EL2,DECODED,GAP (mm) | AX_PL (mm),1,0.185
+tube_fittings_and_adapters/6503_fg,EL3,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.688
+tube_fittings_and_adapters/6503_fg,ER,DECODED,GAP | BOX | CYL_D,1,0.875
+tube_fittings_and_adapters/6503_fg,FL2,DECODED,CYL_D,1,0.412
+tube_fittings_and_adapters/6503_fg,FL3,DECODED,GAP (mm),1,0.234
+tube_fittings_and_adapters/6503_fg,HL3,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.688
+tube_fittings_and_adapters/6503_fg,JL3,DECODED,TOR_R,1,0.140
+tube_fittings_and_adapters/6503_fg,LL3,DECODED,GAP,1,0.735
+tube_fittings_and_adapters/6503_fg,M2,DECODED,AX_PL,1,1.020
+tube_fittings_and_adapters/6503_fg,M4,DECODED,AX_PL,1,1.000
+tube_fittings_and_adapters/6503_fg,M6,DECODED,AX_PL,1,1.380
+tube_fittings_and_adapters/6503_fg,ML3,DECODED,GAP,1,0.340
+tube_fittings_and_adapters/6503_fg,Y,DECODED,GAP | BOX | CYL_D,1,0.875
 tube_fittings_and_adapters/6506,AD,DECODED,CYL_D,1,0.719
 tube_fittings_and_adapters/6506,AR,DECODED,CYL_D,1,1.270
 tube_fittings_and_adapters/6506,ATHD,DECODED,GAP (mm),1,1.1875
@@ -1381,12 +2315,12 @@ tube_fittings_and_adapters/6506,BL,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (c
 tube_fittings_and_adapters/6506,BR,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.210
 tube_fittings_and_adapters/6506,BR2,DECODED,CYL_D,1,1.084
 tube_fittings_and_adapters/6506,BR3,AMBIGUOUS,GAP 1/1 (chance 2/2),1,1.360
-tube_fittings_and_adapters/6506,BTHD,DECODED,TOR_r (mm) | AX_PL (mm) | GAP (mm),1,1.0500
+tube_fittings_and_adapters/6506,BTHD,DECODED,GAP (mm) | TOR_r (mm) | AX_PL (mm),1,1.0500
 tube_fittings_and_adapters/6506,C,DECODED,GAP,1,1.375
 tube_fittings_and_adapters/6506,C4,DECODED,GAP,1,1.375
 tube_fittings_and_adapters/6506,CL,DECODED,CYL_D,1,0.921
 tube_fittings_and_adapters/6506,CR,DECODED,GAP,1,0.585
-tube_fittings_and_adapters/6506,CR2,DECODED,AX_PL (mm) | GAP (mm),1,0.970
+tube_fittings_and_adapters/6506,CR2,DECODED,GAP (mm) | AX_PL (mm),1,0.970
 tube_fittings_and_adapters/6506,CR3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.094
 tube_fittings_and_adapters/6506,DL,DECODED,AX_PL (mm),1,1.070
 tube_fittings_and_adapters/6506,DR2,DECODED,GAP,1,0.33
@@ -1395,11 +2329,11 @@ tube_fittings_and_adapters/6506,EL,NO MATCH,,1,0.900
 tube_fittings_and_adapters/6506,ER2,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.220
 tube_fittings_and_adapters/6506,ER3,DECODED,GAP,1,1.375
 tube_fittings_and_adapters/6506,FR2,DECODED,CYL_D,1,0.926
-tube_fittings_and_adapters/6506,FR3,DECODED,AX_PL (mm) | GAP (mm),1,0.344
-tube_fittings_and_adapters/6506,HLP,DECODED,TOR_r (mm) | AX_PL (mm) | GAP (mm),1,1
+tube_fittings_and_adapters/6506,FR3,DECODED,GAP (mm) | AX_PL (mm),1,0.344
+tube_fittings_and_adapters/6506,HLP,DECODED,GAP (mm) | TOR_r (mm) | AX_PL (mm),1,1
 tube_fittings_and_adapters/6506,HR3,DECODED,GAP,1,1.375
 tube_fittings_and_adapters/6506,JR3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.185
-tube_fittings_and_adapters/6506,L2,DECODED,GAP | CONE_A,1,1.750
+tube_fittings_and_adapters/6506,L2,DECODED,CONE_A | GAP,1,1.750
 tube_fittings_and_adapters/6506,L5,DECODED,GAP | BOX,1,2.330
 tube_fittings_and_adapters/6506,LR3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.093
 tube_fittings_and_adapters/6506,MR3,DECODED,GAP (mm),1,0.450
@@ -1424,9 +2358,9 @@ tube_fittings_and_adapters/6565,CR,DECODED,GAP,1,0.95
 tube_fittings_and_adapters/6565,CR2,NO MATCH,,1,2.235
 tube_fittings_and_adapters/6565,CR3,DECODED,GAP,1,2.400
 tube_fittings_and_adapters/6565,DL2,DECODED,GAP,1,0.410
-tube_fittings_and_adapters/6565,DL3,DECODED,CYL_D | AX_PL,1,2.650
+tube_fittings_and_adapters/6565,DL3,DECODED,AX_PL | CYL_D,1,2.650
 tube_fittings_and_adapters/6565,DR2,DECODED,GAP,1,0.41
-tube_fittings_and_adapters/6565,DR3,DECODED,CYL_D | AX_PL,1,2.650
+tube_fittings_and_adapters/6565,DR3,DECODED,AX_PL | CYL_D,1,2.650
 tube_fittings_and_adapters/6565,EL2,DECODED,GAP,1,0.780
 tube_fittings_and_adapters/6565,EL3,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,2.850
 tube_fittings_and_adapters/6565,ER2,DECODED,GAP,1,0.780
@@ -1456,7 +2390,7 @@ tube_fittings_and_adapters/6603_fg,BL2,DECODED,CYL_D,1,0.492
 tube_fittings_and_adapters/6603_fg,BL3,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/6603_fg,C,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/6603_fg,CL,DECODED,GAP,1,0.385
-tube_fittings_and_adapters/6603_fg,CL2,DECODED,AX_PL (mm) | CYL_D (mm),1,0.430
+tube_fittings_and_adapters/6603_fg,CL2,DECODED,CYL_D (mm) | AX_PL (mm),1,0.430
 tube_fittings_and_adapters/6603_fg,CL3,DECODED,AX_PL,1,0.5
 tube_fittings_and_adapters/6603_fg,CT,DECODED,AX_PL (mm) | AX_AX (mm),1,0.318
 tube_fittings_and_adapters/6603_fg,DL2,DECODED,GAP,1,0.22
@@ -1466,9 +2400,9 @@ tube_fittings_and_adapters/6603_fg,EL2,DECODED,GAP,1,0.185
 tube_fittings_and_adapters/6603_fg,EL3,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/6603_fg,ET,DECODED,GAP,1,0.556
 tube_fittings_and_adapters/6603_fg,FL2,DECODED,CYL_D,1,0.412
-tube_fittings_and_adapters/6603_fg,FL3,DECODED,AX_PL (mm) | GAP (mm),1,0.234
+tube_fittings_and_adapters/6603_fg,FL3,DECODED,GAP (mm) | AX_PL (mm),1,0.234
 tube_fittings_and_adapters/6603_fg,HL3,DECODED,GAP,1,0.688
-tube_fittings_and_adapters/6603_fg,JL3,DECODED,AX_PL (mm) | GAP (mm),1,0.140
+tube_fittings_and_adapters/6603_fg,JL3,DECODED,GAP (mm) | AX_PL (mm),1,0.140
 tube_fittings_and_adapters/6603_fg,LL3,DECODED,GAP,1,0.735
 tube_fittings_and_adapters/6603_fg,M,DECODED,AX_PL,1,1.060
 tube_fittings_and_adapters/6603_fg,M2,DECODED,AX_PL,1,1.250
@@ -1485,21 +2419,89 @@ tube_fittings_and_adapters/6606_fg,BL2,DECODED,CYL_D,1,0.492
 tube_fittings_and_adapters/6606_fg,BL3,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/6606_fg,C,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/6606_fg,CL,DECODED,GAP,1,0.385
-tube_fittings_and_adapters/6606_fg,CL2,DECODED,AX_PL (mm) | CYL_D (mm),1,0.430
+tube_fittings_and_adapters/6606_fg,CL2,DECODED,CYL_D (mm) | AX_PL (mm),1,0.430
 tube_fittings_and_adapters/6606_fg,CL3,DECODED,AX_AX (mm),1,0.5
 tube_fittings_and_adapters/6606_fg,DL2,DECODED,GAP,1,0.22
 tube_fittings_and_adapters/6606_fg,DL3,DECODED,CYL_D,1,0.585
 tube_fittings_and_adapters/6606_fg,EL2,DECODED,GAP,1,0.185
 tube_fittings_and_adapters/6606_fg,EL3,DECODED,GAP,1,0.688
 tube_fittings_and_adapters/6606_fg,FL2,DECODED,CYL_D,1,0.412
-tube_fittings_and_adapters/6606_fg,FL3,DECODED,AX_PL (mm) | GAP (mm),1,0.234
+tube_fittings_and_adapters/6606_fg,FL3,DECODED,GAP (mm) | AX_PL (mm),1,0.234
 tube_fittings_and_adapters/6606_fg,HL3,DECODED,GAP,1,0.688
-tube_fittings_and_adapters/6606_fg,JL3,DECODED,AX_PL (mm) | GAP (mm),1,0.140
+tube_fittings_and_adapters/6606_fg,JL3,DECODED,GAP (mm) | AX_PL (mm),1,0.140
 tube_fittings_and_adapters/6606_fg,LL3,DECODED,GAP,1,0.735
 tube_fittings_and_adapters/6606_fg,M,DECODED,AX_PL,1,0.870
 tube_fittings_and_adapters/6606_fg,M6,DECODED,AX_PL,1,1.250
 tube_fittings_and_adapters/6606_fg,ML3,DECODED,AX_PL (mm) | AX_AX (mm),1,0.340
 tube_fittings_and_adapters/6606_fg,Y,DECODED,GAP,1,0.562
+tube_fittings_and_adapters/6701,C1,DECODED,GAP,1,0.812
+tube_fittings_and_adapters/6701,C2,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6701,DIA,DECODED,GAP | TOR_r,1,0.549
+tube_fittings_and_adapters/6701,DIA1,DECODED,AX_PL | CYL_D,1,0.654
+tube_fittings_and_adapters/6701,DIA2,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.426
+tube_fittings_and_adapters/6701,DIA3,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6701,DIA4,DECODED,GAP | CYL_D,1,0.670
+tube_fittings_and_adapters/6701,DIA5,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,0.572
+tube_fittings_and_adapters/6701,DIA6,DECODED,TOR_r | CYL_D,1,0.374
+tube_fittings_and_adapters/6701,DIA7,DECODED,CYL_D,1,0.587
+tube_fittings_and_adapters/6701,E,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6701,F,DECODED,GAP,1,0.264
+tube_fittings_and_adapters/6701,G,DECODED,CYL_D (mm),1,0.685
+tube_fittings_and_adapters/6701,J,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.155
+tube_fittings_and_adapters/6701,L,DECODED,AX_PL,1,1.520
+tube_fittings_and_adapters/6701,L1,DECODED,GAP,1,0.657
+tube_fittings_and_adapters/6701,L2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.252
+tube_fittings_and_adapters/6701,L3,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.094
+tube_fittings_and_adapters/6701,L4,DECODED,GAP,1,0.268
+tube_fittings_and_adapters/6701,L5,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 2/2),1,0.465
+tube_fittings_and_adapters/6701,LN,DECODED,GAP | TOR_R,1,0.827
+tube_fittings_and_adapters/6701,M,DECODED,AX_PL,1,1.770
+tube_fittings_and_adapters/6701,MN,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2) | AX_PL (mm) 1/1 (chance 1/2),1,0.370
+tube_fittings_and_adapters/6701,NS,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6701,R,DECODED,GAP | TOR_R,1,0.827
+tube_fittings_and_adapters/6701,THK,DECODED,GAP,1,0.197
+tube_fittings_and_adapters/6801_l_nwo_fg,AL,DECODED,CYL_D,1,0.659
+tube_fittings_and_adapters/6801_l_nwo_fg,AT,DECODED,AX_PL (mm),1,0.655
+tube_fittings_and_adapters/6801_l_nwo_fg,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6801_l_nwo_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6801_l_nwo_fg,B2D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6801_l_nwo_fg,B2THD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6801_l_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6801_l_nwo_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+tube_fittings_and_adapters/6801_l_nwo_fg,CT,DECODED,AX_PL (mm),1,0.344
+tube_fittings_and_adapters/6801_l_nwo_fg,DL,DECODED,GAP,1,0.253
+tube_fittings_and_adapters/6801_l_nwo_fg,DT,DECODED,GAP,1,0.490
+tube_fittings_and_adapters/6801_l_nwo_fg,EL,DECODED,GAP,1,0.657
+tube_fittings_and_adapters/6801_l_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6801_l_nwo_fg,FT,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6801_l_nwo_fg,GT,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6801_l_nwo_fg,HT,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6801_l_nwo_fg,IT,DECODED,BOX | CYL_D,1,1.010
+tube_fittings_and_adapters/6801_l_nwo_fg,JT,DECODED,TOR_r | AX_PL,1,0.087
+tube_fittings_and_adapters/6801_l_nwo_fg,M,DECODED,AX_PL,1,1.250
+tube_fittings_and_adapters/6801_l_nwo_fg,M7,DECODED,AX_PL,1,1.970
+tube_fittings_and_adapters/6801_l_nwo_fg,Y,DECODED,GAP | CYL_D,1,0.750
+tube_fittings_and_adapters/6801_ll_nwo_fg,AL,DECODED,CYL_D,1,0.659
+tube_fittings_and_adapters/6801_ll_nwo_fg,AT,DECODED,AX_PL (mm),1,0.655
+tube_fittings_and_adapters/6801_ll_nwo_fg,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6801_ll_nwo_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6801_ll_nwo_fg,B2D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6801_ll_nwo_fg,B2THD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6801_ll_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6801_ll_nwo_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+tube_fittings_and_adapters/6801_ll_nwo_fg,CT,DECODED,AX_PL (mm),1,0.344
+tube_fittings_and_adapters/6801_ll_nwo_fg,DL,DECODED,GAP,1,0.253
+tube_fittings_and_adapters/6801_ll_nwo_fg,DT,DECODED,GAP,1,0.490
+tube_fittings_and_adapters/6801_ll_nwo_fg,EL,DECODED,GAP,1,0.657
+tube_fittings_and_adapters/6801_ll_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6801_ll_nwo_fg,FT,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6801_ll_nwo_fg,GT,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6801_ll_nwo_fg,HT,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6801_ll_nwo_fg,IT,DECODED,BOX | CYL_D,1,1.010
+tube_fittings_and_adapters/6801_ll_nwo_fg,JT,DECODED,TOR_r | AX_PL,1,0.087
+tube_fittings_and_adapters/6801_ll_nwo_fg,M,DECODED,AX_PL,1,1.250
+tube_fittings_and_adapters/6801_ll_nwo_fg,M7,DECODED,AX_PL,1,2.480
+tube_fittings_and_adapters/6801_ll_nwo_fg,Y,DECODED,GAP | CYL_D,1,0.750
 tube_fittings_and_adapters/6801_nwo_fg,AL,DECODED,CYL_D,14,0.364 0.364 0.426 0.481 0.659 0.772
 tube_fittings_and_adapters/6801_nwo_fg,AT,PARTIAL,AX_PL (mm) 7/14 (chance 4/28) | GAP (mm) 4/14 (chance 2/28) | AX_AX (mm) 3/14 (chance 0/28) | GAP 3/14 (chance 2/28) | AX_PL 1/14 (chance 4/28) | CYL_D (mm) 1/14 (chance 0/28) | CYL_D 1/14 (chance 0/28),14,0.245 0.360 0.420 0.475 0.655 0.770
 tube_fittings_and_adapters/6801_nwo_fg,B1D,DECODED,CYL_D,14,0.172 0.172 0.234 0.297 0.391 0.484
@@ -1520,7 +2522,7 @@ tube_fittings_and_adapters/6801_nwo_fg,IT,DECODED,CYL_D,14,0.504 0.650 0.722 0.7
 tube_fittings_and_adapters/6801_nwo_fg,JT,DECODED,TOR_r,14,0.064 0.072 0.072 0.078 0.087 0.097
 tube_fittings_and_adapters/6801_nwo_fg,M,DECODED,AX_PL,14,0.890 0.890 0.950 1.060 1.250 1.450
 tube_fittings_and_adapters/6801_nwo_fg,M7,DECODED,AX_PL,14,0.920 1.030 1.130 1.250 1.450 1.700
-tube_fittings_and_adapters/6801_nwo_fg,MDP,PARTIAL,AX_PL (mm) 4/13 (chance 0/26) | TOR_r (mm) 1/13 (chance 0/26) | GAP (mm) 1/13 (chance 0/26),13,5.000 6.000 6.000 6.000 5.000 5.000
+tube_fittings_and_adapters/6801_nwo_fg,MDP,PARTIAL,AX_PL (mm) 4/13 (chance 0/26) | GAP (mm) 1/13 (chance 0/26) | TOR_r (mm) 1/13 (chance 0/26),13,5.000 6.000 6.000 6.000 5.000 5.000
 tube_fittings_and_adapters/6801_nwo_fg,Y,DECODED,GAP,14,0.438 0.438 0.562 0.562 0.750 0.875
 tube_fittings_and_adapters/6802_nwo_fg,B1D,DECODED,CYL_D,1,1.781
 tube_fittings_and_adapters/6802_nwo_fg,B2D,DECODED,CYL_D,1,1.781
@@ -1543,3 +2545,354 @@ tube_fittings_and_adapters/6802_nwo_fg,O,DECODED,CYL_D,1,3.160
 tube_fittings_and_adapters/6802_nwo_fg,P,DECODED,GAP,1,1.140
 tube_fittings_and_adapters/6802_nwo_fg,THDNPSM,DECODED,AX_PL (mm),1,2.3509
 tube_fittings_and_adapters/6802_nwo_fg,Y,DECODED,GAP | CYL_D,1,2.500
+tube_fittings_and_adapters/6803_nwo_fg,AL,DECODED,CYL_D,1,0.659
+tube_fittings_and_adapters/6803_nwo_fg,AR,DECODED,CYL_D,1,0.659
+tube_fittings_and_adapters/6803_nwo_fg,AT,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.475
+tube_fittings_and_adapters/6803_nwo_fg,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6803_nwo_fg,B1THD,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6803_nwo_fg,B2D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6803_nwo_fg,B2THD,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6803_nwo_fg,B3D,DECODED,CYL_D,1,0.297
+tube_fittings_and_adapters/6803_nwo_fg,B3THD,DECODED,CYL_D,1,0.5625
+tube_fittings_and_adapters/6803_nwo_fg,C,DECODED,GAP,1,0.688
+tube_fittings_and_adapters/6803_nwo_fg,CL,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+tube_fittings_and_adapters/6803_nwo_fg,CR,DECODED,GAP (mm) | AX_PL (mm),1,0.426
+tube_fittings_and_adapters/6803_nwo_fg,CT,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.312
+tube_fittings_and_adapters/6803_nwo_fg,DL,DECODED,GAP,1,0.253
+tube_fittings_and_adapters/6803_nwo_fg,DR,DECODED,GAP,1,0.253
+tube_fittings_and_adapters/6803_nwo_fg,DT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.433
+tube_fittings_and_adapters/6803_nwo_fg,EL,DECODED,GAP,1,0.657
+tube_fittings_and_adapters/6803_nwo_fg,ER,DECODED,GAP,1,0.657
+tube_fittings_and_adapters/6803_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.035
+tube_fittings_and_adapters/6803_nwo_fg,FT,DECODED,GAP,1,0.270
+tube_fittings_and_adapters/6803_nwo_fg,GT,DECODED,CYL_D,1,0.750
+tube_fittings_and_adapters/6803_nwo_fg,HT,DECODED,CYL_D,1,0.482
+tube_fittings_and_adapters/6803_nwo_fg,IT,DECODED,BOX | CYL_D,1,0.794
+tube_fittings_and_adapters/6803_nwo_fg,JT,DECODED,TOR_r,1,0.078
+tube_fittings_and_adapters/6803_nwo_fg,M1,DECODED,GAP | AX_PL,1,1.250
+tube_fittings_and_adapters/6803_nwo_fg,M2,DECODED,GAP | AX_PL,1,1.250
+tube_fittings_and_adapters/6803_nwo_fg,M7,DECODED,AX_PL,1,1.320
+tube_fittings_and_adapters/6803_nwo_fg,Y,DECODED,CYL_D,1,0.750
+tube_fittings_and_adapters/6805_nwo_fg,AD,DECODED,GAP | AX_PL,1,0.531
+tube_fittings_and_adapters/6805_nwo_fg,AL,NO MATCH,,1,0.655
+tube_fittings_and_adapters/6805_nwo_fg,ATHD,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.8400
+tube_fittings_and_adapters/6805_nwo_fg,BD,DECODED,TOR_r | CYL_D,1,0.391
+tube_fittings_and_adapters/6805_nwo_fg,BT,DECODED,GAP | CYL_D,1,0.750
+tube_fittings_and_adapters/6805_nwo_fg,BTHD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6805_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6805_nwo_fg,CL,NO MATCH,,1,0.344
+tube_fittings_and_adapters/6805_nwo_fg,CT,DECODED,CYL_D,1,0.718
+tube_fittings_and_adapters/6805_nwo_fg,DL,DECODED,GAP,1,0.490
+tube_fittings_and_adapters/6805_nwo_fg,DT,DECODED,GAP,1,0.855
+tube_fittings_and_adapters/6805_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6805_nwo_fg,ET,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/6805_nwo_fg,FL,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6805_nwo_fg,GL,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6805_nwo_fg,HL,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6805_nwo_fg,IL,DECODED,CYL_D,1,1.010
+tube_fittings_and_adapters/6805_nwo_fg,JL,DECODED,TOR_r,1,0.087
+tube_fittings_and_adapters/6805_nwo_fg,M7,DECODED,AX_PL,1,1.620
+tube_fittings_and_adapters/6805_nwo_fg,N,DECODED,AX_PL,1,1.230
+tube_fittings_and_adapters/6805_nwo_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/6806_nwo_fg,AD,DECODED,CYL_D,1,0.406
+tube_fittings_and_adapters/6806_nwo_fg,AL,DECODED,GAP,1,0.655
+tube_fittings_and_adapters/6806_nwo_fg,ATHD,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,0.6750
+tube_fittings_and_adapters/6806_nwo_fg,BD,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6806_nwo_fg,BT,DECODED,GAP (mm),1,0.540
+tube_fittings_and_adapters/6806_nwo_fg,BTHD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6806_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6806_nwo_fg,CL,DECODED,AX_PL (mm),1,0.344
+tube_fittings_and_adapters/6806_nwo_fg,CT,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,0.675
+tube_fittings_and_adapters/6806_nwo_fg,DL,DECODED,GAP,1,0.490
+tube_fittings_and_adapters/6806_nwo_fg,DT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.560
+tube_fittings_and_adapters/6806_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6806_nwo_fg,ET,DECODED,GAP (mm),1,0.469
+tube_fittings_and_adapters/6806_nwo_fg,FL,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6806_nwo_fg,GL,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6806_nwo_fg,HL,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6806_nwo_fg,IL,DECODED,BOX | CYL_D,1,1.010
+tube_fittings_and_adapters/6806_nwo_fg,JL,DECODED,TOR_r | AX_PL,1,0.087
+tube_fittings_and_adapters/6806_nwo_fg,M7,DECODED,AX_PL,1,1.450
+tube_fittings_and_adapters/6806_nwo_fg,N,DECODED,AX_PL,1,1.220
+tube_fittings_and_adapters/6806_nwo_fg,Y,DECODED,GAP | CYL_D,1,0.750
+tube_fittings_and_adapters/6807_nwo_fg,AL,DECODED,CYL_D,1,0.655
+tube_fittings_and_adapters/6807_nwo_fg,AR,DECODED,GAP,1,0.475
+tube_fittings_and_adapters/6807_nwo_fg,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6807_nwo_fg,B1PITCH,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.07143
+tube_fittings_and_adapters/6807_nwo_fg,B1THD,DECODED,GAP | CYL_D,1,0.7500
+tube_fittings_and_adapters/6807_nwo_fg,B2D,DECODED,CYL_D,1,0.297
+tube_fittings_and_adapters/6807_nwo_fg,B2PITCH,AMBIGUOUS,GAP 1/1 (chance 2/2) | CYL_D 1/1 (chance 1/2),1,0.05556
+tube_fittings_and_adapters/6807_nwo_fg,B2THD,DECODED,CYL_D,1,0.562
+tube_fittings_and_adapters/6807_nwo_fg,C,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.875
+tube_fittings_and_adapters/6807_nwo_fg,C2,DECODED,GAP,1,0.688
+tube_fittings_and_adapters/6807_nwo_fg,CL,DECODED,AX_PL,1,0.344
+tube_fittings_and_adapters/6807_nwo_fg,CR,DECODED,GAP (mm),1,0.312
+tube_fittings_and_adapters/6807_nwo_fg,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.490
+tube_fittings_and_adapters/6807_nwo_fg,DR,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.433
+tube_fittings_and_adapters/6807_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6807_nwo_fg,ER,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.035
+tube_fittings_and_adapters/6807_nwo_fg,FL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.310
+tube_fittings_and_adapters/6807_nwo_fg,FR,DECODED,GAP,1,0.280
+tube_fittings_and_adapters/6807_nwo_fg,GL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6807_nwo_fg,GR,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6807_nwo_fg,HL,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6807_nwo_fg,HR,DECODED,CYL_D,1,0.482
+tube_fittings_and_adapters/6807_nwo_fg,IDL,DECODED,AX_PL (mm),1,0.644
+tube_fittings_and_adapters/6807_nwo_fg,IDR,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.468
+tube_fittings_and_adapters/6807_nwo_fg,IL,DECODED,BOX | CYL_D,1,1.010
+tube_fittings_and_adapters/6807_nwo_fg,IR,DECODED,CYL_D,1,0.794
+tube_fittings_and_adapters/6807_nwo_fg,M1,DECODED,AX_PL,1,1.450
+tube_fittings_and_adapters/6807_nwo_fg,M2,DECODED,AX_PL,1,1.340
+tube_fittings_and_adapters/6807_nwo_fg,WL,DECODED,TOR_r | AX_PL,1,0.087
+tube_fittings_and_adapters/6807_nwo_fg,WR,DECODED,TOR_r,1,0.078
+tube_fittings_and_adapters/6807_nwo_fg,Y,DECODED,GAP | CYL_D,1,0.750
+tube_fittings_and_adapters/6809_nwo_fg,AL,DECODED,GAP,1,0.915
+tube_fittings_and_adapters/6809_nwo_fg,AR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.770
+tube_fittings_and_adapters/6809_nwo_fg,B1D,DECODED,GAP | CYL_D,1,0.484
+tube_fittings_and_adapters/6809_nwo_fg,B1THD,DECODED,CYL_D,1,0.8750
+tube_fittings_and_adapters/6809_nwo_fg,B2D,DECODED,GAP | CYL_D,1,0.484
+tube_fittings_and_adapters/6809_nwo_fg,B2THD,DECODED,CYL_D,1,0.8750
+tube_fittings_and_adapters/6809_nwo_fg,BL,DECODED,AX_PL (mm),1,0.190
+tube_fittings_and_adapters/6809_nwo_fg,BL2,DECODED,CYL_D,1,0.788
+tube_fittings_and_adapters/6809_nwo_fg,BL3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6809_nwo_fg,C1,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6809_nwo_fg,C2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6809_nwo_fg,CL,DECODED,GAP (mm),1,0.51
+tube_fittings_and_adapters/6809_nwo_fg,CL2,DECODED,GAP | AX_PL,1,0.675
+tube_fittings_and_adapters/6809_nwo_fg,CL3,DECODED,CYL_D,1,0.797
+tube_fittings_and_adapters/6809_nwo_fg,CR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.391
+tube_fittings_and_adapters/6809_nwo_fg,DL2,DECODED,GAP,1,0.28
+tube_fittings_and_adapters/6809_nwo_fg,DL3,DECODED,GAP | CYL_D,1,0.895
+tube_fittings_and_adapters/6809_nwo_fg,DR,DECODED,GAP,1,0.560
+tube_fittings_and_adapters/6809_nwo_fg,EL2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.205
+tube_fittings_and_adapters/6809_nwo_fg,EL3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6809_nwo_fg,ER,DECODED,AX_AX,1,0.050
+tube_fittings_and_adapters/6809_nwo_fg,FL2,DECODED,CYL_D,1,0.694
+tube_fittings_and_adapters/6809_nwo_fg,FL3,DECODED,GAP (mm),1,0.294
+tube_fittings_and_adapters/6809_nwo_fg,FR,DECODED,GAP,1,0.360
+tube_fittings_and_adapters/6809_nwo_fg,GR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6809_nwo_fg,HL3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,1.000
+tube_fittings_and_adapters/6809_nwo_fg,HR,DECODED,CYL_D,1,0.773
+tube_fittings_and_adapters/6809_nwo_fg,IR,DECODED,BOX | CYL_D,1,1.155
+tube_fittings_and_adapters/6809_nwo_fg,JL3,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.165
+tube_fittings_and_adapters/6809_nwo_fg,JR,DECODED,TOR_r,1,0.097
+tube_fittings_and_adapters/6809_nwo_fg,LL3,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.944
+tube_fittings_and_adapters/6809_nwo_fg,M,AMBIGUOUS,AX_PL 1/1 (chance 1/2),1,1.120
+tube_fittings_and_adapters/6809_nwo_fg,M6,DECODED,AX_PL,1,1.620
+tube_fittings_and_adapters/6809_nwo_fg,M7,DECODED,AX_PL,1,1.700
+tube_fittings_and_adapters/6809_nwo_fg,ML3,DECODED,GAP,1,0.410
+tube_fittings_and_adapters/6809_nwo_fg,Y,DECODED,CYL_D,1,0.875
+tube_fittings_and_adapters/6810_nwo_fg,AL,DECODED,GAP | CYL_D,1,1.14
+tube_fittings_and_adapters/6810_nwo_fg,AR,DECODED,GAP (mm),1,0.940
+tube_fittings_and_adapters/6810_nwo_fg,B1D,DECODED,CYL_D,1,0.609
+tube_fittings_and_adapters/6810_nwo_fg,B1THD,DECODED,GAP,1,1.0625
+tube_fittings_and_adapters/6810_nwo_fg,B2D,DECODED,CYL_D,1,0.609
+tube_fittings_and_adapters/6810_nwo_fg,BL,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.200
+tube_fittings_and_adapters/6810_nwo_fg,BL2,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.962
+tube_fittings_and_adapters/6810_nwo_fg,BL3,DECODED,CYL_D (mm) | AX_PL (mm) | GAP (mm),1,1.230
+tube_fittings_and_adapters/6810_nwo_fg,C,DECODED,GAP,1,1.250
+tube_fittings_and_adapters/6810_nwo_fg,C2,DECODED,GAP,1,1.250
+tube_fittings_and_adapters/6810_nwo_fg,CL,DECODED,GAP,1,0.57
+tube_fittings_and_adapters/6810_nwo_fg,CL2,DECODED,GAP (mm),1,0.845
+tube_fittings_and_adapters/6810_nwo_fg,CL3,NO MATCH,,1,0.968
+tube_fittings_and_adapters/6810_nwo_fg,CR,DECODED,GAP | AX_PL,1,0.410
+tube_fittings_and_adapters/6810_nwo_fg,DL2,DECODED,GAP (mm) | AX_PL (mm),1,0.304
+tube_fittings_and_adapters/6810_nwo_fg,DL3,DECODED,CYL_D,1,1.098
+tube_fittings_and_adapters/6810_nwo_fg,DR,DECODED,GAP | TOR_R,1,0.653
+tube_fittings_and_adapters/6810_nwo_fg,EL2,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.215
+tube_fittings_and_adapters/6810_nwo_fg,EL3,DECODED,GAP,1,1.250
+tube_fittings_and_adapters/6810_nwo_fg,ER,DECODED,AX_PL | AX_AX,1,0.050
+tube_fittings_and_adapters/6810_nwo_fg,FL2,DECODED,CYL_D,1,0.834
+tube_fittings_and_adapters/6810_nwo_fg,FL3,DECODED,GAP (mm) | AX_PL (mm),1,0.314
+tube_fittings_and_adapters/6810_nwo_fg,FR,DECODED,GAP | AX_PL,1,0.410
+tube_fittings_and_adapters/6810_nwo_fg,GR,DECODED,GAP | CYL_D,1,1.140
+tube_fittings_and_adapters/6810_nwo_fg,HL3,DECODED,GAP,1,1.250
+tube_fittings_and_adapters/6810_nwo_fg,HR,DECODED,CYL_D,1,0.945
+tube_fittings_and_adapters/6810_nwo_fg,IR,DECODED,BOX | CYL_D,1,1.444
+tube_fittings_and_adapters/6810_nwo_fg,JL3,DECODED,GAP | AX_PL,1,0.185
+tube_fittings_and_adapters/6810_nwo_fg,JR,DECODED,TOR_r,1,0.116
+tube_fittings_and_adapters/6810_nwo_fg,LL3,DECODED,GAP,1,1.047
+tube_fittings_and_adapters/6810_nwo_fg,M,DECODED,AX_PL,1,0.930
+tube_fittings_and_adapters/6810_nwo_fg,M6,DECODED,AX_PL,1,1.500
+tube_fittings_and_adapters/6810_nwo_fg,M8,DECODED,AX_PL,1,1.730
+tube_fittings_and_adapters/6810_nwo_fg,ML3,DECODED,CYL_D,1,0.440
+tube_fittings_and_adapters/6810_nwo_fg,Y,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,1.062
+tube_fittings_and_adapters/6815_nwo_fg,AL,NO MATCH,,1,0.655
+tube_fittings_and_adapters/6815_nwo_fg,AT,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.813
+tube_fittings_and_adapters/6815_nwo_fg,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6815_nwo_fg,B1THD,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6815_nwo_fg,B2THD,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6815_nwo_fg,BT,DECODED,AX_PL,1,0.106
+tube_fittings_and_adapters/6815_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6815_nwo_fg,CL,NO MATCH,,1,0.344
+tube_fittings_and_adapters/6815_nwo_fg,CT,NO MATCH,,1,0.562
+tube_fittings_and_adapters/6815_nwo_fg,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.490
+tube_fittings_and_adapters/6815_nwo_fg,DT,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.688
+tube_fittings_and_adapters/6815_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6815_nwo_fg,ET,DECODED,CONE_A,1,15.000
+tube_fittings_and_adapters/6815_nwo_fg,FL,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6815_nwo_fg,FT,AMBIGUOUS,AX_PL (mm) 1/1 (chance 1/2),1,0.689
+tube_fittings_and_adapters/6815_nwo_fg,GL,DECODED,GAP | AX_PL,1,0.860
+tube_fittings_and_adapters/6815_nwo_fg,HL,DECODED,GAP | CYL_D,1,0.660
+tube_fittings_and_adapters/6815_nwo_fg,IL,DECODED,CYL_D,1,1.010
+tube_fittings_and_adapters/6815_nwo_fg,JL,DECODED,TOR_r,1,0.087
+tube_fittings_and_adapters/6815_nwo_fg,M6,DECODED,AX_PL,1,0.880
+tube_fittings_and_adapters/6815_nwo_fg,M8,DECODED,AX_PL,1,1.590
+tube_fittings_and_adapters/6815_nwo_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/6832_nwo_fg,AL,DECODED,GAP | AX_PL,1,0.813
+tube_fittings_and_adapters/6832_nwo_fg,AR,DECODED,GAP | AX_PL,1,0.813
+tube_fittings_and_adapters/6832_nwo_fg,AT,DECODED,GAP,1,0.655
+tube_fittings_and_adapters/6832_nwo_fg,B1THD,DECODED,AX_PL | CYL_D,1,0.7500
+tube_fittings_and_adapters/6832_nwo_fg,B2THD,DECODED,AX_PL | CYL_D,1,0.7500
+tube_fittings_and_adapters/6832_nwo_fg,B3D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6832_nwo_fg,BL,DECODED,AX_PL,1,0.106
+tube_fittings_and_adapters/6832_nwo_fg,BR,DECODED,AX_PL,1,0.106
+tube_fittings_and_adapters/6832_nwo_fg,C,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.875
+tube_fittings_and_adapters/6832_nwo_fg,CL,NO MATCH,,1,0.562
+tube_fittings_and_adapters/6832_nwo_fg,CR,NO MATCH,,1,0.562
+tube_fittings_and_adapters/6832_nwo_fg,CT,NO MATCH,,1,0.344
+tube_fittings_and_adapters/6832_nwo_fg,DL,DECODED,GAP,1,0.688
+tube_fittings_and_adapters/6832_nwo_fg,DR,DECODED,GAP,1,0.688
+tube_fittings_and_adapters/6832_nwo_fg,DT,DECODED,GAP,1,0.490
+tube_fittings_and_adapters/6832_nwo_fg,EL,DECODED,CONE_A,1,15.000
+tube_fittings_and_adapters/6832_nwo_fg,ER,DECODED,CONE_A,1,15.000
+tube_fittings_and_adapters/6832_nwo_fg,ET,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6832_nwo_fg,FL,DECODED,GAP,1,0.689
+tube_fittings_and_adapters/6832_nwo_fg,FR,DECODED,GAP,1,0.689
+tube_fittings_and_adapters/6832_nwo_fg,FT,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6832_nwo_fg,GT,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6832_nwo_fg,HT,DECODED,AX_PL | CYL_D,1,0.660
+tube_fittings_and_adapters/6832_nwo_fg,IT,DECODED,CYL_D,1,1.010
+tube_fittings_and_adapters/6832_nwo_fg,JT,DECODED,TOR_r,1,0.087
+tube_fittings_and_adapters/6832_nwo_fg,M1,DECODED,AX_PL,1,0.880
+tube_fittings_and_adapters/6832_nwo_fg,M7,DECODED,AX_PL,1,1.590
+tube_fittings_and_adapters/6832_nwo_fg,N2,DECODED,AX_PL,1,0.880
+tube_fittings_and_adapters/6832_nwo_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/6835_nwo_fg,AL,NO MATCH,,1,0.655
+tube_fittings_and_adapters/6835_nwo_fg,AR,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2),1,0.813
+tube_fittings_and_adapters/6835_nwo_fg,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6835_nwo_fg,B1THD,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6835_nwo_fg,BR,DECODED,AX_PL,1,0.106
+tube_fittings_and_adapters/6835_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6835_nwo_fg,CL,NO MATCH,,1,0.344
+tube_fittings_and_adapters/6835_nwo_fg,CR,NO MATCH,,1,0.562
+tube_fittings_and_adapters/6835_nwo_fg,DL,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.490
+tube_fittings_and_adapters/6835_nwo_fg,DR,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.688
+tube_fittings_and_adapters/6835_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.041
+tube_fittings_and_adapters/6835_nwo_fg,ER,DECODED,CONE_A,1,15.000
+tube_fittings_and_adapters/6835_nwo_fg,FL,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6835_nwo_fg,FR,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.689
+tube_fittings_and_adapters/6835_nwo_fg,GL,DECODED,GAP | AX_PL,1,0.860
+tube_fittings_and_adapters/6835_nwo_fg,HL,DECODED,GAP | CYL_D,1,0.660
+tube_fittings_and_adapters/6835_nwo_fg,IL,DECODED,CYL_D,1,1.010
+tube_fittings_and_adapters/6835_nwo_fg,JL,DECODED,TOR_r,1,0.087
+tube_fittings_and_adapters/6835_nwo_fg,M1,DECODED,AX_PL,1,0.880
+tube_fittings_and_adapters/6835_nwo_fg,M2,DECODED,AX_PL,1,0.880
+tube_fittings_and_adapters/6835_nwo_fg,M7,DECODED,AX_PL,1,1.590
+tube_fittings_and_adapters/6835_nwo_fg,Y,DECODED,GAP | BOX | CYL_D,1,1.062
+tube_fittings_and_adapters/6900_o,A2D,DECODED,GAP | CYL_D,1,0.460
+tube_fittings_and_adapters/6900_o,A2THD,DECODED,AX_PL (mm),1,0.8230
+tube_fittings_and_adapters/6900_o,AC,DECODED,CYL_D,1,0.875
+tube_fittings_and_adapters/6900_o,AL,DECODED,AX_PL,1,0.438
+tube_fittings_and_adapters/6900_o,B1D,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6900_o,B1THD,DECODED,CYL_D,1,0.7500
+tube_fittings_and_adapters/6900_o,BC,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.140
+tube_fittings_and_adapters/6900_o,BR,DECODED,CYL_D,1,0.608
+tube_fittings_and_adapters/6900_o,C,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6900_o,C4,DECODED,CYL_D,1,0.875
+tube_fittings_and_adapters/6900_o,CC,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.280
+tube_fittings_and_adapters/6900_o,CL,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6900_o,CR,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.562
+tube_fittings_and_adapters/6900_o,D1N,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6900_o,D2N,DECODED,AX_AX,1,0.747
+tube_fittings_and_adapters/6900_o,D3N,DECODED,CYL_D,1,0.885
+tube_fittings_and_adapters/6900_o,D4N,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6900_o,DL,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.094
+tube_fittings_and_adapters/6900_o,DR,DECODED,CYL_D,1,0.740
+tube_fittings_and_adapters/6900_o,EL,DECODED,AX_PL,1,0.655
+tube_fittings_and_adapters/6900_o,ER,DECODED,AX_PL,1,0.320
+tube_fittings_and_adapters/6900_o,FL,DECODED,TOR_r | AX_PL,1,0.087
+tube_fittings_and_adapters/6900_o,FR,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.160
+tube_fittings_and_adapters/6900_o,HN,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6900_o,L,DECODED,GAP | BOX,1,1.550
+tube_fittings_and_adapters/6900_o,L1,DECODED,GAP,1,1.270
+tube_fittings_and_adapters/6900_o,L1N,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.120
+tube_fittings_and_adapters/6900_o,L2N,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.180
+tube_fittings_and_adapters/6900_o,L3N,DECODED,AX_PL,1,0.320
+tube_fittings_and_adapters/6900_o,L4N,DECODED,AX_PL,1,0.720
+tube_fittings_and_adapters/6900_o,PITCHL,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.07143
+tube_fittings_and_adapters/6900_o,PITCHR,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.07143
+tube_fittings_and_adapters/6901_nwo_fg,AD,DECODED,CYL_D,1,0.450
+tube_fittings_and_adapters/6901_nwo_fg,AL,DECODED,GAP (mm) | TOR_r (mm),1,0.475
+tube_fittings_and_adapters/6901_nwo_fg,AT,DECODED,CYL_D,1,0.875
+tube_fittings_and_adapters/6901_nwo_fg,ATHD,DECODED,GAP (mm) | AX_PL (mm),1,0.8230
+tube_fittings_and_adapters/6901_nwo_fg,BD,DECODED,CYL_D,1,0.297
+tube_fittings_and_adapters/6901_nwo_fg,BT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.140
+tube_fittings_and_adapters/6901_nwo_fg,BT2,DECODED,CYL_D,1,0.608
+tube_fittings_and_adapters/6901_nwo_fg,BTHD,DECODED,CYL_D,1,0.5625
+tube_fittings_and_adapters/6901_nwo_fg,C,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.688
+tube_fittings_and_adapters/6901_nwo_fg,C1,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6901_nwo_fg,CL,DECODED,AX_PL (mm),1,0.312
+tube_fittings_and_adapters/6901_nwo_fg,CT,DECODED,TOR_R,1,0.28
+tube_fittings_and_adapters/6901_nwo_fg,CT2,DECODED,CYL_D,1,0.562
+tube_fittings_and_adapters/6901_nwo_fg,D1T,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6901_nwo_fg,D2T,DECODED,AX_PL,1,0.747
+tube_fittings_and_adapters/6901_nwo_fg,D3T,DECODED,GAP | CYL_D,1,0.885
+tube_fittings_and_adapters/6901_nwo_fg,D4T,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6901_nwo_fg,DL,DECODED,GAP | TOR_R,1,0.433
+tube_fittings_and_adapters/6901_nwo_fg,DT2,DECODED,CYL_D,1,0.740
+tube_fittings_and_adapters/6901_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.035
+tube_fittings_and_adapters/6901_nwo_fg,ET2,DECODED,GAP,1,0.320
+tube_fittings_and_adapters/6901_nwo_fg,FL,DECODED,GAP,1,0.270
+tube_fittings_and_adapters/6901_nwo_fg,FT2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.160
+tube_fittings_and_adapters/6901_nwo_fg,GL,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.750
+tube_fittings_and_adapters/6901_nwo_fg,HL,DECODED,CYL_D,1,0.482
+tube_fittings_and_adapters/6901_nwo_fg,HT,DECODED,GAP,1,1.000
+tube_fittings_and_adapters/6901_nwo_fg,IL,DECODED,CYL_D,1,0.794
+tube_fittings_and_adapters/6901_nwo_fg,JL,DECODED,TOR_r,1,0.078
+tube_fittings_and_adapters/6901_nwo_fg,L1T,AMBIGUOUS,GAP 1/1 (chance 2/2),1,0.120
+tube_fittings_and_adapters/6901_nwo_fg,L2T,DECODED,GAP,1,0.180
+tube_fittings_and_adapters/6901_nwo_fg,L3T,DECODED,GAP,1,0.320
+tube_fittings_and_adapters/6901_nwo_fg,L4T,DECODED,GAP | AX_PL,1,0.720
+tube_fittings_and_adapters/6901_nwo_fg,M,DECODED,GAP | AX_PL,1,1.040
+tube_fittings_and_adapters/6901_nwo_fg,M6,DECODED,GAP | AX_PL,1,1.320
+tube_fittings_and_adapters/6901_nwo_fg,M7,DECODED,GAP | AX_PL,1,1.320
+tube_fittings_and_adapters/6901_nwo_fg,PITCH2,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.07098
+tube_fittings_and_adapters/6901_nwo_fg,Y,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.750
+tube_fittings_and_adapters/6902_nwo_fg,AD,DECODED,CYL_D,1,0.320
+tube_fittings_and_adapters/6902_nwo_fg,AL,DECODED,AX_PL (mm),1,0.655
+tube_fittings_and_adapters/6902_nwo_fg,AT,AMBIGUOUS,CYL_D 1/1 (chance 1/2),1,0.78
+tube_fittings_and_adapters/6902_nwo_fg,ATHD,DECODED,AX_PL (mm),1,0.6620
+tube_fittings_and_adapters/6902_nwo_fg,BD,DECODED,CYL_D,1,0.391
+tube_fittings_and_adapters/6902_nwo_fg,BT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.125
+tube_fittings_and_adapters/6902_nwo_fg,BT2,DECODED,CYL_D,1,0.493
+tube_fittings_and_adapters/6902_nwo_fg,BTHD,DECODED,GAP,1,0.7500
+tube_fittings_and_adapters/6902_nwo_fg,C,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6902_nwo_fg,C1,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6902_nwo_fg,CL,DECODED,AX_PL (mm),1,0.344
+tube_fittings_and_adapters/6902_nwo_fg,CT,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.21
+tube_fittings_and_adapters/6902_nwo_fg,CT2,AMBIGUOUS,GAP (mm) 1/1 (chance 1/2) | AX_PL (mm) 1/1 (chance 1/2),1,0.422
+tube_fittings_and_adapters/6902_nwo_fg,D1T,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6902_nwo_fg,D2T,DECODED,AX_AX (mm),1,0.603
+tube_fittings_and_adapters/6902_nwo_fg,D3T,DECODED,CYL_D,1,0.720
+tube_fittings_and_adapters/6902_nwo_fg,D4T,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6902_nwo_fg,DL,DECODED,GAP,1,0.490
+tube_fittings_and_adapters/6902_nwo_fg,DT2,DECODED,CYL_D,1,0.587
+tube_fittings_and_adapters/6902_nwo_fg,EL,AMBIGUOUS,GAP 1/1 (chance 2/2) | AX_PL 1/1 (chance 1/2),1,0.041
+tube_fittings_and_adapters/6902_nwo_fg,ET2,DECODED,GAP,1,0.265
+tube_fittings_and_adapters/6902_nwo_fg,FL,DECODED,GAP,1,0.310
+tube_fittings_and_adapters/6902_nwo_fg,FT2,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.145
+tube_fittings_and_adapters/6902_nwo_fg,GL,DECODED,GAP,1,0.860
+tube_fittings_and_adapters/6902_nwo_fg,HL,DECODED,CYL_D,1,0.660
+tube_fittings_and_adapters/6902_nwo_fg,HT,DECODED,GAP,1,0.875
+tube_fittings_and_adapters/6902_nwo_fg,IL,DECODED,BOX | CYL_D,1,1.010
+tube_fittings_and_adapters/6902_nwo_fg,JL,DECODED,TOR_r | AX_PL,1,0.087
+tube_fittings_and_adapters/6902_nwo_fg,L1T,AMBIGUOUS,GAP 1/1 (chance 1/2) | AX_PL 1/1 (chance 1/2),1,0.105
+tube_fittings_and_adapters/6902_nwo_fg,L2T,AMBIGUOUS,GAP 1/1 (chance 1/2),1,0.160
+tube_fittings_and_adapters/6902_nwo_fg,L3T,DECODED,GAP,1,0.260
+tube_fittings_and_adapters/6902_nwo_fg,L4T,DECODED,GAP,1,0.580
+tube_fittings_and_adapters/6902_nwo_fg,M,DECODED,GAP | AX_PL,1,0.810
+tube_fittings_and_adapters/6902_nwo_fg,M6,DECODED,AX_PL,1,1.020
+tube_fittings_and_adapters/6902_nwo_fg,M8,DECODED,GAP | AX_PL,1,1.300
+tube_fittings_and_adapters/6902_nwo_fg,PITCH2,AMBIGUOUS,GAP 1/1 (chance 1/2) | CYL_D 1/1 (chance 1/2),1,0.05598
+tube_fittings_and_adapters/6902_nwo_fg,Y,DECODED,GAP,1,0.750

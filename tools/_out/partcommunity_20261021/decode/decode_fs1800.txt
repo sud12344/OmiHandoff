@@ -1,0 +1,40 @@
+# flange_fitting_and_accessories/fs1800: 1 STEP(s): FS1800-12-12
+
+AF       DECODED  GAP 1/1 (chance 0/2)   values: 1.372
+AF1      NO MATCH -   values: 1.375
+AFL      DECODED  GAP 1/1 (chance 0/2)   values: 1.372
+AT       DECODED  GAP 1/1 (chance 0/2)   values: 0.670
+BFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.500
+BT       NO MATCH -   values: 0.125
+CFL      NO MATCH -   values: 0.780
+CT       NO MATCH -   values: 1.069
+DFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.234
+DRILLFL  DECODED  CYL_D 1/1 (chance 0/2)   values: 0.609
+DRILLT   DECODED  CYL_D 1/1 (chance 0/2)   values: 0.609
+DT       NO MATCH -   values: 1.063
+EFL      DECODED  GAP 1/1 (chance 0/2)   values: 0.345
+ET       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.881
+FFL      DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.625
+FL       NO MATCH -   values: 12
+GFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.250
+L        DECODED  GAP 1/1 (chance 0/2)   values: 2.750
+
+== FS1800-12-12 (record FS1800-12-12)
+  FL               12  -> -
+  L             2.750  -> GAP
+  AF            1.372  -> GAP
+  AF1           1.375  -> -
+  AT            0.670  -> GAP
+  BT            0.125  -> -
+  CT            1.069  -> -
+  DT            1.063  -> -
+  ET            0.881  -> CYL_D
+  DRILLT        0.609  -> CYL_D
+  AFL           1.372  -> GAP
+  BFL           1.500  -> CYL_D
+  CFL           0.780  -> -
+  DFL           1.234  -> CYL_D
+  EFL           0.345  -> GAP
+  FFL           1.625  -> BOX, CYL_D
+  GFL           1.250  -> CYL_D
+  DRILLFL       0.609  -> CYL_D

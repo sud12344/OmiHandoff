@@ -2,11 +2,11 @@
 
 A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.531
 A2THD    NO MATCH -   values: 0.8400
-AL       DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.659
+AL       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.659
 B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
 B1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
 BT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.670
-CL       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.426
+CL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
 CT       NO MATCH -   values: 0.840
 DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.253
 DT       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750

@@ -6,7 +6,7 @@ AT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
 B1DT     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
 BB       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.000
 CB       DECODED  GAP 1/1 (chance 0/2)   values: 1.437
-CT       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.426
+CT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
 DB       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.250
 DRILLB   DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
 DT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.253

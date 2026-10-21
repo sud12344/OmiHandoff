@@ -1,13 +1,13 @@
 # tube_fittings_and_adapters/2501_l_fg: 1 STEP(s): 2501-L-06-04-FG
 
-A2D      DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.281
-A2THD    DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.5400
+A2D      DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.281
+A2THD    DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.5400
 AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.481
 B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.297
-B1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.5625
-BT       DECODED  AX_PL (mm) 1/1 (chance 0/2), CYL_D (mm) 1/1 (chance 0/2)   values: 0.410
+B1THD    DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.5625
+BT       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.410
 CL       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.318
-CT       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.540
+CT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.540
 DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.198
 DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.560
 EL       DECODED  GAP 1/1 (chance 0/2)   values: 0.556
@@ -15,7 +15,7 @@ ET       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   val
 L        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.580
 M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.060
 MDP      NO MATCH -   values: 6.000
-Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.562
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.562
 
 == 2501-L-06-04-FG (record 2501-L-06-04-FG)
   B1D           0.297  -> CYL_D

@@ -1,7 +1,7 @@
 # o_ring_face_seal_fittings/fs6801_nwo_fg: 1 STEP(s): FS6801-08-08-NWO-FG
 
 AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
-AL       DECODED  AX_PL (mm) 1/1 (chance 0/2), CYL_D (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.719
+AL       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.719
 AT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.655
 ATHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
 BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
@@ -13,11 +13,11 @@ DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
 DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.540
 ET       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.041
 FT       DECODED  GAP 1/1 (chance 0/2)   values: 0.410
-GT       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1.030
+GT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 1.030
 HT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.660
 IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.010
 JJ       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750
-JT       DECODED  AX_PL 1/1 (chance 0/2), TOR_r 1/1 (chance 0/2)   values: 0.087
+JT       DECODED  TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.087
 M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.100
 N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.600
 

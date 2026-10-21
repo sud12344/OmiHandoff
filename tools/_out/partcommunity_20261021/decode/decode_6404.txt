@@ -8,7 +8,7 @@ BR       PARTIAL  AX_PL (mm) 4/7 (chance 0/14), GAP (mm) 2/7 (chance 0/14), CYL_
 BTHD     PARTIAL  AX_PL (mm) 4/7 (chance 0/14), AX_AX (mm) 2/7 (chance 0/14), CYL_D (mm) 1/7 (chance 0/14), GAP 1/7 (chance 1/14), GAP (mm) 1/7 (chance 1/14)   values: 0.4375, 0.5625, 0.7500, 0.8750
 C4       DECODED  GAP 7/7 (chance 1/14), AX_PL 1/7 (chance 0/14)   values: 0.688, 0.812, 1.062, 1.125
 CL       PARTIAL  AX_PL (mm) 3/7 (chance 0/14), GAP (mm) 2/7 (chance 1/14), AX_AX (mm) 2/7 (chance 0/14), GAP 1/7 (chance 1/14)   values: 0.454, 0.500, 0.562, 0.656
-CR       PARTIAL  CYL_D 5/7 (chance 0/14), AX_PL (mm) 1/7 (chance 0/14), AX_AX (mm) 1/7 (chance 0/14), GAP (mm) 1/7 (chance 0/14)   values: 0.540, 0.675, 0.840, 0.840
+CR       PARTIAL  CYL_D 5/7 (chance 0/14), GAP (mm) 1/7 (chance 0/14), AX_PL (mm) 1/7 (chance 0/14), AX_AX (mm) 1/7 (chance 0/14)   values: 0.540, 0.675, 0.840, 0.840
 DL       PARTIAL  GAP (mm) 4/7 (chance 0/14), AX_PL (mm) 3/7 (chance 0/14), AX_AX (mm) 2/7 (chance 0/14), CYL_D 1/7 (chance 0/14)   values: 0.547, 0.609, 0.688, 0.781
 DR       DECODED  GAP 7/7 (chance 2/14), CYL_D 1/7 (chance 0/14)   values: 0.560, 0.560, 0.750, 0.750
 EL       DECODED  CONE_A 7/7 (chance 0/14)   values: 12, 12, 15, 15

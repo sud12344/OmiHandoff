@@ -44,3 +44,12 @@ Air-Way first). The letter codes differ per CAD family and must be mapped agains
   for the 6 FS2403 per-dash downloads.
 - Not yet covered: families whose review table has no calibration rows (compression, bent tubes, most new FS tables) - map by hand from
   `decode_<family>.txt` + `catalog_codes.csv`.
+
+## 2026-10-21 (later): per-family calibration, verification, the 63 STEPs
+- `map_columns.py` now calibrates per (table, column, Brennan family): one table can mix families whose letters differ (5406: C = outside
+  hex on the nipples, the inside socket on the hollow-hex plugs). Result: **427 cells in 108 not-ready parts, 21 dimension-complete**.
+- `verify_proposals.py` -> `verify.csv`: every cell vs Brennan's printed catalog (235 confirmed), the Air-Way row of the same size, and the
+  neighbouring sizes (equal-dash parts). 4 flagged, all explained (6805-04-04 thread = 1/4 NPT major; 6807 / 6809 forged Y flats =
+  catalog, differ from the plain Air-Way part; FS6402-12-12 L 2.25 vs the catalog misprint 0.609) -> **all 427 pass**.
+- The 63 STEPs arrived (`../steps63_20261021`): every family of the not-ready parts now has a STEP; `decode_families.py` over 147 families:
+  2,255 codes DECODED, 393 ambiguous, 249 partial / no match.

@@ -1,7 +1,7 @@
 # tube_fittings_and_adapters/4404: 2 STEP(s): 4404-08-06 4404-16-16
 
 A2D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.406, 0.938
-A2THD    PARTIAL  CYL_D 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4), AX_AX (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.6750, 1.3150
+A2THD    PARTIAL  CYL_D 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4), AX_AX (mm) 1/2 (chance 0/4)   values: 0.6750, 1.3150
 AL       PARTIAL  GAP 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.560, 1.100
 B1D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.406, 0.843
 BL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.500, 1.000

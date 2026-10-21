@@ -3,9 +3,9 @@
 B1THD    AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.8400
 C        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.718
 D        DECODED  GAP 1/1 (chance 0/2)   values: 0.855
-E        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.062
+E        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.230
-Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.062
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 
 == 5652-08-08-08-08-FG (record 5652-08-08-08-08-FG)
   N             1.230  -> AX_PL

@@ -1,6 +1,6 @@
 # o_ring_face_seal_fittings/fs0318: 8 STEP(s): FS0318-04 FS0318-06 FS0318-08 FS0318-10 FS0318-12 FS0318-16 FS0318-20 FS0318-24
 
-AX       PARTIAL  AX_PL (mm) 6/8 (chance 0/16), GAP (mm) 6/8 (chance 0/16), CYL_D (mm) 2/8 (chance 0/16)   values: 0.567, 0.693, 0.819, 1.020
+AX       PARTIAL  GAP (mm) 6/8 (chance 0/16), AX_PL (mm) 6/8 (chance 0/16), CYL_D (mm) 2/8 (chance 0/16)   values: 0.567, 0.693, 0.819, 1.020
 BX       DECODED  CYL_D 8/8 (chance 0/16)   values: 0.512, 0.630, 0.754, 0.934
 CX       DECODED  GAP 8/8 (chance 2/16), AX_PL 1/8 (chance 1/16)   values: 0.350, 0.410, 0.470, 0.570
 DX       AMBIGUOUS GAP 8/8 (chance 6/16)   values: 0.098, 0.118, 0.197, 0.157

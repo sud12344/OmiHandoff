@@ -9,8 +9,8 @@ CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.729
 CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.729
 CXL      NO MATCH -   values: 1
 CXR      NO MATCH -   values: 1
-DL       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 2.949
-DR       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 2.949
+DL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 2.949
+DR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 2.949
 EL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 3.500
 ER       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 3.500
 FL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.690

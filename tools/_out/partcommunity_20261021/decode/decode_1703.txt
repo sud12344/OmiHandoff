@@ -1,0 +1,44 @@
+# flange_fitting_and_accessories/1703: 1 STEP(s): 1703-08-08
+
+AF       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.87500000
+AFL      DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.188
+AT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+BFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.000
+CFL      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.433
+CT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
+DFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.945
+DRILLFL  DECODED  TOR_r 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.374
+DT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.253
+EFL      DECODED  GAP 1/1 (chance 0/2)   values: 0.265
+ET       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+FFL      DECODED  GAP 1/1 (chance 0/2)   values: 0.512
+FL       NO MATCH -   values: 08
+FT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 0.657
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.004
+JT       DECODED  GAP 1/1 (chance 0/2)   values: 0.394
+L1       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 2.720
+L2       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.910
+TOD      DECODED  TOR_r 1/1 (chance 0/2), TOR_R 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.618
+
+== 1703-08-08 (record 1703-08-08)
+  FL               08  -> -
+  L1            2.720  -> GAP (mm)
+  L2            0.910  -> GAP (mm)
+  AF       0.87500000  -> AX_PL, GAP
+  AT            0.659  -> CYL_D
+  CT            0.426  -> AX_PL (mm), GAP (mm)
+  DT            0.253  -> GAP (mm)
+  ET            0.094  -> AX_PL
+  FT            0.659  -> CYL_D
+  GT            0.657  -> GAP
+  IT            1.004  -> CYL_D
+  JT            0.394  -> GAP
+  AFL           1.188  -> BOX, CYL_D
+  BFL           1.000  -> CYL_D
+  CFL           0.433  -> AX_PL (mm), GAP (mm)
+  DFL           0.945  -> CYL_D
+  EFL           0.265  -> GAP
+  FFL           0.512  -> GAP
+  DRILLFL       0.374  -> CYL_D, TOR_r
+  TOD           0.618  -> CYL_D, TOR_R, TOR_r

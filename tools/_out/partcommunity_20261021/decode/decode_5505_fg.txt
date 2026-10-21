@@ -2,12 +2,12 @@
 
 A1THD    DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.8400
 BL       DECODED  GAP 1/1 (chance 0/2)   values: 0.750
-CL       DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.718
+CL       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.718
 DL       NO MATCH -   values: 0.855
-EL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.062
+EL       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 N        DECODED  AX_PL 1/1 (chance 0/2)   values: 0.940
 N1       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.940
-Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.062
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 
 == 5505-08-08-FG (record 5505-08-08-FG)
   N             0.940  -> AX_PL

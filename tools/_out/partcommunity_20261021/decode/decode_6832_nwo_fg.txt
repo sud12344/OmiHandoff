@@ -1,0 +1,62 @@
+# tube_fittings_and_adapters/6832_nwo_fg: 1 STEP(s): 6832-08-08-08-NWO-FG
+
+AL       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.813
+AR       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.813
+AT       DECODED  GAP 1/1 (chance 0/2)   values: 0.655
+B1THD    DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2THD    DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B3D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+BL       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.106
+BR       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.106
+C        AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.875
+CL       NO MATCH -   values: 0.562
+CR       NO MATCH -   values: 0.562
+CT       NO MATCH -   values: 0.344
+DL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.688
+DR       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.688
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.490
+EL       DECODED  CONE_A 1/1 (chance 0/2)   values: 15.000
+ER       DECODED  CONE_A 1/1 (chance 0/2)   values: 15.000
+ET       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.041
+FL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.689
+FR       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.689
+FT       DECODED  GAP 1/1 (chance 0/2)   values: 0.310
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 0.860
+HT       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.010
+JT       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2)   values: 0.087
+M1       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.880
+M7       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.590
+N2       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.880
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+
+== 6832-08-08-08-NWO-FG (record 6832-08-08-08-NWO-FG)
+  B3D           0.391  -> CYL_D
+  M1            0.880  -> AX_PL
+  N2            0.880  -> AX_PL
+  M7            1.590  -> AX_PL
+  C             0.875  -> GAP
+  Y             1.062  -> BOX, CYL_D, GAP
+  AT            0.655  -> GAP
+  CT            0.344  -> -
+  DT            0.490  -> GAP
+  ET            0.041  -> GAP
+  FT            0.310  -> GAP
+  GT            0.860  -> GAP
+  HT            0.660  -> AX_PL, CYL_D
+  IT            1.010  -> CYL_D
+  JT            0.087  -> GAP, TOR_r
+  AR            0.813  -> AX_PL, GAP
+  BR            0.106  -> AX_PL, GAP
+  CR            0.562  -> -
+  DR            0.688  -> CYL_D, GAP
+  ER           15.000  -> CONE_A
+  FR            0.689  -> CYL_D, GAP
+  AL            0.813  -> AX_PL, GAP
+  BL            0.106  -> AX_PL, GAP
+  CL            0.562  -> -
+  DL            0.688  -> CYL_D, GAP
+  EL           15.000  -> CONE_A
+  FL            0.689  -> CYL_D, GAP
+  B1THD        0.7500  -> AX_PL, CYL_D
+  B2THD        0.7500  -> AX_PL, CYL_D

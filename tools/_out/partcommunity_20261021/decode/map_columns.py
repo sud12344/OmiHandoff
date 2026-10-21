@@ -36,6 +36,7 @@ def rec(p):
     for v in aliases(p):
         a = cache.get(v)
         if a and 'mident' in a:
+            fam = re.match(r'\{\$CADENAS_DATA/23d-libs/brennan/([^}]*)\.prj\}', a['mident']).group(1)
             kv = dict(re.findall(r'\{([A-Z0-9_]+)=([^{}]*)\}', a['mident']))
             out = {}
             for k, x in kv.items():
@@ -45,6 +46,7 @@ def rec(p):
                     continue
                 if f > 0 and k not in ('DN', 'FONTSIZE', 'WEIGHT', 'PITCH', 'LINEID', 'GX'):
                     out[k] = f
+            out['__fam'] = fam
             return out
     return None
 
@@ -90,46 +92,51 @@ for path in tables + stage_orfs:
     cal = [(p, d, R) for p, d, R in data if R]
     if not cal:
         continue
+    # 2026-10-21: calibrate per (column, Brennan family): one table can mix families whose letters mean different things
+    # (5406: C = outside hex on the nipples, = the inside socket on the hollow-hex plugs)
     agree = collections.defaultdict(collections.Counter); both = collections.defaultdict(collections.Counter)
     for p, d, R in cal:
+        fam = R['__fam']
         for c in numcols:
             v = num(d.get(c))
             if v is None:
                 continue
             for k, x in R.items():
-                both[c][k] += 1
+                if k == '__fam':
+                    continue
+                both[(c, fam)][k] += 1
                 if same(v, x):
-                    agree[c][k] += 1
+                    agree[(c, fam)][k] += 1
     mapping = {}
-    for c in numcols:
-        best = sorted(((agree[c][k], k) for k in agree[c]), reverse=True)
+    for (c, fam) in sorted(set(both) | set(agree)):
+        best = sorted(((agree[(c, fam)][k], k) for k in agree[(c, fam)]), reverse=True)
         if not best:
-            cmap.append(dict(root=root, column=c, code='', agree=0, both=0, status='no code agrees')); continue
+            cmap.append(dict(root=root, family=fam, column=c, code='', agree=0, both=0, status='no code agrees')); continue
         n, k = best[0]
         tied = [x for m, x in best if m == n]
-        if len(tied) > 1:                                    # same value on every row: prefer the code named like the column
+        if len(tied) > 1:
             named = [x for x in tied if x == base(c)]
             if len(named) == 1:
                 k, tied = named[0], named
-        b = both[c][k]
+        b = both[(c, fam)][k]
         tie = len(tied) > 1
         ok = n >= 3 and n >= 0.9 * b and not tie
-        cmap.append(dict(root=root, column=c, code=k, agree=n, both=b,
+        cmap.append(dict(root=root, family=fam, column=c, code=k, agree=n, both=b,
                          status='MAPPED' if ok else ('tie: ' + ' / '.join(tied) if tie else 'weak')))
         if ok:
-            mapping[c] = k
+            mapping[(c, fam)] = k
     for p, d, R in data:
         if not R or str(d.get('$PRP@ScopeAction') or '').upper() != 'BUILD':
             continue
-        # only the not-ready parts get proposals: built rows leave some columns empty on purpose (the generator's measured libraries)
         fill_ok = p in NOT_READY
-        for c, k in mapping.items():
-            if k not in R:
+        for (c, fam), k in mapping.items():
+            if fam != R['__fam'] or k not in R:
                 continue
             v = num(d.get(c))
             if v is None:
                 if fill_ok:
-                    props.append(dict(root=root, part=p, column=c, value=R[k], code=k, evidence=f'{agree[c][k]}/{both[c][k]} rows',
+                    props.append(dict(root=root, part=p, column=c, value=R[k], code=k,
+                                      evidence=f'{agree[(c, fam)][k]}/{both[(c, fam)][k]} rows of {fam.split("/")[-1]}',
                                       row_status=d.get('$PRP@DataStatus') or ''))
             elif not same(v, R[k]):
                 diffs.append(dict(root=root, part=p, column=c, table=v, brennan=R[k], code=k, row_status=d.get('$PRP@DataStatus') or ''))

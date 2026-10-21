@@ -1,0 +1,54 @@
+# tube_fittings_and_adapters/6316: 1 STEP(s): 6316-08
+
+AL       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.790
+BD       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.391
+BL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.180
+BL2      DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.680
+BL3      DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
+BR       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.680
+BTHD     AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.7500
+C        DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
+C4       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
+CL       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.422
+CL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.565
+CL3      DECODED  GAP 1/1 (chance 0/2)   values: 0.688
+DL2      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.25
+DL3      AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2), CYL_D 1/1 (chance 1/2)   values: 0.785
+DR       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.434
+EL2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.205
+EL3      DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
+FL2      DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.584
+FL3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.264
+HL3      DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
+JL3      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.155
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.609
+L1       DECODED  GAP 1/1 (chance 0/2)   values: 1.187
+LL3      AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 2/2)   values: 0.827
+ML3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.370
+
+== 6316-08 (record 6316-08)
+  BD            0.391  -> AX_PL, CYL_D, GAP
+  L1            1.187  -> GAP
+  L             1.609  -> BOX, GAP
+  C             0.875  -> AX_PL, GAP
+  C4            0.875  -> AX_PL, GAP
+  AL            0.790  -> AX_PL, CYL_D, GAP
+  BL            0.180  -> GAP
+  CL            0.422  -> AX_PL, GAP
+  BL2           0.680  -> CYL_D, GAP
+  CL2           0.565  -> GAP
+  DL2            0.25  -> GAP
+  EL2           0.205  -> GAP
+  FL2           0.584  -> AX_PL, CYL_D, GAP
+  BL3           0.875  -> AX_PL, GAP
+  CL3           0.688  -> GAP
+  DL3           0.785  -> AX_PL, CYL_D, GAP
+  EL3           0.875  -> AX_PL, GAP
+  FL3           0.264  -> GAP
+  HL3           0.875  -> AX_PL, GAP
+  JL3           0.155  -> GAP
+  LL3           0.827  -> AX_PL, GAP
+  ML3           0.370  -> GAP
+  BR            0.680  -> CYL_D, GAP
+  DR            0.434  -> AX_PL, GAP
+  BTHD         0.7500  -> GAP

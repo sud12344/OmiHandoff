@@ -8,8 +8,8 @@ B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
 B2THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
 B3D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
 B4D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
-CL       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.426
-CR       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.426
+CL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
+CR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
 DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.253
 DR       DECODED  GAP 1/1 (chance 0/2)   values: 0.253
 EL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.657

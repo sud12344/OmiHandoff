@@ -1,0 +1,30 @@
+# o_ring_face_seal_fittings/fs2500_fg: 1 STEP(s): FS2500-12-08-FG
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.609
+A1THD    DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.1875
+A2D      DECODED  TOR_r 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.378
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+AL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.063
+AT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.719
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.670
+CT       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.881
+DT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
+JJ       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.188
+M1       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.470
+M2       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.320
+
+== FS2500-12-08-FG (record FS2500-12-08-FG)
+  A1D           0.609  -> CYL_D
+  A2D           0.378  -> CYL_D, TOR_r
+  M1            1.470  -> AX_PL
+  M2            1.320  -> AX_PL
+  JJ            1.188  -> CYL_D, GAP
+  AL            1.063  -> AX_PL (mm)
+  CL            0.670  -> GAP
+  DL            0.881  -> CYL_D
+  AT            0.719  -> AX_PL (mm)
+  CT            0.504  -> GAP
+  DT            0.629  -> CYL_D
+  A1THD        1.1875  -> CYL_D, GAP
+  A2THD        0.8125  -> CYL_D

@@ -1,0 +1,76 @@
+# tube_fittings_and_adapters/6809_nwo_fg: 1 STEP(s): 6809-10-10-NWO-FG
+
+AL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.915
+AR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.770
+B1D      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.484
+B1THD    DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.8750
+B2D      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.484
+B2THD    DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.8750
+BL       DECODED  GAP (mm) 1/1 (chance 1/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.190
+BL2      DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.788
+BL3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.000
+C1       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.000
+C2       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.000
+CL       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.51
+CL2      DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.675
+CL3      DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.797
+CR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.391
+DL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.28
+DL3      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.895
+DR       DECODED  GAP 1/1 (chance 0/2)   values: 0.560
+EL2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.205
+EL3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.000
+ER       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2), AX_AX 1/1 (chance 0/2)   values: 0.050
+FL2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.694
+FL3      DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.294
+FR       DECODED  GAP 1/1 (chance 0/2)   values: 0.360
+GR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.000
+HL3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.000
+HR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.773
+IR       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.155
+JL3      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.165
+JR       DECODED  TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.097
+LL3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.944
+M        AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 1.120
+M6       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.620
+M7       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.700
+ML3      DECODED  GAP 1/1 (chance 0/2)   values: 0.410
+Y        DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+
+== 6809-10-10-NWO-FG (record 6809-10-10-NWO-FG)
+  B1D           0.484  -> CYL_D, GAP
+  B2D           0.484  -> CYL_D, GAP
+  M7            1.700  -> AX_PL
+  M             1.120  -> AX_PL
+  M6            1.620  -> AX_PL
+  C1            1.000  -> GAP
+  C2            1.000  -> GAP
+  Y             0.875  -> CYL_D, GAP
+  AL            0.915  -> CYL_D, GAP
+  BL            0.190  -> AX_PL (mm), GAP (mm)
+  CL             0.51  -> GAP (mm)
+  BL2           0.788  -> CYL_D, GAP
+  CL2           0.675  -> AX_PL, GAP
+  DL2            0.28  -> GAP
+  EL2           0.205  -> GAP
+  FL2           0.694  -> CYL_D
+  BL3           1.000  -> GAP
+  CL3           0.797  -> CYL_D, GAP
+  DL3           0.895  -> CYL_D, GAP
+  EL3           1.000  -> GAP
+  FL3           0.294  -> GAP (mm)
+  HL3           1.000  -> GAP
+  JL3           0.165  -> GAP
+  LL3           0.944  -> GAP
+  ML3           0.410  -> GAP
+  AR            0.770  -> GAP
+  CR            0.391  -> GAP
+  DR            0.560  -> GAP
+  ER            0.050  -> AX_AX, AX_PL, GAP
+  FR            0.360  -> GAP
+  GR            1.000  -> GAP
+  HR            0.773  -> CYL_D
+  IR            1.155  -> BOX, CYL_D
+  JR            0.097  -> AX_PL, TOR_r
+  B1THD        0.8750  -> CYL_D, GAP
+  B2THD        0.8750  -> CYL_D, GAP

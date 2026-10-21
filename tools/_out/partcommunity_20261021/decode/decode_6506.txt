@@ -7,12 +7,12 @@ BL       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2)   values: 0.770
 BR       AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.210
 BR2      DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.084
 BR3      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 1.360
-BTHD     DECODED  TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1.0500
+BTHD     DECODED  GAP (mm) 1/1 (chance 0/2), TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 1.0500
 C        DECODED  GAP 1/1 (chance 0/2)   values: 1.375
 C4       DECODED  GAP 1/1 (chance 0/2)   values: 1.375
 CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.921
 CR       DECODED  GAP 1/1 (chance 0/2)   values: 0.585
-CR2      DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.970
+CR2      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.970
 CR3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.094
 DL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.070
 DR2      DECODED  GAP 1/1 (chance 0/2)   values: 0.33
@@ -21,11 +21,11 @@ EL       NO MATCH -   values: 0.900
 ER2      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.220
 ER3      DECODED  GAP 1/1 (chance 0/2)   values: 1.375
 FR2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.926
-FR3      DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.344
-HLP      DECODED  TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1
+FR3      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.344
+HLP      DECODED  GAP (mm) 1/1 (chance 0/2), TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 1
 HR3      DECODED  GAP 1/1 (chance 0/2)   values: 1.375
 JR3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.185
-L2       DECODED  GAP 1/1 (chance 0/2), CONE_A 1/1 (chance 0/2)   values: 1.750
+L2       DECODED  CONE_A 1/1 (chance 0/2), GAP 1/1 (chance 0/2)   values: 1.750
 L5       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 2.330
 LR3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.093
 MR3      DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.450

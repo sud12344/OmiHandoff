@@ -7,12 +7,12 @@ A2D1     DECODED  CYL_D 9/9 (chance 1/18), GAP 5/9 (chance 11/18), AX_PL 3/9 (ch
 A2THD    PARTIAL  AX_PL (mm) 5/9 (chance 3/18), GAP (mm) 3/9 (chance 9/18), GAP 2/9 (chance 9/18), AX_PL 2/9 (chance 3/18), AX_AX (mm) 1/9 (chance 0/18)   values: 0.3969, 0.5260, 0.6620, 0.8230
 AT       DECODED  CYL_D 9/9 (chance 1/18), GAP 4/9 (chance 6/18), AX_PL 1/9 (chance 6/18)   values: 0.48, 0.605, 0.78, 0.875
 BL       PARTIAL  GAP 5/9 (chance 6/18), AX_PL 4/9 (chance 4/18), GAP (mm) 2/9 (chance 6/18), AX_AX 1/9 (chance 0/18), AX_PL (mm) 1/9 (chance 4/18)   values: 0.310, 0.410, 0.540, 0.670
-BT       PARTIAL  GAP 5/9 (chance 15/18), AX_PL (mm) 4/9 (chance 3/18), GAP (mm) 4/9 (chance 15/18), AX_PL 1/9 (chance 3/18)   values: 0.100, 0.110, 0.125, 0.140
+BT       PARTIAL  GAP 5/9 (chance 15/18), GAP (mm) 4/9 (chance 15/18), AX_PL (mm) 4/9 (chance 3/18), AX_PL 1/9 (chance 3/18)   values: 0.100, 0.110, 0.125, 0.140
 BT2      DECODED  CYL_D 9/9 (chance 0/18), GAP 6/9 (chance 8/18), AX_PL 3/9 (chance 5/18)   values: 0.258, 0.365, 0.493, 0.608
 C        AMBIGUOUS GAP 9/9 (chance 5/18)   values: 0.562, 0.688, 0.875, 1.000
 C1       AMBIGUOUS GAP 9/9 (chance 5/18)   values: 0.562, 0.688, 0.875, 1.000
 CL       PARTIAL  CYL_D 8/9 (chance 0/18), GAP 4/9 (chance 7/18), AX_PL 3/9 (chance 6/18), AX_AX 1/9 (chance 0/18)   values: 0.405, 0.540, 0.675, 0.840
-CT       PARTIAL  GAP 8/9 (chance 14/18), AX_PL 2/9 (chance 6/18), AX_PL (mm) 1/9 (chance 6/18), GAP (mm) 1/9 (chance 14/18)   values: 0.14, 0.19, 0.21, 0.28
+CT       PARTIAL  GAP 8/9 (chance 14/18), AX_PL 2/9 (chance 6/18), GAP (mm) 1/9 (chance 14/18), AX_PL (mm) 1/9 (chance 6/18)   values: 0.14, 0.19, 0.21, 0.28
 CT2      PARTIAL  GAP 6/9 (chance 12/18), AX_PL 3/9 (chance 3/18), AX_AX (mm) 1/9 (chance 0/18), CYL_D 1/9 (chance 0/18)   values: 0.234, 0.297, 0.422, 0.562
 D1T      AMBIGUOUS GAP 9/9 (chance 5/18)   values: 0.562, 0.690, 0.875, 1.000
 D2T      PARTIAL  GAP 5/9 (chance 5/18), AX_PL 2/9 (chance 3/18), AX_AX 1/9 (chance 0/18), CONE_A 1/9 (chance 0/18), AX_PL (mm) 1/9 (chance 3/18), AX_AX (mm) 1/9 (chance 0/18)   values: 0.358, 0.468, 0.603, 0.747
@@ -20,10 +20,10 @@ D3T      DECODED  CYL_D 9/9 (chance 2/18), GAP 6/9 (chance 6/18)   values: 0.455
 D4T      AMBIGUOUS GAP 9/9 (chance 5/18)   values: 0.562, 0.688, 0.875, 1.000
 DL       AMBIGUOUS GAP 9/9 (chance 11/18), AX_PL 4/9 (chance 8/18), AX_AX 2/9 (chance 1/18)   values: 0.380, 0.560, 0.560, 0.750
 DT2      DECODED  CYL_D 9/9 (chance 1/18), GAP 4/9 (chance 11/18), AX_PL 3/9 (chance 4/18), AX_AX 1/9 (chance 1/18), CONE_A 1/9 (chance 0/18)   values: 0.345, 0.450, 0.587, 0.740
-EL       PARTIAL  GAP 5/9 (chance 11/18), AX_PL 3/9 (chance 5/18), AX_PL (mm) 2/9 (chance 5/18), GAP (mm) 2/9 (chance 11/18), AX_AX (mm) 1/9 (chance 0/18)   values: 0.281, 0.344, 0.469, 0.625
+EL       PARTIAL  GAP 5/9 (chance 11/18), AX_PL 3/9 (chance 5/18), GAP (mm) 2/9 (chance 11/18), AX_PL (mm) 2/9 (chance 5/18), AX_AX (mm) 1/9 (chance 0/18)   values: 0.281, 0.344, 0.469, 0.625
 ET2      AMBIGUOUS GAP 9/9 (chance 12/18), AX_PL 3/9 (chance 9/18)   values: 0.170, 0.260, 0.265, 0.320
-FT2      PARTIAL  GAP 8/9 (chance 18/18), AX_PL (mm) 1/9 (chance 6/18), GAP (mm) 1/9 (chance 18/18)   values: 0.110, 0.130, 0.145, 0.160
-HLP      PARTIAL  GAP 2/4 (chance 5/8), AX_PL 2/4 (chance 1/8), AX_PL (mm) 1/4 (chance 1/8), GAP (mm) 1/4 (chance 5/8)   values: 1, 1, 1, 1
+FT2      PARTIAL  GAP 8/9 (chance 18/18), GAP (mm) 1/9 (chance 18/18), AX_PL (mm) 1/9 (chance 6/18)   values: 0.110, 0.130, 0.145, 0.160
+HLP      PARTIAL  GAP 2/4 (chance 5/8), AX_PL 2/4 (chance 1/8), GAP (mm) 1/4 (chance 5/8), AX_PL (mm) 1/4 (chance 1/8)   values: 1, 1, 1, 1
 HT       AMBIGUOUS GAP 9/9 (chance 5/18)   values: 0.562, 0.688, 0.875, 1.000
 L        DECODED  GAP 9/9 (chance 0/18), BOX 9/9 (chance 0/18)   values: 1.080, 1.420, 1.520, 1.890
 L1       DECODED  GAP 9/9 (chance 2/18), CONE_A 1/9 (chance 0/18)   values: 0.940, 1.230, 1.300, 1.610

@@ -1,0 +1,38 @@
+# flareless_bite_type_fittings/c2500_fg: 1 STEP(s): C2500-08-08-FG
+
+AB1      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.514
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.422
+B1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.422
+BB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.244
+CB1      AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.094
+DB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.840
+EB1      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+FB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+K1       DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+K2       DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+KB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+M1       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.250
+M2       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.250
+MB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.318
+ODB1     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750
+
+== C2500-08-08-FG (record C2500-08-08-FG)
+  B1D           0.422  -> CYL_D
+  B2D           0.422  -> CYL_D
+  M1            1.250  -> AX_PL, GAP
+  M2            1.250  -> AX_PL, GAP
+  K1            0.305  -> GAP
+  K2            0.305  -> GAP
+  Y             0.750  -> CYL_D, GAP
+  AB1           0.514  -> CYL_D
+  BB1           0.244  -> GAP
+  CB1           0.094  -> AX_PL, GAP
+  DB1           0.840  -> GAP
+  EB1           0.660  -> CYL_D, GAP
+  KB1           0.305  -> GAP
+  ODB1          0.505  -> CYL_D
+  FB1           0.875  -> GAP
+  MB1           0.318  -> GAP
+  B1THD        0.7500  -> CYL_D, GAP

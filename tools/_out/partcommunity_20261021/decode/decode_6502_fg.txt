@@ -8,12 +8,12 @@ B2D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.391, 0.609
 B2THD    DECODED  GAP 2/2 (chance 1/4), CYL_D 2/2 (chance 1/4)   values: 0.750, 1.062
 BL       PARTIAL  GAP 1/2 (chance 2/4), AX_PL (mm) 1/2 (chance 1/4)   values: 0.180, 0.200
 BL2      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.680, 0.962
-BL3      PARTIAL  GAP 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4), CYL_D (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.875, 1.230
+BL3      PARTIAL  GAP 1/2 (chance 0/4), CYL_D (mm) 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.875, 1.230
 C        DECODED  GAP 2/2 (chance 0/4)   values: 0.875, 1.250
 CL       PARTIAL  AX_PL 1/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.422, 0.57
 CL2      PARTIAL  AX_AX (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.565, 0.845
-CL3      PARTIAL  AX_PL (mm) 1/2 (chance 1/4), CYL_D (mm) 1/2 (chance 1/4), GAP (mm) 1/2 (chance 0/4)   values: 0.688, 0.968
-CR       PARTIAL  AX_PL (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 1/4), TOR_r (mm) 1/2 (chance 0/4)   values: 0.426, 0.664
+CL3      PARTIAL  CYL_D (mm) 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 1/4), GAP (mm) 1/2 (chance 0/4)   values: 0.688, 0.968
+CR       PARTIAL  GAP (mm) 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4), TOR_r (mm) 1/2 (chance 0/4)   values: 0.426, 0.664
 DL2      DECODED  GAP (mm) 2/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.25, 0.304
 DL3      DECODED  CYL_D 2/2 (chance 1/4)   values: 0.785, 1.098
 DR       DECODED  GAP 2/2 (chance 1/4)   values: 0.253, 0.315
@@ -24,12 +24,12 @@ FL2      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.584, 0.834
 FL3      PARTIAL  GAP (mm) 1/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.264, 0.314
 HL3      DECODED  GAP 2/2 (chance 0/4)   values: 0.875, 1.250
 HLP      DECODED  TOR_r (mm) 1/1 (chance 0/2)   values: 1
-JL3      PARTIAL  AX_PL (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 2/4), GAP 1/2 (chance 2/4), AX_PL 1/2 (chance 0/4)   values: 0.155, 0.185
+JL3      PARTIAL  GAP (mm) 1/2 (chance 2/4), AX_PL (mm) 1/2 (chance 0/4), GAP 1/2 (chance 2/4), AX_PL 1/2 (chance 0/4)   values: 0.155, 0.185
 LL3      DECODED  GAP 2/2 (chance 0/4), AX_PL 1/2 (chance 0/4)   values: 0.827, 1.047
 M        DECODED  AX_PL 2/2 (chance 0/4)   values: 0.850, 0.931
 M2       DECODED  AX_PL 2/2 (chance 0/4)   values: 0.980, 1.280
 M6       DECODED  AX_PL 2/2 (chance 0/4)   values: 1.280, 1.500
-ML3      PARTIAL  AX_PL (mm) 1/2 (chance 1/4), GAP (mm) 1/2 (chance 1/4), CYL_D 1/2 (chance 0/4)   values: 0.370, 0.440
+ML3      PARTIAL  GAP (mm) 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 1/4), CYL_D 1/2 (chance 0/4)   values: 0.370, 0.440
 Y        DECODED  GAP 2/2 (chance 1/4), CYL_D 2/2 (chance 1/4)   values: 0.750, 1.062
 
 == 6502-08-08-FG (record 6502-08-08-FG)

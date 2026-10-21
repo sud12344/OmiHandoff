@@ -1,0 +1,24 @@
+# o_ring_face_seal_fittings/fs2408: 1 STEP(s): FS2408-08
+
+AD       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.350
+AL       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+ATHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+BL       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+CL       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.719
+DL       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.719
+DRILL    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+EL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
+H        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+L        DECODED  GAP 1/1 (chance 0/2)   values: 0.850
+
+== FS2408-08 (record FS2408-08)
+  L             0.850  -> GAP
+  H             0.875  -> GAP
+  AL            0.504  -> GAP
+  BL            0.094  -> AX_PL
+  CL            0.719  -> CYL_D, GAP
+  DL            0.719  -> CYL_D, GAP
+  EL            0.629  -> CYL_D
+  DRILL         0.378  -> CYL_D
+  AD            0.350  -> AX_PL (mm)
+  ATHD         0.8125  -> CYL_D

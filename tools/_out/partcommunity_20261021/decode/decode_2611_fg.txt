@@ -2,27 +2,27 @@
 
 A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.406
 A2PITCH  AMBIGUOUS GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 1/2)   values: 0.05556
-A2THD    DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.6750
+A2THD    DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.6750
 A3PITCH  AMBIGUOUS GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 1/2)   values: 0.05556
-A3THD    DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.675
+A3THD    DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.675
 AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.481
 B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.297
 B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.5625
-BR       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.540
+BR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.540
 BT       DECODED  GAP 1/1 (chance 0/2)   values: 0.580
-CL       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.318
-CR       DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.675
+CL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.318
+CR       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.675
 CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.578
 DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.198
 DR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.560
 DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.695
 EL       DECODED  GAP 1/1 (chance 0/2)   values: 0.556
 ER       AMBIGUOUS GAP (mm) 1/1 (chance 2/2)   values: 0.469
-ET       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.875
+ET       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
 L        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.22
 L1       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.020
 M        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.310
-Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.875
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
 
 == 2611-06-06-06-FG (record 2611-06-06-06-FG)
   B1D           0.297  -> CYL_D

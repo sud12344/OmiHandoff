@@ -10,14 +10,14 @@ CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.718
 DL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.253
 DT       NO MATCH -   values: 0.855
 EL       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.094
-ET       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.062
+ET       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 FL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
 GL       DECODED  GAP 1/1 (chance 0/2)   values: 0.657
 M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.040
 MDP      NO MATCH -   values: 5.000
 N        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.940
 PITCHA2  DECODED  GAP 1/1 (chance 0/2)   values: 0.0714
-Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.062
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 YT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.613
 
 == 2505-08-08-FG (record 2505-08-08-FG)

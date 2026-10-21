@@ -6,7 +6,7 @@ A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
 A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
 AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
 AT       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.000
-BT       DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.801
+BT       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.801
 CL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.504
 CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
 DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629

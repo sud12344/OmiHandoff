@@ -13,9 +13,9 @@ DL       DECODED  CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 1/4)   values: 0.719
 DR       DECODED  AX_PL 2/2 (chance 1/4), GAP 1/2 (chance 3/4)   values: 0.094, 0.125
 EL       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.629, 2.125
 ER       DECODED  AX_PL (mm) 2/2 (chance 0/4), GAP (mm) 1/2 (chance 2/4)   values: 0.655, 2.375
-FR       DECODED  AX_PL 2/2 (chance 1/4), TOR_r 2/2 (chance 0/4), GAP 1/2 (chance 2/4)   values: 0.087, 0.118
+FR       DECODED  TOR_r 2/2 (chance 0/4), AX_PL 2/2 (chance 1/4), GAP 1/2 (chance 2/4)   values: 0.087, 0.118
 H        DECODED  GAP 2/2 (chance 0/4)   values: 0.875, 2.750
-HR       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.940
+HR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.940
 L        DECODED  GAP 2/2 (chance 0/4)   values: 1.441, 2.313
 
 == FS6400-08-08-O (record FS6400-08-08-O)

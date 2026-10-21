@@ -6,7 +6,7 @@ C        DECODED  GAP 1/1 (chance 0/2)   values: 0.688
 DIA1     DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.56
 DIA2     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.482
 L        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.980
-L1       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1.500
+L1       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 1.500
 L2       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.251
 L3       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.799
 L4       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.157

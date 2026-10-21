@@ -6,7 +6,7 @@ C1       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.660, 1.507
 C4       DECODED  GAP 2/2 (chance 0/4)   values: 0.875, 1.875
 D1       DECODED  AX_PL 2/2 (chance 1/4)   values: 0.094, 0.125
 E1       PARTIAL  AX_PL (mm) 1/2 (chance 0/4)   values: 0.655, 1.500
-F1       DECODED  GAP 2/2 (chance 2/4), AX_PL 2/2 (chance 1/4), TOR_r 2/2 (chance 0/4)   values: 0.087, 0.118
+F1       DECODED  GAP 2/2 (chance 2/4), TOR_r 2/2 (chance 0/4), AX_PL 2/2 (chance 1/4)   values: 0.087, 0.118
 L        DECODED  GAP 2/2 (chance 0/4), BOX 2/2 (chance 0/4)   values: 0.800, 1.200
 L2       PARTIAL  GAP (mm) 1/2 (chance 2/4), AX_PL (mm) 1/2 (chance 1/4)   values: 0.220, 0.250
 

@@ -1,0 +1,44 @@
+# o_ring_face_seal_fittings/fs2700: 1 STEP(s): FS2700-08-08
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+A1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+AL       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+BL       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+BR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.801
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+DN2      NO MATCH -   values: 08
+DR       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.629
+EL       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.629
+ER       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+FR       DECODED  GAP 1/1 (chance 0/2)   values: 1.440
+GG       DECODED  GAP 1/1 (chance 0/2)   values: 2.300
+GR       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+HR       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 2/2)   values: 0.060
+PITCHL   AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.06300
+PITCHR   AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.06300
+
+== FS2700-08-08 (record FS2700-08-08)
+  DN2              08  -> -
+  A1D           0.378  -> CYL_D
+  A2D           0.378  -> CYL_D
+  GG            2.300  -> GAP
+  AL            0.504  -> GAP
+  BL            0.094  -> AX_PL
+  CL            0.719  -> CYL_D
+  DL            0.719  -> CYL_D
+  EL            0.629  -> AX_PL, CYL_D, GAP
+  BR            0.801  -> CYL_D
+  CR            0.719  -> CYL_D
+  DR            0.629  -> AX_PL, CYL_D, GAP
+  ER            0.719  -> CYL_D
+  FR            1.440  -> GAP
+  GR            0.094  -> AX_PL
+  HR            0.060  -> AX_PL, GAP
+  A1THD        0.8125  -> CYL_D
+  A2THD        0.8125  -> CYL_D
+  PITCHL      0.06300  -> GAP
+  PITCHR      0.06300  -> GAP

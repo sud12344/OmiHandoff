@@ -1,0 +1,36 @@
+# tube_fittings_and_adapters/2404: 1 STEP(s): 2404-40-40
+
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 2.318
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 2.8750
+AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.880
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 2.318
+B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 3.0000
+BR       NO MATCH -   values: 2.575
+C        DECODED  GAP 1/1 (chance 0/2)   values: 3.250
+CL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.400
+CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.880
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.391
+DR       DECODED  GAP 1/1 (chance 0/2)   values: 1.515
+EL       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.140
+ER       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 2.443
+FL       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.880
+GL       DECODED  GAP 1/1 (chance 0/2)   values: 1.335
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 3.370
+
+== 2404-40-40 (record 2404-40-40)
+  B1D           2.318  -> CYL_D
+  A2D           2.318  -> CYL_D
+  L             3.370  -> BOX, GAP
+  C             3.250  -> GAP
+  AL            2.880  -> CYL_D
+  CL            2.400  -> AX_PL (mm)
+  DL            0.391  -> GAP
+  EL            0.140  -> AX_PL, GAP
+  FL            2.880  -> CYL_D
+  GL            1.335  -> GAP
+  BR            2.575  -> -
+  CR            2.880  -> CYL_D
+  DR            1.515  -> GAP
+  ER            2.443  -> GAP (mm)
+  B1THD        3.0000  -> CYL_D
+  A2THD        2.8750  -> CYL_D

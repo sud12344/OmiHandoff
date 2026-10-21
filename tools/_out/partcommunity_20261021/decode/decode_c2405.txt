@@ -1,0 +1,42 @@
+# flareless_bite_type_fittings/c2405: 1 STEP(s): C2405-08-06
+
+A2THD    DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 1/2), GAP (mm) 1/1 (chance 1/2)   values: 0.675
+AB1      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.514
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.422
+B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.7500
+BA2      DECODED  GAP 1/1 (chance 0/2)   values: 0.580
+BB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.244
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+CA2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.578
+CB1      AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+DA2      DECODED  GAP 1/1 (chance 0/2)   values: 0.695
+DB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.840
+EA2      DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.680
+EB1      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+FB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+K        DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+KB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+L        DECODED  GAP 1/1 (chance 0/2)   values: 1.470
+MB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.318
+ODB1     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+
+== C2405-08-06 (record C2405-08-06)
+  B1D           0.422  -> CYL_D
+  L             1.470  -> GAP
+  K             0.305  -> GAP
+  C             0.875  -> GAP
+  AB1           0.514  -> CYL_D
+  BB1           0.244  -> GAP
+  CB1           0.094  -> AX_PL
+  DB1           0.840  -> GAP
+  EB1           0.660  -> CYL_D, GAP
+  KB1           0.305  -> GAP
+  ODB1          0.505  -> CYL_D
+  FB1           0.875  -> GAP
+  MB1           0.318  -> GAP
+  B1THD        0.7500  -> CYL_D
+  A2THD         0.675  -> AX_PL (mm), CYL_D (mm), GAP (mm)
+  BA2           0.580  -> GAP
+  CA2           0.578  -> CYL_D
+  DA2           0.695  -> GAP
+  EA2           0.680  -> AX_PL (mm), CYL_D (mm), GAP (mm)

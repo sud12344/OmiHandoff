@@ -1,0 +1,38 @@
+# o_ring_face_seal_fittings/fs6403: 1 STEP(s): FS6403-04-04
+
+A1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.5625
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+AL       DECODED  GAP 1/1 (chance 0/2)   values: 0.386
+AR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.364
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+BL       AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.083
+BTHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.4375
+CL       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.478
+CR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.193
+DL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.483
+DR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.193
+EL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.433
+ER       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.075
+FR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.364
+GR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.550
+H        AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.625
+L        DECODED  GAP 1/1 (chance 0/2)   values: 1.250
+
+== FS6403-04-04 (record FS6403-04-04)
+  AD            0.172  -> CYL_D
+  BD            0.172  -> CYL_D
+  L             1.250  -> GAP
+  H             0.625  -> GAP
+  AL            0.386  -> GAP
+  BL            0.083  -> GAP (mm)
+  CL            0.478  -> CYL_D, GAP
+  DL            0.483  -> AX_AX (mm), GAP (mm)
+  EL            0.433  -> CYL_D
+  AR            0.364  -> CYL_D
+  CR            0.193  -> AX_PL (mm), GAP (mm)
+  DR            0.193  -> AX_PL (mm), GAP (mm)
+  ER            0.075  -> GAP
+  FR            0.364  -> CYL_D
+  GR            0.550  -> GAP
+  A1THD        0.5625  -> CYL_D
+  BTHD         0.4375  -> CYL_D

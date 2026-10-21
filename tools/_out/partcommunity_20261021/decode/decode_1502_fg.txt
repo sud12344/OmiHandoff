@@ -12,11 +12,11 @@ CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.718
 CT       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.28
 CT2      NO MATCH -   values: 0.562
 D1T      DECODED  GAP 1/1 (chance 0/2)   values: 1.000
-D2T      DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.747
+D2T      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.747
 D3T      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.885
 D4T      DECODED  GAP 1/1 (chance 0/2)   values: 1.000
 DL       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.855
-DT2      DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.740
+DT2      DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.740
 EL       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.062
 ET2      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.320
 FT2      DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.160

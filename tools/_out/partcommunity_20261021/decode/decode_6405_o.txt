@@ -1,0 +1,34 @@
+# tube_fittings_and_adapters/6405_o: 1 STEP(s): 6405-32-24-O
+
+AL       DECODED  GAP 1/1 (chance 0/2)   values: 0.594
+ATHD     NO MATCH -   values: 1.9000
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.734
+BR       DECODED  GAP 1/1 (chance 0/2)   values: 0.940
+BTHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 2.5000
+C4       DECODED  GAP 1/1 (chance 0/2)   values: 2.750
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.381
+CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.734
+DL       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.125
+DR       NO MATCH -   values: 1.935
+EL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.375
+ER       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.160
+FL       DECODED  GAP 1/1 (chance 0/2), TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.118
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 2.000
+PITCHR   AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.08696
+
+== 6405-32-24-O (record 6405-32-24-O)
+  BD            1.734  -> CYL_D
+  L             2.000  -> BOX, GAP
+  C4            2.750  -> GAP
+  AL            0.594  -> GAP
+  CL            2.381  -> CYL_D
+  DL            0.125  -> AX_PL
+  EL            2.375  -> AX_PL (mm)
+  FL            0.118  -> AX_PL, GAP, TOR_r
+  BR            0.940  -> GAP
+  CR            1.734  -> CYL_D
+  DR            1.935  -> -
+  ER            1.160  -> AX_PL (mm)
+  BTHD         2.5000  -> CYL_D
+  ATHD         1.9000  -> -
+  PITCHR      0.08696  -> GAP

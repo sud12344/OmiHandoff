@@ -1,0 +1,58 @@
+# flareless_bite_type_fittings/c6801_nwo_fg: 1 STEP(s): C6801-08-08-NWO-FG
+
+AB1      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.514
+AB2      DECODED  GAP 1/1 (chance 0/2)   values: 0.655
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.422
+B1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.422
+B2THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750
+BB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.244
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+CB1      AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+CB2      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.344
+DB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.840
+DB2      DECODED  GAP 1/1 (chance 0/2)   values: 0.490
+EB1      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+EB2      AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.041
+FB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+FB2      DECODED  GAP 1/1 (chance 0/2)   values: 0.310
+GB2      DECODED  GAP 1/1 (chance 0/2)   values: 0.860
+HB2      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+IB2      DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.010
+JB2      DECODED  TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.087
+K        DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+KB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.250
+M7       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.450
+MB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.318
+ODB1     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750
+
+== C6801-08-08-NWO-FG (record C6801-08-08-NWO-FG)
+  B1D           0.422  -> CYL_D
+  B2D           0.422  -> CYL_D
+  K             0.305  -> GAP
+  M             1.250  -> AX_PL
+  M7            1.450  -> AX_PL
+  C             0.875  -> GAP
+  Y             0.750  -> CYL_D, GAP
+  AB1           0.514  -> CYL_D
+  BB1           0.244  -> GAP
+  CB1           0.094  -> AX_PL
+  DB1           0.840  -> GAP
+  EB1           0.660  -> CYL_D, GAP
+  KB1           0.305  -> GAP
+  ODB1          0.505  -> CYL_D
+  FB1           0.875  -> GAP
+  MB1           0.318  -> GAP
+  B1THD        0.7500  -> CYL_D, GAP
+  B2THD         0.750  -> CYL_D, GAP
+  AB2           0.655  -> GAP
+  CB2           0.344  -> AX_PL (mm), GAP (mm)
+  DB2           0.490  -> GAP
+  EB2           0.041  -> AX_PL, GAP
+  FB2           0.310  -> GAP
+  GB2           0.860  -> GAP
+  HB2           0.660  -> CYL_D, GAP
+  IB2           1.010  -> BOX, CYL_D
+  JB2           0.087  -> AX_PL, TOR_r

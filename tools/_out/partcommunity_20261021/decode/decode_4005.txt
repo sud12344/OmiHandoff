@@ -1,0 +1,8 @@
+# o_rings_and_seals/4005: 1 STEP(s): 4005-08
+
+ID       NO MATCH -   values: 0.734
+W        DECODED  TOR_r 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.140
+
+== 4005-08 (record 4005-08)
+  W             0.140  -> BOX, TOR_r
+  ID            0.734  -> -

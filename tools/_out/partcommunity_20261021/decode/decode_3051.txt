@@ -1,0 +1,32 @@
+# tube_fittings_and_adapters/3051: 1 STEP(s): 3051-08-08
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.531
+A1THD    DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.840
+A2THD    DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.840
+BL       NO MATCH -   values: 0.670
+BT       DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+CL       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.840
+CT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.718
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+DT       NO MATCH -   values: 0.855
+EL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.625
+ET       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.900
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.875
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.310
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.125
+
+== 3051-08-08 (record 3051-08-08)
+  A1D           0.531  -> CYL_D
+  L             1.875  -> BOX, GAP
+  N             1.310  -> AX_PL
+  Y             1.125  -> BOX, GAP
+  BL            0.670  -> -
+  CL            0.840  -> GAP (mm)
+  DL            0.750  -> GAP
+  EL            0.625  -> AX_PL (mm), GAP (mm)
+  BT            0.750  -> GAP
+  CT            0.718  -> AX_PL (mm)
+  DT            0.855  -> -
+  ET            0.900  -> GAP (mm)
+  A1THD         0.840  -> GAP (mm)
+  A2THD         0.840  -> GAP (mm)

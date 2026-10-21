@@ -10,7 +10,7 @@ CN       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.647
 CS       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.745
 DNUT     DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2)   values: 0.833
 DS       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.642
-EN       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 2/2)   values: 0.838
+EN       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.838
 FN       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.180
 GN       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.827
 H        DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
@@ -21,7 +21,7 @@ MINOR    DECODED  GAP 1/1 (chance 0/2)   values: 0.751
 MN       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.482
 NN       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.197
 PNUT     AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
-QN       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2), GAP (mm) 1/1 (chance 1/2)   values: 0.157
+QN       AMBIGUOUS GAP (mm) 1/1 (chance 1/2), AX_PL (mm) 1/1 (chance 1/2)   values: 0.157
 
 == FS6565-08-08 (record FS6565-08-08)
   AD            0.358  -> CYL_D
