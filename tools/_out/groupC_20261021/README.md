@@ -114,8 +114,7 @@ TABLE_PATH -> `regen\new\...\DesignTable_<root>_SW2.xlsx`, then sweep_configs, g
 g1: C2402 C2403 C2405 C0318 (gen_straight2); g2: C2500 C2501 C2502 C2601 C6801 (gen_tee).
 
 ## Decisions for the user
-1. **Masters:** extend the Q-FS-MASTER exception to compression (own master per C series, -M1 rows folded in) - recommended, the end is a
-   different sketch - or keep C2404 etc. in the JIC masters (needs a second sketch per master, suppressed per row: not built anywhere yet).
+1. ~~**Masters**~~ DECIDED 2026-10-21 (user: "yes"): own master per compression series, -M1 rows folded in (PROJECT_STATUS s5, Q-C-MASTER).
 2. **-M1 body-only numbers (71 configurations):** generate now as the same body (staged so, ASSUMED) or hold them until OMi answers the
    "(Body)" question in the Triveni email.
 3. **24 deg cone:** Brennan's CAD has none (plain socket = tube stop). Build as Brennan (staged) or wait for a citable J514/2 copy /
