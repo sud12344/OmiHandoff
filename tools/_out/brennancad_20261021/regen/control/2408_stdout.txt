@@ -1,0 +1,4 @@
+2408: 15 configs (ref 2408-08-H), 1 skipped (DROP/MISSING/no data), 0 geometry-blocked, 11 profile points, 29 table cols
+   skipped ('2408-14-SOLID', 'BUILD', 'MISSING')
+
+--- stderr ---

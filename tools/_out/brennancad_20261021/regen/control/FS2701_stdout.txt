@@ -1,0 +1,3 @@
+FS2701: 2 configs (ref FS2701-08-08-FG), 19 skipped, 0 blocked, 59 cols
+
+--- stderr ---

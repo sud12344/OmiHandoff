@@ -1,0 +1,23 @@
+6802: 20 configs (ref 6802-08-08-NWO-FG), 39 skipped, 1 blocked, 70 cols
+   BLOCKED 6802-04-06-NWO-FG: leg 1 adjustable ORB: Air-Way locknut hex 0.56 differs from the Brennan nut 0.6875 for -06
+   warn 6802-08-08-NWO-FG: leg 1: the corner puck (radius 0.433) reaches 0.013 past the body face (0.420) inside the neck (max 0.105 off the axis vs neck radius 0.350) - as on the 45 deg Brennan forgings
+   warn 6802-06-04-NWO-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6802-06-06-NWO-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6802-06-08-NWO-FG: leg 1: the corner puck (radius 0.433) reaches 0.013 past the body face (0.420) inside the neck (max 0.105 off the axis vs neck radius 0.350) - as on the 45 deg Brennan forgings
+   warn 6802-08-06-NWO-FG: leg 1: the corner puck (radius 0.433) reaches 0.003 past the body face (0.430) inside the neck (max 0.051 off the axis vs neck radius 0.275) - as on the 45 deg Brennan forgings
+   warn 6802-08-10-NWO-FG: leg 1: the corner puck (radius 0.508) reaches 0.008 past the body face (0.500) inside the neck (max 0.090 off the axis vs neck radius 0.400) - as on the 45 deg Brennan forgings
+   warn 6802-10-08-NWO-FG: leg 1: the corner puck (radius 0.508) reaches 0.028 past the body face (0.480) inside the neck (max 0.167 off the axis vs neck radius 0.350) - as on the 45 deg Brennan forgings
+   warn 6802-10-10-NWO-FG: leg 1: the corner puck (radius 0.508) reaches 0.008 past the body face (0.500) inside the neck (max 0.090 off the axis vs neck radius 0.400) - as on the 45 deg Brennan forgings
+   warn 6802-10-12-NWO-FG: leg 1: the corner puck (radius 0.612) reaches 0.042 past the body face (0.570) inside the neck (max 0.223 off the axis vs neck radius 0.500) - as on the 45 deg Brennan forgings
+   warn 6802-12-10-NWO-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule); leg 1: the corner puck (radius 0.613) reaches 0.063 past the body face (0.550) inside the neck (max 0.272 off the axis vs neck radius 0.400) - as on the 45 deg Brennan forgings
+   warn 6802-12-12-NWO-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule); leg 1: the corner puck (radius 0.613) reaches 0.043 past the body face (0.570) inside the neck (max 0.227 off the axis vs neck radius 0.500) - as on the 45 deg Brennan forgings
+   warn 6802-12-16-NWO-FG: leg 1: the corner puck (radius 0.756) reaches 0.056 past the body face (0.700) inside the neck (max 0.286 off the axis vs neck radius 0.600) - as on the 45 deg Brennan forgings
+   warn 6802-16-12-NWO-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 1: the corner puck (radius 0.758) reaches 0.058 past the body face (0.700) inside the neck (max 0.290 off the axis vs neck radius 0.500) - as on the 45 deg Brennan forgings
+   warn 6802-16-16-NWO-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 1: the corner puck (radius 0.758) reaches 0.058 past the body face (0.700) inside the neck (max 0.290 off the axis vs neck radius 0.600) - as on the 45 deg Brennan forgings
+   warn 6802-16-20-NWO-FG: leg 1: the corner puck (radius 0.941) reaches 0.191 past the body face (0.750) inside the neck (max 0.568 off the axis vs neck radius 0.750) - as on the 45 deg Brennan forgings
+   warn 6802-20-16-NWO-FG: leg 1: the corner puck (radius 0.941) reaches 0.191 past the body face (0.750) inside the neck (max 0.568 off the axis vs neck radius 0.600) - as on the 45 deg Brennan forgings
+   warn 6802-20-20-NWO-FG: leg 1: the corner puck (radius 0.941) reaches 0.191 past the body face (0.750) inside the neck (max 0.568 off the axis vs neck radius 0.750) - as on the 45 deg Brennan forgings
+   warn 6802-24-24-NWO-FG: hex A/F raised from Air-Way 1.87 to 1.8750 (JIC thread major; 2603HX rule); leg 1: the corner puck (radius 1.083) reaches 0.333 past the body face (0.750) inside the neck (max 0.781 off the axis vs neck radius 0.850) - as on the 45 deg Brennan forgings
+   warn 6802-32-32-NWO-FG: leg 1: CORNER NECK TRIM (ORBTRIM1): beyond the body face (0.720) the corner stands outside the ORB neck / locknut inner chamfer - angled hex arm by 0.219 (x=0.723, r 1.319), corner puck by 0.151 (x=0.720, r 1.251) - cut back to the ORB profile up to the full nut corner (0.805); the rest of the corner lies inside the ORB end; leg 1: the angled hex arm corner reaches 1.021 along this leg, past the locknut face (0.747) - cut back by the corner neck trim and inside the locknut envelope beyond (sampled check)
+
+--- stderr ---

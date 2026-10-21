@@ -1,0 +1,56 @@
+{
+ "FS0319": {
+  "configs": 3,
+  "ref": "FS0319-08",
+  "skipped": [
+   [
+    "FS0319-10",
+    "DROP",
+    "VERIFIED"
+   ],
+   [
+    "FS0319-12",
+    "other shape family",
+    "sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)"
+   ],
+   [
+    "FS0319-16",
+    "other shape family",
+    "sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)"
+   ],
+   [
+    "FS0319-20",
+    "other shape family",
+    "sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)"
+   ],
+   [
+    "FS0319-24",
+    "other shape family",
+    "sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)"
+   ],
+   [
+    "FS0319-32",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF319:FF319-4-5 UNPL",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF319:FF319-6-4 UNPL",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "FF319:FF319-6-5 UNPL",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 7,
+  "cols": 19
+ }
+}

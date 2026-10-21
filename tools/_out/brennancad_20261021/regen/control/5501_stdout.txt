@@ -1,0 +1,6 @@
+5501: 7 configs (ref 5501-08-08-FG), 9 skipped, 0 blocked, 46 cols
+   warn 5501-12-12-FG: leg 1: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 5501-16-16-FG: leg 1: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 5501-20-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

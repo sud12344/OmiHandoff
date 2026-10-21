@@ -1,0 +1,4 @@
+5000: 22 configs (ref 5000-08-08), 1 skipped (DROP/MISSING/no data), 0 geometry-blocked, 4 profile points, 27 table cols
+   skipped ('5000-24-20', 'BUILD', 'MISSING')
+
+--- stderr ---

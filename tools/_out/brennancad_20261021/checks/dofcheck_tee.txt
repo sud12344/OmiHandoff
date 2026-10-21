@@ -1,0 +1,5 @@
+Build_2501_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_2501_MASTER.bas LEG 2 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_5503_MASTER.bas LEG 1 {'n': 4, 'unknowns': 8, 'cons': 8, 'rank': 8, 'fully': True, 'redundant': 0}
+Build_5503_MASTER.bas LEG 2 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_5503_MASTER.bas THDPROF_2 (135-deg leg, tip 1.7200, r 0.6416) {'unknowns': 20, 'cons': 21, 'rank': 20, 'fully': True, 'redundant': 1, 'same_as_HelixThread': True}
