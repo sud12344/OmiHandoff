@@ -10,7 +10,7 @@ tip chamfers the model leaves out).
 import os, sys, json, math
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', '..'))
-T = os.path.join(HERE, 'tools')
+T = os.path.join(HERE, 'tools_fs')
 for p_ in (os.path.join(T, 'generators'), os.path.join(T, 'checks'), os.path.join(T, 'measure'), T,
            os.path.join(ROOT, 'tools', '_out', 'orfs_wp2_20261020', 'measure')):
     sys.path.insert(0, p_)
@@ -32,10 +32,13 @@ def build(cols, EA, EB, L, hexb, rB):
     V = straight_chain(EA, EB, L, rB)
     S = revolve(V)
     S = BRepAlgoAPI_Common(S, hex_prism(hexb, -0.1, L + 0.1)).Shape()
-    ra, da = cols['DA@BORE_A'] / 2, cols['DEPTH@BORECUT_A']
-    rb, db = cols['DB@BORE_B'] / 2, cols['DEPTH@BORECUT_B']
-    S = BRepAlgoAPI_Cut(S, BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt(-0.01 * MM, 0, 0), gp_Dir(1, 0, 0)), ra * MM, (da + 0.01) * MM).Shape()).Shape()
-    S = BRepAlgoAPI_Cut(S, BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt((L + 0.01) * MM, 0, 0), gp_Dir(-1, 0, 0)), rb * MM, (db + 0.01) * MM).Shape()).Shape()
+    # group B 2026-10-21: a bore the row does not have (FS2408 plug: End B blind hole only) is skipped
+    if cols.get('DA@BORE_A') is not None:
+        ra, da = cols['DA@BORE_A'] / 2, cols['DEPTH@BORECUT_A']
+        S = BRepAlgoAPI_Cut(S, BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt(-0.01 * MM, 0, 0), gp_Dir(1, 0, 0)), ra * MM, (da + 0.01) * MM).Shape()).Shape()
+    if cols.get('DB@BORE_B') is not None:
+        rb, db = cols['DB@BORE_B'] / 2, cols['DEPTH@BORECUT_B']
+        S = BRepAlgoAPI_Cut(S, BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt((L + 0.01) * MM, 0, 0), gp_Dir(-1, 0, 0)), rb * MM, (db + 0.01) * MM).Shape()).Shape()
     return S
 
 
@@ -89,6 +92,8 @@ def main(roots, out):
                     if abs(tip - want) > TOL: bad.append(f'End {sfx} tip at x {tip} (row {want})')
                     bo = cols['DA@BORE_A' if sfx == 'A' else 'DB@BORE_B'] / 2; n += 1
                     if abs(m['BORER'] - bo) > TOL: bad.append(f'End {sfx} bore r {m["BORER"]} (row {bo})')
+                elif E['kind'] == 'PLAIN':
+                    pass       # group B: the plug's plain back face (overall length checked below)
                 elif E['kind'] in ('JICM', 'NPTFM'):
                     pass       # 2026-10-20: the accepted library ends (MS33656J / ASME B1.20.3), closed-looped with their own masters - not read here
                 else:

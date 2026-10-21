@@ -1652,6 +1652,23 @@ SPEC['FS6400'] = dict(name='ORFS Straight Thread Connector (male face seal x mal
 
 
 
+# 2026-10-21 (group B, groupB_20261021): FS2408 face-seal plug, built the way Brennan builds it (user 2026-10-21, Q-FS2408-HOLE): BRENNAN_FS2408-08
+# (tools/measure/prof.py): the FSM -08 end (face, groove, land, chamfer, thread to 0.383, 60deg flank, relief to 0.504 = FSM_MEAS[8]), hex 0.875
+# over 0.346, plain back face; a BLIND HOLE dia 0.378 from the face, full diameter to 0.391, then a 120deg drill point whose apex is 0.004 short of
+# the end length (0.500 / 0.504). Air-Way prints the hole dia (WHOLE) on every size -> every row is hollow. Full-diameter depth = end length -
+# 0.004 - the drill-point height (hole / 2 / tan 60): -08 0.391 = the STEP; other sizes: the -08 rule (ASSUMPTION). Drill point not modelled.
+FS2408_APEX_SHORT = 0.004
+SPEC['FS2408'] = dict(name='ORFS Male Plug (male face seal, blind hole)', L='L24@DRIVE', hex='S1HEX@HEX', single=True, fs=True,
+                      A=lambda r, a, b: end_PLAIN('A'), B=lambda r, a, b: end_FSM(b, 'B'),
+                      bore=('B_blind', 'WHOLE@BORE', None), ref='FS2408-08', thrchk=(('B', 'THDMAJ_D@DRIVE', 'a'),),
+                      hole_dep=(lambda EB, hole, a: round(EB['endlen'] - FS2408_APEX_SHORT - hole / 2 / TAN60, 4),
+                                'HOLE DEPTH single-source: full diameter to {dep} = face-seal end length - 0.004 - the 120deg drill-point height (Brennan '
+                                'FS2408-08 STEP: 0.391, apex 0.500 of 0.504; ' + 'measured at -08 only - ASSUMED for -{a:02d}) -> DataStatus ASSUMED'),
+                      assume='L24 face -> back face, hex S1 (Air-Way): ' + FS_DIM_SRC + '; male face-seal end = the straight FSM end library; plug head = '
+                             'hex to a plain flat back face (Brennan FS2408-08 STEP; hex chamfers not modelled); BLIND HOLE dia WHOLE (Air-Way) from the '
+                             'face, as Brennan builds it (user 2026-10-21 "build it however brennan builds it"): full diameter to the end length - 0.004 - '
+                             'the drill-point height (Brennan FS2408-08 STEP; 120deg drill point not modelled; the -08 rule is ASSUMED for the other sizes)')
+
 def end_FSSW_row(r, col, dash, sfx, hexface=None):
     """end_FSSW with the nut hex of Q-FS-NUT (fs_nut_af); a substituted value is noted in the row's $COMMENT (fsnote). hexface = (name, Air-Way
     hex face -> seal face): the body face is built there (Air-Way = the dimension source), Brennan's measured one goes to $COMMENT"""
@@ -2192,11 +2209,13 @@ def build_rows(root):
             # plug: optional blind hole from the End B tip; $STATE suppresses it on the solid configs
             hole = r[cA]
             if hole is not None:
-                dep = round(EB['endlen'] - 0.020, 4)
+                # 2026-10-21 (group B, FS2408): SPEC hole_dep = (depth function, warning text) of a root whose hole is not the JIC 2408 rule
+                dep = sp['hole_dep'][0](EB, hole, a) if sp.get('hole_dep') else round(EB['endlen'] - 0.020, 4)
                 cols['DB@BORE_B'] = hole; cols['DEPTH@BORECUT_B'] = dep; cols['$STATE@BORECUT_B'] = 'U'
                 if hole / 2 >= EB['V'][0][1] - 0.002: chk.append(f'hole {hole} >= JIC tip dia {2*EB["V"][0][1]:.3f}')
                 if dep < 0.1: chk.append(f'hole depth {dep}')
-                warn.append('HOLE DEPTH single-source (JIC end length - 0.020, measured on the Brennan 2408-08 STEP only) -> DataStatus ASSUMED')
+                warn.append(sp['hole_dep'][1].format(dep=dep, a=a) if sp.get('hole_dep') else
+                            'HOLE DEPTH single-source (JIC end length - 0.020, measured on the Brennan 2408-08 STEP only) -> DataStatus ASSUMED')
                 r = dict(r); r['$PRP@DataStatus'] = 'ASSUMED'
             else:
                 cols['DB@BORE_B'] = None; cols['DEPTH@BORECUT_B'] = None; cols['$STATE@BORECUT_B'] = 'S'

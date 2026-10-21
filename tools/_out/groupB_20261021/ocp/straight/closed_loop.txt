@@ -1,0 +1,11 @@
+FS2408-08: 16 checks, 0 off; solids 1, volume 0.43421 in^3; Brennan pilot 0.42572 in^3 (+2.0 %)
+FS2408-24: 16 checks, 0 off; solids 1, volume 3.28985 in^3
+FS2403-08-08: 30 checks, 0 off; solids 1, volume 0.5822 in^3; Brennan pilot 0.58654 in^3 (-0.74 %)
+FS2403-24-24: 30 checks, 0 off; solids 1, volume 4.34275 in^3; Brennan pilot 4.35986 in^3 (-0.39 %)
+FS6400-08-06-O: 23 checks, 0 off; solids 1, volume 0.55002 in^3
+FS6400-08-08-O: 23 checks, 0 off; solids 1, volume 0.57539 in^3; Brennan pilot 0.58255 in^3 (-1.23 %)
+FS6400-08-10-O: 23 checks, 0 off; solids 1, volume 0.75684 in^3
+FS6400-08-12-O: 23 checks, 0 off; solids 1, volume 1.18938 in^3
+FS6400-24-24-O: 23 checks, 0 off; solids 1, volume 4.32282 in^3
+
+FS closed loop PASS: 9 configurations, 207 checks, 0 off (tolerance 0.0015)

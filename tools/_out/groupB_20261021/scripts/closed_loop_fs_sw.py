@@ -11,7 +11,7 @@ BRENNAN_FS6565-08-08 the seal face -> seal face distance and the volume. The mal
 import os, sys, json, math
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', '..'))
-T = os.path.join(HERE, 'tools')
+T = os.path.join(HERE, 'tools_fs')
 for p_ in (os.path.join(T, 'generators'), os.path.join(T, 'checks'), os.path.join(T, 'measure'), T,
            os.path.join(ROOT, 'tools', '_out', 'orfs_wp2_20261020', 'measure')):
     sys.path.insert(0, p_)
