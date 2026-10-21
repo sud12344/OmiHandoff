@@ -1468,6 +1468,15 @@ FSM_MEAS = {8: dict(GI=0.2125, GO=0.3145, GD=0.052, FR=0.3595, THDS=0.383, RELR=
 FSM_SRC = {8: 'Brennan FS2403-08-08 (both ends) = FS6400-08-08-O (fsmeasure.measure_fsm, orfs_wp2_20261020 checks (1))',
            24: 'Brennan FS2403-24-24 (both ends; fsmeasure.measure_fsm, orfs_steps2_20261020 ends_survey)',
            32: 'Brennan FS6400-32-32-O (fsmeasure.measure_fsm, orfs_steps2_20261020 ends_survey)'}
+# 2026-10-21 (group B, groupB_20261021): the straight male face-seal ends -04 / -06 / -10 / -12 / -16 / -20 from the Brennan FS2403-NN-NN STEPs received
+# 2026-10-21, read with fsmeasure.measure_fsm (both ends of each STEP identical; the same run reproduces FSM_MEAS[8] and [24] exactly).
+FSM_MEAS.update({4: dict(GI=0.1145, GO=0.2165, GD=0.052, FR=0.2415, THDS=0.2786, RELR=0.239, ENDL=0.386),
+                 6: dict(GI=0.15, GO=0.252, GD=0.052, FR=0.297, THDS=0.317, RELR=0.297, ENDL=0.441),
+                 10: dict(GI=0.276, GO=0.378, GD=0.052, FR=0.445, THDS=0.474, RELR=0.448, ENDL=0.61),
+                 12: dict(GI=0.3385, GO=0.4405, GD=0.052, FR=0.5315, THDS=0.5108, RELR=0.5345, ENDL=0.67),
+                 16: dict(GI=0.4315, GO=0.5335, GD=0.052, FR=0.6565, THDS=0.5298, RELR=0.6595, ENDL=0.689),
+                 20: dict(GI=0.5565, GO=0.6585, GD=0.052, FR=0.7825, THDS=0.5298, RELR=0.7845, ENDL=0.689)})
+FSM_SRC.update({d: f'Brennan FS2403-{d:02d}-{d:02d} (both ends; fsmeasure.measure_fsm, group B 2026-10-21)' for d in (4, 6, 10, 12, 16, 20)})
 # 2026-10-20: the male face-seal end on a FORGED leg (gen_tee leg_FSM): face, groove, land, nose chamfer and the thread end ENDL, where the leg's
 # turned flats diameter takes over (no flank / relief on a forged leg). Measured on the -NN leg of BRENNAN_FS6500-NN-NN-FG (-08: = FSM_MEAS[8],
 # also FS2501-08-08-FG); the flats meet the thread with a radial step down (thread above the flats: -08 / -20), a step up (flats above the

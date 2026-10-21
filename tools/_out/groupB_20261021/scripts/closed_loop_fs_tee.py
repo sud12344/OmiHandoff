@@ -154,8 +154,8 @@ def main(roots, out):
                                MINR=rmin, TE=lg['cs'] + g(f'FSW{i}_THDL'), NUTL=g(f'FSW{i}_NUTL'),
                                NECKR=g(f'FSW{i}_NECKR'), BODYFACE_a=Mi - g(f'FSW{i}_BODYS'), BORER=c[f'D{i}@BORE{i}'] / 2,
                                NUT_CORNER_R=c[f'NUTHEX{i}@NUTHEX{i}'] / 2)        # flats plane: the nut hex reads its A/F / 2
-                    if lg.get('cb'):      # 2026-10-20: counterbore mouth (-10 up) + 60deg countersink to the minor
-                        exp.update(CBR=g(f'FSW{i}_CBR'), CBD=g(f'FSW{i}_CBD'), CB_ANG=g(f'FSW{i}_CSANG'), CB_CS_DEPTH=lg['cs'] - g(f'FSW{i}_CBD'))
+                    if lg.get('cb'):      # (group B: the angle is the sketch constant FSSW_CBANG - no table column) 2026-10-20: counterbore mouth (-10 up) + 60deg countersink to the minor
+                        exp.update(CBR=g(f'FSW{i}_CBR'), CBD=g(f'FSW{i}_CBD'), CB_ANG=T.FSSW_CBANG, CB_CS_DEPTH=lg['cs'] - g(f'FSW{i}_CBD'))
                         n += 1
                         if m.get('MOUTH') != 'cb': bad.append(f'leg {i} FSSW mouth {m.get("MOUTH")} (expected the counterbore)')
                     else:

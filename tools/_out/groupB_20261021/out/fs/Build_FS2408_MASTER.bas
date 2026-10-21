@@ -233,14 +233,14 @@ Sub BuildFS2408()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 3)", (UBound(cfgs) + 1) >= 2
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 9)", (UBound(cfgs) + 1) >= 8
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS2408-24")
+    cx_c = Array("FS2408-04", "FS2408-24")
     cx_p = Array("L24@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "FSMB_GRVIR@DRIVE", "FSMB_GRVD@DRIVE", "FSMB_GRVOR@DRIVE", "FSMB_FACER@DRIVE", "FSMCHANG@DRIVE", "THDPITCH@THD_EndB", "Profile_Height@THD_EndB_PROF", "THDPITCH@THD_EndB_PROF", "DEPTH@BORECUT_B")
-    cx_w = Array(Array(1.10000, 1.22976, 2.13000, 0.71250, 0.05200, 0.81450, 0.93800, 45.00000, 0.08333, 0.04511, 0.08333, 0.32130))
-    For cx_q = 0 To 0
+    cx_w = Array(Array(0.66000, 0.36373, 0.63000, 0.11450, 0.05200, 0.21650, 0.24150, 45.00000, 0.05556, 0.03007, 0.05556, 0.33000), Array(1.10000, 1.22976, 2.13000, 0.71250, 0.05200, 0.81450, 0.93800, 45.00000, 0.08333, 0.04511, 0.08333, 0.32130))
+    For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
         swModel.ForceRebuild3 False

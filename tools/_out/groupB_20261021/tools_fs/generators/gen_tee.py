@@ -475,12 +475,15 @@ SPEC.update({
                    legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE'),
                          ('FSM', 'L7_3@DRIVE', 'D1_3@BORE', 'THDMAJ_D_3@DRIVE')]),
 })
+# per-root stud values where the root's own STEP differs from the FS6801 library (SPEC key 'nwo_fs'): BRENNAN_FS6809-06-06-NWO-FG (tools/measure/
+# prof.py, stud on +Y): neck r 0.300 over 0.058 (FS6801-04-06: r 0.2812 over 0.040), undercut 0.103 (0.121); washer / nut the same
+NWO_FS_FS6809 = {6: dict(NECKR=0.300, NECKL=0.058, NUTT=0.33, WR=0.397, WT=0.035, UL=0.103, AF_B=0.75)}
 # 2026-10-21 (group B): FS6809 90 deg female face-seal swivel x adjustable male ORB stud (forged) - the FS6500 swivel leg (FSSW_MEAS) and the FS6801
 # adjustable stud (NWO_FS) on one 2500HX elbow body. Brennan FS6809-06-06-NWO-FG STEP: swivel on -X (seal face = the row L21 = record AAA 1.150),
 # stud on +Y (tip 1.450 = L10 = record N), body hex 0.75 (= JJ / S2), washer face at 0.993 = L10 - record DT (L11). PN FS6809-<FS>-<ORB>.
 SPEC.update({
     'FS6809': dict(name='ORFS 90 deg Female Face Seal Swivel x Adjustable Male ORB Elbow', hex='S2HEX@HEX', elbow=True, fs=True, ref='FS6809-08-08-NWO-FG',
-                   fssw=('SHEX@HEX',), nwo=(None, 'S3HEX@HEX', None, None), fs_wf='L11@DRIVE',
+                   fssw=('SHEX@HEX',), nwo=(None, 'S3HEX@HEX', None, None), fs_wf='L11@DRIVE', nwo_fs=NWO_FS_FS6809,
                    legs=[('FSSW', 'L21@DRIVE', 'D19@BORE', 'THDMAJ_D@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE')]),
 })
 # 2026-10-20 (per-size STEPs): a forged FS row whose face-seal legs have the flats = the thread major (no step, Brennan FS6500-04 / -12 / -16) is
@@ -744,22 +747,32 @@ FSBH_ASSUME = ('face-seal bulkhead leg (Brennan FS2701-08-08-FG): FSM nose, face
 # Air-Way S3 hex), washer and undercut (= NWO_MEAS); the stud tip -> washer face = Air-Way L10 - L11 (Q-FS-ORBSTUD (a)) and the extra length over
 # the library is thread (tip -> thread end = stud - undercut length).
 NWO_FS = {8: dict(NECKR=0.375, NECKL=0.039, NUTT=0.41, WR=0.505, WT=0.041, UL=0.146, AF_B=0.938)}
-# 2026-10-21 (group B, groupB_20261021): -06 from BRENNAN_FS6809-06-06-NWO-FG (the 'another FS part with a -06 adjustable stud'), section through
-# the stud (tools/measure/prof.py, crossing at the origin, stud on +Y): body hex arm to 0.570, neck r 0.300 to 0.628, lock nut 0.628 .. 0.958 (75deg
-# chamfers from r 0.375 = AF 0.75 / 2), washer r 0.397 0.958 .. 0.993, undercut r 0.241 (= ORB -06 GD / 2) with the O-ring to the 60deg flank at 1.096,
-# thread r 0.2813 to the 45deg tip chamfer, tip 1.450 = the row L10. Tip -> washer face 0.457 (= its CAD record DT), tip -> body face 0.880 (record GT);
-# the -08 pilot read the same way reproduces NWO_FS[8] (tip -> washer 0.540, washer 0.041 / r 0.505, nut 0.41, neck 0.039 / r 0.375).
-NWO_FS[6] = dict(NECKR=0.300, NECKL=0.058, NUTT=0.33, WR=0.397, WT=0.035, UL=0.103, AF_B=0.75)
+# 2026-10-21 (group B, groupB_20261021): -06 / -10 / -12 / -16 / -20 from the Brennan FS6801 STEPs received 2026-10-21 (FS6801-04-06 / -10-10 /
+# -12-12 / -16-16 / -20-20-NWO-FG), read with fsmeasure.measure_stud exactly as the -08 pilot (which it reproduces: washer 0.540 .. 0.581 r 0.505,
+# nut 0.41 AF 0.938, neck 0.039 r 0.375, undercut 0.146) - washer (thickness WT, radius WR), lock nut (NUTT between its 75deg chamfers, AF = 2 x the
+# chamfer foot radius), neck (NECKL to the hex arm, NECKR), undercut UL (flank end -> washer face). On every FS6801 stud the neck radius is the
+# thread major radius.
+NWO_FS.update({6: dict(NECKR=0.2812, NECKL=0.040, NUTT=0.33, WR=0.397, WT=0.035, UL=0.121, AF_B=0.75),
+               10: dict(NECKR=0.4375, NECKL=0.056, NUTT=0.45, WR=0.5775, WT=0.05, UL=0.169, AF_B=1.062),
+               12: dict(NECKR=0.5312, NECKL=0.053, NUTT=0.50, WR=0.722, WT=0.05, UL=0.184, AF_B=1.375),
+               16: dict(NECKR=0.6562, NECKL=0.043, NUTT=0.54, WR=0.866, WT=0.05, UL=0.184, AF_B=1.625),
+               20: dict(NECKR=0.8125, NECKL=0.043, NUTT=0.54, WR=1.0825, WT=0.05, UL=0.184, AF_B=1.875)})
+# (NWO_FS_FS6809: with the FS6809 SPEC above)
+
+
+def nwo_fs_of(sp, d):
+    """the FS adjustable-stud end values of dash d for a root: its own SPEC 'nwo_fs' entry, else the NWO_FS library (group B 2026-10-21)"""
+    return (sp.get('nwo_fs') or {}).get(d) or NWO_FS[d]
 NWOFS_ASSUME = ('adjustable ORB stud on an FS part (Brennan FS6801-08-08-NWO-FG): neck, lock nut (0.41 thick, hex = the row S3), washer and O-ring undercut '
                 'measured on the -08 pilot (NWO_FS; washer and undercut = the 6801 library NWO_MEAS); washer face at Air-Way L11 / L14 from the crossing '
                 '(stud = tip -> washer face, Q-FS-ORBSTUD (a)); thread from the tip to the undercut (the extra stud length is thread); thread major, '
                 'undercut dia = the ORB end library; O-ring not modelled')
 
 
-def fsnwo_inputs(r, d, leg_col, wf_col):
+def fsnwo_inputs(r, d, leg_col, wf_col, sp=None):
     """(I3, THDL, GRVD, m) of an FS adjustable-stud leg: stud = leg - washer-face column; I3 = tip -> body face = stud + neck + nut + washer"""
     if d not in NWO_FS: raise KeyError(f'no -{d:02d} entry in NWO_FS (adjustable stud on an FS part); needs BRENNAN_FS6801-{d:02d}-{d:02d}-NWO-FG or another FS part with a -{d:02d} adjustable stud')
-    f = NWO_FS[d]; stud = round(r[leg_col] - r[wf_col], 4)
+    f = nwo_fs_of(sp or {}, d); stud = round(r[leg_col] - r[wf_col], 4)
     m = dict(NWO_MEAS[d]) if d in NWO_MEAS else {}
     m.update(NECKR=f['NECKR'], NECKL=f['NECKL'], NUTT=f['NUTT'], WR=f['WR'], WT=f['WT'], AF_B=f['AF_B'])
     I3 = round(stud + f['NECKL'] + f['NUTT'] + f['WT'], 4); THDL = round(stud - f['UL'], 4)
@@ -785,7 +798,7 @@ def fs_code(sp, dd, BR, r):
     ns = [fsm_nostep(d, BR) for (kind, lc, bc, tc), d in lk if kind == 'FSM']
     c = 'N' if ns and all(ns) else 'S' if not any(ns) else 'X'
     if any(l[0] == 'NWO' for l in sp['legs']):
-        fl = [abs(NWO_FS[d]['NECKR'] - BR) <= 0.003 for (kind, lc, bc, tc), d in lk if kind == 'NWO' and d in NWO_FS]
+        fl = [abs(nwo_fs_of(sp, d)['NECKR'] - BR) <= 0.003 for (kind, lc, bc, tc), d in lk if kind == 'NWO' and d in NWO_FS]
         c += 'F' if not fl or all(fl) else 'R' if not any(fl) else 'X'
     if any(l[0] == 'FSSW' for l in sp['legs']):
         cb = ['CBR' in FSSW_MEAS[d] for (kind, lc, bc, tc), d in lk if kind == 'FSSW' and d in FSSW_MEAS]
@@ -1246,6 +1259,9 @@ def leg_NWO(i, dash, LEG, BR, I3, nutAF, THDL, GRVD, m=None, flat_neck=False):
         raise AssertionError('radial order neck < nut flats < washer, undercut < thread < washer')
     if flat_neck:
         if abs(m['NECKR'] - BR) > 0.003: raise AssertionError(f'flat neck: neck radius {m["NECKR"]} is not the hex flats radius {BR:.4f} (the row S2 differs from the measured part)')
+        # 2026-10-21 (group B): the flat neck IS the hex flats radius - drawn at BR, not at the measured NECKR (FS6809-20-20: neck 0.8125 vs flats
+        # 0.815; a 0.0025 slant left the reference sketch one H relation short, and the table has no NECKR column to drive it anyway)
+        m = dict(m, NECKR=round(BR, 5))
     elif abs(m['NECKR'] - BR) < 0.003: raise AssertionError(f'neck radius {m["NECKR"]} equals the body hex flats radius {BR:.4f} (zero-height body face)')
     if m['NUTT'] < 2 * ch + 0.05: raise AssertionError(f'nut {m["NUTT"]} too thin for its two chamfers ({2 * ch:.3f})')
     V = [(0, 0), (0, BR), (sh, BR), (sh, m['NECKR']), (n0, m['NECKR']), (n0, rc), (n0 + ch, Rn), (w0 - ch, Rn), (w0, rc), (w0, m['WR']), (w1, m['WR']),
@@ -1942,10 +1958,10 @@ def build_rows(root):
             elif kind == 'NWO' and sp.get('fs'):
                 # 2026-10-20 (ORFS): adjustable stud on an FS part - washer face at the row's washer-face column (Q-FS-ORBSTUD (a)), FS lock nut
                 try:
-                    I3_, THDL_, GRVD_, m_, stud_ = fsnwo_inputs(r, d, lc, sp['fs_wf'])
+                    I3_, THDL_, GRVD_, m_, stud_ = fsnwo_inputs(r, d, lc, sp['fs_wf'], sp)
                     L = leg_NWO(i, d, M, BR, I3_, r[sp['nwo'][1]], THDL_, GRVD_, m=m_, flat_neck=abs(m_['NECKR'] - BR) <= 0.003)
                     warn.append(f'leg {i}: adjustable stud tip -> washer face {stud_} = {lc.split("@")[0]} - {sp["fs_wf"].split("@")[0]} (Air-Way), thread {THDL_} = stud - undercut '
-                                f'{NWO_FS[d]["UL"]}, tip -> body face {I3_} (FS lock nut {NWO_FS[d]["NUTT"]} thick, NWO_FS)')
+                                f'{nwo_fs_of(sp, d)["UL"]}, tip -> body face {I3_} (FS lock nut {nwo_fs_of(sp, d)["NUTT"]} thick, NWO_FS)')
                 except (AssertionError, KeyError, TypeError) as ex: chk.append(f'leg {i} adjustable stud: {ex}'); L = leg_JICM(i, d, M, BR)
             elif kind == 'JICBH':
                 try: L = leg_JICBH(i, d, M, BR, r[sp['bh'][0]], r[sp['bh'][1]], r[sp['bh'][2]])

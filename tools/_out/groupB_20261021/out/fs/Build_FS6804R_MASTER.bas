@@ -50,9 +50,9 @@ Sub LoadLeg(i As Long)
     If i = 2 Then v = Array( _
     0.000000000, 0.000000000, _
     0.000000000, 0.009525000, _
-    0.014147800, 0.009525000, _
-    0.014147800, 0.007620000, _
-    0.015621000, 0.007620000, _
+    0.014605000, 0.009525000, _
+    0.014605000, 0.007142480, _
+    0.015621000, 0.007142480, _
     0.015621000, 0.009652000, _
     0.016049840, 0.011252454, _
     0.023574160, 0.011252454, _
@@ -60,8 +60,8 @@ Sub LoadLeg(i As Long)
     0.024003000, 0.010083800, _
     0.024892000, 0.010083800, _
     0.024892000, 0.006108700, _
-    0.027508200, 0.006108700, _
-    0.027508200, 0.007143750, _
+    0.027965400, 0.006108700, _
+    0.027965400, 0.007143750, _
     0.036830000, 0.007143750, _
     0.036830000, 0.000000000)
     If i = 3 Then v = Array( _
@@ -141,10 +141,10 @@ Sub BuildFS6804R()
     swSkMgr.InsertSketch True
     DrawProfile False, -1#
     Call Dim_len(-1, "M2", 0.036830000, -0.018415, 0.026492)
-    Call Dim_rad(1, "BODYR", 0.009525000, -0.007074, -0.010160)
-    Call Dim_len(1, "NW2_BODYL", 0.014147800, -0.007074, 0.022682)
-    Call Dim_rad(3, "NW2_NECKR", 0.007620000, -0.014884, -0.006350)
-    Call Dim_len(3, "NW2_NECKL", 0.001473200, -0.014884, 0.020142)
+    Call Dim_rad(1, "BODYR", 0.009525000, -0.007302, -0.010160)
+    Call Dim_len(1, "NW2_BODYL", 0.014605000, -0.007302, 0.022682)
+    Call Dim_rad(3, "NW2_NECKR", 0.007142480, -0.015113, -0.006350)
+    Call Dim_len(3, "NW2_NECKL", 0.001016000, -0.015113, 0.020142)
     Call Dim_ptline(5, False, 15, "NW2_CHR", 0.009652000, -0.014351, 0.004826)
     Call Dim_ang(5, 6, "NW2_CHANG1", 1.308996939, -0.015288, 0.010998)
     Call Dim_rad(6, "NW2_NUTR", 0.011252454, -0.019812, -0.011430)
@@ -153,9 +153,9 @@ Sub BuildFS6804R()
     Call Dim_ptline(8, False, 15, "NW2_CHR2", 0.009652000, -0.025273, 0.004826)
     Call Dim_rad(9, "NW2_WASHR", 0.010083800, -0.024447, -0.008890)
     Call Dim_len(9, "NW2_WASHT", 0.000889000, -0.024447, 0.016332)
-    Call Dim_rad(11, "NW2_UCR", 0.006108700, -0.026200, -0.003810)
-    Call Dim_rad(13, "THDMAJR_B2", 0.007143750, -0.032169, -0.007620)
-    Call Dim_len(13, "NW2_THDL", 0.009321800, -0.032169, 0.015062)
+    Call Dim_rad(11, "NW2_UCR", 0.006108700, -0.026429, -0.003810)
+    Call Dim_rad(13, "THDMAJR_B2", 0.007143750, -0.032398, -0.007620)
+    Call Dim_len(13, "NW2_THDL", 0.008864600, -0.032398, 0.015062)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -205,7 +205,7 @@ Sub BuildFS6804R()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "RUN"
-    Call HexRun("Right Plane", 0#, 0.013690600, 0.014147800, 0.009525000, "RUN", 0)
+    Call HexRun("Right Plane", 0#, 0.013690600, 0.014605000, 0.009525000, "RUN", 0)
     stepName = "HEX3"
     Call HexArm("Top Plane", 0#, 0#, 0.013690600, 0.009525000, "HEX3", 1, 1#)
     ' ================= adjustable ORB locknut on leg 2: hexagon on the nut's inner face, flats normal to Z, cut outside over the nut thickness =================
@@ -235,7 +235,7 @@ Sub BuildFS6804R()
     curAxis = 0: tipPos = 0.024892000
     Call ThreadCut(0.013690600, 0.008731250, 0.010013950, "0.6875-16", "THD_End1", 1#, 0.001587500)
     curAxis = 0: tipPos = -0.036830000
-    Call ThreadCut(-0.027508200, 0.007143750, 0.009321800, "0.5625-18", "THD_End2", -1#, 0.001411111)
+    Call ThreadCut(-0.027965400, 0.007143750, 0.008864600, "0.5625-18", "THD_End2", -1#, 0.001411111)
     curAxis = 1: tipPos = 0.024892000
     Call ThreadCut(0.013690600, 0.008731250, 0.010013950, "0.6875-16", "THD_End3", 1#, 0.001587500)
 
@@ -259,14 +259,14 @@ Sub BuildFS6804R()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 3)", (UBound(cfgs) + 1) = 3
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 4)", (UBound(cfgs) + 1) = 4
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS6804-08-06-08-NWO-FG")
+    cx_c = Array("FS6804-08-06-08-NWO-FG", "FS6804-10-10-10-NWO-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "THDMAJR_B1@LEG1", "FSM1_THDL@LEG1", "FSMCHANG1@LEG1", "FSM1_FACER@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "DEPTH@BORECUT3", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "THDPITCH@THD_End2", "Profile_Height@THD_End2_PROF", "THDPITCH@THD_End2_PROF", "THDPITCH@THD_End3", "Profile_Height@THD_End3_PROF", "THDPITCH@THD_End3_PROF", "HEXAF@RUN", "HEXL1@RUN_BODY", "HEXL2@RUN_BODY", "HEXAF@HEX3", "HEXL@HEX3_BODY")
-    cx_w = Array(Array(1.10000, 0.37500, 0.40625, 0.45725, 45.00000, 0.35950, 1.10000, 1.44000, 1.10000, 0.06250, 0.03383, 0.06250, 0.05556, 0.03007, 0.05556, 0.06250, 0.03383, 0.06250, 0.75000, 0.59600, 0.53700, 0.75000, 0.59600))
-    For cx_q = 0 To 0
+    cx_w = Array(Array(1.10000, 0.37500, 0.40625, 0.45725, 45.00000, 0.35950, 1.10000, 1.44000, 1.10000, 0.06250, 0.03383, 0.06250, 0.05556, 0.03007, 0.05556, 0.06250, 0.03383, 0.06250, 0.75000, 0.59600, 0.55500, 0.75000, 0.59600), Array(1.31000, 0.53000, 0.50000, 0.55500, 45.00000, 0.44500, 1.31000, 1.97000, 1.31000, 0.07143, 0.03866, 0.07143, 0.07143, 0.03866, 0.07143, 0.07143, 0.03866, 0.07143, 1.06000, 0.70000, 0.78400, 1.06000, 0.70000))
+    For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
         swModel.ForceRebuild3 False

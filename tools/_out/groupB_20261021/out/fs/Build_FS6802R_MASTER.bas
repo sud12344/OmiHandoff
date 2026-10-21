@@ -38,9 +38,9 @@ Sub LoadLeg(i As Long)
     If i = 1 Then v = Array( _
     0.000000000, 0.000000000, _
     0.000000000, 0.009525000, _
-    0.010083800, 0.009525000, _
-    0.010083800, 0.007620000, _
-    0.011557000, 0.007620000, _
+    0.010541000, 0.009525000, _
+    0.010541000, 0.007142480, _
+    0.011557000, 0.007142480, _
     0.011557000, 0.009652000, _
     0.011985840, 0.011252454, _
     0.019510160, 0.011252454, _
@@ -48,8 +48,8 @@ Sub LoadLeg(i As Long)
     0.019939000, 0.010083800, _
     0.020828000, 0.010083800, _
     0.020828000, 0.006108700, _
-    0.023444200, 0.006108700, _
-    0.023444200, 0.007143750, _
+    0.023901400, 0.006108700, _
+    0.023901400, 0.007143750, _
     0.033020000, 0.007143750, _
     0.033020000, 0.000000000)
     If i = 2 Then v = Array( _
@@ -98,10 +98,10 @@ Sub BuildFS6802R()
     swSkMgr.InsertSketch True
     DrawProfile False, 1#
     Call Dim_len(-1, "M1", 0.033020000, 0.016510, 0.026492)
-    Call Dim_rad(1, "BODYR", 0.009525000, 0.005042, -0.010160)
-    Call Dim_len(1, "NW1_BODYL", 0.010083800, 0.005042, 0.022682)
-    Call Dim_rad(3, "NW1_NECKR", 0.007620000, 0.010820, -0.006350)
-    Call Dim_len(3, "NW1_NECKL", 0.001473200, 0.010820, 0.020142)
+    Call Dim_rad(1, "BODYR", 0.009525000, 0.005270, -0.010160)
+    Call Dim_len(1, "NW1_BODYL", 0.010541000, 0.005270, 0.022682)
+    Call Dim_rad(3, "NW1_NECKR", 0.007142480, 0.011049, -0.006350)
+    Call Dim_len(3, "NW1_NECKL", 0.001016000, 0.011049, 0.020142)
     Call Dim_ptline(5, False, 15, "NW1_CHR", 0.009652000, 0.010287, 0.004826)
     Call Dim_ang(5, 6, "NW1_CHANG1", 1.308996939, 0.011224, 0.010998)
     Call Dim_rad(6, "NW1_NUTR", 0.011252454, 0.015748, -0.011430)
@@ -110,9 +110,9 @@ Sub BuildFS6802R()
     Call Dim_ptline(8, False, 15, "NW1_CHR2", 0.009652000, 0.021209, 0.004826)
     Call Dim_rad(9, "NW1_WASHR", 0.010083800, 0.020383, -0.008890)
     Call Dim_len(9, "NW1_WASHT", 0.000889000, 0.020383, 0.016332)
-    Call Dim_rad(11, "NW1_UCR", 0.006108700, 0.022136, -0.003810)
-    Call Dim_rad(13, "THDMAJR_B1", 0.007143750, 0.028232, -0.007620)
-    Call Dim_len(13, "NW1_THDL", 0.009575800, 0.028232, 0.015062)
+    Call Dim_rad(11, "NW1_UCR", 0.006108700, 0.022365, -0.003810)
+    Call Dim_rad(13, "THDMAJR_B1", 0.007143750, 0.028461, -0.007620)
+    Call Dim_len(13, "NW1_THDL", 0.009118600, 0.028461, 0.015062)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -163,7 +163,7 @@ Sub BuildFS6802R()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "HEX1"
-    Call HexArm("Right Plane", 0#, 0#, 0.010083800, 0.009525000, "HEX1", 0, 1#)
+    Call HexArm("Right Plane", 0#, 0#, 0.010541000, 0.009525000, "HEX1", 0, 1#)
     stepName = "PLN2"
     MakeLegPlane "PLN2", 0.018796000
     stepName = "HEX2"
@@ -240,7 +240,7 @@ Sub BuildFS6802R()
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
     curAxis = 0: tipPos = 0.033020000
-    Call ThreadCut(0.023444200, 0.007143750, 0.009575800, "0.5625-18", "THD_End1", 1#, 0.001411111)
+    Call ThreadCut(0.023901400, 0.007143750, 0.009118600, "0.5625-18", "THD_End1", 1#, 0.001411111)
     tipPos = 0.018796000
     Call ThreadCutV(0.007594600, 0.008731250, 0.010013950, "0.6875-16", "THD_End2", 1#, 0.001587500)
 
@@ -269,7 +269,7 @@ Sub BuildFS6802R()
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
     cx_c = Array("FS6802-08-06-NWO-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "NW1_BODYL@LEG1", "NW1_NECKR@LEG1", "NW1_NECKL@LEG1", "NW1_CHR@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "THDPITCH@THD_End2", "Profile_Height@THD_End2_PROF", "THDPITCH@THD_End2_PROF", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(1.27000, 0.37500, 0.37700, 0.30000, 0.05800, 0.38000, 1.27000, 0.80000, 0.05556, 0.03007, 0.05556, 0.06250, 0.03383, 0.06250, 0.75000, 0.37700, 0.75000, 0.29600, 0.21601, 0.43251))
+    cx_w = Array(Array(1.27000, 0.37500, 0.39500, 0.28120, 0.04000, 0.38000, 1.27000, 0.80000, 0.05556, 0.03007, 0.05556, 0.06250, 0.03383, 0.06250, 0.75000, 0.39500, 0.75000, 0.29600, 0.21601, 0.43251))
     For cx_q = 0 To 0
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

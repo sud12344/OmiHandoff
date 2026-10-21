@@ -1,0 +1,114 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS2403_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS2403_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS2403\\FS2403_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS2403\\Build_FS2403_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS2403_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS2403_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS2404_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS2404_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS2404\\FS2404_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS2404\\Build_FS2404_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS2404_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS2404_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6400_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6400_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6400\\FS6400_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6400\\Build_FS6400_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6400_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6400_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6403_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6403_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6403\\FS6403_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6403\\Build_FS6403_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6403_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6403_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "sw_status",
+  {}
+ ]
+]

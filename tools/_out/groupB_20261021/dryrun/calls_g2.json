@@ -162,6 +162,32 @@
  [
   "run_macro",
   {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6809C_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6809C_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6809C\\FS6809C_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6809C\\Build_FS6809C_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6809C_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6809C_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
    "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6809R_MASTER.bas",
    "timeout_s": 1750,
    "const_overrides": {
@@ -182,6 +208,32 @@
   "close_doc",
   {
    "doc": "FS6809R_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6809RC_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6809RC_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6809RC\\FS6809RC_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6809RC\\Build_FS6809RC_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6809RC_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6809RC_MASTER",
    "discard_unsaved": true
   }
  ],

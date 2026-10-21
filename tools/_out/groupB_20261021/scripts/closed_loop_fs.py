@@ -23,6 +23,24 @@ from OCP.BRepPrimAPI import BRepPrimAPI_MakeCylinder
 from OCP.BRepAlgoAPI import BRepAlgoAPI_Cut, BRepAlgoAPI_Common
 import fsmeasure as M
 import prof
+
+
+def _face_corner_gb(S, win=0.30):
+    """group B 2026-10-21: fsmeasure.face_corner with a wider bore window - FS6400-04-10 (sw2 bore: r 0.09 / r 0.245 at the ORB
+    end, 0.155 apart) put the stud's own bore outside the 0.15 window. Same rule otherwise: the smallest-radius horizontal reaching
+    the end face."""
+    TOL = M.TOL
+    hz = [s for s in S if s['k'] == 'L' and abs(s['r1'] - s['r2']) < TOL and s['a2'] - s['a1'] > 0.05 and min(s['r1'], s['r2']) > 0.01]
+    rlow = min(min(s['r1'], s['r2']) for s in hz)
+    cand = [s for s in hz if min(s['r1'], s['r2']) < rlow + win]
+    amax = max(s['a2'] for s in cand)
+    bs = min((s for s in cand if s['a2'] > amax - TOL), key=lambda s: min(s['r1'], s['r2']))
+    rb = min(bs['r1'], bs['r2'])
+    vs = [s for s in S if s['k'] == 'L' and abs(s['a1'] - s['a2']) < TOL and abs(min(s['r1'], s['r2']) - rb) < TOL and abs(s['a1'] - bs['a2']) < TOL]
+    return max(s['a1'] for s in vs), rb
+
+
+M.face_corner = _face_corner_gb
 from section import load
 
 TOL = 0.0015
@@ -56,6 +74,21 @@ def cmp(exp, got, keys, tag):
         e_, g_ = exp[k], got.get(k)
         if g_ is None or abs(e_ - g_) > (0.15 if k.endswith('ANG') else TOL): bad.append(f'{tag} {k}: row {round(e_, 5)} / model {g_}')
     return bad
+
+
+def slice_z(S, x0, x1, n=120):
+    """z extents of thin slabs (0.004 in) of the solid along X (inches in, model in mm)"""
+    from OCP.BRepPrimAPI import BRepPrimAPI_MakeBox
+    from OCP.Bnd import Bnd_Box
+    from OCP.BRepBndLib import BRepBndLib
+    out = []
+    for k in range(1, n):
+        x = x0 + (x1 - x0) * k / n
+        b = BRepPrimAPI_MakeBox(gp_Pnt((x - 0.002) * MM, -10 * MM, -10 * MM), 0.004 * MM, 20 * MM, 20 * MM).Shape()
+        c = BRepAlgoAPI_Common(S, b).Shape(); bx = Bnd_Box(); BRepBndLib.Add_s(c, bx)
+        if bx.IsVoid(): continue
+        out.append(round((bx.CornerMax().Z() - bx.CornerMin().Z()) / MM, 4))
+    return out
 
 
 def main(roots, out):
@@ -100,7 +133,11 @@ def main(roots, out):
                     bad.append(f'End {sfx}: kind {E["kind"]} has no closed-loop reader here')
             # hex across flats (thin probe: section normal to X at the hex mid-plane, plane through the flats = Z extent)
             bb = prof.bbox(f); n += 2
-            if abs((bb[5] - bb[2]) - hexb) > TOL: bad.append(f'hex A/F (z extent) {round(bb[5] - bb[2], 4)} (row {hexb})')
+            if 'JICSW' in (EA['kind'], EB['kind']):
+                # group B: the swivel nut can be wider than the body hex (FS6402-20-20) - read the z extent of thin slices along X
+                zs = slice_z(S, bb[0], bb[3])
+                if not any(abs(z - hexb) <= TOL for z in zs): bad.append(f'hex A/F: no slice with z extent {hexb} ({sorted(set(zs))[-4:]})')
+            elif abs((bb[5] - bb[2]) - hexb) > TOL: bad.append(f'hex A/F (z extent) {round(bb[5] - bb[2], 4)} (row {hexb})')
             if abs((bb[3] - bb[0]) - L) > TOL: bad.append(f'overall {round(bb[3] - bb[0], 4)} (row {L})')
             r = dict(pn=pn, checks=n, off=len(bad), solids=nsolids(S), volume=round(vol(S), 5), bad=bad)
             if nsolids(S) != 1: bad.append(f'{nsolids(S)} solids')

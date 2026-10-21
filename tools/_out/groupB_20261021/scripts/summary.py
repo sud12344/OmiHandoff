@@ -22,7 +22,8 @@ AF = dict(OMI_ROOT=os.path.join(A, 'stage'))
 FS = dict(OMI_ROOT=ROOT, OMI_REV_EXTRA=os.pathsep.join([os.path.join(A, 'stage', 'orfs_tables'), os.path.join(A, 'stage', '04_DESIGN_TABLES')]),
           GR_REV=J('tools', '_out', 'newtypes_20261014', 'review_tables'))
 JOBS = [('tools_af', 'gen_straight2', ['6900'], AF), ('tools_af', 'gen_tee', ['6901', '6805', '6806', '6809', '6815', '6832', '6835', '6801'], AF),
-        ('tools_fs', 'gen_straight2', ['FS2408', 'FS6402'], FS), ('tools_fs', 'gen_tee', ['FS6809', 'FS6809R', 'FS6801', 'FS6801R', 'FS6801N', 'FS6801NR'], FS),
+        ('tools_fs', 'gen_straight2', ['FS2408', 'FS6402', 'FS2403', 'FS2404', 'FS6400', 'FS6403'], FS),
+        ('tools_fs', 'gen_tee', ['FS6809', 'FS6809C', 'FS6809R', 'FS6809RC', 'FS6801', 'FS6801R', 'FS6801N', 'FS6801NR', 'FS6802R', 'FS6802NR', 'FS6803NR', 'FS6804R', 'FS6804NR'], FS),
         ('tools_fs', 'gen_ring', ['4000'], FS)]
 res = {}
 for t, g, roots, env in JOBS:
@@ -41,6 +42,7 @@ for s in SERIES:
     for p, why in bl: lines.append(f'   BLOCKED {p}: {why[:300]}')
     for p, x in sorted(sk.items()): lines.append(f'   not generated {p}: {" / ".join(x[1:])[:300]}')
 other = sorted({p for r in res.values() for p in r['ok'] if not any(re.match(re.escape(s) + r'-\d', p) for s in SERIES)} - {p for p in res.get('6801', {}).get('ok', []) if not p.startswith('6801-L')} - {p for p in res.get('4000', {}).get('ok', []) if not p.startswith('4005')})
-lines.append(f'\nother configurations in the regenerated masters (existing roots / unlocked by NWO_FS[6]): see regen/cmp.txt')
+lines.append(f'\nother configurations in the regenerated masters (existing FS / 6801 roots, incl. the configurations the old toolset already had; new ones: regen/cmp.txt): {len(other)}')
+lines.append('   ' + ' '.join(other))
 open(os.path.join(A, 'checks', 'series_summary.txt'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
 print('\n'.join(lines))

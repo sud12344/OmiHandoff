@@ -61,5 +61,12 @@ def main():
             t.set(pn, '$PRP@DimSource', 'BRENNAN', 'Q1 2026-10-20', create=True)
             t.note(pn, '$PRP@AxialSource', '[BRENNAN-CELL 2026-10-21: N1@DRIVE]', front=True)
             t.note(pn, '$COMMENT', f'Air-Way N1 {old} cannot be built (female -06 port MS51503 P1 0.68 is longer than the leg) -> Brennan CAD record N '
-                   f'{rec["N"]} (= Air-Way\'s own non-FG 6805-08-06-NWO row; user Q1 2026-10-20 "use brennans")')
+                   f'{rec["N"]} (= Air-Way\'s own non-FG 6805-08-06-NWO row; user Q1 2026-10-20 "use brennans", confirmed 2026-10-21)')
+        if root == '6901':
+            pn = '6901-08-12-NWO-FG'
+            t.note(pn, '$COMMENT', 'BRENNAN_6901-08-12-NWO-FG (received 2026-10-21, tools/measure/npsm.py): the swivel end = NPSM_MEAS[12] (the 1404-12 end) on '
+                   'every value, nut face 1.580, stem tip 1.270 (= the record M6 / M), body hex 1.062 - the record is right. Still generator-BLOCKED: '
+                   'the swivel neck is only 0.015 long (body face 0.76 behind the nut face, nut rear face 0.745; the generator wants >= 0.02) and the '
+                   'forged corner (puck radius 0.613) reaches 0.004 into the ORB locknut slab (starts 0.609; Brennan ends the corner at the ORB body face '
+                   '0.59) - needs a generator change (group B README)')
         t.save(); print(f'{root}: {n_fill} Brennan cells, {n_prom} rows MISSING -> ASSUMED')

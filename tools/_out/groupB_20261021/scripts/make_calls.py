@@ -8,8 +8,9 @@ A = os.path.join(H, 'tools', '_out', 'groupB_20261021')
 DEV = os.environ.get('OMI_DEV', r'C:\Users\sudha\OneDrive\Desktop\OMi_Handoff')
 AD = ntpath.join(DEV, r'tools\_out\groupB_20261021')
 GROUPS = {'g1': [('af', r) for r in ('6900', '6901', '6805', '6806', '6809', '6801')],
-          'g2': [('af', r) for r in ('6815', '6832', '6835')] + [('fs', r) for r in ('FS2408', 'FS6402', 'FS6809', 'FS6809R')],
-          'g3': [('fs', r) for r in ('FS6801', 'FS6801R', 'FS6802R', 'FS6804R', '4000')]}
+          'g2': [('af', r) for r in ('6815', '6832', '6835')] + [('fs', r) for r in ('FS2408', 'FS6402', 'FS6809', 'FS6809C', 'FS6809R', 'FS6809RC')],
+          'g3': [('fs', r) for r in ('FS6801', 'FS6801R', 'FS6801NR', 'FS6802R', 'FS6802NR', 'FS6803NR', 'FS6804R', 'FS6804NR', '4000')],
+          'g4': [('fs', r) for r in ('FS2403', 'FS2404', 'FS6400', 'FS6403')]}      # phase 2 (2026-10-21 STEPs): the FS straights with the new FSM_MEAS sizes
 SHIPPED = {'6801'}
 for g, rr in GROUPS.items():
     calls = [['sw_status', {}]]

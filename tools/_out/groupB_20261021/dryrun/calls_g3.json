@@ -58,6 +58,32 @@
  [
   "run_macro",
   {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6801NR_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6801NR_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6801NR\\FS6801NR_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6801NR\\Build_FS6801NR_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6801NR_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6801NR_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
    "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6802R_MASTER.bas",
    "timeout_s": 1750,
    "const_overrides": {
@@ -84,6 +110,58 @@
  [
   "run_macro",
   {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6802NR_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6802NR_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6802NR\\FS6802NR_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6802NR\\Build_FS6802NR_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6802NR_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6802NR_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6803NR_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6803NR_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6803NR\\FS6803NR_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6803NR\\Build_FS6803NR_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6803NR_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6803NR_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
    "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6804R_MASTER.bas",
    "timeout_s": 1750,
    "const_overrides": {
@@ -104,6 +182,32 @@
   "close_doc",
   {
    "doc": "FS6804R_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\Build_FS6804NR_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\out\\fs\\DesignTable_FS6804NR_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6804NR\\FS6804NR_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupB_20261021\\dryrun\\FS6804NR\\Build_FS6804NR_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6804NR_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6804NR_MASTER",
    "discard_unsaved": true
   }
  ],

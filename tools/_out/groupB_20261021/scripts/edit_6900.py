@@ -38,13 +38,13 @@ def main():
         if all(t.get(pn, c) is not None for c in NEED) and t.get(pn, '$PRP@DataStatus') == 'MISSING':
             t.set(pn, '$PRP@DataStatus', 'ASSUMED', 'A3: every column filled (Air-Way s105, single source)')
             if pn == '6900-05-04-O':
-                # user Q1 2026-10-20 ("use brennans"): an Air-Way value that cannot be built takes Brennan's value, marked BRENNAN
-                aw = (t.get(pn, 'W4@DRIVE'), t.get(pn, 'L2@DRIVE'))
-                t.set(pn, 'W4@DRIVE', rec['L'], 'Q1 2026-10-20: Air-Way pair not buildable -> Brennan record L')
-                t.set(pn, 'L2@DRIVE', rec['L1'], 'Q1 2026-10-20: Air-Way pair not buildable -> Brennan record L1')
+                # Q-CONFLICT-6900-05-04-O, user 2026-10-21 "do the recommended" (2026-10-18 recommendation: keep W4): Air-Way W4 1.30 stays; L2 1.19
+                # is the cell that cannot be built (nut face 0.11 from the stem tip) -> Brennan's L1 1.09 (user Q1 2026-10-20 "use brennans"), marked BRENNAN
+                aw = t.get(pn, 'L2@DRIVE')
+                t.set(pn, 'L2@DRIVE', rec['L1'], 'user 2026-10-21 (keep W4) + Q1: Air-Way L2 not buildable -> Brennan record L1')
                 t.set(pn, '$PRP@DimSource', 'BRENNAN', 'Q1 2026-10-20', create=True)
-                t.note(pn, '$PRP@AxialSource', '[BRENNAN-CELL 2026-10-21: W4@DRIVE, L2@DRIVE]', front=True)
-                t.note(pn, '$COMMENT', f'Q-CONFLICT-6900-05-04-O: Air-Way W4 {aw[0]} / L2 {aw[1]} put the nut face {aw[0] - aw[1]:.2f} from the stem tip - the '
-                       'measured -04 NPSM swivel cannot be built (nut / stem order; Brennan 1404-04: 0.19) -> both cells = the Brennan CAD record L '
-                       f'{rec["L"]} / L1 {rec["L1"]} (user Q1 2026-10-20 "use brennans"; 2026-10-18 recommendation was "keep W4" - tell the user)')
+                t.note(pn, '$PRP@AxialSource', '[BRENNAN-CELL 2026-10-21: L2@DRIVE]', front=True)
+                t.note(pn, '$COMMENT', f'Q-CONFLICT-6900-05-04-O (user 2026-10-21 "do the recommended" = keep W4): Air-Way W4 {t.get(pn, "W4@DRIVE")} kept; '
+                       f'Air-Way L2 {aw} put the nut face {t.get(pn, "W4@DRIVE") - aw:.2f} from the stem tip (the measured -04 NPSM swivel cannot be built) '
+                       f'-> L2 = the Brennan CAD record L1 {rec["L1"]} (user Q1 2026-10-20 "use brennans"; Brennan prints L {rec["L"]})')
     t.save()

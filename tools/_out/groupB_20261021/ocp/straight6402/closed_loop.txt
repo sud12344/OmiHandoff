@@ -1,3 +1,0 @@
-FS6402-08-08: 16 checks, 0 off; solids 1, volume 0.66116 in^3; Brennan pilot 0.65149 in^3 (+1.48 %)
-
-FS closed loop PASS: 1 configurations, 16 checks, 0 off (tolerance 0.0015)

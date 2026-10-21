@@ -11,8 +11,8 @@ Cells:
   against the two STEPs above at -08)
 - other EMPTY cells of BUILD rows <- the part's Brennan CAD record (codes on BRENNAN_6801-L-08-08-NWO-FG: M = JIC leg, M7 = ORB leg, C =
   locknut, Y = body hex, B1D / B2D = JIC / ORB bores); thread majors = the thread the part number names (end library)
-- 6801-LL-08-08-NWO-FG: Air-Way prints exactly its -08-10 row (M12 3.25, locknut 1.00, ORB bore 0.48 - the -10 values; open question D
-  "ignore it? recommended yes", 2026-10-18, not answered) -> held MISSING, Brennan record values in $COMMENT only"""
+- 6801-LL-08-08-NWO-FG: Air-Way prints exactly its -08-10 row (M12 3.25, locknut 1.00, ORB bore 0.48 - the -10 values) -> user 2026-10-21
+  "use brennan": every dimension cell = the Brennan CAD record, marked BRENNAN"""
 import os, re, sys, openpyxl
 import tabedit as T
 sys.path.insert(0, os.path.join(T.A, 'tools_af', 'generators')); sys.path.insert(0, os.path.join(T.A, 'tools_af'))
@@ -42,11 +42,15 @@ def main():
             a, b = [int(x) for x in re.findall(r'-(\d\d)', pn)][:2]
             rec = T.record(pn)
             if pn == '6801-LL-08-08-NWO-FG':
-                t.set(pn, '$PRP@DataStatus', 'MISSING', 'held: Air-Way row = its -08-10 row (open question D)')
-                t.note(pn, '$COMMENT', 'HELD 2026-10-21 (group B): Air-Way prints this row with exactly the 6801-LL-08-10 values (M12 3.25, locknut 1.00, ORB bore '
-                       '0.48; open question D 2026-10-18 "ignore it? recommended yes") - Brennan CAD record: ' +
-                       (', '.join(f'{k} {rec[k]}' for _, k in mp if k in rec) if rec else 'none') + '; BRENNAN_6801-LL-08-08-NWO-FG: ORB tip 2.480, JIC leg 1.250')
-                continue
+                # Air-Way prints this row with exactly the 6801-LL-08-10 values (M12 3.25, locknut 1.00, ORB bore 0.48); user 2026-10-21 "use brennan
+                # for 5": every dimension cell = the Brennan CAD record (= BRENNAN_6801-LL-08-08-NWO-FG: ORB tip 2.480, JIC leg 1.250), marked BRENNAN
+                old = {c: t.get(pn, c) for c, _ in mp}
+                for c, k in mp: t.set(pn, c, rec[k], f'user 2026-10-21 "use brennan": Air-Way row = its -08-10 row -> Brennan CAD record {k}')
+                t.set(pn, '$PRP@DimSource', 'BRENNAN', 'user 2026-10-21', create=True)
+                t.note(pn, '$PRP@AxialSource', '[BRENNAN-CELL 2026-10-21: ' + ', '.join(c for c, _ in mp) + ']', front=True)
+                t.note(pn, '$COMMENT', 'Air-Way prints this row with the 6801-LL-08-10 values (' + ', '.join(f'{c.split("@")[0]} {v}' for c, v in old.items()) +
+                       ') -> every dimension cell = the Brennan CAD record (user 2026-10-21 "use brennan"; = BRENNAN_6801-LL-08-08-NWO-FG: ORB tip 2.480, '
+                       'JIC leg 1.250)')
             if rec:
                 for c, k in mp:
                     if isinstance(rec.get(k), float) and t.fill_brennan(pn, c, rec[k], k): nb += 1
