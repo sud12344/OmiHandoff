@@ -1,14 +1,14 @@
 {
  "summary": {
   "universe (OMi website, carbon steel)": 2535,
-  "shipped now (configurations in a master), OMi parts": 1351,
-  "generated, waiting for the SolidWorks dry runs + ship": 197,
-  "  of which ORFS (FS...)": 133,
-  "  of which ORFS loose parts FS0306 / FS0318 / FS0319": 22,
-  "  of which O-rings 4000 / 4001 / FS4000": 29,
-  "    (FS4000 face-seal O-rings)": 8,
-  "= ready after SolidWorks": 1548,
-  "not yet (data, STEP, decision or OMi needed)": 987,
+  "shipped now (configurations in a master), OMi parts": 1531,
+  "generated, waiting for the SolidWorks dry runs + ship": 18,
+  "  of which ORFS (FS...)": 0,
+  "  of which ORFS loose parts FS0306 / FS0318 / FS0319": 0,
+  "  of which O-rings 4000 / 4001 / FS4000": 0,
+  "    (FS4000 face-seal O-rings)": 0,
+  "= ready after SolidWorks": 1549,
+  "not yet (data, STEP, decision or OMi needed)": 986,
   "configurations not matching an OMi part number (not counted)": 65
  },
  "not_in_universe": [
@@ -79,6 +79,7 @@
   "2603-32-32-32-FG"
  ],
  "shipped_not_regenerated": [
+  "1603-08-08-08-FG",
   "2500-04-04",
   "2500-04-04-FG",
   "2500-05-05",
@@ -175,6 +176,35 @@
   "2603-20-20-20-FG",
   "2603-24-24-24",
   "2603-24-24-24-FG",
-  "2603-32-32-32-FG"
+  "2603-32-32-32-FG",
+  "4000-02",
+  "4000-03",
+  "4000-04",
+  "4000-06",
+  "4000-08",
+  "4000-10",
+  "4000-12",
+  "4000-16",
+  "4000-20",
+  "4000-24",
+  "4000-32",
+  "4001-02",
+  "4001-04",
+  "4001-06",
+  "4001-08",
+  "4001-10",
+  "4001-12",
+  "4001-16",
+  "4001-20",
+  "4001-24",
+  "4001-32",
+  "FS4000-04",
+  "FS4000-06",
+  "FS4000-08",
+  "FS4000-10",
+  "FS4000-12",
+  "FS4000-16",
+  "FS4000-20",
+  "FS4000-24"
  ]
 }
