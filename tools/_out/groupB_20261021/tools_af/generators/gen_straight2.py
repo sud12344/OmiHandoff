@@ -1441,6 +1441,18 @@ SPEC['1724'] = dict(name='O-Ring Face Code 61 Flange Plug', L='L@DRIVE', hex='SH
                     A=lambda r, a, b: dict(end_PLAIN('A'), thr='plain back face (solid plug)'), B=lambda r, a, b: end_FLG61(b, 'B', flgplug_row(r, b)),
                     bore=('none', None, None), ref='1724-08', assume=FLG61PLUG_ASSUME)
 
+# ---- 2026-10-21 (group B, groupB_20261021): 6900 male ORB x female NPSM swivel straight (A3 2026-10-18: the table's "female JIC union"
+#      title was wrong). Only existing end modules: the fixed male ORB end of 6401 / 6402 and the 1404 NPSM swivel end. Brennan
+#      6900-08-08-O STEP (prof.py): ORB tip -> stem tip 1.270 (record L1 = Air-Way L2), ORB tip -> nut face 1.550 (record L = Air-Way W4),
+#      nut face -> stem tip 0.28 and body face 0.48 behind the stem tip = NPSM_MEAS[8] (the 1404-08 end); body hex = Air-Way C2, nut = C.
+SPEC['6900'] = dict(name='Male ORB x Female NPSM Swivel Adapter', L='W4@DRIVE', hex='C2HEX@HEX', swivel=True,
+                    A=lambda r, a, b: end_ORBM(a, 'A'), B=lambda r, a, b: end_NPSMSW(b, 'B', r['W4@DRIVE'] - r['L2@DRIVE'], r['CHEX@HEX']),
+                    bore=('sw2', 'D1@BORE', 'D@BORE'), ref='6900-08-08-O', thrchk=(('A', 'THDMAJ_B@DRIVE', 'a'),),
+                    assume='male ORB end: thread length + groove from the 6401/6405/6410 review tables (ORD-5700 groove, measured thread length; no tip chamfer '
+                           'modelled); W4 = ORB tip to the nut face (overall), L2 = ORB tip to the stem tip (Brennan 6900-08-08-O STEP: 1.550 / 1.270 = its record '
+                           'L / L1); body hex C2, nut hex C (Air-Way; Brennan C4 / C); ' + NPSM_ASSUME + '; bore D1 (ORB side) / D (stem side) stepped at the body-hex '
+                           'mid-plane (ASSUMPTION, as 1404)')
+
 
 def cav_r(E, d):
     # radius of a female port cavity at depth d from its face (piecewise linear over VG; 0 beyond the drill point)
