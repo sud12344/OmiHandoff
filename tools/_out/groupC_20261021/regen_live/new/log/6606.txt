@@ -1,0 +1,3 @@
+6606: 5 configs (ref 6606-08-08-08-FG), 3 skipped, 0 blocked, 99 cols
+
+--- stderr ---

@@ -1,0 +1,3 @@
+FS2603: 4 configs (ref FS2603-08-08-08-FG), 16 skipped, 0 blocked, 66 cols
+
+--- stderr ---

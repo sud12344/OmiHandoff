@@ -1,0 +1,9 @@
+4404: 13 configs (ref 4404-08-06), 20 skipped (DROP/MISSING/no data), 0 geometry-blocked, 13 profile points, 31 table cols
+   skipped ('4404-04-02', 'DROP', 'ASSUMED')
+   skipped ('4404-05-02', 'DROP', 'ASSUMED')
+   skipped ('4404-05-04', 'DROP', 'ASSUMED')
+   skipped ('4404-05-06', 'DROP', 'ASSUMED')
+   skipped ('4404-06-02', 'DROP', 'ASSUMED')
+   skipped ('4404-08-04', 'DROP', 'ASSUMED')
+
+--- stderr ---

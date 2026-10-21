@@ -1,0 +1,9 @@
+C2404: 0 configs - nothing to build (32 skipped (DROP/MISSING/no data), 0 geometry-blocked); no macro / table written
+   skipped ('C2404-04-02', 'BUILD', 'MISSING')
+   skipped ('C2404-04-02-M1', 'BUILD', 'MISSING')
+   skipped ('C2404-04-04', 'BUILD', 'MISSING')
+   skipped ('C2404-04-04-M1', 'BUILD', 'MISSING')
+   skipped ('C2404-06-02', 'BUILD', 'MISSING')
+   skipped ('C2404-06-02-M1', 'BUILD', 'MISSING')
+
+--- stderr ---

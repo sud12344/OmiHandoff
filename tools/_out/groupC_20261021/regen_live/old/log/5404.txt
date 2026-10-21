@@ -1,0 +1,7 @@
+5404: 31 configs (ref 5404-08-08), 4 skipped (DROP/MISSING/no data), 0 geometry-blocked, 10 profile points, 35 table cols
+   skipped ('5404-L-04X2.000', 'BUILD', 'MISSING')
+   skipped ('5404-L-04X3.000', 'BUILD', 'MISSING')
+   skipped ('5404-L-04X4.000', 'BUILD', 'MISSING')
+   skipped ('5404-R-04-04-047', 'BUILD', 'MISSING')
+
+--- stderr ---

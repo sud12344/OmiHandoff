@@ -1,0 +1,9 @@
+2705: 19 configs (ref 2705-08-08-LN), 6 skipped (DROP/MISSING/no data), 0 geometry-blocked, 11 profile points, 35 table cols
+   skipped ('2705-L-06-06', 'DROP', 'ASSUMED')
+   skipped ('2705-06-08-LN', 'DROP', 'ASSUMED')
+   skipped ('2705-20-20', 'DROP', 'ASSUMED')
+   skipped ('2705-24-24', 'DROP', 'ASSUMED')
+   skipped ('2705-04-02', 'BUILD', 'MISSING')
+   skipped ('2705-LN-04-02', 'BUILD', 'MISSING')
+
+--- stderr ---

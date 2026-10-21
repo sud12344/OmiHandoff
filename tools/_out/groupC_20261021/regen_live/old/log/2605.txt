@@ -1,0 +1,7 @@
+2605: 7 configs (ref 2605-08-08-08-FG), 24 skipped, 0 blocked, 65 cols
+   warn 2605-06-04-06-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 2605-12-12-12-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule); leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0625 (round end flush with the flats by 0.0018; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2605-16-16-16-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 2: male NPTF thread dia at L2 1.3259 vs hex flats 1.3125 (round end proud of the flats by 0.0067; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 2605-20-20-20-FG: leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

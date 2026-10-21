@@ -1,0 +1,9 @@
+4604: 14 configs (ref 4604-08-08-O), 24 skipped (DROP/MISSING/no data), 0 geometry-blocked, 14 profile points, 31 table cols
+   skipped ('4604-05-06-O', 'DROP', 'ASSUMED')
+   skipped ('4604-04-03-O', 'DROP', 'ASSUMED')
+   skipped ('4604-06-04-O', 'DROP', 'ASSUMED')
+   skipped ('4604-06-08-O', 'DROP', 'ASSUMED')
+   skipped ('4604-06-10-O', 'DROP', 'ASSUMED')
+   skipped ('4604-08-04-O', 'DROP', 'ASSUMED')
+
+--- stderr ---

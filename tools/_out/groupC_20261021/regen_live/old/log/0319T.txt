@@ -1,0 +1,24 @@
+
+--- stderr ---
+Traceback (most recent call last):
+  File "/home/user/OmiHandoff/tools/generators/gen_ring.py", line 635, in <module>
+    built, skipped = build_rows(root)
+                     ~~~~~~~~~~^^^^^^
+  File "/home/user/OmiHandoff/tools/generators/gen_ring.py", line 136, in build_rows
+    for r in load_review(t):
+             ~~~~~~~~~~~^^^
+  File "/home/user/OmiHandoff/tools/generators/gen_ring.py", line 103, in load_review
+    ws = openpyxl.load_workbook(f, data_only=True).worksheets[0]
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/openpyxl/reader/excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+                         data_only, keep_links, rich_text)
+  File "/usr/local/lib/python3.13/dist-packages/openpyxl/reader/excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ~~~~~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/dist-packages/openpyxl/reader/excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "/usr/lib/python3.13/zipfile/__init__.py", line 1414, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/OmiHandoff/04_DESIGN_TABLES/DesignTable_0319T.xlsx'

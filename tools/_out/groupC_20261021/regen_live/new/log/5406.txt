@@ -1,0 +1,9 @@
+5406: 31 configs (ref 5406-16-08), 17 skipped (DROP/MISSING/no data), 0 geometry-blocked, 7 profile points, 31 table cols
+   skipped ('5406-24-06', 'DROP', 'ASSUMED')
+   skipped ('5406-40-32', 'BUILD', 'MISSING')
+   skipped ('5406-HHP-01', 'BUILD', 'MISSING')
+   skipped ('5406-HHP-02', 'BUILD', 'MISSING')
+   skipped ('5406-HHP-04', 'BUILD', 'MISSING')
+   skipped ('5406-HHP-06', 'BUILD', 'MISSING')
+
+--- stderr ---

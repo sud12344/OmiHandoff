@@ -1,0 +1,9 @@
+FS6540: 3 configs (ref FS6540-08-08-O), 8 skipped (DROP/MISSING/no data), 0 geometry-blocked, 21 profile points, 52 table cols
+   skipped ('FS6540-10-10-O', 'DROP', 'ASSUMED')
+   skipped ('FS6540-12-12-O', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6540C')
+   skipped ('FS6540-16-16-O', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6540C')
+   skipped ('FF6402:FF6402-8-10-O', 'DROP', 'ASSUMED')
+   skipped ('FF6402:FF6402-8-12-O', 'DROP', 'ASSUMED')
+   skipped ('FF6402:FF6402-16-12-O', 'DROP', 'ASSUMED')
+
+--- stderr ---

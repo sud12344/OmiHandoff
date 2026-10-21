@@ -1,0 +1,3 @@
+5652: 7 configs (ref 5652-08-08-08-08-FG), 10 skipped, 0 blocked, 57 cols
+
+--- stderr ---

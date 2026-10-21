@@ -1,0 +1,6 @@
+5406P: 9 configs (ref 5406-16P), 3 skipped (DROP/MISSING/no data), 0 geometry-blocked, 7 profile points, 21 table cols
+   skipped ('5406-2P', 'DROP', 'ASSUMED')
+   skipped ('5406-4P', 'DROP', 'ASSUMED')
+   skipped ('5406-6P', 'DROP', 'ASSUMED')
+
+--- stderr ---

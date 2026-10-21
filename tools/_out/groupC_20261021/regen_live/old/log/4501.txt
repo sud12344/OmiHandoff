@@ -1,0 +1,15 @@
+4501: 12 configs (ref 4501-08-08-FG), 32 skipped, 0 blocked, 51 cols
+   warn 4501-08-08-FG: leg 1: hose-leg bore 0.406 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-06-04-FG: leg 1: hose-leg bore 0.297 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-06-06-FG: leg 1: hose-leg bore 0.297 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-08-06-FG: leg 1: hose-leg bore 0.406 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-08-12-FG: leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 1: hose-leg bore 0.406 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-10-08-FG: leg 1: hose-leg bore 0.5 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-12-08-FG: leg 1: hose-leg bore 0.626 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-12-12-FG: leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 1: hose-leg bore 0.626 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-16-12-FG: leg 1: hose-leg bore 0.843 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-16-16-FG: leg 2: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 1: hose-leg bore 0.843 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-20-20-FG: leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 1: hose-leg bore 1.094 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan')
+   warn 4501-32-32-FG: leg 1: hose-leg bore 1.843 = the row's own hose drill DH (Brennan B1 DRILL; Q-HOSEB-BORE, user 2026-10-18 A15 'look at Brennan'); leg 1: hose hex arm 1.310 ends 0.133 inside the forged corner radius (1.443): the corner past the hose hex face (other hex arm, up to 1.981 off the hose axis, 0.133 deep) is faced off to the stub (HOSEFACE1 / STUBFILL1, depth 0.1834)
+
+--- stderr ---

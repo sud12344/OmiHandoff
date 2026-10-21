@@ -1,0 +1,4 @@
+5505: 3 configs (ref 5505-20-20-FG), 12 skipped, 0 blocked, 38 cols
+   warn 5505-20-20-FG: leg 1: female port thread length = MS51503 P1 1.16 (library) - the row has no measured PORTDEPTH@BORE; leg 2: female port thread length = MS51503 P1 1.16 (library) - the row has no measured PORTDEPTH@BORE
+
+--- stderr ---

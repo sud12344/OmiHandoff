@@ -1,0 +1,8 @@
+2606: 5 configs (ref 2606-08-08-08-FG), 7 skipped, 0 blocked, 61 cols
+   warn 2606-08-08-08-FG: leg 2: female port thread length = MS51503 P1 0.9 (library) - the row has no measured PORTDEPTH@BORE
+   warn 2606-04-04-04-FG: leg 2: female port thread length = MS51503 P1 0.67 (library) - the row has no measured PORTDEPTH@BORE
+   warn 2606-06-06-06-FG: leg 2: female port thread length = MS51503 P1 0.68 (library) - the row has no measured PORTDEPTH@BORE
+   warn 2606-12-12-12-FG: leg 2: female port thread length = MS51503 P1 0.91 (library) - the row has no measured PORTDEPTH@BORE
+   warn 2606-16-16-16-FG: leg 2: female port thread length = MS51503 P1 1.14 (library) - the row has no measured PORTDEPTH@BORE
+
+--- stderr ---

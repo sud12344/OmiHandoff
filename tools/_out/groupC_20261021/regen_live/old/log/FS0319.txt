@@ -1,0 +1,9 @@
+FS0319: 3 configs (ref FS0319-08), 9 skipped (DROP/MISSING/no data), 0 geometry-blocked, 7 profile points, 19 table cols
+   skipped ('FS0319-10', 'DROP', 'VERIFIED')
+   skipped ('FS0319-12', 'other shape family', 'sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)')
+   skipped ('FS0319-16', 'other shape family', 'sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)')
+   skipped ('FS0319-20', 'other shape family', 'sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)')
+   skipped ('FS0319-24', 'BUILD', 'MISSING')
+   skipped ('FS0319-32', 'DROP', 'ASSUMED')
+
+--- stderr ---

@@ -1,0 +1,5 @@
+5406C: 7 configs (ref 5406-C-8), 2 skipped (DROP/MISSING/no data), 0 geometry-blocked, 4 profile points, 19 table cols
+   skipped ('5406-C-24', 'BUILD', 'MISSING')
+   skipped ('5406-C-32', 'BUILD', 'MISSING')
+
+--- stderr ---

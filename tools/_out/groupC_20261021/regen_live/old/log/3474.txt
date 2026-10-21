@@ -1,0 +1,3 @@
+3474: 9 configs (ref 3474-12-12-NWO), 0 skipped (DROP/MISSING/no data), 0 geometry-blocked, 20 profile points, 51 table cols
+
+--- stderr ---

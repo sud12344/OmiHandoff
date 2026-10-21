@@ -1,0 +1,10 @@
+
+--- stderr ---
+Traceback (most recent call last):
+  File "/home/user/OmiHandoff/tools/generators/gen_tee.py", line 4179, in <module>
+    built, skipped = build_rows(root)
+                     ~~~~~~~~~~^^^^^^
+  File "/home/user/OmiHandoff/tools/generators/gen_tee.py", line 1869, in build_rows
+    sp = SPEC[root]; h, rows = load_review(root)
+         ~~~~^^^^^^
+KeyError: '6566'

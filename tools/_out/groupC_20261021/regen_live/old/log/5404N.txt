@@ -1,0 +1,9 @@
+5404N: 26 configs (ref 5404-N-8-8 X 3), 10 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 32 table cols
+   skipped ('5404-N-2-2 X 2', 'DROP', 'ASSUMED')
+   skipped ('5404-N-2-2 X 3', 'DROP', 'ASSUMED')
+   skipped ('5404-N-4-4 X 7/8', 'DROP', 'ASSUMED')
+   skipped ('5404-N-6-6 X 1', 'DROP', 'ASSUMED')
+   skipped ('5404-N-8-8 X 1 1/8', 'DROP', 'ASSUMED')
+   skipped ('5404-N-8-8 X 2 1/2', 'DROP', 'ASSUMED')
+
+--- stderr ---

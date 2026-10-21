@@ -1,0 +1,4 @@
+FS6600: 2 configs (ref FS6600-08-08-08-FG), 5 skipped, 0 blocked, 77 cols
+   warn FS6600-06-06-06-FG: leg 3 hex arm 0.415 barely clears the run bar corner (0.433)
+
+--- stderr ---

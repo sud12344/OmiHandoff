@@ -1,0 +1,3 @@
+C0319: 9 configs (ref C0319-08), 0 skipped, 0 blocked, 29 table cols
+
+--- stderr ---

@@ -1,0 +1,7 @@
+FS6565: 3 configs (ref FS6565-08-08), 4 skipped (DROP/MISSING/no data), 0 geometry-blocked, 30 profile points, 66 table cols
+   skipped ('FS6565-10-10', 'BUILD', 'MISSING')
+   skipped ('FS6565-12-12', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6565C')
+   skipped ('FS6565-16-16', 'BUILD', 'MISSING')
+   skipped ('FF6565:FF6565-20-20', 'DROP', 'ASSUMED')
+
+--- stderr ---

@@ -1,0 +1,9 @@
+2700: 26 configs (ref 2700-08-08), 11 skipped (DROP/MISSING/no data), 0 geometry-blocked, 18 profile points, 42 table cols
+   skipped ('2700-06-06-2.540-OAL', 'DROP', 'ASSUMED')
+   skipped ('2700-14-14', 'DROP', 'ASSUMED')
+   skipped ('2700-14-14-LN', 'DROP', 'ASSUMED')
+   skipped ('2700-04-02', 'BUILD', 'MISSING')
+   skipped ('2700-08-06', 'BUILD', 'MISSING')
+   skipped ('2700-10-08', 'BUILD', 'MISSING')
+
+--- stderr ---

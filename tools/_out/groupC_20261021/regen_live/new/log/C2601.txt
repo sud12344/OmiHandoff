@@ -1,0 +1,7 @@
+C2601: 8 configs (ref C2601-08-08-08-FG), 2 skipped, 0 blocked, 63 cols
+   warn C2601-12-12-12-FG: leg 3: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn C2601-12-12-12-FG-M1: leg 3: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn C2601-16-16-16-FG: leg 3: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn C2601-16-16-16-FG-M1: leg 3: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

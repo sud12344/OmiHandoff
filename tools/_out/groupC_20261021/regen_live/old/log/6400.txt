@@ -1,0 +1,9 @@
+6400: 66 configs (ref 6400-08-08-O), 14 skipped (DROP/MISSING/no data), 0 geometry-blocked, 15 profile points, 43 table cols
+   skipped ('6400-05-08-O', 'DROP', 'ASSUMED')
+   skipped ('6400-08-05-O', 'DROP', 'ASSUMED')
+   skipped ('6400-08-14-O', 'DROP', 'MISSING')
+   skipped ('6400-14-12-O', 'DROP', 'ASSUMED')
+   skipped ('6400-14-16-O', 'DROP', 'ASSUMED')
+   skipped ('6400-L-04-06-O', 'DROP', 'ASSUMED')
+
+--- stderr ---

@@ -1,0 +1,9 @@
+FS6504: 3 configs (ref FS6504-08-08), 6 skipped (DROP/MISSING/no data), 0 geometry-blocked, 24 profile points, 56 table cols
+   skipped ('FS6504-10-10', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C')
+   skipped ('FS6504-12-12', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C')
+   skipped ('FS6504-16-16', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C')
+   skipped ('FS6504-20-20', 'other shape family', 'face-seal swivel with a counterbored mouth (-10 up): built in master FS6504C')
+   skipped ('FF7504:FF7504-10-12', 'DROP', 'ASSUMED')
+   skipped ('FF7504:FF7504-24-24', 'DROP', 'ASSUMED')
+
+--- stderr ---

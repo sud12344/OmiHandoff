@@ -9,15 +9,22 @@ def ins_after(anchor, text):
     global s
     assert s.count(anchor) == 1, (anchor[:60], s.count(anchor))
     i = s.index(anchor) + len(anchor); s = s[:i] + text + s[i:]
+def ins_after_line(prefix, text):
+    """after the one line that starts with prefix (the rest of the line may differ between the tools_af and the live toolsets)"""
+    global s
+    lines = s.splitlines(True); hit = [k for k, l in enumerate(lines) if l.startswith(prefix)]
+    assert len(hit) == 1, (prefix[:60], len(hit))
+    lines.insert(hit[0] + 1, text); s = ''.join(lines)
 
 # 1. thread-major check of a bite end
-ins_before("            if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM', 'JICCAP', 'NUTCSB') and d_ not in NPTF: chk0.append(lib_gap('NPTF', d_)); continue\n",
+ins_before("            if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM'",     # 2026-10-21: prefix only - the live (batch 20) line also lists 'NWO
 """            if E_['kind'] == 'BITEM':     # GROUP C (compression): the bite end's thread = the BITE library major of its dash
                 if r.get(col_) is None or abs(r[col_] - E_['e']['TM']) > 1e-3: chk0.append(f'{col_} {r.get(col_)} does not match the End {sfx_} -{d_:02d} BITEM thread ({E_["e"]["TM"]})')
                 continue
 """)
 # 2. bite end / compression nut checks
-ins_after("        chk = list(chk0); warn = []\n",
+ins_after_line("        chk = list(chk0); warn = ",     # tools_af: warn = []; live (batch 20): warn = list(warn0)
+
 """        if sp.get('bite'):
             # GROUP C (compression): tube socket / bore / neck / hex gates of every bite end; the row's Brennan bite cells = the BITE library
             mode_, cA_, cB_ = sp['bore']

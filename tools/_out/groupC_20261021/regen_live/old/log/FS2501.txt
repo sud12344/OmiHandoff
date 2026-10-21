@@ -1,0 +1,5 @@
+FS2501: 9 configs (ref FS2501-08-06-FG), 11 skipped, 0 blocked, 49 cols
+   warn FS2501-08-12-FG: THDMAJ_D@DRIVE empty: thread major 0.8125 = the -08 end library (Q-TRANSFER-ENDLIB); leg 2: male NPTF thread dia at L2 1.0589 vs hex flats 1.0600 (round end flush with the flats by 0.0005; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn FS2501-20-20-FG: leg 2: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

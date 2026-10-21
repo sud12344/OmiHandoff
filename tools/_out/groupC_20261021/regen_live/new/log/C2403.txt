@@ -1,0 +1,3 @@
+C2403: 18 configs (ref C2403-08-08), 0 skipped (DROP/MISSING/no data), 0 geometry-blocked, 12 profile points, 42 table cols
+
+--- stderr ---

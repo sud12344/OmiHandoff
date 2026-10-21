@@ -1,0 +1,4 @@
+0319: 12 configs (ref 0319-08), 1 skipped, 0 blocked, 17 table cols
+   skipped 0319-14: ScopeAction DROP
+
+--- stderr ---

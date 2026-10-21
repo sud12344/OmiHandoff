@@ -1,0 +1,9 @@
+6408: 14 configs (ref 6408-08-O-H), 21 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 25 table cols
+   skipped ('6408-06-O-SOLID', 'DROP', 'ASSUMED')
+   skipped ('6408-08-O-SOLID', 'DROP', 'ASSUMED')
+   skipped ('6408-10-O-SOLID', 'DROP', 'ASSUMED')
+   skipped ('6408-12-O-SOLID', 'DROP', 'ASSUMED')
+   skipped ('6408-14-O-SOLID', 'DROP', 'ASSUMED')
+   skipped ('6408-16-O-SOLID', 'DROP', 'ASSUMED')
+
+--- stderr ---

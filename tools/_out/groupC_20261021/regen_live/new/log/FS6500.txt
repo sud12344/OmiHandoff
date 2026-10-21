@@ -1,0 +1,4 @@
+FS6500: 3 configs (ref FS6500-08-08-FG), 15 skipped, 0 blocked, 63 cols
+   warn FS6500-06-06-FG: leg 2: the corner puck (radius 0.433) reaches 0.018 past the swivel body face (0.415) but stays inside the neck (max 0.124 off the axis vs neck radius 0.261) - as on the Brennan 6502-08-08-FG / 1503-08-08-FG forgings; leg 2 hex arm 0.415 barely clears the corner puck (radius 0.433)
+
+--- stderr ---

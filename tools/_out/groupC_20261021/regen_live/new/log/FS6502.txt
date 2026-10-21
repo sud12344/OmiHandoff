@@ -1,0 +1,4 @@
+FS6502: 1 configs (ref FS6502-08-08-FG), 6 skipped, 1 blocked, 63 cols
+   BLOCKED FS6502-06-06-FG: leg 1: the corner puck (radius 0.433) reaches past the swivel body face (0.325) outside the neck (0.286 off the axis vs neck radius 0.261) or into the swivel slot (starts 0.883)
+
+--- stderr ---

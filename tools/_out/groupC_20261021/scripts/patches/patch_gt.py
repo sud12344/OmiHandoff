@@ -76,7 +76,7 @@ ins_before("        # SIZE-40 (2026-10-01): a leg dash missing from an end libra
         if btd:
             skipped.append((pn, 'no end data', f'bite-type end not in the BITE library for -{btd[0]:02d} (needs a Brennan compression record of that tube dash)')); continue
 """)
-ins_before("            want = G.JIC[d]['TM'] if kind in ('JICM', 'JICBH', 'JICSW', 'NWO') else G.NPTF[d][2]\n",
+ins_after("            tm = r[tc]\n",     # 2026-10-21: the live (batch 20) 'want' line also reads the face-seal majors
 """            if kind == 'BITEM':     # GROUP C: the bite leg's thread = the BITE library major of its dash
                 if tm is None or abs(tm - G.BITE_MEAS[d]['TM']) > 1e-3: chk.append(f'{tc} {tm} does not match the -{d:02d} bite end ({G.BITE_MEAS[d]["TM"]})')
                 continue

@@ -1,0 +1,23 @@
+4000: 29 configs (ref 4000-08), 20 skipped, 0 blocked, 15 table cols
+   skipped 4000-05: ScopeAction DROP
+   skipped 4000-14: ScopeAction DROP
+   skipped 4001-03: ScopeAction DROP
+   skipped 4001-05: ScopeAction DROP
+   skipped 4001-14: ScopeAction DROP
+   skipped FS4000-32: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+   skipped None: ScopeAction DROP
+
+--- stderr ---

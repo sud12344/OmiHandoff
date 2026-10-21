@@ -1,0 +1,3 @@
+2602: 6 configs (ref 2602-06-06-06-FG), 15 skipped, 0 blocked, 63 cols
+
+--- stderr ---

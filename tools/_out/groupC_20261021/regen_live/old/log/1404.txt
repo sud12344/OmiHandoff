@@ -1,0 +1,6 @@
+1404: 24 configs (ref 1404-08-08), 3 skipped (DROP/MISSING/no data), 0 geometry-blocked, 23 profile points, 52 table cols
+   skipped ('1404-02-02-1.250-OAL', 'DROP', 'ASSUMED')
+   skipped ('1404-08-04', 'DROP', 'ASSUMED')
+   skipped ('1404-24-32', 'DROP', 'ASSUMED')
+
+--- stderr ---

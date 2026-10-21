@@ -1,0 +1,4 @@
+6603: 1 configs (ref 6603-06-06-06-FG), 6 skipped, 0 blocked, 89 cols
+   warn 6603-06-06-06-FG: hex A/F raised from Air-Way 0.562 to 0.5625 (JIC thread major; 2603HX rule)
+
+--- stderr ---

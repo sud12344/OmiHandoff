@@ -1,0 +1,9 @@
+1700: 10 configs (ref 1700-61-08-08), 6 skipped (DROP/MISSING/no data), 0 geometry-blocked, 17 profile points, 36 table cols
+   skipped ('1700-61-12-20', 'DROP', 'ASSUMED')
+   skipped ('1700-61-16-20', 'DROP', 'ASSUMED')
+   skipped ('1700-61-16-24', 'DROP', 'ASSUMED')
+   skipped ('1700-20-16', 'other shape family', 'round collar with two wrench flats (A16 2026-10-18): built in master 1700RC (other DRIVE sketch)')
+   skipped ('1700-24-20', 'other shape family', 'round collar with two wrench flats (A16 2026-10-18): built in master 1700RC (other DRIVE sketch)')
+   skipped ('1700-32-24', 'other shape family', 'round collar with two wrench flats (A16 2026-10-18): built in master 1700RC (other DRIVE sketch)')
+
+--- stderr ---

@@ -1,0 +1,3 @@
+C0318: 9 configs (ref C0318-08), 0 skipped (DROP/MISSING/no data), 0 geometry-blocked, 9 profile points, 25 table cols
+
+--- stderr ---

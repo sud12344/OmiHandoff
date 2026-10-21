@@ -1,0 +1,3 @@
+FS2500: 5 configs (ref FS2500-08-08-FG), 11 skipped, 0 blocked, 52 cols
+
+--- stderr ---

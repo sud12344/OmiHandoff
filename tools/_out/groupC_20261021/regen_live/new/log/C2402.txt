@@ -1,0 +1,5 @@
+C2402: 12 configs (ref C2402-08-08), 2 skipped (DROP/MISSING/no data), 0 geometry-blocked, 15 profile points, 43 table cols
+   skipped ('C2402-10-10', 'BUILD', 'MISSING')
+   skipped ('C2402-10-10-M1', 'BUILD', 'MISSING')
+
+--- stderr ---

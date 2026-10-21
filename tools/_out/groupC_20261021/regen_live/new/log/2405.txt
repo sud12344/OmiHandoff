@@ -1,0 +1,7 @@
+2405: 30 configs (ref 2405-08-08), 4 skipped (DROP/MISSING/no data), 0 geometry-blocked, 11 profile points, 35 table cols
+   skipped ('2405-03-04', 'DROP', 'ASSUMED')
+   skipped ('2405-05-02', 'DROP', 'VERIFIED')
+   skipped ('2405-06-02', 'DROP', 'ASSUMED')
+   skipped ('2405-32-24', 'DROP', 'VERIFIED')
+
+--- stderr ---

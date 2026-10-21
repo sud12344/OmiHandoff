@@ -1,0 +1,8 @@
+2404: 60 configs (ref 2404-08-08), 5 skipped (DROP/MISSING/no data), 0 geometry-blocked, 14 profile points, 42 table cols
+   skipped ('2404-32-48', 'BLOCKED in the review table', 'BLOCKED: NPTF -48 end length unmeasured; CB depth unsourced')
+   skipped ('2404-40-40', 'HELD for a user decision', 'HELD for the user (Q-2404-BORE): the review table builds ONE bore 2.318 straight through = the smaller of Air-Way D / D1, but Air-Way gives two bores and no counterbore depth (MS51500G does not list this size); the Brennan 2404 STEPs have two bores stepped at the hex mid-plane (OMi Side 1 / 2 ID per row: Q-2404-BORE). Built only if the user accepts ONE bore (ONE_BORE_2404_OK), or gives the review table the counterbore (CBDIA + $STATE U; an empty DEPTH = step at the hex mid-plane)')
+   skipped ('2404-L-04-02', 'DROP', 'ASSUMED')
+   skipped ('2404-L-08-06', 'DROP', 'ASSUMED')
+   skipped ('2404-L-16-16', 'DROP', 'ASSUMED')
+
+--- stderr ---

@@ -1,0 +1,9 @@
+FS0319C: 3 configs (ref FS0319-16), 9 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 21 table cols
+   skipped ('FS0319-04', 'other shape family', 'sleeve with a plain collar (BRENNAN_FS0319-04 / -06 / -08): built in master FS0319')
+   skipped ('FS0319-06', 'other shape family', 'sleeve with a plain collar (BRENNAN_FS0319-04 / -06 / -08): built in master FS0319')
+   skipped ('FS0319-08', 'other shape family', 'sleeve with a plain collar (BRENNAN_FS0319-04 / -06 / -08): built in master FS0319')
+   skipped ('FS0319-10', 'DROP', 'VERIFIED')
+   skipped ('FS0319-24', 'BUILD', 'MISSING')
+   skipped ('FS0319-32', 'DROP', 'ASSUMED')
+
+--- stderr ---

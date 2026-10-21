@@ -1,0 +1,3 @@
+C2502: 20 configs (ref C2502-08-08-FG), 12 skipped, 0 blocked, 45 cols
+
+--- stderr ---

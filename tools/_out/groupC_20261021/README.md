@@ -138,6 +138,21 @@ g1: C2402 C2403 C2405 C0318 (gen_straight2); g2: C2500 C2501 C2502 C2601 C6801 (
   4000 identically (macro + SW2); 0319T has no table in the repo (both toolsets stop the same way).
 - Dry run: group g3 in `dryrun/RUN_DRYRUN.md`.
 
+## After the merge of main (batches 18-20) into this branch (2026-10-21, merge commit 78c9b66 by the parent session)
+- **No collision with the batch-19 JIC sleeve 0319.** Main now ships root `0319` = the JIC tube sleeve (gen_ring SLEEVE, "0319 shape scaled
+  from the -08 STEP", `04_DESIGN_TABLES/DesignTable_0319.xlsx`, `0319_MASTER`). Group C's `C0319` is a different part (the bite-type
+  ferrule of OMi's compression series), a different root / review table (`DesignTable_C0319.xlsx`) / master (`C0319_MASTER`) / model type
+  (CSLEEVE, 14 lines, every size measured on its own BRENNAN_C0319-xx STEP - no scaling) / STEP files (BRENNAN_C0319-xx vs BRENNAN_0319-08).
+  The live SPEC '0319' and the group C SPEC 'C0319' sit side by side in gen_ring; with the patch applied, 0319 / 0319T / 4000 regenerate
+  identically (below).
+- **The patches are ready for the live toolset.** `scripts/live_check.py`: the live `tools/` (batch 20) + `scripts/patches` (two anchors
+  made prefix-tolerant: the live lines also list the NWO / face-seal kinds) -> **138 live roots identical** (macro + SW2, gen_straight2 /
+  gen_tee / gen_ring, live tables), 0 different; the 11 group C roots give the **same SW2 tables and byte-identical macros** as `regen/new`
+  (so the dry-run inputs stand). `live_patched/` = the three patched live generators (gen_straight2 / gen_tee / gen_ring) for the ship;
+  `regen_live/cmp.txt` + logs. Merge recipe at ship time: apply `scripts/patches` to the live generators (`live_check.py` does exactly that
+  and re-checks) - do not copy `tools_c/` over the live tools (tools_c is the Air-Way-first base).
+- The patches still reproduce `tools_c` exactly from the Air-Way-first base (checked).
+
 ## Files
 | Path | What |
 |---|---|
@@ -152,3 +167,4 @@ g1: C2402 C2403 C2405 C0318 (gen_straight2); g2: C2500 C2501 C2502 C2601 C6801 (
 | `closed_loop/` | closed-loop result |
 | `measure/c0319_profile.csv`, `scripts/measure_c0319.py`, `scripts/check_csleeve.py` | the sleeve measurement and checks |
 | `dryrun/` | RUN_DRYRUN.md, call files |
+| `live_patched/`, `regen_live/`, `scripts/live_check.py` | the patches applied to the live tools (batch 20) and the live regeneration check |

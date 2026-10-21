@@ -1,0 +1,7 @@
+1601: 7 configs (ref 1601-08-08-08-FG), 9 skipped, 0 blocked, 87 cols
+   warn 1601-06-06-06-FG: leg 1: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed
+   warn 1601-12-12-12-FG: leg 3: male NPTF thread dia at L2 1.0589 vs hex flats 1.0620 (round end flush with the flats by 0.0015; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 1: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed
+   warn 1601-16-16-16-FG: leg 3: male NPTF thread dia at L2 1.3259 vs hex flats 1.3120 (round end proud of the flats by 0.0069; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 1601-20-20-20-FG: leg 3: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

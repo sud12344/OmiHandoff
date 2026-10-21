@@ -1,0 +1,4 @@
+FS0318: 8 configs (ref FS0318-08), 1 skipped (DROP/MISSING/no data), 0 geometry-blocked, 4 profile points, 21 table cols
+   skipped ('FS0318-32', 'DROP', 'ASSUMED')
+
+--- stderr ---

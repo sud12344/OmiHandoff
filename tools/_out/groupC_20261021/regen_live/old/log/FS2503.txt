@@ -1,0 +1,6 @@
+FS2503: 4 configs (ref FS2503-08-06-FG), 8 skipped, 2 blocked, 49 cols
+   BLOCKED FS2503-08-08-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0025)
+   BLOCKED FS2503-10-08-FG: leg 2: the corner puck buries the inner thread edge (margin -0.0248)
+   warn FS2503-20-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+
+--- stderr ---

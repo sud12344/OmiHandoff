@@ -1,0 +1,3 @@
+FS6602: 2 configs (ref FS6602-08-08-08-FG), 19 skipped, 0 blocked, 77 cols
+
+--- stderr ---

@@ -1,0 +1,9 @@
+0306: 11 configs (ref 0306-08), 7 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 24 table cols
+   skipped ('0306-06 LN', 'DROP', 'ASSUMED')
+   skipped ('0306-08 LN', 'DROP', 'ASSUMED')
+   skipped ('0306-10 LN', 'DROP', 'ASSUMED')
+   skipped ('0306-16 LN', 'DROP', 'ASSUMED')
+   skipped ('0306-20 LN', 'DROP', 'ASSUMED')
+   skipped ('0306-24 LN', 'DROP', 'ASSUMED')
+
+--- stderr ---

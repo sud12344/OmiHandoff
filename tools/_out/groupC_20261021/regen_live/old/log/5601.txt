@@ -1,0 +1,3 @@
+5601: 7 configs (ref 5601-06-06-06-FG), 6 skipped, 0 blocked, 53 cols
+
+--- stderr ---
