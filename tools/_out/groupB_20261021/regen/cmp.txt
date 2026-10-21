@@ -118,6 +118,8 @@ fs:gen_straight2 FS0306    rc 0/0 | configs old   8 new   8 | NEW 0 | LOST 0 [] 
 fs:gen_straight2 FS0318    rc 0/0 | configs old   8 new   8 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_straight2 FS0319    rc 0/0 | configs old   3 new   3 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_straight2 FS0319C   rc 0/0 | configs old   3 new   3 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
+fs:gen_straight2 FS2408    rc None/0 | configs old   0 new   2 | NEW 2 | LOST 0 [] | changed 0 [] | macro n/a | new: FS2408-08 FS2408-24
+fs:gen_straight2 FS6402    rc None/0 | configs old   0 new   1 | NEW 1 | LOST 0 [] | changed 0 [] | macro n/a | new: FS6402-08-08
 fs:gen_tee       FS2500    rc 0/0 | configs old   5 new   5 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS2501    rc 0/0 | configs old   9 new   9 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS2503    rc 0/0 | configs old   4 new   4 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
@@ -129,7 +131,7 @@ fs:gen_tee       FS2704    rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] 
 fs:gen_tee       FS6500    rc 0/0 | configs old   3 new   3 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS6600    rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS6602    rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
-fs:gen_tee       FS6801    rc 0/0 | configs old   3 new   3 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
+fs:gen_tee       FS6801    rc 0/0 | configs old   3 new   4 | NEW 1 | LOST 0 [] | changed 0 [] | macro DIFFERS | new: FS6801-L-08-08-NWO-FG
 fs:gen_tee       FS6802    rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS6803    rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS2601    rc 0/0 | configs old   3 new   3 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
@@ -152,10 +154,10 @@ fs:gen_tee       FS6600NC  rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] 
 fs:gen_tee       FS6602C   rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS6602N   rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS6602NC  rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
-fs:gen_tee       FS6801R   rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
+fs:gen_tee       FS6801R   rc 0/0 | configs old   1 new   2 | NEW 1 | LOST 0 [] | changed 0 [] | macro DIFFERS | new: FS6801-08-06-NWO-FG
 fs:gen_tee       FS6801N   rc 0/0 | no SW2 table either side
 fs:gen_tee       FS6801NR  rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
-fs:gen_tee       FS6802R   rc 0/0 | no SW2 table either side
+fs:gen_tee       FS6802R   rc 0/0 | configs old   0 new   2 | NEW 2 | LOST 0 [] | changed 0 [] | macro n/a | new: FS6802-06-06-NWO-FG FS6802-08-06-NWO-FG
 fs:gen_tee       FS6802N   rc 0/0 | no SW2 table either side
 fs:gen_tee       FS6802NR  rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_tee       FS6803R   rc 0/0 | no SW2 table either side
@@ -165,8 +167,12 @@ fs:gen_tee       FS2601N   rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] 
 fs:gen_tee       FS6502C   rc 0/0 | no SW2 table either side
 fs:gen_tee       FS6502N   rc 0/0 | no SW2 table either side
 fs:gen_tee       FS6502NC  rc 0/0 | no SW2 table either side
-fs:gen_tee       FS6804R   rc 0/0 | no SW2 table either side
+fs:gen_tee       FS6804R   rc 0/0 | configs old   0 new   2 | NEW 2 | LOST 0 [] | changed 0 [] | macro n/a | new: FS6804-06-06-06-NWO-FG FS6804-08-06-08-NWO-FG
 fs:gen_tee       FS6804N   rc 0/0 | no SW2 table either side
 fs:gen_tee       FS6804NR  rc 0/0 | no SW2 table either side
-fs:gen_ring      4000      rc 0/0 | configs old   8 new   8 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
+fs:gen_tee       FS6809    rc None/0 | configs old   0 new   1 | NEW 1 | LOST 0 [] | changed 0 [] | macro n/a | new: FS6809-08-08-NWO-FG
+fs:gen_tee       FS6809C   rc None/0 | no SW2 table either side
+fs:gen_tee       FS6809R   rc None/0 | configs old   0 new   1 | NEW 1 | LOST 0 [] | changed 0 [] | macro n/a | new: FS6809-06-06-NWO-FG
+fs:gen_tee       FS6809RC  rc None/0 | no SW2 table either side
+fs:gen_ring      4000      rc 0/0 | configs old  29 new  37 | NEW 8 | LOST 0 [] | changed 0 [] | macro DIFFERS | new: 4005-08 4005-10 4005-12 4005-16 4005-20 4005-24 4005-32 4005-40
 fs:gen_ring      0319T     rc 1/1 | no SW2 table either side
