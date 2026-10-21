@@ -1,0 +1,18 @@
+# tube_fittings_and_adapters/5406_c: 1 STEP(s): 5406-C-24
+
+A1THD    DECODED  GAP (mm) 1/1 (chance 0/2)   values: 1.900
+BX       DECODED  GAP 1/1 (chance 0/2)   values: 0.940
+C        DECODED  GAP 1/1 (chance 0/2)   values: 2.375
+CX       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.734
+DX       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 1.935
+EX       DECODED  GAP 1/1 (chance 0/2)   values: 1.160
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.540
+
+== 5406-C-24 (record 5406-C-24)
+  L             1.540  -> BOX, GAP
+  C             2.375  -> GAP
+  BX            0.940  -> GAP
+  CX            1.734  -> CYL_D
+  DX            1.935  -> GAP (mm)
+  EX            1.160  -> GAP
+  A1THD         1.900  -> GAP (mm)

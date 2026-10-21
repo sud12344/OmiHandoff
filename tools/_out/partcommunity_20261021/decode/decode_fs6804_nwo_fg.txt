@@ -1,0 +1,56 @@
+# o_ring_face_seal_fittings/fs6804_nwo_fg: 1 STEP(s): FS6804-08-06-08-NWO-FG
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+A1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.812
+AL       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 1/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.719
+AR       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 1/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.719
+AT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.475
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.264
+BTHD     AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.5625
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+CR       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+CT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.354
+DL       AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.629
+DR       AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.629
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.457
+ET       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.035
+FT       DECODED  GAP 1/1 (chance 0/2)   values: 0.330
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 0.880
+HT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.482
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.794
+JJ       DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+JT       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.078
+M1       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.100
+M2       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.100
+N        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.440
+
+== FS6804-08-06-08-NWO-FG (record FS6804-08-06-08-NWO-FG)
+  A1D           0.378  -> CYL_D
+  BD            0.264  -> CYL_D
+  A2D           0.378  -> CYL_D
+  M1            1.100  -> AX_PL, GAP
+  N             1.440  -> AX_PL, GAP
+  M2            1.100  -> AX_PL, GAP
+  C             0.750  -> GAP
+  JJ            0.750  -> GAP
+  AL            0.719  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  CL            0.504  -> GAP
+  DL            0.629  -> CYL_D
+  AR            0.719  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  CR            0.504  -> GAP
+  DR            0.629  -> CYL_D
+  AT            0.475  -> GAP (mm)
+  CT            0.354  -> AX_PL (mm)
+  DT            0.457  -> GAP
+  ET            0.035  -> GAP
+  FT            0.330  -> GAP
+  GT            0.880  -> GAP
+  HT            0.482  -> CYL_D
+  IT            0.794  -> CYL_D
+  JT            0.078  -> AX_PL, GAP, TOR_r
+  A1THD        0.8125  -> CYL_D
+  BTHD         0.5625  -> CYL_D
+  A2THD         0.812  -> CYL_D

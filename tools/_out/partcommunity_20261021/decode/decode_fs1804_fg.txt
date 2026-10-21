@@ -1,0 +1,36 @@
+# flange_fitting_and_accessories/fs1804_fg: 1 STEP(s): FS1804-12-12-FG
+
+AF       DECODED  GAP 1/1 (chance 0/2)   values: 1.0620
+AFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.232
+AT       DECODED  GAP 1/1 (chance 0/2)   values: 0.670
+BFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.250
+BT       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.125
+CFL      DECODED  GAP 1/1 (chance 0/2)   values: 1.322
+CT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.069
+DFL      DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.625
+DRILLFL  DECODED  CYL_D 1/1 (chance 0/2)   values: 0.609
+DRILLT   DECODED  CYL_D 1/1 (chance 0/2)   values: 0.609
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 1.063
+EFL      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.345
+ET       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.881
+FL       NO MATCH -   values: 12
+L1       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.660
+L2       DECODED  AX_PL 1/1 (chance 0/2)   values: 2.130
+
+== FS1804-12-12-FG (record FS1804-12-12-FG)
+  FL               12  -> -
+  L1            1.660  -> AX_PL
+  L2            2.130  -> AX_PL
+  AF           1.0620  -> GAP
+  AT            0.670  -> GAP
+  BT            0.125  -> AX_PL
+  CT            1.069  -> AX_PL (mm)
+  DT            1.063  -> GAP
+  ET            0.881  -> CYL_D
+  DRILLT        0.609  -> CYL_D
+  AFL           1.232  -> CYL_D
+  BFL           1.250  -> CYL_D
+  CFL           1.322  -> GAP
+  DFL           1.625  -> BOX, CYL_D
+  EFL           0.345  -> GAP
+  DRILLFL       0.609  -> CYL_D

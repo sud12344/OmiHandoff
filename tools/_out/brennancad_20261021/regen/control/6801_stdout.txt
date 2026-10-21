@@ -1,0 +1,14 @@
+6801: 39 configs (ref 6801-08-08-NWO-FG), 61 skipped, 0 blocked, 62 cols
+   warn 6801-06-04-NWO-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6801-06-05-NWO-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6801-06-06-NWO-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 6801-12-08-NWO-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 6801-12-10-NWO-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 6801-12-12-NWO-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 6801-16-08-NWO-FG: hex A/F raised from Air-Way 1.312 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 6801-16-10-NWO-FG: hex A/F raised from Air-Way 1.312 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 6801-16-12-NWO-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 6801-16-14-NWO-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)
+   warn 6801-16-16-NWO-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule)
+
+--- stderr ---

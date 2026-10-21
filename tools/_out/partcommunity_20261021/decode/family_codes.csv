@@ -1,0 +1,17 @@
+family,code,status,kinds,steps,values
+o_ring_face_seal_fittings/fs2403,A1D,DECODED,CYL_D,2,0.378 1.260
+o_ring_face_seal_fittings/fs2403,A1THD,DECODED,CYL_D,2,0.8125 2.0000
+o_ring_face_seal_fittings/fs2403,A2D,DECODED,CYL_D,2,0.378 1.260
+o_ring_face_seal_fittings/fs2403,A2THD,DECODED,CYL_D,2,0.8125 2.0000
+o_ring_face_seal_fittings/fs2403,AL,DECODED,GAP,2,0.504 0.689
+o_ring_face_seal_fittings/fs2403,AR,DECODED,GAP,2,0.504 0.689
+o_ring_face_seal_fittings/fs2403,BL,DECODED,AX_PL,2,0.094 0.125
+o_ring_face_seal_fittings/fs2403,BR,DECODED,AX_PL,2,0.094 0.125
+o_ring_face_seal_fittings/fs2403,CL,DECODED,CYL_D,2,0.719 1.881
+o_ring_face_seal_fittings/fs2403,CR,DECODED,CYL_D,2,0.719 1.881
+o_ring_face_seal_fittings/fs2403,DL,PARTIAL,CYL_D 1/2 (chance 0/4) | GAP 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 0/4),2,0.719 1.876
+o_ring_face_seal_fittings/fs2403,DR,PARTIAL,CYL_D 1/2 (chance 0/4) | GAP 1/2 (chance 1/4) | AX_PL (mm) 1/2 (chance 0/4),2,0.719 1.876
+o_ring_face_seal_fittings/fs2403,EL,DECODED,CYL_D,2,0.629 1.629
+o_ring_face_seal_fittings/fs2403,ER,DECODED,CYL_D,2,0.629 1.629
+o_ring_face_seal_fittings/fs2403,FF,DECODED,GAP,2,1.390 2.090
+o_ring_face_seal_fittings/fs2403,H,DECODED,GAP,2,0.875 2.125

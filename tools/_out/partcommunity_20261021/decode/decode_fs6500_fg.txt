@@ -1,0 +1,235 @@
+# o_ring_face_seal_fittings/fs6500_fg: 7 STEP(s): FS6500-04-04-FG FS6500-06-06-FG FS6500-08-08-FG FS6500-10-10-FG FS6500-12-12-FG FS6500-16-16-FG FS6500-20-20-FG
+
+AAA      DECODED  AX_PL 7/7 (chance 0/14)   values: 1.040, 1.150, 1.490, 1.620
+AD       DECODED  CYL_D 7/7 (chance 2/14), GAP 1/7 (chance 2/14), AX_PL 1/7 (chance 0/14)   values: 0.172, 0.264, 0.378, 0.484
+AL       PARTIAL  AX_AX (mm) 3/7 (chance 0/14), GAP (mm) 3/7 (chance 2/14), AX_PL (mm) 2/7 (chance 1/14), GAP 1/7 (chance 2/14), CYL_D (mm) 1/7 (chance 0/14)   values: 0.483, 0.594, 0.719, 0.890
+AT       AMBIGUOUS GAP 7/7 (chance 4/14)   values: 0.650, 0.735, 0.855, 0.980
+ATHD     DECODED  CYL_D 7/7 (chance 0/14), GAP 4/7 (chance 1/14)   values: 0.5625, 0.6875, 0.8125, 1.0000
+BD       DECODED  CYL_D 7/7 (chance 1/14)   values: 0.165, 0.264, 0.358, 0.453
+BN       DECODED  GAP 7/7 (chance 1/14)   values: 0.688, 0.812, 0.938, 1.125
+BT       AMBIGUOUS GAP 7/7 (chance 7/14)   values: 0.157, 0.177, 0.197, 0.236
+BTHD     DECODED  CYL_D 7/7 (chance 0/14), GAP 4/7 (chance 1/14)   values: 0.5625, 0.6875, 0.8125, 1.0000
+C        DECODED  GAP 7/7 (chance 1/14)   values: 0.687, 0.812, 0.938, 1.125
+CL       DECODED  GAP 7/7 (chance 3/14), AX_PL 2/7 (chance 0/14)   values: 0.386, 0.441, 0.504, 0.610
+CN       DECODED  CYL_D 7/7 (chance 0/14), AX_PL 1/7 (chance 1/14)   values: 0.405, 0.525, 0.647, 0.822
+CT       DECODED  CYL_D 7/7 (chance 0/14)   values: 0.502, 0.620, 0.745, 0.923
+DL       DECODED  CYL_D 7/7 (chance 1/14), GAP 2/7 (chance 0/14)   values: 0.433, 0.504, 0.629, 0.756
+DNUT     PARTIAL  AX_PL (mm) 4/7 (chance 1/14), CYL_D (mm) 2/7 (chance 3/14), GAP (mm) 2/7 (chance 1/14), AX_AX (mm) 1/7 (chance 0/14), CYL_D 1/7 (chance 3/14)   values: 0.597, 0.722, 0.833, 1.020
+DT       DECODED  CYL_D 7/7 (chance 0/14), GAP 1/7 (chance 1/14)   values: 0.402, 0.522, 0.642, 0.817
+EN       DECODED  CYL_D 7/7 (chance 3/14)   values: 0.588, 0.715, 0.838, 1.032
+FN       PARTIAL  GAP 5/7 (chance 4/14), AX_PL (mm) 2/7 (chance 0/14)   values: 0.140, 0.160, 0.180, 0.220
+GN       DECODED  GAP 7/7 (chance 0/14)   values: 0.622, 0.707, 0.827, 0.953
+HN       DECODED  CYL_D 4/4 (chance 1/8), AX_PL 1/4 (chance 0/8)   values: 1.020, 1.208, 1.458, 1.708
+JJ       DECODED  GAP 7/7 (chance 2/14), CYL_D 3/7 (chance 3/14)   values: 0.562, 0.750, 0.750, 1.062
+JN       PARTIAL  AX_PL (mm) 2/3 (chance 0/6), GAP (mm) 1/3 (chance 1/6), GAP 1/3 (chance 1/6)   values: 0.567, 0.693, 0.819
+KN       PARTIAL  AX_PL (mm) 4/7 (chance 2/14), GAP (mm) 3/7 (chance 1/14), AX_AX (mm) 1/7 (chance 0/14), AX_PL 1/7 (chance 2/14)   values: 0.670, 0.800, 0.920, 1.110
+M        DECODED  AX_PL 7/7 (chance 1/14), GAP 2/7 (chance 1/14)   values: 0.850, 0.980, 1.100, 1.310
+MIN      PARTIAL  GAP (mm) 3/7 (chance 0/14), AX_AX (mm) 3/7 (chance 0/14), AX_PL (mm) 3/7 (chance 0/14), GAP 1/7 (chance 0/14)   values: 0.508, 0.625, 0.751, 0.929
+MN       PARTIAL  AX_PL (mm) 3/7 (chance 0/14), GAP (mm) 2/7 (chance 5/14), AX_AX (mm) 1/7 (chance 0/14)   values: 0.337, 0.392, 0.482, 0.548
+NN       AMBIGUOUS GAP 7/7 (chance 4/14), AX_PL 1/7 (chance 0/14)   values: 0.140, 0.155, 0.197, 0.185
+PNUT     PARTIAL  GAP (mm) 3/7 (chance 0/14), AX_AX (mm) 3/7 (chance 0/14), AX_PL (mm) 3/7 (chance 0/14), GAP 1/7 (chance 0/14)   values: 0.507, 0.625, 0.750, 0.928
+QN       PARTIAL  AX_PL (mm) 4/7 (chance 3/14), GAP 2/7 (chance 10/14), GAP (mm) 1/7 (chance 10/14), AX_PL 1/7 (chance 3/14)   values: 0.118, 0.135, 0.157, 0.157
+
+== FS6500-04-04-FG (record FS6500-04-04-FG)
+  AD            0.172  -> CYL_D
+  BD            0.165  -> CYL_D
+  M             0.850  -> AX_PL, GAP
+  AAA           1.040  -> AX_PL
+  C             0.687  -> GAP
+  JJ            0.562  -> CYL_D, GAP
+  AL            0.483  -> GAP
+  CL            0.386  -> AX_PL, GAP
+  DL            0.433  -> CYL_D, GAP
+  AT            0.650  -> GAP
+  BT            0.157  -> GAP
+  CT            0.502  -> CYL_D
+  DT            0.402  -> CYL_D
+  BN            0.688  -> GAP
+  CN            0.405  -> CYL_D
+  DNUT          0.597  -> AX_PL (mm)
+  EN            0.588  -> CYL_D
+  FN            0.140  -> GAP
+  GN            0.622  -> GAP
+  KN            0.670  -> AX_PL (mm)
+  MN            0.337  -> AX_AX (mm), AX_PL (mm)
+  JN            0.567  -> AX_PL (mm), GAP (mm)
+  MIN           0.508  -> AX_AX (mm), GAP (mm)
+  NN            0.140  -> GAP
+  PNUT          0.507  -> AX_AX (mm), GAP (mm)
+  QN            0.118  -> GAP
+  ATHD         0.5625  -> CYL_D, GAP
+  BTHD         0.5625  -> CYL_D, GAP
+== FS6500-06-06-FG (record FS6500-06-06-FG)
+  AD            0.264  -> CYL_D
+  BD            0.264  -> CYL_D
+  M             0.980  -> AX_PL
+  AAA           1.150  -> AX_PL
+  C             0.812  -> GAP
+  JJ            0.750  -> GAP
+  AL            0.594  -> AX_AX (mm)
+  CL            0.441  -> AX_PL, GAP
+  DL            0.504  -> CYL_D
+  AT            0.735  -> GAP
+  BT            0.177  -> GAP
+  CT            0.620  -> CYL_D
+  DT            0.522  -> CYL_D, GAP
+  BN            0.812  -> GAP
+  CN            0.525  -> AX_PL, CYL_D
+  DNUT          0.722  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  EN            0.715  -> CYL_D
+  FN            0.160  -> GAP
+  GN            0.707  -> GAP
+  KN            0.800  -> AX_PL (mm), GAP (mm)
+  MN            0.392  -> AX_PL (mm), GAP (mm)
+  JN            0.693  -> GAP
+  MIN           0.625  -> AX_AX (mm), AX_PL (mm)
+  NN            0.155  -> GAP
+  PNUT          0.625  -> AX_AX (mm), AX_PL (mm)
+  QN            0.135  -> GAP
+  ATHD         0.6875  -> CYL_D
+  BTHD         0.6875  -> CYL_D
+== FS6500-08-08-FG (record FS6500-08-08-FG)
+  AD            0.378  -> CYL_D, GAP
+  BD            0.358  -> CYL_D
+  M             1.100  -> AX_PL
+  AAA           1.490  -> AX_PL
+  C             0.938  -> GAP
+  JJ            0.750  -> GAP
+  AL            0.719  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  CL            0.504  -> GAP
+  DL            0.629  -> CYL_D, GAP
+  AT            0.855  -> GAP
+  BT            0.197  -> GAP
+  CT            0.745  -> CYL_D
+  DT            0.642  -> CYL_D
+  BN            0.938  -> GAP
+  CN            0.647  -> CYL_D
+  DNUT          0.833  -> -
+  EN            0.838  -> CYL_D
+  FN            0.180  -> GAP
+  GN            0.827  -> GAP
+  KN            0.920  -> GAP (mm)
+  MN            0.482  -> GAP (mm)
+  JN            0.819  -> AX_PL (mm)
+  MIN           0.751  -> GAP
+  NN            0.197  -> GAP
+  PNUT          0.750  -> GAP
+  QN            0.157  -> AX_PL (mm), GAP (mm)
+  ATHD         0.8125  -> CYL_D, GAP
+  BTHD         0.8125  -> CYL_D, GAP
+== FS6500-10-10-FG (record FS6500-10-10-FG)
+  AD            0.484  -> CYL_D
+  BD            0.453  -> CYL_D
+  M             1.310  -> AX_PL
+  AAA           1.620  -> AX_PL
+  C             1.125  -> GAP
+  JJ            1.062  -> GAP
+  AL            0.890  -> GAP (mm)
+  CL            0.610  -> GAP
+  DL            0.756  -> CYL_D
+  AT            0.980  -> GAP
+  BT            0.236  -> GAP
+  CT            0.923  -> CYL_D
+  DT            0.817  -> CYL_D
+  BN            1.125  -> GAP
+  CN            0.822  -> CYL_D
+  DNUT          1.020  -> CYL_D
+  EN            1.032  -> CYL_D
+  FN            0.220  -> GAP
+  GN            0.953  -> GAP
+  HN            1.020  -> CYL_D
+  KN            1.110  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  MN            0.548  -> -
+  MIN           0.929  -> GAP (mm)
+  NN            0.185  -> AX_PL, GAP
+  PNUT          0.928  -> GAP (mm)
+  QN            0.157  -> AX_PL
+  ATHD         1.0000  -> CYL_D
+  BTHD         1.0000  -> CYL_D
+== FS6500-12-12-FG (record FS6500-12-12-FG)
+  AD            0.609  -> CYL_D
+  BD            0.547  -> CYL_D
+  M             1.470  -> AX_PL, GAP
+  AAA           1.820  -> AX_PL
+  C             1.375  -> GAP
+  JJ            1.188  -> CYL_D, GAP
+  AL            1.063  -> AX_PL (mm)
+  CL            0.670  -> GAP
+  DL            0.881  -> CYL_D
+  AT            1.120  -> GAP
+  BT            0.256  -> GAP
+  CT            1.097  -> CYL_D
+  DT            0.936  -> CYL_D
+  BN            1.375  -> GAP
+  CN            0.941  -> CYL_D
+  DNUT          1.200  -> AX_PL (mm), CYL_D (mm)
+  EN            1.216  -> CYL_D
+  FN            0.240  -> GAP
+  GN            1.024  -> GAP
+  HN            1.208  -> CYL_D
+  KN            1.360  -> AX_PL
+  MN            0.599  -> AX_PL (mm)
+  MIN           1.103  -> AX_AX (mm), AX_PL (mm)
+  NN            0.197  -> GAP
+  PNUT          1.103  -> AX_AX (mm), AX_PL (mm)
+  QN            0.161  -> AX_PL (mm)
+  ATHD         1.1875  -> CYL_D, GAP
+  BTHD         1.1875  -> CYL_D, GAP
+== FS6500-16-16-FG (record FS6500-16-16-FG)
+  AD            0.811  -> AX_PL, CYL_D
+  BD            0.783  -> CYL_D
+  M             1.640  -> AX_PL
+  AAA           2.100  -> AX_PL
+  C             1.625  -> GAP
+  JJ            1.438  -> CYL_D, GAP
+  AL            1.313  -> AX_AX (mm), GAP (mm)
+  CL            0.689  -> GAP
+  DL            1.067  -> CYL_D
+  AT            1.200  -> GAP
+  BT            0.276  -> GAP
+  CT            1.347  -> CYL_D
+  DT            1.130  -> CYL_D
+  BN            1.625  -> GAP
+  CN            1.135  -> CYL_D
+  DNUT          1.450  -> -
+  EN            1.420  -> CYL_D
+  FN            0.260  -> AX_PL (mm)
+  GN            1.095  -> GAP
+  HN            1.458  -> CYL_D
+  KN            1.610  -> -
+  MN            0.650  -> -
+  MIN           1.353  -> AX_PL (mm), GAP (mm)
+  NN            0.236  -> GAP
+  PNUT          1.352  -> AX_PL (mm), GAP (mm)
+  QN            0.200  -> AX_PL (mm)
+  ATHD         1.4375  -> CYL_D, GAP
+  BTHD         1.4375  -> CYL_D, GAP
+== FS6500-20-20-FG (record FS6500-20-20-FG)
+  AD            1.024  -> CYL_D
+  BD            1.024  -> CYL_D
+  M             1.760  -> AX_PL
+  AAA           2.290  -> AX_PL
+  C             1.875  -> GAP
+  JJ            1.625  -> GAP
+  AL            1.565  -> -
+  CL            0.689  -> GAP
+  DL            1.317  -> CYL_D
+  AT            1.200  -> GAP
+  BT            0.276  -> GAP
+  CT            1.597  -> CYL_D
+  DT            1.401  -> CYL_D
+  BN            1.875  -> GAP
+  CN            1.406  -> CYL_D
+  DNUT          1.720  -> AX_PL (mm), GAP (mm)
+  EN            1.731  -> CYL_D
+  FN            0.260  -> AX_PL (mm)
+  GN            1.095  -> GAP
+  HN            1.708  -> AX_PL, CYL_D
+  KN            1.860  -> AX_PL (mm)
+  MN            0.650  -> -
+  MIN           1.603  -> -
+  NN            0.236  -> GAP
+  PNUT          1.602  -> -
+  QN            0.200  -> AX_PL (mm)
+  ATHD         1.6875  -> CYL_D
+  BTHD         1.6875  -> CYL_D

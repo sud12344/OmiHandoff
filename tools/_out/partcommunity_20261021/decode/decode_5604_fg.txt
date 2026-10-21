@@ -1,0 +1,34 @@
+# tube_fittings_and_adapters/5604_fg: 1 STEP(s): 5604-02-02-02-FG
+
+A1PN     DECODED  GAP (mm) 1/1 (chance 0/2)   values: 02
+A3D      DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.188
+DIA      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.315
+DIA33    AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.281
+G        DECODED  AX_PL 1/1 (chance 0/2)   values: 0.170
+H1       DECODED  GAP 1/1 (chance 0/2)   values: 0.436
+L1       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.380
+L3       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.380
+LA1      DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.260
+N        AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.780
+N1       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.660
+N2       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.660
+R        AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.010
+THDNPSM  DECODED  GAP 1/1 (chance 0/2)   values: 0.3969
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.562
+
+== 5604-02-02-02-FG (record 5604-02-02-02-FG)
+  A1PN             02  -> GAP (mm)
+  A3D           0.188  -> AX_PL, CYL_D
+  N1            0.660  -> AX_PL
+  N2            0.660  -> AX_PL
+  N             0.780  -> AX_PL
+  Y             0.562  -> BOX, CYL_D, GAP
+  H1            0.436  -> GAP
+  DIA           0.315  -> CYL_D
+  L1            0.380  -> AX_PL (mm), CYL_D (mm)
+  L3            0.380  -> AX_PL (mm), CYL_D (mm)
+  LA1           0.260  -> AX_PL, GAP
+  DIA33         0.281  -> AX_PL
+  G             0.170  -> AX_PL
+  R             0.010  -> AX_PL, GAP
+  THDNPSM      0.3969  -> GAP

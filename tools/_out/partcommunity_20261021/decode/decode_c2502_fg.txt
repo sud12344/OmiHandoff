@@ -1,0 +1,46 @@
+# flareless_bite_type_fittings/c2502_fg: 1 STEP(s): C2502-08-06-FG
+
+A2THD    DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.675
+AB1      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.514
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.422
+B1THD    DECODED  AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+BA2      DECODED  GAP 1/1 (chance 0/2)   values: 0.580
+BB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.244
+CA2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.578
+CB1      AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+DA2      DECODED  GAP 1/1 (chance 0/2)   values: 0.695
+DB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.840
+EA2      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+EB1      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+FB1      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+K        DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+KB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.230
+MB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.318
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.020
+ODB1     DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.505
+PITCHA2  AMBIGUOUS GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 1/2)   values: 0.05556
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+
+== C2502-08-06-FG (record C2502-08-06-FG)
+  B1D           0.422  -> CYL_D
+  M             1.230  -> AX_PL
+  N             1.020  -> AX_PL
+  K             0.305  -> GAP
+  Y             0.875  -> CYL_D, GAP
+  AB1           0.514  -> CYL_D
+  BB1           0.244  -> GAP
+  CB1           0.094  -> AX_PL
+  DB1           0.840  -> GAP
+  EB1           0.660  -> CYL_D, GAP
+  KB1           0.305  -> GAP
+  ODB1          0.505  -> CYL_D, GAP
+  FB1           0.875  -> CYL_D, GAP
+  MB1           0.318  -> GAP
+  BA2           0.580  -> GAP
+  CA2           0.578  -> CYL_D
+  DA2           0.695  -> GAP
+  EA2           0.875  -> CYL_D, GAP
+  B1THD        0.7500  -> AX_PL, CYL_D
+  A2THD         0.675  -> AX_PL (mm), CYL_D (mm), GAP (mm)
+  PITCHA2     0.05556  -> CYL_D, GAP

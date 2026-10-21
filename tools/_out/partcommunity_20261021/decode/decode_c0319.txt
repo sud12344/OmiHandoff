@@ -1,0 +1,32 @@
+# flareless_bite_type_fittings/c0319: 1 STEP(s): C0319-08
+
+C        DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.663
+C1       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.663
+D        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.587
+D1       NO MATCH -   values: 0.577
+E        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.521
+G        NO MATCH -   values: 0.044
+H        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.429
+H1       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.429
+K        NO MATCH -   values: 0.030
+L        NO MATCH -   values: 0.162
+M        DECODED  GAP 1/1 (chance 0/2)   values: 0.068
+N        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.555
+PMAX     NO MATCH -   values: 0.260
+PMIN     NO MATCH -   values: 0.240
+
+== C0319-08 (record C0319-08)
+  C             0.663  -> BOX, CYL_D
+  H             0.429  -> BOX, GAP
+  C1            0.663  -> BOX, CYL_D
+  D             0.587  -> CYL_D
+  D1            0.577  -> -
+  E             0.521  -> CYL_D
+  G             0.044  -> -
+  H1            0.429  -> BOX, GAP
+  K             0.030  -> -
+  L             0.162  -> -
+  M             0.068  -> GAP
+  N             0.555  -> CYL_D
+  PMIN          0.240  -> -
+  PMAX          0.260  -> -

@@ -1,0 +1,22 @@
+# tube_fittings_and_adapters/6408_h_o: 1 STEP(s): 6408-H08-O
+
+BTHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.75000
+C1       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.660
+C5       DECODED  GAP 1/1 (chance 0/2)   values: 0.313
+D1       NO MATCH -   values: 0.094
+D2       DECODED  GAP 1/1 (chance 0/2)   values: 0.188
+E1       NO MATCH -   values: 0.655
+F1       DECODED  TOR_r 1/1 (chance 0/2)   values: 0.087
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.580
+SC       NO MATCH -   values: 0.375
+
+== 6408-H08-O (record 6408-H08-O)
+  BTHD        0.75000  -> CYL_D
+  L             0.580  -> BOX, GAP
+  C5            0.313  -> GAP
+  C1            0.660  -> CYL_D
+  D1            0.094  -> -
+  E1            0.655  -> -
+  F1            0.087  -> TOR_r
+  D2            0.188  -> GAP
+  SC            0.375  -> -

@@ -1,0 +1,66 @@
+# tube_fittings_and_adapters/1502_fg: 1 STEP(s): 1502-08-08-FG
+
+A1THD    AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.8400
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.460
+A2THD    AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.8230
+AT       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+BL       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.750
+BT       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.140
+BT2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.608
+C        DECODED  GAP 1/1 (chance 0/2)   values: 1.000
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.718
+CT       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.28
+CT2      NO MATCH -   values: 0.562
+D1T      DECODED  GAP 1/1 (chance 0/2)   values: 1.000
+D2T      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.747
+D3T      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.885
+D4T      DECODED  GAP 1/1 (chance 0/2)   values: 1.000
+DL       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.855
+DT2      DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.740
+EL       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+ET2      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.320
+FT2      DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.160
+HT       DECODED  GAP 1/1 (chance 0/2)   values: 1.000
+L        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.230
+L1T      AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2)   values: 0.120
+L2T      DECODED  GAP 1/1 (chance 0/2)   values: 0.180
+L3T      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.320
+L4T      DECODED  GAP 1/1 (chance 0/2)   values: 0.720
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.240
+M1       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.520
+MDP      DECODED  CONE_A 1/1 (chance 0/2)   values: 5.000
+PITCH2   DECODED  GAP 1/1 (chance 0/2)   values: 0.07098
+Y        DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+
+== 1502-08-08-FG (record 1502-08-08-FG)
+  A2D           0.460  -> CYL_D
+  L             1.230  -> AX_PL, GAP
+  M             1.240  -> AX_PL
+  M1            1.520  -> AX_PL
+  C             1.000  -> GAP
+  Y             1.062  -> CYL_D, GAP
+  AT            0.875  -> CYL_D, GAP
+  BT            0.140  -> AX_PL, GAP
+  CT             0.28  -> GAP
+  BT2           0.608  -> CYL_D
+  CT2           0.562  -> -
+  DT2           0.740  -> AX_PL, CYL_D
+  ET2           0.320  -> GAP
+  FT2           0.160  -> AX_PL, GAP
+  HT            1.000  -> GAP
+  D1T           1.000  -> GAP
+  D2T           0.747  -> AX_PL (mm), GAP (mm)
+  D3T           0.885  -> CYL_D
+  D4T           1.000  -> GAP
+  L1T           0.120  -> AX_PL, GAP
+  L2T           0.180  -> GAP
+  L3T           0.320  -> GAP
+  L4T           0.720  -> GAP
+  BL            0.750  -> GAP
+  CL            0.718  -> CYL_D
+  DL            0.855  -> GAP
+  EL            1.062  -> CYL_D, GAP
+  A1THD        0.8400  -> GAP (mm)
+  A2THD        0.8230  -> GAP (mm)
+  PITCH2      0.07098  -> GAP
+  MDP           5.000  -> CONE_A

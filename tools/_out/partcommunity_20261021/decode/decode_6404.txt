@@ -1,0 +1,138 @@
+# tube_fittings_and_adapters/6404: 7 STEP(s): 6404-04-04 6404-06-06 6404-08-08 6404-10-08 6404-12-12 6404-16-16 6404-24-24
+
+AD       DECODED  CYL_D 7/7 (chance 0/14), GAP 4/7 (chance 2/14), AX_PL 3/7 (chance 0/14)   values: 0.281, 0.406, 0.531, 0.531
+AL       PARTIAL  GAP (mm) 4/7 (chance 1/14), AX_PL (mm) 4/7 (chance 0/14), AX_AX (mm) 2/7 (chance 0/14), CYL_D (mm) 1/7 (chance 0/14)   values: 0.490, 0.618, 0.813, 0.945
+ATHD     DECODED  CYL_D 7/7 (chance 0/14)   values: 0.5400, 0.6750, 0.8400, 0.8400
+BL       AMBIGUOUS GAP 7/7 (chance 6/14), AX_PL 4/7 (chance 4/14)   values: 0.102, 0.106, 0.106, 0.106
+BR       PARTIAL  AX_PL (mm) 4/7 (chance 0/14), GAP (mm) 2/7 (chance 0/14), CYL_D (mm) 1/7 (chance 0/14)   values: 0.410, 0.540, 0.670, 0.670
+BTHD     PARTIAL  AX_PL (mm) 4/7 (chance 0/14), AX_AX (mm) 2/7 (chance 0/14), CYL_D (mm) 1/7 (chance 0/14), GAP 1/7 (chance 1/14), GAP (mm) 1/7 (chance 1/14)   values: 0.4375, 0.5625, 0.7500, 0.8750
+C4       DECODED  GAP 7/7 (chance 1/14), AX_PL 1/7 (chance 0/14)   values: 0.688, 0.812, 1.062, 1.125
+CL       PARTIAL  AX_PL (mm) 3/7 (chance 0/14), GAP (mm) 2/7 (chance 1/14), AX_AX (mm) 2/7 (chance 0/14), GAP 1/7 (chance 1/14)   values: 0.454, 0.500, 0.562, 0.656
+CR       PARTIAL  CYL_D 5/7 (chance 0/14), GAP (mm) 1/7 (chance 0/14), AX_PL (mm) 1/7 (chance 0/14), AX_AX (mm) 1/7 (chance 0/14)   values: 0.540, 0.675, 0.840, 0.840
+DL       PARTIAL  GAP (mm) 4/7 (chance 0/14), AX_PL (mm) 3/7 (chance 0/14), AX_AX (mm) 2/7 (chance 0/14), CYL_D 1/7 (chance 0/14)   values: 0.547, 0.609, 0.688, 0.781
+DR       DECODED  GAP 7/7 (chance 2/14), CYL_D 1/7 (chance 0/14)   values: 0.560, 0.560, 0.750, 0.750
+EL       DECODED  CONE_A 7/7 (chance 0/14)   values: 12, 12, 15, 15
+ER       PARTIAL  AX_PL (mm) 4/7 (chance 0/14), GAP (mm) 2/7 (chance 1/14), AX_AX (mm) 2/7 (chance 0/14), AX_PL 1/7 (chance 0/14), GAP 1/7 (chance 1/14)   values: 0.344, 0.469, 0.625, 0.625
+FL       DECODED  CYL_D 7/7 (chance 0/14), AX_PL 1/7 (chance 0/14), CONE_A 1/7 (chance 0/14)   values: 0.389, 0.518, 0.689, 0.805
+L        DECODED  GAP 7/7 (chance 0/14), BOX 7/7 (chance 0/14)   values: 1.340, 1.380, 1.650, 1.740
+PITCHR   PARTIAL  GAP 6/7 (chance 8/14), AX_PL 5/7 (chance 6/14), CYL_D 1/7 (chance 1/14)   values: 0.05556, 0.05556, 0.07143, 0.07143
+
+== 6404-04-04 (record 6404-04-04)
+  AD            0.281  -> CYL_D
+  L             1.340  -> BOX, GAP
+  C4            0.688  -> GAP
+  AL            0.490  -> AX_AX (mm), GAP (mm)
+  BL            0.102  -> GAP
+  CL            0.454  -> AX_PL (mm)
+  DL            0.547  -> AX_PL (mm), GAP (mm)
+  EL               12  -> CONE_A
+  FL            0.389  -> AX_PL, CYL_D
+  BR            0.410  -> AX_PL (mm), CYL_D (mm)
+  CR            0.540  -> CYL_D
+  DR            0.560  -> GAP
+  ER            0.344  -> AX_PL
+  BTHD         0.4375  -> AX_PL (mm), CYL_D (mm)
+  ATHD         0.5400  -> CYL_D
+  PITCHR      0.05556  -> AX_PL, GAP
+== 6404-06-06 (record 6404-06-06)
+  AD            0.406  -> AX_PL, CYL_D, GAP
+  L             1.380  -> BOX, GAP
+  C4            0.812  -> GAP
+  AL            0.618  -> AX_AX (mm), AX_PL (mm)
+  BL            0.106  -> AX_PL, GAP
+  CL            0.500  -> GAP (mm)
+  DL            0.609  -> AX_AX (mm), AX_PL (mm)
+  EL               12  -> CONE_A
+  FL            0.518  -> CYL_D
+  BR            0.540  -> GAP (mm)
+  CR            0.675  -> CYL_D
+  DR            0.560  -> GAP
+  ER            0.469  -> GAP (mm)
+  BTHD         0.5625  -> AX_AX (mm)
+  ATHD         0.6750  -> CYL_D
+  PITCHR      0.05556  -> CYL_D, GAP
+== 6404-08-08 (record 6404-08-08)
+  AD            0.531  -> AX_PL, CYL_D
+  L             1.650  -> BOX, GAP
+  C4            1.062  -> GAP
+  AL            0.813  -> AX_PL (mm)
+  BL            0.106  -> AX_PL, GAP
+  CL            0.562  -> AX_AX (mm)
+  DL            0.688  -> CYL_D
+  EL               15  -> CONE_A
+  FL            0.689  -> CYL_D
+  BR            0.670  -> AX_PL (mm)
+  CR            0.840  -> CYL_D
+  DR            0.750  -> GAP
+  ER            0.625  -> AX_AX (mm), AX_PL (mm)
+  BTHD         0.7500  -> GAP
+  ATHD         0.8400  -> CYL_D
+  PITCHR      0.07143  -> AX_PL, GAP
+== 6404-10-08 (record 6404-10-08)
+  AD            0.531  -> AX_PL, CYL_D
+  L             1.740  -> BOX, GAP
+  C4            1.125  -> GAP
+  AL            0.945  -> AX_PL (mm), GAP (mm)
+  BL            0.106  -> AX_PL, GAP
+  CL            0.656  -> AX_PL (mm)
+  DL            0.781  -> AX_AX (mm), AX_PL (mm)
+  EL               15  -> CONE_A
+  FL            0.805  -> CYL_D
+  BR            0.670  -> AX_PL (mm)
+  CR            0.840  -> CYL_D
+  DR            0.750  -> GAP
+  ER            0.625  -> AX_AX (mm), AX_PL (mm)
+  BTHD         0.8750  -> -
+  ATHD         0.8400  -> CYL_D
+  PITCHR      0.07143  -> AX_PL, GAP
+== 6404-12-12 (record 6404-12-12)
+  AD            0.719  -> CYL_D, GAP
+  L             1.980  -> BOX, GAP
+  C4            1.375  -> AX_PL, GAP
+  AL            1.150  -> GAP (mm)
+  BL            0.138  -> GAP
+  CL            0.750  -> GAP
+  DL            0.906  -> GAP (mm)
+  EL               15  -> CONE_A
+  FL            0.980  -> CYL_D
+  BR            0.880  -> -
+  CR            1.050  -> CYL_D
+  DR            0.750  -> GAP
+  ER            0.813  -> AX_PL (mm)
+  BTHD         1.0625  -> AX_PL (mm)
+  ATHD         1.0500  -> CYL_D
+  PITCHR      0.07143  -> AX_PL, GAP
+== 6404-16-16 (record 6404-16-16)
+  AD            0.940  -> CYL_D, GAP
+  L             2.100  -> BOX, GAP
+  C4            1.625  -> GAP
+  AL            1.400  -> AX_PL (mm), CYL_D (mm), GAP (mm)
+  BL            0.138  -> GAP
+  CL            0.750  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  DL            0.906  -> GAP (mm)
+  EL               15  -> CONE_A
+  FL            1.231  -> CYL_D
+  BR            1.105  -> -
+  CR            1.317  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  DR            0.940  -> CYL_D, GAP
+  ER            1.031  -> AX_PL (mm), GAP (mm)
+  BTHD         1.3125  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  ATHD         1.3150  -> CYL_D
+  PITCHR      0.08696  -> AX_PL
+== 6404-24-24 (record 6404-24-24)
+  AD            1.500  -> CYL_D, GAP
+  L             2.230  -> BOX, GAP
+  C4            2.250  -> GAP
+  AL            1.966  -> -
+  BL            0.138  -> AX_PL, GAP
+  CL            0.750  -> -
+  DL            0.906  -> GAP (mm)
+  EL               15  -> CONE_A
+  FL            1.794  -> CONE_A, CYL_D
+  BR            1.685  -> AX_PL (mm), GAP (mm)
+  CR            1.905  -> -
+  DR            1.000  -> GAP
+  ER            1.625  -> GAP
+  BTHD         1.8750  -> AX_PL (mm)
+  ATHD         1.9000  -> CYL_D
+  PITCHR      0.08696  -> GAP

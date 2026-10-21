@@ -1,0 +1,44 @@
+# tube_fittings_and_adapters/2702_fg: 1 STEP(s): 2702-20-20-FG
+
+AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.506
+AT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.506
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.078
+B1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.6250
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.078
+B2THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.6250
+CL       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 1.147
+CT       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 1.147
+DL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.367
+DT       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.367
+EL       DECODED  GAP 1/1 (chance 0/2)   values: 0.958
+ET       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.125
+FT       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.125
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 1.610
+HT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.506
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.618
+JT       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.750
+L        DECODED  AX_PL 1/1 (chance 0/2)   values: 2.650
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.590
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.625
+
+== 2702-20-20-FG (record 2702-20-20-FG)
+  B1D           1.078  -> CYL_D
+  B2D           1.078  -> CYL_D
+  M             1.590  -> AX_PL
+  L             2.650  -> AX_PL
+  Y             1.625  -> CYL_D, GAP
+  AL            1.506  -> CYL_D
+  CL            1.147  -> AX_AX (mm), AX_PL (mm)
+  DL            0.367  -> GAP
+  EL            0.958  -> GAP
+  AT            1.506  -> CYL_D
+  CT            1.147  -> AX_AX (mm), AX_PL (mm)
+  DT            0.367  -> GAP
+  ET            0.125  -> AX_PL, GAP
+  FT            0.125  -> AX_PL, GAP
+  GT            1.610  -> GAP
+  HT            1.506  -> CYL_D
+  IT            1.618  -> CYL_D
+  JT            1.750  -> BOX, CYL_D
+  B1THD        1.6250  -> CYL_D, GAP
+  B2THD        1.6250  -> CYL_D, GAP

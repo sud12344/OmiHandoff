@@ -1,0 +1,69 @@
+# o_ring_face_seal_fittings/fs0319: 6 STEP(s): FS0319-04 FS0319-06 FS0319-08 FS0319-12 FS0319-16 FS0319-20
+
+BS       PARTIAL  BOX 3/6 (chance 0/12), CYL_D 3/6 (chance 0/12)   values: 0.502, 0.620, 0.745, 1.063
+CS       DECODED  CYL_D 6/6 (chance 0/12)   values: 0.172, 0.264, 0.378, 0.609
+DS       DECODED  GAP 6/6 (chance 0/12)   values: 0.157, 0.177, 0.197, 0.256
+ES       PARTIAL  GAP 1/3 (chance 0/6)   values: 0.050, 0.060, 0.051
+F        DECODED  GAP 6/6 (chance 0/12), BOX 6/6 (chance 0/12)   values: 0.374, 0.374, 0.374, 0.551
+FS       DECODED  CYL_D 6/6 (chance 0/12)   values: 0.256, 0.381, 0.506, 0.757
+GS       PARTIAL  GAP 1/6 (chance 0/12)   values: 0.335, 0.465, 0.595, 0.870
+HS       DECODED  CYL_D 6/6 (chance 0/12)   values: 0.402, 0.522, 0.642, 0.936
+IS       DECODED  GAP 6/6 (chance 0/12)   values: 0.040, 0.040, 0.040, 0.060
+
+== FS0319-04 (record FS0319-04)
+  F             0.374  -> BOX, GAP
+  BS            0.502  -> BOX, CYL_D
+  CS            0.172  -> CYL_D
+  DS            0.157  -> GAP
+  FS            0.256  -> CYL_D
+  GS            0.335  -> GAP
+  HS            0.402  -> CYL_D
+  IS            0.040  -> GAP
+== FS0319-06 (record FS0319-06)
+  F             0.374  -> BOX, GAP
+  BS            0.620  -> BOX, CYL_D
+  CS            0.264  -> CYL_D
+  DS            0.177  -> GAP
+  FS            0.381  -> CYL_D
+  GS            0.465  -> -
+  HS            0.522  -> CYL_D
+  IS            0.040  -> GAP
+== FS0319-08 (record FS0319-08)
+  F             0.374  -> BOX, GAP
+  BS            0.745  -> BOX, CYL_D
+  CS            0.378  -> CYL_D
+  DS            0.197  -> GAP
+  FS            0.506  -> CYL_D
+  GS            0.595  -> -
+  HS            0.642  -> CYL_D
+  IS            0.040  -> GAP
+== FS0319-12 (record FS0319-12)
+  F             0.551  -> BOX, GAP
+  BS            1.063  -> -
+  CS            0.609  -> CYL_D
+  DS            0.256  -> GAP
+  ES            0.050  -> -
+  FS            0.757  -> CYL_D
+  GS            0.870  -> -
+  HS            0.936  -> CYL_D
+  IS            0.060  -> GAP
+== FS0319-16 (record FS0319-16)
+  F             0.610  -> BOX, GAP
+  BS            1.313  -> -
+  CS            0.811  -> CYL_D
+  DS            0.276  -> GAP
+  ES            0.060  -> GAP
+  FS            1.007  -> CYL_D
+  GS            1.105  -> -
+  HS            1.130  -> CYL_D
+  IS            0.060  -> GAP
+== FS0319-20 (record FS0319-20)
+  F             0.610  -> BOX, GAP
+  BS            1.564  -> -
+  CS            1.024  -> CYL_D
+  DS            0.276  -> GAP
+  ES            0.051  -> -
+  FS            1.257  -> CYL_D
+  GS            1.340  -> -
+  HS            1.401  -> CYL_D
+  IS            0.060  -> GAP

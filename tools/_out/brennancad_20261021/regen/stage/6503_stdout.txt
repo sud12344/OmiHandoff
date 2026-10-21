@@ -1,0 +1,5 @@
+6503: 4 configs (ref 6503-08-08-FG), 11 skipped, 0 blocked, 58 cols
+   warn 6503-08-08-FG: leg 2 hex arm 0.635 barely clears the corner puck (radius 0.612)
+   warn 6503-12-12-FG: leg 2 hex arm 0.771 barely clears the corner puck (radius 0.757)
+
+--- stderr ---

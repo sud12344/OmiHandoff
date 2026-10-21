@@ -1,0 +1,48 @@
+# o_ring_face_seal_fittings/fs7202_nwo_fg: 1 STEP(s): FS7202-06-04-NWO-FG
+
+AD       DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 6.70
+AL       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.594
+AT       NO MATCH -   values: 10.9
+ATHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.6875
+BD       DECODED  CYL_D (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 7.50
+BT       NO MATCH -   values: 8.0
+BTHD     DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 13.1570
+C4       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 19.0
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.441
+CT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 11.2
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.504
+DT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 1.9
+ET       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.90
+FT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 7.1
+HT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 20.0
+IT       DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 19.50
+JJ       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 19.0
+JT       DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 20.2
+LT       DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 11.1
+M        DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 25.00
+MT       DECODED  TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 2.62
+N        DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 36.00
+
+== FS7202-06-04-NWO-FG (record FS7202-06-04-NWO-FG)
+  AD             6.70  -> CYL_D (mm)
+  BD             7.50  -> CYL_D (mm), GAP (mm)
+  M             25.00  -> AX_PL (mm)
+  N             36.00  -> AX_PL (mm)
+  C4             19.0  -> GAP (mm)
+  JJ             19.0  -> GAP (mm)
+  AL            0.594  -> GAP
+  CL            0.441  -> GAP
+  DL            0.504  -> CYL_D
+  AT             10.9  -> -
+  BT              8.0  -> -
+  CT             11.2  -> GAP (mm)
+  DT              1.9  -> AX_PL (mm), GAP (mm)
+  ET             0.90  -> GAP
+  FT              7.1  -> GAP (mm)
+  HT             20.0  -> GAP (mm)
+  IT            19.50  -> CYL_D (mm)
+  JT             20.2  -> CYL_D (mm)
+  LT             11.1  -> CYL_D (mm)
+  MT             2.62  -> AX_PL (mm), TOR_r (mm)
+  ATHD         0.6875  -> CYL_D
+  BTHD        13.1570  -> CYL_D (mm)

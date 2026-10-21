@@ -1,0 +1,36 @@
+# tube_fittings_and_adapters/6400_l_o: 1 STEP(s): 6400-L-08-08-O
+
+AA       DECODED  GAP 1/1 (chance 0/2)   values: 1.880
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+B2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.75000
+C1       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
+C2       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.660
+C4       DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+D1       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.253
+D2       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+E1       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2)   values: 0.657
+E2       DECODED  GAP 1/1 (chance 0/2)   values: 0.655
+F1       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+F2       DECODED  TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.087
+G1       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2)   values: 0.657
+L6       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 2.700
+
+== 6400-L-08-08-O (record 6400-L-08-08-O)
+  B1THD        0.7500  -> CYL_D
+  B2THD       0.75000  -> CYL_D
+  B1D           0.391  -> CYL_D
+  B2D           0.391  -> CYL_D
+  L6            2.700  -> BOX, GAP
+  C4            0.875  -> GAP
+  C1            0.426  -> AX_PL (mm), GAP (mm)
+  D1            0.253  -> GAP (mm)
+  E1            0.657  -> AX_PL (mm)
+  F1            0.659  -> CYL_D
+  G1            0.657  -> AX_PL (mm)
+  C2            0.660  -> CYL_D
+  D2            0.094  -> AX_PL
+  E2            0.655  -> GAP
+  F2            0.087  -> AX_PL, TOR_r
+  AA            1.880  -> GAP

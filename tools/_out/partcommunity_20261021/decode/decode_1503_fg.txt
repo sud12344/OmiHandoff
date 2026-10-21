@@ -1,0 +1,101 @@
+# tube_fittings_and_adapters/1503_fg: 2 STEP(s): 1503-08-08-FG 1503-12-08-FG
+
+A1D      DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.531, 0.719
+A1THD    DECODED  CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 0/4)   values: 0.8400, 1.0500
+A2D      DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 2/4), AX_PL 1/2 (chance 1/4)   values: 0.460, 0.450
+A2THD    PARTIAL  AX_PL (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.8230, 0.8230
+AT       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.875, 0.875
+BL       PARTIAL  AX_PL (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.670, 0.880
+BT       AMBIGUOUS GAP 2/2 (chance 2/4), AX_PL 1/2 (chance 1/4)   values: 0.140, 0.140
+BT2      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.608, 0.608
+C        DECODED  GAP 2/2 (chance 0/4)   values: 1.000, 1.000
+CL       DECODED  CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 0/4)   values: 0.840, 1.050
+CT       DECODED  GAP 2/2 (chance 1/4)   values: 0.28, 0.28
+CT2      DECODED  AX_PL (mm) 2/2 (chance 0/4), AX_AX (mm) 1/2 (chance 0/4)   values: 0.562, 0.562
+D1T      DECODED  GAP 2/2 (chance 0/4)   values: 1.000, 1.000
+D2T      DECODED  AX_PL (mm) 2/2 (chance 2/4), GAP (mm) 2/2 (chance 0/4), CYL_D (mm) 1/2 (chance 1/4), AX_AX (mm) 1/2 (chance 0/4)   values: 0.747, 0.747
+D3T      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.885, 0.885
+D4T      DECODED  GAP 2/2 (chance 0/4)   values: 1.000, 1.000
+DL       AMBIGUOUS GAP 2/2 (chance 2/4)   values: 0.750, 0.750
+DT2      DECODED  CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 1/4)   values: 0.740, 0.740
+EL       PARTIAL  AX_PL (mm) 1/2 (chance 1/4), AX_AX (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 1/4)   values: 0.625, 0.813
+ET2      AMBIGUOUS GAP 2/2 (chance 2/4)   values: 0.320, 0.320
+FT2      AMBIGUOUS GAP 2/2 (chance 2/4), AX_PL 1/2 (chance 0/4)   values: 0.160, 0.160
+HT       DECODED  GAP 2/2 (chance 0/4)   values: 1.000, 1.000
+L        DECODED  GAP 2/2 (chance 0/4), AX_PL 2/2 (chance 0/4)   values: 1.170, 1.200
+L1T      AMBIGUOUS GAP 2/2 (chance 2/4), AX_PL 1/2 (chance 3/4)   values: 0.120, 0.120
+L2T      DECODED  GAP 2/2 (chance 0/4)   values: 0.180, 0.180
+L3T      AMBIGUOUS GAP 2/2 (chance 2/4)   values: 0.320, 0.320
+L4T      DECODED  GAP 2/2 (chance 0/4), CYL_D 1/2 (chance 0/4)   values: 0.720, 0.720
+M        DECODED  AX_PL 2/2 (chance 0/4)   values: 1.160, 1.330
+M1       DECODED  AX_PL 2/2 (chance 0/4), CYL_D 1/2 (chance 0/4)   values: 0.880, 1.050
+MDP      DECODED  CONE_A 2/2 (chance 0/4)   values: 5.000, 5.000
+PITCH2   DECODED  GAP 2/2 (chance 1/4), AX_PL 1/2 (chance 2/4)   values: 0.07098, 0.07098
+Y        DECODED  GAP 2/2 (chance 0/4), CYL_D 1/2 (chance 0/4)   values: 0.875, 1.062
+
+== 1503-08-08-FG (record 1503-08-08-FG)
+  A1D           0.531  -> CYL_D
+  A2D           0.460  -> CYL_D
+  L             1.170  -> AX_PL, GAP
+  M1            0.880  -> AX_PL
+  M             1.160  -> AX_PL
+  C             1.000  -> GAP
+  Y             0.875  -> CYL_D, GAP
+  AT            0.875  -> CYL_D, GAP
+  BT            0.140  -> GAP
+  CT             0.28  -> GAP
+  BT2           0.608  -> CYL_D
+  CT2           0.562  -> AX_AX (mm), AX_PL (mm)
+  DT2           0.740  -> AX_PL, CYL_D
+  ET2           0.320  -> GAP
+  FT2           0.160  -> GAP
+  HT            1.000  -> GAP
+  D1T           1.000  -> GAP
+  D2T           0.747  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  D3T           0.885  -> CYL_D
+  D4T           1.000  -> GAP
+  L1T           0.120  -> GAP
+  L2T           0.180  -> GAP
+  L3T           0.320  -> GAP
+  L4T           0.720  -> GAP
+  BL            0.670  -> AX_PL (mm)
+  CL            0.840  -> CYL_D
+  DL            0.750  -> GAP
+  EL            0.625  -> AX_AX (mm), AX_PL (mm)
+  A1THD        0.8400  -> CYL_D
+  A2THD        0.8230  -> AX_PL (mm)
+  PITCH2      0.07098  -> AX_PL, GAP
+  MDP           5.000  -> CONE_A
+== 1503-12-08-FG (record 1503-12-08-FG)
+  A1D           0.719  -> CYL_D, GAP
+  A2D           0.450  -> AX_PL, CYL_D, GAP
+  L             1.200  -> AX_PL, GAP
+  M1            1.050  -> AX_PL, CYL_D
+  M             1.330  -> AX_PL
+  C             1.000  -> GAP
+  Y             1.062  -> GAP
+  AT            0.875  -> CYL_D
+  BT            0.140  -> AX_PL, GAP
+  CT             0.28  -> GAP
+  BT2           0.608  -> CYL_D
+  CT2           0.562  -> AX_PL (mm)
+  DT2           0.740  -> CYL_D
+  ET2           0.320  -> GAP
+  FT2           0.160  -> AX_PL, GAP
+  HT            1.000  -> GAP
+  D1T           1.000  -> GAP
+  D2T           0.747  -> AX_PL (mm), GAP (mm)
+  D3T           0.885  -> CYL_D
+  D4T           1.000  -> GAP
+  L1T           0.120  -> AX_PL, GAP
+  L2T           0.180  -> GAP
+  L3T           0.320  -> GAP
+  L4T           0.720  -> CYL_D, GAP
+  BL            0.880  -> GAP (mm)
+  CL            1.050  -> AX_PL, CYL_D
+  DL            0.750  -> GAP
+  EL            0.813  -> GAP (mm)
+  A1THD        1.0500  -> AX_PL, CYL_D
+  A2THD        0.8230  -> GAP (mm)
+  PITCH2      0.07098  -> GAP
+  MDP           5.000  -> CONE_A

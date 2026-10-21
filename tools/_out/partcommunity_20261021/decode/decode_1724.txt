@@ -1,0 +1,14 @@
+# flange_fitting_and_accessories/1724: 1 STEP(s): 1724-08
+
+C        DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 23.48
+D        DECODED  CYL_D (mm) 1/1 (chance 0/2), BOX (mm) 1/1 (chance 0/2)   values: 30.18
+E        DECODED  GAP (mm) 1/1 (chance 0/2)   values: 3.94
+F        DECODED  CYL_D (mm) 1/1 (chance 0/2)   values: 25.40
+G        DECODED  GAP (mm) 1/1 (chance 0/2)   values: 2.79
+
+== 1724-08 (record 1724-08)
+  C             23.48  -> CYL_D (mm)
+  D             30.18  -> BOX (mm), CYL_D (mm)
+  E              3.94  -> GAP (mm)
+  F             25.40  -> CYL_D (mm)
+  G              2.79  -> GAP (mm)

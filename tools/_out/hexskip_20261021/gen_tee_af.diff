@@ -1,0 +1,13 @@
+--- ../airway_first_20261020/tools_af/generators/gen_tee.py	2026-10-21 05:54:49.189852154 +0000
++++ tools_af/generators/gen_tee.py	2026-10-21 06:18:52.066913819 +0000
+@@ -1532,6 +1532,10 @@
+             if tm is None and sp.get('perleg'):      # 2026-10-09 (PERLEGSW): an empty cell takes the library major (a filled one must match)
+                 warn.append(f'{tc} empty: thread major {want} = the -{d:02d} end library (Q-TRANSFER-ENDLIB)'); continue
+             if tm is None or abs(tm - want) > 1e-3: chk.append(f'{tc} {tm} does not match the -{d:02d} end ({want})')
++        # 2026-10-21 (6810 hex): a row with an empty hex cell (SPEC hex) is skipped with the column named - it stopped the whole root
++        # (6810-12-12-NWO-FG, promoted to ASSUMED without its forged hex Y)
++        if r.get(sp['hex']) is None:
++            skipped.append((pn, 'row without ' + sp['hex'], 'needs the cell before the row can build')); continue
+         Y = r[sp['hex']]
+         # 2603HX rule: A/F = max(Air-Way hex, JIC thread majors) - the JIC nipple keeps its relief below the flats
+         maxes = [G.JIC[d]['TM'] for (kind, lc, bc, tc), d in zip(legs4(sp), dd) if kind in ('JICM', 'JICBH')]

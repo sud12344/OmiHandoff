@@ -1,0 +1,3 @@
+6810: 0 configs - nothing to build (5 skipped, 0 blocked); no macro / table written
+
+--- stderr ---

@@ -1,0 +1,346 @@
+# tube_fittings_and_adapters/6801_nwo_fg: 14 STEP(s): 6801-04-02-NWO-FG 6801-04-04-NWO-FG 6801-05-05-NWO-FG 6801-06-06-NWO-FG 6801-08-08-NWO-FG 6801-10-10-NWO-FG 6801-12-12-NWO-FG 6801-14-14-NWO-FG 6801-16-08-NWO-FG 6801-16-16-NWO-FG 6801-20-20-NWO-FG 6801-24-24-NWO-FG 6801-24-32-NWO-FG 6801-32-32-NWO-FG
+
+AL       DECODED  CYL_D 14/14 (chance 0/28), GAP 2/14 (chance 6/28), AX_PL 1/14 (chance 3/28)   values: 0.364, 0.364, 0.426, 0.481
+AT       PARTIAL  AX_PL (mm) 7/14 (chance 4/28), GAP (mm) 4/14 (chance 2/28), AX_AX (mm) 3/14 (chance 0/28), GAP 3/14 (chance 2/28), AX_PL 1/14 (chance 4/28), CYL_D (mm) 1/14 (chance 0/28), CYL_D 1/14 (chance 0/28)   values: 0.245, 0.360, 0.420, 0.475
+B1D      DECODED  CYL_D 14/14 (chance 0/28), GAP 2/14 (chance 3/28), AX_PL 1/14 (chance 1/28)   values: 0.172, 0.172, 0.234, 0.297
+B1THD    DECODED  CYL_D 14/14 (chance 0/28), GAP 11/14 (chance 3/28), BOX 1/14 (chance 0/28)   values: 0.4375, 0.4375, 0.5000, 0.5625
+B2D      DECODED  CYL_D 14/14 (chance 1/28), AX_PL 2/14 (chance 2/28), GAP 1/14 (chance 4/28)   values: 0.062, 0.172, 0.234, 0.297
+B2THD    DECODED  CYL_D 14/14 (chance 1/28), GAP 10/14 (chance 3/28)   values: 0.3125, 0.4375, 0.5000, 0.5625
+C        DECODED  GAP 14/14 (chance 5/28), CYL_D 1/14 (chance 0/28), AX_PL 1/14 (chance 4/28)   values: 0.438, 0.563, 0.625, 0.688
+CL       PARTIAL  GAP (mm) 7/14 (chance 2/28), AX_PL (mm) 5/14 (chance 0/28), GAP 3/14 (chance 2/28), AX_AX (mm) 1/14 (chance 0/28)   values: 0.193, 0.193, 0.255, 0.318
+CT       PARTIAL  GAP (mm) 9/14 (chance 2/28), AX_PL (mm) 3/14 (chance 0/28), GAP 3/14 (chance 2/28), AX_AX (mm) 1/14 (chance 0/28)   values: 0.234, 0.265, 0.265, 0.312
+DL       DECODED  GAP 14/14 (chance 3/28)   values: 0.193, 0.193, 0.193, 0.198
+DT       DECODED  GAP 14/14 (chance 5/28), AX_PL 3/14 (chance 2/28), TOR_R 1/14 (chance 0/28)   values: 0.329, 0.386, 0.386, 0.433
+EL       DECODED  GAP 14/14 (chance 5/28), AX_PL 1/14 (chance 4/28)   values: 0.550, 0.550, 0.550, 0.556
+ET       AMBIGUOUS GAP 14/14 (chance 26/28), AX_PL 13/14 (chance 10/28), AX_AX 9/14 (chance 0/28), CYL_D 3/14 (chance 0/28)   values: 0.030, 0.035, 0.035, 0.035
+FT       DECODED  GAP 14/14 (chance 1/28), AX_PL 3/14 (chance 1/28)   values: 0.220, 0.280, 0.280, 0.270
+GT       DECODED  GAP 14/14 (chance 5/28), AX_PL 2/14 (chance 2/28)   values: 0.590, 0.730, 0.730, 0.750
+HT       DECODED  CYL_D 14/14 (chance 0/28), GAP 2/14 (chance 8/28)   values: 0.250, 0.364, 0.427, 0.482
+IT       DECODED  CYL_D 14/14 (chance 0/28), BOX 10/14 (chance 0/28), GAP 1/14 (chance 2/28)   values: 0.504, 0.650, 0.722, 0.794
+JT       DECODED  TOR_r 14/14 (chance 0/28), AX_PL 12/14 (chance 12/28), GAP 11/14 (chance 10/28)   values: 0.064, 0.072, 0.072, 0.078
+M        DECODED  AX_PL 14/14 (chance 0/28)   values: 0.890, 0.890, 0.950, 1.060
+M7       DECODED  AX_PL 14/14 (chance 1/28)   values: 0.920, 1.030, 1.130, 1.250
+MDP      PARTIAL  AX_PL (mm) 4/13 (chance 0/26), GAP (mm) 1/13 (chance 0/26), TOR_r (mm) 1/13 (chance 0/26)   values: 5.000, 6.000, 6.000, 6.000
+Y        DECODED  GAP 14/14 (chance 3/28), CYL_D 12/14 (chance 0/28), BOX 1/14 (chance 0/28)   values: 0.438, 0.438, 0.562, 0.562
+
+== 6801-04-02-NWO-FG (record 6801-04-02-NWO-FG)
+  B1D           0.172  -> CYL_D
+  B2D           0.062  -> AX_PL, CYL_D
+  M             0.890  -> AX_PL
+  M7            0.920  -> AX_PL
+  C             0.438  -> CYL_D, GAP
+  Y             0.438  -> CYL_D, GAP
+  AL            0.364  -> CYL_D, GAP
+  CL            0.193  -> GAP
+  DL            0.193  -> GAP
+  EL            0.550  -> GAP
+  AT            0.245  -> GAP (mm)
+  CT            0.234  -> AX_PL (mm), GAP (mm)
+  DT            0.329  -> AX_PL, GAP
+  ET            0.030  -> AX_AX, AX_PL, GAP
+  FT            0.220  -> AX_PL, GAP
+  GT            0.590  -> AX_PL, GAP
+  HT            0.250  -> CYL_D, GAP
+  IT            0.504  -> CYL_D
+  JT            0.064  -> AX_PL, TOR_r
+  B1THD        0.4375  -> CYL_D, GAP
+  B2THD        0.3125  -> CYL_D
+  MDP           5.000  -> -
+== 6801-04-04-NWO-FG (record 6801-04-04-NWO-FG)
+  B1D           0.172  -> CYL_D
+  B2D           0.172  -> CYL_D
+  M             0.890  -> AX_PL
+  M7            1.030  -> AX_PL
+  C             0.563  -> GAP
+  Y             0.438  -> CYL_D, GAP
+  AL            0.364  -> CYL_D, GAP
+  CL            0.193  -> GAP
+  DL            0.193  -> GAP
+  EL            0.550  -> GAP
+  AT            0.360  -> AX_AX (mm), AX_PL (mm)
+  CT            0.265  -> GAP
+  DT            0.386  -> GAP
+  ET            0.035  -> AX_PL, CYL_D, GAP
+  FT            0.280  -> AX_PL, GAP
+  GT            0.730  -> GAP
+  HT            0.364  -> CYL_D, GAP
+  IT            0.650  -> BOX, CYL_D
+  JT            0.072  -> AX_PL, GAP, TOR_r
+  B1THD        0.4375  -> CYL_D, GAP
+  B2THD        0.4375  -> CYL_D, GAP
+== 6801-05-05-NWO-FG (record 6801-05-05-NWO-FG)
+  B1D           0.234  -> CYL_D
+  B2D           0.234  -> CYL_D
+  M             0.950  -> AX_PL
+  M7            1.130  -> AX_PL
+  C             0.625  -> GAP
+  Y             0.562  -> GAP
+  AL            0.426  -> CYL_D
+  CL            0.255  -> GAP (mm)
+  DL            0.193  -> GAP
+  EL            0.550  -> GAP
+  AT            0.420  -> GAP
+  CT            0.265  -> GAP (mm)
+  DT            0.386  -> GAP
+  ET            0.035  -> AX_PL, CYL_D, GAP
+  FT            0.280  -> AX_PL, GAP
+  GT            0.730  -> GAP
+  HT            0.427  -> CYL_D
+  IT            0.722  -> BOX, CYL_D
+  JT            0.072  -> AX_PL, GAP, TOR_r
+  B1THD        0.5000  -> CYL_D
+  B2THD        0.5000  -> CYL_D
+  MDP           6.000  -> -
+== 6801-06-06-NWO-FG (record 6801-06-06-NWO-FG)
+  B1D           0.297  -> CYL_D
+  B2D           0.297  -> CYL_D
+  M             1.060  -> AX_PL
+  M7            1.250  -> AX_PL
+  C             0.688  -> GAP
+  Y             0.562  -> CYL_D, GAP
+  AL            0.481  -> CYL_D
+  CL            0.318  -> GAP
+  DL            0.198  -> GAP
+  EL            0.556  -> GAP
+  AT            0.475  -> AX_AX (mm), GAP (mm)
+  CT            0.312  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  DT            0.433  -> GAP
+  ET            0.035  -> AX_PL, CYL_D, GAP
+  FT            0.270  -> GAP
+  GT            0.750  -> GAP
+  HT            0.482  -> CYL_D
+  IT            0.794  -> BOX, CYL_D
+  JT            0.078  -> GAP, TOR_r
+  B1THD        0.5625  -> CYL_D, GAP
+  B2THD        0.5625  -> CYL_D, GAP
+  MDP           6.000  -> -
+== 6801-08-08-NWO-FG (record 6801-08-08-NWO-FG)
+  B1D           0.391  -> CYL_D
+  B2D           0.391  -> CYL_D
+  M             1.250  -> AX_PL
+  M7            1.450  -> AX_PL
+  C             0.875  -> GAP
+  Y             0.750  -> CYL_D, GAP
+  AL            0.659  -> CYL_D
+  CL            0.426  -> AX_PL (mm), GAP (mm)
+  DL            0.253  -> GAP
+  EL            0.657  -> GAP
+  AT            0.655  -> GAP
+  CT            0.344  -> AX_PL (mm)
+  DT            0.490  -> GAP
+  ET            0.041  -> AX_PL, GAP
+  FT            0.310  -> GAP
+  GT            0.860  -> GAP
+  HT            0.660  -> CYL_D
+  IT            1.010  -> BOX, CYL_D
+  JT            0.087  -> AX_PL, TOR_r
+  B1THD        0.7500  -> CYL_D, GAP
+  B2THD        0.7500  -> CYL_D, GAP
+  MDP           6.000  -> -
+== 6801-10-10-NWO-FG (record 6801-10-10-NWO-FG)
+  B1D           0.484  -> CYL_D
+  B2D           0.484  -> CYL_D
+  M             1.450  -> AX_PL
+  M7            1.700  -> AX_PL
+  C                 1  -> GAP
+  Y             0.875  -> CYL_D, GAP
+  AL            0.772  -> CYL_D
+  CL            0.539  -> GAP (mm)
+  DL            0.266  -> GAP
+  EL            0.758  -> GAP
+  AT            0.770  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  CT            0.391  -> GAP
+  DT            0.560  -> GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.360  -> GAP
+  GT            1.000  -> GAP
+  HT            0.773  -> CYL_D
+  IT            1.155  -> BOX, CYL_D, GAP
+  JT            0.097  -> AX_PL, TOR_r
+  B1THD        0.8750  -> CYL_D, GAP
+  B2THD        0.8750  -> CYL_D, GAP
+  MDP           5.000  -> -
+== 6801-12-12-NWO-FG (record 6801-12-12-NWO-FG)
+  B1D           0.609  -> CYL_D
+  B2D           0.609  -> CYL_D
+  M             1.660  -> AX_PL
+  M7            1.940  -> AX_PL
+  C              1.25  -> GAP
+  Y             1.062  -> CYL_D, GAP
+  AL            0.943  -> CYL_D
+  CL            0.664  -> GAP (mm)
+  DL            0.315  -> GAP
+  EL            0.864  -> GAP
+  AT            0.940  -> GAP
+  CT            0.410  -> GAP
+  DT            0.653  -> GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> GAP
+  HT            0.945  -> CYL_D
+  IT            1.444  -> BOX, CYL_D
+  JT            0.116  -> AX_PL, GAP, TOR_r
+  B1THD        1.0625  -> CYL_D, GAP
+  B2THD        1.0625  -> CYL_D, GAP
+  MDP           5.000  -> -
+== 6801-14-14-NWO-FG (record 6801-14-14-NWO-FG)
+  B1D           0.719  -> CYL_D
+  B2D           0.719  -> CYL_D
+  M             1.800  -> AX_PL
+  M7            2.000  -> AX_PL
+  C             1.375  -> GAP
+  Y             1.312  -> GAP
+  AL            1.068  -> CYL_D
+  CL            0.788  -> GAP (mm)
+  DL            0.315  -> GAP
+  EL            0.890  -> GAP
+  AT            1.065  -> AX_PL (mm)
+  CT            0.469  -> GAP (mm)
+  DT            0.653  -> AX_PL, GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> GAP
+  HT            1.070  -> CYL_D
+  IT            1.589  -> BOX, CYL_D
+  JT            0.116  -> AX_PL, GAP, TOR_r
+  B1THD        1.1875  -> CYL_D
+  B2THD        1.1875  -> CYL_D
+  MDP           5.000  -> -
+== 6801-16-08-NWO-FG (record 6801-16-08-NWO-FG)
+  B1D           0.844  -> CYL_D, GAP
+  B2D           0.391  -> CYL_D
+  M             1.810  -> AX_PL
+  M7            1.730  -> AX_PL
+  C             0.875  -> AX_PL, GAP
+  Y             1.312  -> BOX, CYL_D, GAP
+  AL            1.193  -> CYL_D
+  CL            0.913  -> GAP (mm)
+  DL            0.315  -> GAP
+  EL            0.911  -> GAP
+  AT            0.655  -> AX_PL
+  CT            0.344  -> -
+  DT            0.490  -> GAP
+  ET            0.041  -> GAP
+  FT            0.310  -> GAP
+  GT            0.860  -> GAP
+  HT            0.660  -> CYL_D
+  IT            1.010  -> CYL_D
+  JT            0.087  -> GAP, TOR_r
+  B1THD        1.3125  -> BOX, CYL_D, GAP
+  B2THD        0.7500  -> CYL_D
+  MDP           4.000  -> AX_PL (mm)
+== 6801-16-16-NWO-FG (record 6801-16-16-NWO-FG)
+  B1D           0.844  -> CYL_D, GAP
+  B2D           0.844  -> CYL_D, GAP
+  M             1.810  -> AX_PL
+  M7            2.050  -> AX_PL
+  C               1.5  -> GAP
+  Y             1.312  -> CYL_D, GAP
+  AL            1.193  -> CYL_D
+  CL            0.913  -> GAP (mm)
+  DL            0.315  -> GAP
+  EL            0.911  -> AX_PL, GAP
+  AT            1.190  -> AX_PL (mm), CYL_D (mm)
+  CT            0.469  -> GAP (mm)
+  DT            0.653  -> AX_PL, GAP, TOR_R
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> GAP
+  HT            1.195  -> CYL_D
+  IT            1.732  -> BOX, CYL_D
+  JT            0.116  -> AX_PL, GAP, TOR_r
+  B1THD        1.3125  -> CYL_D, GAP
+  B2THD        1.3125  -> CYL_D, GAP
+  MDP           4.000  -> AX_PL (mm)
+== 6801-20-20-NWO-FG (record 6801-20-20-NWO-FG)
+  B1D           1.078  -> AX_PL, CYL_D
+  B2D           1.078  -> AX_PL, CYL_D
+  M             2.060  -> AX_PL
+  M7            2.250  -> AX_PL
+  C             1.875  -> GAP
+  Y             1.625  -> CYL_D, GAP
+  AL            1.506  -> CYL_D
+  CL            1.147  -> AX_AX (mm), AX_PL (mm)
+  DL            0.367  -> GAP
+  EL            0.958  -> GAP
+  AT            1.500  -> CYL_D
+  CT            0.469  -> GAP (mm)
+  DT            0.653  -> GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> AX_PL, GAP
+  HT            1.507  -> CYL_D
+  IT            2.165  -> BOX, CYL_D
+  JT            0.118  -> AX_PL, GAP, TOR_r
+  B1THD        1.6250  -> CYL_D, GAP
+  B2THD        1.6250  -> CYL_D, GAP
+  MDP           4.000  -> AX_PL (mm)
+== 6801-24-24-NWO-FG (record 6801-24-24-NWO-FG)
+  B1D           1.312  -> CYL_D
+  B2D           1.312  -> CYL_D
+  M             2.330  -> AX_PL
+  M7            2.390  -> AX_PL
+  C             2.125  -> GAP
+  Y             1.875  -> CYL_D, GAP
+  AL            1.755  -> CYL_D
+  CL            1.381  -> AX_PL (mm)
+  DL            0.378  -> GAP
+  EL            1.083  -> GAP
+  AT            1.750  -> AX_PL (mm), GAP (mm)
+  CT            0.469  -> GAP (mm)
+  DT            0.653  -> GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> GAP
+  HT            1.756  -> CYL_D
+  IT            2.454  -> BOX, CYL_D
+  JT            0.118  -> AX_PL, GAP, TOR_r
+  B1THD        1.8750  -> CYL_D, GAP
+  B2THD        1.8750  -> CYL_D, GAP
+  MDP           3.000  -> AX_PL (mm), GAP (mm), TOR_r (mm)
+== 6801-24-32-NWO-FG (record 6801-24-32-NWO-FG)
+  B1D           1.312  -> CYL_D
+  B2D           1.781  -> CYL_D
+  M             2.810  -> AX_PL
+  M7            2.890  -> AX_PL
+  C              2.75  -> GAP
+  Y             2.500  -> CYL_D, GAP
+  AL            1.755  -> AX_PL, CYL_D
+  CL            1.381  -> AX_PL (mm)
+  DL            0.378  -> GAP
+  EL            1.083  -> GAP
+  AT            2.375  -> AX_PL (mm)
+  CT            0.469  -> GAP (mm)
+  DT            0.653  -> GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> GAP
+  HT            2.381  -> CYL_D
+  IT            3.160  -> CYL_D
+  JT            0.118  -> AX_PL, GAP, TOR_r
+  B1THD        1.8750  -> CYL_D
+  B2THD        2.5000  -> CYL_D, GAP
+  MDP           2.000  -> -
+== 6801-32-32-NWO-FG (record 6801-32-32-NWO-FG)
+  B1D           1.781  -> CYL_D
+  B2D           1.781  -> CYL_D
+  M             3.060  -> AX_PL
+  M7            2.890  -> AX_PL
+  C              2.75  -> GAP
+  Y             2.500  -> CYL_D, GAP
+  AL            2.380  -> CYL_D
+  CL            1.880  -> AX_PL (mm)
+  DL            0.461  -> GAP
+  EL            1.333  -> GAP
+  AT            2.375  -> AX_PL (mm)
+  CT            0.469  -> GAP (mm)
+  DT            0.653  -> GAP
+  ET            0.050  -> AX_AX, AX_PL, GAP
+  FT            0.410  -> GAP
+  GT            1.140  -> GAP
+  HT            2.381  -> CYL_D
+  IT            3.160  -> CYL_D
+  JT            0.118  -> AX_PL, GAP, TOR_r
+  B1THD        2.5000  -> CYL_D, GAP
+  B2THD        2.5000  -> CYL_D, GAP
+  MDP           2.000  -> -

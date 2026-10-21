@@ -1,0 +1,32 @@
+# o_ring_face_seal_fittings/fs2501_fg: 1 STEP(s): FS2501-08-08-FG
+
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+AL       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.719
+ATHD     DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.8125
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.531
+BT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.670
+BTHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8400
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.840
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
+DT       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+ET       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 1/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.625
+JJ       DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.100
+N        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.470
+
+== FS2501-08-08-FG (record FS2501-08-08-FG)
+  AD            0.378  -> CYL_D
+  BD            0.531  -> CYL_D
+  M             1.100  -> AX_PL
+  N             1.470  -> AX_PL, GAP
+  JJ            0.875  -> GAP
+  AL            0.719  -> AX_PL, GAP
+  CL            0.504  -> GAP
+  DL            0.629  -> CYL_D
+  BT            0.670  -> AX_PL (mm), GAP (mm)
+  CT            0.840  -> CYL_D
+  DT            0.750  -> GAP
+  ET            0.625  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  ATHD         0.8125  -> CYL_D, GAP
+  BTHD         0.8400  -> CYL_D

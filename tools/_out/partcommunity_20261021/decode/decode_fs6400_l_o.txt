@@ -1,0 +1,36 @@
+# o_ring_face_seal_fittings/fs6400_l_o: 1 STEP(s): FS6400-L-08-08-O
+
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+AL       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.719
+AR       DECODED  GAP 1/1 (chance 0/2)   values: 0.551
+ATHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+BTHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.7500
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.660
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
+DR       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+ER       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.655
+FR       DECODED  TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.087
+H        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+HR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.940
+L        DECODED  GAP 1/1 (chance 0/2)   values: 2.671
+X        DECODED  GAP 1/1 (chance 0/2)   values: 1.750
+
+== FS6400-L-08-08-O (record FS6400-L-08-08-O)
+  AD            0.378  -> CYL_D
+  BD            0.378  -> CYL_D
+  L             2.671  -> GAP
+  H             0.875  -> GAP
+  AL            0.719  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  CL            0.504  -> GAP
+  DL            0.629  -> CYL_D
+  AR            0.551  -> GAP
+  CR            0.660  -> CYL_D
+  DR            0.094  -> AX_PL
+  ER            0.655  -> AX_PL (mm)
+  FR            0.087  -> AX_PL, TOR_r
+  HR            0.940  -> AX_PL (mm), GAP (mm)
+  ATHD         0.8125  -> CYL_D
+  BTHD         0.7500  -> CYL_D
+  X             1.750  -> GAP

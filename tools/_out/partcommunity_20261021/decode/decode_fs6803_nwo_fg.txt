@@ -1,0 +1,60 @@
+# o_ring_face_seal_fittings/fs6803_nwo_fg: 1 STEP(s): FS6803-04-04-04-NWO-FG
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+A1THD    DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.5625
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+A2THD    DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.5625
+AL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.483
+AR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.483
+AT       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.360
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+BTHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.4375
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.625
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.386
+CR       DECODED  GAP 1/1 (chance 0/2)   values: 0.386
+CT       DECODED  AX_PL (mm) 1/1 (chance 1/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.307
+DL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.433
+DN2      NO MATCH -   values: 04
+DR       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.433
+DT       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.433
+ET       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2), AX_AX 1/1 (chance 0/2)   values: 0.030
+FT       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.280
+GT       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.810
+HT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.364
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.650
+JJ       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.562
+JT       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.072
+M1       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.850
+M2       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.850
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.290
+NO       NO MATCH -   values: 04
+
+== FS6803-04-04-04-NWO-FG (record FS6803-04-04-04-NWO-FG)
+  NO               04  -> -
+  DN2              04  -> -
+  A1D           0.172  -> CYL_D
+  A2D           0.172  -> CYL_D
+  BD            0.172  -> CYL_D
+  M1            0.850  -> AX_PL
+  M2            0.850  -> AX_PL
+  N             1.290  -> AX_PL
+  C             0.625  -> GAP
+  JJ            0.562  -> CYL_D, GAP
+  AL            0.483  -> AX_AX (mm), GAP (mm)
+  CL            0.386  -> GAP
+  DL            0.433  -> CYL_D, GAP
+  AR            0.483  -> AX_AX (mm), GAP (mm)
+  CR            0.386  -> GAP
+  DR            0.433  -> CYL_D, GAP
+  AT            0.360  -> AX_AX (mm), AX_PL (mm)
+  CT            0.307  -> AX_AX (mm), AX_PL (mm)
+  DT            0.433  -> CYL_D, GAP
+  ET            0.030  -> AX_AX, AX_PL, GAP
+  FT            0.280  -> AX_PL, GAP
+  GT            0.810  -> AX_PL, GAP
+  HT            0.364  -> CYL_D
+  IT            0.650  -> CYL_D
+  JT            0.072  -> AX_PL, GAP, TOR_r
+  A1THD        0.5625  -> AX_PL, CYL_D, GAP
+  A2THD        0.5625  -> AX_PL, CYL_D, GAP
+  BTHD         0.4375  -> CYL_D

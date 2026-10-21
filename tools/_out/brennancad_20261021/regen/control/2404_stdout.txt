@@ -1,0 +1,9 @@
+2404: 59 configs (ref 2404-08-08), 6 skipped (DROP/MISSING/no data), 0 geometry-blocked, 14 profile points, 42 table cols
+   skipped ('2404-32-48', 'BLOCKED in the review table', 'BLOCKED: NPTF -48 end length unmeasured; CB depth unsourced')
+   skipped ('2404-40-40', 'BLOCKED in the review table', 'BLOCKED: NPTF -40 end length unmeasured')
+   skipped ('2404-L-04-02', 'DROP', 'ASSUMED')
+   skipped ('2404-L-08-06', 'DROP', 'ASSUMED')
+   skipped ('2404-L-16-16', 'DROP', 'ASSUMED')
+   skipped ('2404-L-32-32', 'BUILD', 'MISSING')
+
+--- stderr ---

@@ -1,0 +1,3 @@
+5000: 23 configs (ref 5000-08-08), 0 skipped (DROP/MISSING/no data), 0 geometry-blocked, 4 profile points, 27 table cols
+
+--- stderr ---

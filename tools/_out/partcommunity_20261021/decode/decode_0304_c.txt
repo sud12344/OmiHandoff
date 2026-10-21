@@ -1,0 +1,24 @@
+# tube_fittings_and_adapters/0304_c: 1 STEP(s): 0304-C-08
+
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+DIA1     DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.860
+DIA2     DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.7500
+DIA3     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.688
+DIA4     DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.391
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.750
+L2       DECODED  GAP 1/1 (chance 0/2)   values: 0.625
+L3       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.375
+LT       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.276
+MDP      NO MATCH -   values: 6.000
+
+== 0304-C-08 (record 0304-C-08)
+  LT            0.276  -> AX_PL, GAP
+  L             0.750  -> BOX, GAP
+  L2            0.625  -> GAP
+  L3            0.375  -> AX_PL
+  C             0.875  -> GAP
+  DIA1          0.860  -> GAP (mm)
+  DIA2         0.7500  -> BOX, GAP
+  DIA3          0.688  -> CYL_D
+  DIA4          0.391  -> CYL_D, GAP
+  MDP           6.000  -> -

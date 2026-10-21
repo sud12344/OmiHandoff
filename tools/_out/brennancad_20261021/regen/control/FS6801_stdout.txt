@@ -1,0 +1,6 @@
+FS6801: 3 configs (ref FS6801-08-08-NWO-FG), 34 skipped, 0 blocked, 60 cols
+   warn FS6801-08-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)
+   warn FS6801-04-08-NWO-FG: leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)
+   warn FS6801-06-08-NWO-FG: THDMAJ_D@DRIVE empty: thread major 0.6875 = the -06 end library (Q-TRANSFER-ENDLIB); leg 2: adjustable stud tip -> washer face 0.54 = L10 - L11 (Air-Way), thread 0.394 = stud - undercut 0.146, tip -> body face 1.03 (FS lock nut 0.41 thick, NWO_FS)
+
+--- stderr ---

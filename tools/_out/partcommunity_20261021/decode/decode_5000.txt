@@ -1,0 +1,36 @@
+# tube_fittings_and_adapters/5000: 1 STEP(s): 5000-40-40
+
+A1THD    DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.8750
+A2THD    DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.8750
+BL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.057
+BR       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.057
+C        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 3.500
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.729
+CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.729
+CXL      NO MATCH -   values: 1
+CXR      NO MATCH -   values: 1
+DL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 2.949
+DR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 2.949
+EL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 3.500
+ER       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 3.500
+FL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.690
+FR       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.690
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 2.670
+
+== 5000-40-40 (record 5000-40-40)
+  L             2.670  -> BOX, GAP
+  C             3.500  -> CYL_D, GAP
+  BL            1.057  -> AX_PL (mm)
+  CL            2.729  -> CYL_D
+  DL            2.949  -> AX_PL (mm), GAP (mm)
+  EL            3.500  -> CYL_D, GAP
+  FL            0.690  -> AX_PL (mm)
+  BR            1.057  -> AX_PL (mm)
+  CR            2.729  -> CYL_D
+  DR            2.949  -> AX_PL (mm), GAP (mm)
+  ER            3.500  -> CYL_D, GAP
+  FR            0.690  -> AX_PL (mm)
+  A1THD        2.8750  -> AX_PL (mm)
+  A2THD        2.8750  -> AX_PL (mm)
+  CXL               1  -> -
+  CXR               1  -> -

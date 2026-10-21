@@ -1,0 +1,16 @@
+# flareless_bite_type_fittings/c0318: 1 STEP(s): C0318-08
+
+BTHD     DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.75000
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+D        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+E        DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.599
+F        DECODED  GAP 1/1 (chance 0/2)   values: 0.516
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.840
+
+== C0318-08 (record C0318-08)
+  BTHD        0.75000  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  L             0.840  -> BOX, GAP
+  D             0.505  -> CYL_D
+  C             0.875  -> GAP
+  E             0.599  -> AX_AX (mm), AX_PL (mm)
+  F             0.516  -> GAP

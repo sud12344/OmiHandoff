@@ -1,0 +1,74 @@
+# o_ring_face_seal_fittings/fs6809_nwo_fg: 1 STEP(s): FS6809-06-06-NWO-FG
+
+AAA      DECODED  AX_PL 1/1 (chance 0/2)   values: 1.150
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.264
+AL1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.735
+AT       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.475
+ATHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.6875
+B11      NO MATCH -   values: 06
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.264
+BL1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.177
+BL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.812
+BTHD     DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.5625
+C1       DECODED  GAP 1/1 (chance 0/2)   values: 0.812
+C2       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+CL1      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.620
+CL2      AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.525
+CT       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.354
+DL1      DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.522
+DL2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.722
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.457
+EL2      AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.715
+ET       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.035
+FL2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.160
+FT       DECODED  GAP 1/1 (chance 0/2)   values: 0.330
+GL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.707
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 0.880
+HT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.482
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.794
+JJ       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+JL2      DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.693
+JT       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.078
+KL2      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.800
+ML2      DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.392
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.450
+NL2      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.155
+PL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.625
+QL2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.135
+
+== FS6809-06-06-NWO-FG (record FS6809-06-06-NWO-FG)
+  B11              06  -> -
+  AD            0.264  -> CYL_D
+  BD            0.264  -> CYL_D
+  AAA           1.150  -> AX_PL
+  N             1.450  -> AX_PL
+  C1            0.812  -> GAP
+  C2            0.750  -> GAP
+  JJ            0.750  -> GAP
+  AL1           0.735  -> GAP
+  BL1           0.177  -> GAP
+  CL1           0.620  -> CYL_D
+  DL1           0.522  -> CYL_D, GAP
+  BL2           0.812  -> GAP
+  CL2           0.525  -> CYL_D
+  DL2           0.722  -> GAP
+  EL2           0.715  -> CYL_D
+  FL2           0.160  -> GAP
+  GL2           0.707  -> GAP
+  KL2           0.800  -> AX_PL (mm), GAP (mm)
+  ML2           0.392  -> AX_PL (mm), GAP (mm)
+  JL2           0.693  -> CYL_D, GAP
+  NL2           0.155  -> GAP
+  PL2           0.625  -> GAP
+  QL2           0.135  -> GAP
+  AT            0.475  -> GAP (mm)
+  CT            0.354  -> AX_PL (mm), GAP (mm)
+  DT            0.457  -> GAP
+  ET            0.035  -> GAP
+  FT            0.330  -> GAP
+  GT            0.880  -> GAP
+  HT            0.482  -> CYL_D
+  IT            0.794  -> CYL_D
+  JT            0.078  -> AX_PL, GAP, TOR_r
+  ATHD         0.6875  -> CYL_D
+  BTHD         0.5625  -> CYL_D, GAP

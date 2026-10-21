@@ -1,0 +1,34 @@
+# tube_fittings_and_adapters/2501_fg: 1 STEP(s): 2501-40-40-FG
+
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 2.318
+A2THD    DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.8750
+AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.880
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 2.318
+B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 3.0000
+BT       NO MATCH -   values: 2.575
+CL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.400
+CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.880
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.391
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 1.515
+EL       DECODED  GAP 1/1 (chance 0/2)   values: 1.335
+ET       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 2.443
+L        DECODED  AX_PL 1/1 (chance 0/2)   values: 3.950
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 3.250
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 3.234
+
+== 2501-40-40-FG (record 2501-40-40-FG)
+  B1D           2.318  -> CYL_D
+  A2D           2.318  -> CYL_D
+  M             3.250  -> AX_PL
+  L             3.950  -> AX_PL
+  Y             3.234  -> BOX, GAP
+  AL            2.880  -> CYL_D
+  CL            2.400  -> AX_PL (mm)
+  DL            0.391  -> GAP
+  EL            1.335  -> GAP
+  BT            2.575  -> -
+  CT            2.880  -> CYL_D
+  DT            1.515  -> GAP
+  ET            2.443  -> GAP (mm)
+  B1THD        3.0000  -> CYL_D
+  A2THD        2.8750  -> AX_PL (mm)

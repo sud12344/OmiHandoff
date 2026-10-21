@@ -1,0 +1,46 @@
+# o_ring_face_seal_fittings/fs2702_fg: 1 STEP(s): FS2702-04-04-FG
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+A1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.5625
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.172
+A2THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.5625
+AL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.483
+AT       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.690
+BT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.552
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.386
+CT       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.478
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.433
+DN2      NO MATCH -   values: 04
+DNPN     NO MATCH -   values: 04
+DT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.433
+ET       DECODED  GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.483
+FT       DECODED  GAP 1/1 (chance 0/2)   values: 1.240
+GT       AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.083
+HT       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.060
+IT       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.150
+JJ       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.562
+P        DECODED  AX_PL 1/1 (chance 0/2)   values: 0.630
+ZZ       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.730
+
+== FS2702-04-04-FG (record FS2702-04-04-FG)
+  DN2              04  -> -
+  A1D           0.172  -> CYL_D
+  A2D           0.172  -> CYL_D
+  P             0.630  -> AX_PL
+  ZZ            1.730  -> AX_PL
+  JJ            0.562  -> CYL_D, GAP
+  AL            0.483  -> AX_AX (mm), GAP (mm)
+  CL            0.386  -> GAP
+  DL            0.433  -> CYL_D
+  AT            0.690  -> BOX, CYL_D
+  BT            0.552  -> CYL_D
+  CT            0.478  -> AX_PL, CYL_D
+  DT            0.433  -> CYL_D
+  ET            0.483  -> AX_AX (mm), GAP (mm)
+  FT            1.240  -> GAP
+  GT            0.083  -> GAP (mm)
+  HT            0.060  -> AX_PL, GAP
+  IT            0.150  -> CYL_D, GAP
+  A1THD        0.5625  -> CYL_D, GAP
+  A2THD        0.5625  -> CYL_D, GAP
+  DNPN             04  -> -

@@ -1,0 +1,50 @@
+# tube_fittings_and_adapters/5603_fg: 1 STEP(s): 5603-08-08-08-FG
+
+A1D      DECODED  AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.531
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8400
+A3D      DECODED  AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.531
+A3THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8400
+ATHD     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8400
+BL       NO MATCH -   values: 0.670
+BR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+BT       NO MATCH -   values: 0.670
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.840
+CR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.718
+CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.840
+DL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+DR       NO MATCH -   values: 0.855
+DT       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+EL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.625
+ER       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+ET       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.625
+N        DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 1.230
+N1       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 1.470
+N2       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 1.470
+PITCH2   DECODED  GAP 1/1 (chance 0/2)   values: 0.07143
+PITCH3   DECODED  GAP 1/1 (chance 0/2)   values: 0.07143
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+
+== 5603-08-08-08-FG (record 5603-08-08-08-FG)
+  A1D           0.531  -> AX_PL, CYL_D
+  A3D           0.531  -> AX_PL, CYL_D
+  N             1.230  -> AX_PL, GAP
+  N1            1.470  -> AX_PL, GAP
+  N2            1.470  -> AX_PL, GAP
+  Y             1.062  -> BOX, CYL_D, GAP
+  BL            0.670  -> -
+  CL            0.840  -> CYL_D
+  DL            0.750  -> GAP
+  EL            0.625  -> GAP
+  BT            0.670  -> -
+  CT            0.840  -> CYL_D
+  DT            0.750  -> GAP
+  ET            0.625  -> GAP
+  BR            0.750  -> GAP
+  CR            0.718  -> CYL_D
+  DR            0.855  -> -
+  ER            1.062  -> BOX, CYL_D, GAP
+  ATHD         0.8400  -> CYL_D
+  A2THD        0.8400  -> CYL_D
+  A3THD        0.8400  -> CYL_D
+  PITCH2      0.07143  -> GAP
+  PITCH3      0.07143  -> GAP

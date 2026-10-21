@@ -1,0 +1,3 @@
+5605: 4 configs (ref 5605-06-06-06-FG), 15 skipped, 0 blocked, 45 cols
+
+--- stderr ---

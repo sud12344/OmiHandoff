@@ -1,0 +1,82 @@
+# tube_fittings_and_adapters/5405: 4 STEP(s): 5405-04-04 5405-08-08 5405-12-12 5405-16-16
+
+A1D      DECODED  CYL_D 4/4 (chance 0/8), GAP 1/4 (chance 0/8)   values: 0.281, 0.531, 0.719, 0.938
+A1THD    DECODED  CYL_D 4/4 (chance 0/8)   values: 0.5400, 0.8400, 1.0500, 1.3150
+A2THD    DECODED  CYL_D 4/4 (chance 0/8)   values: 0.5400, 0.8400, 1.0500, 1.3150
+BL       PARTIAL  GAP 1/4 (chance 0/8), AX_PL (mm) 1/4 (chance 0/8)   values: 0.410, 0.670, 0.880, 1.105
+BR       PARTIAL  GAP 3/4 (chance 1/8), GAP (mm) 1/4 (chance 1/8), AX_PL (mm) 1/4 (chance 0/8), AX_AX (mm) 1/4 (chance 0/8)   values: 0.560, 0.750, 0.770, 0.940
+C        DECODED  GAP 4/4 (chance 0/8)   values: 0.750, 1.125, 1.375, 1.625
+CL       PARTIAL  CYL_D 3/4 (chance 0/8), GAP (mm) 1/4 (chance 0/8), AX_PL (mm) 1/4 (chance 0/8), AX_AX (mm) 1/4 (chance 0/8)   values: 0.540, 0.840, 1.050, 1.317
+CR       DECODED  CYL_D 4/4 (chance 0/8), GAP 1/4 (chance 0/8)   values: 0.437, 0.718, 0.921, 1.156
+DL       DECODED  GAP 4/4 (chance 2/8)   values: 0.560, 0.750, 0.750, 0.940
+DR       PARTIAL  AX_PL (mm) 2/4 (chance 0/8), GAP (mm) 1/4 (chance 0/8)   values: 0.555, 0.855, 1.070, 1.355
+EL       PARTIAL  GAP 2/4 (chance 1/8), AX_PL (mm) 2/4 (chance 0/8), AX_PL 1/4 (chance 0/8), GAP (mm) 1/4 (chance 1/8)   values: 0.344, 0.625, 0.813, 1.031
+ER       PARTIAL  AX_PL (mm) 1/4 (chance 0/8), GAP (mm) 1/4 (chance 0/8)   values: 0.670, 0.900, 0.900, 1.140
+L        DECODED  GAP 4/4 (chance 0/8), BOX 4/4 (chance 0/8)   values: 1.390, 1.870, 1.930, 2.370
+MDP      PARTIAL  GAP (mm) 1/4 (chance 0/8)   values: 6.000, 5.000, 4.000, 3.000
+PITCH2   PARTIAL  GAP 3/4 (chance 5/8), AX_PL 3/4 (chance 4/8), CYL_D 1/4 (chance 1/8)   values: 0.05556, 0.07143, 0.07143, 0.08696
+
+== 5405-04-04 (record 5405-04-04)
+  A1D           0.281  -> CYL_D
+  L             1.390  -> BOX, GAP
+  C             0.750  -> GAP
+  BL            0.410  -> GAP
+  CL            0.540  -> CYL_D
+  DL            0.560  -> GAP
+  EL            0.344  -> GAP
+  BR            0.560  -> GAP
+  CR            0.437  -> CYL_D, GAP
+  DR            0.555  -> -
+  ER            0.670  -> AX_PL (mm)
+  A1THD        0.5400  -> CYL_D
+  A2THD        0.5400  -> CYL_D
+  PITCH2      0.05556  -> CYL_D, GAP
+  MDP           6.000  -> -
+== 5405-08-08 (record 5405-08-08)
+  A1D           0.531  -> CYL_D, GAP
+  L             1.870  -> BOX, GAP
+  C             1.125  -> GAP
+  BL            0.670  -> AX_PL (mm)
+  CL            0.840  -> CYL_D
+  DL            0.750  -> GAP
+  EL            0.625  -> AX_PL, GAP
+  BR            0.750  -> GAP
+  CR            0.718  -> CYL_D
+  DR            0.855  -> -
+  ER            0.900  -> -
+  A1THD        0.8400  -> CYL_D
+  A2THD        0.8400  -> CYL_D
+  PITCH2      0.07143  -> AX_PL, GAP
+  MDP           5.000  -> -
+== 5405-12-12 (record 5405-12-12)
+  A1D           0.719  -> CYL_D
+  L             1.930  -> BOX, GAP
+  C             1.375  -> GAP
+  BL            0.880  -> -
+  CL            1.050  -> CYL_D
+  DL            0.750  -> GAP
+  EL            0.813  -> AX_PL (mm)
+  BR            0.770  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  CR            0.921  -> CYL_D
+  DR            1.070  -> AX_PL (mm)
+  ER            0.900  -> -
+  A1THD        1.0500  -> CYL_D
+  A2THD        1.0500  -> CYL_D
+  PITCH2      0.07143  -> AX_PL, GAP
+  MDP           4.000  -> -
+== 5405-16-16 (record 5405-16-16)
+  A1D           0.938  -> CYL_D
+  L             2.370  -> BOX, GAP
+  C             1.625  -> GAP
+  BL            1.105  -> -
+  CL            1.317  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  DL            0.940  -> GAP
+  EL            1.031  -> AX_PL (mm), GAP (mm)
+  BR            0.940  -> GAP
+  CR            1.156  -> CYL_D
+  DR            1.355  -> AX_PL (mm), GAP (mm)
+  ER            1.140  -> GAP (mm)
+  A1THD        1.3150  -> CYL_D
+  A2THD        1.3150  -> CYL_D
+  PITCH2      0.08696  -> AX_PL
+  MDP           3.000  -> GAP (mm)

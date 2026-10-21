@@ -1,0 +1,53 @@
+# o_ring_face_seal_fittings/fs2403: 2 STEP(s): FS2403-08-08 FS2403-24-24
+
+A1D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.378, 1.260
+A1THD    DECODED  CYL_D 2/2 (chance 0/4)   values: 0.8125, 2.0000
+A2D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.378, 1.260
+A2THD    DECODED  CYL_D 2/2 (chance 0/4)   values: 0.8125, 2.0000
+AL       DECODED  GAP 2/2 (chance 0/4)   values: 0.504, 0.689
+AR       DECODED  GAP 2/2 (chance 0/4)   values: 0.504, 0.689
+BL       DECODED  AX_PL 2/2 (chance 1/4)   values: 0.094, 0.125
+BR       DECODED  AX_PL 2/2 (chance 1/4)   values: 0.094, 0.125
+CL       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.719, 1.881
+CR       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.719, 1.881
+DL       PARTIAL  CYL_D 1/2 (chance 0/4), GAP 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.719, 1.876
+DR       PARTIAL  CYL_D 1/2 (chance 0/4), GAP 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.719, 1.876
+EL       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.629, 1.629
+ER       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.629, 1.629
+FF       DECODED  GAP 2/2 (chance 0/4)   values: 1.390, 2.090
+H        DECODED  GAP 2/2 (chance 0/4), BOX 1/2 (chance 0/4)   values: 0.875, 2.125
+
+== FS2403-08-08 (record FS2403-08-08)
+  H             0.875  -> GAP
+  A1D           0.378  -> CYL_D
+  A2D           0.378  -> CYL_D
+  FF            1.390  -> GAP
+  AL            0.504  -> GAP
+  BL            0.094  -> AX_PL
+  CL            0.719  -> CYL_D, GAP
+  DL            0.719  -> CYL_D, GAP
+  EL            0.629  -> CYL_D, GAP
+  AR            0.504  -> GAP
+  BR            0.094  -> AX_PL
+  CR            0.719  -> CYL_D, GAP
+  DR            0.719  -> CYL_D, GAP
+  ER            0.629  -> CYL_D, GAP
+  A1THD        0.8125  -> CYL_D
+  A2THD        0.8125  -> CYL_D
+== FS2403-24-24 (record FS2403-24-24)
+  H             2.125  -> BOX, GAP
+  A1D           1.260  -> CYL_D
+  A2D           1.260  -> CYL_D
+  FF            2.090  -> GAP
+  AL            0.689  -> GAP
+  BL            0.125  -> AX_PL
+  CL            1.881  -> CYL_D
+  DL            1.876  -> AX_PL (mm)
+  EL            1.629  -> CYL_D
+  AR            0.689  -> GAP
+  BR            0.125  -> AX_PL
+  CR            1.881  -> CYL_D
+  DR            1.876  -> AX_PL (mm)
+  ER            1.629  -> CYL_D
+  A1THD        2.0000  -> CYL_D
+  A2THD        2.0000  -> CYL_D

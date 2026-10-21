@@ -1,0 +1,48 @@
+# tube_fittings_and_adapters/6815_nwo_fg: 1 STEP(s): 6815-08-08-NWO-FG
+
+AL       NO MATCH -   values: 0.655
+AT       AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.813
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+B1THD    DECODED  AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2THD    DECODED  AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+BT       DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.106
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+CL       NO MATCH -   values: 0.344
+CT       NO MATCH -   values: 0.562
+DL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.490
+DT       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2)   values: 0.688
+EL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.041
+ET       DECODED  CONE_A 1/1 (chance 0/2)   values: 15.000
+FL       DECODED  GAP 1/1 (chance 0/2)   values: 0.310
+FT       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2)   values: 0.689
+GL       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.860
+HL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+IL       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.010
+JL       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2)   values: 0.087
+M6       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.880
+M8       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.590
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+
+== 6815-08-08-NWO-FG (record 6815-08-08-NWO-FG)
+  B1D           0.391  -> CYL_D
+  M8            1.590  -> AX_PL
+  M6            0.880  -> AX_PL
+  C             0.875  -> GAP
+  Y             1.062  -> BOX, CYL_D, GAP
+  AL            0.655  -> -
+  CL            0.344  -> -
+  DL            0.490  -> GAP
+  EL            0.041  -> GAP
+  FL            0.310  -> GAP
+  GL            0.860  -> AX_PL, GAP
+  HL            0.660  -> CYL_D, GAP
+  IL            1.010  -> CYL_D
+  JL            0.087  -> GAP, TOR_r
+  AT            0.813  -> GAP (mm)
+  BT            0.106  -> AX_PL, GAP
+  CT            0.562  -> -
+  DT            0.688  -> AX_PL (mm)
+  ET           15.000  -> CONE_A
+  FT            0.689  -> AX_PL (mm)
+  B1THD        0.7500  -> AX_PL, CYL_D
+  B2THD        0.7500  -> AX_PL, CYL_D

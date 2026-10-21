@@ -1,0 +1,44 @@
+# flange_fitting_and_accessories/1800: 1 STEP(s): 1800-08-08
+
+AF       DECODED  GAP 1/1 (chance 0/2)   values: 0.811
+AF1      DECODED  GAP 1/1 (chance 0/2)   values: 0.812
+AFL      DECODED  GAP 1/1 (chance 0/2)   values: 0.811
+AT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+B1DT     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+BFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.083
+CFL      DECODED  GAP 1/1 (chance 0/2)   values: 0.492
+CT       NO MATCH -   values: 0.426
+DFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.937
+DRILLFL  DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+DT       NO MATCH -   values: 0.253
+EFL      DECODED  GAP 1/1 (chance 0/2)   values: 0.305
+ET       NO MATCH -   values: 0.094
+FFL      DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.250
+FL       NO MATCH -   values: 08
+FT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+GFL      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.000
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 0.657
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 2.610
+STYLE    DECODED  CYL_D 1/1 (chance 0/2)   values: 1.000
+
+== 1800-08-08 (record 1800-08-08)
+  FL               08  -> -
+  L             2.610  -> BOX, GAP
+  AF            0.811  -> GAP
+  AF1           0.812  -> GAP
+  AT            0.659  -> CYL_D
+  B1DT          0.391  -> CYL_D
+  CT            0.426  -> -
+  DT            0.253  -> -
+  ET            0.094  -> -
+  FT            0.659  -> CYL_D
+  GT            0.657  -> GAP
+  AFL           0.811  -> GAP
+  BFL           1.083  -> CYL_D
+  CFL           0.492  -> GAP
+  DFL           0.937  -> CYL_D
+  EFL           0.305  -> GAP
+  FFL           1.250  -> BOX, CYL_D
+  GFL           1.000  -> CYL_D
+  DRILLFL       0.391  -> CYL_D
+  STYLE         1.000  -> CYL_D

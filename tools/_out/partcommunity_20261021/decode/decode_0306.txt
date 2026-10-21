@@ -1,0 +1,8 @@
+# tube_fittings_and_adapters/0306: 1 STEP(s): 0306-08
+
+C        DECODED  GAP 1/1 (chance 0/2)   values: 1.000
+W        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.31
+
+== 0306-08 (record 0306-08)
+  W              0.31  -> BOX, GAP
+  C             1.000  -> GAP

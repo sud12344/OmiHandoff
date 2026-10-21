@@ -1,0 +1,3 @@
+5406C: 9 configs (ref 5406-C-8), 0 skipped (DROP/MISSING/no data), 0 geometry-blocked, 4 profile points, 19 table cols
+
+--- stderr ---

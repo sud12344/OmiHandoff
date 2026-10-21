@@ -1,0 +1,46 @@
+# tube_fittings_and_adapters/6805_nwo_fg: 1 STEP(s): 6805-08-08-NWO-FG
+
+AD       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.531
+AL       NO MATCH -   values: 0.655
+ATHD     AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.8400
+BD       DECODED  TOR_r 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.391
+BT       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750
+BTHD     DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+CL       NO MATCH -   values: 0.344
+CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.718
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.490
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.855
+EL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.041
+ET       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+FL       DECODED  GAP 1/1 (chance 0/2)   values: 0.310
+GL       DECODED  GAP 1/1 (chance 0/2)   values: 0.860
+HL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.660
+IL       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.010
+JL       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2)   values: 0.087
+M7       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.620
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.230
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.062
+
+== 6805-08-08-NWO-FG (record 6805-08-08-NWO-FG)
+  BD            0.391  -> CYL_D, TOR_r
+  AD            0.531  -> AX_PL, GAP
+  M7            1.620  -> AX_PL
+  N             1.230  -> AX_PL
+  C             0.875  -> GAP
+  Y             1.062  -> BOX, CYL_D, GAP
+  AL            0.655  -> -
+  CL            0.344  -> -
+  DL            0.490  -> GAP
+  EL            0.041  -> GAP
+  FL            0.310  -> GAP
+  GL            0.860  -> GAP
+  HL            0.660  -> CYL_D
+  IL            1.010  -> CYL_D
+  JL            0.087  -> GAP, TOR_r
+  BT            0.750  -> CYL_D, GAP
+  CT            0.718  -> CYL_D
+  DT            0.855  -> GAP
+  ET            1.062  -> BOX, CYL_D, GAP
+  BTHD         0.7500  -> CYL_D, GAP
+  ATHD         0.8400  -> GAP

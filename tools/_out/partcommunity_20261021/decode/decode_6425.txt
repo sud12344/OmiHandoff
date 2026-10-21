@@ -1,0 +1,22 @@
+# tube_fittings_and_adapters/6425: 1 STEP(s): 6425-06-06
+
+AL       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.618
+BL       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.106
+BTHD     DECODED  AX_AX (mm) 1/1 (chance 0/2)   values: 0.5625
+C4       DECODED  GAP 1/1 (chance 0/2)   values: 0.812
+CL       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.500
+DL       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.609
+EL       DECODED  CONE_A 1/1 (chance 0/2)   values: 12
+FL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.518
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.260
+
+== 6425-06-06 (record 6425-06-06)
+  L             1.260  -> BOX, GAP
+  C4            0.812  -> GAP
+  AL            0.618  -> AX_PL, GAP
+  BL            0.106  -> AX_PL, GAP
+  CL            0.500  -> GAP
+  DL            0.609  -> AX_AX (mm), AX_PL (mm)
+  EL               12  -> CONE_A
+  FL            0.518  -> CYL_D, GAP
+  BTHD         0.5625  -> AX_AX (mm)

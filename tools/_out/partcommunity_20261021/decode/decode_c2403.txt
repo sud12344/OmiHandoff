@@ -1,0 +1,56 @@
+# flareless_bite_type_fittings/c2403: 1 STEP(s): C2403-08-08
+
+AB1      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.514
+AB2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.514
+B1D      DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.422
+B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2D      DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.422
+B2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.7500
+BB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.244
+BB2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.244
+C        AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.812
+CB1      AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.094
+CB2      AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.094
+DB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.840
+DB2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.840
+EB1      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+EB2      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+FB1      DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+FB2      DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+K1       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.305
+K2       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.305
+KB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.305
+KB2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.305
+L        AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.422
+MB1      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.318
+MB2      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.318
+ODB1     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+ODB2     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+
+== C2403-08-08 (record C2403-08-08)
+  B1D           0.422  -> CYL_D, GAP
+  B2D           0.422  -> CYL_D, GAP
+  L             1.422  -> GAP
+  K1            0.305  -> GAP
+  K2            0.305  -> GAP
+  C             0.812  -> GAP
+  AB1           0.514  -> CYL_D
+  BB1           0.244  -> GAP
+  CB1           0.094  -> AX_PL, GAP
+  DB1           0.840  -> GAP
+  EB1           0.660  -> CYL_D, GAP
+  KB1           0.305  -> GAP
+  ODB1          0.505  -> CYL_D
+  FB1           0.875  -> GAP
+  MB1           0.318  -> GAP
+  AB2           0.514  -> CYL_D
+  BB2           0.244  -> GAP
+  CB2           0.094  -> AX_PL, GAP
+  DB2           0.840  -> GAP
+  EB2           0.660  -> CYL_D, GAP
+  KB2           0.305  -> GAP
+  ODB2          0.505  -> CYL_D
+  FB2           0.875  -> GAP
+  MB2           0.318  -> GAP
+  B1THD        0.7500  -> CYL_D
+  B2THD        0.7500  -> CYL_D

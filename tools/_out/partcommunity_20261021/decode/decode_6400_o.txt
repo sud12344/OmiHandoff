@@ -1,0 +1,53 @@
+# tube_fittings_and_adapters/6400_o: 2 STEP(s): 6400-14-14-O 6400-32-32-O
+
+B1D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.719, 1.781
+B1THD    DECODED  CYL_D 2/2 (chance 0/4)   values: 1.1875, 2.5000
+B2D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.719, 1.781
+B2THD    DECODED  CYL_D 2/2 (chance 0/4)   values: 1.18750, 2.50000
+C1       DECODED  AX_PL (mm) 2/2 (chance 0/4)   values: 0.788, 1.880
+C2       DECODED  CYL_D 2/2 (chance 0/4)   values: 1.070, 2.381
+C4       DECODED  GAP 2/2 (chance 0/4)   values: 1.375, 2.750
+D1       DECODED  GAP (mm) 2/2 (chance 0/4)   values: 0.315, 0.461
+D2       PARTIAL  GAP 1/2 (chance 1/4), AX_PL 1/2 (chance 1/4)   values: 0.125, 0.125
+E1       PARTIAL  GAP 1/2 (chance 1/4), AX_PL 1/2 (chance 1/4)   values: 0.125, 0.125
+E2       DECODED  AX_PL (mm) 2/2 (chance 0/4)   values: 1.065, 2.375
+F1       DECODED  CYL_D 2/2 (chance 0/4)   values: 1.068, 2.380
+F2       DECODED  TOR_r 2/2 (chance 0/4), AX_PL 2/2 (chance 2/4), GAP 1/2 (chance 0/4)   values: 0.116, 0.118
+G1       DECODED  GAP 2/2 (chance 0/4)   values: 0.890, 1.333
+L5       DECODED  GAP 2/2 (chance 1/4), BOX 2/2 (chance 0/4)   values: 1.990, 2.780
+MDP      NO MATCH -   values: 5.000, 2.000
+
+== 6400-14-14-O (record 6400-14-14-O)
+  B1THD        1.1875  -> CYL_D
+  B2THD       1.18750  -> CYL_D
+  B1D           0.719  -> CYL_D
+  B2D           0.719  -> CYL_D
+  L5            1.990  -> BOX, GAP
+  C4            1.375  -> GAP
+  C1            0.788  -> AX_PL (mm)
+  D1            0.315  -> GAP (mm)
+  E1            0.125  -> GAP
+  F1            1.068  -> CYL_D
+  G1            0.890  -> GAP
+  C2            1.070  -> CYL_D
+  D2            0.125  -> GAP
+  E2            1.065  -> AX_PL (mm)
+  F2            0.116  -> AX_PL, TOR_r
+  MDP           5.000  -> -
+== 6400-32-32-O (record 6400-32-32-O)
+  B1THD        2.5000  -> CYL_D
+  B2THD       2.50000  -> CYL_D
+  B1D           1.781  -> CYL_D
+  B2D           1.781  -> CYL_D
+  L5            2.780  -> BOX, GAP
+  C4            2.750  -> GAP
+  C1            1.880  -> AX_PL (mm)
+  D1            0.461  -> GAP (mm)
+  E1            0.125  -> AX_PL
+  F1            2.380  -> CYL_D
+  G1            1.333  -> GAP
+  C2            2.381  -> CYL_D
+  D2            0.125  -> AX_PL
+  E2            2.375  -> AX_PL (mm)
+  F2            0.118  -> AX_PL, GAP, TOR_r
+  MDP           2.000  -> -

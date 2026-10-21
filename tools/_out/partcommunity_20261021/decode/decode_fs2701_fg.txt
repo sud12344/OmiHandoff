@@ -1,0 +1,46 @@
+# o_ring_face_seal_fittings/fs2701_fg: 1 STEP(s): FS2701-08-08-FG
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+A1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.8125
+AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+AT       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.000
+BT       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.801
+CL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.504
+CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+DL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
+DN2      NO MATCH -   values: 08
+DNPN     NO MATCH -   values: 08
+DT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.629
+ET       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.719
+FT       DECODED  GAP 1/1 (chance 0/2)   values: 1.440
+GT       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+HT       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 2/2)   values: 0.060
+IT       DECODED  GAP 1/1 (chance 0/2)   values: 0.200
+JJ       DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+R        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.140
+S        DECODED  AX_PL 1/1 (chance 0/2)   values: 2.180
+
+== FS2701-08-08-FG (record FS2701-08-08-FG)
+  DN2              08  -> -
+  A1D           0.378  -> CYL_D
+  A2D           0.378  -> CYL_D
+  R             1.140  -> AX_PL
+  S             2.180  -> AX_PL
+  JJ            0.750  -> GAP
+  AL            0.719  -> CYL_D
+  CL            0.504  -> GAP
+  DL            0.629  -> CYL_D
+  AT            1.000  -> BOX, CYL_D
+  BT            0.801  -> AX_PL, CYL_D
+  CT            0.719  -> CYL_D
+  DT            0.629  -> CYL_D
+  ET            0.719  -> CYL_D
+  FT            1.440  -> GAP
+  GT            0.094  -> AX_PL
+  HT            0.060  -> AX_PL, GAP
+  IT            0.200  -> GAP
+  A1THD        0.8125  -> CYL_D
+  A2THD        0.8125  -> CYL_D
+  DNPN             08  -> -

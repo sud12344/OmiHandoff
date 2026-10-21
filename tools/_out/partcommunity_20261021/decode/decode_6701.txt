@@ -1,0 +1,56 @@
+# tube_fittings_and_adapters/6701: 1 STEP(s): 6701-08-08
+
+C1       DECODED  GAP 1/1 (chance 0/2)   values: 0.812
+C2       DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+DIA      DECODED  GAP 1/1 (chance 0/2), TOR_r 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2)   values: 0.549
+DIA1     DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.654
+DIA2     AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.426
+DIA3     DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.660
+DIA4     DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.670
+DIA5     AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.572
+DIA6     DECODED  TOR_r 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.374
+DIA7     DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.587
+E        DECODED  GAP 1/1 (chance 0/2)   values: 0.875
+F        DECODED  GAP 1/1 (chance 0/2)   values: 0.264
+G        DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 1/2), GAP (mm) 1/1 (chance 1/2)   values: 0.685
+J        AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.155
+L        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.520
+L1       DECODED  GAP 1/1 (chance 0/2)   values: 0.657
+L2       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.252
+L3       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.094
+L4       DECODED  GAP 1/1 (chance 0/2)   values: 0.268
+L5       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2)   values: 0.465
+LN       DECODED  GAP 1/1 (chance 0/2), TOR_R 1/1 (chance 0/2)   values: 0.827
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.770
+MN       AMBIGUOUS GAP (mm) 1/1 (chance 1/2), AX_PL (mm) 1/1 (chance 1/2)   values: 0.370
+NS       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.7500
+R        DECODED  GAP 1/1 (chance 0/2), TOR_R 1/1 (chance 0/2)   values: 0.827
+THK      DECODED  GAP 1/1 (chance 0/2)   values: 0.197
+
+== 6701-08-08 (record 6701-08-08)
+  NS           0.7500  -> CYL_D
+  M             1.770  -> AX_PL
+  L             1.520  -> AX_PL
+  C1            0.812  -> GAP
+  C2            0.875  -> GAP
+  E             0.875  -> GAP
+  F             0.264  -> GAP
+  J             0.155  -> GAP
+  LN            0.827  -> GAP, TOR_R
+  MN            0.370  -> AX_PL (mm), GAP (mm)
+  THK           0.197  -> GAP
+  DIA           0.549  -> CYL_D, GAP, TOR_r
+  L1            0.657  -> GAP
+  L2            0.252  -> GAP
+  L3            0.094  -> AX_PL, GAP
+  L4            0.268  -> GAP
+  DIA1          0.654  -> AX_PL, CYL_D, GAP
+  DIA2          0.426  -> GAP
+  DIA3          0.660  -> CYL_D, GAP
+  DIA4          0.670  -> CYL_D, GAP
+  DIA5          0.572  -> AX_PL
+  DIA6          0.374  -> CYL_D, TOR_r
+  L5            0.465  -> AX_PL, GAP
+  DIA7          0.587  -> CYL_D, GAP
+  R             0.827  -> GAP, TOR_R
+  G             0.685  -> AX_PL (mm), CYL_D (mm), GAP (mm)

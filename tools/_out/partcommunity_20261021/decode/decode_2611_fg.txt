@@ -1,0 +1,50 @@
+# tube_fittings_and_adapters/2611_fg: 1 STEP(s): 2611-06-06-06-FG
+
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.406
+A2PITCH  AMBIGUOUS GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 1/2)   values: 0.05556
+A2THD    DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.6750
+A3PITCH  AMBIGUOUS GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 1/2)   values: 0.05556
+A3THD    DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.675
+AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.481
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.297
+B1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.5625
+BR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.540
+BT       DECODED  GAP 1/1 (chance 0/2)   values: 0.580
+CL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.318
+CR       DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.675
+CT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.578
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.198
+DR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.560
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.695
+EL       DECODED  GAP 1/1 (chance 0/2)   values: 0.556
+ER       AMBIGUOUS GAP (mm) 1/1 (chance 2/2)   values: 0.469
+ET       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+L        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.22
+L1       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.020
+M        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.310
+Y        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.875
+
+== 2611-06-06-06-FG (record 2611-06-06-06-FG)
+  B1D           0.297  -> CYL_D
+  A2D           0.406  -> CYL_D
+  M             1.310  -> AX_PL, GAP
+  L              1.22  -> AX_PL, GAP
+  L1            1.020  -> AX_PL, GAP
+  Y             0.875  -> BOX, CYL_D, GAP
+  AL            0.481  -> CYL_D
+  CL            0.318  -> AX_PL (mm), GAP (mm)
+  DL            0.198  -> GAP
+  EL            0.556  -> GAP
+  BR            0.540  -> AX_PL (mm), GAP (mm)
+  CR            0.675  -> AX_PL, CYL_D
+  DR            0.560  -> GAP
+  ER            0.469  -> GAP (mm)
+  BT            0.580  -> GAP
+  CT            0.578  -> CYL_D
+  DT            0.695  -> GAP
+  ET            0.875  -> BOX, CYL_D, GAP
+  B1THD        0.5625  -> CYL_D
+  A2THD        0.6750  -> AX_PL, CYL_D
+  A2PITCH     0.05556  -> CYL_D, GAP
+  A3THD         0.675  -> AX_PL, CYL_D
+  A3PITCH     0.05556  -> CYL_D, GAP

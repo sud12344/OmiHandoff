@@ -1,0 +1,44 @@
+# o_ring_face_seal_fittings/fs6802_nwo_fg: 1 STEP(s): FS6802-08-06-NWO-FG
+
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.378
+AL       DECODED  CYL_D (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 1/2), GAP (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.719
+AT       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.475
+ATHD     DECODED  AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.8125
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.264
+BTHD     AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.5625
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.504
+CT       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2)   values: 0.354
+DL       AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 0.629
+DT       DECODED  GAP 1/1 (chance 0/2)   values: 0.457
+ET       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.035
+FT       DECODED  GAP 1/1 (chance 0/2)   values: 0.330
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 0.880
+HT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.482
+IT       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.794
+JJ       DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+JT       DECODED  GAP 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.078
+M        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.800
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.270
+
+== FS6802-08-06-NWO-FG (record FS6802-08-06-NWO-FG)
+  AD            0.378  -> CYL_D
+  BD            0.264  -> CYL_D
+  M             0.800  -> AX_PL, GAP
+  N             1.270  -> AX_PL
+  C             0.750  -> GAP
+  JJ            0.750  -> GAP
+  AL            0.719  -> AX_AX (mm), AX_PL (mm), CYL_D (mm), GAP (mm)
+  CL            0.504  -> GAP
+  DL            0.629  -> CYL_D
+  AT            0.475  -> AX_PL
+  CT            0.354  -> AX_PL (mm)
+  DT            0.457  -> GAP
+  ET            0.035  -> GAP
+  FT            0.330  -> GAP
+  GT            0.880  -> GAP
+  HT            0.482  -> CYL_D
+  IT            0.794  -> CYL_D
+  JT            0.078  -> AX_PL, GAP, TOR_r
+  ATHD         0.8125  -> AX_PL, CYL_D
+  BTHD         0.5625  -> CYL_D

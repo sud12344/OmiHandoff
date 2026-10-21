@@ -1,0 +1,42 @@
+# tube_fittings_and_adapters/2650_fg: 1 STEP(s): 2650-08-08-08-08-FG
+
+AL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+AR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.659
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+B1THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+B2THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.7500
+B3D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+B4D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.391
+CL       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
+CR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.426
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.253
+DR       DECODED  GAP 1/1 (chance 0/2)   values: 0.253
+EL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.657
+ER       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.657
+M1       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.250
+M2       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.250
+M3       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.250
+M4       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.250
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.750
+
+== 2650-08-08-08-08-FG (record 2650-08-08-08-08-FG)
+  B1D           0.391  -> CYL_D
+  B2D           0.391  -> CYL_D
+  B3D           0.391  -> CYL_D
+  B4D           0.391  -> CYL_D
+  M1            1.250  -> AX_PL
+  M2            1.250  -> AX_PL
+  M3            1.250  -> AX_PL
+  M4            1.250  -> AX_PL
+  Y             0.750  -> CYL_D, GAP
+  AL            0.659  -> CYL_D
+  CL            0.426  -> AX_PL (mm), GAP (mm)
+  DL            0.253  -> GAP
+  EL            0.657  -> AX_PL (mm)
+  AR            0.659  -> CYL_D
+  CR            0.426  -> AX_PL (mm), GAP (mm)
+  DR            0.253  -> GAP
+  ER            0.657  -> AX_PL (mm)
+  B1THD        0.7500  -> CYL_D, GAP
+  B2THD        0.7500  -> CYL_D, GAP

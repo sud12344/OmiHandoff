@@ -1,0 +1,55 @@
+# o_ring_face_seal_fittings/fs6400_o: 2 STEP(s): FS6400-08-08-O FS6400-32-32-O
+
+AD       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.378, 1.772
+AL       DECODED  GAP 2/2 (chance 0/4)   values: 0.504, 0.870
+AR       DECODED  GAP 2/2 (chance 0/4)   values: 0.551, 0.728
+ATHD     DECODED  CYL_D 2/2 (chance 0/4)   values: 0.8125, 2.5000
+BD       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.378, 1.578
+BL       DECODED  AX_PL 2/2 (chance 1/4), GAP 1/2 (chance 3/4)   values: 0.094, 0.125
+BTHD     DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.7500, 2.5000
+CL       DECODED  CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 1/4)   values: 0.719, 2.380
+CR       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.660, 2.381
+DL       DECODED  CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 1/4)   values: 0.719, 2.380
+DR       DECODED  AX_PL 2/2 (chance 1/4), GAP 1/2 (chance 3/4)   values: 0.094, 0.125
+EL       DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 0/4)   values: 0.629, 2.125
+ER       DECODED  AX_PL (mm) 2/2 (chance 0/4), GAP (mm) 1/2 (chance 2/4)   values: 0.655, 2.375
+FR       DECODED  TOR_r 2/2 (chance 0/4), AX_PL 2/2 (chance 1/4), GAP 1/2 (chance 2/4)   values: 0.087, 0.118
+H        DECODED  GAP 2/2 (chance 0/4)   values: 0.875, 2.750
+HR       DECODED  GAP (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2)   values: 0.940
+L        DECODED  GAP 2/2 (chance 0/4)   values: 1.441, 2.313
+
+== FS6400-08-08-O (record FS6400-08-08-O)
+  AD            0.378  -> CYL_D
+  BD            0.378  -> CYL_D
+  L             1.441  -> GAP
+  H             0.875  -> GAP
+  AL            0.504  -> GAP
+  BL            0.094  -> AX_PL
+  CL            0.719  -> AX_PL, CYL_D
+  DL            0.719  -> AX_PL, CYL_D
+  EL            0.629  -> CYL_D, GAP
+  AR            0.551  -> GAP
+  CR            0.660  -> CYL_D
+  DR            0.094  -> AX_PL
+  ER            0.655  -> AX_PL (mm)
+  FR            0.087  -> AX_PL, TOR_r
+  HR            0.940  -> AX_PL (mm), GAP (mm)
+  ATHD         0.8125  -> CYL_D
+  BTHD         0.7500  -> CYL_D, GAP
+== FS6400-32-32-O (record FS6400-32-32-O)
+  AD            1.772  -> CYL_D
+  BD            1.578  -> CYL_D
+  L             2.313  -> GAP
+  H             2.750  -> GAP
+  AL            0.870  -> GAP
+  BL            0.125  -> AX_PL, GAP
+  CL            2.380  -> CYL_D
+  DL            2.380  -> CYL_D
+  EL            2.125  -> CYL_D
+  AR            0.728  -> GAP
+  CR            2.381  -> CYL_D
+  DR            0.125  -> AX_PL, GAP
+  ER            2.375  -> AX_PL (mm), GAP (mm)
+  FR            0.118  -> AX_PL, GAP, TOR_r
+  ATHD         2.5000  -> CYL_D
+  BTHD         2.5000  -> CYL_D

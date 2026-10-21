@@ -1,0 +1,36 @@
+{
+ "6810": {
+  "configs": 0,
+  "ref": null,
+  "skipped": [
+   [
+    "6810-08-08 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6810-10-10 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6810-12-12 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6810-16-16 NWO",
+    "DROP",
+    "ASSUMED"
+   ],
+   [
+    "6810-12-12-NWO-FG",
+    "BUILD",
+    "MISSING"
+   ]
+  ],
+  "blocked": [],
+  "warnings": [],
+  "cols": 0
+ }
+}

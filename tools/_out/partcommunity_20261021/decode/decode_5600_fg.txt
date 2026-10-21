@@ -1,0 +1,28 @@
+# tube_fittings_and_adapters/5600_fg: 1 STEP(s): 5600-16-16-16-FG
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.938
+A2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.938
+A3D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.938
+BTHD     DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.3150
+C        DECODED  AX_AX (mm) 1/1 (chance 0/2)   values: 1.317
+D        DECODED  GAP 1/1 (chance 0/2)   values: 0.940
+E        AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 1.031
+MDP      DECODED  GAP 1/1 (chance 0/2)   values: 3.000
+N1       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.970
+N2       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.970
+N3       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.970
+Y        DECODED  GAP 1/1 (chance 0/2)   values: 1.312
+
+== 5600-16-16-16-FG (record 5600-16-16-16-FG)
+  A1D           0.938  -> CYL_D
+  A2D           0.938  -> CYL_D
+  A3D           0.938  -> CYL_D
+  N1            1.970  -> AX_PL
+  N2            1.970  -> AX_PL
+  N3            1.970  -> AX_PL
+  Y             1.312  -> GAP
+  C             1.317  -> AX_AX (mm)
+  D             0.940  -> GAP
+  E             1.031  -> AX_PL, GAP
+  BTHD         1.3150  -> BOX, CYL_D
+  MDP           3.000  -> GAP

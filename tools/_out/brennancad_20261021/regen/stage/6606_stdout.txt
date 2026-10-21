@@ -1,0 +1,5 @@
+6606: 6 configs (ref 6606-08-08-08-FG), 2 skipped, 0 blocked, 99 cols
+   warn 6606-06-06-06-FG: THDMAJ_B1@DRIVE empty: thread major 0.5625 = the -06 end library (Q-TRANSFER-ENDLIB); THDMAJ_B2@DRIVE empty: thread major 0.5625 = the -06 end library (Q-TRANSFER-ENDLIB); THDMAJ_B3@DRIVE empty: thread major 0.5625 = the -06 end library (Q-TRANSFER-ENDLIB)
+   warn 6606-12-12-12-FG: THDMAJ_B1@DRIVE empty: thread major 1.0625 = the -12 end library (Q-TRANSFER-ENDLIB); THDMAJ_B2@DRIVE empty: thread major 1.0625 = the -12 end library (Q-TRANSFER-ENDLIB); THDMAJ_B3@DRIVE empty: thread major 1.0625 = the -12 end library (Q-TRANSFER-ENDLIB)
+
+--- stderr ---

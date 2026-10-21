@@ -7,6 +7,8 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-21 (cloud, night): 6810 hex fix STAGED** (`tools\_out\hexskip_20261021\README.md`). Brennan CAD stage row 6810-12-12-NWO-FG: Y@HEX 1.062 (Brennan catalog TFA p44 Y FLATS = CAD record = STEP flats; Air-Way prints only the plain part, OMi none) written, row back to MISSING (M19 / M20 / C3HEX still empty). gen_tee build_rows: a row with an empty hex cell is skipped ("row without Y@HEX") instead of stopping the root - staged in `tools_af` and `tools_b19` copies; regen old vs new identical on every root but 6810, checks clean. Brennan CAD stage folders brought onto this branch from `claude/ecstatic-hopper-fk5p40` (its PROJECT_STATUS entries are not merged here). **User: 36 more rows the stage promoted the same vacuous way (no shipped rows in the table) are still ASSUMED; 33 of them have empty cells (6805, 6809, 6901, 6801-L, 6900, FS2701-03) - `vacuous_promotions.txt`.**
+
 **2026-10-21: BATCH 19 SHIPPED (`03_SCRIPTS\RUN_ME_batch19.txt`, QA #179-#181; user: "finish the 94 parts that need no input from me").**
 The "(d) generator / table work only" list of `tools\_out\blocked_needs_20261020\BLOCKED_NEEDS.md`, staged by five agents
 (`tools\_out\batch19_20261021\<A_answered|B_newspec|C_ownstep|D_geom|E_gen>\`, README + CHANGES.csv each) and merged in `...\merge\` (scripts,

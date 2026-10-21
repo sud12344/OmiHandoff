@@ -1,0 +1,54 @@
+# flange_fitting_and_accessories/fs1704_fg: 1 STEP(s): FS1704-12-12-FG
+
+AF       DECODED  GAP 1/1 (chance 0/2)   values: 1.062
+AF1      DECODED  GAP 1/1 (chance 0/2)   values: 1.0629
+H1       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.1098
+H2       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.1023
+L1       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.66
+L10      DECODED  GAP 1/1 (chance 0/2)   values: 0.81
+L11      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.25
+L12      DECODED  GAP 1/1 (chance 0/2)   values: 1.062
+L13      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.609
+L16      DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.88
+L2       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 2.13
+L3       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.179
+L4       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.5
+L5       DECODED  GAP 1/1 (chance 0/2)   values: 0.964
+L6       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.543
+L7       DECODED  GAP 1/1 (chance 0/2)   values: 1.338
+L8       DECODED  GAP 1/1 (chance 0/2)   values: 0.264
+L9       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.61
+ND       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.1875
+RID      DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.739
+RW       DECODED  GAP 1/1 (chance 0/2), TOR_r 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.070
+W1       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.068
+W2       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.2401
+W3       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.1551
+W4       DECODED  GAP 1/1 (chance 0/2), AX_AX 1/1 (chance 1/2)   values: 0.0519
+
+== FS1704-12-12-FG (record FS1704-12-12-FG)
+  ND           1.1875  -> CYL_D
+  L1             1.66  -> AX_PL
+  L2             2.13  -> AX_PL, GAP
+  AF            1.062  -> GAP
+  AF1          1.0629  -> GAP
+  L3            1.179  -> AX_PL (mm)
+  L4              1.5  -> BOX, CYL_D
+  L5            0.964  -> GAP
+  L6            0.543  -> GAP (mm)
+  L7            1.338  -> GAP
+  L8            0.264  -> GAP
+  L9             0.61  -> CYL_D
+  L10            0.81  -> GAP
+  L11            1.25  -> CYL_D
+  L12           1.062  -> GAP
+  L13           0.609  -> CYL_D
+  L16            0.88  -> GAP (mm)
+  W1            1.068  -> CYL_D
+  W2           1.2401  -> CYL_D
+  W3           0.1551  -> GAP
+  W4           0.0519  -> AX_AX, GAP
+  H1           0.1098  -> GAP
+  H2           0.1023  -> GAP
+  RID           0.739  -> AX_PL (mm)
+  RW            0.070  -> AX_PL, GAP, TOR_r

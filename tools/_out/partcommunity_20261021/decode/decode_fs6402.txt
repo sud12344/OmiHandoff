@@ -1,0 +1,66 @@
+# o_ring_face_seal_fittings/fs6402: 1 STEP(s): FS6402-08-08
+
+AC       DECODED  AX_PL 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.790
+AD       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.378
+AL       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.504
+ATHD     DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.8125
+BC       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.180
+BD       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.378
+BL       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.094
+BN       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.875
+BR       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.680
+BTHD     DECODED  AX_PL 1/1 (chance 0/2)   values: 0.7500
+C        AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.875
+CC       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.422
+CL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.719
+CN       AMBIGUOUS AX_PL 1/1 (chance 1/2)   values: 0.688
+CR       DECODED  GAP 1/1 (chance 0/2)   values: 0.565
+DL       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.719
+DNUT     AMBIGUOUS GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 1/2)   values: 0.785
+DR       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.250
+EL       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.629
+EN       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.875
+ER       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2)   values: 0.205
+FN       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.264
+FR       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.584
+H        AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.875
+HN       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.875
+JN       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.155
+L        DECODED  GAP 1/1 (chance 0/2)   values: 1.770
+LN       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2)   values: 0.827
+MN       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 2/2)   values: 0.37
+PITCHL   AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.06250
+PITCHR   AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.06250
+
+== FS6402-08-08 (record FS6402-08-08)
+  AD            0.378  -> CYL_D, GAP
+  BD            0.378  -> CYL_D, GAP
+  L             1.770  -> GAP
+  C             0.875  -> AX_PL, GAP
+  H             0.875  -> AX_PL, GAP
+  AL            0.504  -> AX_PL, GAP
+  BL            0.094  -> AX_PL
+  CL            0.719  -> CYL_D, GAP
+  DL            0.719  -> CYL_D, GAP
+  EL            0.629  -> CYL_D, GAP
+  BR            0.680  -> CYL_D, GAP
+  CR            0.565  -> GAP
+  DR            0.250  -> GAP
+  ER            0.205  -> AX_PL, GAP
+  FR            0.584  -> AX_PL, CYL_D, GAP
+  AC            0.790  -> AX_PL, CYL_D
+  BC            0.180  -> GAP
+  CC            0.422  -> AX_PL, GAP
+  BN            0.875  -> AX_PL, GAP
+  CN            0.688  -> AX_PL
+  DNUT          0.785  -> CYL_D, GAP
+  EN            0.875  -> AX_PL, GAP
+  FN            0.264  -> GAP
+  HN            0.875  -> AX_PL, GAP
+  JN            0.155  -> GAP
+  LN            0.827  -> AX_PL, GAP
+  MN             0.37  -> AX_PL, GAP
+  ATHD         0.8125  -> AX_PL, CYL_D, GAP
+  BTHD         0.7500  -> AX_PL
+  PITCHL      0.06250  -> GAP
+  PITCHR      0.06250  -> GAP
