@@ -3,7 +3,8 @@
           new = groupB_20261021/tools_af                  + OMI_ROOT groupB_20261021/stage
   FS:     old = tools/_out/orfs_gen_20261020/tools  OMI_ROOT repo, OMI_REV_EXTRA brennancad stage/orfs_tables
           new = groupB_20261021/tools_fs            OMI_ROOT repo, OMI_REV_EXTRA groupB stage/orfs_tables
-  rings:  gen_ring.py of the FS toolset (its SPEC roots: 4000 = 4000 + 4001 + FS4000 folded, 0319T)
+  rings:  gen_ring.py of the FS toolset (its SPEC roots: 4000 = 4000 + 4001 + FS4000 (+ 4005 new) folded, 0319T); GR_REV = the staged
+          newtypes_20261014 review tables (4000 / 4001, as the ORFS README runs it); new: OMI_REV_EXTRA also the group B 04 stage (4005)
 Writes regen/{old,new}/<set>/..., regen/cmp.txt: per root configurations old / new, NEW, LOST, changed configurations, macro identical.
 usage: python regen_all.py [root ...]   (default: every root of both toolsets)"""
 import os, sys, re, subprocess, openpyxl, json
@@ -15,8 +16,10 @@ SETS = {
     'af': dict(old=J('tools', '_out', 'airway_first_20261020', 'tools_af'), new=os.path.join(A, 'tools_af'),
                env_old=dict(OMI_ROOT=J('tools', '_out', 'brennancad_20261021', 'stage')), env_new=dict(OMI_ROOT=os.path.join(A, 'stage'))),
     'fs': dict(old=J('tools', '_out', 'orfs_gen_20261020', 'tools'), new=os.path.join(A, 'tools_fs'),
-               env_old=dict(OMI_ROOT=ROOT, OMI_REV_EXTRA=J('tools', '_out', 'brennancad_20261021', 'stage', 'orfs_tables')),
-               env_new=dict(OMI_ROOT=ROOT, OMI_REV_EXTRA=os.path.join(A, 'stage', 'orfs_tables'))),
+               env_old=dict(OMI_ROOT=ROOT, OMI_REV_EXTRA=J('tools', '_out', 'brennancad_20261021', 'stage', 'orfs_tables'),
+                            GR_REV=J('tools', '_out', 'newtypes_20261014', 'review_tables')),
+               env_new=dict(OMI_ROOT=ROOT, OMI_REV_EXTRA=os.pathsep.join([os.path.join(A, 'stage', 'orfs_tables'), os.path.join(A, 'stage', '04_DESIGN_TABLES')]),
+                            GR_REV=J('tools', '_out', 'newtypes_20261014', 'review_tables'))),
 }
 OUT = os.path.join(A, 'regen')
 

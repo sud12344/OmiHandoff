@@ -60,6 +60,9 @@ SPEC = {
                          'the Brennan 0319-08 STEP are NOT modelled'),
 }
 
+# 2026-10-21 (group B, groupB_20261021): the 4005 flange O-rings (sizes from the Brennan CAD records, scripts/edit_4005.py) fold into the 4000 master
+# - same shape (torus I.D. x W); the code 61 and code 62 flange faces share the groove at every measured size.
+SPEC['4000']['tables'] = tuple(SPEC['4000']['tables']) + ('4005',)
 
 def load_review(root):
     # 2026-10-20 (ORFS staging): a table missing from GR_REV is looked up in OMI_REV_EXTRA (the staged FS tables, e.g. FS4000)
@@ -123,7 +126,8 @@ def build_rows(root):
                 mshort = mat.split(' (')[0].split(',')[0]
                 cols = {'RINGR@DRIVE': round((idv + w) / 2, 6), 'CSDIA@DRIVE': round(w, 6),
                         '$PRP@PartNo': pn,
-                        '$PRP@Description': (f'{mshort} O-Ring, for -{dash:02d} SAE J1453 O-ring face-seal ends' if t == 'FS4000' else
+                        '$PRP@Description': (f'{mshort} O-Ring, for -{dash:02d} SAE J518 code 61 / code 62 flange faces' if t == '4005' else   # 2026-10-21 (group B)
+                                             f'{mshort} O-Ring, for -{dash:02d} SAE J1453 O-ring face-seal ends' if t == 'FS4000' else
                                              f'{mshort} O-Ring, for -{dash:02d} SAE J1926 straight-thread stud ends'),     # 2026-10-20: FS4000 folded in (Q-FS-MASTER)
                         '$PRP@GeometryRoot': root,
                         '$PRP@Material': mat,

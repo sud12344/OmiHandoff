@@ -4,7 +4,7 @@ import os, shutil, importlib, sys
 H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 import tabedit as T
 SRC = os.path.join(T.ROOT, 'tools', '_out', 'brennancad_20261021', 'stage')
-EDITS = ['edit_6900', 'edit_elbows', 'edit_6801L', 'edit_fs6809', 'edit_fs6402']
+EDITS = ['edit_6900', 'edit_elbows', 'edit_6801L', 'edit_fs6809', 'edit_fs6402', 'edit_4005']
 TABLES = {'04_DESIGN_TABLES': ['6900', '6901', '6805', '6806', '6809', '6815', '6832', '6835', '6801L', '6801LL', '3051', '6425', '4005'],
           'orfs_tables': ['FS1700', 'FS1704', 'FS1800', 'FS1804', 'FS2408', 'FS2700', 'FS2700-LN', 'FS6402', 'FS6809', 'FS6400-L', 'FS6801-L', 'FS7202']}
 if __name__ == '__main__':
