@@ -31,9 +31,20 @@ SCRATCH = os.path.join(OUT, 'scratch')
 COVERAGE_WORK = os.path.join(TOOLS, 'coverage', 'work')
 
 
+REV_EXTRA = [d for d in os.environ.get('OMI_REV_EXTRA', '').split(os.pathsep) if d]
+
+
 def review_table(root):
-    """the Air-Way/OMi review table of a root (single source of truth: 04_DESIGN_TABLES)"""
-    return os.path.join(DESIGN_TABLES, f'DesignTable_{root}.xlsx')
+    """the Air-Way/OMi review table of a root (single source of truth: 04_DESIGN_TABLES).
+    2026-10-20 (ORFS staging): OMI_REV_EXTRA = extra folders (os.pathsep-separated) searched only for a table that 04_DESIGN_TABLES does
+    not have, e.g. the staged FS tables (tools/_out/brennan_yes_20261018/stage_orfs/04_DESIGN_TABLES). Unset = unchanged behaviour."""
+    f = os.path.join(DESIGN_TABLES, f'DesignTable_{root}.xlsx')
+    if not os.path.exists(f):
+        for d in REV_EXTRA:
+            g = os.path.join(d, f'DesignTable_{root}.xlsx')
+            if os.path.exists(g):
+                return g
+    return f
 
 
 def step(pn):

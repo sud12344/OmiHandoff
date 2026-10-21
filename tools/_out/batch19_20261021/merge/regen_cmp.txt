@@ -1,0 +1,173 @@
+straight 5000       same
+straight 5404       same
+straight 5405       same
+straight 6401       same
+straight 6405       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+straight 2408       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+straight 6408       same
+straight 0318       same
+straight 5406       same
+straight 5406C      same
+straight 5406P      same
+straight 2700       same
+straight 2705       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+straight 2706       CHANGED macro != header = new 4 lost 0 old-changed 0 [] []
+straight 4404       CHANGED macro != header = new 0 lost 0 old-changed 0 [] []
+straight 4604       CHANGED macro != header = new 0 lost 0 old-changed 0 [] []
+straight 5404N      CHANGED macro != header = new 18 lost 0 old-changed 0 [] []
+straight 6404       same
+straight 6410       CHANGED macro != header = new 6 lost 0 old-changed 0 [] []
+straight 2406       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+straight 6504       CHANGED macro != header = new 6 lost 0 old-changed 0 [] []
+straight 6505       same
+straight 6506       CHANGED macro != header = new 3 lost 0 old-changed 0 [] []
+straight 6402       same
+straight 6565       same
+straight 1404       same
+straight 1405       same
+straight 1700       CHANGED macro != header = new 0 lost 0 old-changed 0 [] []
+straight 0403       same
+straight 2403       same
+straight 2405       same
+straight 2404       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+straight 0304       same
+straight 0306       same
+straight 6400       same
+straight 6408HHP    same
+straight 5406HHP    same
+straight 5406SHP    same
+straight 3474       NEW root, 9 configurations
+straight 1700RC     same
+straight 1800       same
+straight 1824       same
+straight 1724       same
+straight FS2403     same
+straight FS2404     same
+straight FS6403     same
+straight FS6400     same
+straight FS6565     same
+straight FS6540     same
+straight FS6504     same
+straight FS6505     same
+straight FS6565C    same
+straight FS6540C    same
+straight FS6504C    same
+straight FS6505C    same
+straight FS0306     same
+straight FS0318     same
+straight FS0319     same
+straight FS0319C    same
+tee      2650       same
+tee      2601       same
+tee      2602       same
+tee      2605       same
+tee      2606       same
+tee      2609       same
+tee      2611       same
+tee      2613       NEW root, 1 configurations
+tee      5600       same
+tee      5602       CHANGED macro != header = new 0 lost 0 old-changed 0 [] []
+tee      5604       same
+tee      5605       same
+tee      5652       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      5603       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      5601       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      2501       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      5500       same
+tee      5502       same
+tee      5504       same
+tee      2503       same
+tee      2504       same
+tee      2505       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      2701       same
+tee      2702       same
+tee      2703       same
+tee      2704       CHANGED macro != header = new 0 lost 0 old-changed 0 [] []
+tee      6500       same
+tee      6501       same
+tee      6503       CHANGED macro != header = new 2 lost 0 old-changed 0 [] []
+tee      6502       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      6600       same
+tee      1501       CHANGED macro != header = new 2 lost 0 old-changed 0 [] []
+tee      1503       same
+tee      1504       CHANGED macro != header = new 3 lost 0 old-changed 0 [] []
+tee      5501       CHANGED macro != header = new 2 lost 0 old-changed 0 [] []
+tee      5503       same
+tee      5505       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      6810       no output (rc 0)
+tee      6902       same
+tee      1502       CHANGED macro != header = new 2 lost 0 old-changed 0 [] []
+tee      6602       same
+tee      6802       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      6803       same
+tee      6804       same
+tee      6801       same
+tee      6807       CHANGED macro != header = new 2 lost 0 old-changed 0 [] []
+tee      6606       CHANGED macro != header = new 1 lost 0 old-changed 0 [] []
+tee      1601       same
+tee      1602       same
+tee      1603       same
+tee      4601       same
+tee      4603       same
+tee      4501       same
+tee      4503       same
+tee      1703       same
+tee      1704       same
+tee      1803       no output (rc 0)
+tee      1804       same
+tee      2500       NEW root, 15 configurations
+tee      2603       NEW root, 12 configurations
+tee      FS2500     same
+tee      FS2501     same
+tee      FS2503     same
+tee      FS2603     same
+tee      FS2701     same
+tee      FS2702     same
+tee      FS2703     same
+tee      FS2704     same
+tee      FS6500     same
+tee      FS6600     same
+tee      FS6602     same
+tee      FS6801     same
+tee      FS6802     same
+tee      FS6803     same
+tee      FS2601     same
+tee      FS6502     same
+tee      FS6804     same
+tee      FS2500N    same
+tee      FS2501N    same
+tee      FS2503N    same
+tee      FS2603N    same
+tee      FS2701N    no output (rc 0)
+tee      FS2702N    no output (rc 0)
+tee      FS2703N    no output (rc 0)
+tee      FS2704N    no output (rc 0)
+tee      FS6500C    same
+tee      FS6500N    same
+tee      FS6500NC   same
+tee      FS6600C    same
+tee      FS6600N    same
+tee      FS6600NC   same
+tee      FS6602C    same
+tee      FS6602N    same
+tee      FS6602NC   same
+tee      FS6801R    same
+tee      FS6801N    no output (rc 0)
+tee      FS6801NR   same
+tee      FS6802R    no output (rc 0)
+tee      FS6802N    no output (rc 0)
+tee      FS6802NR   same
+tee      FS6803R    no output (rc 0)
+tee      FS6803N    no output (rc 0)
+tee      FS6803NR   no output (rc 0)
+tee      FS2601N    same
+tee      FS6502C    no output (rc 0)
+tee      FS6502N    no output (rc 0)
+tee      FS6502NC   no output (rc 0)
+tee      FS6804R    no output (rc 0)
+tee      FS6804N    no output (rc 0)
+tee      FS6804NR   no output (rc 0)
+tee      FS2500N1   NEW root, 2 configurations
+tee      6603       NEW root, 1 configurations
+ring     4000       same
+ring     0319       NEW root, 12 configurations

@@ -12,6 +12,8 @@ End modules (profile + thread + bore rules):
    NPTFF  female NPTF      : tap-drill pocket depth P1 per pipe dash (MS51503 P1 max, 2405 table), tapered helix
    ORBM   male SAE ORB     : THDMAJ over ORB_THDL, groove ORB_GRVDIA x ORB_GRVW (ORD-5700 / measured), no chamfer
    BRAZE  braze socket     : bore D2 to depth L7 (Air-Way), plain face
+   NWO    adjustable male ORB (End A only, 2026-10-20, SPEC 3474; port of the 2026-10-02 3474 work): the gen_tee leg_NWO stud (thread,
+                             undercut, washer, chamfered locknut, neck) - locknut and body hex each cut over their own zone (ZoneHexCut)
 Body: revolved at BODYR = HEXB/cos30/2 then hex-cut (2403/2405 pattern).  SP3 rule: all diameters are
 RADIUS dims (BODYR, THDMAJR_*, *_CONER, ORB_GRVR, NPTF_MAJR) and the table holds half the catalog value.
 Every value in the table is traceable: Air-Way (the review table) + the standard chains above; every
@@ -130,6 +132,11 @@ LIB_NEED = {
     'FPT': 'the female NPTF port drill depth P1 of -{d:02d} (MS51503 / the 2405 table stop at -32), measured on a Brennan STEP with a '
            '-{d:02d} female NPTF port (5000-{d:02d}-{d:02d} preferred) -> a measured FPT entry',
     'JIC': 'the male 37deg JIC chain of -{d:02d} (seat, land, thread zone, relief), measured on a Brennan STEP with a -{d:02d} male JIC end',
+    'FSM': 'the male O-ring face-seal end of -{d:02d} on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), '
+           'measured on BRENNAN_FS2403-{d:02d}-{d:02d} (or another FS straight with that end) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py '
+           '-> FSM_MEAS[{d}] (the forged FS6500 leg has no flank / relief: FSMF_MEAS covers forged legs only)',
+    'FSMF': 'the male O-ring face-seal end of -{d:02d} on a FORGED leg (face groove, land, nose chamfer, thread end), measured on '
+            'BRENNAN_FS6500-{d:02d}-{d:02d}-FG (STEPS_NEEDED part 2) with tools/_out/orfs_wp2_20261020/measure/fsmeasure.py -> FSMF_MEAS[{d}]',
 }
 
 
@@ -141,8 +148,8 @@ def lib_gap(lib, d):
 def lib_gaps(kinds_dashes):
     """messages for the ends of one part whose dash is missing from the end libraries they read (used by gen_tee before building)"""
     need = {'JICM': ('JIC',), 'JICBH': ('JIC',), 'JICSW': ('JIC',), 'NWO': ('JIC',), 'NPTFM': ('NPTF', 'ENDL'), 'NPTFF': ('FPT', 'NPTF'),
-            'NPSMSW': ('NPTF',)}
-    libs = dict(JIC=JIC, NPTF=NPTF, ENDL=ENDL, FPT=FPT)
+            'NPSMSW': ('NPTF',), 'FSM': ('FSMF',), 'FSBH': ('FSM',)}     # 2026-10-20: a forged FSM leg reads FSMF_MEAS (the bulkhead leg its flank / relief: FSM_MEAS)
+    libs = dict(JIC=JIC, NPTF=NPTF, ENDL=ENDL, FPT=FPT, FSM=FSM_MEAS, FSMF=FSMF_MEAS)
     out = []
     for kind, d in kinds_dashes:
         for lib in need.get(kind, ()):
@@ -465,6 +472,8 @@ SWIV_MEAS = {
              MINR=1.2049, TE=0.7399, RELR=1.325, FLOOR=1.4202, NOSER=1.198, NOSETIP_B=0.95, SEATR=1.1175),
 }
 SW_CSANG = 50.0; SW_RELANG = 45.0; SW_SEATANG = 37.0
+SW_KINDS = ('JICSW', 'NPSMSW', 'FSSW')     # 2026-10-20: swivel ends with a nut (VO outside + VG cavity); FSSW = the female face-seal swivel
+SWA_KINDS = ('JICSW', 'FSSW')              # ... that can also be End A (a double swivel: 6565 / FS6565)
 SWIV_ASSUME = ('female 37deg JIC SWIVEL end, sectioned on the Brennan 6500-04/-05/-06/-08/-10/-12/-16/-20/-24/-32-FG STEPs (one per swivel size): swivel nut hex = Air-Way C3 over the measured nut hex length, '
                'round skirt (measured radii and taper) to the measured nut rear face, measured neck radius to the body face; nut thread = ASME B1.1 basic minor '
                '(= Brennan at every measured size) with a straight helical UN-2B thread over the measured length, 50deg countersink from the thread major, 45deg relief to the '
@@ -805,6 +814,133 @@ def end_BRAZE(sfx, d2, l7):
 
 ORB_THR = {2: '5/16-24', 3: '3/8-24', 4: '7/16-20', 5: '1/2-20', 6: '9/16-18', 8: '3/4-16', 10: '7/8-14', 12: '1 1/16-12', 14: '1 3/16-12', 16: '1 5/16-12', 20: '1 5/8-12', 24: '1 7/8-12', 32: '2 1/2-12'}
 
+
+# ---- 2026-10-20 (batch 19, master 3474; ported from the 2026-10-02 work tools/_out/newmasters_20261002/work/3474): ADJUSTABLE male ORB end
+# ("NWO": locknut, backup washer, O-ring undercut, ORB thread) at End A of a STRAIGHT - the gen_tee.py leg_NWO module (built clean in SolidWorks
+# on 6801 / 6802 / 6803 / 6804, batch 13b) ported to the straight generator: same profile (from the tip: thread -> undercut -> washer -> locknut
+# envelope with its two 15deg chamfer cones -> neck -> body face), same two modelling offsets, the locknut cut to its hexagon over its own thickness
+# (ZoneHexCut NUTCUTA) and the body hex over its own zone (ZoneHexCut HEXCUT from the body face) - never a through-all hex cut, which would flat
+# the round washer.
+NWO_CHANG = 15.0          # locknut chamfer cone to the nut face plane, deg - MEASURED on all 12 Brennan 6801 STEPs (gen_tee NWO_CHANG) and on both
+                          # nut faces of the Brennan 3474-12-12-NWO STEP (tools/measure/orb_straight.py: 15.00 deg from r = AF/2)
+NWO_CH_DR = 0.005         # chamfer start radius = AF/2 + 0.005 (Brennan: exactly AF/2, tangent to the flats; ASSUMPTION, cosmetic) - = gen_tee
+NWO_RN_MARGIN = 0.010     # revolved nut envelope radius = hex corner radius + 0.010, removed by the hex cut (no effect on the solid) - = gen_tee
+# The 3474 stud, MEASURED on the Brennan 3474-12-12-NWO STEP (09_STEP_FILES, CADENAS export 2026-10-02, sha256 c396aa02...b7736f37) with
+# tools/measure/orb_straight.py (validated: reproduces NWO_MEAS on all 12 Brennan 6801 STEPs and the ORB end dict on 8 fixed-ORB STEPs,
+# evidence in tools/_out/newmasters_20261002/work/3474/evidence/measure_validation.txt). From the tip: thread major 1.0625 to 0.410 (then the
+# 60deg run-out), undercut root dia 0.945, O-ring (drawn and fused on this STEP, R 0.058 - not modelled), washer dia 1.444 x 0.050, locknut
+# 0.410 thick, A/F 1.25, both faces chamfered 15deg from the flats circle, neck dia 0.945 x 0.027, body face 1.140 from the tip.
+# Equal to the Brennan 6801-12-12-NWO-FG stud (NWO_MEAS[12]) except the NECK: 0.945 dia here (= the undercut root) vs 1.000 on 6801-12.
+NWO_MEAS_3474 = {12: dict(NECKR=0.4725, NECKL=0.027, NUTT=0.41, WR=0.722, WT=0.05, THDL_B=0.410, I3_B=1.14, AF_B=1.25, UR_B=0.4725,
+                          src='Brennan 3474-12-12-NWO STEP')}
+# Fixed ORB ends of 3474 checked on the part's own STEP: the 3474-12-12-NWO fixed -12 end measures thread 0.469, groove root 0.945, groove
+# width 0.125 to the hex face = ORB[12] exactly (orb_straight.py). Other sizes take the ORB dict end (Q-TRANSFER-ENDLIB, below).
+ORB_FIXED_OWNSTEP_3474 = frozenset({12})
+# Q-TRANSFER-ENDLIB = YES (user 2026-10-08, PROJECT_STATUS s5: "Reuse already-measured end details - yes"): 3474 sizes without their own Brennan
+# STEP take the adjustable stud of the same ORB size from the Brennan 6801 STEPs (gen_tee NWO_MEAS) and the fixed end from the ORB end dict.
+NWO_3474_TRANSFER = True
+NWO3474_ASSUME = ('ADJUSTABLE ORB END (End A, nut + washer + O-ring, the gen_tee 6801 NWO module ported to the straight): from the tip the male ORB '
+                  'thread (thread length = row ORB_THDL, Thread feature), the O-ring undercut (root = row ORB_GRVDIA), the backup washer, the locknut '
+                  '(hex = row C1, both faces chamfered 15deg to the face from the across-flats circle - drawn as a revolved envelope cut to the '
+                  'hexagon over the nut thickness, chamfer start 0.005 outside the flats circle to avoid a tangent edge: ASSUMPTION, cosmetic), the '
+                  'neck, the body face at row ORB_I3 from the tip; {STUD}; the nut sits where Brennan shows it (backed off against the washer); locknut, washer and body are '
+                  'one solid as on the Brennan STEP; the O-RINGS (drawn and fused into the Brennan 3474 solid, section R 0.058) are NOT modelled '
+                  '(elastomer, as on every ORB end of the library); the 45deg tip chamfers and the 60deg thread run-outs of both ORB ends are NOT '
+                  'modelled (as on every ORB end of the library: the thread major runs to the undercut / groove); body hex = row C2 between the body '
+                  'face and the fixed ORB end, cut over that zone only; its 15deg end chamfers (Brennan STEP, both ends, from the flats circle) NOT '
+                  'modelled (as on every straight master); the 0.002 deep marking recesses on the Brennan nut and body flats NOT modelled')
+
+
+def assume_3474(r):
+    """$PRP@AxialSource MODEL text of one 3474 row: the stud clause names where THIS size's washer / neck / nut thickness come from"""
+    m_ = re.match(r'\s*3474-(\d+)-(\d+)', r.get('$PRP@PartNo') or '')
+    a_ = int(m_.group(1)) if m_ else None
+    stud = (f'washer, neck and nut thickness MEASURED on the Brennan 3474-{a_:02d}-{a_:02d}-NWO STEP (one manufacturer, ASSUMED)' if a_ in NWO_MEAS_3474 else
+            'washer, neck and nut thickness TRANSFERRED from the Brennan 6801 STEP of the same ORB size (Q-TRANSFER-ENDLIB = yes 2026-10-08; see the '
+            'TRANSFERRED note at the end; one manufacturer, ASSUMED)')
+    return NWO3474_ASSUME.replace('{STUD}', stud) + (
+        '; FIXED ORB END (End B): thread length + groove from the ORB end dict (6401 / 6405 / 6410 / 6408 review rows), = the Brennan 3474-12-12-NWO '
+        'STEP at -12 (thread 0.469, root 0.945, groove 0.125 to the hex face); L1 = tip to tip, C1 = locknut hex, C2 = body hex, D1 / D2 = B1 / B2 '
+        'drill (Brennan TFA catalog p.9 table 3474-NWO; BRENNAN-marked, user 2026-10-18; Air-Way prints no 3474); bore step D1 / D2 at the body-hex '
+        'mid-plane (ASSUMPTION, as 2403; no effect where D1 = D2)')
+
+
+def nwo_stud(dash):
+    """3474 adjustable stud data of one ORB size: its own Brennan STEP, else (NWO_3474_TRANSFER, Q-TRANSFER-ENDLIB) the Brennan 6801 stud"""
+    if dash in NWO_MEAS_3474: return NWO_MEAS_3474[dash], None
+    if NWO_3474_TRANSFER:
+        import gen_tee      # lazy: gen_tee imports this module; reached only for a size without its own 3474 STEP
+        if dash in gen_tee.NWO_MEAS:
+            return gen_tee.NWO_MEAS[dash], (f'adjustable ORB stud -{dash:02d} (neck, locknut thickness, washer) TRANSFERRED from the Brennan 6801-{dash:02d}-{dash:02d}-NWO-FG '
+                                            f'STEP (gen_tee NWO_MEAS) - no Brennan 3474 STEP of this size (Q-TRANSFER-ENDLIB = yes 2026-10-08; the 3474-12 STEP differs '
+                                            f'from 6801-12 in the neck: 0.945 vs 1.000 dia)')
+    raise KeyError(f'adjustable ORB end of 3474 not measured for -{dash:02d}: needs BRENNAN_3474-{dash:02d}-{dash:02d}-NWO.stp (tools/measure/orb_straight.py), '
+                   f'or a Brennan 6801 stud of that ORB size (gen_tee NWO_MEAS) with NWO_3474_TRANSFER')
+
+
+def end_ORBM_3474(dash):
+    """fixed ORB end of 3474 (End B): the ORB dict end; a size without its own 3474 STEP gets the TRANSFERRED note"""
+    if dash not in ORB_FIXED_OWNSTEP_3474 and not NWO_3474_TRANSFER:
+        raise KeyError(f'fixed ORB end of 3474 not checked for -{dash:02d}: needs BRENNAN_3474-..-{dash:02d}-NWO.stp, or Q-TRANSFER-ENDLIB = yes (ORB dict end)')
+    E = end_ORBM(dash, 'B')
+    if dash not in ORB_FIXED_OWNSTEP_3474:
+        E['axnote'] = (f'fixed ORB end -{dash:02d} TRANSFERRED from the ORB end dict (6401 / 6405 / 6410 / 6408 review rows; Q-TRANSFER-ENDLIB = yes 2026-10-08) - no '
+                       f'Brennan 3474 STEP of this size' + ('; NOTE: the Brennan 6410-04-02-O STEP has a 0.285 fixed -04 thread (dict 0.265)' if dash == 4 else ''))
+    return E
+
+
+def end_NWO(dash, sfx, I3, nutAF, THDL, GRVD, m, note=None):
+    """adjustable ORB end at End A, tip at x = 0: thread, undercut, washer, locknut envelope with its two 15deg chamfer cones (cut to the
+    hexagon later: NUTCUTA), neck, to the body face at I3. m = the stud data (NECKR, NECKL, NUTT, WR, WT, AF_B)."""
+    assert sfx == 'A', 'adjustable ORB end: End A only (the locknut cut is sketched on the End A tip plane)'
+    if dash not in ORB: raise KeyError(f'no ORB thread data for -{dash:02d}')
+    TM = ORB[dash]['TM']; rM = TM / 2; UR = GRVD / 2; P_ = 1 / tpi_of(ORB_THR[dash])
+    nB = round(I3 - m['NECKL'], 4); wB = round(nB - m['NUTT'], 4); wA = round(wB - m['WT'], 4); te = THDL
+    rc = round(nutAF / 2 + NWO_CH_DR, 5); Rn = round(nutAF / math.sqrt(3) + NWO_RN_MARGIN, 5)
+    chA = 90.0 - NWO_CHANG                                  # sketch angle between each chamfer cone and the envelope line
+    ch = (Rn - rc) * math.tan(math.radians(NWO_CHANG))      # axial run of each cone
+    if abs(nutAF - m['AF_B']) > 0.007: raise AssertionError(f'locknut hex {nutAF} differs from the Brennan nut {m["AF_B"]} for -{dash:02d}')
+    if wA - te < 0.03: raise AssertionError(f'no room for the O-ring undercut ({wA - te:.3f}) between the thread and the washer')
+    if not (m['NECKR'] < nutAF / 2 - 0.01 and m['WR'] > rc + 0.005 and m['WR'] > UR + 0.02 and m['WR'] > rM + 0.02 and UR < rM - 0.005):
+        raise AssertionError('radial order neck < nut flats < washer, undercut < thread < washer')
+    if m['NUTT'] < 2 * ch + 0.05: raise AssertionError(f'nut {m["NUTT"]} too thin for its two chamfers ({2 * ch:.3f})')
+    V = [(0.0, rM), (te, rM), (te, UR), (wA, UR), (wA, m['WR']), (wB, m['WR']), (wB, rc), (wB + ch, Rn), (nB - ch, Rn), (nB, rc), (nB, m['NECKR']), (I3, m['NECKR'])]
+    seg = dict(face=0, thd=1, stepU=2, uc=3, wup=4, wash=5, wdn=6, ch2=7, nut=8, ch1=9, ndn=10, neck=11)
+    cols = {f'THDMAJR_{sfx}@DRIVE': rM, f'NW{sfx}_THDL@DRIVE': THDL, f'NW{sfx}_UCR@DRIVE': round(UR, 5), f'NW{sfx}_WASHR@DRIVE': m['WR'], f'NW{sfx}_WASHT@DRIVE': m['WT'],
+            f'NW{sfx}_CHR2@DRIVE': rc, f'NW{sfx}_CHANG2@DRIVE': chA, f'NW{sfx}_NUTR@DRIVE': Rn, f'NW{sfx}_CHANG1@DRIVE': chA, f'NW{sfx}_CHR@DRIVE': rc,
+            f'NW{sfx}_NUTT@DRIVE': m['NUTT'], f'NW{sfx}_NECKR@DRIVE': m['NECKR'], f'NW{sfx}_NECKL@DRIVE': m['NECKL'], f'NW{sfx}_I3@DRIVE': I3,
+            f'NUTHEX{sfx}@NUTHEX{sfx}': nutAF, f'START@NUTCUT{sfx}': wB, f'DEPTH@NUTCUT{sfx}': m['NUTT'],
+            f'THDDIA@THD_End{sfx}': TM, f'THDPITCH@THD_End{sfx}': round(P_, 5), f'DEPTH@THD_End{sfx}': THDL,
+            f'Profile_Height@THD_End{sfx}_PROF': round(0.54127 * P_, 5), f'Profile_Land@THD_End{sfx}_PROF': round(0.25 * P_, 5), f'THDPITCH@THD_End{sfx}_PROF': round(P_, 5)}
+    return dict(kind='NWO', V=V, endlen=I3, seg=seg, cols=cols, thr=ORB_THR[dash] + ' (adjustable male ORB)', faceR=rM * 0.5, dash=dash, m=m, axnote=note,
+                nut=dict(n0=wB, w0=nB, dep=m['NUTT'], af=nutAF, rc=rc, Rn=Rn), wA=wA, wB=wB, nB=nB, te=te, UR=UR, rM=rM, rc=rc, Rn=Rn, ch=ch, chA=chA,
+                I3=I3, THDL=THDL, nutAF=nutAF, rmax=max(m['WR'], Rn),
+                thread=dict(type='CUT', ex=te, er=rM, depth=THDL, size=f"{TM:.4f}-{tpi_of(ORB_THR[dash]):g}", pitch=P_))
+
+
+def end_NWO_row(r, dash):
+    """End A of a 3474 row: the review-table columns (tip to body face ORB_I3, locknut hex C1, thread length ORB_THDL, undercut root ORB_GRVDIA)
+    + the stud data of that size (nwo_stud)"""
+    m, note = nwo_stud(dash)
+    vals = dict(I3=r.get('ORB_I3@DRIVE'), nutAF=r.get('C1HEX@HEX'), THDL=r.get('ORB_THDL@DRIVE'), GRVD=r.get('ORB_GRVDIA@DRIVE'))
+    miss = [k for k, v in vals.items() if v is None]
+    if miss: raise KeyError(f'adjustable ORB end: {", ".join(miss)} not in the review row')
+    return end_NWO(dash, 'A', vals['I3'], vals['nutAF'], vals['THDL'], vals['GRVD'], m, note)
+
+
+def nwo_nut_removed(nut, n=4000):
+    """volume (in^3) of the revolved, chamfered locknut envelope lying outside the hexagon (what NUTCUTA removes) - port of gen_tee.nwo_nut_removed
+    (same integral): over the nut thickness, the disc of the envelope radius minus the hexagon (flats d = AF/2, corners Rc)"""
+    n0, w0, rc, Rn, af = nut['n0'], nut['w0'], nut['rc'], nut['Rn'], nut['af']
+    d = af / 2; Rc = af / math.sqrt(3); k = 1 / math.tan(math.radians(NWO_CHANG)); tot = 0.0; h = (w0 - n0) / n
+    for j in range(n):
+        a = n0 + (j + 0.5) * h
+        r = min(Rn, rc + (a - n0) * k, rc + (w0 - a) * k)
+        if r <= d: continue
+        if r >= Rc: tot += math.pi * r * r - 2 * math.sqrt(3) * d * d
+        else: tot += 6 * (r * r * math.acos(d / r) - d * math.sqrt(r * r - d * d))
+    return tot * h
+
 # ---- topology specs ----------------------------------------------------------------------
 SPEC = {
  '5000': dict(name='Hexagon Pipe Coupling', L='L@DRIVE', hex='CHEX@HEX',
@@ -895,7 +1031,7 @@ SPEC = {
               assume='female SAE ORB port: minor bore = Air-Way D3 (port drill); O-ring chamfer (12deg at -04/-06, 15deg from -08 up), 45deg lead-in, minor-bore depth and 120deg drill point measured per port size on the Brennan 6404-04/-06/-08/-10/-12/-16/-24 and 6410-12-08-O / 6410-24-20-O STEPs (-08 measured twice, agree; single manufacturer); straight helical UN thread over the port depth; hex over the full body length, end chamfers NOT modelled' + '; male NPTF end per ASME B1.20.3 + the 5404 Brennan-measured end length (Brennan 6404-08-08: 0.75 = the 5404 value); bore D1 from the male tip to the port'),
  '6410': dict(name='ORB Reducer/Expander (male ORB x female ORB port)', L='L33@DRIVE', hex='C1HEX@HEX',
               A=lambda r, a, b: end_ORBM(a, 'A'), B=lambda r, a, b: end_ORBF(b, 'B', r['D3@BORE'], r['D@BORE']),
-              bore=('A_to_pocket', 'D@BORE', None), ref='6410-12-08-O', thrchk=(('A', 'THDMAJ_B1@DRIVE', 'a'),),
+              bore=('A_to_pocket', 'D@BORE', None), ref='6410-24-20-O', thrchk=(('A', 'THDMAJ_B1@DRIVE', 'a'),),
               assume='female SAE ORB port: minor bore = Air-Way D3 (port drill); O-ring chamfer (12deg at -04/-06, 15deg from -08 up), 45deg lead-in, minor-bore depth and 120deg drill point measured per port size on the Brennan 6404-04/-06/-08/-10/-12/-16/-24 and 6410-12-08-O / 6410-24-20-O STEPs (-08 measured twice, agree; single manufacturer); straight helical UN thread over the port depth; hex over the full body length, end chamfers NOT modelled' + '; male ORB end: thread length + groove from the 6401/6405/6410 review tables; bore D from the male tip to the port'),
  '2406': dict(name='Female JIC x Male JIC Reducer/Expander', L='L23@DRIVE', hex='HEXB@HEX',
               A=lambda r, a, b: end_JICM(b, 'A'), B=lambda r, a, b: end_JICF(a, 'B'),
@@ -1361,6 +1497,18 @@ SPEC['5406SHP'] = dict(name='Square Head Pipe Plug (NPTF)', L='L2@DRIVE', hex=la
                               '5406-SHP Y FLATS; head length = the pilot ratio 0.440 / 0.563 = 0.7815 x the row A/F (ASSUMPTION except -08)')
 
 
+# ---- 2026-10-20 (batch 19, master 3474; the 2026-10-02 SPEC ported): adjustable male ORB (End A, the first dash) x fixed male ORB (End B)
+# straight with a hex body between them. Pilot: Brennan 3474-12-12-NWO STEP; dimensions: Brennan TFA p.9 table 3474-NWO (L1 tip to tip, C1 locknut
+# hex, C2 body hex, B1 / B2 drill; BRENNAN-marked rows, user 2026-10-18 - Air-Way prints no 3474). Review-table columns (DesignTable_3474.xlsx):
+# L1@DRIVE, C1HEX@HEX, C2HEX@HEX, D1@BORE / D2@BORE (B1 / B2 drill), ORB_I3@DRIVE (adjustable tip to body face), ORB_THDL@DRIVE / ORB_GRVDIA@DRIVE
+# (adjustable thread length / undercut root = the 6801 row of the same ORB size, Air-Way), THDMAJ_A@DRIVE / THDMAJ_B@DRIVE (thread majors, checked).
+# Bores step at the body-hex mid-plane (equal on every OMi size).
+SPEC['3474'] = dict(name='Adjustable Male ORB x Male ORB Straight', L='L1@DRIVE', hex='C2HEX@HEX', nwo=True,
+                    A=lambda r, a, b: end_NWO_row(r, a), B=lambda r, a, b: end_ORBM_3474(b),
+                    bore=('mid', 'D1@BORE', 'D2@BORE'), ref='3474-12-12-NWO', thrchk=(('A', 'THDMAJ_A@DRIVE', 'a'), ('B', 'THDMAJ_B@DRIVE', 'b')),
+                    assume=assume_3474)      # per row: the stud clause names this size's source (own 3474 STEP, or the 6801 transfer)
+
+
 # overall lengths measured on the Brennan STEP bundle (inch files, vertex bounding box along the fitting axis)
 BRENNAN_OAL = {'6410-12-08-O': (1.480, 'Brennan: male -12 ORB end 0.594 + hex 0.886 carrying the whole -08 port; Air-Way puts the port inside the male end'),
                '6404-08-08': (1.650, 'Brennan: male NPTF end 0.75 + hex 0.90')}
@@ -1442,6 +1590,401 @@ SPEC['1724'] = dict(name='O-Ring Face Code 61 Flange Plug', L='L@DRIVE', hex='SH
                     bore=('none', None, None), ref='1724-08', assume=FLG61PLUG_ASSUME)
 
 
+# ---- 2026-10-20 (ORFS WP2, staging tools/_out/orfs_gen_20261020; plan tools/_out/orfs_modeltype_20261016/PLAN.md, decisions DECISIONS.md):
+# SAE J1453 O-ring face-seal (OMi FS...) straights. Every FS series has its own master (Q-FS-MASTER). Review tables: the staged FS tables
+# (OMI_REV_EXTRA=tools/_out/brennan_yes_20261018/stage_orfs/04_DESIGN_TABLES). End shapes measured on the Brennan pilots with
+# tools/_out/orfs_wp2_20261020/measure/fsmeasure.py (validation: checks.txt there, 0 FAIL; entries: end_lib_08.json).
+# Face-seal thread per dash = Air-Way's callout on the FS rows of that dash (680 of the 699 thread cells of the 51 tables; = the Brennan ORFS
+# catalog; PLAN section 2 FS_THR).
+FS_THR = {4: '9/16-18', 6: '11/16-16', 8: '13/16-16', 10: '1-14', 12: '1 3/16-12', 16: '1 7/16-12', 20: '1 11/16-12', 24: '2-12', 32: '2 1/2-12'}
+# MALE FACE-SEAL END (FSM), from the face: flat face from the bore to the groove inner radius GI, rectangular O-ring groove GI -> GO, depth GD
+# (the corner under the fused O-ring taken as sharp), land to FR, 45deg nose chamfer to the thread major, thread major to THDS from the face,
+# 60deg flank down to the relief RELR, relief to the hex face at the end length ENDL. -08: BRENNAN_FS2403-08-08 (both ends; = the male ends of
+# FS6400-08-08-O, and the nose of the forged FS6500 / FS6801 / FS2701 -08 legs, whose run-out differs - gen_tee). The fused O-ring = Air-Way
+# FS4000-08 (I.D. 0.489, W 0.070) and is not modelled (as the ORB / NWO ends).
+FSM_MEAS = {8: dict(GI=0.2125, GO=0.3145, GD=0.052, FR=0.3595, THDS=0.383, RELR=0.3595, ENDL=0.504),
+            # 2026-10-20 (per-size STEPs, tools/_out/orfs_steps2_20261020/ends_survey.txt): the straight ends with a flank + relief run-out
+            24: dict(GI=0.7125, GO=0.8145, GD=0.052, FR=0.938, THDS=0.5296, RELR=0.9405, ENDL=0.689),
+            32: dict(GI=0.9605, GO=1.0625, GD=0.052, FR=1.19, THDS=0.7104, RELR=1.19, ENDL=0.87)}
+FSM_SRC = {8: 'Brennan FS2403-08-08 (both ends) = FS6400-08-08-O (fsmeasure.measure_fsm, orfs_wp2_20261020 checks (1))',
+           24: 'Brennan FS2403-24-24 (both ends; fsmeasure.measure_fsm, orfs_steps2_20261020 ends_survey)',
+           32: 'Brennan FS6400-32-32-O (fsmeasure.measure_fsm, orfs_steps2_20261020 ends_survey)'}
+# 2026-10-20: the male face-seal end on a FORGED leg (gen_tee leg_FSM): face, groove, land, nose chamfer and the thread end ENDL, where the leg's
+# turned flats diameter takes over (no flank / relief on a forged leg). Measured on the -NN leg of BRENNAN_FS6500-NN-NN-FG (-08: = FSM_MEAS[8],
+# also FS2501-08-08-FG); the flats meet the thread with a radial step down (thread above the flats: -08 / -20), a step up (flats above the
+# thread: -06 / -10, FS2501-08-08-FG) or no step (flats = thread: -04 / -12 / -16, the thread runs into the 75deg hex end chamfer).
+FSMF_MEAS = {4: dict(GI=0.1145, GO=0.2165, GD=0.052, FR=0.2415, ENDL=0.386), 6: dict(GI=0.15, GO=0.252, GD=0.052, FR=0.297, ENDL=0.441),
+             8: dict(GI=0.2125, GO=0.3145, GD=0.052, FR=0.3595, ENDL=0.504), 10: dict(GI=0.276, GO=0.378, GD=0.052, FR=0.445, ENDL=0.61),
+             12: dict(GI=0.3385, GO=0.4405, GD=0.052, FR=0.5315, ENDL=0.67), 16: dict(GI=0.4315, GO=0.5335, GD=0.052, FR=0.6565, ENDL=0.689),
+             20: dict(GI=0.5565, GO=0.6585, GD=0.052, FR=0.7825, ENDL=0.689)}
+FSMF_SRC = {d: f'Brennan FS6500-{d:02d}-{d:02d}-FG male leg (fsmeasure.measure_fsm, ' + ('orfs_wp2_20261020 checks (1))' if d == 8 else 'orfs_steps2_20261020 ends_survey)')
+            for d in FSMF_MEAS}
+FSM_CHANG = 45.0; FSM_FLANKANG = 60.0
+FSM_ASSUME = ('male O-ring face-seal end (SAE J1453): thread = the face-seal thread of the dash (Air-Way callout = Brennan ORFS catalog); face '
+              'O-ring groove (inner / outer dia, depth), land, 45deg nose chamfer, thread length, 60deg flank, relief and end length measured on the '
+              'Brennan pilot of that dash ({src}; single manufacturer - Air-Way 3D models not yet measured, Q-FS-2NDSHAPE); groove drawn rectangular '
+              '(its outer bottom corner is hidden under the O-ring Brennan fuses into the solid - ASSUMPTION); O-ring not modelled (separate FS4000 part)')
+
+
+def fs_major(d):
+    return frac(FS_THR[d].rsplit('-', 1)[0])
+
+
+def end_FSM(dash, sfx):
+    if dash not in FSM_MEAS: raise KeyError(lib_gap('FSM', dash))
+    m = FSM_MEAS[dash]; thr = FS_THR[dash]; TM = fs_major(dash); P_ = 1 / tpi_of(thr); rM = TM / 2
+    ch = round(rM - m['FR'], 5)                          # 45deg nose chamfer from the land to the thread major (-08: 0.0468, measured 0.0467)
+    fl = (rM - m['RELR']) / TAN60
+    if not (m['GI'] < m['GO'] < m['FR'] < rM and m['RELR'] < rM and m['GD'] < m['THDS']): raise AssertionError(f'FSM -{dash:02d} radial / axial order')
+    rell = round(m['ENDL'] - m['THDS'] - fl, 5)
+    if rell < 0.02: raise AssertionError(f'FSM -{dash:02d}: relief {rell}')
+    V = [(0, m['GI']), (m['GD'], m['GI']), (m['GD'], m['GO']), (0, m['GO']), (0, m['FR']), (ch, rM), (m['THDS'], rM), (m['THDS'] + fl, m['RELR']),
+         (m['ENDL'], m['RELR'])]
+    seg = dict(face=0, gin=1, gbot=2, gout=3, land=4, cham=5, thd=6, flank=7, rel=8)
+    cols = {f'FSM{sfx}_GRVIR@DRIVE': m['GI'], f'FSM{sfx}_GRVD@DRIVE': m['GD'], f'FSM{sfx}_GRVOR@DRIVE': m['GO'], f'FSM{sfx}_FACER@DRIVE': m['FR'],
+            'FSMCHANG@DRIVE': FSM_CHANG, f'THDMAJR_{sfx}@DRIVE': rM, f'FSM{sfx}_THDL@DRIVE': round(m['THDS'] - ch, 5), 'RELIEFANG@DRIVE': FSM_FLANKANG,
+            f'FSM{sfx}_RELR@DRIVE': m['RELR'], f'FSM{sfx}_RELL@DRIVE': rell,
+            f'THDDIA@THD_End{sfx}': TM, f'THDPITCH@THD_End{sfx}': round(P_, 5), f'DEPTH@THD_End{sfx}': m['THDS'],
+            f'Profile_Height@THD_End{sfx}_PROF': round(0.54127 * P_, 5), f'Profile_Land@THD_End{sfx}_PROF': round(0.25 * P_, 5), f'THDPITCH@THD_End{sfx}_PROF': round(P_, 5)}
+    return dict(kind='FSM', V=V, endlen=m['ENDL'], seg=seg, cols=cols, thr=thr + ' UN (male O-ring face seal, SAE J1453)', faceR=(m['GO'] + m['FR']) / 2,
+                m=m, rM=rM, ch=ch, rell=rell, dash=dash, assume=FSM_ASSUME.format(src=FSM_SRC[dash]),
+                thread=dict(type='CUT', ex=m['THDS'], er=rM, depth=m['THDS'], size=f'{TM:.4f}-{tpi_of(thr):g}', pitch=P_))
+
+
+# STRAIGHT-THREAD STUD ON AN FS PART (ORB_FS, Q-FS-ORBSTUD (a) "follow Air-Way"): the library ORB end of the dash (thread major, groove dia
+# and width) with the thread lengthened so that the stud (tip -> hex face) is Air-Way's length: THDL = stud - groove width. BRENNAN_FS6400-08-08-O:
+# undercut 0.660 x 0.094 = ORB[8], tip -> 60deg flank end 0.457 (= Air-Way L8 - L9 0.55 - 0.094 = 0.456; the ORB library -08 thread is 0.344),
+# so the extra length is thread, no plain shank (orfs_wp2_20261020 checks); its 0.0475 x 45deg tip chamfer is not modelled (as the ORB end).
+ORBFS_ASSUME = ('male SAE ORB stud on an FS part: thread major, groove dia and width = the ORB end library of the dash (6401 / 6405 / 6410 rows); '
+                'stud length tip -> hex face = Air-Way ({lcols}) and the extra length over the library end is THREAD (measured on the Brennan '
+                'FS6400-08-08-O pilot: undercut 0.660 x 0.094 = ORB -08, thread to 0.457 from the tip; single size - ASSUMED for the other dashes); '
+                'tip chamfer and O-ring not modelled')
+
+
+def end_ORBFS(dash, sfx, stud, lcols):
+    if dash not in ORB: raise KeyError(f'no ORB end data for -{dash:02d}')
+    o = ORB[dash]
+    thdl = round(stud - o['GW'], 4)
+    if thdl < o['THDL'] - 0.005: raise AssertionError(f'Air-Way stud {stud} is shorter than the ORB library end {o["THDL"] + o["GW"]:.3f} of -{dash:02d}')
+    E = end_ORBM(dash, sfx, row={'THDMAJ_A@DRIVE': o['TM'], 'ORB_THDL@DRIVE': thdl, 'ORB_GRVDIA@DRIVE': o['GD'], 'ORB_GRVW@DRIVE': o['GW']})
+    E['thr_note'] = ' (SAE J1926 stud, FS part)'; E['assume'] = ORBFS_ASSUME.format(lcols=lcols); E['lib_thdl'] = o['THDL']
+    return E
+
+
+FS_DIM_SRC = 'review table (Air-Way, staged FS table; OMi website list decides the parts)'
+
+
+# ---- 2026-10-20 (ORFS staging): the female face-seal SWIVEL end (FSSW), shared by gen_tee leg_FSSW and the straight swivels here.
+# 2026-10-20 (per-size STEPs): every size from the swivel leg of its own BRENNAN_FS6500-NN-NN-FG (tools/_out/orfs_steps2_20261020 fssw_table.txt, mapped as
+# the -08 entry; -08 identical). -04 ... -08: a 45deg mouth countersink from the nut face to the minor (CSR); -10 ... -20: a counterbore at the
+# nut face (CBR, CBD 0.05) and a 60deg countersink down to the minor (FSSW_CBANG) - another sketch, masters <root>C. -04 / -06: no lip bore
+# under the nut (the nut rear face meets the stem neck; modelled as every size, nut and stem one solid).
+FSSW_MEAS = {4: dict(AF=0.687, HEXL=0.337, SKF=0.335, SKS=0.504, SKR=0.294, NUTL=0.622, NECKR=0.201, SEAL=0.325, BODYS=0.975, TE=0.2947, RELS=0.342, RELR=0.2985, LIPS=0.482, STEMR=0.251, CSR=0.2835),
+             6: dict(AF=0.812, HEXL=0.392, SKF=0.4, SKS=0.572, SKR=0.3575, NUTL=0.707, NECKR=0.261, SEAL=0.375, BODYS=1.11, TE=0.3409, RELS=0.392, RELR=0.361, LIPS=0.552, STEMR=0.31, CSR=0.3465),
+             8: dict(AF=0.938, HEXL=0.482, SKF=0.46, SKS=0.67, SKR=0.419, NUTL=0.827, NECKR=0.321, SEAL=0.433, BODYS=1.288, TE=0.4059, RELS=0.45, RELR=0.4165, LIPS=0.63, STEMR=0.3725, CSR=0.4095),
+             # 2026-10-20 (PC dry run FS6500C): TE 0.484 -> 0.4993. TE = where the measured 45deg relief (RELS, RELR) meets the modelled minor, as on every
+             # other size (RELS - (RELR - rmin)); the STEP's 0.484 sits on Brennan's -10 minor (dia 0.892, below the ASME basic 0.9227 the model keeps) and
+             # made a 37.2deg relief that FSW_RELANG (45) could not hold - the -20 thread then failed in the -10 built master.
+             # HTE 0.484 (PC dry run FS6602C): the HELIX stops at the STEP's measured thread end; a helix running to TE (0.4993, the tooth
+             # touching the relief cone) failed its swept cut in FS6602C -10 (swivel on -X) and builds at <= 0.49. The cavity keeps TE.
+             10: dict(AF=1.125, HEXL=0.548, SKF=0.555, SKS=0.796, SKR=0.516, NUTL=0.953, NECKR=0.4085, SEAL=0.532, BODYS=1.512, TE=0.4993, HTE=0.484, RELS=0.548, RELR=0.51, LIPS=0.768, STEMR=0.4615, CBR=0.51, CBD=0.05),
+             12: dict(AF=1.375, HEXL=0.599, SKF=0.68, SKS=0.863, SKR=0.608, NUTL=1.024, NECKR=0.468, SEAL=0.571, BODYS=1.691, TE=0.5356, RELS=0.587, RELR=0.6, LIPS=0.827, STEMR=0.5485, CBR=0.604, CBD=0.05),
+             16: dict(AF=1.625, HEXL=0.65, SKF=0.805, SKS=0.895, SKR=0.71, NUTL=1.095, NECKR=0.565, SEAL=0.583, BODYS=1.783, TE=0.5477, RELS=0.599, RELR=0.725, LIPS=0.859, STEMR=0.6735, CBR=0.729, CBD=0.05),
+             20: dict(AF=1.875, HEXL=0.65, SKF=0.93, SKS=0.895, SKR=0.8655, NUTL=1.095, NECKR=0.7005, SEAL=0.583, BODYS=1.783, TE=0.5376, RELS=0.599, RELR=0.86, LIPS=0.859, STEMR=0.7985, CBR=0.854, CBD=0.05)}
+FSSW_CBANG = 60.0
+FSSW_CSANG = 45.0; FSSW_RELANG = 45.0
+# The straight swivel end (end_FSSW): the forged leg's swivel measured from its nut face - Brennan FS6565-08-08 (straight, two swivels) = FS6500-08-08-FG
+# (forged leg) on every reading (hex face -> seal face 0.855, nut rear 0.461 behind the hex face, nut face -> seal face 0.433), and Air-Way's
+# straight lengths run to the stem SEAL face (FS6565-08-08: L45 2.12 = Brennan seal face to seal face; nut face to nut face 2.986).
+FSSW_ASSUME = ('female face-seal SWIVEL end (SAE J1453), measured per size on the swivel leg of BRENNAN_FS6500-NN-NN-FG (gen_straight2 FSSW_MEAS; the '
+               'straight BRENNAN_FS6565-08-08 has the same swivel: hex face -> seal face 0.855, nut rear 0.461 behind the hex face): the row length runs '
+               'to the stem SEAL face (FS6565-08-08: Air-Way L45 = Brennan seal face to seal face), the nut face is SEAL further out; nut hex = the row '
+               'column where it equals Air-Way FF318 S to the rounding, else FF318 S of the dash (Q-FS-NUT, user yes); hex length, rear skirt cone, '
+               'skirt, nut rear face and neck measured, the body face (= the body hex end) measured unless the row prints the hex length; nut thread = the face-seal thread of the dash, minor = ASME '
+               'B1.1 basic minor, helical 60deg thread over the measured length, 45deg mouth countersink (-04 ... -08) or 0.05 counterbore + 60deg '
+               'countersink (-10 up), 45deg relief, a cone to the stem head, the stem head to the seal face; NOT modelled: nut hex chamfers, the skirt '
+               'groove, the nut / stem clearance (one solid), the O-ring; single manufacturer (Brennan)')
+
+
+def fs_nut_af(r, col, dash, warn=None):
+    """Q-FS-NUT (user yes 2026-10-18): the swivel nut hex = the row's column where it equals Air-Way FF318 S of the dash to the print rounding
+    (0.007), else FF318 S of the dash (the row's printed value goes to $COMMENT)"""
+    ff = FF318_S().get(dash)
+    v = r.get(col)
+    if v is not None and ff is not None and abs(v - ff) <= 0.007: return v
+    if ff is None: raise KeyError(f'no Air-Way FF318 nut hex S for -{dash:02d} (FS0318 review table)')
+    if warn is not None: warn.append(f'swivel nut hex {col.split("@")[0]} printed {v} - not the FF318 nut S {ff} of -{dash:02d}: built with FF318 S {ff} (Q-FS-NUT)')
+    return ff
+
+
+_FF318 = {}
+
+
+def FF318_S():
+    if not _FF318:
+        for r in load_review('FS0318')[1]:
+            d = dashes(r['$PRP@PartNo'] or '')
+            if d and r.get('SHEX@HEX') is not None and r.get('$PRP@DataStatus') in ('VERIFIED', 'ASSUMED'): _FF318[d[0]] = r['SHEX@HEX']
+    return _FF318
+
+
+def end_FSSW(dash, sfx, nut_af, bodys=None):
+    """female face-seal swivel end of a straight (kind FSSW: outside VO + cavity VG from the nut face, as end_JICSW); the part's length runs to
+    the seal face, the nut face (the part's end) lies SEAL further out (SPEC Lfun adds it). bodys = nut face -> body face (the body hex end) from
+    the row where Air-Way prints the hex length (FS6540 L37 / FS6504 L39), else the measured FSSW_MEAS BODYS"""
+    if dash not in FSSW_MEAS: raise KeyError(f'female face-seal swivel not measured for -{dash:02d}: needs BRENNAN_FS6500-{dash:02d}-{dash:02d}-FG')
+    m = dict(FSSW_MEAS[dash]); thr = FS_THR[dash]; TM = fs_major(dash); P_ = 1 / tpi_of(thr)
+    if bodys is not None:
+        if bodys < m['NUTL'] + 0.05: raise AssertionError(f'body face {bodys} from the nut face leaves no neck behind the nut (nut length {m["NUTL"]})')
+        m['BODYS_B'] = m['BODYS']; m['BODYS'] = round(bodys, 4)
+    rmin = round((TM - 1.082532 * P_) / 2, 5)
+    if abs(nut_af - m['AF']) > 0.007: raise AssertionError(f'nut hex {nut_af} differs from the Brennan nut {m["AF"]} for -{dash:02d}')
+    cb = 'CBR' in m
+    cs = round(((m['CBR'] - rmin) / math.tan(math.radians(FSSW_CBANG)) + m['CBD']) if cb else (m['CSR'] - rmin) / math.tan(math.radians(FSSW_CSANG)), 5)
+    Rn = nut_af / math.sqrt(3)
+    VO = [(0.0, Rn), (m['HEXL'], Rn), (m['HEXL'], m['SKF']), (m['SKS'], m['SKR']), (m['NUTL'], m['SKR']), (m['NUTL'], m['NECKR']), (m['BODYS'], m['NECKR'])]
+    VG = ([(0.0, m['CBR']), (m['CBD'], m['CBR'])] if cb else [(0.0, m['CSR'])]) + [(cs, rmin), (m['TE'], rmin), (m['RELS'], m['RELR']), (m['LIPS'], m['STEMR']),
+                                                                                  (m['SEAL'], m['STEMR']), (m['SEAL'], 0.0)]
+    rout = nut_af / 2 if m['RELS'] <= m['HEXL'] else m['SKF'] + (m['SKR'] - m['SKF']) * (min(m['RELS'], m['SKS']) - m['HEXL']) / (m['SKS'] - m['HEXL'])
+    if not (m['SKF'] < nut_af / 2 and m['SKR'] < m['SKF'] and m['NECKR'] < m['SKR']): raise AssertionError('radial order neck < skirt < skirt front < nut flats')
+    if not (cs < m['TE'] < m['RELS'] < m['LIPS'] < m['NUTL'] < m['BODYS'] and m['TE'] < m['SEAL'] < m['LIPS']): raise AssertionError('axial order of the swivel')
+    if not (rmin < m['RELR'] and m['STEMR'] < m['RELR'] and m['RELR'] < rout - 0.02): raise AssertionError(f'cavity radial order / nut wall at the relief ({rout - m["RELR"]:.4f})')
+    # 2026-10-20 (PC dry run): no FSW_CSANG table column (constant per master, held in the sketch) - as gen_tee leg_FSSW; a dead column
+    # stops the design-table insert with a dialog
+    cols = {f'FSW{sfx}_BODYS@DRIVE': m['BODYS'], f'FSW{sfx}_NECKR@DRIVE': m['NECKR'], f'FSW{sfx}_NUTL@DRIVE': m['NUTL'], f'FSW{sfx}_SKIRTR@DRIVE': m['SKR'],
+            f'FSW{sfx}_SKIRTL@DRIVE': round(m['NUTL'] - m['SKS'], 4), f'FSW{sfx}_SKIRTFR@DRIVE': m['SKF'], f'FSW{sfx}_NUTHEXL@DRIVE': m['HEXL'],
+            f'FSW{sfx}_NUTR@DRIVE': round(Rn, 5), f'FSW{sfx}_SEAL@DRIVE': m['SEAL'],
+            f'FSW{sfx}_MINR@DRIVE': rmin, f'FSW{sfx}_THDL@DRIVE': round(m['TE'] - cs, 5), f'FSW{sfx}_RELANG@DRIVE': FSSW_RELANG, f'FSW{sfx}_RELR@DRIVE': m['RELR'],
+            f'FSW{sfx}_STEMR@DRIVE': m['STEMR'], f'FSW{sfx}_HEADL@DRIVE': round(m['LIPS'] - m['SEAL'], 4),
+            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rmin, 5), f'HEIGHT@HELIX_{sfx}': m.get('HTE', m['TE']), f'PITCH@HELIX_{sfx}': round(P_, 5),
+            f'PROF_R@THDPROF_{sfx}': rmin, f'APEXR@THDPROF_{sfx}': round(rmin + 0.54127 * P_, 5)}
+    if cb: cols.update({f'FSW{sfx}_CBR@DRIVE': m['CBR'], f'FSW{sfx}_CBD@DRIVE': m['CBD']})
+    else: cols[f'FSW{sfx}_CSR@DRIVE'] = m['CSR']
+    return dict(kind='FSSW', V=[], VO=VO, VG=VG, cav=True, endlen=m['BODYS'], seg=dict(face=0), cols=cols,
+                thr=thr + ' UN (female O-ring face-seal swivel, SAE J1453)', faceR=None, td=2 * rmin, P1=m['SEAL'], m=m, cs=cs, cb=cb, rmin=rmin, Rn=Rn,
+                nut_af=nut_af, s_seal=m['SEAL'], dash=dash, bore_to=round(m['SEAL'] - 0.02, 4), open_at=m['SEAL'], bore_rmax=m['STEMR'] - 0.03,
+                assume=FSSW_ASSUME,
+                thread=dict(type='HELIX', r=rmin, height=m.get('HTE', m['TE']), pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
+SPEC['FS2403'] = dict(name='ORFS Male Union (male face seal x male face seal)', L='L6@DRIVE', hex='S1HEX@HEX',
+                      A=lambda r, a, b: end_FSM(a, 'A'), B=lambda r, a, b: end_FSM(b, 'B'),
+                      bore=('mid', 'D1_1@BORE', 'D1_2@BORE'), ref='FS2403-08-08', thrchk=(('A', 'THDMAJ_D_1@DRIVE', 'a'), ('B', 'THDMAJ_D_2@DRIVE', 'b')),
+                      fs=True, assume='L6 face -> face, hex S1, bores D1 (both sides): ' + FS_DIM_SRC + '; hex over the whole length between the two ends; '
+                                      'bore step at the hex mid-plane (ASSUMPTION, as 2403; no effect where the two bores are equal); hex end chamfers NOT modelled')
+# 2026-10-20 (user "go on with those"): male face seal x male pipe / x male JIC straights - the straight FSM end exists at -08 / -24 / -32 only
+# (FS2403-08-08, FS2403-24-24, FS6400-32-32-O); the other sizes skip naming the straight STEP they need
+SPEC['FS2404'] = dict(name='ORFS Straight Connector (male face seal x male pipe)', L='L@DRIVE', hex='S1HEX@HEX',
+                      A=lambda r, a, b: end_NPTFM(b, 'A'), B=lambda r, a, b: end_FSM(a, 'B'),
+                      bore=('mid', 'D2@BORE', 'D1@BORE'), ref='FS2404-08-08', thrchk=(('B', 'THDMAJ_D@DRIVE', 'a'),),
+                      fs=True, assume='L face -> pipe tip, hex S1, bores D2 (pipe side) / D1 (face-seal side): ' + FS_DIM_SRC + '; male NPTF end per ASME B1.20.3 '
+                                      'with the 5404 Brennan-measured end length (ASSUMPTION, as 2404); hex between the two ends; bore step at the hex mid-plane '
+                                      '(ASSUMPTION, as 2403); hex end chamfers NOT modelled')
+SPEC['FS6403'] = dict(name='ORFS Straight Connector (male face seal x male JIC)', L='L41@DRIVE', hex='S1HEX@HEX',
+                      A=lambda r, a, b: end_JICM(b, 'A'), B=lambda r, a, b: end_FSM(a, 'B'),
+                      bore=('mid', 'D@BORE', 'D1@BORE'), ref='FS6403-08-08', thrchk=(('A', 'THDMAJ_B@DRIVE', 'b'), ('B', 'THDMAJ_D@DRIVE', 'a')),
+                      fs=True, assume='L41 face -> JIC tip, hex S1, bores D (JIC side) / D1 (face-seal side): ' + FS_DIM_SRC + '; male JIC end MS33656J (2403 table, '
+                                      'VERIFIED vs Brennan); hex between the two ends; bore step at the hex mid-plane (ASSUMPTION, as 2403); hex end chamfers NOT modelled')
+SPEC['FS6400'] = dict(name='ORFS Straight Thread Connector (male face seal x male ORB)', L='L8@DRIVE', hex='S5HEX@HEX',
+                      A=lambda r, a, b: end_ORBFS(b, 'A', round(r['L8@DRIVE'] - r['L9@DRIVE'], 4), 'L8 - L9'), B=lambda r, a, b: end_FSM(a, 'B'),
+                      bore=('mid', 'D20@BORE', 'D1@BORE'), ref='FS6400-08-08-O', thrchk=(('A', 'THDMAJ_N@DRIVE', 'b'), ('B', 'THDMAJ_D@DRIVE', 'a')),
+                      fs=True, assume='L8 face -> ORB tip, L9 face -> hex ORB-side face, hex S5, bores D20 (ORB side) / D1 (face-seal side): ' + FS_DIM_SRC +
+                                      '; hex = L9 - the face-seal end; bore step at the hex mid-plane (ASSUMPTION, as 2403 / 6400); hex end chamfers NOT modelled; '
+                                      'FS6400-L (long, Air-Way L32 / L31) not folded in yet: no shape source for where the extra length goes (needs '
+                                      'BRENNAN_FS6400-L-08-08-O)')
+
+
+
+def end_FSSW_row(r, col, dash, sfx, hexface=None):
+    """end_FSSW with the nut hex of Q-FS-NUT (fs_nut_af); a substituted value is noted in the row's $COMMENT (fsnote). hexface = (name, Air-Way
+    hex face -> seal face): the body face is built there (Air-Way = the dimension source), Brennan's measured one goes to $COMMENT"""
+    w = []; af = fs_nut_af(r, col, dash, w)
+    b_ = None
+    if hexface and hexface[1] is not None and dash in FSSW_MEAS:
+        m_ = FSSW_MEAS[dash]; b_ = round(hexface[1] + m_['SEAL'], 4); d_ = hexface[1] - (m_['BODYS'] - m_['SEAL'])
+        w.append(f'body hex face -> seal face = Air-Way {hexface[0]} {hexface[1]} (built); Brennan swivel (FS6500-{dash:02d}-{dash:02d}-FG leg) {m_["BODYS"] - m_["SEAL"]:.3f}'
+                 + (' - agree' if abs(d_) <= 0.006 else f' - differ by {d_:+.3f} (Air-Way vs Brennan: tell the user)'))
+    E = end_FSSW(dash, sfx, af, bodys=b_)
+    if w: E['fsnote'] = '; '.join(w)
+    return E
+
+
+_SEAL = lambda d: FSSW_MEAS[d]['SEAL'] if d in FSSW_MEAS else 0.0
+_FSSW_LEN = ('the row length runs to the stem seal face (Brennan FS6565-08-08: Air-Way L45 2.12 = seal face to seal face); the model length (LNUT, '
+             'nut face to {far}) = {col} + the measured seal -> nut face distance SEAL of the swivel')
+# 2026-10-20 (ORFS staging): the straight FS swivels (the JIC 6504 / 6505 / 6402 / 6565 structure). First dash = the face-seal swivel (End B),
+# second = the other end (End A); body hex between End A and the measured swivel body face (Air-Way's own hex face -> seal face is the check)
+SPEC['FS6565'] = dict(name='ORFS Double Female Swivel Straight (female face-seal swivel x female face-seal swivel)', L='LNUT@DRIVE', hex='S1HEX@HEX',
+                      swivel=True, fs=True, Lfun=lambda r, a, b: round(r['L45@DRIVE'] + _SEAL(a) + _SEAL(b), 4),
+                      A=lambda r, a, b: end_FSSW_row(r, 'S_1HEX@HEX', a, 'A'), B=lambda r, a, b: end_FSSW_row(r, 'S_2HEX@HEX', b, 'B'),
+                      bore=('sw2', 'D19_1@BORE', 'D19_2@BORE'), ref='FS6565-08-08', thrchk=(('A', 'THDMAJ_D_1@DRIVE', 'a'), ('B', 'THDMAJ_D_2@DRIVE', 'b')),
+                      assume='L45 seal face -> seal face, body hex S1, nuts S(1) / S(2), bores D19(1) / D19(2): ' + FS_DIM_SRC + '; ' +
+                             _FSSW_LEN.format(far='nut face', col='L45') + ' at both ends; body hex between the two measured body faces; bore step at the body-hex '
+                             'mid-plane (ASSUMPTION, as 6565)')
+SPEC['FS6540'] = dict(name='ORFS Swivel Straight Thread Connector (female face-seal swivel x male ORB)', L='LNUT@DRIVE', hex='S5HEX@HEX',
+                      swivel=True, fs=True, Lfun=lambda r, a, b: round(r['L34@DRIVE'] + _SEAL(a), 4),
+                      A=lambda r, a, b: end_ORBFS(b, 'A', round(r['L34@DRIVE'] - r['L35@DRIVE'], 4), 'L34 - L35'),
+                      B=lambda r, a, b: end_FSSW_row(r, 'SHEX@HEX', a, 'B', ('L35 - L37', round(r['L35@DRIVE'] - r['L37@DRIVE'], 4) if r.get('L37@DRIVE') is not None else None)),
+                      bore=('sw2', 'D20@BORE', 'D19@BORE'), ref='FS6540-08-08-O', thrchk=(('A', 'THDMAJ_N@DRIVE', 'b'), ('B', 'THDMAJ_D@DRIVE', 'a')),
+                      assume='L34 ORB tip -> seal face, L35 hex ORB-side face -> seal face (stud = L34 - L35), L37 hex length (check), body hex S5, nut S, bores D20 '
+                             '(ORB side) / D19 (swivel): ' + FS_DIM_SRC + '; ' + _FSSW_LEN.format(far='the ORB tip', col='L34') + '; body hex = Air-Way L37 (from the stud to '
+                             'L35 - L37 before the seal face; Brennan\'s measured swivel body face in $COMMENT); bore step at the body-hex mid-plane (ASSUMPTION, as 6402)')
+SPEC['FS6504'] = dict(name='ORFS Swivel Union (female face-seal swivel x male JIC)', L='LNUT@DRIVE', hex='C2HEX@HEX',
+                      swivel=True, fs=True, Lfun=lambda r, a, b: round(r['L40@DRIVE'] + _SEAL(a), 4),
+                      A=lambda r, a, b: end_JICM(b, 'A'),
+                      B=lambda r, a, b: end_FSSW_row(r, 'SHEX@HEX', a, 'B', ('L38 - L39', round(r['L38@DRIVE'] - r['L39@DRIVE'], 4) if r.get('L39@DRIVE') is not None else None)),
+                      bore=('sw2', 'D2@BORE', 'D19@BORE'), ref='FS6504-08-08', thrchk=(('A', 'THDMAJ_B@DRIVE', 'b'), ('B', 'THDMAJ_D@DRIVE', 'a')),
+                      assume='L40 JIC tip -> seal face, L38 hex JIC-side face -> seal face, L39 hex length (check), body hex C2, bores D2 (JIC side) / D19 '
+                             '(swivel): ' + FS_DIM_SRC + '; ' + _FSSW_LEN.format(far='the JIC tip', col='L40') + '; body hex = Air-Way L39 (its swivel-side face L38 - L39 '
+                             'before the seal face; Brennan\'s measured swivel body face in $COMMENT); male JIC end MS33656J (2403 table, VERIFIED vs '
+                             'Brennan; = Air-Way L40 - L38 at every size); Air-Way S on FF7504 is not a nut hex (PLAN D3): the nut = FF318 S (Q-FS-NUT); bore '
+                             'step at the body-hex mid-plane (ASSUMPTION, as 6504)')
+SPEC['FS6505'] = dict(name='ORFS Swivel Connector (female face-seal swivel x male pipe)', L='LNUT@DRIVE', hex='S1HEX@HEX',
+                      swivel=True, fs=True, Lfun=lambda r, a, b: round(r['L16@DRIVE'] + _SEAL(a), 4),
+                      A=lambda r, a, b: end_NPTFM(b, 'A'), B=lambda r, a, b: end_FSSW_row(r, 'SHEX@HEX', a, 'B'),
+                      bore=('sw2', 'D2@BORE', 'D19@BORE'), ref='FS6505-08-08', thrchk=(('B', 'THDMAJ_D@DRIVE', 'a'),),
+                      assume='L16 pipe tip -> seal face, body hex S1, nut S, bores D2 (pipe side) / D19 (swivel): ' + FS_DIM_SRC + '; ' +
+                             _FSSW_LEN.format(far='the pipe tip', col='L16') + '; male NPTF end per ASME B1.20.3 with the 5404 Brennan-measured end length '
+                             '(ASSUMPTION, as 6505); bore step at the body-hex mid-plane (ASSUMPTION, as 6505)')
+for _r in ('FS6565', 'FS6540', 'FS6504', 'FS6505'):      # the counterbored swivel mouth (-10 up): one more profile point -> its own master
+    SPEC[_r + 'C'] = dict(SPEC[_r], name=SPEC[_r]['name'] + ' - swivel nut mouth counterbored (-10 up)', load=(lambda r_=_r: load_review(r_)), fssw_cb=True,
+                          cb_base=_r, ref='')
+
+# ---- 2026-10-20 (ORFS, staging): loose face-seal parts, every size measured on its own Brennan STEP (-08: the pilots, end_lib_08.json; the other
+# sizes: tools/_out/orfs_steps2_20261020/loose_survey.txt, read with the same extractors fsmeasure.measure_nut / measure_sleeve). No per-size rule:
+# a size without its STEP is skipped (the JIC locknut countersink is also measured per size, JICF_MEAS).
+FSLOOSE_SRC = 'tools/_out/orfs_steps2_20261020/loose_survey.txt (-08: tools/_out/orfs_wp2_20261020/end_lib_08.json)'
+# Thread bore of the Brennan nut STEPs (radius) - the model uses the ASME B1.1 basic minor of the face-seal thread; where Brennan's bore differs
+# (-10: 0.892 dia vs 1-14 basic minor 0.9227; -24: 1.817 vs 2-12 basic minor 1.9098 - on both nuts) the row's $COMMENT says so.
+FSNUT_BMINR = {4: 0.2512, 6: 0.3099, 8: 0.3724, 10: 0.446, 12: 0.5486, 16: 0.6736, 20: 0.7986, 24: 0.9085}
+# FS0306 bulkhead LOCKNUT (BRENNAN_FS0306-NN): face-seal thread through, 45deg countersink on both faces from the minor to FSLOCK_RCS.
+FSLOCK_RCS = {4: 0.2805, 6: 0.3465, 8: 0.4095, 10: 0.502, 12: 0.5965, 16: 0.7205, 20: 0.8465, 24: 1.002}
+# FS0318 NUT (BRENNAN_FS0318-NN): thread from the open face to TE, a small radial relief (not modelled: the pocket stays at the minor), the inner
+# lip face at LIP from the open face, the lip bore LIPD through the back face.
+FSNUT_MEAS = {4: dict(TE=0.35, LIP=0.482, LIPD=0.412), 6: dict(TE=0.41, LIP=0.552, LIPD=0.532), 8: dict(TE=0.47, LIP=0.63, LIPD=0.652),
+              10: dict(TE=0.57, LIP=0.768, LIPD=0.829), 12: dict(TE=0.61, LIP=0.827, LIPD=0.95), 16: dict(TE=0.63, LIP=0.859, LIPD=1.144),
+              20: dict(TE=0.63, LIP=0.859, LIPD=1.415), 24: dict(TE=0.63, LIP=0.859, LIPD=1.728)}
+
+
+def _fsd(r):
+    return dashes(r['$PRP@PartNo'])[0]
+
+
+FSLOOSE_ASSUME = {
+    'FS0319': lambda r: (f'face-seal braze sleeve (Brennan FS0319-{_fsd(r):02d}): length L / collar OD d8 = the row; the shape measured on BRENNAN_FS0319-{_fsd(r):02d} '
+               f'({FSLOOSE_SRC}): tube-side face r {FSSLEEVE_MEAS[_fsd(r)]["RT"]}, 15deg taper to the spigot r {FSSLEEVE_MEAS[_fsd(r)]["RS"]}, '
+               + (f'collar {FSSLEEVE_MEAS[_fsd(r)]["COLLARL"]} long behind the flat seal face' if 'CONEL' not in FSSLEEVE_MEAS[_fsd(r)] else
+                  f'collar step {FSSLEEVE_MEAS[_fsd(r)]["COLLARL"]} from the seal face, the last {FSSLEEVE_MEAS[_fsd(r)]["CONEL"]} a shallow cone down to the seal-face '
+                  f'radius {FSSLEEVE_MEAS[_fsd(r)]["RSEAL"]}')
+               + f', braze bore dia {2 * FSSLEEVE_MEAS[_fsd(r)]["BORER"]:.3f} to the tube-stop face {FSSLEEVE_MEAS[_fsd(r)]["LIPL"]} below the seal face, tube-stop '
+               f'bore dia {2 * FSSLEEVE_MEAS[_fsd(r)]["STOPR"]:.3f} - collar and stop-lip lengths held from the seal face, so a row L that rounds the STEP length '
+               'changes the spigot; NOT modelled: the 45deg inner chamfers (tube-side bore, both stop-lip corners), the small fillet at the spigot / collar '
+               'step; single manufacturer'),
+    'FS0306': lambda r: (f'face-seal bulkhead locknut (Brennan FS0306-{_fsd(r):02d}): hex S4 / thickness h2 = the row; thread = the face-seal thread of the dash '
+               f'through, minor = ASME B1.1 basic minor; 45deg countersink on both faces from the minor to r {FSLOCK_RCS[_fsd(r)]} measured on '
+               f'BRENNAN_FS0306-{_fsd(r):02d} ({FSLOOSE_SRC}); hex end chamfers (75deg) NOT modelled; single manufacturer'),
+    'FS0318': lambda r: (f'face-seal tube nut (Brennan FS0318-{_fsd(r):02d}): hex S / length h = the row; thread = the face-seal thread of the dash from the open '
+               f'face over {FSNUT_MEAS[_fsd(r)]["TE"]}, minor = ASME B1.1 basic minor, the thread pocket to the inner lip face at {FSNUT_MEAS[_fsd(r)]["LIP"]}, '
+               f'lip bore {FSNUT_MEAS[_fsd(r)]["LIPD"]} through the back face (measured on BRENNAN_FS0318-{_fsd(r):02d}, {FSLOOSE_SRC}); the small radial '
+               'thread relief, the 45deg mouth countersink and the 75deg hex end chamfers NOT modelled (as the 0318 nut); single manufacturer')}
+
+
+def fs_bore_note(dash, rmin, pn_root):
+    """$COMMENT text where the Brennan STEP's thread bore differs from the basic minor the model uses"""
+    b = FSNUT_BMINR.get(dash)
+    if b is None or abs(b - rmin) <= 0.002: return None
+    return (f'BRENNAN DIFFERS: BRENNAN_{pn_root}-{dash:02d} has its thread bore at dia {2 * b:.4f}; the model uses the ASME B1.1 basic minor {2 * rmin:.4f} of '
+            f'{FS_THR[dash]} (the thread of the row) - tell the user')
+
+
+def fs_nut_csk(dash):
+    if dash not in FSLOCK_RCS: raise KeyError(f'face-seal locknut countersink not measured for -{dash:02d}: needs BRENNAN_FS0306-{dash:02d}')
+    thr = FS_THR[dash]; TM = fs_major(dash); P_ = 1 / tpi_of(thr); rmin = round((TM - 1.082532 * P_) / 2, 5); rcs = FSLOCK_RCS[dash]
+    return dict(TM=TM, thr=thr), P_, rmin, rcs, round(rcs - rmin, 5)
+
+
+def end_FSNUTCSA(dash, sfx):
+    e, P_, rmin, rcs, cs = fs_nut_csk(dash)
+    return dict(kind='NUTCSA', V=[(cs, rmin), (0.0, rcs)], endlen=0.0, seg=dict(core=0, csk=1, face=2), faceseg=2,
+                cols={f'NUTCS{sfx}_MINR@DRIVE': rmin, f'NUTCS{sfx}_CSR@DRIVE': rcs}, thr=e['thr'] + ' UN (45deg countersink)', faceR=None,
+                td=2 * rmin, P1=cs, e=e, rmin=rmin, rcs=rcs, cs=cs, dash=dash, thread=None, fsnote=fs_bore_note(dash, rmin, 'FS0306'))
+
+
+def end_FSNUTCSB(dash, sfx, W):
+    e, P_, rmin, rcs, cs = fs_nut_csk(dash)
+    cols = {f'NUTCS{sfx}_CSR@DRIVE': rcs, f'NUTCS{sfx}_MINR@DRIVE': rmin,
+            f'HELIXDIA@HELIXSK_{sfx}': round(2 * rmin, 5), f'HEIGHT@HELIX_{sfx}': W, f'PITCH@HELIX_{sfx}': round(P_, 5),
+            f'PROF_R@THDPROF_{sfx}': rmin, f'APEXR@THDPROF_{sfx}': round(rmin + 0.54127 * P_, 5)}
+    return dict(kind='NUTCSB', V=[], VG=[(0.0, rcs), (cs, rmin), (cs, 0.0)], cav=True, endlen=0.0, seg=dict(face=0), cols=cols,
+                thr=e['thr'] + ' UN-2B (face-seal locknut thread, through)', faceR=None, td=2 * rmin, P1=cs, e=e, rmin=rmin, rcs=rcs, cs=cs, dash=dash,
+                thread=dict(type='HELIX', r=rmin, height=W, pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True))
+
+
+def end_FSNUTF(dash, sfx):
+    """the FS0318 nut thread end (kind UNFF: thread pocket at the basic minor to the lip face, helical thread over TE)"""
+    if dash not in FSNUT_MEAS: raise KeyError(f'face-seal nut not measured for -{dash:02d}: needs BRENNAN_FS0318-{dash:02d}')
+    m = FSNUT_MEAS[dash]; thr = FS_THR[dash]; TM = fs_major(dash); P = 1 / tpi_of(thr); td = round(TM - 1.082532 * P, 4)
+    cols = {f'TAPDRILL{sfx}@POCKET_{sfx}': td, f'DEPTH@POCKETCUT_{sfx}': m['LIP'],
+            f'HELIXDIA@HELIXSK_{sfx}': td, f'HEIGHT@HELIX_{sfx}': m['TE'], f'PITCH@HELIX_{sfx}': round(P, 5),
+            f'PROF_R@THDPROF_{sfx}': round(td / 2, 5), f'APEXR@THDPROF_{sfx}': round(td / 2 + 0.54127 * P, 5)}
+    return dict(kind='UNFF', V=[], endlen=0.0, seg=dict(face=0), cols=cols, thr=thr + ' UN-2B (face-seal nut)', faceR=None, td=td, P1=m['LIP'], D1=m['LIPD'],
+                thread=dict(type='HELIX', r=td / 2, height=m['TE'], pitch=P, thdh=0.54127 * P, taper=0.0, taperOut=False, apexOut=True),
+                fsnote=fs_bore_note(dash, td / 2, 'FS0318'))
+
+
+SPEC['FS0306'] = dict(name='ORFS Bulkhead Locknut', L='H2@DRIVE', hex='S4HEX@HEX', single=True, fs=True,
+                      A=lambda r, a, b: end_FSNUTCSA(a, 'A'), B=lambda r, a, b: end_FSNUTCSB(a, 'B', r['H2@DRIVE']),
+                      bore=('nut_thru', None, None), ref='FS0306-08', thrchk=(('B', 'THDMAJ_D@DRIVE', 'a'),),
+                      desc=lambda r, tA, tB: f"ORFS Bulkhead Locknut, {tB.split(' UN')[0]} UN-2B, thread through, 45 deg countersink both faces",
+                      assume=FSLOOSE_ASSUME['FS0306'])
+SPEC['FS0318'] = dict(name='ORFS Tube Nut', L='H@DRIVE', hex='SHEX@HEX', single=True, fs=True,
+                      A=lambda r, a, b: end_FSNUTF(a, 'A'), B=lambda r, a, b: end_PLAIN('B'),
+                      bore=('A_to_pocket', lambda r, a, b: FSNUT_MEAS[a]['LIPD'], None), ref='FS0318-08', thrchk=(('A', 'THDMAJ_D@DRIVE', 'a'),),
+                      desc=lambda r, tA, tB: f"ORFS Tube Nut, {tA.split(' UN')[0]} UN-2B, lip bore {FSNUT_MEAS[dashes(r['$PRP@PartNo'])[0]]['LIPD']:.3f}", fsnut=True,
+                      assume=FSLOOSE_ASSUME['FS0318'])
+
+# 2026-10-20 (ORFS staging): FS0319 braze sleeve = a round straight: End A = tube side (face, 15deg taper, spigot, step up to the collar) with the
+# braze bore as its pocket (kind BRAZE), End B = the seal face: flat on the collar (-04 / -06 / -08, PLAIN) or, from -12 up, at the end of a
+# shallow cone CONEL long down to RSEAL (end_FSSEAL); BORE_B = the tube-stop bore from the seal face to the pocket bottom. Every size measured on
+# its own BRENNAN_FS0319-NN (fsmeasure.measure_sleeve); radii and the taper angle are shape, the collar step (COLLARL, from the seal face) and the
+# stop-lip length are held from the seal face (the length L is the row input).
+FSSLEEVE_MEAS = {4: dict(RT=0.1675, TAPANG=15.0, RS=0.201, COLLARL=0.157, LIPL=0.040, BORER=0.128, STOPR=0.086),
+                 6: dict(RT=0.2325, TAPANG=15.0, RS=0.261, COLLARL=0.177, LIPL=0.040, BORER=0.1905, STOPR=0.132),
+                 8: dict(RT=0.2975, TAPANG=15.0, RS=0.321, COLLARL=0.197, LIPL=0.040, BORER=0.253, STOPR=0.189),
+                 12: dict(RT=0.435, TAPANG=15.0, RS=0.468, COLLARL=0.256, LIPL=0.060, BORER=0.3785, STOPR=0.3045, CONEL=0.206, RSEAL=0.5315),
+                 16: dict(RT=0.5525, TAPANG=15.0, RS=0.565, COLLARL=0.276, LIPL=0.060, BORER=0.5035, STOPR=0.4055, CONEL=0.216, RSEAL=0.6565),
+                 20: dict(RT=0.67, TAPANG=15.0, RS=0.7005, COLLARL=0.276, LIPL=0.060, BORER=0.6285, STOPR=0.512, CONEL=0.225, RSEAL=0.782)}
+
+
+def end_FSSLV(dash, sfx, L):
+    if dash not in FSSLEEVE_MEAS: raise KeyError(f'face-seal braze sleeve not measured for -{dash:02d}: needs BRENNAN_FS0319-{dash:02d}')
+    m = FSSLEEVE_MEAS[dash]
+    xT = round((m['RS'] - m['RT']) / math.tan(math.radians(m['TAPANG'])), 5); xS = round(L - m['COLLARL'], 5)
+    cols = {f'FSSLV{sfx}_FACER@DRIVE': m['RT'], f'FSSLV{sfx}_TAPANG@DRIVE': m['TAPANG'], f'FSSLV{sfx}_SPIGOTR@DRIVE': m['RS'], f'FSSLV{sfx}_SPIGOTL@DRIVE': xS,
+            f'SOCKDIA@POCKET_{sfx}': round(2 * m['BORER'], 5), f'DEPTH@POCKETCUT_{sfx}': round(L - m['LIPL'], 5)}
+    return dict(kind='BRAZE', fsslv=True, V=[(0.0, m['RT']), (xT, m['RS']), (xS, m['RS'])], endlen=xS, seg=dict(face=0, taper=1, spigot=2, step=3),
+                cols=cols, thr=f'braze bore {2 * m["BORER"]:.3f}', faceR=None, td=round(2 * m['BORER'], 5), P1=round(L - m['LIPL'], 5), m=m, xT=xT, xS=xS,
+                dash=dash, thread=None)
+
+
+def end_FSSEAL(dash, sfx):
+    """the FS0319 seal end from -12 up: the collar runs into a shallow cone CONEL long that ends on the flat seal face at RSEAL"""
+    m = FSSLEEVE_MEAS[dash]
+    return dict(kind='FSSEAL', V=[(0.0, m['RSEAL'])], endlen=m['CONEL'], seg=dict(face=0, cone=1),
+                cols={f'FSSEAL{sfx}_SEALR@DRIVE': m['RSEAL'], f'FSSEAL{sfx}_CONEL@DRIVE': m['CONEL']}, thr='flat seal face', faceR=None, td=0.0, P1=0.0,
+                m=m, dash=dash, thread=None)
+
+
+SPEC['FS0319'] = dict(name='ORFS Braze Sleeve', L='L@DRIVE', hex='D8@DRIVE', round=True, single=True, fs=True,
+                      A=lambda r, a, b: end_FSSLV(a, 'A', r['L@DRIVE']),
+                      B=lambda r, a, b: end_FSSEAL(a, 'B') if 'CONEL' in FSSLEEVE_MEAS.get(a, {}) else end_PLAIN('B'),
+                      bore=('A_to_pocket', lambda r, a, b: round(2 * FSSLEEVE_MEAS[a]['STOPR'], 5), None), ref='FS0319-08',
+                      desc=lambda r, tA, tB: f"ORFS Braze Sleeve, {tA} x flat seal face (for {r.get('$PRP@TubeOD') or '?'} tube)",
+                      thrB_fix=lambda r, a, bv: f'flat seal face (SAE J1453), tube-stop bore {bv:.3f}', assume=FSLOOSE_ASSUME['FS0319'],
+                      exclude=r'^FS0319-(12|16|20|24|32)$', exclude_why='sleeve with a coned collar (BRENNAN_FS0319-12 / -16 / -20): built in master FS0319C (other DRIVE sketch)')
+# the coned-collar sleeves: same review table, End B = end_FSSEAL (one more profile point, so a master of its own - one sketch per master)
+SPEC['FS0319C'] = dict(SPEC['FS0319'], name='ORFS Braze Sleeve (coned collar)', load=lambda: load_review('FS0319'), ref='FS0319-16',
+                       B=lambda r, a, b: end_FSSEAL(a, 'B'), exclude=r'^FS0319-(04|06|08|10)$',
+                       exclude_why='sleeve with a plain collar (BRENNAN_FS0319-04 / -06 / -08): built in master FS0319')
+
 def cav_r(E, d):
     # radius of a female port cavity at depth d from its face (piecewise linear over VG; 0 beyond the drill point)
     VG = E['VG']; best = 0.0
@@ -1500,6 +2043,7 @@ def dashes(pn):
 # configuration) are untouched. (tools/_out/tier1_20261001/work/5404N-06/NOTES.md; QA #163: the SolidWorks dry run of 2026-10-01 built the
 # -06 bodies but THD_EndA / THD_EndB failed to rebuild in the -06 configurations - the -06 rows carry NEEDS SOLIDWORKS CHECK in $COMMENT.)
 ROUND_STEP_MIN = 0.0025
+ROUND_STEP_HELIX = 0.005      # 2026-10-21 (QA #178): helix stop short of the shoulder on a round-bar-step end (see the round-bar branch in build_rows)
 ROUND_STEP_SWCHECK = ('NEEDS SOLIDWORKS CHECK: on 2026-10-01 (QA #163) the thread features THD_EndA / THD_EndB failed to rebuild in every '
                       'configuration with a round-bar step below 0.005 (5404N -06 TEST rows; bodies built) - dry-run and sweep the threads live '
                       'before shipping')
@@ -1542,18 +2086,30 @@ def build_rows(root):
             else:
                 if len(dashes(pn)) < 2: raise KeyError('part number has no dash pair')
                 a, b = dashes(pn)
-            L = r[sp['L']]; hexb = sp['hex'](r, a, b) if callable(sp['hex']) else r[sp['hex']]     # 2026-10-02: callable (PLUGS: pipe OD of the dash)
+            L = sp['Lfun'](r, a, b) if sp.get('Lfun') else r[sp['L']]     # 2026-10-20: Lfun = a derived overall length (FS straight swivels: + the seal -> nut face)
+            hexb = sp['hex'](r, a, b) if callable(sp['hex']) else r[sp['hex']]     # 2026-10-02: callable (PLUGS: pipe OD of the dash)
             EA = sp['A'](r, a, b); EB = sp['B'](r, a, b)
         except (KeyError, AssertionError) as ex:
             skipped.append((pn, 'no end data', repr(ex))); continue
-        chk0 = []
+        _cb = [E_['cb'] for E_ in (EA, EB) if E_['kind'] == 'FSSW']      # 2026-10-20: the swivel mouth decides the master (one sketch per master)
+        if _cb and (any(_cb) != bool(sp.get('fssw_cb')) or len(set(_cb)) > 1):
+            skipped.append((pn, 'other shape family', 'face-seal swivel with a ' + ('mixed mouth (no master yet)' if len(set(_cb)) > 1 else
+                            ('counterbored mouth (-10 up): built in master ' + root + 'C') if any(_cb) else ('countersunk mouth: built in master ' + sp.get('cb_base', root)))))
+            continue
+        chk0 = []; warn0 = []
         for tc_ in sp.get('thrchk', ()):
             sfx_, col_ = tc_[0], tc_[1]
             E_ = EA if sfx_ == 'A' else EB
             if len(tc_) > 2: d_ = a if tc_[2] == 'a' else b     # explicit: which part-number dash that end is built from
             else: d_ = a if sfx_ == 'A' else b
-            if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM', 'JICCAP', 'NUTCSB') and d_ not in NPTF: chk0.append(lib_gap('NPTF', d_)); continue
-            want_ = (JIC[d_]['TM'] if d_ in JIC else E_['e']['TM']) if E_['kind'] in ('JICM', 'JICSW', 'JICF', 'JICCAP', 'NUTCSB') else ORB[d_]['TM'] if E_['kind'] == 'ORBM' else NPTF[d_][2]   # (d_ not in JIC: a row-supplied JIC chain, SPEC 2404 -40)
+            if E_['kind'] in ('FSM', 'FSSW') or (sp.get('fs') and E_['kind'] in ('NUTCSA', 'NUTCSB', 'UNFF')):      # 2026-10-20 (ORFS): face-seal thread of the dash
+                want_ = fs_major(d_)
+                if r.get(col_) is None and sp.get('fs'):      # 2026-10-20: an empty cell takes the face-seal thread of the dash (PLAN D1, as gen_tee)
+                    warn0.append(f'{col_} empty: thread major {want_} = the -{d_:02d} face-seal thread (FS_THR, PLAN D1)'); continue
+                if r.get(col_) is None or abs(r[col_] - want_) > 1e-3: chk0.append(f'{col_} {r.get(col_)} does not match the End {sfx_} -{d_:02d} FSM thread ({want_})')
+                continue
+            if E_['kind'] not in ('JICM', 'JICSW', 'JICF', 'ORBM', 'NWO', 'JICCAP', 'NUTCSB') and d_ not in NPTF: chk0.append(lib_gap('NPTF', d_)); continue
+            want_ = (JIC[d_]['TM'] if d_ in JIC else E_['e']['TM']) if E_['kind'] in ('JICM', 'JICSW', 'JICF', 'JICCAP', 'NUTCSB') else ORB[d_]['TM'] if E_['kind'] in ('ORBM', 'NWO') else NPTF[d_][2]   # (d_ not in JIC: a row-supplied JIC chain, SPEC 2404 -40; 2026-10-20: NWO = adjustable ORB, 3474)
             if r.get(col_) is None or abs(r[col_] - want_) > 1e-3: chk0.append(f'{col_} {r.get(col_)} does not match the End {sfx_} -{d_:02d} {E_["kind"]} thread ({want_})')
         if sp.get('p1col') and EB['kind'] == 'NPTFF':
             EB['P1'] = r[sp['p1col']]; EB['cols'][f'DEPTH@POCKETCUT_B'] = EB['P1']; EB['cols']['HEIGHT@HELIX_B'] = EB['P1']; EB['thread']['height'] = EB['P1']
@@ -1561,7 +2117,7 @@ def build_rows(root):
         body = L - EA['endlen'] - EB['endlen']
         rB = hexb / 2 if sp.get('round') else hexb / math.cos(math.radians(30)) / 2
         if sp.get('flats'): rB = r[sp['flats']['collar']] / 2     # 2026-10-18 (1700RC / 1800): round collar - the body radius is the collar, the A/F cuts two flats
-        chk = list(chk0); warn = []
+        chk = list(chk0); warn = list(warn0)
         if body < 0.05: chk.append(f'hex length {body:.3f}')
         if xlen_ is not None and (L is None or abs(xlen_ - L) > 1e-6): chk.append(f'length {xlen_:g} in the part number differs from {sp["L"].split("@")[0]} {L}')
         if sp.get('flgplug') and EB['rO'] - rB < FLGPLUG_SHOULDER_MIN:
@@ -1574,7 +2130,7 @@ def build_rows(root):
             if abs(dT_) > 0.02: chk.append(f'hex length {body:.4f} (L20 - both ends) differs from Air-Way T20 {r["_T20"]} by {dT_:+.4f}')
             else: warn.append(f'hex length {body:.4f} (L20 - both ends) vs Air-Way T20 {r["_T20"]}: {"agree" if abs(dT_) <= 0.005 else "differ by %+.4f (L20 printed to 2 decimals)" % dT_}')
         for E in (EA, EB):
-            if E['kind'] == 'FLG61': continue          # flange head: its own zone, not hex-cut
+            if E['kind'] in ('FLG61', 'NWO'): continue          # flange head: its own zone, not hex-cut; 2026-10-20 (3474): adjustable ORB end: its own zone cuts (below)
             if E['kind'] == 'FLG62' or sp.get('flats'): continue      # 2026-10-18: code 62 head; flats body (the flats zone starts at the collar face)
             for (x, rr) in E['V']:
                 if not sp.get('round') and rr > hexb / 2 - 0.002 and rr < rB - 0.005: warn.append(f'{E["kind"]} radius {rr:.4f} is above the hex flats {hexb/2:.4f} - the hex cut will flat it'); break
@@ -1594,6 +2150,16 @@ def build_rows(root):
             if E['kind'] == 'FLG61':
                 if abs(E['rO'] - rB) < 0.003: chk.append(f'flange head radius {E["rO"]:.4f} equals the hex corner radius {rB:.4f} (zero-height step)')
                 continue
+            if E['kind'] == 'NWO':
+                # 2026-10-20 (3474): washer and locknut stand above the body hex by design - the body hex is cut over its own zone (from the body
+                # face) and the locknut over its thickness; only the neck must step up to the body with a real face below the flats
+                if E['m']['NECKR'] >= hexb / 2 - 0.01: chk.append(f'adjustable ORB neck dia {2 * E["m"]["NECKR"]:.4f} not below the body hex flats {hexb}')
+                src_ = E['m'].get('src', f'Brennan 6801-{E["dash"]:02d}-{E["dash"]:02d}-NWO-FG STEP (transferred stud)')
+                for k_, v_, b_ in (('ORB_I3', E['I3'], E['m']['I3_B']), ('ORB_THDL', E['THDL'], E['m']['THDL_B']), ('C1 locknut hex', E['nutAF'], E['m']['AF_B'])):
+                    if abs(v_ - b_) > 0.006: warn.append(f'DIFFERS: row {k_} {v_} vs the {src_} {b_} - built to the row')
+                ur_b_ = E['m'].get('UR_B')
+                if ur_b_ is not None and abs(E['UR'] - ur_b_) > 0.003: warn.append(f'DIFFERS: row ORB_GRVDIA {2 * E["UR"]:.4f} vs the {src_} undercut dia {2 * ur_b_:.4f} - built to the row')
+                continue
             for (x, rr) in E['V']:
                 if E.get('cap') and abs(rr - rB) < 1e-9: continue      # 2026-10-02 (PLUGS): the capped NPTF crest cone ends ON the body (blank) line
                 if E['kind'] == 'SQHEAD':
@@ -1608,12 +2174,21 @@ def build_rows(root):
                                 f'{E["kind"]} end at {x:.4f} from its tip (dia {2 * rr:.4f}' + (' = ASME B1.20.3 crest cone E0 + 0.8P + L2/16' if E['kind'] == 'NPTFM' else '') +
                                 f') - built with that step (round bar: allowed down to {ROUND_STEP_MIN}, half the 0.01 print step of C; a hex body needs 0.005)')
                         if msg_ not in warn: warn.append(msg_)
-                        if ROUND_STEP_SWCHECK not in warn: warn.append(ROUND_STEP_SWCHECK)
+                        # 2026-10-21 (QA #178): with the bar this close above the crest cone, a helix ending exactly at the thread length puts the
+                        # end of the swept tooth on the shoulder edge and THD_End<sfx> fails to rebuild (SolidWorks probe on the 5404N dry-run part:
+                        # 0.4078 fails, 0.4028 / 0.4048 / 0.4058 / 0.415 build, at every -06 length 2.0 ... 6.0). The helix stops ROUND_STEP_HELIX
+                        # short of the shoulder; the uncut 0.005 is invisible and threads are cosmetic (suppressed in the saved master).
                         if not model_extra:
                             model_extra.append(f'round bar only {rB - rr:.4f} (radius) above the {E["kind"]} crest cone at the end of the thread: modelled as that small '
                                                f'step, as at every 5404N size - the vanish threads of the real part (crest cone running on into the bar) are NOT '
                                                f'modelled (ASSUMPTION); allowed because the step is at least {ROUND_STEP_MIN} = half the 0.01 print step of Air-Way C, '
                                                f'so the bar stays above the crest cone even if the true C is 0.005 smaller')
+                        hk_ = f'HEIGHT@HELIX_{sfx_}'
+                        if E.get('thread') and E['thread'].get('type') == 'HELIX' and hk_ in E['cols'] and E['cols'][hk_] == E['cols'].get(f'NPTF{sfx_}_THDL@DRIVE'):
+                            E['cols'][hk_] = round(E['cols'][hk_] - ROUND_STEP_HELIX, 4); E['thread']['height'] = E['cols'][hk_]
+                            model_extra.append(f'End {sfx_}: helical thread stops {ROUND_STEP_HELIX} short of the round-bar shoulder (helix {E["cols"][hk_]} vs '
+                                               f'thread length {E["cols"][f"NPTF{sfx_}_THDL@DRIVE"]}): at the full length the swept tooth ends on the shoulder '
+                                               f'edge and SolidWorks cannot cut it (QA #178) - threads are cosmetic')
                     else:
                         chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
         cols = dict(); cols[sp['L'].split('@')[0] + '@DRIVE'] = L; cols['BODYR@DRIVE'] = round(rB, 5)
@@ -1640,6 +2215,12 @@ def build_rows(root):
         mode, cA, cB = sp['bore']
         if sp.get('zonehex'):
             cols['DEPTH@HEXCUT'] = round(L - EB['endlen'], 4)
+        if sp.get('nwo'):
+            # 2026-10-20 (3474): body hex cut from the adjustable end's body face over the body length (ZoneHexCut with a START offset)
+            assert EA['kind'] == 'NWO', 'SPEC nwo: End A must be the adjustable ORB end'
+            cols['START@HEXCUT'] = EA['endlen']; cols['DEPTH@HEXCUT'] = round(body, 4)
+            for f_, s_, d_ in (('HEXCUT', cols['START@HEXCUT'], cols['DEPTH@HEXCUT']), ('NUTCUTA', EA['cols']['START@NUTCUTA'], EA['cols']['DEPTH@NUTCUTA'])):
+                if abs(s_ - d_) < 1e-4: chk.append(f'{f_} start offset equals its depth ({s_}) - the macro names the two dimensions by value')
         if mode == 'mid':
             # 2026-10-01: cA / cB may be callables (SPEC 2404 bores from the counterbore columns) and sp['step'] may give the step position
             # from End A (SPEC 2404: MS51500 S); without them this is the unchanged hex mid-plane rule
@@ -1649,6 +2230,16 @@ def build_rows(root):
             cols['DA@BORE_A'] = bA_; cols['DEPTH@BORECUT_A'] = step
             cols['DB@BORE_B'] = bB_; cols['DEPTH@BORECUT_B'] = round(L - step, 4)
             if bA_ / 2 >= EA['V'][0][1] or bB_ / 2 >= EB['V'][0][1]: chk.append('bore >= tip radius')
+            if EA['kind'] == 'NWO':
+                # 2026-10-20 (3474): the End A bore runs under the adjustable ORB undercut and neck (gen_tee leg check: wall >= 0.03); the End B bore
+                # under the fixed ORB groove root
+                w_ = min(EA['m']['NECKR'], EA['UR']) - bA_ / 2
+                if w_ < 0.03: chk.append(f'adjustable ORB wall {w_:.3f} (neck dia {2 * EA["m"]["NECKR"]:.3f}, undercut dia {2 * EA["UR"]:.3f}, bore {bA_})')
+                if EB['kind'] == 'ORBM' and EB['o']['GD'] / 2 - bB_ / 2 < 0.03: chk.append(f'fixed ORB groove wall {EB["o"]["GD"] / 2 - bB_ / 2:.3f} (groove dia {EB["o"]["GD"]}, bore {bB_})')
+                if step < EA['endlen'] or step > L - EB['endlen']: chk.append(f'bore step {step} outside the body hex')
+            for E_, b_ in ((EA, bA_), (EB, bB_)):
+                # 2026-10-20 (ORFS): the inner face land between the bore and the O-ring groove (Brennan -08: 0.0235; Air-Way D1 0.37: 0.0275)
+                if E_['kind'] == 'FSM' and E_['m']['GI'] - b_ / 2 < 0.01: chk.append(f'bore {b_} leaves {E_["m"]["GI"] - b_ / 2:.4f} of face inside the O-ring groove (dia {2 * E_["m"]["GI"]})')
             if sp.get('step'):
                 if not (0.05 < step < L - 0.05): chk.append(f'bore step {step} outside the part (L {L})')
                 # radial wall between each bore and the thread root of the male end it runs under (sampled; seat / land / tip excluded)
@@ -1701,6 +2292,7 @@ def build_rows(root):
                 if wmin is not None:
                     if wmin < 0.015: chk.append(f'wall between the female port and the End A thread root/groove only {wmin:.3f} at {xw:.3f} from the End A tip')
                     else: warn.append(f'female port reaches {L - EP["P1"]:.3f} from the End A tip, inside the End A thread/groove zone ({other["endlen"]:.3f}); radial wall there min {wmin:.3f} at {xw:.3f} from the tip' + (' (THIN)' if wmin < 0.03 else ' (OK)'))
+            elif EP.get('fsslv'): pass      # 2026-10-20 (ORFS staging, FS0319): the braze bore ends on the tube-stop lip by design (the far end is the plain seal face)
             elif L - EP['P1'] < other['endlen'] + 0.05: warn.append(f'AS-PRINTED WARNING: port drill depth P1 {EP["P1"]} leaves only {L - EP["P1"]:.3f} to the far tip, inside the other end\'s thread/groove region ({other["endlen"]:.3f}) - Air-Way L {L} looks suspect for this size (built as printed)')
             if pn in BRENNAN_OAL:
                 bl, bnote = BRENNAN_OAL[pn]
@@ -1729,9 +2321,9 @@ def build_rows(root):
                 if EA['V'] and bA / 2 >= EA['V'][0][1] - 0.002: chk.append(f'bore {bA} >= End A tip dia {2*EA["V"][0][1]:.3f}')
                 if r.get(cA) is None: warn.append(f'End A bore not printed by Air-Way (---): D {bB} used through')
             for sw2_, bb_ in ((sw_, bB), (EA, bA)):
-                if sw2_['kind'] not in ('JICSW', 'NPSMSW') or bb_ is None: continue
+                if sw2_['kind'] not in SW_KINDS or bb_ is None: continue
                 m_ = sw2_['m']
-                if bb_ / 2 >= sw2_['bore_rmax']: chk.append(f'bore {bb_} too large for the swivel {"seat mouth" if sw2_["kind"] == "JICSW" else "stem tip"} (max dia {2*sw2_["bore_rmax"]:.3f})')
+                if bb_ / 2 >= sw2_['bore_rmax']: chk.append(f'bore {bb_} too large for the swivel {"seat mouth" if sw2_["kind"] == "JICSW" else "stem head" if sw2_["kind"] == "FSSW" else "stem tip"} (max dia {2*sw2_["bore_rmax"]:.3f})')
                 if m_['NECKR'] - bb_ / 2 < 0.03: chk.append(f'neck wall {m_["NECKR"] - bb_ / 2:.3f} (neck dia {2*m_["NECKR"]:.3f}, bore {bb_})')
                 if sw2_['kind'] == 'JICSW' and abs(sw2_['s_nt'] - m_['NOSETIP_B']) > 0.02: warn.append(f'Air-Way nut-face-to-seat {sw2_["s_nt"]:.3f} vs Brennan {m_["NOSETIP_B"]:.3f}')
                 if sw2_['kind'] == 'NPSMSW' and abs(sw2_['s_tip'] - m_['TIP_B']) > 0.02: warn.append(f'Air-Way nut face to stem tip (W-L) {sw2_["s_tip"]:.3f} vs Brennan {m_["TIP_B"]:.3f}: nut placed at Air-Way W (user decision 2026-09-24)')
@@ -1750,7 +2342,7 @@ def build_rows(root):
                     if xb_ - xa_ < 0.04: chk.append(f'the two swivel seats meet above the through-bore (seat A ends at x={xa_:.3f}, seat B at x={xb_:.3f})')
                     elif xa_ > step_ - 0.02 or xb_ < step_ + 0.02: chk.append(f'a swivel seat ends past the bore step x={step_:.3f} (seat A ends at x={xa_:.3f}, seat B at x={xb_:.3f})')
                     cols['SWA_SEATENDR@DRIVE'] = rbA_; cols['SWB_SEATENDR@DRIVE'] = rbB_
-            elif EA['kind'] in ('JICSW', 'NPSMSW') and EA['P1'] > L - EB['P1'] - 0.02: chk.append(f'the two swivel seat cones meet on the axis (apex A {EA["P1"]:.3f}, apex B {L - EB["P1"]:.3f})')
+            elif EA['kind'] in SW_KINDS and EA['P1'] > L - EB['P1'] - 0.02: chk.append(f'the two swivel cavities meet on the axis (A {EA["P1"]:.3f}, B {L - EB["P1"]:.3f})')
             if bB is not None:
                 m_ = sw_['m']
                 wmin, xw = cav_wall(sw_, EA, L, bB / 2) if EA['V'] else (None, None)
@@ -1765,8 +2357,8 @@ def build_rows(root):
                     gap_ = math.hypot(max(dx_, 0), dr_) if dx_ > 0 else -1
                     if gap_ < 0.02: chk.append(f'End A port (P1 {EA["P1"]}, thread major dia {2*rmaj_:.3f}) runs into the swivel neck (dia {2*m_["NECKR"]:.3f}) behind the body hex at x={xbody_:.3f}')
                     elif gap_ < 0.04: warn.append(f'thin corner {gap_:.3f} between the End A port bottom and the swivel neck step')
-            cols['DEPTH@HEXCUT'] = round(L - sw_['endlen'] - (EA['endlen'] if EA['kind'] == 'JICSW' else 0), 4)
-            if EA['kind'] == 'JICSW':
+            cols['DEPTH@HEXCUT'] = round(L - sw_['endlen'] - (EA['endlen'] if EA['kind'] in SWA_KINDS else 0), 4)
+            if EA['kind'] in SWA_KINDS:
                 cols['START@HEXCUT'] = EA['endlen']; cols['NUTHEXA@NUTHEXA'] = EA['nut_af']; cols['DEPTH@NUTCUTA'] = EA['m']['HEXL']
                 if abs(cols['START@HEXCUT'] - cols['DEPTH@HEXCUT']) < 1e-4: chk.append('body hex start offset equals its length (dimension naming would be ambiguous)')
             cols['NUTHEX@NUTHEX'] = sw_['nut_af']; cols['DEPTH@NUTCUT'] = sw_['m']['HEXL']
@@ -1870,16 +2462,28 @@ def build_rows(root):
                 warn.append(f'square head length {EB["H"]} = the Brennan 5406-SHP-08 pilot (measured)')
         for E in (EA, EB):
             if E['kind'] in ('NPTFF', 'BRAZE', 'UNFF') and E['td'] >= hexb - 0.05: chk.append(f'pocket {E["td"]} too close to hex {hexb}')
-            if E.get('cav') and 2 * E['VG'][0][1] >= (E['nut_af'] if E['kind'] in ('JICSW', 'NPSMSW') else hexb) - 0.05: chk.append(f'port face dia {2*E["VG"][0][1]:.3f} too close to hex {E.get("nut_af", hexb)}')
+            if E.get('fsnote'): warn.append(E['fsnote'])     # 2026-10-20 (ORFS staging): a measured difference from the model rule (fs_bore_note)
+            if E['kind'] == 'FSSEAL':
+                if (L - E['endlen']) - EA.get('xS', 0) < 0.02: chk.append(f'sleeve collar cylinder {(L - E["endlen"]) - EA.get("xS", 0):.4f} before the seal cone')
+                if rB - E['m']['RSEAL'] < 0.005: chk.append(f'seal-face radius {E["m"]["RSEAL"]} not below the collar radius {rB:.4f}')
+            if E.get('fsslv'):    # 2026-10-20 (ORFS staging, FS0319): walls of the sleeve's own shape at this row's length
+                if E['m']['RT'] - E['m']['BORER'] < 0.03: chk.append(f'sleeve wall at the tube-side face {E["m"]["RT"] - E["m"]["BORER"]:.4f}')
+                if E['xS'] - E['xT'] < 0.02: chk.append(f'spigot length {E["xS"] - E["xT"]:.4f} (L {L} - collar {E["m"]["COLLARL"]} - taper {E["xT"]})')
+                if E['m']['STOPR'] >= E['m']['BORER'] - 0.01: chk.append('tube-stop bore not below the braze bore')
+            if E.get('cav') and 2 * E['VG'][0][1] >= (E['nut_af'] if E['kind'] in SW_KINDS else hexb) - 0.05: chk.append(f'port face dia {2*E["VG"][0][1]:.3f} too close to hex {E.get("nut_af", hexb)}')
             if E.get('cav') and E['P1'] >= L - 0.05: chk.append(f'port (apex {E["P1"]:.3f}) runs through the part (L {L})')
         thrA = EA['thr'] or ORB_THR.get(a, '?') + ' ORB'; thrB = EB['thr'] or ORB_THR.get(b, '?') + ' ORB'
-        if EA['kind'] == 'ORBM': thrA = ORB_THR[a] + ' (male ORB)'
-        if EB['kind'] == 'ORBM': thrB = ORB_THR[b] + ' (male ORB)'
+        if EA['kind'] == 'ORBM': thrA = ORB_THR[EA['dash'] if sp.get('fs') else a] + ' (male ORB)' + EA.get('thr_note', '')
+        if EB['kind'] == 'ORBM': thrB = ORB_THR[EB['dash'] if sp.get('fs') else b] + ' (male ORB)' + EB.get('thr_note', '')
         desc = f"{sp['name']}, {thrA} x {thrB}"
         if sp.get('desc'): desc = sp['desc'](r, thrA, thrB)     # 2026-10-01: SPECs 2403 / 2404 / 2405 keep the description text of their earlier tables
         if EA['kind'] == 'PLAIN': desc = f"{sp['name']}, {thrB}" + (' (hollow)' if cols.get('$STATE@BORECUT_B') == 'U' else ' (solid)' if '$STATE@BORECUT_B' in cols else '')
         if EB['kind'] == 'PLAIN': desc = f"{sp['name']}, {thrA}" + (' (hollow)' if cols.get('$STATE@BORECUT_A') == 'U' else ' (solid)' if ('$STATE@BORECUT_A' in cols or sp.get('solid_only')) else '')
         if sp.get('nut'): thrB = f'tube bore {bv:.3f} (MS51531D D1)'
+        if sp.get('fsnut'):   # 2026-10-20 (ORFS staging): the FS0318 tube nut - End B is the lip bore, not a plug head (the PLAIN label above)
+            thrB = f'lip bore {bv:.3f} (tube stop, measured on BRENNAN_FS0318-08)'; desc = sp['desc'](r, thrA, thrB)
+        if sp.get('thrB_fix'):   # 2026-10-20 (ORFS staging): the FS0319 sleeve - End B is the seal face, not a plug head
+            thrB = sp['thrB_fix'](r, a, bv); desc = sp['desc'](r, thrA, thrB)
         if sp.get('ln') and pn.endswith('-LN'): desc += ' (with bulkhead locknut - locknut not modelled)'
         cols['$PRP@PartNo'] = pn; cols['$PRP@Description'] = desc; cols['$PRP@GeometryRoot'] = root
         cols['$PRP@EndA_Thread'] = thrA; cols['$PRP@EndB_Thread'] = thrB
@@ -1890,8 +2494,16 @@ def build_rows(root):
         if st_ == 'VERIFIED' and any(E_.get('n40') for E_ in (EA, EB)):
             # 2026-10-18: the -40 pipe end is Brennan-measured (one manufacturer) - the row cannot stay VERIFIED
             st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the -40 pipe end is measured on Brennan STEPs - single manufacturer')
+        if st_ == 'VERIFIED' and EA['kind'] == 'NWO':
+            # 2026-10-20 (3474): the adjustable ORB stud (neck, locknut, washer) is measured on one Brennan STEP - the row cannot be VERIFIED
+            st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the adjustable ORB stud geometry is single-source (Brennan STEP)')
+        if sp.get('fs') and st_ == 'VERIFIED':
+            # 2026-10-20 (ORFS, PLAN R8): the face-seal end shapes are measured on Brennan pilots only (Air-Way's own 3D models not yet measured,
+            # Q-FS-2NDSHAPE) - single manufacturer, so the row is written ASSUMED; the review table keeps VERIFIED for the dimensions
+            st_ = 'ASSUMED'; warn.append('DataStatus VERIFIED -> ASSUMED: the face-seal end shapes are measured on Brennan STEPs only (Air-Way 3D models not yet measured)')
         cols['$PRP@DataStatus'] = 'BLOCKED' if chk else st_
         asm_ = sp['assume'](r) if callable(sp['assume']) else sp['assume']     # review fix F2: SPEC 2404 words its source clause per row
+        if sp.get('fs'): asm_ = asm_ + ''.join('; ' + E_['assume'] for E_ in (EA, EB) if E_.get('assume'))
         cols['$PRP@AxialSource'] = (r.get('$PRP@AxialSource') or '') + ' | MODEL: ' + asm_ + ''.join('; ' + m_ for m_ in model_extra)
         # 2026-10-01 (ORB-02): an ORB end merged from another series' row carries its own source note (empty for every older ORB size)
         cols['$PRP@AxialSource'] += ''.join('; ' + E_['o']['note'] for E_ in (EA, EB) if E_.get('kind') == 'ORBM' and E_.get('o', {}).get('note'))
@@ -2163,7 +2775,7 @@ Function FlatsCut(afM As Double, wM As Double, startM As Double, depthM As Doubl
     Check skName & ": sketch plane selected (Right Plane)", ok
     swSkMgr.InsertSketch True
     Dim fcR As Variant, fcK As Long, fcSg As SldWorks.SketchSegment, fcLn As SldWorks.SketchLine, fcNs As Long
-    Dim fcV As SldWorks.SketchSegment, fcH As SldWorks.SketchSegment, fcD As SldWorks.SketchSegment
+    Dim fcV As SldWorks.SketchSegment, fcH As SldWorks.SketchSegment, fcD As SldWorks.SketchSegment, fcD2 As SldWorks.SketchSegment
     fcR = swSkMgr.CreateCenterRectangle(0, 0, 0, wM / 2, afM / 2, 0)
     If IsEmpty(fcR) Then
         Check skName & ": centre rectangle created", False
@@ -2176,7 +2788,7 @@ Function FlatsCut(afM As Double, wM As Double, startM As Double, depthM As Doubl
         If fcSg.GetType = swSketchSegments_e.swSketchLINE Then
             Set fcLn = fcSg
             If fcSg.ConstructionGeometry Then
-                If fcD Is Nothing Then Set fcD = fcSg
+                If fcD Is Nothing Then Set fcD = fcSg Else If fcD2 Is Nothing Then Set fcD2 = fcSg
             Else
                 fcNs = fcNs + 1
                 If Abs(fcLn.GetStartPoint2.X - fcLn.GetEndPoint2.X) < 0.0000001 Then
@@ -2231,6 +2843,40 @@ Function FlatsCut(afM As Double, wM As Double, startM As Double, depthM As Doubl
             Next fcK
         End If
     End If
+    ' 2026-10-20: the centre rectangle comes WITHOUT its rectangle relations here (1700RC / 1800 dry runs: status 2 after the two dimensions
+    ' and the centring; the saved masters rebuilt as skewed quadrilaterals). The centre point at the middle of the SECOND diagonal too
+    ' (diagonals bisect each other = parallelogram), then one horizontal and one vertical side, each only while still under-defined
+    ' (tested on the 1800 dry-run part: the second midpoint relation alone gave status 3 there).
+    If fcSk.GetConstrainedStatus = swConstrainedStatus_e.swUnderConstrained And Not fcD2 Is Nothing Then
+        Dim fcPts2 As Variant, fcK2 As Long, fcP2 As SldWorks.SketchPoint
+        fcPts2 = fcSk.GetSketchPoints2
+        If Not IsEmpty(fcPts2) Then
+            For fcK2 = LBound(fcPts2) To UBound(fcPts2)
+                Set fcP2 = fcPts2(fcK2)
+                If Abs(fcP2.X) < 0.0000001 And Abs(fcP2.Y) < 0.0000001 Then
+                    swModel.ClearSelection2 True
+                    fcP2.Select4 False, Nothing
+                    fcD2.Select4 True, Nothing
+                    swModel.SketchAddConstraints "sgATMIDDLE"
+                    Trace skName & ": centre point at the middle of the second diagonal -> status " & fcSk.GetConstrainedStatus
+                    Exit For
+                End If
+            Next fcK2
+        End If
+    End If
+    Dim fcJ As Long
+    For fcJ = 0 To 1
+        If fcSk.GetConstrainedStatus <> swConstrainedStatus_e.swUnderConstrained Then Exit For
+        swModel.ClearSelection2 True
+        If fcJ = 0 Then
+            fcH.Select4 False, Nothing
+            swModel.SketchAddConstraints "sgHORIZONTAL"
+        Else
+            fcV.Select4 False, Nothing
+            swModel.SketchAddConstraints "sgVERTICAL"
+        End If
+        Trace skName & ": " & IIf(fcJ = 0, "horizontal", "vertical") & " relation on one side -> status " & fcSk.GetConstrainedStatus
+    Next fcJ
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Dim skF As SldWorks.Feature
@@ -2394,7 +3040,7 @@ assert 'profile pitch reachable' in HELP
 def emit(root, hdr, ok, refrow, table_path):
     sp = SPEC[root]; cols, EA, EB, L, hexb, rB, body, _ = refrow; PN = cols['$PRP@PartNo']
     # ---- vertex chain: End A tip at x=0, End B tip at x=L
-    swA = EA['kind'] == 'JICSW'
+    swA = EA['kind'] in SWA_KINDS
     if swA:
         V = [(x, r) for (x, r) in EA['VG'][::-1]]   # apex A (on the axis) -> seat -> nose -> slot -> relief -> thread -> countersink edge (0, rcs)
         faceA = len(V) - 1                            # segment (0, rcs) -> (0, Rn) = the End A NUT FACE
@@ -2408,7 +3054,7 @@ def emit(root, hdr, ok, refrow, table_path):
         if not EA.get('cap'): V += [(xa, rB)]      # 2026-10-02 (PLUGS): a capped NPTF crest cone already ends on the body line
     xb = L - EB['endlen']; V += [(xb, rB)]
     bodyseg = len(V) - 2          # segment index of the body top line (V[k]->V[k+1])
-    if EB.get('cav') and EB['kind'] in ('JICSW', 'NPSMSW'):
+    if EB.get('cav') and EB['kind'] in SW_KINDS:
         kb = len(V) - 1                          # index of (xb, rB); segment kb = body face
         V += [(L - x, r) for (x, r) in EB['VO'][::-1]]   # body face bottom -> neck -> nut rear -> skirt -> nut hex -> (L, Rn)
         faceB = len(V) - 1                       # segment (L, Rn) -> countersink outer edge = the NUT FACE
@@ -2436,7 +3082,7 @@ def emit(root, hdr, ok, refrow, table_path):
     else:
         dl(-1, Lname, L, L / 2, rB + 0.6)
     dr(bodyseg, 'BODYR', rB, mid(bodyseg), -0.45)
-    seen_angle = False; seen_seat = False
+    seen_angle = False; seen_seat = False; seen_fsch = False
     for E, g, sfx, side in ((EA, gA, 'A', +1), (EB, gB, 'B', -1)):
         s = E['seg']; k = E['kind']
         if k == 'JICM':
@@ -2495,13 +3141,87 @@ def emit(root, hdr, ok, refrow, table_path):
         elif k == 'SQHEAD':      # 2026-10-02 (PLUGS): square head revolved at its corner radius, cut to the square by ZoneSquareCut
             dr(g(s['top']), f'SQ{sfx}_HEADR', E['rH'], mid(g(s['top'])), -0.3)
             dl(g(s['top']), f'SQ{sfx}_HEADL', E['H'], mid(g(s['top'])), rB + 0.25)
+        elif k == 'FSM':
+            # 2026-10-20 (ORFS): face (axis -> GI) | groove inner wall | groove bottom | groove outer wall | land (-> FR) | 45deg chamfer |
+            # thread major | 60deg flank | relief | (shoulder up to the body, added by the chain). 10 dimensions + the land collinear with the face.
+            m = E['m']; ue = 'True' if side > 0 else 'False'
+            dr(g(s['gin']), f'FSM{sfx}_GRVIR', m['GI'], mid(g(s['gin'])), -0.15)
+            dl(g(s['gin']), f'FSM{sfx}_GRVD', m['GD'], mid(g(s['gin'])), rB + 0.45)
+            dr(g(s['gout']), f'FSM{sfx}_GRVOR', m['GO'], mid(g(s['gout'])), -0.25)
+            dp(g(s['land']), ue, axis, f'FSM{sfx}_FACER', m['FR'], V[g(s['land'])][0] - 0.12 * side, m['FR'] * 0.8)
+            da(g(s['cham']), axis, 'FSMCHANG' if not seen_fsch else f'FSMCHANG_{sfx}_plain', FSM_CHANG, mid(g(s['cham'])), E['rM'] + 0.1); seen_fsch = True
+            dr(g(s['thd']), f'THDMAJR_{sfx}', E['rM'], mid(g(s['thd'])), -0.3)
+            dl(g(s['thd']), f'FSM{sfx}_THDL', E['cols'][f'FSM{sfx}_THDL@DRIVE'], mid(g(s['thd'])), rB + 0.35)
+            da(g(s['flank']), g(s['thd']), 'RELIEFANG' if not seen_angle else f'RELIEFANG_{sfx}_plain', FSM_FLANKANG, V[g(s['flank'])][0] + 0.1 * side, rB + 0.1); seen_angle = True
+            dr(g(s['rel']), f'FSM{sfx}_RELR', m['RELR'], mid(g(s['rel'])), -0.2)
+            dl(g(s['rel']), f'FSM{sfx}_RELL', E['rell'], mid(g(s['rel'])), rB + 0.15)
+            REL.append(f'    Call Collinear({g(s["land"])}, {g(s["face"])})')
+        elif k == 'FSSEAL':
+            # 2026-10-20 (ORFS staging, FS0319 -12 up, End B): collar -> shallow cone (segment 'cone') -> flat seal face (segment 'face') down to the axis
+            dp(g(s['face']), 'False', axis, f'FSSEAL{sfx}_SEALR', E['m']['RSEAL'], L + 0.1, E['m']['RSEAL'] / 2)
+            dp(g(s['cone']), 'False', g(s['face']), f'FSSEAL{sfx}_CONEL', E['m']['CONEL'], L - E['m']['CONEL'] / 2, rB + 0.3)
+        elif k == 'BRAZE' and E.get('fsslv'):
+            # 2026-10-20 (ORFS staging, FS0319 sleeve End A): tube-side face (origin -> FACER) | 15deg taper | spigot | step up to the collar (chain)
+            dp(g(s['face']), 'True', axis, f'FSSLV{sfx}_FACER', E['m']['RT'], -0.1, E['m']['RT'] / 2)
+            da(g(s['taper']), axis, f'FSSLV{sfx}_TAPANG', E['m']['TAPANG'], mid(g(s['taper'])), E['m']['RS'] + 0.1)
+            dr(g(s['spigot']), f'FSSLV{sfx}_SPIGOTR', E['m']['RS'], mid(g(s['spigot'])), -0.2)
+            dp(g(s['spigot']), 'True', g(s['face']), f'FSSLV{sfx}_SPIGOTL', E['xS'], mid(g(s['spigot'])), rB + 0.3)
         elif k == 'ORBM':
             o = E['o']
             dr(g(s['thd']), f'THDMAJR_{sfx}', o['TM'] / 2, mid(g(s['thd'])), -0.3)
             dl(g(s['thd']), f'ORB{sfx}_THDL', o['THDL'], mid(g(s['thd'])), rB + 0.25)
             dr(g(s['grv']), f'ORB{sfx}_GRVR', o['GD'] / 2, mid(g(s['grv'])), -0.2)
             dl(g(s['grv']), f'ORB{sfx}_GRVW', o['GW'], mid(g(s['grv'])), rB + 0.15)
-    if swA:
+        elif k == 'NWO':
+            # 2026-10-20 (3474): adjustable ORB end at End A - the gen_tee leg_NWO dimension set (same names with NW<sfx>_, same order of
+            # constraints), plus NWA_I3 = tip face to the body face (the gen_tee BODYL counterpart: the undercut takes the remaining length)
+            assert side > 0, 'adjustable ORB end: End A only'
+            m = E['m']; top = max(rB, E['rmax'])
+            def dpairN(i, j, nm, val, tx, ty): D.append(f'    Call Dim_pair({i}, {j}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
+            dr(g(s['thd']), f'THDMAJR_{sfx}', E['rM'], mid(g(s['thd'])), -0.3)
+            dl(g(s['thd']), f'NW{sfx}_THDL', E['THDL'], mid(g(s['thd'])), top + 0.25)
+            dr(g(s['uc']), f'NW{sfx}_UCR', E['UR'], mid(g(s['uc'])), -0.15)
+            dr(g(s['wash']), f'NW{sfx}_WASHR', m['WR'], mid(g(s['wash'])), -0.35)
+            dl(g(s['wash']), f'NW{sfx}_WASHT', m['WT'], mid(g(s['wash'])), top + 0.2)
+            dp(g(s['ch2']), 'False', axis, f'NW{sfx}_CHR2', E['rc'], E['wB'] - 0.05, E['rc'] / 2)
+            da(g(s['ch2']), g(s['nut']), f'NW{sfx}_CHANG2', E['chA'], E['wB'] + E['ch'] + 0.03, E['Rn'] - 0.01)
+            dr(g(s['nut']), f'NW{sfx}_NUTR', E['Rn'], (E['wB'] + E['nB']) / 2, -0.45)
+            da(g(s['nut']), g(s['ch1']), f'NW{sfx}_CHANG1', E['chA'], E['nB'] - E['ch'] - 0.03, E['Rn'] - 0.01)
+            dpairN(g(s['wdn']), g(s['ndn']), f'NW{sfx}_NUTT', m['NUTT'], (E['wB'] + E['nB']) / 2, top + 0.3)
+            dp(g(s['ch1']), 'True', axis, f'NW{sfx}_CHR', E['rc'], E['nB'] + 0.05, E['rc'] / 2)
+            dr(g(s['neck']), f'NW{sfx}_NECKR', m['NECKR'], mid(g(s['neck'])), -0.25)
+            dl(g(s['neck']), f'NW{sfx}_NECKL', m['NECKL'], mid(g(s['neck'])), top + 0.4)
+            dpairN(g(s['face']), g(s['neck']) + 1, f'NW{sfx}_I3', E['I3'], E['I3'] / 2, top + 0.5)
+    if swA and EA['kind'] == 'FSSW':
+        # 2026-10-20 (FS straight swivels, End A): seal face (on the axis) -> stem head -> cone -> relief -> minor -> mouth -> nut face (faceA) -> nut
+        # hex -> skirt -> nut rear face -> neck -> body face; the counterbore (cb) adds one segment before the nut face
+        E = EA; m = E['m']; kfa = faceA; o = 1 if E['cb'] else 0
+        def dpairA(i, nm, val, tx, ty): D.append(f'    Call Dim_pair({i}, {kfa}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
+        topA = max(rB, E['Rn'])
+        dpairA(0, 'FSWA_SEAL', m['SEAL'], m['SEAL'] / 2, topA + 0.65)
+        dr(1, 'FSWA_STEMR', m['STEMR'], (m['SEAL'] + m['LIPS']) / 2, -0.75)
+        dl(1, 'FSWA_HEADL', m['LIPS'] - m['SEAL'], (m['SEAL'] + m['LIPS']) / 2, topA + 0.15)
+        dp(3, 'False', axis, 'FSWA_RELR', m['RELR'], m['RELS'] + 0.03, m['RELR'] / 2)
+        da(3, axis, 'FSWA_RELANG', FSSW_RELANG, (m['TE'] + m['RELS']) / 2, E['rmin'] + 0.05)
+        dr(4, 'FSWA_MINR', E['rmin'], (E['cs'] + m['TE']) / 2, -0.6)
+        dl(4, 'FSWA_THDL', m['TE'] - E['cs'], (E['cs'] + m['TE']) / 2, topA + 0.1)
+        if E['cb']:
+            da(5, axis, 'FSWA_CSANG', FSSW_CBANG, (m['CBD'] + E['cs']) / 2, m['CBR'] + 0.08)
+            dr(6, 'FSWA_CBR', m['CBR'], m['CBD'] / 2, -0.5)
+            dl(6, 'FSWA_CBD', m['CBD'], m['CBD'] / 2, topA + 0.05)
+        else:
+            da(5, axis, 'FSWA_CSANG', FSSW_CSANG, E['cs'] / 2, m['CSR'] + 0.08)
+            dp(5, 'True', axis, 'FSWA_CSR', m['CSR'], -0.1, m['CSR'] / 2)
+        dr(7 + o, 'FSWA_NUTR', E['Rn'], m['HEXL'] / 2, -0.45)
+        dl(7 + o, 'FSWA_NUTHEXL', m['HEXL'], m['HEXL'] / 2, topA + 0.3)
+        dp(9 + o, 'False', axis, 'FSWA_SKIRTFR', m['SKF'], m['HEXL'] + 0.05, m['SKF'] / 2)
+        dr(10 + o, 'FSWA_SKIRTR', m['SKR'], (m['SKS'] + m['NUTL']) / 2, -0.3)
+        dl(10 + o, 'FSWA_SKIRTL', m['NUTL'] - m['SKS'], (m['SKS'] + m['NUTL']) / 2, topA + 0.2)
+        dpairA(11 + o, 'FSWA_NUTL', m['NUTL'], m['NUTL'] / 2, topA + 0.45)
+        dr(12 + o, 'FSWA_NECKR', m['NECKR'], (m['NUTL'] + m['BODYS']) / 2, -0.15)
+        dpairA(13 + o, 'FSWA_BODYS', m['BODYS'], m['BODYS'] / 2, topA + 0.55)
+        assert faceA == 6 + o and bodyseg == 14 + o, (faceA, bodyseg)
+    elif swA:
         E = EA; m = E['m']; kfa = faceA
         o = 1 if 'seat_end' in E else 0    # 2026-10-01 (6565-CAVITY): segment 0 = radial line at the seat end (bore radius), the seat cone is segment 1
         def dpairA(i, nm, val, tx, ty): D.append(f'    Call Dim_pair({i}, {kfa}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
@@ -2551,6 +3271,35 @@ def emit(root, hdr, ok, refrow, table_path):
         da(kb + 15, axis, f'NP{sfx}_CONEANG', NPSM_CONEANG, L - E['s_tip'] - 0.08, m['TIPR'] * 0.3)
         dp(kb + 16, 'False', axis, f'NP{sfx}_TIPR', m['TIPR'], L - E['s_tip'] - 0.05, m['TIPR'] / 2)
         dpairN(kb + 16, f'NP{sfx}_STEMTIP', E['s_tip'], L - E['s_tip'] / 2, top + 0.75)
+    elif EB.get('cav') and EB['kind'] == 'FSSW':
+        # 2026-10-20 (FS straight swivels, End B): body face (kb) -> neck -> nut rear face -> skirt -> skirt cone -> nut hex -> nut face (faceB) ->
+        # mouth (countersink, or counterbore + 60deg countersink) -> minor -> relief -> cone -> stem head -> seal face down to the axis
+        E = EB; sfx = 'B'; m = E['m']; kf = faceB; o = 1 if E['cb'] else 0
+        def dpairF(i, nm, val, tx, ty): D.append(f'    Call Dim_pair({i}, {kf}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
+        top = max(rB, E['Rn'])
+        dpairF(kb, f'FSW{sfx}_BODYS', m['BODYS'], L - m['BODYS'] / 2, top + 0.55)
+        dr(kb + 1, f'FSW{sfx}_NECKR', m['NECKR'], mid(kb + 1), -0.15)
+        dpairF(kb + 2, f'FSW{sfx}_NUTL', m['NUTL'], L - m['NUTL'] / 2, top + 0.45)
+        dr(kb + 3, f'FSW{sfx}_SKIRTR', m['SKR'], mid(kb + 3), -0.3)
+        dl(kb + 3, f'FSW{sfx}_SKIRTL', m['NUTL'] - m['SKS'], mid(kb + 3), top + 0.2)
+        dp(kb + 5, 'False', axis, f'FSW{sfx}_SKIRTFR', m['SKF'], L - m['HEXL'] - 0.05, m['SKF'] / 2)
+        dl(kb + 6, f'FSW{sfx}_NUTHEXL', m['HEXL'], mid(kb + 6), top + 0.3)
+        dr(kb + 6, f'FSW{sfx}_NUTR', E['Rn'], mid(kb + 6), -0.45)
+        if E['cb']:
+            dr(kb + 8, f'FSW{sfx}_CBR', m['CBR'], mid(kb + 8), -0.5)
+            dl(kb + 8, f'FSW{sfx}_CBD', m['CBD'], mid(kb + 8), top + 0.05)
+            da(kb + 9, axis, f'FSW{sfx}_CSANG', FSSW_CBANG, L - (m['CBD'] + E['cs']) / 2, m['CBR'] + 0.08)
+        else:
+            dp(kb + 8, 'False', axis, f'FSW{sfx}_CSR', m['CSR'], L + 0.1, m['CSR'] / 2)
+            da(kb + 8, axis, f'FSW{sfx}_CSANG', FSSW_CSANG, L - E['cs'] / 2, m['CSR'] + 0.08)
+        dr(kb + 9 + o, f'FSW{sfx}_MINR', E['rmin'], mid(kb + 9 + o), -0.6)
+        dl(kb + 9 + o, f'FSW{sfx}_THDL', m['TE'] - E['cs'], mid(kb + 9 + o), top + 0.1)
+        da(kb + 10 + o, axis, f'FSW{sfx}_RELANG', FSSW_RELANG, L - (m['TE'] + m['RELS']) / 2, E['rmin'] + 0.05)
+        dp(kb + 10 + o, 'True', axis, f'FSW{sfx}_RELR', m['RELR'], L - m['RELS'] + 0.03, m['RELR'] / 2)
+        dr(kb + 12 + o, f'FSW{sfx}_STEMR', m['STEMR'], mid(kb + 12 + o), -0.75)
+        dl(kb + 12 + o, f'FSW{sfx}_HEADL', m['LIPS'] - m['SEAL'], mid(kb + 12 + o), top + 0.15)
+        dpairF(kb + 13 + o, f'FSW{sfx}_SEAL', m['SEAL'], L - m['SEAL'] / 2, top + 0.65)
+        assert kb + 14 + o == axis, (kb, o, axis)
     elif EB.get('cav') and EB['kind'] == 'JICSW':
         E = EB; sfx = 'B'; m = E['m']; kf = faceB
         def dpair(i, nm, val, tx, ty): D.append(f'    Call Dim_pair({i}, {kf}, "{nm}", {val*IN:.9f}, {tx*IN:.6f}, {ty*IN:.6f})')
@@ -2682,11 +3431,13 @@ def emit(root, hdr, ok, refrow, table_path):
     else:
         OPEN = [f'    Check "bore open on the axis at End A (x=0)", Not AxisCovered(0#)',
                 f'    Check "bore open on the axis at End B (x={L:.4f})", Not AxisCovered({L*IN:.9f})']
+    if mode in ('sw1', 'sw2') and EA['kind'] == 'FSSW':
+        OPEN.append(f'    Check "bore reaches the End A swivel seal face (no face across the axis at x={EA["open_at"]:.4f})", Not AxisCovered({EA["open_at"]*IN:.9f})')
     if mode in ('sw1', 'sw2') and EA['kind'] == 'JICSW':
         OPEN.append(f'    Check "bore reaches the End A swivel seat (no bore bottom at the nose-tip plane x={EA["s_nt"]:.4f})", Not AxisCovered({EA["s_nt"]*IN:.9f})')
     if mode in ('sw1', 'sw2'):
         xs_ = L - EB['open_at']
-        OPEN.append(f'    Check "bore reaches the swivel {"seat (no bore bottom at the nose-tip plane" if EB["kind"] == "JICSW" else "stem tip (no face across the axis at the stem-tip plane"} x={xs_:.4f})", Not AxisCovered({xs_*IN:.9f})')
+        OPEN.append(f'    Check "bore reaches the swivel {"seat (no bore bottom at the nose-tip plane" if EB["kind"] == "JICSW" else "seal face (no face across the axis at the seal-face plane" if EB["kind"] == "FSSW" else "stem tip (no face across the axis at the stem-tip plane"} x={xs_:.4f})", Not AxisCovered({xs_*IN:.9f})')
         if mode == 'sw2':
             OPEN.append(f'    Check "bore step open (no face across the axis at x={cols["START@BORECUT_B"]:.4f})", Not AxisCovered({cols["START@BORECUT_B"]*IN:.9f})')
         if 'seat_end' in EA:   # 2026-10-01 (6565-CAVITY): the bore cuts must remove the core disc closing each trimmed seat cone
@@ -3093,7 +3844,7 @@ End Sub
     if sp.get('swivel') or sp.get('zonehex'):
         i0 = vba.index('    stepName = "HEX cut"'); i1 = vba.index('    stepName = "Pockets and bores"')
         xbody = L - EB['endlen']; xs0 = EA['endlen'] if swA else 0.0
-        nutB = EB['kind'] in ('JICSW', 'NPSMSW')
+        nutB = EB['kind'] in SW_KINDS
         blkA = ''
         blkB = ''
         if nutB:
@@ -3138,6 +3889,35 @@ End Sub
         vba = vba.replace("Body revolved at BODYR then hex-cut; SP3 radius dims.", "Body revolved at BODYR (body hex) " + ("/ the nut radius (swivel nut hex), each hex cut over its own zone" if nutB else "then hex-cut between the JIC end and the flange head only") + "; SP3 radius dims.")
         assert ('ZoneHexCut(True' in vba) == nutB
         if swA: vba = vba.replace('Ends: A = JICSW  B = JICSW.', 'Ends: A = JICSW  B = JICSW (both ends swivel; the origin sits on the End A nut face' + ('; each seat cone ends at the through-bore' if 'seat_end' in EA else '') + ').')
+    if sp.get('nwo'):
+        # 2026-10-20 (3474): adjustable ORB end at End A - the body hex is cut over its own zone (from the body face to the fixed ORB end), the
+        # locknut to its own hexagon over the nut thickness (both ZoneHexCut, flats normal to the same axis, sketched on the Right Plane = the End A
+        # tip plane with a START offset); the round washer between them is never hex-cut. The locknut cut must remove exactly the chamfered nut
+        # envelope outside its hexagon (the gen_tee NutHexCutNWO check, analytic integral nwo_nut_removed).
+        i0 = vba.index('    stepName = "HEX cut"'); i1 = vba.index('    stepName = "Pockets and bores"')
+        xbody = L - EB['endlen']; nut = EA['nut']; vexp = nwo_nut_removed(nut) * IN ** 3
+        vba = vba[:i0] + f'''    stepName = "HEX cuts (body hex + adjustable ORB locknut hex)"
+    Dim hexcut As SldWorks.Feature, nutcutA As SldWorks.Feature, vq0 As Double, vq1 As Double
+    ' body hex: only between the adjustable ORB body face (x={EA['endlen']:.4f}) and the fixed ORB end (x={xbody:.4f}) - NOT through all (the washer is round)
+    Set hexcut = ZoneHexCut(False, 0#, {hexb*IN:.9f}, {EA['endlen']*IN:.9f}, {(xbody - EA['endlen'])*IN:.9f}, {(EA['endlen'] + xbody)/2*IN:.9f}, "HEX", "HEXB", "HEXCUT")
+    ' adjustable ORB locknut hex: sketched on the Right Plane (End A tip), cut from the nut's washer-side face (x={nut['n0']:.4f}) over the nut thickness
+    vq0 = Volume()
+    Set nutcutA = ZoneHexCut(False, 0#, {nut['af']*IN:.9f}, {nut['n0']*IN:.9f}, {nut['dep']*IN:.9f}, {(nut['n0'] + nut['dep']/2)*IN:.9f}, "NUTHEXA", "NUTHEXA", "NUTCUTA")
+    vq1 = Volume()
+    Check "NUTCUTA removed " & Format((vq0 - vq1) / (IN_ ^ 3), "0.00000") & " in^3 = the chamfered locknut envelope outside its hexagon (expect {vexp/IN**3:.5f})", Abs((vq0 - vq1) - {vexp:.12e}) < 0.02 * {vexp:.12e} + 1E-10
+    Check "HEXB@HEX reachable", Not swModel.Parameter("HEXB@HEX") Is Nothing
+    Check "DEPTH@HEXCUT reachable", Not swModel.Parameter("DEPTH@HEXCUT") Is Nothing
+    Check "START@HEXCUT reachable", Not swModel.Parameter("START@HEXCUT") Is Nothing
+    Check "NUTHEXA@NUTHEXA reachable", Not swModel.Parameter("NUTHEXA@NUTHEXA") Is Nothing
+    Check "DEPTH@NUTCUTA reachable", Not swModel.Parameter("DEPTH@NUTCUTA") Is Nothing
+    Check "START@NUTCUTA reachable", Not swModel.Parameter("START@NUTCUTA") Is Nothing
+
+''' + vba[i1:]
+        i0 = vba.index('    Check "Hex across flats'); i1 = vba.index('\n', i0)
+        big = max(hexb, nut['af'], 2 * EA['m']['WR']); bigc = max(2 * rB, 2 * nut['af'] / math.sqrt(3), 2 * EA['m']['WR'])
+        vba = vba[:i0] + f'    Check "Across flats / corners " & Format(dY, "0.0000") & " / " & Format(dZ, "0.0000") & " (body hex {hexb:.4f}, locknut {nut["af"]:.4f}, washer dia {2 * EA["m"]["WR"]:.4f}: expect between {big:.4f} and {bigc:.4f})", dY > {big - 0.01:.4f} And dZ > {big - 0.01:.4f} And dY < {bigc + 0.01:.4f} And dZ < {bigc + 0.01:.4f}' + vba[i1:]
+        vba = vba.replace("Body revolved at BODYR then hex-cut; SP3 radius dims.", "Body revolved at BODYR (body hex) / the nut envelope (locknut), each hex cut over its own zone; SP3 radius dims.")
+        assert vba.count('ZoneHexCut(False') == 2 and 'Set hexcut = MakeCut2' not in vba
     if sp.get('round'):
         i0 = vba.index('    stepName = "HEX cut"'); i1 = vba.index('    stepName = "Pockets and bores"')
         vba = vba[:i0] + "    ' (round bar - no hex cut)\n\n" + vba[i1:]

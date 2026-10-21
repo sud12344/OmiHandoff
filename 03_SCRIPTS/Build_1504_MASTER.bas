@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_1504_MASTER"
 ' ============================================================================
-'  Build_1504_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
+'  Build_1504_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_tee.py
 '  45 deg Female Pipe x Female NPSM Swivel Elbow (45-deg elbow), forged hex body (Brennan 2504 / 2500HX pattern).  Reference config 1504-06-06-FG: NPSMSW -06, NPTFF -06
 '  Entry: Sub Build1504.  Leg 1 along +X, leg 2 along the 135-deg direction (45-deg elbow); hex arms HEX1 / HEX2 (on plane PLN2) + 30deg corner PUCK about Z + swivel neck turn NECKTRIM1 / NECKFILL1.
 '  Builds from DesignTable_1504_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
@@ -277,13 +277,13 @@ Sub Build1504()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 4)", (UBound(cfgs) + 1) = 4
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 7)", (UBound(cfgs) + 1) = 7
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("1504-04-04-FG", "1504-06-06-FG", "1504-20-20-FG")
+    cx_c = Array("1504-04-04-FG", "1504-16-16-FG", "1504-20-20-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "NP1_BODYS@LEG1", "NP1_NECKR@LEG1", "NP1_NUTL@LEG1", "NP1_LIPR@LEG1", "DEPTH@BORECUT1", "DEPTH@POCKETCUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK", "TRIM_A0@NECKTRIM1", "TRIM_LEN@NECKTRIM1", "TRIM_RIN@NECKTRIM1", "TRIM_ROUT@NECKTRIM1", "FILL_A0@NECKFILL1", "FILL_LEN@NECKFILL1", "FILL_RIN@NECKFILL1", "FILL_ROUT@NECKFILL1")
-    cx_w = Array(Array(0.91000, 0.34500, 0.58000, 0.18250, 0.54000, 0.31460, 0.91000, 0.91000, 0.24050, 0.21500, 0.69000, 0.33000, 0.69000, 0.65000, 0.19869, 0.39787, 0.33000, 0.04000, 0.14625, 0.59756, 0.33000, 0.04000, 0.14625, 0.18250), Array(0.98000, 0.43750, 0.62000, 0.24650, 0.58000, 0.40560, 0.98000, 0.75000, 0.30600, 0.28500, 0.87500, 0.36000, 0.87500, 0.53500, 0.25209, 0.50468, 0.36000, 0.04000, 0.20325, 0.75777, 0.36000, 0.04000, 0.20325, 0.24650), Array(1.77000, 0.93750, 1.04000, 0.69500, 1.00000, 0.90480, 1.77000, 1.44000, 0.77750, 0.74000, 1.87500, 0.73000, 1.87500, 1.18000, 0.54077, 1.08203, 0.73000, 0.04000, 0.60000, 1.62380, 0.73000, 0.04000, 0.60000, 0.69500))
+    cx_w = Array(Array(0.91000, 0.34500, 0.58000, 0.18250, 0.54000, 0.31460, 0.91000, 0.91000, 0.24050, 0.21500, 0.69000, 0.33000, 0.69000, 0.65000, 0.19869, 0.39787, 0.33000, 0.04000, 0.14625, 0.59756, 0.33000, 0.04000, 0.14625, 0.18250), Array(1.58000, 0.81250, 0.94000, 0.52500, 0.90000, 0.70980, 1.58000, 1.19000, 0.60550, 0.57000, 1.62500, 0.64000, 1.62500, 0.96800, 0.46860, 0.93769, 0.64000, 0.04000, 0.46250, 1.40729, 0.64000, 0.04000, 0.46250, 0.52500), Array(1.77000, 0.93750, 1.04000, 0.69500, 1.00000, 0.90480, 1.77000, 1.44000, 0.77750, 0.74000, 1.87500, 0.73000, 1.87500, 1.18000, 0.54077, 1.08203, 0.73000, 0.04000, 0.60000, 1.62380, 0.73000, 0.04000, 0.60000, 0.69500))
     For cx_q = 0 To 2
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -313,6 +313,9 @@ Sub Build1504()
     stepName = "135-deg thread check"
     Call HelixUCheck("1504-06-06-FG", "2", 0.75000, 0.285000)
     Call HelixUCheck("1504-04-04-FG", "2", 0.91000, 0.215000)
+    Call HelixUCheck("1504-08-08-FG", "2", 0.94000, 0.350000)
+    Call HelixUCheck("1504-12-12-FG", "2", 1.00000, 0.455000)
+    Call HelixUCheck("1504-16-16-FG", "2", 1.19000, 0.570000)
     Call HelixUCheck("1504-20-20-FG", "2", 1.44000, 0.740000)
 
     swModel.ShowConfiguration2 "1504-06-06-FG"

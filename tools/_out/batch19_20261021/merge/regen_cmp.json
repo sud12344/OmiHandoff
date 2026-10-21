@@ -1,0 +1,958 @@
+{
+ "5000": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5404": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5405": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6401": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6405": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6405-32-16-O"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "2408": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2408-14-SOLID"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6408": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "0318": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5406": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5406C": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5406P": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "2700": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "2705": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2705-LN-06-04"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "2706": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2706-06-04",
+   "2706-32-32",
+   "2706-LN-06-04",
+   "2706-LN-08-06"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "4404": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [],
+  "lost": [],
+  "changed": {}
+ },
+ "4604": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [],
+  "lost": [],
+  "changed": {}
+ },
+ "5404N": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "5404-N-04X2.500",
+   "5404-N-04X3.500",
+   "5404-N-04X4.000",
+   "5404-N-04X4.500",
+   "5404-N-04X5.000",
+   "5404-N-04X5.500",
+   "5404-N-04X6.000",
+   "5404-N-06X2.000",
+   "5404-N-06X2.500",
+   "5404-N-06X3.000",
+   "5404-N-06X3.500",
+   "5404-N-06X4.000",
+   "5404-N-06X5.000",
+   "5404-N-06X6.000",
+   "5404-N-08X3.500",
+   "5404-N-08X4.500",
+   "5404-N-08X5.000",
+   "5404-N-08X6.000"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6404": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6410": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6410-20-06-O",
+   "6410-20-08-O",
+   "6410-32-12-O",
+   "6410-32-16-O",
+   "6410-32-20-O",
+   "6410-32-24-O"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "2406": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2406-16-04"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6504": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6504-08-12",
+   "6504-10-08",
+   "6504-10-12",
+   "6504-12-10",
+   "6504-16-20",
+   "6504-32-32"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6505": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6506": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6506-06-04",
+   "6506-06-10",
+   "6506-12-08"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6402": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6565": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "1404": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "1405": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "1700": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [],
+  "lost": [],
+  "changed": {}
+ },
+ "0403": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "2403": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "2405": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "2404": {
+  "kind": "straight",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2404-L-32-32"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "0304": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "0306": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6400": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "6408HHP": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5406HHP": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "5406SHP": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "3474": {
+  "kind": "straight",
+  "status": "NEW",
+  "n": 9
+ },
+ "1700RC": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "1800": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "1824": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "1724": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS2403": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS2404": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6403": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6400": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6565": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6540": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6504": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6505": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6565C": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6540C": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6504C": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS6505C": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS0306": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS0318": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS0319": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "FS0319C": {
+  "kind": "straight",
+  "status": "same"
+ },
+ "2650": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2601": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2602": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2605": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2606": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2609": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2611": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2613": {
+  "kind": "tee",
+  "status": "NEW",
+  "n": 1
+ },
+ "5600": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "5602": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [],
+  "lost": [],
+  "changed": {}
+ },
+ "5604": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "5605": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "5652": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "5652-08-08-08-08-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "5603": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "5603-08-08-08-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "5601": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "5601-06-06-06-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "2501": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2501-LL-08-08-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "5500": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "5502": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "5504": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2503": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2504": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2505": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "2505-08-08-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "2701": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2702": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2703": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2704": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [],
+  "lost": [],
+  "changed": {}
+ },
+ "6500": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "6501": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "6503": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6503-04-04-FG",
+   "6503-12-12-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6502": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6502-16-12-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6600": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1501": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "1501-04-02-FG",
+   "1501-24-24-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "1503": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1504": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "1504-08-08-FG",
+   "1504-12-12-FG",
+   "1504-16-16-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "5501": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "5501-24-24-FG",
+   "5501-32-32-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "5503": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "5505": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "5505-08-08-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6810": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "6902": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1502": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "1502-04-04-FG",
+   "1502-08-08-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6602": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "6802": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6802-04-06-NWO-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6803": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "6804": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "6801": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "6807": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6807-16-16-NWO-FG",
+   "6807-20-20-NWO-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "6606": {
+  "kind": "tee",
+  "status": "CHANGED",
+  "macro_same": false,
+  "header_same": true,
+  "new": [
+   "6606-06-06-06-FG"
+  ],
+  "lost": [],
+  "changed": {}
+ },
+ "1601": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1602": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1603": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "4601": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "4603": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "4501": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "4503": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1703": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1704": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "1803": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "1804": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "2500": {
+  "kind": "tee",
+  "status": "NEW",
+  "n": 15
+ },
+ "2603": {
+  "kind": "tee",
+  "status": "NEW",
+  "n": 12
+ },
+ "FS2500": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2501": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2503": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2603": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2701": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2702": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2703": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2704": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6500": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6600": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6602": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6801": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6802": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6803": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2601": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6502": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6804": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2500N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2501N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2503N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2603N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS2701N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS2702N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS2703N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS2704N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6500C": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6500N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6500NC": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6600C": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6600N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6600NC": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6602C": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6602N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6602NC": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6801R": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6801N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6801NR": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6802R": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6802N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6802NR": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6803R": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6803N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6803NR": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS2601N": {
+  "kind": "tee",
+  "status": "same"
+ },
+ "FS6502C": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6502N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6502NC": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6804R": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6804N": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS6804NR": {
+  "kind": "tee",
+  "status": "no output",
+  "rc": 0
+ },
+ "FS2500N1": {
+  "kind": "tee",
+  "status": "NEW",
+  "n": 2
+ },
+ "6603": {
+  "kind": "tee",
+  "status": "NEW",
+  "n": 1
+ },
+ "4000": {
+  "kind": "ring",
+  "status": "same"
+ },
+ "0319": {
+  "kind": "ring",
+  "status": "NEW",
+  "n": 12
+ }
+}

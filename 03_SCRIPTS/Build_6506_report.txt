@@ -1,4 +1,4 @@
-Build_6506_MASTER  10/19/2026 11:54:59 PM
+Build_6506_MASTER  10/21/2026 12:31:27 AM
 OK    dim L17 = 1.9100 in (expect 1.9100)
 OK    dim BODYR = 0.6524 in (expect 0.6524)
 OK    dim SWB_BODYS = 0.8850 in (expect 0.8850)
@@ -29,12 +29,12 @@ OK    angle SWB_RELANG = 45.00 deg
 OK    dim SWB_RELR = 0.3925 in (expect 0.3925)
 OK    dim SWB_FLOOR = 0.6723 in (expect 0.6723)
 OK    dim SWB_NOSER = 0.3400 in (expect 0.3400)
-OK    dim SWB_NOSETIP = 0.4300 in (expect 0.4300)
+OK    dim SWB_NOSETIP = 0.4200 in (expect 0.4200)
 OK    dim SWB_SEATR = 0.2825 in (expect 0.2825)
 OK    angle SWB_SEATANG = 37.00 deg
 OK    DRIVE sketch fully defined
 OK    Revolve created
-OK    Revolved volume 1.7330 in^3 (expect 1.7330)
+OK    Revolved volume 1.7366 in^3 (expect 1.7366)
 OK    HEX: sketch plane selected (Right Plane)
 OK    dim HEXB = 1.1300 in (expect 1.1300)
 OK    HEX sketch fully defined
@@ -87,10 +87,10 @@ OK    BORE_A sketch closed and named (ProfileFeature)
       BORECUT_A attempt 0: CreateDefinition returned Nothing
       BORECUT_A attempt 0: FeatureCut4 scope off -> True
 OK    BORECUT_A cut removes material (attempt 0)
-OK    BORECUT_A dims: DEPTH=1.4800 DA=0.3900 
+OK    BORECUT_A dims: DEPTH=1.4900 DA=0.3900 
 OK    bore open on the axis at End A (x=0)
 OK    bore open on the axis at End B (x=1.9100)
-OK    bore reaches the swivel seat (no bore bottom at the nose-tip plane x=1.4800)
+OK    bore reaches the swivel seat (no bore bottom at the nose-tip plane x=1.4900)
 OK    bore open through the End A pocket bottom (x=0.9000)
 OK    THD_EndA: end face found at 0.0000
 OK    dim HELIXDIA = 0.7000 in (expect 0.7000)
@@ -141,10 +141,10 @@ OK    End B face present at x=1.9100
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Across flats / corners 1.1300 / 1.3048 (body hex 1.1300, nut hex 0.8800: expect between 1.1300 and 1.3048)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\straight\DesignTable_6506_SW2.xlsx
-OK    Configurations after table: 15 (expect 15)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6506_SW2.xlsx
+OK    Configurations after table: 18 (expect 18)
       config check 1: 6506-02-04
-OK    6506-02-04 L17@DRIVE = 1.2600 (table 1.2600)
+OK    6506-02-04 L17@DRIVE = 1.1900 (table 1.1900)
 OK    6506-02-04 BODYR@DRIVE = 0.3233 (table 0.3233)
 OK    6506-02-04 HEXB@HEX = 0.5600 (table 0.5600)
 OK    6506-02-04 SWB_BODYS@DRIVE = 0.6850 (table 0.6850)
@@ -155,11 +155,11 @@ OK    6506-02-04 SWB_SKIRTL@DRIVE = 0.1400 (table 0.1400)
 OK    6506-02-04 DEPTH@POCKETCUT_A = 0.4600 (table 0.4600)
 OK    6506-02-04 PROF_R@THDPROF_A = 0.1650 (table 0.1650)
 OK    6506-02-04 PROF_R@THDPROF_B = 0.1917 (table 0.1917)
-OK    6506-02-04 DEPTH@BORECUT_A = 0.9200 (table 0.9200)
+OK    6506-02-04 DEPTH@BORECUT_A = 0.8500 (table 0.8500)
 OK    6506-02-04 one solid body (found 1)
-      6506-02-04 box x -0.020..1.276  y -0.280..0.280
+      6506-02-04 box x -0.020..1.206  y -0.280..0.280
       config check 2: 6506-24-24
-OK    6506-24-24 L17@DRIVE = 3.0000 (table 3.0000)
+OK    6506-24-24 L17@DRIVE = 2.9800 (table 2.9800)
 OK    6506-24-24 BODYR@DRIVE = 1.3741 (table 1.3741)
 OK    6506-24-24 HEXB@HEX = 2.3800 (table 2.3800)
 OK    6506-24-24 SWB_BODYS@DRIVE = 1.4100 (table 1.4100)
@@ -170,29 +170,32 @@ OK    6506-24-24 SWB_SKIRTL@DRIVE = 0.2300 (table 0.2300)
 OK    6506-24-24 DEPTH@POCKETCUT_A = 1.1600 (table 1.1600)
 OK    6506-24-24 PROF_R@THDPROF_A = 0.8600 (table 0.8600)
 OK    6506-24-24 PROF_R@THDPROF_B = 0.8924 (table 0.8924)
-OK    6506-24-24 DEPTH@BORECUT_A = 2.2700 (table 2.2700)
+OK    6506-24-24 DEPTH@BORECUT_A = 2.2500 (table 2.2500)
 OK    6506-24-24 one solid body (found 1)
-      6506-24-24 box x -0.054..3.026  y -1.190..1.190
-      All-config sweep: rebuilding 14 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/14  6506-02-04  rebuilt in 1.2 s
-      sweep 2/14  6506-04-04  rebuilt in 1.6 s
-      sweep 3/14  6506-04-06  rebuilt in 1.7 s
-      sweep 4/14  6506-06-06  rebuilt in 2.0 s
-      sweep 5/14  6506-06-08  rebuilt in 1.8 s
-      sweep 6/14  6506-08-06  rebuilt in 1.8 s
-      sweep 7/14  6506-08-08  rebuilt in 1.3 s
-      sweep 8/14  6506-08-10  rebuilt in 1.7 s
-      sweep 9/14  6506-12-10  rebuilt in 2.2 s
-      sweep 10/14  6506-12-12  rebuilt in 2.1 s
-      sweep 11/14  6506-12-16  rebuilt in 2.0 s
-      sweep 12/14  6506-16-16  rebuilt in 2.1 s
-      sweep 13/14  6506-20-20  rebuilt in 2.5 s
-      sweep 14/14  6506-24-24  rebuilt in 1.5 s
-OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
+      6506-24-24 box x -0.054..3.006  y -1.190..1.190
+      All-config sweep: rebuilding 17 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/17  6506-02-04  rebuilt in 1.5 s
+      sweep 2/17  6506-04-04  rebuilt in 1.9 s
+      sweep 3/17  6506-04-06  rebuilt in 2.4 s
+      sweep 4/17  6506-06-04  rebuilt in 2.6 s
+      sweep 5/17  6506-06-06  rebuilt in 2.4 s
+      sweep 6/17  6506-06-08  rebuilt in 2.3 s
+      sweep 7/17  6506-06-10  rebuilt in 2.1 s
+      sweep 8/17  6506-08-06  rebuilt in 2.3 s
+      sweep 9/17  6506-08-08  rebuilt in 1.6 s
+      sweep 10/17  6506-08-10  rebuilt in 2.3 s
+      sweep 11/17  6506-12-08  rebuilt in 2.1 s
+      sweep 12/17  6506-12-10  rebuilt in 2.6 s
+      sweep 13/17  6506-12-12  rebuilt in 2.5 s
+      sweep 14/17  6506-12-16  rebuilt in 2.5 s
+      sweep 15/17  6506-16-16  rebuilt in 2.3 s
+      sweep 16/17  6506-20-20  rebuilt in 2.6 s
+      sweep 17/17  6506-24-24  rebuilt in 1.5 s
+OK    All-config sweep: 17 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6506-08-08 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 18 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6506\6506_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/19/2026 11:55:56 PM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\6506\6506_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6506\6506_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/21/2026 12:32:46 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\6506\6506_MASTER.SLDPRT

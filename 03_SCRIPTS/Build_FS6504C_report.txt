@@ -1,0 +1,217 @@
+Build_FS6504C_MASTER  10/20/2026 6:52:00 PM
+OK    dim LNUT = 2.7320 in (expect 2.7320)
+OK    dim BODYR = 0.5427 in (expect 0.5427)
+OK    dim THDMAJR_A = 0.4375 in (expect 0.4375)
+OK    dim JICA_RELIEFL = 0.1070 in (expect 0.1070)
+OK    angle RELIEFANG = 60.00 deg
+OK    dim JICA_THDZ = 0.3553 in (expect 0.3553)
+OK    dim JICA_CONER = 0.3860 in (expect 0.3860)
+OK    dim JICA_LANDL = 0.1114 in (expect 0.1114)
+OK    dim JICA_SEATL = 0.1546 in (expect 0.1546)
+      SEATB: the two lines share no endpoint - vertex candidates unavailable
+OK    angle SEATB = 37.00 deg
+OK    dim FSWB_BODYS = 1.4720 in (expect 1.4720)
+OK    dim FSWB_NECKR = 0.4085 in (expect 0.4085)
+OK    dim FSWB_NUTL = 0.9530 in (expect 0.9530)
+OK    dim FSWB_SKIRTR = 0.5160 in (expect 0.5160)
+OK    dim FSWB_SKIRTL = 0.1570 in (expect 0.1570)
+OK    dim FSWB_SKIRTFR = 0.5550 in (expect 0.5550)
+OK    dim FSWB_NUTHEXL = 0.5480 in (expect 0.5480)
+OK    dim FSWB_NUTR = 0.6524 in (expect 0.6524)
+OK    dim FSWB_CBR = 0.5100 in (expect 0.5100)
+OK    dim FSWB_CBD = 0.0500 in (expect 0.0500)
+      FSWB_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      FSWB_CSANG angle try 0 at (2.251, -0.079): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 1 at (2.524, 0.079): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 2 at (2.115, -0.157): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 3 at (2.660, 0.157): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 4 at (2.668, 0.590): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 5 at (2.668, -0.590): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 6 at (-2.668, 0.590): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 7 at (-2.668, -0.590): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 8 at (2.786, 0.079): 120.0 deg (want 60.0)
+      FSWB_CSANG angle try 9 at (2.550, 0.079): 120.0 deg (want 60.0)
+OK    angle FSWB_CSANG held by its supplement FSWB_CSANG_SUPPL = 120.00 deg (same line; the segments do not meet)
+OK    dim FSWB_MINR = 0.4613 in (expect 0.4613)
+OK    dim FSWB_THDL = 0.4212 in (expect 0.4212)
+      FSWB_RELANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle FSWB_RELANG = 44.98 deg
+OK    dim FSWB_RELR = 0.5100 in (expect 0.5100)
+OK    dim FSWB_STEMR = 0.4615 in (expect 0.4615)
+OK    dim FSWB_HEADL = 0.2360 in (expect 0.2360)
+OK    dim FSWB_SEAL = 0.5320 in (expect 0.5320)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 1.8239 in^3 (expect 1.8239)
+OK    HEX: sketch plane selected (Right Plane)
+OK    dim HEXB = 0.9400 in (expect 0.9400)
+OK    HEX sketch fully defined
+      HEXCUT attempt 0: CreateDefinition returned Nothing
+      HEXCUT attempt 0: FeatureCut4 scope off -> False
+      HEXCUT attempt 0: FeatureCut4 scope on -> False
+      HEXCUT attempt 1: CreateDefinition returned Nothing
+      HEXCUT attempt 1: FeatureCut4 scope off -> True
+      HEXCUT attempt 1: removed 0.08036 in^3, new faces span x=0.7580..1.2600 (zone 0.0000..1.2600)
+OK    HEXCUT created in the right zone and removed material (attempt 1)
+OK    HEXCUT removed only the corners (4.4% of volume)
+OK    HEXCUT dims: DEPTH=1.2600 HEXB=0.9400 
+OK    NUTHEX: sketch plane selected (End B face)
+OK    dim NUTHEX = 1.1300 in (expect 1.1300)
+OK    NUTHEX sketch fully defined
+      NUTCUT attempt 0: CreateDefinition returned Nothing
+      NUTCUT attempt 0: FeatureCut4 scope off -> True
+      NUTCUT attempt 0: removed 0.12677 in^3, new faces span x=2.1840..2.7320 (zone 2.1840..2.7320)
+OK    NUTCUT created in the right zone and removed material (attempt 0)
+OK    NUTCUT removed only the corners (7.3% of volume)
+OK    NUTCUT dims: DEPTH=0.5480 NUTHEX=1.1300 
+OK    NUTHEX@NUTHEX reachable
+OK    DEPTH@NUTCUT reachable
+OK    HEXB@HEX reachable
+OK    DEPTH@HEXCUT reachable
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.4500 in (expect 0.4500)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=1.0090 DA=0.4500 
+OK    select end face for BORE_B at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.4500 in (expect 0.4500)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> False
+      BORECUT_B attempt 0: FeatureCut4 scope on -> False
+      BORECUT_B attempt 1: CreateDefinition returned Nothing
+      BORECUT_B attempt 1: FeatureCut4 scope off -> False
+      BORECUT_B attempt 1: FeatureCut4 scope on -> False
+      BORECUT_B attempt 2: CreateDefinition returned Nothing
+      BORECUT_B attempt 2: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 2)
+OK    BORECUT_B dims: DEPTH=1.2110 START=1.0090 DB=0.4500 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=2.7320)
+OK    bore reaches the swivel seal face (no face across the axis at the seal-face plane x=2.2000)
+OK    bore step open (no face across the axis at x=1.0090)
+      THD_EndA: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndA: anchor edge found at x=0.6213 r=0.4375
+      THD_EndA: Edge ok
+      THD_EndA: Type=Inch Die ok
+      THD_EndA: Size=0.8750-14 ok
+      THD_EndA: ThreadMethod=Cut ok
+      THD_EndA: EndCondition=Blind ok
+      THD_EndA: BlindDepth=0.6213 ok
+      THD_EndA: DiameterOverride ok
+      THD_EndA: Diameter ok
+      THD_EndA: PitchOverride ok
+      THD_EndA: Pitch ok
+      THD_EndA: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.8750-14 Dia=0.8750 Pitch=0.0714
+      THD_EndA: CreateFeature -> True
+OK    THD_EndA thread feature created
+      THD_EndA: thread centre x = 0.4318 in, anchor 0.6213, wanted -X
+OK    THD_EndA runs along the thread flat (away from the hex)
+OK    THD_EndA rebuilds without error (code 0)
+      THD_EndA: dim full name D8@THD_EndA@Part70.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part70.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part70.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part70.Part
+      THD_EndA: dim full name D1@THD_EndA@Part70.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part70.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part70.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part70.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part70.Part
+OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0714 THDDIA=0.8750 DEPTH=0.6213 D1=0.0000 THDPITCH=0.0714 Profile_Land=0.0179 Profile_Angle=41.2283 Profile_Height=0.0387 
+      THD_EndA: profile sketch renamed to THD_EndA_PROF
+OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
+OK    THD_EndA profile pitch reachable as THDPITCH@THD_EndA_PROF
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+OK    THD_EndB: end face found at 2.7320
+OK    dim HELIXDIA = 0.9227 in (expect 0.9227)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (2.7320, 0.0000, -0.4613)
+      THD_EndB: helix start = (2.7320, 0.0000, -0.4613)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (2.7320,0.4613) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 2.7320 (want 2.7320)
+OK    dim PROF_AX = 2.7320 in (expect 2.7320)
+      PROF_R: try 0 value 0.4613 (want 0.4613)
+OK    dim PROF_R = 0.4613 in (expect 0.4613)
+      APEXR: try 0 value 0.5000 (want 0.5000)
+OK    dim APEXR = 0.5000 in (expect 0.5000)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.01490 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 2.7320 (nominal 2.7320; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=2.7320
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Across flats / corners 1.1300 / 1.3048 (body hex 0.9400, nut hex 1.1300: expect between 1.1300 and 1.3048)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_gen_20261020\out\DesignTable_FS6504C_SW2.xlsx
+OK    Configurations after table: 5 (expect 5)
+      config check 1: FS6504-12-12
+OK    FS6504-12-12 LNUT@DRIVE = 3.0710 (table 3.0710)
+OK    FS6504-12-12 BODYR@DRIVE = 0.6524 (table 0.6524)
+OK    FS6504-12-12 HEXB@HEX = 1.1300 (table 1.1300)
+OK    FS6504-12-12 THDMAJR_A@DRIVE = 0.5313 (table 0.5313)
+OK    FS6504-12-12 JICA_RELIEFL@DRIVE = 0.1250 (table 0.1250)
+OK    FS6504-12-12 JICA_THDZ@DRIVE = 0.3895 (table 0.3895)
+OK    FS6504-12-12 JICA_CONER@DRIVE = 0.4715 (table 0.4715)
+OK    FS6504-12-12 JICA_LANDL@DRIVE = 0.1299 (table 0.1299)
+OK    FS6504-12-12 THDPITCH@THD_EndA = 0.0833 (table 0.0833)
+OK    FS6504-12-12 Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
+OK    FS6504-12-12 THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
+OK    FS6504-12-12 PROF_R@THDPROF_B = 0.5486 (table 0.5486)
+OK    FS6504-12-12 DEPTH@BORECUT_A = 1.1670 (table 1.1670)
+OK    FS6504-12-12 DEPTH@BORECUT_B = 1.3530 (table 1.3530)
+OK    FS6504-12-12 one solid body (found 1)
+      FS6504-12-12 box x 0.000..3.071  y -0.690..0.690
+      config check 2: FS6504-20-20
+OK    FS6504-20-20 LNUT@DRIVE = 3.3830 (table 3.3830)
+OK    FS6504-20-20 BODYR@DRIVE = 0.9757 (table 0.9757)
+OK    FS6504-20-20 HEXB@HEX = 1.6900 (table 1.6900)
+OK    FS6504-20-20 THDMAJR_A@DRIVE = 0.8125 (table 0.8125)
+OK    FS6504-20-20 JICA_RELIEFL@DRIVE = 0.1250 (table 0.1250)
+OK    FS6504-20-20 JICA_THDZ@DRIVE = 0.4316 (table 0.4316)
+OK    FS6504-20-20 JICA_CONER@DRIVE = 0.7530 (table 0.7530)
+OK    FS6504-20-20 JICA_LANDL@DRIVE = 0.1288 (table 0.1288)
+OK    FS6504-20-20 THDPITCH@THD_EndA = 0.0833 (table 0.0833)
+OK    FS6504-20-20 Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
+OK    FS6504-20-20 THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
+OK    FS6504-20-20 PROF_R@THDPROF_B = 0.7986 (table 0.7986)
+OK    FS6504-20-20 DEPTH@BORECUT_A = 1.3040 (table 1.3040)
+OK    FS6504-20-20 DEPTH@BORECUT_B = 1.5160 (table 1.5160)
+OK    FS6504-20-20 one solid body (found 1)
+      FS6504-20-20 box x 0.000..3.383  y -0.940..0.940
+      All-config sweep: rebuilding 4 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/4  FS6504-10-10  rebuilt in 0.6 s
+      sweep 2/4  FS6504-12-12  rebuilt in 1.0 s
+      sweep 3/4  FS6504-16-16  rebuilt in 2.8 s
+      sweep 4/4  FS6504-20-20  rebuilt in 1.1 s
+OK    All-config sweep: 4 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration FS6504-10-10 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS6504C\FS6504C_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 6:52:37 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS6504C\FS6504C_MASTER.SLDPRT

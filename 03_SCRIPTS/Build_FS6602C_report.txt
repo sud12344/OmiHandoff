@@ -1,0 +1,254 @@
+Build_FS6602C_MASTER  10/20/2026 6:50:51 PM
+OK    dim M1 = 1.7600 in (expect 1.7600)
+OK    dim BODYR = 0.8125 in (expect 0.8125)
+OK    dim THDMAJR_B1 = 0.8438 in (expect 0.8438)
+OK    dim FSM1_THDL = 0.6278 in (expect 0.6278)
+      FSMCHANG1: the two lines share no endpoint - vertex candidates unavailable
+OK    angle FSMCHANG1 = 45.00 deg
+OK    dim FSM1_FACER = 0.7825 in (expect 0.7825)
+OK    dim FSM1_GRVOR = 0.6585 in (expect 0.6585)
+OK    dim FSM1_GRVD = 0.0520 in (expect 0.0520)
+OK    dim FSM1_GRVIR = 0.5565 in (expect 0.5565)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim M2 = 2.2900 in (expect 2.2900)
+OK    dim BODYR = 0.8125 in (expect 0.8125)
+OK    dim FSW2_BODYS = 1.2000 in (expect 1.2000)
+OK    dim FSW2_NECKR = 0.7005 in (expect 0.7005)
+OK    dim FSW2_NUTL = 1.0950 in (expect 1.0950)
+OK    dim FSW2_SKIRTR = 0.8655 in (expect 0.8655)
+OK    dim FSW2_SKIRTL = 0.2000 in (expect 0.2000)
+OK    dim FSW2_SKIRTFR = 0.9300 in (expect 0.9300)
+OK    dim FSW2_NUTHEXL = 0.6500 in (expect 0.6500)
+OK    dim FSW2_NUTR = 1.0825 in (expect 1.0825)
+OK    dim FSW2_SEAL = 0.5830 in (expect 0.5830)
+OK    dim FSW2_CBR = 0.8540 in (expect 0.8540)
+OK    dim FSW2_CBD = 0.0500 in (expect 0.0500)
+      FSW2_CSANG: the two lines share no endpoint - vertex candidates unavailable
+      FSW2_CSANG angle try 0 at (-2.194, -0.079): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 1 at (-2.466, 0.079): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 2 at (-2.057, -0.157): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 3 at (-2.603, 0.157): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 4 at (-2.807, 0.934): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 5 at (-2.807, -0.934): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 6 at (2.807, 0.934): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 7 at (2.807, -0.934): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 8 at (-2.689, 0.079): 120.0 deg (want 60.0)
+      FSW2_CSANG angle try 9 at (-2.925, 0.079): 120.0 deg (want 60.0)
+OK    angle FSW2_CSANG held by its supplement FSW2_CSANG_SUPPL = 120.00 deg (same line; the segments do not meet)
+OK    dim FSW2_MINR = 0.7986 in (expect 0.7986)
+OK    dim FSW2_THDL = 0.4556 in (expect 0.4556)
+      FSW2_RELANG: the two lines share no endpoint - vertex candidates unavailable
+      FSW2_RELANG angle try 0 at (-2.989, 0.060): 90.0 deg (want 45.0)
+      FSW2_RELANG angle try 1 at (-3.280, -0.060): 90.0 deg (want 45.0)
+      FSW2_RELANG angle try 2 at (-2.844, 0.120): 90.0 deg (want 45.0)
+      FSW2_RELANG angle try 3 at (-3.426, -0.120): 90.0 deg (want 45.0)
+OK    angle FSW2_RELANG = 44.98 deg
+OK    dim FSW2_RELR = 0.8600 in (expect 0.8600)
+OK    dim FSW2_STEMR = 0.7985 in (expect 0.7985)
+OK    dim FSW2_HEADL = 0.2760 in (expect 0.2760)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim M3 = 1.7600 in (expect 1.7600)
+OK    dim BODYR = 0.8125 in (expect 0.8125)
+OK    dim THDMAJR_B3 = 0.8438 in (expect 0.8438)
+OK    dim FSM3_THDL = 0.6278 in (expect 0.6278)
+      FSMCHANG3: the two lines share no endpoint - vertex candidates unavailable
+OK    angle FSMCHANG3 = 45.00 deg
+OK    dim FSM3_FACER = 0.7825 in (expect 0.7825)
+OK    dim FSM3_GRVOR = 0.6585 in (expect 0.6585)
+OK    dim FSM3_GRVD = 0.0520 in (expect 0.0520)
+OK    dim FSM3_GRVIR = 0.5565 in (expect 0.5565)
+OK    LEG3 sketch fully defined
+OK    LEG3 revolve created
+OK    dim HEXAF = 1.6250 in (expect 1.6250)
+      RUN: sgVERTICAL -> vertex |z| max 0.8125 (flats want 0.8125)
+OK    RUN hex flats normal to Z
+OK    RUN hex sketch fully defined
+      RUN: FeatureExtrusion3 two-direction (1.071 / 1.090) -> True
+      RUN: new faces centred at -0.009 in (want -0.009)
+OK    RUN extruded both ways
+OK    RUN dims named (HEXL1 HEXL2 HEXAF )
+OK    dim HEXAF = 1.6250 in (expect 1.6250)
+      HEX3: sgHORIZONTAL -> vertex |z| max 0.8125 (flats want 0.8125)
+OK    HEX3 hex flats normal to Z
+OK    HEX3 hex sketch fully defined
+      HEX3: FeatureExtrusion3 dir=0 -> True
+      HEX3: new faces centred at 0.301 in on axis 1 (want sign 1)
+OK    HEX3 extruded the right way
+OK    HEX3 dims named (HEXL HEXAF )
+OK    NUTHEX2: nut face found at -2.8730 on axis 0
+OK    dim NUTHEX2 = 1.8750 in (expect 1.8750)
+      NUTHEX2: sgHORIZONTAL -> vertex |z| max 1.0825 (flats want 0.9375)
+      NUTHEX2: sketch removed, retrying with the other relation
+OK    NUTHEX2: nut face found at -2.8730 on axis 0
+OK    dim NUTHEX2 = 1.8750 in (expect 1.8750)
+      NUTHEX2: sgVERTICAL -> vertex |z| max 0.9375 (flats want 0.9375)
+OK    NUTHEX2 nut flats normal to Z
+OK    NUTHEX2 sketch fully defined
+      NUTCUT2 attempt 0: CreateDefinition returned Nothing
+      NUTCUT2 attempt 0: FeatureCut4 scope off -> True
+OK    NUTCUT2 created and removed material (attempt 0)
+OK    NUTCUT2 removed only the nut corners (3.4% of volume)
+OK    NUTCUT2 dims: DEPTH=0.6500 NUTHEX2=1.8750 
+OK    NUTHEX2@NUTHEX2 reachable
+OK    DEPTH@NUTCUT2 reachable
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=1.7600
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 1.0200 in (expect 1.0200)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=1.7600 D1=1.0200 
+OK    select end face for BORE2 at x=-2.8730
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 1.0200 in (expect 1.0200)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=2.8730 D2=1.0200 
+OK    select end face for BORE3 at x=1.7600
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE3 sketch opened (active sketch exists)
+OK    BORE3 circle created
+OK    dim D3 = 1.0200 in (expect 1.0200)
+OK    BORE3 sketch closed and named (ProfileFeature)
+      BORECUT3 attempt 0: CreateDefinition returned Nothing
+      BORECUT3 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT3 cut removes material (attempt 0)
+OK    BORECUT3 dims: DEPTH=1.7600 D3=1.0200 
+OK    leg 1 bore open on the axis at its face (X=+1.7600)
+OK    leg 2 bore open on the axis at its face (X=-2.8730)
+OK    leg 2 bore runs through the swivel seal face (no face across the axis at the seal-face plane X=-2.2900)
+OK    leg 3 bore open on the axis at its face (Y=+1.7600)
+      THD_End1: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End1: anchor edge found at x=1.0710 r=0.8438
+      THD_End1: Edge ok
+      THD_End1: Type=Inch Die ok
+      THD_End1: Size=1.6875-12 ok
+      THD_End1: ThreadMethod=Cut ok
+      THD_End1: EndCondition=Blind ok
+      THD_End1: BlindDepth=0.6278 ok
+      THD_End1: DiameterOverride ok
+      THD_End1: Diameter ok
+      THD_End1: PitchOverride ok
+      THD_End1: Pitch ok
+      THD_End1: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=1.6875-12 Dia=1.6875 Pitch=0.0833
+      THD_End1: CreateFeature -> True
+OK    THD_End1 thread feature created
+      THD_End1: thread centre x = 1.3937 in, anchor 1.0710, wanted +X
+OK    THD_End1 runs along the thread flat (away from the hex)
+OK    THD_End1 rebuilds without error (code 0)
+OK    THD_End1 dims: D8=0.0000 THDPITCH=0.0833 THDDIA=1.6875 DEPTH=0.6278 D1=0.0000 Pitch=0.0125 Profile_Land=0.0031 Profile_Angle=41.2283 Profile_Height=0.0068 
+      THD_End1: profile sketch renamed to THD_End1_PROF
+OK    THD_End1 profile dims reachable as Profile_Height@THD_End1_PROF
+      THD_End1: profile pitch dimension renamed Pitch -> THDPITCH
+OK    THD_End1 profile pitch reachable as THDPITCH@THD_End1_PROF
+      THD_End1: left live until the final suppress step
+OK    THD_End2: end face found at -2.8730
+OK    dim HELIXDIA = 1.5973 in (expect 1.5973)
+OK    THD_End2 helix sketch made (ProfileFeature)
+      THD_End2: InsertHelix ok
+OK    THD_End2 helix created
+OK    THD_End2 helix dims named (D7 D5 PITCH HEIGHT )
+      THD_End2: helix start from the curve (-2.8730, 0.0000, 0.7986)
+      THD_End2: helix start = (-2.8730, 0.0000, 0.7986)
+      THD_End2: profile on Top Plane
+      THD_End2: sketch start (-2.8730,-0.7986) axialIsX=True apex dir -1
+      PROF_AX: try 0 value 2.8730 (want 2.8730)
+OK    dim PROF_AX = 2.8730 in (expect 2.8730)
+      PROF_R: try 0 value 0.7986 (want 0.7986)
+OK    dim PROF_R = 0.7986 in (expect 0.7986)
+      APEXR: try 0 value 0.8437 (want 0.8437)
+OK    dim APEXR = 0.8437 in (expect 0.8437)
+OK    THD_End2 60 deg tooth angle placed
+OK    THD_End2 profile sketch fully defined
+      THD_End2: sweep CreateFeature -> True
+OK    THD_End2 swept cut created
+OK    THD_End2 sweep removed material: 0.03434 in^3
+OK    THD_End2 suppressed
+      THD_End3: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End3: anchor edge found at x=1.0710 r=0.8438
+      THD_End3: Edge ok
+      THD_End3: Type=Inch Die ok
+      THD_End3: Size=1.6875-12 ok
+      THD_End3: ThreadMethod=Cut ok
+      THD_End3: EndCondition=Blind ok
+      THD_End3: BlindDepth=0.6278 ok
+      THD_End3: DiameterOverride ok
+      THD_End3: Diameter ok
+      THD_End3: PitchOverride ok
+      THD_End3: Pitch ok
+      THD_End3: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=1.6875-12 Dia=1.6875 Pitch=0.0833
+      THD_End3: CreateFeature -> True
+OK    THD_End3 thread feature created
+      THD_End3: thread centre x = 1.3941 in, anchor 1.0710, wanted +X
+OK    THD_End3 runs along the thread flat (away from the hex)
+OK    THD_End3 rebuilds without error (code 0)
+OK    THD_End3 dims: D8=0.0000 THDPITCH=0.0833 THDDIA=1.6875 DEPTH=0.6278 D1=0.0000 Pitch=0.0125 Profile_Land=0.0031 Profile_Angle=41.2283 Profile_Height=0.0068 
+      THD_End3: profile sketch renamed to THD_End3_PROF
+OK    THD_End3 profile dims reachable as Profile_Height@THD_End3_PROF
+      THD_End3: profile pitch dimension renamed Pitch -> THDPITCH
+OK    THD_End3 profile pitch reachable as THDPITCH@THD_End3_PROF
+      THD_End3: left live until the final suppress step
+OK    X extent -2.873 .. 1.760 (expect -2.873 .. 1.760; threads may add a little)
+OK    Y extent -1.083 .. 1.760 (expect -1.083 .. 1.760)
+      Bounding box z -0.938 .. 0.938 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.9375 .. 0.9375 (expect -0.9375 .. 0.9375: swivel nut flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_gen_20261020\out\tee\DesignTable_FS6602C_SW2.xlsx
+OK    Configurations after table: 3 (expect 3)
+      config check 1: FS6602-10-10-10-FG
+OK    FS6602-10-10-10-FG M1@LEG1 = 1.3100 (table 1.3100)
+OK    FS6602-10-10-10-FG BODYR@LEG1 = 0.5300 (table 0.5300)
+OK    FS6602-10-10-10-FG THDMAJR_B1@LEG1 = 0.5000 (table 0.5000)
+OK    FS6602-10-10-10-FG FSM1_THDL@LEG1 = 0.5550 (table 0.5550)
+OK    FS6602-10-10-10-FG FSMCHANG1@LEG1 = 45.0000 (table 45.0000)
+OK    FS6602-10-10-10-FG FSM1_FACER@LEG1 = 0.4450 (table 0.4450)
+OK    FS6602-10-10-10-FG DEPTH@BORECUT1 = 1.3100 (table 1.3100)
+OK    FS6602-10-10-10-FG DEPTH@BORECUT2 = 2.1520 (table 2.1520)
+OK    FS6602-10-10-10-FG DEPTH@BORECUT3 = 1.3100 (table 1.3100)
+OK    FS6602-10-10-10-FG THDPITCH@THD_End1 = 0.0714 (table 0.0714)
+OK    FS6602-10-10-10-FG Profile_Height@THD_End1_PROF = 0.0387 (table 0.0387)
+OK    FS6602-10-10-10-FG THDPITCH@THD_End1_PROF = 0.0714 (table 0.0714)
+OK    FS6602-10-10-10-FG PROF_R@THDPROF_2 = 0.4613 (table 0.4613)
+OK    FS6602-10-10-10-FG THDPITCH@THD_End3 = 0.0714 (table 0.0714)
+OK    FS6602-10-10-10-FG Profile_Height@THD_End3_PROF = 0.0387 (table 0.0387)
+OK    FS6602-10-10-10-FG THDPITCH@THD_End3_PROF = 0.0714 (table 0.0714)
+OK    FS6602-10-10-10-FG HEXAF@RUN = 1.0600 (table 1.0600)
+OK    FS6602-10-10-10-FG HEXL1@RUN_BODY = 0.7000 (table 0.7000)
+OK    FS6602-10-10-10-FG HEXL2@RUN_BODY = 0.6400 (table 0.6400)
+OK    FS6602-10-10-10-FG HEXAF@HEX3 = 1.0600 (table 1.0600)
+OK    FS6602-10-10-10-FG HEXL@HEX3_BODY = 0.7000 (table 0.7000)
+OK    FS6602-10-10-10-FG one solid body (found 1)
+      FS6602-10-10-10-FG box x -2.152..1.321  y -0.652..1.322
+      All-config sweep: rebuilding 2 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/2  FS6602-10-10-10-FG  rebuilt in 1.2 s
+      sweep 2/2  FS6602-20-20-20-FG  rebuilt in 1.4 s
+OK    All-config sweep: 2 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration FS6602-20-20-20-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+      THD_End3: SetSuppression2(all configs) -> True; per-config check: 3 configs, 0 still live
+OK    Threads suppressed in all configurations before save (3 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS6602C\FS6602C_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS6602C\FS6602C_MASTER.SLDPRT

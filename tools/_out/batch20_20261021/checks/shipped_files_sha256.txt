@@ -1,0 +1,6 @@
+bc9f1235230478da542d89c1a15dd9d831d14f547bbfff5b1e9194b54ad07fc5  11_MASTERS/5404N_MASTER.SLDPRT   <- copy tools\_out\batch20_20261021\dryrun\5404N\5404N_MASTER.SLDPRT
+69e70c41f639237666ddfdcd1ade123463c15770738c9060aacbf98e5d5b2b44  03_SCRIPTS/Build_5404N_report.txt   <- copy tools\_out\batch20_20261021\dryrun\5404N\Build_5404N_report.txt
+fc4813bdee4e999a23ebcffe5600786ef905107a6ad05febae67cfd191796eaa  03_SCRIPTS/Build_5404N_MASTER.bas   <- lf tools\_out\batch20_20261021\regen_all\straight\Build_5404N_MASTER.bas
+fc67861d23c6021622d551e3951d2516fcffda928b917b5998609200eeef3d7b  04_DESIGN_TABLES/DesignTable_5404N_SW2.xlsx   <- copy tools\_out\batch20_20261021\regen_all\straight\DesignTable_5404N_SW2.xlsx
+b5c0fce777259a15c3943836ffcc20cf6417bc92b55cd0d05dd23b1f16f9f22d  04_DESIGN_TABLES/DesignTable_5404N.xlsx   <- copy tools\_out\batch20_20261021\root20\04_DESIGN_TABLES\DesignTable_5404N.xlsx
+4a49e61abd139d6ea4ca863502cc31904cf03171eb062b6063934b1ac18e33a3  tools/generators/gen_straight2.py   <- copy tools\_out\batch20_20261021\tools_b20\generators\gen_straight2.py

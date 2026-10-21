@@ -1,0 +1,304 @@
+ship 31 roots; 140 old files to supersede (incl. 8 retired HX files), 163 new files; GO=False
+  old 11_MASTERS/1501_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_1501_report.txt
+  old 03_SCRIPTS/Build_1501_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_1501_SW2.xlsx
+  old 11_MASTERS/1502_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_1502_report.txt
+  old 03_SCRIPTS/Build_1502_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_1502_SW2.xlsx
+  old 11_MASTERS/1504_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_1504_report.txt
+  old 03_SCRIPTS/Build_1504_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_1504_SW2.xlsx
+  old 11_MASTERS/2404_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2404_report.txt
+  old 03_SCRIPTS/Build_2404_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2404_SW2.xlsx
+  old 11_MASTERS/2406_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2406_report.txt
+  old 03_SCRIPTS/Build_2406_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2406_SW2.xlsx
+  old 11_MASTERS/2408_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2408_report.txt
+  old 03_SCRIPTS/Build_2408_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2408_SW2.xlsx
+  old 11_MASTERS/2501_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2501_report.txt
+  old 03_SCRIPTS/Build_2501_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2501_SW2.xlsx
+  old 11_MASTERS/2505_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2505_report.txt
+  old 03_SCRIPTS/Build_2505_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2505_SW2.xlsx
+  old 11_MASTERS/2705_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2705_report.txt
+  old 03_SCRIPTS/Build_2705_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2705_SW2.xlsx
+  old 11_MASTERS/2706_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2706_report.txt
+  old 03_SCRIPTS/Build_2706_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_2706_SW2.xlsx
+  old 11_MASTERS/5501_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_5501_report.txt
+  old 03_SCRIPTS/Build_5501_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_5501_SW2.xlsx
+  old 11_MASTERS/5505_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_5505_report.txt
+  old 03_SCRIPTS/Build_5505_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_5505_SW2.xlsx
+  old 11_MASTERS/5601_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_5601_report.txt
+  old 03_SCRIPTS/Build_5601_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_5601_SW2.xlsx
+  old 11_MASTERS/5603_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_5603_report.txt
+  old 03_SCRIPTS/Build_5603_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_5603_SW2.xlsx
+  old 11_MASTERS/5652_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_5652_report.txt
+  old 03_SCRIPTS/Build_5652_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_5652_SW2.xlsx
+  old 11_MASTERS/6405_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6405_report.txt
+  old 03_SCRIPTS/Build_6405_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6405_SW2.xlsx
+  old 11_MASTERS/6410_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6410_report.txt
+  old 03_SCRIPTS/Build_6410_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6410_SW2.xlsx
+  old 11_MASTERS/6502_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6502_report.txt
+  old 03_SCRIPTS/Build_6502_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6502_SW2.xlsx
+  old 11_MASTERS/6503_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6503_report.txt
+  old 03_SCRIPTS/Build_6503_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6503_SW2.xlsx
+  old 11_MASTERS/6504_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6504_report.txt
+  old 03_SCRIPTS/Build_6504_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6504_SW2.xlsx
+  old 11_MASTERS/6506_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6506_report.txt
+  old 03_SCRIPTS/Build_6506_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6506_SW2.xlsx
+  old 11_MASTERS/6606_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6606_report.txt
+  old 03_SCRIPTS/Build_6606_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6606_SW2.xlsx
+  old 11_MASTERS/6802_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6802_report.txt
+  old 03_SCRIPTS/Build_6802_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6802_SW2.xlsx
+  old 11_MASTERS/6807_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_6807_report.txt
+  old 03_SCRIPTS/Build_6807_MASTER.bas
+  old 04_DESIGN_TABLES/DesignTable_6807_SW2.xlsx
+  old 04_DESIGN_TABLES/DesignTable_0319.xlsx
+  old 04_DESIGN_TABLES/DesignTable_1501.xlsx
+  old 04_DESIGN_TABLES/DesignTable_1502.xlsx
+  old 04_DESIGN_TABLES/DesignTable_1504.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2404L.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2404_FINAL.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2406.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2408.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2500.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2501LL.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2502.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2505.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2603.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2613.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2705.xlsx
+  old 04_DESIGN_TABLES/DesignTable_2706.xlsx
+  old 04_DESIGN_TABLES/DesignTable_3474.xlsx
+  old 04_DESIGN_TABLES/DesignTable_5501.xlsx
+  old 04_DESIGN_TABLES/DesignTable_5505.xlsx
+  old 04_DESIGN_TABLES/DesignTable_5601.xlsx
+  old 04_DESIGN_TABLES/DesignTable_5603.xlsx
+  old 04_DESIGN_TABLES/DesignTable_5652.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6405.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6410.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6420.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6502.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6503.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6504.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6506.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6603.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6606.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6802.xlsx
+  old 04_DESIGN_TABLES/DesignTable_6807.xlsx
+  old tools/generators/gen_ring.py
+  old tools/generators/gen_straight2.py
+  old tools/generators/gen_tee.py
+  old 11_MASTERS/2500HX_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2500HX_MASTER.bas
+  old 03_SCRIPTS/Build_2500HX_report.txt
+  old 04_DESIGN_TABLES/DesignTable_2500HX_SW2.xlsx
+  old 11_MASTERS/2603HX_MASTER.SLDPRT
+  old 03_SCRIPTS/Build_2603HX_MASTER.bas
+  old 03_SCRIPTS/Build_2603HX_report.txt
+  old 04_DESIGN_TABLES/DesignTable_2603HX_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\0319\0319_MASTER.SLDPRT -> 11_MASTERS/0319_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\0319\Build_0319_report.txt -> 03_SCRIPTS/Build_0319_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\ring\Build_0319_MASTER.bas -> 03_SCRIPTS/Build_0319_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\ring\DesignTable_0319_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_0319_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\1501\1501_MASTER.SLDPRT -> 11_MASTERS/1501_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\1501\Build_1501_report.txt -> 03_SCRIPTS/Build_1501_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_1501_MASTER.bas -> 03_SCRIPTS/Build_1501_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_1501_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_1501_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\1502\1502_MASTER.SLDPRT -> 11_MASTERS/1502_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\1502\Build_1502_report.txt -> 03_SCRIPTS/Build_1502_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_1502_MASTER.bas -> 03_SCRIPTS/Build_1502_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_1502_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_1502_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\1504\1504_MASTER.SLDPRT -> 11_MASTERS/1504_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\1504\Build_1504_report.txt -> 03_SCRIPTS/Build_1504_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_1504_MASTER.bas -> 03_SCRIPTS/Build_1504_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_1504_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_1504_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2404\2404_MASTER.SLDPRT -> 11_MASTERS/2404_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2404\Build_2404_report.txt -> 03_SCRIPTS/Build_2404_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_2404_MASTER.bas -> 03_SCRIPTS/Build_2404_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2404_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2404_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2406\2406_MASTER.SLDPRT -> 11_MASTERS/2406_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2406\Build_2406_report.txt -> 03_SCRIPTS/Build_2406_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_2406_MASTER.bas -> 03_SCRIPTS/Build_2406_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2406_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2406_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2408\2408_MASTER.SLDPRT -> 11_MASTERS/2408_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2408\Build_2408_report.txt -> 03_SCRIPTS/Build_2408_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_2408_MASTER.bas -> 03_SCRIPTS/Build_2408_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2408_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2408_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2500\2500_MASTER.SLDPRT -> 11_MASTERS/2500_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2500\Build_2500_report.txt -> 03_SCRIPTS/Build_2500_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_2500_MASTER.bas -> 03_SCRIPTS/Build_2500_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_2500_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2500_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2501\2501_MASTER.SLDPRT -> 11_MASTERS/2501_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2501\Build_2501_report.txt -> 03_SCRIPTS/Build_2501_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_2501_MASTER.bas -> 03_SCRIPTS/Build_2501_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_2501_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2501_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2505\2505_MASTER.SLDPRT -> 11_MASTERS/2505_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2505\Build_2505_report.txt -> 03_SCRIPTS/Build_2505_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_2505_MASTER.bas -> 03_SCRIPTS/Build_2505_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_2505_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2505_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2603\2603_MASTER.SLDPRT -> 11_MASTERS/2603_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2603\Build_2603_report.txt -> 03_SCRIPTS/Build_2603_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_2603_MASTER.bas -> 03_SCRIPTS/Build_2603_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_2603_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2603_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2613\2613_MASTER.SLDPRT -> 11_MASTERS/2613_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2613\Build_2613_report.txt -> 03_SCRIPTS/Build_2613_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_2613_MASTER.bas -> 03_SCRIPTS/Build_2613_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_2613_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2613_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2705\2705_MASTER.SLDPRT -> 11_MASTERS/2705_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2705\Build_2705_report.txt -> 03_SCRIPTS/Build_2705_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_2705_MASTER.bas -> 03_SCRIPTS/Build_2705_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2705_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2705_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\2706\2706_MASTER.SLDPRT -> 11_MASTERS/2706_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\2706\Build_2706_report.txt -> 03_SCRIPTS/Build_2706_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_2706_MASTER.bas -> 03_SCRIPTS/Build_2706_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_2706_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_2706_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\3474\3474_MASTER.SLDPRT -> 11_MASTERS/3474_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\3474\Build_3474_report.txt -> 03_SCRIPTS/Build_3474_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_3474_MASTER.bas -> 03_SCRIPTS/Build_3474_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_3474_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_3474_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\5501\5501_MASTER.SLDPRT -> 11_MASTERS/5501_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\5501\Build_5501_report.txt -> 03_SCRIPTS/Build_5501_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_5501_MASTER.bas -> 03_SCRIPTS/Build_5501_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_5501_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_5501_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\5505\5505_MASTER.SLDPRT -> 11_MASTERS/5505_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\5505\Build_5505_report.txt -> 03_SCRIPTS/Build_5505_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_5505_MASTER.bas -> 03_SCRIPTS/Build_5505_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_5505_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_5505_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\5601\5601_MASTER.SLDPRT -> 11_MASTERS/5601_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\5601\Build_5601_report.txt -> 03_SCRIPTS/Build_5601_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_5601_MASTER.bas -> 03_SCRIPTS/Build_5601_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_5601_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_5601_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\5603\5603_MASTER.SLDPRT -> 11_MASTERS/5603_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\5603\Build_5603_report.txt -> 03_SCRIPTS/Build_5603_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_5603_MASTER.bas -> 03_SCRIPTS/Build_5603_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_5603_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_5603_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\5652\5652_MASTER.SLDPRT -> 11_MASTERS/5652_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\5652\Build_5652_report.txt -> 03_SCRIPTS/Build_5652_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_5652_MASTER.bas -> 03_SCRIPTS/Build_5652_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_5652_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_5652_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6405\6405_MASTER.SLDPRT -> 11_MASTERS/6405_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6405\Build_6405_report.txt -> 03_SCRIPTS/Build_6405_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_6405_MASTER.bas -> 03_SCRIPTS/Build_6405_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6405_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6405_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6410\6410_MASTER.SLDPRT -> 11_MASTERS/6410_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6410\Build_6410_report.txt -> 03_SCRIPTS/Build_6410_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_6410_MASTER.bas -> 03_SCRIPTS/Build_6410_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6410_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6410_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6502\6502_MASTER.SLDPRT -> 11_MASTERS/6502_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6502\Build_6502_report.txt -> 03_SCRIPTS/Build_6502_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_6502_MASTER.bas -> 03_SCRIPTS/Build_6502_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6502_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6502_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6503\6503_MASTER.SLDPRT -> 11_MASTERS/6503_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6503\Build_6503_report.txt -> 03_SCRIPTS/Build_6503_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_6503_MASTER.bas -> 03_SCRIPTS/Build_6503_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6503_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6503_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6504\6504_MASTER.SLDPRT -> 11_MASTERS/6504_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6504\Build_6504_report.txt -> 03_SCRIPTS/Build_6504_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_6504_MASTER.bas -> 03_SCRIPTS/Build_6504_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6504_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6504_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6506\6506_MASTER.SLDPRT -> 11_MASTERS/6506_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6506\Build_6506_report.txt -> 03_SCRIPTS/Build_6506_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\straight\Build_6506_MASTER.bas -> 03_SCRIPTS/Build_6506_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\straight\DesignTable_6506_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6506_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6603\6603_MASTER.SLDPRT -> 11_MASTERS/6603_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6603\Build_6603_report.txt -> 03_SCRIPTS/Build_6603_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_6603_MASTER.bas -> 03_SCRIPTS/Build_6603_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6603_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6603_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6606\6606_MASTER.SLDPRT -> 11_MASTERS/6606_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6606\Build_6606_report.txt -> 03_SCRIPTS/Build_6606_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_6606_MASTER.bas -> 03_SCRIPTS/Build_6606_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6606_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6606_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6802\6802_MASTER.SLDPRT -> 11_MASTERS/6802_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6802\Build_6802_report.txt -> 03_SCRIPTS/Build_6802_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_6802_MASTER.bas -> 03_SCRIPTS/Build_6802_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6802_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6802_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\6807\6807_MASTER.SLDPRT -> 11_MASTERS/6807_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\6807\Build_6807_report.txt -> 03_SCRIPTS/Build_6807_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_6807_MASTER.bas -> 03_SCRIPTS/Build_6807_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_6807_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_6807_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\dryrun\FS2500N1\FS2500N1_MASTER.SLDPRT -> 11_MASTERS/FS2500N1_MASTER.SLDPRT
+  copy tools\_out\batch19_20261021\merge\dryrun\FS2500N1\Build_FS2500N1_report.txt -> 03_SCRIPTS/Build_FS2500N1_report.txt
+  lf   tools\_out\batch19_20261021\merge\regen\tee\Build_FS2500N1_MASTER.bas -> 03_SCRIPTS/Build_FS2500N1_MASTER.bas
+  copy tools\_out\batch19_20261021\merge\regen\tee\DesignTable_FS2500N1_SW2.xlsx -> 04_DESIGN_TABLES/DesignTable_FS2500N1_SW2.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_0319.xlsx -> 04_DESIGN_TABLES/DesignTable_0319.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_1501.xlsx -> 04_DESIGN_TABLES/DesignTable_1501.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_1502.xlsx -> 04_DESIGN_TABLES/DesignTable_1502.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_1504.xlsx -> 04_DESIGN_TABLES/DesignTable_1504.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2404L.xlsx -> 04_DESIGN_TABLES/DesignTable_2404L.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2404_FINAL.xlsx -> 04_DESIGN_TABLES/DesignTable_2404_FINAL.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2406.xlsx -> 04_DESIGN_TABLES/DesignTable_2406.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2408.xlsx -> 04_DESIGN_TABLES/DesignTable_2408.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2500.xlsx -> 04_DESIGN_TABLES/DesignTable_2500.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2501LL.xlsx -> 04_DESIGN_TABLES/DesignTable_2501LL.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2502.xlsx -> 04_DESIGN_TABLES/DesignTable_2502.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2505.xlsx -> 04_DESIGN_TABLES/DesignTable_2505.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2603.xlsx -> 04_DESIGN_TABLES/DesignTable_2603.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2613.xlsx -> 04_DESIGN_TABLES/DesignTable_2613.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2705.xlsx -> 04_DESIGN_TABLES/DesignTable_2705.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_2706.xlsx -> 04_DESIGN_TABLES/DesignTable_2706.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_3474.xlsx -> 04_DESIGN_TABLES/DesignTable_3474.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_5501.xlsx -> 04_DESIGN_TABLES/DesignTable_5501.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_5505.xlsx -> 04_DESIGN_TABLES/DesignTable_5505.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_5601.xlsx -> 04_DESIGN_TABLES/DesignTable_5601.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_5603.xlsx -> 04_DESIGN_TABLES/DesignTable_5603.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_5652.xlsx -> 04_DESIGN_TABLES/DesignTable_5652.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6316.xlsx -> 04_DESIGN_TABLES/DesignTable_6316.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6405.xlsx -> 04_DESIGN_TABLES/DesignTable_6405.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6410.xlsx -> 04_DESIGN_TABLES/DesignTable_6410.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6420.xlsx -> 04_DESIGN_TABLES/DesignTable_6420.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6502.xlsx -> 04_DESIGN_TABLES/DesignTable_6502.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6503.xlsx -> 04_DESIGN_TABLES/DesignTable_6503.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6504.xlsx -> 04_DESIGN_TABLES/DesignTable_6504.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6506.xlsx -> 04_DESIGN_TABLES/DesignTable_6506.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6603.xlsx -> 04_DESIGN_TABLES/DesignTable_6603.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6606.xlsx -> 04_DESIGN_TABLES/DesignTable_6606.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6802.xlsx -> 04_DESIGN_TABLES/DesignTable_6802.xlsx
+  copy tools\_out\batch19_20261021\merge\root19\04_DESIGN_TABLES\DesignTable_6807.xlsx -> 04_DESIGN_TABLES/DesignTable_6807.xlsx
+  copy tools\_out\batch19_20261021\merge\tools_b19\generators\gen_ring.py -> tools/generators/gen_ring.py
+  copy tools\_out\batch19_20261021\merge\tools_b19\generators\gen_straight2.py -> tools/generators/gen_straight2.py
+  copy tools\_out\batch19_20261021\merge\tools_b19\generators\gen_tee.py -> tools/generators/gen_tee.py
+  copy tools\_out\batch19_20261021\merge\tools_b19\measure\orb_straight.py -> tools/measure/orb_straight.py
+  copy tools\_out\batch19_20261021\merge\tools_b19\measure\straight_model.py -> tools/measure/straight_model.py

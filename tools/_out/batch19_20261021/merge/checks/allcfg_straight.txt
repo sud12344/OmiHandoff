@@ -1,0 +1,12 @@
+2404    60 configs  outline problems: 0 []
+2406    52 configs  outline problems: 0 []
+2408    16 configs  outline problems: 0 []
+2705    19 configs  outline problems: 0 []
+2706    29 configs  outline problems: 0 []
+3474     9 configs  outline problems: 0 []
+6405    45 configs  outline problems: 0 []
+6410    40 configs  outline problems: 0 []
+6504    20 configs  outline problems: 0 []
+6506    17 configs  outline problems: 0 []
+
+--- stderr ---

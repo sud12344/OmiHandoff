@@ -1,0 +1,189 @@
+Build_FS2503_MASTER  10/20/2026 5:08:34 PM
+OK    dim M1 = 0.9500 in (expect 0.9500)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim NPTF1_MAJR = 0.3282 in (expect 0.3282)
+OK    dim NPTF1_THDL = 0.4078 in (expect 0.4078)
+      NPTF1_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTF1_TAPER = 1.79 deg
+OK    dim NPTF1_RELL = 0.1522 in (expect 0.1522)
+OK    LEG1 sketch fully defined
+OK    LEG1 revolve created
+OK    dim HZREF = 0.5000 in (expect 0.5000)
+OK    angle LEGANG2 = 135.00 deg
+OK    dim M2 = 0.8000 in (expect 0.8000)
+OK    dim BODYR = 0.3750 in (expect 0.3750)
+OK    dim THDMAJR_B2 = 0.4063 in (expect 0.4063)
+OK    dim FSM2_THDL = 0.4573 in (expect 0.4573)
+      FSMCHANG2: the two lines share no endpoint - vertex candidates unavailable
+OK    angle FSMCHANG2 = 45.00 deg
+OK    dim FSM2_FACER = 0.3595 in (expect 0.3595)
+OK    dim FSM2_GRVOR = 0.3145 in (expect 0.3145)
+OK    dim FSM2_GRVD = 0.0520 in (expect 0.0520)
+OK    dim FSM2_GRVIR = 0.2125 in (expect 0.2125)
+OK    LEG2 sketch fully defined
+OK    LEG2 revolve created
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX1: sgVERTICAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX1 hex flats normal to Z
+OK    HEX1 hex sketch fully defined
+      HEX1: FeatureExtrusion3 dir=0 -> True
+      HEX1: new faces centred at 0.195 in on axis 0 (want sign 1)
+OK    HEX1 extruded the right way
+OK    HEX1 dims named (HEXL HEXAF )
+OK    PLN2: leg tip face found 0.8000 along the leg
+      PLN2: InsertRefPlane ok
+OK    PLN2 reference plane created (RefPlane)
+      PLN2: plane z axis (-0.707, 0.707, 0.000), leg axis (-0.707, 0.707)
+OK    PLN2 is normal to the angled leg
+OK    dim HEXAF = 0.7500 in (expect 0.7500)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.3750 (flats want 0.3750)
+OK    HEX2 hex flats normal to Z
+OK    HEX2 hex sketch fully defined
+      HEX2: FeatureExtrusion3 dir=0 -> True
+      HEX2: new faces centred at 0.118 in on axis 0 (want sign 1)
+OK    HEX2 extruded the right way
+OK    HEX2 dims named (HEXL HEXAF )
+OK    dim PUCK_HB = 0.3750 in (expect 0.3750)
+OK    dim PUCK_HT = 0.3750 in (expect 0.3750)
+OK    dim PUCK_R1B = 0.2160 in (expect 0.2160)
+OK    dim PUCK_R1T = 0.2160 in (expect 0.2160)
+OK    dim PUCK_XC = 0.4325 in (expect 0.4325)
+OK    PUCK sketch fully defined
+OK    PUCK revolve created
+OK    One solid body after legs+hex
+OK    select end face for BORE1 at x=0.9500
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE1 sketch opened (active sketch exists)
+OK    BORE1 circle created
+OK    dim D1 = 0.4100 in (expect 0.4100)
+OK    BORE1 sketch closed and named (ProfileFeature)
+      BORECUT1 attempt 0: CreateDefinition returned Nothing
+      BORECUT1 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT1 cut removes material (attempt 0)
+OK    BORECUT1 dims: DEPTH=0.9500 D1=0.4100 
+OK    select end face for BORE2 at x=0.8000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE2 sketch opened (active sketch exists)
+OK    BORE2 circle created
+OK    dim D2 = 0.3700 in (expect 0.3700)
+OK    BORE2 sketch closed and named (ProfileFeature)
+      BORECUT2 attempt 0: CreateDefinition returned Nothing
+      BORECUT2 attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT2 cut removes material (attempt 0)
+OK    BORECUT2 dims: DEPTH=0.8000 D2=0.3700 
+OK    leg 1 bore open on the axis at its face (X=+0.9500)
+OK    leg 2 bore open on the axis at its face (0.8000 along the 135-deg leg)
+OK    THD_End1: end face found at 0.9500
+OK    dim HELIXDIA = 0.6565 in (expect 0.6565)
+OK    THD_End1 helix sketch made (ProfileFeature)
+      THD_End1: InsertHelix ok
+OK    THD_End1 helix created
+OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_End1: helix start from the curve (0.9500, 0.0000, -0.3282)
+      THD_End1: helix start = (0.9500, 0.0000, -0.3282)
+      THD_End1: profile on Top Plane
+      THD_End1: sketch start (0.9500,0.3282) axialIsX=True apex dir -1
+      PROF_AX: try 0 value 0.9500 (want 0.9500)
+OK    dim PROF_AX = 0.9500 in (expect 0.9500)
+      PROF_R: try 0 value 0.3282 (want 0.3282)
+OK    dim PROF_R = 0.3282 in (expect 0.3282)
+      APEXR: try 0 value 0.2838 (want 0.2838)
+OK    dim APEXR = 0.2838 in (expect 0.2838)
+OK    THD_End1 60 deg tooth angle placed
+OK    THD_End1 profile sketch fully defined
+      THD_End1: sweep CreateFeature -> True
+OK    THD_End1 swept cut created
+OK    THD_End1 sweep removed material: 0.01813 in^3
+OK    THD_End1 suppressed
+      THD_End2: CreateDefinition(swFmSweepThread) -> True
+OK    THD_End2: anchor edge found at x=0.2960 r=0.4063
+      THD_End2: Edge ok
+      THD_End2: Type=Inch Die ok
+      THD_End2: Size=0.8125-16 ok
+      THD_End2: ThreadMethod=Cut ok
+      THD_End2: EndCondition=Blind ok
+      THD_End2: BlindDepth=0.4573 ok
+      THD_End2: DiameterOverride ok
+      THD_End2: Diameter ok
+      THD_End2: PitchOverride ok
+      THD_End2: Pitch ok
+      THD_End2: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.8125-16 Dia=0.8125 Pitch=0.0625
+      THD_End2: CreateFeature -> True
+OK    THD_End2 thread feature created
+      THD_End2: thread centre x = 0.5209 in, anchor 0.2960, wanted +X
+OK    THD_End2 runs along the thread flat (away from the hex)
+OK    THD_End2 rebuilds without error (code 0)
+OK    THD_End2 dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.8125 DEPTH=0.4573 D1=0.0000 Pitch=0.0125 Profile_Land=0.0031 Profile_Angle=41.2283 Profile_Height=0.0068 
+      THD_End2: profile sketch renamed to THD_End2_PROF
+OK    THD_End2 profile dims reachable as Profile_Height@THD_End2_PROF
+      THD_End2: profile pitch dimension renamed Pitch -> THDPITCH
+OK    THD_End2 profile pitch reachable as THDPITCH@THD_End2_PROF
+      THD_End2: left live until the final suppress step
+OK    leg 1 tip (exact) 0.9500 along +X (expect 0.9500)
+OK    leg 2 tip (exact) 0.8000 along the 135-deg leg (expect 0.8000)
+OK    Z extent (exact) -0.4063 .. 0.4063 (expect -0.4062 .. 0.4062: face-seal end proud of the flats)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_gen_20261020\out\tee\DesignTable_FS2503_SW2.xlsx
+OK    Configurations after table: 5 (expect 5)
+      config check 1: FS2503-06-04-FG
+OK    FS2503-06-04-FG M1@LEG1 = 0.8700 (table 0.8700)
+OK    FS2503-06-04-FG BODYR@LEG1 = 0.3750 (table 0.3750)
+OK    FS2503-06-04-FG NPTF1_MAJR@LEG1 = 0.2609 (table 0.2609)
+OK    FS2503-06-04-FG NPTF1_THDL@LEG1 = 0.4018 (table 0.4018)
+OK    FS2503-06-04-FG NPTF1_TAPER@LEG1 = 1.7899 (table 1.7899)
+OK    FS2503-06-04-FG NPTF1_RELL@LEG1 = 0.1582 (table 0.1582)
+OK    FS2503-06-04-FG DEPTH@BORECUT1 = 0.8700 (table 0.8700)
+OK    FS2503-06-04-FG DEPTH@BORECUT2 = 0.7400 (table 0.7400)
+OK    FS2503-06-04-FG PROF_R@THDPROF_1 = 0.2609 (table 0.2609)
+OK    FS2503-06-04-FG THDPITCH@THD_End2 = 0.0625 (table 0.0625)
+OK    FS2503-06-04-FG Profile_Height@THD_End2_PROF = 0.0338 (table 0.0338)
+OK    FS2503-06-04-FG THDPITCH@THD_End2_PROF = 0.0625 (table 0.0625)
+OK    FS2503-06-04-FG HEXAF@HEX1 = 0.7500 (table 0.7500)
+OK    FS2503-06-04-FG HEXL@HEX1_BODY = 0.3100 (table 0.3100)
+OK    FS2503-06-04-FG HEXAF@HEX2 = 0.7500 (table 0.7500)
+OK    FS2503-06-04-FG HEXL@HEX2_BODY = 0.2990 (table 0.2990)
+OK    FS2503-06-04-FG PUCK_R1B@PUCK = 0.2160 (table 0.2160)
+OK    FS2503-06-04-FG PUCK_XC@PUCK = 0.4325 (table 0.4325)
+OK    FS2503-06-04-FG one solid body (found 1)
+      FS2503-06-04-FG box x -0.752..0.870  y -0.433..0.750
+      config check 2: FS2503-20-20-FG
+OK    FS2503-20-20-FG M1@LEG1 = 1.6700 (table 1.6700)
+OK    FS2503-20-20-FG BODYR@LEG1 = 0.8125 (table 0.8125)
+OK    FS2503-20-20-FG NPTF1_MAJR@LEG1 = 0.8134 (table 0.8134)
+OK    FS2503-20-20-FG NPTF1_THDL@LEG1 = 0.7068 (table 0.7068)
+OK    FS2503-20-20-FG NPTF1_TAPER@LEG1 = 1.7899 (table 1.7899)
+OK    FS2503-20-20-FG NPTF1_RELL@LEG1 = 0.2632 (table 0.2632)
+OK    FS2503-20-20-FG DEPTH@BORECUT1 = 1.6700 (table 1.6700)
+OK    FS2503-20-20-FG DEPTH@BORECUT2 = 1.2600 (table 1.2600)
+OK    FS2503-20-20-FG PROF_R@THDPROF_1 = 0.8134 (table 0.8134)
+OK    FS2503-20-20-FG THDPITCH@THD_End2 = 0.0833 (table 0.0833)
+OK    FS2503-20-20-FG Profile_Height@THD_End2_PROF = 0.0451 (table 0.0451)
+OK    FS2503-20-20-FG THDPITCH@THD_End2_PROF = 0.0833 (table 0.0833)
+OK    FS2503-20-20-FG HEXAF@HEX1 = 1.6250 (table 1.6250)
+OK    FS2503-20-20-FG HEXL@HEX1_BODY = 0.7000 (table 0.7000)
+OK    FS2503-20-20-FG HEXAF@HEX2 = 1.6250 (table 1.6250)
+OK    FS2503-20-20-FG HEXL@HEX2_BODY = 0.5710 (table 0.5710)
+OK    FS2503-20-20-FG PUCK_R1B@PUCK = 0.4686 (table 0.4686)
+OK    FS2503-20-20-FG PUCK_XC@PUCK = 0.9377 (table 0.9377)
+OK    FS2503-20-20-FG one solid body (found 1)
+      FS2503-20-20-FG box x -1.496..1.670  y -0.938..1.496
+      All-config sweep: rebuilding 4 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/4  FS2503-06-04-FG  rebuilt in 0.8 s
+      sweep 2/4  FS2503-06-06-FG  rebuilt in 1.3 s
+      sweep 3/4  FS2503-08-06-FG  rebuilt in 0.9 s
+      sweep 4/4  FS2503-20-20-FG  rebuilt in 0.8 s
+OK    All-config sweep: 4 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration FS2503-08-06-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS2503\FS2503_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\FS2503\FS2503_MASTER.SLDPRT

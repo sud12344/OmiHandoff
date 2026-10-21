@@ -1,0 +1,144 @@
+TOTAL 1831 {'DATA-NO-MACRO': 62, 'BUILT': 1339, 'MISSING': 400, 'OUT-KIT': 30}
+cs-adapters 1595 {'DATA-NO-MACRO': 62, 'BUILT': 1247, 'MISSING': 286}
+carbon-steel-braze-beaded-hose 73 {'BUILT': 73}
+carbon-steel-flange-adapters-accessories 163 {'BUILT': 19, 'MISSING': 114, 'OUT-KIT': 30}
+SW2 masters: 151 configs total 1599
+SW2 configs not in OMi feed: 2403 1 ['2403-20-16']
+SW2 configs not in OMi feed: 2404 2 ['2404-14-12', '2404-16-08']
+SW2 configs not in OMi feed: 2406 2 ['2406-20-12', '2406-20-16']
+SW2 configs not in OMi feed: 2500HX 16 ['2500-08-08', '2500-04-04', '2500-05-05', '2500-06-04', '2500-06-06', '2500-08-06']
+SW2 configs not in OMi feed: 2501 2 ['2501-06-04-FG', '2501-06-06-FG']
+SW2 configs not in OMi feed: 2502HX 21 ['2502-08-08', '2502-04-02', '2502-04-04', '2502-04-04-FG', '2502-04-08', '2502-06-02']
+SW2 configs not in OMi feed: 2504 1 ['2504-16-16-FG']
+SW2 configs not in OMi feed: 2505 1 ['2505-06-06-FG']
+SW2 configs not in OMi feed: 2603HX 30 ['2603-08-08-08', '2603-04-04-04', '2603-04-04-06', '2603-05-05-05', '2603-06-06-04', '2603-06-06-06']
+SW2 configs not in OMi feed: 2650 1 ['2650-04-04-04-04-FG']
+SW2 configs not in OMi feed: 2701 3 ['2701-02-02-FG-LN', '2701-04-04-FG-LN', '2701-05-05-FG-LN']
+SW2 configs not in OMi feed: 2705 4 ['2705-06-04', '2705-06-06', '2705-06-08', '2705-08-08']
+SW2 configs not in OMi feed: 4000 8 ['FS4000-04', 'FS4000-06', 'FS4000-08', 'FS4000-10', 'FS4000-12', 'FS4000-16']
+SW2 configs not in OMi feed: 5406P 2 ['5406-08P', '5406-12P']
+SW2 configs not in OMi feed: 5406 2 ['5406-08-04', '5406-08-06']
+SW2 configs not in OMi feed: 5502 3 ['5502-12-12-FG', '5502-16-12-FG', '5502-16-16-FG']
+SW2 configs not in OMi feed: 5601 3 ['5601-08-08-08-FG', '5601-12-12-12-FG', '5601-16-16-16-FG']
+SW2 configs not in OMi feed: 6400 4 ['6400-02-02-O', '6400-20-12-O', '6400-20-16-O', '6400-20-20-O']
+SW2 configs not in OMi feed: 6402 1 ['6402-12-10-O']
+SW2 configs not in OMi feed: 6405 2 ['6405-16-06-O', '6405-16-08-O']
+SW2 configs not in OMi feed: 6410 2 ['6410-06-08-O', '6410-08-04-O']
+SW2 configs not in OMi feed: 6500 2 ['6500-08-06-FG', '6500-08-08-FG']
+SW2 configs not in OMi feed: 6502 1 ['6502-16-16-FG']
+SW2 configs not in OMi feed: 6505 2 ['6505-24-24', '6505-32-32']
+SW2 configs not in OMi feed: 6602 1 ['6602-32-32-32-FG']
+SW2 configs not in OMi feed: 6801 4 ['6801-16-10-NWO-FG', '6801-16-12-NWO-FG', '6801-16-14-NWO-FG', '6801-16-16-NWO-FG']
+SW2 configs not in OMi feed: 6803 3 ['6803-04-04-04-NWO-FG', '6803-04-04-06-NWO-FG', '6803-06-06-06-NWO-FG']
+SW2 configs not in OMi feed: FS0306 8 ['FS0306-08', 'FS0306-04', 'FS0306-06', 'FS0306-10', 'FS0306-12', 'FS0306-16']
+SW2 configs not in OMi feed: FS0318 8 ['FS0318-08', 'FS0318-04', 'FS0318-06', 'FS0318-10', 'FS0318-12', 'FS0318-16']
+SW2 configs not in OMi feed: FS0319C 3 ['FS0319-16', 'FS0319-12', 'FS0319-20']
+SW2 configs not in OMi feed: FS0319 3 ['FS0319-08', 'FS0319-04', 'FS0319-06']
+SW2 configs not in OMi feed: FS2403 2 ['FS2403-08-08', 'FS2403-24-24']
+SW2 configs not in OMi feed: FS2404 5 ['FS2404-08-08', 'FS2404-08-04', 'FS2404-08-06', 'FS2404-08-12', 'FS2404-24-24']
+SW2 configs not in OMi feed: FS2500N 3 ['FS2500-04-04-FG', 'FS2500-12-12-FG', 'FS2500-16-16-FG']
+SW2 configs not in OMi feed: FS2500 5 ['FS2500-08-08-FG', 'FS2500-06-06-FG', 'FS2500-10-10-FG', 'FS2500-20-16-FG', 'FS2500-20-20-FG']
+SW2 configs not in OMi feed: FS2501N 3 ['FS2501-04-04-FG', 'FS2501-12-08-FG', 'FS2501-16-16-FG']
+SW2 configs not in OMi feed: FS2501 9 ['FS2501-08-06-FG', 'FS2501-06-04-FG', 'FS2501-06-06-FG', 'FS2501-06-08-FG', 'FS2501-08-08-FG', 'FS2501-08-12-FG']
+SW2 configs not in OMi feed: FS2503N 4 ['FS2503-04-04-FG', 'FS2503-12-08-FG', 'FS2503-12-12-FG', 'FS2503-16-16-FG']
+SW2 configs not in OMi feed: FS2503 4 ['FS2503-08-06-FG', 'FS2503-06-04-FG', 'FS2503-06-06-FG', 'FS2503-20-20-FG']
+SW2 configs not in OMi feed: FS2601N 2 ['FS2601-04-04-04-FG', 'FS2601-12-12-12-FG']
+SW2 configs not in OMi feed: FS2601 3 ['FS2601-08-08-08-FG', 'FS2601-06-06-06-FG', 'FS2601-10-10-08-FG']
+SW2 configs not in OMi feed: FS2603N 2 ['FS2603-04-04-04-FG', 'FS2603-16-16-16-FG']
+SW2 configs not in OMi feed: FS2603 4 ['FS2603-08-08-08-FG', 'FS2603-06-06-06-FG', 'FS2603-10-10-10-FG', 'FS2603-12-12-12-FG']
+SW2 configs not in OMi feed: FS2701 2 ['FS2701-08-08-FG', 'FS2701-LN-08-08-FG']
+SW2 configs not in OMi feed: FS2702 2 ['FS2702-08-08-FG', 'FS2702-LN-08-08-FG']
+SW2 configs not in OMi feed: FS2703 2 ['FS2703-08-08-08-FG', 'FS2703-LN-08-08-08-FG']
+SW2 configs not in OMi feed: FS2704 2 ['FS2704-08-08-08-FG', 'FS2704-LN-08-08-08-FG']
+SW2 configs not in OMi feed: FS6400 5 ['FS6400-08-08-O', 'FS6400-08-06-O', 'FS6400-08-10-O', 'FS6400-08-12-O', 'FS6400-24-24-O']
+SW2 configs not in OMi feed: FS6403 1 ['FS6403-08-08']
+SW2 configs not in OMi feed: FS6500C 2 ['FS6500-20-20-FG', 'FS6500-10-10-FG']
+SW2 configs not in OMi feed: FS6500NC 2 ['FS6500-12-12-FG', 'FS6500-16-16-FG']
+SW2 configs not in OMi feed: FS6500N 1 ['FS6500-04-04-FG']
+SW2 configs not in OMi feed: FS6500 3 ['FS6500-08-08-FG', 'FS6500-06-06-FG', 'FS6500-08-06-FG']
+SW2 configs not in OMi feed: FS6502 1 ['FS6502-08-08-FG']
+SW2 configs not in OMi feed: FS6504C 4 ['FS6504-10-10', 'FS6504-12-12', 'FS6504-16-16', 'FS6504-20-20']
+SW2 configs not in OMi feed: FS6504 3 ['FS6504-08-08', 'FS6504-04-04', 'FS6504-06-06']
+SW2 configs not in OMi feed: FS6505C 2 ['FS6505-12-12', 'FS6505-16-16']
+SW2 configs not in OMi feed: FS6505 2 ['FS6505-08-08', 'FS6505-04-04']
+SW2 configs not in OMi feed: FS6540C 2 ['FS6540-12-12-O', 'FS6540-16-16-O']
+SW2 configs not in OMi feed: FS6540 3 ['FS6540-08-08-O', 'FS6540-04-04-O', 'FS6540-06-06-O']
+SW2 configs not in OMi feed: FS6565C 1 ['FS6565-12-12']
+SW2 configs not in OMi feed: FS6565 3 ['FS6565-08-08', 'FS6565-04-04', 'FS6565-06-06']
+SW2 configs not in OMi feed: FS6600C 1 ['FS6600-10-10-10-FG']
+SW2 configs not in OMi feed: FS6600NC 1 ['FS6600-12-12-12-FG']
+SW2 configs not in OMi feed: FS6600N 1 ['FS6600-04-04-04-FG']
+SW2 configs not in OMi feed: FS6600 2 ['FS6600-08-08-08-FG', 'FS6600-06-06-06-FG']
+SW2 configs not in OMi feed: FS6602C 2 ['FS6602-20-20-20-FG', 'FS6602-10-10-10-FG']
+SW2 configs not in OMi feed: FS6602NC 2 ['FS6602-12-12-12-FG', 'FS6602-16-16-16-FG']
+SW2 configs not in OMi feed: FS6602N 1 ['FS6602-04-04-04-FG']
+SW2 configs not in OMi feed: FS6602 2 ['FS6602-08-08-08-FG', 'FS6602-06-06-06-FG']
+SW2 configs not in OMi feed: FS6801NR 1 ['FS6801-12-08-NWO-FG']
+SW2 configs not in OMi feed: FS6801R 1 ['FS6801-10-08-NWO-FG']
+SW2 configs not in OMi feed: FS6801 3 ['FS6801-08-08-NWO-FG', 'FS6801-04-08-NWO-FG', 'FS6801-06-08-NWO-FG']
+SW2 configs not in OMi feed: FS6802NR 1 ['FS6802-12-08-NWO-FG']
+SW2 configs not in OMi feed: FS6802 2 ['FS6802-08-08-NWO-FG', 'FS6802-06-08-NWO-FG']
+SW2 configs not in OMi feed: FS6803 1 ['FS6803-08-08-08-NWO-FG']
+SW2 configs not in OMi feed: FS6804 1 ['FS6804-08-08-08-NWO-FG']
+A1   1339  Built - master in 11_MASTERS
+A2      0  Built earlier - 2404 / 6400 masters (files not in 11_MASTERS)
+B       0  Macro ready - waiting for you to run it
+C1      0  Macro ready - batch 11 (new masters 1501, 6502)
+C2      0  Macro ready - batch 11 extra sizes for a built master (re-run)
+D1      0  Needs a Brennan STEP - female JIC swivel size
+D2      3  Needs a Brennan STEP - female NPSM swivel size
+D3     22  Needs a Brennan STEP - female JIC port size
+D4      2  Needs a Brennan STEP - female ORB port size
+D5      0  Needs a Brennan STEP - code 61 flange size
+D6     15  Needs Brennan STEPs - adjustable ORB stud (nut/washer) sizes + a new module
+D7     40  Needs one specific item (see note)
+E       1  Needs your decision
+F1    114  Missing - Air-Way lists only the non-forged part (OMi sells -FG)
+F2    145  Missing - OMi part not in Air-Way
+F3    113  Missing - no Air-Way page for the whole series
+F4      6  Missing - Air-Way misprint or conflict with the MS standard
+F5      1  Missing - Air-Way cell blank / other
+X      30  Out of scope - kits
+TOTAL 1831
+saved C:\Users\sudha\OneDrive\Desktop\OMi_Handoff/00_DOCS/OMi_Coverage_2026-09-24.xlsx rows 1831 total 2535
+A1 1339 Built - master in 11_MASTERS
+A2 0 Built earlier - 2404 / 6400 masters (files not in 11_MASTERS)
+B 0 Macro ready - waiting for you to run it
+C1 0 Macro ready - batch 11 (new masters 1501, 6502)
+C2 0 Macro ready - batch 11 extra sizes for a built master (re-run)
+D1 0 Needs a Brennan STEP - female JIC swivel size
+D2 3 Needs a Brennan STEP - female NPSM swivel size
+D3 22 Needs a Brennan STEP - female JIC port size
+D4 2 Needs a Brennan STEP - female ORB port size
+D5 0 Needs a Brennan STEP - code 61 flange size
+D6 15 Needs Brennan STEPs - adjustable ORB stud (nut/washer) sizes + a new module
+D7 40 Needs one specific item (see note)
+E 1 Needs your decision
+F1 114 Missing - Air-Way lists only the non-forged part (OMi sells -FG)
+F2 145 Missing - OMi part not in Air-Way
+F3 113 Missing - no Air-Way page for the whole series
+F4 6 Missing - Air-Way misprint or conflict with the MS standard
+F5 1 Missing - Air-Way cell blank / other
+X 30 Out of scope - kits
+N1 77 Not captured yet - Tube Fittings & Adapters SKUs the OMi feed dropped (1,672 pub
+N2 385 Not started - O-Ring Face Seal (ORFS) collection
+N3 230 Not started - Compression collection
+N4 12 Not started - Test Gauge collection
+ 2535 TOTAL (OMi carbon-steel catalog)
+--- top STEPs
+  21 6900 | 6900 female JIC union
+  12 0319 | tube sleeve
+  4 3051 | Air-Way 3051 prints one leg length N and the hex W
+  4 6801-XX-XX-NWO-FG per ORB size | adjustable ORB stud + locknut (6801L)
+  3 6801-XX-XX-NWO-FG per ORB size | adjustable ORB stud + locknut (6801LL)
+  3 6801-XX-XX-NWO-FG per ORB size | adjustable ORB stud + locknut (6805)
+  3 6801-XX-XX-NWO-FG per ORB size | adjustable ORB stud + locknut (6901)
+  2 TFA | OMi-filled 2026-10-02 (was BUILD-MISSING
+  1 1404-02-02 | NPSM swivel -02
+  1 1404-24-24 | NPSM swivel -24
+  1 1404-04-04 | NPSM swivel -04
+  1 2406-16-xx | female JIC -16
+  1 6404/6410 | female ORB -20 port
+  1 6404/6410 | female ORB -24 port
+  1 6801-XX-XX-NWO-FG per ORB size | adjustable ORB stud + locknut (6802)
+  1 6801-XX-XX-NWO-FG per ORB size | adjustable ORB stud + locknut (6806)

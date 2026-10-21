@@ -1,73 +1,73 @@
-Build_1502_MASTER  10/20/2026 12:09:27 AM
-OK    dim M1 = 0.7500 in (expect 0.7500)
-OK    dim BODYR = 0.2800 in (expect 0.2800)
+Build_1502_MASTER  10/21/2026 12:09:08 AM
+OK    dim M1 = 1.2300 in (expect 1.2300)
+OK    dim BODYR = 0.5310 in (expect 0.5310)
 OK    LEG1 sketch fully defined
 OK    LEG1 revolve created
-OK    dim M2 = 0.8900 in (expect 0.8900)
-OK    dim BODYR = 0.2800 in (expect 0.2800)
-OK    dim NP2_BODYS = 0.4300 in (expect 0.4300)
-OK    dim NP2_NECKR = 0.1290 in (expect 0.1290)
-OK    dim NP2_NUTL = 0.3800 in (expect 0.3800)
-OK    dim NP2_LIPR = 0.2496 in (expect 0.2496)
-OK    dim NP2_LIPL = 0.1000 in (expect 0.1000)
-OK    dim NP2_SKIRTFR = 0.2800 in (expect 0.2800)
-OK    dim NP2_NUTHEXL = 0.2000 in (expect 0.2000)
-OK    dim NP2_NUTR = 0.3233 in (expect 0.3233)
-OK    dim NP2_CSR = 0.1984 in (expect 0.1984)
+OK    dim M2 = 1.5200 in (expect 1.5200)
+OK    dim BODYR = 0.5310 in (expect 0.5310)
+OK    dim NP2_BODYS = 0.7600 in (expect 0.7600)
+OK    dim NP2_NECKR = 0.3040 in (expect 0.3040)
+OK    dim NP2_NUTL = 0.7200 in (expect 0.7200)
+OK    dim NP2_LIPR = 0.4550 in (expect 0.4550)
+OK    dim NP2_LIPL = 0.1400 in (expect 0.1400)
+OK    dim NP2_SKIRTFR = 0.5000 in (expect 0.5000)
+OK    dim NP2_NUTHEXL = 0.4000 in (expect 0.4000)
+OK    dim NP2_NUTR = 0.5774 in (expect 0.5774)
+OK    dim NP2_CSR = 0.4115 in (expect 0.4115)
       NP2_CSANG: the two lines share no endpoint - vertex candidates unavailable
-      NP2_CSANG angle try 0 at (-0.060, 0.546): 135.0 deg (want 45.0)
+      NP2_CSANG angle try 0 at (-0.060, 0.963): 135.0 deg (want 45.0)
 OK    angle NP2_CSANG = 45.00 deg
-OK    dim NP2_MINR = 0.1820 in (expect 0.1820)
-OK    dim NP2_THDL = 0.1572 in (expect 0.1572)
+OK    dim NP2_MINR = 0.3795 in (expect 0.3795)
+OK    dim NP2_THDL = 0.3560 in (expect 0.3560)
       NP2_RELANG: the two lines share no endpoint - vertex candidates unavailable
 OK    angle NP2_RELANG = 45.00 deg
-OK    dim NP2_RELR = 0.1984 in (expect 0.1984)
-OK    dim NP2_CBR = 0.2275 in (expect 0.2275)
-OK    dim NP2_CBEND = 0.3066 in (expect 0.3066)
-OK    dim NP2_STEMR = 0.1725 in (expect 0.1725)
+OK    dim NP2_RELR = 0.4115 in (expect 0.4115)
+OK    dim NP2_CBR = 0.4425 in (expect 0.4425)
+OK    dim NP2_CBEND = 0.5950 in (expect 0.5950)
+OK    dim NP2_STEMR = 0.3700 in (expect 0.3700)
       NP2_CONEANG: the two lines share no endpoint - vertex candidates unavailable
-OK    angle NP2_CONEANG = 30.01 deg
-OK    dim NP2_TIPR = 0.1170 in (expect 0.1170)
-OK    dim NP2_STEMTIP = 0.1500 in (expect 0.1500)
+OK    angle NP2_CONEANG = 29.99 deg
+OK    dim NP2_TIPR = 0.2810 in (expect 0.2810)
+OK    dim NP2_STEMTIP = 0.2800 in (expect 0.2800)
 OK    LEG2 sketch fully defined
 OK    LEG2 revolve created
-OK    dim HEXAF = 0.5600 in (expect 0.5600)
-      HEX1: sgVERTICAL -> vertex |z| max 0.2800 (flats want 0.2800)
+OK    dim HEXAF = 1.0620 in (expect 1.0620)
+      HEX1: sgVERTICAL -> vertex |z| max 0.5310 (flats want 0.5310)
 OK    HEX1 hex flats normal to Z
 OK    HEX1 hex sketch fully defined
       HEX1: FeatureExtrusion3 dir=0 -> True
-      HEX1: new faces centred at 0.245 in on axis 0 (want sign 1)
+      HEX1: new faces centred at 0.485 in on axis 0 (want sign 1)
 OK    HEX1 extruded the right way
 OK    HEX1 dims named (HEXL HEXAF )
-OK    dim HEXAF = 0.5600 in (expect 0.5600)
-      HEX2: sgHORIZONTAL -> vertex |z| max 0.2800 (flats want 0.2800)
+OK    dim HEXAF = 1.0620 in (expect 1.0620)
+      HEX2: sgHORIZONTAL -> vertex |z| max 0.5310 (flats want 0.5310)
 OK    HEX2 hex flats normal to Z
 OK    HEX2 hex sketch fully defined
       HEX2: FeatureExtrusion3 dir=0 -> True
-      HEX2: new faces centred at 0.149 in on axis 1 (want sign 1)
+      HEX2: new faces centred at 0.227 in on axis 1 (want sign 1)
 OK    HEX2 extruded the right way
 OK    HEX2 dims named (HEXL HEXAF )
-OK    dim PUCK_HB = 0.2800 in (expect 0.2800)
-OK    dim PUCK_HT = 0.2800 in (expect 0.2800)
-OK    dim PUCK_R1B = 0.1612 in (expect 0.1612)
-OK    dim PUCK_R1T = 0.1612 in (expect 0.1612)
-OK    dim PUCK_XC = 0.3228 in (expect 0.3228)
+OK    dim PUCK_HB = 0.5310 in (expect 0.5310)
+OK    dim PUCK_HT = 0.5310 in (expect 0.5310)
+OK    dim PUCK_R1B = 0.3061 in (expect 0.3061)
+OK    dim PUCK_R1T = 0.3061 in (expect 0.3061)
+OK    dim PUCK_XC = 0.6126 in (expect 0.6126)
 OK    PUCK sketch fully defined
 OK    PUCK revolve created
-OK    NUTHEX2: nut face found at 0.8900 on axis 1
-OK    dim NUTHEX2 = 0.5600 in (expect 0.5600)
-      NUTHEX2: sgHORIZONTAL -> vertex |z| max 0.2800 (flats want 0.2800)
+OK    NUTHEX2: nut face found at 1.5200 on axis 1
+OK    dim NUTHEX2 = 1.0000 in (expect 1.0000)
+      NUTHEX2: sgHORIZONTAL -> vertex |z| max 0.5000 (flats want 0.5000)
 OK    NUTHEX2 nut flats normal to Z
 OK    NUTHEX2 sketch fully defined
       NUTCUT2 attempt 0: CreateDefinition returned Nothing
       NUTCUT2 attempt 0: FeatureCut4 scope off -> True
 OK    NUTCUT2 created and removed material (attempt 0)
-OK    NUTCUT2 removed only the nut corners (2.9% of volume)
-OK    NUTCUT2 dims: DEPTH=0.2000 NUTHEX2=0.5600 
+OK    NUTCUT2 removed only the nut corners (3.1% of volume)
+OK    NUTCUT2 dims: DEPTH=0.4000 NUTHEX2=1.0000 
 OK    NUTHEX2@NUTHEX2 reachable
 OK    DEPTH@NUTCUT2 reachable
 OK    One solid body after legs+hex
-OK    select end face for POCKET1 at x=0.7500
+OK    select end face for POCKET1 at x=1.2300
       selected object type = 2 (2 = face), count = 1
       ok = True
       about to InsertSketch on the face
@@ -75,13 +75,13 @@ OK    select end face for POCKET1 at x=0.7500
       ActiveSketch fetched
 OK    POCKET1 sketch opened (active sketch exists)
 OK    POCKET1 circle created
-OK    dim TAPDRILL1 = 0.3300 in (expect 0.3300)
+OK    dim TAPDRILL1 = 0.7000 in (expect 0.7000)
 OK    POCKET1 sketch closed and named (ProfileFeature)
       POCKETCUT1 attempt 0: CreateDefinition returned Nothing
       POCKETCUT1 attempt 0: FeatureCut4 scope off -> True
 OK    POCKETCUT1 cut removes material (attempt 0)
-OK    POCKETCUT1 dims: DEPTH=0.7500 TAPDRILL1=0.3300 
-OK    select end face for BORE2 at x=0.8900
+OK    POCKETCUT1 dims: DEPTH=1.2300 TAPDRILL1=0.7000 
+OK    select end face for BORE2 at x=1.5200
       selected object type = 2 (2 = face), count = 1
       ok = True
       about to InsertSketch on the face
@@ -89,85 +89,85 @@ OK    select end face for BORE2 at x=0.8900
       ActiveSketch fetched
 OK    BORE2 sketch opened (active sketch exists)
 OK    BORE2 circle created
-OK    dim D2 = 0.1300 in (expect 0.1300)
+OK    dim D2 = 0.4600 in (expect 0.4600)
 OK    BORE2 sketch closed and named (ProfileFeature)
       BORECUT2 attempt 0: CreateDefinition returned Nothing
       BORECUT2 attempt 0: FeatureCut4 scope off -> True
 OK    BORECUT2 cut removes material (attempt 0)
-OK    BORECUT2 dims: DEPTH=0.8900 D2=0.1300 
-OK    leg 1 bore open on the axis at its face (X=+0.7500)
-OK    leg 2 bore open on the axis at its face (Y=+0.8900)
-OK    leg 2 bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane Y=+0.7400)
-OK    THD_End1: end face found at 0.7500
-OK    dim HELIXDIA = 0.3300 in (expect 0.3300)
+OK    BORECUT2 dims: DEPTH=1.5200 D2=0.4600 
+OK    leg 1 bore open on the axis at its face (X=+1.2300)
+OK    leg 2 bore open on the axis at its face (Y=+1.5200)
+OK    leg 2 bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane Y=+1.2400)
+OK    THD_End1: end face found at 1.2300
+OK    dim HELIXDIA = 0.7000 in (expect 0.7000)
 OK    THD_End1 helix sketch made (ProfileFeature)
       THD_End1: InsertHelix ok
 OK    THD_End1 helix created
 OK    THD_End1 helix dims named (D7 D6 D5 PITCH HEIGHT )
-      THD_End1: helix start from the curve (0.7500, 0.0000, -0.1650)
-      THD_End1: helix start = (0.7500, 0.0000, -0.1650)
+      THD_End1: helix start from the curve (1.2300, 0.0000, -0.3500)
+      THD_End1: helix start = (1.2300, 0.0000, -0.3500)
       THD_End1: profile on Top Plane
-      THD_End1: sketch start (0.7500,0.1650) axialIsX=True apex dir 1
-      PROF_AX: try 0 value 0.7500 (want 0.7500)
-OK    dim PROF_AX = 0.7500 in (expect 0.7500)
-      PROF_R: try 0 value 0.1650 (want 0.1650)
-OK    dim PROF_R = 0.1650 in (expect 0.1650)
-      APEXR: try 0 value 0.1946 (want 0.1946)
-OK    dim APEXR = 0.1946 in (expect 0.1946)
+      THD_End1: sketch start (1.2300,0.3500) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.2300 (want 1.2300)
+OK    dim PROF_AX = 1.2300 in (expect 1.2300)
+      PROF_R: try 0 value 0.3500 (want 0.3500)
+OK    dim PROF_R = 0.3500 in (expect 0.3500)
+      APEXR: try 0 value 0.4071 (want 0.4071)
+OK    dim APEXR = 0.4071 in (expect 0.4071)
 OK    THD_End1 60 deg tooth angle placed
 OK    THD_End1 profile sketch fully defined
       THD_End1: sweep CreateFeature -> True
 OK    THD_End1 swept cut created
-OK    THD_End1 sweep removed material: 0.00405 in^3
+OK    THD_End1 sweep removed material: 0.03205 in^3
 OK    THD_End1 suppressed
-OK    THD_End2: end face found at 0.8900
-OK    dim HELIXDIA = 0.3640 in (expect 0.3640)
+OK    THD_End2: end face found at 1.5200
+OK    dim HELIXDIA = 0.7590 in (expect 0.7590)
 OK    THD_End2 helix sketch made (ProfileFeature)
       THD_End2: InsertHelix ok
 OK    THD_End2 helix created
 OK    THD_End2 helix dims named (D7 D5 PITCH HEIGHT )
-      THD_End2: helix start from the curve (0.0000, 0.8900, 0.1820)
-      THD_End2: helix start = (0.0000, 0.8900, 0.1820)
+      THD_End2: helix start from the curve (0.0000, 1.5200, 0.3795)
+      THD_End2: helix start = (0.0000, 1.5200, 0.3795)
       THD_End2: profile on Right Plane
-      THD_End2: sketch start (-0.1820,0.8900) axialIsX=False apex dir -1
-      PROF_AX: try 0 value 0.8900 (want 0.8900)
-OK    dim PROF_AX = 0.8900 in (expect 0.8900)
-      PROF_R: try 0 value 0.1820 (want 0.1820)
-OK    dim PROF_R = 0.1820 in (expect 0.1820)
-      APEXR: try 0 value 0.2116 (want 0.2116)
-OK    dim APEXR = 0.2116 in (expect 0.2116)
+      THD_End2: sketch start (-0.3795,1.5200) axialIsX=False apex dir -1
+      PROF_AX: try 0 value 1.5200 (want 1.5200)
+OK    dim PROF_AX = 1.5200 in (expect 1.5200)
+      PROF_R: try 0 value 0.3795 (want 0.3795)
+OK    dim PROF_R = 0.3795 in (expect 0.3795)
+      APEXR: try 0 value 0.4366 (want 0.4366)
+OK    dim APEXR = 0.4366 in (expect 0.4366)
 OK    THD_End2 60 deg tooth angle placed
 OK    THD_End2 profile sketch fully defined
       THD_End2: sweep CreateFeature -> True
 OK    THD_End2 swept cut created
-OK    THD_End2 sweep removed material: 0.00289 in^3
+OK    THD_End2 sweep removed material: 0.02577 in^3
 OK    THD_End2 suppressed
-OK    X extent -0.323 .. 0.750 (expect -0.323 .. 0.750; threads may add a little)
-OK    Y extent -0.323 .. 0.890 (expect -0.323 .. 0.890)
-      Bounding box z -0.280 .. 0.280 (approximate - loose around thread faces)
-OK    Z extent (exact) -0.2800 .. 0.2800 (expect -0.2800 .. 0.2800: hex flats)
+OK    X extent -0.613 .. 1.230 (expect -0.613 .. 1.230; threads may add a little)
+OK    Y extent -0.613 .. 1.520 (expect -0.613 .. 1.520)
+      Bounding box z -0.531 .. 0.531 (approximate - loose around thread faces)
+OK    Z extent (exact) -0.5310 .. 0.5310 (expect -0.5310 .. 0.5310: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_1502_SW2.xlsx
-OK    Configurations after table: 9 (expect 9)
-      config check 1: 1502-06-06-FG
-OK    1502-06-06-FG M1@LEG1 = 1.0200 (table 1.0200)
-OK    1502-06-06-FG BODYR@LEG1 = 0.4375 (table 0.4375)
-OK    1502-06-06-FG M2@LEG2 = 1.2700 (table 1.2700)
-OK    1502-06-06-FG BODYR@LEG2 = 0.4375 (table 0.4375)
-OK    1502-06-06-FG NP2_BODYS@LEG2 = 0.6200 (table 0.6200)
-OK    1502-06-06-FG NP2_NECKR@LEG2 = 0.2465 (table 0.2465)
-OK    1502-06-06-FG DEPTH@POCKETCUT1 = 1.0200 (table 1.0200)
-OK    1502-06-06-FG DEPTH@BORECUT2 = 1.2700 (table 1.2700)
-OK    1502-06-06-FG PROF_R@THDPROF_1 = 0.2850 (table 0.2850)
-OK    1502-06-06-FG PROF_R@THDPROF_2 = 0.3060 (table 0.3060)
-OK    1502-06-06-FG HEXAF@HEX1 = 0.8750 (table 0.8750)
-OK    1502-06-06-FG HEXL@HEX1_BODY = 0.7600 (table 0.7600)
-OK    1502-06-06-FG HEXAF@HEX2 = 0.8750 (table 0.8750)
-OK    1502-06-06-FG HEXL@HEX2_BODY = 0.6500 (table 0.6500)
-OK    1502-06-06-FG PUCK_R1B@PUCK = 0.2521 (table 0.2521)
-OK    1502-06-06-FG PUCK_XC@PUCK = 0.5047 (table 0.5047)
-OK    1502-06-06-FG one solid body (found 1)
-      1502-06-06-FG box x -0.505..1.020  y -0.505..1.270
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\tee\DesignTable_1502_SW2.xlsx
+OK    Configurations after table: 11 (expect 11)
+      config check 1: 1502-02-02-FG
+OK    1502-02-02-FG M1@LEG1 = 0.7500 (table 0.7500)
+OK    1502-02-02-FG BODYR@LEG1 = 0.2800 (table 0.2800)
+OK    1502-02-02-FG M2@LEG2 = 0.8900 (table 0.8900)
+OK    1502-02-02-FG BODYR@LEG2 = 0.2800 (table 0.2800)
+OK    1502-02-02-FG NP2_BODYS@LEG2 = 0.4300 (table 0.4300)
+OK    1502-02-02-FG NP2_NECKR@LEG2 = 0.1290 (table 0.1290)
+OK    1502-02-02-FG DEPTH@POCKETCUT1 = 0.7500 (table 0.7500)
+OK    1502-02-02-FG DEPTH@BORECUT2 = 0.8900 (table 0.8900)
+OK    1502-02-02-FG PROF_R@THDPROF_1 = 0.1650 (table 0.1650)
+OK    1502-02-02-FG PROF_R@THDPROF_2 = 0.1820 (table 0.1820)
+OK    1502-02-02-FG HEXAF@HEX1 = 0.5600 (table 0.5600)
+OK    1502-02-02-FG HEXL@HEX1_BODY = 0.4900 (table 0.4900)
+OK    1502-02-02-FG HEXAF@HEX2 = 0.5600 (table 0.5600)
+OK    1502-02-02-FG HEXL@HEX2_BODY = 0.4600 (table 0.4600)
+OK    1502-02-02-FG PUCK_R1B@PUCK = 0.1612 (table 0.1612)
+OK    1502-02-02-FG PUCK_XC@PUCK = 0.3228 (table 0.3228)
+OK    1502-02-02-FG one solid body (found 1)
+      1502-02-02-FG box x -0.323..0.750  y -0.323..0.890
       config check 2: 1502-32-32-FG
 OK    1502-32-32-FG M1@LEG1 = 2.3900 (table 2.3900)
 OK    1502-32-32-FG BODYR@LEG1 = 1.4055 (table 1.4055)
@@ -187,19 +187,21 @@ OK    1502-32-32-FG PUCK_R1B@PUCK = 0.8110 (table 0.8110)
 OK    1502-32-32-FG PUCK_XC@PUCK = 1.6224 (table 1.6224)
 OK    1502-32-32-FG one solid body (found 1)
       1502-32-32-FG box x -1.623..2.390  y -1.623..2.990
-      All-config sweep: rebuilding 8 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/8  1502-02-02-FG  rebuilt in 0.2 s
-      sweep 2/8  1502-06-06-FG  rebuilt in 0.9 s
-      sweep 3/8  1502-12-08-FG  rebuilt in 0.6 s
-      sweep 4/8  1502-12-12-FG  rebuilt in 0.8 s
-      sweep 5/8  1502-16-16-FG  rebuilt in 0.9 s
-      sweep 6/8  1502-20-20-FG  rebuilt in 0.8 s
-      sweep 7/8  1502-24-24-FG  rebuilt in 0.7 s
-      sweep 8/8  1502-32-32-FG  rebuilt in 0.6 s
-OK    All-config sweep: 8 configurations rebuilt, 0 feature/body failures
-      Master left in its reference configuration 1502-02-02-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
+      All-config sweep: rebuilding 10 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/10  1502-02-02-FG  rebuilt in 0.9 s
+      sweep 2/10  1502-04-04-FG  rebuilt in 0.8 s
+      sweep 3/10  1502-06-06-FG  rebuilt in 0.8 s
+      sweep 4/10  1502-08-08-FG  rebuilt in 0.7 s
+      sweep 5/10  1502-12-08-FG  rebuilt in 1.1 s
+      sweep 6/10  1502-12-12-FG  rebuilt in 0.8 s
+      sweep 7/10  1502-16-16-FG  rebuilt in 0.8 s
+      sweep 8/10  1502-20-20-FG  rebuilt in 1.1 s
+      sweep 9/10  1502-24-24-FG  rebuilt in 0.8 s
+      sweep 10/10  1502-32-32-FG  rebuilt in 0.7 s
+OK    All-config sweep: 10 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 1502-08-08-FG for the save (it opens in this size)
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 11 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 11 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1502\1502_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1502\1502_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\1502\1502_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\1502\1502_MASTER.SLDPRT

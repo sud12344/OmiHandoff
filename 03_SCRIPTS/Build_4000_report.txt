@@ -1,0 +1,120 @@
+Build_4000_MASTER  10/20/2026 6:19:37 PM
+OK    RING_AXIS inserted (Front Plane x Top Plane = X axis)
+OK    construction line and section circle created
+OK    dim RINGR = 0.3655 in (expect 0.3655)
+OK    dim CSDIA = 0.0870 in (expect 0.0870)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Ring volume 0.01365 in^3 (torus 2 pi^2 R r^2 = 0.01365)
+OK    split line SPLIT_AXIAL created (silhouette seen along X)
+OK    split line SPLIT_SIDE created (silhouette seen along Z)
+OK    ring face split into 8 faces (found 8)
+OK    volume unchanged by the split lines
+OK    Ring thickness along the axis 0.0870 (expect W 0.0870)
+OK    Ring O.D. 0.8180 / 0.8180 (expect 0.8180 = I.D. 0.6440 + 2 W)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_gen_20261020\out\ring\DesignTable_4000_SW2.xlsx
+OK    Configurations after table: 30 (expect 30)
+      config check 1: 4000-02
+OK    4000-02 RINGR@DRIVE = 0.1515 (table 0.1515)
+OK    4000-02 CSDIA@DRIVE = 0.0640 (table 0.0640)
+OK    4000-02 one solid body (found 1)
+      4000-02 box x -0.032..0.032  y -0.184..0.184
+      config check 2: 4001-32
+OK    4001-32 RINGR@DRIVE = 1.2275 (table 1.2275)
+OK    4001-32 CSDIA@DRIVE = 0.1180 (table 0.1180)
+OK    4001-32 one solid body (found 1)
+      4001-32 box x -0.059..0.059  y -1.287..1.287
+OK    4000-08: thickness 0.0870 (W 0.0870), O.D. 0.8180 / 0.8180 (expect 0.8180)
+OK    4000-08: split lines present (8 faces, found 8)
+OK    4000-02: thickness 0.0640 (W 0.0640), O.D. 0.3670 / 0.3670 (expect 0.3670)
+OK    4000-02: split lines present (8 faces, found 8)
+OK    4000-03: thickness 0.0640 (W 0.0640), O.D. 0.4290 / 0.4290 (expect 0.4290)
+OK    4000-03: split lines present (8 faces, found 8)
+OK    4000-04: thickness 0.0720 (W 0.0720), O.D. 0.4950 / 0.4950 (expect 0.4950)
+OK    4000-04: split lines present (8 faces, found 8)
+OK    4000-06: thickness 0.0780 (W 0.0780), O.D. 0.6240 / 0.6240 (expect 0.6240)
+OK    4000-06: split lines present (8 faces, found 8)
+OK    4000-10: thickness 0.0970 (W 0.0970), O.D. 0.9490 / 0.9490 (expect 0.9490)
+OK    4000-10: split lines present (8 faces, found 8)
+OK    4000-12: thickness 0.1160 (W 0.1160), O.D. 1.1560 / 1.1560 (expect 1.1560)
+OK    4000-12: split lines present (8 faces, found 8)
+OK    4000-16: thickness 0.1160 (W 0.1160), O.D. 1.4030 / 1.4030 (expect 1.4030)
+OK    4000-16: split lines present (8 faces, found 8)
+OK    4000-20: thickness 0.1180 (W 0.1180), O.D. 1.7110 / 1.7110 (expect 1.7110)
+OK    4000-20: split lines present (8 faces, found 8)
+OK    4000-24: thickness 0.1180 (W 0.1180), O.D. 1.9560 / 1.9560 (expect 1.9560)
+OK    4000-24: split lines present (8 faces, found 8)
+OK    4000-32: thickness 0.1180 (W 0.1180), O.D. 2.5730 / 2.5730 (expect 2.5730)
+OK    4000-32: split lines present (8 faces, found 8)
+OK    4001-02: thickness 0.0640 (W 0.0640), O.D. 0.3670 / 0.3670 (expect 0.3670)
+OK    4001-02: split lines present (8 faces, found 8)
+OK    4001-04: thickness 0.0720 (W 0.0720), O.D. 0.4950 / 0.4950 (expect 0.4950)
+OK    4001-04: split lines present (8 faces, found 8)
+OK    4001-06: thickness 0.0780 (W 0.0780), O.D. 0.6240 / 0.6240 (expect 0.6240)
+OK    4001-06: split lines present (8 faces, found 8)
+OK    4001-08: thickness 0.0870 (W 0.0870), O.D. 0.8180 / 0.8180 (expect 0.8180)
+OK    4001-08: split lines present (8 faces, found 8)
+OK    4001-10: thickness 0.0970 (W 0.0970), O.D. 0.9490 / 0.9490 (expect 0.9490)
+OK    4001-10: split lines present (8 faces, found 8)
+OK    4001-12: thickness 0.1160 (W 0.1160), O.D. 1.1560 / 1.1560 (expect 1.1560)
+OK    4001-12: split lines present (8 faces, found 8)
+OK    4001-16: thickness 0.1160 (W 0.1160), O.D. 1.4030 / 1.4030 (expect 1.4030)
+OK    4001-16: split lines present (8 faces, found 8)
+OK    4001-20: thickness 0.1180 (W 0.1180), O.D. 1.7110 / 1.7110 (expect 1.7110)
+OK    4001-20: split lines present (8 faces, found 8)
+OK    4001-24: thickness 0.1180 (W 0.1180), O.D. 1.9560 / 1.9560 (expect 1.9560)
+OK    4001-24: split lines present (8 faces, found 8)
+OK    4001-32: thickness 0.1180 (W 0.1180), O.D. 2.5730 / 2.5730 (expect 2.5730)
+OK    4001-32: split lines present (8 faces, found 8)
+OK    FS4000-04: thickness 0.0700 (W 0.0700), O.D. 0.4410 / 0.4410 (expect 0.4410)
+OK    FS4000-04: split lines present (8 faces, found 8)
+OK    FS4000-06: thickness 0.0700 (W 0.0700), O.D. 0.5040 / 0.5040 (expect 0.5040)
+OK    FS4000-06: split lines present (8 faces, found 8)
+OK    FS4000-08: thickness 0.0700 (W 0.0700), O.D. 0.6290 / 0.6290 (expect 0.6290)
+OK    FS4000-08: split lines present (8 faces, found 8)
+OK    FS4000-10: thickness 0.0700 (W 0.0700), O.D. 0.7540 / 0.7540 (expect 0.7540)
+OK    FS4000-10: split lines present (8 faces, found 8)
+OK    FS4000-12: thickness 0.0700 (W 0.0700), O.D. 0.8790 / 0.8790 (expect 0.8790)
+OK    FS4000-12: split lines present (8 faces, found 8)
+OK    FS4000-16: thickness 0.0700 (W 0.0700), O.D. 1.0660 / 1.0660 (expect 1.0660)
+OK    FS4000-16: split lines present (8 faces, found 8)
+OK    FS4000-20: thickness 0.0700 (W 0.0700), O.D. 1.3160 / 1.3160 (expect 1.3160)
+OK    FS4000-20: split lines present (8 faces, found 8)
+OK    FS4000-24: thickness 0.0700 (W 0.0700), O.D. 1.6290 / 1.6290 (expect 1.6290)
+OK    FS4000-24: split lines present (8 faces, found 8)
+      All-config sweep: rebuilding 29 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/29  4000-02  rebuilt in 0.3 s
+      sweep 2/29  4000-03  rebuilt in 0.3 s
+      sweep 3/29  4000-04  rebuilt in 0.3 s
+      sweep 4/29  4000-06  rebuilt in 0.3 s
+      sweep 5/29  4000-08  rebuilt in 0.3 s
+      sweep 6/29  4000-10  rebuilt in 0.3 s
+      sweep 7/29  4000-12  rebuilt in 0.4 s
+      sweep 8/29  4000-16  rebuilt in 0.3 s
+      sweep 9/29  4000-20  rebuilt in 0.3 s
+      sweep 10/29  4000-24  rebuilt in 0.3 s
+      sweep 11/29  4000-32  rebuilt in 0.3 s
+      sweep 12/29  4001-02  rebuilt in 0.3 s
+      sweep 13/29  4001-04  rebuilt in 0.3 s
+      sweep 14/29  4001-06  rebuilt in 0.3 s
+      sweep 15/29  4001-08  rebuilt in 0.3 s
+      sweep 16/29  4001-10  rebuilt in 0.3 s
+      sweep 17/29  4001-12  rebuilt in 0.3 s
+      sweep 18/29  4001-16  rebuilt in 0.3 s
+      sweep 19/29  4001-20  rebuilt in 0.3 s
+      sweep 20/29  4001-24  rebuilt in 0.3 s
+      sweep 21/29  4001-32  rebuilt in 0.3 s
+      sweep 22/29  FS4000-04  rebuilt in 0.3 s
+      sweep 23/29  FS4000-06  rebuilt in 0.3 s
+      sweep 24/29  FS4000-08  rebuilt in 0.3 s
+      sweep 25/29  FS4000-10  rebuilt in 0.3 s
+      sweep 26/29  FS4000-12  rebuilt in 0.3 s
+      sweep 27/29  FS4000-16  rebuilt in 0.3 s
+      sweep 28/29  FS4000-20  rebuilt in 0.3 s
+      sweep 29/29  FS4000-24  rebuilt in 0.3 s
+OK    All-config sweep: 29 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 4000-08 for the save (it opens in this size)
+      No THD_ features in this master (O-rings carry no threads)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\4000\4000_MASTER.SLDPRT returned True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\orfs_dryrun_20261020\4000\4000_MASTER.SLDPRT
