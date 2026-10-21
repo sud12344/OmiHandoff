@@ -7,6 +7,12 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-21: BATCH 20 SHIPPED (`03_SCRIPTS\RUN_ME_batch20.txt`, QA #182; QA #178 closed).** 5404N: -06 thread fix (gen_straight2
+`ROUND_STEP_HELIX` - helix 0.005 short of the round-bar shoulder; cause: tooth end on the shoulder edge) + the 4 long nipples (A4) -> 26
+configurations (was 4). Dry run 26 rebuilt with threads live, old 4 identical; post-ship verify 0 BAD. **Now: 1,632 configurations in a master,
+156 masters; OMi's 2,535 parts: 1,629 in a master.** Evidence `tools\_out\batch20_20261021\` (README, checks, dryrun). No held roots left except
+2502 (QA #180); open user questions QA #181.
+
 **2026-10-21: BATCH 19 SHIPPED (`03_SCRIPTS\RUN_ME_batch19.txt`, QA #179-#181; user: "finish the 94 parts that need no input from me").**
 The "(d) generator / table work only" list of `tools\_out\blocked_needs_20261020\BLOCKED_NEEDS.md`, staged by five agents
 (`tools\_out\batch19_20261021\<A_answered|B_newspec|C_ownstep|D_geom|E_gen>\`, README + CHANGES.csv each) and merged in `...\merge\` (scripts,

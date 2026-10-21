@@ -2043,6 +2043,7 @@ def dashes(pn):
 # configuration) are untouched. (tools/_out/tier1_20261001/work/5404N-06/NOTES.md; QA #163: the SolidWorks dry run of 2026-10-01 built the
 # -06 bodies but THD_EndA / THD_EndB failed to rebuild in the -06 configurations - the -06 rows carry NEEDS SOLIDWORKS CHECK in $COMMENT.)
 ROUND_STEP_MIN = 0.0025
+ROUND_STEP_HELIX = 0.005      # 2026-10-21 (QA #178): helix stop short of the shoulder on a round-bar-step end (see the round-bar branch in build_rows)
 ROUND_STEP_SWCHECK = ('NEEDS SOLIDWORKS CHECK: on 2026-10-01 (QA #163) the thread features THD_EndA / THD_EndB failed to rebuild in every '
                       'configuration with a round-bar step below 0.005 (5404N -06 TEST rows; bodies built) - dry-run and sweep the threads live '
                       'before shipping')
@@ -2173,12 +2174,21 @@ def build_rows(root):
                                 f'{E["kind"]} end at {x:.4f} from its tip (dia {2 * rr:.4f}' + (' = ASME B1.20.3 crest cone E0 + 0.8P + L2/16' if E['kind'] == 'NPTFM' else '') +
                                 f') - built with that step (round bar: allowed down to {ROUND_STEP_MIN}, half the 0.01 print step of C; a hex body needs 0.005)')
                         if msg_ not in warn: warn.append(msg_)
-                        if ROUND_STEP_SWCHECK not in warn: warn.append(ROUND_STEP_SWCHECK)
+                        # 2026-10-21 (QA #178): with the bar this close above the crest cone, a helix ending exactly at the thread length puts the
+                        # end of the swept tooth on the shoulder edge and THD_End<sfx> fails to rebuild (SolidWorks probe on the 5404N dry-run part:
+                        # 0.4078 fails, 0.4028 / 0.4048 / 0.4058 / 0.415 build, at every -06 length 2.0 ... 6.0). The helix stops ROUND_STEP_HELIX
+                        # short of the shoulder; the uncut 0.005 is invisible and threads are cosmetic (suppressed in the saved master).
                         if not model_extra:
                             model_extra.append(f'round bar only {rB - rr:.4f} (radius) above the {E["kind"]} crest cone at the end of the thread: modelled as that small '
                                                f'step, as at every 5404N size - the vanish threads of the real part (crest cone running on into the bar) are NOT '
                                                f'modelled (ASSUMPTION); allowed because the step is at least {ROUND_STEP_MIN} = half the 0.01 print step of Air-Way C, '
                                                f'so the bar stays above the crest cone even if the true C is 0.005 smaller')
+                        hk_ = f'HEIGHT@HELIX_{sfx_}'
+                        if E.get('thread') and E['thread'].get('type') == 'HELIX' and hk_ in E['cols'] and E['cols'][hk_] == E['cols'].get(f'NPTF{sfx_}_THDL@DRIVE'):
+                            E['cols'][hk_] = round(E['cols'][hk_] - ROUND_STEP_HELIX, 4); E['thread']['height'] = E['cols'][hk_]
+                            model_extra.append(f'End {sfx_}: helical thread stops {ROUND_STEP_HELIX} short of the round-bar shoulder (helix {E["cols"][hk_]} vs '
+                                               f'thread length {E["cols"][f"NPTF{sfx_}_THDL@DRIVE"]}): at the full length the swept tooth ends on the shoulder '
+                                               f'edge and SolidWorks cannot cut it (QA #178) - threads are cosmetic')
                     else:
                         chk.append(f'{E["kind"]} radius {rr:.3f} >= body radius {rB:.3f}')
         cols = dict(); cols[sp['L'].split('@')[0] + '@DRIVE'] = L; cols['BODYR@DRIVE'] = round(rB, 5)

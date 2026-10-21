@@ -1,0 +1,30 @@
+cfg,column,old,new,source
+5404-N-06X4.500,L@DRIVE,,4.5,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,COD@REF,,0.69,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,D1@BORE,,0.39,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,D2@BORE,,0.39,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,THDMAJ_A1@DRIVE,,0.675,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,THDMAJ_A2@DRIVE,,0.675,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,$PRP@Threads,,"3/8-18 x 3/8-18 NPTF, cut length 4.5 in",A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,$PRP@DataStatus,MISSING,ASSUMED,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X4.500,$COMMENT,BUILD-MISSING: part exists in OMi catalog but the Air-Way page has no row; needs a second dimensional source,"BUILD-MISSING: part exists in OMi catalog but the Air-Way page has no row; needs a second dimensional source | 2026-10-21 (batch 20): L from the part number, bar dia and bores from the Air-Way nipple 5404-N-06-06-X1 (A4 yes 2026-10-18), as every 06 sibling row; MISSING -> ASSUMED",batch 20
+5404-N-06X5.500,$PRP@DataStatus,MISSING,ASSUMED,A4 transfer from 5404-N-06X3.000 / Air-Way 5404-N-06-06-X1
+5404-N-06X5.500,$COMMENT,"2026-10-18 (wave 3 adapters, staged, not shipped): NEW row - OMi sells this part (SKU dropped by the 2026-09-23 crawl; two-pass crawl 2026-10-16, tools/_out/adapters77_20261016/REPORT_77.md); Air-Way does not print this size; L from the part number, bar dia and bores from the Air-Way nipple 5404-N-06-06-X1 (A4 yes 2026-10-18); no Brennan size used","2026-10-18 (wave 3 adapters, staged, not shipped): NEW row - OMi sells this part (SKU dropped by the 2026-09-23 crawl; two-pass crawl 2026-10-16, tools/_out/adapters77_20261016/REPORT_77.md); Air-Way does not print this size; L from the part number, bar dia and bores from the Air-Way nipple 5404-N-06-06-X1 (A4 yes 2026-10-18); no Brennan size used | 2026-10-21 (batch 20): L from the part number, bar dia and bores from the Air-Way nipple 5404-N-06-06-X1 (A4 yes 2026-10-18), as every 06 sibling row; MISSING -> ASSUMED",batch 20
+5404-N-08X2.500,L@DRIVE,,2.5,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,COD@REF,,0.88,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,D1@BORE,,0.48,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,D2@BORE,,0.48,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,THDMAJ_A1@DRIVE,,0.84,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,THDMAJ_A2@DRIVE,,0.84,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,$PRP@Threads,,"1/2-14 x 1/2-14 NPTF, cut length 2.5 in",A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,$PRP@DataStatus,MISSING,ASSUMED,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X2.500,$COMMENT,BUILD-MISSING: part exists in OMi catalog but the Air-Way page has no row; needs a second dimensional source,"BUILD-MISSING: part exists in OMi catalog but the Air-Way page has no row; needs a second dimensional source | 2026-10-21 (batch 20): L from the part number, bar dia and bores from the Air-Way nipple 5404-N-08-08-X3 (A4 yes 2026-10-18), as every 08 sibling row; MISSING -> ASSUMED",batch 20
+5404-N-08X5.500,L@DRIVE,,5.5,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,COD@REF,,0.88,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,D1@BORE,,0.48,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,D2@BORE,,0.48,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,THDMAJ_A1@DRIVE,,0.84,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,THDMAJ_A2@DRIVE,,0.84,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,$PRP@Threads,,"1/2-14 x 1/2-14 NPTF, cut length 5.5 in",A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,$PRP@DataStatus,MISSING,ASSUMED,A4 transfer from 5404-N-08X3.500 / Air-Way 5404-N-08-08-X3
+5404-N-08X5.500,$COMMENT,BUILD-MISSING: part exists in OMi catalog but the Air-Way page has no row; needs a second dimensional source,"BUILD-MISSING: part exists in OMi catalog but the Air-Way page has no row; needs a second dimensional source | 2026-10-21 (batch 20): L from the part number, bar dia and bores from the Air-Way nipple 5404-N-08-08-X3 (A4 yes 2026-10-18), as every 08 sibling row; MISSING -> ASSUMED",batch 20
