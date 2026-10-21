@@ -475,6 +475,14 @@ SPEC.update({
                    legs=[('FSM', 'L7_1@DRIVE', 'D1_1@BORE', 'THDMAJ_D_1@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE'),
                          ('FSM', 'L7_3@DRIVE', 'D1_3@BORE', 'THDMAJ_D_3@DRIVE')]),
 })
+# 2026-10-21 (group B): FS6809 90 deg female face-seal swivel x adjustable male ORB stud (forged) - the FS6500 swivel leg (FSSW_MEAS) and the FS6801
+# adjustable stud (NWO_FS) on one 2500HX elbow body. Brennan FS6809-06-06-NWO-FG STEP: swivel on -X (seal face = the row L21 = record AAA 1.150),
+# stud on +Y (tip 1.450 = L10 = record N), body hex 0.75 (= JJ / S2), washer face at 0.993 = L10 - record DT (L11). PN FS6809-<FS>-<ORB>.
+SPEC.update({
+    'FS6809': dict(name='ORFS 90 deg Female Face Seal Swivel x Adjustable Male ORB Elbow', hex='S2HEX@HEX', elbow=True, fs=True, ref='FS6809-08-08-NWO-FG',
+                   fssw=('SHEX@HEX',), nwo=(None, 'S3HEX@HEX', None, None), fs_wf='L11@DRIVE',
+                   legs=[('FSSW', 'L21@DRIVE', 'D19@BORE', 'THDMAJ_D@DRIVE'), ('NWO', 'L10@DRIVE', 'D20@BORE', 'THDMAJ_N@DRIVE')]),
+})
 # 2026-10-20 (per-size STEPs): a forged FS row whose face-seal legs have the flats = the thread major (no step, Brennan FS6500-04 / -12 / -16) is
 # another DRIVE sketch -> its own master <root>N, reading the same review table (rows sorted between the two by build_rows)
 FS_CODE_WHY = dict(S='stepped face-seal legs', N='face-seal legs with the flats = the thread major (no step)', F='stud neck flush with the flats',
@@ -722,6 +730,12 @@ FSBH_ASSUME = ('face-seal bulkhead leg (Brennan FS2701-08-08-FG): FSM nose, face
 # Air-Way S3 hex), washer and undercut (= NWO_MEAS); the stud tip -> washer face = Air-Way L10 - L11 (Q-FS-ORBSTUD (a)) and the extra length over
 # the library is thread (tip -> thread end = stud - undercut length).
 NWO_FS = {8: dict(NECKR=0.375, NECKL=0.039, NUTT=0.41, WR=0.505, WT=0.041, UL=0.146, AF_B=0.938)}
+# 2026-10-21 (group B, groupB_20261021): -06 from BRENNAN_FS6809-06-06-NWO-FG (the 'another FS part with a -06 adjustable stud'), section through
+# the stud (tools/measure/prof.py, crossing at the origin, stud on +Y): body hex arm to 0.570, neck r 0.300 to 0.628, lock nut 0.628 .. 0.958 (75deg
+# chamfers from r 0.375 = AF 0.75 / 2), washer r 0.397 0.958 .. 0.993, undercut r 0.241 (= ORB -06 GD / 2) with the O-ring to the 60deg flank at 1.096,
+# thread r 0.2813 to the 45deg tip chamfer, tip 1.450 = the row L10. Tip -> washer face 0.457 (= its CAD record DT), tip -> body face 0.880 (record GT);
+# the -08 pilot read the same way reproduces NWO_FS[8] (tip -> washer 0.540, washer 0.041 / r 0.505, nut 0.41, neck 0.039 / r 0.375).
+NWO_FS[6] = dict(NECKR=0.300, NECKL=0.058, NUTT=0.33, WR=0.397, WT=0.035, UL=0.103, AF_B=0.75)
 NWOFS_ASSUME = ('adjustable ORB stud on an FS part (Brennan FS6801-08-08-NWO-FG): neck, lock nut (0.41 thick, hex = the row S3), washer and O-ring undercut '
                 'measured on the -08 pilot (NWO_FS; washer and undercut = the 6801 library NWO_MEAS); washer face at Air-Way L11 / L14 from the crossing '
                 '(stud = tip -> washer face, Q-FS-ORBSTUD (a)); thread from the tip to the undercut (the extra stud length is thread); thread major, '
