@@ -52,6 +52,7 @@ tools/_out/*
 !tools/_out/count_20261020/
 !tools/_out/orfs_steps2_20261020/
 !tools/_out/blocked_needs_20261020/
+!tools/_out/groupD_20261021/
 
 # brennan_yes: keep stage, stage_orfs, scripts, wave reports / cell lists; drop test copies and regenerations
 tools/_out/brennan_yes_20261018/base_root/
