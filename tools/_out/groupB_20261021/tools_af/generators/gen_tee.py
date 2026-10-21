@@ -405,6 +405,39 @@ SPEC = {
                  assume_reps=(('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),),
                  legs=[('FLG62', 'N2@DRIVE', 'DFLG@BORE', None), ('JICM', 'M@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE')]),
 }
+# ---- 2026-10-21 (group B, groupB_20261021): 90 deg adjustable-ORB elbows with the existing leg modules (no new end shape). The rows are
+#      the OMi -FG parts: Air-Way -FG rows where Air-Way prints them, else the part's Brennan CAD record (user 2026-10-21; codes placed on
+#      the family STEP, scripts/edit_elbows.py). The Brennan STEP of each family has the 2500HX elbow body (hex arms + 30deg corner puck of
+#      the hex-corner radius, crossing at the origin, ORB leg on -X: drawn on +X here, mirror image) and the 6801 adjustable-ORB end; the
+#      ORB end cells not printed (I3, thread length, undercut) come from the end library as on 4601 / 6807 ('=6801', '=ORB:*').
+_GB_REPS = (('A/F = max(Air-Way hex, JIC thread majors)', "A/F = max(the row hex A/F (its source: the start of this AxialSource), JIC thread majors)"),)
+_GB_NPSM = ('NUT FACE AT AIR-WAY W3 AND STEM TIP AT AIR-WAY M1/M (crossing to the stem tip)',
+            'NUT FACE AT THE ROW W3 AND STEM TIP AT THE ROW M1 (crossing to the nut face / to the stem tip; Air-Way, or the Brennan record M6 / M - '
+            'the start of this AxialSource names the source; Brennan 6901-06-08-NWO-FG STEP: nut face 1.320, stem tip 1.040, body face 0.560 = '
+            'the 1404-08 swivel end)')
+# 6901: = 6902 at 90 deg (NWO leg on +X, NPSM swivel on +Y); PN 6901-ORB-NPSM
+SPEC['6901'] = dict(name='90 deg Adjustable Male ORB x Female NPSM Swivel Elbow', hex='C1HEX@HEX', elbow=True, ref='6901-08-08-NWO-FG', pn='$PRP@OMiSKU',
+                    npsm=('W3@HEX', 'CHEX@HEX'), nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'),
+                    assume_reps=_GB_REPS, assume_reps_opt=(_GB_NPSM,),
+                    legs=[('NWO', 'N5@DRIVE', 'D1@BORE', 'THDMAJ_B@DRIVE'), ('NPSMSW', 'M1@DRIVE', 'D@BORE', 'THDMAJ_A1@DRIVE')])
+# 6805: adjustable ORB x female NPTF (the 5504 / 1502 female pipe leg: round collar 0.26, tap drill to the crossing - Brennan 6805-08-08-NWO-FG
+# STEP: collar 0.97 .. 1.23 dia 1.062 = the flats, tap drill 0.718 running on past the crossing)
+SPEC['6805'] = dict(name='90 deg Adjustable Male ORB x Female Pipe Elbow', hex='Y1@REF', elbow=True, ref='6805-08-08-NWO-FG', conn=None,
+                    nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'), assume_reps=_GB_REPS,
+                    nptff_text=('female NPTF leg: tap drill = the row TAPDRILL (Air-Way per-size value, A1) from the port face to the axis crossing, tapered '
+                                'helical thread over MS51503 P1 max (' + BR5405 + ') - the Brennan 6805-08-08-NWO-FG STEP shows the 0.718 tap drill running on '
+                                'past the crossing (modelled with a flat end at the crossing: ASSUMPTION, the ORB bore opens into it); the thread-zone minor cone '
+                                'and the 45deg port-mouth chamfer are NOT modelled'),
+                    legs=[('NWO', 'M17@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('NPTFF', 'N1@DRIVE', 'TAPDRILL@BORE', 'THDMAJ_A@DRIVE')])
+# 6806: adjustable ORB x male NPTF (the 2501 / 5500 male pipe leg)
+SPEC['6806'] = dict(name='90 deg Adjustable Male ORB x Male Pipe Elbow', hex='Y@REF', elbow=True, ref='6806-08-08-NWO-FG',
+                    nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'), assume_reps=_GB_REPS,
+                    legs=[('NWO', 'M7@DRIVE', 'D@BORE', 'THDMAJ_B@DRIVE'), ('NPTFM', 'N@DRIVE', 'D1@BORE', 'THDMAJ_A@DRIVE')])
+# 6809: = 6810 at 90 deg (adjustable ORB x female JIC swivel; Brennan 6809-10-10-NWO-FG STEP: nut face 1.620 = M6, nose tip 1.120 = M)
+SPEC['6809'] = dict(name='90 deg Adjustable Male ORB x Female JIC Swivel Elbow', hex='Y@HEX', elbow=True, ref='6809-10-10-NWO-FG',
+                    sw=('M10@DRIVE', 'C3HEX@HEX'), nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'), assume_reps=_GB_REPS,
+                    legs=[('NWO', 'M7@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICSW', 'M5@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE')])
+
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.
@@ -2128,6 +2161,8 @@ def assume_text(root, legs):
     s_ = '; '.join(t)
     for a_, b_ in sp.get('assume_reps', ()):        # 2026-10-02 (1502): per-root wording of the shared texts (every pair must apply)
         assert a_ in s_, (root, a_); s_ = s_.replace(a_, b_)
+    for a_, b_ in sp.get('assume_reps_opt', ()):    # 2026-10-21 (group B): pairs for a text only some rows carry (a blocked row's leg falls back)
+        s_ = s_.replace(a_, b_)
     return s_
 
 
