@@ -1,0 +1,182 @@
+Build_6404_MASTER  10/20/2026 8:42:21 PM
+OK    dim L32 = 1.6900 in (expect 1.6900)
+OK    dim BODYR = 0.5774 in (expect 0.5774)
+OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
+OK    dim NPTFA_THDL = 0.5337 in (expect 0.5337)
+      NPTFA_TAPER: the two lines share no endpoint - vertex candidates unavailable
+OK    angle NPTFA_TAPER = 1.79 deg
+OK    dim NPTFA_RELL = 0.2163 in (expect 0.2163)
+OK    dim ORBFB_FACER = 0.4065 in (expect 0.4065)
+      ORBFB_CHAMANG: the two lines share no endpoint - vertex candidates unavailable
+      ORBFB_CHAMANG angle try 0 at (0.017, -0.021): 165.0 deg (want 15.0)
+OK    angle ORBFB_CHAMANG = 15.00 deg
+OK    dim ORBFB_CHAMR = 0.3780 in (expect 0.3780)
+      ORBFB_LEADANG: the two lines share no endpoint - vertex candidates unavailable
+      ORBFB_LEADANG angle try 0 at (1.060, -0.060): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 1 at (1.351, 0.060): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 2 at (0.915, -0.121): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 3 at (1.497, 0.121): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 4 at (1.565, 0.478): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 5 at (1.565, -0.478): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 6 at (-1.565, 0.478): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 7 at (-1.565, -0.478): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 8 at (1.683, 0.079): 135.0 deg (want 45.0)
+      ORBFB_LEADANG angle try 9 at (1.447, 0.079): 135.0 deg (want 45.0)
+OK    angle ORBFB_LEADANG held by its supplement ORBFB_LEADANG_SUPPL = 135.00 deg (same line; the segments do not meet)
+OK    dim ORBFB_MINR = 0.3400 in (expect 0.3400)
+OK    dim ORBFB_MINL = 0.5436 in (expect 0.5436)
+OK    angle ORBFB_DRILLANG = 60.00 deg
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 1.1091 in^3 (expect 1.1091)
+OK    dim HEXB = 1.0000 in (expect 1.0000)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (15.4% of volume)
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.5300 in (expect 0.5300)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=1.0020 DA=0.5300 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=1.6900)
+OK    THD_EndA: end face found at 0.0000
+OK    dim HELIXDIA = 0.8156 in (expect 0.8156)
+OK    THD_EndA helix sketch made (ProfileFeature)
+      THD_EndA: InsertHelix ok
+OK    THD_EndA helix created
+OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.4078)
+      THD_EndA: helix start = (0.0000, 0.0000, 0.4078)
+      THD_EndA: profile on Top Plane
+      THD_EndA: sketch start (0.0000,-0.4078) axialIsX=True apex dir 1
+      THD_EndA: P on Right Plane ok
+      PROF_R: try 0 value 0.4078 (want 0.4078)
+OK    dim PROF_R = 0.4078 in (expect 0.4078)
+      APEXR: try 0 value 0.3506 (want 0.3506)
+OK    dim APEXR = 0.3506 in (expect 0.3506)
+OK    THD_EndA 60 deg tooth angle placed
+OK    THD_EndA profile sketch fully defined
+      THD_EndA: sweep CreateFeature -> True
+OK    THD_EndA swept cut created
+OK    THD_EndA sweep removed material: 0.03723 in^3
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+OK    THD_EndB: end face found at 1.6900
+OK    dim HELIXDIA = 0.6800 in (expect 0.6800)
+OK    THD_EndB helix sketch made (ProfileFeature)
+      THD_EndB: InsertHelix ok
+OK    THD_EndB helix created
+OK    THD_EndB helix dims named (D7 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (1.6900, 0.0000, -0.3400)
+      THD_EndB: helix start = (1.6900, 0.0000, -0.3400)
+      THD_EndB: profile on Top Plane
+      THD_EndB: sketch start (1.6900,0.3400) axialIsX=True apex dir 1
+      PROF_AX: try 0 value 1.6900 (want 1.6900)
+OK    dim PROF_AX = 1.6900 in (expect 1.6900)
+      PROF_R: try 0 value 0.3400 (want 0.3400)
+OK    dim PROF_R = 0.3400 in (expect 0.3400)
+      APEXR: try 0 value 0.3738 (want 0.3738)
+OK    dim APEXR = 0.3738 in (expect 0.3738)
+OK    THD_EndB 60 deg tooth angle placed
+OK    THD_EndB profile sketch fully defined
+      THD_EndB: sweep CreateFeature -> True
+OK    THD_EndB swept cut created
+OK    THD_EndB sweep removed material: 0.01431 in^3
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 1.7266 (nominal 1.6900; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.6900
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 1.0000 / corners 1.1547 (expect 1.0000 / 1.1547)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_6404_SW2.xlsx
+OK    Configurations after table: 15 (expect 15)
+      config check 1: 6404-04-02
+OK    6404-04-02 L32@DRIVE = 1.1300 (table 1.1300)
+OK    6404-04-02 BODYR@DRIVE = 0.3984 (table 0.3984)
+OK    6404-04-02 HEXB@HEX = 0.6900 (table 0.6900)
+OK    6404-04-02 NPTFA_MAJR@DRIVE = 0.1966 (table 0.1966)
+OK    6404-04-02 NPTFA_THDL@DRIVE = 0.2639 (table 0.2639)
+OK    6404-04-02 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    6404-04-02 NPTFA_RELL@DRIVE = 0.1161 (table 0.1161)
+OK    6404-04-02 ORBFB_FACER@DRIVE = 0.2450 (table 0.2450)
+OK    6404-04-02 PROF_R@THDPROF_A = 0.1966 (table 0.1966)
+OK    6404-04-02 PROF_R@THDPROF_B = 0.1900 (table 0.1900)
+OK    6404-04-02 DEPTH@BORECUT_A = 0.5830 (table 0.5830)
+OK    6404-04-02 one solid body (found 1)
+      6404-04-02 box x -0.020..1.130  y -0.345..0.345
+      config check 2: 6404-24-24
+OK    6404-24-24 L32@DRIVE = 2.3000 (table 2.3000)
+OK    6404-24-24 BODYR@DRIVE = 1.2990 (table 1.2990)
+OK    6404-24-24 HEXB@HEX = 2.2500 (table 2.2500)
+OK    6404-24-24 NPTFA_MAJR@DRIVE = 0.9328 (table 0.9328)
+OK    6404-24-24 NPTFA_THDL@DRIVE = 0.7235 (table 0.7235)
+OK    6404-24-24 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    6404-24-24 NPTFA_RELL@DRIVE = 0.2765 (table 0.2765)
+OK    6404-24-24 ORBFB_FACER@DRIVE = 0.9830 (table 0.9830)
+OK    6404-24-24 PROF_R@THDPROF_A = 0.9328 (table 0.9328)
+OK    6404-24-24 PROF_R@THDPROF_B = 0.8900 (table 0.8900)
+OK    6404-24-24 DEPTH@BORECUT_A = 1.3940 (table 1.3940)
+OK    6404-24-24 one solid body (found 1)
+      6404-24-24 box x -0.064..2.300  y -1.125..1.125
+OK    6404-08-08: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-08-08: bore meets the port - no face across the axis at the minor-bore bottom x=1.0020
+OK    6404-04-02: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-04-02: bore meets the port - no face across the axis at the minor-bore bottom x=0.5830
+OK    6404-04-04: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-04-04: bore meets the port - no face across the axis at the minor-bore bottom x=0.7630
+OK    6404-06-04: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-06-04: bore meets the port - no face across the axis at the minor-bore bottom x=0.7710
+OK    6404-06-06: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-06-06: bore meets the port - no face across the axis at the minor-bore bottom x=0.7710
+OK    6404-06-08: ORBFB_DRILLANG@DRIVE = 90.00 deg (table 90)
+OK    6404-06-08: bore meets the port - no face across the axis at the minor-bore bottom x=0.4910
+OK    6404-08-06: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-08-06: bore meets the port - no face across the axis at the minor-bore bottom x=0.8120
+OK    6404-10-08: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-10-08: bore meets the port - no face across the axis at the minor-bore bottom x=1.0290
+OK    6404-10-12: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-10-12: bore meets the port - no face across the axis at the minor-bore bottom x=0.9390
+OK    6404-12-08: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-12-08: bore meets the port - no face across the axis at the minor-bore bottom x=1.0640
+OK    6404-12-12: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-12-12: bore meets the port - no face across the axis at the minor-bore bottom x=1.0640
+OK    6404-16-12: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-16-12: bore meets the port - no face across the axis at the minor-bore bottom x=1.0640
+OK    6404-16-16: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-16-16: bore meets the port - no face across the axis at the minor-bore bottom x=1.2540
+OK    6404-24-24: ORBFB_DRILLANG@DRIVE = 60.00 deg (table 60)
+OK    6404-24-24: bore meets the port - no face across the axis at the minor-bore bottom x=1.3940
+      All-config sweep: rebuilding 14 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/14  6404-04-02  rebuilt in 2.6 s
+      sweep 2/14  6404-04-04  rebuilt in 1.7 s
+      sweep 3/14  6404-06-04  rebuilt in 1.6 s
+      sweep 4/14  6404-06-06  rebuilt in 1.7 s
+      sweep 5/14  6404-06-08  rebuilt in 3.7 s
+      sweep 6/14  6404-08-06  rebuilt in 1.4 s
+      sweep 7/14  6404-08-08  rebuilt in 3.8 s
+      sweep 8/14  6404-10-08  rebuilt in 3.5 s
+      sweep 9/14  6404-10-12  rebuilt in 6.0 s
+      sweep 10/14  6404-12-08  rebuilt in 3.6 s
+      sweep 11/14  6404-12-12  rebuilt in 6.1 s
+      sweep 12/14  6404-16-12  rebuilt in 6.0 s
+      sweep 13/14  6404-16-16  rebuilt in 6.8 s
+      sweep 14/14  6404-24-24  rebuilt in 6.4 s
+OK    All-config sweep: 14 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 6404-08-08 for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 15 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6404\6404_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 8:45:39 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6404\6404_MASTER.SLDPRT

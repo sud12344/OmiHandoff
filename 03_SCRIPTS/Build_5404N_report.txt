@@ -1,4 +1,4 @@
-Build_5404N_MASTER  9/25/2026 3:14:54 AM
+Build_5404N_MASTER  10/21/2026 3:33:05 AM
 OK    dim L = 3.0000 in (expect 3.0000)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim NPTFA_MAJR = 0.4078 in (expect 0.4078)
@@ -48,6 +48,7 @@ OK    THD_EndA helix sketch made (ProfileFeature)
       THD_EndA: InsertHelix ok
 OK    THD_EndA helix created
 OK    THD_EndA helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndA: helix start from the curve (0.0000, 0.0000, 0.4078)
       THD_EndA: helix start = (0.0000, 0.0000, 0.4078)
       THD_EndA: profile on Top Plane
       THD_EndA: sketch start (0.0000,-0.4078) axialIsX=True apex dir 1
@@ -68,6 +69,7 @@ OK    THD_EndB helix sketch made (ProfileFeature)
       THD_EndB: InsertHelix ok
 OK    THD_EndB helix created
 OK    THD_EndB helix dims named (D7 D6 D5 PITCH HEIGHT )
+      THD_EndB: helix start from the curve (3.0000, 0.0000, -0.4078)
       THD_EndB: helix start = (3.0000, 0.0000, -0.4078)
       THD_EndB: profile on Top Plane
       THD_EndB: sketch start (3.0000,0.4078) axialIsX=True apex dir -1
@@ -89,23 +91,23 @@ OK    End B face present at x=3.0000
 OK    Body within nominal length +0.15 (threads loosen the box)
 FAIL  Body diameter 0.8861 / 0.8931 (expect 0.8800)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_5404N_SW2.xlsx
-OK    Configurations after table: 5 (expect 5)
-      config check 1: 5404-N-4-4 X 2
-OK    5404-N-4-4 X 2 L@DRIVE = 2.0000 (table 2.0000)
-OK    5404-N-4-4 X 2 BODYR@DRIVE = 0.2800 (table 0.2800)
-OK    5404-N-4-4 X 2 NPTFA_MAJR@DRIVE = 0.2609 (table 0.2609)
-OK    5404-N-4-4 X 2 NPTFA_THDL@DRIVE = 0.4018 (table 0.4018)
-OK    5404-N-4-4 X 2 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
-OK    5404-N-4-4 X 2 NPTFB_MAJR@DRIVE = 0.2609 (table 0.2609)
-OK    5404-N-4-4 X 2 NPTFB_THDL@DRIVE = 0.4018 (table 0.4018)
-OK    5404-N-4-4 X 2 NPTFB_TAPER@DRIVE = 1.7899 (table 1.7899)
-OK    5404-N-4-4 X 2 PROF_R@THDPROF_A = 0.2609 (table 0.2609)
-OK    5404-N-4-4 X 2 PROF_R@THDPROF_B = 0.2609 (table 0.2609)
-OK    5404-N-4-4 X 2 DEPTH@BORECUT_A = 1.0000 (table 1.0000)
-OK    5404-N-4-4 X 2 DEPTH@BORECUT_B = 1.0000 (table 1.0000)
-OK    5404-N-4-4 X 2 one solid body (found 1)
-      5404-N-4-4 X 2 box x -0.030..2.030  y -0.288..0.287
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch20_20261021\regen_all\straight\DesignTable_5404N_SW2.xlsx
+OK    Configurations after table: 27 (expect 27)
+      config check 1: 5404-N-04X2.500
+OK    5404-N-04X2.500 L@DRIVE = 2.5000 (table 2.5000)
+OK    5404-N-04X2.500 BODYR@DRIVE = 0.2800 (table 0.2800)
+OK    5404-N-04X2.500 NPTFA_MAJR@DRIVE = 0.2609 (table 0.2609)
+OK    5404-N-04X2.500 NPTFA_THDL@DRIVE = 0.4018 (table 0.4018)
+OK    5404-N-04X2.500 NPTFA_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5404-N-04X2.500 NPTFB_MAJR@DRIVE = 0.2609 (table 0.2609)
+OK    5404-N-04X2.500 NPTFB_THDL@DRIVE = 0.4018 (table 0.4018)
+OK    5404-N-04X2.500 NPTFB_TAPER@DRIVE = 1.7899 (table 1.7899)
+OK    5404-N-04X2.500 PROF_R@THDPROF_A = 0.2609 (table 0.2609)
+OK    5404-N-04X2.500 PROF_R@THDPROF_B = 0.2609 (table 0.2609)
+OK    5404-N-04X2.500 DEPTH@BORECUT_A = 1.2500 (table 1.2500)
+OK    5404-N-04X2.500 DEPTH@BORECUT_B = 1.2500 (table 1.2500)
+OK    5404-N-04X2.500 one solid body (found 1)
+      5404-N-04X2.500 box x -0.030..2.530  y -0.288..0.287
       config check 2: 5404-N-8-8 X 4
 OK    5404-N-8-8 X 4 L@DRIVE = 4.0000 (table 4.0000)
 OK    5404-N-8-8 X 4 BODYR@DRIVE = 0.4400 (table 0.4400)
@@ -121,16 +123,38 @@ OK    5404-N-8-8 X 4 DEPTH@BORECUT_A = 2.0000 (table 2.0000)
 OK    5404-N-8-8 X 4 DEPTH@BORECUT_B = 2.0000 (table 2.0000)
 OK    5404-N-8-8 X 4 one solid body (found 1)
       5404-N-8-8 X 4 box x -0.037..4.037  y -0.446..0.440
-      All-config sweep: rebuilding 4 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/4  5404-N-4-4 X 2  rebuilt in 1.7 s
-      sweep 2/4  5404-N-4-4 X 3  rebuilt in 2.9 s
-      sweep 3/4  5404-N-8-8 X 3  rebuilt in 4.5 s
-      sweep 4/4  5404-N-8-8 X 4  rebuilt in 4.1 s
-OK    All-config sweep: 4 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 26 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/26  5404-N-04X2.500  rebuilt in 2.8 s
+      sweep 2/26  5404-N-04X3.500  rebuilt in 4.6 s
+      sweep 3/26  5404-N-04X4.000  rebuilt in 4.6 s
+      sweep 4/26  5404-N-04X4.500  rebuilt in 8.3 s
+      sweep 5/26  5404-N-04X5.000  rebuilt in 5.4 s
+      sweep 6/26  5404-N-04X5.500  rebuilt in 5.2 s
+      sweep 7/26  5404-N-04X6.000  rebuilt in 5.6 s
+      sweep 8/26  5404-N-06X2.000  rebuilt in 5.8 s
+      sweep 9/26  5404-N-06X2.500  rebuilt in 5.1 s
+      sweep 10/26  5404-N-06X3.000  rebuilt in 6.4 s
+      sweep 11/26  5404-N-06X3.500  rebuilt in 5.6 s
+      sweep 12/26  5404-N-06X4.000  rebuilt in 7.3 s
+      sweep 13/26  5404-N-06X4.500  rebuilt in 4.5 s
+      sweep 14/26  5404-N-06X5.000  rebuilt in 4.3 s
+      sweep 15/26  5404-N-06X5.500  rebuilt in 4.2 s
+      sweep 16/26  5404-N-06X6.000  rebuilt in 4.2 s
+      sweep 17/26  5404-N-08X2.500  rebuilt in 11.3 s
+      sweep 18/26  5404-N-08X3.500  rebuilt in 11.1 s
+      sweep 19/26  5404-N-08X4.500  rebuilt in 12.9 s
+      sweep 20/26  5404-N-08X5.000  rebuilt in 12.3 s
+      sweep 21/26  5404-N-08X5.500  rebuilt in 11.8 s
+      sweep 22/26  5404-N-08X6.000  rebuilt in 12.6 s
+      sweep 23/26  5404-N-4-4 X 2  rebuilt in 6.1 s
+      sweep 24/26  5404-N-4-4 X 3  rebuilt in 6.8 s
+      sweep 25/26  5404-N-8-8 X 3  rebuilt in 7.4 s
+      sweep 26/26  5404-N-8-8 X 4  rebuilt in 6.9 s
+OK    All-config sweep: 26 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 5404-N-8-8 X 3 for the save (it opens in this size)
-      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
-      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 5 configs, 0 still live
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 27 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 27 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\5404N\5404N_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 9/25/2026 3:15:54 AM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\overnight\5404N\5404N_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch20_20261021\dryrun\5404N\5404N_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/21/2026 3:37:16 AM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch20_20261021\dryrun\5404N\5404N_MASTER.SLDPRT

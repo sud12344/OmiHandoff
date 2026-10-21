@@ -7,6 +7,8 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-21 (cloud): main (batches 18-20) merged into claude/groupC-compression-20261021 (group C).** The staged work in the entries just below was built on the pre-batch-18 stage: regenerate it against the shipped state (live `tools\` = batch 20, `04_DESIGN_TABLES`) and drop rows batch 19 / 20 already shipped before any SolidWorks dry run.
+
 **2026-10-21 (cloud, group C): compression (bite-type) parts made generatable - STAGED, not shipped** (`tools\_out\groupC_20261021\README.md`; branch `claude/groupC-compression-20261021`). 11 review tables for OMi's 230 compression parts (Brennan CAD records = the only source: 160 rows ASSUMED / DimSource BRENNAN incl. 71 "-M1" bodies, 70 MISSING); new bite-type end (per-dash library from the records, 0 disagreements over 71 records; -08 = all ten Brennan STEPs) in gen_straight2 / gen_tee + C0318 nut ends; own masters per C series (Q-FS-MASTER reasoning) -> **160 configurations in 10 new masters** (C0319 sleeve: built from the eight per-size Brennan STEPs the user sent, new gen_ring type CSLEEVE). 101 existing roots regenerate identically; dofcheck / allcfg / vbacheck / regress clean; OCP closed loop 151 configurations 0 off (and the ten Brennan -08 STEPs read back the bite-end library). Next: SolidWorks dry runs on the PC (`dryrun\RUN_DRYRUN.md`); user decisions Q-C-MASTER / Q-C-CONE / Q-C-M1 in section 5; the C0319 STEPs arrived.
 
 **2026-10-21 (cloud, evening): Brennan CAD cells STAGED** (`tools\_out\brennancad_20261021\README.md`; user "stage"). On top of the Air-Way-first stage: 421 verified Brennan CAD cells in 103 rows (`DimSource` BRENNAN), 40 rows MISSING -> ASSUMED -> **8 new configurations** (2408-14-SOLID, 2501-40-40-FG, 2501-LL-08-08-FG, 2706-32-32, 5000-24-20, 5405-16-24, 5406-40-32, 5503-02-02-FG; A9 tap drills applied: -24 1.72 / -32 2.20); 0 lost / changed; dofcheck / allcfg / vbacheck / regress clean. The 63 one-per-family Brennan STEPs arrived (`tools\_out\steps63_20261021`). Still blocking most staged rows: the -24 / -32 tap drill (A9 -> download BRENNAN_5405-24-24 / -32-32), adjustable-family end data, missing generator SPECs. Next: SolidWorks dry runs of the 4 roots.
@@ -14,6 +16,55 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 **2026-10-21 (cloud, later): Brennan CAD portal lookup** (`tools\_out\partcommunity_20261021\README.md`; network: brennaninc.com + *.partcommunity.com allowed). Brennan has a CAD model for 693 of the 1,022 not-ready parts; of the 240 STEP downloads 217 exist, 23 do not (struck in `STEP_CHECKLIST.md`). The records = Brennan's CAD parameters (checked against BRENNAN_FS2403-08-08: bore / thread / hex / length match) - not applied; user decides whether to use them as Brennan values. OMi package rebuilt: 140 parts (compression 70 of 230). Downloads stay with the user (contact form + reCAPTCHA).
 
 **2026-10-21 (cloud): not-ready parts sorted by source + OMi package drafted (not sent).** `tools\_out\sources_20261021\README.md`: the 1,022 not-ready parts (PC's 987 + 35 held) checked against Air-Way / Brennan catalogs + STEPs / OMi file; agrees with the PC's `blocked_needs_20261020\BLOCKED_NEEDS.md` except 6505-04-02 (OMi file prints it) and 11 download-list parts no catalog prints. `STEP_CHECKLIST.md` = the 240 Brennan files as exact names + arrival check. `10_DRAWINGS\for_OMi_2026-10-21\` = PDF + fill-in workbook + email to Triveni for the 290 parts no source prints (compression 230, test gauge 12, 34 single sizes, 4005, 0618 / 0619, FS0319-24) - user to review and send.
+
+**2026-10-21: BATCH 20 SHIPPED (`03_SCRIPTS\RUN_ME_batch20.txt`, QA #182; QA #178 closed).** 5404N: -06 thread fix (gen_straight2
+`ROUND_STEP_HELIX` - helix 0.005 short of the round-bar shoulder; cause: tooth end on the shoulder edge) + the 4 long nipples (A4) -> 26
+configurations (was 4). Dry run 26 rebuilt with threads live, old 4 identical; post-ship verify 0 BAD. **Now: 1,632 configurations in a master,
+156 masters; OMi's 2,535 parts: 1,629 in a master.** Evidence `tools\_out\batch20_20261021\` (README, checks, dryrun). No held roots left except
+2502 (QA #180); open user questions QA #181.
+
+**2026-10-21: BATCH 19 SHIPPED (`03_SCRIPTS\RUN_ME_batch19.txt`, QA #179-#181; user: "finish the 94 parts that need no input from me").**
+The "(d) generator / table work only" list of `tools\_out\blocked_needs_20261020\BLOCKED_NEEDS.md`, staged by five agents
+(`tools\_out\batch19_20261021\<A_answered|B_newspec|C_ownstep|D_geom|E_gen>\`, README + CHANGES.csv each) and merged in `...\merge\` (scripts,
+checks, dry runs, old_files). 31 masters -> `11_MASTERS` (7 new: 0319 2500 2603 2613 3474 6603 FS2500N1; 24 replaced); hand-built 2500HX / 2603HX
+retired (A7). 0 old configurations changed in any table; dry runs 31 / 31 PASS; post-ship verify 0 BAD. Live `tools\` = `merge\tools_b19`.
+**Now: 1,610 BUILD rows in a master, 156 masters; OMi's 2,535 parts: 1,607 in a master (was 1,531).** Coverage A1 1,405 of 1,831.
+- **2502 parked (QA #180):** generated 2502-20-20-FG pocket (MS51503 P1 1.16) ends tangent to the cross bore -> POCKETCUT2 fails; 2502HX stays,
+  2502 in `SPEC_WAITING`; its 2 new rows wait.
+- **Need the user (QA #181):** 2404-40-40 one bore (ONE_BORE_2404_OK); 2705-04-02 / -LN -02 bulkhead I1 (1.07 vs 1.11); 5503-02-02-FG port
+  (STEP or cap); 6420-08-08 port overlap (shorten drill / Brennan body); 6316 x3 (STEPs); 6506-12-14 (L17 / L18 + straight swivel measure);
+  5404-N x4 (5404N -06 fix, QA #178).
+- Calls made under the rules, in RUN_ME: Brennan cells (Q1) 2406-16-04, 2408-14, 1501-24-24-FG, 6802-04-06-NWO-FG, 1501-04-02-FG,
+  1502-04-04-FG M1 / W3; 0319 shape scaled from the -08 STEP; 6504 offset = end-library swivel nose (A12); 3474 thread length Air-Way 0.469 vs
+  Brennan STEP 0.410; 2613 branch = Brennan forged 1.22.
+
+**2026-10-20 (night): BATCH 18 SHIPPED (`03_SCRIPTS\RUN_ME_batch18.txt`, QA #176-#178; user: "Ship batch 18 as staged, including the 40
+cells as Air-Way.").** 83 masters -> `11_MASTERS` (56 new: 50 FS + 4000 + 1700RC 1800 1703 4503 4603; 27 replaced: the 26 Air-Way-first
+roots + 1603), 83 macros (LF) + reports -> `03_SCRIPTS`, 83 SW2 + 81 review tables (Air-Way stage, A14, 51 FS, 4000 / 4001) ->
+`04_DESIGN_TABLES`; live `tools\` = `batch18_20261020\tools_b18` (4 files changed, gen_ring.py added; undo = `old_files\tools\`). Post-ship
+verify 0 BAD (`checks\verify_b18.txt`). **Now: 1,534 BUILD rows in a master of 2,259 (was 1,354 / 1,874), 151 masters; OMi's 2,535 parts:
+1,531 in a master (was 1,351).** Coverage A1 1,339 of the 1,831-part feed. Still held: 5404N (QA #178). Old files:
+`_to_delete\superseded_20261020\batch18_replaced\` + `batch18_20261020\old_files\`. The ship details below (written before the ship) stay
+valid. Next: 5404N, the BLOCKED_NEEDS list, send Triveni the 40-row list (an answer other than AW = later table edit).
+
+**2026-10-20 (PC, night): batch-18 candidate** (`tools\_out\batch18_20261020\README.md`) - SHIPPED as batch 18 (above).
+- **Review PDFs** (`07_RAW_EXTRACTS\omi_review_drawings_20261020\`, check `tools\_out\review_pdfs_20261020\PDF_CHECK.md`): no AW / BI mark
+  contradicts the Air-Way-first stage. 1404-08-08 (1.94, bores .53 / .45) and 0318-08 (0.84) confirm the stage. Triveni read Air-Way's plain
+  row for 2501-08-08-FG / 5502-08-08-FG and the "PF" row for 0403 D2. All 40 Triveni rows stay open (none drawn). OMi: "UNPL - mention in
+  notes, do not put in part#" (0403 names: user decision). Drawing feedback (threads, cone angle, both bores, missing L / M1 / C1) for later.
+- **Air-Way-first SolidWorks dry runs: 26 / 26 PASS** (`airway_first_20261020\checks\dryrun_verdict.txt`); 233 configurations change, each
+  with its own table cells. **1603 (A14): PASS.**
+- **One toolset** `tools_b18` = ORFS staging tools + the 6410 line + 3 held-root fixes; one input set `root18` (Air-Way stage + A14).
+  Every root regenerates identical to its tested / shipped file, except the 6 pre-2026-09-25 macro roots (= live-tools control) and the held
+  roots. Ring 4000 identical.
+- **Held roots (QA #175) fixed + dry-run PASS:** 1700RC / 1800 (FLATS rectangle had no rectangle relations - skewed flats), 1703 (45-deg
+  HEX2 direction test), 4503 / 4603 (45-deg hose face-off test) = 17 configurations. **5404N -06 still fails** (thread sweeps; not
+  sensitive to bar / thread radius / length; Brennan has no -06 STEP).
+- **Ship content:** 51 FS masters + O-ring 4000 (162 OMi parts), 1603 +1, the held roots +17, the 26 Air-Way-first roots (user: ship the 40
+  cells as Air-Way, or wait for Triveni). About 1,530 of 2,535 in a master after the ship.
+- **What the other ~987 parts need:** `tools\_out\blocked_needs_20261020\BLOCKED_NEEDS.md` (STEP list ~240 files, OMi questions, user
+  decisions, 94 parts of own generator / table work).
+- Not committed: git was blocked in this session (PDF folder, review check, batch-18 folder - commit with `git add -f` for tools\_out).
 
 **2026-10-20 (later): AIR-WAY FIRST - STAGED (cloud session), not shipped.** Branch `claude/review-drawings-update-eflmmf` also carries the
 merged ORFS / A14 branch (`claude/pensive-planck-t9i90d`); `claude/quirky-sagan-ajqv46` (cloud batch-17 rebase, 01:32) is superseded by the

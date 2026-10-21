@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_1502_MASTER"
 ' ============================================================================
-'  Build_1502_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
-'  90 deg Female Pipe x Female NPSM Swivel Elbow (elbow), forged hex body (2500HX pattern).  Reference config 1502-02-02-FG: NPTFF -02, NPSMSW -02
+'  Build_1502_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_tee.py
+'  90 deg Female Pipe x Female NPSM Swivel Elbow (elbow), forged hex body (2500HX pattern).  Reference config 1502-08-08-FG: NPTFF -08, NPSMSW -08
 '  Entry: Sub Build1502.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_1502_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.
@@ -37,30 +37,30 @@ Sub LoadLeg(i As Long)
     Dim v As Variant, k As Long
     If i = 1 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.007112000, _
-    0.019050000, 0.007112000, _
-    0.019050000, 0.000000000)
+    0.000000000, 0.013487400, _
+    0.031242000, 0.013487400, _
+    0.031242000, 0.000000000)
     If i = 2 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.007112000, _
-    0.011684000, 0.007112000, _
-    0.011684000, 0.003276600, _
-    0.012954000, 0.003276600, _
-    0.012954000, 0.006339840, _
-    0.015494000, 0.006339840, _
-    0.017526000, 0.007112000, _
-    0.017526000, 0.008212230, _
-    0.022606000, 0.008212230, _
-    0.022606000, 0.005039360, _
-    0.022189440, 0.004622800, _
-    0.018196560, 0.004622800, _
-    0.017780000, 0.005039360, _
-    0.017780000, 0.005778500, _
-    0.014818360, 0.005778500, _
-    0.014818360, 0.004381500, _
-    0.016355060, 0.004381500, _
-    0.018796000, 0.002971800, _
-    0.018796000, 0.000000000)
+    0.000000000, 0.013487400, _
+    0.019304000, 0.013487400, _
+    0.019304000, 0.007721600, _
+    0.020320000, 0.007721600, _
+    0.020320000, 0.011557000, _
+    0.023876000, 0.011557000, _
+    0.028448000, 0.012700000, _
+    0.028448000, 0.014664697, _
+    0.038608000, 0.014664697, _
+    0.038608000, 0.010452100, _
+    0.037795200, 0.009639300, _
+    0.028752800, 0.009639300, _
+    0.027940000, 0.010452100, _
+    0.027940000, 0.011239500, _
+    0.023495000, 0.011239500, _
+    0.023495000, 0.009398000, _
+    0.027579320, 0.009398000, _
+    0.031496000, 0.007137400, _
+    0.031496000, 0.000000000)
     NPTS = (UBound(v) + 1) \ 2
     ReDim PX(NPTS - 1): ReDim PR(NPTS - 1)
     For k = 0 To NPTS - 1
@@ -86,15 +86,15 @@ Sub Build1502()
     On Error GoTo Trap
     Dim swFeat As SldWorks.Feature, rev As SldWorks.Feature, sd As SldWorks.SelectData
 
-    ' ================= LEG 1 (NPTFF -02, along X +) =================
+    ' ================= LEG 1 (NPTFF -08, along X +) =================
     stepName = "LEG1 sketch"
-    curAxis = 0: tipPos = 0.019050000
+    curAxis = 0: tipPos = 0.031242000
     LoadLeg 1
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile False, 1#
-    Call Dim_len(-1, "M1", 0.019050000, 0.009525, 0.022352)
-    Call Dim_rad(1, "BODYR", 0.007112000, 0.009525, -0.010160)
+    Call Dim_len(-1, "M1", 0.031242000, 0.015621, 0.028727)
+    Call Dim_rad(1, "BODYR", 0.013487400, 0.015621, -0.010160)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -110,35 +110,35 @@ Sub Build1502()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "LEG1_BODY"
 
-    ' ================= LEG 2 (NPSMSW -02, along Y +) =================
+    ' ================= LEG 2 (NPSMSW -08, along Y +) =================
     stepName = "LEG2 sketch"
-    curAxis = 1: tipPos = 0.022606000
+    curAxis = 1: tipPos = 0.038608000
     LoadLeg 2
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile True, 1#
-    Call Dim_pair(0, 9, "M2", 0.022606000, 0.025992, 0.011303)
-    Call Dim_rad(1, "BODYR", 0.007112000, -0.010160, 0.005842)
-    Call Dim_pair(2, 9, "NP2_BODYS", 0.010922000, 0.022182, 0.017145)
-    Call Dim_rad(3, "NP2_NECKR", 0.003276600, -0.003810, 0.012319)
-    Call Dim_pair(4, 9, "NP2_NUTL", 0.009652000, 0.019642, 0.017780)
-    Call Dim_rad(5, "NP2_LIPR", 0.006339840, -0.007620, 0.014224)
-    Call Dim_len(5, "NP2_LIPL", 0.002540000, 0.013292, 0.014224)
-    Call Dim_ptline(7, False, 19, "NP2_SKIRTFR", 0.007112000, 0.003556, 0.016256)
-    Call Dim_len(8, "NP2_NUTHEXL", 0.005080000, 0.015832, 0.020066)
-    Call Dim_rad(8, "NP2_NUTR", 0.008212230, -0.011430, 0.020066)
-    Call Dim_ptline(10, False, 19, "NP2_CSR", 0.005039360, 0.002520, 0.025146)
-    Call Dim_ang(10, 19, "NP2_CSANG", 0.785398163, 0.007071, 0.022398)
-    Call Dim_rad(11, "NP2_MINR", 0.004622800, -0.015240, 0.020193)
-    Call Dim_len(11, "NP2_THDL", 0.003992880, 0.010752, 0.020193)
-    Call Dim_ang(12, 19, "NP2_RELANG", 0.785398163, 0.005893, 0.017988)
-    Call Dim_ptline(13, False, 19, "NP2_RELR", 0.005039360, 0.002520, 0.018542)
-    Call Dim_rad(14, "NP2_CBR", 0.005778500, -0.019050, 0.016299)
-    Call Dim_pair(15, 9, "NP2_CBEND", 0.007787640, 0.024722, 0.018712)
-    Call Dim_rad(16, "NP2_STEMR", 0.004381500, -0.022860, 0.015587)
-    Call Dim_ang(17, 19, "NP2_CONEANG", 0.523598776, 0.000892, 0.016764)
-    Call Dim_ptline(18, False, 19, "NP2_TIPR", 0.002971800, 0.001486, 0.017526)
-    Call Dim_pair(18, 9, "NP2_STEMTIP", 0.003810000, 0.027262, 0.020701)
+    Call Dim_pair(0, 9, "M2", 0.038608000, 0.032445, 0.019304)
+    Call Dim_rad(1, "BODYR", 0.013487400, -0.010160, 0.009652)
+    Call Dim_pair(2, 9, "NP2_BODYS", 0.019304000, 0.028635, 0.028956)
+    Call Dim_rad(3, "NP2_NECKR", 0.007721600, -0.003810, 0.019812)
+    Call Dim_pair(4, 9, "NP2_NUTL", 0.018288000, 0.026095, 0.029464)
+    Call Dim_rad(5, "NP2_LIPR", 0.011557000, -0.007620, 0.022098)
+    Call Dim_len(5, "NP2_LIPL", 0.003556000, 0.019745, 0.022098)
+    Call Dim_ptline(7, False, 19, "NP2_SKIRTFR", 0.012700000, 0.006350, 0.027178)
+    Call Dim_len(8, "NP2_NUTHEXL", 0.010160000, 0.022285, 0.033528)
+    Call Dim_rad(8, "NP2_NUTR", 0.014664697, -0.011430, 0.033528)
+    Call Dim_ptline(10, False, 19, "NP2_CSR", 0.010452100, 0.005226, 0.041148)
+    Call Dim_ang(10, 19, "NP2_CSANG", 0.785398163, 0.012484, 0.038202)
+    Call Dim_rad(11, "NP2_MINR", 0.009639300, -0.015240, 0.033274)
+    Call Dim_len(11, "NP2_THDL", 0.009042400, 0.017205, 0.033274)
+    Call Dim_ang(12, 19, "NP2_RELANG", 0.785398163, 0.010909, 0.028346)
+    Call Dim_ptline(13, False, 19, "NP2_RELR", 0.010452100, 0.005226, 0.028702)
+    Call Dim_rad(14, "NP2_CBR", 0.011239500, -0.019050, 0.025718)
+    Call Dim_pair(15, 9, "NP2_CBEND", 0.015113000, 0.031175, 0.031052)
+    Call Dim_rad(16, "NP2_STEMR", 0.009398000, -0.022860, 0.025537)
+    Call Dim_ang(17, 19, "NP2_CONEANG", 0.523598776, 0.002141, 0.029464)
+    Call Dim_ptline(18, False, 19, "NP2_TIPR", 0.007137400, 0.003569, 0.030226)
+    Call Dim_pair(18, 9, "NP2_STEMTIP", 0.007112000, 0.033715, 0.035052)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -156,9 +156,9 @@ Sub Build1502()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "HEX1"
-    Call HexArm("Right Plane", 0#, 0#, 0.012446000, 0.007112000, "HEX1", 0, 1#)
+    Call HexArm("Right Plane", 0#, 0#, 0.024638000, 0.013487400, "HEX1", 0, 1#)
     stepName = "HEX2"
-    Call HexArm("Top Plane", 0#, 0#, 0.011684000, 0.007112000, "HEX2", 1, 1#)
+    Call HexArm("Top Plane", 0#, 0#, 0.019304000, 0.013487400, "HEX2", 1, 1#)
     ' ================= PUCK: 30 deg double cone about Z at the crossing (the turned hex corner, per Brennan) =================
     stepName = "PUCK"
     swModel.ClearSelection2 True
@@ -166,12 +166,12 @@ Sub Build1502()
     swSkMgr.InsertSketch True
     swSkMgr.AddToDB = True
     Dim pA As SldWorks.SketchSegment, pB As SldWorks.SketchSegment, pC As SldWorks.SketchSegment, pD As SldWorks.SketchSegment, pE As SldWorks.SketchSegment, pX As SldWorks.SketchSegment
-    Set pA = swSkMgr.CreateLine(0#, -0.007112000, 0, 0.004093415, -0.007112000, 0)
-    Set pB = swSkMgr.CreateLine(0.004093415, -0.007112000, 0, 0.008199530, 0#, 0)
-    Set pC = swSkMgr.CreateLine(0.008199530, 0#, 0, 0.004093415, 0.007112000, 0)
-    Set pD = swSkMgr.CreateLine(0.004093415, 0.007112000, 0, 0#, 0.007112000, 0)
-    Set pE = swSkMgr.CreateCenterLine(0#, 0.007112000, 0, 0#, -0.007112000, 0)
-    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.008199530, 0#, 0)
+    Set pA = swSkMgr.CreateLine(0#, -0.013487400, 0, 0.007774254, -0.013487400, 0)
+    Set pB = swSkMgr.CreateLine(0.007774254, -0.013487400, 0, 0.015561208, 0#, 0)
+    Set pC = swSkMgr.CreateLine(0.015561208, 0#, 0, 0.007774254, 0.013487400, 0)
+    Set pD = swSkMgr.CreateLine(0.007774254, 0.013487400, 0, 0#, 0.013487400, 0)
+    Set pE = swSkMgr.CreateCenterLine(0#, 0.013487400, 0, 0#, -0.013487400, 0)
+    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.015561208, 0#, 0)
     swSkMgr.AddToDB = False
     pX.ConstructionGeometry = True
     Dim qa As SldWorks.SketchLine, qb As SldWorks.SketchLine, qc As SldWorks.SketchLine, qd As SldWorks.SketchLine, qe As SldWorks.SketchLine, qx As SldWorks.SketchLine
@@ -192,11 +192,11 @@ Sub Build1502()
     swModel.ClearSelection2 True: pE.Select4 False, Nothing
     swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
     swModel.SketchAddConstraints "sgCOINCIDENT"
-    Call DimSegOrigin(pA, "PUCK_HB", 0.007112000, 0.002047, -0.016002)
-    Call DimSegOrigin(pD, "PUCK_HT", 0.007112000, 0.002047, 0.016002)
-    Call DimSeg1(pA, "PUCK_R1B", 0.004093415, 0.002047, -0.024892)
-    Call DimSeg1(pD, "PUCK_R1T", 0.004093415, 0.002047, 0.024892)
-    Call DimSeg1(pX, "PUCK_XC", 0.008199530, 0.004100, -0.006350)
+    Call DimSegOrigin(pA, "PUCK_HB", 0.013487400, 0.003887, -0.022377)
+    Call DimSegOrigin(pD, "PUCK_HT", 0.013487400, 0.003887, 0.022377)
+    Call DimSeg1(pA, "PUCK_R1B", 0.007774254, 0.003887, -0.031267)
+    Call DimSeg1(pD, "PUCK_R1T", 0.007774254, 0.003887, 0.031267)
+    Call DimSeg1(pX, "PUCK_XC", 0.015561208, 0.007781, -0.006350)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0): swFeat.Name = "PUCK"
@@ -211,8 +211,8 @@ Sub Build1502()
 
     ' ================= swivel nut hex on leg 2: sketched on the nut face, flats normal to Z, cut over the nut hex length =================
     stepName = "NUTHEX2"
-    curAxis = 1: tipPos = 0.022606000
-    Call NutHexCutAx(tipPos, 0.014224000, 0.005080000, "NUTHEX2", "NUTHEX2", "NUTCUT2")
+    curAxis = 1: tipPos = 0.038608000
+    Call NutHexCutAx(tipPos, 0.025400000, 0.010160000, "NUTHEX2", "NUTHEX2", "NUTCUT2")
     Check "NUTHEX2@NUTHEX2 reachable", Not swModel.Parameter("NUTHEX2@NUTHEX2") Is Nothing
     Check "DEPTH@NUTCUT2 reachable", Not swModel.Parameter("DEPTH@NUTCUT2") Is Nothing
     Dim bodies As Variant
@@ -221,29 +221,29 @@ Sub Build1502()
 
     ' ================= pockets and bores (each from its leg face to the axis crossing) =================
     stepName = "Bores"
-    curAxis = 0: tipPos = 0.019050000
-    Call BoreCut("POCKET1", "TAPDRILL1", 0.008382000, 0.019050000, 0#, "POCKETCUT1", True, 0.006400800)
-    curAxis = 1: tipPos = 0.022606000
-    Call BoreCut("BORE2", "D2", 0.003302000, 0.022606000, 0#, "BORECUT2", True, 0.002674620)
-    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+0.7500)", Not AxisCoveredAx(0.019050000)
-    curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+0.8900)", Not AxisCoveredAx(0.022606000)
-    curAxis = 1: Check "leg 2 bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane Y=+0.7400)", Not AxisCoveredAx(0.018796000)
+    curAxis = 0: tipPos = 0.031242000
+    Call BoreCut("POCKET1", "TAPDRILL1", 0.017780000, 0.031242000, 0#, "POCKETCUT1", True, 0.012138660)
+    curAxis = 1: tipPos = 0.038608000
+    Call BoreCut("BORE2", "D2", 0.011684000, 0.038608000, 0#, "BORECUT2", True, 0.006423660)
+    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.2300)", Not AxisCoveredAx(0.031242000)
+    curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+1.5200)", Not AxisCoveredAx(0.038608000)
+    curAxis = 1: Check "leg 2 bore runs through the NPSM stem tip (no face across the axis at the stem-tip plane Y=+1.2400)", Not AxisCoveredAx(0.031496000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
-    curAxis = 0: tipPos = 0.019050000
-    Call HelixThread(0.019050000, 0.004191000, 0.011684000, 0.000940741, 0.000752593, 0.031239648, False, True, "1", "THD_End1")
-    curAxis = 1: tipPos = 0.022606000
-    Call HelixThread(0.022606000, 0.004622800, 0.004409440, 0.000940741, 0.000752593, 0.000000000, False, True, "2", "THD_End2")
+    curAxis = 0: tipPos = 0.031242000
+    Call HelixThread(0.031242000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "1", "THD_End1")
+    curAxis = 1: tipPos = 0.038608000
+    Call HelixThread(0.038608000, 0.009639300, 0.009855200, 0.001814286, 0.001451429, 0.000000000, False, True, "2", "THD_End2")
 
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
-    Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -0.323 .. 0.750; threads may add a little)", Abs(bb(3) / IN_ - 0.7500) < 0.08 And Abs(bb(0) / IN_ - (-0.3233)) < 0.08
-    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.323 .. 0.890)", Abs(bb(4) / IN_ - 0.8900) < 0.08 And Abs(bb(1) / IN_ - (-0.3233)) < 0.08
+    Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -0.613 .. 1.230; threads may add a little)", Abs(bb(3) / IN_ - 1.2300) < 0.08 And Abs(bb(0) / IN_ - (-0.6131)) < 0.08
+    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.613 .. 1.520)", Abs(bb(4) / IN_ - 1.5200) < 0.08 And Abs(bb(1) / IN_ - (-0.6131)) < 0.08
     Trace "Bounding box z " & Format(bb(2) / IN_, "0.000") & " .. " & Format(bb(5) / IN_, "0.000") & " (approximate - loose around thread faces)"
     Dim zlo As Double, zhi As Double: zhi = ExtremeAlong(0#, 0#, 1#): zlo = -ExtremeAlong(0#, 0#, -1#)
-    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.2800 .. 0.2800: hex flats)", Abs(zlo / IN_ + 0.2800) < 0.001 And Abs(zhi / IN_ - 0.2800) < 0.001
+    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.5310 .. 0.5310: hex flats)", Abs(zlo / IN_ + 0.5310) < 0.001 And Abs(zhi / IN_ - 0.5310) < 0.001
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
     If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)
 
@@ -256,13 +256,13 @@ Sub Build1502()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 9)", (UBound(cfgs) + 1) = 9
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 11)", (UBound(cfgs) + 1) = 11
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("1502-06-06-FG", "1502-32-32-FG")
+    cx_c = Array("1502-02-02-FG", "1502-32-32-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "M2@LEG2", "BODYR@LEG2", "NP2_BODYS@LEG2", "NP2_NECKR@LEG2", "DEPTH@POCKETCUT1", "DEPTH@BORECUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(1.02000, 0.43750, 1.27000, 0.43750, 0.62000, 0.24650, 1.02000, 1.27000, 0.28500, 0.30600, 0.87500, 0.76000, 0.87500, 0.65000, 0.25209, 0.50468), Array(2.39000, 1.40550, 2.99000, 1.40550, 1.16500, 1.02150, 2.39000, 2.99000, 1.09500, 1.13400, 2.81100, 2.13000, 2.81100, 1.82500, 0.81097, 1.62243))
+    cx_w = Array(Array(0.75000, 0.28000, 0.89000, 0.28000, 0.43000, 0.12900, 0.75000, 0.89000, 0.16500, 0.18200, 0.56000, 0.49000, 0.56000, 0.46000, 0.16116, 0.32282), Array(2.39000, 1.40550, 2.99000, 1.40550, 1.16500, 1.02150, 2.39000, 2.99000, 1.09500, 1.13400, 2.81100, 2.13000, 2.81100, 1.82500, 0.81097, 1.62243))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -288,7 +288,7 @@ Sub Build1502()
         Trace cx_c(cx_q) & " box x " & Format(cx_bx(0) / IN_, "0.000") & ".." & Format(cx_bx(3) / IN_, "0.000") & "  y " & Format(cx_bx(1) / IN_, "0.000") & ".." & Format(cx_bx(4) / IN_, "0.000")
     Next cx_q
 
-    swModel.ShowConfiguration2 "1502-02-02-FG"
+    swModel.ShowConfiguration2 "1502-08-08-FG"
     swModel.ForceRebuild3 False
 
     ' ---- all-config rebuild sweep (2026-09-23, QA #124): every configuration, every feature must rebuild
@@ -323,10 +323,10 @@ Sub Build1502()
         End If
     Next sw_i
     Check "All-config sweep: " & sw_n & " configurations rebuilt, " & sw_bad & " feature/body failures", sw_bad = 0
-    ' 2026-09-25: leave the master in its reference configuration (1502-02-02-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
+    ' 2026-09-25: leave the master in its reference configuration (1502-08-08-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
     ' before this the master was left in the first name of the list (the smallest size)
-    swModel.ShowConfiguration2 "1502-02-02-FG"
-    Trace "Master left in its reference configuration 1502-02-02-FG for the save (it opens in this size)"
+    swModel.ShowConfiguration2 "1502-08-08-FG"
+    Trace "Master left in its reference configuration 1502-08-08-FG for the save (it opens in this size)"
 
     ' ---- resting state (project rule): every THD_* feature suppressed in EVERY configuration before the save.
     '      Threads stay live through the build, table insert, config checks and sweep so they are verified;

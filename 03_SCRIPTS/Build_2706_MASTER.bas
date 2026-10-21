@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2706_MASTER"
 ' ============================================================================
-'  Build_2706_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_straight2.py
+'  Build_2706_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_straight2.py
 '  Male Pipe x JIC Bulkhead Connector - master from reference configuration 2706-08-08 (DesignTable_2706_SW2.xlsx row 2)
 '  Ends: A = NPTFM  B = JICM.  Body revolved at BODYR then hex-cut; SP3 radius dims.
 '  Run in SolidWorks: Tools > Macro > Run > Build2706.  Report: 03_SCRIPTS\Build_2706_report.txt
@@ -37,15 +37,15 @@ Sub LoadPoints()
     0.013555980, 0.010781397, _
     0.019050000, 0.010781397, _
     0.019050000, 0.014664697, _
-    0.029464776, 0.014664697, _
-    0.029464776, 0.008369300, _
-    0.031852376, 0.008369300, _
-    0.032519620, 0.009525000, _
-    0.059613800, 0.009525000, _
-    0.059613800, 0.008369300, _
-    0.062113160, 0.008369300, _
-    0.066040000, 0.005410214, _
-    0.066040000, 0.000000000)
+    0.027686776, 0.014664697, _
+    0.027686776, 0.008369300, _
+    0.030074376, 0.008369300, _
+    0.030741620, 0.009525000, _
+    0.057835800, 0.009525000, _
+    0.057835800, 0.008369300, _
+    0.060335160, 0.008369300, _
+    0.064262000, 0.005410214, _
+    0.064262000, 0.000000000)
     For i = 0 To NPTS - 1
         PX(i) = v(2 * i): PR(i) = v(2 * i + 1)
     Next i
@@ -120,20 +120,20 @@ Sub Build2706()
     swModel.SketchAddConstraints "sgCOINCIDENT"
     swModel.ClearSelection2 True
     Call Collinear(6, 10)
-    Call Dim_len(-1, "L25", 0.066040000, 0.033020, 0.029905)
-    Call Dim_rad(4, "BODYR", 0.014664697, 0.024257, -0.011430)
+    Call Dim_len(-1, "L25", 0.064262000, 0.032131, 0.029905)
+    Call Dim_rad(4, "BODYR", 0.014664697, 0.023368, -0.011430)
     Call Dim_len(0, "NPTFA_MAJR", 0.010357775, -0.003810, 0.005179)
     Call Dim_ptline(1, True, 0, "NPTFA_THDL", 0.013555980, 0.006778, 0.021015)
     Call Dim_ang(1, 13, "NPTFA_TAPER", 0.031239648, 0.006778, 0.005179)
     Call Dim_len(2, "NPTFA_RELL", 0.005494020, 0.016303, 0.018475)
-    Call Dim_rad(8, "THDMAJR_B", 0.009525000, 0.046067, -0.007620)
-    Call Dim_len(6, "JICB_RELIEFL", 0.002387600, 0.030659, 0.021015)
-    Call Dim_ang(7, 8, "RELIEFANG", 1.047197551, 0.029312, 0.017205)
-    Call Dim_len(8, "JICB_THDZ", 0.027094180, 0.046067, 0.023555)
-    Call Dim_rad(10, "JICB_CONER", 0.008369300, 0.060863, -0.005080)
-    Call Dim_len(10, "JICB_LANDL", 0.002499360, 0.060863, 0.018475)
-    Call Dim_ptline(11, False, 12, "JICB_SEATL", 0.003926840, 0.064077, 0.026095)
-    Call Dim_ang(11, 13, "SEATB", 0.645771823, 0.060843, -0.003810)
+    Call Dim_rad(8, "THDMAJR_B", 0.009525000, 0.044289, -0.007620)
+    Call Dim_len(6, "JICB_RELIEFL", 0.002387600, 0.028881, 0.021015)
+    Call Dim_ang(7, 8, "RELIEFANG", 1.047197551, 0.027534, 0.017205)
+    Call Dim_len(8, "JICB_THDZ", 0.027094180, 0.044289, 0.023555)
+    Call Dim_rad(10, "JICB_CONER", 0.008369300, 0.059085, -0.005080)
+    Call Dim_len(10, "JICB_LANDL", 0.002499360, 0.059085, 0.018475)
+    Call Dim_ptline(11, False, 12, "JICB_SEATL", 0.003926840, 0.062299, 0.026095)
+    Call Dim_ang(11, 13, "SEATB", 0.645771823, 0.059065, -0.003810)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Dim swFeat As SldWorks.Feature
@@ -153,7 +153,7 @@ Sub Build2706()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "BODY"
     Dim vrev As Double: vrev = Volume()
-    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.4256)", Abs(vrev - 2.336142919648e-05) < 2.336142919648e-05 * 0.002
+    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.3523)", Abs(vrev - 2.216019466603e-05) < 2.216019466603e-05 * 0.002
 
     stepName = "HEX cut"
     swModel.ClearSelection2 True
@@ -187,9 +187,9 @@ Sub Build2706()
     Check "hex sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)
     Dim hexcut As SldWorks.Feature, v0 As Double, v1 As Double
     v0 = Volume()
-    Set hexcut = MakeCut2(swFeat, True, 0.099060, "HEXCUT flip")
+    Set hexcut = MakeCut2(swFeat, True, 0.096393, "HEXCUT flip")
     If hexcut Is Nothing Then
-        Set hexcut = MakeCut2(swFeat, False, 0.099060, "HEXCUT plain (to flip)")
+        Set hexcut = MakeCut2(swFeat, False, 0.096393, "HEXCUT plain (to flip)")
         If Not hexcut Is Nothing Then
             Dim xd2 As SldWorks.ExtrudeFeatureData2
             Set xd2 = hexcut.GetDefinition
@@ -206,23 +206,23 @@ Sub Build2706()
     End If
 
     stepName = "Pockets and bores"
-    Call BoreCut("BORE_A", "DA", 0.013462000, 0.024257000, 0#, "BORECUT_A", False, 0.005178888)
-    Call BoreCut("BORE_B", "DB", 0.009906000, 0.041783000, 0#, "BORECUT_B", True, 0.002705107)
+    Call BoreCut("BORE_A", "DA", 0.013462000, 0.023368000, 0#, "BORECUT_A", False, 0.005178888)
+    Call BoreCut("BORE_B", "DB", 0.009906000, 0.040894000, 0#, "BORECUT_B", True, 0.002705107)
     Check "bore open on the axis at End A (x=0)", Not AxisCovered(0#)
-    Check "bore open on the axis at End B (x=2.6000)", Not AxisCovered(0.066040000)
+    Check "bore open on the axis at End B (x=2.5300)", Not AxisCovered(0.064262000)
     stepName = "Threads"
     curAxis = 0
     Call HelixThread(0.000000000, 0.010357775, 0.013555980, 0.001814286, 0.001451429, 0.031239648, True, False, "A", "THD_EndA")
-    Call ThreadCut(0.032519620, 0.009525000, 0.033520380, "0.7500-16", "THD_EndB", 1#, 0.001587500)
+    Call ThreadCut(0.030741620, 0.009525000, 0.033520380, "0.7500-16", "THD_EndB", 1#, 0.001587500)
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
     Dim lenX As Double, dY As Double, dZ As Double
     lenX = (bb(3) - bb(0)) / IN_: dY = (bb(4) - bb(1)) / IN_: dZ = (bb(5) - bb(2)) / IN_
-    Trace "Bounding box length " & Format(lenX, "0.0000") & " (nominal 2.6000; loose around thread faces, informational)"
+    Trace "Bounding box length " & Format(lenX, "0.0000") & " (nominal 2.5300; loose around thread faces, informational)"
     Check "End A face present at x=0", SelectEndFace(0#)
-    Check "End B face present at x=2.6000", SelectEndFace(0.066040000)
-    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - 2.6) < 0.15
+    Check "End B face present at x=2.5300", SelectEndFace(0.064262000)
+    Check "Body within nominal length +0.15 (threads loosen the box)", Abs(lenX - 2.53) < 0.15
     Check "Hex across flats " & Format(dY, "0.0000") & " / corners " & Format(dZ, "0.0000") & " (expect 1.0000 / 1.1547)", (Abs(dY - 1) < 0.01 And Abs(dZ - 1.1547005383792515) < 0.01) Or (Abs(dZ - 1) < 0.01 And Abs(dY - 1.1547005383792515) < 0.01)
     Dim bodies As Variant
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
@@ -237,13 +237,13 @@ Sub Build2706()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 26)", (UBound(cfgs) + 1) >= 25
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 30)", (UBound(cfgs) + 1) >= 29
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("2706-02-04", "2706-LN-04-02")
+    cx_c = Array("2706-02-04", "2706-LN-08-06")
     cx_p = Array("L25@DRIVE", "BODYR@DRIVE", "HEXB@HEX", "NPTFA_MAJR@DRIVE", "NPTFA_THDL@DRIVE", "NPTFA_TAPER@DRIVE", "NPTFA_RELL@DRIVE", "THDMAJR_B@DRIVE", "PROF_R@THDPROF_A", "THDPITCH@THD_EndB", "Profile_Height@THD_EndB_PROF", "THDPITCH@THD_EndB_PROF", "DEPTH@BORECUT_A", "DEPTH@BORECUT_B")
-    cx_w = Array(Array(1.84000, 0.39837, 0.69000, 0.19657, 0.26390, 1.78990, 0.11610, 0.21875, 0.19657, 0.05000, 0.02706, 0.05000, 0.51000, 1.33000), Array(1.98000, 0.36084, 0.62500, 0.26092, 0.40180, 1.78990, 0.15820, 0.15625, 0.26092, 0.04167, 0.02255, 0.04167, 0.71500, 1.26500))
+    cx_w = Array(Array(1.84000, 0.39837, 0.69000, 0.19657, 0.26390, 1.78990, 0.11610, 0.21875, 0.19657, 0.05000, 0.02706, 0.05000, 0.51000, 1.33000), Array(2.34000, 0.50807, 0.88000, 0.40779, 0.53370, 1.78990, 0.21630, 0.28125, 0.40779, 0.05556, 0.03007, 0.05556, 0.90500, 1.43500))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

@@ -1,6 +1,6 @@
 Attribute VB_Name = "Build_2503_MASTER"
 ' ============================================================================
-'  Build_2503_MASTER.bas  -  OMi fitting library, generated 2026-10-19 by gen_tee.py
+'  Build_2503_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
 '  45 deg Male Elbow (45-deg elbow), forged hex body (Brennan 2504 / 2500HX pattern).  Reference config 2503-08-06-FG: NPTFM -06, JICM -08
 '  Entry: Sub Build2503.  Leg 1 along +X, leg 2 along the 135-deg direction (45-deg elbow); hex arms HEX1 / HEX2 (on plane PLN2) + 30deg corner PUCK about Z.
 '  Builds from DesignTable_2503_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
