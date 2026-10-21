@@ -1,0 +1,4 @@
+6801   configs 39 -> 50  new cols []  lost cols []  changed cells in old configs: 0 []
+FS6801 configs 3 -> 4  new cols []  lost cols []  changed cells in old configs: 0 []
+FS6801R configs 1 -> 2  new cols []  lost cols []  changed cells in old configs: 0 []
+4000   configs 29 -> 37  new cols []  lost cols []  changed cells in old configs: 0 []

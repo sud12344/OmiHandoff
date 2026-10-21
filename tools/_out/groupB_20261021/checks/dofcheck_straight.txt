@@ -1,0 +1,3 @@
+Build_6900_MASTER.bas {'points': 24, 'unknowns': 48, 'constraints': 48, 'rank': 48, 'dims': 26, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS2408_MASTER.bas {'points': 13, 'unknowns': 26, 'constraints': 26, 'rank': 26, 'dims': 13, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_FS6402_MASTER.bas {'points': 28, 'unknowns': 56, 'constraints': 56, 'rank': 56, 'dims': 32, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}

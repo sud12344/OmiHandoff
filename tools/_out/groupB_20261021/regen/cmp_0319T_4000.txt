@@ -1,2 +1,0 @@
-fs:gen_ring      4000      rc 0/0 | configs old  29 new  37 | NEW 8 | LOST 0 [] | changed 0 [] | macro DIFFERS | new: 4005-08 4005-10 4005-12 4005-16 4005-20 4005-24 4005-32 4005-40
-fs:gen_ring      0319T     rc 1/1 | no SW2 table either side

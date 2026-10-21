@@ -3,3 +3,5 @@ regen/new/
 scratch/
 __pycache__/
 regen/scratch_import/
+ocp/**/*.stp
+ocp/*.stp

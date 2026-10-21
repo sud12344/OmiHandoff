@@ -508,6 +508,9 @@ for _k in [k_ for k_ in SPEC if k_ == 'FS6801' or SPEC[k_].get('table') == 'FS68
                   'longer (tip -> washer face 0.540 and the face-seal leg 1.118 as on FS6801-08-08; Q-FS-MASTER, user 2026-10-18)',
               assume='FS6801-L fold: the forged hex arm of the adjustable-stud leg runs on to the longer stud leg L50 (washer face L51); stud, lock '
                      'nut and face-seal leg as FS6801 (Brennan FS6801-L-08-08-NWO-FG STEP vs FS6801-08-08-NWO-FG; measured at -08-08 only)'))]
+# 2026-10-21 (group B): NWO_FS[6] adds FS6801-08-06-NWO-FG to FS6801R; keep the reference configuration the dry run of 2026-10-20 used
+# (a derived root takes its first row otherwise)
+SPEC['FS6801R']['ref'] = 'FS6801-10-08-NWO-FG'
 # 2026-10-09 wave 2: families whose capability is implemented but which have NO buildable row (no allowed body-size source: OMi Items carry
 # no dimension, Air-Way only the non-forged twin, Brennan-only sizes not allowed - user decisions 2026-10-08). Outside the generator loop;
 # the TEST harnesses read them (rows copied from built siblings, never shipped). The ship that brings a root's first row moves it into SPEC.

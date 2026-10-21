@@ -1,0 +1,39 @@
+6900: 22 configurations - 6900-04-02-O 6900-04-04-O 6900-04-06-O 6900-05-04-O 6900-06-04-O 6900-06-06-O 6900-06-08-O 6900-08-04-O 6900-08-06-O 6900-08-08-O 6900-08-12-O 6900-10-06-O 6900-10-08-O 6900-10-12-O 6900-12-08-O 6900-12-12-O 6900-12-16-O 6900-16-12-O 6900-16-16-O 6900-20-20-O 6900-24-24-O 6900-32-32-O
+6901: 19 configurations - 6901-04-04-NWO-FG 6901-04-06-NWO-FG 6901-06-04-NWO-FG 6901-06-06-NWO-FG 6901-06-08-NWO-FG 6901-08-06-NWO-FG 6901-08-08-NWO-FG 6901-10-06-NWO-FG 6901-10-12-NWO-FG 6901-12-06-NWO-FG 6901-12-08-NWO-FG 6901-12-12-NWO-FG 6901-12-16-NWO-FG 6901-16-12-NWO-FG 6901-16-16-NWO-FG 6901-20-16-NWO-FG 6901-20-20-NWO-FG 6901-24-24-NWO-FG 6901-32-32-NWO-FG
+   BLOCKED 6901-08-12-NWO-FG: leg 2 NPSM swivel: nut/stem axial order broken for W-L 0.31; leg 1: locknut starts 0.609 from the crossing, inside the reach of the other legs / corner (0.613)
+   BLOCKED 6901-10-08-NWO-FG: leg 2: the corner puck (radius 0.641) reaches past the swivel body face (0.500) outside the neck (0.401 off the axis vs neck radius 0.304) or into the swivel slot (starts 0.715)
+6805: 12 configurations - 6805-04-02-NWO-FG 6805-04-04-NWO-FG 6805-06-04-NWO-FG 6805-06-06-NWO-FG 6805-08-06-NWO-FG 6805-08-08-NWO-FG 6805-10-08-NWO-FG 6805-12-08-NWO-FG 6805-12-12-NWO-FG 6805-16-12-NWO-FG 6805-16-16-NWO-FG 6805-20-20-NWO-FG
+6806: 10 configurations - 6806-04-04-NWO-FG 6806-06-04-NWO-FG 6806-06-06-NWO-FG 6806-08-06-NWO-FG 6806-08-08-NWO-FG 6806-10-08-NWO-FG 6806-12-12-NWO-FG 6806-16-16-NWO-FG 6806-20-20-NWO-FG 6806-24-24-NWO-FG
+   not generated 6806-12-08-NWO-FG: BUILD / MISSING
+6809: 7 configurations - 6809-04-04-NWO-FG 6809-06-06-NWO-FG 6809-08-08-NWO-FG 6809-10-10-NWO-FG 6809-12-12-NWO-FG 6809-16-16-NWO-FG 6809-20-20-NWO-FG
+6815: 6 configurations - 6815-04-04-NWO-FG 6815-06-06-NWO-FG 6815-08-08-NWO-FG 6815-10-10-NWO-FG 6815-12-12-NWO-FG 6815-16-16-NWO-FG
+6832: 4 configurations - 6832-04-04-04-NWO-FG 6832-06-06-06-NWO-FG 6832-08-08-08-NWO-FG 6832-16-16-16-NWO-FG
+6835: 4 configurations - 6835-04-04-04-NWO-FG 6835-06-06-06-NWO-FG 6835-08-08-08-NWO-FG 6835-12-12-12-NWO-FG
+6801-L: 6 configurations - 6801-L-04-04-NWO-FG 6801-L-06-06-NWO-FG 6801-L-08-08-NWO-FG 6801-L-12-12-NWO-FG 6801-L-16-16-NWO-FG 6801-L-20-20-NWO-FG
+6801-LL: 5 configurations - 6801-LL-04-04-NWO-FG 6801-LL-06-06-NWO-FG 6801-LL-12-12-NWO-FG 6801-LL-16-16-NWO-FG 6801-LL-20-20-NWO-FG
+   not generated 6801-LL-08-08-NWO-FG: BUILD / MISSING
+4005: 8 configurations - 4005-08 4005-10 4005-12 4005-16 4005-20 4005-24 4005-32 4005-40
+   not generated 4005-48: DataStatus MISSING: 
+FS2408: 2 configurations - FS2408-08 FS2408-24
+   not generated FS2408-04: no end data / KeyError('no -04 entry in the FSM end library; needs the male O-ring face-seal end of -04 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-04-04 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS2408-06: no end data / KeyError('no -06 entry in the FSM end library; needs the male O-ring face-seal end of -06 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-06-06 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS2408-10: no end data / KeyError('no -10 entry in the FSM end library; needs the male O-ring face-seal end of -10 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-10-10 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS2408-12: no end data / KeyError('no -12 entry in the FSM end library; needs the male O-ring face-seal end of -12 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-12-12 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS2408-16: no end data / KeyError('no -16 entry in the FSM end library; needs the male O-ring face-seal end of -16 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-16-16 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS2408-20: no end data / KeyError('no -20 entry in the FSM end library; needs the male O-ring face-seal end of -20 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-20-20 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+FS6402: 1 configurations - FS6402-08-08
+   not generated FS6402-04-04: no end data / KeyError('no -04 entry in the FSM end library; needs the male O-ring face-seal end of -04 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-04-04 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS6402-06-06: no end data / KeyError('no -06 entry in the FSM end library; needs the male O-ring face-seal end of -06 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-06-06 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS6402-10-10: no end data / KeyError('no -10 entry in the FSM end library; needs the male O-ring face-seal end of -10 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-10-10 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS6402-12-12: no end data / KeyError('no -12 entry in the FSM end library; needs the male O-ring face-seal end of -12 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-12-12 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS6402-16-16: no end data / KeyError('no -16 entry in the FSM end library; needs the male O-ring face-seal end of -16 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-16-16 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+   not generated FS6402-20-20: no end data / KeyError('no -20 entry in the FSM end library; needs the male O-ring face-seal end of -20 on a STRAIGHT (face groove, land, nose chamfer, thread length, 60deg flank, relief, end length), measured on BRENNAN_FS2403-20-20 (or another FS straight with that end) with tools/_out/orfs_wp2_20
+FS6809: 2 configurations - FS6809-06-06-NWO-FG FS6809-08-08-NWO-FG
+   not generated FS6809-04-04-NWO-FG: no end data / adjustable ORB stud on an FS part not measured for -04 (NWO_FS has -06/-08; needs BRENNAN_FS6801-04-04-NWO-FG or another FS part with that stud)
+   not generated FS6809-10-10-NWO-FG: no end data / adjustable ORB stud on an FS part not measured for -10 (NWO_FS has -06/-08; needs BRENNAN_FS6801-10-10-NWO-FG or another FS part with that stud)
+   not generated FS6809-12-12-NWO-FG: no end data / adjustable ORB stud on an FS part not measured for -12 (NWO_FS has -06/-08; needs BRENNAN_FS6801-12-12-NWO-FG or another FS part with that stud)
+   not generated FS6809-16-16-NWO-FG: no end data / adjustable ORB stud on an FS part not measured for -16 (NWO_FS has -06/-08; needs BRENNAN_FS6801-16-16-NWO-FG or another FS part with that stud)
+   not generated FS6809-20-20-NWO-FG: no end data / adjustable ORB stud on an FS part not measured for -20 (NWO_FS has -06/-08; needs BRENNAN_FS6801-20-20-NWO-FG or another FS part with that stud)
+FS6801-L: 1 configurations - FS6801-L-08-08-NWO-FG
+
+other configurations in the regenerated masters (existing roots / unlocked by NWO_FS[6]): see regen/cmp.txt

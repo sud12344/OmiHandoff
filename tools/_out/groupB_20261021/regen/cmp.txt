@@ -102,6 +102,9 @@ af:gen_tee       6901      rc None/0 | configs old   0 new  19 | NEW 19 | LOST 0
 af:gen_tee       6805      rc None/0 | configs old   0 new  12 | NEW 12 | LOST 0 [] | changed 0 [] | macro n/a | new: 6805-04-02-NWO-FG 6805-04-04-NWO-FG 6805-06-04-NWO-FG 6805-06-06-NWO-FG 6805-08-06-NWO-FG 6805-08-08-NWO-FG 6805-10-08-NWO-FG 6805-12-08-NWO-FG 6805-12-12-NWO-FG 6805-16-12-NWO-FG 6805-16-16-NWO-FG 6805-20-20-NWO-FG
 af:gen_tee       6806      rc None/0 | configs old   0 new  10 | NEW 10 | LOST 0 [] | changed 0 [] | macro n/a | new: 6806-04-04-NWO-FG 6806-06-04-NWO-FG 6806-06-06-NWO-FG 6806-08-06-NWO-FG 6806-08-08-NWO-FG 6806-10-08-NWO-FG 6806-12-12-NWO-FG 6806-16-16-NWO-FG 6806-20-20-NWO-FG 6806-24-24-NWO-FG
 af:gen_tee       6809      rc None/0 | configs old   0 new   7 | NEW 7 | LOST 0 [] | changed 0 [] | macro n/a | new: 6809-04-04-NWO-FG 6809-06-06-NWO-FG 6809-08-08-NWO-FG 6809-10-10-NWO-FG 6809-12-12-NWO-FG 6809-16-16-NWO-FG 6809-20-20-NWO-FG
+af:gen_tee       6815      rc None/0 | configs old   0 new   6 | NEW 6 | LOST 0 [] | changed 0 [] | macro n/a | new: 6815-04-04-NWO-FG 6815-06-06-NWO-FG 6815-08-08-NWO-FG 6815-10-10-NWO-FG 6815-12-12-NWO-FG 6815-16-16-NWO-FG
+af:gen_tee       6832      rc None/0 | configs old   0 new   4 | NEW 4 | LOST 0 [] | changed 0 [] | macro n/a | new: 6832-04-04-04-NWO-FG 6832-06-06-06-NWO-FG 6832-08-08-08-NWO-FG 6832-16-16-16-NWO-FG
+af:gen_tee       6835      rc None/0 | configs old   0 new   4 | NEW 4 | LOST 0 [] | changed 0 [] | macro n/a | new: 6835-04-04-04-NWO-FG 6835-06-06-06-NWO-FG 6835-08-08-08-NWO-FG 6835-12-12-12-NWO-FG
 fs:gen_straight2 FS2403    rc 0/0 | configs old   2 new   2 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_straight2 FS2404    rc 0/0 | configs old   5 new   5 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
 fs:gen_straight2 FS6403    rc 0/0 | configs old   1 new   1 | NEW 0 | LOST 0 [] | changed 0 [] | macro identical
