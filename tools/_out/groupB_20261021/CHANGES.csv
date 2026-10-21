@@ -686,3 +686,187 @@ FS6402,FS6402-20-20,$COMMENT,"no Air-Way MFS x female JIC swivel series (Air-Way
 4005,4005-40,$PRP@DimSource,,BRENNAN,group B: row takes Brennan cells
 4005,4005-40,$PRP@AxialSource,"Brennan CAD record 4005-40 (I.D. 2.734, W 0.14; checked on BRENNAN_4005-08: I.D. 0.734 / O.D. 1.014 / W 0.140); no Air-Way page, no OMi sizes [user 2026-10-21: Brennan CAD records ""following my rule""]","[BRENNAN-CAD 2026-10-21 group B: ID@DRIVE, W@DRIVE] Brennan CAD record 4005-40 (I.D. 2.734, W 0.14; checked on BRENNAN_4005-08: I.D. 0.734 / O.D. 1.014 / W 0.140); no Air-Way page, no OMi sizes [user 2026-10-21: Brennan CAD records ""following my rule""]",group B note
 4005,4005-40,$COMMENT,"MISSING: needs a dimensional source (Air-Way sibling family, Parker/Brennan catalog, or a STEP measurement) before any geometry is modelled","MISSING: needs a dimensional source (Air-Way sibling family, Parker/Brennan catalog, or a STEP measurement) before any geometry is modelled | Brennan CAD record 4005-40 (PARTcommunity / CADENAS, group B 2026-10-21: ID@DRIVE=ID, W@DRIVE=W; user 2026-10-21 ""yes you can use them following my rule"")",group B note
+6815,(header),M8@DRIVE,,new column,group B: column the SPEC reads
+6815,(header),M6@DRIVE,,new column,group B: column the SPEC reads
+6815,(header),D1@BORE,,new column,group B: column the SPEC reads
+6815,(header),CHEX@HEX,,new column,group B: column the SPEC reads
+6815,(header),Y@HEX,,new column,group B: column the SPEC reads
+6815,(header),PD@BORE,,new column,group B: column the SPEC reads
+6815,(header),THDMAJ_B1@DRIVE,,new column,group B: column the SPEC reads
+6815,(header),$PRP@DimSource,,new column,group B: column the SPEC reads
+6815,6815-04-04-NWO-FG,M8@DRIVE,,1.23,Brennan TFA catalog TFA-p045-t01 M8 LGTH (= CAD record M8)
+6815,6815-04-04-NWO-FG,M6@DRIVE,,0.63,Brennan TFA catalog TFA-p045-t01 M6 LGTH (= CAD record M6)
+6815,6815-04-04-NWO-FG,D1@BORE,,0.172,Brennan TFA catalog TFA-p045-t01 B1 DRILL (= CAD record B1D)
+6815,6815-04-04-NWO-FG,CHEX@HEX,,0.563,Brennan TFA catalog TFA-p045-t01 C HEX (= CAD record C)
+6815,6815-04-04-NWO-FG,Y@HEX,,0.75,Brennan TFA catalog TFA-p045-t01 Y FLATS (= CAD record Y)
+6815,6815-04-04-NWO-FG,PD@BORE,,0.38,A11 Q-TRANSFER-D3: Air-Way per-size -04 female ORB port drill
+6815,6815-04-04-NWO-FG,THDMAJ_B1@DRIVE,,0.4375,thread major of the -04 ORB thread named by the part number
+6815,6815-04-04-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6815,6815-04-04-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M8@DRIVE, M6@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p045-t01 (CAD record agrees within the print rounding); port drill PD@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6815,6815-04-04-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6815,6815-06-06-NWO-FG,M8@DRIVE,,1.41,Brennan TFA catalog TFA-p045-t01 M8 LGTH (= CAD record M8)
+6815,6815-06-06-NWO-FG,M6@DRIVE,,1.02,Brennan TFA catalog TFA-p045-t01 M6 LGTH (= CAD record M6)
+6815,6815-06-06-NWO-FG,D1@BORE,,0.297,Brennan TFA catalog TFA-p045-t01 B1 DRILL (= CAD record B1D)
+6815,6815-06-06-NWO-FG,CHEX@HEX,,0.688,Brennan TFA catalog TFA-p045-t01 C HEX (= CAD record C)
+6815,6815-06-06-NWO-FG,Y@HEX,,0.875,Brennan TFA catalog TFA-p045-t01 Y FLATS (= CAD record Y)
+6815,6815-06-06-NWO-FG,PD@BORE,,0.5,A11 Q-TRANSFER-D3: Air-Way per-size -06 female ORB port drill
+6815,6815-06-06-NWO-FG,THDMAJ_B1@DRIVE,,0.5625,thread major of the -06 ORB thread named by the part number
+6815,6815-06-06-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6815,6815-06-06-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M8@DRIVE, M6@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p045-t01 (CAD record agrees within the print rounding); port drill PD@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6815,6815-06-06-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6815,6815-08-08-NWO-FG,M8@DRIVE,,1.59,Brennan TFA catalog TFA-p045-t01 M8 LGTH (= CAD record M8)
+6815,6815-08-08-NWO-FG,M6@DRIVE,,0.88,Brennan TFA catalog TFA-p045-t01 M6 LGTH (= CAD record M6)
+6815,6815-08-08-NWO-FG,D1@BORE,,0.391,Brennan TFA catalog TFA-p045-t01 B1 DRILL (= CAD record B1D)
+6815,6815-08-08-NWO-FG,CHEX@HEX,,0.875,Brennan TFA catalog TFA-p045-t01 C HEX (= CAD record C)
+6815,6815-08-08-NWO-FG,Y@HEX,,1.062,Brennan TFA catalog TFA-p045-t01 Y FLATS (= CAD record Y)
+6815,6815-08-08-NWO-FG,PD@BORE,,0.68,A11 Q-TRANSFER-D3: Air-Way per-size -08 female ORB port drill
+6815,6815-08-08-NWO-FG,THDMAJ_B1@DRIVE,,0.75,thread major of the -08 ORB thread named by the part number
+6815,6815-08-08-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6815,6815-08-08-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M8@DRIVE, M6@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p045-t01 (CAD record agrees within the print rounding); port drill PD@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6815,6815-08-08-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6815,6815-10-10-NWO-FG,M8@DRIVE,,1.81,Brennan TFA catalog TFA-p045-t01 M8 LGTH (= CAD record M8)
+6815,6815-10-10-NWO-FG,M6@DRIVE,,1.02,Brennan TFA catalog TFA-p045-t01 M6 LGTH (= CAD record M6)
+6815,6815-10-10-NWO-FG,D1@BORE,,0.484,Brennan TFA catalog TFA-p045-t01 B1 DRILL (= CAD record B1D)
+6815,6815-10-10-NWO-FG,CHEX@HEX,,1.0,Brennan TFA catalog TFA-p045-t01 C HEX (= CAD record C)
+6815,6815-10-10-NWO-FG,Y@HEX,,1.062,Brennan TFA catalog TFA-p045-t01 Y FLATS (= CAD record Y)
+6815,6815-10-10-NWO-FG,PD@BORE,,0.8,A11 Q-TRANSFER-D3: Air-Way per-size -10 female ORB port drill
+6815,6815-10-10-NWO-FG,THDMAJ_B1@DRIVE,,0.875,thread major of the -10 ORB thread named by the part number
+6815,6815-10-10-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6815,6815-10-10-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M8@DRIVE, M6@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p045-t01 (CAD record agrees within the print rounding); port drill PD@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6815,6815-10-10-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6815,6815-12-12-NWO-FG,M8@DRIVE,,2.0,Brennan TFA catalog TFA-p045-t01 M8 LGTH (= CAD record M8)
+6815,6815-12-12-NWO-FG,M6@DRIVE,,1.21,Brennan TFA catalog TFA-p045-t01 M6 LGTH (= CAD record M6)
+6815,6815-12-12-NWO-FG,D1@BORE,,0.609,Brennan TFA catalog TFA-p045-t01 B1 DRILL (= CAD record B1D)
+6815,6815-12-12-NWO-FG,CHEX@HEX,,1.25,Brennan TFA catalog TFA-p045-t01 C HEX (= CAD record C)
+6815,6815-12-12-NWO-FG,Y@HEX,,1.312,Brennan TFA catalog TFA-p045-t01 Y FLATS (= CAD record Y)
+6815,6815-12-12-NWO-FG,PD@BORE,,0.97,A11 Q-TRANSFER-D3: Air-Way per-size -12 female ORB port drill
+6815,6815-12-12-NWO-FG,THDMAJ_B1@DRIVE,,1.0625,thread major of the -12 ORB thread named by the part number
+6815,6815-12-12-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6815,6815-12-12-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M8@DRIVE, M6@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p045-t01 (CAD record agrees within the print rounding); port drill PD@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6815,6815-12-12-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6815,6815-16-16-NWO-FG,M8@DRIVE,,2.25,Brennan TFA catalog TFA-p045-t01 M8 LGTH (= CAD record M8)
+6815,6815-16-16-NWO-FG,M6@DRIVE,,1.62,Brennan TFA catalog TFA-p045-t01 M6 LGTH (= CAD record M6)
+6815,6815-16-16-NWO-FG,D1@BORE,,0.844,Brennan TFA catalog TFA-p045-t01 B1 DRILL (= CAD record B1D)
+6815,6815-16-16-NWO-FG,CHEX@HEX,,1.5,Brennan TFA catalog TFA-p045-t01 C HEX (= CAD record C)
+6815,6815-16-16-NWO-FG,Y@HEX,,1.625,Brennan TFA catalog TFA-p045-t01 Y FLATS (= CAD record Y)
+6815,6815-16-16-NWO-FG,PD@BORE,,1.22,A11 Q-TRANSFER-D3: Air-Way per-size -16 female ORB port drill
+6815,6815-16-16-NWO-FG,THDMAJ_B1@DRIVE,,1.3125,thread major of the -16 ORB thread named by the part number
+6815,6815-16-16-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6815,6815-16-16-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M8@DRIVE, M6@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p045-t01 (CAD record agrees within the print rounding); port drill PD@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6815,6815-16-16-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6832,(header),M1@DRIVE,,new column,group B: column the SPEC reads
+6832,(header),N2@DRIVE,,new column,group B: column the SPEC reads
+6832,(header),M7@DRIVE,,new column,group B: column the SPEC reads
+6832,(header),D3@BORE,,new column,group B: column the SPEC reads
+6832,(header),CHEX@HEX,,new column,group B: column the SPEC reads
+6832,(header),Y@HEX,,new column,group B: column the SPEC reads
+6832,(header),PD1@BORE,,new column,group B: column the SPEC reads
+6832,(header),PD2@BORE,,new column,group B: column the SPEC reads
+6832,(header),THDMAJ_B3@DRIVE,,new column,group B: column the SPEC reads
+6832,(header),$PRP@DimSource,,new column,group B: column the SPEC reads
+6832,6832-04-04-04-NWO-FG,M1@DRIVE,,0.63,Brennan TFA catalog TFA-p061-t01 M1 LGTH (= CAD record M1)
+6832,6832-04-04-04-NWO-FG,N2@DRIVE,,0.63,Brennan TFA catalog TFA-p061-t01 N2 LGTH (= CAD record N2)
+6832,6832-04-04-04-NWO-FG,M7@DRIVE,,1.23,Brennan TFA catalog TFA-p061-t01 M7 LGTH (= CAD record M7)
+6832,6832-04-04-04-NWO-FG,D3@BORE,,0.172,Brennan TFA catalog TFA-p061-t01 B3 DRILL (= CAD record B3D)
+6832,6832-04-04-04-NWO-FG,CHEX@HEX,,0.563,Brennan TFA catalog TFA-p061-t01 C HEX (= CAD record C)
+6832,6832-04-04-04-NWO-FG,Y@HEX,,0.75,Brennan TFA catalog TFA-p061-t01 Y FLATS (= CAD record Y)
+6832,6832-04-04-04-NWO-FG,PD1@BORE,,0.38,A11 Q-TRANSFER-D3: Air-Way per-size -04 female ORB port drill
+6832,6832-04-04-04-NWO-FG,PD2@BORE,,0.38,A11 Q-TRANSFER-D3: Air-Way per-size -04 female ORB port drill
+6832,6832-04-04-04-NWO-FG,THDMAJ_B3@DRIVE,,0.4375,thread major of the -04 ORB thread named by the part number
+6832,6832-04-04-04-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6832,6832-04-04-04-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M1@DRIVE, N2@DRIVE, M7@DRIVE, D3@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t01 (CAD record agrees within the print rounding); port drill PD1@BORE, PD2@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6832,6832-04-04-04-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6832,6832-06-06-06-NWO-FG,M1@DRIVE,,0.75,Brennan TFA catalog TFA-p061-t01 M1 LGTH (= CAD record M1)
+6832,6832-06-06-06-NWO-FG,N2@DRIVE,,0.75,Brennan TFA catalog TFA-p061-t01 N2 LGTH (= CAD record N2)
+6832,6832-06-06-06-NWO-FG,M7@DRIVE,,1.38,Brennan TFA catalog TFA-p061-t01 M7 LGTH (= CAD record M7)
+6832,6832-06-06-06-NWO-FG,D3@BORE,,0.297,Brennan TFA catalog TFA-p061-t01 B3 DRILL (= CAD record B3D)
+6832,6832-06-06-06-NWO-FG,CHEX@HEX,,0.688,Brennan TFA catalog TFA-p061-t01 C HEX (= CAD record C)
+6832,6832-06-06-06-NWO-FG,Y@HEX,,0.875,Brennan TFA catalog TFA-p061-t01 Y FLATS (= CAD record Y)
+6832,6832-06-06-06-NWO-FG,PD1@BORE,,0.5,A11 Q-TRANSFER-D3: Air-Way per-size -06 female ORB port drill
+6832,6832-06-06-06-NWO-FG,PD2@BORE,,0.5,A11 Q-TRANSFER-D3: Air-Way per-size -06 female ORB port drill
+6832,6832-06-06-06-NWO-FG,THDMAJ_B3@DRIVE,,0.5625,thread major of the -06 ORB thread named by the part number
+6832,6832-06-06-06-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6832,6832-06-06-06-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M1@DRIVE, N2@DRIVE, M7@DRIVE, D3@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t01 (CAD record agrees within the print rounding); port drill PD1@BORE, PD2@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6832,6832-06-06-06-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6832,6832-08-08-08-NWO-FG,M1@DRIVE,,0.88,Brennan TFA catalog TFA-p061-t01 M1 LGTH (= CAD record M1)
+6832,6832-08-08-08-NWO-FG,N2@DRIVE,,0.88,Brennan TFA catalog TFA-p061-t01 N2 LGTH (= CAD record N2)
+6832,6832-08-08-08-NWO-FG,M7@DRIVE,,1.59,Brennan TFA catalog TFA-p061-t01 M7 LGTH (= CAD record M7)
+6832,6832-08-08-08-NWO-FG,D3@BORE,,0.391,Brennan TFA catalog TFA-p061-t01 B3 DRILL (= CAD record B3D)
+6832,6832-08-08-08-NWO-FG,CHEX@HEX,,0.875,Brennan TFA catalog TFA-p061-t01 C HEX (= CAD record C)
+6832,6832-08-08-08-NWO-FG,Y@HEX,,1.062,Brennan TFA catalog TFA-p061-t01 Y FLATS (= CAD record Y)
+6832,6832-08-08-08-NWO-FG,PD1@BORE,,0.68,A11 Q-TRANSFER-D3: Air-Way per-size -08 female ORB port drill
+6832,6832-08-08-08-NWO-FG,PD2@BORE,,0.68,A11 Q-TRANSFER-D3: Air-Way per-size -08 female ORB port drill
+6832,6832-08-08-08-NWO-FG,THDMAJ_B3@DRIVE,,0.75,thread major of the -08 ORB thread named by the part number
+6832,6832-08-08-08-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6832,6832-08-08-08-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M1@DRIVE, N2@DRIVE, M7@DRIVE, D3@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t01 (CAD record agrees within the print rounding); port drill PD1@BORE, PD2@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6832,6832-08-08-08-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6832,6832-16-16-16-NWO-FG,M1@DRIVE,,1.33,Brennan TFA catalog TFA-p061-t01 M1 LGTH (= CAD record M1)
+6832,6832-16-16-16-NWO-FG,N2@DRIVE,,1.33,Brennan TFA catalog TFA-p061-t01 N2 LGTH (= CAD record N2)
+6832,6832-16-16-16-NWO-FG,M7@DRIVE,,2.25,Brennan TFA catalog TFA-p061-t01 M7 LGTH (= CAD record M7)
+6832,6832-16-16-16-NWO-FG,D3@BORE,,0.844,Brennan TFA catalog TFA-p061-t01 B3 DRILL (= CAD record B3D)
+6832,6832-16-16-16-NWO-FG,CHEX@HEX,,1.5,Brennan TFA catalog TFA-p061-t01 C HEX (= CAD record C)
+6832,6832-16-16-16-NWO-FG,Y@HEX,,1.625,Brennan TFA catalog TFA-p061-t01 Y FLATS (= CAD record Y)
+6832,6832-16-16-16-NWO-FG,PD1@BORE,,1.22,A11 Q-TRANSFER-D3: Air-Way per-size -16 female ORB port drill
+6832,6832-16-16-16-NWO-FG,PD2@BORE,,1.22,A11 Q-TRANSFER-D3: Air-Way per-size -16 female ORB port drill
+6832,6832-16-16-16-NWO-FG,THDMAJ_B3@DRIVE,,1.3125,thread major of the -16 ORB thread named by the part number
+6832,6832-16-16-16-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6832,6832-16-16-16-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M1@DRIVE, N2@DRIVE, M7@DRIVE, D3@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t01 (CAD record agrees within the print rounding); port drill PD1@BORE, PD2@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6832,6832-16-16-16-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6835,(header),M7@DRIVE,,new column,group B: column the SPEC reads
+6835,(header),M1@DRIVE,,new column,group B: column the SPEC reads
+6835,(header),M2@DRIVE,,new column,group B: column the SPEC reads
+6835,(header),D1@BORE,,new column,group B: column the SPEC reads
+6835,(header),CHEX@HEX,,new column,group B: column the SPEC reads
+6835,(header),Y@HEX,,new column,group B: column the SPEC reads
+6835,(header),PD2@BORE,,new column,group B: column the SPEC reads
+6835,(header),PD3@BORE,,new column,group B: column the SPEC reads
+6835,(header),THDMAJ_B1@DRIVE,,new column,group B: column the SPEC reads
+6835,(header),$PRP@DimSource,,new column,group B: column the SPEC reads
+6835,6835-04-04-04-NWO-FG,M7@DRIVE,,1.23,Brennan TFA catalog TFA-p061-t02 M7 LGTH (= CAD record M7)
+6835,6835-04-04-04-NWO-FG,M1@DRIVE,,0.74,Brennan TFA catalog TFA-p061-t02 M1 LGH (= CAD record M1)
+6835,6835-04-04-04-NWO-FG,M2@DRIVE,,0.74,Brennan TFA catalog TFA-p061-t02 M2 LGTH (= CAD record M2)
+6835,6835-04-04-04-NWO-FG,D1@BORE,,0.172,Brennan TFA catalog TFA-p061-t02 B1 DRILL (= CAD record B1D)
+6835,6835-04-04-04-NWO-FG,CHEX@HEX,,0.563,Brennan TFA catalog TFA-p061-t02 C HEX (= CAD record C)
+6835,6835-04-04-04-NWO-FG,Y@HEX,,0.75,Brennan TFA catalog TFA-p061-t02 Y FLATS (= CAD record Y)
+6835,6835-04-04-04-NWO-FG,PD2@BORE,,0.38,A11 Q-TRANSFER-D3: Air-Way per-size -04 female ORB port drill
+6835,6835-04-04-04-NWO-FG,PD3@BORE,,0.38,A11 Q-TRANSFER-D3: Air-Way per-size -04 female ORB port drill
+6835,6835-04-04-04-NWO-FG,THDMAJ_B1@DRIVE,,0.4375,thread major of the -04 ORB thread named by the part number
+6835,6835-04-04-04-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6835,6835-04-04-04-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M7@DRIVE, M1@DRIVE, M2@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t02 (CAD record agrees within the print rounding); port drill PD2@BORE, PD3@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6835,6835-04-04-04-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6835,6835-06-06-06-NWO-FG,M7@DRIVE,,1.38,Brennan TFA catalog TFA-p061-t02 M7 LGTH (= CAD record M7)
+6835,6835-06-06-06-NWO-FG,M1@DRIVE,,0.75,Brennan TFA catalog TFA-p061-t02 M1 LGH (= CAD record M1)
+6835,6835-06-06-06-NWO-FG,M2@DRIVE,,0.75,Brennan TFA catalog TFA-p061-t02 M2 LGTH (= CAD record M2)
+6835,6835-06-06-06-NWO-FG,D1@BORE,,0.297,Brennan TFA catalog TFA-p061-t02 B1 DRILL (= CAD record B1D)
+6835,6835-06-06-06-NWO-FG,CHEX@HEX,,0.688,Brennan TFA catalog TFA-p061-t02 C HEX (= CAD record C)
+6835,6835-06-06-06-NWO-FG,Y@HEX,,0.875,Brennan TFA catalog TFA-p061-t02 Y FLATS (= CAD record Y)
+6835,6835-06-06-06-NWO-FG,PD2@BORE,,0.5,A11 Q-TRANSFER-D3: Air-Way per-size -06 female ORB port drill
+6835,6835-06-06-06-NWO-FG,PD3@BORE,,0.5,A11 Q-TRANSFER-D3: Air-Way per-size -06 female ORB port drill
+6835,6835-06-06-06-NWO-FG,THDMAJ_B1@DRIVE,,0.5625,thread major of the -06 ORB thread named by the part number
+6835,6835-06-06-06-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6835,6835-06-06-06-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M7@DRIVE, M1@DRIVE, M2@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t02 (CAD record agrees within the print rounding); port drill PD2@BORE, PD3@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6835,6835-06-06-06-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6835,6835-08-08-08-NWO-FG,M7@DRIVE,,1.59,Brennan TFA catalog TFA-p061-t02 M7 LGTH (= CAD record M7)
+6835,6835-08-08-08-NWO-FG,M1@DRIVE,,0.88,Brennan TFA catalog TFA-p061-t02 M1 LGH (= CAD record M1)
+6835,6835-08-08-08-NWO-FG,M2@DRIVE,,0.88,Brennan TFA catalog TFA-p061-t02 M2 LGTH (= CAD record M2)
+6835,6835-08-08-08-NWO-FG,D1@BORE,,0.391,Brennan TFA catalog TFA-p061-t02 B1 DRILL (= CAD record B1D)
+6835,6835-08-08-08-NWO-FG,CHEX@HEX,,0.875,Brennan TFA catalog TFA-p061-t02 C HEX (= CAD record C)
+6835,6835-08-08-08-NWO-FG,Y@HEX,,1.062,Brennan TFA catalog TFA-p061-t02 Y FLATS (= CAD record Y)
+6835,6835-08-08-08-NWO-FG,PD2@BORE,,0.68,A11 Q-TRANSFER-D3: Air-Way per-size -08 female ORB port drill
+6835,6835-08-08-08-NWO-FG,PD3@BORE,,0.68,A11 Q-TRANSFER-D3: Air-Way per-size -08 female ORB port drill
+6835,6835-08-08-08-NWO-FG,THDMAJ_B1@DRIVE,,0.75,thread major of the -08 ORB thread named by the part number
+6835,6835-08-08-08-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6835,6835-08-08-08-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M7@DRIVE, M1@DRIVE, M2@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t02 (CAD record agrees within the print rounding); port drill PD2@BORE, PD3@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6835,6835-08-08-08-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)
+6835,6835-12-12-12-NWO-FG,M7@DRIVE,,2.0,Brennan TFA catalog TFA-p061-t02 M7 LGTH (= CAD record M7)
+6835,6835-12-12-12-NWO-FG,M1@DRIVE,,1.39,Brennan TFA catalog TFA-p061-t02 M1 LGH (= CAD record M1)
+6835,6835-12-12-12-NWO-FG,M2@DRIVE,,1.39,Brennan TFA catalog TFA-p061-t02 M2 LGTH (= CAD record M2)
+6835,6835-12-12-12-NWO-FG,D1@BORE,,0.609,Brennan TFA catalog TFA-p061-t02 B1 DRILL (= CAD record B1D)
+6835,6835-12-12-12-NWO-FG,CHEX@HEX,,1.25,Brennan TFA catalog TFA-p061-t02 C HEX (= CAD record C)
+6835,6835-12-12-12-NWO-FG,Y@HEX,,1.312,Brennan TFA catalog TFA-p061-t02 Y FLATS (= CAD record Y)
+6835,6835-12-12-12-NWO-FG,PD2@BORE,,0.97,A11 Q-TRANSFER-D3: Air-Way per-size -12 female ORB port drill
+6835,6835-12-12-12-NWO-FG,PD3@BORE,,0.97,A11 Q-TRANSFER-D3: Air-Way per-size -12 female ORB port drill
+6835,6835-12-12-12-NWO-FG,THDMAJ_B1@DRIVE,,1.0625,thread major of the -12 ORB thread named by the part number
+6835,6835-12-12-12-NWO-FG,$PRP@DimSource,,BRENNAN,group B
+6835,6835-12-12-12-NWO-FG,$PRP@AxialSource,"OMi catalog SKU (omindustrial.com collections feed (cs-adapters, carbon-steel-flange-adapters-accessories, carbon-steel-braze-beaded-hose; products.json limit=50, single pass 2026-09-23)); Air-Way lists no carbon-steel series for this root -> no dimensions","[BRENNAN-CAT 2026-10-21: M7@DRIVE, M1@DRIVE, M2@DRIVE, D1@BORE, CHEX@HEX, Y@HEX] Brennan TFA catalog TFA-p061-t02 (CAD record agrees within the print rounding); port drill PD2@BORE, PD3@BORE = Air-Way per-size (A11) [user 2026-10-18 ""Brennan = yes""; 2026-10-21 CAD records ""following my rule""]",group B
+6835,6835-12-12-12-NWO-FG,$PRP@DataStatus,MISSING,ASSUMED,group B: one source (Brennan)

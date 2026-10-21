@@ -438,6 +438,33 @@ SPEC['6809'] = dict(name='90 deg Adjustable Male ORB x Female JIC Swivel Elbow',
                     sw=('M10@DRIVE', 'C3HEX@HEX'), nwo=('=6801', 'C4HEX@HEX', '=ORB:THDL', '=ORB:GD'), assume_reps=_GB_REPS,
                     legs=[('NWO', 'M7@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('JICSW', 'M5@DRIVE', 'D2@BORE', 'THDMAJ_B2@DRIVE')])
 
+# ---- 2026-10-21 (group B): adjustable male ORB x FEMALE ORB PORT elbow / tees (leg_ORBPORT; legs listed in 'orbport' are female ORB ports, their
+#      bore column = the port drill). Rows: Brennan TFA catalog p45 / p61 + CAD records, port drill Air-Way per size (scripts/edit_orbport.py).
+ORBPORT_E = 0.02        # the mouth loop runs this far past the port face (outside the part)
+ORBPORT_ASSUME = ('female ORB port leg (group B 2026-10-21): the forged female leg of the 5504 / 1502 / 6805 pattern (hex arm to 0.26 short of the face, '
+                  'round collar of the flats dia - Brennan 6815-08-08-NWO-FG / 6835-08-08-08-NWO-FG STEPs: collar 0.62 .. 0.88) with the SAE J1926 female '
+                  'ORB port of the straight end library (ORBF_MEAS: face radius, O-ring chamfer angle and depth, minor-bore depth P, measured on the Brennan '
+                  '6404 / 6410 STEPs; the -08 port of the 6815 / 6835 STEPs is the same: RF 0.4065, 15deg to RC 0.378, P 0.688): port drill = the row '
+                  '{dcol} (Air-Way per-size port drill, A11), 45deg lead-in from the chamfer foot to the drill (the 0.003 radial step at the chamfer foot '
+                  'not modelled), straight helical thread over P; {conn}; mouth = a revolved cut (ORBMOUTHi)')
+_ORBP_T = lambda dcol, conn: ORBPORT_ASSUME.format(dcol=dcol, conn=conn) + ('; female legs: the forged hex arm stops 0.26 short of the port face and the end is a '
+                                                                           'ROUND COLLAR of the flats dia (Brennan 6815-08-08-NWO-FG / 6835-08-08-08-NWO-FG STEPs: 0.62 .. 0.88)')
+SPEC['6815'] = dict(name='90 deg Adjustable Male ORB x Female ORB Elbow', hex='Y@HEX', elbow=True, dmap=(1, 0), ref='6815-08-08-NWO-FG', conn='D1@BORE',
+                    orbport=(1,), nwo=('=6801', 'CHEX@HEX', '=ORB:THDL', '=ORB:GD'), assume_reps=_GB_REPS,
+                    nptff_text=_ORBP_T('PD', 'the drill ends flat at P (Brennan: a 120deg drill point down to the B1 drill) and the row D1 (B1 DRILL) runs on '
+                                       'to the crossing (Brennan 6815-08-08-NWO-FG STEP: 0.391)'),
+                    legs=[('NPTFF', 'M6@DRIVE', 'PD@BORE', None), ('NWO', 'M8@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE')])
+SPEC['6832'] = dict(name='Female ORB Run x Adjustable Male ORB Branch Tee', hex='Y@HEX', ref='6832-08-08-08-NWO-FG', conn=None, orbport=(1, 2),
+                    nwo=('=6801', 'CHEX@HEX', '=ORB:THDL', '=ORB:GD'),
+                    nptff_text=_ORBP_T('PD1 / PD2', 'the port drills run on to the crossing (Brennan 6832-08-08-08-NWO-FG STEP: the two 0.682 drills meet at the '
+                                       'crossing)'),
+                    legs=[('NPTFF', 'M1@DRIVE', 'PD1@BORE', None), ('NPTFF', 'N2@DRIVE', 'PD2@BORE', None), ('NWO', 'M7@DRIVE', 'D3@BORE', 'THDMAJ_B3@DRIVE')])
+# 6835: B1 = the adjustable stud (run, -X on the Brennan STEP), B2 / B3 the female ports (+X run, +Y branch) -> dmap
+SPEC['6835'] = dict(name='Adjustable Male ORB x Female ORB Run x Female ORB Branch Tee', hex='Y@HEX', ref='6835-08-08-08-NWO-FG', conn=None, dmap=(1, 0, 2),
+                    orbport=(1, 3), nwo=('=6801', 'CHEX@HEX', '=ORB:THDL', '=ORB:GD'),
+                    nptff_text=_ORBP_T('PD2 / PD3', 'the port drills run on to the crossing (Brennan 6835-08-08-08-NWO-FG STEP: each 0.682 drill runs to the other)'),
+                    legs=[('NPTFF', 'M1@DRIVE', 'PD2@BORE', None), ('NWO', 'M7@DRIVE', 'D1@BORE', 'THDMAJ_B1@DRIVE'), ('NPTFF', 'M2@DRIVE', 'PD3@BORE', None)])
+
 # 6801-L / 6801-LL folded into 6801 (user 2026-10-21 "keep it the same as that" = as 2501-L / -LL; Q-NEW-FOLD-6801L): Brennan 6801-08-08 /
 # 6801-L-08-08 / 6801-LL-08-08-NWO-FG STEPs - ORB tip 1.450 / 1.970 / 2.480, ORB body face 0.590 / 1.110 / 1.620 (tip to body face 0.860 on
 # all three), JIC leg 1.250 on all three: the ORB leg's forged hex arm runs longer, the adjustable ORB end is the 6801 one -> same topology.
@@ -1132,6 +1159,47 @@ def leg_NPTFF(i, dash, M, BR, td, conn, split=False, p1=None):
                 thread=dict(type='HELIX', r=td / 2, height=P1, pitch=P, thdh=0.8 * P, taperOut=False, apexOut=True), tipR=None)
 
 
+
+# 2026-10-21 (group B, groupB_20261021): FEMALE ORB PORT on a forged leg (6815 / 6832 / 6835). Brennan 6815-08-08-NWO-FG and
+# 6835-08-08-08-NWO-FG STEPs (tools/measure/prof.py): the female leg is the forged female pipe leg (hex arm to 0.26 short of the face, ROUND COLLAR
+# of the flats dia: 0.62 .. 0.88 at -08) with the SAE J1926 port of the straight end library (end_ORBF / ORBF_MEAS, the 6404 / 6410 ports): face
+# radius RF 0.4065, O-ring chamfer CHANG 15deg to RC 0.378 (0.106 deep), 45deg lead-in to the port drill (Brennan 0.682 = Air-Way's -08 port drill
+# 0.68, A11), minor bore to the measured depth P 0.688; 6815 (elbow): then a 120deg drill point down to the 0.391 bore that runs on to the
+# crossing; 6835 (tee): the port drills run on to the crossing (no bore step). The small radial step 0.378 -> 0.375 at the chamfer foot is not
+# modelled (as on the straight ORB ports). Built as an NPTFF-type leg (same collar / pocket / connecting bore / helix machinery) plus the
+# mouth: a closed loop revolved as a CUT about the leg axis (ORBMOUTHi, DrawPortLoop / PortMouthCut).
+# (ORBPORT_E / ORBPORT_ASSUME: defined with the group B SPECs above)
+
+
+def leg_ORBPORT(i, dash, M, BR, minor, conn, split=False):
+    if dash not in G.ORBF_MEAS: raise KeyError(f'female ORB port not measured for -{dash:02d}')
+    m = G.ORBF_MEAS[dash]; thr = G.ORB_THR[dash]; P = 1 / G.tpi_of(thr); rmin = minor / 2; e = ORBPORT_E
+    if rmin >= m['RC'] - 0.005: raise AssertionError(f'port drill {minor} does not fit inside the O-ring chamfer (dia {2 * m["RC"]:.4f})')
+    if m['RF'] >= BR - 0.03: raise AssertionError(f'port face radius {m["RF"]} leaves < 0.03 to the hex flats radius {BR:.4f}')
+    c1 = (m['RF'] - m['RC']) / math.tan(math.radians(m['CHANG'])); c2 = c1 + (m['RC'] - rmin); P1 = m['P']
+    if c2 >= P1 - 0.02: raise AssertionError(f'port lead-in depth {c2:.4f} reaches the minor-bore depth {P1}')
+    if split and conn is not None and conn > minor: conn = minor
+    to_centre = conn is None or (conn >= minor - 1e-9 and not split)
+    pk = M if to_centre else P1
+    V = [(0, 0), (0, BR), (M, BR), (M, 0)]
+    cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5)}
+    dW = round(min(0.03, 0.3 * rmin), 4); rin = round(rmin - dW, 5)
+    pts = [(M - c2, rin), (M - c2, rmin), (M - c1, m['RC']), (M, m['RF']), (M + e, m['RF']), (M + e, rin)]     # exact: the drawn loop carries every dimension value
+    # material the mouth removes: the ring between the drill and the chamfer / lead-in profile from M - c2 to the face (the slab rin .. rmin
+    # lies in the pocket, the part past M + 0 is outside)
+    vol = math.pi * ((c2 - c1) * ((rmin ** 2 + rmin * m['RC'] + m['RC'] ** 2) / 3 - rmin ** 2)
+                     + c1 * ((m['RC'] ** 2 + m['RC'] * m['RF'] + m['RF'] ** 2) / 3 - rmin ** 2))
+    cols.update({f'OM{i}_X@ORBMOUTH{i}_SK': round(M + e, 6), f'OM{i}_E@ORBMOUTH{i}_SK': e, f'OM{i}_RF@ORBMOUTH{i}_SK': m['RF'],
+                 f'OM{i}_RIN@ORBMOUTH{i}_SK': rin, f'OM{i}_DW@ORBMOUTH{i}_SK': dW, f'OM{i}_CHANG@ORBMOUTH{i}_SK': m['CHANG'],
+                 f'OM{i}_LEAD@ORBMOUTH{i}_SK': 45.0, f'OM{i}_C2E@ORBMOUTH{i}_SK': round(c2 + e, 6)})
+    tcols = {f'HELIXDIA@HELIXSK_{i}': minor, f'HEIGHT@HELIX_{i}': P1, f'PITCH@HELIX_{i}': round(P, 5),
+             f'PROF_R@THDPROF_{i}': round(rmin, 5), f'APEXR@THDPROF_{i}': round(rmin + 0.54127 * P, 5), f'PROF_AX@THDPROF_{i}': M}
+    dims = [('len', -1, f'M{i}', M, M / 2, BR + 0.6), ('rad', 1, 'BODYR', BR, M / 2, -0.4)]
+    return dict(kind='NPTFF', dash=dash, V=V, endlen=0.0, cols=cols, tcols=tcols, dims=dims, rmax=rmin, td=minor, P1=P1,
+                pocket=pk, to_centre=to_centre, conn=conn, thr=thr + ' UNF (female ORB port, SAE J1926)', orbport=True,
+                orbmouth=dict(pts=pts, m=m, c1=c1, c2=c2, e=e, rin=rin, rmin=rmin, dW=dW, vol=vol),
+                thread=dict(type='HELIX', r=rmin, height=P1, pitch=P, thdh=0.54127 * P, taper=0.0, taperOut=False, apexOut=True), tipR=None)
+
 def leg_JICSW(i, dash, M5, BR, M10, nutAF):
     # female 37deg JIC SWIVEL leg: hex arm to the measured body face, neck, nut (skirt + hex), nut thread, slot, nose, 37deg seat.
     # M5 = crossing to the nut face, M10 = crossing to the nose tip (Air-Way); the rest is the measured Brennan swivel end.
@@ -1560,7 +1628,9 @@ def build_rows(root):
             skipped.append((pn, 'no end data', f'adjustable ORB end not measured for -{nwd[0]:02d}')); continue
         # SIZE-40 (2026-10-01): a leg dash missing from an end library (e.g. -40 NPTF) -> skip the row with the source that would fill it
         # (until now an uncaught KeyError here stopped the whole root)
-        gaps = G.lib_gaps([(kind, d) for (kind, lc, bc, tc), d in zip(legs4(sp), dd)])
+        gaps = G.lib_gaps([(kind, d) for k_, ((kind, lc, bc, tc), d) in enumerate(zip(legs4(sp), dd), 1) if k_ not in sp.get('orbport', ())])
+        gaps += [f'female ORB port not measured for -{d:02d} (ORBF_MEAS has {"/".join("-%02d" % k for k in sorted(G.ORBF_MEAS))})'      # 2026-10-21 (group B)
+                 for k_, d in enumerate(dd, 1) if k_ in sp.get('orbport', ()) and d not in G.ORBF_MEAS]
         if gaps:
             skipped.append((pn, 'no end data', '; '.join(gaps))); continue
         if any(kind in FLG_KINDS for (kind, lc, bc, tc) in legs4(sp)):
@@ -1651,6 +1721,11 @@ def build_rows(root):
                 ro_ = r.get(sp['flg_o']) if sp.get('flg_o') else None
                 if ro_ is not None and abs(ro_ - O_) > FLG_O_ROUND: chk.append(f'leg {i}: row head OD {sp["flg_o"].split("@")[0]} {ro_} differs from the end library {O_} - conflict, ask the user')
                 elif ro_ is not None and abs(ro_ - O_) > 1e-9: warn.append(f'leg {i}: row head OD {ro_} vs end library {O_} - rounding only (built at {O_})')
+            elif kind == 'NPTFF' and i in sp.get('orbport', ()):
+                # 2026-10-21 (group B): female ORB port on a forged leg (leg_ORBPORT)
+                try: L = leg_ORBPORT(i, d, M, BR, r[bc], conn, split=bool(sp.get('elbow')))
+                except (AssertionError, KeyError, TypeError) as ex:
+                    chk.append(f'leg {i} ORB port: {ex}'); L = leg_ORBPORT(i, d, M, BR, 2 * G.ORBF_MEAS[d]['RC'] - 0.05, None, split=bool(sp.get('elbow')))
             elif sp.get('p1'):
                 # 2026-10-02: the row's own measured port thread length where it has one, else the MS51503 P1 library value (said in $COMMENT)
                 p1_ = r.get(sp['p1'])
@@ -2470,6 +2545,93 @@ Sub OrbTrimCut(skName As String, featName As String, live As Boolean, expRemM3 A
         v1 = Volume()
         Check featName & " suppressed: volume back to " & Format(v1 / (IN_ ^ 3), "0.00000") & " in^3 (before the cut " & Format(v0 / (IN_ ^ 3), "0.00000") & ")", Abs(v1 - v0) < 0.000001 * v0 + 1E-12
     End If
+    Dim d As SldWorks.DisplayDimension, names As String
+    Set d = f.GetFirstDisplayDimension
+    Do While Not d Is Nothing
+        names = names & d.GetDimension2(0).Name & " "
+        Set d = f.GetNextDisplayDimension(d)
+    Loop
+    Trace featName & " feature dims: " & names
+End Sub
+"""
+# 2026-10-21 (group B): only macros with a female ORB port leg (leg_ORBPORT) carry these helpers (every other macro stays byte-identical)
+ORBPORT_HELP = """
+' ---------------------------------------------------------------- female ORB port mouth helpers (group B, 2026-10-21)
+Sub DrawPortLoop(v As Variant, axDir As Long, axLen As Double, nmAx As String)
+    ' CLOSED loop for a revolve about a leg axis through the origin (axDir 0 = model X, 1 = model Y) that does not touch the axis: v = x, y pairs
+    ' in sketch coordinates (Front Plane = model X / Y). Corners merged, horizontal / vertical relations as drawn; the axis centreline runs
+    ' from the origin along +X (axDir 0) or +Y (axDir 1), fixed length axLen named nmAx - it carries the revolve axis and the radius dimensions.
+    ' = DrawLoopAx (corner neck trim) with the centreline direction as a parameter.
+    Dim i As Long, n As Long
+    n = (UBound(v) + 1) \\ 2
+    NPTS = n
+    ReDim PX(n - 1): ReDim PR(n - 1)
+    For i = 0 To n - 1
+        PX(i) = v(2 * i): PR(i) = v(2 * i + 1)
+    Next i
+    ReDim seg(n - 1)
+    swSkMgr.AddToDB = True
+    For i = 0 To n - 1
+        Set seg(i) = swSkMgr.CreateLine(PX(i), PR(i), 0, PX((i + 1) Mod n), PR((i + 1) Mod n), 0)
+    Next i
+    If axDir = 0 Then
+        Set axisCL = swSkMgr.CreateCenterLine(0, 0, 0, axLen, 0, 0)
+    Else
+        Set axisCL = swSkMgr.CreateCenterLine(0, 0, 0, 0, axLen, 0)
+    End If
+    swSkMgr.AddToDB = False
+    Dim ln1 As SldWorks.SketchLine, ln2 As SldWorks.SketchLine, cl As SldWorks.SketchLine
+    For i = 0 To n - 1
+        Set ln1 = seg(i): Set ln2 = seg((i + 1) Mod n)
+        swModel.ClearSelection2 True
+        ln1.GetEndPoint2.Select4 False, Nothing
+        ln2.GetStartPoint2.Select4 True, Nothing
+        swModel.SketchAddConstraints "sgMERGEPOINTS"
+    Next i
+    For i = 0 To n - 1
+        swModel.ClearSelection2 True
+        If Abs(PR(i) - PR((i + 1) Mod n)) < 0.000000001 Then
+            seg(i).Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL"
+        ElseIf Abs(PX(i) - PX((i + 1) Mod n)) < 0.000000001 Then
+            seg(i).Select4 False, Nothing: swModel.SketchAddConstraints "sgVERTICAL"
+        End If
+    Next i
+    swModel.ClearSelection2 True
+    If axDir = 0 Then
+        axisCL.Select4 False, Nothing: swModel.SketchAddConstraints "sgHORIZONTAL"
+    Else
+        axisCL.Select4 False, Nothing: swModel.SketchAddConstraints "sgVERTICAL"
+    End If
+    Set cl = axisCL
+    swModel.ClearSelection2 True
+    cl.GetStartPoint2.Select4 False, Nothing
+    swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
+    swModel.SketchAddConstraints "sgCOINCIDENT"
+    swModel.ClearSelection2 True
+    If axDir = 0 Then
+        Call DimSeg1(axisCL, nmAx, axLen, axLen / 2, -0.004)
+    Else
+        Call DimSeg1(axisCL, nmAx, axLen, -0.004, axLen / 2)
+    End If
+End Sub
+
+Sub PortMouthCut(skName As String, featName As String, expRemM3 As Double)
+    ' FEMALE ORB PORT MOUTH (group B, 2026-10-21): revolve CUT of the closed mouth loop about its axis centreline (the port leg axis). It must
+    ' remove the O-ring chamfer / lead-in ring between the port drill and the chamfer profile (expRemM3, computed by the generator; 2 %).
+    On Error Resume Next
+    Dim v0 As Double, v1 As Double, f As SldWorks.Feature, sd As SldWorks.SelectData
+    v0 = Volume()
+    swModel.ClearSelection2 True
+    swModel.Extension.SelectByID2 skName, "SKETCH", 0, 0, 0, False, 0, Nothing, 0
+    Set sd = swSelMgr.CreateSelectData: sd.Mark = 16
+    axisCL.Select4 True, sd
+    Set f = swFeatMgr.FeatureRevolve2(True, True, False, True, False, False, 0, 0, 6.28318530717959, 0, False, False, 0, 0, 0, 0, 0, True, True, True)
+    Trace featName & ": FeatureRevolve2 (cut) -> " & (Not f Is Nothing) & IIf(Err.Number <> 0, " [err " & Err.Description & "]", ""): Err.Clear
+    Check featName & " revolve cut created", Not f Is Nothing
+    If f Is Nothing Then Exit Sub
+    f.Name = featName
+    v1 = Volume()
+    Check featName & " removed " & Format((v0 - v1) / (IN_ ^ 3), "0.00000") & " in^3 = the port mouth ring (expect " & Format(expRemM3 / (IN_ ^ 3), "0.00000") & ")", Abs((v0 - v1) - expRemM3) < 0.02 * expRemM3 + 1E-12
     Dim d As SldWorks.DisplayDimension, names As String
     Set d = f.GetFirstDisplayDimension
     Do While Not d Is Nothing
@@ -3533,6 +3695,34 @@ def emit(root, hdr, ok, refrow):
             xb = sg * (M - lg['pocket'])
             body.append(f'    curAxis = {ax}: Check "leg {i} bore open through the pocket bottom ({"XY"[ax]}={xb:+.4f})", Not AxisCoveredAx({xb*IN:.9f})')
     body.append('')
+    # 2026-10-21 (group B): female ORB port mouths (leg_ORBPORT): the O-ring chamfer + 45deg lead-in, a closed loop on the Front Plane revolved as a
+    # CUT about the leg axis - after the pockets / bores, before the threads (the helix starts on the port face)
+    for i, lg in enumerate(legs, 1):
+        if not lg.get('orbmouth'): continue
+        ax, sg = place(sp)[i]; assert ax in (0, 1), f'{root}: ORB port on the angled leg {i} is not supported'
+        om = lg['orbmouth']; e_ = om['e']; M = lg['V'][-1][0]
+        sk = [((sg * a, r) if ax == 0 else (r, sg * a)) for a, r in om['pts']]
+        arr = ', '.join(f'{x*IN:.9f}, {y*IN:.9f}' for x, y in sk)
+        # text positions (sketch coordinates): beside each dimensioned segment
+        tp = lambda a, r: ((sg * a, r) if ax == 0 else (r, sg * a))
+        body += [f"    ' ================= female ORB port mouth on leg {i}: O-ring chamfer {om['m']['CHANG']:g}deg + 45deg lead-in, revolved cut about the leg axis =================",
+                 f'    stepName = "ORBMOUTH{i} sketch"',
+                 '    swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0', '    swSkMgr.InsertSketch True',
+                 f'    DrawPortLoop Array({arr}), {ax}, {(M + 0.3)*IN:.9f}, "OM{i}_AXL"',
+                 f'    Call DimSegOrigin(seg(4), "OM{i}_X", {(M + e_)*IN:.9f}, {tp(M + e_ + 0.15, om["m"]["RF"] + 0.2)[0]*IN:.6f}, {tp(M + e_ + 0.15, om["m"]["RF"] + 0.2)[1]*IN:.6f})',
+                 f'    Call Dim_len(3, "OM{i}_E", {e_*IN:.9f}, {tp(M + e_ / 2, om["m"]["RF"] + 0.12)[0]*IN:.6f}, {tp(M + e_ / 2, om["m"]["RF"] + 0.12)[1]*IN:.6f})',
+                 f'    Call Dim_rad(3, "OM{i}_RF", {om["m"]["RF"]*IN:.9f}, {tp(M + 0.1, 0.0)[0]*IN:.6f}, {tp(M + 0.1, 0.0)[1]*IN:.6f})',
+                 f'    Call Dim_rad(5, "OM{i}_RIN", {om["rin"]*IN:.9f}, {tp(M + 0.2, 0.0)[0]*IN:.6f}, {tp(M + 0.2, 0.0)[1]*IN:.6f})',
+                 f'    Call Dim_len(0, "OM{i}_DW", {om["dW"]*IN:.9f}, {tp(M - om["c2"] - 0.1, om["rmin"])[0]*IN:.6f}, {tp(M - om["c2"] - 0.1, om["rmin"])[1]*IN:.6f})',
+                 f'    Call Dim_ang(2, 3, "OM{i}_CHANG", {math.radians(om["m"]["CHANG"]):.12f}, {tp(M - om["c1"] / 2, om["m"]["RF"] + 0.05)[0]*IN:.6f}, {tp(M - om["c1"] / 2, om["m"]["RF"] + 0.05)[1]*IN:.6f})',
+                 f'    Call Dim_ang(1, 3, "OM{i}_LEAD", {math.radians(45.0):.12f}, {tp(M - om["c2"], om["m"]["RC"] + 0.05)[0]*IN:.6f}, {tp(M - om["c2"], om["m"]["RC"] + 0.05)[1]*IN:.6f})',
+                 f'    Call Dim_ptline(1, False, 4, "OM{i}_C2E", {(om["c2"] + e_)*IN:.9f}, {tp(M - om["c2"] / 2, om["rin"] - 0.1)[0]*IN:.6f}, {tp(M - om["c2"] / 2, om["rin"] - 0.1)[1]*IN:.6f})',
+                 '    swModel.ClearSelection2 True', '    swSkMgr.InsertSketch True', '    Set swFeat = swModel.FeatureByPositionReverse(0)',
+                 f'    swFeat.Name = "ORBMOUTH{i}_SK"',
+                 f'    Check "ORBMOUTH{i}_SK sketch fully defined", (swFeat.GetSpecificFeature2.GetConstrainedStatus = swConstrainedStatus_e.swFullyConstrained)',
+                 f'    stepName = "ORBMOUTH{i} cut"',
+                 f'    Call PortMouthCut("ORBMOUTH{i}_SK", "ORBMOUTH{i}", {om["vol"]*IN**3:.12e})',
+                 f'    Check "OM{i}_RF@ORBMOUTH{i}_SK reachable", Not swModel.Parameter("OM{i}_RF@ORBMOUTH{i}_SK") Is Nothing', '']
     # threads
     body.append("    ' ================= threads (left live until the final resting-state step) =================")
     body.append('    stepName = "Threads"')
@@ -3710,7 +3900,7 @@ Trap:
 End Sub
 
 ' ---------------------------------------------------------------- helpers (2603HX library + straights HelixThread)
-{HELP}{NWO_HELP if any(lg['kind'] == 'NWO' for lg in legs) else ''}{ORBTRIM_HELP if orbtrims else ''}{NECK_HELP if any(lg.get('trim') for lg in legs) else ''}{HOSEFACE_HELP if any(lg.get('faceoff') for lg in legs) else ''}{angled_help(sp, legs)}'''
+{HELP}{NWO_HELP if any(lg['kind'] == 'NWO' for lg in legs) else ''}{ORBTRIM_HELP if orbtrims else ''}{NECK_HELP if any(lg.get('trim') for lg in legs) else ''}{HOSEFACE_HELP if any(lg.get('faceoff') for lg in legs) else ''}{angled_help(sp, legs)}{ORBPORT_HELP if any(lg.get('orbmouth') for lg in legs) else ''}'''
     vba = ref_config_at_save(add_progress(vba))      # 2026-09-24: one report/status-bar line per configuration in the sweep; 2026-09-25: saved in the reference configuration (progress_patch.py)
     p = f'{OUT}/Build_{root}_MASTER.bas'; open(p, 'w').write(vba)
     return p

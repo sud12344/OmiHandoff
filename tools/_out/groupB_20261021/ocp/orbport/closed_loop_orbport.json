@@ -1,0 +1,120 @@
+[
+ {
+  "pn": "6815-04-04-NWO-FG",
+  "checks": 7,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.57229,
+  "bad": []
+ },
+ {
+  "pn": "6815-06-06-NWO-FG",
+  "checks": 7,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.04889,
+  "bad": []
+ },
+ {
+  "pn": "6815-08-08-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.47988,
+  "bad": [],
+  "brennan_volume": 1.47036,
+  "diff_pct": 0.65
+ },
+ {
+  "pn": "6815-10-10-NWO-FG",
+  "checks": 7,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.63681,
+  "bad": []
+ },
+ {
+  "pn": "6815-12-12-NWO-FG",
+  "checks": 7,
+  "off": 0,
+  "solids": 1,
+  "volume": 2.81681,
+  "bad": []
+ },
+ {
+  "pn": "6815-16-16-NWO-FG",
+  "checks": 7,
+  "off": 0,
+  "solids": 1,
+  "volume": 5.13109,
+  "bad": []
+ },
+ {
+  "pn": "6832-04-04-04-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.64294,
+  "bad": []
+ },
+ {
+  "pn": "6832-06-06-06-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.96215,
+  "bad": []
+ },
+ {
+  "pn": "6832-08-08-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.55044,
+  "bad": [],
+  "brennan_volume": 1.55054,
+  "diff_pct": -0.01
+ },
+ {
+  "pn": "6832-16-16-16-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 4.48699,
+  "bad": []
+ },
+ {
+  "pn": "6835-04-04-04-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.72372,
+  "bad": []
+ },
+ {
+  "pn": "6835-06-06-06-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 0.97472,
+  "bad": []
+ },
+ {
+  "pn": "6835-08-08-08-NWO-FG",
+  "checks": 22,
+  "off": 0,
+  "solids": 1,
+  "volume": 1.58332,
+  "bad": [],
+  "brennan_volume": 1.5609,
+  "diff_pct": 1.44
+ },
+ {
+  "pn": "6835-12-12-12-NWO-FG",
+  "checks": 12,
+  "off": 0,
+  "solids": 1,
+  "volume": 3.18548,
+  "bad": []
+ }
+]

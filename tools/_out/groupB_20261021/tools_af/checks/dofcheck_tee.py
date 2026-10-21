@@ -213,11 +213,68 @@ def check_thdprof(tip, r, thdh, apexOut, angled=True):
             qp = q0v.copy(); qm = q0v.copy(); qp[k] += h; qm[k] -= h; J[c, k] = (f(qp) - f(qm)) / (2 * h)
     rk = int(np.linalg.matrix_rank(J, tol=1e-6))
     return dict(unknowns=len(q0v), cons=len(cons), rank=rk, fully=bool(rk == len(q0v)), redundant=len(cons) - rk)
+def port_mouths(path):
+    """2026-10-21 (group B): the female ORB port mouth sketches ORBMOUTHi_SK - a CLOSED loop drawn by DrawPortLoop (corners merged, horizontal /
+    vertical relations as drawn) plus an axis centreline from the origin along +X (axDir 0) or +Y (axDir 1), fixed length"""
+    t = open(path).read(); out = {}
+    for m in re.finditer(r'stepName = "(ORBMOUTH\d+) sketch"(.*?)swFeat\.Name = "\1_SK"', t, re.S):
+        blk = m.group(2)
+        a = re.search(r'DrawPortLoop Array\(([^)]*)\), (\d), (-?\d+\.\d+), "(\w+)"', blk)
+        nums = [float(x) for x in a.group(1).split(',')]
+        out[m.group(1)] = (np.array([(nums[k], nums[k + 1]) for k in range(0, len(nums), 2)]), int(a.group(2)), float(a.group(3)),
+                           re.findall(r'Call (Dim_\w+|DimSegOrigin)\(((?:seg\(\d+\)|[^)])*)\)', blk))
+    return out
+def check_portloop(P, axd, axl, dims):
+    """rank of the mouth loop: unknowns = the loop points + the centreline end points; relations = DrawPortLoop's (merged corners are implicit:
+    shared points), H / V as drawn, centreline start at the origin, centreline H (axDir 0) / V (axDir 1), centreline length; dims = DimSegOrigin
+    (line to origin), Dim_len (segment length), Dim_rad (line to centreline), Dim_ang (angle between two loop lines), Dim_ptline (segment start /
+    end point to a line). Also: the drawn loop must carry every dimension value."""
+    n = len(P); segs = [(i, (i + 1) % n) for i in range(n)]; c = 2 * n
+    X = lambda q, i: q[2 * i]; Y = lambda q, i: q[2 * i + 1]
+    def ldist(q, px, py, a, b):
+        x1, y1, x2, y2 = X(q, a), Y(q, a), X(q, b), Y(q, b); L_ = math.hypot(x2 - x1, y2 - y1)
+        return ((px - x1) * (y2 - y1) - (py - y1) * (x2 - x1)) / L_
+    def cldist(q, px, py):
+        x1, y1, x2, y2 = q[c], q[c + 1], q[c + 2], q[c + 3]; L_ = math.hypot(x2 - x1, y2 - y1)
+        return ((px - x1) * (y2 - y1) - (py - y1) * (x2 - x1)) / L_
+    def sang(q, k):
+        a, b = segs[k]; return math.atan2(Y(q, b) - Y(q, a), X(q, b) - X(q, a))
+    cons = [('CL start x', lambda q: q[c], 0.0), ('CL start y', lambda q: q[c + 1], 0.0),
+            ('CL dir', (lambda q: q[c + 3] - q[c + 1]) if axd == 0 else (lambda q: q[c + 2] - q[c]), 0.0),
+            ('CL length', lambda q: math.hypot(q[c + 2] - q[c], q[c + 3] - q[c + 1]), axl)]
+    for k, (a, b) in enumerate(segs):
+        if abs(P[a][1] - P[b][1]) < 1e-9: cons.append((f'H{k}', lambda q, a=a, b=b: Y(q, a) - Y(q, b), 0.0))
+        elif abs(P[a][0] - P[b][0]) < 1e-9: cons.append((f'V{k}', lambda q, a=a, b=b: X(q, a) - X(q, b), 0.0))
+    for name, args in dims:
+        a = [x.strip().strip('"') for x in args.split(',')]
+        if name == 'DimSegOrigin':
+            i = int(re.search(r'seg\((\d+)\)', a[0]).group(1)); cons.append((a[1], lambda q, i=i: abs(ldist(q, 0.0, 0.0, *segs[i])), float(a[2])))
+        elif name == 'Dim_len':
+            i = int(a[0]); cons.append((a[1], lambda q, i=i: math.hypot(X(q, segs[i][1]) - X(q, segs[i][0]), Y(q, segs[i][1]) - Y(q, segs[i][0])), float(a[2])))
+        elif name == 'Dim_rad':
+            i = int(a[0]); cons.append((a[1], lambda q, i=i: abs(cldist(q, X(q, segs[i][0]), Y(q, segs[i][0]))), float(a[2])))
+        elif name == 'Dim_ang':
+            i, j = int(a[0]), int(a[1]); v = float(a[3])
+            cons.append((a[2], lambda q, i=i, j=j: abs(math.sin(sang(q, i) - sang(q, j))), abs(math.sin(v))))
+        elif name == 'Dim_ptline':
+            sp_, ue, sl = int(a[0]), a[1] == 'True', int(a[2]); pt = segs[sp_][1] if ue else segs[sp_][0]
+            cons.append((a[3], lambda q, pt=pt, sl=sl: abs(ldist(q, X(q, pt), Y(q, pt), *segs[sl])), float(a[4])))
+        else: raise ValueError(f'port mouth sketch: unknown dimension call {name}')
+    end = (axl, 0.0) if axd == 0 else (0.0, axl)
+    q0 = np.concatenate([P.flatten(), [0.0, 0.0, end[0], end[1]]]).astype(float); J = np.zeros((len(cons), len(q0))); h = 1e-7
+    for k_, (nm, f, v) in enumerate(cons):
+        for k in range(len(q0)):
+            qp = q0.copy(); qm = q0.copy(); qp[k] += h; qm[k] -= h; J[k_, k] = (f(qp) - f(qm)) / (2 * h)
+    r = np.linalg.matrix_rank(J, tol=1e-6)
+    # angles: the macro prints the points to 1e-9 m; on the short chamfer line (~0.0007 m) that is ~2e-6 rad -> angle tolerance 5e-6 (sin)
+    bad = [f'{nm} {f(q0):.9f} vs {v:.9f}' for nm, f, v in cons if abs(f(q0) - v) > (5e-6 if nm.endswith(('_CHANG', '_LEAD')) else 1e-8)]
+    return dict(n=n, unknowns=len(q0), cons=len(cons), rank=int(r), fully=bool(r == len(q0)), redundant=len(cons) - int(r), value_mismatch=bad)
 IN_ = 0.0254
 for p in sys.argv[1:]:
     L, D = legs(p)
     for i in sorted(L): print(p.split('/')[-1], 'LEG', i, check(L[i], D[i]))
     for nm, (P_, axl_, d_) in sorted(trims(p).items()): print(p.split('/')[-1], nm, check_loop(P_, axl_, d_))
+    for nm, (P_, axd_, axl_, d_) in sorted(port_mouths(p).items()): print(p.split('/')[-1], nm, check_portloop(P_, axd_, axl_, d_))   # 2026-10-21 (group B)
     rings = neck_rings(p)
     for nm, pfx, a0, ln, r0, r1 in rings:
         res = check_ring(a0, ln, r0, r1)

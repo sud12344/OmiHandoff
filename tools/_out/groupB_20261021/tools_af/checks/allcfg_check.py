@@ -141,9 +141,18 @@ def check_tees(roots):
         for pn, i, Lg in tl:
             iss = poly_issues(Lg['nwo_trim_pts']) + (['loop touches the axis'] if min(r_ for _, r_ in Lg['nwo_trim_pts']) < 1e-4 else [])
             if iss: probs.append((pn, f'ORBTRIM{i}', iss[:3]))
+        # 2026-10-21 (group B): the female ORB port mouth loop (ORBMOUTHi_SK) of every configuration: no zero segment, no self-intersection, off
+        # the axis, its bottom inside the port drill (rin < drill radius) and above the pocket bottom (the mouth must not cut below the drilled pocket)
+        ml = [(b['pn'], i, Lg) for b in ok for i, Lg in enumerate(b['legs'], 1) if Lg.get('orbmouth')]
+        for pn, i, Lg in ml:
+            om = Lg['orbmouth']; pts = om['pts']; M_ = Lg['V'][-1][0]
+            iss = poly_issues(pts) + (['loop touches the axis'] if min(r_ for _, r_ in pts) < 1e-4 else [])
+            if not (om['rin'] < om['rmin'] - 1e-6): iss.append('mouth bottom not inside the port drill')
+            if not (M_ - pts[0][0] < Lg['pocket'] - 0.02): iss.append(f'mouth depth {M_ - pts[0][0]:.4f} reaches the pocket depth {Lg["pocket"]:.4f}')
+            if iss: probs.append((pn, f'ORBMOUTH{i}', iss[:3]))
         # integration 2026-10-01: one summary line carrying both counters (corner neck trim loops of 6802-E45, neck turns of NECK-6502)
         print(f'{r:6} {len(ok):3} configs  leg outline problems: {len(probs)}', probs[:4], *([f'(corner neck trim loops checked: {len(tl)})'] if tl else []),
-              *([f'(neck turns checked: {nturn})'] if nturn else []),
+              *([f'(neck turns checked: {nturn})'] if nturn else []), *([f'(ORB port mouth loops checked: {len(ml)})'] if ml else []),
               *([f'(hose face-offs checked: {nface}, forged-corner sample points past the hose hex face: {npast_}, all inside the cut region)'] if nface and not
                 [p_ for p_ in probs if str(p_[1]).startswith('HOSEFACE')] else [f'(hose face-offs checked: {nface})'] if nface else []))
 

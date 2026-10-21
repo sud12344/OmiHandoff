@@ -1,0 +1,21 @@
+6815-04-04-NWO-FG: 7 checks, 0 off; solids 1, volume 0.57229 in^3
+6815-06-06-NWO-FG: 7 checks, 0 off; solids 1, volume 1.04889 in^3
+   6815-08-08-NWO-FG leg 1 port: model {'face': 0.88, 'RF': 0.4065, 'RC': 0.378, 'CHANG': 15.0, 'MINR': 0.34, 'P': 0.6845} | Brennan {'face': 0.88, 'RF': 0.4065, 'RC': 0.3781, 'CHANG': 15.0, 'MINR': 0.3412, 'P': 0.688}
+6815-08-08-NWO-FG: 12 checks, 0 off; solids 1, volume 1.47988 in^3; Brennan 1.47036 in^3 (+0.65 %)
+6815-10-10-NWO-FG: 7 checks, 0 off; solids 1, volume 1.63681 in^3
+6815-12-12-NWO-FG: 7 checks, 0 off; solids 1, volume 2.81681 in^3
+6815-16-16-NWO-FG: 7 checks, 0 off; solids 1, volume 5.13109 in^3
+6832-04-04-04-NWO-FG: 12 checks, 0 off; solids 1, volume 0.64294 in^3
+6832-06-06-06-NWO-FG: 12 checks, 0 off; solids 1, volume 0.96215 in^3
+   6832-08-08-08-NWO-FG leg 1 port: model {'face': 0.88, 'RF': 0.4065, 'RC': 0.378, 'CHANG': 15.0, 'MINR': 0.34, 'P': 0.6845} | Brennan {'face': 0.88, 'RF': 0.4065, 'RC': 0.3781, 'CHANG': 15.0, 'MINR': 0.3411, 'P': 0.6845}
+   6832-08-08-08-NWO-FG leg 2 port: model {'face': 0.88, 'RF': 0.4065, 'RC': 0.378, 'CHANG': 15.0, 'MINR': 0.34, 'P': 0.6845} | Brennan {'face': 0.88, 'RF': 0.4065, 'RC': 0.3781, 'CHANG': 15.0, 'MINR': 0.3411, 'P': 0.6845}
+6832-08-08-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.55044 in^3; Brennan 1.55054 in^3 (-0.01 %)
+6832-16-16-16-NWO-FG: 12 checks, 0 off; solids 1, volume 4.48699 in^3
+6835-04-04-04-NWO-FG: 12 checks, 0 off; solids 1, volume 0.72372 in^3
+6835-06-06-06-NWO-FG: 12 checks, 0 off; solids 1, volume 0.97472 in^3
+   6835-08-08-08-NWO-FG leg 1 port: model {'face': 0.88, 'RF': 0.4065, 'RC': 0.378, 'CHANG': 15.0, 'MINR': 0.34, 'P': 0.54} | Brennan {'face': 0.88, 'RF': 0.4065, 'RC': 0.3781, 'CHANG': 15.0, 'MINR': 0.3411, 'P': 0.5389}
+   6835-08-08-08-NWO-FG leg 3 port: model {'face': 0.88, 'RF': 0.4065, 'RC': 0.378, 'CHANG': 15.0, 'MINR': 0.34, 'P': 0.54} | Brennan {'face': 0.88, 'RF': 0.4065, 'RC': 0.3781, 'CHANG': 15.0, 'MINR': 0.3411, 'P': 0.5389}
+6835-08-08-08-NWO-FG: 22 checks, 0 off; solids 1, volume 1.58332 in^3; Brennan 1.5609 in^3 (+1.44 %)
+6835-12-12-12-NWO-FG: 12 checks, 0 off; solids 1, volume 3.18548 in^3
+
+ORB port closed loop PASS: 14 configurations, 163 checks, 0 off (tolerance 0.0015)
