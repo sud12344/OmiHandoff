@@ -6,13 +6,14 @@ the dry runs (`dryrun/RUN_DRYRUN.md`).
 
 ## Result
 
-OMi's 230 compression part numbers (`07_RAW_EXTRACTS/omi_feed/omi_skus_compression.txt`) are in 11 review tables; **151 configurations
-generate** in 9 new masters, 0 blocked; 70 rows are MISSING (no source), 9 sleeve rows wait for a sleeve model type.
+OMi's 230 compression part numbers (`07_RAW_EXTRACTS/omi_feed/omi_skus_compression.txt`) are in 11 review tables; **160 configurations
+generate** in 10 new masters, 0 blocked; 70 rows are MISSING (no source). (Update 2026-10-21 later: the C0319 sleeve is built from the
+eight per-size Brennan STEPs the user sent - section "C0319 sleeve" below.)
 
 | Series | OMi parts | Brennan record (cells) | Configurations | Not generated (why) |
 |---|---|---|---|---|
 | C0318 nut | 9 | 9 | 9 | - |
-| C0319 sleeve | 9 | 9 | 0 | no sleeve model type for this shape yet (data staged; see decision 4) |
+| C0319 sleeve | 9 | 9 (STEP per size) | 9 | - (gen_ring CSLEEVE) |
 | C2402 bite x male JIC | 14 | 12 | 12 | -10-10 + -M1: no Brennan record (MISSING) |
 | C2403 union | 18 | 18 | 18 | - |
 | C2404 bite x male pipe | 32 | 0 | 0 | all 32: Brennan has no C2404 model at all (MISSING, in the Triveni package) |
@@ -22,9 +23,9 @@ generate** in 9 new masters, 0 blocked; 70 rows are MISSING (no source), 9 sleev
 | C2502 female pipe elbow -FG | 32 | 20 | 20 | -12-08 -16-12 -20-16 -24-20 -24-24 -32-32 + -M1 (MISSING) |
 | C2601 branch tee -FG | 10 | 8 | 8 | -06-06-06 + -M1 (MISSING) |
 | C6801 adj. ORB elbow -FG | 30 | 20 | 20 | -04-02 -20-16 -24-20 -32-24 -32-32 + -M1 (MISSING) |
-| **Total** | **230** | **160** (89 fittings + 71 -M1) | **151** | 70 MISSING + 9 sleeves |
+| **Total** | **230** | **160** (89 fittings + 71 -M1) | **160** | 70 MISSING |
 
-151 = 80 complete fittings / nuts + 71 "-M1" body-only part numbers. Count against the catalog: the 151 are new (no compression
+160 = 89 complete fittings / nuts / sleeves + 71 "-M1" body-only part numbers. Count against the catalog: the 160 are new (no compression
 part was in any master before).
 
 ## Master choice (one master per shape)
@@ -101,7 +102,7 @@ Each Brennan compression STEP is ONE fused solid: body + nut(s), no sleeve, no 2
 - **regress**: 97 roots, 0 changed cells in old configurations (`checks/regress.txt`).
 - **dofcheck**: straight DRIVE sketches and every tee leg fully defined, 0 redundant (`checks/dofcheck_*.txt`).
 - **allcfg**: 0 outline problems in all 151 configurations (`checks/allcfg_*.txt`).
-- **vbacheck**: 9 / 9 macros OK.
+- **vbacheck**: 10 / 10 macros OK.
 - **OCP closed loop** (`scripts/closed_loop_c.py` -> `closed_loop/closed_loop.txt`): every configuration rebuilt from the generator's own
   vertex chains + pockets + bores, read back with point-membership probes (independent extractor; the ramp read at two levels, its angle
   measured): **151 configurations, straights 765 checks 0 off, forged bite legs 1,060 checks 0 off** (tolerance 0.0012; incl. overall length / leg length, nut countersink / minor / cone start / hole / L / hex flats). The same extractor on the ten Brennan -08 STEPs returns the library chain at every bite end (socket, bore, thread
@@ -115,13 +116,27 @@ g1: C2402 C2403 C2405 C0318 (gen_straight2); g2: C2500 C2501 C2502 C2601 C6801 (
 
 ## Decisions for the user
 1. ~~**Masters**~~ DECIDED 2026-10-21 (user: "yes"): own master per compression series, -M1 rows folded in (PROJECT_STATUS s5, Q-C-MASTER).
-2. **-M1 body-only numbers (71 configurations):** generate now as the same body (staged so, ASSUMED) or hold them until OMi answers the
-   "(Body)" question in the Triveni email.
+2. ~~**-M1 body-only numbers**~~ DECIDED 2026-10-21 (user: "go with A"): built now as the same body, ASSUMED (PROJECT_STATUS s5, Q-C-M1).
 3. ~~**24 deg cone**~~ DECIDED 2026-10-21 (user: "go with A"): built as Brennan draws it (plain socket); OMi asked in the Triveni email draft whether they need the cone and for its dimensions (PROJECT_STATUS s5, Q-C-CONE).
-4. **C0319 sleeve (9 parts):** the record leaves three positions of the -08 shape unexplained (collar end 0.141, step radius 0.3246,
-   inner step 0.267). Either download BRENNAN_C0319-04 / -06 / -10 / -12 / -16 / -20 / -24 / -32 (8 files) so they can be measured per
-   size, or allow scaling them from -08 (an assumption per row). Then a sleeve model type (gen_ring SLEEVE has 7 segments; this shape
-   needs ~14).
+4. ~~**C0319 sleeve**~~ DONE 2026-10-21: the user sent BRENNAN_C0319-04 / -06 / -10 / -12 / -16 / -20 / -24 / -32 (PARTcommunity briefcase) -> every size measured, built (section "C0319 sleeve").
+
+## C0319 sleeve (2026-10-21, later: the user sent the eight per-size STEPs)
+- `09_STEP_FILES/BRENNAN_C0319-04 / -06 / -10 / -12 / -16 / -20 / -24 / -32.stp` (user upload, PARTcommunity briefcase, CC BY-ND 4.0 CADENAS
+  export) + the -08 already in the repo. `scripts/measure_c0319.py` -> `measure/c0319_profile.csv`: every size is the same closed 14-line
+  half-section (front face, 40deg nose, 60deg back of the nose, groove, step, 40deg chamfer, collar, 45deg chamfer, spigot, 10deg tail chamfer,
+  rear face, rear bore, 15deg inner step, front bore); the six angles are identical on all nine. The record letters A B N C D D1 E H K equal the
+  STEP points; G / M differ by up to 0.0066 (-32) - the STEP is used, the difference is in each row's `$PRP@AxialSource`.
+- `DesignTable_C0319.xlsx` now carries the 19 DRIVE values measured on the row's own STEP (`[BRENNAN-STEP 2026-10-21 ...]`, ASSUMED,
+  DimSource BRENNAN, the record in `$COMMENT`).
+- Model type **CSLEEVE** in `tools_c/generators/gen_ring.py` (copied verbatim from `orfs_gen_20261020/tools`, + `scripts/patches/patch_ring.py` /
+  `ring_block.py`: one block, one build_rows branch, the emit dispatch line): DRIVE = the 14 lines + a construction line origin -> nose top,
+  19 linear dimensions only (no angle dimensions that could flip to their supplement), revolve, volume / size / all-config checks as the
+  existing SLEEVE type. 9 configurations (`regen/new/ring/`).
+- Checks (`checks/csleeve_check.txt`, `checks/ring_regen.txt`): sketch fully defined (28 unknowns, 28 constraints, rank 28, 0 redundant); every
+  dimension named once in the macro; closed loop - each configuration revolved in OCP, written as STEP and read back with the same extractor
+  that measured Brennan: all 14 points equal the row AND the Brennan STEP of that size (0.0000); vbacheck OK; the copied gen_ring still builds
+  4000 identically (macro + SW2); 0319T has no table in the repo (both toolsets stop the same way).
+- Dry run: group g3 in `dryrun/RUN_DRYRUN.md`.
 
 ## Files
 | Path | What |
@@ -135,4 +150,5 @@ g1: C2402 C2403 C2405 C0318 (gen_straight2); g2: C2500 C2501 C2502 C2601 C6801 (
 | `regen/` | `cmp.txt` + the run logs of every root (the old / new outputs of the 101 unchanged roots were compared, then not kept - `scripts/regen_all.py` recreates them); `regen/new/{straight,tee}/Build_C*_MASTER.bas` + SW2 = the dry-run inputs |
 | `measure/measure_c.txt` | sections of the ten Brennan STEPs |
 | `closed_loop/` | closed-loop result |
+| `measure/c0319_profile.csv`, `scripts/measure_c0319.py`, `scripts/check_csleeve.py` | the sleeve measurement and checks |
 | `dryrun/` | RUN_DRYRUN.md, call files |

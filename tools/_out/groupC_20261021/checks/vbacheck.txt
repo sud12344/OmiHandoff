@@ -7,3 +7,4 @@ regen/new/tee/Build_C2501_MASTER.bas 51 procedures OK
 regen/new/tee/Build_C2502_MASTER.bas 51 procedures OK
 regen/new/tee/Build_C2601_MASTER.bas 51 procedures OK
 regen/new/tee/Build_C6801_MASTER.bas 52 procedures OK
+regen/new/ring/Build_C0319_MASTER.bas 6 procedures OK

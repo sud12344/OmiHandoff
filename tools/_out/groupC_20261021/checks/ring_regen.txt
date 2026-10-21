@@ -1,0 +1,4 @@
+gen_ring old (tools/_out/orfs_gen_20261020/tools) vs new (tools_c), GR_REV = newtypes review_tables, OMI_REV_EXTRA = stage_orfs tables, GR_TEST=1:
+4000: 29 configurations, macro identical, SW2 identical
+0319T: DesignTable_0319T.xlsx is not in the repo - both toolsets stop the same way (FileNotFoundError), unchanged
+C0319: new (group C CSLEEVE), see csleeve_check.txt

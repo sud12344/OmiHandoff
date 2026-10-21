@@ -1,0 +1,12 @@
+check_csleeve: 9 configurations, 0 bad (closed loop: every one of the 14 points within 0.0005 of the row and of the Brennan STEP)
+rigidity: unknowns 28, constraints 28, rank 28 -> FULLY DEFINED, 0 redundant
+macro: 19 DRIVE dimensions, each named once: OK
+C0319-08   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-04   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-06   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-10   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-12   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-16   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-20   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-24   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK
+C0319-32   solids 1  model vs row 0.000000  model vs Brennan STEP 0.000000  OK

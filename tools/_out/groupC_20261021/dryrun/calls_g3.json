@@ -1,0 +1,58 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\ring\\Build_C0319_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\ring\\DesignTable_C0319_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C0319\\C0319_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C0319\\Build_C0319_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C0319_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C0319_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C0319_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C0319_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C0319_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

@@ -55,10 +55,15 @@ T = {
            [('L1@DRIVE', 'L'), ('CHEX@HEX', 'C'), ('THDMAJ_B@DRIVE', 'BTHD'), ('THDL@DRIVE', 'F'), ('CONEX@DRIVE', 'E'), ('TUBEHOLE@BORE', 'D'),
             ('CSKDIA@DRIVE', 'B'), ('CHAMDIA@REF', 'A')]),
  'C0319': ('Compression Sleeve / Ferrule (bite type)',
-           [('H@DRIVE', 'H'), ('COLLARD@DRIVE', 'C'), ('BORE@DRIVE', 'A'), ('NOSED@DRIVE', 'B'), ('GROOVED@DRIVE', 'N'), ('GROOVEX@DRIVE', 'G'),
-            ('COLLARX@DRIVE', 'M'), ('SPIGOTD@DRIVE', 'D'), ('TAILD@DRIVE', 'D1'), ('TAILCH@DRIVE', 'K'), ('INNERD@DRIVE', 'E'), ('L@REF', 'L'),
-            ('PMIN@REF', 'PMIN'), ('PMAX@REF', 'PMAX')]),
+           # 2026-10-21 (user: "I sent the files below for question 4"): every DRIVE cell = the row's own Brennan C0319 STEP (measure/c0319_profile.csv,
+           # scripts/measure_c0319.py); P_i = (x_i, r_i) of the 14-line half-section; the record letters are kept in $COMMENT and cross-checked
+           [(f'{nm}@DRIVE', (lambda d, k=k: SLV[d['_pn']][k])) for nm, k in (
+               ('NOSER', 'r1'), ('BORER', 'r0'), ('GROOVER', 'r3'), ('COLLARR', 'r6'), ('SPIGOTR', 'r8'), ('REARIR', 'r11'), ('APEXR', 'r2'),
+               ('STEPR', 'r5'), ('TAILR', 'r10'), ('APEXX', 'x2'), ('GROOVEX', 'x3'), ('CHAMX', 'x6'), ('COLLARX', 'x7'), ('SPIGOTX', 'x8'),
+               ('TAILX', 'x9'), ('REARIX', 'x12'), ('BOREX', 'x13'), ('STEPX', 'x4'), ('L', 'x10'))]),
 }
+SLV = {r['part']: {k: (float(v) if k[0] in 'xr' and k[1:].isdigit() else v) for k, v in r.items()}
+       for r in csv.DictReader(open(os.path.join(STAGE, 'measure', 'c0319_profile.csv')))}
 SERIES = {k: k for k in T}
 # record letters -> meaning, decoded on the ten Brennan -08 STEPs (measure/measure_c.txt); written into $PRP@AxialSource of every filled row
 DECODE = {
@@ -92,7 +97,7 @@ for root, pns in by.items():
     title, cols = T[root]
     wb = openpyxl.Workbook(); ws = wb.active; ws.title = 'DesignTable'
     hdr = [None] + [c for c, _ in cols] + ['$PRP@PartNo', '$PRP@Threads', '$PRP@DataStatus', '$PRP@AxialSource', '$COMMENT', '$PRP@ScopeAction',
-                                           '$PRP@OMiSKU', '$PRP@DimSource', '$PRP@BrennanRecord']
+                                           '$PRP@OMiSKU', '$PRP@DimSource', '$PRP@BrennanRecord'] + (['$PRP@TubeOD'] if root == 'C0319' else [])
     ws.append([f'OMi {root} {title} - review table (group C stage {TODAY}) | dimensions: Brennan CAD parameter records (PARTcommunity, '
                f'user 2026-10-21) - no Air-Way series, OMi file prints threads only | NOT SHIPPED'])
     ws.append(hdr)
@@ -109,6 +114,11 @@ for root, pns in by.items():
             st, src = 'ASSUMED', 'BRENNAN'
             axs = (f'[BRENNAN-CAD {TODAY}: every dimension cell] Brennan CAD parameter record {d["_pn"]} ({d["_family"]}, PARTcommunity reversemap, '
                    f'{d["_match"]} match) - single source (no Air-Way compression series; OMi file prints threads only)')
+            if root == 'C0319':
+                axs = (f'[BRENNAN-STEP {TODAY}: every DRIVE cell measured on BRENNAN_{d["_pn"]}.stp] Brennan 3D model of the part (user upload 2026-10-21, '
+                       f'PARTcommunity) - single source (no Air-Way compression series; OMi file prints threads only); the 14-line half-section read by '
+                       f'groupC scripts/measure_c0319.py; Brennan record letters vs the STEP: {SLV[d["_pn"]]["record_check"]} (G / M are not exactly the groove '
+                       f'start / end on the STEP - the STEP is used)')
             if root not in ('C0318', 'C0319'): axs += '; ' + DECODE['bite'] + '; ' + (DECODE['L'] + '; ' + DECODE['C'] if root.startswith('C24') else DECODE['M'])
             cm = f'Brennan record {d["_pn"]}: ' + ' '.join(f'{k}={v}' for k, v in d.items() if not k.startswith(('_', 'MAT', 'WBVAR', 'FONT', 'PLATING', 'WEIGHT', 'TT', 'B21', 'A21', 'A31')))
             if pn.endswith('-M1'):
@@ -125,7 +135,8 @@ for root, pns in by.items():
             i = [c for c, _ in cols].index('THDMAJ_B@DRIVE'); vals[i] = 1.875
             cm += (' | THDMAJ_B 1.875 = the record\'s own callout B1 1 7/8-12 (OMi file: 1 7/8-12 UN); the record\'s BTHD 1.750 contradicts its callout, its '
                    'countersink B 1.880 and the bite-end library -24 thread 1.875 (C2403-24-24 B1THD) - record typo, flagged for the user')
-        ws.append([pn] + vals + [pn, thr or None, st, axs, cm, 'BUILD', pn, src, d['_pn'] if d else None])
+        if root == 'C0319': tube_ = {4: '1/4', 6: '3/8', 8: '1/2', 10: '5/8', 12: '3/4', 16: '1', 20: '1 1/4', 24: '1 1/2', 32: '2'}[int(pn.split('-')[1])]
+        ws.append([pn] + vals + [pn, thr or None, st, axs, cm, 'BUILD', pn, src, d['_pn'] if d else None] + ([tube_] if root == 'C0319' else []))
         rows_out.append(dict(root=root, part=pn, status=st, source=src or '', record=d['_pn'] if d else ''))
     ws['A1'].font = Font(bold=True)
     wb.save(os.path.join(OUTD, f'DesignTable_{root}.xlsx'))

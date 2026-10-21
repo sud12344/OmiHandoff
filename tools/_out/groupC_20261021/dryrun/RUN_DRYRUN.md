@@ -2,15 +2,16 @@
 
 Nothing here writes to `11_MASTERS`, `03_SCRIPTS` or `04_DESIGN_TABLES`: every macro reads its SW2 table from
 `tools\_out\groupC_20261021\regen\new\...` (TABLE_PATH override) and saves its part + report into `dryrun\<root>\`
-(SAVE_PATH / REPORT_PATH overrides). The cloud could not run SolidWorks - none of the 9 macros has been built yet.
+(SAVE_PATH / REPORT_PATH overrides). The cloud could not run SolidWorks - none of the 10 macros has been built yet.
 
 1. SolidWorks 2026 SP4 signed in (start SOLIDWORKS Design from 3DEXPERIENCE). Close any open VBA editor.
 2. In `OMi_Handoff` (PowerShell):
    ```
-   python tools\_out\groupC_20261021\scripts\run_dryrun.py g1 g2
+   python tools\_out\groupC_20261021\scripts\run_dryrun.py g1 g2 g3
    ```
    - g1 (gen_straight2): C2402 (12 configurations), C2403 (18), C2405 (24), C0318 (9)
    - g2 (gen_tee, forged -FG): C2500 (10), C2501 (30), C2502 (20), C2601 (8), C6801 (20)
+   - g3 (gen_ring, CSLEEVE): C0319 sleeve (9) - no threads; check the size-check lines (length / collar O.D. per configuration) and the volume line
    Per root: `run_macro` (overrides above) -> `sweep_configs` -> `geometry` (reference configuration) -> two screenshots
    (isometric + top; front with a section through the axis) -> `close_doc` without saving. It stops before a group when SolidWorks
    uses > 8 GB or free virtual memory is < 6 GB (restart SolidWorks, run the rest). Excel crash during the design-table insert
@@ -22,7 +23,7 @@ Nothing here writes to `11_MASTERS`, `03_SCRIPTS` or `04_DESIGN_TABLES`: every m
    - sweep: every configuration rebuilds, 1 solid body;
    - geometry (reference -08): socket cylinder 0.514 dia x 0.305 deep at each bite tip, thread major 0.750 to 0.423 from the tip, 45 deg
      cone (ramp), neck 0.660 to the hex face at 0.562; C0318-08: countersink 0.755, minor 0.6823 to 0.599, 45 deg cone, hole 0.505,
-     L 0.840. The OCP closed loop (`closed_loop\closed_loop.txt`) already checked every configuration's outline against these values;
+     L 0.840; C0319-08: 14-point half-section (`checks/csleeve_check.txt`). The OCP closed loop (`closed_loop\closed_loop.txt`) already checked every configuration's outline against these values;
      the dry run checks what only SolidWorks can: the features (pocket / bore / Thread-feature / helix on the nut) and the design table.
    - threads: `set_suppression` THD_* off on the reference and one extreme size (-04, -32), rebuild, 1 body, threads cut material,
      then put them back (masters are saved with THD_* suppressed).

@@ -1,0 +1,22 @@
+{
+ "C0319": {
+  "configs": 9,
+  "ref": "C0319-08",
+  "skipped": [],
+  "blocked": [],
+  "cols": 29,
+  "review": "/home/user/OmiHandoff/tools/_out/groupC_20261021/stage/04_DESIGN_TABLES",
+  "test": false,
+  "names": [
+   "C0319-08",
+   "C0319-04",
+   "C0319-06",
+   "C0319-10",
+   "C0319-12",
+   "C0319-16",
+   "C0319-20",
+   "C0319-24",
+   "C0319-32"
+  ]
+ }
+}

@@ -5,7 +5,8 @@ import os, json
 H = os.path.dirname(os.path.abspath(__file__)); A = os.path.dirname(H)
 DEV = r'C:\Users\sudha\OneDrive\Desktop\OMi_Handoff'; S = DEV + r'\tools\_out\groupC_20261021'
 G = {'g1': [('C2402', 'straight'), ('C2403', 'straight'), ('C2405', 'straight'), ('C0318', 'straight')],
-     'g2': [('C2500', 'tee'), ('C2501', 'tee'), ('C2502', 'tee'), ('C2601', 'tee'), ('C6801', 'tee')]}
+     'g2': [('C2500', 'tee'), ('C2501', 'tee'), ('C2502', 'tee'), ('C2601', 'tee'), ('C6801', 'tee')],
+     'g3': [('C0319', 'ring')]}      # gen_ring CSLEEVE (compression sleeve)
 for g, roots in G.items():
     calls = [['sw_status', {}]]
     for r, sub in roots:
