@@ -1,0 +1,62 @@
+# tube_fittings_and_adapters/6506: 1 STEP(s): 6506-12-14
+
+AD       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.719
+AR       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.270
+ATHD     DECODED  GAP (mm) 1/1 (chance 0/2)   values: 1.1875
+BL       AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2)   values: 0.770
+BR       AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.210
+BR2      DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 1.084
+BR3      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 1.360
+BTHD     DECODED  TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1.0500
+C        DECODED  GAP 1/1 (chance 0/2)   values: 1.375
+C4       DECODED  GAP 1/1 (chance 0/2)   values: 1.375
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.921
+CR       DECODED  GAP 1/1 (chance 0/2)   values: 0.585
+CR2      DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.970
+CR3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.094
+DL       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.070
+DR2      DECODED  GAP 1/1 (chance 0/2)   values: 0.33
+DR3      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.195
+EL       NO MATCH -   values: 0.900
+ER2      AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.220
+ER3      DECODED  GAP 1/1 (chance 0/2)   values: 1.375
+FR2      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.926
+FR3      DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.344
+HLP      DECODED  TOR_r (mm) 1/1 (chance 0/2), AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1
+HR3      DECODED  GAP 1/1 (chance 0/2)   values: 1.375
+JR3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.185
+L2       DECODED  GAP 1/1 (chance 0/2), CONE_A 1/1 (chance 0/2)   values: 1.750
+L5       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 2.330
+LR3      AMBIGUOUS GAP 1/1 (chance 1/2)   values: 1.093
+MR3      DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.450
+
+== 6506-12-14 (record 6506-12-14)
+  AD            0.719  -> CYL_D, GAP
+  L2            1.750  -> CONE_A, GAP
+  L5            2.330  -> BOX, GAP
+  C             1.375  -> GAP
+  C4            1.375  -> GAP
+  AR            1.270  -> CYL_D
+  BR            0.210  -> GAP (mm)
+  CR            0.585  -> GAP
+  BR2           1.084  -> CYL_D, GAP
+  CR2           0.970  -> AX_PL (mm), GAP (mm)
+  DR2            0.33  -> GAP
+  ER2           0.220  -> GAP
+  FR2           0.926  -> CYL_D
+  BR3           1.360  -> GAP
+  CR3           1.094  -> GAP
+  DR3           1.195  -> CYL_D
+  ER3           1.375  -> GAP
+  FR3           0.344  -> AX_PL (mm), GAP (mm)
+  HR3           1.375  -> GAP
+  JR3           0.185  -> GAP
+  LR3           1.093  -> GAP
+  MR3           0.450  -> GAP (mm)
+  BL            0.770  -> AX_PL, GAP
+  CL            0.921  -> CYL_D
+  DL            1.070  -> AX_PL (mm)
+  EL            0.900  -> -
+  BTHD         1.0500  -> AX_PL (mm), GAP (mm), TOR_r (mm)
+  ATHD         1.1875  -> GAP (mm)
+  HLP               1  -> AX_PL (mm), GAP (mm), TOR_r (mm)

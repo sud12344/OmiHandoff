@@ -1,0 +1,40 @@
+# tube_fittings_and_adapters/2706: 1 STEP(s): 2706-04-02
+
+A1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.281
+A1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 0.5400
+AR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.250
+B2D      AMBIGUOUS CYL_D 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.062
+B2THD    DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.3125
+BL       DECODED  AX_PL (mm) 1/1 (chance 0/2), CYL_D (mm) 1/1 (chance 0/2)   values: 0.410
+C1       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.625
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.540
+CR       AMBIGUOUS GAP (mm) 1/1 (chance 2/2)   values: 0.083
+DL       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.560
+DR       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.177
+EL       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 0.344
+ER       AMBIGUOUS CYL_D 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2)   values: 0.063
+FR       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.040
+GR       DECODED  GAP 1/1 (chance 0/2)   values: 1.110
+HR       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.311
+IR       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.250
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.980
+
+== 2706-04-02 (record 2706-04-02)
+  A1D           0.281  -> CYL_D
+  B2D           0.062  -> AX_PL, CYL_D
+  L             1.980  -> BOX, GAP
+  C1            0.625  -> GAP
+  BL            0.410  -> AX_PL (mm), CYL_D (mm)
+  CL            0.540  -> CYL_D
+  DL            0.560  -> GAP
+  EL            0.344  -> AX_AX (mm), AX_PL (mm), GAP (mm)
+  AR            0.250  -> CYL_D
+  CR            0.083  -> GAP (mm)
+  DR            0.177  -> GAP
+  ER            0.063  -> AX_PL, CYL_D
+  FR            0.040  -> AX_PL, GAP
+  GR            1.110  -> GAP
+  HR            0.311  -> AX_PL, CYL_D, GAP
+  IR            0.250  -> CYL_D
+  A1THD        0.5400  -> CYL_D
+  B2THD        0.3125  -> AX_PL, CYL_D

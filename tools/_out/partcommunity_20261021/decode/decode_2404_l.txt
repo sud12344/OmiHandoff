@@ -1,0 +1,56 @@
+# tube_fittings_and_adapters/2404_l: 2 STEP(s): 2404-L-08-08 2404-L-32-32
+
+A2D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.391, 1.938
+A2THD    DECODED  CYL_D 2/2 (chance 0/4), GAP 1/2 (chance 1/4)   values: 0.8400, 2.3750
+AL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.659, 2.380
+B1D      DECODED  CYL_D 2/2 (chance 0/4), CONE_A 1/2 (chance 0/4)   values: 0.391, 1.781
+B1THD    DECODED  GAP 2/2 (chance 0/4), CYL_D 2/2 (chance 0/4), AX_PL 1/2 (chance 0/4)   values: 0.7500, 2.5000
+BR       PARTIAL  AX_PL (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.670, 2.155
+C        DECODED  GAP 2/2 (chance 0/4)   values: 0.875, 2.625
+CL       DECODED  AX_PL (mm) 2/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.426, 1.880
+CR       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.840, 2.380
+DL       DECODED  GAP 2/2 (chance 0/4)   values: 0.253, 0.461
+DR       DECODED  GAP 2/2 (chance 0/4), CYL_D 1/2 (chance 0/4)   values: 0.750, 1.030
+EL       DECODED  AX_PL 2/2 (chance 1/4), GAP 1/2 (chance 3/4)   values: 0.094, 0.125
+ER       PARTIAL  AX_PL (mm) 1/2 (chance 0/4), AX_AX (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.625, 2.062
+FL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.659, 2.380
+GL       DECODED  GAP 2/2 (chance 0/4)   values: 0.657, 1.333
+L        DECODED  GAP 2/2 (chance 0/4), BOX 2/2 (chance 0/4)   values: 3.040, 5.620
+MDP      NO MATCH -   values: 6.000, 2.000
+
+== 2404-L-08-08 (record 2404-L-08-08)
+  B1D           0.391  -> CYL_D
+  A2D           0.391  -> CYL_D
+  L             3.040  -> BOX, GAP
+  C             0.875  -> GAP
+  AL            0.659  -> CYL_D
+  CL            0.426  -> AX_PL (mm), GAP (mm)
+  DL            0.253  -> GAP
+  EL            0.094  -> AX_PL
+  FL            0.659  -> CYL_D
+  GL            0.657  -> GAP
+  BR            0.670  -> AX_PL (mm)
+  CR            0.840  -> CYL_D
+  DR            0.750  -> CYL_D, GAP
+  ER            0.625  -> AX_AX (mm), AX_PL (mm)
+  B1THD        0.7500  -> CYL_D, GAP
+  A2THD        0.8400  -> CYL_D
+  MDP           6.000  -> -
+== 2404-L-32-32 (record 2404-L-32-32)
+  B1D           1.781  -> CONE_A, CYL_D
+  A2D           1.938  -> CYL_D
+  L             5.620  -> BOX, GAP
+  C             2.625  -> GAP
+  AL            2.380  -> CYL_D
+  CL            1.880  -> AX_PL (mm)
+  DL            0.461  -> GAP
+  EL            0.125  -> AX_PL, GAP
+  FL            2.380  -> CYL_D
+  GL            1.333  -> GAP
+  BR            2.155  -> GAP (mm)
+  CR            2.380  -> CYL_D
+  DR            1.030  -> GAP
+  ER            2.062  -> GAP (mm)
+  B1THD        2.5000  -> AX_PL, CYL_D, GAP
+  A2THD        2.3750  -> CYL_D, GAP
+  MDP           2.000  -> -

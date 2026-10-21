@@ -1,0 +1,46 @@
+# tube_fittings_and_adapters/6802_nwo_fg: 1 STEP(s): 6802-32-32-NWO-FG
+
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.781
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.781
+C        DECODED  GAP 1/1 (chance 0/2)   values: 2.750
+D        DECODED  GAP 1/1 (chance 0/2)   values: 0.461
+E        DECODED  GAP 1/1 (chance 0/2)   values: 1.318
+G        NO MATCH -   values: 0.550
+H        DECODED  GAP 1/1 (chance 0/2)   values: 0.410
+I        DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), AX_AX 1/1 (chance 0/2)   values: 0.050
+J        DECODED  GAP 1/1 (chance 0/2)   values: 0.653
+K        DECODED  GAP 1/1 (chance 0/2)   values: 0.469
+L        DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.375
+M2       DECODED  AX_PL 1/1 (chance 0/2)   values: 2.220
+M2TL     NO MATCH -   values: 1.554
+M8       DECODED  AX_PL 1/1 (chance 0/2)   values: 1.860
+M8TL     DECODED  AX_PL 1/1 (chance 0/2)   values: 1.116
+MAXD     DECODED  CYL_D 1/1 (chance 0/2)   values: 1.7810
+N        DECODED  CYL_D 1/1 (chance 0/2)   values: 2.381
+O        DECODED  CYL_D 1/1 (chance 0/2)   values: 3.160
+P        DECODED  GAP 1/1 (chance 0/2)   values: 1.140
+THDNPSM  DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 2.3509
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 2.500
+
+== 6802-32-32-NWO-FG (record 6802-32-32-NWO-FG)
+  G             0.550  -> -
+  M2TL          1.554  -> -
+  M8TL          1.116  -> AX_PL
+  THDNPSM      2.3509  -> AX_PL (mm)
+  B1D           1.781  -> CYL_D
+  D             0.461  -> GAP
+  E             1.318  -> GAP
+  M2            2.220  -> AX_PL
+  M8            1.860  -> AX_PL
+  H             0.410  -> GAP
+  I             0.050  -> AX_AX, AX_PL, GAP
+  J             0.653  -> GAP
+  K             0.469  -> GAP
+  L             2.375  -> AX_PL (mm)
+  B2D           1.781  -> CYL_D
+  N             2.381  -> CYL_D
+  O             3.160  -> CYL_D
+  P             1.140  -> GAP
+  Y             2.500  -> CYL_D, GAP
+  C             2.750  -> GAP
+  MAXD         1.7810  -> CYL_D

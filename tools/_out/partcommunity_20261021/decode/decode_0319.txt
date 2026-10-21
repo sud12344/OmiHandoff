@@ -1,0 +1,18 @@
+# tube_fittings_and_adapters/0319: 1 STEP(s): 0319-08
+
+D        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.505
+F        NO MATCH -   values: 0.589
+I        DECODED  GAP 1/1 (chance 0/2)   values: 0.220
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 0.560
+O        DECODED  CYL_D 1/1 (chance 0/2)   values: 0.562
+R        NO MATCH -   values: 0.062
+X        DECODED  BOX 1/1 (chance 0/2)   values: 0.682
+
+== 0319-08 (record 0319-08)
+  D             0.505  -> CYL_D
+  F             0.589  -> -
+  I             0.220  -> GAP
+  L             0.560  -> BOX, GAP
+  O             0.562  -> CYL_D
+  R             0.062  -> -
+  X             0.682  -> BOX

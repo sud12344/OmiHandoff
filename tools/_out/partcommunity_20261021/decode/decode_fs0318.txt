@@ -1,0 +1,65 @@
+# o_ring_face_seal_fittings/fs0318: 8 STEP(s): FS0318-04 FS0318-06 FS0318-08 FS0318-10 FS0318-12 FS0318-16 FS0318-20 FS0318-24
+
+AX       PARTIAL  AX_PL (mm) 6/8 (chance 0/16), GAP (mm) 6/8 (chance 0/16), CYL_D (mm) 2/8 (chance 0/16)   values: 0.567, 0.693, 0.819, 1.020
+BX       DECODED  CYL_D 8/8 (chance 0/16)   values: 0.512, 0.630, 0.754, 0.934
+CX       DECODED  GAP 8/8 (chance 2/16), AX_PL 1/8 (chance 1/16)   values: 0.350, 0.410, 0.470, 0.570
+DX       AMBIGUOUS GAP 8/8 (chance 6/16)   values: 0.098, 0.118, 0.197, 0.157
+EX       DECODED  CYL_D 8/8 (chance 0/16)   values: 0.412, 0.532, 0.652, 0.829
+Q        DECODED  GAP 8/8 (chance 0/16), BOX 8/8 (chance 0/16)   values: 0.580, 0.670, 0.827, 0.925
+
+== FS0318-04 (record FS0318-04)
+  Q             0.580  -> BOX, GAP
+  AX            0.567  -> AX_PL (mm), GAP (mm)
+  BX            0.512  -> CYL_D
+  CX            0.350  -> GAP
+  DX            0.098  -> GAP
+  EX            0.412  -> CYL_D
+== FS0318-06 (record FS0318-06)
+  Q             0.670  -> BOX, GAP
+  AX            0.693  -> AX_PL (mm), CYL_D (mm), GAP (mm)
+  BX            0.630  -> CYL_D
+  CX            0.410  -> GAP
+  DX            0.118  -> GAP
+  EX            0.532  -> CYL_D
+== FS0318-08 (record FS0318-08)
+  Q             0.827  -> BOX, GAP
+  AX            0.819  -> AX_PL (mm)
+  BX            0.754  -> CYL_D
+  CX            0.470  -> AX_PL, GAP
+  DX            0.197  -> GAP
+  EX            0.652  -> CYL_D
+== FS0318-10 (record FS0318-10)
+  Q             0.925  -> BOX, GAP
+  AX            1.020  -> AX_PL (mm), GAP (mm)
+  BX            0.934  -> CYL_D
+  CX            0.570  -> GAP
+  DX            0.157  -> GAP
+  EX            0.829  -> CYL_D
+== FS0318-12 (record FS0318-12)
+  Q             1.024  -> BOX, GAP
+  AX            1.207  -> GAP (mm)
+  BX            1.109  -> CYL_D
+  CX            0.610  -> GAP
+  DX            0.197  -> GAP
+  EX            0.950  -> CYL_D
+== FS0318-16 (record FS0318-16)
+  Q             1.095  -> BOX, GAP
+  AX            1.458  -> AX_PL (mm), CYL_D (mm)
+  BX            1.358  -> CYL_D
+  CX            0.630  -> GAP
+  DX            0.236  -> GAP
+  EX            1.144  -> CYL_D
+== FS0318-20 (record FS0318-20)
+  Q             1.095  -> BOX, GAP
+  AX            1.708  -> AX_PL (mm), GAP (mm)
+  BX            1.609  -> CYL_D
+  CX            0.630  -> GAP
+  DX            0.236  -> GAP
+  EX            1.415  -> CYL_D
+== FS0318-24 (record FS0318-24)
+  Q             1.095  -> BOX, GAP
+  AX            2.020  -> GAP (mm)
+  BX            1.922  -> CYL_D
+  CX            0.630  -> GAP
+  DX            0.236  -> GAP
+  EX            1.728  -> CYL_D

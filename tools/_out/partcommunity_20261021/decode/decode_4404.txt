@@ -1,0 +1,41 @@
+# tube_fittings_and_adapters/4404: 2 STEP(s): 4404-08-06 4404-16-16
+
+A2D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.406, 0.938
+A2THD    PARTIAL  CYL_D 1/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4), AX_AX (mm) 1/2 (chance 0/4), GAP (mm) 1/2 (chance 0/4)   values: 0.6750, 1.3150
+AL       PARTIAL  GAP 1/2 (chance 1/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.560, 1.100
+B1D      DECODED  CYL_D 2/2 (chance 0/4)   values: 0.406, 0.843
+BL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.500, 1.000
+C        DECODED  GAP 2/2 (chance 1/4)   values: 0.750, 1.375
+CL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.406, 0.843
+CR       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.675, 1.317
+DR       DECODED  GAP 2/2 (chance 1/4)   values: 0.560, 0.940
+ER       DECODED  GAP (mm) 2/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.469, 1.031
+L1       DECODED  GAP 2/2 (chance 0/4)   values: 1.500, 1.500
+N        DECODED  GAP 2/2 (chance 0/4)   values: 0.850, 1.410
+
+== 4404-08-06 (record 4404-08-06)
+  B1D           0.406  -> CYL_D
+  A2D           0.406  -> CYL_D
+  L1            1.500  -> GAP
+  N             0.850  -> GAP
+  C             0.750  -> GAP
+  CR            0.675  -> CYL_D
+  DR            0.560  -> GAP
+  ER            0.469  -> GAP (mm)
+  AL            0.560  -> GAP
+  BL            0.500  -> CYL_D
+  CL            0.406  -> CYL_D
+  A2THD        0.6750  -> CYL_D
+== 4404-16-16 (record 4404-16-16)
+  B1D           0.843  -> CYL_D
+  A2D           0.938  -> CYL_D
+  L1            1.500  -> GAP
+  N             1.410  -> GAP
+  C             1.375  -> GAP
+  CR            1.317  -> CYL_D
+  DR            0.940  -> GAP
+  ER            1.031  -> AX_PL (mm), GAP (mm)
+  AL            1.100  -> AX_PL (mm)
+  BL            1.000  -> CYL_D
+  CL            0.843  -> CYL_D
+  A2THD        1.3150  -> AX_AX (mm), AX_PL (mm), GAP (mm)

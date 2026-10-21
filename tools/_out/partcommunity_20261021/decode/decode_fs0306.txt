@@ -1,0 +1,47 @@
+# o_ring_face_seal_fittings/fs0306: 8 STEP(s): FS0306-04 FS0306-06 FS0306-08 FS0306-10 FS0306-12 FS0306-16 FS0306-20 FS0306-24
+
+C4       DECODED  GAP 8/8 (chance 0/16)   values: 0.812, 1.000, 1.125, 1.312
+T1       DECODED  GAP 8/8 (chance 0/16), BOX 8/8 (chance 0/16)   values: 0.270, 0.310, 0.350, 0.410
+V        PARTIAL  GAP (mm) 5/8 (chance 0/16), AX_PL (mm) 4/8 (chance 0/16), AX_AX (mm) 1/8 (chance 0/16), CYL_D (mm) 1/8 (chance 0/16)   values: 0.561, 0.693, 0.819, 1.004
+X1       PARTIAL  GAP 7/8 (chance 0/16)   values: 0.8120, 1.0000, 1.1250, 1.3120
+
+== FS0306-04 (record FS0306-04)
+  T1            0.270  -> BOX, GAP
+  X1           0.8120  -> GAP
+  C4            0.812  -> GAP
+  V             0.561  -> AX_AX (mm)
+== FS0306-06 (record FS0306-06)
+  T1            0.310  -> BOX, GAP
+  X1           1.0000  -> GAP
+  C4            1.000  -> GAP
+  V             0.693  -> AX_PL (mm), CYL_D (mm), GAP (mm)
+== FS0306-08 (record FS0306-08)
+  T1            0.350  -> BOX, GAP
+  X1           1.1250  -> GAP
+  C4            1.125  -> GAP
+  V             0.819  -> AX_PL (mm)
+== FS0306-10 (record FS0306-10)
+  T1            0.410  -> BOX, GAP
+  X1           1.3120  -> GAP
+  C4            1.312  -> GAP
+  V             1.004  -> AX_PL (mm), GAP (mm)
+== FS0306-12 (record FS0306-12)
+  T1            0.410  -> BOX, GAP
+  X1           1.5000  -> GAP
+  C4            1.500  -> GAP
+  V             1.193  -> GAP (mm)
+== FS0306-16 (record FS0306-16)
+  T1            0.410  -> BOX, GAP
+  X1           1.7500  -> GAP
+  C4            1.750  -> GAP
+  V             1.441  -> -
+== FS0306-20 (record FS0306-20)
+  T1            0.410  -> BOX, GAP
+  X1           2.0000  -> GAP
+  C4            2.000  -> GAP
+  V             1.693  -> AX_PL (mm), GAP (mm)
+== FS0306-24 (record FS0306-24)
+  T1            0.410  -> BOX, GAP
+  X1           2.2375  -> -
+  C4            2.375  -> GAP
+  V             2.004  -> GAP (mm)

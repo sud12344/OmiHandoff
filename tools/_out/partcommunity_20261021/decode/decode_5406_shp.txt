@@ -1,0 +1,18 @@
+# tube_fittings_and_adapters/5406_shp: 1 STEP(s): 5406-SHP-08
+
+A1THD    DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.8400
+BL       NO MATCH -   values: 0.670
+CL       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 0.840
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.580
+EL       NO MATCH -   values: 0.625
+L        DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.020
+Y        DECODED  GAP 1/1 (chance 0/2)   values: 0.563
+
+== 5406-SHP-08 (record 5406-SHP-08)
+  L             1.020  -> BOX, GAP
+  Y             0.563  -> GAP
+  BL            0.670  -> -
+  CL            0.840  -> BOX, CYL_D
+  DL            0.580  -> GAP
+  EL            0.625  -> -
+  A1THD        0.8400  -> BOX, CYL_D

@@ -1,0 +1,212 @@
+# flange_fitting_and_accessories/1700: 9 STEP(s): 1700-08-08 1700-12-12 1700-16-16 1700-20-16 1700-20-20 1700-24-20 1700-24-24 1700-32-24 1700-32-32
+
+AF       DECODED  GAP 9/9 (chance 0/18), CYL_D 2/9 (chance 0/18)   values: 1.000, 1.374, 1.622, 1.646
+AF1      PARTIAL  GAP 5/9 (chance 0/18), CYL_D 3/9 (chance 0/18)   values: 1.0000, 1.3750, 1.6250, 1.6250
+AFL      DECODED  GAP 9/9 (chance 0/18), CYL_D 2/9 (chance 0/18)   values: 1.000, 1.374, 1.622, 1.646
+AT       DECODED  CYL_D 9/9 (chance 0/18)   values: 0.659, 0.943, 1.193, 1.506
+B1DT     DECODED  CYL_D 9/9 (chance 0/18)   values: 0.391, 0.609, 0.844, 1.078
+BFL      DECODED  CYL_D 9/9 (chance 0/18), BOX 5/9 (chance 0/18)   values: 1.188, 1.500, 1.750, 1.750
+CFL      PARTIAL  GAP 3/9 (chance 0/18)   values: 0.630, 0.567, 0.531, 0.478
+CT       NO MATCH -   values: 0.426, 0.664, 0.913, 1.147
+DFL      DECODED  CYL_D 9/9 (chance 0/18)   values: 0.924, 1.240, 1.484, 1.484
+DRILLFL  DECODED  CYL_D 9/9 (chance 0/18)   values: 0.391, 0.609, 0.844, 1.078
+DT       PARTIAL  GAP 1/9 (chance 0/18)   values: 0.253, 0.315, 0.315, 0.367
+EFL      DECODED  GAP 9/9 (chance 0/18)   values: 0.265, 0.265, 0.315, 0.315
+ET       NO MATCH -   values: 0.094, 0.125, 0.125, 0.125
+FFL      DECODED  CYL_D 9/9 (chance 0/18), BOX 7/9 (chance 0/18), GAP 1/9 (chance 0/18)   values: 1.188, 1.500, 1.750, 1.755
+FL       NO MATCH -   values: 08, 12, 16, 16
+FT       DECODED  CYL_D 9/9 (chance 0/18)   values: 0.659, 0.943, 1.193, 1.506
+GFL      DECODED  CYL_D 9/9 (chance 0/18), GAP 1/9 (chance 0/18)   values: 1.000, 1.250, 1.560, 1.560
+GT       DECODED  GAP 9/9 (chance 0/18)   values: 0.657, 0.864, 0.911, 0.958
+L        DECODED  GAP 9/9 (chance 0/18), BOX 9/9 (chance 0/18)   values: 2.600, 2.750, 2.800, 2.800
+STYLE    PARTIAL  AX_PL 2/9 (chance 0/18), GAP 1/9 (chance 0/18), CYL_D 1/9 (chance 0/18)   values: 1.000, 1.000, 1.000, 1.000
+
+== 1700-08-08 (record 1700-08-08)
+  FL               08  -> -
+  L             2.600  -> BOX, GAP
+  AF            1.000  -> CYL_D, GAP
+  AF1          1.0000  -> CYL_D, GAP
+  AT            0.659  -> CYL_D
+  B1DT          0.391  -> CYL_D
+  CT            0.426  -> -
+  DT            0.253  -> -
+  ET            0.094  -> -
+  FT            0.659  -> CYL_D
+  GT            0.657  -> GAP
+  AFL           1.000  -> CYL_D, GAP
+  BFL           1.188  -> BOX, CYL_D
+  CFL           0.630  -> -
+  DFL           0.924  -> CYL_D
+  EFL           0.265  -> GAP
+  FFL           1.188  -> BOX, CYL_D
+  GFL           1.000  -> CYL_D, GAP
+  DRILLFL       0.391  -> CYL_D
+  STYLE         1.000  -> CYL_D, GAP
+== 1700-12-12 (record 1700-12-12)
+  FL               12  -> -
+  L             2.750  -> BOX, GAP
+  AF            1.374  -> GAP
+  AF1          1.3750  -> GAP
+  AT            0.943  -> CYL_D
+  B1DT          0.609  -> CYL_D
+  CT            0.664  -> -
+  DT            0.315  -> -
+  ET            0.125  -> -
+  FT            0.943  -> CYL_D
+  GT            0.864  -> GAP
+  AFL           1.374  -> GAP
+  BFL           1.500  -> BOX, CYL_D
+  CFL           0.567  -> -
+  DFL           1.240  -> CYL_D
+  EFL           0.265  -> GAP
+  FFL           1.500  -> BOX, CYL_D
+  GFL           1.250  -> CYL_D
+  DRILLFL       0.609  -> CYL_D
+  STYLE         1.000  -> -
+== 1700-16-16 (record 1700-16-16)
+  FL               16  -> -
+  L             2.800  -> BOX, GAP
+  AF            1.622  -> GAP
+  AF1          1.6250  -> -
+  AT            1.193  -> CYL_D
+  B1DT          0.844  -> CYL_D
+  CT            0.913  -> -
+  DT            0.315  -> GAP
+  ET            0.125  -> -
+  FT            1.193  -> CYL_D
+  GT            0.911  -> GAP
+  AFL           1.622  -> GAP
+  BFL           1.750  -> BOX, CYL_D
+  CFL           0.531  -> -
+  DFL           1.484  -> CYL_D
+  EFL           0.315  -> GAP
+  FFL           1.750  -> BOX, CYL_D
+  GFL           1.560  -> CYL_D
+  DRILLFL       0.844  -> CYL_D
+  STYLE         1.000  -> -
+== 1700-20-16 (record 1700-20-16)
+  FL               16  -> -
+  L             2.800  -> BOX, GAP
+  AF            1.646  -> GAP
+  AF1          1.6250  -> CYL_D
+  AT            1.506  -> CYL_D
+  B1DT          1.078  -> CYL_D
+  CT            1.147  -> -
+  DT            0.367  -> -
+  ET            0.125  -> -
+  FT            1.506  -> CYL_D
+  GT            0.958  -> GAP
+  AFL           1.646  -> GAP
+  BFL           1.750  -> CYL_D
+  CFL           0.478  -> -
+  DFL           1.484  -> CYL_D
+  EFL           0.315  -> GAP
+  FFL           1.755  -> BOX, CYL_D
+  GFL           1.560  -> CYL_D
+  DRILLFL       1.078  -> CYL_D
+  STYLE         1.000  -> -
+== 1700-20-20 (record 1700-20-20)
+  FL               20  -> -
+  L             2.800  -> BOX, GAP
+  AF            1.748  -> GAP
+  AF1          1.6875  -> -
+  AT            1.506  -> CYL_D
+  B1DT          1.078  -> CYL_D
+  CT            1.147  -> -
+  DT            0.367  -> -
+  ET            0.125  -> -
+  FT            1.506  -> CYL_D
+  GT            0.958  -> GAP
+  AFL           1.748  -> GAP
+  BFL           1.875  -> CYL_D
+  CFL           0.594  -> -
+  DFL           1.689  -> CYL_D
+  EFL           0.315  -> GAP
+  FFL           2.000  -> BOX, CYL_D
+  GFL           1.750  -> CYL_D
+  DRILLFL       1.078  -> CYL_D
+  STYLE         1.000  -> -
+== 1700-24-20 (record 1700-24-20)
+  FL               20  -> -
+  L             3.400  -> BOX, GAP
+  AF            2.000  -> CYL_D, GAP
+  AF1          2.0000  -> CYL_D, GAP
+  AT            1.755  -> CYL_D
+  B1DT          1.312  -> CYL_D
+  CT            1.381  -> -
+  DT            0.378  -> -
+  ET            0.125  -> -
+  FT            1.755  -> CYL_D
+  GT            1.083  -> GAP
+  AFL           2.000  -> CYL_D, GAP
+  BFL           2.300  -> BOX, CYL_D
+  CFL           0.650  -> GAP
+  DFL           1.690  -> CYL_D
+  EFL           0.315  -> GAP
+  FFL           2.000  -> CYL_D, GAP
+  GFL           1.752  -> CYL_D
+  DRILLFL       1.078  -> CYL_D
+  STYLE         1.000  -> AX_PL
+== 1700-24-24 (record 1700-24-24)
+  FL               24  -> -
+  L             3.500  -> BOX, GAP
+  AF            2.000  -> GAP
+  AF1          2.0000  -> GAP
+  AT            1.755  -> CYL_D
+  B1DT          1.312  -> CYL_D
+  CT            1.381  -> -
+  DT            0.378  -> -
+  ET            0.125  -> -
+  FT            1.755  -> CYL_D
+  GT            1.083  -> GAP
+  AFL           2.000  -> GAP
+  BFL           2.250  -> CYL_D
+  CFL           0.875  -> -
+  DFL           1.965  -> CYL_D
+  EFL           0.315  -> GAP
+  FFL           2.375  -> BOX, CYL_D
+  GFL           2.115  -> CYL_D
+  DRILLFL       1.312  -> CYL_D
+  STYLE         1.000  -> AX_PL
+== 1700-32-24 (record 1700-32-24)
+  FL               24  -> -
+  L             4.200  -> BOX, GAP
+  AF            2.622  -> GAP
+  AF1          2.6220  -> GAP
+  AT            2.380  -> CYL_D
+  B1DT          1.781  -> CYL_D
+  CT            1.880  -> -
+  DT            0.461  -> -
+  ET            0.125  -> -
+  FT            2.380  -> CYL_D
+  GT            1.333  -> GAP
+  AFL           2.622  -> GAP
+  BFL           2.750  -> BOX, CYL_D
+  CFL           1.149  -> GAP
+  DFL           1.964  -> CYL_D
+  EFL           0.315  -> GAP
+  FFL           2.375  -> CYL_D
+  GFL           2.115  -> CYL_D
+  DRILLFL       1.500  -> CYL_D
+  STYLE         1.000  -> -
+== 1700-32-32 (record 1700-32-32)
+  FL               32  -> -
+  L             3.980  -> BOX, GAP
+  AF            2.622  -> GAP
+  AF1          2.6250  -> -
+  AT            2.380  -> CYL_D
+  B1DT          1.781  -> CYL_D
+  CT            1.880  -> -
+  DT            0.461  -> -
+  ET            0.125  -> -
+  FT            2.380  -> CYL_D
+  GT            1.333  -> GAP
+  AFL           2.622  -> GAP
+  BFL           2.750  -> CYL_D
+  CFL           0.858  -> GAP
+  DFL           2.439  -> CYL_D
+  EFL           0.375  -> GAP
+  FFL           2.812  -> BOX, CYL_D
+  GFL           2.490  -> CYL_D
+  DRILLFL       1.780  -> CYL_D
+  STYLE         1.000  -> -

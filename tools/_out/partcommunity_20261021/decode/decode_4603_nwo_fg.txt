@@ -1,0 +1,50 @@
+# tube_fittings_and_adapters/4603_nwo_fg: 1 STEP(s): 4603-16-16-NWO-FG
+
+AL       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 1.100
+AR       DECODED  AX_PL (mm) 1/1 (chance 0/2), CYL_D (mm) 1/1 (chance 0/2)   values: 1.190
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.844
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.844
+B2THD    DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.312
+BL       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.000
+C        DECODED  GAP 1/1 (chance 0/2)   values: 1.500
+CL       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.843
+CR       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.469
+DIA1     DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.06
+DIA2     DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.195
+DR       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 0.653
+ER       DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2), AX_AX 1/1 (chance 0/2)   values: 0.050
+FR       DECODED  GAP 1/1 (chance 0/2)   values: 0.410
+GR       DECODED  GAP 1/1 (chance 0/2)   values: 1.140
+HLP      DECODED  CYL_D 1/1 (chance 0/2)   values: 1
+HR       DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.195
+ID       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.171
+IR       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.732
+L        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.960
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.850
+W        DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 1/2), TOR_r 1/1 (chance 0/2)   values: 0.116
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.312
+
+== 4603-16-16-NWO-FG (record 4603-16-16-NWO-FG)
+  B1D           0.844  -> CYL_D
+  B2D           0.844  -> CYL_D
+  L             1.960  -> AX_PL
+  M             1.850  -> AX_PL
+  C             1.500  -> GAP
+  Y             1.312  -> AX_PL, CYL_D, GAP
+  AL            1.100  -> AX_AX (mm), AX_PL (mm)
+  BL            1.000  -> CYL_D
+  CL            0.843  -> CYL_D
+  AR            1.190  -> AX_PL (mm), CYL_D (mm)
+  CR            0.469  -> GAP (mm)
+  DR            0.653  -> AX_PL, GAP
+  ER            0.050  -> AX_AX, AX_PL, GAP
+  FR            0.410  -> GAP
+  GR            1.140  -> GAP
+  HR            1.195  -> AX_PL, CYL_D
+  IR            1.732  -> BOX, CYL_D
+  W             0.116  -> AX_PL, GAP, TOR_r
+  ID            1.171  -> AX_PL (mm)
+  B2THD         1.312  -> AX_PL, CYL_D, GAP
+  DIA1           1.06  -> AX_PL (mm)
+  DIA2          1.195  -> AX_PL, CYL_D
+  HLP               1  -> CYL_D

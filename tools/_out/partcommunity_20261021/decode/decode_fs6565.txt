@@ -1,0 +1,48 @@
+# o_ring_face_seal_fittings/fs6565: 1 STEP(s): FS6565-08-08
+
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.358
+AS       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.855
+BD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.358
+BN       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.938
+BS       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.197
+C        AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.938
+CN       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.647
+CS       DECODED  GAP 1/1 (chance 1/2), CYL_D 1/1 (chance 0/2)   values: 0.745
+DNUT     DECODED  GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 0/2)   values: 0.833
+DS       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2)   values: 0.642
+EN       DECODED  GAP 1/1 (chance 2/2), CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 2/2)   values: 0.838
+FN       AMBIGUOUS GAP 1/1 (chance 2/2), AX_PL 1/1 (chance 1/2)   values: 0.180
+GN       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.827
+H        DECODED  GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 0/2)   values: 0.875
+JN       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.819
+KN       AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 0.920
+L        AMBIGUOUS GAP 1/1 (chance 1/2)   values: 2.120
+MINOR    DECODED  GAP 1/1 (chance 0/2)   values: 0.751
+MN       AMBIGUOUS GAP 1/1 (chance 2/2)   values: 0.482
+NN       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.197
+PNUT     AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.750
+QN       AMBIGUOUS AX_PL (mm) 1/1 (chance 1/2), GAP (mm) 1/1 (chance 1/2)   values: 0.157
+
+== FS6565-08-08 (record FS6565-08-08)
+  AD            0.358  -> CYL_D
+  BD            0.358  -> CYL_D
+  L             2.120  -> GAP
+  C             0.938  -> GAP
+  H             0.875  -> AX_PL, GAP
+  AS            0.855  -> GAP
+  BS            0.197  -> GAP
+  CS            0.745  -> CYL_D, GAP
+  DS            0.642  -> CYL_D, GAP
+  BN            0.938  -> GAP
+  CN            0.647  -> CYL_D
+  DNUT          0.833  -> AX_PL, GAP
+  EN            0.838  -> AX_PL, CYL_D, GAP
+  FN            0.180  -> AX_PL, GAP
+  GN            0.827  -> GAP
+  KN            0.920  -> GAP (mm)
+  MN            0.482  -> GAP
+  JN            0.819  -> AX_PL
+  MINOR         0.751  -> GAP
+  NN            0.197  -> GAP
+  PNUT          0.750  -> GAP
+  QN            0.157  -> AX_PL (mm), GAP (mm)

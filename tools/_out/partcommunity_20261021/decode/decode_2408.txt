@@ -1,0 +1,41 @@
+# tube_fittings_and_adapters/2408: 2 STEP(s): 2408-08 2408-20
+
+AL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.659, 1.506
+B1THD    DECODED  CYL_D 2/2 (chance 0/4)   values: 0.7500, 1.6250
+BL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.391, 1.078
+C        DECODED  GAP 2/2 (chance 1/4)   values: 0.812, 1.688
+CL       DECODED  GAP (mm) 2/2 (chance 0/4), AX_PL (mm) 1/2 (chance 0/4)   values: 0.426, 1.147
+DL       DECODED  GAP 2/2 (chance 0/4)   values: 0.253, 0.367
+EL       PARTIAL  AX_PL 1/2 (chance 3/4), GAP 1/2 (chance 2/4)   values: 0.094, 0.125
+FL       DECODED  CYL_D 2/2 (chance 0/4)   values: 0.659, 1.506
+GL       DECODED  GAP 2/2 (chance 0/4)   values: 0.657, 0.958
+L        DECODED  GAP 2/2 (chance 0/4), BOX 2/2 (chance 0/4)   values: 0.940, 1.450
+MDP      PARTIAL  GAP (mm) 1/2 (chance 0/4)   values: 6.000, 4.000
+W        PARTIAL  GAP 1/2 (chance 1/4), GAP (mm) 1/2 (chance 1/4)   values: 0.283, 0.490
+
+== 2408-08 (record 2408-08)
+  L             0.940  -> BOX, GAP
+  W             0.283  -> GAP
+  C             0.812  -> GAP
+  AL            0.659  -> CYL_D
+  BL            0.391  -> CYL_D
+  CL            0.426  -> AX_PL (mm), GAP (mm)
+  DL            0.253  -> GAP
+  EL            0.094  -> AX_PL
+  FL            0.659  -> CYL_D
+  GL            0.657  -> GAP
+  B1THD        0.7500  -> CYL_D
+  MDP           6.000  -> GAP (mm)
+== 2408-20 (record 2408-20)
+  L             1.450  -> BOX, GAP
+  W             0.490  -> GAP (mm)
+  C             1.688  -> GAP
+  AL            1.506  -> CYL_D
+  BL            1.078  -> CYL_D
+  CL            1.147  -> GAP (mm)
+  DL            0.367  -> GAP
+  EL            0.125  -> GAP
+  FL            1.506  -> CYL_D
+  GL            0.958  -> GAP
+  B1THD        1.6250  -> CYL_D
+  MDP           4.000  -> -

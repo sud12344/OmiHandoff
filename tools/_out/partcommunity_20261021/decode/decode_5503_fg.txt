@@ -1,0 +1,36 @@
+# tube_fittings_and_adapters/5503_fg: 1 STEP(s): 5503-16-16-FG
+
+A1THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 1.3150
+A2THD    DECODED  CYL_D 1/1 (chance 0/2)   values: 1.3150
+AD       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.938
+BA       DECODED  GAP 1/1 (chance 0/2)   values: 0.940
+BL       DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 1.105
+CA       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.156
+CL       DECODED  AX_AX (mm) 1/1 (chance 0/2)   values: 1.317
+DA       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.355
+DL       DECODED  GAP 1/1 (chance 0/2)   values: 0.940
+EA       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.625
+EL       NO MATCH -   values: 1.031
+N        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.720
+N1       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.120
+PITCH2   AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.0870
+Y        DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 1.625
+Y1       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.938
+
+== 5503-16-16-FG (record 5503-16-16-FG)
+  AD            0.938  -> CYL_D
+  N             1.720  -> AX_PL
+  N1            1.120  -> AX_PL, GAP
+  Y             1.625  -> BOX, CYL_D, GAP
+  BL            1.105  -> AX_AX (mm), AX_PL (mm)
+  CL            1.317  -> AX_AX (mm)
+  DL            0.940  -> GAP
+  EL            1.031  -> -
+  BA            0.940  -> GAP
+  CA            1.156  -> CYL_D
+  DA            1.355  -> AX_PL (mm)
+  EA            1.625  -> BOX, CYL_D, GAP
+  A1THD        1.3150  -> CYL_D
+  A2THD        1.3150  -> CYL_D
+  PITCH2       0.0870  -> GAP
+  Y1            0.938  -> CYL_D

@@ -1,0 +1,38 @@
+# flange_fitting_and_accessories/1703_fg: 1 STEP(s): 1703-24-24-FG
+
+AB       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.965
+AF       DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 1.8750
+AT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.755
+B1DT     DECODED  CYL_D 1/1 (chance 0/2)   values: 1.312
+BB       DECODED  BOX 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 2.375
+CB       DECODED  GAP 1/1 (chance 0/2)   values: 0.315
+CT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 1.381
+DB       DECODED  GAP 1/1 (chance 0/2)   values: 1.700
+DRILLB   DECODED  CYL_D 1/1 (chance 0/2)   values: 1.260
+DT       DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.378
+EB       DECODED  CYL_D 1/1 (chance 0/2)   values: 2.115
+ET       DECODED  AX_PL 1/1 (chance 0/2)   values: 0.125
+FL       NO MATCH -   values: 1.50000000
+FT       DECODED  CYL_D 1/1 (chance 0/2)   values: 1.755
+GT       DECODED  GAP 1/1 (chance 0/2)   values: 1.083
+L1       DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.780
+L2       DECODED  AX_PL 1/1 (chance 0/2)   values: 2.380
+
+== 1703-24-24-FG (record 1703-24-24-FG)
+  FL       1.50000000  -> -
+  L1            1.780  -> AX_PL, GAP
+  L2            2.380  -> AX_PL
+  AF           1.8750  -> CYL_D, GAP
+  AT            1.755  -> CYL_D
+  B1DT          1.312  -> CYL_D
+  CT            1.381  -> AX_PL (mm)
+  DT            0.378  -> AX_PL (mm)
+  ET            0.125  -> AX_PL
+  FT            1.755  -> CYL_D
+  GT            1.083  -> GAP
+  AB            1.965  -> CYL_D
+  BB            2.375  -> BOX, CYL_D
+  CB            0.315  -> GAP
+  DB            1.700  -> GAP
+  EB            2.115  -> CYL_D
+  DRILLB        1.260  -> CYL_D

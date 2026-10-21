@@ -1,0 +1,36 @@
+# tube_fittings_and_adapters/4601_nwo_fg: 1 STEP(s): 4601-08-06-NWO-FG
+
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.406
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 0.297
+C        DECODED  GAP 1/1 (chance 0/2)   values: 0.688
+DIA1     DECODED  AX_PL (mm) 1/1 (chance 0/2), AX_AX (mm) 1/1 (chance 0/2)   values: 0.56
+DIA2     DECODED  CYL_D 1/1 (chance 0/2)   values: 0.482
+L        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 1.980
+L1       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 0/2)   values: 1.500
+L2       DECODED  GAP (mm) 1/1 (chance 0/2)   values: 0.251
+L3       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.799
+L4       AMBIGUOUS GAP 1/1 (chance 1/2)   values: 0.157
+LT       DECODED  GAP 1/1 (chance 0/2)   values: 0.299
+M        DECODED  AX_PL 1/1 (chance 0/2)   values: 1.250
+NS       DECODED  CYL_D 1/1 (chance 0/2)   values: 0.5625
+R        DECODED  GAP 1/1 (chance 0/2), AX_PL 1/1 (chance 1/2)   values: 0.064
+T1       DECODED  GAP 1/1 (chance 0/2), TOR_R 1/1 (chance 0/2)   values: 0.280
+Y        DECODED  GAP 1/1 (chance 0/2)   values: 0.750
+
+== 4601-08-06-NWO-FG (record 4601-08-06-NWO-FG)
+  B1D           0.406  -> CYL_D
+  B2D           0.297  -> CYL_D
+  L             1.980  -> AX_PL, GAP
+  M             1.250  -> AX_PL
+  C             0.688  -> GAP
+  Y             0.750  -> GAP
+  T1            0.280  -> GAP, TOR_R
+  L1            1.500  -> AX_PL (mm), GAP (mm)
+  L2            0.251  -> GAP (mm)
+  L3            0.799  -> GAP
+  L4            0.157  -> GAP
+  LT            0.299  -> GAP
+  DIA1           0.56  -> AX_AX (mm), AX_PL (mm)
+  DIA2          0.482  -> CYL_D
+  R             0.064  -> AX_PL, GAP
+  NS           0.5625  -> CYL_D

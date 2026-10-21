@@ -1,0 +1,88 @@
+# tube_fittings_and_adapters/6565: 1 STEP(s): 6565-32-32
+
+AL       AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 2.680
+AR       AMBIGUOUS CYL_D 1/1 (chance 1/2)   values: 2.68
+B1D      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.781
+B1THD    DECODED  GAP 1/1 (chance 0/2), AX_AX 1/1 (chance 0/2)   values: 2.5000
+B2D      DECODED  CYL_D 1/1 (chance 0/2)   values: 1.781
+B2THD    DECODED  GAP 1/1 (chance 0/2), AX_AX 1/1 (chance 0/2)   values: 2.5000
+BL       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 1/2)   values: 0.270
+BL2      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 2.396
+BL3      DECODED  GAP (mm) 1/1 (chance 0/2)   values: 2.840
+BR       DECODED  AX_PL (mm) 1/1 (chance 0/2), GAP (mm) 1/1 (chance 1/2)   values: 0.270
+BR2      DECODED  GAP 1/1 (chance 0/2), CYL_D 1/1 (chance 0/2)   values: 2.396
+BR3      DECODED  GAP (mm) 1/1 (chance 0/2)   values: 2.840
+C1       DECODED  GAP 1/1 (chance 0/2)   values: 2.875
+C2       DECODED  GAP 1/1 (chance 0/2)   values: 2.875
+CL       DECODED  GAP 1/1 (chance 0/2)   values: 0.950
+CL2      NO MATCH -   values: 2.235
+CL3      DECODED  GAP 1/1 (chance 0/2)   values: 2.400
+CR       DECODED  GAP 1/1 (chance 0/2)   values: 0.95
+CR2      NO MATCH -   values: 2.235
+CR3      DECODED  GAP 1/1 (chance 0/2)   values: 2.400
+DL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.410
+DL3      DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 2.650
+DR2      DECODED  GAP 1/1 (chance 0/2)   values: 0.41
+DR3      DECODED  CYL_D 1/1 (chance 0/2), AX_PL 1/1 (chance 0/2)   values: 2.650
+EL2      DECODED  GAP 1/1 (chance 0/2)   values: 0.780
+EL3      AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 2.850
+ER2      DECODED  GAP 1/1 (chance 0/2)   values: 0.780
+ER3      AMBIGUOUS GAP (mm) 1/1 (chance 1/2)   values: 2.850
+FL2      DECODED  CYL_D 1/1 (chance 0/2)   values: 2.157
+FL3      NO MATCH -   values: 0.560
+FR2      DECODED  CYL_D 1/1 (chance 0/2)   values: 2.157
+FR3      NO MATCH -   values: 0.560
+HL3      DECODED  GAP 1/1 (chance 0/2)   values: 2.875
+HR3      DECODED  GAP 1/1 (chance 0/2)   values: 2.875
+JL3      DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.190
+JR3      DECODED  AX_PL (mm) 1/1 (chance 0/2)   values: 0.190
+L1       DECODED  GAP 1/1 (chance 0/2)   values: 1.600
+L5       DECODED  GAP 1/1 (chance 0/2), BOX 1/1 (chance 0/2)   values: 3.480
+LL3      AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2)   values: 1.610
+LR3      AMBIGUOUS GAP 1/1 (chance 1/2), AX_PL 1/1 (chance 2/2)   values: 1.610
+ML3      DECODED  GAP 1/1 (chance 0/2)   values: 0.740
+MR3      DECODED  GAP 1/1 (chance 0/2)   values: 0.740
+
+== 6565-32-32 (record 6565-32-32)
+  B1D           1.781  -> CYL_D
+  B2D           1.781  -> CYL_D
+  L1            1.600  -> GAP
+  L5            3.480  -> BOX, GAP
+  C1            2.875  -> GAP
+  C2            2.875  -> GAP
+  AR             2.68  -> CYL_D
+  BR            0.270  -> AX_PL (mm), GAP (mm)
+  CR             0.95  -> GAP
+  BR2           2.396  -> CYL_D, GAP
+  CR2           2.235  -> -
+  DR2            0.41  -> GAP
+  ER2           0.780  -> GAP
+  FR2           2.157  -> CYL_D
+  BR3           2.840  -> GAP (mm)
+  CR3           2.400  -> GAP
+  DR3           2.650  -> AX_PL, CYL_D
+  ER3           2.850  -> GAP (mm)
+  FR3           0.560  -> -
+  HR3           2.875  -> GAP
+  JR3           0.190  -> AX_PL (mm)
+  LR3           1.610  -> AX_PL, GAP
+  MR3           0.740  -> GAP
+  AL            2.680  -> CYL_D
+  BL            0.270  -> AX_PL (mm), GAP (mm)
+  CL            0.950  -> GAP
+  BL2           2.396  -> CYL_D, GAP
+  CL2           2.235  -> -
+  DL2           0.410  -> GAP
+  EL2           0.780  -> GAP
+  FL2           2.157  -> CYL_D
+  BL3           2.840  -> GAP (mm)
+  CL3           2.400  -> GAP
+  DL3           2.650  -> AX_PL, CYL_D
+  EL3           2.850  -> GAP (mm)
+  FL3           0.560  -> -
+  HL3           2.875  -> GAP
+  JL3           0.190  -> AX_PL (mm)
+  LL3           1.610  -> AX_PL, GAP
+  ML3           0.740  -> GAP
+  B1THD        2.5000  -> AX_AX, GAP
+  B2THD        2.5000  -> AX_AX, GAP
