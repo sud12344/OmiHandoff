@@ -26,3 +26,21 @@ seal faces +-0.695. FS6400-08-08-O: L 1.441 vs STEP 1.459 = + the O-ring standin
 ## Not done (needs the user's yes)
 Nothing here is written into a review table. Using the parameter records as a dimension source = Brennan data (`$PRP@DimSource` BRENNAN,
 Air-Way first). The letter codes differ per CAD family and must be mapped against a real STEP of that family first (as above).
+
+## Decoding (2026-10-21, user: "yes start decoding the 58 families") - `decode/`
+- `decode_families.py` -> `decode_<family>.txt`, `family_codes.csv`: every record code vs the features measured on the family's STEPs on
+  disk (84 families, 188 STEPs; OCP). With a chance test (the value shifted by +0.037 / -0.029 in must not match too): 1,193 of 1,544 codes
+  DECODED, 159 ambiguous, 192 partial / no match.
+- `catalog_match.py` -> `catalog_codes.csv`: 628 codes equal a named Brennan PDF-catalog column on the family's printed sizes.
+- `map_columns.py` -> `column_map.csv`, `proposals.csv`, `differences.csv`: code -> review-table column, calibrated on the rows whose values
+  are known (records of 1,315 of the 1,416 shipped parts fetched: `pc_results_shipped.csv`): 536 of 1,239 columns MAPPED (>= 3 rows,
+  >= 90 % agree; a 2-decimal Air-Way value agrees with its Brennan rounding). Proposals = EMPTY cells of not-ready BUILD rows only.
+- `review_pack.py` -> `BRENNAN_CELLS_for_review.xlsx`: **506 cells in 132 not-ready parts; 30 parts dimension-complete** (thread / port /
+  seat columns from the end library by thread size, as on every built row); 64 still miss a bore / hex / leg whose mapping is a tie or weak;
+  **61 differences** with filled cells (Air-Way stays; for information / OMi).
+- Self-check: the differences reproduce the two known by hand (6801-04-02 leg 1.03 vs 0.92, 6801-12-12 ORB thread length 0.469 vs 0.410).
+- FS2403 end (vs gen_straight2 FSM_MEAS -08 / -24): record EL = groove OD, DL = face dia, CL = relief dia, AL = end length; groove ID / depth
+  not in the record but constant on all 10 measured dashes (0.102 / 0.052); thread start THDS not in the record -> the only reason left
+  for the 6 FS2403 per-dash downloads.
+- Not yet covered: families whose review table has no calibration rows (compression, bent tubes, most new FS tables) - map by hand from
+  `decode_<family>.txt` + `catalog_codes.csv`.
