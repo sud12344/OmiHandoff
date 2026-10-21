@@ -79,3 +79,8 @@ ship together with (or after) batch 18 - the stage contains the Air-Way-first ta
   -08-06 / -08-08 / -12-12-NWO-FG. 0 lost / changed; dofcheck, allcfg, vbacheck, regress clean.
 - Not mapped on purpose: 6902 N4 / M / W2 / C1HEX (letters differ, forged lengths 0.08-0.15 off the plain Air-Way part: needs the two
   catalog drawings compared).
+- Round 2 of the hand map (5501 5503 5504 5601 5603 5652 6606 6502 5406-C; exact or near-exact on 6-15 sizes) + the end-library transfer
+  (Q-TRANSFER-ENDLIB) of the JIC end columns for 6801 / 6802 from same-JIC-size rows: 375 hand / transfer cells, all confirmed.
+  **44 new configurations** (adds 5406-C-24 / -32, 5503-24-24 / -32-32-FG, 5504-24-24 / -32-32-FG, 5601-06-06-06 / -24-24-24-FG,
+  5652-08 / -24 x4-FG, 6502-16-12-FG, 6606-06 / -12 x3-FG). 0 lost / changed; dofcheck, allcfg, vbacheck, regress clean.
+- Skipped on purpose: 1502 / 1504 (a hex column matches a length code), 6404 L32, 6506 L17, 5406-C L, 6902 lengths / third hex.

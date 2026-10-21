@@ -320,7 +320,7 @@ Sub Build6606()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 5)", (UBound(cfgs) + 1) = 5
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 7)", (UBound(cfgs) + 1) = 7
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature

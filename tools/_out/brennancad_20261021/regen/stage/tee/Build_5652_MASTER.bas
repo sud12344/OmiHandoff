@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_5652_MASTER"
 ' ============================================================================
 '  Build_5652_MASTER.bas  -  OMi fitting library, generated 2026-10-21 by gen_tee.py
-'  Female Pipe Cross (cross), forged hex body (2603HX pattern).  Reference config 5652-02-02-02-02-FG: NPTFF -02, NPTFF -02, NPTFF -02, NPTFF -02
+'  Female Pipe Cross (cross), forged hex body (2603HX pattern).  Reference config 5652-08-08-08-08-FG: NPTFF -08, NPTFF -08, NPTFF -08, NPTFF -08
 '  Entry: Sub Build5652.  Legs 1/2 along +X/-X, leg 3 along +Y, leg 4 along -Y.
 '  Builds from DesignTable_5652_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.
@@ -37,24 +37,24 @@ Sub LoadLeg(i As Long)
     Dim v As Variant, k As Long
     If i = 1 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.007137400, _
-    0.016764000, 0.007137400, _
-    0.016764000, 0.000000000)
+    0.000000000, 0.013487400, _
+    0.031242000, 0.013487400, _
+    0.031242000, 0.000000000)
     If i = 2 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.007137400, _
-    0.016764000, 0.007137400, _
-    0.016764000, 0.000000000)
+    0.000000000, 0.013487400, _
+    0.031242000, 0.013487400, _
+    0.031242000, 0.000000000)
     If i = 3 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.007137400, _
-    0.016764000, 0.007137400, _
-    0.016764000, 0.000000000)
+    0.000000000, 0.013487400, _
+    0.031242000, 0.013487400, _
+    0.031242000, 0.000000000)
     If i = 4 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.007137400, _
-    0.016764000, 0.007137400, _
-    0.016764000, 0.000000000)
+    0.000000000, 0.013487400, _
+    0.031242000, 0.013487400, _
+    0.031242000, 0.000000000)
     NPTS = (UBound(v) + 1) \ 2
     ReDim PX(NPTS - 1): ReDim PR(NPTS - 1)
     For k = 0 To NPTS - 1
@@ -80,15 +80,15 @@ Sub Build5652()
     On Error GoTo Trap
     Dim swFeat As SldWorks.Feature, rev As SldWorks.Feature, sd As SldWorks.SelectData
 
-    ' ================= LEG 1 (NPTFF -02, along X +) =================
+    ' ================= LEG 1 (NPTFF -08, along X +) =================
     stepName = "LEG1 sketch"
-    curAxis = 0: tipPos = 0.016764000
+    curAxis = 0: tipPos = 0.031242000
     LoadLeg 1
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile False, 1#
-    Call Dim_len(-1, "M1", 0.016764000, 0.008382, 0.022377)
-    Call Dim_rad(1, "BODYR", 0.007137400, 0.008382, -0.010160)
+    Call Dim_len(-1, "M1", 0.031242000, 0.015621, 0.028727)
+    Call Dim_rad(1, "BODYR", 0.013487400, 0.015621, -0.010160)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -104,15 +104,15 @@ Sub Build5652()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "LEG1_BODY"
 
-    ' ================= LEG 2 (NPTFF -02, along X -) =================
+    ' ================= LEG 2 (NPTFF -08, along X -) =================
     stepName = "LEG2 sketch"
-    curAxis = 0: tipPos = -0.016764000
+    curAxis = 0: tipPos = -0.031242000
     LoadLeg 2
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile False, -1#
-    Call Dim_len(-1, "M2", 0.016764000, -0.008382, 0.022377)
-    Call Dim_rad(1, "BODYR", 0.007137400, -0.008382, -0.010160)
+    Call Dim_len(-1, "M2", 0.031242000, -0.015621, 0.028727)
+    Call Dim_rad(1, "BODYR", 0.013487400, -0.015621, -0.010160)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -128,15 +128,15 @@ Sub Build5652()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "LEG2_BODY"
 
-    ' ================= LEG 3 (NPTFF -02, along Y +) =================
+    ' ================= LEG 3 (NPTFF -08, along Y +) =================
     stepName = "LEG3 sketch"
-    curAxis = 1: tipPos = 0.016764000
+    curAxis = 1: tipPos = 0.031242000
     LoadLeg 3
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile True, 1#
-    Call Dim_len(-1, "M3", 0.016764000, 0.022377, 0.008382)
-    Call Dim_rad(1, "BODYR", 0.007137400, -0.010160, 0.008382)
+    Call Dim_len(-1, "M3", 0.031242000, 0.028727, 0.015621)
+    Call Dim_rad(1, "BODYR", 0.013487400, -0.010160, 0.015621)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -152,15 +152,15 @@ Sub Build5652()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "LEG3_BODY"
 
-    ' ================= LEG 4 (NPTFF -02, along Y -) =================
+    ' ================= LEG 4 (NPTFF -08, along Y -) =================
     stepName = "LEG4 sketch"
-    curAxis = 1: tipPos = -0.016764000
+    curAxis = 1: tipPos = -0.031242000
     LoadLeg 4
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile True, -1#
-    Call Dim_len(-1, "M4", 0.016764000, 0.022377, -0.008382)
-    Call Dim_rad(1, "BODYR", 0.007137400, -0.010160, -0.008382)
+    Call Dim_len(-1, "M4", 0.031242000, 0.028727, -0.015621)
+    Call Dim_rad(1, "BODYR", 0.013487400, -0.010160, -0.015621)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -178,47 +178,47 @@ Sub Build5652()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "RUN"
-    Call HexRun("Right Plane", 0#, 0.010160000, 0.010160000, 0.007137400, "RUN", 0)
+    Call HexRun("Right Plane", 0#, 0.024638000, 0.024638000, 0.013487400, "RUN", 0)
     stepName = "RUN2"
-    Call HexRun("Top Plane", 0#, 0.010160000, 0.010160000, 0.007137400, "RUN2", 1)
+    Call HexRun("Top Plane", 0#, 0.024638000, 0.024638000, 0.013487400, "RUN2", 1)
     Dim bodies As Variant
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
     If IsEmpty(bodies) Then Check "One solid body after legs+hex", False Else Check "One solid body after legs+hex", (UBound(bodies) = 0)
 
     ' ================= pockets and bores (each from its leg face to the axis crossing) =================
     stepName = "Bores"
-    curAxis = 0: tipPos = 0.016764000
-    Call BoreCut("POCKET1", "TAPDRILL1", 0.008382000, 0.016764000, 0#, "POCKETCUT1", True, 0.006423660)
-    curAxis = 0: tipPos = -0.016764000
-    Call BoreCut("POCKET2", "TAPDRILL2", 0.008382000, 0.016764000, 0#, "POCKETCUT2", True, 0.006423660)
-    curAxis = 1: tipPos = 0.016764000
-    Call BoreCut("POCKET3", "TAPDRILL3", 0.008382000, 0.016764000, 0#, "POCKETCUT3", True, 0.006423660)
-    curAxis = 1: tipPos = -0.016764000
-    Call BoreCut("POCKET4", "TAPDRILL4", 0.008382000, 0.016764000, 0#, "POCKETCUT4", True, 0.006423660)
-    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+0.6600)", Not AxisCoveredAx(0.016764000)
-    curAxis = 0: Check "leg 2 bore open on the axis at its face (X=-0.6600)", Not AxisCoveredAx(-0.016764000)
-    curAxis = 1: Check "leg 3 bore open on the axis at its face (Y=+0.6600)", Not AxisCoveredAx(0.016764000)
-    curAxis = 1: Check "leg 4 bore open on the axis at its face (Y=-0.6600)", Not AxisCoveredAx(-0.016764000)
+    curAxis = 0: tipPos = 0.031242000
+    Call BoreCut("POCKET1", "TAPDRILL1", 0.017780000, 0.031242000, 0#, "POCKETCUT1", True, 0.012138660)
+    curAxis = 0: tipPos = -0.031242000
+    Call BoreCut("POCKET2", "TAPDRILL2", 0.017780000, 0.031242000, 0#, "POCKETCUT2", True, 0.012138660)
+    curAxis = 1: tipPos = 0.031242000
+    Call BoreCut("POCKET3", "TAPDRILL3", 0.017780000, 0.031242000, 0#, "POCKETCUT3", True, 0.012138660)
+    curAxis = 1: tipPos = -0.031242000
+    Call BoreCut("POCKET4", "TAPDRILL4", 0.017780000, 0.031242000, 0#, "POCKETCUT4", True, 0.012138660)
+    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.2300)", Not AxisCoveredAx(0.031242000)
+    curAxis = 0: Check "leg 2 bore open on the axis at its face (X=-1.2300)", Not AxisCoveredAx(-0.031242000)
+    curAxis = 1: Check "leg 3 bore open on the axis at its face (Y=+1.2300)", Not AxisCoveredAx(0.031242000)
+    curAxis = 1: Check "leg 4 bore open on the axis at its face (Y=-1.2300)", Not AxisCoveredAx(-0.031242000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
-    curAxis = 0: tipPos = 0.016764000
-    Call HelixThread(0.016764000, 0.004191000, 0.011684000, 0.000940741, 0.000752593, 0.031239648, False, True, "1", "THD_End1")
-    curAxis = 0: tipPos = -0.016764000
-    Call HelixThread(-0.016764000, 0.004191000, 0.011684000, 0.000940741, 0.000752593, 0.031239648, False, True, "2", "THD_End2")
-    curAxis = 1: tipPos = 0.016764000
-    Call HelixThread(0.016764000, 0.004191000, 0.011684000, 0.000940741, 0.000752593, 0.031239648, False, True, "3", "THD_End3")
-    curAxis = 1: tipPos = -0.016764000
-    Call HelixThread(-0.016764000, 0.004191000, 0.011684000, 0.000940741, 0.000752593, 0.031239648, False, True, "4", "THD_End4")
+    curAxis = 0: tipPos = 0.031242000
+    Call HelixThread(0.031242000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "1", "THD_End1")
+    curAxis = 0: tipPos = -0.031242000
+    Call HelixThread(-0.031242000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "2", "THD_End2")
+    curAxis = 1: tipPos = 0.031242000
+    Call HelixThread(0.031242000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "3", "THD_End3")
+    curAxis = 1: tipPos = -0.031242000
+    Call HelixThread(-0.031242000, 0.008890000, 0.022860000, 0.001814286, 0.001451429, 0.031239648, False, True, "4", "THD_End4")
 
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
-    Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -0.660 .. 0.660; threads may add a little)", Abs(bb(3) / IN_ - 0.6600) < 0.08 And Abs(bb(0) / IN_ - (-0.6600)) < 0.08
-    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.660 .. 0.660)", Abs(bb(4) / IN_ - 0.6600) < 0.08 And Abs(bb(1) / IN_ - (-0.6600)) < 0.08
+    Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -1.230 .. 1.230; threads may add a little)", Abs(bb(3) / IN_ - 1.2300) < 0.08 And Abs(bb(0) / IN_ - (-1.2300)) < 0.08
+    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -1.230 .. 1.230)", Abs(bb(4) / IN_ - 1.2300) < 0.08 And Abs(bb(1) / IN_ - (-1.2300)) < 0.08
     Trace "Bounding box z " & Format(bb(2) / IN_, "0.000") & " .. " & Format(bb(5) / IN_, "0.000") & " (approximate - loose around thread faces)"
     Dim zlo As Double, zhi As Double: zhi = ExtremeAlong(0#, 0#, 1#): zlo = -ExtremeAlong(0#, 0#, -1#)
-    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.2810 .. 0.2810: hex flats)", Abs(zlo / IN_ + 0.2810) < 0.001 And Abs(zhi / IN_ - 0.2810) < 0.001
+    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.5310 .. 0.5310: hex flats)", Abs(zlo / IN_ + 0.5310) < 0.001 And Abs(zhi / IN_ - 0.5310) < 0.001
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
     If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)
 
@@ -231,13 +231,13 @@ Sub Build5652()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 7)", (UBound(cfgs) + 1) = 7
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 9)", (UBound(cfgs) + 1) = 9
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("5652-04-04-04-04-FG", "5652-20-20-20-20-FG")
+    cx_c = Array("5652-02-02-02-02-FG", "5652-24-24-24-24-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "M2@LEG2", "BODYR@LEG2", "M3@LEG3", "BODYR@LEG3", "DEPTH@POCKETCUT1", "DEPTH@POCKETCUT2", "DEPTH@POCKETCUT3", "DEPTH@POCKETCUT4", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "PROF_R@THDPROF_3", "PROF_R@THDPROF_4", "HEXAF@RUN", "HEXL1@RUN_BODY", "HEXL2@RUN_BODY", "HEXAF@RUN2", "HEXL1@RUN2_BODY", "HEXL2@RUN2_BODY")
-    cx_w = Array(Array(0.88000, 0.37500, 0.88000, 0.37500, 0.88000, 0.37500, 0.88000, 0.88000, 0.88000, 0.88000, 0.21500, 0.21500, 0.21500, 0.21500, 0.75000, 0.62000, 0.62000, 0.75000, 0.62000, 0.62000), Array(1.70000, 0.93750, 1.70000, 0.93750, 1.70000, 0.93750, 1.70000, 1.70000, 1.70000, 1.70000, 0.74000, 0.74000, 0.74000, 0.74000, 1.87500, 1.44000, 1.44000, 1.87500, 1.44000, 1.44000))
+    cx_w = Array(Array(0.66000, 0.28100, 0.66000, 0.28100, 0.66000, 0.28100, 0.66000, 0.66000, 0.66000, 0.66000, 0.16500, 0.16500, 0.16500, 0.16500, 0.56200, 0.40000, 0.40000, 0.56200, 0.40000, 0.40000), Array(2.08000, 1.28050, 2.08000, 1.28050, 2.08000, 1.28050, 2.08000, 2.08000, 2.08000, 2.08000, 0.86000, 0.86000, 0.86000, 0.86000, 2.56100, 1.82000, 1.82000, 2.56100, 1.82000, 1.82000))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -263,7 +263,7 @@ Sub Build5652()
         Trace cx_c(cx_q) & " box x " & Format(cx_bx(0) / IN_, "0.000") & ".." & Format(cx_bx(3) / IN_, "0.000") & "  y " & Format(cx_bx(1) / IN_, "0.000") & ".." & Format(cx_bx(4) / IN_, "0.000")
     Next cx_q
 
-    swModel.ShowConfiguration2 "5652-02-02-02-02-FG"
+    swModel.ShowConfiguration2 "5652-08-08-08-08-FG"
     swModel.ForceRebuild3 False
 
     ' ---- all-config rebuild sweep (2026-09-23, QA #124): every configuration, every feature must rebuild
@@ -298,10 +298,10 @@ Sub Build5652()
         End If
     Next sw_i
     Check "All-config sweep: " & sw_n & " configurations rebuilt, " & sw_bad & " feature/body failures", sw_bad = 0
-    ' 2026-09-25: leave the master in its reference configuration (5652-02-02-02-02-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
+    ' 2026-09-25: leave the master in its reference configuration (5652-08-08-08-08-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
     ' before this the master was left in the first name of the list (the smallest size)
-    swModel.ShowConfiguration2 "5652-02-02-02-02-FG"
-    Trace "Master left in its reference configuration 5652-02-02-02-02-FG for the save (it opens in this size)"
+    swModel.ShowConfiguration2 "5652-08-08-08-08-FG"
+    Trace "Master left in its reference configuration 5652-08-08-08-08-FG for the save (it opens in this size)"
 
     ' ---- resting state (project rule): every THD_* feature suppressed in EVERY configuration before the save.
     '      Threads stay live through the build, table insert, config checks and sweep so they are verified;

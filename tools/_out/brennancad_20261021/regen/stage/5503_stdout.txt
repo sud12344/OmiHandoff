@@ -1,4 +1,4 @@
-5503: 7 configs (ref 5503-16-16-FG), 17 skipped, 0 blocked, 42 cols
+5503: 9 configs (ref 5503-16-16-FG), 15 skipped, 0 blocked, 42 cols
    warn 5503-12-12-FG: leg 1: female port thread length = MS51503 P1 0.91 (library) - the row has no measured PORTDEPTH@BORE
    warn 5503-20-20-FG: leg 1: female port thread length = MS51503 P1 1.16 (library) - the row has no measured PORTDEPTH@BORE
 

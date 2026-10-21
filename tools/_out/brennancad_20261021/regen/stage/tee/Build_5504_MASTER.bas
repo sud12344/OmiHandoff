@@ -213,13 +213,13 @@ Sub Build5504()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 10)", (UBound(cfgs) + 1) = 10
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 12)", (UBound(cfgs) + 1) = 12
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("5504-02-02-FG", "5504-20-20-FG")
+    cx_c = Array("5504-02-02-FG", "5504-32-32-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "M2@LEG2", "BODYR@LEG2", "DEPTH@POCKETCUT1", "DEPTH@POCKETCUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(0.66000, 0.28000, 0.66000, 0.28000, 0.66000, 0.66000, 0.16500, 0.16500, 0.56000, 0.40000, 0.56000, 0.40000, 0.16116, 0.32282), Array(1.70000, 0.93750, 1.70000, 0.93750, 1.70000, 1.70000, 0.74000, 0.74000, 1.87500, 1.44000, 1.87500, 1.44000, 0.54077, 1.08203))
+    cx_w = Array(Array(0.66000, 0.28000, 0.66000, 0.28000, 0.66000, 0.66000, 0.16500, 0.16500, 0.56000, 0.40000, 0.56000, 0.40000, 0.16116, 0.32282), Array(2.39000, 1.40600, 2.39000, 1.40600, 2.39000, 2.39000, 1.10000, 1.10000, 2.81200, 2.13000, 2.81200, 2.13000, 0.81125, 1.62301))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)

@@ -41,7 +41,28 @@ HANDMAP = {   # (table, column) -> (code, reason); from the printed comparison (
     ('6503', 'D@BORE'): ('BD', 'Brennan B DRILL'), ('6503', 'THDMAJ_A@DRIVE'): ('ATHD', 'exact'), ('6503', 'THDMAJ_B@DRIVE'): ('BTHD', 'exact'),
     ('6902', 'CHEX@HEX'): ('C1', 'Brennan C1 HEX (swivel nut); exact on 9 sizes'), ('6902', 'C4HEX@HEX'): ('C', 'Brennan C HEX (lock nut)'),
     ('6902', 'D1@BORE'): ('BD', 'Brennan B DRILL'), ('6902', 'D@BORE'): ('AD', 'Brennan A DRILL'), ('6902', 'THDMAJ_B@DRIVE'): ('BTHD', 'ORB thread, exact'),
+    # round 2 (2026-10-21): exact or near-exact on 6-15 sizes; equal-dash targets where two legs share a value
+    ('5501', 'N4@DRIVE'): ('N', 'Brennan N; exact, 7 sizes'), ('5501', 'N6@DRIVE'): ('N1', 'Brennan N1; exact'), ('5501', 'Y@HEX'): ('Y', 'Y FLATS; exact'),
+    ('5501', 'D1@BORE'): ('A1D', 'A1 DRILL'), ('5501', 'D2@BORE'): ('A2D', 'A2 DRILL'),
+    ('5503', 'N4@DRIVE'): ('N', 'Brennan N; exact, 9 sizes'), ('5503', 'N3@DRIVE'): ('N1', 'Brennan N1; exact'), ('5503', 'W@HEX'): ('Y', 'Y FLATS'),
+    ('5503', 'D@BORE'): ('AD', 'A DRILL; exact'), ('5503', 'THDMAJ_A1@DRIVE'): ('A1THD', 'thread A1'), ('5503', 'THDMAJ_A2@DRIVE'): ('A2THD', 'thread A2'),
+    ('5504', 'N1_1@DRIVE'): ('N', 'Brennan N; exact, 11 sizes'), ('5504', 'N1_2@DRIVE'): ('N1', 'Brennan N1'), ('5504', 'W@REF'): ('Y', 'Y FLATS'),
+    ('5601', 'N_1@DRIVE'): ('N1', 'Brennan N1; exact, 7 sizes'), ('5601', 'N2@DRIVE'): ('N2', 'Brennan N2; exact'), ('5601', 'N1@DRIVE'): ('N3', 'Brennan N3; exact'),
+    ('5601', 'W@HEX'): ('Y', 'Y FLATS'), ('5601', 'D1@BORE'): ('A1D', 'A1 DRILL'), ('5601', 'D2@BORE'): ('A2D', 'A2 DRILL'),
+    ('5603', 'N1@DRIVE'): ('N1', 'Brennan N1; exact, 7 sizes'), ('5603', 'N1_2@DRIVE'): ('N', 'Brennan N; exact'), ('5603', 'N3@DRIVE'): ('N2', 'Brennan N2; exact'),
+    ('5603', 'W@REF'): ('Y', 'Y FLATS'), ('5603', 'D1_1@BORE'): ('A1D', 'A1 DRILL'), ('5603', 'D1_3@BORE'): ('A3D', 'A3 DRILL'),
+    ('5652', 'N1_1@DRIVE'): ('N', 'Brennan N; exact, 8 sizes (cross: four equal legs)'), ('5652', 'N1_2@DRIVE'): ('N', 'Brennan N'),
+    ('5652', 'N1_3@DRIVE'): ('N', 'Brennan N'), ('5652', 'N1_4@DRIVE'): ('N', 'Brennan N'), ('5652', 'W@HEX'): ('Y', 'Y FLATS'),
+    ('6606', 'M5_1@DRIVE'): ('M6', 'Brennan M6; exact, 6 sizes'), ('6606', 'M5_2@DRIVE'): ('M6', 'Brennan M6'), ('6606', 'M5_3@DRIVE'): ('M6', 'Brennan M6'),
+    ('6606', 'M10_1@DRIVE'): ('M', 'Brennan M; 6 sizes'), ('6606', 'M10_2@DRIVE'): ('M', 'Brennan M'), ('6606', 'M10_3@DRIVE'): ('M', 'Brennan M'),
+    ('6606', 'C3_1HEX@HEX'): ('C', 'C HEX'), ('6606', 'C3_2HEX@HEX'): ('C', 'C HEX'), ('6606', 'C3_3HEX@HEX'): ('C', 'C HEX'),
+    ('6606', 'Y@HEX'): ('Y', 'Y FLATS'), ('6606', 'D1@BORE'): ('A1D', 'A1 DRILL'),
+    ('6502', 'M14@DRIVE'): ('M', 'Brennan M; 0.010, 11 sizes'), ('6502', 'C3HEX@HEX'): ('C', 'C HEX; 11 sizes'),
+    ('5406C', 'C1HEX@HEX'): ('C', 'C HEX; 0.005, 3 sizes'),
 }
+# skipped on purpose (round 2): 1502 / 1504 (a '@HEX' column matches a length code - unclear), 6404 L32 (0.05 with spread 0.14),
+# 6506 L17 (0.045 off on plain parts - a different dimension), 5406-C L (no clear code)
+ENDLIB = {'6801': 0, '6802': 0}   # Q-TRANSFER-ENDLIB = yes: JIC end columns from the table's own rows of the same JIC size (dash position)
 # not mapped, on purpose: 6902 N4 / M / W2 (forged lengths differ from the plain Air-Way part by 0.08-0.15 and the letters differ - needs
 # the two catalog drawings), 6902 C1HEX (Air-Way's third hex; Brennan prints two), pipe majors where Air-Way and Brennan use different
 # definitions (6902 A1: pipe OD 0.54 vs NPSM major 0.526) - the end library / generator supplies those.
@@ -119,7 +140,7 @@ if __name__ == '__main__' and len(sys.argv) > 1:
 
 def proposals():
     props = []
-    for root in sorted({t for t, c in HANDMAP} | set(A5)):
+    for root in sorted({t for t, c in HANDMAP} | set(A5) | set(ENDLIB)):
         head, data = table(root)
         for d in data:
             p = norm(d.get('$PRP@OMiSKU') or d.get('$PRP@PartNo'))
@@ -129,6 +150,16 @@ def proposals():
             for (t, c), (k, why) in HANDMAP.items():
                 if t == root and c in head and not isnum(d.get(c)) and k in r:
                     props.append(dict(root=root, part=p, column=c, value=r[k], code=k, evidence=f'hand map: {why}', row_status=d.get('$PRP@DataStatus') or ''))
+            if root in ENDLIB:
+                k_ = ENDLIB[root]; me = dsh(p)
+                for c in head:
+                    if c and re.match(r'^(JIC_|RELIEF|SEAT)', str(c)) and not isnum(d.get(c)) and len(me) > k_:
+                        src = next((q for q in data if isnum(q.get(c)) and len(dsh(norm(q.get('$PRP@PartNo') or ''))) > k_ and
+                                    dsh(norm(q.get('$PRP@PartNo') or ''))[k_] == me[k_]), None)
+                        if src is not None:
+                            props.append(dict(root=root, part=p, column=c, value=src[c], code='ENDLIB',
+                                              evidence=f"Q-TRANSFER-ENDLIB: same JIC size row {norm(src.get('$PRP@PartNo'))}",
+                                              row_status=d.get('$PRP@DataStatus') or ''))
             for c in A5.get(root, ()):
                 if c in head and not isnum(d.get(c)):
                     me = dsh(p)

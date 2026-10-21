@@ -223,13 +223,13 @@ Sub Build5503()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 8)", (UBound(cfgs) + 1) = 8
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 10)", (UBound(cfgs) + 1) = 10
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("5503-02-02-FG", "5503-20-20-FG")
+    cx_c = Array("5503-02-02-FG", "5503-32-32-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "M2@LEG2", "BODYR@LEG2", "NPTF2_MAJR@LEG2", "NPTF2_THDL@LEG2", "DEPTH@POCKETCUT1", "DEPTH@BORECUT2", "PROF_R@THDPROF_1", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(0.47000, 0.28000, 0.72000, 0.28000, 0.19657, 0.26390, 0.47000, 0.72000, 0.16500, 0.19657, 0.56000, 0.35300, 0.56000, 0.34000, 0.16116, 0.32282), Array(1.63000, 0.93750, 1.80000, 0.93750, 0.81335, 0.70680, 1.63000, 1.80000, 0.74000, 0.81335, 1.87500, 1.37000, 1.87500, 0.83000, 0.54077, 1.08203))
+    cx_w = Array(Array(0.47000, 0.28000, 0.72000, 0.28000, 0.19657, 0.26390, 0.47000, 0.72000, 0.16500, 0.19657, 0.56000, 0.35300, 0.56000, 0.34000, 0.16116, 0.32282), Array(2.19000, 1.40600, 2.15000, 1.40600, 1.16929, 0.75650, 2.19000, 2.15000, 1.10000, 1.16929, 2.81200, 1.93000, 2.81200, 1.12000, 0.81125, 1.62301))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -264,6 +264,8 @@ Sub Build5503()
     Call HelixUCheck("5503-08-08-FG", "2", 1.34000, 0.407785)
     Call HelixUCheck("5503-12-12-FG", "2", 1.38000, 0.512410)
     Call HelixUCheck("5503-20-20-FG", "2", 1.80000, 0.813350)
+    Call HelixUCheck("5503-24-24-FG", "2", 2.06000, 0.932830)
+    Call HelixUCheck("5503-32-32-FG", "2", 2.15000, 1.169295)
 
     swModel.ShowConfiguration2 "5503-16-16-FG"
     swModel.ForceRebuild3 False
