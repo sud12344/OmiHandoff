@@ -162,7 +162,7 @@ def straights(lines, res):
                     got = bite_read(P, E_['rM'], E_['e']['EL']); exp = bite_expect(E_['e'], bore)
                     bad += cmp(exp, got, f'End {sfx}'); nc += len(exp)
                 Pl = Probe(S, v=(0, 0, 1))
-                Lm = Pl.edge(lambda a: Pl.inside(a, EB['V'][0][1] - 0.01 if EB['V'] else rB * 0.9), L - 0.2, L + 0.05, 50)
+                Lm = Pl.edge(lambda a: Pl.inside(a, EB['V'][0][1] - 0.01 if EB['V'] else (EB['td'] / 2 + 0.15 * EB['thread']['pitch'] + hexb / 2) / 2), L - 0.2, L + 0.05, 50)   # port face: between the port and the flats
                 if Lm is None or abs(Lm - L) > TOL: bad.append(f'overall {Lm} vs L {L}')
                 nc += 1
             nb += len(bad)

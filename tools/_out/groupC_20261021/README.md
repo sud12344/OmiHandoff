@@ -104,7 +104,7 @@ Each Brennan compression STEP is ONE fused solid: body + nut(s), no sleeve, no 2
 - **vbacheck**: 9 / 9 macros OK.
 - **OCP closed loop** (`scripts/closed_loop_c.py` -> `closed_loop/closed_loop.txt`): every configuration rebuilt from the generator's own
   vertex chains + pockets + bores, read back with point-membership probes (independent extractor; the ramp read at two levels, its angle
-  measured): CLOSEDLOOP_RESULT. The same extractor on the ten Brennan -08 STEPs returns the library chain at every bite end (socket, bore, thread
+  measured): **151 configurations, straights 765 checks 0 off, forged bite legs 1,060 checks 0 off** (tolerance 0.0012; incl. overall length / leg length, nut countersink / minor / cone start / hole / L / hex flats). The same extractor on the ten Brennan -08 STEPs returns the library chain at every bite end (socket, bore, thread
   major, thread end 0.423, ramp 45.0 deg, neck, hex face 0.562) and the C0318-08 nut (countersink, minor, cone start 0.599, 45 deg, hole,
   L) - the only difference is the known C2402 ring.
 
