@@ -1,11 +1,11 @@
-"""triveni_package.py (2026-10-21, cloud): the parts no source prints, as a package for Triveni (OMi).
-Inputs: the PC's BLOCKED_NEEDS.md (2026-10-20) category (b) "Dimensions missing everywhere - ask OMi", checked against this folder's
-sources.csv (source_lookup.py), and OMi's own parts file for the descriptions.
-Changes to (b), from the source check:
-- 6505-04-02 is left out: OMi's parts file prints Overall Length, L 1, Hex, Side 1/2 ID and Nut Hex 1 for it (a source; the review
-  table's "no source" predates that check).
-- the 2700-LN rows are asked as "same as the plain part?" (A10: -LN parts are modelled as the plain part, no locknut).
-- FS0319-24 is a question (three printed values disagree), not a size request.
+"""triveni_package.py (2026-10-21, cloud): the parts nobody gives us dimensions for, as a package for Triveni (OMi).
+Rule (2026-10-21, after the PARTcommunity lookup): a not-ready part goes to OMi when
+  (1) no catalog prints it - Air-Way, Brennan's PDF catalogs, OMi's own parts file (sources.csv: NO SOURCE), and
+  (2) Brennan has no CAD model for it (tools/_out/partcommunity_20261021/pc_final.csv: match exact / alias = covered);
+      a body-only "-M1" compression part counts as covered when Brennan models the complete fitting (asked as a question).
+Then: kits 1901 / 1902 / 1927 out of scope (one line); 5404-N-..X.. long nipples covered by A4 (Q-TRANSFER-5404N: the length is in the
+part number); the 2700-LN rows asked as "same as the plain part?" (A10); FS0319-24 asked as a question (three printed values disagree);
+0618 / 0619 asked as "= Brennan V0318 / V0319?" (Brennan prints V0318 / V0319; Q-NEW-F3-FLARELESS-ALIAS).
 Writes 10_DRAWINGS/for_OMi_2026-10-21/: the PDF, the fill-in workbook and the email text. Nothing is sent."""
 import os, re, csv, collections, datetime
 import openpyxl
@@ -22,26 +22,19 @@ J = lambda *a: os.path.join(ROOT, *a)
 OUT = J('10_DRAWINGS', 'for_OMi_2026-10-21'); os.makedirs(OUT, exist_ok=True)
 DATE = '2026-10-21'
 
-# --- (b) groups from the PC list
-B = open(J('tools', '_out', 'blocked_needs_20261020', 'BLOCKED_NEEDS.md'), encoding='utf-8').read().split('## Appendix')[1]
-grp = {}
-for m in re.finditer(r'^\*\*([a-e]) / (.+?)\*\* \((\d+)\): (.+)$', B, re.M):
-    if m.group(1) == 'b':
-        ps = [p.strip().upper() for p in m.group(4).split(',')]; assert len(ps) == int(m.group(3)); grp[m.group(2)] = ps
-G_COMP = next(k for k in grp if k.startswith('Compression'))
-G_TG = next(k for k in grp if k.startswith('Test gauge'))
-G_SINGLE = next(k for k in grp if k.startswith('Parts with no Air-Way row'))
-G_ORFS = next(k for k in grp if k.startswith('ORFS parts with no usable'))
-G_4005 = next(k for k in grp if k.startswith('4005'))
-G_FL = next(k for k in grp if k.startswith('Flareless'))
-assert sum(map(len, grp.values())) == 291
-
 src = {r['part']: r for r in csv.DictReader(open(os.path.join(HERE, 'sources.csv'), encoding='utf-8'))}
-for g in grp.values():
-    for p in g:
-        assert p in src, p
-LEFT_OUT = {p: f"OMi's parts file prints {src[p]['omi_dims']}" for g in grp.values() for p in g if src[p]['omi_file'].startswith('=')}
-assert set(LEFT_OUT) == {'6505-04-02'}, LEFT_OUT   # the only (b) part a source covers - re-check by hand if this changes
+pcf = {r['part']: r for r in csv.DictReader(open(J('tools', '_out', 'partcommunity_20261021', 'pc_final.csv'), encoding='utf-8'))}
+cad = lambda p: p in pcf and pcf[p]['match'] in ('exact', 'alias')
+covered = lambda p: cad(p) or (p.endswith('-M1') and cad(p[:-3]))
+need = [p for p in src if src[p]['cls'] == 'NO SOURCE' and not covered(p)
+        and '-KIT' not in p and not p.startswith('5404-N-')]
+COMP_ALL = [l.strip().upper() for l in open(J('07_RAW_EXTRACTS', 'omi_feed', 'omi_skus_compression.txt')) if l.strip()]
+G_COMP, G_TG, G_4005, G_FL = 'comp', 'tg', '4005', 'fl'
+grp = {G_COMP: [p for p in need if p in COMP_ALL], G_TG: [p for p in need if p.startswith('TGT-')],
+       G_4005: [p for p in need if p.startswith('4005-')], G_FL: ['0618-06', '0618-08', '0619-06', '0619-08']}
+singles = [p for p in need if p not in grp[G_COMP] + grp[G_TG] + grp[G_4005]]
+n_comp_brennan = sum(1 for p in COMP_ALL if cad(p))                      # complete fittings Brennan models
+n_comp_m1 = sum(1 for p in COMP_ALL if covered(p) and not cad(p))      # their body-only -M1 numbers (assumed same body)
 
 ws = openpyxl.load_workbook(J('07_RAW_EXTRACTS', 'omi_dimensions', 'WebsitePartsInfo2026.xlsx'), read_only=True, data_only=True)['Items']
 rows = list(ws.iter_rows(values_only=True)); H = rows[0]
@@ -74,7 +67,6 @@ def needs(p, ds):
     return 'Overall Length, Hex Flat, Side 1 ID, Side 2 ID' + (', Nut Hex 1' if swivel else '')
 
 
-singles = [p for p in grp[G_SINGLE] + grp[G_ORFS] if p not in LEFT_OUT and p != 'FS0319-24']
 single_rows = [(p, desc.get(p, ''), needs(p, desc.get(p, ''))) for p in singles]
 tg_rows = [(p, desc.get(p, ''), 'M 1 Size, L 1 Size, test-port leg length, Hex Flat, Nut Hex 1, Side 1-3 ID') for p in grp[G_TG]]
 
@@ -87,8 +79,7 @@ SER_DESC = {}
 for s, v in comp.items():
     d = desc.get((v['parts'] or v['m1'])[0], '')
     SER_DESC[s] = re.sub(r'^\d\d\s+', '', re.sub(r'\b\d\d\s+(?=(BT|MJ|MP|FP|MAORB)\b)', '', d)).replace(' (Body)', '')
-n_out = 230 + len(tg_rows) + len(single_rows) + 1 + len(grp[G_4005]) + len(grp[G_FL])
-assert n_out == 291 - len(LEFT_OUT), n_out
+n_out = len(grp[G_COMP]) + len(tg_rows) + len(single_rows) + 1 + len(grp[G_4005]) + len(grp[G_FL])
 
 
 def dashes(ps):
@@ -138,28 +129,29 @@ S = [Paragraph('Parts we have no dimensions for', st['title']),
                'same column names as your parts file.', st['p']),
      Spacer(1, 4),
      table(['', 'What', 'Parts', 'What we need'], [
-         ['1', 'Compression (bite-type) fittings, nuts and sleeves', '230', f'A drawing per series ({len(comp)} series); which standard the bite-type port follows'],
+         ['1', 'Compression (bite-type) fittings', str(len(grp[G_COMP])), f'A drawing per series ({len(comp)} series); which standard the bite-type port follows'],
          ['2', 'Test-gauge tees TGT-6504 / TGT-FS2406', str(len(tg_rows)), 'A drawing per series (2 series)'],
          ['3', 'Single sizes nobody prints', str(len(single_rows)), 'The values listed per part (or a drawing)'],
-         ['4', 'Flange O-rings 4005', str(len(grp[G_4005])), 'Code 61 or 62; AS568 size or I.D. x cross-section; material, hardness'],
+         ['4', 'Flange O-rings 4005', str(len(grp[G_4005])), 'Code 61 or 62; I.D. x cross-section; material, hardness'],
          ['5', 'Flareless nut 0618 / sleeve 0619', str(len(grp[G_FL])), 'Are they Brennan\'s V0318 / V0319? If not: sizes and shape'],
          ['6', 'FS0319-24 sleeve: three printed values disagree', '1', 'Which outside diameter is right'],
      ], [0.25 * inch, 2.6 * inch, 0.5 * inch, W - 3.35 * inch]),
      Spacer(1, 8),
-     Paragraph('Not on this list: parts that Air-Way, Brennan or your parts file already print, and parts we are waiting to download '
-               'from Brennan\'s 3D files. We are treating the kits 1901 / 1902 / 1927 (30 parts) as out of scope; tell us if you need them '
+     Paragraph('Not on this list: parts that Air-Way, Brennan or your parts file already print, and parts Brennan has 3D models for '
+               f'(including {n_comp_brennan} of your compression fittings, and with them {n_comp_m1} body-only -M1 numbers). We are treating the kits 1901 / 1902 / 1927 (30 parts) as out of scope; tell us if you need them '
                'modelled.', st['p'])]
 
-S += [PageBreak(), Paragraph('1. Compression (bite-type) fittings - 230 parts', st['h1']),
-      Paragraph('No Air-Way series, and Brennan prints only its own V0318 / V0319 nut and sleeve. A "(Body)" part number (-M1) is, we assume, the '
-                'same body sold without the nut and sleeve, so each series needs one set of sizes. Please also tell us which standard the '
-                'bite-type port follows (thread, tube bore, the cone the sleeve bites into, port depth).', st['p']),
+S += [PageBreak(), Paragraph(f'1. Compression (bite-type) fittings - {len(grp[G_COMP])} parts', st['h1']),
+      Paragraph(f'Brennan has 3D models for {n_comp_brennan} of your compression part numbers (all nuts and sleeves and most fittings). '
+                f'A "(Body)" part number (-M1) is, we assume, the same body sold without the nut and sleeve - please confirm; on that '
+                f'basis those models also cover {n_comp_m1} of the -M1 numbers, and only these {len(grp[G_COMP])} remain. Air-Way has no '
+                'compression series. Please also tell us which '
+                'standard the bite-type port follows (thread, tube bore, the cone the sleeve bites into, port depth).', st['p']),
       table(['Series', 'Description (your file)', 'Sizes (dash numbers)', 'Parts'],
             [[s, SER_DESC[s], dashes(v['parts']) + (f'<br/><font color="#52606d">Body only (-M1): {dashes(v["m1"])}</font>' if v['m1'] else ''),
               str(len(v['parts']) + len(v['m1']))] for s, v in comp.items()],
             [0.6 * inch, 1.75 * inch, W - 2.85 * inch, 0.5 * inch]),
-      Paragraph('What we need per series: Overall Length (or M 1 / L 1 Size for elbows and tees), Hex Flat, Side IDs, Nut Hex, and for the '
-                'sleeve: length, outside diameter and the shape of its front edge.', st['p'])]
+      Paragraph('What we need per part: Overall Length (or M 1 / L 1 Size for elbows and tees), Hex Flat, Side 1 ID, Side 2 ID.', st['p'])]
 
 S += [Paragraph('2. Test-gauge tees - 12 parts', st['h1']),
       Paragraph('Swivel unions with a -04 pipe test port. Air-Way\'s test points are a different (metric) part, and Brennan does not print these.', st['p']),
@@ -170,9 +162,9 @@ S += [PageBreak(), Paragraph(f'3. Single sizes nobody prints - {len(single_rows)
                 'need use your parts file\'s column names (M 1 / L 1 Size = the two leg lengths of an elbow).', st['p']),
       table(['Part number', 'Description (your file)', 'What we need'], single_rows, [1.45 * inch, 2.35 * inch, W - 3.8 * inch])]
 
-S += [Paragraph('4. Flange O-rings 4005 - 9 parts', st['h1']),
-      Paragraph(f'{", ".join(grp[G_4005])}. Are they for code 61 or code 62 flanges? Which AS568 size is each one (or its inside diameter and '
-                'cross-section)? Material and hardness. (Also on the O-ring tab of the earlier size request, attached.)', st['p']),
+S += [Paragraph(f'4. Flange O-ring {", ".join(grp[G_4005])}', st['h1']),
+      Paragraph('Brennan models the other eight 4005 sizes, not this one. Code 61 or code 62 flange? Inside diameter and cross-section, '
+                'material and hardness.', st['p']),
       Paragraph('5. Flareless nut 0618 and sleeve 0619 - 4 parts', st['h1']),
       Paragraph(f'{", ".join(grp[G_FL])}. Brennan sells a flareless nut V0318 and sleeve V0319 in the same sizes. Are yours the same parts? '
                 'If yes, we use Brennan\'s 3D files; if not, please send length, hex, inside and outside diameters and the shape (a drawing or '
@@ -245,13 +237,15 @@ files, and your website parts file. {n_out} of them appear in none of these with
 The attached PDF lists them; the attached workbook has a yellow cell for each value we need, using your parts file's column names.
 
 In short:
-1. Compression (bite-type) fittings, nuts and sleeves - 230 part numbers in {len(comp)} series. One supplier drawing per series with its size
-   table would cover them. Which standard does the bite-type port follow? And is each "(Body)" -M1 part the same body without the nut
-   and sleeve?
+1. Compression (bite-type) fittings - {len(grp[G_COMP])} part numbers in {len(comp)} series. Brennan's 3D models cover
+   {n_comp_brennan} of your compression fittings, and {n_comp_m1} more body-only numbers if each "(Body)" -M1 part is the
+   same body without the nut and sleeve - is it? Supplier drawings would cover the rest. Which standard does the
+   bite-type port follow?
 2. Test-gauge tees TGT-6504 / TGT-FS2406 - 12 parts, two series.
-3. {len(single_rows)} single sizes that no catalog prints (the rest of each series is modelled), e.g. 1405-20-24, 2403-06-02, the
-   2700 bulkhead reducers and the 6500 / 6502 forged reducers. For the four 2700-LN parts: are they the same as the plain 2700 part?
-4. 4005 flange O-rings (9): code 61 or 62, AS568 size (or I.D. x cross-section), material and hardness.
+3. {len(single_rows)} single sizes that no catalog prints and Brennan does not model (the rest of each series is modelled), e.g.
+   1405-20-24, 2403-06-02, the 2700 bulkhead reducers, the 6500 / 6502 forged reducers and the FS0304-C cap assemblies. For the four
+   2700-LN parts: are they the same as the plain 2700 part?
+4. Flange O-ring 4005-48: code 61 or 62, I.D. x cross-section, material and hardness (Brennan models the other eight sizes).
 5. Flareless nut 0618 and sleeve 0619 (4): are they the same parts as Brennan's V0318 / V0319?
 6. FS0319-24 sleeve: Air-Way prints 1.71, Brennan 1.910, Air-Way's own -24 female face-seal end 2.00 - which is right?
 
@@ -266,5 +260,5 @@ Attachments:
 - OMi_parts_without_dimensions_{DATE}.xlsx
 """
 open(os.path.join(OUT, f'Email_to_Triveni_{DATE}.txt'), 'w', encoding='utf-8').write(EMAIL)
-print('parts on the list:', n_out, '| left out:', LEFT_OUT, '| singles', len(single_rows), '| TG', len(tg_rows), '| compression series', len(comp))
+print('parts on the list:', n_out, '| compression', len(grp[G_COMP]), 'of 230 (Brennan', n_comp_brennan, '+ M1', n_comp_m1, ')', '| singles', len(single_rows), '| TG', len(tg_rows), '| compression series', len(comp))
 print(PDF); print(XLSX)

@@ -24,3 +24,10 @@ Nothing here changes a review table, a macro or a master. Re-run any script with
   OMi to confirm), the remaining PC "questions for OMi" 6-9 (FS2408 hole, 6420-12-12 body, bent-tube cross-check, 2026-10-09 chase).
 - The unsent 2026-10-14 size request (`10_DRAWINGS/for_OMi_2026-10-14/`, O-rings / bent tubes / flareless) overlaps items 4-5; send one
   or merge.
+
+## Update 2026-10-21 (later): Brennan CAD portal
+After `tools/_out/partcommunity_20261021` (Brennan has a CAD model for 693 of the 1,022): the STEP checklist marks the 23 files Brennan
+does not have, and the OMi package is rebuilt with the rule "no catalog prints it AND Brennan has no CAD model" (`triveni_package.py`
+docstring): **140 parts** - compression 70 (of 230; Brennan models 89 fittings, + 71 -M1 bodies if OMi confirms body = fitting body),
+test gauge 12, 52 single sizes (incl. 9 FS0304-C-xx-ASY, 1504-32-32-FG, 5503 x5, 5652-32 x4, 6566-16-16-FG, 6806-12-08, 5404-L x3),
+4005-48, 0618 / 0619 (= V0318 / V0319?), FS0319-24.

@@ -1,241 +1,241 @@
-priority,group,requested,brennan_pn,file_name,have,duplicate,in_brennan_catalog,frees_parts,frees,group_note
-1,Quick wins,5405-24-24,5405-24-24,BRENNAN_5405-24-24.stp,,,TFA p12,0,,together free 18 parts (5405 family)
-1,Quick wins,5405-32-32,5405-32-32,BRENNAN_5405-32-32.stp,,,TFA p12,0,,together free 18 parts (5405 family)
-2,ORFS shared shape files,FS2403-04-04,FS2403-04-04,BRENNAN_FS2403-04-04.stp,,,ORFS p3,1,FS2403-04-04,each serves several FS masters
-2,ORFS shared shape files,FS2403-06-06,FS2403-06-06,BRENNAN_FS2403-06-06.stp,,,ORFS p3,1,FS2403-06-06,each serves several FS masters
-2,ORFS shared shape files,FS2403-10-10,FS2403-10-10,BRENNAN_FS2403-10-10.stp,,,ORFS p3,1,FS2403-10-10,each serves several FS masters
-2,ORFS shared shape files,FS2403-12-12,FS2403-12-12,BRENNAN_FS2403-12-12.stp,,,ORFS p3,1,FS2403-12-12,each serves several FS masters
-2,ORFS shared shape files,FS2403-16-16,FS2403-16-16,BRENNAN_FS2403-16-16.stp,,,ORFS p3,1,FS2403-16-16,each serves several FS masters
-2,ORFS shared shape files,FS2403-20-20,FS2403-20-20,BRENNAN_FS2403-20-20.stp,,,ORFS p3,1,FS2403-20-20,each serves several FS masters
-2,ORFS shared shape files,FS2701-04-04-FG,FS2701-04-04-FG,BRENNAN_FS2701-04-04-FG.stp,,,ORFS p8,1,FS2701-04-04-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-06-06-FG,FS2701-06-06-FG,BRENNAN_FS2701-06-06-FG.stp,,,ORFS p8,1,FS2701-06-06-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-10-10-FG,FS2701-10-10-FG,BRENNAN_FS2701-10-10-FG.stp,,,ORFS p8,1,FS2701-10-10-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-12-12-FG,FS2701-12-12-FG,BRENNAN_FS2701-12-12-FG.stp,,,ORFS p8,1,FS2701-12-12-FG,each serves several FS masters
-2,ORFS shared shape files,FS2701-16-16-FG,FS2701-16-16-FG,BRENNAN_FS2701-16-16-FG.stp,,,ORFS p8,1,FS2701-16-16-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-04-04-NWO-FG,FS6801-04-04-NWO-FG,BRENNAN_FS6801-04-04-NWO-FG.stp,,,ORFS p10,1,FS6801-04-04-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-06-06-NWO-FG,FS6801-06-06-NWO-FG,BRENNAN_FS6801-06-06-NWO-FG.stp,,,ORFS p10,1,FS6801-06-06-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-10-10-NWO-FG,FS6801-10-10-NWO-FG,BRENNAN_FS6801-10-10-NWO-FG.stp,,,ORFS p10,1,FS6801-10-10-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-12-12-NWO-FG,FS6801-12-12-NWO-FG,BRENNAN_FS6801-12-12-NWO-FG.stp,,,ORFS p10,1,FS6801-12-12-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-16-16-NWO-FG,FS6801-16-16-NWO-FG,BRENNAN_FS6801-16-16-NWO-FG.stp,,,ORFS p10,1,FS6801-16-16-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-20-20-NWO-FG,FS6801-20-20-NWO-FG,BRENNAN_FS6801-20-20-NWO-FG.stp,,,ORFS p10,1,FS6801-20-20-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6801-24-24-NWO-FG,FS6801-24-24-NWO-FG,BRENNAN_FS6801-24-24-NWO-FG.stp,,,ORFS p10,1,FS6801-24-24-NWO-FG,each serves several FS masters
-2,ORFS shared shape files,FS6500-24-24-FG,FS6500-24-24-FG,BRENNAN_FS6500-24-24-FG.stp,,,ORFS p9,1,FS6500-24-24-FG,each serves several FS masters
-2,ORFS shared shape files,FS6502-06-06-FG,FS6502-06-06-FG,BRENNAN_FS6502-06-06-FG.stp,,,ORFS p9,1,FS6502-06-06-FG,each serves several FS masters
-2,ORFS shared shape files,FS2406-08-04,FS2406-08-04,BRENNAN_FS2406-08-04.stp,,,ORFS p4,1,FS2406-08-04,each serves several FS masters
-2,ORFS shared shape files,FS0304-C-08,FS0304-C-08,BRENNAN_FS0304-C-08.stp,,,ORFS p19,1,FS0304-C-08-ASY,each serves several FS masters
-2,ORFS shared shape files,FS2503-08-06-FG,FS2503-08-06-FG,BRENNAN_FS2503-08-06-FG.stp,,,ORFS p8,0,,each serves several FS masters
-2,ORFS shared shape files,FS6809-06-06-NWO-FG,FS6809-06-06-NWO-FG,BRENNAN_FS6809-06-06-NWO-FG.stp,,,ORFS p11,1,FS6809-06-06-NWO-FG,each serves several FS masters
-3,ORFS one file per part,FS1700-12-12,FS1700-12-12,BRENNAN_FS1700-12-12.stp,,,FLANGE p4,1,FS1700-12-12,
-3,ORFS one file per part,FS1700-16-16,FS1700-16-16,BRENNAN_FS1700-16-16.stp,,,FLANGE p4,1,FS1700-16-16,
-3,ORFS one file per part,FS1700-20-20,FS1700-20-20,BRENNAN_FS1700-20-20.stp,,,FLANGE p4,1,FS1700-20-20,
-3,ORFS one file per part,FS1700-24-24,FS1700-24-24,BRENNAN_FS1700-24-24.stp,,,FLANGE p4,1,FS1700-24-24,
-3,ORFS one file per part,FS1800-12-12,FS1800-12-12,BRENNAN_FS1800-12-12.stp,,,FLANGE p4,1,FS1800-12-12,
-3,ORFS one file per part,FS1800-16-16,FS1800-16-16,BRENNAN_FS1800-16-16.stp,,,FLANGE p4,1,FS1800-16-16,
-3,ORFS one file per part,FS1800-20-20,FS1800-20-20,BRENNAN_FS1800-20-20.stp,,,FLANGE p4,1,FS1800-20-20,
-3,ORFS one file per part,FS1800-24-24,FS1800-24-24,BRENNAN_FS1800-24-24.stp,,,FLANGE p4,1,FS1800-24-24,
-3,ORFS one file per part,FS1704-12-12-FG,FS1704-12-12-FG,BRENNAN_FS1704-12-12-FG.stp,,,FLANGE p6,1,FS1704-12-12-FG,
-3,ORFS one file per part,FS1704-16-16-FG,FS1704-16-16-FG,BRENNAN_FS1704-16-16-FG.stp,,,FLANGE p6,1,FS1704-16-16-FG,
-3,ORFS one file per part,FS1704-20-20-FG,FS1704-20-20-FG,BRENNAN_FS1704-20-20-FG.stp,,,FLANGE p6,1,FS1704-20-20-FG,
-3,ORFS one file per part,FS1704-24-24-FG,FS1704-24-24-FG,BRENNAN_FS1704-24-24-FG.stp,,,FLANGE p6,1,FS1704-24-24-FG,
-3,ORFS one file per part,FS1804-12-12-FG,FS1804-12-12-FG,BRENNAN_FS1804-12-12-FG.stp,,,FLANGE p7,1,FS1804-12-12-FG,
-3,ORFS one file per part,FS1804-16-16-FG,FS1804-16-16-FG,BRENNAN_FS1804-16-16-FG.stp,,,FLANGE p7,1,FS1804-16-16-FG,
-3,ORFS one file per part,FS1804-20-20-FG,FS1804-20-20-FG,BRENNAN_FS1804-20-20-FG.stp,,,FLANGE p7,1,FS1804-20-20-FG,
-3,ORFS one file per part,FS1804-24-24-FG,FS1804-24-24-FG,BRENNAN_FS1804-24-24-FG.stp,,,FLANGE p7,1,FS1804-24-24-FG,
-3,ORFS one file per part,FS2406-12-16,FS2406-12-16,BRENNAN_FS2406-12-16.stp,,,ORFS p4,1,FS2406-12-16,
-3,ORFS one file per part,FS2406-16-20,FS2406-16-20,BRENNAN_FS2406-16-20.stp,,,ORFS p4,1,FS2406-16-20,
-3,ORFS one file per part,FS6400-10-06-O,FS6400-10-06-O,BRENNAN_FS6400-10-06-O.stp,,,ORFS p5,1,FS6400-10-06-O,
-3,ORFS one file per part,FS6400-12-20-O,FS6400-12-20-O,BRENNAN_FS6400-12-20-O.stp,,,ORFS p5,1,FS6400-12-20-O,
-3,ORFS one file per part,FS6565-10-10,FS6565-10-10,BRENNAN_FS6565-10-10.stp,,,ORFS p7,1,FS6565-10-10,
-3,ORFS one file per part,FS6565-16-16,FS6565-16-16,BRENNAN_FS6565-16-16.stp,,,ORFS p7,1,FS6565-16-16,
-3,ORFS one file per part,FS7202-06-04-NWO-FG,FS7202-06-04-NWO-FG,BRENNAN_FS7202-06-04-NWO-FG.stp,,,ORFS p11,1,FS7202-06-04-NWO-FG,
-4,Code 62 heads,1824-12,1824-12,BRENNAN_1824-12.stp,,,FLANGE p7,1,1824-12,not needed if the user says yes to Q2 of the PC list
-4,Code 62 heads,1824-16,1824-16,BRENNAN_1824-16.stp,,,FLANGE p7,1,1824-16,not needed if the user says yes to Q2 of the PC list
-4,Code 62 heads,1824-20,1824-20,BRENNAN_1824-20.stp,,,FLANGE p7,1,1824-20,not needed if the user says yes to Q2 of the PC list
-4,Code 62 heads,1824-24,1824-24,BRENNAN_1824-24.stp,,,FLANGE p7,1,1824-24,not needed if the user says yes to Q2 of the PC list
-4,Code 62 heads,1824-32,1824-32,BRENNAN_1824-32.stp,,,FLANGE p7,1,1824-32,not needed if the user says yes to Q2 of the PC list
-5,Pilots (one shape file per family),6801-L-08-08-NWO-FG,6801-L-08-08-NWO-FG,BRENNAN_6801-L-08-08-NWO-FG.stp,,,TFA p39,1,6801-L-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6801-LL-08-08-NWO-FG,6801-LL-08-08-NWO-FG,BRENNAN_6801-LL-08-08-NWO-FG.stp,,,TFA p39,1,6801-LL-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6805-08-08-NWO-FG,6805-08-08-NWO-FG,BRENNAN_6805-08-08-NWO-FG.stp,,,TFA p42,1,6805-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6806-08-08-NWO-FG,6806-08-08-NWO-FG,BRENNAN_6806-08-08-NWO-FG.stp,,,TFA p43,1,6806-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6807-08-08-NWO-FG,6807-08-08-NWO-FG,BRENNAN_6807-08-08-NWO-FG.stp,,,TFA p43,1,6807-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6809-10-10-NWO-FG,6809-10-10-NWO-FG,BRENNAN_6809-10-10-NWO-FG.stp,,,TFA p44,1,6809-10-10-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6815-08-08-NWO-FG,6815-08-08-NWO-FG,BRENNAN_6815-08-08-NWO-FG.stp,,,TFA p45,1,6815-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6901-06-08-NWO-FG,6901-06-08-NWO-FG,BRENNAN_6901-06-08-NWO-FG.stp,,,TFA p45,1,6901-06-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6902-08-08-NWO-FG,6902-08-08-NWO-FG,BRENNAN_6902-08-08-NWO-FG.stp,,,TFA p46,1,6902-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6832-08-08-08-NWO-FG,6832-08-08-08-NWO-FG,BRENNAN_6832-08-08-08-NWO-FG.stp,,,TFA p61,1,6832-08-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6835-08-08-08-NWO-FG,6835-08-08-08-NWO-FG,BRENNAN_6835-08-08-08-NWO-FG.stp,,,TFA p61,1,6835-08-08-08-NWO-FG,each unlocks its whole family
-5,Pilots (one shape file per family),6900-08-08-O,6900-08-08-O,BRENNAN_6900-08-08-O.stp,,,TFA p18,1,6900-08-08-O,each unlocks its whole family
-6,"Forged parts, one file per size",6801-08-04,6801-08-04-NWO-FG,BRENNAN_6801-08-04-NWO-FG.stp,,,TFA p40,1,6801-08-04-NWO-FG,
-6,"Forged parts, one file per size",6801-08-16,6801-08-16-NWO-FG,BRENNAN_6801-08-16-NWO-FG.stp,,,TFA p41,1,6801-08-16-NWO-FG,
-6,"Forged parts, one file per size",6801-12-20,6801-12-20-NWO-FG,BRENNAN_6801-12-20-NWO-FG.stp,,,TFA p41,1,6801-12-20-NWO-FG,
-6,"Forged parts, one file per size",6801-16-24,6801-16-24-NWO-FG,BRENNAN_6801-16-24-NWO-FG.stp,,,TFA p41,1,6801-16-24-NWO-FG,
-6,"Forged parts, one file per size",6801-24-16,6801-24-16-NWO-FG,BRENNAN_6801-24-16-NWO-FG.stp,,,TFA p41,1,6801-24-16-NWO-FG,
-6,"Forged parts, one file per size",6801-L-16-16,6801-L-16-16-NWO-FG,BRENNAN_6801-L-16-16-NWO-FG.stp,,,TFA p39,1,6801-L-16-16-NWO-FG,
-6,"Forged parts, one file per size",6801-L-20-20,6801-L-20-20-NWO-FG,BRENNAN_6801-L-20-20-NWO-FG.stp,,,TFA p39,1,6801-L-20-20-NWO-FG,
-6,"Forged parts, one file per size",6801-LL-12-12,6801-LL-12-12-NWO-FG,BRENNAN_6801-LL-12-12-NWO-FG.stp,,,TFA p39,1,6801-LL-12-12-NWO-FG,
-6,"Forged parts, one file per size",6801-LL-16-16,6801-LL-16-16-NWO-FG,BRENNAN_6801-LL-16-16-NWO-FG.stp,,,TFA p40,1,6801-LL-16-16-NWO-FG,
-6,"Forged parts, one file per size",6801-LL-20-20,6801-LL-20-20-NWO-FG,BRENNAN_6801-LL-20-20-NWO-FG.stp,,,TFA p40,1,6801-LL-20-20-NWO-FG,
-6,"Forged parts, one file per size",6802-06-10,6802-06-10-NWO-FG,BRENNAN_6802-06-10-NWO-FG.stp,,,TFA p41,1,6802-06-10-NWO-FG,
-6,"Forged parts, one file per size",6802-08-12,6802-08-12-NWO-FG,BRENNAN_6802-08-12-NWO-FG.stp,,,TFA p42,1,6802-08-12-NWO-FG,
-6,"Forged parts, one file per size",6803-08-08-06,6803-08-08-06-NWO-FG,BRENNAN_6803-08-08-06-NWO-FG.stp,,,TFA p59,1,6803-08-08-06-NWO-FG,
-6,"Forged parts, one file per size",6803-08-08-10,6803-08-08-10-NWO-FG,BRENNAN_6803-08-08-10-NWO-FG.stp,,,TFA p59,1,6803-08-08-10-NWO-FG,
-6,"Forged parts, one file per size",6803-24-24-24,6803-24-24-24-NWO-FG,BRENNAN_6803-24-24-24-NWO-FG.stp,,,TFA p59,1,6803-24-24-24-NWO-FG,
-6,"Forged parts, one file per size",6804-24-24-24,6804-24-24-24-NWO-FG,BRENNAN_6804-24-24-24-NWO-FG.stp,,,TFA p60,1,6804-24-24-24-NWO-FG,
-6,"Forged parts, one file per size",6810-12-12,6810-12-12-NWO-FG,BRENNAN_6810-12-12-NWO-FG.stp,,,TFA p44,1,6810-12-12-NWO-FG,
-6,"Forged parts, one file per size",6805-04-02,6805-04-02-NWO-FG,BRENNAN_6805-04-02-NWO-FG.stp,,,TFA p42,1,6805-04-02-NWO-FG,
-6,"Forged parts, one file per size",6805-04-04,6805-04-04-NWO-FG,BRENNAN_6805-04-04-NWO-FG.stp,,,TFA p42,1,6805-04-04-NWO-FG,
-6,"Forged parts, one file per size",6805-06-06,6805-06-06-NWO-FG,BRENNAN_6805-06-06-NWO-FG.stp,,,TFA p42,1,6805-06-06-NWO-FG,
-6,"Forged parts, one file per size",6805-10-08,6805-10-08-NWO-FG,BRENNAN_6805-10-08-NWO-FG.stp,,,TFA p42,1,6805-10-08-NWO-FG,
-6,"Forged parts, one file per size",6805-12-08,6805-12-08-NWO-FG,BRENNAN_6805-12-08-NWO-FG.stp,,,TFA p42,1,6805-12-08-NWO-FG,
-6,"Forged parts, one file per size",6805-16-12,6805-16-12-NWO-FG,BRENNAN_6805-16-12-NWO-FG.stp,,,TFA p42,1,6805-16-12-NWO-FG,
-6,"Forged parts, one file per size",6805-16-16,6805-16-16-NWO-FG,BRENNAN_6805-16-16-NWO-FG.stp,,,TFA p42,1,6805-16-16-NWO-FG,
-6,"Forged parts, one file per size",6805-20-20,6805-20-20-NWO-FG,BRENNAN_6805-20-20-NWO-FG.stp,,,TFA p42,1,6805-20-20-NWO-FG,
-6,"Forged parts, one file per size",6806-06-04,6806-06-04-NWO-FG,BRENNAN_6806-06-04-NWO-FG.stp,,,TFA p43,1,6806-06-04-NWO-FG,
-6,"Forged parts, one file per size",6806-06-06,6806-06-06-NWO-FG,BRENNAN_6806-06-06-NWO-FG.stp,,,TFA p43,1,6806-06-06-NWO-FG,
-6,"Forged parts, one file per size",6806-08-06,6806-08-06-NWO-FG,BRENNAN_6806-08-06-NWO-FG.stp,,,TFA p43,1,6806-08-06-NWO-FG,
-6,"Forged parts, one file per size",6806-10-08,6806-10-08-NWO-FG,BRENNAN_6806-10-08-NWO-FG.stp,,,TFA p43,1,6806-10-08-NWO-FG,
-6,"Forged parts, one file per size",6806-12-08,6806-12-08,BRENNAN_6806-12-08.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,6806-12-08-NWO-FG,
-6,"Forged parts, one file per size",6806-12-12,6806-12-12-NWO-FG,BRENNAN_6806-12-12-NWO-FG.stp,,,TFA p43,1,6806-12-12-NWO-FG,
-6,"Forged parts, one file per size",6806-16-16,6806-16-16-NWO-FG,BRENNAN_6806-16-16-NWO-FG.stp,,,TFA p43,1,6806-16-16-NWO-FG,
-6,"Forged parts, one file per size",6806-20-20,6806-20-20-NWO-FG,BRENNAN_6806-20-20-NWO-FG.stp,,,TFA p43,1,6806-20-20-NWO-FG,
-6,"Forged parts, one file per size",6806-24-24,6806-24-24-NWO-FG,BRENNAN_6806-24-24-NWO-FG.stp,,,TFA p43,1,6806-24-24-NWO-FG,
-6,"Forged parts, one file per size",6807-04-04,6807-04-04-NWO-FG,BRENNAN_6807-04-04-NWO-FG.stp,,,TFA p43,1,6807-04-04-NWO-FG,
-6,"Forged parts, one file per size",6807-08-06,6807-08-06-NWO-FG,BRENNAN_6807-08-06-NWO-FG.stp,,,TFA p43,1,6807-08-06-NWO-FG,
-6,"Forged parts, one file per size",6807-12-12,6807-12-12-NWO-FG,BRENNAN_6807-12-12-NWO-FG.stp,,,TFA p43,1,6807-12-12-NWO-FG,
-6,"Forged parts, one file per size",6809-12-12,6809-12-12-NWO-FG,BRENNAN_6809-12-12-NWO-FG.stp,,,TFA p44,1,6809-12-12-NWO-FG,
-6,"Forged parts, one file per size",6809-16-16,6809-16-16-NWO-FG,BRENNAN_6809-16-16-NWO-FG.stp,,,TFA p44,1,6809-16-16-NWO-FG,
-6,"Forged parts, one file per size",6809-20-20,6809-20-20-NWO-FG,BRENNAN_6809-20-20-NWO-FG.stp,,,TFA p44,1,6809-20-20-NWO-FG,
-6,"Forged parts, one file per size",6815-04-04,6815-04-04-NWO-FG,BRENNAN_6815-04-04-NWO-FG.stp,,,TFA p45,1,6815-04-04-NWO-FG,
-6,"Forged parts, one file per size",6815-06-06,6815-06-06-NWO-FG,BRENNAN_6815-06-06-NWO-FG.stp,,,TFA p45,1,6815-06-06-NWO-FG,
-6,"Forged parts, one file per size",6815-10-10,6815-10-10-NWO-FG,BRENNAN_6815-10-10-NWO-FG.stp,,,TFA p45,1,6815-10-10-NWO-FG,
-6,"Forged parts, one file per size",6815-12-12,6815-12-12-NWO-FG,BRENNAN_6815-12-12-NWO-FG.stp,,,TFA p45,1,6815-12-12-NWO-FG,
-6,"Forged parts, one file per size",6815-16-16,6815-16-16-NWO-FG,BRENNAN_6815-16-16-NWO-FG.stp,,,TFA p45,1,6815-16-16-NWO-FG,
-6,"Forged parts, one file per size",6832-04-04-04,6832-04-04-04-NWO-FG,BRENNAN_6832-04-04-04-NWO-FG.stp,,,TFA p61,1,6832-04-04-04-NWO-FG,
-6,"Forged parts, one file per size",6832-06-06-06,6832-06-06-06-NWO-FG,BRENNAN_6832-06-06-06-NWO-FG.stp,,,TFA p61,1,6832-06-06-06-NWO-FG,
-6,"Forged parts, one file per size",6832-16-16-16,6832-16-16-16-NWO-FG,BRENNAN_6832-16-16-16-NWO-FG.stp,,,TFA p61,1,6832-16-16-16-NWO-FG,
-6,"Forged parts, one file per size",6835-04-04-04,6835-04-04-04-NWO-FG,BRENNAN_6835-04-04-04-NWO-FG.stp,,,TFA p61,1,6835-04-04-04-NWO-FG,
-6,"Forged parts, one file per size",6835-06-06-06,6835-06-06-06-NWO-FG,BRENNAN_6835-06-06-06-NWO-FG.stp,,,TFA p61,1,6835-06-06-06-NWO-FG,
-6,"Forged parts, one file per size",6835-12-12-12,6835-12-12-12-NWO-FG,BRENNAN_6835-12-12-12-NWO-FG.stp,,,TFA p61,1,6835-12-12-12-NWO-FG,
-6,"Forged parts, one file per size",6901-04-04,6901-04-04-NWO-FG,BRENNAN_6901-04-04-NWO-FG.stp,,,TFA p45,1,6901-04-04-NWO-FG,
-6,"Forged parts, one file per size",6901-04-06,6901-04-06-NWO-FG,BRENNAN_6901-04-06-NWO-FG.stp,,,TFA p45,1,6901-04-06-NWO-FG,
-6,"Forged parts, one file per size",6901-10-12,6901-10-12-NWO-FG,BRENNAN_6901-10-12-NWO-FG.stp,,,TFA p45,1,6901-10-12-NWO-FG,
-6,"Forged parts, one file per size",6901-12-06,6901-12-06-NWO-FG,BRENNAN_6901-12-06-NWO-FG.stp,,,TFA p45,1,6901-12-06-NWO-FG,
-6,"Forged parts, one file per size",6901-12-08,6901-12-08-NWO-FG,BRENNAN_6901-12-08-NWO-FG.stp,,,TFA p45,1,6901-12-08-NWO-FG,
-6,"Forged parts, one file per size",6901-12-12,6901-12-12-NWO-FG,BRENNAN_6901-12-12-NWO-FG.stp,,,TFA p45,1,6901-12-12-NWO-FG,
-6,"Forged parts, one file per size",6901-12-16,6901-12-16-NWO-FG,BRENNAN_6901-12-16-NWO-FG.stp,,,TFA p45,1,6901-12-16-NWO-FG,
-6,"Forged parts, one file per size",6901-16-12,6901-16-12-NWO-FG,BRENNAN_6901-16-12-NWO-FG.stp,,,TFA p46,1,6901-16-12-NWO-FG,
-6,"Forged parts, one file per size",6901-16-16,6901-16-16-NWO-FG,BRENNAN_6901-16-16-NWO-FG.stp,,,TFA p46,1,6901-16-16-NWO-FG,
-6,"Forged parts, one file per size",6901-20-16,6901-20-16-NWO-FG,BRENNAN_6901-20-16-NWO-FG.stp,,,TFA p46,1,6901-20-16-NWO-FG,
-6,"Forged parts, one file per size",6901-20-20,6901-20-20-NWO-FG,BRENNAN_6901-20-20-NWO-FG.stp,,,TFA p46,1,6901-20-20-NWO-FG,
-6,"Forged parts, one file per size",6901-24-24,6901-24-24-NWO-FG,BRENNAN_6901-24-24-NWO-FG.stp,,,TFA p46,1,6901-24-24-NWO-FG,
-6,"Forged parts, one file per size",6901-32-32,6901-32-32-NWO-FG,BRENNAN_6901-32-32-NWO-FG.stp,,,TFA p46,1,6901-32-32-NWO-FG,
-6,"Forged parts, one file per size",6902-04-04,6902-04-04-NWO-FG,BRENNAN_6902-04-04-NWO-FG.stp,,,TFA p46,1,6902-04-04-NWO-FG,
-6,"Forged parts, one file per size",6902-06-04,6902-06-04-NWO-FG,BRENNAN_6902-06-04-NWO-FG.stp,,,TFA p46,1,6902-06-04-NWO-FG,
-6,"Forged parts, one file per size",6902-06-06,6902-06-06-NWO-FG,BRENNAN_6902-06-06-NWO-FG.stp,,,TFA p46,1,6902-06-06-NWO-FG,
-6,"Forged parts, one file per size",6902-08-06,6902-08-06-NWO-FG,BRENNAN_6902-08-06-NWO-FG.stp,,,TFA p46,1,6902-08-06-NWO-FG,
-6,"Forged parts, one file per size",6902-10-08,6902-10-08-NWO-FG,BRENNAN_6902-10-08-NWO-FG.stp,,,TFA p46,1,6902-10-08-NWO-FG,
-6,"Forged parts, one file per size",6902-10-12,6902-10-12-NWO-FG,BRENNAN_6902-10-12-NWO-FG.stp,,,TFA p46,1,6902-10-12-NWO-FG,
-6,"Forged parts, one file per size",6902-16-16,6902-16-16-NWO-FG,BRENNAN_6902-16-16-NWO-FG.stp,,,TFA p46,1,6902-16-16-NWO-FG,
-6,"Forged parts, one file per size",6902-24-24,6902-24-24-NWO-FG,BRENNAN_6902-24-24-NWO-FG.stp,,,TFA p46,1,6902-24-24-NWO-FG,
-6,"Forged parts, one file per size",5602-02-02-02,5602-02-02-02-FG,BRENNAN_5602-02-02-02-FG.stp,,,TFA p55,1,5602-02-02-02-FG,
-6,"Forged parts, one file per size",5602-06-06-06,5602-06-06-06-FG,BRENNAN_5602-06-06-06-FG.stp,,,TFA p55,1,5602-06-06-06-FG,
-6,"Forged parts, one file per size",5602-12-12-12,5602-12-12-12-FG,BRENNAN_5602-12-12-12-FG.stp,,,TFA p55,1,5602-12-12-12-FG,
-6,"Forged parts, one file per size",5602-16-16-16,5602-16-16-16-FG,BRENNAN_5602-16-16-16-FG.stp,,,TFA p55,1,5602-16-16-16-FG,
-6,"Forged parts, one file per size",5602-20-20-20,5602-20-20-20-FG,BRENNAN_5602-20-20-20-FG.stp,,,TFA p55,1,5602-20-20-20-FG,
-6,"Forged parts, one file per size",5602-24-24-24,5602-24-24-24-FG,BRENNAN_5602-24-24-24-FG.stp,,,TFA p55,1,5602-24-24-24-FG,
-6,"Forged parts, one file per size",5602-32-32-32,5602-32-32-32-FG,BRENNAN_5602-32-32-32-FG.stp,,,TFA p55,1,5602-32-32-32-FG,
-6,"Forged parts, one file per size",5604-02-02-02,5604-02-02-02-FG,BRENNAN_5604-02-02-02-FG.stp,,,TFA p56,1,5604-02-02-02-FG,
-6,"Forged parts, one file per size",5604-12-12-12,5604-12-12-12-FG,BRENNAN_5604-12-12-12-FG.stp,,,TFA p56,1,5604-12-12-12-FG,
-6,"Forged parts, one file per size",5604-16-16-16,5604-16-16-16-FG,BRENNAN_5604-16-16-16-FG.stp,,,TFA p56,1,5604-16-16-16-FG,
-6,"Forged parts, one file per size",5604-20-20-20,5604-20-20-20-FG,BRENNAN_5604-20-20-20-FG.stp,,,TFA p56,1,5604-20-20-20-FG,
-6,"Forged parts, one file per size",5604-32-32-32,5604-32-32-32-FG,BRENNAN_5604-32-32-32-FG.stp,,,TFA p56,1,5604-32-32-32-FG,
-6,"Forged parts, one file per size",5605-02-02-02,5605-02-02-02-FG,BRENNAN_5605-02-02-02-FG.stp,,,TFA p56,1,5605-02-02-02-FG,
-6,"Forged parts, one file per size",5605-12-12-12,5605-12-12-12-FG,BRENNAN_5605-12-12-12-FG.stp,,,TFA p56,1,5605-12-12-12-FG,
-6,"Forged parts, one file per size",5605-16-16-16,5605-16-16-16-FG,BRENNAN_5605-16-16-16-FG.stp,,,TFA p56,1,5605-16-16-16-FG,
-6,"Forged parts, one file per size",5605-20-20-20,5605-20-20-20-FG,BRENNAN_5605-20-20-20-FG.stp,,,TFA p56,1,5605-20-20-20-FG,
-6,"Forged parts, one file per size",5605-32-32-32,5605-32-32-32-FG,BRENNAN_5605-32-32-32-FG.stp,,,TFA p56,1,5605-32-32-32-FG,
-6,"Forged parts, one file per size",5505-02-02,5505-02-02-FG,BRENNAN_5505-02-02-FG.stp,,,TFA p32,1,5505-02-02-FG,
-6,"Forged parts, one file per size",5505-06-06,5505-06-06-FG,BRENNAN_5505-06-06-FG.stp,,,TFA p32,1,5505-06-06-FG,
-6,"Forged parts, one file per size",5505-12-12,5505-12-12-FG,BRENNAN_5505-12-12-FG.stp,,,TFA p33,1,5505-12-12-FG,
-6,"Forged parts, one file per size",5505-16-16,5505-16-16-FG,BRENNAN_5505-16-16-FG.stp,,,TFA p33,1,5505-16-16-FG,
-6,"Forged parts, one file per size",5503-04-02,5503-04-02,BRENNAN_5503-04-02.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-04-02-FG,
-6,"Forged parts, one file per size",5503-06-04,5503-06-04,BRENNAN_5503-06-04.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-06-04-FG,
-6,"Forged parts, one file per size",5503-08-06,5503-08-06,BRENNAN_5503-08-06.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-08-06-FG,
-6,"Forged parts, one file per size",5503-12-08,5503-12-08,BRENNAN_5503-12-08.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-12-08-FG,
-6,"Forged parts, one file per size",5503-16-12,5503-16-12,BRENNAN_5503-16-12.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-16-12-FG,
-6,"Forged parts, one file per size",5504-32-32,5504-32-32-FG,BRENNAN_5504-32-32-FG.stp,,,TFA p32,1,5504-32-32-FG,
-6,"Forged parts, one file per size",5652-32-32-32-32,5652-32-32-32-32,BRENNAN_5652-32-32-32-32.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5652-32-32-32-32-FG,
-6,"Forged parts, one file per size",6503-06-06,6503-06-06-FG,BRENNAN_6503-06-06-FG.stp,,,TFA p38,1,6503-06-06-FG,
-6,"Forged parts, one file per size",6503-16-16,6503-16-16,BRENNAN_6503-16-16.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,6503-16-16-FG,
-6,"Forged parts, one file per size",6603-16-16-16,6603-16-16-16-FG,BRENNAN_6603-16-16-16-FG.stp,,,TFA p58,1,6603-16-16-16-FG,
-6,"Forged parts, one file per size",6606-12-12-12,6606-12-12-12-FG,BRENNAN_6606-12-12-12-FG.stp,,,TFA p58,1,6606-12-12-12-FG,
-6,"Forged parts, one file per size",6566-16-16,6566-16-16,BRENNAN_6566-16-16.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,6566-16-16-FG,
-6,"Forged parts, one file per size",1504-24-24,1504-24-24-FG,BRENNAN_1504-24-24-FG.stp,,,TFA p22,1,1504-24-24-FG,
-6,"Forged parts, one file per size",1504-32-32,1504-32-32,BRENNAN_1504-32-32.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,1504-32-32-FG,
-6,"Forged parts, one file per size",2505-16-16,2505-16-16-FG,BRENNAN_2505-16-16-FG.stp,,,TFA p27,1,2505-16-16-FG,
-7,Flanges,1703-08-08-FG,1703-08-08-FG,BRENNAN_1703-08-08-FG.stp,,,FLANGE p4 (printed as 1703-08-08),2,1703-08-08-FG 1703-08-08-TUBE,
-7,Flanges,1703-12-12-FG,1703-12-12-FG,BRENNAN_1703-12-12-FG.stp,,,FLANGE p4,2,1703-12-12-FG 1703-12-12-TUBE,
-7,Flanges,1703-16-16-FG,1703-16-16-FG,BRENNAN_1703-16-16-FG.stp,,,FLANGE p4,2,1703-16-16-FG 1703-16-16-TUBE,
-7,Flanges,1703-20-20-FG,1703-20-20-FG,BRENNAN_1703-20-20-FG.stp,,,FLANGE p4,2,1703-20-20-FG 1703-20-20-TUBE,
-7,Flanges,1703-32-32-FG,1703-32-32-FG,BRENNAN_1703-32-32-FG.stp,,,FLANGE p4,2,1703-32-32-FG 1703-32-32-TUBE,
-7,Flanges,1704-08-08-FG,1704-08-08-FG,BRENNAN_1704-08-08-FG.stp,,,FLANGE p5,2,1704-08-08-FG 1704-08-08-TUBE,
-7,Flanges,1704-12-12-FG,1704-12-12-FG,BRENNAN_1704-12-12-FG.stp,,,FLANGE p5,2,1704-12-12-FG 1704-12-12-TUBE,
-7,Flanges,1704-16-16-FG,1704-16-16-FG,BRENNAN_1704-16-16-FG.stp,,,FLANGE p5,2,1704-16-16-FG 1704-16-16-TUBE,
-7,Flanges,1704-20-20-FG,1704-20-20-FG,BRENNAN_1704-20-20-FG.stp,,,FLANGE p5,2,1704-20-20-FG 1704-20-20-TUBE,
-7,Flanges,1704-32-32-FG,1704-32-32-FG,BRENNAN_1704-32-32-FG.stp,,,FLANGE p5,2,1704-32-32-FG 1704-32-32-TUBE,
-7,Flanges,1803-12-12-FG,1803-12-12-FG,BRENNAN_1803-12-12-FG.stp,,,FLANGE p5,2,1803-12-12-FG 1803-12-12-TUBE,
-7,Flanges,1803-16-16-FG,1803-16-16-FG,BRENNAN_1803-16-16-FG.stp,,,FLANGE p5,2,1803-16-16-FG 1803-16-16-TUBE,
-7,Flanges,1803-20-20-FG,1803-20-20-FG,BRENNAN_1803-20-20-FG.stp,,,FLANGE p5,2,1803-20-20-FG 1803-20-20-TUBE,
-7,Flanges,1803-24-24-FG,1803-24-24-FG,BRENNAN_1803-24-24-FG.stp,,,FLANGE p5,2,1803-24-24-FG 1803-24-24-TUBE,
-7,Flanges,1803-32-32-FG,1803-32-32-FG,BRENNAN_1803-32-32-FG.stp,,,FLANGE p5 (printed as 1803-32-32),2,1803-32-32-FG 1803-32-32-TUBE,
-7,Flanges,1804-12-12-FG,1804-12-12-FG,BRENNAN_1804-12-12-FG.stp,,,FLANGE p6,2,1804-12-12-FG 1804-12-12-TUBE,
-7,Flanges,1804-16-16-FG,1804-16-16-FG,BRENNAN_1804-16-16-FG.stp,,,FLANGE p6,2,1804-16-16-FG 1804-16-16-TUBE,
-7,Flanges,1804-20-20-FG,1804-20-20-FG,BRENNAN_1804-20-20-FG.stp,,,FLANGE p6,2,1804-20-20-FG 1804-20-20-TUBE,
-7,Flanges,1804-24-24-FG,1804-24-24-FG,BRENNAN_1804-24-24-FG.stp,,,FLANGE p6,2,1804-24-24-FG 1804-24-24-TUBE,
-7,Flanges,1804-32-32-FG,1804-32-32-FG,BRENNAN_1804-32-32-FG.stp,,,FLANGE p6,2,1804-32-32-FG 1804-32-32-TUBE,
-7,Flanges,1800-12-12,1800-12-12,BRENNAN_1800-12-12.stp,,,FLANGE p3,1,1800-12-12,
-7,Flanges,1800-12-16,1800-12-16,BRENNAN_1800-12-16.stp,,,FLANGE p3,1,1800-12-16,
-7,Flanges,1800-16-12,1800-16-12,BRENNAN_1800-16-12.stp,,,FLANGE p3,1,1800-16-12,
-7,Flanges,1800-16-16,1800-16-16,BRENNAN_1800-16-16.stp,,,FLANGE p3,1,1800-16-16,
-7,Flanges,1800-16-20,1800-16-20,BRENNAN_1800-16-20.stp,,,FLANGE p3,1,1800-16-20,
-7,Flanges,1800-16-24,1800-16-24,BRENNAN_1800-16-24.stp,,,FLANGE p3,1,1800-16-24,
-7,Flanges,1800-20-16,1800-20-16,BRENNAN_1800-20-16.stp,,,FLANGE p3,1,1800-20-16,
-7,Flanges,1800-20-20,1800-20-20,BRENNAN_1800-20-20.stp,,,FLANGE p3,1,1800-20-20,
-7,Flanges,1800-20-24,1800-20-24,BRENNAN_1800-20-24.stp,,,FLANGE p3,1,1800-20-24,
-7,Flanges,1800-24-20,1800-24-20,BRENNAN_1800-24-20.stp,,,FLANGE p3,1,1800-24-20,
-7,Flanges,1800-24-24,1800-24-24,BRENNAN_1800-24-24.stp,,,FLANGE p3,1,1800-24-24,
-7,Flanges,1800-32-32,1800-32-32,BRENNAN_1800-32-32.stp,,,FLANGE p3,1,1800-32-32,
-7,Flanges,1724-12,1724-12,BRENNAN_1724-12.stp,,,FLANGE p7,1,1724-12,
-7,Flanges,1724-16,1724-16,BRENNAN_1724-16.stp,,,FLANGE p7,1,1724-16,
-7,Flanges,1724-20,1724-20,BRENNAN_1724-20.stp,,,FLANGE p7,1,1724-20,
-7,Flanges,1724-24,1724-24,BRENNAN_1724-24.stp,,,FLANGE p7,1,1724-24,
-7,Flanges,1724-32,1724-32,BRENNAN_1724-32.stp,,,FLANGE p7,1,1724-32,
-7,Flanges,1724-40,1724-40,BRENNAN_1724-40.stp,,,FLANGE p7,1,1724-40,
-8,Plugs,6408-H02-O,6408-H02-O,BRENNAN_6408-H02-O.stp,,,TFA p67,1,6408-HHP-02-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H03-O,6408-H03-O,BRENNAN_6408-H03-O.stp,,,TFA p67,1,6408-HHP-03-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H04-O,6408-H04-O,BRENNAN_6408-H04-O.stp,,,TFA p67,1,6408-HHP-04-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H05-O,6408-H05-O,BRENNAN_6408-H05-O.stp,,,TFA p67,1,6408-HHP-05-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H06-O,6408-H06-O,BRENNAN_6408-H06-O.stp,,,TFA p67,1,6408-HHP-06-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H10-O,6408-H10-O,BRENNAN_6408-H10-O.stp,,,TFA p67,1,6408-HHP-10-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H12-O,6408-H12-O,BRENNAN_6408-H12-O.stp,,,TFA p67,1,6408-HHP-12-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H16-O,6408-H16-O,BRENNAN_6408-H16-O.stp,,,TFA p67,1,6408-HHP-16-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H20-O,6408-H20-O,BRENNAN_6408-H20-O.stp,,,TFA p67,1,6408-HHP-20-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H24-O,6408-H24-O,BRENNAN_6408-H24-O.stp,,,TFA p67,1,6408-HHP-24-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-8,Plugs,6408-H32-O,6408-H32-O,BRENNAN_6408-H32-O.stp,,,TFA p67,1,6408-HHP-32-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
-9,Other,0304-C-02,0304-C-02,BRENNAN_0304-C-02.stp,,,TFA p65,1,0304-C-02,
-9,Other,0306-02,0306-02,BRENNAN_0306-02.stp,,,TFA p65,1,0306-02,
-9,Other,5404-L-04X3.000,5404-L-04X3.000,BRENNAN_5404-L-04X3.000.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5404-L-04X3.000,
-9,Other,5404-L-04X4.000,5404-L-04X4.000,BRENNAN_5404-L-04X4.000.stp,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5404-L-04X4.000,
-9,Other,5405-08-16,5405-08-16,BRENNAN_5405-08-16.stp,,,TFA p12,1,5405-08-16,
-9,Other,6405-32-24-O,6405-32-24-O,BRENNAN_6405-32-24-O.stp,,,TFA p16,1,6405-32-24-O,
-9,Other,6420-12-12,6420-12-12,BRENNAN_6420-12-12.stp,,,TFA p17,1,6420-12-12,
-9,Other,6425-04-04,6425-04-04,BRENNAN_6425-04-04.stp,,,TFA p17,1,6425-04-04,
-9,Other,6425-06-06,6425-06-06,BRENNAN_6425-06-06.stp,,,TFA p17,1,6425-06-06,
-9,Other,6425-10-10,6425-10-10,BRENNAN_6425-10-10.stp,,,TFA p17,1,6425-10-10,
-9,Other,6425-12-12,6425-12-12,BRENNAN_6425-12-12.stp,,,TFA p17,1,6425-12-12,
-9,Other,6425-16-16,6425-16-16,BRENNAN_6425-16-16.stp,,,TFA p17,1,6425-16-16,
-9,Other,6900-32-32-O,6900-32-32-O,BRENNAN_6900-32-32-O.stp,,,TFA p19,1,6900-32-32-O,
-9,Other,2404-32-48,2404-32-48,BRENNAN_2404-32-48.stp,,,TFA p6,1,2404-32-48,
-9,Other,V0318-08,V0318-08,BRENNAN_V0318-08.stp,,,TFA p68,1,0618-08,
-9,Other,V0319-08,V0319-08,BRENNAN_V0319-08.stp,,,TFA p68,1,0619-08,
-9,Other,3051-??-??,3051 (size not given),BRENNAN_3051-<size>.stp,,,TFA: 3051-02-02 ... -16-16 printed,4,3051-04-04 3051-06-06 3051-08-08 3051-12-12,the PC list does not say which size - ask the PC session
+priority,group,requested,brennan_pn,file_name,brennan_cad,have,duplicate,in_brennan_catalog,frees_parts,frees,group_note
+1,Quick wins,5405-24-24,5405-24-24,BRENNAN_5405-24-24.stp,yes,,,TFA p12,0,,together free 18 parts (5405 family)
+1,Quick wins,5405-32-32,5405-32-32,BRENNAN_5405-32-32.stp,yes,,,TFA p12,0,,together free 18 parts (5405 family)
+2,ORFS shared shape files,FS2403-04-04,FS2403-04-04,BRENNAN_FS2403-04-04.stp,yes,,,ORFS p3,1,FS2403-04-04,each serves several FS masters
+2,ORFS shared shape files,FS2403-06-06,FS2403-06-06,BRENNAN_FS2403-06-06.stp,yes,,,ORFS p3,1,FS2403-06-06,each serves several FS masters
+2,ORFS shared shape files,FS2403-10-10,FS2403-10-10,BRENNAN_FS2403-10-10.stp,yes,,,ORFS p3,1,FS2403-10-10,each serves several FS masters
+2,ORFS shared shape files,FS2403-12-12,FS2403-12-12,BRENNAN_FS2403-12-12.stp,yes,,,ORFS p3,1,FS2403-12-12,each serves several FS masters
+2,ORFS shared shape files,FS2403-16-16,FS2403-16-16,BRENNAN_FS2403-16-16.stp,yes,,,ORFS p3,1,FS2403-16-16,each serves several FS masters
+2,ORFS shared shape files,FS2403-20-20,FS2403-20-20,BRENNAN_FS2403-20-20.stp,yes,,,ORFS p3,1,FS2403-20-20,each serves several FS masters
+2,ORFS shared shape files,FS2701-04-04-FG,FS2701-04-04-FG,BRENNAN_FS2701-04-04-FG.stp,yes,,,ORFS p8,1,FS2701-04-04-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-06-06-FG,FS2701-06-06-FG,BRENNAN_FS2701-06-06-FG.stp,yes,,,ORFS p8,1,FS2701-06-06-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-10-10-FG,FS2701-10-10-FG,BRENNAN_FS2701-10-10-FG.stp,yes,,,ORFS p8,1,FS2701-10-10-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-12-12-FG,FS2701-12-12-FG,BRENNAN_FS2701-12-12-FG.stp,yes,,,ORFS p8,1,FS2701-12-12-FG,each serves several FS masters
+2,ORFS shared shape files,FS2701-16-16-FG,FS2701-16-16-FG,BRENNAN_FS2701-16-16-FG.stp,yes,,,ORFS p8,1,FS2701-16-16-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-04-04-NWO-FG,FS6801-04-04-NWO-FG,BRENNAN_FS6801-04-04-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-04-04-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-06-06-NWO-FG,FS6801-06-06-NWO-FG,BRENNAN_FS6801-06-06-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-06-06-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-10-10-NWO-FG,FS6801-10-10-NWO-FG,BRENNAN_FS6801-10-10-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-10-10-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-12-12-NWO-FG,FS6801-12-12-NWO-FG,BRENNAN_FS6801-12-12-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-12-12-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-16-16-NWO-FG,FS6801-16-16-NWO-FG,BRENNAN_FS6801-16-16-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-16-16-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-20-20-NWO-FG,FS6801-20-20-NWO-FG,BRENNAN_FS6801-20-20-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-20-20-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6801-24-24-NWO-FG,FS6801-24-24-NWO-FG,BRENNAN_FS6801-24-24-NWO-FG.stp,yes,,,ORFS p10,1,FS6801-24-24-NWO-FG,each serves several FS masters
+2,ORFS shared shape files,FS6500-24-24-FG,FS6500-24-24-FG,BRENNAN_FS6500-24-24-FG.stp,yes,,,ORFS p9,1,FS6500-24-24-FG,each serves several FS masters
+2,ORFS shared shape files,FS6502-06-06-FG,FS6502-06-06-FG,BRENNAN_FS6502-06-06-FG.stp,yes,,,ORFS p9,1,FS6502-06-06-FG,each serves several FS masters
+2,ORFS shared shape files,FS2406-08-04,FS2406-08-04,BRENNAN_FS2406-08-04.stp,no,,,ORFS p4,1,FS2406-08-04,each serves several FS masters
+2,ORFS shared shape files,FS0304-C-08,FS0304-C-08,BRENNAN_FS0304-C-08.stp,no,,,ORFS p19,1,FS0304-C-08-ASY,each serves several FS masters
+2,ORFS shared shape files,FS2503-08-06-FG,FS2503-08-06-FG,BRENNAN_FS2503-08-06-FG.stp,yes,,,ORFS p8,0,,each serves several FS masters
+2,ORFS shared shape files,FS6809-06-06-NWO-FG,FS6809-06-06-NWO-FG,BRENNAN_FS6809-06-06-NWO-FG.stp,yes,,,ORFS p11,1,FS6809-06-06-NWO-FG,each serves several FS masters
+3,ORFS one file per part,FS1700-12-12,FS1700-12-12,BRENNAN_FS1700-12-12.stp,yes,,,FLANGE p4,1,FS1700-12-12,
+3,ORFS one file per part,FS1700-16-16,FS1700-16-16,BRENNAN_FS1700-16-16.stp,yes,,,FLANGE p4,1,FS1700-16-16,
+3,ORFS one file per part,FS1700-20-20,FS1700-20-20,BRENNAN_FS1700-20-20.stp,yes,,,FLANGE p4,1,FS1700-20-20,
+3,ORFS one file per part,FS1700-24-24,FS1700-24-24,BRENNAN_FS1700-24-24.stp,yes,,,FLANGE p4,1,FS1700-24-24,
+3,ORFS one file per part,FS1800-12-12,FS1800-12-12,BRENNAN_FS1800-12-12.stp,yes,,,FLANGE p4,1,FS1800-12-12,
+3,ORFS one file per part,FS1800-16-16,FS1800-16-16,BRENNAN_FS1800-16-16.stp,yes,,,FLANGE p4,1,FS1800-16-16,
+3,ORFS one file per part,FS1800-20-20,FS1800-20-20,BRENNAN_FS1800-20-20.stp,yes,,,FLANGE p4,1,FS1800-20-20,
+3,ORFS one file per part,FS1800-24-24,FS1800-24-24,BRENNAN_FS1800-24-24.stp,yes,,,FLANGE p4,1,FS1800-24-24,
+3,ORFS one file per part,FS1704-12-12-FG,FS1704-12-12-FG,BRENNAN_FS1704-12-12-FG.stp,yes,,,FLANGE p6,1,FS1704-12-12-FG,
+3,ORFS one file per part,FS1704-16-16-FG,FS1704-16-16-FG,BRENNAN_FS1704-16-16-FG.stp,yes,,,FLANGE p6,1,FS1704-16-16-FG,
+3,ORFS one file per part,FS1704-20-20-FG,FS1704-20-20-FG,BRENNAN_FS1704-20-20-FG.stp,yes,,,FLANGE p6,1,FS1704-20-20-FG,
+3,ORFS one file per part,FS1704-24-24-FG,FS1704-24-24-FG,BRENNAN_FS1704-24-24-FG.stp,yes,,,FLANGE p6,1,FS1704-24-24-FG,
+3,ORFS one file per part,FS1804-12-12-FG,FS1804-12-12-FG,BRENNAN_FS1804-12-12-FG.stp,yes,,,FLANGE p7,1,FS1804-12-12-FG,
+3,ORFS one file per part,FS1804-16-16-FG,FS1804-16-16-FG,BRENNAN_FS1804-16-16-FG.stp,yes,,,FLANGE p7,1,FS1804-16-16-FG,
+3,ORFS one file per part,FS1804-20-20-FG,FS1804-20-20-FG,BRENNAN_FS1804-20-20-FG.stp,yes,,,FLANGE p7,1,FS1804-20-20-FG,
+3,ORFS one file per part,FS1804-24-24-FG,FS1804-24-24-FG,BRENNAN_FS1804-24-24-FG.stp,yes,,,FLANGE p7,1,FS1804-24-24-FG,
+3,ORFS one file per part,FS2406-12-16,FS2406-12-16,BRENNAN_FS2406-12-16.stp,no,,,ORFS p4,1,FS2406-12-16,
+3,ORFS one file per part,FS2406-16-20,FS2406-16-20,BRENNAN_FS2406-16-20.stp,no,,,ORFS p4,1,FS2406-16-20,
+3,ORFS one file per part,FS6400-10-06-O,FS6400-10-06-O,BRENNAN_FS6400-10-06-O.stp,yes,,,ORFS p5,1,FS6400-10-06-O,
+3,ORFS one file per part,FS6400-12-20-O,FS6400-12-20-O,BRENNAN_FS6400-12-20-O.stp,yes,,,ORFS p5,1,FS6400-12-20-O,
+3,ORFS one file per part,FS6565-10-10,FS6565-10-10,BRENNAN_FS6565-10-10.stp,yes,,,ORFS p7,1,FS6565-10-10,
+3,ORFS one file per part,FS6565-16-16,FS6565-16-16,BRENNAN_FS6565-16-16.stp,yes,,,ORFS p7,1,FS6565-16-16,
+3,ORFS one file per part,FS7202-06-04-NWO-FG,FS7202-06-04-NWO-FG,BRENNAN_FS7202-06-04-NWO-FG.stp,yes,,,ORFS p11,1,FS7202-06-04-NWO-FG,
+4,Code 62 heads,1824-12,1824-12,BRENNAN_1824-12.stp,yes,,,FLANGE p7,1,1824-12,not needed if the user says yes to Q2 of the PC list
+4,Code 62 heads,1824-16,1824-16,BRENNAN_1824-16.stp,yes,,,FLANGE p7,1,1824-16,not needed if the user says yes to Q2 of the PC list
+4,Code 62 heads,1824-20,1824-20,BRENNAN_1824-20.stp,yes,,,FLANGE p7,1,1824-20,not needed if the user says yes to Q2 of the PC list
+4,Code 62 heads,1824-24,1824-24,BRENNAN_1824-24.stp,yes,,,FLANGE p7,1,1824-24,not needed if the user says yes to Q2 of the PC list
+4,Code 62 heads,1824-32,1824-32,BRENNAN_1824-32.stp,yes,,,FLANGE p7,1,1824-32,not needed if the user says yes to Q2 of the PC list
+5,Pilots (one shape file per family),6801-L-08-08-NWO-FG,6801-L-08-08-NWO-FG,BRENNAN_6801-L-08-08-NWO-FG.stp,yes,,,TFA p39,1,6801-L-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6801-LL-08-08-NWO-FG,6801-LL-08-08-NWO-FG,BRENNAN_6801-LL-08-08-NWO-FG.stp,yes,,,TFA p39,1,6801-LL-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6805-08-08-NWO-FG,6805-08-08-NWO-FG,BRENNAN_6805-08-08-NWO-FG.stp,yes,,,TFA p42,1,6805-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6806-08-08-NWO-FG,6806-08-08-NWO-FG,BRENNAN_6806-08-08-NWO-FG.stp,yes,,,TFA p43,1,6806-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6807-08-08-NWO-FG,6807-08-08-NWO-FG,BRENNAN_6807-08-08-NWO-FG.stp,yes,,,TFA p43,1,6807-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6809-10-10-NWO-FG,6809-10-10-NWO-FG,BRENNAN_6809-10-10-NWO-FG.stp,yes,,,TFA p44,1,6809-10-10-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6815-08-08-NWO-FG,6815-08-08-NWO-FG,BRENNAN_6815-08-08-NWO-FG.stp,yes,,,TFA p45,1,6815-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6901-06-08-NWO-FG,6901-06-08-NWO-FG,BRENNAN_6901-06-08-NWO-FG.stp,yes,,,TFA p45,1,6901-06-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6902-08-08-NWO-FG,6902-08-08-NWO-FG,BRENNAN_6902-08-08-NWO-FG.stp,yes,,,TFA p46,1,6902-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6832-08-08-08-NWO-FG,6832-08-08-08-NWO-FG,BRENNAN_6832-08-08-08-NWO-FG.stp,yes,,,TFA p61,1,6832-08-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6835-08-08-08-NWO-FG,6835-08-08-08-NWO-FG,BRENNAN_6835-08-08-08-NWO-FG.stp,yes,,,TFA p61,1,6835-08-08-08-NWO-FG,each unlocks its whole family
+5,Pilots (one shape file per family),6900-08-08-O,6900-08-08-O,BRENNAN_6900-08-08-O.stp,yes,,,TFA p18,1,6900-08-08-O,each unlocks its whole family
+6,"Forged parts, one file per size",6801-08-04,6801-08-04-NWO-FG,BRENNAN_6801-08-04-NWO-FG.stp,yes,,,TFA p40,1,6801-08-04-NWO-FG,
+6,"Forged parts, one file per size",6801-08-16,6801-08-16-NWO-FG,BRENNAN_6801-08-16-NWO-FG.stp,yes,,,TFA p41,1,6801-08-16-NWO-FG,
+6,"Forged parts, one file per size",6801-12-20,6801-12-20-NWO-FG,BRENNAN_6801-12-20-NWO-FG.stp,yes,,,TFA p41,1,6801-12-20-NWO-FG,
+6,"Forged parts, one file per size",6801-16-24,6801-16-24-NWO-FG,BRENNAN_6801-16-24-NWO-FG.stp,yes,,,TFA p41,1,6801-16-24-NWO-FG,
+6,"Forged parts, one file per size",6801-24-16,6801-24-16-NWO-FG,BRENNAN_6801-24-16-NWO-FG.stp,yes,,,TFA p41,1,6801-24-16-NWO-FG,
+6,"Forged parts, one file per size",6801-L-16-16,6801-L-16-16-NWO-FG,BRENNAN_6801-L-16-16-NWO-FG.stp,yes,,,TFA p39,1,6801-L-16-16-NWO-FG,
+6,"Forged parts, one file per size",6801-L-20-20,6801-L-20-20-NWO-FG,BRENNAN_6801-L-20-20-NWO-FG.stp,yes,,,TFA p39,1,6801-L-20-20-NWO-FG,
+6,"Forged parts, one file per size",6801-LL-12-12,6801-LL-12-12-NWO-FG,BRENNAN_6801-LL-12-12-NWO-FG.stp,yes,,,TFA p39,1,6801-LL-12-12-NWO-FG,
+6,"Forged parts, one file per size",6801-LL-16-16,6801-LL-16-16-NWO-FG,BRENNAN_6801-LL-16-16-NWO-FG.stp,yes,,,TFA p40,1,6801-LL-16-16-NWO-FG,
+6,"Forged parts, one file per size",6801-LL-20-20,6801-LL-20-20-NWO-FG,BRENNAN_6801-LL-20-20-NWO-FG.stp,yes,,,TFA p40,1,6801-LL-20-20-NWO-FG,
+6,"Forged parts, one file per size",6802-06-10,6802-06-10-NWO-FG,BRENNAN_6802-06-10-NWO-FG.stp,yes,,,TFA p41,1,6802-06-10-NWO-FG,
+6,"Forged parts, one file per size",6802-08-12,6802-08-12-NWO-FG,BRENNAN_6802-08-12-NWO-FG.stp,yes,,,TFA p42,1,6802-08-12-NWO-FG,
+6,"Forged parts, one file per size",6803-08-08-06,6803-08-08-06-NWO-FG,BRENNAN_6803-08-08-06-NWO-FG.stp,yes,,,TFA p59,1,6803-08-08-06-NWO-FG,
+6,"Forged parts, one file per size",6803-08-08-10,6803-08-08-10-NWO-FG,BRENNAN_6803-08-08-10-NWO-FG.stp,yes,,,TFA p59,1,6803-08-08-10-NWO-FG,
+6,"Forged parts, one file per size",6803-24-24-24,6803-24-24-24-NWO-FG,BRENNAN_6803-24-24-24-NWO-FG.stp,yes,,,TFA p59,1,6803-24-24-24-NWO-FG,
+6,"Forged parts, one file per size",6804-24-24-24,6804-24-24-24-NWO-FG,BRENNAN_6804-24-24-24-NWO-FG.stp,no,,,TFA p60,1,6804-24-24-24-NWO-FG,
+6,"Forged parts, one file per size",6810-12-12,6810-12-12-NWO-FG,BRENNAN_6810-12-12-NWO-FG.stp,yes,,,TFA p44,1,6810-12-12-NWO-FG,
+6,"Forged parts, one file per size",6805-04-02,6805-04-02-NWO-FG,BRENNAN_6805-04-02-NWO-FG.stp,yes,,,TFA p42,1,6805-04-02-NWO-FG,
+6,"Forged parts, one file per size",6805-04-04,6805-04-04-NWO-FG,BRENNAN_6805-04-04-NWO-FG.stp,yes,,,TFA p42,1,6805-04-04-NWO-FG,
+6,"Forged parts, one file per size",6805-06-06,6805-06-06-NWO-FG,BRENNAN_6805-06-06-NWO-FG.stp,yes,,,TFA p42,1,6805-06-06-NWO-FG,
+6,"Forged parts, one file per size",6805-10-08,6805-10-08-NWO-FG,BRENNAN_6805-10-08-NWO-FG.stp,yes,,,TFA p42,1,6805-10-08-NWO-FG,
+6,"Forged parts, one file per size",6805-12-08,6805-12-08-NWO-FG,BRENNAN_6805-12-08-NWO-FG.stp,yes,,,TFA p42,1,6805-12-08-NWO-FG,
+6,"Forged parts, one file per size",6805-16-12,6805-16-12-NWO-FG,BRENNAN_6805-16-12-NWO-FG.stp,yes,,,TFA p42,1,6805-16-12-NWO-FG,
+6,"Forged parts, one file per size",6805-16-16,6805-16-16-NWO-FG,BRENNAN_6805-16-16-NWO-FG.stp,yes,,,TFA p42,1,6805-16-16-NWO-FG,
+6,"Forged parts, one file per size",6805-20-20,6805-20-20-NWO-FG,BRENNAN_6805-20-20-NWO-FG.stp,yes,,,TFA p42,1,6805-20-20-NWO-FG,
+6,"Forged parts, one file per size",6806-06-04,6806-06-04-NWO-FG,BRENNAN_6806-06-04-NWO-FG.stp,yes,,,TFA p43,1,6806-06-04-NWO-FG,
+6,"Forged parts, one file per size",6806-06-06,6806-06-06-NWO-FG,BRENNAN_6806-06-06-NWO-FG.stp,yes,,,TFA p43,1,6806-06-06-NWO-FG,
+6,"Forged parts, one file per size",6806-08-06,6806-08-06-NWO-FG,BRENNAN_6806-08-06-NWO-FG.stp,yes,,,TFA p43,1,6806-08-06-NWO-FG,
+6,"Forged parts, one file per size",6806-10-08,6806-10-08-NWO-FG,BRENNAN_6806-10-08-NWO-FG.stp,yes,,,TFA p43,1,6806-10-08-NWO-FG,
+6,"Forged parts, one file per size",6806-12-08,6806-12-08,BRENNAN_6806-12-08.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,6806-12-08-NWO-FG,
+6,"Forged parts, one file per size",6806-12-12,6806-12-12-NWO-FG,BRENNAN_6806-12-12-NWO-FG.stp,yes,,,TFA p43,1,6806-12-12-NWO-FG,
+6,"Forged parts, one file per size",6806-16-16,6806-16-16-NWO-FG,BRENNAN_6806-16-16-NWO-FG.stp,yes,,,TFA p43,1,6806-16-16-NWO-FG,
+6,"Forged parts, one file per size",6806-20-20,6806-20-20-NWO-FG,BRENNAN_6806-20-20-NWO-FG.stp,yes,,,TFA p43,1,6806-20-20-NWO-FG,
+6,"Forged parts, one file per size",6806-24-24,6806-24-24-NWO-FG,BRENNAN_6806-24-24-NWO-FG.stp,yes,,,TFA p43,1,6806-24-24-NWO-FG,
+6,"Forged parts, one file per size",6807-04-04,6807-04-04-NWO-FG,BRENNAN_6807-04-04-NWO-FG.stp,yes,,,TFA p43,1,6807-04-04-NWO-FG,
+6,"Forged parts, one file per size",6807-08-06,6807-08-06-NWO-FG,BRENNAN_6807-08-06-NWO-FG.stp,yes,,,TFA p43,1,6807-08-06-NWO-FG,
+6,"Forged parts, one file per size",6807-12-12,6807-12-12-NWO-FG,BRENNAN_6807-12-12-NWO-FG.stp,yes,,,TFA p43,1,6807-12-12-NWO-FG,
+6,"Forged parts, one file per size",6809-12-12,6809-12-12-NWO-FG,BRENNAN_6809-12-12-NWO-FG.stp,yes,,,TFA p44,1,6809-12-12-NWO-FG,
+6,"Forged parts, one file per size",6809-16-16,6809-16-16-NWO-FG,BRENNAN_6809-16-16-NWO-FG.stp,yes,,,TFA p44,1,6809-16-16-NWO-FG,
+6,"Forged parts, one file per size",6809-20-20,6809-20-20-NWO-FG,BRENNAN_6809-20-20-NWO-FG.stp,yes,,,TFA p44,1,6809-20-20-NWO-FG,
+6,"Forged parts, one file per size",6815-04-04,6815-04-04-NWO-FG,BRENNAN_6815-04-04-NWO-FG.stp,yes,,,TFA p45,1,6815-04-04-NWO-FG,
+6,"Forged parts, one file per size",6815-06-06,6815-06-06-NWO-FG,BRENNAN_6815-06-06-NWO-FG.stp,yes,,,TFA p45,1,6815-06-06-NWO-FG,
+6,"Forged parts, one file per size",6815-10-10,6815-10-10-NWO-FG,BRENNAN_6815-10-10-NWO-FG.stp,yes,,,TFA p45,1,6815-10-10-NWO-FG,
+6,"Forged parts, one file per size",6815-12-12,6815-12-12-NWO-FG,BRENNAN_6815-12-12-NWO-FG.stp,yes,,,TFA p45,1,6815-12-12-NWO-FG,
+6,"Forged parts, one file per size",6815-16-16,6815-16-16-NWO-FG,BRENNAN_6815-16-16-NWO-FG.stp,yes,,,TFA p45,1,6815-16-16-NWO-FG,
+6,"Forged parts, one file per size",6832-04-04-04,6832-04-04-04-NWO-FG,BRENNAN_6832-04-04-04-NWO-FG.stp,yes,,,TFA p61,1,6832-04-04-04-NWO-FG,
+6,"Forged parts, one file per size",6832-06-06-06,6832-06-06-06-NWO-FG,BRENNAN_6832-06-06-06-NWO-FG.stp,yes,,,TFA p61,1,6832-06-06-06-NWO-FG,
+6,"Forged parts, one file per size",6832-16-16-16,6832-16-16-16-NWO-FG,BRENNAN_6832-16-16-16-NWO-FG.stp,yes,,,TFA p61,1,6832-16-16-16-NWO-FG,
+6,"Forged parts, one file per size",6835-04-04-04,6835-04-04-04-NWO-FG,BRENNAN_6835-04-04-04-NWO-FG.stp,yes,,,TFA p61,1,6835-04-04-04-NWO-FG,
+6,"Forged parts, one file per size",6835-06-06-06,6835-06-06-06-NWO-FG,BRENNAN_6835-06-06-06-NWO-FG.stp,yes,,,TFA p61,1,6835-06-06-06-NWO-FG,
+6,"Forged parts, one file per size",6835-12-12-12,6835-12-12-12-NWO-FG,BRENNAN_6835-12-12-12-NWO-FG.stp,yes,,,TFA p61,1,6835-12-12-12-NWO-FG,
+6,"Forged parts, one file per size",6901-04-04,6901-04-04-NWO-FG,BRENNAN_6901-04-04-NWO-FG.stp,yes,,,TFA p45,1,6901-04-04-NWO-FG,
+6,"Forged parts, one file per size",6901-04-06,6901-04-06-NWO-FG,BRENNAN_6901-04-06-NWO-FG.stp,yes,,,TFA p45,1,6901-04-06-NWO-FG,
+6,"Forged parts, one file per size",6901-10-12,6901-10-12-NWO-FG,BRENNAN_6901-10-12-NWO-FG.stp,yes,,,TFA p45,1,6901-10-12-NWO-FG,
+6,"Forged parts, one file per size",6901-12-06,6901-12-06-NWO-FG,BRENNAN_6901-12-06-NWO-FG.stp,yes,,,TFA p45,1,6901-12-06-NWO-FG,
+6,"Forged parts, one file per size",6901-12-08,6901-12-08-NWO-FG,BRENNAN_6901-12-08-NWO-FG.stp,yes,,,TFA p45,1,6901-12-08-NWO-FG,
+6,"Forged parts, one file per size",6901-12-12,6901-12-12-NWO-FG,BRENNAN_6901-12-12-NWO-FG.stp,yes,,,TFA p45,1,6901-12-12-NWO-FG,
+6,"Forged parts, one file per size",6901-12-16,6901-12-16-NWO-FG,BRENNAN_6901-12-16-NWO-FG.stp,yes,,,TFA p45,1,6901-12-16-NWO-FG,
+6,"Forged parts, one file per size",6901-16-12,6901-16-12-NWO-FG,BRENNAN_6901-16-12-NWO-FG.stp,yes,,,TFA p46,1,6901-16-12-NWO-FG,
+6,"Forged parts, one file per size",6901-16-16,6901-16-16-NWO-FG,BRENNAN_6901-16-16-NWO-FG.stp,yes,,,TFA p46,1,6901-16-16-NWO-FG,
+6,"Forged parts, one file per size",6901-20-16,6901-20-16-NWO-FG,BRENNAN_6901-20-16-NWO-FG.stp,yes,,,TFA p46,1,6901-20-16-NWO-FG,
+6,"Forged parts, one file per size",6901-20-20,6901-20-20-NWO-FG,BRENNAN_6901-20-20-NWO-FG.stp,yes,,,TFA p46,1,6901-20-20-NWO-FG,
+6,"Forged parts, one file per size",6901-24-24,6901-24-24-NWO-FG,BRENNAN_6901-24-24-NWO-FG.stp,yes,,,TFA p46,1,6901-24-24-NWO-FG,
+6,"Forged parts, one file per size",6901-32-32,6901-32-32-NWO-FG,BRENNAN_6901-32-32-NWO-FG.stp,yes,,,TFA p46,1,6901-32-32-NWO-FG,
+6,"Forged parts, one file per size",6902-04-04,6902-04-04-NWO-FG,BRENNAN_6902-04-04-NWO-FG.stp,yes,,,TFA p46,1,6902-04-04-NWO-FG,
+6,"Forged parts, one file per size",6902-06-04,6902-06-04-NWO-FG,BRENNAN_6902-06-04-NWO-FG.stp,yes,,,TFA p46,1,6902-06-04-NWO-FG,
+6,"Forged parts, one file per size",6902-06-06,6902-06-06-NWO-FG,BRENNAN_6902-06-06-NWO-FG.stp,yes,,,TFA p46,1,6902-06-06-NWO-FG,
+6,"Forged parts, one file per size",6902-08-06,6902-08-06-NWO-FG,BRENNAN_6902-08-06-NWO-FG.stp,yes,,,TFA p46,1,6902-08-06-NWO-FG,
+6,"Forged parts, one file per size",6902-10-08,6902-10-08-NWO-FG,BRENNAN_6902-10-08-NWO-FG.stp,yes,,,TFA p46,1,6902-10-08-NWO-FG,
+6,"Forged parts, one file per size",6902-10-12,6902-10-12-NWO-FG,BRENNAN_6902-10-12-NWO-FG.stp,yes,,,TFA p46,1,6902-10-12-NWO-FG,
+6,"Forged parts, one file per size",6902-16-16,6902-16-16-NWO-FG,BRENNAN_6902-16-16-NWO-FG.stp,yes,,,TFA p46,1,6902-16-16-NWO-FG,
+6,"Forged parts, one file per size",6902-24-24,6902-24-24-NWO-FG,BRENNAN_6902-24-24-NWO-FG.stp,yes,,,TFA p46,1,6902-24-24-NWO-FG,
+6,"Forged parts, one file per size",5602-02-02-02,5602-02-02-02-FG,BRENNAN_5602-02-02-02-FG.stp,yes,,,TFA p55,1,5602-02-02-02-FG,
+6,"Forged parts, one file per size",5602-06-06-06,5602-06-06-06-FG,BRENNAN_5602-06-06-06-FG.stp,yes,,,TFA p55,1,5602-06-06-06-FG,
+6,"Forged parts, one file per size",5602-12-12-12,5602-12-12-12-FG,BRENNAN_5602-12-12-12-FG.stp,yes,,,TFA p55,1,5602-12-12-12-FG,
+6,"Forged parts, one file per size",5602-16-16-16,5602-16-16-16-FG,BRENNAN_5602-16-16-16-FG.stp,yes,,,TFA p55,1,5602-16-16-16-FG,
+6,"Forged parts, one file per size",5602-20-20-20,5602-20-20-20-FG,BRENNAN_5602-20-20-20-FG.stp,yes,,,TFA p55,1,5602-20-20-20-FG,
+6,"Forged parts, one file per size",5602-24-24-24,5602-24-24-24-FG,BRENNAN_5602-24-24-24-FG.stp,yes,,,TFA p55,1,5602-24-24-24-FG,
+6,"Forged parts, one file per size",5602-32-32-32,5602-32-32-32-FG,BRENNAN_5602-32-32-32-FG.stp,yes,,,TFA p55,1,5602-32-32-32-FG,
+6,"Forged parts, one file per size",5604-02-02-02,5604-02-02-02-FG,BRENNAN_5604-02-02-02-FG.stp,yes,,,TFA p56,1,5604-02-02-02-FG,
+6,"Forged parts, one file per size",5604-12-12-12,5604-12-12-12-FG,BRENNAN_5604-12-12-12-FG.stp,yes,,,TFA p56,1,5604-12-12-12-FG,
+6,"Forged parts, one file per size",5604-16-16-16,5604-16-16-16-FG,BRENNAN_5604-16-16-16-FG.stp,yes,,,TFA p56,1,5604-16-16-16-FG,
+6,"Forged parts, one file per size",5604-20-20-20,5604-20-20-20-FG,BRENNAN_5604-20-20-20-FG.stp,yes,,,TFA p56,1,5604-20-20-20-FG,
+6,"Forged parts, one file per size",5604-32-32-32,5604-32-32-32-FG,BRENNAN_5604-32-32-32-FG.stp,yes,,,TFA p56,1,5604-32-32-32-FG,
+6,"Forged parts, one file per size",5605-02-02-02,5605-02-02-02-FG,BRENNAN_5605-02-02-02-FG.stp,yes,,,TFA p56,1,5605-02-02-02-FG,
+6,"Forged parts, one file per size",5605-12-12-12,5605-12-12-12-FG,BRENNAN_5605-12-12-12-FG.stp,yes,,,TFA p56,1,5605-12-12-12-FG,
+6,"Forged parts, one file per size",5605-16-16-16,5605-16-16-16-FG,BRENNAN_5605-16-16-16-FG.stp,yes,,,TFA p56,1,5605-16-16-16-FG,
+6,"Forged parts, one file per size",5605-20-20-20,5605-20-20-20-FG,BRENNAN_5605-20-20-20-FG.stp,yes,,,TFA p56,1,5605-20-20-20-FG,
+6,"Forged parts, one file per size",5605-32-32-32,5605-32-32-32-FG,BRENNAN_5605-32-32-32-FG.stp,yes,,,TFA p56,1,5605-32-32-32-FG,
+6,"Forged parts, one file per size",5505-02-02,5505-02-02-FG,BRENNAN_5505-02-02-FG.stp,yes,,,TFA p32,1,5505-02-02-FG,
+6,"Forged parts, one file per size",5505-06-06,5505-06-06-FG,BRENNAN_5505-06-06-FG.stp,yes,,,TFA p32,1,5505-06-06-FG,
+6,"Forged parts, one file per size",5505-12-12,5505-12-12-FG,BRENNAN_5505-12-12-FG.stp,yes,,,TFA p33,1,5505-12-12-FG,
+6,"Forged parts, one file per size",5505-16-16,5505-16-16-FG,BRENNAN_5505-16-16-FG.stp,yes,,,TFA p33,1,5505-16-16-FG,
+6,"Forged parts, one file per size",5503-04-02,5503-04-02,BRENNAN_5503-04-02.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-04-02-FG,
+6,"Forged parts, one file per size",5503-06-04,5503-06-04,BRENNAN_5503-06-04.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-06-04-FG,
+6,"Forged parts, one file per size",5503-08-06,5503-08-06,BRENNAN_5503-08-06.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-08-06-FG,
+6,"Forged parts, one file per size",5503-12-08,5503-12-08,BRENNAN_5503-12-08.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-12-08-FG,
+6,"Forged parts, one file per size",5503-16-12,5503-16-12,BRENNAN_5503-16-12.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5503-16-12-FG,
+6,"Forged parts, one file per size",5504-32-32,5504-32-32-FG,BRENNAN_5504-32-32-FG.stp,yes,,,TFA p32,1,5504-32-32-FG,
+6,"Forged parts, one file per size",5652-32-32-32-32,5652-32-32-32-32,BRENNAN_5652-32-32-32-32.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5652-32-32-32-32-FG,
+6,"Forged parts, one file per size",6503-06-06,6503-06-06-FG,BRENNAN_6503-06-06-FG.stp,yes,,,TFA p38,1,6503-06-06-FG,
+6,"Forged parts, one file per size",6503-16-16,6503-16-16,BRENNAN_6503-16-16.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,6503-16-16-FG,
+6,"Forged parts, one file per size",6603-16-16-16,6603-16-16-16-FG,BRENNAN_6603-16-16-16-FG.stp,yes,,,TFA p58,1,6603-16-16-16-FG,
+6,"Forged parts, one file per size",6606-12-12-12,6606-12-12-12-FG,BRENNAN_6606-12-12-12-FG.stp,yes,,,TFA p58,1,6606-12-12-12-FG,
+6,"Forged parts, one file per size",6566-16-16,6566-16-16,BRENNAN_6566-16-16.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,6566-16-16-FG,
+6,"Forged parts, one file per size",1504-24-24,1504-24-24-FG,BRENNAN_1504-24-24-FG.stp,yes,,,TFA p22,1,1504-24-24-FG,
+6,"Forged parts, one file per size",1504-32-32,1504-32-32,BRENNAN_1504-32-32.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,1504-32-32-FG,
+6,"Forged parts, one file per size",2505-16-16,2505-16-16-FG,BRENNAN_2505-16-16-FG.stp,yes,,,TFA p27,1,2505-16-16-FG,
+7,Flanges,1703-08-08-FG,1703-08-08-FG,BRENNAN_1703-08-08-FG.stp,no,,,FLANGE p4 (printed as 1703-08-08),2,1703-08-08-FG 1703-08-08-TUBE,
+7,Flanges,1703-12-12-FG,1703-12-12-FG,BRENNAN_1703-12-12-FG.stp,yes,,,FLANGE p4,2,1703-12-12-FG 1703-12-12-TUBE,
+7,Flanges,1703-16-16-FG,1703-16-16-FG,BRENNAN_1703-16-16-FG.stp,yes,,,FLANGE p4,2,1703-16-16-FG 1703-16-16-TUBE,
+7,Flanges,1703-20-20-FG,1703-20-20-FG,BRENNAN_1703-20-20-FG.stp,yes,,,FLANGE p4,2,1703-20-20-FG 1703-20-20-TUBE,
+7,Flanges,1703-32-32-FG,1703-32-32-FG,BRENNAN_1703-32-32-FG.stp,yes,,,FLANGE p4,2,1703-32-32-FG 1703-32-32-TUBE,
+7,Flanges,1704-08-08-FG,1704-08-08-FG,BRENNAN_1704-08-08-FG.stp,yes,,,FLANGE p5,2,1704-08-08-FG 1704-08-08-TUBE,
+7,Flanges,1704-12-12-FG,1704-12-12-FG,BRENNAN_1704-12-12-FG.stp,yes,,,FLANGE p5,2,1704-12-12-FG 1704-12-12-TUBE,
+7,Flanges,1704-16-16-FG,1704-16-16-FG,BRENNAN_1704-16-16-FG.stp,yes,,,FLANGE p5,2,1704-16-16-FG 1704-16-16-TUBE,
+7,Flanges,1704-20-20-FG,1704-20-20-FG,BRENNAN_1704-20-20-FG.stp,yes,,,FLANGE p5,2,1704-20-20-FG 1704-20-20-TUBE,
+7,Flanges,1704-32-32-FG,1704-32-32-FG,BRENNAN_1704-32-32-FG.stp,yes,,,FLANGE p5,2,1704-32-32-FG 1704-32-32-TUBE,
+7,Flanges,1803-12-12-FG,1803-12-12-FG,BRENNAN_1803-12-12-FG.stp,yes,,,FLANGE p5,2,1803-12-12-FG 1803-12-12-TUBE,
+7,Flanges,1803-16-16-FG,1803-16-16-FG,BRENNAN_1803-16-16-FG.stp,yes,,,FLANGE p5,2,1803-16-16-FG 1803-16-16-TUBE,
+7,Flanges,1803-20-20-FG,1803-20-20-FG,BRENNAN_1803-20-20-FG.stp,yes,,,FLANGE p5,2,1803-20-20-FG 1803-20-20-TUBE,
+7,Flanges,1803-24-24-FG,1803-24-24-FG,BRENNAN_1803-24-24-FG.stp,yes,,,FLANGE p5,2,1803-24-24-FG 1803-24-24-TUBE,
+7,Flanges,1803-32-32-FG,1803-32-32-FG,BRENNAN_1803-32-32-FG.stp,no,,,FLANGE p5 (printed as 1803-32-32),2,1803-32-32-FG 1803-32-32-TUBE,
+7,Flanges,1804-12-12-FG,1804-12-12-FG,BRENNAN_1804-12-12-FG.stp,yes,,,FLANGE p6,2,1804-12-12-FG 1804-12-12-TUBE,
+7,Flanges,1804-16-16-FG,1804-16-16-FG,BRENNAN_1804-16-16-FG.stp,yes,,,FLANGE p6,2,1804-16-16-FG 1804-16-16-TUBE,
+7,Flanges,1804-20-20-FG,1804-20-20-FG,BRENNAN_1804-20-20-FG.stp,yes,,,FLANGE p6,2,1804-20-20-FG 1804-20-20-TUBE,
+7,Flanges,1804-24-24-FG,1804-24-24-FG,BRENNAN_1804-24-24-FG.stp,yes,,,FLANGE p6,2,1804-24-24-FG 1804-24-24-TUBE,
+7,Flanges,1804-32-32-FG,1804-32-32-FG,BRENNAN_1804-32-32-FG.stp,yes,,,FLANGE p6,2,1804-32-32-FG 1804-32-32-TUBE,
+7,Flanges,1800-12-12,1800-12-12,BRENNAN_1800-12-12.stp,yes,,,FLANGE p3,1,1800-12-12,
+7,Flanges,1800-12-16,1800-12-16,BRENNAN_1800-12-16.stp,yes,,,FLANGE p3,1,1800-12-16,
+7,Flanges,1800-16-12,1800-16-12,BRENNAN_1800-16-12.stp,yes,,,FLANGE p3,1,1800-16-12,
+7,Flanges,1800-16-16,1800-16-16,BRENNAN_1800-16-16.stp,yes,,,FLANGE p3,1,1800-16-16,
+7,Flanges,1800-16-20,1800-16-20,BRENNAN_1800-16-20.stp,yes,,,FLANGE p3,1,1800-16-20,
+7,Flanges,1800-16-24,1800-16-24,BRENNAN_1800-16-24.stp,yes,,,FLANGE p3,1,1800-16-24,
+7,Flanges,1800-20-16,1800-20-16,BRENNAN_1800-20-16.stp,yes,,,FLANGE p3,1,1800-20-16,
+7,Flanges,1800-20-20,1800-20-20,BRENNAN_1800-20-20.stp,yes,,,FLANGE p3,1,1800-20-20,
+7,Flanges,1800-20-24,1800-20-24,BRENNAN_1800-20-24.stp,yes,,,FLANGE p3,1,1800-20-24,
+7,Flanges,1800-24-20,1800-24-20,BRENNAN_1800-24-20.stp,yes,,,FLANGE p3,1,1800-24-20,
+7,Flanges,1800-24-24,1800-24-24,BRENNAN_1800-24-24.stp,yes,,,FLANGE p3,1,1800-24-24,
+7,Flanges,1800-32-32,1800-32-32,BRENNAN_1800-32-32.stp,yes,,,FLANGE p3,1,1800-32-32,
+7,Flanges,1724-12,1724-12,BRENNAN_1724-12.stp,yes,,,FLANGE p7,1,1724-12,
+7,Flanges,1724-16,1724-16,BRENNAN_1724-16.stp,yes,,,FLANGE p7,1,1724-16,
+7,Flanges,1724-20,1724-20,BRENNAN_1724-20.stp,yes,,,FLANGE p7,1,1724-20,
+7,Flanges,1724-24,1724-24,BRENNAN_1724-24.stp,yes,,,FLANGE p7,1,1724-24,
+7,Flanges,1724-32,1724-32,BRENNAN_1724-32.stp,yes,,,FLANGE p7,1,1724-32,
+7,Flanges,1724-40,1724-40,BRENNAN_1724-40.stp,yes,,,FLANGE p7,1,1724-40,
+8,Plugs,6408-H02-O,6408-H02-O,BRENNAN_6408-H02-O.stp,yes,,,TFA p67,1,6408-HHP-02-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H03-O,6408-H03-O,BRENNAN_6408-H03-O.stp,yes,,,TFA p67,1,6408-HHP-03-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H04-O,6408-H04-O,BRENNAN_6408-H04-O.stp,yes,,,TFA p67,1,6408-HHP-04-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H05-O,6408-H05-O,BRENNAN_6408-H05-O.stp,yes,,,TFA p67,1,6408-HHP-05-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H06-O,6408-H06-O,BRENNAN_6408-H06-O.stp,yes,,,TFA p67,1,6408-HHP-06-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H10-O,6408-H10-O,BRENNAN_6408-H10-O.stp,yes,,,TFA p67,1,6408-HHP-10-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H12-O,6408-H12-O,BRENNAN_6408-H12-O.stp,yes,,,TFA p67,1,6408-HHP-12-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H16-O,6408-H16-O,BRENNAN_6408-H16-O.stp,yes,,,TFA p67,1,6408-HHP-16-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H20-O,6408-H20-O,BRENNAN_6408-H20-O.stp,yes,,,TFA p67,1,6408-HHP-20-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H24-O,6408-H24-O,BRENNAN_6408-H24-O.stp,yes,,,TFA p67,1,6408-HHP-24-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+8,Plugs,6408-H32-O,6408-H32-O,BRENNAN_6408-H32-O.stp,yes,,,TFA p67,1,6408-HHP-32-O,OMi 6408-HHP-NN-O = Brennan 6408-HNN-O (as for the shipped -08)
+9,Other,0304-C-02,0304-C-02,BRENNAN_0304-C-02.stp,yes,,,TFA p65,1,0304-C-02,
+9,Other,0306-02,0306-02,BRENNAN_0306-02.stp,yes,,,TFA p65,1,0306-02,
+9,Other,5404-L-04X3.000,5404-L-04X3.000,BRENNAN_5404-L-04X3.000.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5404-L-04X3.000,
+9,Other,5404-L-04X4.000,5404-L-04X4.000,BRENNAN_5404-L-04X4.000.stp,no,,,not in the PDF catalogs - may not exist at Brennan; search the portal,1,5404-L-04X4.000,
+9,Other,5405-08-16,5405-08-16,BRENNAN_5405-08-16.stp,yes,,,TFA p12,1,5405-08-16,
+9,Other,6405-32-24-O,6405-32-24-O,BRENNAN_6405-32-24-O.stp,yes,,,TFA p16,1,6405-32-24-O,
+9,Other,6420-12-12,6420-12-12,BRENNAN_6420-12-12.stp,yes,,,TFA p17,1,6420-12-12,
+9,Other,6425-04-04,6425-04-04,BRENNAN_6425-04-04.stp,no,,,TFA p17,1,6425-04-04,
+9,Other,6425-06-06,6425-06-06,BRENNAN_6425-06-06.stp,yes,,,TFA p17,1,6425-06-06,
+9,Other,6425-10-10,6425-10-10,BRENNAN_6425-10-10.stp,yes,,,TFA p17,1,6425-10-10,
+9,Other,6425-12-12,6425-12-12,BRENNAN_6425-12-12.stp,yes,,,TFA p17,1,6425-12-12,
+9,Other,6425-16-16,6425-16-16,BRENNAN_6425-16-16.stp,yes,,,TFA p17,1,6425-16-16,
+9,Other,6900-32-32-O,6900-32-32-O,BRENNAN_6900-32-32-O.stp,yes,,,TFA p19,1,6900-32-32-O,
+9,Other,2404-32-48,2404-32-48,BRENNAN_2404-32-48.stp,no,,,TFA p6,1,2404-32-48,
+9,Other,V0318-08,V0318-08,BRENNAN_V0318-08.stp,no,,,TFA p68,1,0618-08,
+9,Other,V0319-08,V0319-08,BRENNAN_V0319-08.stp,no,,,TFA p68,1,0619-08,
+9,Other,3051-??-??,3051 (size not given),BRENNAN_3051-<size>.stp,?,,,TFA: 3051-02-02 ... -16-16 printed,4,3051-04-04 3051-06-06 3051-08-08 3051-12-12,the PC list does not say which size - ask the PC session

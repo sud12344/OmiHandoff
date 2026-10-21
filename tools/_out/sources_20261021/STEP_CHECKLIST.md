@@ -4,7 +4,7 @@ Source: the PC session's blocked-needs list of 2026-10-20 (section 1), expanded 
 Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_STEP_FILES/BRENNAN_<part number>.stp`
 (the file name column). Re-run `python -I tools/_out/sources_20261021/step_checklist.py` afterwards: the box column fills in.
 
-**240 files to download** (0 already in the repo, 0 listed twice). Files marked * are not printed in Brennan's PDF catalogs: search for them, and tell me which ones Brennan does not have.
+**217 files to download** (0 already in the repo, 0 listed twice, **23 that Brennan has no CAD model for** - struck through, do not search for them). Checked 2026-10-21 against Brennan's CAD portal (`tools/_out/partcommunity_20261021`). Files marked * are not printed in Brennan's PDF catalogs but do exist on the portal.
 
 ## 1. Quick wins (2) - together free 18 parts (5405 family)
 
@@ -37,8 +37,8 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 | [ ] | `BRENNAN_FS6801-24-24-NWO-FG.stp` | FS6801-24-24-NWO-FG |
 | [ ] | `BRENNAN_FS6500-24-24-FG.stp` | FS6500-24-24-FG |
 | [ ] | `BRENNAN_FS6502-06-06-FG.stp` | FS6502-06-06-FG |
-| [ ] | `BRENNAN_FS2406-08-04.stp` | FS2406-08-04 |
-| [ ] | `BRENNAN_FS0304-C-08.stp` | FS0304-C-08-ASY |
+| [no CAD] | ~~`BRENNAN_FS2406-08-04.stp`~~ | FS2406-08-04 |
+| [no CAD] | ~~`BRENNAN_FS0304-C-08.stp`~~ | FS0304-C-08-ASY |
 | [ ] | `BRENNAN_FS2503-08-06-FG.stp` | (shape file for the family) |
 | [ ] | `BRENNAN_FS6809-06-06-NWO-FG.stp` | FS6809-06-06-NWO-FG |
 
@@ -62,8 +62,8 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 | [ ] | `BRENNAN_FS1804-16-16-FG.stp` | FS1804-16-16-FG |
 | [ ] | `BRENNAN_FS1804-20-20-FG.stp` | FS1804-20-20-FG |
 | [ ] | `BRENNAN_FS1804-24-24-FG.stp` | FS1804-24-24-FG |
-| [ ] | `BRENNAN_FS2406-12-16.stp` | FS2406-12-16 |
-| [ ] | `BRENNAN_FS2406-16-20.stp` | FS2406-16-20 |
+| [no CAD] | ~~`BRENNAN_FS2406-12-16.stp`~~ | FS2406-12-16 |
+| [no CAD] | ~~`BRENNAN_FS2406-16-20.stp`~~ | FS2406-16-20 |
 | [ ] | `BRENNAN_FS6400-10-06-O.stp` | FS6400-10-06-O |
 | [ ] | `BRENNAN_FS6400-12-20-O.stp` | FS6400-12-20-O |
 | [ ] | `BRENNAN_FS6565-10-10.stp` | FS6565-10-10 |
@@ -116,7 +116,7 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 | [ ] | `BRENNAN_6803-08-08-06-NWO-FG.stp` | 6803-08-08-06-NWO-FG |
 | [ ] | `BRENNAN_6803-08-08-10-NWO-FG.stp` | 6803-08-08-10-NWO-FG |
 | [ ] | `BRENNAN_6803-24-24-24-NWO-FG.stp` | 6803-24-24-24-NWO-FG |
-| [ ] | `BRENNAN_6804-24-24-24-NWO-FG.stp` | 6804-24-24-24-NWO-FG |
+| [no CAD] | ~~`BRENNAN_6804-24-24-24-NWO-FG.stp`~~ | 6804-24-24-24-NWO-FG |
 | [ ] | `BRENNAN_6810-12-12-NWO-FG.stp` | 6810-12-12-NWO-FG |
 | [ ] | `BRENNAN_6805-04-02-NWO-FG.stp` | 6805-04-02-NWO-FG |
 | [ ] | `BRENNAN_6805-04-04-NWO-FG.stp` | 6805-04-04-NWO-FG |
@@ -130,7 +130,7 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 | [ ] | `BRENNAN_6806-06-06-NWO-FG.stp` | 6806-06-06-NWO-FG |
 | [ ] | `BRENNAN_6806-08-06-NWO-FG.stp` | 6806-08-06-NWO-FG |
 | [ ] | `BRENNAN_6806-10-08-NWO-FG.stp` | 6806-10-08-NWO-FG |
-| [ ] | `BRENNAN_6806-12-08.stp` * | 6806-12-08-NWO-FG |
+| [no CAD] | ~~`BRENNAN_6806-12-08.stp`~~ | 6806-12-08-NWO-FG |
 | [ ] | `BRENNAN_6806-12-12-NWO-FG.stp` | 6806-12-12-NWO-FG |
 | [ ] | `BRENNAN_6806-16-16-NWO-FG.stp` | 6806-16-16-NWO-FG |
 | [ ] | `BRENNAN_6806-20-20-NWO-FG.stp` | 6806-20-20-NWO-FG |
@@ -194,27 +194,27 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 | [ ] | `BRENNAN_5505-06-06-FG.stp` | 5505-06-06-FG |
 | [ ] | `BRENNAN_5505-12-12-FG.stp` | 5505-12-12-FG |
 | [ ] | `BRENNAN_5505-16-16-FG.stp` | 5505-16-16-FG |
-| [ ] | `BRENNAN_5503-04-02.stp` * | 5503-04-02-FG |
-| [ ] | `BRENNAN_5503-06-04.stp` * | 5503-06-04-FG |
-| [ ] | `BRENNAN_5503-08-06.stp` * | 5503-08-06-FG |
-| [ ] | `BRENNAN_5503-12-08.stp` * | 5503-12-08-FG |
-| [ ] | `BRENNAN_5503-16-12.stp` * | 5503-16-12-FG |
+| [no CAD] | ~~`BRENNAN_5503-04-02.stp`~~ | 5503-04-02-FG |
+| [no CAD] | ~~`BRENNAN_5503-06-04.stp`~~ | 5503-06-04-FG |
+| [no CAD] | ~~`BRENNAN_5503-08-06.stp`~~ | 5503-08-06-FG |
+| [no CAD] | ~~`BRENNAN_5503-12-08.stp`~~ | 5503-12-08-FG |
+| [no CAD] | ~~`BRENNAN_5503-16-12.stp`~~ | 5503-16-12-FG |
 | [ ] | `BRENNAN_5504-32-32-FG.stp` | 5504-32-32-FG |
-| [ ] | `BRENNAN_5652-32-32-32-32.stp` * | 5652-32-32-32-32-FG |
+| [no CAD] | ~~`BRENNAN_5652-32-32-32-32.stp`~~ | 5652-32-32-32-32-FG |
 | [ ] | `BRENNAN_6503-06-06-FG.stp` | 6503-06-06-FG |
-| [ ] | `BRENNAN_6503-16-16.stp` * | 6503-16-16-FG |
+| [no CAD] | ~~`BRENNAN_6503-16-16.stp`~~ | 6503-16-16-FG |
 | [ ] | `BRENNAN_6603-16-16-16-FG.stp` | 6603-16-16-16-FG |
 | [ ] | `BRENNAN_6606-12-12-12-FG.stp` | 6606-12-12-12-FG |
-| [ ] | `BRENNAN_6566-16-16.stp` * | 6566-16-16-FG |
+| [no CAD] | ~~`BRENNAN_6566-16-16.stp`~~ | 6566-16-16-FG |
 | [ ] | `BRENNAN_1504-24-24-FG.stp` | 1504-24-24-FG |
-| [ ] | `BRENNAN_1504-32-32.stp` * | 1504-32-32-FG |
+| [no CAD] | ~~`BRENNAN_1504-32-32.stp`~~ | 1504-32-32-FG |
 | [ ] | `BRENNAN_2505-16-16-FG.stp` | 2505-16-16-FG |
 
 ## 7. Flanges (38)
 
 | | File | For (not-ready OMi parts of this size) |
 |---|---|---|
-| [ ] | `BRENNAN_1703-08-08-FG.stp` | 1703-08-08-FG 1703-08-08-TUBE |
+| [no CAD] | ~~`BRENNAN_1703-08-08-FG.stp`~~ | 1703-08-08-FG 1703-08-08-TUBE |
 | [ ] | `BRENNAN_1703-12-12-FG.stp` | 1703-12-12-FG 1703-12-12-TUBE |
 | [ ] | `BRENNAN_1703-16-16-FG.stp` | 1703-16-16-FG 1703-16-16-TUBE |
 | [ ] | `BRENNAN_1703-20-20-FG.stp` | 1703-20-20-FG 1703-20-20-TUBE |
@@ -228,7 +228,7 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 | [ ] | `BRENNAN_1803-16-16-FG.stp` | 1803-16-16-FG 1803-16-16-TUBE |
 | [ ] | `BRENNAN_1803-20-20-FG.stp` | 1803-20-20-FG 1803-20-20-TUBE |
 | [ ] | `BRENNAN_1803-24-24-FG.stp` | 1803-24-24-FG 1803-24-24-TUBE |
-| [ ] | `BRENNAN_1803-32-32-FG.stp` | 1803-32-32-FG 1803-32-32-TUBE |
+| [no CAD] | ~~`BRENNAN_1803-32-32-FG.stp`~~ | 1803-32-32-FG 1803-32-32-TUBE |
 | [ ] | `BRENNAN_1804-12-12-FG.stp` | 1804-12-12-FG 1804-12-12-TUBE |
 | [ ] | `BRENNAN_1804-16-16-FG.stp` | 1804-16-16-FG 1804-16-16-TUBE |
 | [ ] | `BRENNAN_1804-20-20-FG.stp` | 1804-20-20-FG 1804-20-20-TUBE |
@@ -275,20 +275,20 @@ Download each from Brennan's PARTcommunity / CADENAS portal and save it as `09_S
 |---|---|---|
 | [ ] | `BRENNAN_0304-C-02.stp` | 0304-C-02 |
 | [ ] | `BRENNAN_0306-02.stp` | 0306-02 |
-| [ ] | `BRENNAN_5404-L-04X3.000.stp` * | 5404-L-04X3.000 |
-| [ ] | `BRENNAN_5404-L-04X4.000.stp` * | 5404-L-04X4.000 |
+| [no CAD] | ~~`BRENNAN_5404-L-04X3.000.stp`~~ | 5404-L-04X3.000 |
+| [no CAD] | ~~`BRENNAN_5404-L-04X4.000.stp`~~ | 5404-L-04X4.000 |
 | [ ] | `BRENNAN_5405-08-16.stp` | 5405-08-16 |
 | [ ] | `BRENNAN_6405-32-24-O.stp` | 6405-32-24-O |
 | [ ] | `BRENNAN_6420-12-12.stp` | 6420-12-12 |
-| [ ] | `BRENNAN_6425-04-04.stp` | 6425-04-04 |
+| [no CAD] | ~~`BRENNAN_6425-04-04.stp`~~ | 6425-04-04 |
 | [ ] | `BRENNAN_6425-06-06.stp` | 6425-06-06 |
 | [ ] | `BRENNAN_6425-10-10.stp` | 6425-10-10 |
 | [ ] | `BRENNAN_6425-12-12.stp` | 6425-12-12 |
 | [ ] | `BRENNAN_6425-16-16.stp` | 6425-16-16 |
 | [ ] | `BRENNAN_6900-32-32-O.stp` | 6900-32-32-O |
-| [ ] | `BRENNAN_2404-32-48.stp` | 2404-32-48 |
-| [ ] | `BRENNAN_V0318-08.stp` | 0618-08 |
-| [ ] | `BRENNAN_V0319-08.stp` | 0619-08 |
+| [no CAD] | ~~`BRENNAN_2404-32-48.stp`~~ | 2404-32-48 |
+| [no CAD] | ~~`BRENNAN_V0318-08.stp`~~ | 0618-08 |
+| [no CAD] | ~~`BRENNAN_V0319-08.stp`~~ | 0619-08 |
 | [ ] | `BRENNAN_3051-<size>.stp` | 3051-04-04 3051-06-06 3051-08-08 3051-12-12 |
 
 ## Also

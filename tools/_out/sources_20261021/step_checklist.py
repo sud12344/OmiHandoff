@@ -76,6 +76,10 @@ nr_core = collections.defaultdict(list)
 for p in nr:
     nr_core[core(p.replace('6408-HHP-', '6408-H').replace('5406-HHP-', '5406-HP-').replace('0618-', 'V0318-').replace('0619-', 'V0319-'))].append(p)
 
+# Brennan's CAD portal (PARTcommunity reversemap, tools/_out/partcommunity_20261021/cache.json): does the file exist at all?
+pcc_path = J('tools', '_out', 'partcommunity_20261021', 'cache.json')
+pcc = json.load(open(pcc_path)) if os.path.exists(pcc_path) else {}
+cad = lambda pn: ('yes' if 'mident' in pcc[pn] else 'no') if pn in pcc else '?'
 rows, seen = [], set()
 for prio, grp, note, pns in G:
     for p in pns:
@@ -91,32 +95,35 @@ for prio, grp, note, pns in G:
         else:
             bpn, where = p, 'not in the PDF catalogs - may not exist at Brennan; search the portal'
         frees = nr_core.get(c, [])
-        rows.append(dict(priority=prio, group=grp, requested=p, brennan_pn=bpn, file_name=f'BRENNAN_{bpn}.stp',
+        rows.append(dict(priority=prio, group=grp, requested=p, brennan_pn=bpn, file_name=f'BRENNAN_{bpn}.stp', brennan_cad=cad(bpn),
                          have='yes' if bpn in have or p in have else '', duplicate='yes' if bpn in seen else '',
                          in_brennan_catalog=where, frees_parts=len(frees), frees=' '.join(frees), group_note=note))
         seen.add(bpn)
-rows.append(dict(priority=9, group='Other', requested='3051-??-??', brennan_pn='3051 (size not given)', file_name='BRENNAN_3051-<size>.stp',
+rows.append(dict(priority=9, group='Other', requested='3051-??-??', brennan_pn='3051 (size not given)', file_name='BRENNAN_3051-<size>.stp', brennan_cad='?',
                  have='', duplicate='', in_brennan_catalog='TFA: 3051-02-02 ... -16-16 printed',
                  frees_parts=sum(len(v) for k, v in nr_core.items() if k.startswith('3051')),
                  frees=' '.join(p for p in nr if p.startswith('3051')), group_note='the PC list does not say which size - ask the PC session'))
 with open(os.path.join(HERE, 'STEP_CHECKLIST.csv'), 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
 
-todo = [r for r in rows if not r['have'] and not r['duplicate']]
+todo = [r for r in rows if not r['have'] and not r['duplicate'] and r['brennan_cad'] != 'no']
+nocad = [r for r in rows if r['brennan_cad'] == 'no']
 md = ['# Brennan STEP download checklist (2026-10-21)', '',
       'Source: the PC session\'s blocked-needs list of 2026-10-20 (section 1), expanded to full part numbers by `step_checklist.py`.',
       'Download each from Brennan\'s PARTcommunity / CADENAS portal and save it as `09_STEP_FILES/BRENNAN_<part number>.stp`',
       '(the file name column). Re-run `python -I tools/_out/sources_20261021/step_checklist.py` afterwards: the box column fills in.', '',
       f'**{len(todo)} files to download** ({sum(1 for r in rows if r["have"])} already in the repo, '
-      f'{sum(1 for r in rows if r["duplicate"])} listed twice). Files marked * are not printed in Brennan\'s PDF catalogs: '
-      'search for them, and tell me which ones Brennan does not have.', '']
+      f'{sum(1 for r in rows if r["duplicate"])} listed twice, **{len(nocad)} that Brennan has no CAD model for** - struck through, '
+      'do not search for them). Checked 2026-10-21 against Brennan\'s CAD portal (`tools/_out/partcommunity_20261021`). '
+      'Files marked * are not printed in Brennan\'s PDF catalogs but do exist on the portal.', '']
 for prio, grp, note, _ in G:
     rs = [r for r in rows if r['group'] == grp]
     md += [f'## {prio}. {grp} ({len(rs)})' + (f' - {note}' if note else ''), '', '| | File | For (not-ready OMi parts of this size) |', '|---|---|---|']
     for r in rs:
-        box = 'x' if r['have'] else ('dup' if r['duplicate'] else ' ')
+        box = 'x' if r['have'] else ('dup' if r['duplicate'] else ('no CAD' if r['brennan_cad'] == 'no' else ' '))
         star = ' *' if r['in_brennan_catalog'].startswith('not in') else ''
-        md.append(f"| [{box}] | `{r['file_name']}`{star} | {r['frees'] or '(shape file for the family)'} |")
+        name = f"~~`{r['file_name']}`~~" if r['brennan_cad'] == 'no' else f"`{r['file_name']}`{star}"
+        md.append(f"| [{box}] | {name} | {r['frees'] or '(shape file for the family)'} |")
     md.append('')
 md += ['## Also', '', '- One 3051 file: the PC list does not say which size (not-ready: ' + rows[-1]['frees'] + ').', '']
 # --- arrival check: every BRENNAN_*.stp must name its own part number in a STEP PRODUCT entry (as the 2026-10-20 pilots do)

@@ -7,6 +7,8 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-21 (cloud, later): Brennan CAD portal lookup** (`tools\_out\partcommunity_20261021\README.md`; network: brennaninc.com + *.partcommunity.com allowed). Brennan has a CAD model for 693 of the 1,022 not-ready parts; of the 240 STEP downloads 217 exist, 23 do not (struck in `STEP_CHECKLIST.md`). The records = Brennan's CAD parameters (checked against BRENNAN_FS2403-08-08: bore / thread / hex / length match) - not applied; user decides whether to use them as Brennan values. OMi package rebuilt: 140 parts (compression 70 of 230). Downloads stay with the user (contact form + reCAPTCHA).
+
 **2026-10-21 (cloud): not-ready parts sorted by source + OMi package drafted (not sent).** `tools\_out\sources_20261021\README.md`: the 1,022 not-ready parts (PC's 987 + 35 held) checked against Air-Way / Brennan catalogs + STEPs / OMi file; agrees with the PC's `blocked_needs_20261020\BLOCKED_NEEDS.md` except 6505-04-02 (OMi file prints it) and 11 download-list parts no catalog prints. `STEP_CHECKLIST.md` = the 240 Brennan files as exact names + arrival check. `10_DRAWINGS\for_OMi_2026-10-21\` = PDF + fill-in workbook + email to Triveni for the 290 parts no source prints (compression 230, test gauge 12, 34 single sizes, 4005, 0618 / 0619, FS0319-24) - user to review and send.
 
 **2026-10-20 (later): AIR-WAY FIRST - STAGED (cloud session), not shipped.** Branch `claude/review-drawings-update-eflmmf` also carries the
