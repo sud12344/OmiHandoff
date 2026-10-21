@@ -149,3 +149,6 @@ tools/_out/rebase_b16_20261020/checks/gs/
 tools/_out/orfs_gen_20261020/regen/
 tools/_out/orfs_gen_20261020/ocp/*.stp
 tools/_out/orfs_gen_20261020/scratch/
+# groupD: the all-roots regeneration outputs (only regen/all_cmp.txt is kept)
+tools/_out/groupD_20261021/regen/all_old/
+tools/_out/groupD_20261021/regen/all_new/

@@ -1,0 +1,330 @@
+1703-08-08-Tube    record L1  2.72    catalog FLANGE-p004-t03 2.72    ok
+1703-08-08-Tube    record L2  0.91    catalog FLANGE-p004-t03 0.91    ok
+1703-08-08-Tube    record A/F 0.875   catalog FLANGE-p004-t03 7/8     ok
+1703-08-08-Tube    JIC -08 end length GT 0.657 vs library 0.657 ok
+1703-08-08-Tube    code 61 -08 head record AFL 1.188 EFL 0.265 BFL 1.0 vs FLG61_MEAS TH 0.265 groove OD 1.0 ok; Air-Way s61 O [1.19] ok
+1703-12-12-Tube    record L1  3.15    catalog FLANGE-p004-t03 3.15    ok
+1703-12-12-Tube    record L2  1.02    catalog FLANGE-p004-t03 1.02    ok
+1703-12-12-Tube    record A/F 1.125   catalog FLANGE-p004-t03 1 1/8   ok
+1703-12-12-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1703-12-12-Tube    code 61 -12 head record AFL 1.5 EFL 0.265 BFL 1.25 vs FLG61_MEAS TH 0.265 groove OD 1.25 ok; Air-Way s61 O [1.5] ok
+1703-12-16-Tube    record L1  3.15    catalog FLANGE-p004-t03 3.15    ok
+1703-12-16-Tube    record L2  1.02    catalog FLANGE-p004-t03 1.02    ok
+1703-12-16-Tube    record A/F 1.125   catalog FLANGE-p004-t03 1 1/8   ok
+1703-12-16-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1703-12-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1703-16-16-Tube    record L1  3.66    catalog FLANGE-p004-t03 3.66    ok
+1703-16-16-Tube    record L2  1.18    catalog FLANGE-p004-t03 1.18    ok
+1703-16-16-Tube    record A/F 1.375   catalog FLANGE-p004-t03 1 3/8   ok
+1703-16-16-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1703-16-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1703-16-20-Tube    record L1  3.66    catalog FLANGE-p004-t03 3.66    ok
+1703-16-20-Tube    record L2  1.18    catalog FLANGE-p004-t03 1.18    ok
+1703-16-20-Tube    record A/F 1.375   catalog FLANGE-p004-t03 1 3/8   ok
+1703-16-20-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1703-16-20-Tube    code 61 -20 head record AFL 2.0 EFL 0.315 BFL 1.75 vs FLG61_MEAS TH 0.315 groove OD 1.75 ok; Air-Way s61 O [2.0] ok
+1703-16-24-Tube    record L1  3.74    catalog FLANGE-p004-t03 3.74    ok
+1703-16-24-Tube    record L2  1.26    catalog FLANGE-p004-t03 1.26    ok
+1703-16-24-Tube    record A/F 1.375   catalog FLANGE-p004-t03 1 3/8   ok
+1703-16-24-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1703-16-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1703-20-16-Tube    record L1  3.86    catalog FLANGE-p004-t03 3.86    ok
+1703-20-16-Tube    record L2  1.22    catalog FLANGE-p004-t03 1.22    ok
+1703-20-16-Tube    record A/F 1.6875  catalog FLANGE-p004-t03 1 11/16 ok
+1703-20-16-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1703-20-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1703-20-20-Tube    record L1  4.21    catalog FLANGE-p004-t03 4.21    ok
+1703-20-20-Tube    record L2  1.38    catalog FLANGE-p004-t03 1.38    ok
+1703-20-20-Tube    record A/F 1.6875  catalog FLANGE-p004-t03 1 11/16 ok
+1703-20-20-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1703-20-20-Tube    code 61 -20 head record AFL 2.0 EFL 0.315 BFL 1.75 vs FLG61_MEAS TH 0.315 groove OD 1.75 ok; Air-Way s61 O [2.0] ok
+1703-20-24-Tube    record L1  4.25    catalog FLANGE-p004-t03 4.25    ok
+1703-20-24-Tube    record L2  1.42    catalog FLANGE-p004-t03 1.42    ok
+1703-20-24-Tube    record A/F 1.6875  catalog FLANGE-p004-t03 1 11/16 ok
+1703-20-24-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1703-20-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1703-24-20-Tube    record L1  4.7     catalog FLANGE-p004-t03 4.70    ok
+1703-24-20-Tube    record L2  1.46    catalog FLANGE-p004-t03 1.46    ok
+1703-24-20-Tube    record A/F 2.0     catalog FLANGE-p004-t03 2       ok
+1703-24-20-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1703-24-20-Tube    code 61 -20 head record AFL 2.0 EFL 0.315 BFL 1.75 vs FLG61_MEAS TH 0.315 groove OD 1.75 ok; Air-Way s61 O [2.0] ok
+1703-24-24-Tube    record L1  4.96    catalog FLANGE-p004-t03 4.96    ok
+1703-24-24-Tube    record L2  1.69    catalog FLANGE-p004-t03 1.69    ok
+1703-24-24-Tube    record A/F 2.0     catalog FLANGE-p004-t03 2       ok
+1703-24-24-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1703-24-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1703-24-32-Tube    record L1  5.12    catalog FLANGE-p004-t03 5.12    ok
+1703-24-32-Tube    record L2  1.81    catalog FLANGE-p004-t03 1.81    ok
+1703-24-32-Tube    record A/F 2.0     catalog FLANGE-p004-t03 2       ok
+1703-24-32-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1703-24-32-Tube    code 61 -32 head record AFL 2.812 EFL 0.375 BFL 2.495 vs FLG61_MEAS TH 0.375 groove OD 2.49 ok; Air-Way s61 O [2.81] ok
+1703-32-32-Tube    record L1  6.22    catalog FLANGE-p004-t03 6.22    ok
+1703-32-32-Tube    record L2  2.17    catalog FLANGE-p004-t03 2.17    ok
+1703-32-32-Tube    record A/F 2.75    catalog FLANGE-p004-t03 2 3/4   ok
+1703-32-32-Tube    JIC -32 end length GT 1.333 vs library 1.333 ok
+1703-32-32-Tube    code 61 -32 head record AFL 2.812 EFL 0.375 BFL 2.495 vs FLG61_MEAS TH 0.375 groove OD 2.49 ok; Air-Way s61 O [2.81] ok
+1704-08-08-Tube    record L1  2.32    catalog FLANGE-p005-t01 2.32    ok
+1704-08-08-Tube    record L2  1.81    catalog FLANGE-p005-t01 1.81    ok
+1704-08-08-Tube    record A/F 0.875   catalog FLANGE-p005-t01 7/8     ok
+1704-08-08-Tube    JIC -08 end length GT 0.657 vs library 0.657 ok
+1704-08-08-Tube    code 61 -08 head record AFL 1.188 EFL 0.265 BFL 1.0 vs FLG61_MEAS TH 0.265 groove OD 1.0 ok; Air-Way s61 O [1.19] ok
+1704-08-12-Tube    record L1  2.32    catalog FLANGE-p005-t01 2.32    ok
+1704-08-12-Tube    record L2  1.85    catalog FLANGE-p005-t01 1.85    ok
+1704-08-12-Tube    record A/F 0.875   catalog FLANGE-p005-t01 7/8     ok
+1704-08-12-Tube    JIC -08 end length GT 0.657 vs library 0.657 ok
+1704-08-12-Tube    code 61 -12 head record AFL 1.5 EFL 0.265 BFL 1.25 vs FLG61_MEAS TH 0.265 groove OD 1.25 ok; Air-Way s61 O [1.5] ok
+1704-12-12-Tube    record L1  2.83    catalog FLANGE-p005-t01 2.83    ok
+1704-12-12-Tube    record L2  2.13    catalog FLANGE-p005-t01 2.13    ok
+1704-12-12-Tube    record A/F 1.125   catalog FLANGE-p005-t01 1 1/8   ok
+1704-12-12-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1704-12-12-Tube    code 61 -12 head record AFL 1.5 EFL 0.265 BFL 1.25 vs FLG61_MEAS TH 0.265 groove OD 1.25 ok; Air-Way s61 O [1.5] ok
+1704-12-16-Tube    record L1  2.83    catalog FLANGE-p005-t01 2.83    ok
+1704-12-16-Tube    record L2  2.13    catalog FLANGE-p005-t01 2.13    ok
+1704-12-16-Tube    record A/F 1.125   catalog FLANGE-p005-t01 1 1/8   ok
+1704-12-16-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1704-12-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1704-16-12-Tube    record L1  2.95    catalog FLANGE-p005-t01 2.95    ok
+1704-16-12-Tube    record L2  2.13    catalog FLANGE-p005-t01 2.13    ok
+1704-16-12-Tube    record A/F 1.375   catalog FLANGE-p005-t01 1 3/8   ok
+1704-16-12-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1704-16-12-Tube    code 61 -12 head record AFL 1.5 EFL 0.265 BFL 1.25 vs FLG61_MEAS TH 0.265 groove OD 1.25 ok; Air-Way s61 O [1.5] ok
+1704-16-16-Tube    record L1  3.39    catalog FLANGE-p005-t01 3.39    ok
+1704-16-16-Tube    record L2  2.6     catalog FLANGE-p005-t01 2.60    ok
+1704-16-16-Tube    record A/F 1.375   catalog FLANGE-p005-t01 1 3/8   ok
+1704-16-16-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1704-16-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1704-16-20-Tube    record L1  3.39    catalog FLANGE-p005-t01 3.39    ok
+1704-16-20-Tube    record L2  2.6     catalog FLANGE-p005-t01 2.60    ok
+1704-16-20-Tube    record A/F 1.375   catalog FLANGE-p005-t01 1 3/8   ok
+1704-16-20-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1704-16-20-Tube    code 61 -20 head record AFL 2.0 EFL 0.315 BFL 1.75 vs FLG61_MEAS TH 0.315 groove OD 1.75 ok; Air-Way s61 O [2.0] ok
+1704-16-24-Tube    record L1  3.39    catalog FLANGE-p005-t01 3.39    ok
+1704-16-24-Tube    record L2  2.66    catalog FLANGE-p005-t01 2.66    ok
+1704-16-24-Tube    record A/F 1.375   catalog FLANGE-p005-t01 1 3/8   ok
+1704-16-24-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1704-16-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1704-20-12-Tube    record L1  3.052   catalog FLANGE-p005-t01 3.052   ok
+1704-20-12-Tube    record L2  2.26    catalog FLANGE-p005-t01 2.26    ok
+1704-20-12-Tube    record A/F 1.6875  catalog FLANGE-p005-t01 1.6875  ok
+1704-20-12-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1704-20-12-Tube    code 61 -12 head record AFL 1.5 EFL 0.265 BFL 1.25 vs FLG61_MEAS TH 0.265 groove OD 1.25 ok; Air-Way s61 O [1.5] ok
+1704-20-16-Tube    record L1  3.54    catalog FLANGE-p005-t01 3.54    ok
+1704-20-16-Tube    record L2  2.6     catalog FLANGE-p005-t01 2.60    ok
+1704-20-16-Tube    record A/F 1.6875  catalog FLANGE-p005-t01 1 11/16 ok
+1704-20-16-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1704-20-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1704-20-20-Tube    record L1  3.98    catalog FLANGE-p005-t01 3.98    ok
+1704-20-20-Tube    record L2  3.03    catalog FLANGE-p005-t01 3.03    ok
+1704-20-20-Tube    record A/F 1.6875  catalog FLANGE-p005-t01 1 11/16 ok
+1704-20-20-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1704-20-20-Tube    code 61 -20 head record AFL 2.0 EFL 0.315 BFL 1.75 vs FLG61_MEAS TH 0.315 groove OD 1.75 ok; Air-Way s61 O [2.0] ok
+1704-20-24-Tube    record L1  3.98    catalog FLANGE-p005-t01 3.98    ok
+1704-20-24-Tube    record L2  3.11    catalog FLANGE-p005-t01 3.11    ok
+1704-20-24-Tube    record A/F 1.6875  catalog FLANGE-p005-t01 1 11/16 ok
+1704-20-24-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1704-20-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1704-20-32-Tube    record L1  3.976   catalog FLANGE-p005-t01 3.976   ok
+1704-20-32-Tube    record L2  3.504   catalog FLANGE-p005-t01 3.504   ok
+1704-20-32-Tube    record A/F 1.688   catalog FLANGE-p005-t01 1.688   ok
+1704-20-32-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1704-20-32-Tube    code 61 -32 head record AFL 2.812 EFL 0.375 BFL 2.49 vs FLG61_MEAS TH 0.375 groove OD 2.49 ok; Air-Way s61 O [2.81] ok
+1704-24-16-Tube    record L1  4.039   catalog FLANGE-p005-t01 4.039   ok
+1704-24-16-Tube    record L2  2.849   catalog FLANGE-p005-t01 2.849   ok
+1704-24-16-Tube    record A/F 2.0     catalog FLANGE-p005-t01 2.000   ok
+1704-24-16-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1704-24-16-Tube    code 61 -16 head record AFL 1.75 EFL 0.315 BFL 1.56 vs FLG61_MEAS TH 0.315 groove OD 1.56 ok; Air-Way s61 O [1.75] ok
+1704-24-20-Tube    record L1  4.21    catalog FLANGE-p005-t01 4.21    ok
+1704-24-20-Tube    record L2  3.03    catalog FLANGE-p005-t01 3.03    ok
+1704-24-20-Tube    record A/F 2.0     catalog FLANGE-p005-t01 2       ok
+1704-24-20-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1704-24-20-Tube    code 61 -20 head record AFL 2.0 EFL 0.315 BFL 1.75 vs FLG61_MEAS TH 0.315 groove OD 1.75 ok; Air-Way s61 O [2.0] ok
+1704-24-24-Tube    record L1  4.57    catalog FLANGE-p005-t01 4.57    ok
+1704-24-24-Tube    record L2  3.66    catalog FLANGE-p005-t01 3.66    ok
+1704-24-24-Tube    record A/F 2.0     catalog FLANGE-p005-t01 2       ok
+1704-24-24-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1704-24-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1704-24-32-Tube    record L1  4.57    catalog FLANGE-p005-t01 4.57    ok
+1704-24-32-Tube    record L2  3.86    catalog FLANGE-p005-t01 3.86    ok
+1704-24-32-Tube    record A/F 2.0     catalog FLANGE-p005-t01 2       ok
+1704-24-32-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1704-24-32-Tube    code 61 -32 head record AFL 2.812 EFL 0.375 BFL 2.49 vs FLG61_MEAS TH 0.375 groove OD 2.49 ok; Air-Way s61 O [2.81] ok
+1704-32-24-Tube    record L1  5.04    catalog FLANGE-p005-t01 5.04    ok
+1704-32-24-Tube    record L2  3.66    catalog FLANGE-p005-t01 3.66    ok
+1704-32-24-Tube    record A/F 2.75    catalog FLANGE-p005-t01 2 3/4   ok
+1704-32-24-Tube    JIC -32 end length GT 1.333 vs library 1.333 ok
+1704-32-24-Tube    code 61 -24 head record AFL 2.375 EFL 0.315 BFL 2.12 vs FLG61_MEAS TH 0.315 groove OD 2.115 ok; Air-Way s61 O [2.37, 2.38] ok
+1704-32-32-Tube    record L1  5.79    catalog FLANGE-p005-t01 5.79    ok
+1704-32-32-Tube    record L2  4.84    catalog FLANGE-p005-t01 4.84    ok
+1704-32-32-Tube    record A/F 2.75    catalog FLANGE-p005-t01 2 3/4   ok
+1704-32-32-Tube    JIC -32 end length GT 1.333 vs library 1.333 ok
+1704-32-32-Tube    code 61 -32 head record AFL 2.812 EFL 0.375 BFL 2.49 vs FLG61_MEAS TH 0.375 groove OD 2.49 ok; Air-Way s61 O [2.81] ok
+1803-12-12-Tube    record L1  3.31    catalog FLANGE-p005-t04 3.31    ok
+1803-12-12-Tube    record L2  1.14    catalog FLANGE-p005-t04 1.14    ok
+1803-12-12-Tube    record A/F 1.125   catalog FLANGE-p005-t04 1 1/8   ok
+1803-12-12-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1803-12-12-Tube    code 62 -12 head record AFL 1.625 EFL 0.345 BFL 1.25 vs FLG62_HEAD (3300-62 / measured) 1.625 / 0.345 / 1.25 ok
+1803-12-16-Tube    record L1  3.35    catalog FLANGE-p005-t04 3.35    ok
+1803-12-16-Tube    record L2  1.22    catalog FLANGE-p005-t04 1.22    ok
+1803-12-16-Tube    record A/F 1.125   catalog FLANGE-p005-t04 1 1/8   ok
+1803-12-16-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1803-12-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1803-12-20-Tube    record L1  3.75    catalog FLANGE-p005-t04 3.75    ok
+1803-12-20-Tube    record L2  1.62    catalog FLANGE-p005-t04 1.62    ok
+1803-12-20-Tube    record A/F 1.125   catalog FLANGE-p005-t04 1.125   ok
+1803-12-20-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1803-12-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1803-16-12-Tube    record L1  3.46    catalog FLANGE-p005-t04 3.46    ok
+1803-16-12-Tube    record L2  1.18    catalog FLANGE-p005-t04 1.18    ok
+1803-16-12-Tube    record A/F 1.375   catalog FLANGE-p005-t04 1 3/8   ok
+1803-16-12-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1803-16-12-Tube    code 62 -12 head record AFL 1.625 EFL 0.345 BFL 1.25 vs FLG62_HEAD (3300-62 / measured) 1.625 / 0.345 / 1.25 ok
+1803-16-16-Tube    record L1  3.86    catalog FLANGE-p005-t04 3.86    ok
+1803-16-16-Tube    record L2  1.38    catalog FLANGE-p005-t04 1.38    ok
+1803-16-16-Tube    record A/F 1.375   catalog FLANGE-p005-t04 1 3/8   ok
+1803-16-16-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1803-16-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1803-16-20-Tube    record L1  3.98    catalog FLANGE-p005-t04 3.98    ok
+1803-16-20-Tube    record L2  1.5     catalog FLANGE-p005-t04 1.50    ok
+1803-16-20-Tube    record A/F 1.375   catalog FLANGE-p005-t04 1 3/8   ok
+1803-16-20-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1803-16-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1803-20-12-Tube    record L1  4.13    catalog FLANGE-p005-t04 4.13    ok
+1803-20-12-Tube    record L2  1.42    catalog FLANGE-p005-t04 1.42    ok
+1803-20-12-Tube    record A/F 1.5     catalog FLANGE-p005-t04 1 1/2   ok
+1803-20-12-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1803-20-12-Tube    code 62 -12 head record AFL 1.625 EFL 0.345 BFL 1.25 vs FLG62_HEAD (3300-62 / measured) 1.625 / 0.345 / 1.25 ok
+1803-20-16-Tube    record L1  4.13    catalog FLANGE-p005-t04 4.13    ok
+1803-20-16-Tube    record L2  1.42    catalog FLANGE-p005-t04 1.42    ok
+1803-20-16-Tube    record A/F 1.6875  catalog FLANGE-p005-t04 1 11/16 ok
+1803-20-16-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1803-20-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1803-20-20-Tube    record L1  4.53    catalog FLANGE-p005-t04 4.53    ok
+1803-20-20-Tube    record L2  1.65    catalog FLANGE-p005-t04 1.65    ok
+1803-20-20-Tube    record A/F 1.6875  catalog FLANGE-p005-t04 1 11/16 ok
+1803-20-20-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1803-20-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1803-20-24-Tube    record L1  4.65    catalog FLANGE-p005-t04 4.65    ok
+1803-20-24-Tube    record L2  1.81    catalog FLANGE-p005-t04 1.81    ok
+1803-20-24-Tube    record A/F 1.6875  catalog FLANGE-p005-t04 1 11/16 ok
+1803-20-24-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1803-20-24-Tube    code 62 -24 head record AFL 2.5 EFL 0.495 BFL 2.115 vs FLG62_HEAD (3300-62 / measured) 2.5 / 0.495 / 2.115 ok
+1803-24-20-Tube    record L1  4.875   catalog FLANGE-p005-t04 4.875   ok
+1803-24-20-Tube    record L2  1.4     catalog FLANGE-p005-t04 1.400   ok
+1803-24-20-Tube    record A/F 2.0     catalog FLANGE-p005-t04 2.000   ok
+1803-24-20-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1803-24-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1803-24-24-Tube    record L1  5.16    catalog FLANGE-p005-t04 5.16    ok
+1803-24-24-Tube    record L2  1.93    catalog FLANGE-p005-t04 1.93    ok
+1803-24-24-Tube    record A/F 2.0     catalog FLANGE-p005-t04 2       ok
+1803-24-24-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1803-24-24-Tube    code 62 -24 head record AFL 2.5 EFL 0.495 BFL 2.115 vs FLG62_HEAD (3300-62 / measured) 2.5 / 0.495 / 2.115 ok
+1803-32-32-Tube    record L1  6.54    catalog FLANGE-p005-t04 6.54    ok
+1803-32-32-Tube    record L2  2.48    catalog FLANGE-p005-t04 2.48    ok
+1803-32-32-Tube    record A/F 2.75    catalog FLANGE-p005-t04 2 3/4   ok
+1803-32-32-Tube    JIC -32 end length GT 1.333 vs library 1.333 ok
+1803-32-32-Tube    code 62 -32 head record AFL 3.125 EFL 0.495 BFL 2.49 vs FLG62_HEAD (3300-62 / measured) 3.125 / 0.495 / 2.49 ok
+1804-08-08-Tube    record L1  2.32    catalog FLANGE-p006-t01 2.32    ok
+1804-08-08-Tube    record L2  1.85    catalog FLANGE-p006-t01 1.85    ok
+1804-08-08-Tube    record A/F 0.875   catalog FLANGE-p006-t01 7/8     ok
+1804-08-08-Tube    JIC -08 end length GT 0.657 vs library 0.657 ok
+1804-08-08-Tube    code 62 -08 head record AFL 1.25 EFL 0.305 BFL 1.0 vs FLG62_HEAD (3300-62 / measured) 1.25 / 0.305 / 1.0 ok
+1804-12-12-Tube    record L1  2.83    catalog FLANGE-p006-t01 2.83    ok
+1804-12-12-Tube    record L2  2.28    catalog FLANGE-p006-t01 2.28    ok
+1804-12-12-Tube    record A/F 1.125   catalog FLANGE-p006-t01 1 1/8   ok
+1804-12-12-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1804-12-12-Tube    code 62 -12 head record AFL 1.625 EFL 0.345 BFL 1.25 vs FLG62_HEAD (3300-62 / measured) 1.625 / 0.345 / 1.25 ok
+1804-12-16-Tube    record L1  2.83    catalog FLANGE-p006-t01 2.83    ok
+1804-12-16-Tube    record L2  2.4     catalog FLANGE-p006-t01 2.40    ok
+1804-12-16-Tube    record A/F 1.125   catalog FLANGE-p006-t01 1 1/8   ok
+1804-12-16-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1804-12-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1804-12-20-Tube    record L1  2.83    catalog FLANGE-p006-t01 2.83    ok
+1804-12-20-Tube    record L2  2.76    catalog FLANGE-p006-t01 2.76    ok
+1804-12-20-Tube    record A/F 1.125   catalog FLANGE-p006-t01 1 1/8   ok
+1804-12-20-Tube    JIC -12 end length GT 0.864 vs library 0.864 ok
+1804-12-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1804-16-12-Tube    record L1  2.93    catalog FLANGE-p006-t01 2.93    ok
+1804-16-12-Tube    record L2  2.28    catalog FLANGE-p006-t01 2.28    ok
+1804-16-12-Tube    record A/F 1.375   catalog FLANGE-p006-t01 1 3/8   ok
+1804-16-12-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1804-16-12-Tube    code 62 -12 head record AFL 1.625 EFL 0.345 BFL 1.25 vs FLG62_HEAD (3300-62 / measured) 1.625 / 0.345 / 1.25 ok
+1804-16-16-Tube    record L1  3.39    catalog FLANGE-p006-t01 3.39    ok
+1804-16-16-Tube    record L2  2.87    catalog FLANGE-p006-t01 2.87    ok
+1804-16-16-Tube    record A/F 1.375   catalog FLANGE-p006-t01 1 3/8   ok
+1804-16-16-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1804-16-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1804-16-20-Tube    record L1  3.39    catalog FLANGE-p006-t01 3.39    ok
+1804-16-20-Tube    record L2  3.03    catalog FLANGE-p006-t01 3.03    ok
+1804-16-20-Tube    record A/F 1.375   catalog FLANGE-p006-t01 1 3/8   ok
+1804-16-20-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1804-16-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1804-16-24-Tube    record L1  3.39    catalog FLANGE-p006-t01 3.39    ok
+1804-16-24-Tube    record L2  3.23    catalog FLANGE-p006-t01 3.23    ok
+1804-16-24-Tube    record A/F 1.375   catalog FLANGE-p006-t01 1 3/8   ok
+1804-16-24-Tube    JIC -16 end length GT 0.911 vs library 0.911 ok
+1804-16-24-Tube    code 62 -24 head record AFL 2.5 EFL 0.495 BFL 2.115 vs FLG62_HEAD (3300-62 / measured) 2.5 / 0.495 / 2.115 ok
+1804-20-16-Tube    record L1  3.54    catalog FLANGE-p006-t01 3.54    ok
+1804-20-16-Tube    record L2  2.87    catalog FLANGE-p006-t01 2.87    ok
+1804-20-16-Tube    record A/F 1.6875  catalog FLANGE-p006-t01 1 11/16 ok
+1804-20-16-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1804-20-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1804-20-20-Tube    record L1  3.98    catalog FLANGE-p006-t01 3.98    ok
+1804-20-20-Tube    record L2  3.46    catalog FLANGE-p006-t01 3.46    ok
+1804-20-20-Tube    record A/F 1.6875  catalog FLANGE-p006-t01 1 11/16 ok
+1804-20-20-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1804-20-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1804-20-24-Tube    record L1  3.98    catalog FLANGE-p006-t01 3.98    ok
+1804-20-24-Tube    record L2  3.66    catalog FLANGE-p006-t01 3.66    ok
+1804-20-24-Tube    record A/F 1.6875  catalog FLANGE-p006-t01 1 11/16 ok
+1804-20-24-Tube    JIC -20 end length GT 0.958 vs library 0.958 ok
+1804-20-24-Tube    code 62 -24 head record AFL 2.5 EFL 0.495 BFL 2.115 vs FLG62_HEAD (3300-62 / measured) 2.5 / 0.495 / 2.115 ok
+1804-24-16-Tube    record L1  3.94    catalog FLANGE-p006-t01 3.94    ok
+1804-24-16-Tube    record L2  2.87    catalog FLANGE-p006-t01 2.87    ok
+1804-24-16-Tube    record A/F 2.0     catalog FLANGE-p006-t01 2       ok
+1804-24-16-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1804-24-16-Tube    code 62 -16 head record AFL 1.875 EFL 0.375 BFL 1.56 vs FLG62_HEAD (3300-62 / measured) 1.875 / 0.375 / 1.56 ok
+1804-24-20-Tube    record L1  4.33    catalog FLANGE-p006-t01 4.33    ok
+1804-24-20-Tube    record L2  3.46    catalog FLANGE-p006-t01 3.46    ok
+1804-24-20-Tube    record A/F 2.0     catalog FLANGE-p006-t01 2       ok
+1804-24-20-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1804-24-20-Tube    code 62 -20 head record AFL 2.125 EFL 0.405 BFL 1.75 vs FLG62_HEAD (3300-62 / measured) 2.125 / 0.405 / 1.75 ok
+1804-24-24-Tube    record L1  4.57    catalog FLANGE-p006-t01 4.57    ok
+1804-24-24-Tube    record L2  4.02    catalog FLANGE-p006-t01 4.02    ok
+1804-24-24-Tube    record A/F 2.0     catalog FLANGE-p006-t01 2       ok
+1804-24-24-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1804-24-24-Tube    code 62 -24 head record AFL 2.5 EFL 0.495 BFL 2.115 vs FLG62_HEAD (3300-62 / measured) 2.5 / 0.495 / 2.115 ok
+1804-24-32-Tube    record L1  4.833   catalog FLANGE-p006-t01 4.833   ok
+1804-24-32-Tube    record L2  4.303   catalog FLANGE-p006-t01 4.303   ok
+1804-24-32-Tube    record A/F 2.0     catalog FLANGE-p006-t01 2.000   ok
+1804-24-32-Tube    JIC -24 end length GT 1.083 vs library 1.083 ok
+1804-24-32-Tube    code 62 -32 head record AFL 3.125 EFL 0.495 BFL 2.49 vs FLG62_HEAD (3300-62 / measured) 3.125 / 0.495 / 2.49 ok
+1804-32-32-Tube    record L1  5.79    catalog FLANGE-p006-t01 5.79    ok
+1804-32-32-Tube    record L2  5.31    catalog FLANGE-p006-t01 5.31    ok
+1804-32-32-Tube    record A/F 2.75    catalog FLANGE-p006-t01 2 3/4   ok
+1804-32-32-Tube    JIC -32 end length GT 1.333 vs library 1.333 ok
+1804-32-32-Tube    code 62 -32 head record AFL 3.125 EFL 0.495 BFL 2.49 vs FLG62_HEAD (3300-62 / measured) 3.125 / 0.495 / 2.49 ok
+6701-04-04         record M  1.25   catalog TFA-p038-t02 1.25   ok
+6701-04-04         record L  1.09   catalog TFA-p038-t02 1.09   ok
+6701-04-04         record C1 0.5    catalog TFA-p038-t02 0.500  ok
+6701-04-04         record C2 0.563  catalog TFA-p038-t02 0.563  ok
+6701-04-04         JIC -04 end length L1 0.551 vs library 0.55 ok
+6701-06-06         record M  1.35   catalog TFA-p038-t02 1.35   ok
+6701-06-06         record L  1.22   catalog TFA-p038-t02 1.22   ok
+6701-06-06         record C1 0.625  catalog TFA-p038-t02 0.625  ok
+6701-06-06         record C2 0.688  catalog TFA-p038-t02 0.688  ok
+6701-06-06         JIC -06 end length L1 0.555 vs library 0.556 ok
+6701-08-08         record M  1.77   catalog TFA-p038-t02 1.77   ok
+6701-08-08         record L  1.52   catalog TFA-p038-t02 1.52   ok
+6701-08-08         record C1 0.812  catalog TFA-p038-t02 0.812  ok
+6701-08-08         record C2 0.875  catalog TFA-p038-t02 0.875  ok
+6701-08-08         JIC -08 end length L1 0.657 vs library 0.657 ok
+6701-12-12         record M  2.5    catalog TFA-p038-t02 2.50   ok
+6701-12-12         record L  2.4    catalog TFA-p038-t02 2.40   ok
+6701-12-12         record C1 1.125  catalog TFA-p038-t02 1.125  ok
+6701-12-12         record C2 1.25   catalog TFA-p038-t02 1.250  ok
+6701-12-12         JIC -12 end length L1 0.862 vs library 0.864 ok
+6701-20-20         record M  3.26   catalog TFA-p038-t02 2.750  DIFFERS
+6701-20-20         record L  3.75   catalog TFA-p038-t02 3.750  ok
+6701-20-20         record C1 1.693  catalog TFA-p038-t02 1.693  ok
+6701-20-20         record C2 2.0    catalog TFA-p038-t02 2.000  ok
+6701-20-20         JIC -20 end length L1 0.957 vs library 0.958 ok

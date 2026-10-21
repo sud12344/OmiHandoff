@@ -1,0 +1,11 @@
+Build_1703T_MASTER.bas     DRIVE   OK  {'points': 11, 'unknowns': 22, 'constraints': 22, 'rank': 22, 'dims': 11, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_1703T_MASTER.bas     PATH    OK  {'unknowns': 22, 'constraints': 22, 'rank': 22, 'fully': True, 'redundant': 0, 'max_residual': 5.19e-10, 'sketch': 'PATH', 'face_extension': True}
+Build_1703T_MASTER.bas     PATHX   OK  {'unknowns': 18, 'constraints': 18, 'rank': 18, 'fully': True, 'redundant': 0, 'max_residual': 2.92e-10, 'sketch': 'PATHX', 'face_extension': False}
+Build_1703T_MASTER.bas     HEADSK  OK  {'unknowns': 44, 'constraints': 44, 'rank': 44, 'fully': True, 'redundant': 0, 'max_residual': 2.53e-07, 'sketch': 'HEADSK', 'lines': 10, 'anchor': 'pe', 'dims': 7}
+Build_1704T_MASTER.bas     DRIVE   OK  {'points': 11, 'unknowns': 22, 'constraints': 22, 'rank': 22, 'dims': 11, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_1704T_MASTER.bas     PATH    OK  {'unknowns': 22, 'constraints': 22, 'rank': 22, 'fully': True, 'redundant': 0, 'max_residual': 6.94e-18, 'sketch': 'PATH', 'face_extension': True}
+Build_1704T_MASTER.bas     PATHX   OK  {'unknowns': 18, 'constraints': 18, 'rank': 18, 'fully': True, 'redundant': 0, 'max_residual': 6.94e-18, 'sketch': 'PATHX', 'face_extension': False}
+Build_1704T_MASTER.bas     HEADSK  OK  {'unknowns': 44, 'constraints': 44, 'rank': 44, 'fully': True, 'redundant': 0, 'max_residual': 1.04e-17, 'sketch': 'HEADSK', 'lines': 10, 'anchor': 'pe', 'dims': 7}
+Build_6701_MASTER.bas      DRIVE   OK  {'points': 11, 'unknowns': 22, 'constraints': 22, 'rank': 22, 'dims': 11, 'fully': np.True_, 'redundant': np.int64(0), 'apex_on_axis': np.True_}
+Build_6701_MASTER.bas      PATH    OK  {'unknowns': 18, 'constraints': 18, 'rank': 18, 'fully': True, 'redundant': 0, 'max_residual': 3.47e-18, 'sketch': 'PATH', 'face_extension': False}
+Build_6701_MASTER.bas      PATHX   OK  {'unknowns': 18, 'constraints': 18, 'rank': 18, 'fully': True, 'redundant': 0, 'max_residual': 3.47e-18, 'sketch': 'PATHX', 'face_extension': False}

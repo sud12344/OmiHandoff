@@ -131,11 +131,14 @@ def geom(c, th):
     return dict(u=u, n=(u[1], -u[0]), X0=X0, t=t, T1=T1, T2=T2, F=F, FX=FX, Cb=(T1[0], c['RB']))
 
 
-def expected_box(c, g, lib, sw=None):
+def expected_box(c, g, lib, sw=None, J=None):
     """xmax / ymax / ymin / zmax of the solid (inches), by sampling every piece's surface (sw = the swivel module for 6701)"""
     rt = c['TUBEOD'] / 2
     C = c['CHEX']
     xs, ys = [c['LJ']], [C / 2, -C / 2]
+    if J is not None:          # 2026-10-21: the JIC chain (thread) can be wider than the hex flats (1803-20-12: A/F 1.5 on a -20 end, A13)
+        rj = max(r_ for _, r_ in J['V'])
+        ys += [rj, -rj]
     u, n = g['u'], g['n']
     if sw is not None:                                              # swivel nut on the vertical leg: corners along X, flats in Z
         xs.append(g['X0'] + sw['Rn']); ys.append(g['F'][1])
@@ -299,7 +302,7 @@ def build_rows(root):
                                               f'{(FLG62_ASSUME_SZ.get(b, FLG62_ASSUME)) if code == "62" else gs.FLG61_ASSUME.split("; body =")[0]}'
                                               + (f'; {HUB_ASSUME}' if hub else '')),
                          '$COMMENT': r.get('$COMMENT'), '$PRP@OMiSKU': r.get('$PRP@OMiSKU')})
-            built.append((cols, why, dict(c=c, g=g, J=J, lib=lib, S=S, ov=(ov if swv else None), box=expected_box(c, g, lib, S))))
+            built.append((cols, why, dict(c=c, g=g, J=J, lib=lib, S=S, ov=(ov if swv else None), box=expected_box(c, g, lib, S, J))))
     return built, skipped
 
 
@@ -354,7 +357,7 @@ def vba_path(name, vals, T1, Cb, T2, E, S, ty, ext=None):
     swSkMgr.AddToDB = False
     Check "{name}: face extension line created", Not pe Is Nothing
     pe.ConstructionGeometry = True
-    PathExtension p2, pe, "FACEEXT", {q(el)}, {q(ty)}
+    PathExtension p2, pe, "FACEEXT", {q(el)}, {q((E[0] + Fp[0]) / 2 + 0.3 * (Fp[1] - E[1]) / el)}, {q((E[1] + Fp[1]) / 2 - 0.3 * (Fp[0] - E[0]) / el)}
 '''
     return f'''    ' ================= {name}: tube centre line {'(boss)' if name == 'PATH' else '(bore, 0.05 past both ends)'} =================
     stepName = "{name} sketch"
@@ -563,8 +566,9 @@ def vba_head(g, lib, rO, hub=None):
 '''
 
 
-HUB_SUBS = '''Sub PathExtension(p2 As SldWorks.SketchSegment, pe As SldWorks.SketchSegment, nm As String, vM As Double, ty As Double)
-    ' 2026-10-21 (hub heads): pe starts at the end of the last path line, parallel to it, length nm (tube end in the hub -> flange face)
+HUB_SUBS = '''Sub PathExtension(p2 As SldWorks.SketchSegment, pe As SldWorks.SketchSegment, nm As String, vM As Double, tx As Double, ty As Double)
+    ' 2026-10-21 (hub heads): pe starts at the end of the last path line, parallel to it, length nm (tube end in the hub -> flange face);
+    ' the text sits 0.3 in off the line's middle along its normal, so the dimension is the aligned length (also on the 45 deg leg)
     Dim l2 As SldWorks.SketchLine, le As SldWorks.SketchLine, dd As SldWorks.DisplayDimension
     Set l2 = p2: Set le = pe
     swModel.ClearSelection2 True
@@ -577,7 +581,7 @@ HUB_SUBS = '''Sub PathExtension(p2 As SldWorks.SketchSegment, pe As SldWorks.Ske
     swModel.SketchAddConstraints "sgPARALLEL"
     swModel.ClearSelection2 True
     pe.Select4 False, Nothing
-    Set dd = swModel.AddDimension2(le.GetEndPoint2.X + ty, le.GetEndPoint2.Y + ty, 0)
+    Set dd = swModel.AddDimension2(tx, ty, 0)
     NameDim dd, nm, vM
     swModel.ClearSelection2 True
 End Sub
