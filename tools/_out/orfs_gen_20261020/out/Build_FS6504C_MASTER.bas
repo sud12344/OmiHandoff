@@ -42,7 +42,7 @@ Sub LoadPoints()
     0.055473600, 0.014097000, 0.055473600, 0.016571107, _
     0.069392800, 0.016571107, 0.069392800, 0.012954000, _
     0.068122800, 0.012954000, 0.067409314, 0.011718036, _
-    0.057099200, 0.011718036, 0.055473600, 0.012954000, _
+    0.056710580, 0.011718036, 0.055473600, 0.012954000, _
     0.049885600, 0.011722100, 0.055880000, 0.011722100, _
     0.055880000, 0.000000000)
     For i = 0 To NPTS - 1
@@ -140,9 +140,9 @@ Sub BuildFS6504C()
     Call Dim_rad(17, "FSWB_CBR", 0.012954000, 0.068758, -0.012700)
     Call Dim_len(17, "FSWB_CBD", 0.001270000, 0.068758, 0.017841)
     Call Dim_ang(18, 24, "FSWB_CSANG", 1.047197551, 0.067766, 0.014986)
-    Call Dim_rad(19, "FSWB_MINR", 0.011718036, 0.062254, -0.015240)
-    Call Dim_len(19, "FSWB_THDL", 0.010310114, 0.062254, 0.019111)
-    Call Dim_ang(20, 24, "FSWB_RELANG", 0.785398163, 0.056286, 0.012988)
+    Call Dim_rad(19, "FSWB_MINR", 0.011718036, 0.062060, -0.015240)
+    Call Dim_len(19, "FSWB_THDL", 0.010698734, 0.062060, 0.019111)
+    Call Dim_ang(20, 24, "FSWB_RELANG", 0.785398163, 0.056092, 0.012988)
     Call Dim_ptline(20, True, 24, "FSWB_RELR", 0.012954000, 0.056236, 0.006477)
     Call Dim_rad(22, "FSWB_STEMR", 0.011722100, 0.052883, -0.019050)
     Call Dim_len(22, "FSWB_HEADL", 0.005994400, 0.052883, 0.020381)
@@ -166,7 +166,7 @@ Sub BuildFS6504C()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "BODY"
     Dim vrev As Double: vrev = Volume()
-    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.8228)", Abs(vrev - 2.986961158333e-05) < 2.986961158333e-05 * 0.002
+    Check "Revolved volume " & Format(vrev / IN_ ^ 3, "0.0000") & " in^3 (expect 1.8239)", Abs(vrev - 2.988791543559e-05) < 2.988791543559e-05 * 0.002
 
     stepName = "HEX cuts (body hex + swivel nut hex)"
     Dim hexcut As SldWorks.Feature, nutcut As SldWorks.Feature, nutcutA As SldWorks.Feature

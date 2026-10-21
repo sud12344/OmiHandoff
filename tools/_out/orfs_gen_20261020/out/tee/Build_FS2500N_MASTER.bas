@@ -211,9 +211,9 @@ Sub BuildFS2500N()
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
     curAxis = 0: tipPos = 0.021590000
-    Call ThreadCut(0.011785600, 0.007143750, 0.008794750, "0.5625-18", "THD_End1", 1#, 0.001411111)
+    Call ThreadCut(0.020580350, 0.007143750, 0.008794750, "0.5625-18", "THD_End1", -1#, 0.001411111)
     curAxis = 1: tipPos = 0.021590000
-    Call ThreadCut(0.011785600, 0.007143750, 0.008794750, "0.5625-18", "THD_End2", 1#, 0.001411111)
+    Call ThreadCut(0.020580350, 0.007143750, 0.008794750, "0.5625-18", "THD_End2", -1#, 0.001411111)
 
     stepName = "Self-checks"
     Dim bb As Variant

@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_FS2503_MASTER"
 ' ============================================================================
 '  Build_FS2503_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
-'  ORFS 45 deg Male Elbow (male face seal x male pipe) (45-deg elbow), forged hex body (Brennan 2504 / 2500HX pattern).  Reference config FS2503-06-04-FG: NPTFM -04, FSM -06
+'  ORFS 45 deg Male Elbow (male face seal x male pipe) (45-deg elbow), forged hex body (Brennan 2504 / 2500HX pattern).  Reference config FS2503-08-06-FG: NPTFM -06, FSM -08
 '  Entry: Sub BuildFS2503.  Leg 1 along +X, leg 2 along the 135-deg direction (45-deg elbow); hex arms HEX1 / HEX2 (on plane PLN2) + 30deg corner PUCK about Z.
 '  Builds from DesignTable_FS2503_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.
@@ -38,23 +38,23 @@ Sub LoadLeg(i As Long)
     If i = 1 Then v = Array( _
     0.000000000, 0.000000000, _
     0.000000000, 0.009525000, _
-    0.007874000, 0.009525000, _
-    0.007874000, 0.006946224, _
-    0.011892280, 0.006946224, _
-    0.022098000, 0.006627297, _
-    0.022098000, 0.000000000)
+    0.009906000, 0.009525000, _
+    0.009906000, 0.008660661, _
+    0.013771880, 0.008660661, _
+    0.024130000, 0.008336971, _
+    0.024130000, 0.000000000)
     If i = 2 Then v = Array( _
     0.000000000, 0.000000000, _
     0.000000000, 0.009525000, _
-    0.007594600, 0.009525000, _
-    0.007594600, 0.008731250, _
-    0.017608550, 0.008731250, _
-    0.018796000, 0.007543800, _
-    0.018796000, 0.006400800, _
-    0.017475200, 0.006400800, _
-    0.017475200, 0.003810000, _
-    0.018796000, 0.003810000, _
-    0.018796000, 0.000000000)
+    0.007518400, 0.009525000, _
+    0.007518400, 0.010318750, _
+    0.019132550, 0.010318750, _
+    0.020320000, 0.009131300, _
+    0.020320000, 0.007988300, _
+    0.018999200, 0.007988300, _
+    0.018999200, 0.005397500, _
+    0.020320000, 0.005397500, _
+    0.020320000, 0.000000000)
     NPTS = (UBound(v) + 1) \ 2
     ReDim PX(NPTS - 1): ReDim PR(NPTS - 1)
     For k = 0 To NPTS - 1
@@ -81,19 +81,19 @@ Sub BuildFS2503()
     Dim swFeat As SldWorks.Feature, rev As SldWorks.Feature, sd As SldWorks.SelectData
 
     UX = -0.707106781186547: UY = 0.707106781186548      ' angled leg direction (135 deg from +X)
-    ' ================= LEG 1 (NPTFM -04, along X +) =================
+    ' ================= LEG 1 (NPTFM -06, along X +) =================
     stepName = "LEG1 sketch"
-    curAxis = 0: tipPos = 0.022098000
+    curAxis = 0: tipPos = 0.024130000
     LoadLeg 1
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile False, 1#
-    Call Dim_len(-1, "M1", 0.022098000, 0.011049, 0.024765)
-    Call Dim_rad(1, "BODYR", 0.009525000, 0.003937, -0.010160)
-    Call Dim_len(5, "NPTF1_MAJR", 0.006627297, 0.025908, 0.003314)
-    Call Dim_ptline(4, False, 5, "NPTF1_THDL", 0.010205720, 0.016995, 0.015875)
-    Call Dim_ang(4, 6, "NPTF1_TAPER", 0.031239648, 0.016995, 0.003314)
-    Call Dim_len(3, "NPTF1_RELL", 0.004018280, 0.009883, 0.013335)
+    Call Dim_len(-1, "M1", 0.024130000, 0.012065, 0.024765)
+    Call Dim_rad(1, "BODYR", 0.009525000, 0.004953, -0.010160)
+    Call Dim_len(5, "NPTF1_MAJR", 0.008336971, 0.027940, 0.004168)
+    Call Dim_ptline(4, False, 5, "NPTF1_THDL", 0.010358120, 0.018951, 0.015875)
+    Call Dim_ang(4, 6, "NPTF1_TAPER", 0.031239648, 0.018951, 0.004168)
+    Call Dim_len(3, "NPTF1_RELL", 0.003865880, 0.011839, 0.013335)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -109,23 +109,23 @@ Sub BuildFS2503()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "LEG1_BODY"
 
-    ' ================= LEG 2 (FSM -06, along the 135-deg axis) =================
+    ' ================= LEG 2 (FSM -08, along the 135-deg axis) =================
     stepName = "LEG2 sketch"
-    tipPos = 0.018796000
+    tipPos = 0.020320000
     LoadLeg 2
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfileU 0.012700000
     Call DimAngLeg("LEGANG2", 2.356194490, 0.001555, 0.003755)
-    Call DimLenU(-1, "M2", 0.018796000, 0.009398, 0.024765)
-    Call DimRadU(1, "BODYR", 0.009525000, 0.003797, -0.010160)
-    Call DimRadU(3, "THDMAJR_B2", 0.008731250, 0.013195, -0.007620)
-    Call DimLenU(3, "FSM2_THDL", 0.010013950, 0.013195, 0.018415)
-    Call Dim_ang(4, 10, "FSMCHANG2", 0.785398163, -0.020841, 0.004901)
-    Call Dim_ptline(5, False, 10, "FSM2_FACER", 0.007543800, -0.019713, 0.011179)
-    Call DimRadU(6, "FSM2_GRVOR", 0.006400800, 0.018136, -0.006350)
-    Call DimLenU(6, "FSM2_GRVD", 0.001320800, 0.018136, 0.020955)
-    Call DimRadU(8, "FSM2_GRVIR", 0.003810000, 0.018136, -0.003810)
+    Call DimLenU(-1, "M2", 0.020320000, 0.010160, 0.025559)
+    Call DimRadU(1, "BODYR", 0.009525000, 0.003759, -0.010160)
+    Call DimRadU(3, "THDMAJR_B2", 0.010318750, 0.013919, -0.007620)
+    Call DimLenU(3, "FSM2_THDL", 0.011614150, 0.013919, 0.019209)
+    Call Dim_ang(4, 10, "FSMCHANG2", 0.785398163, -0.023041, 0.004856)
+    Call Dim_ptline(5, False, 10, "FSM2_FACER", 0.009131300, -0.021689, 0.011358)
+    Call DimRadU(6, "FSM2_GRVOR", 0.007988300, 0.019660, -0.006350)
+    Call DimLenU(6, "FSM2_GRVD", 0.001320800, 0.019660, 0.021749)
+    Call DimRadU(8, "FSM2_GRVIR", 0.005397500, 0.019660, -0.003810)
     Call Collinear(5, 9)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
@@ -144,11 +144,11 @@ Sub BuildFS2503()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "HEX1"
-    Call HexArm("Right Plane", 0#, 0#, 0.007874000, 0.009525000, "HEX1", 0, 1#)
+    Call HexArm("Right Plane", 0#, 0#, 0.009906000, 0.009525000, "HEX1", 0, 1#)
     stepName = "PLN2"
-    MakeLegPlane "PLN2", 0.018796000
+    MakeLegPlane "PLN2", 0.020320000
     stepName = "HEX2"
-    Call HexArmV("PLN2", 0#, 0#, 0.007594600, 0.009525000, "HEX2", 0, 1#)
+    Call HexArmV("PLN2", 0#, 0#, 0.007518400, 0.009525000, "HEX2", 0, 1#)
     ' ================= PUCK: 30 deg double cone about Z at the crossing (the turned hex corner, per Brennan) =================
     stepName = "PUCK"
     swModel.ClearSelection2 True
@@ -205,27 +205,27 @@ Sub BuildFS2503()
 
     ' ================= pockets and bores (each from its leg face to the axis crossing) =================
     stepName = "Bores"
-    curAxis = 0: tipPos = 0.022098000
-    Call BoreCut("BORE1", "D1", 0.007112000, 0.022098000, 0#, "BORECUT1", True, 0.005964568)
-    tipPos = 0.018796000
-    Call BoreCutV("BORE2", "D2", 0.006604000, 0.018796000, 0#, "BORECUT2", True, 0.003429000)
-    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+0.8700)", Not AxisCoveredAx(0.022098000)
-    Check "leg 2 bore open on the axis at its face (0.7400 along the 135-deg leg)", Not AxisCoveredV(0.018796000)
+    curAxis = 0: tipPos = 0.024130000
+    Call BoreCut("BORE1", "D1", 0.010414000, 0.024130000, 0#, "BORECUT1", True, 0.007503274)
+    tipPos = 0.020320000
+    Call BoreCutV("BORE2", "D2", 0.009398000, 0.020320000, 0#, "BORECUT2", True, 0.004857750)
+    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+0.9500)", Not AxisCoveredAx(0.024130000)
+    Check "leg 2 bore open on the axis at its face (0.8000 along the 135-deg leg)", Not AxisCoveredV(0.020320000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
-    curAxis = 0: tipPos = 0.022098000
-    Call HelixThread(0.022098000, 0.006627297, 0.010205720, 0.001411111, 0.001128889, 0.031239648, True, False, "1", "THD_End1")
-    tipPos = 0.018796000
-    Call ThreadCutV(0.007594600, 0.008731250, 0.010013950, "0.6875-16", "THD_End2", 1#, 0.001587500)
+    curAxis = 0: tipPos = 0.024130000
+    Call HelixThread(0.024130000, 0.008336971, 0.010358120, 0.001411111, 0.001128889, 0.031239648, True, False, "1", "THD_End1")
+    tipPos = 0.020320000
+    Call ThreadCutV(0.007518400, 0.010318750, 0.011614150, "0.8125-16", "THD_End2", 1#, 0.001587500)
 
     stepName = "Self-checks"
     Dim bb As Variant, ex1 As Double, ex2 As Double
     ex1 = ExtremeAlong(1#, 0#, 0#): ex2 = ExtremeAlong(UX, UY, 0#)
-    Check "leg 1 tip (exact) " & Format(ex1 / IN_, "0.0000") & " along +X (expect 0.8700)", Abs(ex1 / IN_ - 0.8700) < 0.001
-    Check "leg 2 tip (exact) " & Format(ex2 / IN_, "0.0000") & " along the 135-deg leg (expect 0.7400)", Abs(ex2 / IN_ - 0.7400) < 0.001
+    Check "leg 1 tip (exact) " & Format(ex1 / IN_, "0.0000") & " along +X (expect 0.9500)", Abs(ex1 / IN_ - 0.9500) < 0.001
+    Check "leg 2 tip (exact) " & Format(ex2 / IN_, "0.0000") & " along the 135-deg leg (expect 0.8000)", Abs(ex2 / IN_ - 0.8000) < 0.001
     Dim zlo As Double, zhi As Double: zhi = ExtremeAlong(0#, 0#, 1#): zlo = -ExtremeAlong(0#, 0#, -1#)
-    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.3750 .. 0.3750: hex flats)", Abs(zlo / IN_ + 0.3750) < 0.001 And Abs(zhi / IN_ - 0.3750) < 0.001
+    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.4062 .. 0.4062: face-seal end proud of the flats)", Abs(zlo / IN_ + 0.4062) < 0.001 And Abs(zhi / IN_ - 0.4062) < 0.001
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
     If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)
 
@@ -242,9 +242,9 @@ Sub BuildFS2503()
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS2503-06-06-FG", "FS2503-20-20-FG")
+    cx_c = Array("FS2503-06-04-FG", "FS2503-20-20-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "NPTF1_MAJR@LEG1", "NPTF1_THDL@LEG1", "NPTF1_TAPER@LEG1", "NPTF1_RELL@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "PROF_R@THDPROF_1", "THDPITCH@THD_End2", "Profile_Height@THD_End2_PROF", "THDPITCH@THD_End2_PROF", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(0.95000, 0.37500, 0.32823, 0.40780, 1.78990, 0.15220, 0.95000, 0.74000, 0.32823, 0.06250, 0.03383, 0.06250, 0.75000, 0.39000, 0.75000, 0.29900, 0.21601, 0.43251), Array(1.67000, 0.81250, 0.81335, 0.70680, 1.78990, 0.26320, 1.67000, 1.26000, 0.81335, 0.08333, 0.04511, 0.08333, 1.62500, 0.70000, 1.62500, 0.57100, 0.46860, 0.93769))
+    cx_w = Array(Array(0.87000, 0.37500, 0.26092, 0.40180, 1.78990, 0.15820, 0.87000, 0.74000, 0.26092, 0.06250, 0.03383, 0.06250, 0.75000, 0.31000, 0.75000, 0.29900, 0.21601, 0.43251), Array(1.67000, 0.81250, 0.81335, 0.70680, 1.78990, 0.26320, 1.67000, 1.26000, 0.81335, 0.08333, 0.04511, 0.08333, 1.62500, 0.70000, 1.62500, 0.57100, 0.46860, 0.93769))
     For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -270,7 +270,7 @@ Sub BuildFS2503()
         Trace cx_c(cx_q) & " box x " & Format(cx_bx(0) / IN_, "0.000") & ".." & Format(cx_bx(3) / IN_, "0.000") & "  y " & Format(cx_bx(1) / IN_, "0.000") & ".." & Format(cx_bx(4) / IN_, "0.000")
     Next cx_q
 
-    swModel.ShowConfiguration2 "FS2503-06-04-FG"
+    swModel.ShowConfiguration2 "FS2503-08-06-FG"
     swModel.ForceRebuild3 False
 
     ' ---- all-config rebuild sweep (2026-09-23, QA #124): every configuration, every feature must rebuild
@@ -305,10 +305,10 @@ Sub BuildFS2503()
         End If
     Next sw_i
     Check "All-config sweep: " & sw_n & " configurations rebuilt, " & sw_bad & " feature/body failures", sw_bad = 0
-    ' 2026-09-25: leave the master in its reference configuration (FS2503-06-04-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
+    ' 2026-09-25: leave the master in its reference configuration (FS2503-08-06-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
     ' before this the master was left in the first name of the list (the smallest size)
-    swModel.ShowConfiguration2 "FS2503-06-04-FG"
-    Trace "Master left in its reference configuration FS2503-06-04-FG for the save (it opens in this size)"
+    swModel.ShowConfiguration2 "FS2503-08-06-FG"
+    Trace "Master left in its reference configuration FS2503-08-06-FG for the save (it opens in this size)"
 
     ' ---- resting state (project rule): every THD_* feature suppressed in EVERY configuration before the save.
     '      Threads stay live through the build, table insert, config checks and sweep so they are verified;

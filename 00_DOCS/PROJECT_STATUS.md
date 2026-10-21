@@ -7,6 +7,32 @@ the detail behind it. Keep it current: update it whenever a batch ships or a dec
 
 ## 1. Where things stand
 
+**2026-10-20 (PC, evening): ORFS SolidWorks dry runs - ALL 51 staged ORFS masters PASS** (50 FS masters + the O-ring master 4000 with
+FS4000).
+- **Run log:** `tools\_out\orfs_dryrun_20261020\RESUME.md`. Evidence: `VERDICT.txt`, `out_g*.txt`, the per-root reports and dry-run parts.
+- **What was checked:** the CLAUDE.md verify loop, plus a thread check. Every configuration must give 1 body with THD_* off and on, and every
+  thread must be live, error-free and removing material.
+- **5 staging-generator fixes** (`orfs_gen_20261020\tools`; backups `orfs_dryrun_20261020\backup_20261020\`). Each was regenerated and
+  diffed to the intended lines only, and the changed roots were re-run.
+  1. FSSW -10 TE 0.484 -> 0.4993: where the measured 45deg relief meets the basic minor, as on every other size. The STEP's 0.484 sits on
+     Brennan's undersized -10 minor.
+  2. FS masters with a face-seal leg below the flats in one row and proud of them in another are built at a proud row. Affects FS2501,
+     FS2503, FS6500C, FS6602C.
+  3. No `FSW*_CSANG` table column. It was dead (the angle is held by its supplement) and stopped every insert with a modal "parameters not
+     found" dialog.
+  4. No-step face-seal threads are anchored at the nose circle; the hex-end circle is split by the flats. This fixed FS2601N, FS2603N and
+     FS6600N.
+  5. -10 swivel helix = the STEP's measured thread end 0.484 (HTE); the cavity keeps TE. A helix to TE touched the relief, and the swept
+     cut failed in FS6602C.
+- **Status:** nothing shipped. The live `tools\` and `04_DESIGN_TABLES` are untouched. The staged `out\` files = the tested ones.
+- **Ship needs:**
+  - the user's review;
+  - the FS review tables moved into `04_DESIGN_TABLES`;
+  - the staging generators merged into the live `tools\` (back up, regenerate all roots old / new, diff).
+- **Noticed, not fixed:**
+  - the swivel / nut helix curves (HELIX_n) are visible in the saved masters (display only);
+  - SolidWorks shows the same modal dialog for ANY dead table column. That stopped the batches until `dialog_watch.ps1` answered it.
+
 **2026-10-20: BATCH 17 SHIPPED (`03_SCRIPTS\RUN_ME_batch17.txt`, QA #173-#175; user: "can you ship batch 17?").** Evidence and scripts:
 `tools\_out\batch17_20261019\` (RESUME.md = the run log, checks\, scripts\ship_b17.py, old_files\ + MANIFEST*.txt; second copy
 `_to_delete\superseded_20261019b\batch17_replaced\`).

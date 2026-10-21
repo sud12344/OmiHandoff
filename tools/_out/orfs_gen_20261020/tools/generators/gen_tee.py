@@ -798,7 +798,7 @@ def leg_FSM(i, dash, M, BR, nostep=False):
                 ('rad', 4, f'FSM{i}_GRVOR', f['GO'], M - f['GD'] / 2, -0.25), ('len', 4, f'FSM{i}_GRVD', f['GD'], M - f['GD'] / 2, rM + 0.45),
                 ('rad', 6, f'FSM{i}_GRVIR', f['GI'], M - f['GD'] / 2, -0.15), ('col', 3, 7)]
         return dict(kind='FSM', dash=dash, V=V, endlen=f['ENDL'], cols=cols, tcols=tcols, dims=dims, rmax=rM, f=f, rM=rM, ch=ch, nostep=True,
-                    thr=thr + ' UN (male O-ring face seal, SAE J1453)', thread=dict(type='CUT', ex=sh, er=rM, depth=thdl, size=f'{TM:.4f}-{G.tpi_of(thr):g}', pitch=pitch),
+                    thr=thr + ' UN (male O-ring face seal, SAE J1453)', thread=dict(type='CUT', ex=sh, er=rM, depth=thdl, size=f'{TM:.4f}-{G.tpi_of(thr):g}', pitch=pitch, nose=True),
                     tipR=f['GI'], thr_in=1, thr_pt=(sh, rM))
     V = [(0, 0), (0, BR), (sh, BR), (sh, rM), (M - ch, rM), (M, f['FR']), (M, f['GO']), (M - f['GD'], f['GO']), (M - f['GD'], f['GI']), (M, f['GI']), (M, 0)]
     cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5), f'THDMAJR_B{i}@LEG{i}': rM, f'FSM{i}_THDL@LEG{i}': thdl, f'FSMCHANG{i}@LEG{i}': G.FSM_CHANG,
@@ -889,13 +889,16 @@ def leg_FSSW(i, dash, M, BR, nutAF):
     cols = {f'M{i}@LEG{i}': M, f'BODYR@LEG{i}': round(BR, 5), f'FSW{i}_BODYS@LEG{i}': round(m['BODYS'] - m['SEAL'], 4), f'FSW{i}_NECKR@LEG{i}': m['NECKR'],
             f'FSW{i}_NUTL@LEG{i}': m['NUTL'], f'FSW{i}_SKIRTR@LEG{i}': m['SKR'], f'FSW{i}_SKIRTL@LEG{i}': round(m['NUTL'] - m['SKS'], 4), f'FSW{i}_SKIRTFR@LEG{i}': m['SKF'],
             f'FSW{i}_NUTHEXL@LEG{i}': m['HEXL'], f'FSW{i}_NUTR@LEG{i}': round(Rn, 5), f'FSW{i}_SEAL@LEG{i}': m['SEAL'], f'FSW{i}_CSR@LEG{i}': m.get('CSR'),
-            f'FSW{i}_CSANG@LEG{i}': FSSW_CSANG, f'FSW{i}_MINR@LEG{i}': rmin, f'FSW{i}_THDL@LEG{i}': round(m['TE'] - cs, 5), f'FSW{i}_RELANG@LEG{i}': FSSW_RELANG,
+            f'FSW{i}_MINR@LEG{i}': rmin, f'FSW{i}_THDL@LEG{i}': round(m['TE'] - cs, 5), f'FSW{i}_RELANG@LEG{i}': FSSW_RELANG,
             f'FSW{i}_RELR@LEG{i}': m['RELR'], f'FSW{i}_STEMR@LEG{i}': m['STEMR'], f'FSW{i}_HEADL@LEG{i}': round(m['LIPS'] - m['SEAL'], 4),
             f'NUTHEX{i}@NUTHEX{i}': nutAF, f'DEPTH@NUTCUT{i}': m['HEXL']}
+    # 2026-10-20 (PC dry run): no FSW_CSANG table column - the macro can only hold this angle by its supplement (<nm>_SUPPL, the countersink
+    # line does not meet the axis), so the column was dead and SolidWorks stopped every insert with a 'parameters not found' dialog. The
+    # angle is constant per master (45, C masters 60) and stays in the sketch, as the JIC swivel's SW_CSANG.
     if cb:
-        del cols[f'FSW{i}_CSR@LEG{i}']; cols[f'FSW{i}_CSANG@LEG{i}'] = FSSW_CBANG
+        del cols[f'FSW{i}_CSR@LEG{i}']
         cols[f'FSW{i}_CBR@LEG{i}'] = m['CBR']; cols[f'FSW{i}_CBD@LEG{i}'] = m['CBD']
-    tcols = {f'HELIXDIA@HELIXSK_{i}': round(2 * rmin, 5), f'HEIGHT@HELIX_{i}': m['TE'], f'PITCH@HELIX_{i}': round(P_, 5),
+    tcols = {f'HELIXDIA@HELIXSK_{i}': round(2 * rmin, 5), f'HEIGHT@HELIX_{i}': m.get('HTE', m['TE']), f'PITCH@HELIX_{i}': round(P_, 5),
              f'PROF_R@THDPROF_{i}': rmin, f'APEXR@THDPROF_{i}': round(rmin + 0.54127 * P_, 5), f'PROF_AX@THDPROF_{i}': Mt}
     top = max(BR, Rn)
     dims = [('len', -1, f'M{i}', M, M / 2, top + 0.8), ('rad', 1, 'BODYR', BR, sh / 2, -0.4),
@@ -918,7 +921,7 @@ def leg_FSSW(i, dash, M, BR, nutAF):
     mm = dict(m, MINR=rmin, CAVEND=m['LIPS'])
     return dict(kind='FSSW', dash=dash, V=V, endlen=m['BODYS'], cols=cols, tcols=tcols, dims=dims, rmax=nutAF / 2, nut_af=nutAF,
                 thr=thr + ' UN (female O-ring face-seal swivel, SAE J1453)',
-                thread=dict(type='HELIX', r=rmin, height=m['TE'], pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True),
+                thread=dict(type='HELIX', r=rmin, height=m.get('HTE', m['TE']), pitch=P_, thdh=0.54127 * P_, taper=0.0, taperOut=False, apexOut=True),
                 tipR=m['STEMR'], Mtip=Mt, s_seal=m['SEAL'], m=mm, cs=cs, Rn=Rn, cb=cb)
 
 
@@ -2512,6 +2515,20 @@ def write_sw2(root, built):
     ok = [b for b in built if not b['chk']]
     ref = [b for b in ok if b['pn'] == sp['ref']] or ok
     refrow = ref[0]
+    # 2026-10-20 (PC dry run FS6500C): a face-seal male leg whose thread is BELOW the flats in the reference row but PROUD of them in another
+    # row loses its Thread-feature edge there (FS6500C built at -10: THD_End1 error on -20). Built at a proud row, the below rows rebuild
+    # (FS2500: -08 -> -06 / -10; FS6500C at -20 -> -10, both threads cut). So such a master is built at its first row with no leg below.
+    if sp.get('fs'):
+        def _below(b):
+            return {i for i in range(1, 5) if f'THDMAJR_B{i}@LEG{i}' in b['cols'] and f'BODYR@LEG{i}' in b['cols']
+                    and b['cols'][f'THDMAJR_B{i}@LEG{i}'] < b['cols'][f'BODYR@LEG{i}'] - 1e-3}
+
+        def _proud(b):
+            return {i for i in range(1, 5) if f'THDMAJR_B{i}@LEG{i}' in b['cols'] and f'BODYR@LEG{i}' in b['cols']
+                    and b['cols'][f'THDMAJR_B{i}@LEG{i}'] > b['cols'][f'BODYR@LEG{i}'] + 1e-3}
+        if _below(refrow) & set().union(*[_proud(b) for b in ok]):
+            alt = sorted([b for b in ok if not _below(b)], key=lambda b: b['pn'])
+            if alt: refrow = alt[0]
     ok.sort(key=lambda b: (b['pn'] != refrow['pn'], b['pn']))
     hdr = list(refrow['cols'].keys())
     for b in ok: assert list(b['cols'].keys()) == hdr, (b['pn'], set(b['cols']) ^ set(hdr))
@@ -3873,10 +3890,18 @@ def emit(root, hdr, ok, refrow):
                 # 2026-10-18 (ANGLED, Q-NEW-ANGLEDHELIX): helical thread about the 135 deg axis (male / female NPTF, swivel-nut thread)
                 body.append(f'    Call HelixThreadV({M*IN:.9f}, {t["r"]*IN:.9f}, {t["height"]*IN:.9f}, {t["pitch"]*IN:.9f}, {t["thdh"]*IN:.9f}, {t.get("taper", TAPER):.9f}, {t["taperOut"]}, {t["apexOut"]}, "{i}", "THD_End{i}")')
                 continue
+            if t.get('nose'):     # 2026-10-20: as below - no-step leg anchored at the nose circle, run back towards the hex
+                body.append(f'    Call ThreadCutV({(t["ex"] + t["depth"])*IN:.9f}, {t["er"]*IN:.9f}, {t["depth"]*IN:.9f}, "{t["size"]}", "THD_End{i}", -1#, {t["pitch"]*IN:.9f})')
+                continue
             body.append(f'    Call ThreadCutV({t["ex"]*IN:.9f}, {t["er"]*IN:.9f}, {t["depth"]*IN:.9f}, "{t["size"]}", "THD_End{i}", 1#, {t["pitch"]*IN:.9f})')
             continue
         body.append(f'    curAxis = {ax}: tipPos = {sg*M*IN:.9f}')
-        if t['type'] == 'CUT':
+        if t['type'] == 'CUT' and t.get('nose'):
+            # 2026-10-20 (PC dry run FS2601N / FS2603N / FS6600N): a no-step face-seal leg's thread anchor at the hex end is a circle the flats split
+            # into arcs (flats = thread major within FSM_NOSTEP_TOL); with face-seal legs on both run ends SolidWorks refused the Thread feature
+            # there. Anchor at the nose circle (thread major meets the 45deg chamfer: ex + depth, always whole) and run back towards the hex.
+            body.append(f'    Call ThreadCut({sg*(t["ex"] + t["depth"])*IN:.9f}, {t["er"]*IN:.9f}, {t["depth"]*IN:.9f}, "{t["size"]}", "THD_End{i}", {-sg}#, {t["pitch"]*IN:.9f})')
+        elif t['type'] == 'CUT':
             body.append(f'    Call ThreadCut({sg*t["ex"]*IN:.9f}, {t["er"]*IN:.9f}, {t["depth"]*IN:.9f}, "{t["size"]}", "THD_End{i}", {sg}#, {t["pitch"]*IN:.9f})')
         else:
             body.append(f'    Call HelixThread({sg*M*IN:.9f}, {t["r"]*IN:.9f}, {t["height"]*IN:.9f}, {t["pitch"]*IN:.9f}, {t["thdh"]*IN:.9f}, {t.get("taper", TAPER):.9f}, {t["taperOut"]}, {t["apexOut"]}, "{i}", "THD_End{i}")')

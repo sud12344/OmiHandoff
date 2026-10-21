@@ -238,7 +238,7 @@ Sub BuildFS6802NR()
     curAxis = 0: tipPos = 0.041656000
     Call ThreadCut(0.031648400, 0.009525000, 0.010007600, "0.7500-16", "THD_End1", 1#, 0.001587500)
     tipPos = 0.025908000
-    Call ThreadCutV(0.008890000, 0.015081250, 0.015436850, "1.1875-12", "THD_End2", 1#, 0.002116667)
+    Call ThreadCutV(0.024326850, 0.015081250, 0.015436850, "1.1875-12", "THD_End2", -1#, 0.002116667)
 
     stepName = "Self-checks"
     Dim bb As Variant, ex1 As Double, ex2 As Double

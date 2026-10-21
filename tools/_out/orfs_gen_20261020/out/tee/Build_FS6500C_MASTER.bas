@@ -1,7 +1,7 @@
 Attribute VB_Name = "Build_FS6500C_MASTER"
 ' ============================================================================
 '  Build_FS6500C_MASTER.bas  -  OMi fitting library, generated 2026-10-20 by gen_tee.py
-'  ORFS 90 deg Male Face Seal x Female Face Seal Swivel Elbow - swivel nut mouth counterbored (-10 up) (elbow), forged hex body (2500HX pattern).  Reference config FS6500-10-10-FG: FSM -10, FSSW -10
+'  ORFS 90 deg Male Face Seal x Female Face Seal Swivel Elbow - swivel nut mouth counterbored (-10 up) (elbow), forged hex body (2500HX pattern).  Reference config FS6500-20-20-FG: FSM -20, FSSW -20
 '  Entry: Sub BuildFS6500C.  Leg 1 along +X, leg 2 along +Y; hex arms HEX1/HEX2 + 30deg corner PUCK about Z.
 '  Builds from DesignTable_FS6500C_SW2.xlsx, runs self-checks + an all-configuration rebuild sweep with the
 '  threads LIVE, then suppresses every THD_ feature in every configuration and saves to 11_MASTERS.
@@ -37,35 +37,35 @@ Sub LoadLeg(i As Long)
     Dim v As Variant, k As Long
     If i = 1 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.013462000, _
-    0.017780000, 0.013462000, _
-    0.017780000, 0.012700000, _
-    0.031877000, 0.012700000, _
-    0.033274000, 0.011303000, _
-    0.033274000, 0.009601200, _
-    0.031953200, 0.009601200, _
-    0.031953200, 0.007010400, _
-    0.033274000, 0.007010400, _
-    0.033274000, 0.000000000)
+    0.000000000, 0.020637500, _
+    0.027203400, 0.020637500, _
+    0.027203400, 0.021431250, _
+    0.043148250, 0.021431250, _
+    0.044704000, 0.019875500, _
+    0.044704000, 0.016725900, _
+    0.043383200, 0.016725900, _
+    0.043383200, 0.014135100, _
+    0.044704000, 0.014135100, _
+    0.044704000, 0.000000000)
     If i = 2 Then v = Array( _
     0.000000000, 0.000000000, _
-    0.000000000, 0.013462000, _
-    0.016256000, 0.013462000, _
-    0.016256000, 0.010375900, _
-    0.030454600, 0.010375900, _
-    0.030454600, 0.013106400, _
-    0.034442400, 0.013106400, _
-    0.040741600, 0.014097000, _
-    0.040741600, 0.016571107, _
-    0.054660800, 0.016571107, _
-    0.054660800, 0.012954000, _
-    0.053390800, 0.012954000, _
-    0.052677314, 0.011718036, _
-    0.042367200, 0.011718036, _
-    0.040741600, 0.012954000, _
-    0.035153600, 0.011722100, _
-    0.041148000, 0.011722100, _
-    0.041148000, 0.000000000)
+    0.000000000, 0.020637500, _
+    0.027686000, 0.020637500, _
+    0.027686000, 0.017792700, _
+    0.045161200, 0.017792700, _
+    0.045161200, 0.021983700, _
+    0.050241200, 0.021983700, _
+    0.056464200, 0.023622000, _
+    0.056464200, 0.027496307, _
+    0.072974200, 0.027496307, _
+    0.072974200, 0.021691600, _
+    0.071704200, 0.021691600, _
+    0.070892416, 0.020285456, _
+    0.059319160, 0.020285456, _
+    0.057759600, 0.021844000, _
+    0.051155600, 0.020281900, _
+    0.058166000, 0.020281900, _
+    0.058166000, 0.000000000)
     NPTS = (UBound(v) + 1) \ 2
     ReDim PX(NPTS - 1): ReDim PR(NPTS - 1)
     For k = 0 To NPTS - 1
@@ -91,22 +91,22 @@ Sub BuildFS6500C()
     On Error GoTo Trap
     Dim swFeat As SldWorks.Feature, rev As SldWorks.Feature, sd As SldWorks.SelectData
 
-    ' ================= LEG 1 (FSM -10, along X +) =================
+    ' ================= LEG 1 (FSM -20, along X +) =================
     stepName = "LEG1 sketch"
-    curAxis = 0: tipPos = 0.033274000
+    curAxis = 0: tipPos = 0.044704000
     LoadLeg 1
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile False, 1#
-    Call Dim_len(-1, "M1", 0.033274000, 0.016637, 0.028702)
-    Call Dim_rad(1, "BODYR", 0.013462000, 0.008890, -0.010160)
-    Call Dim_rad(3, "THDMAJR_B1", 0.012700000, 0.025527, -0.007620)
-    Call Dim_len(3, "FSM1_THDL", 0.014097000, 0.025527, 0.022352)
-    Call Dim_ang(4, 10, "FSMCHANG1", 0.785398163, 0.032576, 0.015240)
-    Call Dim_ptline(5, False, 10, "FSM1_FACER", 0.011303000, 0.036322, 0.009042)
-    Call Dim_rad(6, "FSM1_GRVOR", 0.009601200, 0.032614, -0.006350)
-    Call Dim_len(6, "FSM1_GRVD", 0.001320800, 0.032614, 0.024892)
-    Call Dim_rad(8, "FSM1_GRVIR", 0.007010400, 0.032614, -0.003810)
+    Call Dim_len(-1, "M1", 0.044704000, 0.022352, 0.036671)
+    Call Dim_rad(1, "BODYR", 0.020637500, 0.013602, -0.010160)
+    Call Dim_rad(3, "THDMAJR_B1", 0.021431250, 0.035954, -0.007620)
+    Call Dim_len(3, "FSM1_THDL", 0.015944850, 0.035954, 0.030321)
+    Call Dim_ang(4, 10, "FSMCHANG1", 0.785398163, 0.043926, 0.023971)
+    Call Dim_ptline(5, False, 10, "FSM1_FACER", 0.019875500, 0.047752, 0.015900)
+    Call Dim_rad(6, "FSM1_GRVOR", 0.016725900, 0.044044, -0.006350)
+    Call Dim_len(6, "FSM1_GRVD", 0.001320800, 0.044044, 0.032861)
+    Call Dim_rad(8, "FSM1_GRVIR", 0.014135100, 0.044044, -0.003810)
     Call Collinear(5, 9)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
@@ -123,33 +123,33 @@ Sub BuildFS6500C()
     If rev Is Nothing Then GoTo Finish
     rev.Name = "LEG1_BODY"
 
-    ' ================= LEG 2 (FSSW -10, along Y +) =================
+    ' ================= LEG 2 (FSSW -20, along Y +) =================
     stepName = "LEG2 sketch"
-    curAxis = 1: tipPos = 0.054660800
+    curAxis = 1: tipPos = 0.072974200
     LoadLeg 2
     swModel.Extension.SelectByID2 "Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0
     swSkMgr.InsertSketch True
     DrawProfile True, 1#
-    Call Dim_len(-1, "M2", 0.041148000, 0.036891, 0.020574)
-    Call Dim_rad(1, "BODYR", 0.013462000, -0.010160, 0.008128)
-    Call Dim_pair(2, 16, "FSW2_BODYS", 0.024892000, 0.030541, 0.028702)
-    Call Dim_rad(3, "FSW2_NECKR", 0.010375900, -0.003810, 0.023355)
-    Call Dim_pair(4, 9, "FSW2_NUTL", 0.024206200, 0.028001, 0.042558)
-    Call Dim_rad(5, "FSW2_SKIRTR", 0.013106400, -0.007620, 0.032448)
-    Call Dim_len(5, "FSW2_SKIRTL", 0.003987800, 0.021651, 0.032448)
-    Call Dim_ptline(7, False, 17, "FSW2_SKIRTFR", 0.014097000, 0.007049, 0.039472)
-    Call Dim_len(8, "FSW2_NUTHEXL", 0.013919200, 0.024191, 0.047701)
-    Call Dim_rad(8, "FSW2_NUTR", 0.016571107, -0.011430, 0.047701)
-    Call Dim_pair(9, 16, "FSW2_SEAL", 0.013512800, 0.033081, 0.047904)
-    Call Dim_rad(10, "FSW2_CBR", 0.012954000, -0.012700, 0.054026)
-    Call Dim_len(10, "FSW2_CBD", 0.001270000, 0.017841, 0.054026)
-    Call Dim_ang(11, 17, "FSW2_CSANG", 1.047197551, 0.014986, 0.053034)
-    Call Dim_rad(12, "FSW2_MINR", 0.011718036, -0.015240, 0.047522)
-    Call Dim_len(12, "FSW2_THDL", 0.010310114, 0.019111, 0.047522)
-    Call Dim_ang(13, 17, "FSW2_RELANG", 0.785398163, 0.012988, 0.041554)
-    Call Dim_ptline(13, True, 17, "FSW2_RELR", 0.012954000, 0.006477, 0.039980)
-    Call Dim_rad(15, "FSW2_STEMR", 0.011722100, -0.019050, 0.038151)
-    Call Dim_len(15, "FSW2_HEADL", 0.005994400, 0.020381, 0.038151)
+    Call Dim_len(-1, "M2", 0.058166000, 0.047816, 0.029083)
+    Call Dim_rad(1, "BODYR", 0.020637500, -0.010160, 0.013843)
+    Call Dim_pair(2, 16, "FSW2_BODYS", 0.030480000, 0.041466, 0.042926)
+    Call Dim_rad(3, "FSW2_NECKR", 0.017792700, -0.003810, 0.036424)
+    Call Dim_pair(4, 9, "FSW2_NUTL", 0.027813000, 0.038926, 0.059068)
+    Call Dim_rad(5, "FSW2_SKIRTR", 0.021983700, -0.007620, 0.047701)
+    Call Dim_len(5, "FSW2_SKIRTL", 0.005080000, 0.032576, 0.047701)
+    Call Dim_ptline(7, False, 17, "FSW2_SKIRTFR", 0.023622000, 0.011811, 0.055194)
+    Call Dim_len(8, "FSW2_NUTHEXL", 0.016510000, 0.035116, 0.064719)
+    Call Dim_rad(8, "FSW2_NUTR", 0.027496307, -0.011430, 0.064719)
+    Call Dim_pair(9, 16, "FSW2_SEAL", 0.014808200, 0.044006, 0.065570)
+    Call Dim_rad(10, "FSW2_CBR", 0.021691600, -0.012700, 0.072339)
+    Call Dim_len(10, "FSW2_CBD", 0.001270000, 0.028766, 0.072339)
+    Call Dim_ang(11, 17, "FSW2_CSANG", 1.047197551, 0.023724, 0.071298)
+    Call Dim_rad(12, "FSW2_MINR", 0.020285456, -0.015240, 0.065106)
+    Call Dim_len(12, "FSW2_THDL", 0.011573256, 0.030036, 0.065106)
+    Call Dim_ang(13, 17, "FSW2_RELANG", 0.785398163, 0.021555, 0.058539)
+    Call Dim_ptline(13, True, 17, "FSW2_RELR", 0.021844000, 0.010922, 0.056998)
+    Call Dim_rad(15, "FSW2_STEMR", 0.020281900, -0.019050, 0.054661)
+    Call Dim_len(15, "FSW2_HEADL", 0.007010400, 0.031306, 0.054661)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0)
@@ -167,9 +167,9 @@ Sub BuildFS6500C()
 
     ' ================= forged body: hex bars, A/F = 2*BODYR, flats normal to Z =================
     stepName = "HEX1"
-    Call HexArm("Right Plane", 0#, 0#, 0.017780000, 0.013462000, "HEX1", 0, 1#)
+    Call HexArm("Right Plane", 0#, 0#, 0.027203400, 0.020637500, "HEX1", 0, 1#)
     stepName = "HEX2"
-    Call HexArm("Top Plane", 0#, 0#, 0.016256000, 0.013462000, "HEX2", 1, 1#)
+    Call HexArm("Top Plane", 0#, 0#, 0.027686000, 0.020637500, "HEX2", 1, 1#)
     ' ================= PUCK: 30 deg double cone about Z at the crossing (the turned hex corner, per Brennan) =================
     stepName = "PUCK"
     swModel.ClearSelection2 True
@@ -177,12 +177,12 @@ Sub BuildFS6500C()
     swSkMgr.InsertSketch True
     swSkMgr.AddToDB = True
     Dim pA As SldWorks.SketchSegment, pB As SldWorks.SketchSegment, pC As SldWorks.SketchSegment, pD As SldWorks.SketchSegment, pE As SldWorks.SketchSegment, pX As SldWorks.SketchSegment
-    Set pA = swSkMgr.CreateLine(0#, -0.013462000, 0, 0.007759589, -0.013462000, 0)
-    Set pB = swSkMgr.CreateLine(0.007759589, -0.013462000, 0, 0.015531879, 0#, 0)
-    Set pC = swSkMgr.CreateLine(0.015531879, 0#, 0, 0.007759589, 0.013462000, 0)
-    Set pD = swSkMgr.CreateLine(0.007759589, 0.013462000, 0, 0#, 0.013462000, 0)
-    Set pE = swSkMgr.CreateCenterLine(0#, 0.013462000, 0, 0#, -0.013462000, 0)
-    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.015531879, 0#, 0)
+    Set pA = swSkMgr.CreateLine(0#, -0.020637500, 0, 0.011902366, -0.020637500, 0)
+    Set pB = swSkMgr.CreateLine(0.011902366, -0.020637500, 0, 0.023817432, 0#, 0)
+    Set pC = swSkMgr.CreateLine(0.023817432, 0#, 0, 0.011902366, 0.020637500, 0)
+    Set pD = swSkMgr.CreateLine(0.011902366, 0.020637500, 0, 0#, 0.020637500, 0)
+    Set pE = swSkMgr.CreateCenterLine(0#, 0.020637500, 0, 0#, -0.020637500, 0)
+    Set pX = swSkMgr.CreateLine(0#, 0#, 0, 0.023817432, 0#, 0)
     swSkMgr.AddToDB = False
     pX.ConstructionGeometry = True
     Dim qa As SldWorks.SketchLine, qb As SldWorks.SketchLine, qc As SldWorks.SketchLine, qd As SldWorks.SketchLine, qe As SldWorks.SketchLine, qx As SldWorks.SketchLine
@@ -203,11 +203,11 @@ Sub BuildFS6500C()
     swModel.ClearSelection2 True: pE.Select4 False, Nothing
     swModel.Extension.SelectByID2 "Point1@Origin", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0
     swModel.SketchAddConstraints "sgCOINCIDENT"
-    Call DimSegOrigin(pA, "PUCK_HB", 0.013462000, 0.003880, -0.022352)
-    Call DimSegOrigin(pD, "PUCK_HT", 0.013462000, 0.003880, 0.022352)
-    Call DimSeg1(pA, "PUCK_R1B", 0.007759589, 0.003880, -0.031242)
-    Call DimSeg1(pD, "PUCK_R1T", 0.007759589, 0.003880, 0.031242)
-    Call DimSeg1(pX, "PUCK_XC", 0.015531879, 0.007766, -0.006350)
+    Call DimSegOrigin(pA, "PUCK_HB", 0.020637500, 0.005951, -0.029527)
+    Call DimSegOrigin(pD, "PUCK_HT", 0.020637500, 0.005951, 0.029527)
+    Call DimSeg1(pA, "PUCK_R1B", 0.011902366, 0.005951, -0.038417)
+    Call DimSeg1(pD, "PUCK_R1T", 0.011902366, 0.005951, 0.038417)
+    Call DimSeg1(pX, "PUCK_XC", 0.023817432, 0.011909, -0.006350)
     swModel.ClearSelection2 True
     swSkMgr.InsertSketch True
     Set swFeat = swModel.FeatureByPositionReverse(0): swFeat.Name = "PUCK"
@@ -222,8 +222,8 @@ Sub BuildFS6500C()
 
     ' ================= swivel nut hex on leg 2: sketched on the nut face, flats normal to Z, cut over the nut hex length =================
     stepName = "NUTHEX2"
-    curAxis = 1: tipPos = 0.054660800
-    Call NutHexCutAx(tipPos, 0.028702000, 0.013919200, "NUTHEX2", "NUTHEX2", "NUTCUT2")
+    curAxis = 1: tipPos = 0.072974200
+    Call NutHexCutAx(tipPos, 0.047625000, 0.016510000, "NUTHEX2", "NUTHEX2", "NUTCUT2")
     Check "NUTHEX2@NUTHEX2 reachable", Not swModel.Parameter("NUTHEX2@NUTHEX2") Is Nothing
     Check "DEPTH@NUTCUT2 reachable", Not swModel.Parameter("DEPTH@NUTCUT2") Is Nothing
     Dim bodies As Variant
@@ -232,29 +232,29 @@ Sub BuildFS6500C()
 
     ' ================= pockets and bores (each from its leg face to the axis crossing) =================
     stepName = "Bores"
-    curAxis = 0: tipPos = 0.033274000
-    Call BoreCut("BORE1", "D1", 0.012446000, 0.033274000, 0#, "BORECUT1", True, 0.006309360)
-    curAxis = 1: tipPos = 0.054660800
-    Call BoreCut("BORE2", "D2", 0.011430000, 0.054660800, 0#, "BORECUT2", True, 0.010549890)
-    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.3100)", Not AxisCoveredAx(0.033274000)
-    curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+2.1520)", Not AxisCoveredAx(0.054660800)
-    curAxis = 1: Check "leg 2 bore runs through the swivel seal face (no face across the axis at the seal-face plane Y=+1.6200)", Not AxisCoveredAx(0.041148000)
+    curAxis = 0: tipPos = 0.044704000
+    Call BoreCut("BORE1", "D1", 0.025908000, 0.044704000, 0#, "BORECUT1", True, 0.012721590)
+    curAxis = 1: tipPos = 0.072974200
+    Call BoreCut("BORE2", "D2", 0.025908000, 0.072974200, 0#, "BORECUT2", True, 0.018253710)
+    curAxis = 0: Check "leg 1 bore open on the axis at its face (X=+1.7600)", Not AxisCoveredAx(0.044704000)
+    curAxis = 1: Check "leg 2 bore open on the axis at its face (Y=+2.8730)", Not AxisCoveredAx(0.072974200)
+    curAxis = 1: Check "leg 2 bore runs through the swivel seal face (no face across the axis at the seal-face plane Y=+2.2900)", Not AxisCoveredAx(0.058166000)
 
     ' ================= threads (left live until the final resting-state step) =================
     stepName = "Threads"
-    curAxis = 0: tipPos = 0.033274000
-    Call ThreadCut(0.017780000, 0.012700000, 0.014097000, "1.0000-14", "THD_End1", 1#, 0.001814286)
-    curAxis = 1: tipPos = 0.054660800
-    Call HelixThread(0.054660800, 0.011718036, 0.012293600, 0.001814286, 0.000982018, 0.000000000, False, True, "2", "THD_End2")
+    curAxis = 0: tipPos = 0.044704000
+    Call ThreadCut(0.027203400, 0.021431250, 0.015944850, "1.6875-12", "THD_End1", 1#, 0.002116667)
+    curAxis = 1: tipPos = 0.072974200
+    Call HelixThread(0.072974200, 0.020285456, 0.013655040, 0.002116667, 0.001145688, 0.000000000, False, True, "2", "THD_End2")
 
     stepName = "Self-checks"
     Dim bb As Variant
     bb = swModel.GetPartBox(True)
-    Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -0.652 .. 1.310; threads may add a little)", Abs(bb(3) / IN_ - 1.3100) < 0.08 And Abs(bb(0) / IN_ - (-0.6524)) < 0.08
-    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.612 .. 2.152)", Abs(bb(4) / IN_ - 2.1520) < 0.08 And Abs(bb(1) / IN_ - (-0.6120)) < 0.08
+    Check "X extent " & Format(bb(0) / IN_, "0.000") & " .. " & Format(bb(3) / IN_, "0.000") & " (expect -1.083 .. 1.760; threads may add a little)", Abs(bb(3) / IN_ - 1.7600) < 0.08 And Abs(bb(0) / IN_ - (-1.0825)) < 0.08
+    Check "Y extent " & Format(bb(1) / IN_, "0.000") & " .. " & Format(bb(4) / IN_, "0.000") & " (expect -0.938 .. 2.873)", Abs(bb(4) / IN_ - 2.8730) < 0.08 And Abs(bb(1) / IN_ - (-0.9382)) < 0.08
     Trace "Bounding box z " & Format(bb(2) / IN_, "0.000") & " .. " & Format(bb(5) / IN_, "0.000") & " (approximate - loose around thread faces)"
     Dim zlo As Double, zhi As Double: zhi = ExtremeAlong(0#, 0#, 1#): zlo = -ExtremeAlong(0#, 0#, -1#)
-    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.5650 .. 0.5650: swivel nut flats)", Abs(zlo / IN_ + 0.5650) < 0.001 And Abs(zhi / IN_ - 0.5650) < 0.001
+    Check "Z extent (exact) " & Format(zlo / IN_, "0.0000") & " .. " & Format(zhi / IN_, "0.0000") & " (expect -0.9375 .. 0.9375: swivel nut flats)", Abs(zlo / IN_ + 0.9375) < 0.001 And Abs(zhi / IN_ - 0.9375) < 0.001
     bodies = swModel.GetBodies2(swBodyType_e.swSolidBody, True)
     If IsEmpty(bodies) Then Check "One solid body", False Else Check "One solid body", (UBound(bodies) = 0)
 
@@ -271,9 +271,9 @@ Sub BuildFS6500C()
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_v As Double, cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("FS6500-20-20-FG")
+    cx_c = Array("FS6500-10-10-FG")
     cx_p = Array("M1@LEG1", "BODYR@LEG1", "THDMAJR_B1@LEG1", "FSM1_THDL@LEG1", "FSMCHANG1@LEG1", "FSM1_FACER@LEG1", "DEPTH@BORECUT1", "DEPTH@BORECUT2", "THDPITCH@THD_End1", "Profile_Height@THD_End1_PROF", "THDPITCH@THD_End1_PROF", "PROF_R@THDPROF_2", "HEXAF@HEX1", "HEXL@HEX1_BODY", "HEXAF@HEX2", "HEXL@HEX2_BODY", "PUCK_R1B@PUCK", "PUCK_XC@PUCK")
-    cx_w = Array(Array(1.76000, 0.81250, 0.84375, 0.62775, 45.00000, 0.78250, 1.76000, 2.87300, 0.08333, 0.04511, 0.08333, 0.79864, 1.62500, 1.07100, 1.62500, 1.09000, 0.46860, 0.93769))
+    cx_w = Array(Array(1.31000, 0.53000, 0.50000, 0.55500, 45.00000, 0.44500, 1.31000, 2.15200, 0.07143, 0.03866, 0.07143, 0.46134, 1.06000, 0.70000, 1.06000, 0.64000, 0.30550, 0.61149))
     For cx_q = 0 To 0
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
@@ -299,7 +299,7 @@ Sub BuildFS6500C()
         Trace cx_c(cx_q) & " box x " & Format(cx_bx(0) / IN_, "0.000") & ".." & Format(cx_bx(3) / IN_, "0.000") & "  y " & Format(cx_bx(1) / IN_, "0.000") & ".." & Format(cx_bx(4) / IN_, "0.000")
     Next cx_q
 
-    swModel.ShowConfiguration2 "FS6500-10-10-FG"
+    swModel.ShowConfiguration2 "FS6500-20-20-FG"
     swModel.ForceRebuild3 False
 
     ' ---- all-config rebuild sweep (2026-09-23, QA #124): every configuration, every feature must rebuild
@@ -334,10 +334,10 @@ Sub BuildFS6500C()
         End If
     Next sw_i
     Check "All-config sweep: " & sw_n & " configurations rebuilt, " & sw_bad & " feature/body failures", sw_bad = 0
-    ' 2026-09-25: leave the master in its reference configuration (FS6500-10-10-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
+    ' 2026-09-25: leave the master in its reference configuration (FS6500-20-20-FG) - SolidWorks opens a part in the configuration that is active when it is saved;
     ' before this the master was left in the first name of the list (the smallest size)
-    swModel.ShowConfiguration2 "FS6500-10-10-FG"
-    Trace "Master left in its reference configuration FS6500-10-10-FG for the save (it opens in this size)"
+    swModel.ShowConfiguration2 "FS6500-20-20-FG"
+    Trace "Master left in its reference configuration FS6500-20-20-FG for the save (it opens in this size)"
 
     ' ---- resting state (project rule): every THD_* feature suppressed in EVERY configuration before the save.
     '      Threads stay live through the build, table insert, config checks and sweep so they are verified;
