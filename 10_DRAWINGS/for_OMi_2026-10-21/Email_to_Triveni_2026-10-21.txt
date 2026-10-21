@@ -13,7 +13,9 @@ In short:
 1. Compression (bite-type) fittings - 70 part numbers in 7 series. Brennan's 3D models cover
    89 of your compression fittings, and 71 more body-only numbers if each "(Body)" -M1 part is the
    same body without the nut and sleeve - is it? Supplier drawings would cover the rest. Which standard does the
-   bite-type port follow?
+   bite-type port follow? Brennan's 3D models show the port mouth as a plain counterbore (the tube stop) without the
+   24 deg sleeve cone, and we are modelling it that way for now. Do you need the 24 deg cone shown on the models and
+   drawings? If so, please send its dimensions per tube size (a supplier drawing of the port is enough).
 2. Test-gauge tees TGT-6504 / TGT-FS2406 - 12 parts, two series.
 3. 52 single sizes that no catalog prints and Brennan does not model (the rest of each series is modelled), e.g.
    1405-20-24, 2403-06-02, the 2700 bulkhead reducers, the 6500 / 6502 forged reducers and the FS0304-C cap assemblies. For the four
