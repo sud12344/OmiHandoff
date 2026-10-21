@@ -94,7 +94,7 @@ def main(roots, out):
                     if abs(m['BORER'] - bo) > TOL: bad.append(f'End {sfx} bore r {m["BORER"]} (row {bo})')
                 elif E['kind'] == 'PLAIN':
                     pass       # group B: the plug's plain back face (overall length checked below)
-                elif E['kind'] in ('JICM', 'NPTFM'):
+                elif E['kind'] in ('JICM', 'NPTFM', 'JICSW'):     # group B: + the accepted JIC swivel end (6402 / 6504 / 6565 masters)
                     pass       # 2026-10-20: the accepted library ends (MS33656J / ASME B1.20.3), closed-looped with their own masters - not read here
                 else:
                     bad.append(f'End {sfx}: kind {E["kind"]} has no closed-loop reader here')

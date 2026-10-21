@@ -1669,6 +1669,17 @@ SPEC['FS2408'] = dict(name='ORFS Male Plug (male face seal, blind hole)', L='L24
                              'face, as Brennan builds it (user 2026-10-21 "build it however brennan builds it"): full diameter to the end length - 0.004 - '
                              'the drill-point height (Brennan FS2408-08 STEP; 120deg drill point not modelled; the -08 rule is ASSUMED for the other sizes)')
 
+# 2026-10-21 (group B): FS6402 male face seal x female JIC swivel straight (no Air-Way series: Brennan ORFS catalog + CAD records). BRENNAN_FS6402-08-08
+# (tools/measure/prof.py): the straight FSM -08 end (= FSM_MEAS[8]), hex 0.875 from the end to the swivel body face 0.389, JIC swivel nut face at
+# 1.266 (L 1.770 from the seal face), nose tip 0.422 behind the nut face (record CC -> SNT; the library NOSETIP_B -08 is 0.43), body face 0.877
+# behind the nut face (SWIV_MEAS[8] BODYS 0.885), one bore 0.378 from the seal face to the seat.
+SPEC['FS6402'] = dict(name='ORFS Straight Adapter (male face seal x female JIC swivel)', L='L@DRIVE', hex='S1HEX@HEX', swivel=True, fs=True,
+                      A=lambda r, a, b: end_FSM(a, 'A'), B=lambda r, a, b: end_JICSW(b, 'B', r['SNT@DRIVE'], r['SHEX@HEX']),
+                      bore=('sw1', 'D1@BORE', None), ref='FS6402-08-08', thrchk=(('A', 'THDMAJ_D@DRIVE', 'a'), ('B', 'THDMAJ_B@DRIVE', 'b')),
+                      assume='L face-seal face -> JIC nut face, SNT nut face -> nose tip, body hex S1, nut hex S, bore D1 (Brennan ORFS catalog / CAD record: '
+                             'no Air-Way series; codes placed on the Brennan FS6402-08-08 STEP); male face-seal end = the straight FSM end library; '
+                             + SWIV_ASSUME + '; one bore D1 from the seal face to the swivel seat; hex end chamfers NOT modelled')
+
 def end_FSSW_row(r, col, dash, sfx, hexface=None):
     """end_FSSW with the nut hex of Q-FS-NUT (fs_nut_af); a substituted value is noted in the row's $COMMENT (fsnote). hexface = (name, Air-Way
     hex face -> seal face): the body face is built there (Air-Way = the dimension source), Brennan's measured one goes to $COMMENT"""
