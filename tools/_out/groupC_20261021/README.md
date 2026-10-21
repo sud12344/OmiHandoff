@@ -117,8 +117,7 @@ g1: C2402 C2403 C2405 C0318 (gen_straight2); g2: C2500 C2501 C2502 C2601 C6801 (
 1. ~~**Masters**~~ DECIDED 2026-10-21 (user: "yes"): own master per compression series, -M1 rows folded in (PROJECT_STATUS s5, Q-C-MASTER).
 2. **-M1 body-only numbers (71 configurations):** generate now as the same body (staged so, ASSUMED) or hold them until OMi answers the
    "(Body)" question in the Triveni email.
-3. **24 deg cone:** Brennan's CAD has none (plain socket = tube stop). Build as Brennan (staged) or wait for a citable J514/2 copy /
-   OMi drawing for the cone.
+3. ~~**24 deg cone**~~ DECIDED 2026-10-21 (user: "go with A"): built as Brennan draws it (plain socket); OMi asked in the Triveni email draft whether they need the cone and for its dimensions (PROJECT_STATUS s5, Q-C-CONE).
 4. **C0319 sleeve (9 parts):** the record leaves three positions of the -08 shape unexplained (collar end 0.141, step radius 0.3246,
    inner step 0.267). Either download BRENNAN_C0319-04 / -06 / -10 / -12 / -16 / -20 / -24 / -32 (8 files) so they can be measured per
    size, or allow scaling them from -08 (an assumption per row). Then a sleeve model type (gen_ring SLEEVE has 7 segments; this shape

@@ -579,6 +579,7 @@ harmless; move it to `_to_delete` when SolidWorks is closed.
 ## 5. User decisions on record
 
 - **2026-10-21 (Q-C-MASTER, group C): compression series get their own masters** ("yes"): the Q-FS-MASTER exception extends to the compression (bite-type) series - one master per C series (C2402 ... C6801, nut C0318, sleeve C0319), "-M1" body-only numbers fold in as rows. Reason: the bite-type end is a different DRIVE sketch than a JIC end (`tools/_out/groupC_20261021/README.md`).
+- **2026-10-21 (Q-C-CONE, group C): compression port = Brennan's plain counterbore, no 24 deg cone** ("go with A"): built as Brennan's CAD draws it (tube socket = tube stop); the 24 deg cone waits for a citable source (SAE J514/2 copy or an OMi / supplier drawing) - asked in the Triveni email draft (`10_DRAWINGS/for_OMi_2026-10-21`, item 1).
 - ~~6410-12-08-O stays at Air-Way 1.09.~~ Superseded 2026-10-02: shipped at OMi 1.480 (= Brennan) with Task A ("yes to
   all", question 4 of 2026-09-26).
 - 1404 / 1405: the swivel nut face sits at Air-Way W (Air-Way over Brennan). 1700 follows Air-Way.
