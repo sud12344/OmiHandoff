@@ -1,0 +1,6 @@
+2504: 5 configs (ref 2504-08-08-FG), 7 skipped, 0 blocked, 54 cols
+   warn 2504-06-06-FG: hex A/F raised from OMi Hex Flat 0.562 to 0.5625 (JIC thread major; 2603HX rule)
+   warn 2504-12-12-FG: hex A/F raised from OMi Hex Flat 1.062 to 1.0625 (JIC thread major; 2603HX rule)
+   warn 2504-16-16-FG: hex A/F raised from OMi Hex Flat 1.312 to 1.3125 (JIC thread major; 2603HX rule)
+
+--- stderr ---

@@ -1,0 +1,8 @@
+6401: 24 configs (ref 6401-08-08-O), 5 skipped (DROP/MISSING/no data), 0 geometry-blocked, 11 profile points, 36 table cols
+   skipped ('6401-05-02-O', 'DROP', 'ASSUMED')
+   skipped ('6401-05-04-O', 'DROP', 'ASSUMED')
+   skipped ('6401-05-06-O', 'DROP', 'ASSUMED')
+   skipped ('6401-06-02-O', 'DROP', 'ASSUMED')
+   skipped ('6401-24-16-O', 'DROP', 'ASSUMED')
+
+--- stderr ---

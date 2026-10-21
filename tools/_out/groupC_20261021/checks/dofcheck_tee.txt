@@ -1,0 +1,11 @@
+Build_C2500_MASTER.bas LEG 1 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C2500_MASTER.bas LEG 2 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C2501_MASTER.bas LEG 1 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C2501_MASTER.bas LEG 2 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_C2502_MASTER.bas LEG 1 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C2502_MASTER.bas LEG 2 {'n': 4, 'unknowns': 8, 'cons': 8, 'rank': 8, 'fully': True, 'redundant': 0}
+Build_C2601_MASTER.bas LEG 1 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C2601_MASTER.bas LEG 2 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C2601_MASTER.bas LEG 3 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_C6801_MASTER.bas LEG 1 {'n': 10, 'unknowns': 20, 'cons': 20, 'rank': 20, 'fully': True, 'redundant': 0}
+Build_C6801_MASTER.bas LEG 2 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}

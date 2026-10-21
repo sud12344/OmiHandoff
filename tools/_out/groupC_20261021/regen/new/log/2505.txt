@@ -1,0 +1,7 @@
+2505: 2 configs (ref 2505-12-12-FG), 7 skipped, 2 blocked, 46 cols
+   BLOCKED 2505-08-08-FG: leg 1: port depth P1 0.9 >= leg length 0.94
+   BLOCKED 2505-16-16-FG: leg 1: port depth P1 1.14 >= leg length 1.12
+   warn 2505-12-12-FG: leg 1: female port thread length = MS51503 P1 0.91 (library) - the row has no measured PORTDEPTH@BORE
+   warn 2505-06-06-FG: leg 1: female port thread length = MS51503 P1 0.68 (library) - the row has no measured PORTDEPTH@BORE; leg 2: inner thread edge clears the corner puck by only 0.0090
+
+--- stderr ---

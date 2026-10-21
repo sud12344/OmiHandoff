@@ -1,0 +1,9 @@
+0403: 7 configs (ref 0403-08-08 UNPL), 27 skipped (DROP/MISSING/no data), 0 geometry-blocked, 11 profile points, 30 table cols
+   skipped ('0403-05-05 UNPL', 'DROP', 'ASSUMED')
+   skipped ('0403-06-08 UNPL', 'DROP', 'ASSUMED')
+   skipped ('0403-08-08 PF UNPL', 'DROP', 'ASSUMED')
+   skipped ('0403-08-06 UNPL', 'DROP', 'ASSUMED')
+   skipped ('0403-10-08 UNPL', 'DROP', 'ASSUMED')
+   skipped ('0403-10-06 UNPL', 'DROP', 'MISSING')
+
+--- stderr ---

@@ -1,0 +1,9 @@
+1724: 1 configs (ref 1724-08), 6 skipped (DROP/MISSING/no data), 0 geometry-blocked, 10 profile points, 16 table cols
+   skipped ('1724-12', 'BUILD', 'MISSING')
+   skipped ('1724-16', 'BUILD', 'MISSING')
+   skipped ('1724-20', 'BUILD', 'MISSING')
+   skipped ('1724-24', 'BUILD', 'MISSING')
+   skipped ('1724-32', 'BUILD', 'MISSING')
+   skipped ('1724-40', 'BUILD', 'MISSING')
+
+--- stderr ---

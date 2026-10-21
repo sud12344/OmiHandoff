@@ -1,0 +1,214 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\Build_C2402_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\DesignTable_C2402_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2402\\C2402_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2402\\Build_C2402_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2402_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2402_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2402_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2402_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2402_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\Build_C2403_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\DesignTable_C2403_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2403\\C2403_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2403\\Build_C2403_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2403_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2403_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2403_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2403_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2403_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\Build_C2405_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\DesignTable_C2405_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2405\\C2405_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2405\\Build_C2405_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2405_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2405_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2405_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2405_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2405_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\Build_C0318_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\straight\\DesignTable_C0318_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C0318\\C0318_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C0318\\Build_C0318_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C0318_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C0318_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C0318_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C0318_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C0318_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

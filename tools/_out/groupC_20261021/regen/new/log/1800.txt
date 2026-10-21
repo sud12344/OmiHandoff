@@ -1,0 +1,9 @@
+1800: 1 configs (ref 1800-08-08), 12 skipped (DROP/MISSING/no data), 0 geometry-blocked, 19 profile points, 41 table cols
+   skipped ('1800-12-12', 'BUILD', 'MISSING')
+   skipped ('1800-12-16', 'BUILD', 'MISSING')
+   skipped ('1800-16-12', 'BUILD', 'MISSING')
+   skipped ('1800-16-16', 'BUILD', 'MISSING')
+   skipped ('1800-16-20', 'BUILD', 'MISSING')
+   skipped ('1800-16-24', 'BUILD', 'MISSING')
+
+--- stderr ---

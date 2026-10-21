@@ -1,0 +1,9 @@
+C2405: 24 configs (ref C2405-08-08), 8 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 35 table cols
+   skipped ('C2405-16-12', 'BUILD', 'MISSING')
+   skipped ('C2405-16-12-M1', 'BUILD', 'MISSING')
+   skipped ('C2405-20-16', 'BUILD', 'MISSING')
+   skipped ('C2405-20-16-M1', 'BUILD', 'MISSING')
+   skipped ('C2405-24-20', 'BUILD', 'MISSING')
+   skipped ('C2405-24-20-M1', 'BUILD', 'MISSING')
+
+--- stderr ---

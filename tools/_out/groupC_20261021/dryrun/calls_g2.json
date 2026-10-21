@@ -1,0 +1,266 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\Build_C2500_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\DesignTable_C2500_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2500\\C2500_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2500\\Build_C2500_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2500_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2500_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2500_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2500_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2500_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\Build_C2501_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\DesignTable_C2501_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2501\\C2501_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2501\\Build_C2501_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2501_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2501_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2501_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2501_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2501_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\Build_C2502_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\DesignTable_C2502_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2502\\C2502_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2502\\Build_C2502_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2502_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2502_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2502_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2502_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2502_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\Build_C2601_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\DesignTable_C2601_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2601\\C2601_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C2601\\Build_C2601_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C2601_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C2601_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2601_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C2601_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C2601_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\Build_C6801_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\regen\\new\\tee\\DesignTable_C6801_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C6801\\C6801_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupC_20261021\\dryrun\\C6801\\Build_C6801_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "C6801_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "C6801_MASTER"
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C6801_MASTER",
+   "views": [
+    "isometric",
+    "top"
+   ]
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "C6801_MASTER",
+   "views": [
+    "front"
+   ],
+   "section_plane": "Front Plane"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "C6801_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

@@ -1,0 +1,9 @@
+6408HHP: 1 configs (ref 6408-HHP-08-O), 11 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 23 table cols
+   skipped ('6408-HHP-02-O', 'BUILD', 'MISSING')
+   skipped ('6408-HHP-03-O', 'BUILD', 'MISSING')
+   skipped ('6408-HHP-04-O', 'BUILD', 'MISSING')
+   skipped ('6408-HHP-05-O', 'BUILD', 'MISSING')
+   skipped ('6408-HHP-06-O', 'BUILD', 'MISSING')
+   skipped ('6408-HHP-10-O', 'BUILD', 'MISSING')
+
+--- stderr ---

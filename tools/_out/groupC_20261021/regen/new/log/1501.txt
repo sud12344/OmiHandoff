@@ -1,0 +1,18 @@
+1501: 19 configs (ref 1501-08-08-FG), 29 skipped, 2 blocked, 61 cols
+   BLOCKED 1501-04-02-FG: leg 2: bore 0.23 >= tip dia 0.234; leg 2: neck wall 0.014 (neck dia 0.258, bore 0.23); leg 2: bore 0.23 leaves < 0.03 at the stem tip (tip dia 0.234)
+   BLOCKED 1501-24-24-FG: leg 2 NPSM swivel: Air-Way nut hex C(2) 1.88 differs from the Brennan nut 2.125 for -24
+   warn 1501-08-08-FG: leg 2 hex arm 0.530 barely clears the corner puck (radius 0.508); leg 2: Air-Way nut face to stem tip (W - M) 0.330 vs Brennan 0.280: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-04-04-FG: leg 1: male NPTF thread dia at L2 0.5469 vs hex flats 0.5000 (round end proud of the flats by 0.0235; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 1501-04-06-FG: leg 2: Air-Way nut face to stem tip (W - M) 0.250 vs Brennan 0.220: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-06-06-FG: leg 2: Air-Way nut face to stem tip (W - M) 0.250 vs Brennan 0.220: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-06-08-FG: leg 2 hex arm 0.520 barely clears the corner puck (radius 0.502); leg 2: Air-Way nut face to stem tip (W - M) 0.330 vs Brennan 0.280: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-08-06-FG: leg 2: Air-Way nut face to stem tip (W - M) 0.250 vs Brennan 0.220: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-12-08-FG: leg 1: male NPTF thread dia at L2 1.0589 vs hex flats 1.0600 (round end flush with the flats by 0.0005; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: Air-Way nut face to stem tip (W - M) 0.330 vs Brennan 0.280: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-12-16-FG: leg 2: Air-Way nut face to stem tip (W - M) 0.380 vs Brennan 0.350: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-16-12-FG: leg 1: male NPTF thread dia at L2 1.3259 vs hex flats 1.3100 (round end proud of the flats by 0.0079; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 1501-16-16-FG: leg 1: male NPTF thread dia at L2 1.3259 vs hex flats 1.3100 (round end proud of the flats by 0.0079; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012); leg 2: Air-Way nut face to stem tip (W - M) 0.380 vs Brennan 0.350: nut placed at Air-Way W (user decision 2026-09-24, as 1404/1405)
+   warn 1501-20-16-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6250 (round end proud of the flats by 0.0229; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 1501-20-20-FG: leg 1: male NPTF thread dia at L2 1.6709 vs hex flats 1.6300 (round end proud of the flats by 0.0204; Brennan 5600-16-16-16-FG also has its round end proud of the flats, by 0.0012)
+   warn 1501-32-32-FG: leg 2 hex arm 1.465 barely clears the corner puck (radius 1.443)
+
+--- stderr ---

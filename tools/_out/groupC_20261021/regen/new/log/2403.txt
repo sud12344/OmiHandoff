@@ -1,0 +1,9 @@
+2403: 40 configs (ref 2403-08-08), 15 skipped (DROP/MISSING/no data), 0 geometry-blocked, 18 profile points, 42 table cols
+   skipped ('2403-04-03', 'DROP', 'ASSUMED')
+   skipped ('2403-12-04', 'DROP', 'ASSUMED')
+   skipped ('2403-14-12', 'DROP', 'ASSUMED')
+   skipped ('2403-14-14', 'DROP', 'VERIFIED')
+   skipped ('2403-24-12', 'DROP', 'ASSUMED')
+   skipped ('2403-06-02', 'BUILD', 'MISSING')
+
+--- stderr ---

@@ -1,0 +1,5 @@
+1602: 7 configs (ref 1602-08-08-08-FG), 4 skipped, 0 blocked, 83 cols
+   warn 1602-06-06-06-FG: leg 1: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.210 (row) vs 0.220 on the Brennan -06 swivel (TIP_B) - the row is followed
+   warn 1602-12-12-12-FG: leg 1: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed; leg 2: nut face to stem tip 0.350 (row) vs 0.330 on the Brennan -12 swivel (TIP_B) - the row is followed
+
+--- stderr ---

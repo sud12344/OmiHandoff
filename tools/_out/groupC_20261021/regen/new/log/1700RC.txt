@@ -1,0 +1,9 @@
+1700RC: 3 configs (ref 1700-20-16), 13 skipped (DROP/MISSING/no data), 0 geometry-blocked, 19 profile points, 41 table cols
+   skipped ('1700-61-08-08', 'other shape family', 'hex-body 1700 row: built in master 1700')
+   skipped ('1700-61-12-12', 'other shape family', 'hex-body 1700 row: built in master 1700')
+   skipped ('1700-61-12-16', 'other shape family', 'hex-body 1700 row: built in master 1700')
+   skipped ('1700-61-12-20', 'DROP', 'ASSUMED')
+   skipped ('1700-61-16-12', 'other shape family', 'hex-body 1700 row: built in master 1700')
+   skipped ('1700-61-16-16', 'other shape family', 'hex-body 1700 row: built in master 1700')
+
+--- stderr ---

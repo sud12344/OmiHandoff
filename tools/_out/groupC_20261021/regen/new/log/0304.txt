@@ -1,0 +1,9 @@
+0304: 12 configs (ref 0304-C-08), 10 skipped (DROP/MISSING/no data), 0 geometry-blocked, 8 profile points, 22 table cols
+   skipped ('0304-04', 'DROP', 'ASSUMED')
+   skipped ('0304-05', 'DROP', 'ASSUMED')
+   skipped ('0304-06', 'DROP', 'ASSUMED')
+   skipped ('0304-08', 'DROP', 'ASSUMED')
+   skipped ('0304-10', 'DROP', 'ASSUMED')
+   skipped ('0304-12', 'DROP', 'ASSUMED')
+
+--- stderr ---

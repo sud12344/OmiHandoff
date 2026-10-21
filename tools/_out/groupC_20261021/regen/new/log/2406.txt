@@ -1,0 +1,10 @@
+2406: 51 configs (ref 2406-08-06), 7 skipped (DROP/MISSING/no data), 1 geometry-blocked, 14 profile points, 37 table cols
+   BLOCKED 2406-16-04: wall between the female port and the End A thread root/groove only -0.009 at 0.550 from the End A tip
+   skipped ('2406-04-05', 'DROP', 'ASSUMED')
+   skipped ('2406-05-08', 'DROP', 'ASSUMED')
+   skipped ('2406-14-08', 'DROP', 'ASSUMED')
+   skipped ('2406-14-12', 'DROP', 'ASSUMED')
+   skipped ('2406-24-04', 'DROP', 'ASSUMED')
+   skipped ('2406-32-12', 'DROP', 'ASSUMED')
+
+--- stderr ---

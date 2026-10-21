@@ -1,0 +1,3 @@
+C2500: 10 configs (ref C2500-08-08-FG), 0 skipped, 0 blocked, 52 cols
+
+--- stderr ---
