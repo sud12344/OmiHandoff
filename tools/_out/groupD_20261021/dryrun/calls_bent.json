@@ -1,0 +1,159 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\regen\\stage\\Build_1704T_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\regen\\stage\\DesignTable_1704T_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\dryrun\\1704T\\1704T_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\dryrun\\1704T\\Build_1704T_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "1704T_MASTER",
+   "dims": [
+    "RB@PATH",
+    "TUBEOD@TUBE",
+    "TUBEID@BORE",
+    "FX@PATH",
+    "FY@PATH",
+    "FACEEXT@PATH",
+    "FLGB_HEADR@HEADSK",
+    "FLGB_HUBR@HEADSK"
+   ],
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "1704T_MASTER",
+   "config": "1704-08-08-Tube"
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "1704T_MASTER",
+   "config": "1804-32-32-Tube"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "1704T_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\regen\\stage\\Build_1703T_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\regen\\stage\\DesignTable_1703T_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\dryrun\\1703T\\1703T_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\dryrun\\1703T\\Build_1703T_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "1703T_MASTER",
+   "dims": [
+    "RB@PATH",
+    "TUBEOD@TUBE",
+    "TUBEID@BORE",
+    "FX@PATH",
+    "FY@PATH",
+    "FACEEXT@PATH",
+    "FLGB_HEADR@HEADSK",
+    "FLGB_HUBR@HEADSK"
+   ],
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "1703T_MASTER",
+   "config": "1703-08-08-Tube"
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "1703T_MASTER",
+   "config": "1803-32-32-Tube"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "1703T_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\regen\\stage\\Build_6701_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\regen\\stage\\DesignTable_6701_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\dryrun\\6701\\6701_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\groupD_20261021\\dryrun\\6701\\Build_6701_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "6701_MASTER",
+   "dims": [
+    "RB@PATH",
+    "TUBEOD@TUBE",
+    "TUBEID@BORE",
+    "FX@PATH",
+    "FY@PATH",
+    "OFFSET@NUTPLN",
+    "SWB_NOSETIP@SWSK"
+   ],
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "6701_MASTER",
+   "config": "6701-08-08"
+  }
+ ],
+ [
+  "geometry",
+  {
+   "doc": "6701_MASTER",
+   "config": "6701-12-12"
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "6701_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "sw_status",
+  {}
+ ]
+]

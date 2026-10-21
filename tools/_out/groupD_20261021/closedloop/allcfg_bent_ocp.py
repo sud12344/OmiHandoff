@@ -25,7 +25,7 @@ def nsolids(s):
 
 def main():
     gb = B.load_gb()
-    out, bad = [], 0
+    out, bad, exp = [], 0, {}
     for root in ('1704T', '1703T', '6701'):
         built = [b for b in gb.build_rows(root)[0] if not b[1]]
         for cols, _, X in built:
@@ -53,11 +53,14 @@ def main():
             if v <= 0: issues.append(f'volume {v}')
             if any(abs(d) > 0.01 for d in dev.values()): issues.append(f'box off the macro check: {dev}')
             bad += bool(issues)
+            exp[pn] = dict(root=root, volume=round(v, 6), size=[round(bx[3] - bx[0], 5), round(bx[4] - bx[1], 5), round(bx[5] - bx[2], 5)])
             out.append(f'{root:6} {pn:18} {"OK " if not issues else "BAD"} vol {v:.4f} in^3  box dev {dev}' + (f'  {issues}' if issues else ''))
             print(out[-1], flush=True)
     out.append(f'{len(out)} configurations, {bad} with problems')
     print(out[-1])
     open(os.path.join(B.H, 'closedloop', 'allcfg.txt'), 'w').write('\n'.join(out) + '\n')
+    import json
+    json.dump(exp, open(os.path.join(B.H, 'dryrun', 'expected_ocp.json'), 'w'), indent=1)     # for scripts/verdict.py
     sys.exit(1 if bad else 0)
 
 
