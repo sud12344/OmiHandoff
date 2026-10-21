@@ -1,0 +1,2 @@
+orfs_dryrun_20261020/regen_after_hte/straight/Build_FS6504C_MASTER.bas 33 procedures OK
+orfs_dryrun_20261020/regen_after_hte/tee/Build_FS6600C_MASTER.bas 51 procedures OK

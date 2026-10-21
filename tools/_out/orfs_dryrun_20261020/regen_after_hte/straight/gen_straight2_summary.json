@@ -1,0 +1,41 @@
+{
+ "FS6565C": {
+  "configs": 1,
+  "ref": "FS6565-12-12",
+  "skipped": [
+   [
+    "FS6565-04-04",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6565"
+   ],
+   [
+    "FS6565-06-06",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6565"
+   ],
+   [
+    "FS6565-08-08",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6565"
+   ],
+   [
+    "FS6565-10-10",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6565-16-16",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF6565:FF6565-20-20",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 32,
+  "cols": 68
+ }
+}

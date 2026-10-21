@@ -1,0 +1,11 @@
+straight FS6504C: macro lines changed 1, SW2 cells changed 1
+   macro (190, '    Call HelixThread(0.069392800, 0.011718036, 0.012682220, 0.001814286, 0.000982018, 0.000000000, False, True, "B", "THD_EndB")', '    Call HelixThread(0.069392800, 0.011718036, 0.012293600, 0.001814286, 0.000982018, 0.000000000, False, True, "B", "THD_EndB")')
+   cell  ('HEIGHT@HELIX_B', 'FS6504-10-10', 0.4993, 0.484)
+tee FS6500C: macro lines changed 0, SW2 cells changed 1
+   cell  ('HEIGHT@HELIX_2', 'FS6500-10-10-FG', 0.4993, 0.484)
+tee FS6600C: macro lines changed 1, SW2 cells changed 1
+   macro (245, '    Call HelixThread(0.054660800, 0.011718036, 0.012682220, 0.001814286, 0.000982018, 0.000000000, False, True, "3", "THD_End3")', '    Call HelixThread(0.054660800, 0.011718036, 0.012293600, 0.001814286, 0.000982018, 0.000000000, False, True, "3", "THD_End3")')
+   cell  ('HEIGHT@HELIX_3', 'FS6600-10-10-10-FG', 0.4993, 0.484)
+tee FS6602C: macro lines changed 0, SW2 cells changed 1
+   cell  ('HEIGHT@HELIX_2', 'FS6602-10-10-10-FG', 0.4993, 0.484)
+4 FS root(s) differ

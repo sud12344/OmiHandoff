@@ -1,0 +1,36 @@
+{
+ "FS6505C": {
+  "configs": 2,
+  "ref": "FS6505-12-12",
+  "skipped": [
+   [
+    "FS6505-04-04",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6505"
+   ],
+   [
+    "FS6505-06-06",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FS6505-08-08",
+    "other shape family",
+    "face-seal swivel with a countersunk mouth: built in master FS6505"
+   ],
+   [
+    "FS6505-10-08",
+    "BUILD",
+    "MISSING"
+   ],
+   [
+    "FF6505:FF6505-8-12",
+    "DROP",
+    "ASSUMED"
+   ]
+  ],
+  "blocked": [],
+  "verts": 21,
+  "cols": 53
+ }
+}

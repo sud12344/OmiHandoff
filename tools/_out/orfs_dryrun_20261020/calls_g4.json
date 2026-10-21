@@ -1,0 +1,685 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS0306_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS0306_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0306\\FS0306_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0306\\Build_FS0306_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS0306_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS0306_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS0306_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS0306_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS0318_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS0318_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0318\\FS0318_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0318\\Build_FS0318_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS0318_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS0318_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS0318_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS0318_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS0319C_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS0319C_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0319C\\FS0319C_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0319C\\Build_FS0319C_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS0319C_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS0319C_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS0319C_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS0319C_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS0319_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS0319_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0319\\FS0319_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS0319\\Build_FS0319_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS0319_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS0319_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS0319_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS0319_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS2404_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS2404_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS2404\\FS2404_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS2404\\Build_FS2404_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS2404_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS2404_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS2404_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS2404_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6403_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6403_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6403\\FS6403_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6403\\Build_FS6403_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6403_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6403_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6403_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6403_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6504C_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6504C_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6504C\\FS6504C_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6504C\\Build_FS6504C_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6504C_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6504C_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6504C_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6504C_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6504_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6504_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6504\\FS6504_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6504\\Build_FS6504_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6504_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6504_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6504_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6504_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6505C_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6505C_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6505C\\FS6505C_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6505C\\Build_FS6505C_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6505C_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6505C_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6505C_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6505C_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6505_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6505_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6505\\FS6505_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6505\\Build_FS6505_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6505_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6505_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6505_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6505_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6540C_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6540C_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6540C\\FS6540C_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6540C\\Build_FS6540C_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6540C_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6540C_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6540C_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6540C_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6540_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6540_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6540\\FS6540_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6540\\Build_FS6540_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6540_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6540_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6540_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6540_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6565C_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6565C_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6565C\\FS6565C_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6565C\\Build_FS6565C_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6565C_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6565C_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6565C_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6565C_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\Build_FS6565_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\DesignTable_FS6565_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6565\\FS6565_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\FS6565\\Build_FS6565_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "FS6565_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('FS6565_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "FS6565_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "FS6565_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\ring\\Build_4000_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_gen_20261020\\out\\ring\\DesignTable_4000_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\4000\\4000_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\orfs_dryrun_20261020\\4000\\Build_4000_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "4000_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "run_python",
+  {
+   "code": "\ndef _thdcheck(title):\n    d = get_doc(title)\n    cfgs = [c for c in d.GetConfigurationNames() if c != 'Default']\n    ref = d.ConfigurationManager.ActiveConfiguration.Name\n    rows = []\n    for cfg in cfgs:\n        d.ShowConfiguration2(cfg)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        d.ForceRebuild3(False)\n        b0 = len(solid_bodies(d)); v0 = mass_props(d)['volume']\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        for f in thd: f.SetSuppression2(1, 1, None)\n        d.ForceRebuild3(False)\n        thd = [f for f in iter_features(d) if f.Name.startswith('THD_')]\n        b1 = len(solid_bodies(d)); v1 = mass_props(d)['volume']\n        live = [f.Name for f in thd if f.IsSuppressed2(1, None)[0] is False]\n        errs = [(f.Name, f.GetErrorCode2()[0]) for f in thd if f.GetErrorCode2()[0] != 0]\n        for f in thd: f.SetSuppression2(0, 1, None)\n        rows.append(dict(cfg=cfg, bodies=(b0, b1), vol_in3=round(v0 / IN ** 3, 4),\n                         thd_cut_pct=round(100 * (v0 - v1) / v0, 2) if v0 else None, n_thd=len(thd), live=len(live), thd_err=errs))\n    d.ShowConfiguration2(ref); d.ForceRebuild3(False)\n    bad = [r for r in rows if r['bodies'] != (1, 1) or r['thd_err'] or r['live'] != r['n_thd']\n           or (r['n_thd'] and (not r['thd_cut_pct'] or r['thd_cut_pct'] <= 0))]\n    return dict(thdcheck=title, n=len(rows), n_bad=len(bad), bad=bad, rows=[(r['cfg'], r['vol_in3'], r['thd_cut_pct'], r['n_thd']) for r in rows])\nresult = _thdcheck('4000_MASTER')\n",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "screenshot",
+  {
+   "doc": "4000_MASTER",
+   "views": [
+    "isometric",
+    "front"
+   ],
+   "section_plane": "Front Plane",
+   "width": 1000
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "4000_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "sw_status",
+  {}
+ ]
+]

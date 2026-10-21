@@ -1,0 +1,20 @@
+## vbacheck
+tools/_out/orfs_dryrun_20261020/regen_after_ref/tee/Build_FS2501_MASTER.bas 51 procedures OK
+tools/_out/orfs_dryrun_20261020/regen_after_ref/tee/Build_FS2503_MASTER.bas 51 procedures OK
+tools/_out/orfs_dryrun_20261020/regen_after_ref/tee/Build_FS6500C_MASTER.bas 51 procedures OK
+tools/_out/orfs_dryrun_20261020/regen_after_ref/tee/Build_FS6602C_MASTER.bas 51 procedures OK
+## dofcheck_tee
+Build_FS2501_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS2501_MASTER.bas LEG 2 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2503_MASTER.bas LEG 1 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
+Build_FS2503_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6500C_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6500C_MASTER.bas LEG 2 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6602C_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+Build_FS6602C_MASTER.bas LEG 2 {'n': 18, 'unknowns': 36, 'cons': 36, 'rank': 36, 'fully': True, 'redundant': 0}
+Build_FS6602C_MASTER.bas LEG 3 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
+## allcfg
+FS2501   9 configs  leg outline problems: 0 []
+FS2503   4 configs  leg outline problems: 0 []
+FS6500C   2 configs  leg outline problems: 0 []
+FS6602C   2 configs  leg outline problems: 0 []

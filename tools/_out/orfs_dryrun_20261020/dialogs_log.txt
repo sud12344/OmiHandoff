@@ -1,0 +1,25 @@
+﻿2026-10-20T17:45:52 watcher started
+2026-10-20T17:45:52 OK on [SOLIDWORKS Design]: FSW3_CSANG@LEG3
+
+<a href="Copy all to Clipboard">Copy all to Clipboard</a> / OK
+2026-10-20T17:47:01 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T17:47:01 OK on [SOLIDWORKS Design]: FSW2_CSANG@LEG2
+
+<a href="Copy all to Clipboard">Copy all to Clipboard</a> / OK
+2026-10-20T17:48:13 OK on [SOLIDWORKS Design]: FSW2_CSANG@LEG2
+
+<a href="Copy all to Clipboard">Copy all to Clipboard</a> / OK
+2026-10-20T17:49:25 OK on [SOLIDWORKS Design]: FSW2_CSANG@LEG2
+
+<a href="Copy all to Clipboard">Copy all to Clipboard</a> / OK
+2026-10-20T17:50:30 OK on [SOLIDWORKS Design]: FSW2_CSANG@LEG2
+
+<a href="Copy all to Clipboard">Copy all to Clipboard</a> / OK
+2026-10-20T18:12:19 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:14:22 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:24:23 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:25:23 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:26:24 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:34:19 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:49:29 SEEN, left alone []: Title / Description / Button1 / Button2 / Hyperlink Text 1 / Hyperlink Text 2
+2026-10-20T18:53:24 watcher stopped

@@ -1,0 +1,99 @@
+PASS  FS2500    macro ok 121 fail 0  configs 5  sweep bad []  thread-check bad 0  42.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2500_master_164226.png
+PASS  FS2500N   macro ok 117 fail 0  configs 3  sweep bad []  thread-check bad 0  60.3 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2500n_master_182800.png
+PASS  FS6500C   macro ok 125 fail 0  configs 2  sweep bad []  thread-check bad 0  45.3 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6500c_master_184953.png
+PASS  FS6801R   macro ok 117 fail 0  configs 1  sweep bad []  thread-check bad 0  33.7 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6801r_master_164511.png
+PASS  FS2501N   macro ok 118 fail 0  configs 3  sweep bad []  thread-check bad 0  37.0 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2501n_master_182924.png
+PASS  FS2501    macro ok 120 fail 0  configs 9  sweep bad []  thread-check bad 0  40.4 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2501_master_170705.png
+PASS  FS2503N   macro ok 123 fail 0  configs 4  sweep bad []  thread-check bad 0  51.7 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2503n_master_183129.png
+PASS  FS2503    macro ok 125 fail 0  configs 4  sweep bad []  thread-check bad 0  33.4 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2503_master_170942.png
+PASS  FS2601N   macro ok 119 fail 0  configs 2  sweep bad []  thread-check bad 0  58.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2601n_master_183321.png
+PASS  FS2601    macro ok 145 fail 0  configs 3  sweep bad []  thread-check bad 0  39.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2601_master_171516.png
+PASS  FS2603N   macro ok 116 fail 0  configs 2  sweep bad []  thread-check bad 0  68.0 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2603n_master_183505.png
+PASS  FS2603    macro ok 146 fail 0  configs 4  sweep bad []  thread-check bad 0  57.0 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2603_master_171853.png
+PASS  FS2701    macro ok 107 fail 0  configs 2  sweep bad []  thread-check bad 0  41.7 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2701_master_171955.png
+PASS  FS2702    macro ok 112 fail 0  configs 2  sweep bad []  thread-check bad 0  37.2 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2702_master_172051.png
+PASS  FS2703    macro ok 129 fail 0  configs 2  sweep bad []  thread-check bad 0  47.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2703_master_172201.png
+PASS  FS2704    macro ok 129 fail 0  configs 2  sweep bad []  thread-check bad 0  48.5 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2704_master_172314.png
+PASS  FS6500NC  macro ok 123 fail 0  configs 2  sweep bad []  thread-check bad 0  38.0 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6500nc_master_183700.png
+PASS  FS6500N   macro ok 122 fail 0  configs 1  sweep bad []  thread-check bad 0  43.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6500n_master_183601.png
+PASS  FS6500    macro ok 143 fail 0  configs 3  sweep bad []  thread-check bad 0  40.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6500_master_173117.png
+PASS  FS6502    macro ok 131 fail 0  configs 1  sweep bad []  thread-check bad 0  33.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6502_master_173206.png
+PASS  FS6600C   macro ok 147 fail 0  configs 1  sweep bad []  thread-check bad 0  44.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6600c_master_185049.png
+PASS  FS6600NC  macro ok 143 fail 0  configs 1  sweep bad []  thread-check bad 0  40.4 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6600nc_master_183906.png
+PASS  FS6600N   macro ok 142 fail 0  configs 1  sweep bad []  thread-check bad 0  55.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6600n_master_183813.png
+PASS  FS6600    macro ok 146 fail 0  configs 2  sweep bad []  thread-check bad 0  51.9 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6600_master_174618.png
+PASS  FS6602C   macro ok 149 fail 0  configs 2  sweep bad []  thread-check bad 0  47.9 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6602c_master_185158.png
+PASS  FS6602NC  macro ok 145 fail 0  configs 2  sweep bad []  thread-check bad 0  44.5 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6602nc_master_184138.png
+PASS  FS6602N   macro ok 144 fail 0  configs 1  sweep bad []  thread-check bad 0  63.9 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6602n_master_184030.png
+PASS  FS6602    macro ok 148 fail 0  configs 2  sweep bad []  thread-check bad 0  52.5 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6602_master_175103.png
+PASS  FS6801NR  macro ok 115 fail 0  configs 1  sweep bad []  thread-check bad 0  36.3 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6801nr_master_184225.png
+PASS  FS6801    macro ok 137 fail 0  configs 3  sweep bad []  thread-check bad 0  42.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6801_master_175251.png
+PASS  FS6802NR  macro ok 122 fail 0  configs 1  sweep bad []  thread-check bad 0  36.2 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6802nr_master_184311.png
+PASS  FS6802    macro ok 123 fail 0  configs 2  sweep bad []  thread-check bad 0  35.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6802_master_175429.png
+PASS  FS6803    macro ok 138 fail 0  configs 1  sweep bad []  thread-check bad 0  34.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6803_master_175513.png
+PASS  FS6804    macro ok 140 fail 0  configs 1  sweep bad []  thread-check bad 0  37.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6804_master_175601.png
+PASS  FS0306    macro ok 67 fail 0  configs 8  sweep bad []  thread-check bad 0  27.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs0306_master_175716.png
+PASS  FS0318    macro ok 61 fail 0  configs 8  sweep bad []  thread-check bad 0  32.2 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs0318_master_175822.png
+PASS  FS0319C   macro ok 60 fail 0  configs 3  sweep bad []  thread-check bad 0  17.0 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs0319c_master_175849.png
+PASS  FS0319    macro ok 54 fail 0  configs 3  sweep bad []  thread-check bad 0  15.5 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs0319_master_175914.png
+PASS  FS2404    macro ok 97 fail 0  configs 5  sweep bad []  thread-check bad 0  72.4 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs2404_master_180124.png
+PASS  FS6403    macro ok 84 fail 0  configs 1  sweep bad []  thread-check bad 0  24.5 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6403_master_180156.png
+PASS  FS6504C   macro ok 124 fail 0  configs 4  sweep bad []  thread-check bad 0  38.6 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6504c_master_185302.png
+CHECK            macro ok None fail None  configs None  sweep bad None  thread-check bad n/a  None s
+PASS  FS6504    macro ok 123 fail 0  configs 3  sweep bad []  thread-check bad 0  59.9 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6504_master_181259.png
+PASS  FS6505C   macro ok 107 fail 0  configs 2  sweep bad []  thread-check bad 0  82.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6505c_master_181500.png
+PASS  FS6505    macro ok 106 fail 0  configs 2  sweep bad []  thread-check bad 0  46.7 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6505_master_181607.png
+PASS  FS6540C   macro ok 105 fail 0  configs 2  sweep bad []  thread-check bad 0  34.8 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6540c_master_181657.png
+PASS  FS6540    macro ok 119 fail 0  configs 3  sweep bad []  thread-check bad 0  37.2 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6540_master_181755.png
+PASS  FS6565C   macro ok 131 fail 0  configs 1  sweep bad []  thread-check bad 0  33.3 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6565c_master_181838.png
+PASS  FS6565    macro ok 142 fail 0  configs 3  sweep bad []  thread-check bad 0  38.5 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_fs6565_master_181936.png
+PASS  4000      macro ok 82 fail 0  configs 29  sweep bad []  thread-check bad 0  38.4 s
+        shot: C:\Users\sudha\AppData\Local\Temp\sw_mcp\shot_4000_master_182123.png
