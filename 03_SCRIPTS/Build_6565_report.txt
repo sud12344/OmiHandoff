@@ -1,4 +1,4 @@
-Build_6565_MASTER  10/2/2026 7:17:03 AM
+Build_6565_MASTER  10/20/2026 9:08:41 PM
 OK    dim L31 = 1.9200 in (expect 1.9200)
 OK    dim BODYR = 0.4677 in (expect 0.4677)
 OK    dim SWA_SEATENDR = 0.1950 in (expect 0.1950)
@@ -201,7 +201,7 @@ OK    End B face present at x=1.9200
 OK    Body within nominal length +0.15 (threads loosen the box)
 OK    Across flats / corners 0.8800 / 1.0161 (body hex 0.8100, nut hex 0.8800/0.8800: expect between 0.8800 and 1.0161)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\04_DESIGN_TABLES\DesignTable_6565_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\straight\DesignTable_6565_SW2.xlsx
 OK    Configurations after table: 9 (expect 9)
       config check 1: 6565-04-04
 OK    6565-04-04 L31@DRIVE = 1.5100 (table 1.5100)
@@ -254,19 +254,19 @@ OK    6565-20-20: bore open through the End B seat end (x=2.0427, seat cone ends
 OK    6565-24-24: bore open through the End A seat end (x=0.9407, seat cone ends at r=0.6550)
 OK    6565-24-24: bore open through the End B seat end (x=2.5193, seat cone ends at r=0.6550)
       All-config sweep: rebuilding 8 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/8  6565-04-04  rebuilt in 1.4 s
-      sweep 2/8  6565-06-06  rebuilt in 1.1 s
-      sweep 3/8  6565-08-08  rebuilt in 1.0 s
-      sweep 4/8  6565-10-10  rebuilt in 1.0 s
-      sweep 5/8  6565-12-12  rebuilt in 0.9 s
-      sweep 6/8  6565-16-16  rebuilt in 1.5 s
-      sweep 7/8  6565-20-20  rebuilt in 1.6 s
-      sweep 8/8  6565-24-24  rebuilt in 1.1 s
+      sweep 1/8  6565-04-04  rebuilt in 0.8 s
+      sweep 2/8  6565-06-06  rebuilt in 1.0 s
+      sweep 3/8  6565-08-08  rebuilt in 0.7 s
+      sweep 4/8  6565-10-10  rebuilt in 0.8 s
+      sweep 5/8  6565-12-12  rebuilt in 1.1 s
+      sweep 6/8  6565-16-16  rebuilt in 0.8 s
+      sweep 7/8  6565-20-20  rebuilt in 1.0 s
+      sweep 8/8  6565-24-24  rebuilt in 1.0 s
 OK    All-config sweep: 8 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 6565-08-08 for the save (it opens in this size)
       THD_EndA: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
       THD_EndB: SetSuppression2(all configs) -> True; per-config check: 9 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\6565_MASTER.SLDPRT returned True (error 0, warning 0)
-        file on disk written 10/2/2026 7:18:20 AM - saved (SaveAs return value ignored)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\11_MASTERS\6565_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6565\6565_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 9:09:35 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\6565\6565_MASTER.SLDPRT

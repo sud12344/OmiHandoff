@@ -1,0 +1,53 @@
+[
+ [
+  "sw_status",
+  {}
+ ],
+ [
+  "run_macro",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch20_20261021\\regen_all\\straight\\Build_5404N_MASTER.bas",
+   "timeout_s": 1750,
+   "const_overrides": {
+    "TABLE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch20_20261021\\regen_all\\straight\\DesignTable_5404N_SW2.xlsx",
+    "SAVE_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch20_20261021\\dryrun\\5404N\\5404N_MASTER.SLDPRT",
+    "REPORT_PATH": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\tools\\_out\\batch20_20261021\\dryrun\\5404N\\Build_5404N_report.txt"
+   }
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "5404N_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "5404N_MASTER",
+   "discard_unsaved": true
+  }
+ ],
+ [
+  "open_doc",
+  {
+   "path": "C:\\Users\\sudha\\OneDrive\\Desktop\\OMi_Handoff\\11_MASTERS\\5404N_MASTER.SLDPRT",
+   "read_only": true
+  }
+ ],
+ [
+  "sweep_configs",
+  {
+   "doc": "5404N_MASTER",
+   "timeout_s": 1700
+  }
+ ],
+ [
+  "close_doc",
+  {
+   "doc": "5404N_MASTER",
+   "discard_unsaved": true
+  }
+ ]
+]

@@ -1,0 +1,62 @@
+Build_0319_MASTER  10/20/2026 11:14:30 PM
+OK    RING_AXIS inserted (Front Plane x Top Plane = X axis)
+OK    seven profile lines and the construction line created
+OK    dim COLLARR = 0.3400 in (expect 0.3400)
+OK    dim L = 0.5600 in (expect 0.5600)
+OK    dim COLLARL = 0.2200 in (expect 0.2200)
+OK    dim SPIGOTR = 0.2810 in (expect 0.2810)
+OK    dim BORER = 0.2525 in (expect 0.2525)
+OK    dim FRONTIR = 0.2945 in (expect 0.2945)
+OK    dim CONEL = 0.0647 in (expect 0.0647)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Sleeve volume 0.04980 in^3 (revolved half-section 0.04980)
+OK    Sleeve length along the axis 0.5600 (expect L 0.5600)
+OK    Sleeve O.D. 0.6800 / 0.6800 (expect collar 0.6800)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\ring\DesignTable_0319_SW2.xlsx
+OK    Configurations after table: 13 (expect 13)
+      config check 1: 0319-02
+OK    0319-02 L@DRIVE = 0.3400 (table 0.3400)
+OK    0319-02 COLLARR@DRIVE = 0.1350 (table 0.1350)
+OK    0319-02 BORER@DRIVE = 0.0650 (table 0.0650)
+OK    0319-02 CONEL@DRIVE = 0.0518 (table 0.0518)
+OK    0319-02 one solid body (found 1)
+      0319-02 box x 0.000..0.340  y -0.135..0.135
+      config check 2: 0319-32
+OK    0319-32 L@DRIVE = 1.1900 (table 1.1900)
+OK    0319-32 COLLARR@DRIVE = 1.2050 (table 1.2050)
+OK    0319-32 BORER@DRIVE = 1.0070 (table 1.0070)
+OK    0319-32 CONEL@DRIVE = 0.1464 (table 0.1464)
+OK    0319-32 one solid body (found 1)
+      0319-32 box x 0.000..1.190  y -1.205..1.205
+OK    0319-08: length 0.5600 (L 0.5600), O.D. 0.6800 / 0.6800 (expect 0.6800)
+OK    0319-02: length 0.3400 (L 0.3400), O.D. 0.2700 / 0.2700 (expect 0.2700)
+OK    0319-03: length 0.3400 (L 0.3400), O.D. 0.3300 / 0.3300 (expect 0.3300)
+OK    0319-04: length 0.4100 (L 0.4100), O.D. 0.3800 / 0.3800 (expect 0.3800)
+OK    0319-05: length 0.4400 (L 0.4400), O.D. 0.4400 / 0.4400 (expect 0.4400)
+OK    0319-06: length 0.5000 (L 0.5000), O.D. 0.5000 / 0.5000 (expect 0.5000)
+OK    0319-10: length 0.6600 (L 0.6600), O.D. 0.8000 / 0.8000 (expect 0.8000)
+OK    0319-12: length 0.6800 (L 0.6800), O.D. 0.9700 / 0.9700 (expect 0.9700)
+OK    0319-16: length 0.7800 (L 0.7800), O.D. 1.2200 / 1.2200 (expect 1.2200)
+OK    0319-20: length 0.9100 (L 0.9100), O.D. 1.5300 / 1.5300 (expect 1.5300)
+OK    0319-24: length 1.1200 (L 1.1200), O.D. 1.7800 / 1.7800 (expect 1.7800)
+OK    0319-32: length 1.1900 (L 1.1900), O.D. 2.4100 / 2.4100 (expect 2.4100)
+      All-config sweep: rebuilding 12 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/12  0319-02  rebuilt in 0.2 s
+      sweep 2/12  0319-03  rebuilt in 0.3 s
+      sweep 3/12  0319-04  rebuilt in 0.3 s
+      sweep 4/12  0319-05  rebuilt in 0.3 s
+      sweep 5/12  0319-06  rebuilt in 0.3 s
+      sweep 6/12  0319-08  rebuilt in 0.3 s
+      sweep 7/12  0319-10  rebuilt in 0.3 s
+      sweep 8/12  0319-12  rebuilt in 0.3 s
+      sweep 9/12  0319-16  rebuilt in 0.3 s
+      sweep 10/12  0319-20  rebuilt in 0.3 s
+      sweep 11/12  0319-24  rebuilt in 0.3 s
+      sweep 12/12  0319-32  rebuilt in 0.3 s
+OK    All-config sweep: 12 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration 0319-08 for the save (it opens in this size)
+      No THD_ features in this master (sleeves carry no threads)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\0319\0319_MASTER.SLDPRT returned True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\0319\0319_MASTER.SLDPRT

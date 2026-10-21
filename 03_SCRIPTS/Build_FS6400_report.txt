@@ -1,0 +1,181 @@
+Build_FS6400_MASTER  10/20/2026 9:53:07 PM
+OK    dim L8 = 1.4400 in (expect 1.4400)
+OK    dim BODYR = 0.5081 in (expect 0.5081)
+OK    dim THDMAJR_A = 0.3750 in (expect 0.3750)
+OK    dim ORBA_THDL = 0.4560 in (expect 0.4560)
+OK    dim ORBA_GRVR = 0.3300 in (expect 0.3300)
+OK    dim ORBA_GRVW = 0.0940 in (expect 0.0940)
+OK    dim FSMB_GRVIR = 0.2125 in (expect 0.2125)
+OK    dim FSMB_GRVD = 0.0520 in (expect 0.0520)
+OK    dim FSMB_GRVOR = 0.3145 in (expect 0.3145)
+OK    dim FSMB_FACER = 0.3595 in (expect 0.3595)
+      FSMCHANG: the two lines share no endpoint - vertex candidates unavailable
+OK    angle FSMCHANG = 45.00 deg
+OK    dim THDMAJR_B = 0.4063 in (expect 0.4063)
+OK    dim FSMB_THDL = 0.3363 in (expect 0.3363)
+OK    angle RELIEFANG = 60.00 deg
+OK    dim FSMB_RELR = 0.3595 in (expect 0.3595)
+OK    dim FSMB_RELL = 0.0940 in (expect 0.0940)
+OK    DRIVE sketch fully defined
+OK    Revolve created
+OK    Revolved volume 0.7844 in^3 (expect 0.7844)
+OK    dim HEXB = 0.8800 in (expect 0.8800)
+OK    hex sketch fully defined
+      HEXCUT flip: two-dir ThroughAll/ThroughAll -> True
+OK    HEXCUT created
+OK    HEXCUT removed only the corners (6.9% of volume)
+OK    select end face for BORE_A at x=0.0000
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_A sketch opened (active sketch exists)
+OK    BORE_A circle created
+OK    dim DA = 0.3700 in (expect 0.3700)
+OK    BORE_A sketch closed and named (ProfileFeature)
+      BORECUT_A attempt 0: CreateDefinition returned Nothing
+      BORECUT_A attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_A cut removes material (attempt 0)
+OK    BORECUT_A dims: DEPTH=0.7430 DA=0.3700 
+OK    select end face for BORE_B at x=1.4400
+      selected object type = 2 (2 = face), count = 1
+      ok = True
+      about to InsertSketch on the face
+      returned from InsertSketch
+      ActiveSketch fetched
+OK    BORE_B sketch opened (active sketch exists)
+OK    BORE_B circle created
+OK    dim DB = 0.3700 in (expect 0.3700)
+OK    BORE_B sketch closed and named (ProfileFeature)
+      BORECUT_B attempt 0: CreateDefinition returned Nothing
+      BORECUT_B attempt 0: FeatureCut4 scope off -> True
+OK    BORECUT_B cut removes material (attempt 0)
+OK    BORECUT_B dims: DEPTH=0.6970 DB=0.3700 
+OK    bore open on the axis at End A (x=0)
+OK    bore open on the axis at End B (x=1.4400)
+      THD_EndA: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndA: anchor edge found at x=0.4560 r=0.3750
+      THD_EndA: Edge ok
+      THD_EndA: Type=Inch Die ok
+      THD_EndA: Size=0.7500-16 ok
+      THD_EndA: ThreadMethod=Cut ok
+      THD_EndA: EndCondition=Blind ok
+      THD_EndA: BlindDepth=0.4560 ok
+      THD_EndA: DiameterOverride ok
+      THD_EndA: Diameter ok
+      THD_EndA: PitchOverride ok
+      THD_EndA: Pitch ok
+      THD_EndA: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.7500-16 Dia=0.7500 Pitch=0.0625
+      THD_EndA: CreateFeature -> True
+OK    THD_EndA thread feature created
+      THD_EndA: thread centre x = 0.2182 in, anchor 0.4560, wanted -X
+OK    THD_EndA runs along the thread flat (away from the hex)
+OK    THD_EndA rebuilds without error (code 0)
+      THD_EndA: dim full name D8@THD_EndA@Part39.Part
+      THD_EndA: dim full name THDPITCH@THD_EndA@Part39.Part
+      THD_EndA: dim full name THDDIA@THD_EndA@Part39.Part
+      THD_EndA: dim full name DEPTH@THD_EndA@Part39.Part
+      THD_EndA: dim full name D1@THD_EndA@Part39.Part
+      THD_EndA: dim full name THDPITCH@Thread Profile1@Part39.Part
+      THD_EndA: dim full name Profile_Land@Thread Profile1@Part39.Part
+      THD_EndA: dim full name Profile_Angle@Thread Profile1@Part39.Part
+      THD_EndA: dim full name Profile_Height@Thread Profile1@Part39.Part
+OK    THD_EndA dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.7500 DEPTH=0.4560 D1=0.0000 THDPITCH=0.0625 Profile_Land=0.0156 Profile_Angle=41.2283 Profile_Height=0.0338 
+      THD_EndA: profile sketch renamed to THD_EndA_PROF
+OK    THD_EndA profile dims reachable as Profile_Height@THD_EndA_PROF
+OK    THD_EndA profile pitch reachable as THDPITCH@THD_EndA_PROF
+      THD_EndA: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      THD_EndB: CreateDefinition(swFmSweepThread) -> True
+OK    THD_EndB: anchor edge found at x=1.0570 r=0.4063
+      THD_EndB: Edge ok
+      THD_EndB: Type=Inch Die ok
+      THD_EndB: Size=0.8125-16 ok
+      THD_EndB: ThreadMethod=Cut ok
+      THD_EndB: EndCondition=Blind ok
+      THD_EndB: BlindDepth=0.3830 ok
+      THD_EndB: DiameterOverride ok
+      THD_EndB: Diameter ok
+      THD_EndB: PitchOverride ok
+      THD_EndB: Pitch ok
+      THD_EndB: readback Type=C:\ProgramData\SolidWorks\SOLIDWORKS 2026\thread profiles\Inch Die.sldlfp Size=0.8125-16 Dia=0.8125 Pitch=0.0625
+      THD_EndB: CreateFeature -> True
+OK    THD_EndB thread feature created
+      THD_EndB: thread centre x = 1.2394 in, anchor 1.0570, wanted +X
+OK    THD_EndB runs along the thread flat (away from the hex)
+OK    THD_EndB rebuilds without error (code 0)
+      THD_EndB: dim full name D8@THD_EndB@Part39.Part
+      THD_EndB: dim full name THDPITCH@THD_EndB@Part39.Part
+      THD_EndB: dim full name THDDIA@THD_EndB@Part39.Part
+      THD_EndB: dim full name DEPTH@THD_EndB@Part39.Part
+      THD_EndB: dim full name D1@THD_EndB@Part39.Part
+      THD_EndB: dim full name Pitch@Thread Profile2@Part39.Part
+      THD_EndB: dim full name Profile_Land@Thread Profile2@Part39.Part
+      THD_EndB: dim full name Profile_Angle@Thread Profile2@Part39.Part
+      THD_EndB: dim full name Profile_Height@Thread Profile2@Part39.Part
+OK    THD_EndB dims: D8=0.0000 THDPITCH=0.0625 THDDIA=0.8125 DEPTH=0.3830 D1=0.0000 Pitch=0.0125 Profile_Land=0.0031 Profile_Angle=41.2283 Profile_Height=0.0068 
+      THD_EndB: profile sketch renamed to THD_EndB_PROF
+OK    THD_EndB profile dims reachable as Profile_Height@THD_EndB_PROF
+      THD_EndB: profile pitch dimension renamed Pitch -> THDPITCH
+OK    THD_EndB profile pitch reachable as THDPITCH@THD_EndB_PROF
+      THD_EndB: left UNSUPPRESSED (SUPPRESS_THREADS = False)
+      Bounding box length 1.4597 (nominal 1.4400; loose around thread faces, informational)
+OK    End A face present at x=0
+OK    End B face present at x=1.4400
+OK    Body within nominal length +0.15 (threads loosen the box)
+OK    Hex across flats 0.8800 / corners 1.0161 (expect 0.8800 / 1.0161)
+OK    One solid body
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\regen\straight\DesignTable_FS6400_SW2.xlsx
+OK    Configurations after table: 6 (expect 6)
+      config check 1: FS6400-08-06-O
+OK    FS6400-08-06-O L8@DRIVE = 1.4700 (table 1.4700)
+OK    FS6400-08-06-O BODYR@DRIVE = 0.5081 (table 0.5081)
+OK    FS6400-08-06-O HEXB@HEX = 0.8800 (table 0.8800)
+OK    FS6400-08-06-O THDMAJR_A@DRIVE = 0.2813 (table 0.2813)
+OK    FS6400-08-06-O ORBA_THDL@DRIVE = 0.3870 (table 0.3870)
+OK    FS6400-08-06-O ORBA_GRVR@DRIVE = 0.2405 (table 0.2405)
+OK    FS6400-08-06-O ORBA_GRVW@DRIVE = 0.0830 (table 0.0830)
+OK    FS6400-08-06-O FSMB_GRVIR@DRIVE = 0.2125 (table 0.2125)
+OK    FS6400-08-06-O THDPITCH@THD_EndA = 0.0556 (table 0.0556)
+OK    FS6400-08-06-O Profile_Height@THD_EndA_PROF = 0.0301 (table 0.0301)
+OK    FS6400-08-06-O THDPITCH@THD_EndA_PROF = 0.0556 (table 0.0556)
+OK    FS6400-08-06-O THDPITCH@THD_EndB = 0.0625 (table 0.0625)
+OK    FS6400-08-06-O Profile_Height@THD_EndB_PROF = 0.0338 (table 0.0338)
+OK    FS6400-08-06-O THDPITCH@THD_EndB_PROF = 0.0625 (table 0.0625)
+OK    FS6400-08-06-O DEPTH@BORECUT_A = 0.7180 (table 0.7180)
+OK    FS6400-08-06-O DEPTH@BORECUT_B = 0.7520 (table 0.7520)
+OK    FS6400-08-06-O one solid body (found 1)
+      FS6400-08-06-O box x -0.018..1.480  y -0.440..0.440
+      config check 2: FS6400-24-24-O
+OK    FS6400-24-24-O L8@DRIVE = 2.2200 (table 2.2200)
+OK    FS6400-24-24-O BODYR@DRIVE = 1.2298 (table 1.2298)
+OK    FS6400-24-24-O HEXB@HEX = 2.1300 (table 2.1300)
+OK    FS6400-24-24-O THDMAJR_A@DRIVE = 0.9375 (table 0.9375)
+OK    FS6400-24-24-O ORBA_THDL@DRIVE = 0.6950 (table 0.6950)
+OK    FS6400-24-24-O ORBA_GRVR@DRIVE = 0.8780 (table 0.8780)
+OK    FS6400-24-24-O ORBA_GRVW@DRIVE = 0.1250 (table 0.1250)
+OK    FS6400-24-24-O FSMB_GRVIR@DRIVE = 0.7125 (table 0.7125)
+OK    FS6400-24-24-O THDPITCH@THD_EndA = 0.0833 (table 0.0833)
+OK    FS6400-24-24-O Profile_Height@THD_EndA_PROF = 0.0451 (table 0.0451)
+OK    FS6400-24-24-O THDPITCH@THD_EndA_PROF = 0.0833 (table 0.0833)
+OK    FS6400-24-24-O THDPITCH@THD_EndB = 0.0833 (table 0.0833)
+OK    FS6400-24-24-O Profile_Height@THD_EndB_PROF = 0.0451 (table 0.0451)
+OK    FS6400-24-24-O THDPITCH@THD_EndB_PROF = 0.0833 (table 0.0833)
+OK    FS6400-24-24-O DEPTH@BORECUT_A = 1.1755 (table 1.1755)
+OK    FS6400-24-24-O DEPTH@BORECUT_B = 1.0445 (table 1.0445)
+OK    FS6400-24-24-O one solid body (found 1)
+      FS6400-24-24-O box x -0.026..2.260  y -1.065..1.065
+      All-config sweep: rebuilding 5 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/5  FS6400-08-06-O  rebuilt in 1.1 s
+      sweep 2/5  FS6400-08-08-O  rebuilt in 1.1 s
+      sweep 3/5  FS6400-08-10-O  rebuilt in 1.8 s
+      sweep 4/5  FS6400-08-12-O  rebuilt in 2.2 s
+      sweep 5/5  FS6400-24-24-O  rebuilt in 1.4 s
+OK    All-config sweep: 5 configurations rebuilt, 0 feature/body failures
+      Master left in its reference configuration FS6400-08-08-O for the save (it opens in this size)
+      THD_EndA: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+      THD_EndB: SetSuppression2(all configs) -> True; per-config check: 6 configs, 0 still live
+OK    Threads suppressed in all configurations before save (2 THD_ features)
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\dryrun\FS6400\FS6400_MASTER.SLDPRT returned True (error 0, warning 0)
+        file on disk written 10/20/2026 9:53:49 PM - saved (SaveAs return value ignored)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch18_20261020\dryrun\FS6400\FS6400_MASTER.SLDPRT

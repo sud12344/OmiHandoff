@@ -1,0 +1,87 @@
+ AIR-WAY FIRST (26, replaced)
+   Build_0318_MASTER.bas              12 ->   12         11 rebuilt with Air-Way values
+   Build_0403_MASTER.bas               7 ->    7          1 rebuilt with Air-Way values
+   Build_1404_MASTER.bas              24 ->   24         22 rebuilt with Air-Way values
+   Build_2404_MASTER.bas              59 ->   59          2 rebuilt with Air-Way values
+   Build_2501_MASTER.bas              56 ->   56          4 rebuilt with Air-Way values
+   Build_2503_MASTER.bas              29 ->   29          4 rebuilt with Air-Way values
+   Build_2605_MASTER.bas               7 ->    7          1 rebuilt with Air-Way values
+   Build_2705_MASTER.bas              18 ->   18         15 rebuilt with Air-Way values
+   Build_2706_MASTER.bas              25 ->   25         21 rebuilt with Air-Way values
+   Build_5500_MASTER.bas              16 ->   16          2 rebuilt with Air-Way values
+   Build_5502_MASTER.bas              20 ->   20          7 rebuilt with Air-Way values
+   Build_6400_MASTER.bas              66 ->   66          8 rebuilt with Air-Way values
+   Build_6401_MASTER.bas              24 ->   24         16 rebuilt with Air-Way values
+   Build_6402_MASTER.bas              16 ->   16         15 rebuilt with Air-Way values
+   Build_6404_MASTER.bas              14 ->   14         13 rebuilt with Air-Way values
+   Build_6405_MASTER.bas              44 ->   44         31 rebuilt with Air-Way values
+   Build_6408_MASTER.bas              14 ->   14          1 rebuilt with Air-Way values
+   Build_6410_MASTER.bas              34 ->   34         19 rebuilt with Air-Way values
+   Build_6500_MASTER.bas              26 ->   26          5 rebuilt with Air-Way values
+   Build_6501_MASTER.bas              14 ->   14          1 rebuilt with Air-Way values
+   Build_6502_MASTER.bas              12 ->   12          3 rebuilt with Air-Way values
+   Build_6503_MASTER.bas               1 ->    1          1 rebuilt with Air-Way values
+   Build_6504_MASTER.bas              14 ->   14          1 rebuilt with Air-Way values
+   Build_6505_MASTER.bas              21 ->   21         16 rebuilt with Air-Way values
+   Build_6506_MASTER.bas              14 ->   14         13 rebuilt with Air-Way values
+   Build_6565_MASTER.bas               8 ->    8          0 rebuilt with Air-Way values
+ HELD ROOTS FIXED (5, new)
+   Build_1700RC_MASTER.bas             3 configurations   
+   Build_1703_MASTER.bas               1 configurations   
+   Build_1800_MASTER.bas               1 configurations   
+   Build_4503_MASTER.bas               7 configurations   
+   Build_4603_MASTER.bas               5 configurations   
+ A14 (1, replaced)
+   Build_1603_MASTER.bas               5 ->    6  +1   
+ ORFS + O-RING (51, new)
+   Build_4000_MASTER.bas              29 configurations   
+   Build_FS0306_MASTER.bas             8 configurations   
+   Build_FS0318_MASTER.bas             8 configurations   
+   Build_FS0319_MASTER.bas             3 configurations   
+   Build_FS0319C_MASTER.bas            3 configurations   
+   Build_FS2403_MASTER.bas             2 configurations   
+   Build_FS2404_MASTER.bas             5 configurations   
+   Build_FS2500_MASTER.bas             5 configurations   
+   Build_FS2500N_MASTER.bas            3 configurations   
+   Build_FS2501_MASTER.bas             9 configurations   
+   Build_FS2501N_MASTER.bas            3 configurations   
+   Build_FS2503_MASTER.bas             4 configurations   
+   Build_FS2503N_MASTER.bas            4 configurations   
+   Build_FS2601_MASTER.bas             3 configurations   
+   Build_FS2601N_MASTER.bas            2 configurations   
+   Build_FS2603_MASTER.bas             4 configurations   
+   Build_FS2603N_MASTER.bas            2 configurations   
+   Build_FS2701_MASTER.bas             2 configurations   
+   Build_FS2702_MASTER.bas             2 configurations   
+   Build_FS2703_MASTER.bas             2 configurations   
+   Build_FS2704_MASTER.bas             2 configurations   
+   Build_FS6400_MASTER.bas             5 configurations   
+   Build_FS6403_MASTER.bas             1 configurations   
+   Build_FS6500_MASTER.bas             3 configurations   
+   Build_FS6500C_MASTER.bas            2 configurations   
+   Build_FS6500N_MASTER.bas            1 configurations   
+   Build_FS6500NC_MASTER.bas           2 configurations   
+   Build_FS6502_MASTER.bas             1 configurations   
+   Build_FS6504_MASTER.bas             3 configurations   
+   Build_FS6504C_MASTER.bas            4 configurations   
+   Build_FS6505_MASTER.bas             2 configurations   
+   Build_FS6505C_MASTER.bas            2 configurations   
+   Build_FS6540_MASTER.bas             3 configurations   
+   Build_FS6540C_MASTER.bas            2 configurations   
+   Build_FS6565_MASTER.bas             3 configurations   
+   Build_FS6565C_MASTER.bas            1 configurations   
+   Build_FS6600_MASTER.bas             2 configurations   
+   Build_FS6600C_MASTER.bas            1 configurations   
+   Build_FS6600N_MASTER.bas            1 configurations   
+   Build_FS6600NC_MASTER.bas           1 configurations   
+   Build_FS6602_MASTER.bas             2 configurations   
+   Build_FS6602C_MASTER.bas            2 configurations   
+   Build_FS6602N_MASTER.bas            1 configurations   
+   Build_FS6602NC_MASTER.bas           2 configurations   
+   Build_FS6801_MASTER.bas             3 configurations   
+   Build_FS6801NR_MASTER.bas           1 configurations   
+   Build_FS6801R_MASTER.bas            1 configurations   
+   Build_FS6802_MASTER.bas             2 configurations   
+   Build_FS6802NR_MASTER.bas           1 configurations   
+   Build_FS6803_MASTER.bas             1 configurations   
+   Build_FS6804_MASTER.bas             1 configurations   

@@ -8,6 +8,17 @@ spec-sheet work).
 
 **Current state, open work, user decisions: `00_DOCS/PROJECT_STATUS.md` - read it before starting
 anything, update it when a batch ships or the user decides something.**
+**2026-10-21: BATCH 20 SHIPPED** (`03_SCRIPTS/RUN_ME_batch20.txt`, QA #182): 5404N -06 thread fix + 4 long nipples -> 1,632 configurations,
+1,629 of 2,535 OMi parts. Only 2502 is still parked (QA #180); user questions QA #181.
+**2026-10-21: BATCH 19 SHIPPED** (`03_SCRIPTS/RUN_ME_batch19.txt`, QA #179-#181, `tools/_out/batch19_20261021/merge/`): the no-input
+parts (answered rows, own-STEP rows, Brennan cells, new masters 0319 2500 2603 2613 3474 6603 FS2500N1; 2500HX / 2603HX retired) -> 1,610
+configurations in a master, 156 masters; 1,607 of 2,535 OMi parts. Live `tools/` = `merge/tools_b19`. 2502 parked (QA #180). Rows needing the
+user: QA #181 / PROJECT_STATUS s1.
+**2026-10-20 (night): BATCH 18 SHIPPED** (`03_SCRIPTS/RUN_ME_batch18.txt`, QA #176-#178, `tools/_out/batch18_20261020/` README.md): Air-Way
+first (incl. the 40 Triveni cells as Air-Way) + 50 ORFS masters + O-ring master 4000 + A14 + held roots 1700RC 1800 1703 4503 4603 fixed ->
+1,534 configurations in a master, 151 masters; 1,531 of 2,535 OMi parts. Live `tools/` = `batch18_20261020/tools_b18`. Still held: 5404N
+(QA #178). What the other ~1,000 parts need: `tools/_out/blocked_needs_20261020/BLOCKED_NEEDS.md`. Supersedes the Air-Way-first / ORFS
+"staged" lines below.
 **2026-10-20 (later): AIR-WAY FIRST - OMi's rule** (Triveni: Air-Way over Brennan, incl. OMi's own website file). STAGED, not shipped:
 `tools/_out/airway_first_20261020/README.md` - 320 OMi-file cells back to Air-Way + 4 unbuildable Air-Way cells -> Brennan (user Q1) (236 configurations,
 26 roots, 0 lost; static checks clean; 6410 reference -> 6410-24-20-O in `tools_af`), 43 cells to look at; PC dry-run kit in `dryrun/`. Next on the PC: read the

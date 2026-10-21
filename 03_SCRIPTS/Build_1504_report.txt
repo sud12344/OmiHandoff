@@ -1,4 +1,4 @@
-Build_1504_MASTER  10/19/2026 9:56:09 PM
+Build_1504_MASTER  10/20/2026 11:15:12 PM
 OK    dim M1 = 0.9800 in (expect 0.9800)
 OK    dim BODYR = 0.4375 in (expect 0.4375)
 OK    dim NP1_BODYS = 0.6200 in (expect 0.6200)
@@ -176,8 +176,8 @@ OK    leg 1 tip (exact) 0.9800 along +X (expect 0.9800)
 OK    leg 2 tip (exact) 0.7500 along the 135-deg leg (expect 0.7500)
 OK    Z extent (exact) -0.4375 .. 0.4375 (expect -0.4375 .. 0.4375: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_1504_SW2.xlsx
-OK    Configurations after table: 4 (expect 4)
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\regen\tee\DesignTable_1504_SW2.xlsx
+OK    Configurations after table: 7 (expect 7)
       config check 1: 1504-04-04-FG
 OK    1504-04-04-FG M1@LEG1 = 0.9100 (table 0.9100)
 OK    1504-04-04-FG BODYR@LEG1 = 0.3450 (table 0.3450)
@@ -205,33 +205,33 @@ OK    1504-04-04-FG FILL_RIN@NECKFILL1 = 0.1463 (table 0.1463)
 OK    1504-04-04-FG FILL_ROUT@NECKFILL1 = 0.1825 (table 0.1825)
 OK    1504-04-04-FG one solid body (found 1)
       1504-04-04-FG box x -0.887..0.910  y -0.398..0.887
-      config check 2: 1504-06-06-FG
-OK    1504-06-06-FG M1@LEG1 = 0.9800 (table 0.9800)
-OK    1504-06-06-FG BODYR@LEG1 = 0.4375 (table 0.4375)
-OK    1504-06-06-FG NP1_BODYS@LEG1 = 0.6200 (table 0.6200)
-OK    1504-06-06-FG NP1_NECKR@LEG1 = 0.2465 (table 0.2465)
-OK    1504-06-06-FG NP1_NUTL@LEG1 = 0.5800 (table 0.5800)
-OK    1504-06-06-FG NP1_LIPR@LEG1 = 0.4056 (table 0.4056)
-OK    1504-06-06-FG DEPTH@BORECUT1 = 0.9800 (table 0.9800)
-OK    1504-06-06-FG DEPTH@POCKETCUT2 = 0.7500 (table 0.7500)
-OK    1504-06-06-FG PROF_R@THDPROF_1 = 0.3060 (table 0.3060)
-OK    1504-06-06-FG PROF_R@THDPROF_2 = 0.2850 (table 0.2850)
-OK    1504-06-06-FG HEXAF@HEX1 = 0.8750 (table 0.8750)
-OK    1504-06-06-FG HEXL@HEX1_BODY = 0.3600 (table 0.3600)
-OK    1504-06-06-FG HEXAF@HEX2 = 0.8750 (table 0.8750)
-OK    1504-06-06-FG HEXL@HEX2_BODY = 0.5350 (table 0.5350)
-OK    1504-06-06-FG PUCK_R1B@PUCK = 0.2521 (table 0.2521)
-OK    1504-06-06-FG PUCK_XC@PUCK = 0.5047 (table 0.5047)
-OK    1504-06-06-FG TRIM_A0@NECKTRIM1 = 0.3600 (table 0.3600)
-OK    1504-06-06-FG TRIM_LEN@NECKTRIM1 = 0.0400 (table 0.0400)
-OK    1504-06-06-FG TRIM_RIN@NECKTRIM1 = 0.2033 (table 0.2033)
-OK    1504-06-06-FG TRIM_ROUT@NECKTRIM1 = 0.7578 (table 0.7578)
-OK    1504-06-06-FG FILL_A0@NECKFILL1 = 0.3600 (table 0.3600)
-OK    1504-06-06-FG FILL_LEN@NECKFILL1 = 0.0400 (table 0.0400)
-OK    1504-06-06-FG FILL_RIN@NECKFILL1 = 0.2033 (table 0.2033)
-OK    1504-06-06-FG FILL_ROUT@NECKFILL1 = 0.2465 (table 0.2465)
-OK    1504-06-06-FG one solid body (found 1)
-      1504-06-06-FG box x -0.840..0.980  y -0.505..0.840
+      config check 2: 1504-16-16-FG
+OK    1504-16-16-FG M1@LEG1 = 1.5800 (table 1.5800)
+OK    1504-16-16-FG BODYR@LEG1 = 0.8125 (table 0.8125)
+OK    1504-16-16-FG NP1_BODYS@LEG1 = 0.9400 (table 0.9400)
+OK    1504-16-16-FG NP1_NECKR@LEG1 = 0.5250 (table 0.5250)
+OK    1504-16-16-FG NP1_NUTL@LEG1 = 0.9000 (table 0.9000)
+OK    1504-16-16-FG NP1_LIPR@LEG1 = 0.7098 (table 0.7098)
+OK    1504-16-16-FG DEPTH@BORECUT1 = 1.5800 (table 1.5800)
+OK    1504-16-16-FG DEPTH@POCKETCUT2 = 1.1900 (table 1.1900)
+OK    1504-16-16-FG PROF_R@THDPROF_1 = 0.6055 (table 0.6055)
+OK    1504-16-16-FG PROF_R@THDPROF_2 = 0.5700 (table 0.5700)
+OK    1504-16-16-FG HEXAF@HEX1 = 1.6250 (table 1.6250)
+OK    1504-16-16-FG HEXL@HEX1_BODY = 0.6400 (table 0.6400)
+OK    1504-16-16-FG HEXAF@HEX2 = 1.6250 (table 1.6250)
+OK    1504-16-16-FG HEXL@HEX2_BODY = 0.9680 (table 0.9680)
+OK    1504-16-16-FG PUCK_R1B@PUCK = 0.4686 (table 0.4686)
+OK    1504-16-16-FG PUCK_XC@PUCK = 0.9377 (table 0.9377)
+OK    1504-16-16-FG TRIM_A0@NECKTRIM1 = 0.6400 (table 0.6400)
+OK    1504-16-16-FG TRIM_LEN@NECKTRIM1 = 0.0400 (table 0.0400)
+OK    1504-16-16-FG TRIM_RIN@NECKTRIM1 = 0.4625 (table 0.4625)
+OK    1504-16-16-FG TRIM_ROUT@NECKTRIM1 = 1.4073 (table 1.4073)
+OK    1504-16-16-FG FILL_A0@NECKFILL1 = 0.6400 (table 0.6400)
+OK    1504-16-16-FG FILL_LEN@NECKFILL1 = 0.0400 (table 0.0400)
+OK    1504-16-16-FG FILL_RIN@NECKFILL1 = 0.4625 (table 0.4625)
+OK    1504-16-16-FG FILL_ROUT@NECKFILL1 = 0.5250 (table 0.5250)
+OK    1504-16-16-FG one solid body (found 1)
+      1504-16-16-FG box x -1.416..1.580  y -0.938..1.416
       config check 3: 1504-20-20-FG
 OK    1504-20-20-FG M1@LEG1 = 1.7700 (table 1.7700)
 OK    1504-20-20-FG BODYR@LEG1 = 0.9375 (table 0.9375)
@@ -263,16 +263,25 @@ OK    1504-06-06-FG: THD_End2 live and rebuilt (error code 0)
 OK    1504-06-06-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.7500 along the leg, table 0.7500; r 0.2850, table 0.2850)
 OK    1504-04-04-FG: THD_End2 live and rebuilt (error code 0)
 OK    1504-04-04-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.9100 along the leg, table 0.9100; r 0.2150, table 0.2150)
+OK    1504-08-08-FG: THD_End2 live and rebuilt (error code 0)
+OK    1504-08-08-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 0.9400 along the leg, table 0.9400; r 0.3500, table 0.3500)
+OK    1504-12-12-FG: THD_End2 live and rebuilt (error code 0)
+OK    1504-12-12-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.0000 along the leg, table 1.0000; r 0.4550, table 0.4550)
+OK    1504-16-16-FG: THD_End2 live and rebuilt (error code 0)
+OK    1504-16-16-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.1900 along the leg, table 1.1900; r 0.5700, table 0.5700)
 OK    1504-20-20-FG: THD_End2 live and rebuilt (error code 0)
 OK    1504-20-20-FG: HELIX_2 starts in the Front Plane on the end face (z 0.00000; 1.4400 along the leg, table 1.4400; r 0.7400, table 0.7400)
-      All-config sweep: rebuilding 3 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
-      sweep 1/3  1504-04-04-FG  rebuilt in 1.0 s
-      sweep 2/3  1504-06-06-FG  rebuilt in 0.9 s
-      sweep 3/3  1504-20-20-FG  rebuilt in 1.1 s
-OK    All-config sweep: 3 configurations rebuilt, 0 feature/body failures
+      All-config sweep: rebuilding 6 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
+      sweep 1/6  1504-04-04-FG  rebuilt in 1.7 s
+      sweep 2/6  1504-06-06-FG  rebuilt in 1.3 s
+      sweep 3/6  1504-08-08-FG  rebuilt in 1.4 s
+      sweep 4/6  1504-12-12-FG  rebuilt in 1.5 s
+      sweep 5/6  1504-16-16-FG  rebuilt in 1.4 s
+      sweep 6/6  1504-20-20-FG  rebuilt in 1.6 s
+OK    All-config sweep: 6 configurations rebuilt, 0 feature/body failures
       Master left in its reference configuration 1504-06-06-FG for the save (it opens in this size)
-      THD_End1: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
-      THD_End2: SetSuppression2(all configs) -> True; per-config check: 4 configs, 0 still live
+      THD_End1: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
+      THD_End2: SetSuppression2(all configs) -> True; per-config check: 7 configs, 0 still live
 OK    Threads suppressed in all configurations before save (2 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1504\1504_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\1504\1504_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\1504\1504_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch19_20261021\merge\dryrun\1504\1504_MASTER.SLDPRT

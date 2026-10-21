@@ -1,4 +1,4 @@
-Build_2605_MASTER  10/20/2026 12:20:54 AM
+Build_2605_MASTER  10/20/2026 8:19:01 PM
 OK    dim M1 = 1.3300 in (expect 1.3300)
 OK    dim BODYR = 0.4400 in (expect 0.4400)
 OK    dim THDMAJR_B1 = 0.3750 in (expect 0.3750)
@@ -169,7 +169,7 @@ OK    Y extent -0.508 .. 1.330 (expect -0.508 .. 1.330)
       Bounding box z -0.442 .. 0.442 (approximate - loose around thread faces)
 OK    Z extent (exact) -0.4400 .. 0.4400 (expect -0.4400 .. 0.4400: hex flats)
 OK    One solid body
-OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\regen\b17v2\tee\DesignTable_2605_SW2.xlsx
+OK    Design table inserted from C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\regen\stage\tee\DesignTable_2605_SW2.xlsx
 OK    Configurations after table: 8 (expect 8)
       config check 1: 2605-04-04-04-FG
 OK    2605-04-04-04-FG M1@LEG1 = 1.0500 (table 1.0500)
@@ -221,7 +221,7 @@ OK    2605-20-20-20-FG one solid body (found 1)
       2605-20-20-20-FG box x -2.380..2.060  y -0.941..2.060
       All-config sweep: rebuilding 7 configurations one at a time with the threads live. SolidWorks does not redraw until it is done - one line per configuration follows.
       sweep 1/7  2605-04-04-04-FG  rebuilt in 1.0 s
-      sweep 2/7  2605-06-04-06-FG  rebuilt in 1.6 s
+      sweep 2/7  2605-06-04-06-FG  rebuilt in 1.5 s
       sweep 3/7  2605-06-06-06-FG  rebuilt in 1.5 s
       sweep 4/7  2605-08-08-08-FG  rebuilt in 1.1 s
       sweep 5/7  2605-12-12-12-FG  rebuilt in 1.3 s
@@ -233,5 +233,5 @@ OK    All-config sweep: 7 configurations rebuilt, 0 feature/body failures
       THD_End2: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
       THD_End3: SetSuppression2(all configs) -> True; per-config check: 8 configs, 0 still live
 OK    Threads suppressed in all configurations before save (3 THD_ features)
-      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2605\2605_MASTER.SLDPRT -> True (error 0, warning 0)
-OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\batch17_20261019\sw_dryrun\2605\2605_MASTER.SLDPRT
+      SaveAs C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\2605\2605_MASTER.SLDPRT -> True (error 0, warning 0)
+OK    Saved to C:\Users\sudha\OneDrive\Desktop\OMi_Handoff\tools\_out\airway_first_20261020\dryrun\2605\2605_MASTER.SLDPRT
