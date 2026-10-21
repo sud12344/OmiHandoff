@@ -59,14 +59,6 @@ Build_6803_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'f
 Build_6803_MASTER.bas LEG 3 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
 Build_6807_MASTER.bas LEG 1 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
 Build_6807_MASTER.bas LEG 2 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
-Build_FS2503_MASTER.bas LEG 1 {'n': 7, 'unknowns': 14, 'cons': 14, 'rank': 14, 'fully': True, 'redundant': 0}
-Build_FS2503_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
-Build_FS2701_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
-Build_FS2701_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
-Build_FS2702_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
-Build_FS2702_MASTER.bas LEG 2 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
-Build_FS2703_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
-Build_FS2703_MASTER.bas LEG 2 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
-Build_FS2703_MASTER.bas LEG 3 {'n': 17, 'unknowns': 34, 'cons': 34, 'rank': 34, 'fully': True, 'redundant': 0}
-Build_FS6801_MASTER.bas LEG 1 {'n': 11, 'unknowns': 22, 'cons': 22, 'rank': 22, 'fully': True, 'redundant': 0}
-Build_FS6801_MASTER.bas LEG 2 {'n': 15, 'unknowns': 30, 'cons': 30, 'rank': 30, 'fully': True, 'redundant': 0}
+Build_6902_MASTER.bas LEG 1 {'n': 16, 'unknowns': 32, 'cons': 32, 'rank': 32, 'fully': True, 'redundant': 0}
+Build_6902_MASTER.bas LEG 2 {'n': 20, 'unknowns': 40, 'cons': 40, 'rank': 40, 'fully': True, 'redundant': 0}
+Build_6902_MASTER.bas THDPROF_2 (135-deg leg, tip 1.3900, r 0.4850) {'unknowns': 20, 'cons': 21, 'rank': 20, 'fully': True, 'redundant': 1, 'same_as_HelixThread': True}

@@ -86,6 +86,7 @@ for r in cand:
     failed = [k for k in mine if 'GEOMETRY CHECK FAILED' in str(rows[k].get('$COMMENT') or '')]
     if rc == 0 and mine and not failed and not others_changed:
         set_status(table_path(STAGE, r['root']), r['part'], 'ASSUMED')
+        base_cache.pop(r['root'], None)      # the next row of this root is compared with the stage that now includes this promotion
         log.append(dict(root=r['root'], part=r['part'], result='PROMOTED', reason=f'generates {mine}'))
     else:
         why = (f'rc {rc}; ' if rc else '') + ('not generated (blocked/skipped); ' if not mine else '') + \

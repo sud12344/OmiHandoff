@@ -1,11 +1,14 @@
-6803: 8 configs (ref 6803-08-08-08-NWO-FG), 30 skipped, 0 blocked, 77 cols
+6803: 11 configs (ref 6803-08-08-08-NWO-FG), 27 skipped, 0 blocked, 77 cols
    warn 6803-08-08-08-NWO-FG: leg 3: adjustable ORB tip-to-body-face 0.86 = Air-Way 6801 ORB_I3 for -08 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-04-04-04-NWO-FG: leg 3: adjustable ORB tip-to-body-face 0.73 = Air-Way 6801 ORB_I3 for -04 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-04-04-06-NWO-FG: leg 3: adjustable ORB tip-to-body-face 0.75 = Air-Way 6801 ORB_I3 for -06 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-06-06-06-NWO-FG: hex A/F raised from Air-Way 0.56 to 0.5625 (JIC thread major; 2603HX rule); leg 3: adjustable ORB tip-to-body-face 0.75 = Air-Way 6801 ORB_I3 for -06 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
+   warn 6803-08-08-06-NWO-FG: leg 3: adjustable ORB tip-to-body-face 0.75 = Air-Way 6801 ORB_I3 for -06 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
+   warn 6803-08-08-10-NWO-FG: leg 3: adjustable ORB tip-to-body-face 1 = Air-Way 6801 ORB_I3 for -10 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-10-10-10-NWO-FG: leg 3: adjustable ORB tip-to-body-face 1 = Air-Way 6801 ORB_I3 for -10 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-12-12-12-NWO-FG: hex A/F raised from Air-Way 1.06 to 1.0625 (JIC thread major; 2603HX rule); leg 3: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -12 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-16-16-16-NWO-FG: hex A/F raised from Air-Way 1.31 to 1.3125 (JIC thread major; 2603HX rule); leg 3: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -16 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
    warn 6803-20-20-20-NWO-FG: leg 3: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -20 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
+   warn 6803-24-24-24-NWO-FG: leg 3: adjustable ORB tip-to-body-face 1.14 = Air-Way 6801 ORB_I3 for -24 (= Brennan 6801 STEP; not printed for this series - ASSUMPTION)
 
 --- stderr ---

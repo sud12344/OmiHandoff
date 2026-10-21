@@ -33,10 +33,21 @@ for src, dst in ((BASE, ST), (BASE_FS, ST_FS)):
 # (the plain Air-Way part differs); FS6402-12-12 L 2.25 vs Brennan's catalog misprint 0.609 (BLOCKED_NEEDS: 'L misprinted')
 EXPLAINED = {('6807-08-06-NWO-FG', 'THDMAJ_B2@DRIVE'),   # group A: 9/16 ORB thread major = Air-Way; the catalog test hit another column
              ('6805-04-04-NWO-FG', 'THDMAJ_A@DRIVE'), ('6807-08-08-NWO-FG', 'Y@HEX'), ('6809-10-10-NWO-FG', 'Y@HEX'), ('FS6402-12-12', 'L@DRIVE')}
-cells = [r for f in ('verify.csv', 'verify_A.csv')     # verify_A.csv = group A (map_groupA.py, 2026-10-21)
+def confirmed(r):
+    # hand-mapped cells (verify_H.csv): a DOUBT from the neighbour test is accepted when Air-Way's same-size row or Brennan's printed
+    # catalog gives the same value (2026-10-21: the neighbour test picks the wrong neighbours on mixed-dash families)
+    try:
+        v = float(r['value'])
+        aw = r['airway_same_size'].split('=')[-1]; cat = r['catalog'].split('=')[-1]
+        return any(x not in ('', 'n/a') and abs(float(x) - v) <= 0.0055 for x in (aw, cat))
+    except ValueError:
+        return False
+
+
+cells = [r for f in ('verify.csv', 'verify_A.csv', 'verify_H.csv')     # _A = group A (map_groupA.py), _H = hand map (handmap_groupA.py)
          if os.path.exists(J('tools', '_out', 'partcommunity_20261021', 'decode', f))
          for r in csv.DictReader(open(J('tools', '_out', 'partcommunity_20261021', 'decode', f), encoding='utf-8'))
-         if r['verdict'] == 'OK' or (r['part'], r['column']) in EXPLAINED]
+         if r['verdict'] == 'OK' or (r['part'], r['column']) in EXPLAINED or (f == 'verify_H.csv' and confirmed(r))]
 cache_pn = {r['part']: (r['tried_as'] or r['part']) for r in csv.DictReader(open(J('tools', '_out', 'partcommunity_20261021', 'pc_final.csv'), encoding='utf-8'))}
 shipped = set()
 for p in glob.glob(J('04_DESIGN_TABLES', '*_SW2.xlsx')):

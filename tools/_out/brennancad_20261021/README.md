@@ -65,3 +65,17 @@ ship together with (or after) batch 18 - the stage contains the Air-Way-first ta
   (FSM_MEAS / FSBH_MEAS / NWO_FS): the 18 STEPs FS2403-04 ... -20, FS2701-04 ... -16-FG, FS6801-04 ... -24-NWO-FG are needed (the records
   give groove OD / face / relief / end length, not the thread start).
 - regen: 0 lost / changed; regress 0 changed cells in old configurations; vbacheck OK.
+
+## 2026-10-21 (later): hand map (user: "why can't you finish the non-fs parts?")
+- `tools/_out/partcommunity_20261021/decode/handmap_groupA.py`: per family and empty column, every Brennan code vs the Air-Way value of the
+  same size over all sizes (median |diff|, spread, n) + Brennan's printed catalog letters; the decisions are written by hand into HANDMAP
+  with their reason (6807, 6803, 5602, 5604, 6503; 6902 bores / hexes / ORB thread). A5 (adjustable-ORB end values from the table's own
+  rows of the same ORB size) for 6803. `verify_H.csv`: 235 OK + 8 flagged by the neighbour test, each confirmed by Air-Way's same-size row
+  or Brennan's catalog (accepted by apply_cells.confirmed()).
+- promote_test.py fix: the per-root reference is refreshed after each promotion (before, a second row of a root looked like it changed the
+  first promoted one and was wrongly kept MISSING).
+- **31 new configurations**: 2408-14-SOLID; 2501-40-40-FG, 2501-LL-08-08-FG; 2706-32-32; 5000-24-20; 5405-16-24, 5405-20-32; 5406-40-32;
+  5503-02-02-FG; 5602 x7 (-02 ... -32); 5604 x5; 6503-04-04 / -06-06 / -12-12-FG; 6803-08-08-06 / -08-08-10 / -24-24-24-NWO-FG; 6807-04-04 /
+  -08-06 / -08-08 / -12-12-NWO-FG. 0 lost / changed; dofcheck, allcfg, vbacheck, regress clean.
+- Not mapped on purpose: 6902 N4 / M / W2 / C1HEX (letters differ, forged lengths 0.08-0.15 off the plain Air-Way part: needs the two
+  catalog drawings compared).
