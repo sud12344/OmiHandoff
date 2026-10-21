@@ -20,7 +20,7 @@ table,config,status,airway,record,hold
 1704T,1704-16-16-Tube,ASSUMED,,alias,
 1704T,1704-16-20-Tube,ASSUMED,yes,alias,
 1704T,1704-16-24-Tube,ASSUMED,,alias,
-1704T,1704-20-12-Tube,MISSING,,alias,Brennan record TOD 1.339 (tube) is wider than its hub DFL 1.260 (-12 code 61 head): the tube cannot enter the hub as recorded; not built - needs BRENNAN_1704-20-12.stp or the user's call (Q-GD-1704-20-12)
+1704T,1704-20-12-Tube,ASSUMED,,alias,
 1704T,1704-20-16-Tube,ASSUMED,,alias,
 1704T,1704-20-20-Tube,ASSUMED,,alias,
 1704T,1704-20-24-Tube,ASSUMED,,alias,
@@ -51,7 +51,7 @@ table,config,status,airway,record,hold
 1704T,1804-16-12-Tube,ASSUMED,,alias,
 1704T,1804-16-16-Tube,ASSUMED,,alias,
 1704T,1804-16-20-Tube,ASSUMED,,alias,
-1704T,1804-16-24-Tube,MISSING,,alias,"Brennan record TOD 0.800 with DRILLFL 0.740 = a 0.030 tube wall (every other -16 JIC row: tube 1.043 / bore 0.75, incl. 1704-16-24); not built - needs BRENNAN_1804-16-24.stp or the user's call (Q-GD-1804-16-24)"
+1704T,1804-16-24-Tube,ASSUMED,,alias,
 1704T,1804-20-16-Tube,ASSUMED,,alias,
 1704T,1804-20-20-Tube,ASSUMED,,alias,
 1704T,1804-20-24-Tube,ASSUMED,,alias,
@@ -64,6 +64,6 @@ table,config,status,airway,record,hold
 6701T,6701-06-06,ASSUMED,,exact,
 6701T,6701-08-08,ASSUMED,,exact,
 6701T,6701-12-12,ASSUMED,,exact,
-6701T,6701-16-16,MISSING,,,no Brennan CAD record (PARTcommunity: none) and no -16 6701 STEP: tube OD / bore / bend radius / hex length / nut position have no source (catalog p38 gives only M 3.10 / L 3.15 / C1 1.375 / C2 1.500) - needs BRENNAN_6701-16-16.stp
-6701T,6701-20-20,MISSING,,exact,M conflict between two Brennan sources: CAD record M 3.260 vs TFA catalog p38 M 2.750 (L 3.750 in both; the -16 has M 3.10) - never picked silently; Q-GD-6701-20 (the record value 3.26 fits the size series)
-6701T,6701-L-16-16,MISSING,,,no Brennan CAD record (PARTcommunity: none) and no 6701-L STEP: tube OD / bore / bend radius / hex length / nut position have no source (catalog p38 6701-L gives only L 4.870 / M 3.125 / C1 1.375 / C2 1.500) - needs BRENNAN_6701-L-16-16.stp
+6701T,6701-16-16,MISSING,,,no Brennan CAD record (PARTcommunity: none) and no STEP (user 2026-10-21: nothing available): tube OD / bore / bend radius / hex length / nut position have no source (catalog p38 gives only M 3.10 / L 3.15 / C1 1.375 / C2 1.500)
+6701T,6701-20-20,ASSUMED,,exact,
+6701T,6701-L-16-16,MISSING,,,no Brennan CAD record (PARTcommunity: none) and no STEP (user 2026-10-21: nothing available): tube OD / bore / bend radius / hex length / nut position have no source (catalog p38 6701-L gives only L 4.870 / M 3.125 / C1 1.375 / C2 1.500)

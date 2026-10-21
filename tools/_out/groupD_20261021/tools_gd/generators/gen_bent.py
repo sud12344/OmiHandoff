@@ -195,6 +195,10 @@ def build_rows(root):
                     S = gs.end_JICSW(b, 'B', c['NOSETIP'], c['NUTHEX'])
                 except (KeyError, AssertionError) as ex:
                     why.append(f'female JIC swivel -{b:02d}: {ex}'); built.append(({'$PRP@PartNo': pn}, why)); continue
+                if num(r.get('NECKD@SWSK')):     # 2026-10-21: the part's own body dia where the tube enters (6701-04 / -06 STEPs)
+                    c['NECKD'] = float(r['NECKD@SWSK'])
+                    S['m'] = dict(S['m'], NECKR=round(c['NECKD'] / 2, 6))
+                    S['cols']['SWB_NECKR@DRIVE'] = S['m']['NECKR']
             elif code == '62':
                 if b not in FLG62_HEAD:
                     why.append(f'code 62 -{b:02d} flange head not in the library (measured -08 / -12, catalog 3300-62 -16 / -20 / -24 / -32)')
@@ -220,7 +224,9 @@ def build_rows(root):
                 ov = 0.05
                 g['E'] = (g['X0'] + (c['L1'] - back + ov) * g['u'][0], (c['L1'] - back + ov) * g['u'][1])
             elif hub:    # the tube runs HUB_OVL into the hub; PATH's construction line FACEEXT reaches on to the flange face F
-                g['E'] = (g['X0'] + (c['L1'] - back + HUB_OVL) * g['u'][0], (c['L1'] - back + HUB_OVL) * g['u'][1])
+                # a tube wider than the hub ends flat at the hub back face instead (BRENNAN_1704-20-12.stp: tube 1.339 on the 1.260 hub)
+                c['HUBOVL'] = HUB_OVL if c['HUBD'] / 2 >= rt + 0.005 else 0.0
+                g['E'] = (g['X0'] + (c['L1'] - back + c['HUBOVL']) * g['u'][0], (c['L1'] - back + c['HUBOVL']) * g['u'][1])
             else:
                 g['E'] = g['F']
             if g['T1'][0] < c['LJ'] + 0.02:
@@ -252,8 +258,8 @@ def build_rows(root):
                         why.append(f'hub length {c["HUBL"]} (face -> hub back) not behind the {lib["TH"]} head')
                     if rH > rO - 0.02:
                         why.append(f'hub dia {c["HUBD"]} not inside the head OD {c["O"]}')
-                    if rH < rt + 0.005:
-                        why.append(f'tube {c["TUBEOD"]} does not fit into the hub (dia {c["HUBD"]})')
+                    if rt > rO - 0.02:
+                        why.append(f'tube {c["TUBEOD"]} not inside the head OD {c["O"]}')
                 elif rt > lib['GI'] - 0.02:
                     why.append(f'tube {c["TUBEOD"]} wider than the -{b:02d} flange O-ring groove (inner dia {2 * lib["GI"]:.3f}): the tube cannot meet this head as modelled')
                 if not (lib['GO'] < rO - 0.03 and lib['GI'] < lib['GO'] - 0.05):
@@ -284,7 +290,7 @@ def build_rows(root):
                              'FLGB_HEADR@HEADSK': round(c['O'] / 2, 6), 'FLGB_HEADT@HEADSK': lib['TH']})
                 if hub:
                     cols.update({'FLGB_HUBR@HEADSK': round(c['HUBD'] / 2, 6), 'FLGB_HUBL@HEADSK': c['HUBL'],
-                                 'FACEEXT@PATH': round(c['HUBL'] - HUB_OVL, 6)})
+                                 'FACEEXT@PATH': round(c['HUBL'] - c['HUBOVL'], 6)})
             cols.update({'BSTART@PATHX': BX, 'BT1X@PATHX': round(g['T1'][0], 6), 'BRB@PATHX': c['RB'],
                          'BFX@PATHX': round(g['FX'][0], 6), 'BFY@PATHX': round(g['FX'][1], 6), 'TUBEID@BORE': c['D']})
             thr = J['thr']
@@ -297,10 +303,13 @@ def build_rows(root):
                          '$PRP@M1': f'{c["M1"]:.3f}', '$PRP@L1': f'{c["L1"]:.3f}', '$PRP@BendRadius': f'{c["RB"]:.3f}',
                          '$PRP@TubeOD': f'{c["TUBEOD"]:.3f}',
                          '$PRP@DataStatus': r['$PRP@DataStatus'],
-                         '$PRP@AxialSource': (f'{r["$PRP@AxialSource"]} | MODEL: {ASSUME.replace(" + code 61 flange head", " + female JIC swivel end")}; {SW_ASSUME}' if swv else
+                         '$PRP@AxialSource': (f'{r["$PRP@AxialSource"]} | MODEL: {ASSUME.replace(" + code 61 flange head", " + female JIC swivel end")}; {SW_ASSUME}'
+                                              + (f'; swivel neck dia {c["NECKD"]} = the part\'s own body where the tube enters (NECKD@SWSK, not SWIV_MEAS)' if 'NECKD' in c else '') if swv else
                                               f'{r["$PRP@AxialSource"]} | MODEL: {(ASSUME.replace("code 61 flange head (FLG61_MEAS", "code 62 flange head (FLG62_MEAS") if code == "62" else ASSUME).replace("ends at the flange face; braze fillets, chamfers and the head hub NOT", "ends in the hub; braze fillets and chamfers NOT") if hub else (ASSUME.replace("code 61 flange head (FLG61_MEAS", "code 62 flange head (FLG62_MEAS") if code == "62" else ASSUME)}; '
                                               f'{(FLG62_ASSUME_SZ.get(b, FLG62_ASSUME)) if code == "62" else gs.FLG61_ASSUME.split("; body =")[0]}'
-                                              + (f'; {HUB_ASSUME}' if hub else '')),
+                                              + (f'; {HUB_ASSUME}' if hub else '')
+                                              + ('; the tube is wider than the hub and ends flat at its back face (as on BRENNAN_1704-20-12.stp)'
+                                                 if hub and c['HUBOVL'] == 0 else '')),
                          '$COMMENT': r.get('$COMMENT'), '$PRP@OMiSKU': r.get('$PRP@OMiSKU')})
             built.append((cols, why, dict(c=c, g=g, J=J, lib=lib, S=S, ov=(ov if swv else None), box=expected_box(c, g, lib, S, J))))
     return built, skipped
@@ -1068,7 +1077,7 @@ def emit(root, hdr, ok, refrow):
                 f'{tb["thdh"]*IN:.9f}, "THD_EndB")')
     hub = (c['HUBD'] / 2, c['HUBL']) if 'HUBD' in c else None          # 2026-10-21: flange head with braze hub
     path = vba_path('PATH', ('TUBESTART', 'T1X', 'RB', 'FX', 'FY'), g['T1'], g['Cb'], g['T2'], g['E'], c['S'], 0.35,
-                    ext=((g['F'], c['HUBL'] - HUB_OVL) if hub else None))
+                    ext=((g['F'], c['HUBL'] - c['HUBOVL']) if hub else None))
     pathx = vba_path('PATHX', ('BSTART', 'BT1X', 'BRB', 'BFX', 'BFY'), g['T1'], g['Cb'], g['T2'], g['FX'], -BX, 0.55)
     head = vba_swivel(g, X['S'], c['D'] / 2, X['ov'])[0] if swv else vba_head(g, lib, c['O'] / 2, hub)
     # config spot check + per-configuration box (the head and the end piece set it - expected_box samples every piece)

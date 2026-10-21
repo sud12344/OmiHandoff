@@ -9,26 +9,29 @@
 - `1703T` (45 deg): 1703 + 1803 -Tube;
 - `6701` (90 deg, female JIC swivel): 6701 + 6701-L.
 
+**Brennan STEPs added:** `09_STEP_FILES/BRENNAN_1704-16-16 / 1804-16-24 / 1704-20-12 / 6701-04-04 / 6701-06-06 / 6701-20-20.stp`
+(user upload 2026-10-21, PARTcommunity).
+
 **Not touched:** the live `tools/`, `04_DESIGN_TABLES`, `03_SCRIPTS` and `11_MASTERS`. The cloud has no SolidWorks; the dry runs are for
 the PC: `dryrun/RUN_DRYRUN.md`.
 
 ## 1. Result
 
-**61 of the 68 configurations generate:**
+**66 of the 68 configurations generate** (2026-10-21, later: after the 6 STEPs the user uploaded - s7; first pass 61):
 
 | Master | Rows | Generated | Not generated (reason) |
 |---|---|---|---|
-| 1704T | 35 (1704 -Tube 19, 1804 -Tube 16) | **33** (18 code 61 + 15 code 62) | 1704-20-12-Tube, 1804-16-24-Tube: Brennan record contradicts itself (s6 Q2) |
+| 1704T | 35 (1704 -Tube 19, 1804 -Tube 16) | **35** (19 code 61 + 16 code 62) | - |
 | 1703T | 26 (1703 -Tube 13, 1803 -Tube 13) | **26** (13 code 61 + 13 code 62) | - |
-| 6701 | 7 | **2** (6701-08-08, -12-12) | -04-04, -06-06: Brennan's tube is wider than the straights' swivel neck (s6 Q4). -20-20: Brennan M conflict (Q3). -16-16, -L-16-16: no record, no STEP (Q5) |
+| 6701 | 7 | **5** (6701-04-04, -06-06, -08-08, -12-12, -20-20) | 6701-16-16, 6701-L-16-16: no record and no STEP - the user confirmed nothing is available (MISSING) |
 
 **Data status:**
-- The 61 rows are ASSUMED. Their dimensions come from Brennan (`$PRP@DimSource` BRENNAN, `[BRENNAN-CAD 2026-10-21: <cols>]`) or Air-Way.
-- The 7 rows not generated are MISSING, with their cells staged and the reason in `$COMMENT`.
-- **Code 62 heads:** 28 code 62 configurations (-08 ... -32) build. The -12 ... -32 heads are new, per user Q-CODE62-CAT (s4).
+- The 66 rows are ASSUMED. Their dimensions come from Brennan (`$PRP@DimSource` BRENNAN, `[BRENNAN-CAD 2026-10-21: <cols>]`) or Air-Way.
+- 6701-16-16 / 6701-L-16-16 stay MISSING (catalog M / L / hexes staged, nothing else has a source).
+- **Code 62 heads:** 29 code 62 configurations (-08 ... -32) build. The -12 ... -32 heads are new, per user Q-CODE62-CAT (s4).
 
 **Checks: all clean** (s5).
-- The OCP closed loop against all 5 family STEPs reproduces:
+- The OCP closed loop against all 11 STEPs (5 family + 6 uploaded) reproduces:
   - both legs;
   - the bend torus (radius, tube dia, centre);
   - the bore;
@@ -40,7 +43,8 @@ the PC: `dryrun/RUN_DRYRUN.md`.
 **Records:** 66 of the 68 parts have one (PARTcommunity; Brennan numbers drop "-Tube"). `data/records.csv` holds them.
 
 **Decoding:** the codes were read face by face on the family STEPs (`data/dump_<pn>.txt`, inches). The STEPs are 1704-08-08, 1804-08-08,
-1703-08-08, 1803-12-12 and 6701-08-08.
+1703-08-08, 1803-12-12 and 6701-08-08; later checked on the 6 uploaded STEPs (1704-16-16, 1804-16-24, 1704-20-12, 6701-04-04, -06-06,
+-20-20; s7).
 
 | Gen column | 1704 / 1804 (90 deg) | 1703 / 1803 (45 deg) | 6701 | Evidence on the STEP |
 |---|---|---|---|---|
@@ -71,7 +75,7 @@ leg-2 axis, confirmed on the STEP).
 
 **Files:**
 - `DesignTable_1704T.xlsx`, `DesignTable_1703T.xlsx`, `DesignTable_6701T.xlsx`: gen_bent's review tables;
-- `cells.csv`: 661 cells, each with its source;
+- `cells.csv`: 663 cells, each with its source;
 - `rows.csv`;
 - `checks.txt`.
 
@@ -109,6 +113,11 @@ gen_straight2 / gen_tee are not edited (`diff -r` against tools_af: only those 2
    - The tube-vs-groove check applies only without a hub.
    - New hub checks: hub behind the head, inside the head OD, and the tube fits into it.
 4. **6701 neck margin 0.02 -> 0.005.** Brennan's own 6701-08-08 has 0.019: tube 0.549 into the 0.587 neck.
+6. **(later) Tube wider than the hub** ends flat at the hub back face instead of 0.05 inside it (per-row `FACEEXT` = HUBL); as on
+   BRENNAN_1704-20-12.stp (tube 1.339, hub 1.260). The "tube fits into the hub" block is replaced by "tube inside the head OD".
+7. **(later) Optional `NECKD@SWSK`** (6701): the swivel neck dia from the part's own STEP replaces SWIV_MEAS NECKR (SWB_NECKR column, same
+   SW2 header). Used on 6701-04-04 (0.374) / -06-06 (0.494): Brennan's 6701 body takes the tube there, the straights' neck (0.293 / 0.412)
+   is narrower than the tube. Backup before 6 and 7: `history/gen_bent_before_steps6_20261021.py`.
 5. **Box check (the macro's per-configuration check).** It now includes the JIC chain radius: 1803-20-12's -20 thread (r 0.8125) is wider
    than its 1.5 hex flats. The old check would have FAILED that configuration in SolidWorks; the OCP all-configuration check found it.
 
@@ -129,16 +138,17 @@ gen_straight2 / gen_tee are not edited (`diff -r` against tools_af: only those 2
 - **regress:** the TEST configurations are unchanged. No bent configuration has shipped yet.
 - **OCP closed loop** (`closedloop/bent_ocp.py` -> `closedloop.txt`). It rebuilds a configuration from gen_bent's own numbers, then compares
   it with its family STEP, moved into the model frame.
-  - **Matches exactly:** 1704-08-08, 1804-08-08, 1703-08-08, 1803-12-12 and 6701-08-08 all match the STEP in:
+  - **Matches exactly:** 1704-08-08, 1804-08-08, 1703-08-08, 1803-12-12, 6701-08-08 and the uploaded 1704-16-16, 1804-16-24, 1704-20-12,
+    6701-04-04, -06-06, -20-20 all match the STEP in:
     - the bend torus: R, tube dia, centre;
     - the box: x, y max and z;
     - the cylinders: bore, tube, head, hub, groove.
-  - **Volume:** -1.3 ... -3.3 %. Symmetric difference 4 - 5 % (6701: 10 %). This comes from what is not modelled:
+  - **Volume:** -0.2 ... -4.4 %. Symmetric difference 4 - 5 % (6701: 10 - 12 %). This comes from what is not modelled:
     - the end-piece hex: gen_bent has its flats normal to Y with sharp corners; Brennan has its flats normal to Z, turned to dia IT;
     - 0.02 fillets;
     - the 7 deg bore flare at the flange face;
     - on the 6701, the straights' swivel shape instead of the 6701's own.
-- **All-configuration check** (`closedloop/allcfg_bent_ocp.py` -> `allcfg.txt`, `dryrun/expected_ocp.json`): **61 / 61 OK**. Each
+- **All-configuration check** (`closedloop/allcfg_bent_ocp.py` -> `allcfg.txt`, `dryrun/expected_ocp.json`): **66 / 66 OK**. Each
   configuration:
   - builds as one valid solid;
   - has outlines that do not self-intersect;
@@ -146,7 +156,8 @@ gen_straight2 / gen_tee are not edited (`diff -r` against tools_af: only those 2
 
 ## 6. Assumptions, all logged in `$PRP@AxialSource` / `$COMMENT`
 
-1. **90 deg bend radius = 0.8 x EXT.** Decoded on one STEP size (-08, the 1704 and 1804 STEPs). EXT's own rule holds on all 35 records.
+1. **90 deg bend radius = 0.8 x EXT.** Decoded on -08 (1704 / 1804) and confirmed on 1704-16-16, 1804-16-24 and 1704-20-12 (R 1.6208 /
+   1.6208 / 1.2504 = 0.8 x EXT exactly). EXT's own rule holds on all 35 records.
 2. **45 deg bend radius = tube OD,** from two STEP sizes (-08, -12).
 3. **Code 62 groove I.D. / depth** = the code 61 groove (s4.2).
 4. **6701 swivel = the straights' SWIV_MEAS shape** (Q-TRANSFER-ENDLIB); the nose tip comes from the record.
@@ -156,23 +167,20 @@ gen_straight2 / gen_tee are not edited (`diff -r` against tools_af: only those 2
    - the bore flare at the flange face;
    - edge chamfers.
 
-## 7. User decisions (real ones only)
+## 7. User decisions - settled by the 6 STEPs the user uploaded (2026-10-21, later)
 
-- **Q1 (recommended, not blocking): confirm the 90 deg bend rule.**
-  - 33 configurations use it, and it rests on one STEP size.
-  - One more 90 deg STEP would confirm it, e.g. BRENNAN_1704-16-16 (on the 2026-10-14 shape-file list) or 1804-24-24. Ship without
-    it = accept the rule as decoded.
-- **Q2 (Q-GD-1804-16-24, Q-GD-1704-20-12): two Brennan records contradict themselves.** Both rows are held MISSING. Get the part's own
-  STEP, or decide.
-  - **1804-16-24:** tube 0.800 with bore 0.740, a 0.030 wall. The other -16 rows have tube 1.043.
-  - **1704-20-12:** tube 1.339 is wider than its hub 1.260.
-- **Q3 (Q-GD-6701-20): 6701-20-20 M - CAD record 3.260 vs TFA catalog 2.750.** L is 3.750 in both, and the -16 has M 3.10. Which one?
-  The record value fits the size series.
-- **Q4: 6701-04-04 / -06-06.** Brennan's tube (0.315 / 0.413) is wider than the -04 / -06 neck of the straights' swivel (0.293 /
-  0.412), and Brennan's records show no separate neck there (DIA7 = 0). Either get BRENNAN_6701-04-04 / -06-06 for the real body, or
-  allow the neck to follow the tube on these two sizes.
-- **Q5: 6701-16-16 / 6701-L-16-16 have no source** for the tube, bore, bend or nut position. Brennan's CAD portal has no record. Needs
-  BRENNAN_6701-16-16 / 6701-L-16-16.
+The user: "6701-16-16 / 6701-L-16-16 these two dont have anything available, i have the rest of them though" + a PARTcommunity briefcase
+with BRENNAN_1704-16-16 / 1804-16-24 / 1704-20-12 / 6701-04-04 / 6701-06-06 / 6701-20-20 (copied to `09_STEP_FILES`, measured:
+`data/dump_<pn>.txt`, closed loop in `closedloop/closedloop.txt`).
+
+- **Q1 (90 deg bend rule): confirmed** on three more sizes (above).
+- **Q2: 1804-16-24 and 1704-20-12 are built as Brennan models them** - each STEP equals its record:
+  - 1804-16-24: tube 0.800 / bore 0.740, a 0.030 wall (likely a Brennan modelling choice; the other -16 JIC rows have a 1.043 tube) - worth
+    a line to OMi with the drawings;
+  - 1704-20-12: the 1.339 tube is wider than the 1.260 hub and ends flat at the hub's back face (generator change 6).
+- **Q3: 6701-20-20 M = 3.26** (CAD record = STEP: JIC tip x -3.260). The TFA catalog's M 2.750 is a misprint.
+- **Q4: 6701-04-04 / -06-06 built** with the neck of their own STEPs (generator change 7).
+- **Q5: 6701-16-16 / 6701-L-16-16 stay MISSING** - no source exists (user). Nothing open needs a decision from the user now.
 
 ## 8. To ship (after the dry run passes and the user says so)
 

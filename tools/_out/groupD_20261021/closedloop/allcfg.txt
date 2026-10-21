@@ -6,6 +6,7 @@
 1704T  1704-16-16-Tube    OK  vol 3.4673 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1704T  1704-16-20-Tube    OK  vol 3.0285 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1704T  1704-16-24-Tube    OK  vol 4.5770 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
+1704T  1704-20-12-Tube    OK  vol 5.5625 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
 1704T  1704-20-16-Tube    OK  vol 6.5324 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
 1704T  1704-20-20-Tube    OK  vol 5.4136 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
 1704T  1704-20-24-Tube    OK  vol 6.1657 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
@@ -23,6 +24,7 @@
 1704T  1804-16-12-Tube    OK  vol 3.1249 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1704T  1804-16-16-Tube    OK  vol 3.9722 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1704T  1804-16-20-Tube    OK  vol 4.8926 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
+1704T  1804-16-24-Tube    OK  vol 5.4697 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1704T  1804-20-16-Tube    OK  vol 5.1854 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
 1704T  1804-20-20-Tube    OK  vol 6.3493 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
 1704T  1804-20-24-Tube    OK  vol 8.2827 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
@@ -57,6 +59,9 @@
 1703T  1803-24-20-Tube    OK  vol 6.9715 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1703T  1803-24-24-Tube    OK  vol 8.2127 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
 1703T  1803-32-32-Tube    OK  vol 16.0771 in^3  box dev {'xmax': 0.0004, 'ymax': 0.0004, 'ymin': -0.0004, 'zmax': 0.0004}
+6701   6701-04-04         OK  vol 0.2543 in^3  box dev {'xmax': 0.0002, 'ymax': 0.0002, 'ymin': -0.0002, 'zmax': 0.0002}
+6701   6701-06-06         OK  vol 0.4047 in^3  box dev {'xmax': 0.0002, 'ymax': 0.0002, 'ymin': -0.0002, 'zmax': 0.0002}
 6701   6701-08-08         OK  vol 0.7341 in^3  box dev {'xmax': 0.0003, 'ymax': 0.0003, 'ymin': -0.0003, 'zmax': 0.0003}
 6701   6701-12-12         OK  vol 1.9377 in^3  box dev {'xmax': 0.0003, 'ymax': 0.0003, 'ymin': -0.0003, 'zmax': 0.0003}
-61 configurations, 0 with problems
+6701   6701-20-20         OK  vol 5.0923 in^3  box dev {'xmax': 0.0005, 'ymax': 0.0005, 'ymin': -0.0005, 'zmax': 0.0005}
+66 configurations, 0 with problems

@@ -34,22 +34,31 @@ FLG62 = {8: (1.250, 0.305, 1.000), 12: (1.625, 0.345, 1.250), 16: (1.875, 0.375,
 HDR_FL = ['M1@DRIVE', 'L1@DRIVE', 'CHEX@HEX', 'HEXL@HEX', 'O@DRIVE', 'D@BORE', 'TUBEOD@TUBE', 'RB@PATH', 'HUBD@HEAD', 'HUBL@HEAD',
           '$PRP@FlangeCode', '$PRP@TubeOD', '$PRP@PartNo', '$PRP@DataStatus', '$PRP@AxialSource', '$COMMENT', '$PRP@ScopeAction',
           '$PRP@OMiSKU', '$PRP@DimSource']
-HDR_SW = ['M1@DRIVE', 'L1@DRIVE', 'CHEX@HEX', 'HEXL@HEX', 'NUTHEX@NUTHEXSK', 'NOSETIP@SWSK', 'D@BORE', 'TUBEOD@TUBE', 'RB@PATH',
+HDR_SW = ['M1@DRIVE', 'L1@DRIVE', 'CHEX@HEX', 'HEXL@HEX', 'NUTHEX@NUTHEXSK', 'NOSETIP@SWSK', 'D@BORE', 'TUBEOD@TUBE', 'RB@PATH', 'NECKD@SWSK',
           '$PRP@TubeOD', '$PRP@PartNo', '$PRP@DataStatus', '$PRP@AxialSource', '$COMMENT', '$PRP@ScopeAction', '$PRP@OMiSKU',
           '$PRP@DimSource']
 # data holds: the record contradicts itself or the catalog - cells are staged, the row stays MISSING until the user decides
-HOLD = {
-    '1804-16-24-Tube': 'Brennan record TOD 0.800 with DRILLFL 0.740 = a 0.030 tube wall (every other -16 JIC row: tube 1.043 / bore 0.75, '
-                       'incl. 1704-16-24); not built - needs BRENNAN_1804-16-24.stp or the user\'s call (Q-GD-1804-16-24)',
-    '1704-20-12-Tube': 'Brennan record TOD 1.339 (tube) is wider than its hub DFL 1.260 (-12 code 61 head): the tube cannot enter the hub '
-                       'as recorded; not built - needs BRENNAN_1704-20-12.stp or the user\'s call (Q-GD-1704-20-12)',
-    '6701-20-20': 'M conflict between two Brennan sources: CAD record M 3.260 vs TFA catalog p38 M 2.750 (L 3.750 in both; the -16 has M 3.10) '
-                  '- never picked silently; Q-GD-6701-20 (the record value 3.26 fits the size series)',
-    '6701-16-16': 'no Brennan CAD record (PARTcommunity: none) and no -16 6701 STEP: tube OD / bore / bend radius / hex length / nut '
-                  'position have no source (catalog p38 gives only M 3.10 / L 3.15 / C1 1.375 / C2 1.500) - needs BRENNAN_6701-16-16.stp',
-    '6701-L-16-16': 'no Brennan CAD record (PARTcommunity: none) and no 6701-L STEP: tube OD / bore / bend radius / hex length / nut '
-                    'position have no source (catalog p38 6701-L gives only L 4.870 / M 3.125 / C1 1.375 / C2 1.500) - needs '
-                    'BRENNAN_6701-L-16-16.stp',
+HOLD = {   # no source at all (user 2026-10-21: "these two dont have anything available")
+    '6701-16-16': 'no Brennan CAD record (PARTcommunity: none) and no STEP (user 2026-10-21: nothing available): tube OD / bore / bend '
+                  'radius / hex length / nut position have no source (catalog p38 gives only M 3.10 / L 3.15 / C1 1.375 / C2 1.500)',
+    '6701-L-16-16': 'no Brennan CAD record (PARTcommunity: none) and no STEP (user 2026-10-21: nothing available): tube OD / bore / bend '
+                    'radius / hex length / nut position have no source (catalog p38 6701-L gives only L 4.870 / M 3.125 / C1 1.375 / C2 1.500)',
+}
+# 2026-10-21 (later): the parts' own STEPs (user upload, PARTcommunity briefcase) settle the earlier holds - measured, data/dump_<pn>.txt
+STEP_NOTE = {
+    '1804-16-24-Tube': 'BRENNAN_1804-16-24.stp confirms the record: tube 0.800 / bore 0.740 (bend torus tube dia 0.800 / 0.740, R 1.6208 = '
+                       '0.8 x EXT) - a 0.030 wall, built as Brennan models it (the other -16 JIC rows have a 1.043 tube)',
+    '1704-20-12-Tube': 'BRENNAN_1704-20-12.stp confirms the record: the 1.339 tube is wider than the 1.260 hub and ends flat at the hub back '
+                       'face (y -1.709); R 1.2504 = 0.8 x EXT',
+    '6701-20-20': 'BRENNAN_6701-20-20.stp: JIC tip x -3.260 = M 3.26 (CAD record); the TFA catalog p38 M 2.750 is a misprint; nut face '
+                  'y 4.335 = L - F - J + LN; torus R 1.890, tube 1.260 / 1.024',
+    '1704-16-16-Tube': 'BRENNAN_1704-16-16.stp: torus R 1.6208 = 0.8 x EXT 2.026 (second STEP size of the 90 deg bend rule), tube 1.043 / 0.750',
+}
+NECK = {   # the 6701's own body dia where the tube enters, measured on its STEP (the straights' SWIV_MEAS neck is narrower than the tube)
+    '6701-04-04': (0.374, 'BRENNAN_6701-04-04.stp: body cylinder 0.374 from the nut back (y 0.771) to the tube end (y 0.896 / 0.901) = record DIA4; '
+                          'SWIV_MEAS -04 neck 0.293 < the 0.315 tube'),
+    '6701-06-06': (0.494, 'BRENNAN_6701-06-06.stp: body cylinder 0.494 from the nut back (y 0.846) to the tube end (y 0.986 / 0.995) = record DIA4; '
+                          'SWIV_MEAS -06 neck 0.412 < the 0.413 tube'),
 }
 
 
@@ -237,12 +246,11 @@ def main():
                     chk.append(f'{pn:18} record {k_[:2]} {rv:<6} catalog {cat[catpn][0]} {cv[k_]:<6} {"ok" if ok else "DIFFERS"}')
                 chk.append(f'{pn:18} JIC -{a:02d} end length L1 {GL1} vs library {JIC_GT[a]} {"ok" if abs(GL1 - JIC_GT[a]) < 0.0025 else "DIFFERS"}')
                 nf = round(L - F - J + LN, 4); nt = round(LN - F - J, 4)
-                if pn in HOLD:
-                    cell(tbl, pn, 'M1@DRIVE', None, f'HELD: record M {M} vs catalog M {cv["M LGTH"]}')
-                    row['M1@DRIVE'] = None
-                else:
-                    cell(tbl, pn, 'M1@DRIVE', M, f'{rs}: M {M} = JIC tip -> swivel-leg axis (BRENNAN_6701-08-08.stp: tip x -1.770, leg-2 axis x 0) = catalog')
-                    row['M1@DRIVE'] = M
+                cell(tbl, pn, 'M1@DRIVE', M, f'{rs}: M {M} = JIC tip -> swivel-leg axis (BRENNAN_6701-08-08.stp: tip x -1.770, leg-2 axis x 0)' +
+                     (' = catalog' if abs(frac(cv['M LGTH']) - M) <= 0.0051 else f' (catalog {cv["M LGTH"]}: misprint - {STEP_NOTE[pn]})'))
+                row['M1@DRIVE'] = M
+                if pn in NECK:
+                    cell(tbl, pn, 'NECKD@SWSK', NECK[pn][0], NECK[pn][1]); row['NECKD@SWSK'] = NECK[pn][0]
                 cell(tbl, pn, 'L1@DRIVE', nf, f'{rs}: L {L} - F {F} - J {J} + LN {LN} = crossing -> swivel nut face (STEP 6701-08-08: L 1.520 = nose tip, '
                                               'F = nose above the body shoulder, J = shoulder -> nut back, LN = nut length; nut face y 1.928)')
                 cell(tbl, pn, 'NOSETIP@SWSK', nt, f'{rs}: LN {LN} - F {F} - J {J} = nut face -> nose tip (STEP 6701-08-08: 1.928 - 1.520 = 0.408)')
@@ -259,8 +267,10 @@ def main():
                       f'RB = R; catalog {cat[catpn][0]} M / L / C1 / C2 = record | {b["$PRP@AxialSource"]}')
                 com = (f'Brennan record {bpn}: M {M} L {L} F {F} J {J} LN {LN} C1 {C1} C2 {C2} THK {THK} DIA {DIA} DIA6 {D6} R {R}. '
                        f'Swivel shape = the straights\' SWIV_MEAS (Q-TRANSFER-ENDLIB); NOSETIP from the record.')
-                if pn in HOLD:
-                    com += f' HELD: {HOLD[pn]}'
+                if pn in NECK:
+                    com += f' Swivel neck {NECK[pn][0]} from the part\'s own STEP ({NECK[pn][1]}).'
+        if pn in STEP_NOTE:
+            com += f' {STEP_NOTE[pn]}.'
         if pn in HOLD:
             status = 'MISSING'
             if fam not in ('6701',) or has:

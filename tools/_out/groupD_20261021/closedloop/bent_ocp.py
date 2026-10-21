@@ -207,6 +207,13 @@ CASES = [  # (root, config, STEP, dx to move the STEP's JIC tip to the origin, m
     ('1703T', '1703-08-08-Tube', 'BRENNAN_1703-08-08.stp', 0.657, True),
     ('1703T', '1803-12-12-Tube', 'BRENNAN_1803-12-12.stp', 0.864, True),
     ('6701', '6701-08-08', 'BRENNAN_6701-08-08.stp', 1.770, False),
+    # 2026-10-21 (later): the parts' own STEPs for the earlier open questions
+    ('1704T', '1704-16-16-Tube', 'BRENNAN_1704-16-16.stp', 0.911, True),
+    ('1704T', '1804-16-24-Tube', 'BRENNAN_1804-16-24.stp', 0.911, True),
+    ('1704T', '1704-20-12-Tube', 'BRENNAN_1704-20-12.stp', 0.958, True),
+    ('6701', '6701-04-04', 'BRENNAN_6701-04-04.stp', 1.250, False),
+    ('6701', '6701-06-06', 'BRENNAN_6701-06-06.stp', 1.350, False),
+    ('6701', '6701-20-20', 'BRENNAN_6701-20-20.stp', 3.260, False),
 ]
 
 

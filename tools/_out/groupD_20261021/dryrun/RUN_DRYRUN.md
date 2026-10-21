@@ -1,7 +1,7 @@
 # Group D bent tubes: SolidWorks dry runs on the PC
 
 Nothing here writes to `11_MASTERS`, `03_SCRIPTS` or `04_DESIGN_TABLES`. Each macro saves its part and report into `dryrun\<root>\`,
-and reads its SW2 table from `regen\stage\`. 3 masters, 61 configurations: 1704T 33, 1703T 26, 6701 2.
+and reads its SW2 table from `regen\stage\`. 3 masters, 66 configurations: 1704T 35, 1703T 26, 6701 5.
 
 1. Get SolidWorks ready:
    - SolidWorks 2026 SP4 signed in: start SOLIDWORKS Design from 3DEXPERIENCE (never start SLDWORKS.exe directly).
@@ -37,8 +37,8 @@ and reads its SW2 table from `regen\stage\`. 3 masters, 61 configurations: 1704T
    - the configuration set equals the SW2 table;
    - each configuration's volume and box size match the OCP rebuild of the same numbers (`dryrun\expected_ocp.json`, from
      `closedloop\allcfg_bent_ocp.py`) within 0.3 % and 0.005 in.
-4. Look at it (CLAUDE.md verify loop, step 5): take a `screenshot` of `1704-12-12-Tube`, `1703-12-12-Tube`, `1803-32-32-Tube` and
-   `6701-08-08`, with views `front` / `isometric` and `section_plane` "Front Plane". Check:
+4. Look at it (CLAUDE.md verify loop, step 5): take a `screenshot` of `1704-12-12-Tube`, `1703-12-12-Tube`, `1803-32-32-Tube`,
+   `1704-20-12-Tube` (tube wider than the hub), `6701-04-04` (own neck) and `6701-08-08`, with views `front` / `isometric` and `section_plane` "Front Plane". Check:
    - the bend;
    - the hub behind the flange head;
    - the O-ring groove;

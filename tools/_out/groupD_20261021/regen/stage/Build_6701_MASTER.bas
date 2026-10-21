@@ -342,14 +342,14 @@ Sub Build6701()
     swModel.ForceRebuild3 False
     Dim cfgs As Variant
     cfgs = swModel.GetConfigurationNames
-    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 3)", (UBound(cfgs) + 1) >= 2
+    Check "Configurations after table: " & (UBound(cfgs) + 1) & " (expect 6)", (UBound(cfgs) + 1) >= 5
     ' ---- config spot check: do the table values actually land in the model? (SP3 lesson)
     stepName = "Config check"
     Dim cx_c As Variant, cx_p As Variant, cx_w As Variant, cx_prm As SldWorks.Dimension, cx_bx As Variant, cx_nb As Long, cx_q As Long, cx_k As Long, cx_b As Variant, cx_f As SldWorks.Feature
-    cx_c = Array("6701-12-12")
+    cx_c = Array("6701-04-04", "6701-20-20")
     cx_p = Array("LJ@DRIVE", "BODYR@DRIVE", "T1X@PATH", "RB@PATH", "FX@PATH", "FY@PATH", "TUBEOD@TUBE", "TUBEID@BORE", "SWB_NUTR@SWSK", "HEXB@HEX", "OFFSET@NUTPLN", "NUTCX@NUTHEXSK", "HELIXCX@HELIXSK_B", "HEIGHT@HELIX_B", "PROF_R@THDPROF_B", "APEXR@THDPROF_B")
-    cx_w = Array(Array(1.14000, 0.64952, 1.31900, 1.18100, 2.50000, 1.90900, 0.79900, 0.59100, 0.72169, 1.12500, 2.94800, 2.50000, 2.50000, 0.48510, 2.98614, 3.03125))
-    For cx_q = 0 To 0
+    cx_w = Array(Array(0.74702, 0.28868, 0.89600, 0.35400, 1.25000, 0.78500, 0.31500, 0.16700, 0.32505, 0.50000, 1.42000, 1.25000, 1.25000, 0.28670, 1.44169, 1.46875), Array(1.27295, 0.97745, 1.37000, 1.89000, 3.26000, 3.12500, 1.26000, 1.02400, 1.15470, 1.69300, 4.33500, 3.26000, 3.26000, 0.47240, 4.02739, 4.07250))
+    For cx_q = 0 To 1
         Progress "config check " & (cx_q + 1) & ": " & cx_c(cx_q)
         swModel.ShowConfiguration2 cx_c(cx_q)
         swModel.ForceRebuild3 False
@@ -375,10 +375,13 @@ Sub Build6701()
     ' ---- every configuration: the box = the flange head (x max, y max), the end-piece flats (y min), head / hex corners (z)
     stepName = "Box check"
     Dim bk_c() As String, bk_v() As Variant, bk_i As Long, bk_b As Variant
-    ReDim bk_c(1): ReDim bk_v(1)
+    ReDim bk_c(4): ReDim bk_v(4)
     bk_c(0) = "6701-08-08": bk_v(0) = Array(2.275181, 1.928000, -0.406000, 0.468808)
-    bk_c(1) = "6701-12-12": bk_v(1) = Array(3.221688, 2.948000, -0.562500, 0.649519)
-    For bk_i = 0 To 1
+    bk_c(1) = "6701-04-04": bk_v(1) = Array(1.575048, 1.420000, -0.250000, 0.288675)
+    bk_c(2) = "6701-06-06": bk_v(2) = Array(1.747217, 1.581000, -0.312500, 0.360844)
+    bk_c(3) = "6701-12-12": bk_v(3) = Array(3.221688, 2.948000, -0.562500, 0.649519)
+    bk_c(4) = "6701-20-20": bk_v(4) = Array(4.414701, 4.335000, -0.846500, 1.000000)
+    For bk_i = 0 To 4
         swModel.ShowConfiguration2 bk_c(bk_i)
         swModel.ForceRebuild3 False
         bk_b = swModel.GetPartBox(True)
